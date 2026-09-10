@@ -270,7 +270,9 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
 .c2st{display:inline-block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);border:1px solid var(--line);border-radius:3px;padding:1px 5px;margin-top:4px}
 .c2status{margin-top:6px;font-size:13px;color:var(--gold);font-style:italic}
 .c2q{margin:10px 0;padding:10px 12px;border-left:3px solid var(--gold-dim);background:rgba(201,162,74,.05)} .c2q h3{margin:8px 0 2px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)} .c2q p{margin:2px 0 6px;font-size:14px;line-height:1.5}
-.c2links{margin-top:14px} .c2maps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px}
+.c2links{margin-top:14px}
+.c2lnk{color:var(--gold);text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
+.c2lnk:hover{text-decoration-style:solid} .c2maps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px}
 .c2map{cursor:pointer} .c2map div{aspect-ratio:4/3;border-radius:6px;background:center/cover;border:1px solid var(--line)} .c2map:hover div{border-color:var(--gold)} .c2map b{display:block;margin-top:4px;font-family:var(--display);font-size:12px;letter-spacing:.08em}
 .c2timeline{margin-top:10px} .c2tl{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);cursor:pointer} .c2tl:hover b{color:var(--gold)} .c2tl .n{font-family:var(--display);font-size:20px;color:var(--gold-dim);text-align:center} .c2tl b{display:block;font-size:15px} .c2tl small{color:var(--ink-dim)} .c2tl p{margin:3px 0 0;font-size:13px;line-height:1.4}
 #compBody .lore p{margin:0 0 10px}
@@ -279,7 +281,7 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <h1>APRUTIUM · Atto Terzo</h1><span class="eyebrow" id="ver" title="Versione della pagina">v42</span>
+    <h1>APRUTIUM · Atto Terzo</h1><span class="eyebrow" id="ver" title="Versione della pagina">v43</span>
     <span class="eyebrow pl" id="sceneName">Sotto Bëllindë</span><label class="gm row" style="gap:6px"><span class="eyebrow">Scena</span><select id="sceneSel" style="max-width:260px"></select></label>
     <button id="btnComp" class="mini" style="border-color:var(--gold-dim)">Compendio</button>
     <span class="spacer"></span>
@@ -1475,20 +1477,59 @@ function renderC2List(list,title,flat,grouped){
   const bk=body.querySelector('#c2back'); if(bk) bk.onclick=()=>{ c2City=null; renderCompendio(); };
   const add=body.querySelector('#compAdd'); if(add) add.onclick=()=>editC2Entry(null);
 }
-function c2Text(t){ return (t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\[\[([^\]]+)\]\]/g,'<b>$1</b>').replace(/\n\n/g,'</p><p>').replace(/\n/g,'<br>'); }
+function c2LnkNorm(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+const C2LNK_STOP=new Set(['mastro','maestro','frate','fratel','frati','sergente','capitan','capitano','kapitan','comandante','donna','donne','dama','sorella','padre','madre','nonna','casa','famiglia','porta','porte','quartiere','locanda','torre','piazza','borgo','mercato','campo','chiesa','abate','conte','messer','vedova','mercenari','guardia','guardie','signore','signora','signori','santa','sant','arconte','cardinal','cardinale','domina','primus','stazione','strada','tenuta','giovane','vecchio','ragazzo','ragazzi','ragazzini','pastori','agente','osservatore','anima','della','dello','delle','degli']);
+let C2LNK_LC=null;
+function c2LnkLc(){
+  const all=c2All();
+  if(C2LNK_LC&&C2LNK_LC.n===all.length) return C2LNK_LC.set;
+  const set=new Set();
+  for(const e of all){ const txt=[e.pub,e.gm,e.status,e.sub,e.sanno,e.prossimo,e.esito].filter(Boolean).join(' ');
+    for(const m of txt.matchAll(/(^|[^\p{L}])([a-z\u00e0-\u00ff][\p{L}']{3,})/gu)) set.add(c2LnkNorm(m[2])); }
+  C2LNK_LC={n:all.length,set}; return set;
+}
+function c2LnkBuild(curId){
+  const map={}, dead=new Set(), lc=c2LnkLc();
+  const add=(name,id)=>{ name=(name||'').trim(); if(name.length<4) return; const k=c2LnkNorm(name); if(dead.has(k)) return; if(map[k]&&map[k].id!==id){ dead.add(k); delete map[k]; return; } map[k]={id,name}; };
+  for(const e of c2All()){
+    if(e.id===curId||!c2Visible(e)) continue;
+    let t=(e.title||'').replace(/^\s*\d+\s*[\.\u00b7:]?\s*/,'').trim();
+    const nicks=[...t.matchAll(/\u00ab\s*([^\u00bb]+?)\s*\u00bb/g)].map(m=>m[1]).concat([...t.matchAll(/'([^']{4,})'/g)].map(m=>m[1]));
+    const plain=t.replace(/[\u00ab\u00bb]/g,' ').replace(/\s+/g,' ').trim();
+    add(plain,e.id);
+    for(const n of nicks) add(n,e.id);
+    for(const w of plain.split(/[\s\u2014\u00b7,()\u2019]+/)){ const k=c2LnkNorm(w); if(w.length>=5&&/^[A-Z\u00c0-\u00de]/.test(w)&&!C2LNK_STOP.has(k)&&!lc.has(k)) add(w,e.id); }
+  }
+  const names=Object.values(map).map(x=>x.name).sort((a,b)=>b.length-a.length);
+  const flat={}; for(const k in map) flat[k]=map[k].id;
+  if(!names.length) return {map:flat,rx:null};
+  const esc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/&/g,'&amp;');
+  let rx=null; try{ rx=new RegExp('(^|[^\\p{L}])('+names.map(esc).join('|')+')(?![\\p{L}])','giu'); }catch(_){ rx=null; }
+  return {map:flat,rx};
+}
+function c2Text(t,lnk){
+  let s=(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const out=[]; const put=h=>{ out.push(h); return '\x01'+(out.length-1)+'\x02'; };
+  s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(m,txt,id)=>{ id=id.trim(); const te=c2All().find(x=>x.id===id); return put(te&&c2Visible(te)?`<a class="c2lnk" data-go="${id}">${txt}</a>`:`<b>${txt}</b>`); });
+  s=s.replace(/\[\[([^\]]+)\]\]/g,(m,txt)=>{ const id=lnk&&lnk.map[c2LnkNorm(txt)]; return put(id?`<a class="c2lnk" data-go="${id}">${txt}</a>`:`<b>${txt}</b>`); });
+  if(lnk&&lnk.rx) s=s.replace(lnk.rx,(m,pre,name)=>{ if(!name.includes(' ')&&!/^[A-Z\u00c0-\u00de]/.test(name)) return m; const id=lnk.map[c2LnkNorm(name)]; return id?pre+put(`<a class="c2lnk" data-go="${id}">${name}</a>`):m; });
+  s=s.replace(/\n\n/g,'</p><p>').replace(/\n/g,'<br>');
+  return s.replace(/\x01(\d+)\x02/g,(m,i)=>out[+i]);
+}
 function renderC2Entry(id){
   const body=document.getElementById('compBody'); const e=c2All().find(x=>x.id===id); if(!e){ c2Open=null; return renderCompendio(); }
   const img=c2Img(e); const links=(e.links||[]).map(l=>c2All().find(x=>x.id===l)).filter(x=>x&&c2Visible(x));
+  const LNK=c2LnkBuild(e.id);
   const pgs=Object.entries(S.tokens).filter(([,x])=>x.kind==='pg');
   let html=`<div class="row split"><button class="mini" id="c2back">‹ indietro</button>${IS_GM?`<span class="row" style="gap:4px"><select id="c2state"><option value="visitato" ${/^(visitat|incontrat)/.test(e.state||'')?'selected':''}>${e.cat==='png'?'incontrato':'visitato / noto ai PG'}</option><option value="noto" ${/^not/.test(e.state||'')?'selected':''}>ne hanno sentito parlare</option><option value="segreto" ${/^segret/.test(e.state||'')?'selected':''}>segreto</option></select><button class="mini" id="c2edit">Modifica</button>${img?`<button class="mini" id="c2show">Mostra ai giocatori</button>`:''}</span>`:''}</div>`;
   html+=`<div class="sheethead" style="margin-top:10px">${img?`<div class="portrait" style="background-image:url(${img});width:120px;height:120px"></div>`:''}<div><div class="eyebrow">${(C2_CITY[e.city]&&e.city?C2_CITY[e.city]+' · ':'')}${e.group||C2_SECTIONS.find(s=>s[0]===c2SecOf(e))[1]}</div><h2 class="big" style="margin:2px 0">${e.title}</h2><div class="note">${e.sub||''}</div>${e.status?`<div class="c2status">${e.status}</div>`:''}${e.owner?`<div class="note">Lo tiene: <b>${e.owner}</b></div>`:''}${e.data?`<div class="note">${e.data}</div>`:''}</div></div>`;
   if(img&&(e.cat==='luogo'||e.cat==='diario'||e.cat==='mondo')) html+=`<img class="poiimg" src="${img}" alt="" style="max-height:52vh;object-fit:contain">`;
-  if(e.cat==='quest') html+=`<div class="c2q"><span class="eyebrow">${e.stato==='principale'?'Filo principale':e.stato==='chiusa'?'Chiusa':'Aperta'}</span>${e.sanno?`<h3>Cosa sapete</h3><p>${c2Text(e.sanno)}</p>`:''}${e.prossimo?`<h3>Prossima mossa possibile</h3><p>${c2Text(e.prossimo)}</p>`:''}${e.esito?`<h3>Come è finita</h3><p>${c2Text(e.esito)}</p>`:''}</div>`;
+  if(e.cat==='quest') html+=`<div class="c2q"><span class="eyebrow">${e.stato==='principale'?'Filo principale':e.stato==='chiusa'?'Chiusa':'Aperta'}</span>${e.sanno?`<h3>Cosa sapete</h3><p>${c2Text(e.sanno,LNK)}</p>`:''}${e.prossimo?`<h3>Prossima mossa possibile</h3><p>${c2Text(e.prossimo,LNK)}</p>`:''}${e.esito?`<h3>Come è finita</h3><p>${c2Text(e.esito,LNK)}</p>`:''}</div>`;
   if(e.cat==='diario'&&e.eventi) html+=`<div class="c2q"><h3>In breve</h3><p>${e.eventi.map(x=>'· '+x).join('<br>')}</p></div>`;
   if(e.mech) html+=`<p class="note"><b>Regole:</b> ${e.mech}</p>`;
-  if(e.pub) html+=`<div class="lore" style="max-width:none"><p>${c2Text(e.pub)}</p></div>`;
+  if(e.pub) html+=`<div class="lore" style="max-width:none"><p>${c2Text(e.pub,LNK)}</p></div>`;
   else if(!IS_GM) html+=`<p class="note">Ne avete sentito parlare, ma non sapete altro.</p>`;
-  if(IS_GM&&e.gm) html+=`<div class="gmbox"><div class="eyebrow">Solo master</div><p style="font-size:14px;line-height:1.5">${c2Text(e.gm)}</p></div>`;
+  if(IS_GM&&e.gm) html+=`<div class="gmbox"><div class="eyebrow">Solo master</div><p style="font-size:14px;line-height:1.5">${c2Text(e.gm,LNK)}</p></div>`;
   if(IS_GM&&e.cat==='oggetto') html+=`<div class="gmbox"><div class="eyebrow">Assegna</div><div class="row"><select id="c2who"><option value="Crociata">Crociata (loot comune)</option><option value="gruppo">Gruppo</option>${pgs.map(([i,x])=>`<option value="${i}">${x.name}</option>`).join('')}</select><button class="primary" id="c2assign">Assegna</button></div></div>`;
   if(links.length) html+=`<div class="c2links"><span class="eyebrow">Collegato a</span><div class="row">${links.map(l=>`<button class="mini" data-go="${l.id}">${l.title}</button>`).join('')}</div></div>`;
   if(e.atti&&e.atti.length) html+=`<p class="note">Atti: ${e.atti.map(n=>C2_ROMAN[n]||n).join(', ')}</p>`;
