@@ -1,4 +1,9 @@
 <meta charset="utf-8">
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+<script>window.FIREBASE_CONFIG={apiKey:"AIzaSyDXpZIDJE8OoqcnWVmvPAfoX5TTUMxchhA",authDomain:"aprutium-a8021.firebaseapp.com",databaseURL:"https://aprutium-a8021-default-rtdb.europe-west1.firebasedatabase.app",projectId:"aprutium-a8021",storageBucket:"aprutium-a8021.firebasestorage.app",messagingSenderId:"555620777431",appId:"1:555620777431:web:bcfcf6f65e48d5e0611f92"};</script>
+
 <title>Aprutium Tavolo</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
 <style>
@@ -274,7 +279,7 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <h1>APRUTIUM · Atto Terzo</h1><span class="eyebrow" id="ver" title="Versione della pagina">v41</span>
+    <h1>APRUTIUM · Atto Terzo</h1><span class="eyebrow" id="ver" title="Versione della pagina">v42</span>
     <span class="eyebrow pl" id="sceneName">Sotto Bëllindë</span><label class="gm row" style="gap:6px"><span class="eyebrow">Scena</span><select id="sceneSel" style="max-width:260px"></select></label>
     <button id="btnComp" class="mini" style="border-color:var(--gold-dim)">Compendio</button>
     <span class="spacer"></span>
@@ -420,7 +425,7 @@ function applyRole(){
 }
 applyRole();
 const roleSel=document.getElementById('roleSel');
-roleSel.onchange=()=>{ ROLE=roleSel.value; selected=null; applyRole(); render(); };
+roleSel.onchange=async()=>{ const want=roleSel.value; if(want==='master'&&fbAuth&&!(fbAuth.currentUser&&fbAuth.currentUser.email)){ ROLE='master'; const ok=await fbMasterLogin(); if(!ok){ ROLE=roleSel.dataset.prev||Object.keys(S.tokens).find(k=>S.tokens[k].kind==='pg'); roleSel.value=ROLE; } } else ROLE=want; roleSel.dataset.prev=ROLE; selected=null; applyRole(); render(); };
 
 /* ---------- stato + sync ---------- */
 let S = structuredClone(DEFAULT_STATE);
@@ -456,10 +461,41 @@ function save(immediate){
 }
 function log(ev){ S.log = [{t:Date.now(),sc:S.scene||'sotto',...ev}, ...S.log].slice(0,60); }
 
+
+/* ---------- Firebase (versione pubblica su GitHub Pages) ---------- */
+let fbAuth=null, fbDb=null, fbLastWrite=null;
+async function fbConnect(){
+  try{
+    firebase.initializeApp(FIREBASE_CONFIG); fbAuth=firebase.auth(); fbDb=firebase.database();
+    await new Promise(r=>{ const u=fbAuth.onAuthStateChanged(()=>{ u(); r(); }); });
+    if(IS_GM){ const ok=await fbMasterLogin(); if(!ok){ ROLE=Object.keys(DEFAULT_STATE.tokens).find(k=>DEFAULT_STATE.tokens[k].kind==='pg')||'alessandros'; applyRole(); } }
+    if(!fbAuth.currentUser) await fbAuth.signInAnonymously();
+    return { doc:(path)=>{ const r=fbDb.ref(path); return {
+      get:async()=>{ const s=await r.get(); return {exists:s.exists(),data:()=>s.val()}; },
+      set:async(data)=>{ const j=JSON.stringify(data); fbLastWrite=j; await r.set(JSON.parse(j)); },
+      onSnapshot:(cb,err)=>{ r.on('value',s=>{ const v=s.val(); const j=JSON.stringify(v); const pending=(j===fbLastWrite); cb({exists:s.exists(),data:()=>v,metadata:{hasPendingWrites:pending}}); },e=>{ console.error(e); if(err) err(e); }); }
+    }; } };
+  }catch(e){ console.error('Firebase non disponibile',e); toast('Collegamento al tavolo non riuscito'); return null; }
+}
+/* accesso del master: email+password (utente creato nella console Firebase). Ricorda l'accesso sul browser. */
+async function fbMasterLogin(){
+  const u=fbAuth.currentUser; if(u&&u.email) return true;
+  return new Promise(res=>{
+    openModal(`<div class="eyebrow">Accesso</div><h2 class="big">Sei il Master?</h2><p class="note">Inserisci la password del master. I giocatori non hanno bisogno di password: scelgono il loro personaggio dal menu in alto.</p><div class="stack"><input type="password" id="mpw" placeholder="Password del master" autocomplete="current-password"><div class="row"><button class="primary" id="mgo">Entra</button><button id="mno">Sono un giocatore</button></div><div class="note" id="merr"></div></div>`,'poibox');
+    const box=document.getElementById('modal');
+    const go=async()=>{ const pw=box.querySelector('#mpw').value; try{ if(fbAuth.currentUser&&!fbAuth.currentUser.email) await fbAuth.signOut(); await fbAuth.signInWithEmailAndPassword('master@aprutium.it',pw); closeModal(); res(true); }catch(e){ box.querySelector('#merr').textContent='Password sbagliata.'; } };
+    box.querySelector('#mgo').onclick=go; box.querySelector('#mpw').addEventListener('keydown',e=>{ if(e.key==='Enter') go(); });
+    box.querySelector('#mno').onclick=()=>{ closeModal(); res(false); };
+    box.querySelector('.close').onclick=()=>{ closeModal(); res(false); };
+    setTimeout(()=>box.querySelector('#mpw').focus(),50);
+  });
+}
+
 let READY=false;
 (async()=>{
   await new Promise(r=>setTimeout(r,0));
-  try{ db = await claude.use('db'); }catch(e){ db=null; }
+  if(window.FIREBASE_CONFIG&&window.firebase){ db = await fbConnect(); }
+  else { try{ db = await claude.use('db'); }catch(e){ db=null; } }
   if(!db){ setLive(false); render(); return; }
   ref = db.doc('partita/stato');
   const snap = await ref.get().catch(()=>null);
