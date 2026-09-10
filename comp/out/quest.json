@@ -1,0 +1,1089 @@
+[
+ {
+  "id": "q-silvanus-a-teramum",
+  "cat": "quest",
+  "city": "teramum",
+  "group": "Principale",
+  "title": "Portare Silvanus a Teramum",
+  "sub": "La Crociata delle Due Lune e la Grande Convocazione",
+  "img": null,
+  "state": "noto",
+  "stato": "principale",
+  "sanno": "Silvanus Ardentus è Aurelius, l'ultimo sangue solare, figlio dell'Imperatore Aurelius Lux Aurax: lo sanno solo voi, Fenix e chi ha visto il sangue disegnare il Sole e le Due Lune sulla Terrazza dei Venti. Il Concilio di Julia Nova ha dato il mandato per Teramum. La Legge Antica dice che solo il sigillo della Città Ducale può convocare la Grande Convocazione a L'Aquila Aurea, dove le Casate e le Città Libere costringeranno i traditori a rispondere. Iuvenza vi aspetta a Teramum, « come la serpe che aspetta il topo », con armature « più nuove, più forti »; un « Fabbro » arma la Guardia Ducale; un incappucciato di Teramum vuole isolare Lucius Grazianus. Un proclama con le formule e la magia degli atti ufficiali di Teramum vi dichiara sediziosi. Julia Nova e Mushanè sono con voi; Bëllindë ha firmato.",
+  "prossimo": "Uscire da Bëllindë con la dichiarazione dei Melacera e trentanove anime, e affrontare l'ultimo tratto di strada verso Teramum — senza passare per la Via Bianca, come ha chiesto Lucius Grazianus, e aspettando il suo segnale.",
+  "pub": "Tutto è cominciato con un nome nel Tomo del Ricordo Spezzato — « Ardentus » — e con un capitano trascinato via nella notte dalla Caserma Est. A Pietraluna lo avete strappato all'altare di Lyaras, e lì avete visto i suoi ricordi: Solaria in fiamme, un giardino di fiori dorati, un padre Imperatore. « Il mio nome è morto vent'anni fa tra le fiamme di Solaria. Deve restare morto. Da questo momento io sono solo Silvanus. »\n\nA Julia Nova, sulla Terrazza dei Venti, il suo sangue ha disegnato il Sole e le Due Lune nella pietra e Virellius ha gridato al miracolo: il Concilio ha dato il mandato. Il piano di Silvanus non è uccidere Iuvenza nel buio, ma la Grande Convocazione: il Concilio Pretutiano sotto il Gigante Dormiente, a L'Aquila Aurea, davanti a tutte le Casate e le Città Libere. Ma solo il sigillo di Teramum può convocarla. Dunque Teramum è la tappa obbligata — « una missione diplomatica armata ».\n\nSotto lo stendardo di Aldric Aurex la Crociata delle Due Lune ha lasciato Julia Nova: Mushanè è caduta e si è rialzata con Onofrio, Bëllindë ha messo il sigillo dei Melacera sopra un ordine della capitale. Dietro di voi si accumulano testimoni, famiglie, documenti, mercenari, città e nomi. Davanti resta Teramum. E su Teramum ci sono tre certezze: qualcuno vi sta aspettando, qualcuno conosce il vostro nome, e qualcuno ha accesso alle istituzioni.",
+  "gm": "Fili da tenere insieme all'arrivo a Teramum: (1) Iuvenza vuole Silvanus vivo nella sua tana; (2) il « Fabbro » e l'acciaio maledetto della Guardia Ducale (libro mastro della Gilda, Torvus); (3) l'incappucciato del Cristallo di Memoria e Lucius Grazianus isolato; (4) il proclama: chi lo ha firmato non è nelle fonti (vedi faz-consiglio-reggente-teramum); (5) il filatterio di Lyaras e la forgia di annullamento sotto la Cattedrale Ducale, da cui Silvanus deve stare lontano; (6) il « passaggio sotto la Basilica Aurea », la « chiave vera » di Iuvenza; (7) Frate Davide de li Piccole Vie per Mattheus. Il segreto dell'Erede è ormai noto a un intero Concilio e a una piazza: a Teramum non è più un segreto, è una notizia. Coesione della Crociata: cosa succede se Vicarus e Silvanus non si parlano ancora.",
+  "atti": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "links": [
+   "jn-silvanus",
+   "jn-fenix",
+   "faz-crociata-due-lune",
+   "cro-il-cammino",
+   "cro-proclamo-teramum",
+   "q-velthuria-iuvenza",
+   "q-lucius-grazianus",
+   "q-proclamo-teramum",
+   "ogg-stendardo-aldric-aurex",
+   "mito-stirpe-aurex"
+  ]
+ },
+ {
+  "id": "q-rocco",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "Bëllindë",
+  "title": "Chi ha ucciso Rocco Serrafredda",
+  "sub": "Il cavatore del pozzo cieco",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Nel cortile stretto del Borgo Vecchio la vecchia Za' Filumena vi ha raccontato di Rocco e di come è morto. Dentro il pozzo c'era una corda tagliata; a metà discesa un moncone di corda fissato alla pietra, tagliato di netto. I ragazzini del Borgo, messi sotto pressione mentre Adamus teneva impegnata la vecchia, hanno ammesso quello che il Borgo non dice: Rocco è morto, ma non si è ucciso. L'hanno ucciso.",
+  "prossimo": "Risalire dal pozzo e chiedere a chi non vuole parlare: Za' Filumena, i ragazzini, Ruggiero — che ora ha visto coi suoi piedi cosa c'è là sotto.",
+  "pub": "Rocco era sceso in quel pozzo, nel cortile più vecchio e più sporco del Borgo Vecchio. Poi è morto. Il Borgo racconta una versione, Za' Filumena un'altra, e i ragazzini — quando nessun adulto guarda — la terza: « L'hanno ucciso. » Nel pozzo avete trovato una corda tagliata di netto, e sotto la corda avete trovato il resto: un corridoio diritto e un ritmo che tiene il passo di un esercito che non c'è più. Chi ha tagliato la corda sapeva cosa c'era sotto. E non voleva che si sapesse.",
+  "gm": "Le fonti giocate non dicono chi ha ucciso Rocco: il colpevole resta da fissare al tavolo. Elementi già in gioco: Rocco era un cavatore (chi lo ha mandato giù, e perché); la corda tagliata dall'alto; il muro della Porta Murata è « anni, non secoli » — qualcuno in città sapeva già del corridoio; la sorella Nunzia Serrafredda (scena preparata, non giocata: chiede « una parola sopra » il fratello e Don Fulgenzio nega la terra consacrata). Agganci: un rito di Mortus sul corpo di Rocco è la porta naturale per Mattheus; i ragazzini sanno più di quel che hanno detto; Za' Filumena ha « raccontato » — quanto di vero?",
+  "atti": [
+   16
+  ],
+  "links": [
+   "be-rocco-serrafredda",
+   "be-nunzia-serrafredda",
+   "be-za-filumena",
+   "be-i-ragazzini-del-borgo",
+   "q-sottosuolo-bellinde",
+   "q-fondaco-delle-lane",
+   "cro-i-caduti"
+  ]
+ },
+ {
+  "id": "q-fondaco-delle-lane",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "Bëllindë",
+  "title": "Il Fondaco delle Lane e la sua cantina",
+  "sub": "L'incendio di Ottavio Ceruso",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Mentre Vicarus veniva portato via dalla locanda Lu Deng' Rott' — dove Ottavio Ceruso, padrone del Fondaco, lo aveva intercettato lui — la bottega di Ceruso ha preso fuoco. Adamus, trasformato in toro alla catena dei secchi, ha visto uscire dalla porta sul retro Renzo, il manovale, annerito dal fumo, e poi Cascia. Renzo dice che cercava di salvare la lana e non sa come sia scoppiato il fuoco; Cascia non ha detto una parola. Ruggiero ha mandato una guardia alla locanda: Ceruso non c'era più — ha pagato, ha preso la sua roba ed è uscito subito dopo che avevano portato via Vicarus. La cantina, sotto il livello dell'incendio, è intatta: la botola era aperta. Ruggiero ha chiuso il Fondaco con una guardia davanti e una dietro, ha trattenuto Renzo, e « ha smesso di considerarlo un incendio ».",
+  "prossimo": "Parlare con Renzo, che è nelle mani delle guardie; trovare Cascia; chiedere a Ruggiero di entrare nella cantina del Fondaco — e capire dove porta quella botola.",
+  "pub": "Ottavio Ceruso è il mercante di lane che ha cercato Vicarus alla locanda, e il suo Fondaco è bruciato mentre parlavano. La catena dei secchi ha vinto: il piano di sopra è rovinato, la scala mezza bruciata, i registri bagnati o anneriti. Ma la cantina è intatta, con la botola aperta. Renzo è uscito dal fuoco per primo, poi Cascia. Ruggiero, che vi ha trovati proprio lì e per un momento ha sospettato di Adamus, ora ha un edificio che brucia, un padrone che non era più alla locanda e un manovale che « improvvisamente ricorda molto poco ». Il Fondaco è sigillato, e sotto il sigillo c'è una cantina che nessuno ha ancora guardato fino in fondo.",
+  "gm": "I PG NON sanno che Ceruso è in fuga: sanno solo che non era più alla locanda. Il diario di sessione annota che nella cantina, in fondo, c'è un varco nel muro antico segnato col gesso giallo — i PG lo hanno visto solo dalla botola aperta, non lo hanno esplorato. Cascia è nelle immagini disponibili come « Cascia la Sguscia ». Agganci: chi ha appiccato il fuoco e perché proprio mentre Vicarus era con Ceruso; cosa portava via Ceruso nella borsa; il legame tra la cantina del Fondaco e il corridoio del pozzo (il Borgo Vecchio « ha cantine e pozzi che scendono più del dovuto »); Ruggiero è ora il custode dell'accesso — e, dopo la discesa nel pozzo, un testimone.",
+  "atti": [
+   16
+  ],
+  "links": [
+   "be-ottavio-ceruso",
+   "be-renzo",
+   "be-cascia",
+   "be-ruggiero-de-santi",
+   "be-fondaco-delle-lane",
+   "be-locanda-lu-deng-rott",
+   "q-sottosuolo-bellinde",
+   "q-rocco"
+  ]
+ },
+ {
+  "id": "q-druidi-delle-colline",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "Bëllindë",
+  "title": "I druidi delle colline",
+  "sub": "Adamus cerca un contatto",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Il Conte Gisulfo non ha problemi coi druidi, perché i druidi fanno crescere le vigne. Al banco di Donna Egidia Vernacchia, Adamus ha chiesto dove si trovino: vuole mettersi in contatto con loro. La risposta non è ancora arrivata. Sulla strada, Ndònie aveva riconosciuto Mattheus come un « toccàte » della Vecchia Madre, e Adamus ha sognato i tratturi strozzati da una pietra: « Hanno chiuso la strada ai vivi. Per questo i morti non possono più passare. »",
+  "prossimo": "Tornare da Donna Egidia per la risposta, o cercare i druidi da soli nelle vigne a sud di Bëllindë.",
+  "pub": "Nelle colline e sui monti del Ducato la Fiamma non è mai arrivata del tutto: i contadini pregano il Sole in pubblico e la Vecchia Madre in segreto, e i druidi parlano alla terra. Adamus, che si trasforma in orso e in toro e sente la terra rispondere, vuole trovare i suoi: a Bëllindë ha chiesto di loro a Donna Egidia, l'unica che ancora volesse parlare con uno della Crociata. Per ora, silenzio. Ma il Conte li tollera, e in un borgo dove tutti guardano e distolgono gli occhi, i druidi potrebbero essere gli unici a non aver letto il proclama.",
+  "gm": "I druidi di Bëllindë non sono scritti nelle fonti giocate (vedi faz-druidi-colline: proposta di un piccolo cerchio nelle vigne a sud). Egidia è il tramite naturale. Cose che i druidi possono sapere e i PG no: cosa c'è sotto il Borgo Vecchio (« l'oro dei pagani »), il significato del collare a otto punte e dei « lupàre », perché i tratturi chiusi fanno soffrire anche i morti. Riconoscere Adamus come uno dei loro vale un alleato fuori dalla portata del proclama.",
+  "atti": [
+   12,
+   15,
+   16
+  ],
+  "links": [
+   "faz-druidi-colline",
+   "be-donna-egidia-vernacchia",
+   "mito-vecchia-madre",
+   "mito-lupare-otto-punte",
+   "q-collare-otto-punte",
+   "q-tratturi-chiusi",
+   "ogg-collare-otto-punte"
+  ]
+ },
+ {
+  "id": "q-scuse-a-mimi",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "Bëllindë",
+  "title": "Le scuse di Vicarus a Mimì",
+  "sub": "Un banditore offeso",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "In Piazza Grande Vicarus ha tormentato Mimì lu Bannitòre col pensiero telepatico mentre leggeva il proclama. Mimì, offeso, è andato a chiamare le guardie, che hanno portato via Vicarus dalla locanda. Ruggiero non ne ha fatto un arresto: « un insulto al banditore si chiude con delle scuse ». Ma è un ordine, e non è ancora stato eseguito.",
+  "prossimo": "Vicarus deve trovare Mimì e chiedergli scusa, davanti a chi serve — meglio prima che Ruggiero se ne ricordi.",
+  "pub": "Mimì lu Bannitòre è la voce di Bëllindë: dal murello della Piazza Grande ha letto il proclama di Teramum che vi chiama colonna armata senza mandato. Vicarus ha risposto a modo suo, dentro la testa del banditore, e Mimì lo ha fatto prendere dalle guardie. Ruggiero ha chiuso la faccenda con una condizione sola: delle scuse. In una città che vi guarda e poi distoglie gli occhi, come Vicarus si scuserà — e davanti a chi — dirà alla piazza più di qualunque proclama.",
+  "gm": "Scena piccola ma pubblica: la piazza ha già « tirato le proprie conclusioni da sola ». Scuse fatte bene davanti alla gente (Persuasione o interpretazione) possono ribaltare un pezzo di diffidenza; Mimì, come banditore, è anche l'uomo che legge ad alta voce ciò che gli si mette in mano — la dichiarazione di Gisulfo, per esempio. Scuse mancate: Ruggiero lo segna, e Vicarus è già l'uomo che ha bruciato un prigioniero arreso.",
+  "atti": [
+   16
+  ],
+  "links": [
+   "be-mimi-lu-bannitore",
+   "be-ruggiero-de-santi",
+   "be-piazza-grande",
+   "q-proclamo-teramum",
+   "cro-proclamo-teramum"
+  ]
+ },
+ {
+  "id": "q-proclamo-teramum",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "Bëllindë",
+  "title": "Il proclamo di Teramum e la diffidenza di Bëllindë",
+  "sub": "Qualcuno scrive la vostra storia prima di voi",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Il proclama parla della « Crociata delle Due Lune » come compagnia armata senza mandato, sospettata di sedizione, aggressione contro autorità ecclesiastiche e reclutamento illecito; intima di non darvi uomini, cavalli, armi, denaro, vettovaglie o ospitalità e di riferire i vostri movimenti. Maximus lo ha letto: formule di un vero atto amministrativo. Vicarus ha trovato una componente coerente con le procedure di autenticazione arcana di Teramum. Gisulfo ne aveva una copia prima del vostro arrivo, e ha firmato una dichiarazione che lo contraddice punto per punto. A Bëllindë Mimì lo ha letto in piazza; nessuno di voi ha risposto; da allora la gente guarda e distoglie gli occhi, e Ruggiero non ha alzato un dito per aiutarvi.",
+  "prossimo": "Rispondere alla piazza — con la dichiarazione dei Melacera in mano — o lasciare che Bëllindë continui a decidere da sola chi siete.",
+  "pub": "Non una spada, non un esercito: una pergamena. La narrazione contro di voi si muove più in fretta dei fatti che dovrebbe raccontare. Un bambino sulla strada per Bëllindë non ha chiesto chi siete: ha detto « sò' arrivate quille de le Du' Lune », e sua madre lo ha zittito. Il proclama non è un falso: qualcuno ha accesso ai meccanismi con cui Teramum rende ufficiali i propri atti. Non dice quale autorità lo abbia ordinato. Dice però che la rete contro Silvanus non lavora più solo con mercenari, spie e denaro: qualcuno sa muoversi dentro le istituzioni.\n\nA Bëllindë ve ne siete infischiati, e la piazza ha tirato le sue conclusioni. Poi vi ha visti scendere in un pozzo. Ora la città si chiede che cosa stiate facendo sotto di lei.",
+  "gm": "L'autorità dietro il proclama non è fissata nelle fonti. Il proclama sarà letto in ogni borgo da qui a Teramum. La dichiarazione di Gisulfo è la contromossa non ancora usata: letta in piazza dopo il bando (dal banditore stesso, se Vicarus si è scusato) ribalta la scena. La discesa nel pozzo aggrava la diffidenza: quando risalgono, Bëllindë avrà una domanda. Legami: chi ha accesso ai sigilli di Teramum è la stessa mano che ha scritto le lettere del Cristallo di Memoria? (non provato).",
+  "atti": [
+   15,
+   16
+  ],
+  "links": [
+   "ogg-proclama-teramum",
+   "ogg-dichiarazione-gisulfo",
+   "cro-proclamo-teramum",
+   "faz-consiglio-reggente-teramum",
+   "be-conte-gisulfo-melacera",
+   "be-ruggiero-de-santi",
+   "be-mimi-lu-bannitore",
+   "q-scuse-a-mimi",
+   "q-silvanus-a-teramum"
+  ]
+ },
+ {
+  "id": "q-sottosuolo-bellinde",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "Bëllindë",
+  "title": "Il sottosuolo di Bëllindë",
+  "sub": "Il Pozzo Cieco e la Galleria della Schiera",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "In fondo al pozzo di Rocco la pietra cambia: blocchi enormi, squadrati, senza malta, molto più vecchi di Bëllindë. Il pozzo si apre di lato su un corridoio perfettamente diritto, e dal buio risponde un ritmo — TAC. TAC. TAC. — che si ferma quando vi fermate. Per Mattheus la magia è nella struttura: filamenti di Ammaliamento antichissimo che pulsano a tre a tre, fatti per dirigere qualcuno; il Senso Divino di Alessandros non vede nulla. Il corridoio finiva contro una Porta Murata rozza e recente — « anni, non secoli » — con una crepa a cinque direzioni: è crollata. Oltre, la Galleria della Schiera: decine di solchi paralleli consumati da migliaia di piedi, crolli, acqua nera immobile, nicchie con blocchi incisi che pulsano a ogni TAC (amplificatori, non la fonte). I comandi « ALLINEATI » e « AVANTI » vi prendono le gambe: tre di voi si sono messi in formazione, Luigis è partito da solo e Maximus se l'è caricato in spalla — il comando muove un corpo, ma non lo rende più forte di chi lo trattiene. La Protezione dal Bene e dal Male non serve. Anche Ruggiero, sceso con Adamus e Vicarus, è finito allineato: « Non camminate dove vuole lui. » Vicarus ricorda che il Borgo Vecchio è costruito sopra qualcosa che esisteva già, ma nella storia ufficiale non c'è una riga. Adamus ha sfondato la parete a sinistra: dietro, un cunicolo stretto senza solchi né iscrizioni, con tracce debolissime di magia, che corre parallelo alla galleria e sbocca oltre il tratto pericoloso.",
+  "prossimo": "Decidere se seguire i solchi lungo la Galleria della Schiera — dove il ritmo continua — o infilarsi nella breccia di Adamus, che aggira i comandi.",
+  "pub": "Sotto il Borgo Vecchio c'è una cosa che nessuna cronaca di Bëllindë nomina: un corridoio di blocchi squadrati, e una cadenza di marcia che continua a tenere il passo di un esercito che non c'è più. Non una creatura, non un oggetto: la struttura stessa è incantata, e i suoi ordini — ALLINEATI, AVANTI — non chiedono il permesso alle gambe. Qualcuno, anni fa, ha murato in fretta quella porta; qualcosa, una volta sola, ha spinto dall'altra parte. Ora la porta è a terra, il muro a sinistra ha un buco fatto da Adamus, e Ruggiero de' Santi ha visto il proprio piede muoversi senza di lui.\n\nSiete in sette là sotto, più un sergente: Alessandros e Maximus sui solchi, Luigis in spalla a Maximus, Mattheus fuori linea con la trama di Ammaliamento davanti agli occhi, Adamus e Vicarus sulla breccia. Il ritmo continua.",
+  "gm": "Limitare il testo per i giocatori a ciò che hanno visto nell'Atto XVI. Non rivelare: cosa c'è oltre la Galleria, chi ha murato la Porta e perché, il rapporto tra Rocco e i comandi, la natura della fonte del ritmo, cosa sorveglia il tratto. Meccaniche viste: rompere una nicchia rende muto quel tratto, non spegne il sistema; il comando muove il corpo ma non lo rende più forte di chi trattiene; il cunicolo di Adamus è « il retro del meccanismo » e nel diario sbocca « dalla parte della Caserma degli Armigeri » — non citato nel testo per i giocatori su indicazione di regia. Il sistema è militare (formazione elementare): Maximus è il personaggio che lo legge meglio. Collegamenti con i Sigilli: vedi mito-sigilli-lunari (gm).",
+  "atti": [
+   16
+  ],
+  "links": [
+   "be-il-pozzo-cieco",
+   "be-borgo-vecchio",
+   "be-ruggiero-de-santi",
+   "q-rocco",
+   "q-fondaco-delle-lane",
+   "q-sigilli-lunari",
+   "mito-sigilli-lunari",
+   "mito-leggende-del-ducato"
+  ]
+ },
+ {
+  "id": "q-sigilli-lunari",
+  "cat": "quest",
+  "city": null,
+  "group": "I Sigilli",
+  "title": "Il Primo Sigillo e i Sigilli",
+  "sub": "Risonanza, Memoria — e gli altri",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Un anno prima dell'Atto I avete infranto il Primo Sigillo — quello della Risonanza — al Santuario di Lunaria, e da allora sentite un potere nuovo: il Custode della Torre di Ombretra vi ha detto che quella rottura vi ha « risvegliati ». Il Secondo Sigillo, quello della Memoria, era il bersaglio di Sylva Noctis: la sua corruzione crea i Forgiati, « più antico del primo, più vicino, più sporco: non nel sottosuolo, ma dentro chi ha smesso di essere umano ». A Pietraluna, quando Maia ha risposto ad Alessandros, il Secondo Sigillo è stato purificato. Meren aveva detto: « Il sigillo non si è spezzato… si è riscritto. E la sua nuova legge è l'oblio. » Si racconta che i Sigilli siano sette, e che uno sia sotto la Basilica Aurea di Teramum. Il diario di Iuvenza parla di un « passaggio sotto la Basilica Aurea » come della « chiave vera ».",
+  "prossimo": "Capire cosa sia la Risonanza che vi lega alla profezia, e cosa cerchi Iuvenza sotto la Basilica Aurea di Teramum.",
+  "pub": "Cristalli d'ombra forgiati nei mesi dopo la Frattura, ciascuno con un frammento della luna morta: così le cronache raccontano i Sigilli Lunari. Ne avete toccati due. Il Primo lo avete infranto voi, a Lunaria, prima ancora che questa storia cominciasse — e da allora sei ombre crescono sotto sei lune. Il Secondo lo avete visto lavorare: la Forgiatura che svuota la memoria, Colleventoso in piedi nell'abbazia, Silvanus sull'altare. Lo avete purificato, non distrutto: « Voi che ricordate… siete più forti di chi riscrive. »\n\nDegli altri sapete solo quello che si dice — e che Veneranda Iuvenza, che « è ossessionata dal sapere », ha scritto nel suo diario che sotto la Basilica Aurea di Teramum c'è la chiave vera.",
+  "gm": "Ordine e natura dei Sigilli (Magia e Fede, Parte IV): I Risonanza (infranto a Lunaria), II Memoria (purificato a Pietraluna), III Carne, IV Comando, V Follia, VI Segreti, VII Fine. Il Sigillo sotto la Basilica Aurea è la « chiave vera » di Iuvenza. Il sottosuolo di Bëllindë — comandi che muovono i corpi — va lasciato senza etichetta finché i PG non collegano da soli. Obiettivo a lungo termine: purificare, non distruggere; Alessandros (Equilibrio) e Mattheus (Mortus) sono le due chiavi già emerse. Il Primo Sigillo infranto non è più stato nominato dopo l'Atto I: (proposta) la Risonanza è ciò che il Bastone di Lyaras e la Spilla di Vicarus « sentono ».",
+  "atti": [
+   1,
+   4,
+   5,
+   7,
+   9,
+   11,
+   16
+  ],
+  "links": [
+   "mito-sigilli-lunari",
+   "mito-profezia-sei-ombre",
+   "mito-la-frattura",
+   "q-torre-di-ombretra",
+   "q-chiave-vera-basilica-aurea",
+   "q-sottosuolo-bellinde",
+   "q-pietraluna",
+   "ogg-pendente-pietra-lunare"
+  ]
+ },
+ {
+  "id": "q-cappella-mortus-mushane",
+  "cat": "quest",
+  "city": "mushane",
+  "group": "Mushanè",
+  "title": "La cappella di Mortus a Mushanè",
+  "sub": "Un luogo capace di sopravvivere alla partenza di Mattheus",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "La sera del giudizio Mattheus è tornato da Onofrio, Abate da poche ore, e non gli ha parlato della guerra: gli ha chiesto di poter costruire una piccola cappella di Mortus, separata da San Pietro — un posto dove qualcuno possa entrare, fermarsi, ricordare i propri morti e forse imparare a pregare. Vuole che resti memoria del suo passaggio. Ci ha messo cento monete d'oro sue. Onofrio ha accettato che il progetto nasca. La Crociata è partita il mattino dopo: la cappella è ancora da costruire.",
+  "prossimo": "Far sapere a Onofrio come deve essere fatta, e a chi affidarla — o tornare, un giorno, a vedere se qualcuno ci prega.",
+  "pub": "Mattheus ha aperto la sua fede in Mortus dentro una cattedrale della Fiamma per curare i suoi, e poi ha condotto un Abate alla confessione. Onofrio, che ha visto tutto, ha detto sì: una cappella piccola, separata da San Pietro, abbastanza concreta da rappresentare una cosa che Mattheus non aveva mai avuto — un luogo di Mortus capace di sopravvivere alla sua partenza. « Mortus, accòjele, Mortus, accompàgnele, Mortus, faje truvà la via… » A Bëllindë Gisulfo gli ha concesso di predicare e riunire chi vuole ascoltarlo: in una sola giornata Mattheus ha seminato la sua fede in due città.",
+  "gm": "Non ancora fissati: chi la costruisce, dove (fuori le mura? nell'orto dell'Abbazia?), chi la custodisce (Frate Simone bibliotecario vorrebbe scrivere la liturgia; un novizio di Onofrio). Rischio: per la Chiesa è l'eresia più grave; se Virellius o l'Inquisizione mettono a verbale Mushanè, Mattheus è processabile e Onofrio compromesso. Aggancio a Bëllindë: Nunzia Serrafredda e « una parola sopra » Rocco — il primo rito pubblico di Mortus fuori da Julia Nova.",
+  "atti": [
+   15,
+   16
+  ],
+  "links": [
+   "mito-mortus",
+   "mu-frate-onofrio",
+   "mu-01-cattedrale-san-pietro",
+   "faz-abbazia-mushane",
+   "q-fedeli-di-mortus",
+   "jn-padre-cassio"
+  ]
+ },
+ {
+  "id": "q-fedeli-di-mortus",
+  "cat": "quest",
+  "city": "teramum",
+  "group": "Personali",
+  "title": "Mortus a Bëllindë e a Teramum",
+  "sub": "Frate Davide de li Piccole Vie e i fedeli che verranno",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Padre Cassio, a Julia Nova, ha lasciato a Mattheus una lista di fedeli di Mortus a Teramum: in cima, Frate Davide de li Piccole Vie. A Bëllindë il Conte Gisulfo ha fatto una distinzione: impedire a qualcuno di pregare è una cosa, riconoscere un culto nuovo un'altra. Mattheus può parlare di Mortus, pregare e riunire chi voglia ascoltarlo senza che nessuno sia perseguitato. « Se dopo la vostra partenza qualcuno continuerà a pregare, allora si potrà parlare di qualcosa di permanente. »",
+  "prossimo": "Trovare a Bëllindë qualcuno a cui parlare di Mortus prima di ripartire; a Teramum, cercare Frate Davide de li Piccole Vie.",
+  "pub": "Un chierico di Mortus non ha templi: ha una lista di nomi e il permesso, quando lo ottiene, di parlare. A Teramum, si dice, il tempio di Mortus è sigillato; ma c'è una lista, e in cima c'è un frate delle Piccole Vie. A Bëllindë c'è un Conte che non vieta e non riconosce. In mezzo c'è tutto quello che Mattheus riuscirà a seminare tra un pozzo e una marcia.",
+  "gm": "Frate Davide è il contatto naturale per muoversi a Teramum fuori dalle vie ufficiali (le « Piccole Vie »). A Bëllindë la scena preparata e non giocata è Nunzia Serrafredda (rito per Rocco davanti a otto persone: nascita di una liturgia). Il permesso di Gisulfo vale finché Gisulfo regge: se il proclama diventa legge, Mattheus è la prima « aggressione contro autorità ecclesiastiche » da mettere a verbale.",
+  "atti": [
+   11,
+   15
+  ],
+  "links": [
+   "mito-mortus",
+   "ogg-lista-fedeli-mortus",
+   "jn-padre-cassio",
+   "be-conte-gisulfo-melacera",
+   "be-nunzia-serrafredda",
+   "q-cappella-mortus-mushane",
+   "q-rocco"
+  ]
+ },
+ {
+  "id": "q-velthuria-iuvenza",
+  "cat": "quest",
+  "city": "teramum",
+  "group": "Teramum",
+  "title": "Veneranda Iuvenza di Velthuria",
+  "sub": "La Dama del Loto d'Ombra vi aspetta a Teramum",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Iuvenza vi ha usati come « giardinieri inattesi » contro Domina, poi ha fatto uccidere Tonio e Marco e rubato Lyraeth, ha venduto la missione di Pietraluna a Lyaras, e ha lasciato Altavia per Teramum: « Quando il porto brucia, il fumo coprirà la mia ascesa al Colle. » Vuole farsi nominare Reggente sul caos che ha creato. I suoi mercenari col Loto Nero — vesperiani pagati in oro straniero — hanno chiuso la Via Salaria e il Passo dei Frati, tenevano Mushanè con Lekë Muzàka, e il suo Osservatore Lu Grise vi ha seguiti fino alla cattedrale. Dall'ultima armatura di Altavia ha parlato con la sua voce: « Ne ho altri. Più nuovi. Più forti. Vi aspettano a Teramum. Portatelo a me. » Avete le prove: il libro mastro cifrato di Domina, la lettera con le 200 monete per Gofferio, il Cristallo di Memoria, il diario, il Sigillo da Contratto del Loto Nero, il Libro paga di Lekë.",
+  "prossimo": "Arrivare a Teramum con le prove in mano e Silvanus vivo — sapendo che lei conta esattamente su questo.",
+  "pub": "« Voi siete ossessionati dal fare. Io sono ossessionata dal sapere. Perché chi sa, controlla. » La matriarca di Casa Velthuria è la banca di Julia Nova, la mano dietro i Naviganti Grigi di Domina, la padrona degli assassini che hanno lasciato profumo di Loto d'Ombra sul molo del Covo. Non ha mai combattuto: ha comprato, venduto, aspettato. Ha comprato un Abate con duecento monete e una compagnia vesperiana con un sigillo nero. Ha perso Altavia — che non era mai stata sua — e Mushanè. Ma ha Lyraeth, ha un uomo incappucciato nel Consiglio Ducale, e ha detto « ci vediamo a Teramum » con il sorriso di chi ha già scelto il posto.\n\nConti aperti: Tonio e Marco (« costi operativi »), la Masseria dei Colabelle con una fibbia vesperiana tra la cenere, l'elmo bruciato sulla picca della Via Salaria, i quattro di Lu Vallòne.",
+  "gm": "Ciò che i PG non sanno: cosa ha fatto di Lyraeth e cosa ha imparato da lui; il nome dell'incappucciato di Teramum; quali siano le « nuove armature »; se la firma dietro il proclama sia sua. Manca ancora chi colleghi il Loto Nero al nome Velthuria davanti a un tribunale: Kostandìn è l'unico testimone possibile. Il suo diario mostra sfiducia verso i Celamanti: Iuvenza e Sylva Noctis non sono la stessa cosa — un cuneo utilizzabile. Sviluppo: la Grande Convocazione è il luogo dove la si fa rispondere in pubblico, non un vicolo.",
+  "atti": [
+   4,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   12,
+   14,
+   15,
+   16
+  ],
+  "links": [
+   "jn-veneranda-iuvenza",
+   "faz-casa-velthuria",
+   "faz-loto-nero",
+   "faz-compagnie-vesperiane",
+   "jn-lu-grise",
+   "mu-osservatore-lu-grise",
+   "ogg-cristallo-di-memoria",
+   "ogg-diario-di-iuvenza",
+   "ogg-lettera-gofferio",
+   "ogg-sigillo-contratto-loto-nero",
+   "q-lucius-grazianus",
+   "q-silvanus-a-teramum",
+   "q-altavia",
+   "jn-tonio-e-marco"
+  ]
+ },
+ {
+  "id": "q-lucius-grazianus",
+  "cat": "quest",
+  "city": "teramum",
+  "group": "Teramum",
+  "title": "Il padre di Maximus",
+  "sub": "Lucius Grazianus, il vero bersaglio",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Nel Cristallo di Memoria di Altavia, Iuvenza e un uomo incappucciato con accento aristocratico di Teramum passano in rassegna il Consiglio Ducale — Mazzarellus è cieco, Savinellus si compra, De Spina si distrae — e si fermano su un nome: Lucius Grazianus. « Isolatelo. E il figlio? Tenetelo distratto. Non deve mai capire che suo padre è il vero bersaglio. E se capisse… i sentieri tra Julia Nova e Teramum sono lunghi. E pieni di incidenti. » La notte prima della partenza il falco di Maximus ha portato due righe del padre: « Non venire per la Via Bianca. Aspetta mio segnale. — Grazianus. » Il segnale non è arrivato. Mattheus ha portato il Cristallo a Cyrius Meren perché ne estragga i nomi.",
+  "prossimo": "Aspettare il segnale di Lucius — o trovare il modo di farglielo mandare — e tenere Maximus lontano dagli « incidenti ».",
+  "pub": "Maximus è venuto a Teramum per la Crociata; ma qualcuno, a Teramum, aspetta lui per un altro motivo. Suo padre Lucius siede nel Consiglio Ducale ed è l'unico che il complotto non riesce né a comprare né a distrarre: vogliono isolarlo. Il figlio deve restare distratto, e se capisce, i sentieri sono lunghi. Maximus ha capito. E ha già quattro mercenari vesperiani al suo soldo, un sigillo dello Stratega e una lettera di due righe: « Aspetta mio segnale. »",
+  "gm": "Il nome dell'incappucciato e cosa Meren abbia estratto dal Cristallo non risultano rivelati ai PG. Lucius ha chiesto di NON passare per la Via Bianca: la Crociata ha seguito la Via delle Colline — la richiesta è rispettata finora. Il segnale del padre è lo strumento del DM per dettare tempi e via d'ingresso a Teramum. Vasco e i tre vesperiani di Maximus: fedeltà comprata, non provata.",
+  "atti": [
+   11,
+   12
+  ],
+  "links": [
+   "faz-casa-grazianus",
+   "ogg-cristallo-di-memoria",
+   "ogg-messaggio-del-falco",
+   "jn-cyrius-meren",
+   "faz-consiglio-reggente-teramum",
+   "q-velthuria-iuvenza",
+   "q-silvanus-a-teramum",
+   "q-mercenari-della-crociata"
+  ]
+ },
+ {
+  "id": "q-chiave-vera-basilica-aurea",
+  "cat": "quest",
+  "city": "teramum",
+  "group": "Teramum",
+  "title": "Il passaggio sotto la Basilica Aurea",
+  "sub": "« La chiave vera » del diario di Iuvenza",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Il diario di Iuvenza, trovato ad Altavia, parla di un « passaggio sotto la Basilica Aurea » di Teramum: la chiave vera. Nello stesso diario, una sfiducia profonda verso i Celamanti. L'Arconte Meren ha detto a Mattheus che il filatterio di Lyaras si può spezzare solo nella forgia di annullamento sotto la Cattedrale Ducale di Teramum — e che Silvanus non deve avvicinarsi. Si racconta che uno dei Sigilli Lunari sia sotto la Basilica Aurea, attivato dai difensori durante la Guerra.",
+  "prossimo": "A Teramum: scoprire cosa cerca Iuvenza sotto la Basilica prima che lo trovi lei.",
+  "pub": "Iuvenza non corre per salvare nessuno: si prepara a ereditare. E la cosa che vuole ereditare non è un titolo — è sotto la Basilica Aurea di Teramum. Il suo diario la chiama « la chiave vera ». Meren parla di una forgia di annullamento sotto la Cattedrale Ducale. Le leggende parlano di un Sigillo. Tre voci, un solo sottosuolo.",
+  "gm": "Basilica Aurea e Cattedrale Ducale: le fonti usano entrambi i nomi; chiarire se sono lo stesso edificio. Il Sigillo sotto la Basilica è il Sigillo di Teramum del Manuale; il passaggio è ciò che Iuvenza cerca per « riempire il vuoto di potere ». Silvanus vicino al filatterio: rischio narrativo esplicito (Meren). Chi conosce il passaggio: (proposta) Frate Davide de li Piccole Vie.",
+  "atti": [
+   9,
+   11
+  ],
+  "links": [
+   "ogg-diario-di-iuvenza",
+   "ogg-filatterio-di-lyaras",
+   "mito-sigilli-lunari",
+   "q-sigilli-lunari",
+   "q-filatterio-di-lyaras",
+   "q-velthuria-iuvenza",
+   "jn-cyrius-meren"
+  ]
+ },
+ {
+  "id": "q-filatterio-di-lyaras",
+  "cat": "quest",
+  "city": "teramum",
+  "group": "Teramum",
+  "title": "Il filatterio di Lyaras",
+  "sub": "Il Lich non è morto: è in pausa",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Lyaras morente ha legato la sua morte all'isola; ma la scatola di ossidiana strappata all'altare di Pietraluna, dice l'Arconte Cyrius Meren, è il suo filatterio: il Lich « non è morto, è in pausa ». Solo la forgia di annullamento sotto la Cattedrale Ducale di Teramum può spezzarlo, e Silvanus non deve avvicinarsi. Il Bastone di Lyaras, secondo Elara, « non è un bastone da mago: è un condotto, un'antenna » che sussurra con la voce della Fata Oscura. A Lu Vallòne il Bastone ha parlato a Vicarus con voce gentile: « Non sono io che cambio te. Sei tu che stai diventando ciò che eri. »",
+  "prossimo": "Portare la scatola d'ossidiana a Teramum e trovare la forgia di annullamento — tenendo Silvanus e il Bastone a distanza l'uno dall'altro.",
+  "pub": "Avete visto Lyaras Vel'Quoril dissolversi in un'onda di memoria. Non basta. Ciò che resta di lui sta in una scatola di ossidiana che viaggia con voi, e in un bastone che Vicarus non lascia più. Meren è stato chiaro: Silvanus è « un'Eclissi che cammina », e un Lich in pausa vicino all'ultimo sangue solare è un rischio che nessuno ha ancora misurato. Virellius, se vedesse l'aura del Bastone, farebbe domande che bruciano.",
+  "gm": "Il Bastone è il canale con cui Lyaras/la Fata Oscura può tornare a parlare: la « voce gentile » è l'inizio. La frattura Vicarus–Silvanus (Vasco bruciato) e il Bastone sono la stessa trama. Silvanus ha intuito i « pesi » di Vicarus e Mattheus e non ha chiesto. Chi altri sa del filatterio: Meren, i PG — non Fenix, non il Concilio (non risulta).",
+  "atti": [
+   7,
+   9,
+   12
+  ],
+  "links": [
+   "ogg-filatterio-di-lyaras",
+   "ogg-bastone-di-lyaras",
+   "jn-cyrius-meren",
+   "jn-elara-manodoro",
+   "q-bastone-di-lyaras",
+   "q-chiave-vera-basilica-aurea",
+   "q-pietraluna"
+  ]
+ },
+ {
+  "id": "q-fabbro-di-teramum",
+  "cat": "quest",
+  "city": "teramum",
+  "group": "Teramum",
+  "title": "Il « Fabbro » di Teramum",
+  "sub": "Armi non contrassegnate e acciaio maledetto",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Il libro mastro mezzo bruciato della Gilda, consegnato ad Adamus da Yuri, registra pagamenti regolari a un « fabbro » di Teramum per armi non contrassegnate. Al Consiglio delle Mappe Silvanus e Fenix hanno detto che a Teramum un « Fabbro » nuovo arma la Guardia Ducale con acciaio maledetto; Torvus parla di metalli che non dovrebbero esistere. Il frammento del nemico esaminato da Torvus era « roba d'elf'… ma guasta ».",
+  "prossimo": "A Teramum, seguire i pagamenti del libro mastro fino alla bottega giusta — con Adamus, che ha il registro, e Torvus, che conosce il metallo.",
+  "pub": "Chi ha armato i Naviganti Grigi di Domina Syel? Chi arma oggi la Guardia Ducale di Teramum? Il libro mastro della Gilda ha una risposta a metà: un « fabbro », pagato con regolarità, per lame senza marchio. Torvus ha visto il ferro lunare corrotto dei Forgiati e sa che c'è qualcuno, a Teramum, che lo lavora.",
+  "gm": "Il Fabbro non è nominato nelle fonti giocate; collegamento naturale con il ferro lunare (Elara, Talismano dell'Eco) e con le « nuove armature » di Iuvenza. Il Sigillo da Contratto del Loto Nero e il Libro paga di Lekë sono i registri gemelli: tre libri contabili, una rete.",
+  "atti": [
+   9
+  ],
+  "links": [
+   "nav-libri-mastri-e-mappe",
+   "jn-torvus-halderan",
+   "jn-yuri",
+   "ogg-talismano-eco",
+   "faz-consiglio-reggente-teramum",
+   "q-velthuria-iuvenza"
+  ]
+ },
+ {
+  "id": "q-alto-celomante",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "L'Alto Celomante",
+  "sub": "Il burattinaio oltre il mare",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "A Pietraluna, Therxil riferiva a uno specchio d'ossidiana da cui parlava la voce dell'Alto Celomante; lo specchio si è incrinato e spento. Lyaras morente ha detto che Sariel non è una disertrice ma un'agente dell'Alto Celomante, mandata a far eliminare il suo tenente impazzito — e che l'Alto Celomante « ha già ciò che vuole ». Silvanus teme che, se l'Alto Celomante scopre il fallimento, « brucerà Aprutium fino al Gran Sasso per trovarmi ». Gli emissari di Sylva Noctis erano a Julia Nova da mesi come diplomatici e mercanti di vini, e uscivano all'alba dalle tenute di Velthuria.",
+  "prossimo": "Nessuna mossa immediata: tenere gli occhi aperti su Sariel e sugli infiltrati, e non lasciare che il nome di Aurelius attraversi il mare.",
+  "pub": "Lyaras era un profeta pazzo che sacrificava la sua stessa gente; ma sopra Lyaras c'era una voce in uno specchio, e sopra la voce un disegno più freddo: un Imperatore forgiato sul Trono Vacante, l'Impero conquistato senza sguainare una spada. Il disegno è fallito a Pietraluna. Chi lo aveva concepito non ha ancora detto una parola.",
+  "gm": "Cosa « ha già » l'Alto Celomante non è rivelato: (proposta) il nome e il volto di Silvanus — quindi la caccia all'Erede è aperta anche da oltremare. Sariel è sparita dopo il diversivo a est. Il diario di Iuvenza mostra sfiducia verso i Celamanti: l'Alto Celomante e Velthuria sono alleati di comodo, non amici.",
+  "atti": [
+   7,
+   8
+  ],
+  "links": [
+   "faz-sylva-noctis",
+   "mito-celamanti",
+   "q-sariel",
+   "q-infiltrati-julianova",
+   "q-pietraluna",
+   "jn-silvanus"
+  ]
+ },
+ {
+  "id": "q-sariel",
+  "cat": "quest",
+  "city": "strada",
+  "group": "Il mare",
+  "title": "Sariel, la falsa disertrice",
+  "sub": "La drow del cutter nero",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Sotto le Scogliere del Silenzio una drow dalla pelle cinerea e dagli occhi viola, Sariel, vi ha affiancati su un cutter nero dalla vela magica dichiarandosi disertrice di Sylva Noctis: vi ha detto che Iuvenza vi aveva venduti a Lyaras, vi ha indicato il tunnel sommerso, ha consegnato a Matthios un medaglione che pulsava avvicinandosi alla meta, poi ha virato a est per un diversivo. Lyaras morente ha riso: Sariel è un'agente dell'Alto Celomante, e vi ha usati come esecutori. Dov'è ora, non lo sapete.",
+  "prossimo": "Nessuna pista: se il medaglione di Sariel pulsa di nuovo, qualcosa si avvicina.",
+  "pub": "Aveva ragione su tutto — su Iuvenza, sul tunnel, sulla trappola all'approdo — e proprio per questo vi ha portati esattamente dove voleva. Sariel ha spinto sei eroi contro un Lich per conto di chi quel Lich lo voleva morto. Vi ha lasciato un medaglione, un diversivo a est, e nessun saluto.",
+  "gm": "Il medaglione di Sariel è ancora con Matthios/il gruppo: (proposta) strumento di localizzazione a doppio senso — l'Alto Celomante sa dove sono i PG. Ricomparsa possibile a Teramum, come « diplomatica » o come killer del Lich in pausa (vuole il filatterio?).",
+  "atti": [
+   7
+  ],
+  "links": [
+   "ogg-medaglione-di-sariel",
+   "faz-sylva-noctis",
+   "q-alto-celomante",
+   "q-pietraluna"
+  ]
+ },
+ {
+  "id": "q-infiltrati-julianova",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "Gli infiltrati di Julia Nova",
+  "sub": "Il roster di Pietraluna e le prove della Caserma Est",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Nel baule di Therxil, a Pietraluna: mappe di Julia Nova con i pozzi principali cerchiati in rosso, i punti deboli delle mura, e un elenco degli agenti Celomanti già infiltrati in città — tra i nomi un mercante del porto e un accolito della Basilica di Valerus. Al Concilio, Aulo Dernas aveva mostrato un simbolo del Sole trovato addosso a un Forgiato caduto nella caserma. Silvanus ha ricordato registri falsificati alla Caserma Est: « pesce guasto » scaricato di notte alle Scogliere del Silenzio — persone, non pesce.",
+  "prossimo": "Consegnare il roster a Fenix, se non è già stato fatto, e cercare i registri del « pesce guasto » alla Caserma Est.",
+  "pub": "Julia Nova è salva ma non pulita. I nomi dell'elenco di Pietraluna sono ancora dentro le mura: un mercante al porto, un accolito nella Basilica. I pozzi cerchiati in rosso sono gli stessi in cui è finito « lu liquore ». E alla Caserma Est ci sono, forse, i registri che provano il traffico di persone alle Scogliere del Silenzio. Fenix tiene la città con lo sputo; a lui restano gli occhi aperti — « molto aperti ».",
+  "gm": "Non risulta che il roster sia stato consegnato a Fenix né che i nomi siano stati letti al tavolo: sono da inventare. L'accolito della Basilica è il « traditore col simbolo del Sole » di Dernas. Questo filo vive a Julia Nova mentre i PG sono lontani: notizie via Talismano dell'Eco (Elara) o via Gilda (Biagio « un paio d'orecchie al bancone »).",
+  "atti": [
+   4,
+   7,
+   8
+  ],
+  "links": [
+   "ogg-carte-di-pietraluna",
+   "jn-fenix",
+   "jn-caserma-est",
+   "jn-basilica-fiamma-eterna",
+   "jn-quartiere-del-porto",
+   "q-liquore-nei-pozzi",
+   "q-alto-celomante"
+  ]
+ },
+ {
+  "id": "q-liquore-nei-pozzi",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "« Lu liquore » nei pozzi di Julia Nova",
+  "sub": "La maledizione di Domina Syel",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Domina morente: « Il veleno… 'lu liquore'… non serve solo per forgiare anime a Pietraluna. È già nell'acqua… nei pozzi… La sete… arriverà per tutti… » Lyraeth ha confermato che il « liquore » distribuito nei pozzi e nelle taverne ha « preparato il terreno ». A Pietraluna avete visto la fabbrica: Forgiati-operai nelle pozze geotermiche che riempivano anfore di melma scura; le mappe di Julia Nova coi pozzi cerchiati in rosso. Dopo l'Acido Solare, le acque del porto sono tossiche. Nessuno, che sappiate, ha ancora bonificato i pozzi.",
+  "prossimo": "Far controllare i pozzi cerchiati in rosso — Fenix, Torvus, Meren — prima che « la sete » arrivi davvero.",
+  "pub": "La fabbrica del veleno è ferma, le vasche di melma sono vetro nero. Ma quello che era già stato versato nei pozzi di Julia Nova non è evaporato con Lyaras. Colleventoso ha bevuto l'acqua « benedetta » di un pozzo e si è svegliata in piedi in un'abbazia. Julia Nova ha bevuto per mesi. Nessuno ha ancora detto che cosa succede adesso.",
+  "gm": "Filo mai chiuso in quindici Atti. Da decidere: il liquore senza Lyaras è inerte, o resta una vulnerabilità (chi lo ha bevuto è « preparato » a un comando?). Legame diretto con i comandi del sottosuolo di Bëllindë: se un Sigillo del Comando esiste, chi ha bevuto è materia prima. Rituale inverso di Mattheus e Vicarus (Colleventoso) = cura conosciuta.",
+  "atti": [
+   5,
+   7,
+   8
+  ],
+  "links": [
+   "jn-domina-syel",
+   "jn-pozzo-di-mara",
+   "q-infiltrati-julianova",
+   "q-colleventoso",
+   "mito-forgiati",
+   "q-pietraluna"
+  ]
+ },
+ {
+  "id": "q-taverna-senza-nome",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "La taverna senza nome",
+  "sub": "L'Ancora Spezzata aspetta un'insegna",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Davanti alle macerie de L'Ancora Spezzata, Adamus ha fatto società con Mastro Biagio « Lu Spilorce » invece di cacciarlo: l'unica taverna che riaprirà in tre giorni, in una città piena di soldati e operai assetati, e con Biagio « un paio d'orecchie al bancone ». La sera i Naviganti Grigi martellavano assi, e Yuri si è avvicinato con un secchio di vernice e un pezzo di legno bruciato: « Capo… che nome ci scriviamo sopra? » Non gli avete ancora risposto.",
+  "prossimo": "Mandare a Yuri un nome, con la prima staffetta per Julia Nova.",
+  "pub": "Una taverna senza oste è solo un edificio vuoto; una taverna senza nome è un'insegna bruciata. L'Ancora è spezzata, i muri sono buoni — « pietra vecchia » — e la Gilda ha bisogno di un posto dove il porto parli. Manca una parola sola, e la deve dire Adamus.",
+  "gm": "Piccolo filo di colore, buono per una scena di taverna a distanza o per il ritorno. Il nome scelto dai giocatori va registrato e usato: è il quartier generale ufficioso della Gilda e la rete d'informazioni di Biagio.",
+  "atti": [
+   10
+  ],
+  "links": [
+   "jn-ancora-spezzata",
+   "jn-mastro-biagio",
+   "jn-yuri",
+   "nav-sedi-della-gilda",
+   "faz-naviganti-grigi"
+  ]
+ },
+ {
+  "id": "q-collare-otto-punte",
+  "cat": "quest",
+  "city": "strada",
+  "group": "La strada",
+  "title": "Il collare a otto punte",
+  "sub": "I lupi di Lu Vallòne e i « lupàre »",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "A Lu Vallòne, sotto la torre di Mushanè, un branco troppo numeroso ha colpito la carovana; quando il Mastìne è caduto, qualcosa nel branco si è spezzato e le bestie sono fuggite. Al collo di uno dei lupi grossi: un collare di cuoio antichissimo, inciso con una stella a otto punte. Nessuno sa dire cosa significhi. Ora è al collo di Gelsomina, la mucca di Luigis, insolitamente calma. Nel Bosco dei Noci Vecchi, che i mercenari del Loto Nero non osavano guardare, luccicano ragnatele grandi come corde di liuto.",
+  "prossimo": "Chiedere della stella a otto punte a chi conosce le colline: i druidi, i pastori dei tratturi, Ndònie.",
+  "pub": "I lupi non attaccano una carovana di quaranta persone con i fuochi accesi. Questi l'hanno fatto, e hanno smesso solo quando è morto un uomo. Il collare che uno di loro portava è più vecchio di qualunque pastore vivo: un patto antico, con qualcuno che i vecchi chiamano « li lupàre ». Il patto è rotto. Gelsomina lo porta adesso, e da allora non ha più paura di niente.",
+  "gm": "Vedi mito-lupare-otto-punte e faz-druidi-colline (gm). Il collare su Gelsomina: (proposta) i lupi non attaccano più chi lo porta — o lo seguono. Il sogno di Adamus (tratturi chiusi, i morti che non passano) è la chiave. La stella a otto punte ricompare a sud (Vesperia, da confermare).",
+  "atti": [
+   12,
+   13
+  ],
+  "links": [
+   "ogg-collare-otto-punte",
+   "mito-lupare-otto-punte",
+   "faz-druidi-colline",
+   "q-druidi-delle-colline",
+   "q-tratturi-chiusi",
+   "mu-i-pastori-del-sotte"
+  ]
+ },
+ {
+  "id": "q-tratturi-chiusi",
+  "cat": "quest",
+  "city": "mushane",
+  "group": "Mushanè",
+  "title": "I tratturi chiusi",
+  "sub": "Il messaggio di Narduccio lu pecuràre",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "A un bivio sopra Mushanè una pietra di confine dei tratturi è sbarrata con catena e lucchetto: l'Abate Gofferio ha chiuso le vie della transumanza, venti Gofferine a capo di pecora, e i pastori sono rovinati. Narduccio lu pecuràre vi ha affidato un messaggio per l'Abate: « le pèchere nun cunòsce li cunfìne. So' sòle l'òmmene ca li 'mvènte. E li àngeli, quànne vénne a pijà' l'àneme, nun pàghene lu dàzie. » Gofferio è morto prima di sentirlo. Onofrio è Abate. I lucchetti, che sappiate, sono ancora lì.",
+  "prossimo": "Far arrivare a Onofrio il messaggio di Narduccio e chiedergli di riaprire i tratturi — una lettera basta.",
+  "pub": "È il sogno di Adamus fatto pietra: « Hanno chiuso la strada ai vivi. Per questo i morti non possono più passare. » Le pecore magre belano verso un pascolo che non possono raggiungere, e i pastori del Sotte pagano un dazio agli angeli. Chi ha chiuso il tratturo è morto in piazza. Chi può riaprirlo è un frate delle vigne che vi deve il pastorale.",
+  "gm": "Vedi faz-ordine-dei-tratturi (gm): riaprire i tratturi apre l'Ordine dei Tratturi alla Crociata — vie sacre che nessun signore osa bloccare, e una marcia più sicura verso Teramum. Il messaggio non risulta consegnato: un'occasione persa che si può recuperare per lettera.",
+  "atti": [
+   12,
+   15
+  ],
+  "links": [
+   "mu-narduccio-lu-pecurare",
+   "mu-i-pastori-del-sotte",
+   "mu-frate-onofrio",
+   "faz-ordine-dei-tratturi",
+   "q-collare-otto-punte",
+   "q-druidi-delle-colline"
+  ]
+ },
+ {
+  "id": "q-promessa-celestina",
+  "cat": "quest",
+  "city": "strada",
+  "group": "Personali",
+  "title": "La promessa a Celestina",
+  "sub": "Assunta Colabello, a Tortoreto",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Nel cortile di Altavia, quando l'armatura che la imprigionava è caduta, Celestina — la cameriera dal sorriso vuoto — vi ha chiesto una cosa sola: « Dicìteje a mi' ma'… sta a Tortoreto… se chiama Assunta… dicìteje che la fija sua l'amava… » Assunta Colabello, vicino alla chiesa di San Nicola. Sulla strada per Mushanè avete trovato la Masseria de li Colabèlle bruciata, col sole rovesciato sulla porta e una fibbia vesperiana tra la cenere: cinque generazioni, otto figli, nessuno salvo.",
+  "prossimo": "Quando la strada lo permetterà, Tortoreto: trovare Assunta, se è viva, e dirle quelle parole.",
+  "pub": "Non tutte le quest hanno un nemico. Questa ha una madre a Tortoreto, una figlia morta dentro un'armatura per quarant'anni, e una frase da consegnare. E un dubbio che vi ha preso alla Masseria bruciata: quanti Colabello sono rimasti, e chi ha tracciato il sole rovesciato sulla loro porta.",
+  "gm": "La Masseria dei Colabelle e Assunta Colabello di Tortoreto: stessa famiglia? Non fissato — se sì, il sole rovesciato è la cancellazione di una famiglia intera e la fibbia vesperiana indica il Loto Nero. Scena da ritorno, o da lettera affidata a Fenix/Gilda.",
+  "atti": [
+   11,
+   12
+  ],
+  "links": [
+   "jn-celestina",
+   "jn-tenuta-di-altavia",
+   "mito-sole-rovesciato",
+   "faz-loto-nero"
+  ]
+ },
+ {
+  "id": "q-mercenari-della-crociata",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "La Crociata",
+  "title": "I mercenari della Crociata",
+  "sub": "Vasco e Kostandìn: fiducia o rischio",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Al Ponte dei Frati Maximus ha sciolto le corde a Vasco e ai suoi tre: non più prigionieri, uomini al suo soldo. A Mushanè, dopo la morte di Lekë, Maximus ha convinto Kostandìn — il sergente più anziano rimasto — a passare con i suoi al soldo della Crociata: « le lame che al tramonto vi stavano ammazzando, all'alba marciavano con voi ». A Bëllindë Vasco e Kostandìn sono entrati con voi nella delegazione dei nove. Dodici vesperiani più Kostandìn sono oggi tra i venti combattenti della Crociata.",
+  "prossimo": "Pagarli, seppellire i loro morti secondo l'uso delle Aquile, e dare a Kostandìn una ragione per testimoniare, un giorno, contro chi portava il Loto Nero.",
+  "pub": "Una compagnia vesperiana senza capitano, senza contratto e senza paga è solo un gruppo di uomini con delle armi e nessun posto dove andare. Maximus li ha presi. Ora marciano con voi, mangiano con voi, e sono più della metà delle vostre spade. Vasco è stato bruciato da Vicarus mentre era arreso e legato; Kostandìn ha visto due teste cadere davanti alla stessa chiesa. Nessuno di loro ha ancora giurato niente.",
+  "gm": "Kostandìn è l'unico testimone possibile del contratto Loto Nero–Velthuria (vedi ogg-sigillo-contratto-loto-nero). La sepoltura dei vesperiani caduti a Mushanè non risulta fatta (cro-i-caduti). Paga: la cassa della Crociata è di 620 mo. Lealtà a rischio se un'offerta migliore arriva a Teramum — o se Vicarus e Vasco si trovano vicini.",
+  "atti": [
+   12,
+   13,
+   15,
+   16
+  ],
+  "links": [
+   "mu-sergente-kostandin",
+   "faz-compagnie-vesperiane",
+   "cro-chi-siamo",
+   "cro-i-caduti",
+   "cro-cassa-e-loot",
+   "ogg-sigillo-contratto-loto-nero",
+   "q-lucius-grazianus"
+  ]
+ },
+ {
+  "id": "q-bastone-di-lyaras",
+  "cat": "quest",
+  "city": null,
+  "group": "Personali",
+  "title": "Il Bastone di Lyaras e Vicarus",
+  "sub": "« Stai diventando ciò che eri »",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Elara Manodoro: « Quello non è un bastone da mago, Cerullius. È un condotto. Un'antenna » — un amplificatore di volontà che sussurra con la voce della Fata Oscura. Al Ponte dei Frati la palla di fuoco di Vicarus ha investito Vasco già arreso e legato, e Silvanus non l'ha perdonato: « Spero che il fuoco ti abbia scaldato l'anima, perché ci ha lasciato il vento. » A Lu Vallòne Vicarus si è svegliato con la mano stretta sul Bastone, che non diceva sangue né morte: « Non sono io che cambio te. Sei tu che stai diventando ciò che eri. » A Mushanè il Bastone ha lavorato « senza pause e senza sconti »; Silvanus ha intuito che Vicarus e Mattheus portano pesi da Pietraluna e ha chiesto solo: « siete sicuri di poterli controllare? »",
+  "prossimo": "Decidere che cosa dire a Silvanus — e che cosa rispondere al Bastone.",
+  "pub": "Il Bastone di Lyaras non ha mai promesso niente a Vicarus. Ha solo cominciato a parlargli con gentilezza, e a lavorare bene. Tra il mago e il Capitano c'è ormai un prigioniero bruciato e una frase di ghiaccio; tra il mago e il Bastone, una voce che dice che non sta cambiando nessuno. Il Talismano dell'Eco di Elara « risuona oltre ogni distanza »: « Non sparire nel silenzio, promettimelo. »",
+  "gm": "Arco personale: il Bastone come tentazione, non come maledizione visibile. Segnali usati finora: la voce gentile, il fuoco su Vasco, il sospetto di Silvanus. Elara/Talismano è l'ancora; Virellius che ne vede l'aura è la minaccia esterna. Se Vicarus lo consegna a Meren o a Torvus, la forgia di annullamento di Teramum è l'unico posto dove spezzarlo insieme al filatterio.",
+  "atti": [
+   9,
+   12,
+   14
+  ],
+  "links": [
+   "ogg-bastone-di-lyaras",
+   "ogg-talismano-eco",
+   "jn-elara-manodoro",
+   "jn-silvanus",
+   "q-filatterio-di-lyaras"
+  ]
+ },
+ {
+  "id": "q-alessandros-due-lune",
+  "cat": "quest",
+  "city": null,
+  "group": "Personali",
+  "title": "Alessandros e l'Equilibrio",
+  "sub": "Un paladino di Valerus che risponde alla Luna",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Sotto la luce lunare l'armatura di Alessandros ha rivelato le Due Lune ai fianchi del Sole; a Pietraluna ha alzato il simbolo antico della sua casata — il Sole e le Due Lune — e Maia ha risposto, purificando il Secondo Sigillo. Silvanus ha detto che suo padre l'Imperatore portava quel simbolo sotto l'armatura: gli Aurex erano il ponte, il garante del Patto tra il Sole e le sue spose. Virellius, che per trent'anni ha perseguitato i Cerullius, si è inginocchiato nella cripta di San Berardo: « Insegnami. Come si prega un Dio che accetta il buio? » Sul pettorale nuovo di Oswald Grigiomanto lo spazio accanto al Sole attende, se lo vorrà, le Due Lune.",
+  "prossimo": "Decidere se far incidere le Due Lune sul pettorale — e cosa dirà, davanti a Teramum, un paladino col simbolo proibito.",
+  "pub": "Ciò che Virellius chiama eresia ha salvato il mondo. Alessandros combatte avvolto in una luce argentea che non è la Fiamma, porta il Dito di San Berardo e il simbolo per cui la sua famiglia è stata perseguitata. Il Cardinale ha pregato con lui; un cielo di cenere si è aperto in oro e argento sopra la Terrazza dei Venti. A Teramum la Chiesa non ha ancora deciso se questa sia una benedizione o un processo.",
+  "gm": "La Chiesa a Teramum non ha visto il miracolo: Virellius convertito è un alleato a Julia Nova, non una copertura nella capitale. Il « Fratello al fiume con una luce fredda negli occhi » (sogno di Lu Vallòne) è un filo personale non sviluppato. Il pettorale con o senza Lune è una scelta con conseguenze politiche visibili.",
+  "atti": [
+   5,
+   7,
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "mito-sole-fra-due-lune",
+   "mito-due-lune-e-sole",
+   "ogg-armatura-cerullius",
+   "ogg-dito-san-berardo",
+   "jn-cardinal-virellius",
+   "jn-oswald-grigiomanto",
+   "faz-casa-cerullius"
+  ]
+ },
+ {
+  "id": "q-torre-di-ombretra",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "Il Custode e la profezia delle sei ombre",
+  "sub": "La Torre di Ombretra",
+  "img": null,
+  "state": "noto",
+  "stato": "aperta",
+  "sanno": "Una figura incappucciata che non mangiava e non beveva — nel cui volto avete visto il vostro — vi ha condotti oltre i Giardini del Silenzio alla Torre di Ombretra, pietra e ossidiana. Nella Sala della Soglia si è rivelata come « Il Custode », entità legata al vostro destino, e la pietra ha parlato: « Sei ombre crescono sotto sei lune. Sei cuori battono a tempo spezzato. […] Il secondo sigillo è più antico del primo. Più vicino. Più sporco. Non lo troverete nel sottosuolo. Ma dentro chi ha smesso di essere umano. » La notte dell'assalto alla Caserma Est avete condiviso un incubo, e al risveglio un simbolo inciso nel pavimento pulsava. Non siete più tornati alla Torre.",
+  "prossimo": "Tornare alla Torre di Ombretra quando sarete di nuovo a Julia Nova: il Custode ha detto « è tempo di ricordare », e non avete ancora finito.",
+  "pub": "La Torre è ancora lì, sola, tra i pini oltre le mura. Il Custode vi ha detto cos'era il Primo Sigillo e cos'era il Secondo, e ha lasciato un boccale pieno di acqua di mare. Il Secondo lo avete purificato. Del resto della profezia — sei ombre, sei lune, sei cuori a tempo spezzato — non avete capito niente, e nessuno è tornato a chiedere.",
+  "gm": "Il Custode della Torre di Ombretra e il « Custode » sotto Bëllindë non sono la stessa figura (vedi faz-custodi-del-ciclo, gm). L'incubo condiviso e il simbolo nel pavimento della Caserma Est non sono mai stati ripresi: da recuperare. « Sei » ombre: i sei PG — Iosephus è il settimo, e la profezia non lo conta.",
+  "atti": [
+   1,
+   4
+  ],
+  "links": [
+   "jn-torre-di-ombretra",
+   "mito-profezia-sei-ombre",
+   "q-sigilli-lunari",
+   "jn-caserma-est"
+  ]
+ },
+ {
+  "id": "q-navi-rosse-forgiati",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "Le Navi Rosse e l'Assalto Silenzioso",
+  "sub": "L'invasione dei Forgiati Lunari",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Navi silenziose dalle vele cremisi, coste svuotate, uomini tornati senza memoria. Le avete respinte sulla spiaggia di Julia Nova, poi le avete viste chiudere il porto in un semicerchio e riversare fuoco sulla città. I Forgiati sono echi della volontà di un « Primo Forgiato »: Lyaras Vel'Quoril. Umbrax, il Berserker catturato sulla spiaggia, è rimasto nelle prigioni di Julia Nova.",
+  "prossimo": "",
+  "pub": "Il porto brucia ancora nella memoria: la flotta cremisi in semicerchio, le urla dalla costa, e poi il ruggito delle macchine di Torvus — un liquido verde-bianco che non brucia il legno, lo scioglie. In trenta secondi tre navi non c'erano più. La flotta ha rotto il bombardamento. Julia Nova è ferita, ma è in piedi; e i Forgiati, senza il loro Primo, sono soltanto corpi che vagano.",
+  "gm": "Filo residuo: Umbrax nelle prigioni (mai più nominato — è ancora vivo? cosa è diventato senza Lyaras?); i Forgiati ferali della Valle, la via più veloce per Teramum che la Crociata ha evitato. Le Navi Rosse restano una flotta dell'Alto Celomante: respinta, non distrutta.",
+  "atti": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   7,
+   8
+  ],
+  "links": [
+   "faz-navi-rosse-forgiati",
+   "mito-forgiati",
+   "jn-umbrax",
+   "jn-torvus-halderan",
+   "jn-spiaggia-della-battaglia",
+   "q-alto-celomante",
+   "q-pietraluna"
+  ],
+  "esito": "L'Acido Solare di Maestro Torvus, dalle mura della Caserma Nord, ha sciolto tre Navi Rosse in melma fumante e spezzato l'assedio; Lyaras è caduto a Pietraluna e i Forgiati incompleti si sono accasciati come marionette senza fili. Il porto di Julia Nova è un cimitero di navi; nella Valle vagano ancora Forgiati sopravvissuti « come bestie rabbiose senza più una mente che li guidi »."
+ },
+ {
+  "id": "q-colleventoso",
+  "cat": "quest",
+  "city": "strada",
+  "group": "La strada",
+  "title": "Colleventoso, il villaggio che dimenticò",
+  "sub": "La Forgia dell'Identità sotto Biancosale",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Il Concilio vi ha mandati a Colleventoso — Culognè, frazione di Rosetum nella Contea de Li Cotè. L'avete trovata intatta e svuotata, con la falce lunare rovesciata sulle porte e tutta la popolazione forgiata nell'Abbazia di Biancosale. Un anno prima Padre Elvirius, prete giunto da Teramum, aveva convinto i paesani a bere l'acqua « benedetta » del pozzo, aprendo la porta ai Celomanti.",
+  "prossimo": "",
+  "pub": "La cena ancora in tavola, un telaio fermo a metà trama, una bambola in mezzo alla via. Poi il ronzio dall'abbazia, e un intero villaggio in piedi con gli occhi vitrei. Colleventoso è tornata a essere un luogo di vivi — a fatica, tra lacrime e ricordi confusi. Il prete che l'ha venduta viene da Teramum.",
+  "gm": "Padre Elvirius: prigioniero dall'Atto III, mai più nominato. Dove è finito (Caserma Est? consegnato al Concilio? Virellius?) e chi lo ha mandato da Teramum — un filo che punta dritto alla capitale. Le « cicatrici » di Colleventoso (chi ha bevuto è « preparato »?) si legano a q-liquore-nei-pozzi.",
+  "atti": [
+   1,
+   2,
+   3
+  ],
+  "links": [
+   "ogg-tomo-ricordo-spezzato",
+   "mito-forgiati",
+   "q-liquore-nei-pozzi",
+   "q-silvanus-a-teramum"
+  ],
+  "esito": "Nelle catacombe avete liberato Luigis e Vicarus, abbattuto i Guardiani e gli Emissari, e sconfitto Aeryn Vel'hael nella Sala della Forgia dell'Identità un istante prima che forgiasse il Sindaco Berardo: « Non volevo… dimenticare… ». Col rituale inverso di Mattheus e Vicarus gli abitanti hanno riavuto la memoria. Padre Elvirius è stato preso prigioniero. Tra le ceneri di Aeryn, il Tomo del Ricordo Spezzato con il nome « Ardentus ». I prigionieri di Colleventoso trovati poi a Pietraluna sono stati liberati."
+ },
+ {
+  "id": "q-silvanus-rapito",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "Il rapimento di Silvanus",
+  "sub": "Therxil, la Lama dei Sussurri",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "« Ardentus » nel Tomo del Ricordo Spezzato; poi il colpo secco sul portone della Caserma Est e il Capitano trascinato via da Therxil. Lyraeth ha rivelato il perché: forgiare l'Ardentus, ultimo eco del sangue solare, all'Abbazia di Pietraluna entro la Luna Alta, per mettere un Imperatore-fantoccio sul Trono Vacante.",
+  "prossimo": "",
+  "pub": "La vendetta per la Caserma Est si è compiuta in una sala dalle colonne intarsiate, e l'uomo che avete riportato sulla Perla non è più solo un capitano. Addosso a Therxil: una chiave di ferro nero e un diario sulla « purificazione » di Julia Nova.",
+  "gm": "Il diario di Therxil sulla « purificazione » non è stato letto al tavolo nel dettaglio: materiale disponibile. Le dodici guardie della Caserma Est sono il debito di sangue di Fenix e Silvanus.",
+  "atti": [
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "links": [
+   "jn-silvanus",
+   "jn-caserma-est",
+   "q-pietraluna",
+   "q-silvanus-a-teramum",
+   "cro-i-caduti"
+  ],
+  "esito": "Therxil è caduto nelle sale di Pietraluna, colto di spalle davanti allo specchio dell'Alto Celomante; Silvanus è stato strappato all'altare di ossidiana, e la sua memoria — sigillata vent'anni fa — è tornata tutta insieme. « Io… io ricordo. Ricordo tutto. »"
+ },
+ {
+  "id": "q-covo-della-serpe",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "Il Covo della Serpe",
+  "sub": "Domina Syel e la Gilda dei Naviganti Grigi",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Domina Syel Faredan, capo della Gilda dei Naviganti Grigi, prendeva in consegna casse da una nave elfica non registrata. Iuvenza vi ha dato la mappa d'inchiostro argenteo del suo covo alle scogliere a nord, dove nella luna nuova incontrava gli emissari di Sylva Noctis.",
+  "prossimo": "",
+  "pub": "Una grotta costiera, una caravella nera arenata nella spiaggia interna, e una donna che ha capito troppo tardi di aver comprato l'apocalisse invece del caos. Della Gilda restano Yuri, Anacleto, Achilluc, e un capo nuovo che compra cavalli guardandogli i denti.",
+  "gm": "Il libro mastro cifrato di Domina: prova contro Velthuria/Sylva Noctis, non ancora usata in un foro. La mappa dei covi della costa: risorsa inutilizzata (Navi Rosse, contrabbando, via di fuga da Teramum via mare?).",
+  "atti": [
+   4,
+   5,
+   6
+  ],
+  "links": [
+   "jn-domina-syel",
+   "jn-covo-della-conchiglia",
+   "faz-naviganti-grigi",
+   "nav-perla-silenziosa",
+   "nav-libri-mastri-e-mappe",
+   "q-velthuria-iuvenza"
+  ],
+  "esito": "Domina è morta sulla sabbia tra le fiamme verdi — « SCIACQUATIV'! » — maledicendo la città. Bottino: la Perla Silenziosa, il libro mastro cifrato, la mappa dei covi e delle rotte segrete della costa. Per legge del più forte Adamus è capo della Gilda; il covo è il Covo della Conchiglia, dove poi Iuvenza ha fatto uccidere Tonio e Marco e rubare Lyraeth."
+ },
+ {
+  "id": "q-pietraluna",
+  "cat": "quest",
+  "city": "strada",
+  "group": "Il mare",
+  "title": "La Luna Alta su Pietraluna",
+  "sub": "Il rito su Silvanus e la caduta di Lyaras",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Pietraluna: un dente di roccia nera sotto un vortice viola, un santuario di Maia violato con un cristallo nero da un Lyaras più giovane. Due anelli di difesa, la cripta sotto l'altare maggiore. Il tunnel sommerso di Sariel, la fabbrica del veleno, Therxil, l'Ala Nord con le mappe e il roster, i prigionieri nelle gabbie.",
+  "prossimo": "",
+  "pub": "Otto sacerdoti come batterie umane, un Lich che copia i vostri volti, colonne nere che esplodono — e in mezzo, i ricordi rubati di un bambino che fugge da Solaria in fiamme. Quando avete riaperto gli occhi la cripta sapeva di fiori notturni e mare pulito. Maia è tornata nel suo tempio.",
+  "gm": "Ciò che rimane di Pietraluna: un santuario di Maia restaurato senza custodi (l'Equilibrio ha un luogo, ora); il filatterio « in pausa »; i prigionieri liberati tornati a Julia Nova. Sariel conosceva l'isola meglio di chiunque.",
+  "atti": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "links": [
+   "q-silvanus-rapito",
+   "q-filatterio-di-lyaras",
+   "q-sariel",
+   "q-sigilli-lunari",
+   "mito-sigilli-lunari",
+   "jn-silvanus",
+   "ogg-medaglione-di-sariel"
+  ],
+  "esito": "Lyaras Vel'Quoril, il Lich, il Primo Forgiato, è stato spezzato dai vostri colpi; morente ha rivelato Sariel e ha acceso le rune dell'autodistruzione. Alessandros ha alzato il Sole e le Due Lune e Maia ha risposto: la melma è evaporata, il Secondo Sigillo è stato purificato, Silvanus ha ricordato. « Voi che avete scelto… non potete essere forgiati. » Restano la scatola d'ossidiana (il filatterio) e il Bastone."
+ },
+ {
+  "id": "q-altavia",
+  "cat": "quest",
+  "city": "julianova",
+  "group": "Julia Nova",
+  "title": "La Tenuta di Altavia",
+  "sub": "La Domus Aurea Aestiva degli Aurex",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Prima la trappola-accoglienza di Iuvenza, poi i cancelli spalancati e la villa vuota, poi le statue del giardino che si muovono con lame al posto delle mani: quattro Armature Animate d'Argento e Ombra, con dentro le anime dei vecchi servitori — Berardo de Còlle Lungo, Celestina, un contadino — e un Comandante col Loto Nero che parlava con la voce della Dama.",
+  "prossimo": "",
+  "pub": "Sul cancello, sotto la ruggine e i loti, i simboli più antichi: aquile, soli raggianti, due Lune che abbracciano il Sole. « 'Sta casa nun è de li Velthuria. Nun è mai stata loro. » Oggi ci dormono gli sfollati del porto, e per un istante, quando Berardo è andato via, il cortile ha profumato di pane appena sfornato.",
+  "gm": "Altavia è ora una base della Gilda/Crociata a Julia Nova, e la prima « terra » di Silvanus. Il baule d'oro è confluito nella sanatoria (cassa 1.500). Il magazzino degli stendardi: solo uno è stato aperto — gli altri sono lì.",
+  "atti": [
+   4,
+   6,
+   9,
+   11
+  ],
+  "links": [
+   "jn-tenuta-di-altavia",
+   "ogg-cristallo-di-memoria",
+   "ogg-diario-di-iuvenza",
+   "ogg-lettera-gofferio",
+   "ogg-stendardo-aldric-aurex",
+   "jn-berardo-de-colle-lungo",
+   "jn-celestina",
+   "q-promessa-celestina",
+   "q-velthuria-iuvenza",
+   "mito-stirpe-aurex"
+  ],
+  "esito": "Le armature sono cadute e le anime liberate; Lu Biondo e Storto salvati. Nello studio, il Cristallo di Memoria, la lettera per Gofferio, il diario di Iuvenza, un baule d'oro; in cantina il mosaico « DOMVS AVREA AESTIVA — SANGVIS AVREVS CVSTODIAT »: la casa è degli Aurex, e Silvanus l'ha riconosciuta sua per diritto di sangue — « e adesso è vostra ». Adamus e Yuri l'hanno destinata a lazzaretto per gli sfollati del porto. Nel magazzino, lo stendardo di Aldric Aurex."
+ },
+ {
+  "id": "q-lettera-di-iuvenza",
+  "cat": "quest",
+  "city": "mushane",
+  "group": "Mushanè",
+  "title": "La lettera di Iuvenza a Gofferio",
+  "sub": "Duecento monete d'oro per le guglie",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Tra i documenti di Altavia, una lettera per l'Abate Gofferio di Mushanè con duecento monete d'oro: l'Abate è comprato. Virellius vi aveva avvertiti: « un uomo di libri, non di miracoli »; Nìcola sulla strada: « nun è cattìve — è pègge. È 'nu vìle. » Silvanus: « Gofferio è un codardo, non un fanatico. I codardi si piegano. »",
+  "prossimo": "",
+  "pub": "Duecento monete e una firma hanno comprato un Abate per ventotto anni di guglie. Non l'avete usata come ricatto: l'avete lasciata sul tavolo dei fatti, e i fatti l'hanno superata. Ora è carta per L'Aquila Aurea.",
+  "gm": "La lettera è il pezzo di prova più esplicito contro Iuvenza (nome e cifra). Mai esibita in pubblico: usarla davanti al Girella o alla Convocazione. Attenzione: la memoria di Gofferio è contesa (« màrtere ») — chi mostra la lettera a Mushanè decide come sarà ricordato.",
+  "atti": [
+   10,
+   11,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "ogg-lettera-gofferio",
+   "mu-abate-gofferio",
+   "q-gofferio-mushane",
+   "q-velthuria-iuvenza",
+   "cro-sostegni-e-prove"
+  ],
+  "esito": "Gofferio non si è piegato al Dito di San Berardo; si è piegato ai suoi frati, dopo le campane. Ha confessato, è stato giudicato davanti al borgo e ha scelto la morte come espiazione. La lettera resta con voi: una prova, insieme al Sigillo da Contratto e al Libro paga di Lekë, che il Loto Nero pagava a Mushanè."
+ },
+ {
+  "id": "q-gofferio-mushane",
+  "cat": "quest",
+  "city": "mushane",
+  "group": "Mushanè",
+  "title": "L'Abate Gofferio e la liberazione di Mushanè",
+  "sub": "Le campane, il giudizio, il pastorale vuoto",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Mushanè era il primo passo obbligato verso Teramum: feudo dell'Abate Gofferio, occupato dai mercenari vesperiani di Lekë Muzàka, con Lu Grise arrivato prima di voi. Avete chiesto l'udienza tramite Corrado « Lu Mazzòle »; Frate Tommaso e la porticina nel muro vecchio del Borgo Basso erano la via alternativa.",
+  "prossimo": "",
+  "pub": "Mushanè è libera, e non è finita con una sentenza semplice. Dentro San Pietro il sangue è sulle pietre; fuori, sul sagrato, due teste in una notte. La gente è uscita dalle case per trovare il proprio Abate in catene, e lo ha visto scegliere. Adesso il borgo prova a esistere dopo di lui — con un Abate delle vigne, un gigante con la mazza che non è più un cane, e una cappella ancora da costruire.",
+  "gm": "Residui: la memoria contesa di Gofferio (« màrtere ») può essere usata contro la Crociata dal proclama; Lu Grise decapitato a mani legate davanti a Corrado e ai frati — materia per un'accusa; Frate Tommaso e la porticina mai usati; Corrado « fuori da questa guerra » ma non ancora dentro la Crociata; i tratturi ancora chiusi.",
+  "atti": [
+   9,
+   10,
+   12,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-abate-gofferio",
+   "mu-frate-onofrio",
+   "mu-corrado-lu-mazzole",
+   "mu-kapitan-leke-muzaka",
+   "mu-osservatore-lu-grise",
+   "mu-sergente-kostandin",
+   "faz-abbazia-mushane",
+   "faz-pompizius",
+   "q-lettera-di-iuvenza",
+   "q-tratturi-chiusi",
+   "q-cappella-mortus-mushane",
+   "q-mercenari-della-crociata"
+  ],
+  "esito": "Gofferio ha rifiutato il Dito di San Berardo; Maximus ha suonato le campane; Corrado si è tirato da parte; Alessandros ha decapitato Lekë Muzàka sul sagrato; Lu Grise è stato preso e poi decapitato da Maximus a mani legate; Kostandìn è passato con la Crociata. Gofferio, condotto alla confessione da Mattheus e dai suoi frati, ha scelto la morte come espiazione: per alcuni un corrotto, per altri un « màrtere ». Frate Onofrio, il frate delle vigne, è il nuovo Abate. Casa Pompizius si è unita alla Crociata; Luigis ha commissionato gli stendardi."
+ },
+ {
+  "id": "q-lu-grise",
+  "cat": "quest",
+  "city": "mushane",
+  "group": "Mushanè",
+  "title": "Lu Grise, l'Osservatore",
+  "sub": "L'ombra grigia da Julia Nova a Mushanè",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Un uomo con una casacca scura che « guarda e basta », appoggiato a un albero al Ponte dei Frati: l'Osservatore di Iuvenza. Bruciato dal globo di Vicarus, è fuggito a Mushanè ed è arrivato prima di voi; nella cattedrale ha aizzato i vesperiani senza combattere.",
+  "prossimo": "",
+  "pub": "Due teste in una notte davanti alla stessa chiesa: la seconda è caduta a mani legate. Lu Grise non ha rivelato niente perché non aveva niente: guardava, e riferiva. Chi lo pagava non ha ancora ricevuto l'ultimo rapporto.",
+  "gm": "Il pugnale da spia con scanalatura per il veleno « vale per quello che racconta ». L'esecuzione di un prigioniero è ciò che un'accusa formale userà dopo l'« aggressione contro autorità ecclesiastiche ». Iuvenza ha perso gli occhi sulla Crociata: chi la informa adesso? (Kostandìn? qualcuno a Bëllindë?)",
+  "atti": [
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "links": [
+   "mu-osservatore-lu-grise",
+   "jn-lu-grise",
+   "ogg-pugnale-osservatore",
+   "q-velthuria-iuvenza",
+   "cro-i-caduti"
+  ],
+  "esito": "Inchiodato da un incantesimo a mezza fuga sul sagrato; interrogato a lungo — un mercenario al soldo di Velthuria, pagato per guardare, niente da confessare — e poi decapitato da Maximus, a mani legate. Restano il suo Pugnale dell'Osservatore, non magico, e il fatto che Corrado e i frati hanno visto."
+ },
+ {
+  "id": "q-gisulfo-firma",
+  "cat": "quest",
+  "city": "bellinde",
+  "group": "Bëllindë",
+  "title": "La firma del Girella",
+  "sub": "Bëllindë riconosce la Crociata",
+  "img": null,
+  "state": "noto",
+  "stato": "chiusa",
+  "sanno": "Fenix lo aveva descritto come un voltagabbana senza onore. Alle porte Ruggiero de' Santi ha ammesso una delegazione di nove; nella Rocca dei Melacera il Conte Gisulfo ha chiesto: « Perché dovrei credere che a Teramum non verrete schiacciati? » Il Senso Divino di Alessandros ha detto che è soltanto un uomo.",
+  "prossimo": "",
+  "pub": "Non si è inginocchiato, non ha giurato, non ha consegnato i suoi uomini. Ha fatto una cosa più misurata e più pesante: ha messo il sigillo dei Melacera sopra un ordine della capitale. Il Girella si è esposto — e in piazza, il giorno dopo, Ruggiero non ha alzato un dito.",
+  "gm": "La dichiarazione non è ancora stata usata in pubblico a Bëllindë (vedi q-proclamo-teramum). Gisulfo ha scommesso e non dorme: chiedergli ora scorta, viveri a prezzo di casa, permesso di scendere nel Borgo Vecchio è il momento giusto. Ciò che sta sotto la sua città lui non lo sa.",
+  "atti": [
+   9,
+   15
+  ],
+  "links": [
+   "be-conte-gisulfo-melacera",
+   "be-ruggiero-de-santi",
+   "be-rocca-melacera",
+   "ogg-dichiarazione-gisulfo",
+   "faz-melacera",
+   "q-proclamo-teramum"
+  ],
+  "esito": "Maximus lo ha colpito nella memoria — « Un giorno morirai. Ma potresti essere ricordato » — e il Girella, per la prima volta, ha scelto prima: sigillo dei Melacera su una dichiarazione che riconosce alla Crociata libero passaggio, diritto di parola, facoltà di acquistare viveri e servizi, protezione per chi vi aiuta, e il diritto di non essere considerati colpevoli per un proclama prima delle prove. A Mattheus, il permesso di predicare Mortus."
+ }
+]

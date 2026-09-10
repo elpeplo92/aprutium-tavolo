@@ -1,0 +1,1442 @@
+[
+ {
+  "id": "mu-01-cattedrale-san-pietro",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Abbazia di San Pietro",
+  "title": "01 · Cattedrale di San Pietro",
+  "sub": "La chiesa-torre dell'Abate — cuore e padrone di Mushanè",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Grande, grigia, a tre navate, col campanile dritto come un'unghia piantata nella terra: da lontano lo avete scambiato per la torre di una città-fortezza. Dentro l'aria sa di cera e incenso freddo; la Fiamma Eterna arde nel braciere di bronzo accanto all'altare e i frati la nutrono a turni, giorno e notte, da generazioni. Le pareti sono coperte di affreschi: il Fondatore che brucia le pietre dei pagani, Teodorus « Lu Sant'Ome » che spezza il pane coi profughi, processioni di santi dalle facce contadine. Dietro l'abside un drappo rosso copre un tratto di parete; in fondo alla navata destra una porta bassa conduce alla sala del Capitolo, e una scala scende verso la cripta, sempre chiusa. Nella cripta riposano gli Abati di Mushanè; il sarcofago più nuovo e lucido porta già inciso il nome di Gofferio.\n\nQui è successo tutto. Alessandros ha mostrato il Dito di San Berardo e Gofferio ne ha rifiutato l'autorità; Maximus ha afferrato la fune della campana e non l'ha più lasciata; Corrado e i suoi Frati Armati vi hanno affrontati tra le panche e poi si sono tirati da parte; i vesperiani di Lekë sono entrati in armi con Lu Grise, e la battaglia si è rovesciata sul sagrato. Sotto queste volte Mattheus ha aperto la sua fede in Mortus per curare i suoi, e sotto queste volte, la notte stessa, Gofferio ha confessato davanti ai suoi frati.\n\nOggi San Pietro ha un nuovo Abate, Onofrio, e porta ancora addosso i segni della battaglia. Accanto, separata dalla chiesa, nascerà la piccola cappella di Mortus che Mattheus ha ottenuto e pagato di tasca sua.",
+  "gm": "Il drappo rosso copre un affresco antico sbiadito: tre cerchi, il sole e due lune — iconografia pretuziana, non solare (Religione CD 12). Nessuno dei PG l'ha ancora sollevato. Nella cripta chi scende sente un ronzio sotto il pavimento (Percezione passiva 15+; Mattheus lo sente senza tiro): è il cerchio pretuziano interrato sotto le fondamenta, aura di divinazione a Individuazione del magico. La chiave della cripta è di Frate Simone. Il sarcofago di Gofferio, già inciso, è ora — ironia — pronto per l'uso: dove è stato sepolto l'Abate morto per espiazione non è stato deciso (proposta: nel suo sarcofago, con la parola « Màrtere » già graffiata sulla pietra da qualcuno). La cappella di Mortus: sede, forma e frate custode da definire con Onofrio; 100 mo versate da Mattheus. Le tre campane (Vox Solis, Vox Populi, Vox Mortis) sono di Frate Bonifacio: la Vox Solis era il segnale comprato da Iuvenza — non ha mai suonato per lei, ma Maximus l'ha fatta urlare per tutta la valle.",
+  "atti": [
+   12,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-02-casa-dell-abate",
+   "mu-03-casa-dei-frati",
+   "mu-24-la-piazza",
+   "mu-abate-gofferio",
+   "mu-frate-onofrio",
+   "mu-corrado-lu-mazzole",
+   "mu-frate-bonifacio",
+   "mu-frate-simone-bibliotecario",
+   "mu-fratel-mario",
+   "mu-frate-lorenzo"
+  ]
+ },
+ {
+  "id": "mu-02-casa-dell-abate",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Abbazia di San Pietro",
+  "title": "02 · Casa dell'Abate",
+  "sub": "La residenza di Gofferio, addossata alla Cattedrale",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Addossata al fianco della Cattedrale, la residenza dell'Abate non è una cella monastica: è la casa di un signore. Vetri veri alle finestre — gli unici del borgo — tappeti di Teramum, argenteria, un camino sempre acceso. Alla porta, giorno e notte, due Frati Armati in cotta grigia, mazza al fianco: educati, fermi, nessuno entra senza essere annunciato.\n\nGofferio è morto. La casa aspetta il nuovo Abate, Onofrio, il frate delle vigne — che qui dentro, con questi tappeti, sembra ancora un ospite.",
+  "gm": "Nello studio, in un cassetto a doppia chiave dello scrittoio (una chiave era al collo di Gofferio, l'altra è nascosta dietro il ritratto del Fondatore; Scassinare CD 15 a chiave singola, CD 12 con entrambe) ci sono la Lettera di Iuvenza — la prova scritta del patto — e le 200 monete d'oro mai spese. Nei diari non risulta che i PG le abbiano cercate: sono ancora lì, oppure Onofrio le ha trovate sistemando la casa. Da decidere. La lettera in mano alla Crociata è una prova contro Iuvenza a Teramum; le monete sono « l'oro della vergogna », che Onofrio potrebbe consegnare o destinare al borgo. I due Frati Armati rispondono a Corrado.",
+  "atti": [
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-abate-gofferio",
+   "mu-frate-onofrio",
+   "mu-corrado-lu-mazzole"
+  ]
+ },
+ {
+  "id": "mu-03-casa-dei-frati",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Abbazia di San Pietro",
+  "title": "03 · Casa dei Frati",
+  "sub": "Dormitori del convento e quartiere dei Frati Armati",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Un edificio lungo e basso dietro la Cattedrale: i dormitori dei frati del convento e, in fondo, una porta rinforzata con sopra la fiamma solare dipinta. È la casa dei Frati Armati, la piccola guarnigione dell'Abbazia: brande allineate, un tavolo comune, l'odore di cuoio, grasso d'armi e minestra. Qui gli uomini in cotta grigia mangiano, dormono e si esercitano nel cortiletto interno, sotto la voce dura di Corrado « Lu Mazzòle ». Dai mercenari stranieri, finché c'erano, si tenevano alla larga — e non era cortesia.\n\nQui sta anche la biblioteca e l'archivio dell'Abbazia, regno di Frate Simone.",
+  "gm": "I 12 Frati Armati sono devoti a Corrado prima che all'Abate: questo era l'unico posto dove Corrado comandava ancora, e dopo la battaglia è l'unico corpo armato rimasto a Mushanè (più la milizia di Ndriçim, senza padrone). L'armeria — mazze, cotte, qualche balestra — è in ordine maniacale. Nell'archivio: cronache della fondazione, atti del feudo, concessioni, sfratti — l'aritmetica dell'avidità di Gofferio nero su bianco, utile per Onofrio e per chi prepara il dossier su Teramum. Nota di coerenza: la sala del Capitolo è nella Cattedrale; la biblioteca/archivio è qui (« Casa del Capitolo » nella scheda di Simone è lo stesso edificio). Zio di Corrado: Mastro Còla, il fabbro (luogo 10).",
+  "atti": [
+   14,
+   15
+  ],
+  "links": [
+   "mu-corrado-lu-mazzole",
+   "mu-frate-simone-bibliotecario",
+   "mu-frate-anselmo",
+   "mu-10-bottega-del-fabbro"
+  ]
+ },
+ {
+  "id": "mu-04-la-macelleria",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "04 · La Macelleria",
+  "sub": "La chianca di Mastro Sabbatìne Lu Chiancùse",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "La chianca del borgo: un bancone di pietra lucidato da generazioni di lame, ganci di ferro con mezzene e salsicce, segatura per terra e l'odore dolciastro del sangue fresco. Dietro il bancone Mastro Sabbatìne Lu Chiancùse: spalle da bue, mannaia sempre in mano, e un sorriso pronto per ogni cliente — un sorriso che sta tutto nei denti, mai negli occhi. È bravo nel mestiere, generoso col peso, e ai bambini regala le cotenne.",
+  "gm": "I mercenari prendevano carne « a credito » e non pagavano; Sabbatìne incartava e taceva per i due figli. Ora che i Velthuria sono spezzati, lo sblocco è scattato: se qualcuno gli chiede il conto delle requisizioni, lo dà tutto, a memoria, davanti a chi serve — testimonianza « di bottega » utile a Onofrio per il dossier su Lekë e Iuvenza. Il maiale più grasso del recinto si chiamava « Gofferìe »: la battuta ora si può dire forte. Omonimia: non confondere con Sabbatìne la fornaia (luogo 8).",
+  "atti": [],
+  "links": [
+   "mu-sabbatine-lu-chiancuse",
+   "mu-08-forno-comune"
+  ]
+ },
+ {
+  "id": "mu-05-casa-del-vecchio",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "05 · La casa del vecchio",
+  "sub": "La sedia impagliata di Mastro Carlo Vecchio",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Una casetta di pietra con la porta sempre socchiusa e una sedia impagliata sull'uscio. Lì siede, dalle prime ore alla sera, Mastro Carlo Vecchio: sessantotto anni, mani come radici, un mantello rattoppato anche d'estate. Guarda passare il borgo come si guarda un fiume che si conosce a memoria. Con lui vive il nipote Pìjètre, dodici anni, svelto e silenzioso. Ai forestieri il vecchio non risponde: annuisce, sputa di lato, e torna a guardare il fiume.",
+  "gm": "Il più vecchio testimone di Mushanè — parla SOLO a chi usa il dialetto stretto (l'italiano ottiene « Eh? Nun sènte. So' vècchie. »). Archivio orale: Teodorus, i nomi vecchi (Muscanum Vetus, Li Tre Surelle, « la chièse l'hànne pusàte 'ncòppe a 'na còse cchiù vècchie… ancóre respìre »), l'elezione di Gofferio « cu li vóte de Teramum », chi è parente di chi. Il figlio (padre di Pìjètre) morì nel Bosco dei Noci sei anni fa — la stessa stagione della « carrozza nera da Teramum »: coincidenza di date nella memoria del vecchio, se nasconda altro è da decidere. Non confondere con Mastro Carlo il gabelliere del Pònte, venuto via col convoglio. Pìjètre è la guida perfetta nei vicoli per chi è gentile col nonno.",
+  "atti": [],
+  "links": [
+   "mu-mastro-carlo-vecchio",
+   "mu-famiglia-cucullo"
+  ]
+ },
+ {
+  "id": "mu-06-casa-della-donna-col-figlio",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Lu Sotte (Borgo Basso)",
+  "title": "06 · La casa della donna col figlio",
+  "sub": "La casa di Donna Rosìna, la Vedova del Sotte",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Una casa povera del Borgo Basso, con le corde del bucato tese da un muro all'altro e panni stesi a ogni ora. Qui vive Donna Rosìna, che il borgo chiama la Vedova del Sotte: quarantaquattro anni, tre figli, le mani perennemente nell'acqua e nel sapone. Il marito glielo ha preso il mulino, e da allora Rosìna campa lavando i panni di mezzo borgo. I più piccoli giocano sull'uscio; il grande porta e ritira le ceste. La porta è aperta a chiunque saluti per nome.",
+  "gm": "Lavava i panni dei mercenari per pochi Gofferini e, lavando, sentiva: turni, nomi (« Kostandìn », « lu Kapitàne »), i lamenti sulla paga in ritardo e sulla « patróne ca nun tène fàcce ». Ora che i Velthuria non ci sono più ha perso quel lavoro — è la fame: un PG attento ha qui un dovere, e il Borgo Basso guarda come lo onora. Parla per rispetto e aiuto concreto (legna, farina), non per soldi: Persuasione CD 10 con garbo. Rimanda a Maddalena al lavatoio per la faccenda delle tonache.",
+  "atti": [],
+  "links": [
+   "mu-donna-rosina",
+   "mu-24-la-piazza",
+   "mu-maddalena-la-lavandara"
+  ]
+ },
+ {
+  "id": "mu-07-casa-vedova-del-mezze",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "07 · La Casa della Vedova del Mèzze",
+  "sub": "Magazzino della lana e casa di Donna Filomena e Tonìno Lu Lanàre",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Una delle case benestanti del nucleo murato: due piani, intonaco curato, e al pianterreno il magazzino della lana — balle profumate di grasso e d'erba che partono coi carri verso Teramum. Qui vive Donna Filomena, sessant'anni, sempre vestita di nero da quando è morto il marito: messa ogni mattina, rosario alla cintura, e un'occhiata dalla finestra che pesa chiunque passi. Il figlio, Mastro Tonìno Lu Lanàre, trentacinque anni e baffi curati come un giardino, è il mercante di lana del feudo: affabile, vestito troppo bene per Mushanè, sempre con un conto in testa e un complimento in bocca.",
+  "gm": "Tonìno vende la lana all'Abbazia (concessione ufficiale) E ai Naviganti Grigi di Julia Nova sottobanco: carichi non registrati, due registri nel magazzino (Intuizione CD 13 per fiutarlo; Adamus può conoscerne il nome dai registri della Gilda). Ricattabile o comprabile: offre un canale di contrabbando rodato verso Julia Nova e ciò che i Naviganti Grigi dicono di Mushanè. Donna Filomena non sa nulla: minacciare Tonìno davanti alla madre funziona troppo bene. Con Gofferio morto, la concessione della lana passa a Onofrio: Tonìno starà già facendo i conti. Omonimia: NON è la Vedova Filomena mezzadra (luogo 19).",
+  "atti": [],
+  "links": [
+   "mu-tonino-lu-lanare"
+  ]
+ },
+ {
+  "id": "mu-08-forno-comune",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Lu Sotte (Borgo Basso)",
+  "title": "08 · Il Forno Comune",
+  "sub": "Il forno di Mastro Vinciènze e di Sabbatìne — il notiziario dell'alba",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Prima ancora dell'alba, il Borgo Basso sa che ora è dal profumo: il forno comune sforna quando il cielo è ancora nero, e la fila delle donne con le ceste comincia al buio. Mastro Vinciènze Lu Furnàre, quarantacinque anni, braccia bianche di farina fino al gomito, inforna e sforna con la pala lunga; la moglie Sabbatìne, quarantatré, tiene il banco, i conti e — soprattutto — le conversazioni. La fila dell'alba è il vero notiziario di Mushanè insieme al lavatoio: chi è malato, chi deve soldi, chi ha litigato con chi.",
+  "gm": "Il segreto di Vinciènze: ha un'amante, Mariannìna, moglie di Mastro Giusto il mugnaio (Intuizione CD 12 sui suoi silenzi al nome del mulino). Chi lo sa tiene in pugno l'uomo che sa tutto di tutti. Sabbatìne la pettegola: mezz'ora di chiacchiere in fila = le dicerie del giorno (tabella d8 nella scheda del borgo); ma ciò che i PG le dicono, a pranzo lo sa il borgo. Il forno che lavora per la colonna è parte della « dote di Mushanè » alla Crociata. Mastro Peppino (luogo 12) vende qui farina di scarto.",
+  "atti": [],
+  "links": [
+   "mu-vincienze-lu-furnare",
+   "mu-mastro-giusto-lu-mulinare",
+   "mu-mastro-peppino"
+  ]
+ },
+ {
+  "id": "mu-09-locanda-del-frate",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Lu Sotte (Borgo Basso)",
+  "title": "09 · La Locanda del Frate",
+  "sub": "La bettola del Borgo Basso — Mastro Pancrazio, Mariuccia, il garzone",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "La sala è bassa e calda: travi nere di fumo, il fuoco alto nel camino, odore di ceci, agnello e vino versato. Dietro il banco Mastro Pancrazio Lu Lardùse — grosso come una botte, il dente d'oro che brilla quando ride — ha già visto, contato e pesato chiunque entri. La figlia Mariuccia serve ai tavoli; il garzone Sabbatìno porta i vassoi dappertutto. Dopo il Vespro la locanda si riempie ed è la bettola chiassosa di Mushanè: il posto migliore per sentire — e farsi sentire.\n\nQui Vicarus e Mattheus hanno ritrovato Iosephus Pompizius, l'amico dei tempi di Julia Nova, e qui Iosephus ha scoperto che la magia non paga i conti: il locandiere si è piantato davanti alla porta con la mano tesa. In fondo alla sala, al tavolo fisso, il sergente Kostandìn vi guardava senza mai smettere. Dopo la caduta di Gofferio, Vicarus e Alessandros sono tornati qui a bere, e mezza sala guardava l'uomo che aveva staccato la testa a Lekë. Al piano di sopra, in fondo, c'è la camera 9: quella che non si apriva mai.",
+  "gm": "Camera 9: era il nascondiglio di Lu Grise — ferita magica che non chiudeva (le ustioni di Vicarus), pugnale avvelenato sotto il cuscino, finestra sul tetto basso del retro. I PG non l'hanno mai scoperta: Lu Grise è uscito da solo, con i vesperiani, alla campana. Ora la camera è vuota: restano le bende alla lavanda di Crescenzo, il quaderno di Mariuccia (« 9 — lu Grìse. Nun è nome suo. Occhi che contano. ») e il fatto che Pancrazio SAPEVA e ospitava, per conto dell'Abbazia. Frate Crescenzo saliva ogni notte a mezzanotte a curarlo senza sapere chi fosse: se lo scopre adesso, a cose fatte, è devastato — scena ancora disponibile. Regola della sala: un giro offerto (2 ma) = una domanda con vantaggio a Persuasione. Sabbatìno: 2 fiorini = memoria di facce e orari.",
+  "atti": [
+   13,
+   15
+  ],
+  "links": [
+   "mu-mastro-pancrazio",
+   "mu-mariuccia",
+   "mu-sabbatino-il-garzone",
+   "mu-osservatore-lu-grise",
+   "mu-sergente-kostandin",
+   "mu-iosephus-pompizius",
+   "mu-frate-crescenzo"
+  ]
+ },
+ {
+  "id": "mu-10-bottega-del-fabbro",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "10 · La Bottega del Fabbro",
+  "sub": "L'incudine di Mastro Còla Lu Fèrre, zio di Corrado",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Il martello di Mastro Còla Lu Fèrre è uno degli orologi di Mushanè: comincia dopo la Matins e smette al Vespro, regolare come le campane. La bottega è nera di fuliggine, calda anche d'inverno, ordinata come una sacrestia: zappe, vomeri, ferri da mulo appesi in file precise. Còla ha trentotto anni, spalle da incudine e un vocabolario di forse cento parole, metà delle quali sono prezzi. Non fa credito a chiacchiere, e quando non vuole rispondere batte il ferro più forte.",
+  "gm": "Sotto un telo, una rastrelliera con venti punte di lancia ordinate dai mercenari (Indagare CD 12): Còla le forgiava più lentamente di quanto sapesse fare. Ora nessuno verrà a ritirarle — sono venti punte buone per i Frati Armati, o per la Crociata. Còla è lo zio di Corrado (« Curràde? Bone guaglió'ne. Male servìte. »): la via di mezzo per parlare al nipote. Si apre col rispetto del mestiere, mai con le domande dirette; chi lo minaccia lo perde per sempre. Nota: Corrado ha 44 anni e lo zio 38 — incongruenza da sanare (proposta: Còla è il fratello minore della madre, nato tardi).",
+  "atti": [],
+  "links": [
+   "mu-mastro-cola-lu-ferre",
+   "mu-corrado-lu-mazzole",
+   "mu-03-casa-dei-frati"
+  ]
+ },
+ {
+  "id": "mu-11-casa-di-leke",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "11 · La Casa di Lekë",
+  "sub": "L'ex quartier generale dei mercenari Velthuria",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una casa di pietra a due piani, requisita e trasformata in quartier generale: imposte sempre accostate, un mercenario sull'uscio a ogni ora, un viavai misurato di uomini che entravano con un rapporto e uscivano con un ordine. Sul davanzale, una bandieruola rosso-bianca che a Mushanè nessuno sapeva leggere — e tutti avevano imparato a temere. Qui abitava il Kapitàn Lekë Muzàka, che si faceva vedere solo quando voleva lui, sotto il portico della Cattedrale su uno sgabello di campo.\n\nLekë è morto sul sagrato. La casa è vuota, con la bandieruola ancora al davanzale.",
+  "gm": "Dentro: mappe del feudo annotate, il registro-copia dei varchi, la contabilità della compagnia, le paghe e il contratto con Casa Velthuria — col sigillo della Veneranda Iuvenza. È una prova documentale del legame Iuvenza–mercenari che i PG non hanno ancora raccolto: Kostandìn (ora al soldo della Crociata) sa dov'è tutto. Ciò che NON c'è: nessuna carta su Lu Grise — Lekë sospettava un canale separato del committente e non lo gestiva. La casa appartiene a una famiglia del borgo che l'ha persa alla requisizione: restituirla è un gesto che il borgo nota.",
+  "atti": [
+   13,
+   14
+  ],
+  "links": [
+   "mu-kapitan-leke-muzaka",
+   "mu-sergente-kostandin",
+   "mu-21-23-case-occupate-mercenari"
+  ]
+ },
+ {
+  "id": "mu-12-casa-di-mastro-peppino",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "12 · La Casa di Mastro Peppino",
+  "sub": "La casa decaduta del vecchio mugnaio",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Una casa che è stata di un uomo importante e si vede — e si vede anche che non lo è più: l'intonaco cade, l'orto è sfatto, e sull'architrave resta inciso un chicco di grano, il marchio dei mugnai. Mastro Peppino, cinquantadue anni, fu il mugnaio del feudo; oggi vende sacchetti di farina di scarto e passa alla Locanda più ore di quante ne passi sveglio a casa. Quando ha bevuto — cioè quasi sempre, dopo la Sexta — parla volentieri, e sempre dello stesso argomento: il mulino che era suo.",
+  "gm": "Peppino sa COME Mastro Giusto ha avuto la concessione del mulino: comprata, con una firma dell'Abbazia dove non doveva stare. Racconto intero con vino e pazienza: Persuasione CD 10 (sobrio CD 14, la vergogna). Vale come pista, non come prova (« le fàvele de li 'mbriàche »). Con Gofferio morto, la concessione del mulino è in mano a Onofrio: ridare il mulino a Peppino — o farlo rientrare — è un modo per comprarsi i Disperati del Borgo Basso. Da ubriaco ripete in sala ciò che gli si dice.",
+  "atti": [],
+  "links": [
+   "mu-mastro-peppino",
+   "mu-mastro-giusto-lu-mulinare",
+   "mu-09-locanda-del-frate"
+  ]
+ },
+ {
+  "id": "mu-13-casa-de-li-partute",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "13 · La Casa de li Partùte",
+  "sub": "La casa sprangata di quelli che se ne sono andati",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Una casa sprangata in mezzo alle case vive: assi inchiodate sulla porta, imposte chiuse, l'erba che cresce sulla soglia. Il borgo la chiama la casa de li Partùte — di quelli che se ne sono andati. La famiglia ha caricato un carro ed è partita per Julia Nova poco dopo l'arrivo dei forestieri armati; nessuno li ha più sentiti. I vicini abbassano la voce quando ci passano davanti: non per paura della casa, ma di quello che significa — che andarsene si può, e che qualcuno l'ha già fatto.",
+  "gm": "Dentro tutto com'era: piatti nella credenza, coperte piegate, un giocattolo di legno sotto il tavolo, e sul tavolo una lettera mai finita: « Fratè, qua nun se pò cchiù campà… ». Forzare il retro: Scassinare CD 10 o un'asse smossa. Jolly per scene: nascondiglio, incontri segreti, una candela accesa dove non dovrebbe esserci nessuno. Ora che Mushanè è libera, la famiglia potrebbe tornare da Julia Nova — o la Crociata potrebbe portare loro la notizia. Rumore di notte = vicini che guardano.",
+  "atti": [],
+  "links": []
+ },
+ {
+  "id": "mu-14-casa-di-iosephus-pompizius",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "14 · La Casa di Iosephus Pompizius",
+  "sub": "La casa di famiglia dei Pompizius, chiusa da anni",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una casa di pietra chiara, più dignitosa delle vicine, con lo stipite scolpito e un anello di bronzo alla porta: la casa di famiglia dei Pompizius a Mushanè, chiusa da anni. La polvere ha posato il suo velo su tutto — ma è una casa custodita, non abbandonata: qualcuno del parentado paga perché il tetto tenga e i ladri girino al largo. Dentro, al buio delle imposte, dormono i mobili sotto i teli, una libreria, e l'odore delle case che aspettano: cera vecchia, carta, tempo. È la casa d'infanzia di Iosephus, il vostro amico bardo.",
+  "gm": "La chiave la custodisce Don Aurelio (luogo 16) e la consegna a Iosephus con cerimonia commossa. È la scena personale di Iosephus: un oggetto del padre Vetus, il medicus dentium di Teramum, una lettera, un ricordo — semina per la trama del padre. Dentro possono esserci carte sui poderi Pompizius (utili con i Lu Trùpe e la Vedova Filomena) e vecchia corrispondenza con Teramum; niente su Iuvenza. Valore pratico: un tetto legittimo nel borgo per la Crociata, ora che Casa Pompizius ha aderito.",
+  "atti": [
+   15
+  ],
+  "links": [
+   "mu-iosephus-pompizius",
+   "mu-don-aurelio-pompizius",
+   "mu-16-casa-dei-pompizius"
+  ]
+ },
+ {
+  "id": "mu-15-casa-del-medico",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "15 · La Casa del Medico",
+  "sub": "Lo studio di Mastro Simone Lu Mèdiche, cerusico",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Sull'uscio è inchiodata una piccola insegna dipinta: una mano e una lancetta. Mastro Simone Lu Mèdiche, trentanove anni, magro, preciso, le maniche sempre rimboccate, è il cerusico di Mushanè: cava denti, ricuce ferite, sistema ossa. Lo studio è pulito e ordinato — boccette etichettate, ferri lucidi — e stranamente poco frequentato. Il motivo lo sa tutto il borgo: la gente, potendo, va dal vecchio frate scalzo dell'orto, che non chiede niente. Mastro Simone cura chi paga — e mastica amaro.",
+  "gm": "Simone SA che Marìa non è morta per un fulmine: nessuno gli fece esaminare i quattro corpi, l'Abbazia dichiarò il fulmine e seppellì in fretta. Conferma rispettabile ma senza prove della sidequest « Il Fuoco che non venne dal Cielo » (luogo 20). Pronto a parlare male dell'Abbazia (rivalità economica con Crescenzo); cure competenti a pagamento — dopo la battaglia i feriti della Crociata sono il suo momento. Non confondere con Frate Simone il bibliotecario.",
+  "atti": [],
+  "links": [
+   "mu-mastro-simone-lu-mediche",
+   "mu-20-casa-bruciata-di-maria",
+   "mu-frate-crescenzo"
+  ]
+ },
+ {
+  "id": "mu-16-casa-dei-pompizius",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "16 · La Casa dei Pompizius",
+  "sub": "Il salotto di Don Aurelio e Donna Lavinia",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "La casa più grande del Borgo dopo quelle dell'Abbazia: due piani di pietra chiara, una loggetta, e dentro un odore di cera, vino e libri vecchi. I corridoi sono tappezzati di ritratti — decine di volti con lo stesso naso, generazioni di Pompizius che guardano l'ospite come una giuria. Qui vivono Don Aurelio Pompizius, sessantadue anni, pasciuto, roseo, il possidente laico più importante del feudo, e la moglie Donna Lavinia, magrissima, le dita sempre sporche di colore: dipinge corvi — solo corvi, da anni — e i quadri sono appesi tra gli antenati, che sembrano disapprovarli.\n\nLa sera dopo la battaglia Maximus è venuto qui per primo: non a chiedere oro, ma a chiamare la famiglia alla Crociata. I Pompizius hanno detto di sì — sostegno civile, logistico e politico — e Iosephus continua il viaggio con voi.",
+  "gm": "Don Aurelio non agisce: parla, col vino suo, a un parente. Ciò che può ancora dare: i nomi e le inclinazioni dei frati del Capitolo (oro per chi deve capire il convento di Onofrio); la conferma che la « signora di Teramum » venne sei anni fa, di notte, vestita di nero — e che da allora Gofferio « incassava e non spendeva ». Nominarlo in giro come fonte chiude il salotto per sempre. Donna Lavinia sente i residui del cerchio pretuziano sotto la cripta senza saperlo (« la nota sotto il pavimento »; i corvi sono sempre sopra il campanile): per Mattheus è un indizio-bussola gratuito. Con l'adesione alla Crociata, Don Aurelio « si è schierato » per la prima volta in dieci secoli di Pompizius: fargli pesare il rischio, e il ritorno (Onofrio gli deve qualcosa).",
+  "atti": [
+   15
+  ],
+  "links": [
+   "mu-don-aurelio-pompizius",
+   "mu-donna-lavinia-pompizius",
+   "mu-iosephus-pompizius",
+   "mu-14-casa-di-iosephus-pompizius",
+   "mu-18-casa-lu-trupe"
+  ]
+ },
+ {
+  "id": "mu-17-casa-del-capo-bestiame",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "17 · La Casa del Capo-bestiame",
+  "sub": "Casa, stalla e recinti di Zì Pèppe Lu Vaccàre",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Casa, stalla e recinti tutt'uno, ai margini del borgo: odore di fieno, letame e cuoio, muggiti all'alba, e muli legati in fila come pensionanti. Mastro Zì Pèppe Lu Vaccàre, cinquantotto anni e una voce roca da vento e tabacco, governa il bestiame di mezzo feudo — e la stalla e il fienile comuni fuori mura: sa di chi è ogni vacca, ogni mulo e ogni debito che ci sta attaccato. Lo aiuta il garzone Tonìnele, sedici anni, bravo con le bestie e impacciato con i cristiani.",
+  "gm": "Le orecchie della notte: chi si muove col buio passa vicino alle bestie, e Zì Pèppe sa di tutti i passaggi notturni (muli « in prestito », tacche su una trave; « 'na tòneca » che rientra sempre dopo Completorium dalla parte degli orti — Tommaso o Crescenzo; il foraggio della mula della camera 9 pagato da Pancrazio). Persuasione CD 12, dimezzata se si parla di bestie con competenza o si aiuta a una nascita. Tonìnele è innamorato di Mariuccia e saliva sul tetto del retro della Locanda: ha visto la finestra della camera 9 e « ùne ca me guardàve da derète li vétre ». Muli, carri e foraggio per la marcia, con discrezione.",
+  "atti": [],
+  "links": [
+   "mu-zi-peppe-lu-vaccare",
+   "mu-09-locanda-del-frate",
+   "mu-mariuccia"
+  ]
+ },
+ {
+  "id": "mu-18-casa-lu-trupe",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "18 · La Casa della Famiglia Lu Trùpe",
+  "sub": "La casa dei mezzadri onesti dei Pompizius",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Una casa contadina piena di vita: galline sull'aia, attrezzi in ordine, tre figli scalzi che si rincorrono, e l'odore del pane e del sugo dalla finestra. Qui vivono Cèsare, quarantatré anni, mani enormi e schiena dritta, e Felìce, quaranta, che governa casa, conti e marito con la stessa fermezza. Sono mezzadri dei poderi Pompizius, e nel borgo hanno fama meritata di gente onesta: la parola di un Lu Trùpe, a Mushanè, vale una firma.",
+  "gm": "Il nome Pompizius qui apre porta e tavola: con Iosephus i PG sono famiglia. Cèsare conosceva Marìa (casa bruciata, luogo 20) e non ha mai creduto al fulmine; rimanda alla Vedova Filomena (« chèlla l'ève cóme 'na sòre »). Onesti davvero: chiedere loro qualcosa di losco li offende. Se i PG portano verità o giustizia su Marìa, Cèsare diventa la voce che convince i contadini onesti — la maggioranza silenziosa dei Nostalgici di Teodorus. Il figlio grande (16) potrebbe chiedere di unirsi alla Crociata: la risposta dice che razza di crociata è.",
+  "atti": [],
+  "links": [
+   "mu-famiglia-lu-trupe",
+   "mu-vedova-filomena-mezzadra",
+   "mu-16-casa-dei-pompizius",
+   "mu-20-casa-bruciata-di-maria"
+  ]
+ },
+ {
+  "id": "mu-19-orto-dell-abbazia",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Abbazia di San Pietro",
+  "title": "19 · L'Orto dell'Abbazia",
+  "sub": "Le erbe di Frate Crescenzo Lu Scàuze e la lavanda di Federìghe",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Dietro il convento, ordinato come un salterio: file di legumi, erbe officinali in quadrati segnati da pietre, e i filari di lavanda che a tagliarli profumano mezzo borgo. Tra i solchi, curvo e a piedi nudi in ogni stagione, lavora Frate Crescenzo Lu Scàuze, sessantasette anni, l'erborista che cura tutti e non chiede mai niente — bisogna chinarsi per sentire quel che sussurra. Con lui Mastro Federìghe Lu Lavandàre, sessantadue anni, che governa i campi di lavanda e stende i mazzi a seccare. Poco oltre la siepe, l'orto piccolo e curatissimo di una mezzadra dei Pompizius.",
+  "gm": "Crescenzo è un devoto segreto di Maia (latte sulle pietre di confine, di notte) e curava ogni notte Lu Grise alla camera 9 senza sapere chi fosse: adesso, con Lu Grise decapitato in piazza, la verità può raggiungerlo — scena della devastazione ancora giocabile, e la sua unica richiesta è la protezione del culto (con Onofrio Abate, ottenibile). Per Mattheus: Crescenzo sente il Toccato e gli porta una ciotola di latte. Federìghe portava la lavanda « pe' li bènne » senza collegare nulla. Oltre la siepe la Vedova Filomena mezzadra, amica di Marìa: via d'ingresso canonica alla casa bruciata (luogo 20) — si apre se Iosephus si presenta come Pompizius. Frate Martino (devoto di Maia, del convoglio) e Crescenzo si riconoscono al primo sguardo.",
+  "atti": [],
+  "links": [
+   "mu-frate-crescenzo",
+   "mu-vedova-filomena-mezzadra",
+   "mu-20-casa-bruciata-di-maria",
+   "mu-frate-martino"
+  ]
+ },
+ {
+  "id": "mu-20-casa-bruciata-di-maria",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Fuori dal borgo",
+  "title": "20 · La Casa Bruciata di Marìa",
+  "sub": "Il rudere a sud-est, oltre gli orti — « lu fùlmene »",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Il rudere sta a sud-est, oltre gli orti del convento: venti minuti a piedi dalla Locanda. L'Abbazia ha parlato di un fulmine, ha benedetto le ceneri e ha chiuso il discorso. Il borgo non ci passa più, nemmeno di giorno.\n\nLa casa di Marìa è poco più di una rovina. Quattro muri di pietra grigia anneriti dal fumo, il tetto crollato, le travi maestre cadute come ossa di un animale grosso. L'orto c'è ancora — solo che nessuno lo lavora più. Il pozzo è pieno d'acqua chiara, ed è la cosa più disturbante: l'acqua è pulita, ma non c'è nessuno a bere. Fuori dalla porta, sotto una pietra, un mucchietto di rosmarino secco. Qualcuno lo cambia, ogni qualche giorno.",
+  "gm": "Sidequest « Il Fuoco che non venne dal Cielo », MAI aperta dai PG. Quattro Ombre Tessute (Marìa, i due figli adulti, la nipotina di otto anni): CA 13, PF 22, Tocco psichico +4 (2d6 psichici + TS SAG 12 o spaventato), immuni ai danni fisici non magici, vulnerabili ai radiosi; non attaccano chi resta immobile e parla a voce alta. Risoluzione non violenta: preghiera/promessa + Persuasione o Religione CD 13 — la bambina indica sotto una trave il Sigillo Velthuria (stoffa rosso-bianca) e poi le case dei mercenari (21–23). Mattheus: si placano senza tiro; la bambina sussurra « Lu Frate cu' lu Mazzòle nun à fàtte. È state lu strànjere. Lu cu' la spàde lùnghe. » Vicarus: il Bastone sente Maia — SANGUE.MORTE.ANCORA + SORELLA. Furono i mercenari di Lekë (olio combustibile sulle tonache: Maddalena). Ora che Lekë è morto, il sigillo non serve più a ribaltare Corrado: serve a far riposare le ombre e a chiudere il conto davanti al borgo — e a legare Mattheus alla Vecchia Madre. Vie d'ingresso: Tommaso, Maddalena, Vedova Filomena, il cerusico, la visione di Mattheus.",
+  "atti": [],
+  "links": [
+   "mu-vedova-filomena-mezzadra",
+   "mu-maddalena-la-lavandara",
+   "mu-mastro-simone-lu-mediche",
+   "mu-frate-tommaso",
+   "mu-21-23-case-occupate-mercenari",
+   "mu-kapitan-leke-muzaka"
+  ]
+ },
+ {
+  "id": "mu-21-23-case-occupate-mercenari",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "21-22-23 · Case occupate dai mercenari",
+  "sub": "Le tre case dei Cucullo, requisite dai Velthuria",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Tre case contadine a nord-ovest del borgo, in fila, riconoscibili al primo sguardo: bandieruole rosso-bianche alle finestre, rastrelliere di lance accanto agli usci, e un braciere davanti alla casa di mezzo dove c'era sempre qualcuno di guardia. Erano case di famiglie del borgo; per tre settimane ci hanno dormito i trenta forestieri armati, con turni che cambiavano, stivali e ordini secchi in una lingua dura. Da qui, quando la campana di Maximus ha cominciato a urlare, uomini che vivono di guerra hanno posato la scodella e preso l'acciaio.\n\nOggi i vesperiani non ci sono più: chi è caduto in piazza, chi è passato con Kostandìn al soldo della Crociata. Le case sono vuote, con le bandieruole ancora alle finestre.",
+  "gm": "Le case appartengono ai Cucullo — Giròlamo, Filumèna, tre figli — sfrattati e ospitati da parenti nel feudo: restituirgliele è un gesto di giustizia che parla a tutto il Borgo Basso (e che Onofrio può fare subito). Dentro: paghe e contratti della compagnia, equipaggiamento per trenta (bottino: armature vesperiane brunite, fibbie col punzone del regno, balestre), e i segni di chi ci abitava prima. È QUI che indica la bambina della casa bruciata: il Sigillo Velthuria e questo gesto chiudono il cerchio su chi appiccò il fuoco. Drità e Kostandìn alloggiavano qui.",
+  "atti": [
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-11-casa-di-leke",
+   "mu-famiglia-cucullo",
+   "mu-sergente-kostandin",
+   "mu-drita",
+   "mu-mercenari-velthuria",
+   "mu-20-casa-bruciata-di-maria"
+  ]
+ },
+ {
+  "id": "mu-24-la-piazza",
+  "cat": "luogo",
+  "city": "mushane",
+  "group": "Il borgo",
+  "title": "24 · La Piazza",
+  "sub": "Lo spiazzo davanti alla Cattedrale, il lavatoio, i Campi dei Pellegrini",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Lo spiazzo davanti alla Cattedrale è il palcoscenico di Mushanè: qui arrivano le carovane sotto gli occhi di tutto il borgo, qui si tiene il mercato del martedì, qui le campane scandiscono la giornata di chiunque. Al lavatoio, dall'alba al Vespro, le donne lavano e parlano — il vero notiziario del borgo — e in mezzo a loro batte i panni Maddalena la Lavandàra. I bambini giocano tra le ceste contando con una filastrocca vecchia quanto le pietre: « Une, dùje, tre, lu Sòle se ne va… ». Ai margini, dietro la Cattedrale, i campi dove da sempre si accampano i pellegrini: lì la Crociata ha messo i carri in cerchio, i feriti all'ombra e Gelsomina legata a un palo, e lì Adamus ha comprato cavalli dal contadino dei campi.\n\nSu questo spiazzo Corrado vi ha squadrati e ha portato dentro la vostra richiesta; su questo sagrato la battaglia è uscita dalla chiesa, e la testa di Lekë è rotolata sul selciato davanti a mezza piazza. Il mattino dopo Mushanè è uscita dalle case e ha trovato qui il suo Abate in catene: il giudizio, la confessione, le parole di Silvanus sulla redenzione, la morte scelta da Gofferio — e, in fondo alla piazza, la parola « Màrtere ». Qui, davanti alle stesse facce, Onofrio è stato scelto come nuovo Abate.",
+  "gm": "Maddalena lavò le tonache dei Velthuria la mattina dopo l'incendio di Marìa: puzzavano d'olio combustibile. Paga in farina, non in Gofferini (mezzo sacchetto = chiacchiere; sacchetto pieno = le tonache) — via d'ingresso canonica al luogo 20; e ora, coi mercenari caduti, lava gratis ai crociati. La filastrocca dei bambini è una conta pretuziana camuffata (il sole che se ne va, le due lune che restano): Mattheus la sente vibrare come il ronzio della cripta. Il martedì, il banco del vasaio Narduccio Lu Vasàre coi piatti « decorati » di lune (culto nascosto di Maia). Il contadino dei campi da cui Adamus ha comprato i cavalli non ha nome nei diari: proposta — un mezzadro dell'Abbazia, fonte sul malcontento. Tutto ciò che si fa qui è pubblico: la memoria di Gofferio (« màrtere » o venduto) si giocherà in questa piazza.",
+  "atti": [
+   12,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-maddalena-la-lavandara",
+   "mu-narduccio-lu-vasare",
+   "mu-abate-gofferio",
+   "mu-frate-onofrio",
+   "mu-kapitan-leke-muzaka",
+   "mu-corrado-lu-mazzole"
+  ]
+ },
+ {
+  "id": "mu-abate-gofferio",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Abate Gofferio de Petra Nigra",
+  "sub": "Abate-Signore di Mushanè per ventotto anni — « sorride sempre »",
+  "img": null,
+  "state": "incontrato",
+  "status": "Morto. Confessato davanti ai suoi frati e giudicato in piazza, ha scelto volontariamente la morte come espiazione. Il borgo è già diviso sulla sua memoria: venduto, o « màrtere ».",
+  "pub": "Più magro di quanto ci si aspetti, e più alto. Mani coperte di anelli, paramenti finissimi, e il sorriso appena percettibile che era già lì prima ancora che vi vedesse. Figlio di un tagliapietre, e non lo nascondeva: lo brandiva. Parlava un italiano formale, untuoso, pieno di pause — mai una parola in dialetto. Eletto ventotto anni fa con l'appoggio di Teramum, l'opposto di Teodorus Lu Sant'Ome: dazi triplicati, tratturi chiusi, lusso da nobile. Nìcola, il profugo sulla strada, ve l'aveva detto: « Quìlle nun è cattìve — è pègge. È 'nu vìle. »\n\nNella sala del Capitolo ha rifiutato di riconoscere l'autorità del Dito di San Berardo, e davanti alla scelta tra le guglie della sua abbazia e la gente che ci vive sotto ha scelto le guglie con la calma di chi archivia una pratica. Poi la campana, la battaglia, le catene. La notte stessa, nella Cattedrale piena di sangue, Mattheus lo ha condotto alla confessione — coi frati dell'Abbazia alle spalle che per ventotto anni avevano abbassato la testa e quella notte incalzavano, e Corrado davanti a tutti. Non è stato piegato dai forestieri: è stato piegato dai suoi. Al giudizio in piazza Silvanus gli ha parlato di redenzione — non di cancellare i peccati, ma di scegliere che uomo essere nell'ultimo momento — e Gofferio ha portato quelle parole fino in fondo.",
+  "gm": "Ciò che i PG NON hanno avuto da lui e resta nel borgo: la Lettera di Iuvenza e le 200 monete d'oro nel cassetto a doppia chiave della Casa dell'Abate (luogo 2); trent'anni di dossier su Impalox e sulle gerarchie di Teramum; il volto e le abitudini del messaggero della « nobildonna » (dove lasciava i messaggi, ogni quanto passava, la parola d'ordine) — tutto questo ora è nei suoi archivi o nella memoria di Fratel Mario, il cugino. Confessione: i diari non registrano il contenuto — proposta: la « nobildonna generosa » e le duecento monete per suonare la Vox Solis, senza il nome Iuvenza (lui non lo pronunciava mai). La sua morte è un campo di battaglia narrativo: Teramum (Impalox) può farne un martire ucciso dalla Crociata — il proclama arrivato all'alba parla già di « aggressione contro autorità ecclesiastiche ». Temeva Impalox più di tutto; quel timore ora è di Onofrio.",
+  "atti": [
+   12,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-02-casa-dell-abate",
+   "mu-24-la-piazza",
+   "mu-frate-onofrio",
+   "mu-corrado-lu-mazzole",
+   "mu-fratel-mario",
+   "mu-osservatore-lu-grise",
+   "mu-kapitan-leke-muzaka"
+  ]
+ },
+ {
+  "id": "mu-frate-onofrio",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Onofrio",
+  "sub": "Il frate delle vigne — oggi Abate di Mushanè",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Abate di Mushanè, scelto dall'Abbazia e dal borgo dopo la morte di Gofferio. Ha accettato che nasca la cappella di Mortus di Mattheus.",
+  "pub": "Lo avete incontrato nelle vigne del versante di San Pietro, il quarto giorno di marcia, dopo il Pònte: un frate che si è unito alla carovana verso il borgo senza chiedere niente a nessuno, e che ha camminato con voi fino alle porte. Poi la campana, la battaglia, la morte di Gofferio — e davanti alle stesse facce radunate in piazza, San Pietro ha avuto bisogno di un Abate. La scelta è caduta su di lui. Non un uomo imposto da Silvanus, non un candidato della Crociata: la risposta dell'Abbazia e della comunità al vuoto che Gofferio aveva lasciato.\n\nAbate da poche ore, ha ricevuto Mattheus che non gli ha parlato della guerra ma di Mortus, e ha accettato che a Mushanè nasca una piccola cappella separata da San Pietro — un posto dove qualcuno possa entrare, fermarsi, ricordare i propri morti. Il Conte Gisulfo di Bëllindë lo conosce, e non ha preso la notizia della sua elezione come una cosa da poco.",
+  "gm": "Nessuna scheda: Onofrio nasce nei diari (Atto XII, XV). Nota di canone: nell'Atto XII i nomi Onofrio/Onorino risultano invertiti — fa fede l'Atto XV: Onofrio = frate delle vigne, oggi Abate; Onorino = il frate grasso del Varco Est. Le schede scritte prima (Gofferio: « Onòfrio gli ha portato i nomi ») parlano del registro del Varco Est, cioè di Onorino. Da costruire: carattere, età, da che parte stava sotto Gofferio (proposta: uno dei frati giovani « Nostalgici di Teodorus », lavorava le vigne dell'Abbazia — l'unico frate che abbia visto la Crociata da vicino prima della battaglia, e per questo scelto). Problemi sul suo tavolo: il proclama di Teramum e Impalox, che lo tratterà da usurpatore; i tratturi chiusi e la tassa delle venti Gofferine (messaggio di Narduccio, mai consegnato); il mulino e gli sfratti; le case dei Cucullo; la Lettera di Iuvenza e le 200 monete nella casa dell'Abate; la protezione del culto di Maia chiesta da Crescenzo; la cappella di Mortus (100 mo di Mattheus). È il primo alleato istituzionale della Crociata nel Ducato: la sua firma (« il sigillo del Feudo di Mushanè ») vale per la Grande Convocazione dell'Aquila Aurea — da confermare.",
+  "atti": [
+   12,
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-02-casa-dell-abate",
+   "mu-abate-gofferio",
+   "mu-frate-onorino",
+   "mu-corrado-lu-mazzole",
+   "mu-frate-crescenzo"
+  ]
+ },
+ {
+  "id": "mu-corrado-lu-mazzole",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Corrado « Lu Mazzòle »",
+  "sub": "Capo dei dodici Frati Armati — ex boia, frate da vent'anni",
+  "img": "corrado.jpg",
+  "state": "incontrato",
+  "status": "Vivo. A Mushanè, alla testa dei suoi dodici. Vi ha combattuti in Cattedrale, poi ha abbassato l'arma da solo; era davanti a tutti quando Gofferio ha confessato.",
+  "pub": "Una montagna di carne in tonaca grigia, le maniche rimboccate su avambracci da fabbro, la testa rasata, e appesa alla cintura di corda lu Mazzòle — la mazza che gli dà il nome, liscia per l'uso. Tutto il borgo conosce la sua storia e nessuno gliela rinfaccia: prima dei voti era un boia; ha preso la tonaca per riscattarsi, vent'anni fa, e da allora comanda i dodici Frati Armati dell'Abbazia. Parla poco, in dialetto stretto, e quando parla la gente smette di fare rumore.\n\nSullo spiazzo davanti alla Cattedrale vi ha fatto le domande giuste guardandovi negli occhi, e con Mattheus l'aria si è fatta di vetro: « Ìje sò fràte. Frà-te. NU' SO' CÀNE. La diffèrenze la fà chi cumànne. » Trattato da capo militare vero, ha portato lui la vostra richiesta all'Abate — lui che davanti a Gofferio di solito restava fuori dalla porta. Quando Maximus ha preso la campana, ha attraversato la navata coi suoi Frati Armati alle spalle, perché è quello che fa un uomo d'ordine quando l'ordine gli crolla addosso; è finito in ginocchio tra i calcinacci della sua cattedrale, ha guardato l'Abate che urlava, ha guardato voi, ha sentito arrivare gli stivali stranieri — e si è tirato da parte. Ha abbassato l'arma non perché vinto, ma perché non riusciva più a riconoscersi nell'autorità in nome della quale combatteva. Alla confessione di Gofferio era davanti a tutti.",
+  "gm": "Statistiche: Veterano con la mazza (CA 17, PF 58; mazza +5, 1d8+3, multiattacco ×2); contro popolani usa il piatto della mano, non letale. Non mente: se non vuole rispondere tace. Non chiamarlo mai « cane » o « guardia ». Non sapeva nulla di Iuvenza, della lettera, della campana comprata: ora lo sa dalla confessione, ed è la ferita che temeva — vent'anni di tonaca al servizio di un uomo che non valeva il riscatto. Cosa può dare alla Crociata: i 12 Frati Armati (« Si avéte besògne de 'n òmme cu 'na mazze, sapéte addò sto »); la difesa di Onofrio contro chi verrà da Teramum. Il Sigillo Velthuria della casa bruciata non serve più a ribaltarlo, ma gli darebbe il nome dell'incendio di Marìa, che gli portava il pane nelle ronde di notte (« Maríe stève sèmpre a li pìetre de cunfìne, la sére. Bòna fémmene. »): scena di chiusura da concedergli. Zio: Mastro Còla il fabbro. Il ponte con la Crociata è Frate Giustino, il suo Mastino. Dubbio da chiarire: la milizia di Ndriçim (« comanda i dodici e la milizia del borgo », Atto XIII) — di fatto Ndriçim si arrende se Corrado si schiera.",
+  "atti": [
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-03-casa-dei-frati",
+   "mu-abate-gofferio",
+   "mu-frate-onofrio",
+   "mu-frate-giustino",
+   "mu-mastro-cola-lu-ferre",
+   "mu-ndricim-shkambi",
+   "mu-20-casa-bruciata-di-maria"
+  ]
+ },
+ {
+  "id": "mu-frate-onorino",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Onorino",
+  "sub": "Frate Armato, guardiano del Varco Est — il frate grasso del registro",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Mushanè, alla garitta del Varco Est col suo registro. Uno dei dodici di Corrado.",
+  "pub": "Largo quanto la garitta che occupa, la tonaca tesa sulla pancia, una lancia appoggiata al muro che non viene toccata da anni e, sul tavolaccio, sempre qualcosa da mangiare. È lui che vi ha fermati alle porte di Mushanè — « Fermàteve ddà. Chi sète e che vulète a Mushanè? » — e ha scritto i vostri nomi di pellegrini in crociata sul grande registro, con la penna dietro l'orecchio, facendovi segno di passare col mento perché aveva la bocca piena. È lui che, davanti allo spiazzo, si è grattato la tonsura quando gli avete chiesto l'udienza: lui registra i nomi, conta i carri, apre e chiude la porta; l'Abate non si chiede, si ottiene — e ha mandato un novizio a chiamare Corrado. Di tutti i dodici Frati Armati è il più quieto: ferma i viandanti per dovere, li registra per abitudine, e li lascia passare per filosofia: « chi vò trasì, tràse ».",
+  "gm": "Scheda originale intitolata « Frate Onòfrio »: per canone (Atto XV) il frate grasso del Varco Est è ONORINO; la scheda vale per lui. Guardia: CA 16, PF 11, lancia +3; Percezione passiva 14 per il cibo in avvicinamento. Non combatte se esiste un'alternativa. Il suo registro è la memoria scritta del borgo: dal registro Gofferio ebbe i nomi della Crociata (« ~30 ingressi, carri, una mucca col collare strano »). Lo si apre col cibo (« Pe' 'na pagnòtte accuscì ve cónte pùre li pìcure de Nardùcce »); sotto interrogatorio ammette che « 'n forastìere ca cammenàve stòrte » fu portato alla locanda prima dei PG. Conosce Narduccio Lu Pecuràre da vent'anni (« Pecché stàje cu sti gènti? ») e il vasaio omonimo. Scena calda ancora disponibile: il riconoscimento di Giustino (« Giustì… ma stive 'mpiccàte! Te dévene pe' mòrte! ») — se non è già avvenuta durante l'ingresso. Fedele a Corrado « pe' pigrizia si non pe' fede »: « si Corràde àuze la mazze, ìje stònghe addò stà Corràde. » Confrontare il suo registro con quello di Tommaso rivela i « buchi » della porticina.",
+  "atti": [
+   12,
+   13
+  ],
+  "links": [
+   "mu-corrado-lu-mazzole",
+   "mu-frate-onofrio",
+   "mu-frate-giustino",
+   "mu-frate-tommaso",
+   "mu-narduccio-lu-pecurare"
+  ]
+ },
+ {
+  "id": "mu-frate-giustino",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Giustino « Lu Mastìne »",
+  "sub": "Frate Armato di Mushanè passato alla Crociata — « Io ci sto »",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo, ferito al fianco. Arrivato a Mushanè sul carro dei feriti della Crociata; il convento lo credeva morto al Pònte.",
+  "pub": "Spalle quadre, mascella da cane da presa — il Mastino. Era al Pònte de li Fràte il giorno del sangue, coi Frati Armati del dazio, e davanti a tutti ha rotto coi mercenari piantandosi sul passaggio: « QUÈSTE È LU PÒNTE MÌJE! ». L'ha pagato con un pugnale al Loto Nero nel fianco. La Crociata l'ha raccolto e curato; ha viaggiato sul carro dei feriti con Frate Martino che gli cambiava l'acqua, e nella notte dei lupi è caduto sotto l'ultimo colpo — quando è caduto, il branco si è spezzato ed è fuggito. Cammina piegato sul fianco sinistro e rifiuta il braccio di chiunque provi a sorreggerlo. Quando gli chiedono perché marcia con la Crociata, risponde con tre parole: « Io ci sto. »",
+  "gm": "Uno dei dodici di Corrado, cresciuto in quelle mura. Veterano, PF 58 → attualmente 29, svantaggio agli attacchi finché non curato (riposo nel convento o magia). Non è chiaro dai diari se Giustino sia stato curato nel convento dopo la caduta di Gofferio, se abbia partecipato alla battaglia o se sia ripartito con la Crociata: da decidere (proposta: resta a Mushanè a guarire, e diventa il braccio di Corrado accanto a Onofrio — o segue Martino con la colonna). È la chiave dei frati dissidenti: « Tommàse, a lu Vàrche de pónente. Lu vìecchie Ansèlme. Simóne, chìlle cu l'ucchiàle. » Il suo racconto del Pònte davanti al Capitolo è un'arma contro la versione dei « bravi ospiti ». Sulle soglie non arretra mai. Tell: la mano sulle bende quando qualcuno mente. Chi tocca Martino scopre cosa resta del Mastino anche da ferito.",
+  "atti": [
+   12
+  ],
+  "links": [
+   "mu-corrado-lu-mazzole",
+   "mu-frate-martino",
+   "mu-frate-onorino",
+   "mu-frate-tommaso"
+  ]
+ },
+ {
+  "id": "mu-frate-anselmo",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Anselmo",
+  "sub": "Il più anziano del Capitolo — la memoria di Teodorus, cieco da un occhio",
+  "img": null,
+  "state": "noto",
+  "status": "Vivo. A Mushanè, nel convento. Ha visto il suo Abate confessare e un nuovo Abate eletto: quello per cui ha aspettato quarant'anni.",
+  "pub": "Settantadue anni portati come una quercia porta l'inverno: piegato ma in piedi. L'occhio sinistro è una nuvola bianca; il destro, vivissimo, non ti molla. È il frate più vecchio di Mushanè, l'ultimo rimasto che abbia servito sotto l'Abate Teodorus Pietrasanta, Lu Sant'Ome — quello che nella Guerra delle Due Lune diede tutto ai profughi e morì di stenti. I popolani gli baciano la mano quando passa. Era tra le tonache del Capitolo quando Alessandros ha mostrato il Dito di San Berardo, e tra i frati che, la notte della battaglia, non abbassavano più la testa.",
+  "gm": "Contro Gofferio in silenzio, per quarant'anni: « Teodorus tagliò li paramente d'óre pe' fànne bènde… Quest'Abbate li paramente li fa ricamà. » Leva dei Nostalgici di Teodorus, la maggioranza silenziosa. Ora che il vento è girato, Anselmo è la legittimazione morale di Onofrio davanti al borgo e — se viene qualcuno da Teramum — il testimone che ricorda l'elezione di Gofferio « cu li vóte de Teramum » ventotto anni fa. Col Dito di San Berardo si è commosso davanti a tutti (canone). Popolano PF 3; SAG 16, Intuizione +5. Mentore di Tommaso. Sulla memoria di Gofferio: proposta — è lui che può dire in pubblico la parola che pesa, « peccatore » e non « màrtere », o il contrario. Non fa mai nomi: « Lu Capìtole è cu Dìje. E Dìje tène pacienza assàje. »",
+  "atti": [
+   14,
+   15
+  ],
+  "links": [
+   "mu-abate-gofferio",
+   "mu-frate-onofrio",
+   "mu-frate-tommaso",
+   "mu-frate-simone-bibliotecario",
+   "mu-01-cattedrale-san-pietro"
+  ]
+ },
+ {
+  "id": "mu-frate-bonifacio",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Bonifacio",
+  "sub": "Cantore e campanaro — padrone delle tre campane, mezzo sordo",
+  "img": null,
+  "state": "noto",
+  "status": "Vivo. A Mushanè, al campanile. Le sue campane le ha suonate Maximus, senza permesso e senza ritmo: non l'ha ancora digerito.",
+  "pub": "Torace da botte, mani da corda di campana, e una voce così profonda che la si sente coi piedi prima che con le orecchie: quando canta il Vespro i bicchieri della Locanda vibrano sul bancone. Trent'anni di campane gli hanno regalato il fisico e tolto l'udito: è mezzo sordo, parla urlando senza accorgersene, e si lamenta di tutto — i centosettantadue scalini, le corde vecchie, i piccioni, l'Abate che non stanziava per la rifusione. È il padrone delle tre campane: la Vox Solis (funzioni e allarmi), la Vox Populi (le ore), la Vox Mortis (i funerali — e, dice, certe notti suona da sola). Il giorno della battaglia, la fune della Vox Solis è finita in mano a Maximus.",
+  "gm": "Era il « grilletto innocente » di Iuvenza: Gofferio gli aveva ordinato « si te lu dìce ìje, sòne la Vox Solis fòrte, tre vóte tre » senza dirgli perché — Bonifacio lo racconta a chiunque, ad alta voce, e non ha mai capito cos'era. Motore comico: ripete le domande scomode a volume di piazza (« CHI È CHE HA PRESO L'ORO, ABATE? »). Chi gli fa un complimento competente sul canto sale con lui al campanile: la vista più strategica del Ducato (mare a est, Gigante Dormiente a ovest, valle del Tordinum verso Teramum). Riconosce a orecchio i rintocchi di ogni borgo della valle: se serve capire chi segnala a chi, l'esperto è lui — e un codice di rintocchi concordato con la Crociata (« la Torre di Vedetta, stavolta per voi ») passa da lui. Su Maximus e la corda: lutto e rancore comico da giocare (« TRENT'ÀNNE de campàne e mò me le sòne 'nu furastìere cu li mane de pàne! »). Popolano FOR 16, PF 6; difende le campane a mani nude.",
+  "atti": [
+   14,
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-abate-gofferio",
+   "mu-frate-lorenzo"
+  ]
+ },
+ {
+  "id": "mu-frate-crescenzo",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Crescenzo Lu Scàuze",
+  "sub": "L'erborista scalzo dell'Orto dell'Abbazia — cura tutti, non chiede niente",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. All'Orto dell'Abbazia, a piedi nudi, come sempre. L'uomo che curava ogni notte è morto in piazza a mani legate.",
+  "pub": "Sessantasette anni, piccolo, asciutto come un sarmento, e sempre a piedi nudi — d'estate sulla terra battuta, d'inverno sulla brina: da qui il nome, lo Scalzo. Le mani macchiate di verde, la tonaca che odora di lavanda, rosmarino e fumo dolce. Parla pochissimo, in dialetto stretto sussurrato: bisogna chinarsi per sentirlo, e la gente del borgo si china volentieri — Crescenzo cura tutti, frati e contadini, e non chiede mai niente. I bambini dicono che parla con le piante. I vecchi dicono che le piante gli rispondono.",
+  "gm": "Due segreti. 1) Devoto segreto di Maia: mette il latte sulle pietre di confine di notte, da una vita, sotto il naso della Fiamma; la sua unica richiesta per qualunque alleanza è la protezione del culto (« che nisciùne abbrùsce cchiù li vìecchie pe' 'na prejère sbajàte ») — con Onofrio Abate è ottenibile, e sarebbe la prima vittoria di Maia dentro un feudo della Fiamma. 2) Curava ogni notte a mezzanotte il ferito della camera 9 su richiesta dell'Abbazia, SENZA sapere che era Lu Grise, la spia della donna che aveva comprato Gofferio. Ora Lu Grise è stato decapitato in piazza: quando Crescenzo capisce chi ha medicato per settimane (« 'st'Abbazìe m'à fàtte 'nfermìere de lu lùpe »), è devastato — scena da giocare lenta, senza salvarlo dal dolore: chi lo raccoglie guadagna cinquant'anni di radici di Maia. Con Mattheus: sente il Toccato e gli porta una ciotola di latte, il saluto tra devoti — da quel momento pietre, riti, nomi delle notti giuste. Con Frate Martino (devoto di Maia, del convoglio): si riconoscono dai gesti. Popolano PF 4; Medicina +4, Natura +4, Erboristeria +6; riconosce le ferite magiche ma non le chiude. Sa che « lu fùlmene nu' càde da lu cìele seréne » e chi cambia il rosmarino alla casa di Marìa.",
+  "atti": [],
+  "links": [
+   "mu-19-orto-dell-abbazia",
+   "mu-09-locanda-del-frate",
+   "mu-osservatore-lu-grise",
+   "mu-frate-tommaso",
+   "mu-frate-martino",
+   "mu-mastro-simone-lu-mediche",
+   "mu-vedova-filomena-mezzadra"
+  ]
+ },
+ {
+  "id": "mu-frate-lorenzo",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Lorenzo",
+  "sub": "Il novizio servitore — goffo, gentile, riferisce tutto a tutti",
+  "img": null,
+  "state": "noto",
+  "status": "Vivo. A Mushanè, a scopare la sala del Capitolo e portare i bicchieri al nuovo Abate.",
+  "pub": "Lungo, ossuto, con mani e piedi che sembrano arrivare un attimo dopo di lui: inciampa nei gradini che pulisce da dieci anni, fa tintinnare i bicchieri sui vassoi, si scusa con le porte quando le urta. Goffo e gentile: il novizio che porta e toglie i bicchieri alle udienze, scopa la sala del Capitolo, fa le commissioni di tutti. Sorride sempre, di un sorriso vero — merce rarissima a Mushanè — e parla volentieri con chiunque gli rivolga una parola buona: « Sète vuje li pellegrìne de li Càmpe? E la mùcca! Chèlla cu lu collàre! »",
+  "gm": "La spia involontaria: riferisce tutto a chiunque gli parli con dolcezza, in entrambe le direzioni, e non mente mai — canale perfetto (anche di disinformazione) finché nessuno capisce il gioco. Tell: se gli è stato detto « non dirlo », lo dice lo stesso con la mano davanti alla bocca. Sa la vita di servizio dell'Abbazia: chi è stato ricevuto, com'era l'aria, chi non ha toccato il vino. Far piangere Lorenzo costa simpatia a chiunque. Davanti al pericolo corre a chiamare aiuto annunciando tutto al cortile: la sua versione dell'allarme.",
+  "atti": [
+   14,
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-fratel-mario",
+   "mu-frate-bonifacio"
+  ]
+ },
+ {
+  "id": "mu-frate-simone-bibliotecario",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Simone il Bibliotecario",
+  "sub": "Archivista dell'Abbazia — gli occhiali, e la chiave della cripta",
+  "img": null,
+  "state": "noto",
+  "status": "Vivo. A Mushanè, tra i suoi registri. Con Onofrio Abate, l'archivio non deve più tacere.",
+  "pub": "Magrolino, le spalle curve di chi vive sui leggii, e sul naso una rarità che a Mushanè vale quanto un cavallo: un paio di occhiali, lenti spesse legate col filo di rame. Dita macchiate d'inchiostro, tonaca che sa di pergamena. Parla un italiano colto, preciso, un po' troppo veloce — a Mushanè quasi nessuno lo capisce per intero. Custodisce la biblioteca e l'archivio dell'Abbazia: registri, cronache, atti del feudo, e i libri che nessun altro apre da decenni. Era tra i frati del Capitolo il giorno della reliquia.",
+  "gm": "Contro Gofferio, e sveglio. Ha la chiave della cripta e ha ricostruito da solo, dagli affreschi (aureole ridipinte: erano falcate, lunari) e dalle cronache (« bruciò le pietre VISIBILI »), che sotto la Cattedrale c'è qualcosa di pretuziano: i topi della cripta girano in cerchio, sempre nello stesso verso. Non è mai sceso a vedere da solo: offre la chiave a chi è dalla parte giusta — il filo di Mattheus passa di qui, e con Onofrio il « via libera per la cripta » è canone. L'archivio come arsenale: concessioni, dazi, sfratti (il mulino di Giusto), il verbale di due righe che velò l'affresco quindici anni fa, e l'ASSENZA delle tre righe sulla visita di riguardo di sei anni fa — conferma per sottrazione della « signora di Teramum ». Autentica prove (Lettera di Iuvenza, contratto dei mercenari) da archivista: trasforma una prova in una sentenza a Teramum. Con Iosephus Pompizius: amore intellettuale a prima vista — mezz'ora di conversazione vale tre prove. Accolito PF 9; Storia/Religione/Indagare +5; svantaggio a Percezione visiva senza occhiali.",
+  "atti": [
+   14,
+   15
+  ],
+  "links": [
+   "mu-01-cattedrale-san-pietro",
+   "mu-03-casa-dei-frati",
+   "mu-frate-anselmo",
+   "mu-frate-tommaso",
+   "mu-iosephus-pompizius",
+   "mu-donna-lavinia-pompizius"
+  ]
+ },
+ {
+  "id": "mu-frate-tommaso",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Frate Tommaso de Sant'Onofrie",
+  "sub": "Frate del Borgo Basso, guardiano diurno del Varco Ovest — e della porticina",
+  "img": null,
+  "state": "noto",
+  "status": "Vivo. A Mushanè, al Varco Ovest di giorno. Il suo nome ve l'ha dato Nìcola, il profugo, sulla strada.",
+  "pub": "Sulla strada per Mushanè, Nìcola — contadino delle terre dell'Abate in fuga con la famiglia — vi ha affidato a voce bassa un nome: Frate Tommaso, che di notte apre una porticina nel muro vecchio del Borgo Basso e fa uscire le famiglie che l'Abate ha ridotto alla fame. Di giorno sta al Varco Ovest col registro dei nomi sulle ginocchia, una panchetta e un calamaio che gela d'inverno: giovane, magro, la tonaca rattoppata ai gomiti, le mani screpolate di chi zappa oltre a pregare. È il frate del Borgo Basso — i Disperati del Sotte lo chiamano per nome, le donne gli affidano i bambini al lavatoio — l'unica tonaca che la gente del Sotte saluta senza abbassare gli occhi.",
+  "gm": "Tre segreti: la porticina nel muro vecchio del Sotte (l'Abate non lo sapeva; i nomi delle famiglie passate mancano dal suo registro); il nome « Iuvenza » visto tre mesi fa su una carta sulla scrivania di Gofferio (« l'Abbate me pàre 'n òmme ca tène 'n padróne ») — testimone vivo, vale oro a Teramum; il rosmarino alla luna — vicino al culto di Maia, copre e tace, sa dove trovare Crescenzo di notte. Gli scappa la frase sulla casa bruciata: « lu fùlmene s'à chiamàte Lèkë. » Si apre con la carità vera verso il Sotte o con la parola di Anselmo, Crescenzo, Giustino; non con l'oro. Regole della porticina: pochi per volta, niente ferro in vista, niente sangue. Ora che Gofferio è morto e Onofrio è Abate, la porticina può diventare legittima — o restare il suo segreto per quando serve di nuovo. Accolito PF 9; incantesimi di 1° (benedizione, cura ferite, santuario). Tell: alle domande pericolose guarda il campanile. Non fa mai nomi.",
+  "atti": [
+   12
+  ],
+  "links": [
+   "mu-frate-crescenzo",
+   "mu-frate-anselmo",
+   "mu-frate-giustino",
+   "mu-frate-onorino",
+   "mu-20-casa-bruciata-di-maria",
+   "mu-vedova-filomena-mezzadra"
+  ]
+ },
+ {
+  "id": "mu-fratel-mario",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Abbazia (frati)",
+  "title": "Fratel Mario",
+  "sub": "Cellario dell'Abbazia — cugino di Gofferio, le chiavi delle cantine",
+  "img": null,
+  "state": "noto",
+  "status": "Vivo. A Mushanè, con le chiavi di vino, olio e granai ancora alla cintura. Il cugino è morto: Mario ha cambiato bandiera un quarto d'ora prima.",
+  "pub": "Tondo, liscio, con le guance lucide di chi assaggia per mestiere e un mazzo di chiavi alla cintura che suona a ogni passo: le cantine, i magazzini dell'olio, i granai. Fratel Mario è il cellario dell'Abbazia — e il cugino dell'Abate, cosa che a Mushanè sanno tutti e che lui non nomina mai. Alle udienze versava il vino agli ospiti con grazia da locandiere (« Delle vigne dell'Abbazia. Annata buona. »), sorrideva a tutti, non diceva quasi niente. Cortese, premuroso, perfino simpatico — finché non ci si accorge che mentre versa, conta.",
+  "gm": "Era la memoria operativa di Gofferio e il suo canale verso i mercenari (« se l'udienza va male, è Mario che corre da Lekë »). Sa i conti del feudo — nei registri non ci sono falsi ma « oblazioni di benefattori » senza nome: tracce dell'oro di Iuvenza (Indagare CD 14). Servì lui, sei anni fa, la « signora di Teramum » vestita di nero — con la paura giusta (Intimidire CD 13) lo conferma: « lu cugìne, lu jórne appriésse, stève cuntènte e zìtte. » Ricorda con precisione assoluta facce, numeri e chi-ha-detto-cosa: interrogarlo bene vale un registro — è l'uomo che sa del messaggero della « nobildonna » più di quanto ammetta. Morale zero: si è già presentato ai vincitori con le chiavi e l'inventario per la marcia (« Vùje teníte besògne de 'n òmme ca cunósce li bótte ») — utile e rischioso: un cugino di un « màrtere » è un cugino che qualcuno a Teramum può cercare. Onofrio deve decidere se tenerlo cellario: un inventario vero è il suo incubo. Popolano PF 4, Intuizione +4.",
+  "atti": [
+   14,
+   15
+  ],
+  "links": [
+   "mu-abate-gofferio",
+   "mu-01-cattedrale-san-pietro",
+   "mu-frate-lorenzo",
+   "mu-frate-simone-bibliotecario",
+   "mu-kapitan-leke-muzaka"
+  ]
+ },
+ {
+  "id": "mu-kapitan-leke-muzaka",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mercenari e milizia",
+  "title": "Kapitàn Lekë Muzàka",
+  "sub": "Capitano della compagnia Velthuria — trenta lame, « referenze da Teramum »",
+  "img": null,
+  "state": "incontrato",
+  "status": "Morto. Decapitato da Alessandros sul sagrato di San Pietro, davanti a mezza piazza, nella battaglia delle campane.",
+  "pub": "Cinquant'anni portati come un'armatura ben tenuta: asciutto, spalle larghe, capelli grigio ferro tagliati corti da campo, e una cicatrice bianca che tagliava il sopracciglio destro. Vesperiano delle Genti dell'Aquila, parlava un italiano corretto e duro che mozzava le vocali e scandiva i numeri come colpi di martello. Era arrivato a Mushanè tre settimane prima di voi con trenta lame e « referenze da Teramum »: aveva requisito le case dei Cucullo, i suoi uomini compravano « a credito » nelle botteghe, e ogni giorno si mostrava sotto il portico della Cattedrale su uno sgabello di campo, la spada di traverso sulle ginocchia, come se il borgo fosse suo. Dice una donna del lavatoio: « Lu Kapitàne nun strìlle ma'. È pègge: cùnte. »\n\nFino al giorno della campana si era fatto vedere solo quando voleva lui. Poi i suoi sono entrati in chiesa in armi, con Lu Grise a parlare piano, e lui dietro, finalmente allo scoperto. Le guerre dei mercenari finiscono quando cade chi tiene la borsa: Alessandros ha attraversato la piazza piena di ferro per arrivare a lui, e lo scontro è stato corto e feroce come le cose importanti.",
+  "gm": "Contratto con Casa Velthuria, ordini da Teramum col sigillo di Iuvenza — non l'aveva mai vista in faccia. Sapeva che la casa di Marìa l'avevano bruciata i suoi (il Sigillo Velthuria perso tra le macerie era il suo peggior errore professionale) e sospettava un canale separato del committente (Lu Grise) senza gestirlo. Da morto lascia: il contratto e la contabilità nella Casa di Lekë (luogo 11) — prova documentale del legame Iuvenza–mercenari; la « storia » che la compagnia racconterà a Vesperia (un capitano d'Aquila decapitato in una chiesa d'Aprutium: qualcuno, a sud, potrebbe volere un conto); e Kostandìn, che ha fatto i suoi conti e ha cambiato bandiera — cosa che per un Aquila « alla scadenza del contratto » è lecita. Il proclama di Teramum lo chiamerà « ospite dell'Abate ucciso da una compagnia armata ». Stat: Veterano. Regno di Vesperia: le Genti dell'Aquila tengono nomi (Lekë, Kostandìn, Ndriçim, Drità, Gjon) e codice — la parola vale più del sangue, il contratto più della parola, il clan più di tutto.",
+  "atti": [
+   12,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-11-casa-di-leke",
+   "mu-21-23-case-occupate-mercenari",
+   "mu-sergente-kostandin",
+   "mu-drita",
+   "mu-mercenari-velthuria",
+   "mu-osservatore-lu-grise",
+   "mu-abate-gofferio",
+   "mu-20-casa-bruciata-di-maria"
+  ]
+ },
+ {
+  "id": "mu-sergente-kostandin",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mercenari e milizia",
+  "title": "Sergente Kostandìn",
+  "sub": "Sergente in seconda dei Velthuria — ora al soldo della Crociata",
+  "img": "Kostandin.jpg",
+  "state": "incontrato",
+  "status": "Vivo. Passato al soldo della Crociata coi vesperiani superstiti; a Bëllindë è entrato con voi nella delegazione dal Conte.",
+  "pub": "Trentacinque anni, basso e largo come una botte messa di traverso, il collo che non c'è, una barba di tre giorni che è di tre giorni da anni. Alla Locanda del Frate lo avete visto dal primo pomeriggio al tavolo in fondo, schiena al muro e faccia alla porta, a parlare a voce bassa col suo sottoposto senza mai smettere di guardarvi. Beve molto, con metodo, e regge: nessuno a Mushanè l'ha mai visto ubriaco. I suoi modi sono quasi cortesi — il che, da un mercenario, mette più paura della villania. Dove non arrivava l'occhio del Kapitàn, arrivava il suo: e già la prima sera sapeva che tra voi c'era Vasco, un nome che quelli del mestiere conoscono.\n\nDopo la battaglia, senza Lekë, senza contratto e senza nessuno che venisse a pagarli, i vesperiani rimasti erano uomini con delle armi e nessun posto dove andare. Maximus li ha convinti. Kostandìn — il sergente più anziano rimasto in piedi — ha accettato di passare al soldo della Crociata, e con lui i suoi. Le lame che al tramonto vi stavano ammazzando, all'alba marciavano con voi.",
+  "gm": "Veterano. Il sergente perfetto: fa il suo lavoro pulito, beve il suo vino, riporta a casa la pelle e la paga. Ha riferito a Lekë di Vasco (la scena dell'« invito a bere » non è stata giocata). Non sapeva quasi nulla della camera 9. Ora è il rappresentante del contingente vesperiano della Crociata: sa dov'è il contratto di Lekë con Casa Velthuria (Casa di Lekë, luogo 11) e come funzionava la catena Teramum→compagnia — testimone utile contro Iuvenza, se decide che conviene. Rischi: « chi cambia bandiera due volte, alla terza la bandiera gliela cuciono addosso » — lo diceva lui; a Vesperia il clan conta, e Lekë era un Aquila. Rispetto professionale con Vasco. Quanti sono i « suoi »? Non registrato: proposta 10–15 tra sani e feriti leggeri. Tell: gira il bicchiere d'un quarto prima di ogni sorso; quando gira senza bere sta per dire la cosa importante. Nota: era lui il « Kostandin » della Locanda nell'Atto XIII.",
+  "atti": [
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-kapitan-leke-muzaka",
+   "mu-drita",
+   "mu-mercenari-velthuria",
+   "mu-09-locanda-del-frate",
+   "mu-21-23-case-occupate-mercenari"
+  ]
+ },
+ {
+  "id": "mu-drita",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mercenari e milizia",
+  "title": "Drità",
+  "sub": "Mercenario Velthuria — beve per due, parla per tre",
+  "img": null,
+  "state": "noto",
+  "status": "Sorte non registrata dopo la battaglia della Cattedrale: tra i caduti, o tra i superstiti passati con Kostandìn.",
+  "pub": "Ventotto anni, alto e magro come una pertica, gomiti e ginocchia dappertutto. Rideva forte, beveva più forte, perdeva ai dadi con un'allegria sospetta e vinceva quando il piatto era grosso. Dal pomeriggio a notte sedeva al tavolo in fondo della Locanda del Frate, accanto al sergente Kostandìn, che ogni tanto gli diceva di abbassare la voce — e lui la abbassava per metà frase. Il suo italiano era un cantiere, accento duro di Vesperia, ma il vino glielo scioglieva: metà delle sue storie di guerra erano inventate, e il guaio era indovinare quale metà.",
+  "gm": "Guardia (MM). Coraggioso in formazione, coniglio da solo: se è vivo, è tra quelli che hanno alzato le mani (« Io solo bevuto! Io niente! »). Il DM decida: proposta — vivo, con Kostandìn, e primo mercenario « umano » della Crociata: il rubinetto della routine e delle chiacchiere della compagnia (Persuasione CD 10 per brocca). Sapeva della frase di Lekë « due conti per lo stesso lavoro » — il sospetto sul canale di Lu Grise. Era probabilmente il « sottoposto » con cui Kostandìn parlava nell'Atto XIII.",
+  "atti": [
+   13
+  ],
+  "links": [
+   "mu-sergente-kostandin",
+   "mu-kapitan-leke-muzaka",
+   "mu-09-locanda-del-frate",
+   "mu-mercenari-velthuria"
+  ]
+ },
+ {
+  "id": "mu-mercenari-velthuria",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mercenari e milizia",
+  "title": "I mercenari Velthuria",
+  "sub": "La compagnia di trenta lame vesperiane che teneva Mushanè",
+  "img": null,
+  "state": "incontrato",
+  "status": "Compagnia spezzata nella battaglia delle campane: alcuni caduti, alcuni feriti, i superstiti passati con Kostandìn al soldo della Crociata.",
+  "pub": "Trenta lame vesperiane arrivate a Mushanè tre settimane prima di voi, con « referenze da Teramum » e « carte buone »: alloggi e corpo di guardia nelle tre case requisite ai Cucullo, il quartier generale del Kapitàn nella casa 11, il tavolo fisso alla Locanda, la « spesa a credito » nelle botteghe, due coppie di ronda tra la Piazza e i varchi, e di notte un giro largo intorno ai Campi dei Pellegrini. Un ordine che tutti avevano notato: niente attriti con la Chiesa — salutavano le tonache, e alla Locanda pagavano almeno il vino. Sono entrati in chiesa in armi alla campana, e sono morti quasi tutti sul sagrato e nella piazza: gente lontana da casa, per una paga che nessuno verrà più a ritirare.",
+  "gm": "Contratto con Casa Velthuria (Iuvenza) via Teramum; furono loro a bruciare la casa di Marìa (olio combustibile, il Sigillo Velthuria tra le macerie). Conti: 30 all'inizio; caduti e passaggi non registrati — da decidere (proposta: 12 morti, 6 feriti gravi lasciati a Mushanè, ~12 con Kostandìn). Il bottino: armature vesperiane brunite, fibbie col punzone del regno, balestre, paghe nelle case 21–23 — « una sanatoria da 1.500 mo complessive per i PG comprensiva del bottino di Mushanè » era una proposta non accettata esplicitamente. Ndriçim e i ~20 miliziani locali erano comprati da Lekë. Regno di Vesperia: una compagnia con un capitano morto in una chiesa è una compagnia « senza storia da raccontare senza vergogna » — chi torna a sud dovrà raccontarne una, e la versione può arrivare prima della Crociata.",
+  "atti": [
+   12,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-kapitan-leke-muzaka",
+   "mu-sergente-kostandin",
+   "mu-drita",
+   "mu-ndricim-shkambi",
+   "mu-21-23-case-occupate-mercenari",
+   "mu-11-casa-di-leke",
+   "mu-20-casa-bruciata-di-maria"
+  ]
+ },
+ {
+  "id": "mu-ndricim-shkambi",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mercenari e milizia",
+  "title": "Ndriçim Shkambi",
+  "sub": "« Capitano » della milizia di Mushanè — venti miliziani e un pennacchio",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Mushanè, alloggiato nel complesso abbaziale. La milizia che comanda sulla carta è rimasta senza padrone.",
+  "pub": "Quarantatré anni, petto in fuori, pancia più in fuori del petto. Mezzo straniero — e non si è mai capito quale metà. Corazza lucidata ogni mattina dal miliziano più giovane, pennacchio sull'elmo, spada da cerimonia che non ha mai visto sangue. Marcia per il borgo come a una parata che esiste solo nella sua testa e alloggia nel complesso abbaziale, onore che ricorda a chiunque due volte. Il suo italiano è stentato e pomposo insieme (« Io sono la autorevolezza costituita! »). Comanda — sulla carta — la ventina di miliziani locali dell'Abate; il borgo ride piano quando passa, e lui scambia le risate per saluti.",
+  "gm": "Mai comparso nei diari: durante la battaglia la milizia non risulta — proposta: Ndriçim ha gridato ordini da dietro un muro e si è arreso alla prima ferita nel raggio di dieci passi, e i venti hanno posato le lance appena Corrado si è tirato da parte. Era comprato da Lekë (« integrazione »); ora senza paga né padrone: si presenterà a Onofrio, alla Crociata o a chiunque per tenersi il titolo. Intimidire CD 8 senza testimoni: vuota il sacco — turni, porte, corridoi e abitudini del complesso abbaziale. Guardia (MM). Teme, in ordine: Corrado, Lekë (morto), perdere il titolo, il dolore. Trattato con un filo di rispetto vi adorerà: nessuno l'ha mai fatto.",
+  "atti": [],
+  "links": [
+   "mu-corrado-lu-mazzole",
+   "mu-kapitan-leke-muzaka",
+   "mu-mercenari-velthuria",
+   "mu-frate-onofrio"
+  ]
+ },
+ {
+  "id": "mu-osservatore-lu-grise",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Ospiti e forestieri",
+  "title": "L'Osservatore « Lu Grise »",
+  "sub": "La spia personale di Iuvenza — « occhi che contano »",
+  "img": null,
+  "state": "incontrato",
+  "status": "Morto. Catturato da un incantesimo a mezza fuga dopo la battaglia; interrogato a lungo, poi decapitato da Maximus davanti alla chiesa, a mani legate.",
+  "pub": "Un uomo tra i quaranta e i cinquanta, vestito di grigio, con una faccia che il giorno dopo non si riesce a descrivere: né bello né brutto, la faccia di tutti e di nessuno. Solo gli occhi restavano addosso. Lo avete visto la prima volta al Pònte de li Fràte, appoggiato a un albero accanto ai mercenari di Vasco: un uomo con la casacca scura che « guarda e basta », come vi aveva detto il pastore Ndònie. È fuggito verso Mushanè bruciato dal globo di Vicarus ma vivo, ed è arrivato prima di voi: il borgo bisbigliava di un viandante ferito « arrivato prima della Crociata », e qualcuno l'ha chiamato lu Grise.\n\nÈ ricomparso in mezzo ai vesperiani, in chiesa, il giorno della campana: non ha combattuto, ha parlato piano e ha aizzato i cani di qualcun altro contro di voi — la Crociata dalla parte del torto dentro una casa di Dio. Quando è finita, ha capito prima di tutti e si è voltato per sparire; un incantesimo lo ha inchiodato. L'interrogatorio ha dato quello che poteva dare: un mercenario al soldo di Velthuria, pagato per guardare, seguire, riferire. Nessuna rivelazione, nessun pentimento. Si è parlato a lungo. Poi Maximus gli ha tagliato la testa.",
+  "gm": "Ciò che sapeva e che NON è uscito nell'interrogatorio (per canone del diario: « nessuna rivelazione »): l'accordo dell'Abate (200 monete, la Vox Solis); il Palazzo della Notte di Iuvenza a Teramum, dove arrivavano i suoi rapporti; e che Iuvenza vuole Mattheus VIVO — informazione critica ora persa con lui. Il DM può recuperarla per altre vie: la Lettera di Iuvenza nel cassetto di Gofferio, le carte nella camera 9, un rapporto non spedito, Fratel Mario. La ferita che non chiudeva (le ustioni di Vicarus) era curata ogni notte da Frate Crescenzo, che non sapeva chi fosse: la scena della devastazione di Crescenzo è ancora da giocare. Una spia di Iuvenza decapitata a mani legate dopo un Abate morto: Teramum ne farà un capo d'accusa (« esecuzione sommaria »). Stat: Spia (MM) a metà PF; pugnale avvelenato.",
+  "atti": [
+   12,
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-09-locanda-del-frate",
+   "mu-abate-gofferio",
+   "mu-kapitan-leke-muzaka",
+   "mu-frate-crescenzo",
+   "mu-mastro-pancrazio",
+   "mu-mariuccia"
+  ]
+ },
+ {
+  "id": "mu-iosephus-pompizius",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Ospiti e forestieri",
+  "title": "Iosephus Pompizius",
+  "sub": "Bardo di Teramum, amico d'infanzia — sangue Pompizius a Mushanè",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. In viaggio con la Crociata verso Teramum; Casa Pompizius ha aderito alla causa.",
+  "pub": "Alla Locanda del Frate, tra il vociare e l'odore di ceci, un uomo si è alzato da un tavolo, ha posato un libretto chiuso, e ha attraversato la sala con un sorriso che arrivava da molto lontano: Iosephus Pompizius, bardo, amico dei tempi di Julia Nova, spuntato nell'ultimo posto del mondo dove ve lo sareste aspettato. « Voi… qui? E che ci fate, a Mushanè? » Un'ora di ricordi e di vino — e poi il congedo alla maniera dei bardi: un gesto delle dita, una parola sussurrata, e il conto avrebbe dovuto dimenticarsi di esistere. Non si è dimenticato. Il grande incantatore ha pagato come tutti i mortali, sotto lo sguardo divertito di mezzo borgo.\n\nÈ figlio di Vetus Pompizius, il leggendario medicus dentium di Teramum; a Mushanè la famiglia ha una casa chiusa da anni, i poderi in mezzadria e un cugino, Don Aurelio, il possidente più importante del feudo. Dopo la battaglia i Pompizius hanno risposto alla chiamata di Maximus, e Iosephus continua a viaggiare con voi.",
+  "gm": "È un PG/PNG-alleato (scheda in « I Personaggi »): qui solo il suo peso a Mushanè. Il « vantaggio Pompizius »: il suo nome apre Don Aurelio (chiave della casa 14, i nomi dei frati, la « signora di Teramum »), i Lu Trùpe, la Vedova Filomena (la casa bruciata), Frate Simone (« amore intellettuale a prima vista »), e apriva l'udienza con Gofferio. Il padre Vetus a Teramum è un filo di trama personale (« mi cura ancora i molari per corrispondenza »). Perché fosse a Mushanè « davvero » (fili aperti Atto XIII) non è stato chiarito: da decidere col giocatore.",
+  "atti": [
+   13,
+   14,
+   15
+  ],
+  "links": [
+   "mu-09-locanda-del-frate",
+   "mu-14-casa-di-iosephus-pompizius",
+   "mu-16-casa-dei-pompizius",
+   "mu-don-aurelio-pompizius",
+   "mu-famiglia-lu-trupe",
+   "mu-vedova-filomena-mezzadra",
+   "mu-frate-simone-bibliotecario"
+  ]
+ },
+ {
+  "id": "mu-frate-martino",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Ospiti e forestieri",
+  "title": "Frate Martino",
+  "sub": "Il giovane frate del convoglio — l'ombra di Giustino",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Arrivato a Mushanè col convoglio della Crociata, sempre accanto al carro di Giustino.",
+  "pub": "Giovane, la tonaca ancora troppo nuova, gli occhi che si spalancano davanti a tutto: il campanile di Mushanè, una battuta dei veterani, il pane caldo. Era al Pònte de li Fràte con Giustino, ed è venuto via con voi; nel campo lo si trova sempre nello stesso punto, accanto al carro del Mastino, che segue come un'ombra — gli cambia l'acqua, gli porta il pane, lo guarda come si guarda una montagna. Sincero fino al disastro: dice quello che pensa nell'istante in cui lo pensa. « Lo conoscete il Mastino? Si è messo in mezzo, lui. In mezzo. Coi pugnali che giravano. Io porto l'acqua. Per ora. »",
+  "gm": "Devoto a Maia (quieta, senza teologia: latte, pietre, lune) e a Giustino. A Mushanè, borgo del monopolio della Fiamma, la sua sincerità è un innesco a orologeria: « Anche qui qualcuno si ricorda della Madre. AVETE VISTO? Il latte! » — vicino a Lorenzo o a Mario è polvere da sparo. Se un PG gli spiega perché tacere, tace. L'incontro con Frate Crescenzo è il ponte naturale tra la Crociata e il culto nascosto: si riconoscono dai gesti, e per Mattheus è una scorciatoia. Se Giustino è in pericolo si mette in mezzo, a mani nude. Accolito. Dove sia dopo l'Atto XV (con la colonna o rimasto con Giustino) non è registrato.",
+  "atti": [
+   12
+  ],
+  "links": [
+   "mu-frate-giustino",
+   "mu-frate-crescenzo",
+   "mu-frate-lorenzo",
+   "mu-19-orto-dell-abbazia"
+  ]
+ },
+ {
+  "id": "mu-don-aurelio-pompizius",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Famiglie del borgo",
+  "title": "Don Aurelio Pompizius",
+  "sub": "Possidente laico più importante del feudo — il chiacchierone prezioso",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Mushanè, nella casa dei ritratti. Casa Pompizius ha aderito alla Crociata: sostegno civile, logistico e politico.",
+  "pub": "Pasciuto, roseo, con le mani morbide di chi non ha mai zappato e gli occhi furbi di chi ha sempre contato. Cugino lontano di Vetus Pompizius — il padre di Iosephus — parla un italiano formale con una cadenza molle da salotto di provincia, e riceve in una casa piena di ritratti di antenati che guardano l'ospite come una giuria. Era vassallo formale dell'Abate: pagava i dazi puntuale e sorrideva a tutti. « Sapete come si arriva a dieci secoli? Non schierandosi. »\n\nLa sera dopo la battaglia Maximus è andato da lui per primo — non a chiedere oro, ma a chiedere di scegliere se far parte di quello che stava succedendo. I Pompizius hanno risposto di sì.",
+  "gm": "Nobile (MM), non combattente. Non agisce mai — parla, col vino suo, a un parente, e al terzo bicchiere dice cose che valgono più di una spia pagata: i frati del Capitolo uno per uno; le abitudini di Gofferio; la « signora di Teramum » di sei anni fa, di notte, vestita di nero (« quando un uomo come Gofferio incassa e non spende, il pagamento era per qualcos'altro »). Non sa il nome. Chiave della casa di Iosephus (luogo 14). I suoi mezzadri: i Lu Trùpe (« gente d'oro ») e la Vedova Filomena, amica di Marìa. Nominarlo in giro come fonte chiude il salotto per sempre. Con l'adesione alla Crociata si è schierato per la prima volta: il proclama di Teramum (« reclutamento illecito ») lo espone, e un Pompizius esposto è un uomo che chiederà garanzie — a Onofrio e alla Crociata. Con Gofferio caduto è « il primo notabile a presentarsi ai vincitori, raggiante, con due bottiglie ». Il mulino di Giusto lavora anche il suo grano: leva sui debiti dei Lu Salvàte.",
+  "atti": [
+   15
+  ],
+  "links": [
+   "mu-16-casa-dei-pompizius",
+   "mu-14-casa-di-iosephus-pompizius",
+   "mu-iosephus-pompizius",
+   "mu-donna-lavinia-pompizius",
+   "mu-famiglia-lu-trupe",
+   "mu-vedova-filomena-mezzadra",
+   "mu-famiglia-lu-salvate"
+  ]
+ },
+ {
+  "id": "mu-donna-lavinia-pompizius",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Famiglie del borgo",
+  "title": "Donna Lavinia Pompizius",
+  "sub": "La moglie di Don Aurelio — dipinge corvi, solo corvi",
+  "img": null,
+  "state": "noto",
+  "status": "Viva. A Mushanè, nella casa dei Pompizius, con le dita sporche di colore.",
+  "pub": "Cinquantotto anni, magrissima accanto al marito tondo, sempre con le dita sporche di colore. Dipinge corvi — solo corvi, da anni — e i quadri sono appesi tra gli antenati, che sembrano disapprovarli. Nel borgo la chiamano stramba con affetto: è gentile coi bambini e parla poco.",
+  "gm": "Sente i residui magici del cerchio pretuziano sepolto sotto la cripta della Cattedrale senza sapere cosa siano: « vengono a posarsi dove la terra canta », dice dei corvi, che nei suoi quadri stanno sempre sopra il campanile. Con Mattheus (« Voi la sentite, vero? La nota sotto il pavimento. Io la dipingo da trent'anni. ») è un indizio-bussola gratuito verso la cripta e Frate Simone. Non è una fonte di trama: è la conferma che il borgo « sente » ciò che la Fiamma ha coperto. Se Maximus l'ha incontrata nella visita dell'Atto XV non è detto: state = noto.",
+  "atti": [
+   15
+  ],
+  "links": [
+   "mu-don-aurelio-pompizius",
+   "mu-16-casa-dei-pompizius",
+   "mu-01-cattedrale-san-pietro",
+   "mu-frate-simone-bibliotecario"
+  ]
+ },
+ {
+  "id": "mu-donna-rosina",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Famiglie del borgo",
+  "title": "Donna Rosìna, la Vedova del Sotte",
+  "sub": "Lavandaia dei mercenari per fame — tre figli, una porta sola",
+  "img": null,
+  "state": "segreto",
+  "status": "Viva. Nel Borgo Basso, coi tre figli. Senza i mercenari ha perso i panni che le davano da mangiare.",
+  "pub": "Magra, gli occhi cerchiati, le mani sempre occupate. Il marito morì schiacciato al mulino, e da allora Rosìna tira avanti tre figli da sola, nel Borgo Basso. Per pochi Gofferini lavava i panni dei mercenari — lavoro che le donne del lavatoio le rinfacciavano e che lei si teneva stretto: « Lu sàcce ca me guàrdene stòrte. Ma li fìglie mè nun màgnene li guàrde stòrte. Màgnene lu pàne. »",
+  "gm": "Entrava nelle case occupate con la cesta e sentiva: i turni, i nomi, i lamenti sulla paga in ritardo e « 'na patróne ca nun tène fàcce » — i soldati semplici non sapevano chi pagava davvero. Ora è un frammento di testimonianza sull'occupazione, e soprattutto un caso di carità: chi le dà lavoro o farina si compra il Borgo Basso. Si apre col rispetto e l'aiuto concreto (Persuasione CD 10), non con le monete; trattata da spia si chiude. Se i PG le promettono che i figli non resteranno soli, piange — e dice tutto. Non testimonia in pubblico.",
+  "atti": [],
+  "links": [
+   "mu-06-casa-della-donna-col-figlio",
+   "mu-maddalena-la-lavandara",
+   "mu-21-23-case-occupate-mercenari"
+  ]
+ },
+ {
+  "id": "mu-mastro-carlo-vecchio",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Famiglie del borgo",
+  "title": "Mastro Carlo Vecchio",
+  "sub": "Il più vecchio testimone di Mushanè — parla solo in dialetto stretto",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Sulla sua sedia impagliata, col nipote Pìjètre. Ha visto morire un Abate santo e ne ha visto morire uno che contava.",
+  "pub": "Sessantotto anni, vedovo, mani come radici, un mantello rattoppato anche d'estate. Vive col nipote Pìjètre (12) nella casa più vecchia del versante e siede sull'uscio dalle prime ore alla sera, guardando passare il borgo come un fiume che conosce a memoria. C'era prima di Gofferio, c'era con Teodorus. Coi forestieri fa il sordo e il rimbambito: il borgo sa che Mastro Carlo sa cose che nessuno sa — e le dice solo a chi parla il dialetto stretto. Il figlio, il padre di Pìjètre, morì nel Bosco dei Noci sei anni fa: il vecchio non nomina il bosco, mai.",
+  "gm": "Regola dura: italiano = « Eh? Nun sènte. So' vècchie. »; dialetto vero = manda Pìjètre a prendere il vino e comincia, UNA cosa per visita. Sa: Teodorus che dava il pane e moriva; i nomi vecchi e le pietre sotto la chiesa (« ancóre respìre. Li sùrge de la cantìne lu sànne »); l'elezione di Gofferio; le parentele e gli odi del feudo. Sull'Abate: « ìje àgghie canusciùte quàttre abàte. Ùne sànte, dùje fèsse, e chìste. Chìste nun è fèsse. » La morte del figlio è nello stesso anno della « carròzza nère da Teramum »: coincidenza nella memoria, se nasconda altro è da confermare — il Bosco resta sfondo. Se i PG onorano Teodorus in pubblico, si fa portare in piazza: il borgo nota che il più vecchio testimone si è mosso. Non confondere con Mastro Carlo il gabelliere del Pònte. Scheda condivisa con la Famiglia Cucullo.",
+  "atti": [],
+  "links": [
+   "mu-05-casa-del-vecchio",
+   "mu-famiglia-cucullo",
+   "mu-frate-anselmo",
+   "mu-narduccio-lu-pecurare"
+  ]
+ },
+ {
+  "id": "mu-famiglia-cucullo",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Famiglie del borgo",
+  "title": "Famiglia Cucullo",
+  "sub": "Giròlamo, Filumèna, tre figli — sfrattati dalle case occupate",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivi. Ospiti di parenti nel feudo; le loro tre case a nord-ovest sono di nuovo vuote.",
+  "pub": "Giròlamo (38) e Filumèna (35), con tre figli, mezzadri al cinquanta per cento sulle terre del nord — « la metà peggiore ». I mercenari Velthuria li avevano sfrattati dalle loro tre case in fila a nord-ovest del borgo, e la famiglia dorme da parenti nel feudo: i disperati tra i disperati, il raccolto che non basta, i debiti che crescono, e Giròlamo con gli occhi di chi non dorme. Il figlio grande, Pasquale (15), parla a chiunque passi di Julia Nova: ci vuole scappare, fare il garzone al porto, « qualunque cosa, ma là ». « Mètà a l'Abbazìa. E de l'àta mètà, lu dèbbete se màgne mètà. »",
+  "gm": "Le case 21–23 sono le loro: ora che i Velthuria sono spezzati, restituirle è il gesto di giustizia più semplice e più visibile di Mushanè — da chiedere a Onofrio, o da fare coi PG davanti al borgo. Il debito con l'Abbazia resta: la Crociata o Casa Pompizius possono alleggerirlo (carità vera → i Nostalgici di Teodorus rumoreggiano, Anselmo lo viene a sapere). Pasquale: dategli un compito vero e diventa il primo « crociato » di Mushanè; respinto con durezza, scappa da solo verso Julia Nova — sulla strada che la Crociata conosce. Giròlamo conosce le case dentro: botole, assi, ingressi. Non combattenti.",
+  "atti": [],
+  "links": [
+   "mu-21-23-case-occupate-mercenari",
+   "mu-mastro-carlo-vecchio",
+   "mu-kapitan-leke-muzaka",
+   "mu-frate-anselmo",
+   "mu-frate-onofrio"
+  ]
+ },
+ {
+  "id": "mu-mastro-pancrazio",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Pancrazio Lu Lardùse",
+  "sub": "Oste della Locanda del Frate — il dente d'oro e la memoria di ferro",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Alla sua locanda. Ha fatto pagare il conto a Iosephus davanti a mezzo borgo.",
+  "pub": "Grosso come una botte e rosso come il suo vino, un grembiule che fu bianco in un altro decennio, e un dente d'oro davanti che brilla ogni volta che ride — e Pancrazio ride spesso, soprattutto quando non vuole rispondere. È l'oste della Locanda del Frate, nel Borgo Basso, da prima che metà del borgo nascesse. Vedovo, padre di Mariuccia, padrone-padre del garzone Sabbatìno. Ha una memoria di ferro e se ne vanta: non scrive un conto da trent'anni e non ne ha mai sbagliato uno. Quando Iosephus ha provato a far sparire il conto con un gesto delle dita, si è piantato davanti alla porta con la mano tesa e la pazienza corta.",
+  "gm": "SAPEVA che alla camera 9 c'era Lu Grise, ospitato per conto dell'Abbazia, e che Crescenzo saliva ogni notte a curarlo: si sbloccava con vino, mezz'ora di gioco e Persuasione CD 13 (o 5 fiorini). Ora che Lu Grise è morto in piazza, Pancrazio è il testimone di chi lo nascondeva e di chi pagava (« Chi pàje, pàje. E pàje bbone. »): con Onofrio o Corrado a chiederglielo, parla. Regola della sala: un giro offerto (2 ma) = una domanda con vantaggio a Persuasione; ciò che si dice forte in sala cammina. Tell: pulisce sempre lo stesso boccale quando è nervoso. Archivio orale del Borgo Basso: trent'anni di facce e conti. Sua paura vera: Mariuccia.",
+  "atti": [
+   13,
+   15
+  ],
+  "links": [
+   "mu-09-locanda-del-frate",
+   "mu-mariuccia",
+   "mu-sabbatino-il-garzone",
+   "mu-osservatore-lu-grise",
+   "mu-frate-crescenzo",
+   "mu-iosephus-pompizius"
+  ]
+ },
+ {
+  "id": "mu-mariuccia",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mariuccia di Pancrazio",
+  "sub": "La figlia dell'oste — serve ai tavoli, sa leggere e scrivere",
+  "img": null,
+  "state": "noto",
+  "status": "Viva. Alla Locanda del Frate, tra la sala e la cucina.",
+  "pub": "Treccia scura, maniche rimboccate, svelta tra i tavoli come un'anguilla tra le canne. Serve in sala quando la locanda è piena, e di sera sta in cucina. Ha gli occhi del padre — di quelli che contano e ricordano — ma più silenziosi. Cosa rara per il borgo, sa leggere e scrivere: « Ma nu' lu jàte a dìce 'n gìre, ca po' me fànne tenè li cùnte de tùtte quànte lu pajèse. »",
+  "gm": "Il quaderno segreto: nomi e segni dei clienti strani passati per la locanda, e la riga « 9 — lu Grìse. Nun è nome suo. Occhi che contano. » — annota anche Kostandìn: orari, brocche, chi si sedeva alla sua panca. Prova scritta, ora storica, che la locanda osservava. Si fida di chi tratta bene il padre e Sabbatìno; chi sgrida il garzone è morto per lei. Tell: quando un discorso la incuriosisce resta col vassoio in mano, ferma un secondo di troppo. Tonìnele, il garzone della stalla, è innamorato di lei (lei non l'ha notato — o sì?). Uno degli « occhi amici » che la Crociata può lasciare a Mushanè.",
+  "atti": [
+   13,
+   15
+  ],
+  "links": [
+   "mu-09-locanda-del-frate",
+   "mu-mastro-pancrazio",
+   "mu-sabbatino-il-garzone",
+   "mu-osservatore-lu-grise",
+   "mu-zi-peppe-lu-vaccare"
+  ]
+ },
+ {
+  "id": "mu-sabbatino-il-garzone",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Sabbatìno il garzone",
+  "sub": "Orfano, quindici anni, i vassoi della Locanda — ascolta tutto",
+  "img": null,
+  "state": "noto",
+  "status": "Vivo. Alla Locanda del Frate, dappertutto e da nessuna parte.",
+  "pub": "Magro come un chiodo, scalzo metà dell'anno: porta i vassoi, attizza il fuoco, sparecchia, corre. Orfano, cresciuto a pane e lavoro nella locanda di Pancrazio. Non parla molto — ascolta tutto. « Cummannàte, signurì? Vìne? Pàne? Lu pòrte sùbbete. » E mentre lo porta, ha già sentito mezza conversazione.",
+  "gm": "2 fiorini = « ricorda » chi è entrato alla locanda, facce e orari, memoria fotografica da ragazzino di strada. Battuta canonica: « La càmmera 9? Chìlle nun scègne maje. Lu vassòje je lu pòrte ije. Nu' pellegrìne ca nun prèghe maje. » Trattato da grande parla anche gratis, e Mariuccia comincia a fidarsi. Spaventato, piange e corre da Pancrazio: la locanda si chiude. Non confondere con Sabbatìne la fornaia né con Sabbatìne il macellaio.",
+  "atti": [
+   13
+  ],
+  "links": [
+   "mu-09-locanda-del-frate",
+   "mu-mastro-pancrazio",
+   "mu-mariuccia"
+  ]
+ },
+ {
+  "id": "mu-mastro-cola-lu-ferre",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Còla Lu Fèrre",
+  "sub": "Il fabbro — zio di Corrado, parole contate come chiodi",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Alla sua bottega, dal martello dopo la Matins al Vespro. Ha in bottega venti punte di lancia che nessuno verrà più a ritirare.",
+  "pub": "Spalle da bue, avambracci segnati di bruciature vecchie, parole contate come chiodi. Nipote del vecchio Còla, da cui ha preso bottega e nome; zio di Corrado « Lu Mazzòle ». Lavora dall'alba: zappe, ferrature, chiodi. Non fa domande ai clienti — ma sa chi compra cosa, da vent'anni. « Che vulìte. Fèrre? Cavàlle da ferrà? Parlàte, ca tènghe lu fùcho acchiése. »",
+  "gm": "I mercenari gli avevano ordinato venti punte di lancia: le forgiava lentamente, e gli pesava armare chi umiliava il nipote. Ora sono venti punte per i Frati Armati o per la Crociata — o una prova che i Velthuria non pensavano di partire. Si apre col rispetto del mestiere (mettere mano al mantice senza chiedere), mai coi soldi né con le domande dirette; minacciato, posa il pezzo, tiene il martello, guarda: fine per sempre. « Sànghe mèje. E lu sànghe mèje nun s'è mài vennùte. » È la via di mezzo per parlare a Corrado. Popolano, FOR 18. Incongruenza d'età (38 lo zio, 44 il nipote) da sanare.",
+  "atti": [],
+  "links": [
+   "mu-10-bottega-del-fabbro",
+   "mu-corrado-lu-mazzole",
+   "mu-mercenari-velthuria"
+  ]
+ },
+ {
+  "id": "mu-mastro-giusto-lu-mulinare",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Giusto Lu Mulinàre",
+  "sub": "Il mugnaio del feudo — avaro come una pietra, in vendita sempre",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Al mulino fuori mura. La concessione gliel'aveva data Gofferio: ora dipende da Onofrio.",
+  "pub": "Faccia da topo, occhi piccoli e svelti, dita che contano anche quando non c'è niente da contare. Avaro come una pietra. Tiene il mulino del feudo in concessione dell'Abbazia — tutto il grano di Mushanè passa dalle sue macine, e ogni chicco viene pesato due volte. « Lu mulìne è de l'Abbazìje. Ìje lu fàcce fruttà. Tùtte se pàje prìme. » In casa, la moglie Mariannìna, quarantotto anni, che parla poco e guarda lontano.",
+  "gm": "Tradirebbe chiunque per oro più puro: da 5 fiorini in su vende ciò che passa per le macine (quanto grano entrava ed usciva dall'Abbazia, per chi si macinava). La concessione fu comprata, non vinta — Mastro Peppino sa come e da chi (una firma dell'Abbazia): con Onofrio Abate, la concessione è revocabile — e Giusto lo sa, quindi ora si vende ancora più in fretta. Creditore dei Lu Salvàte (sfratto a Pasqua): il debito si compra, si tratta o cade con la pressione giusta (Adamus che parla di usura davanti al mulino; una parola dei Pompizius, di cui macina il grano). Mariannìna lo tradisce con Vinciènze il fornaio: Giusto non sa — o non vuole sapere; se lo scopre, calcola quanto vale il segreto. Tell: al tintinnio dell'oro smette di lavorare. « Se l'Abate cade, è il primo a girare bandiera col berretto in mano e la tariffa pronta. »",
+  "atti": [],
+  "links": [
+   "mu-mastro-peppino",
+   "mu-vincienze-lu-furnare",
+   "mu-famiglia-lu-salvate",
+   "mu-frate-onofrio",
+   "mu-08-forno-comune"
+  ]
+ },
+ {
+  "id": "mu-mastro-peppino",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Peppino Lu Mulinàre",
+  "sub": "Il mugnaio decaduto — farina di scarto e vino",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Tra la sua casa che cade e la Locanda del Frate. L'uomo che gli tolse il mulino è morto.",
+  "pub": "Il titolo di « Mastro » gli è rimasto addosso come un vestito di un altro: Peppino ha perso la concessione del mulino a favore di Mastro Giusto, e da allora vende farina di scarto di porta in porta e beve — alla Locanda quando ha di che, e dove capita quando non ha. Mani ancora bianche di farina, occhi rossi di vino. « Lu mulìne ère mèje. De pàtreme, e de lu pàtre de pàtreme. Mò màcine Giùste. E vulète sapè pecché? Offrìteme da vève. »",
+  "gm": "Sa come Giusto ebbe la concessione — comprata, con una firma in Abbazia (indica il campanile col mento, non dice il nome forte). Vino + pazienza: Persuasione CD 10 (sobrio CD 14). Pista, non prova: « le fàvele de li 'mbriàche ». Al terzo bicchiere infiora. Chiamarlo Mastro sul serio lo raddrizza per un'ora. Con Gofferio morto e Onofrio Abate, il suo dossier è la base per rivedere la concessione: ridargli uno scopo (o il mulino) compra un alleato tra i Disperati del Borgo Basso. Ripete in sala ciò che gli si dice.",
+  "atti": [],
+  "links": [
+   "mu-12-casa-di-mastro-peppino",
+   "mu-mastro-giusto-lu-mulinare",
+   "mu-09-locanda-del-frate"
+  ]
+ },
+ {
+  "id": "mu-narduccio-lu-vasare",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Narduccio Lu Vasàre",
+  "sub": "Il vasaio gobbo del mercato del martedì — e i piatti « ordinati »",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Bottega e fornace fuori mura; il martedì al banco in Piazza.",
+  "pub": "Gobbo, le mani perennemente sporche d'argilla, la bottega piena fino al soffitto di piatti, brocche, tegami e coppi. Borbotta mentre lavora, tratta i clienti come un disturbo necessario, e ha una faida personale — rumorosissima — col pastore che porta il suo stesso nome: « Nardùcce lu Pecuràre?! NUN me lu numinàte! Chìlle me dève dùje fiorìne da dùdece ànne! » Sullo scaffale alto, pezzi che non si vendono: « È urdinàte. »",
+  "gm": "I piatti « ordinati » sono piatti rituali che vende alla luna piena al culto nascosto di Maia delle campagne — stelle, lune, spirali « perché alla gente di campagna piacciono ». Con la Fiamma in monopolio, per lui sarebbe finita; con Onofrio e la protezione del culto chiesta da Crescenzo, no. Tell: alle domande sulla luna le mani si fermano e gli occhi vanno alla porta (Intuizione CD 12: paura). Se Mattheus o Vicarus parlano della Vecchia Madre con rispetto, chiude la porta e parla piano: la porta verso il culto delle campagne. Pagare i due fiorini del pastore sgonfia la faida: due fonti al prezzo di una. Conosce Onorino del Varco Est da vent'anni.",
+  "atti": [],
+  "links": [
+   "mu-24-la-piazza",
+   "mu-narduccio-lu-pecurare",
+   "mu-frate-crescenzo",
+   "mu-frate-onorino"
+  ]
+ },
+ {
+  "id": "mu-sabbatine-lu-chiancuse",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Sabbatìne Lu Chiancùse",
+  "sub": "Il macellaio — sorride sempre coi denti, mai con gli occhi",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Alla chianca, coi due figli sulla soglia. I mercenari che prendevano la carne senza pagare non ci sono più.",
+  "pub": "Largo, le spalle da bue e il grembiule di cuoio segnato da vent'anni di lama. Tiene la chianca sulla via principale del Borgo: banco di pietra, ganci di ferro. Ha due figli piccoli che giocano sulla soglia, e una particolarità che tutto il borgo conosce: sorride sempre. Coi denti, però — non con gli occhi. « Sabbatìne nun arròbbe a nesciùne. A nesciùne ca pàghe. » Il maiale più grasso del recinto, coi clienti fidati, lo chiamava Gofferìe.",
+  "gm": "Testimone delle requisizioni: vent'anni di banco, ogni presa di carne dei Velthuria contata a memoria — facce, giorni, quantità. Taceva per i due figli (« Tènghe dùje fìglie. Capìte? Dùje. »); lo sblocco scatta solo coi mercenari in ginocchio — cioè ADESSO: posa la mannaia, il sorriso arriva agli occhi, « scrivéte. Ve lu dètte tùtte. » Il giorno dopo la caduta dei mercenari porta carne in regalo ai Campi dei Pellegrini « pe' li fìglie de l'àte ». Omonimo di Sabbatìne la fornaia: gancio comico e filo reale (forno e chianca si parlano ogni mattina). Popolano, braccia da squartare buoi.",
+  "atti": [],
+  "links": [
+   "mu-04-la-macelleria",
+   "mu-mercenari-velthuria",
+   "mu-vincienze-lu-furnare"
+  ]
+ },
+ {
+  "id": "mu-mastro-simone-lu-mediche",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Simone Lu Mèdiche",
+  "sub": "Il cerusico laico — la sala d'attesa vuota",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Nel suo studio pulito e poco frequentato. Dopo la battaglia, ha finalmente dei feriti da curare.",
+  "pub": "Magro e pallido come un cero, la casa pulita, i ferri lucidi, la sala d'attesa vuota. È l'unico cerusico laico di Mushanè — e muore di fame, perché Frate Crescenzo cura gratis nell'orto dell'Abbazia. La frustrazione gli esce dalle cuciture: « A Mushanè se nàsce cu' la mammàne, se càmpe cu' la fortùne e se mòre cu' lu frate. Lu mèdiche sèrve sólo a firmà… ah, no. Manche a chèsse. »",
+  "gm": "Sa che Marìa non è morta di fulmine per il contrario di una prova: nessuno gli fece esaminare i quattro corpi, l'Abbazia disse « fulmine » e seppellì (« a lu mèdiche nun l'à chiamàte nisciùne »). Conferma rispettabile della sidequest della casa bruciata, senza prove; scrive una dichiarazione firmata se protetto. Rancore economico verso Crescenzo, non personale. Cure competenti a pagamento: Medicina +4, riconosce una ferita magica al primo sguardo. Pronto a parlare male dell'Abbazia in casa sua, mai in piazza. Non confondere con Frate Simone.",
+  "atti": [],
+  "links": [
+   "mu-15-casa-del-medico",
+   "mu-20-casa-bruciata-di-maria",
+   "mu-frate-crescenzo",
+   "mu-maddalena-la-lavandara"
+  ]
+ },
+ {
+  "id": "mu-tonino-lu-lanare",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Tonìno Lu Lanàre",
+  "sub": "Il mercante di lana — baffi curati, due registri",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Nella casa della madre, la Vedova del Mèzze; i carri della lana partono ancora per Teramum.",
+  "pub": "Il vestito migliore del borgo dopo quello dell'Abate, e baffi curatissimi che si liscia in continuazione. Compra la lana dei casali e la rivende — ufficialmente all'Abbazia — lamentandosi a ogni respiro di dazi e tratturi chiusi. Vive nella casa di famiglia con la madre, Donna Filomena la Vedova del Mèzze, sessant'anni, sempre in nero, che dalla finestra commenta chiunque passi: « Tonì! Chi sò chìsse? — Mamma, clientèle! — E falle pagà prìme! »",
+  "gm": "Doppio agente economico: vende lana all'Abbazia E ai Naviganti Grigi di Julia Nova sottobanco — due registri, due prezzi. Adamus può conoscerne il nome dai registri della Gilda. Smascherato, compra il silenzio con informazioni: contatti e tariffe dei Naviganti Grigi, cosa cercano a Mushanè (sa del tentativo fallito di comprare le guardie del Passo), i conti della lana di Gofferio. Tell: si liscia i baffi quando mente (Intuizione CD 13). Denunciarlo all'Abbazia lo rovina e brucia la fonte; minacciare di dirlo alla madre funziona troppo. Con Onofrio Abate, la concessione della lana è da rinegoziare: Tonìno sarà il primo a bussare. Non è il Tonìno del ritratto « Tonino.jpg » (probabile Tonino La Botte di Julia Nova): immagine non assegnata.",
+  "atti": [],
+  "links": [
+   "mu-07-casa-vedova-del-mezze",
+   "mu-frate-onofrio"
+  ]
+ },
+ {
+  "id": "mu-vincienze-lu-furnare",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Vinciènze Lu Furnàre",
+  "sub": "Il fornaio del Forno Comune — con Sabbatìne, il notiziario dell'alba",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Al Forno Comune, dall'alba. Il forno che lavora per la colonna è parte di ciò che Mushanè può dare alla Crociata.",
+  "pub": "Pancia da fornaio, braccia segnate di ustioni fino al gomito, e un sorriso largo che accoglie chiunque come un parente. Il Forno Comune è il suo regno dall'alba: le donne in fila per il pane sono il notiziario del borgo, e Vinciènze ne è il direttore — sa tutto di tutti, e quasi tutto lo racconta volentieri. « Qua a lu fùrne arrìve tùtte: lu gràne, le fémmene e li fàtte. E ìje 'nfórne tùtte e tre. » Con lui la moglie Sabbatìne, quarantatré anni, tonda, allegra: « Ìje sàcce pure chèlle che nun sàpe ìsse! »",
+  "gm": "Amante segreto di Mariannìna, la moglie di Mastro Giusto: se esce, il forno e il mulino — i due granai di Mushanè — tremano insieme. Tell: al nome di Giusto o di Mariannìna il fiume di parole si secca (Intuizione CD 12). Chi lo stringe in disparte (Persuasione o Intimidire CD 13) tiene per la gola l'uomo che sa tutto di tutti; chi fa uscire il segreto brucia il notiziario e si fa nemiche due famiglie. Sabbatìne: doppio volume, metà prudenza — per i pettegolezzi di servizio è più utile del marito, ma ciò che le si dice a pranzo lo sa il borgo. Sulla casa bruciata rimanda a Maddalena.",
+  "atti": [],
+  "links": [
+   "mu-08-forno-comune",
+   "mu-mastro-giusto-lu-mulinare",
+   "mu-sabbatine-lu-chiancuse",
+   "mu-maddalena-la-lavandara"
+  ]
+ },
+ {
+  "id": "mu-zi-peppe-lu-vaccare",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Mastro Zì Pèppe Lu Vaccàre",
+  "sub": "Il capo-bestiame — stalla e fienile comuni, le orecchie della notte",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Dorme su un pagliericcio accanto alle bestie, fuori mura; il garzone Tonìnele con lui.",
+  "pub": "Spalle da bue, voce roca da fumo di stalla, e un odore di letame e latte che lo precede di tre passi. Governa la stalla e il fienile comuni fuori mura da trent'anni: muli, vacche, e le bestie dei viandanti che pagano la notte. In paese ha la Casa del Capo-bestiame, ma dorme poco e male accanto alle bestie, « pecché le vàcche fìglien'e de nòtte e li crestiàne arròbbene de nòtte ». Con lui il garzone Tonìnele lu vaccàre, sedici anni, orecchie rosse, che sparisce ogni volta che dalla Locanda esce una voce di ragazza. « La stàlle è cóme la chièse, signurì: ce vène ognùne, prìme o pò. »",
+  "gm": "Sa di tutti i passaggi notturni: muli in prestito (tacche su una trave — il registro non scritto del Borgo Basso), la tonaca che rientra sempre dopo Completorium dalla parte degli orti (Tommaso o Crescenzo — sa quando e dove, non chi), il foraggio della mula della camera 9 pagato da Pancrazio, la ronda dei mercenari. Non vende: scambia — lavoro pesante, una bevuta, una bestia curata (un incantesimo su una vacca malata lo compra per la vita). Parla al mulo, non ai PG, quando la cosa scotta. Tonìnele, innamorato di Mariuccia, saliva sul tetto del retro della Locanda: ha visto « quaccùne ca càgne le bbènne » alla finestra della camera 9 e un uomo che lo guardava « fèrme fèrme, cóme 'nu càne ca cùnte le pèchere » — Lu Grise l'aveva visto in faccia. Una parola buona a Mariuccia vale più di dieci fiorini. Muli, carri e foraggio per la marcia, con discrezione.",
+  "atti": [],
+  "links": [
+   "mu-17-casa-del-capo-bestiame",
+   "mu-09-locanda-del-frate",
+   "mu-mariuccia",
+   "mu-frate-tommaso",
+   "mu-frate-crescenzo"
+  ]
+ },
+ {
+  "id": "mu-maddalena-la-lavandara",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Mestieri",
+  "title": "Maddalena la Lavandàra",
+  "sub": "La lavandaia del lavatoio in Piazza — si paga in farina, non in Gofferini",
+  "img": null,
+  "state": "segreto",
+  "status": "Viva. Al lavatoio dall'alba al Vespro. Ai crociati, da ora, lava gratis.",
+  "pub": "Braccia rosse fino al gomito, mani spaccate dal sapone e dall'acqua fredda, lingua più veloce del battipanni. Sta al lavatoio della Piazza dall'alba al Vespro, e il lavatoio è il vero notiziario di Mushanè: « Ìje cunósce ógne màcchia de stu paése. Lu vìne, lu sàngue, lu fànghe, lu pecchè. La rróbba de la gènte pàrle, signurì. » Particolarità nota a tutti: si fa pagare in farina, mai in Gofferini: « La monéta de l'Abàte tène la fàcce de l'Abàte. E ìje 'ndà la màne, chèlla fàcce, nun ce la vùje. »",
+  "gm": "Via d'ingresso canonica alla casa bruciata: la mattina dopo l'incendio di Marìa le portarono da lavare le tonache dei Velthuria, e puzzavano d'olio combustibile — « lu fùlmene mò se vèste pure ìsse ». Mezzo sacchetto di farina = chiacchiere di piazza (i debiti col mulino, la camera che non si apre mai, « chela nòtte nun piuvètte »); sacchetto pieno = le tonache. Pagata in Gofferini o pressata, si chiude. Non testimonia (« lu nàse 'ndù tribunàle nun tèstimònie ») ma indirizza alla prova materiale: il Sigillo Velthuria tra le macerie. Coi mercenari caduti è tra le prime in piazza col battipanni: « Stavóte à lavàte lu paése. »",
+  "atti": [],
+  "links": [
+   "mu-24-la-piazza",
+   "mu-20-casa-bruciata-di-maria",
+   "mu-vedova-filomena-mezzadra",
+   "mu-donna-rosina",
+   "mu-mastro-simone-lu-mediche"
+  ]
+ },
+ {
+  "id": "mu-narduccio-lu-pecurare",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Pastori e contadini",
+  "title": "Narduccio Lu Pecuràre",
+  "sub": "Il pastore dei tratturi chiusi — cappello in mano, schiena dritta",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Alla Casetta del Pastore fuori mura. Il suo messaggio per l'Abate non risulta consegnato — e l'Abate è morto.",
+  "pub": "Sulla Strada dei Pastori, a un bivio, avete trovato una pietra di confine dei tratturi sbarrata da una catena di ferro e un lucchetto: dietro, pecore magre belavano verso un pascolo che non potevano più raggiungere — il sogno di Adamus, fatto pietra. Accanto, un vecchio col mantello consunto e la faccia cotta dal sole, il cappello in mano ma gli occhi che non si abbassano: Narduccio lu pecuràre. L'Abate Gofferio ha chiuso le vie della transumanza, venti Gofferine a capo di pecora, e i pastori sono rovinati. Vi ha affidato un messaggio: « Dicìtece accussì, a l'Abàte: ca le pèchere nun cunòsce li cunfìne. So' sòle l'òmmene ca li 'mvènte. E li àngeli, quànne vénne a pijà' l'àneme, nun pàghene lu dàzie. »",
+  "gm": "Gancio diretto di Adamus e fonte della missione « I Tratturi Chiusi »: far riaprire le vie della transumanza e togliere la tassa — completamento: il primo gregge attraversa la pietra di confine senza pagare; ricompensa: la Fede della Crociata sale, guide e vettovaglie dei pastori lungo i Tratturi del Ducato (« ve pòrte addò vulìte, da ècche a lu mare »). Con Gofferio morto, la decisione è di Onofrio: la missione si chiude con una parola dell'Abate nuovo — e Narduccio si presenta ai Campi col cappello in testa, formaggio e una pelle di montone per il capitano. Conta sulle dita i compagni rovinati (Mìchele a Bellindè, Sànte, Lurìnze, Vìnce) e tiene a freno i Pastori del Sotte perché non facciano « 'na fessarìa ». Se un PG gli dice di rimettersi il cappello, parla da pari. Conosce Onorino del Varco Est da vent'anni; faida trentennale col vasaio omonimo (due fiorini). Non chiede carità: « Vùje la vìa. 'Na strada s'adda arapì. »",
+  "atti": [
+   12
+  ],
+  "links": [
+   "mu-i-pastori-del-sotte",
+   "mu-frate-onofrio",
+   "mu-abate-gofferio",
+   "mu-frate-onorino",
+   "mu-narduccio-lu-vasare"
+  ]
+ },
+ {
+  "id": "mu-i-pastori-del-sotte",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Pastori e contadini",
+  "title": "I Pastori del Sotte",
+  "sub": "Sànte, Lurìnze, Vìnce — e lo sgabello vuoto di Mìchele",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivi (Mìchele a Bellindè). Alla Casetta del Pastore, ogni sera dopo il Vespro, a rifare gli stessi conti.",
+  "pub": "Alla sera, dopo il Vespro, alla Casetta del Pastore si raduna quel che resta dei pastori di Mushanè: un fuoco piccolo, formaggio duro, vino quando c'è, e silenzi lunghi rotti da conti che non tornano. Mìchele Lu Caprìne se n'è andato a Bellindè coi fratelli, e il suo sgabello nessuno lo occupa. Sànte Lu Pìzze ha venduto metà del gregge a metà prezzo e rifà i conti a voce alta ogni sera. Lurìnze Lu Strangàte sta perdendo il senno: parla alle pecore che non ha più. Vìnce Lu Sòrde aspetta il castigo del Signore sull'Abate — « ma lu Signùre nu' à fretta ». « Cìnche èreme, attùrne a stu fóche. Mò sème trè e mèzze. »",
+  "gm": "La brace del Borgo Basso: pronti a sollevarsi, ma serve una testa (« Purtàtece 'na càpe, e vedète si ce manchème nùje »). Ora l'Abate è morto e i tratturi sono ancora chiusi: la temperatura sale se Onofrio tarda — Vìnce affila una roncola « pe' lu càstico ». Massimo due voci per scena (Sànte i conti, Vìnce il castigo), Lurìnze come pugno nello stomaco (« Bianchìne, addò sì jùte? »). Se i tratturi si riaprono: il primo gregge oltre la pietra è il loro, Sànte rifà i conti e stavolta tornano, Lurìnze davanti alle pecore vere ha la sua mezza guarigione. Con Adamus a guidarli: nerbo dei Disperati del Sotte, braccia e voce per la Crociata. Chiedono intanto farina, sale, « e ca quaccùne dìce a l'Abàte ca esistème pùre nùje ».",
+  "atti": [],
+  "links": [
+   "mu-narduccio-lu-pecurare",
+   "mu-famiglia-lu-salvate",
+   "mu-frate-onofrio"
+  ]
+ },
+ {
+  "id": "mu-famiglia-lu-salvate",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Pastori e contadini",
+  "title": "Famiglia Lu Salvàte",
+  "sub": "Donàto, Rosa, due figli — indebitati col mulino, sfratto a Pasqua",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivi. Al casale fuori mura, sotto sfratto per Pasqua; Rosa ha già cominciato i fagotti.",
+  "pub": "Donàto (45) e Rosa (42), con due figli adolescenti. Gente che ha sempre pagato — finché due annate storte e gli interessi di Mastro Giusto, il mugnaio, non li hanno mangiati vivi. Il debito col mulino è cresciuto più in fretta del grano, e sulla porta pende la condanna che tutto il Borgo Basso conosce: sfratto a Pasqua. « Lu nónne dicève: Salvàte de nóme, salvàte de fàtte. Embè, lu nóme è rimàste. A Pàsque, dìce lu mulinàre. Lu Signóre rinàsce, e nùje perdème la càse. »",
+  "gm": "Il caso-simbolo del Borgo Basso: Adamus (o chiunque) può intervenire, e non salva una famiglia sola — parla a tutto il Sotte. Vie: pagare o rilevare il debito (Giusto gonfia la cifra ai forestieri: Intuizione/Persuasione CD 12; Rosa ha « tùtte 'ncàpe, cìfra pe' cìfra » — metterle per iscritto davanti a un testimone dimezza il gioco di Giusto); parlare di usura davanti al mulino con la gente che ascolta; una parola dei Pompizius; ora anche una parola di Onofrio, che tiene la concessione. Donàto rifiuta l'aiuto due volte prima di accettarlo; Rosa parla lei, coi numeri. Se nessuno interviene, a Pasqua lo sfratto si consuma davanti a tutti e il Borgo Basso impara che nemmeno questa Crociata salva nessuno. Battuta di chiusura pronta: « Salvàte de nóme, salvàte de fàtte… stavóte pe' davère. »",
+  "atti": [],
+  "links": [
+   "mu-mastro-giusto-lu-mulinare",
+   "mu-don-aurelio-pompizius",
+   "mu-i-pastori-del-sotte",
+   "mu-donna-rosina",
+   "mu-frate-onofrio"
+  ]
+ },
+ {
+  "id": "mu-famiglia-lu-trupe",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Pastori e contadini",
+  "title": "Famiglia Lu Trùpe",
+  "sub": "Cèsare, Felìce, tre figli — i mezzadri onesti dei Pompizius",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivi. Al podere, con un posto in più a tavola.",
+  "pub": "Gente onesta, di quella che il borgo cita come esempio: Cèsare (43), schiena dritta e parole poche; Felìce (40), la moglie, che governa casa, conti e marito; e tre figli — il grande di sedici, la mezzana di tredici, il piccolo di otto. Mezzadri dei Pompizius da generazioni, pagano la metà senza lamentarsi e tengono il podere come un giardino. Alla porta di casa loro non si bussa mai due volte. « Nùje sème mezzàdre, signurì. Mètà a lu padróne, mètà a nùje. Ma la fatìje… la fatìje è tùtta la nòstre. »",
+  "gm": "Gancio di Iosephus presso la gente dei poderi: col nome Pompizius, ospitalità piena e la battuta-chiave di Cèsare su Marìa (« Cèsare Lu Trùpe a chèsta fàvola nun ce à credùte ma' ») col rimando alla Vedova Filomena, « chèlla l'ève cóme 'na sòre ». Niente doppi fondi: sono esattamente quello che sembrano — un posto pulito dove capire com'era la vita sotto Gofferio. Se i PG portano verità su Marìa, Cèsare diventa la voce dei contadini onesti. Il figlio grande beve ogni parola sui crociati: se chiede di unirsi, Felìce guarda i PG — la risposta dice che razza di crociata è. Se i PG vincono pulito, sono i primi a togliersi il cappello al passaggio della colonna.",
+  "atti": [],
+  "links": [
+   "mu-18-casa-lu-trupe",
+   "mu-don-aurelio-pompizius",
+   "mu-iosephus-pompizius",
+   "mu-vedova-filomena-mezzadra",
+   "mu-20-casa-bruciata-di-maria"
+  ]
+ },
+ {
+  "id": "mu-vedova-filomena-mezzadra",
+  "cat": "png",
+  "city": "mushane",
+  "group": "Pastori e contadini",
+  "title": "Vedova Filomena, la mezzadra",
+  "sub": "Mezzadra dei Pompizius, orto accanto a quello dell'Abbazia — amica di Marìa",
+  "img": null,
+  "state": "segreto",
+  "status": "Viva. Nel suo orto oltre la siepe dell'Abbazia. Dalla morte di Marìa ha smesso di cantare mentre lavora.",
+  "pub": "Curva, fazzoletto nero in testa, mani larghe da zappa. Lavora un podere dei Pompizius e un orto che confina con quello dell'Abbazia, curato come un altare: file dritte, niente erbacce, rosmarino lungo tutto il bordo. La si trova lì dall'alba, a parlare con le piante più che coi cristiani. Dalla morte di Marìa — la sua amica della casa isolata, « quella del fulmine » — ha smesso di cantare mentre lavora, e al lavatoio se ne sono accorti tutti. Da non confondere con Donna Filomena la Vedova del Mèzze, la benestante del nucleo murato.",
+  "gm": "La via d'ingresso col cuore più grosso alla casa bruciata: se Iosephus si presenta come Pompizius, gli si butta addosso in lacrime — « Marìe nu' è mòrte de fùlmene. Lu sàje? La nòtte ca à brusciàte la càse nu' à fàtte nèngue 'na gòcce de pioggia. Marìe metteva lu làtte sópre la pìjètre. Pe' la Vècchia Màdre. E mò l'hànne mòrtate. » — e l'avvertimento: « nu' ce annàte sùle. Forse li mùrte stà ancóre dèntre la càse. » Sa del culto di Marìa (latte, luna) e che Frate Tommaso « conosce il rosmarino alla luna »; non sa chi appiccò il fuoco. Con chiunque altro: diffidenza contadina, occhi bassi; nominarla in pubblico sul culto = terrore e negazione. A Mattheus: « Tu lu sàje mèglie de mè, figliù. » Se le ombre di Marìa vengono placate, porta uova e pane ai Campi.",
+  "atti": [],
+  "links": [
+   "mu-19-orto-dell-abbazia",
+   "mu-20-casa-bruciata-di-maria",
+   "mu-iosephus-pompizius",
+   "mu-famiglia-lu-trupe",
+   "mu-frate-tommaso",
+   "mu-maddalena-la-lavandara",
+   "mu-frate-crescenzo"
+  ]
+ }
+]

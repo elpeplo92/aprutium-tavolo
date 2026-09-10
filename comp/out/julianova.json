@@ -1,0 +1,2614 @@
+[
+ {
+  "id": "jn-quartiere-nobiliare",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Alta",
+  "title": "1. Quartiere Nobiliare",
+  "sub": "« La Corte » — la parte più alta della Città Alta",
+  "img": "Quartiere 1 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "Le strade del Quartiere Nobiliare sono lastricate di pietra bianca e pulite come la faccia di un condannato prima dell'esecuzione. L'aria profuma di gelsomino e incenso. I portoni sono di quercia massiccia, con stemmi in ferro battuto. Le finestre hanno tende. Sempre.\n\nI nobili che incontri camminano con scorte armate e sguardi che non ti vedono. I mendicanti non esistono: vengono cacciati prima dell'alba. È la parte più alta della città, la più lontana dal mare, dalla puzza e dal sudore. È anche la più pericolosa.\n\nCi siete passati più volte: nel retrobottega della Vetreria del Giudice con Forcinum, nella fuga notturna tra i vicoli in cui l'armatura di Alessandros ha risposto alla luna, e salendo alla Torre dei Cieli Inversi.",
+  "gm": "I PG senza abbigliamento nobile o accompagnatore riconoscibile vengono fermati dalle guardie private entro 2 minuti: Carisma (Persuasione) CD 14 o vengono 'invitati' a tornare nella Città Bassa. Voci d6: il Maniero Cerullius è sigillato da un testamento imperiale; Castemar e Velthuria si odiavano, ora Aulo dorme meglio; la notte dei Forgiati Meren misurava qualcosa nel cielo dal tetto; Sir Ottavio 'Lu Specchiaròle' vende specchi che mostrano cose che non ci sono; il giardiniere dei Giardini non è mai lo stesso due giorni di seguito; la statua di Julius piange quando piove.",
+  "atti": [
+   4,
+   5,
+   9,
+   11
+  ],
+  "links": [
+   "jn-tenuta-castemar",
+   "jn-maniero-cerullius",
+   "jn-biblioteca-cieli-inversi",
+   "jn-giardini-rimembranza",
+   "jn-basilica-fiamma-eterna",
+   "jn-vetreria-del-giudice"
+  ]
+ },
+ {
+  "id": "jn-tenuta-castemar",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "1. Quartiere Nobiliare",
+  "title": "Tenuta di Casa Castemar",
+  "sub": "Fortezza-villa del patriarca Aulo Dernas",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una fortezza-villa che occupa un intero isolato. Mura alte tre metri, guardie in livrea rossa e blu. L'aquila di Castemar — due teste, una rivolta al sole e una alla luna — campeggia sull'arco d'ingresso. Aulo Dernas di Castemar, il patriarca, si trova qui quasi ogni pomeriggio: è il vecchio più potente della città e sa esattamente quanto vale quella consapevolezza. Lo avete conosciuto al Concilio, non in casa sua.",
+  "gm": "Aulo è l'unico nobile che sa della stirpe Aurex — lo ha scoperto decenni fa. Non lo usa: lo conserva. PG con Alessandros o Vicarus ottengono udienza più facilmente (famiglia Cerullius nota). Battuta: «Ho novantadue anni, avventuriero. Ho visto cadere tre imperatori e costruire due chiese. Cosa credi di potermi offrire che non abbia già avuto?»",
+  "atti": [],
+  "links": [
+   "jn-aulo-dernas",
+   "jn-quartiere-nobiliare"
+  ]
+ },
+ {
+  "id": "jn-maniero-cerullius",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "1. Quartiere Nobiliare",
+  "title": "Maniero Abbandonato di Casa Cerullius",
+  "sub": "Casa ancestrale dei Cerullius, sprangata",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Un maniero che sembra respirare a fatica. Le pietre sono buone, l'architettura è nobile, ma le finestre sono sprangate e il giardino è incolto. Sull'arco: due spade incrociate sotto un sole nascente, lo stemma dei Cerullius. Qualcuno ha lasciato un mazzo di fiori freschi sul gradino. Non c'è nessuno in vista.",
+  "gm": "Solo per Alessandros / Vicarus: il maniero è di diritto loro. All'interno mobili coperti da teli, archivio familiare intatto, un passaggio segreto verso i sotterranei della Città Alta. Indagare richiede 2 ore; Indagine (Int) CD 13: successo = archivio con lettere di credito, sigillo di cera con lo stemma Cerullius (prova d'identità a Teramum) e il passaggio; fallimento = archivio ma non il passaggio, lettere difficili da decifrare. Forcinum sa che il maniero ha un problema di eredità irrisolto. Voce: sigillato da un testamento imperiale, invendibile senza un discendente diretto. Nei diari i PG non ci sono mai entrati.",
+  "atti": [],
+  "links": [
+   "jn-quartiere-nobiliare",
+   "jn-gabrielus-forcinum"
+  ]
+ },
+ {
+  "id": "jn-biblioteca-cieli-inversi",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "1. Quartiere Nobiliare",
+  "title": "Biblioteca dei Cieli Inversi — Torre dell'Arconte",
+  "sub": "Osservatorio, biblioteca e sede della Gilda dei Cieli Inversi",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Un edificio stretto e altissimo, come un dito puntato verso il cielo. Le finestre sono strumenti astronomici: astrolabi fissi nel muro, lenti di cristallo, fori calibrati per misurare il passaggio delle stelle. Dentro non sembra una biblioteca ma un osservatorio: cupola di vetro, libri su scaffali circolari che salgono fino al soffitto. Cyrius Meren riceve al piano più alto, su un pavimento a mosaico di stelle; le mappe celesti sulle pareti si muovono seguendo il moto reale dei pianeti.\n\nQui Vicarus e Mattheus hanno trovato la conferma che la Forgiatura è un antico rituale elfico che svuota memoria e identità; con il vecchio scriba Mastro Evaristo hanno decifrato il Tomo del Ricordo Spezzato (l'anima non viene dominata ma cancellata; i Forgiati sono echi di un « Primo Forgiato »). Dopo Pietraluna Meren ha spiegato a Mattheus che la scatola d'ossidiana è il filatterio di Lyaras, e nell'ultimo pomeriggio ha ricevuto il Cristallo di Memoria per estrarne i nomi.",
+  "gm": "Frate Odilon de Serlum è il bibliotecario e custodisce una sezione riservata di testi proibiti dalla Chiesa. Intelligenza (Storia) CD 14 per riferimenti alla stirpe Aurex o alla Guerra delle Due Lune; con il permesso di Meren CD 10; senza CD 18 e rischio di essere notati. Meren è l'alleato più informato dei PG nella Città Alta; sospetta della vera natura del Cristallo, NON sa dell'Aurex ma ci è vicino. Voce: la notte dei Forgiati era sul tetto con uno strumento sconosciuto.",
+  "atti": [
+   1,
+   4,
+   9,
+   11
+  ],
+  "links": [
+   "jn-cyrius-meren",
+   "jn-mastro-evaristo",
+   "jn-frate-odilon",
+   "jn-quartiere-nobiliare"
+  ]
+ },
+ {
+  "id": "jn-giardini-rimembranza",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "1. Quartiere Nobiliare",
+  "title": "Giardini della Rimembranza",
+  "sub": "Parco pubblico con la statua di Julius Aquaviva",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Un parco pubblico — l'unico in questo quartiere — con cipressi, una fontana di pietra bianca e al centro la statua di Julius Aquaviva, il fondatore: marmo bianco, toga, una mano alzata verso il mare. La statua ha gli occhi chiusi. I vecchi del quartiere dicono che quando Julius aprirà gli occhi, Julia Nova avrà ritrovato la sua guida vera.",
+  "gm": "Luogo neutro, buono per conversazioni riservate: nessuna guardia privata. Se i PG si siedono sulla panchina vicino alla fontana, Dama Lellèna 'de li Faliscòrpi' li nota e li avvicina: ha sempre notizie da vendere (costo: conversazione e un po' di attenzione). Voci: il giardiniere cambia ogni giorno; la statua piange quando piove (Virellius dice condensa).",
+  "atti": [],
+  "links": [
+   "jn-dama-lellena",
+   "jn-quartiere-nobiliare"
+  ]
+ },
+ {
+  "id": "jn-basilica-fiamma-eterna",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Alta",
+  "title": "Basilica della Fiamma Eterna",
+  "sub": "La Cattedrale — Basilica Solare di Valerus, tra le zone 1 e 2",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Il secondo edificio più alto di Julia Nova dopo la Torre del Sole. Facciata di pietra bianca, rosone circolare con vetri giallo-arancio, campane che suonano ogni ora. La Fiamma Eterna arde sul portale principale, un fuoco magico che non si spegne da duecento anni; dentro, navata alta, altare d'oro, guardie dell'Ordine d'Acciaio ai lati e un incenso così denso che fa lacrimare gli occhi.\n\nQuando ci siete entrati la prima volta la Fiamma era ridotta a un moccolo tremolante: Sorella Almerya vi ha sussurrato di nascosto la sua visione (« La ferita è nel porto »), e Virellius vi ha coperti di accuse. Dopo l'assedio Alessandros ha ritrovato il Cardinale nella cripta, in tonaca di sacco davanti al sarcofago di San Berardo, con la fede in frantumi: hanno pregato insieme e Virellius gli ha consegnato il Dito di San Berardo.",
+  "gm": "Zona pericolosa per i PG prima dell'Atto IX: Virellius li tollerava perché utili a Fenix. Se sapesse di Mattheus (Mortus) o del legame di Adamus con Maia cambierebbe atteggiamento — anche dopo la 'conversione' nella cripta, la sua Chiesa resta l'Inquisizione. Sorella Almerya è l'alleata interna: Int o Percezione CD 13 per riconoscerla come contatto. Udienza con Virellius: Persuasione CD 16; fallimento = un segretario annota nome e visita negli archivi dell'Inquisizione. Roster di Pietraluna: un accolito della Basilica è agente Celomante infiltrato (identità ancora da assegnare). Voce: passaggio murato tra Palazzo del Sole e Basilica.",
+  "atti": [
+   4,
+   9,
+   10
+  ],
+  "links": [
+   "jn-cardinal-virellius",
+   "jn-sorella-almerya",
+   "jn-palazzo-del-sole"
+  ]
+ },
+ {
+  "id": "jn-vetreria-del-giudice",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Alta",
+  "title": "La Vetreria del Giudice",
+  "sub": "Locale di Donato « Lu Serpe » — il « vero ufficio » di Forcinum",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Un locale della Città Alta gestito da Donato « Lu Serpe », da sua moglie Laurenzia e dalla silenziosa Nonna Bartolda. Sul retro, Gabrielus Forcinum tiene il suo « vero ufficio »: qui, dopo la rissa al porto, vi ha spiegato che la rissa era solo il sintomo e che serviva un instrumentum regni abbastanza pesante da costringere Domina Syel a un accordo.",
+  "gm": "Compare solo nell'Atto IV. Posizione esatta nella Città Alta non specificata: (proposta) al limite tra Quartiere Nobiliare e il Balcone. Buon rifugio discreto per i PG quando devono restare « irreperibili ».",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-gabrielus-forcinum",
+   "jn-donato-lu-serpe"
+  ]
+ },
+ {
+  "id": "jn-palazzo-del-sole",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Alta",
+  "title": "2. Palazzo del Sole",
+  "sub": "« La Cittadella » — centro della Città Alta, il punto più elevato",
+  "img": "Quartiere 2 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "Il Palazzo del Sole domina Julia Nova come un padre severo domina una famiglia che non ama ma controlla. La Torre del Sole al centro è alta quaranta metri: si vede dal mare, dalla campagna, dai villaggi sulle colline. La pietra è gialla di tufo, quasi dorata al tramonto. Le guardie ai cancelli non sorridono mai.\n\nQuesto è il cuore del governo: Severian Altherion, il Primo Cittadino, lavora qui, e qui si riunisce il Concilio Ristretto. Vi siete stati come eroi della spiaggia, come sospetti dopo la Caserma Est, come testimoni della morte di Domina, e infine sulla Terrazza dei Venti, dove Silvanus ha ottenuto il mandato per Teramum. Dopo l'assedio la Torre è sfregiata da un dardo di balista e le vetrate sono in frantumi.",
+  "gm": "Accesso: convocazione ufficiale oppure Persuasione/Inganno CD 17 con storia credibile. Il Concilio si riunisce martedì e venerdì; Fenix ha accesso permanente. Voci d6: Severian non dorme da settimane e parla da solo; voto segreto tre giorni fa noto solo a Torvus e Fenix; le prigioni del terzo livello non sono mai vuote e chi entra non sempre esce dalle porte principali; Virellius ha chiesto tre volte di ispezionare gli archivi, Altherion ha rifiutato tre volte; passaggio murato verso la Basilica; la Torre poggia su una struttura molto più antica (pietre diverse alla base).",
+  "atti": [
+   1,
+   4,
+   6,
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-torre-del-sole",
+   "jn-ala-ovest-prigioni",
+   "jn-cortile-milizia",
+   "jn-piazza-alta",
+   "jn-scala-dei-venti",
+   "jn-severian-altherion",
+   "jn-fenix"
+  ]
+ },
+ {
+  "id": "jn-torre-del-sole",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "2. Palazzo del Sole",
+  "title": "Torre del Sole — Sala del Concilio",
+  "sub": "Sala ottagonale al quinto piano",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Una sala ottagonale al quinto piano. Ogni lato ha una finestra che guarda in una direzione diversa. Al centro un tavolo circolare con i seggi del Concilio; quello della Voce della Fiamma è rivestito di velluto rosso sangue, quello del Comandante è il più consumato. Vi avete testimoniato due volte: la prima da eroi, la seconda davanti al seggio vuoto di Silvanus, che pesava come un'accusa, mentre il Concilio si mostrava per ciò che è: un branco di lupi che si azzannano mentre il cacciatore si avvicina.",
+  "gm": "Il Concilio è in crisi: Severian paralizzato dalla paura, Virellius spinge per poteri d'emergenza, Torvus è l'unico a opporsi (situazione pre-Atto IX; dopo il 'miracolo' il quadro è mutato). Il seggio del Signore del Mare (ex-Syel) è vuoto: Adamus può reclamarlo se si propone formalmente. Nota: la guida parla di otto seggi, l'Atto IV di nove.",
+  "atti": [
+   1,
+   4,
+   6
+  ],
+  "links": [
+   "jn-palazzo-del-sole",
+   "jn-severian-altherion"
+  ]
+ },
+ {
+  "id": "jn-ala-ovest-prigioni",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "2. Palazzo del Sole",
+  "title": "Ala Ovest — Archivi e Prigioni",
+  "sub": "Tre livelli di prigioni sotterranee",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "L'Ala Ovest è accessibile solo con permesso del Primo Cittadino o del Comandante. Sotto l'ala, tre livelli di prigioni sotterranee. Maximus e Alessandros ci sono scesi per interrogare Umbrax, il Berserker Forgiato catturato sulla spiaggia, cercando di strappare informazioni alla sua mente spezzata.",
+  "gm": "SEGRETO DM: al terzo livello — quello che non compare nelle mappe ufficiali — una porta di ferro con sigillo solare. Dietro, le Cripte Inferiori con il Sigillo della Marea Nera, artefatto imperiale che blocca le Navi Rosse nel porto: se rimosso o distrutto, le navi potrebbero entrare liberamente. Iuvenza sapeva della sua esistenza. Voce: i prigionieri del terzo livello non escono dalle porte principali.",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-palazzo-del-sole",
+   "jn-umbrax"
+  ]
+ },
+ {
+  "id": "jn-cortile-milizia",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "2. Palazzo del Sole",
+  "title": "Cortile della Milizia — QG Temporaneo",
+  "sub": "Il secondo quartier generale di Fenix",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Il cortile nord del Palazzo è stato trasformato in un campo operativo: tende, armature appese, mappe sul tavolo. La Caserma Est è quasi distrutta, e questo è il secondo QG di Fenix. Qui si tengono i briefing mattutini; qui Fenix dorme quattro ore a notte quando va bene.",
+  "gm": "Battuta di Fenix: «Nde sta nisciune che nge pó dì niente. Se t'è màndate ijè, sei dei nòstre. Se non t'ha mannàte nisciune, torna indietro. Hai capito?». Nei diari il QG di Fenix dopo l'assedio è la Tenda di Comando sulla Piazza Alta, davanti alla Torre: trattare cortile e tenda come lo stesso luogo.",
+  "atti": [
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-fenix",
+   "jn-piazza-alta"
+  ]
+ },
+ {
+  "id": "jn-piazza-alta",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "2. Palazzo del Sole",
+  "title": "La Piazza Alta e la Terrazza dei Venti",
+  "sub": "Davanti alla Torre del Sole — la Tenda di Comando e Lu Callaròne",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "La grande piazza davanti alla Torre del Sole, con la Terrazza dei Venti affacciata sulla città. Dopo l'assedio è diventata il cuore di Julia Nova: la Tenda di Comando di Fenix, le file di corpi sotto lenzuola grigie, poi il Concilio riunito all'aperto davanti a mille volti sporchi di fuliggine, dove il sangue di Silvanus ha disegnato sulla pietra il Sole e le Due Lune e la piazza ha gridato « ARDENTUS! A TERAMUM! ». La sera seguente vi hanno tirato fuori Lu Callaròne, il pentolone di rame delle feste di Sant'Antonio, e la città ha mangiato la zuppa delle Virtù Teramane su casse di munizioni. Al tramonto del giorno dopo, tra cucine da campo e tavoli di fortuna, Silvanus ha aperto lo stendardo del nonno e ha parlato di crociata.",
+  "gm": "Luogo dei diari, non della guida. Qui è nata la Crociata del Sole e delle Due Lune.",
+  "atti": [
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-palazzo-del-sole",
+   "jn-silvanus",
+   "jn-fenix",
+   "jn-sorella-peppa"
+  ]
+ },
+ {
+  "id": "jn-scala-dei-venti",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "2. Palazzo del Sole",
+  "title": "La Scala dei Venti",
+  "sub": "La salita dalla Città Bassa alla Torre del Sole",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "La lunga scalinata che sale dalla città bassa alla Torre del Sole. L'avete salita scortati da Fenix attraverso una città in lutto che vi guardava come presagi più che come eroi, e poi striata di fuliggine, tra file di corpi coperti da lenzuola, sostenendo Silvanus appena tornato da Pietraluna.",
+  "gm": "",
+  "atti": [
+   4,
+   9
+  ],
+  "links": [
+   "jn-palazzo-del-sole",
+   "jn-piazza-alta"
+  ]
+ },
+ {
+  "id": "jn-mantelli-bianchi-nord",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Alta",
+  "title": "3. Quartiere dei Mantelli Bianchi (Nord)",
+  "sub": "« Le Fucine (Nord) » — confine tra Città Alta e Bassa, lato nord",
+  "img": "Quartiere 3 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "Senti il Quartiere dei Mantelli Bianchi prima di vederlo. Il rumore — martelli su incudini, sibili di vapore, il crepitio delle forge — è costante come il respiro. L'aria è grigia di fuliggine. I fabbri indossano grembiuli di cuoio bianco, i 'Mantelli Bianchi', anche se non sono più bianchi dal primo giorno di lavoro.\n\nLa Gilda del Martello Bianco governa questo quartiere più di qualsiasi guardia o nobile: Torvus Halderan, il Nano, è il signore non ufficiale di Julia Nova quando si tratta di ferro, acciaio e fuoco. Qui avete visto le fucine ardere di furia innaturale prima dell'assedio, e da qui sono uscite le macchine che hanno sciolto le Navi Rosse. Dopo l'assedio decine di fabbri battevano all'unisono per riparare i cardini delle porte.",
+  "gm": "Voci d6: il 'ferro lunare' di Elara cade dal cielo in certe notti; Torvus ha respinto un'ispezione di Virellius e due inquisitori sono stati trovati con le dita rotte; Oswald ha tre identità in tre città; il cantiere navale costruisce qualcosa di grande e segreto; Erminio ha venduto un oggetto a Virellius e da allora non parla; il fumo della Grande Forgia è diventato verde scuro tre notti fa. Il Manuale colloca qui anche la « sede dell'Inquisizione » — da armonizzare con la Basilica.",
+  "atti": [
+   4,
+   7,
+   10
+  ],
+  "links": [
+   "jn-grande-forgia",
+   "jn-laboratorio-torvus",
+   "jn-emporio-tuttofare",
+   "jn-bottega-elara",
+   "jn-torvus-halderan"
+  ]
+ },
+ {
+  "id": "jn-grande-forgia",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "3. Quartiere dei Mantelli Bianchi",
+  "title": "La Grande Forgia — Centro della Gilda",
+  "sub": "Sede del Martello Bianco",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Un edificio che sembra fatto di fumo e acciaio. La Grande Forgia non ha finestre, solo aperture per far uscire il calore; la temperatura all'interno è insopportabile per chi non è abituato. Al centro l'incudine principale, alta quanto un uomo: Torvus Halderan ci lavora sopra personalmente quando qualcosa è importante. Qui Torvus ha esaminato un frammento del nemico (« Roba d'elf'… ma guasta ») e qui, nei tre giorni prima della marcia, ha forgiato per Alessandros.",
+  "gm": "Persuasione o Baratto CD 13: Torvus accetta di forgiare/riparare/potenziare in cambio di un favore futuro o materiale raro (ferro lunare, scaglie di Forgiato), 1-3 giorni. Fallimento: «Torna quando la città non è assediata», si può riprovare con un'offerta migliore.",
+  "atti": [
+   4,
+   10
+  ],
+  "links": [
+   "jn-torvus-halderan",
+   "jn-mantelli-bianchi-nord"
+  ]
+ },
+ {
+  "id": "jn-laboratorio-torvus",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "3. Quartiere dei Mantelli Bianchi",
+  "title": "Laboratorio di Torvus — Fuoco Verde",
+  "sub": "Il retrobottega sigillato",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Il retrobottega di Torvus è vietato a chiunque non sia Elara o un apprendista fidato. Le pareti sono coperte di schizzi, formule, campioni di metallo; al centro un alambicco di rame produce un liquido verde brillante. Il Fuoco Verde non brucia l'organico: brucia solo il ferro animato, ed è questo che ferma i Forgiati. Torvus ve lo ha mostrato sigillato — « Loro parl'. Io… prepare le risposte » — e dalle mura lo avete visto sciogliere tre Navi Rosse in trenta secondi.",
+  "gm": "Gli appunti contengono informazioni cruciali: i Forgiati sono animati da frammenti di un'anima, schegge; distruggi l'anima-madre e si fermano tutti (Int Arcano CD 15). Il Manuale aggiunge il segreto vero: il Fuoco Verde (« Acido Solare » è depistaggio) è magia lunare, frammenti dell'essenza di Noxtua — conoscenza del Clan Halderan. Se la Chiesa lo scoprisse, Torvus finirebbe sul rogo.",
+  "atti": [
+   4,
+   7
+  ],
+  "links": [
+   "jn-torvus-halderan",
+   "jn-elara-manodoro"
+  ]
+ },
+ {
+  "id": "jn-emporio-tuttofare",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "3. Quartiere dei Mantelli Bianchi",
+  "title": "Emporio del Tuttofare — Oswald Grigiomanto",
+  "sub": "Metà bottega, metà emporio (laboratorio in zona 3, vendita in zona 10)",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Metà bottega, metà emporio: armi, armature, ferramenta, oggetti che non sai classificare. L'insegna è un martello incrociato con una piuma. Oswald Grigiomanto — ex mercenario, oggi fabbro-mercante — conosce ogni cliente per nome e vizio. Alessandros ha trattato acciaio nel suo retrobottega dopo Pietraluna; qui lui e Maximus hanno ritirato le armature nuove prima della marcia — con lo spazio libero accanto al Sole sul pettorale di Alessandros, e sul cinturino di Maximus lo stemma di Julia Nova in regalo.",
+  "gm": "Vende equipaggiamento standard al prezzo del manuale; oggetti speciali: Persuasione CD 12 + prezzo raddoppiato. Sa qualcosa dei Velthuria che non dice volentieri — un incidente anni fa. Voci: tre identità in tre città (a Teramum si chiama altrimenti); sta per lasciare Julia Nova, ha venduto discretamente proprietà.",
+  "atti": [
+   4,
+   9,
+   11
+  ],
+  "links": [
+   "jn-oswald-grigiomanto",
+   "jn-mantelli-bianchi-sud"
+  ]
+ },
+ {
+  "id": "jn-bottega-elara",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "3. Quartiere dei Mantelli Bianchi",
+  "title": "Bottega di Elara Manodoro e mercato della Gilda",
+  "sub": "L'armaiola dagli oggetti dal potenziale dormiente",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Al mercato della Gilda del Martello Bianco avete conosciuto Elara Manodoro, l'armaiola dagli oggetti dal potenziale dormiente, il bazar di Barnabus « Barba » Fildargento e la bottega di Oswald. Nel retrobottega di Elara, dopo l'assedio, il metallo dei Forgiati distrutti si contorceva in un crogiolo come un lamento umano: Vicarus e lei, con la spilla come diapason, ne hanno tratto il Talismano dell'Eco.",
+  "gm": "Luogo dei diari (non nella guida). Il ferro lunare corrotto « non si forgia col fuoco, va convinto ».",
+  "atti": [
+   4,
+   9,
+   10
+  ],
+  "links": [
+   "jn-elara-manodoro",
+   "jn-barnabus-fildargento"
+  ]
+ },
+ {
+  "id": "jn-canneto-verde",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Bassa",
+  "title": "4. Quartiere del Canneto Verde",
+  "sub": "« Lu Cannéte » — Città Bassa occidentale, ai piedi del colle",
+  "img": "Quartiere 4 Julianova.jpg",
+  "state": "noto",
+  "status": null,
+  "pub": "Il Canneto Verde prende il nome dai canali d'irrigazione che attraversano il quartiere, un'eredità dell'antico insediamento imperiale. I canali portano acqua fresca dalla collina, e lungo le sponde crescono canne, salice, menta selvatica. È il quartiere più verde della città e anche il più tranquillo: qui vivono i guaritori, le erboriste, i conciatori. Non ci sono Gilde forti, non ci sono nobili, non ci sono soldati fissi. La gente ti guarda con curiosità, non con sospetto.",
+  "gm": "Nei diari i PG non ci sono mai stati. Voci d6: i canali vengono da una sorgente sotto la collina, luci nell'acqua di notte; Margherita ha curato un soldato di Fenix con tessuto metallico sotto la pelle; c'è un secondo accesso alla rete fognaria imperiale, noto solo a chi viveva qui prima della fondazione; Cipriano vende informazioni a tutti; le erbe di Margherita non crescono in nessun posto conosciuto; l'acqua dei canali era più calda l'inverno scorso — « qualcosa si sveglia sotto ».",
+  "atti": [],
+  "links": [
+   "jn-bottega-margherita",
+   "jn-piazza-dell-acqua",
+   "jn-osteria-canto-del-grillo"
+  ]
+ },
+ {
+  "id": "jn-bottega-margherita",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "4. Quartiere del Canneto Verde",
+  "title": "Bottega di Margherita 'de li Scurèlle'",
+  "sub": "Erboristeria — lucertola verde su campo giallo",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "L'insegna è una lucertola verde su campo giallo. La bottega è piena di mazzi di erbe appese al soffitto, barattoli di ogni colore, e un gatto nero che dorme sempre sul bancone. Margherita è una donna sulla cinquantina con le mani forti e lo sguardo che vede troppo. Conosce ogni erba del Ducato.",
+  "gm": "Margherita è sacerdotessa segreta di Maia (la sacerdotessa principale del Tempio di Lunaria). Vende erbe normali a chiunque; a chi dimostra di conoscere Maia offre rimedi magici rari a metà prezzo. Conosce Padre Cassio e lo aiuta. Percezione o Arcano CD 12: simbolo di Maia (luna falce su blu) nascosto dietro un'erba secca sul retro → un grado di fiducia in più. Battuta: «Cos'è che vi fa male? Non mi rispondere subito — pensaci. La risposta rapida è sempre sbagliata.»",
+  "atti": [],
+  "links": [
+   "jn-margherita-de-li-scurelle",
+   "jn-tempio-lunaria"
+  ]
+ },
+ {
+  "id": "jn-piazza-dell-acqua",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "4. Quartiere del Canneto Verde",
+  "title": "Canali del Canneto — La Piazza dell'Acqua",
+  "sub": "Dove tre canali si incontrano",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una piccola piazza dove tre canali si incontrano. C'è una fontana bassa al centro, usata per lavare la frutta, i panni, i piedi. I bambini ci giocano. I vecchi ci siedono intorno. È il posto più normale che abbiate visto a Julia Nova. Nessun intrigo. Nessuna guardia. Solo vita.",
+  "gm": "Zona neutrale per incontri discreti. Un informatore dei Naviganti Grigi si incontra qui ogni terzo giorno al tramonto: fazzoletto grigio al collo legato al contrario.",
+  "atti": [],
+  "links": [
+   "jn-canneto-verde"
+  ]
+ },
+ {
+  "id": "jn-osteria-canto-del-grillo",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "4. Quartiere del Canneto Verde",
+  "title": "Osteria del Canto del Grillo",
+  "sub": "Osteria familiare di Cipriano 'Lu Grìlle'",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una piccola osteria a gestione familiare. Cucina semplice — pasta e fagioli, baccalà, vino della collina. Il proprietario, Cipriano 'Lu Grìlle', è sordo da un orecchio ma sente tutto quello che non dovrebbe. «Qui si mangia, si beve e non si fanno domande. O almeno, io non ne faccio.»",
+  "gm": "Cipriano vende informazioni alla Gilda dei Naviganti, alla Basilica, e forse a qualcun altro. Non prende partito: prende monete.",
+  "atti": [],
+  "links": [
+   "jn-cipriano-lu-grille"
+  ]
+ },
+ {
+  "id": "jn-vicoli-grigi",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Bassa",
+  "title": "5. Quartiere dei Vicoli Grigi",
+  "sub": "« Il Labirinto » — Città Bassa centrale, base dei Naviganti Grigi",
+  "img": "Quartiere 5 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "Il Labirinto non è costruito: è cresciuto. Quattrocento anni di case aggiunte, abbattute, ricostruite sopra le fondamenta di quelle precedenti. I vicoli cambiano nome ogni tre crocicchi; alcune strade portano solo a cortili chiusi. Non c'è illuminazione ufficiale: chi porta una lanterna è un forestiero o un pazzo. I Naviganti Grigi si muovono nell'oscurità come i pesci nell'acqua.\n\nOgni muro ha un segno — un graffio, un simbolo, una pietra tolta e rimessa. Se sai leggerli, è una mappa. Se non li sai leggere, sei perduto. Da quando Adamus è il Capo della Gilda, questo è il suo quartiere.",
+  "gm": "Voci d6: tra i vecchi Naviganti qualcuno è ancora fedele a Domina Syel e aspetta; esiste una sola mappa completa del Labirinto, del fondatore, e nessuno sa dov'è; il Pozzo di Mara fa suoni strani di notte; Loretta 'Lu Lenzuòle' scrive tutto in un libro cifrato cucito nella fodera del mantello; dietro la Luna Storta è apparsa una porta che la settimana scorsa non c'era; Anacleto lavora anche per il Palazzo, o la Basilica, o entrambi. Voce 5 dell'Atto XV della guida (Porta Piccola): un Navigante trovato morto sulla spiaggia, caso chiuso come annegamento.",
+  "atti": [
+   5,
+   6,
+   7,
+   9
+  ],
+  "links": [
+   "jn-covo-della-conchiglia",
+   "jn-piazza-del-silenzio",
+   "jn-pozzo-di-mara",
+   "jn-locanda-luna-storta",
+   "jn-yuri"
+  ]
+ },
+ {
+  "id": "jn-covo-della-conchiglia",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "5. Quartiere dei Vicoli Grigi",
+  "title": "Il Covo della Conchiglia — QG dei Naviganti Grigi",
+  "sub": "Il cuore operativo della Gilda di Adamus",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Dall'esterno sembra un magazzino vuoto. L'interno sorprende: un tavolo grande, luci a soffitto, mappe sulle pareti, un banco con cibo sempre pronto. Odore di salsedine e cera. Questo è il cuore operativo dei Naviganti Grigi: Adamus lo governa ora, i Naviganti siedono ai bordi — fazzoletto grigio al collo, pugno al cuore quando entra il loro Capo.\n\nIl nome lo avete dato voi: « Il Covo della Conchiglia » era la grotta di Domina Syel nelle scogliere a nord, dove l'avete uccisa, dove Adamus è diventato Capo per legge del più forte, dove gli assassini di Iuvenza hanno ucciso Tonio e Marco e portato via Lyraeth, e da cui la Perla Silenziosa è salpata mentre Julia Nova bruciava.",
+  "gm": "Nei diari il Covo della Conchiglia è la grotta costiera a nord (Atti V-VII); nella guida è un magazzino nel Labirinto. (proposta) Trattarli come due sedi: la grotta-porto e il magazzino cittadino. Yuri è sempre presente; Anacleto 'Lu Quattrocchi' porta notizie ogni mattina — alcune vere. Battuta di Yuri: «Capo. Siediti. C'è 'na cosa che devi sapere prima che te lo dica qualcun altro.»",
+  "atti": [
+   5,
+   6,
+   7
+  ],
+  "links": [
+   "jn-yuri",
+   "jn-anacleto",
+   "jn-vicoli-grigi",
+   "jn-ancora-spezzata"
+  ]
+ },
+ {
+  "id": "jn-piazza-del-silenzio",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "5. Quartiere dei Vicoli Grigi",
+  "title": "La Piazza del Silenzio",
+  "sub": "Una piazza che non appare su nessuna mappa",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Una piazza che non appare su nessuna mappa ufficiale. Ci arrivi solo se sai dove girare. È circolare, selciata, con una sola entrata visibile — le altre tre sono dietro pareti mobili. Qui si concludono affari che non si possono concludere altrove. Chi parla in questa piazza sa che le parole restano qui.",
+  "gm": "Transazioni illegali, informazioni riservate, accordi fuori dai canali. Se i PG cercano qualcosa di raro o illecito, qui trovano un tramite — a un prezzo. Percezione CD 14 per trovarla senza guida.",
+  "atti": [],
+  "links": [
+   "jn-vicoli-grigi"
+  ]
+ },
+ {
+  "id": "jn-pozzo-di-mara",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "5. Quartiere dei Vicoli Grigi",
+  "title": "Il Pozzo di Mara — Il Pozzo dei Segreti",
+  "sub": "Pozzo di pietra nera in un vicolo cieco",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Un pozzo di pietra nera al centro di un vicolo cieco. L'acqua è fresca e pulita, miracolo nel Labirinto. La leggenda dice che se sussurri un segreto nell'acqua a mezzanotte, quel segreto non raggiungerà mai le orecchie sbagliate. La leggenda non dice che raggiunge sempre quelle giuste.",
+  "gm": "Artefatto magico minore collegato a una rete di canali che trasporta 'eco' dei suoni a chi sa ascoltare. Yuri lo usa per messaggi brevi ai Naviganti. Individuazione del Magico: aura di Divinazione (CD 13).",
+  "atti": [],
+  "links": [
+   "jn-yuri",
+   "jn-vicoli-grigi"
+  ]
+ },
+ {
+  "id": "jn-locanda-luna-storta",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "5. Quartiere dei Vicoli Grigi",
+  "title": "La Locanda della Luna Storta",
+  "sub": "Locanda di Salvio 'Lu Luppe'",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "L'insegna è una luna dipinta storta, intenzionalmente. Si mangia, si beve, si dorme. Si compra quasi tutto. Nessuno chiede i nomi. Il padrone, Salvio 'Lu Luppe', ha occhi che sembrano contare i soldi mentre ti parla. «Qui non è successo niente. Non è successo niente ieri. Non succederà niente domani. Vuoi un letto o no?»",
+  "gm": "Voce: nel vicolo cieco dietro la locanda c'è una porta che la settimana scorsa non c'era.",
+  "atti": [],
+  "links": [
+   "jn-salvio-lu-luppe"
+  ]
+ },
+ {
+  "id": "jn-quartiere-del-porto",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Bassa",
+  "title": "6. Quartiere del Porto",
+  "sub": "« I Moli » — Città Bassa orientale, lungo la costa",
+  "img": "Quartiere 6 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "Il Porto di Julia Nova non dorme mai. Le navi arrivano con la marea, scaricano al tramonto, ripartono con l'alba. L'odore è una miscela di sale, pesce, catrame e sudore che ti entra nei vestiti e non se ne va più. Tre zone: il Porto Vecchio a nord con le navi mercantili di valore; il Porto Nuovo al centro con il mercato del pesce; la Spiaggia dei Relitti a sud, dove i recuperatori frugano tra i relitti dei Forgiati.\n\nDopo l'attacco il Porto è cambiato: moli distrutti, navi sciolte dall'Acido Solare nell'acqua oleosa e tossica, guardie doppiate. Qui c'è stata la rissa con gli sgherri dei Naviganti Grigi (quattro mezzelfi morti), qui siete sbarcati dalla Perla Silenziosa in un girone infernale di feriti e cadaveri, qui Adamus ha salvato il magazzino della Gilda dagli sciacalli. Ma la vita continua — perché deve.",
+  "gm": "Voci d6: Ciccillo conosce ogni vicolo e nascondiglio del porto; la Spiaggia dei Relitti nasconde pezzi di Forgiati che di notte si muovono; Mastro Gerolamo accetta bustarelle solo in argento; una nave senza bandiera all'orizzonte aspettava qualcosa; l'Ancora Spezzata si chiamava 'Lu Cuddùre de lu Mòrte' e il vecchio proprietario è sparito nell'attacco; Darius Velascuri ha ricevuto un messaggio cifrato. Roster di Pietraluna: un mercante del porto è agente Celomante infiltrato (proposta: Darius Velascuri o Mastro Gerolamo).",
+  "atti": [
+   1,
+   4,
+   7,
+   8,
+   9,
+   10
+  ],
+  "links": [
+   "jn-ancora-spezzata",
+   "jn-faro-porto-vecchio",
+   "jn-trabocco-della-luna",
+   "jn-bottega-velascuri",
+   "jn-ufficio-portuale",
+   "jn-magazzino-gilda",
+   "jn-spiaggia-dei-relitti"
+  ]
+ },
+ {
+  "id": "jn-ancora-spezzata",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "6. Quartiere del Porto",
+  "title": "L'Ancora Spezzata — Base dei Naviganti",
+  "sub": "Taverna del porto, ora della Gilda — in attesa di un nome nuovo",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Una taverna che stava andando a pezzi — e ora no. L'insegna è un'ancora spezzata in due, dipinta di grigio. Davanti alle sue macerie Adamus ha trattato con Mastro Biagio « Lu Spilorce »: 500 monete per i muri, oppure società. Biagio è rimasto come socio, con le sue orecchie al bancone, e a sera i Naviganti martellavano assi sulle finestre e ripulivano la sala dalla fuliggine. Yuri, con un secchio di vernice: « Capo… che nome ci scriviamo sopra? L'Ancora è spezzata. Serve un nome nuovo. » La risposta è ancora in sospeso.",
+  "gm": "Base operativa secondaria di Adamus, ora proprietà dei Naviganti (Biagio come oste-socio). Ottima fonte di informazioni portuali: chi arriva, chi parte, cosa portano le navi. L'unica taverna riaperta in tre giorni in una città piena di soldati e operai assetati.",
+  "atti": [
+   10
+  ],
+  "links": [
+   "jn-mastro-biagio",
+   "jn-yuri",
+   "jn-covo-della-conchiglia"
+  ]
+ },
+ {
+  "id": "jn-faro-porto-vecchio",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "6. Quartiere del Porto",
+  "title": "Il Faro del Porto Vecchio",
+  "sub": "Trenta metri di pietra bianca con una fiamma che non si spegne",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Trenta metri di pietra bianca, con una fiamma magica in cima che non si spegne mai — nemmeno durante la tempesta, nemmeno durante l'attacco dei Forgiati. Il guardiano del faro è Rafèle 'Lu Rematore', un pescatore con una gamba di legno che vede tutto quello che entra ed esce dal porto da quarant'anni. Lo avete sentito parlare delle Navi Rosse, terrorizzato, la sera del compleanno di Mattheus.",
+  "gm": "Rafèle conosce ogni nave che passa: se i PG vogliono sapere chi è arrivato o partito, è lui il contatto. Potrebbe aver visto la nave di Iuvenza partire e notato qualcosa di strano: Intuizione CD 11 per capire che nasconde qualcosa. «Ho visto le Navi Rosse tre settimane prima che arrivassero. L'ho detto al Palazzo. Mi hanno detto che avevo bevuto troppo.»",
+  "atti": [],
+  "links": [
+   "jn-rafele-lu-rematore"
+  ]
+ },
+ {
+  "id": "jn-trabocco-della-luna",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "6. Quartiere del Porto",
+  "title": "Il Trabocco della Luna — Maledetto",
+  "sub": "L'unico degli otto trabocchi che nessun pescatore usa",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Degli otto trabocchi del porto, questo è diverso. Abbandonato da anni, le reti marcite, le assi nere di umidità. Di notte si vedono luci verdi riflesse nell'acqua sotto di esso. Nessun pescatore ci va. I bambini ci vanno — una volta. Poi smettono.",
+  "gm": "Sopra una delle uscite della rete fognaria imperiale, accesso sotterraneo usato dai Forgiati durante l'attacco. La 'maledizione' è contaminazione magica residua (Individuazione del Magico: Necromanza fortissima). Indagine CD 14: botola sotto il Trabocco, via alternativa per uscire dalla città senza passare per le porte. Fallimento: sembra solo pericolante.",
+  "atti": [],
+  "links": [
+   "jn-quartiere-del-porto"
+  ]
+ },
+ {
+  "id": "jn-bottega-velascuri",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "6. Quartiere del Porto",
+  "title": "Bottega Velascuri — Mercante di Segreti",
+  "sub": "Spezie, tessuti, oggetti di viaggio… e informazioni",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Apparentemente vende spezie, tessuti, oggetti di viaggio. Darius Velascuri conosce tutti e tutto: «Tutto si vende. La domanda è solo: chi paga di più? E a te, amico mio, perché dovrei fare uno sconto?»",
+  "gm": "In realtà vende informazioni. Sa di Teramum — situazione politica, movimenti delle Casate — e ha sentito il nome 'Frate Davide' in contesto sospetto. 20 mo generali, 50 mo specifiche; Persuasione CD 13 per abbassare il prezzo. Voce: ha ricevuto un messaggio cifrato e ha lo sguardo di chi sa troppo.",
+  "atti": [],
+  "links": [
+   "jn-darius-velascuri"
+  ]
+ },
+ {
+  "id": "jn-ufficio-portuale",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "6. Quartiere del Porto",
+  "title": "L'Ufficio Portuale",
+  "sub": "La dogana del porto",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "L'ufficio doganale del porto. Qui un funzionario terrorizzato vi ha confessato di una nave elfica non registrata e di casse misteriose prese in consegna da Domina Syel in persona. Fuori dall'ufficio è scoppiata la rissa con gli sgherri dei Naviganti Grigi.",
+  "gm": "Luogo dei diari. Mastro Gerolamo (guida, voce 3) è il funzionario dell'Ufficio: accetta bustarelle solo in monete d'argento, mai d'oro, e non spiega perché. (proposta) È lui il funzionario terrorizzato dell'Atto IV. La corruzione dell'Ufficio si replica alla Porta del Sale.",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-mastro-gerolamo",
+   "jn-quartiere-del-porto"
+  ]
+ },
+ {
+  "id": "jn-magazzino-gilda",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "6. Quartiere del Porto",
+  "title": "Magazzino della Gilda dei Naviganti",
+  "sub": "Il deposito portuale dei Naviganti Grigi",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Il magazzino della Gilda al porto. Dopo l'assedio Adamus lo ha salvato dagli sciacalli al fianco di Yuri l'Amaro, e ha ricevuto un libro mastro mezzo bruciato: pagamenti regolari a un « fabbro » di Teramum per armi non contrassegnate.",
+  "gm": "Filo aperto: il « fabbro » di Teramum arma la Guardia Ducale con acciaio maledetto; Torvus parla di metalli che non dovrebbero esistere.",
+  "atti": [
+   9
+  ],
+  "links": [
+   "jn-yuri",
+   "jn-covo-della-conchiglia"
+  ]
+ },
+ {
+  "id": "jn-spiaggia-dei-relitti",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "6. Quartiere del Porto",
+  "title": "La Spiaggia dei Relitti",
+  "sub": "Sud del porto — dove si fruga tra i resti dei Forgiati",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "La parte meridionale del porto, dove i recuperatori frugano tra i relitti dei Forgiati e delle navi sciolte dall'assedio.",
+  "gm": "Voce: nasconde pezzi di Forgiati non ancora 'morti' che di notte si muovono. Fonte possibile di scaglie di Forgiato per Torvus/Elara.",
+  "atti": [],
+  "links": [
+   "jn-quartiere-del-porto"
+  ]
+ },
+ {
+  "id": "jn-lu-spicchje-di-luna",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Bassa",
+  "title": "Locanda « Lu Spicchje di Luna »",
+  "sub": "La taverna di Tonino « La Botte » — dove tutto è cominciato",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "La locanda di Tonino « La Botte », dove una lettera anonima vi ha convocati per il compleanno di Mattheus: abbracci, racconti, la giovialità dell'oste, e i sussurri terrorizzati dei marinai — Rafèle e Giacomì — sulle navi dalle vele cremisi. In un angolo buio, una figura incappucciata che non mangiava e non beveva ha lasciato un boccale pieno di acqua di mare e vi ha condotti fuori dalla città, verso la Torre di Ombretra.",
+  "gm": "Compare solo nell'Atto I. Quartiere non specificato: (proposta) tra il Porto e i Vicoli Grigi, vista la clientela di marinai.",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-tonino-la-botte",
+   "jn-rafele-lu-rematore",
+   "jn-giacomi-lu-ventarole",
+   "jn-torre-di-ombretra"
+  ]
+ },
+ {
+  "id": "jn-popolare-ovest",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Bassa",
+  "title": "7. Quartiere Popolare Ovest",
+  "sub": "« Il Balcone » — pendice occidentale, tra Città Alta e Bassa",
+  "img": "Quartiere 7 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "Il Balcone è il quartiere della gente che lavora: sarte, calzolai, notai, insegnanti privati, piccoli commercianti. Non è ricco, non è povero. È ordinato. Le case hanno le finestre con i vasi di fiori. I bambini giocano per strada fino al tramonto. Le botteghe chiudono prima del buio. Non succede quasi mai niente di interessante qui. Quasi.\n\nQui c'è il piccolo Tempio di Mortus dove Mattheus è andato a pregare, e lo studio dell'avvocato Forcinum.",
+  "gm": "Voci d6: Padre Cassio è tornato cambiato da Teramum e dorme con la porta barricata; Forcinum ha un cliente che paga in oro senza nome e vince sempre; il culto di Maia ha una rete sotterranea tra Julia Nova, Teramum e altre tre città; al Mercato delle Stoffe un venditore appare solo quando piove; Margherita era a corte vent'anni fa; tre notai spariti nell'ultimo mese, 'partiti per affari'. Ariellia Ragaiola, la compagna di Matthios, insegna in una scuola del quartiere popolare (proposta: qui).",
+  "atti": [
+   1,
+   11
+  ],
+  "links": [
+   "jn-studio-forcinum",
+   "jn-tempio-mortus",
+   "jn-tempio-lunaria",
+   "jn-mercato-delle-stoffe"
+  ]
+ },
+ {
+  "id": "jn-studio-forcinum",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "7. Quartiere Popolare Ovest",
+  "title": "Studio di Gabrielus Forcinum — Avvocato",
+  "sub": "Porta verde, insegna con la bilancia",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una porta verde, un'insegna con una bilancia. L'ufficio è pieno di rotoli, libri, documenti. Gabrielus Forcinum siede alla scrivania con tre candele accese e l'aria di chi non ha mai abbastanza tempo. «Il diritto è complicato. La realtà è ancora più complicata. Per questo mi pagano.»",
+  "gm": "Forcinum conosce la storia legale della Tenuta di Altavia e può formalizzare la donazione come lazzaretto; sa che il maniero Cerullius ha un problema di eredità irrisolto; sa del testamento sigillato nel Mausoleo Aquaviva. Il suo « vero ufficio » è alla Vetreria del Giudice.",
+  "atti": [],
+  "links": [
+   "jn-gabrielus-forcinum",
+   "jn-vetreria-del-giudice"
+  ]
+ },
+ {
+  "id": "jn-tempio-mortus",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "7. Quartiere Popolare Ovest",
+  "title": "Tempio di Mortus — Per i Poveri",
+  "sub": "Piccolo tempio dalla porta sempre aperta",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Un tempio piccolo, quasi nascosto tra due case più alte. La porta è sempre aperta. L'interno è semplice: un altare di pietra grigia, una lucerna che brucia costantemente, il profumo di cera e lavanda. Padre Cassio è sempre qui, o nel quartiere a visitare chi sta morendo. Mattheus vi è venuto la vigilia della partenza per Colleventoso, e prima della marcia ha pregato qui tra le bare con Padre Cassio, che gli ha lasciato una lista di fedeli di Mortus a Teramum.",
+  "gm": "Solo per Mattheus: Cassio riconosce la devozione a Mortus dalla luce argentea della sua magia e non lo denuncia. Il contatto a Teramum è Frate Davide de li Piccole Vie (culto clandestino sotto la repressione della Fiamma). «Mortus non giudica. Non condanna. Accoglie tutti alla fine.»",
+  "atti": [
+   1,
+   11
+  ],
+  "links": [
+   "jn-padre-cassio"
+  ]
+ },
+ {
+  "id": "jn-tempio-lunaria",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "7. Quartiere Popolare Ovest",
+  "title": "Tempio di Lunaria — Culto di Maia",
+  "sub": "Formalmente tollerato, praticamente braccato",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Formalmente 'tollerato'. Praticamente braccato dal cardinal Virellius. L'insegna è stata tolta: rimane il simbolo sulla pietra sopra la porta, una luna falce. Si entra solo la sera, solo con qualcuno che ti introduce.",
+  "gm": "Il culto di Maia a Julia Nova è in crisi. Sacerdotessa principale: Margherita 'de li Scurèlle'. Vuoto di giorno, riunioni segrete di notte. Adamus come druido viene riconosciuto e accolto automaticamente. Alessandros (armatura che risponde alla Luna) e la Crociata del Sole e delle Due Lune sono un aggancio naturale.",
+  "atti": [],
+  "links": [
+   "jn-margherita-de-li-scurelle",
+   "jn-bottega-margherita"
+  ]
+ },
+ {
+  "id": "jn-mercato-delle-stoffe",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "7. Quartiere Popolare Ovest",
+  "title": "Mercato delle Stoffe — Il Mercato Quotidiano",
+  "sub": "La piazza principale del Balcone ogni mattina",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Ogni mattina una ventina di bancarelle occupano la piazza principale del Balcone. Stoffe, abiti, aghi, fili, bottoni, fibbie. Anche frutta, verdura, formaggio. È il posto dove la città normale si incontra: serve, prostitute in pensione, soldati in riposo, famiglie. Tutto il pettegolezzo di Julia Nova passa per questo mercato.",
+  "gm": "Abiti da viaggio, equipaggiamento di base, notizie. Orazio 'Lu Scucitóre' vende anche travestimenti e documenti di viaggio falsi — solo tramite i Naviganti o Forcinum.",
+  "atti": [],
+  "links": [
+   "jn-orazio-lu-scucitore"
+  ]
+ },
+ {
+  "id": "jn-porta-dei-morti",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Porte e mura",
+  "title": "8. Porta Nord-Ovest « Porta dei Morti »",
+  "sub": "Mura nord-ovest — verso il Cimitero",
+  "img": "Quartiere 8 Julianova.jpg",
+  "state": "noto",
+  "status": null,
+  "pub": "La Porta dei Morti prende il nome dal fatto che da qui escono i cortei funebri verso il cimitero fuori le mura. Di giorno è aperta ma poco sorvegliata — due guardie, non sempre svegli. Di notte viene sigillata con tre catenacci e un sigillo magico rinnovato ogni luna. Fuori: la strada del cimitero, diritta, fiancheggiata da cipressi. Di notte si vedono luci tremolanti tra le tombe. I soldati giurano che sono fiaccole abbandonate. I vecchi giurano che non lo sono.",
+  "gm": "Voci d6: mai forzata dall'esterno in trecento anni, ma qualcosa ha provato dall'interno; il Mausoleo Aquaviva ha una stanza segreta voluta da Julius; tre notti fa la Cripta dei Senza Nome è stata aperta dall'interno; Micucci 'Lu Fuossatóre' non lascia mai il recinto di notte, 'qualcuno deve restare a sentire'; le luci hanno cadenza regolare, come segnali; la botola dietro il Mausoleo esiste davvero.",
+  "atti": [],
+  "links": [
+   "jn-cimitero-moderno",
+   "jn-cripta-senza-nome",
+   "jn-botola-necropoli"
+  ]
+ },
+ {
+  "id": "jn-cimitero-moderno",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "8. Porta Nord-Ovest",
+  "title": "Cimitero Moderno — Tombe degli ultimi 100 anni",
+  "sub": "Con il Mausoleo degli Aquaviva",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Un cimitero ordinato, con tombe di pietra bianca e grigia. Fiori freschi su alcune tombe, erbacce su altre. Al fondo, il Mausoleo degli Aquaviva, più grande di tutte le tombe messe insieme.",
+  "gm": "Il Mausoleo di Julius Aquaviva è sempre chiuso. Forcinum sa che dentro c'è un testamento sigillato che nessuno ha mai avuto autorizzazione ad aprire: potrebbe contenere informazioni sulla stirpe Aurex o sulla vera storia della fondazione di Julia Nova.",
+  "atti": [],
+  "links": [
+   "jn-gabrielus-forcinum",
+   "jn-micucci-lu-fuossatore"
+  ]
+ },
+ {
+  "id": "jn-cripta-senza-nome",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "8. Porta Nord-Ovest",
+  "title": "Cripta dei Senza Nome — Corpi del Mare",
+  "sub": "Cripta comune per i morti anonimi",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una cripta comune per i morti anonimi — naufraghi, stranieri, vittime senza identità. Recentemente riaperta per i corpi dell'attacco dei Forgiati che non si riuscivano a identificare. Padre Cassio viene qui ogni settimana a benedire i nuovi arrivi.",
+  "gm": "SEGRETO: tra i cadaveri dei Forgiati c'è qualcosa non ancora morto del tutto, un frammento metallico che pulsa debolmente. Torvus vuole recuperarlo per studiarlo. Percezione CD 15 di notte per sentire il pulsare.",
+  "atti": [],
+  "links": [
+   "jn-padre-cassio",
+   "jn-torvus-halderan"
+  ]
+ },
+ {
+  "id": "jn-botola-necropoli",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "8. Porta Nord-Ovest",
+  "title": "Accesso alla Necropoli — La Botola",
+  "sub": "Dietro il Mausoleo, sotto le rose selvatiche",
+  "img": null,
+  "state": "segreto",
+  "status": null,
+  "pub": "Dietro il Mausoleo, nascosta da un cespuglio di rose selvatiche, c'è una botola di ferro arrugginito. Non è sulle mappe ufficiali della città.",
+  "gm": "SEGRETO DM: conduce alla Necropoli sotterranea di Castrum Vetus, l'insediamento imperiale precedente a Julia Nova. Resti della struttura militare imperiale, archivi in Pretuziano antico e forse accesso ai sotterranei del Palazzo del Sole. Indagine CD 14 per trovarla senza guida. Voce: chi l'ha usata non torna mai dalla stessa parte da cui è entrato.",
+  "atti": [],
+  "links": [
+   "jn-ala-ovest-prigioni",
+   "jn-maniero-cerullius"
+  ]
+ },
+ {
+  "id": "jn-porta-del-vento",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Porte e mura",
+  "title": "9. Porta Nord « Porta del Vento »",
+  "sub": "Mura nord — verso la campagna e le colline",
+  "img": "Quartiere 9 Julianova.jpg",
+  "state": "noto",
+  "status": null,
+  "pub": "La Porta del Vento è la meno usata delle porte principali. La strada sale verso le colline: commercianti di bestiame, contadini con i carri, pastori con le greggi. Due guardie al turno di giorno; di notte quattro — dopo l'attacco dei Forgiati nessuna porta viene lasciata incustodita. C'è qualcosa di malinconico in questa porta: i soldati sembrano guardare verso le colline con desiderio.",
+  "gm": "Voci d6: l'accampamento dei profughi cresce ogni giorno; alcune famiglie non sono profughi veri ma informatori o contaminati; Nardìne ha rifiutato un ordine diretto di Virellius; una botola nel muro usata per uscire di notte; un bambino ha visto 'uomini di ferro' uscire dal mare tre notti prima dell'attacco; la strada verso le colline non è più sicura di notte.",
+  "atti": [],
+  "links": [
+   "jn-torre-guardia-nord",
+   "jn-accampamento-profughi"
+  ]
+ },
+ {
+  "id": "jn-torre-guardia-nord",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "9. Porta Nord",
+  "title": "Torre di Guardia Nord — Postazione di vedetta",
+  "sub": "La torre più alta delle mura nord",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "La torre più alta delle mura nord. Di qui si vede la campagna fino all'orizzonte: in un giorno limpido i monti lontani e, se sai dove guardare, la macchia della Tenuta di Altavia sulla collina.",
+  "gm": "Percezione CD 12 per individuare movimenti sospetti sulla strada verso la Tenuta o le colline. Di giorno è di guardia il Sergente Nardìne 'Lu Cancèlle' (la guida lo colloca anche alla Porta del Sole): impossibile ingannarlo facilmente.",
+  "atti": [],
+  "links": [
+   "jn-sergente-nardine",
+   "jn-tenuta-di-altavia"
+  ]
+ },
+ {
+  "id": "jn-accampamento-profughi",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "9. Porta Nord",
+  "title": "Accampamento dei Profughi — Fuori Porta",
+  "sub": "Tende e carri delle famiglie sfollate",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Fuori dalla Porta del Vento, ai lati della strada, un accampamento di tende e carri: famiglie sfollate dai villaggi costieri dopo l'attacco dei Forgiati, che aspettano di sapere se possono tornare o se Julia Nova li lascerà entrare. Bambini che giocano nel fango, donne che cucinano su fuochi improvvisati, uomini che guardano le mura con occhi stanchi. « Lu Sóle tramónde, ma tòrne sèmbre. Ma la nòtte… la nòtte de li Furgàte nun finìsce mai. »",
+  "gm": "La Tenuta di Altavia come lazzaretto (decisa da Adamus nell'Atto XI) risolve il problema di queste famiglie: annunciarla qui tramite Fenix dà reputazione immediata con gli sfollati e con Fenix.",
+  "atti": [],
+  "links": [
+   "jn-tenuta-di-altavia",
+   "jn-fenix"
+  ]
+ },
+ {
+  "id": "jn-mantelli-bianchi-sud",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Bassa",
+  "title": "10. Quartiere dei Mantelli Bianchi (Sud)",
+  "sub": "« Le Fucine (Sud) » — Città Bassa occidentale, botteghe e cantiere navale",
+  "img": "Quartiere 10 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "La zona sud delle Fucine è dove il ferro diventa denaro. Se nella zona nord si forgia, qui si vende: armerie, botteghe di riparazione, magazzini di componenti. Il Cantiere Navale occupa il fondo della zona, affacciato sull'acqua: si sentono sempre le asce, le seghe, il rumore di fasciame battuto in forma. Qui lavorano più apprendisti che maestri, giovani con le mani callose e gli occhi attenti. Qui c'è la sede di vendita di Oswald Grigiomanto, dove avete ritirato le armature.",
+  "gm": "Voci d6: il Cantiere ha ricevuto materiali stranissimi, né legno né ferro; Pasquale ha una mappa dei fondali del porto — ci sono cose sul fondo che non dovrebbero esserci; Erminio è stato apprendista di un alchimista imperiale; nel magazzino est del Cantiere qualcosa è sigillato con tre lucchetti; i Martelli Bianchi addestrano combattenti di notte; Oswald sta per lasciare Julia Nova.",
+  "atti": [
+   9,
+   11
+  ],
+  "links": [
+   "jn-emporio-tuttofare",
+   "jn-cantiere-navale",
+   "jn-laboratorio-erminio"
+  ]
+ },
+ {
+  "id": "jn-cantiere-navale",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "10. Quartiere dei Mantelli Bianchi (Sud)",
+  "title": "Il Cantiere Navale dei Martelli Bianchi",
+  "sub": "Tre navi in costruzione, altrettante in riparazione",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Un cantiere sempre attivo. Tre navi in costruzione contemporaneamente, altrettante in riparazione. I mastri d'ascia sono i più preziosi dopo i fabbri. Da quando i Forgiati hanno danneggiato il porto, il lavoro è raddoppiato. Pasquale 'Lu Rematore' sovrintende tutto con la calma di chi sa che il mare non aspetta.",
+  "gm": "Sta costruendo qualcosa di segreto: una piccola imbarcazione rapida commissionata da Torvus. Percezione CD 14 per notare la costruzione insolita. Non accessibile ai PG per ora.",
+  "atti": [],
+  "links": [
+   "jn-pasquale-lu-rematore",
+   "jn-torvus-halderan"
+  ]
+ },
+ {
+  "id": "jn-laboratorio-erminio",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "10. Quartiere dei Mantelli Bianchi (Sud)",
+  "title": "Laboratorio di Erminio 'Lu Cardanétte' — Oggetti Arcani",
+  "sub": "Bottega stretta, porta sempre semichiusa",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una bottega stretta con la porta sempre semichiusa. L'insegna è un cardano, un meccanismo di ruote che girano. Erminio è un fabbro specializzato in oggetti che hanno qualcosa di magico o meccanico di insolito. «Non creo magia. Creo meccanismi precisi che producono effetti che sembrano magici. C'è differenza.»",
+  "gm": "Può creare trappole, serrature impossibili, meccanismi a orologeria. Di recente ha consegnato qualcosa a Virellius e si è chiuso a chiave per tre giorni: non parla di cosa fosse.",
+  "atti": [],
+  "links": [
+   "jn-erminio-lu-cardanette",
+   "jn-cardinal-virellius"
+  ]
+ },
+ {
+  "id": "jn-porta-del-sole",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Porte e mura",
+  "title": "11. Porta Nord-Est « Porta del Sole »",
+  "sub": "Mura nord-est — la porta d'onore, verso Teramum",
+  "img": "Quartiere 11 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "L'arco di pietra grigia porta i bassorilievi della Càcce a lu Drèghene, il cavaliere solare che sconfisse il mostro marino: una storia che i preti della Fiamma hanno smesso di raccontare per intero. È la porta principale, la porta d'onore: otto guardie sempre di servizio, stemma della Legione Costiera — il sole dorato che sorge dal mare su campo blu. Da qui si parte per Teramum, da qui tornano i messaggeri, da qui passa il potere.\n\nTornando da Altavia sui cavalli da guerra dei Velthuria, il Sergente Nardìne ha abbassato le lance: « Quèlle che avéte fàtte là fòre… la cìtte v'è gràte. Ànche se nge pó dìcele. »",
+  "gm": "Voci d6: due messaggeri senza livrea usciti di notte, Nardìne li ha lasciati passare e non dice perché; luci alle finestre della Tenuta di Altavia che dovrebbe essere vuota; l'ultima carovana da Teramum arrivata con metà carico 'richiesto per uso militare'; il cavaliere solare del bassorilievo è uguale a un simbolo nelle rovine sotto Altavia; controllo aggiuntivo ordinato dalla Basilica sui viaggiatori per Teramum; Nardìne ha servito sotto il padre di Fenix.",
+  "atti": [
+   11
+  ],
+  "links": [
+   "jn-posto-guardia-nardine",
+   "jn-via-per-teramum",
+   "jn-sergente-nardine"
+  ]
+ },
+ {
+  "id": "jn-posto-guardia-nardine",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "11. Porta Nord-Est",
+  "title": "Posto di Guardia — Sergente Nardìne 'Lu Cancèlle'",
+  "sub": "Il veterano che non lascia passare nessuno senza sapere chi è",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Un veterano con i capelli grigi e una cicatrice che gli attraversa la guancia. Nardìne 'Lu Cancèlle' non lascia passare nessuno senza sapere chi è, da dove viene e dove va. Non è cattivo: è preciso. È sopravvissuto trent'anni di frontiera essendo preciso. «Teramum non è Julia Nova. Là, chi non conta niente sparisce. Voi, per ora, contate qualcosa.»",
+  "gm": "Alleato affidabile ma non flessibile. Sa di movimenti sospetti verso Teramum nell'ultima settimana: due messaggeri senza livrea, un carro coperto di notte.",
+  "atti": [
+   11
+  ],
+  "links": [
+   "jn-sergente-nardine"
+  ]
+ },
+ {
+  "id": "jn-via-per-teramum",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "11. Porta Nord-Est",
+  "title": "Strada Fuori Porta — La Via per Teramum",
+  "sub": "Campi, colline, e la sagoma di Altavia sulla Collina delle Serpi",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Fuori dalla porta la strada sale verso nord-est. Ai bordi campi, qualche casa, poi le colline. Lontano, la sagoma della Tenuta di Altavia sulla Collina delle Serpi. Tre giorni a piedi fino a Teramum; uno a cavallo, con sosta a Mushanë. Maximus l'ha percorsa in ricognizione fino alla Via Salaria, dove sventola il Loto Nero dei Velthuria; voi l'avete fatta di corsa all'alba verso Altavia.",
+  "gm": "Tre percorsi possibili: Via delle Colline (sicura, 4 giorni), Via del Mare (rischio Forgiati), Via dei Boschi (rapida ma pericolosa). La Crociata è partita dalla Porta delle Colline per la Via delle Colline (Atto XII).",
+  "atti": [
+   10,
+   11
+  ],
+  "links": [
+   "jn-tenuta-di-altavia",
+   "jn-porta-delle-colline"
+  ]
+ },
+ {
+  "id": "jn-la-sentinella",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Città Bassa",
+  "title": "12. Quartiere Popolare Sud « La Sentinella »",
+  "sub": "Città Bassa settentrionale, contro le mura nord — il quartiere della Caserma Est",
+  "img": "Quartiere 12 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "La Sentinella prende il nome dalla Caserma Est, o da quello che ne rimane. Dopo l'attacco dei Forgiati mezza caserma è un cumulo di macerie; l'altra metà è stata trasformata in punto di comando. Le strade sono più militari che civili: blocchi di controllo agli angoli, soldati in pattuglia ogni venti minuti, ordini urlati da qualche parte sempre. La gente normale del quartiere si è adattata: fa la spesa prima dei controlli del mattino, rientra prima del coprifuoco, sa come vivere sotto lo sguardo della guerra.",
+  "gm": "Voci d6: Brizio si aggira attorno alle rovine 'per i ladri di pietre' ma aspetta notizie da qualcuno; Nunziatì 'Lu Verdùn', il portinaio sopravvissuto, vede Forgiati ovunque; passaggio segreto dalla Locanda dello Scudo Spezzato al sottotetto della caserma (lo sanno Torvus e Fenix); tre soldati rifiutano il turno notturno e sono in isolamento; Sorella Peppa porta cibo a prigionieri nelle cantine mai annunciati; il Sergente Marcellus fa domande su Adamus — per Fenix o per sé?",
+  "atti": [
+   2,
+   4,
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-caserma-est",
+   "jn-locanda-scudo-spezzato",
+   "jn-piazza-del-pane",
+   "jn-fenix"
+  ]
+ },
+ {
+  "id": "jn-caserma-est",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "12. Quartiere Popolare Sud",
+  "title": "Rovine della Caserma Est — QG di Fenix",
+  "sub": "Metà crollata, metà ancora in piedi",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Metà crollata, metà ancora in piedi. La parte funzionante è stata trasformata con travi di legno, tende militari, lampade a olio. Mappe sul tavolo, segnalini di piombo, odore di cera e caffè d'orzo. Fenix lavora qui; Silvanus riceve qui; il gruppo si incontra qui.\n\nÈ la vostra casa a Julia Nova. Qui Silvanus vi ha affidato la missione di Colleventoso; qui, la notte del ritorno, il portone è stato sfondato e Silvanus trascinato via da Therxil, e all'alba si sono contate dodici guardie cadute. Qui Silvanus è tornato a bussare tre colpi secchi — « Il mio turno di guardia non è finito » — e Brizio ha gridato « È turnate! ». Zuppa di ceci neri, la Riserva del Barbas, il vino co' la gazzosa di Pippo. Qui avete dormito l'ultima notte prima della marcia.",
+  "gm": "Hub principale della campagna a Julia Nova. Nella sala mappe c'è la mappa del Ducato con le posizioni aggiornate. Sulla mappa operativa di Silvanus il cerchio a matita sulla baia a nord (« Eco? »). Un simbolo inciso nel pavimento dopo l'incubo condiviso (Atto IV) — filo mai ripreso. Silvanus aveva trovato in caserma registri falsificati di 'pesce guasto' scaricato di notte alle Scogliere del Silenzio (traffico di persone): le prove potrebbero esistere ancora. Battuta di Fenix: «Chiudète la pòrte. Quèlle che se dìce ccà nde esce de ccà.»",
+  "atti": [
+   2,
+   4,
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-fenix",
+   "jn-silvanus",
+   "jn-brizio",
+   "jn-pippo",
+   "jn-sorella-peppa"
+  ]
+ },
+ {
+  "id": "jn-locanda-scudo-spezzato",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "12. Quartiere Popolare Sud",
+  "title": "Locanda dello Scudo Spezzato — Dove Bevono i Soldati",
+  "sub": "Sgabelli di legno, tavoli segnati, vino acre",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una locanda che non prova nemmeno a sembrare accogliente. Sgabelli di legno, tavoli segnati, vino acre. Ma è sempre piena: i soldati di Fenix ci vengono perché è vicina e non fa domande. Sorella Peppa, la cuoca della caserma, passa spesso a controllare che i suoi ragazzi mangino qualcosa di caldo.",
+  "gm": "Informazioni militari informali: Percezione CD 11 per captare qualcosa di utile. Voce: passaggio segreto verso il sottotetto della caserma.",
+  "atti": [],
+  "links": [
+   "jn-sorella-peppa"
+  ]
+ },
+ {
+  "id": "jn-piazza-del-pane",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "12. Quartiere Popolare Sud",
+  "title": "Piazza del Pane — L'accampamento civile",
+  "sub": "Tende, fuochi, bambini: le famiglie che hanno perso la casa",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "La piazza del quartiere è stata parzialmente occupata da un accampamento civile: famiglie del quartiere che hanno perso le case durante l'attacco. Tende improvvisate, fuochi, bambini. Frate Ambrose de la Bòna Morte passa qui ogni mattina a distribuire pane e benedizioni di Mortus.",
+  "gm": "Annunciare qui la donazione della Tenuta di Altavia come lazzaretto genera il massimo impatto: Frate Ambrose ringrazia pubblicamente e la notizia si diffonde in tutta la Città Bassa entro un'ora.",
+  "atti": [],
+  "links": [
+   "jn-frate-ambrose"
+  ]
+ },
+ {
+  "id": "jn-porta-delle-colline",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Porte e mura",
+  "title": "13. Porta Sud-Ovest « Porta delle Colline »",
+  "sub": "Mura sud-ovest — verso l'entroterra agricolo",
+  "img": "Quartiere 13 Julianova.jpg",
+  "state": "visitato",
+  "status": null,
+  "pub": "La Porta delle Colline guarda verso ovest: non verso il mare, non verso Teramum, ma verso l'entroterra agricolo. È la meno sorvegliata delle porte principali: due guardie di giorno, una di notte. Il traffico è di contadini, spedizionieri, muli carichi di grano. Nessuno la nota. Il che la rende utile. Da qui siete usciti al crepuscolo verso i Vigneti di Altavia, con l'invito sigillato d'ambra dei Velthuria.",
+  "gm": "Controllo minimo: Persuasione CD 8 per passare con una storia qualsiasi; nome e destinazione su un taccuino che nessuno legge. È il percorso di fuga discreto dalla città. Voci d6: un carro coperto e un uomo cappellato usciti di notte tre settimane fa — Iuvenza?; la stanza del Mulino Fermo si affitta solo su raccomandazione; a due ore di cammino i resti di un forte imperiale abbandonato con oggetti di metallo antico; una guardia sostituita di notte, l'originale non è tornata a casa; voci di un secondo gruppo di Forgiati dalle montagne; una crepa nelle mura nota solo a contrabbandieri e Naviganti. Nell'Atto IV la porta è chiamata « Porta Ovest 'Porta delle Colline' »; l'Atto XII la indica come punto di partenza della Crociata.",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-posto-controllo-ovest",
+   "jn-osteria-mulino-fermo",
+   "jn-tenuta-di-altavia"
+  ]
+ },
+ {
+  "id": "jn-posto-controllo-ovest",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "13. Porta Sud-Ovest",
+  "title": "Posto di Controllo Ovest — Guardia ridotta",
+  "sub": "Due guardie di giorno, una di notte",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Il posto di guardia della Porta delle Colline. Il controllo è quasi inesistente per chi entra; per chi esce, nome e destinazione su un taccuino.",
+  "gm": "Persuasione CD 8. Il taccuino, se qualcuno lo leggesse, registra chi è uscito e quando: potrebbe contenere tracce del carro coperto di tre settimane fa.",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-porta-delle-colline"
+  ]
+ },
+ {
+  "id": "jn-osteria-mulino-fermo",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "13. Porta Sud-Ovest",
+  "title": "Osteria del Mulino Fermo — Fuori Porta",
+  "sub": "Osteria di campagna di Nicola 'Lu Mulinàre'",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Un'osteria di campagna costruita appena fuori le mura. Serve chi arriva prima che le porte aprano e chi parte dopo che chiudono. La cucina è onesta, il vino è locale, i letti sono puliti. Il proprietario, Nicola 'Lu Mulinàre', non fa domande. «Posto per dormire? Quattro soldi. Cena? Due. Silenzio sulle domande? Gratis, per abitudine.»",
+  "gm": "Clientela mista: contadini, mercanti, qualcuno che preferisce non passare per le porte principali. Una stanza si affitta solo a chi viene raccomandato — da chi, nessuno lo sa.",
+  "atti": [],
+  "links": [
+   "jn-nicola-lu-mulinare"
+  ]
+ },
+ {
+  "id": "jn-porta-del-sale",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Porte e mura",
+  "title": "14. Porta Sud-Est « Porta del Sale »",
+  "sub": "Mura sud-est — verso Tortoscuro e le saline",
+  "img": "Quartiere 14 Julianova.jpg",
+  "state": "noto",
+  "status": null,
+  "pub": "La Porta del Sale prende il nome dalla Via del Sale, la strada antica che collegava le saline di Tortoscuro ai mercati dell'entroterra. Oggi è una porta commerciale intensa: carri di sale, pesce essiccato, olio di oliva. I mercanti del sud la usano più di qualsiasi altra. Il controllo è più attento di quello della Porta delle Colline: il sale vale oro, e la corruzione dell'Ufficio Portuale si replica anche qui.",
+  "gm": "Voci d6: le saline di Tortoscuro abbandonate, il sale sta finendo; Casa Neròn ritira le navi dai porti del sud; un mercante arrestato e rilasciato per un artefatto 'trovato tra i rottami dei Forgiati', poi sparito; l'agente Neròn ha incontrato Virellius in segreto; qualcuno compra scorte alimentari per sei mesi di città; di notte la Via del Sale è pattugliata da civili con la cintura troppo gonfia. Nell'Atto X i carri dei Barbus entrano dalla « Porta Sud » — non è specificato se questa o la 13.",
+  "atti": [],
+  "links": [
+   "jn-via-del-sale",
+   "jn-magazzino-neron"
+  ]
+ },
+ {
+  "id": "jn-via-del-sale",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "14. Porta Sud-Est",
+  "title": "Via del Sale — La Strada dei Mercanti",
+  "sub": "Magazzini, depositi, pesatori della Gilda",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Appena dentro la porta, una strada larga fiancheggiata di magazzini e depositi. I carri scaricano, i mulattieri discutono, i pesatori della Gilda controllano i carichi. Odore forte di sale e pesce secco: non scompare mai completamente, le pietre lo hanno assorbito nei secoli.",
+  "gm": "Sale a buon prezzo (conservare cibo in viaggio), informazioni su Tortoscuro e la costa sud, e Antonia 'La Rìvere', la pescivendola che sa tutto di tutto.",
+  "atti": [],
+  "links": [
+   "jn-antonia-la-rivere"
+  ]
+ },
+ {
+  "id": "jn-magazzino-neron",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "14. Porta Sud-Est",
+  "title": "Magazzino di Casa Neròn — Signori della Flotta",
+  "sub": "Ancora d'argento su campo blu",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Il magazzino più grande della Via del Sale porta lo stemma di Casa Neròn, un'ancora d'argento su campo blu. La famiglia è più presente a Tortoscuro che qui, ma i loro agenti controllano buona parte del commercio via mare.",
+  "gm": "Casa Neròn è neutrale in modo quasi aggressivo. I loro agenti sanno dei Forgiati e sono nervosi: hanno flotte, e le flotte sono vulnerabili. Potenziale alleato per informazioni marittime. Voce: l'agente ha incontrato Virellius in segreto.",
+  "atti": [],
+  "links": [
+   "jn-agente-neron"
+  ]
+ },
+ {
+  "id": "jn-porta-piccola",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Porte e mura",
+  "title": "15. Porta Ovest « Porta Piccola »",
+  "sub": "Mura ovest — la porta dei pescatori e dei contrabbandieri",
+  "img": "Quartiere 15 Julianova.jpg",
+  "state": "noto",
+  "status": null,
+  "pub": "La Porta Piccola non ha un arco monumentale, non ha bassorilievi, non ha guardie d'onore. È una porta di legno rinforzata, bassa, che sembra sempre sul punto di cedere. I pescatori la usano dall'alba al tramonto: si apre e si chiude venti volte al giorno. Di notte è 'chiusa', nel senso che il catenaccio c'è. Ma il catenaccio è piccolo. I contrabbandieri lo sanno. Le guardie lo sanno. Qualcuno viene pagato perché lo sappiano e facciano finta di non saperlo.",
+  "gm": "Voci d6: aperta di notte quattro volte nell'ultima settimana, tracce di barca sulla sabbia; Zi' Mènne ha un figlio nei magazzini del porto di Teramum; una cassa nascosta tra gli scogli a nord, troppo pesante per i ladri normali; le stelle si riflettono stranamente nell'acqua, come se fosse più profonda; un Navigante Grigio trovato morto sulla spiaggia dieci giorni fa, 'annegamento accidentale' — nuotava meglio di un delfino; Ciccillo ha visto una nave piccola e veloce con bandiera sconosciuta tre notti fa.",
+  "atti": [],
+  "links": [
+   "jn-spiaggia-ovest",
+   "jn-barca-zi-menne"
+  ]
+ },
+ {
+  "id": "jn-spiaggia-ovest",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "15. Porta Ovest",
+  "title": "Spiaggia Ovest — La Spiaggia dei Pescatori",
+  "sub": "Barche tirate a terra, reti stese, bambini tra gli scogli",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Fuori dalla Porta Piccola, una spiaggia stretta con barche di legno tirate a terra. Reti stese ad asciugare. Bambini che raccolgono granchi tra gli scogli. Rafèle 'Lu Rematore', il vecchio del faro, passa di qui ogni mattina: parla con tutti i pescatori, sa quando qualcosa non quadra.",
+  "gm": "Punto di sbarco non ufficiale dei Naviganti Grigi. Ciccillo conosce i segnali per distinguere uno sbarco lecito da uno illecito. Il Trabocco Nero (zona contrabbando) è visibile da qui.",
+  "atti": [],
+  "links": [
+   "jn-rafele-lu-rematore",
+   "jn-ciccillo-lu-sorce"
+  ]
+ },
+ {
+  "id": "jn-barca-zi-menne",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "15. Porta Ovest",
+  "title": "Barca di Zi' Mènne de li Còzze — Il Contrabbandiere",
+  "sub": "Una barca grande quanto due, con la stiva troppo profonda",
+  "img": null,
+  "state": "noto",
+  "status": null,
+  "pub": "Una barca di pesca grande quanto due normali, con la stiva troppo profonda per il tipo di pesca che dovrebbe fare. Zi' Mènne è sempre sulla barca, sempre a riparare qualcosa, mai disponibile per conversazione. Tranne quando lo sei davvero: allora si siede, tira fuori la pipa, e ascolta.",
+  "gm": "Zi' Mènne ha incontrato le Navi Rosse in mare prima dell'attacco e sa da dove vengono: non dal mare aperto, da un porto nascosto nelle caverne costiere a sud. Prezzo: 50 mo o un favore significativo dei Naviganti; Persuasione CD 12 per trattare.",
+  "atti": [],
+  "links": [
+   "jn-zi-menne"
+  ]
+ },
+ {
+  "id": "jn-tenuta-di-altavia",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Fuori le mura",
+  "title": "La Tenuta di Altavia",
+  "sub": "Sulla Collina delle Serpi — ex sede dei Velthuria, ora lazzaretto e « Domus Aurea Aestiva »",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Sulla collina più alta fuori Julia Nova, stagliata contro l'alba come un rapace: mura di pietra bianca coronate d'ossidiana nera, vigneti immersi in un silenzio innaturale, il profumo di Loto d'Ombra — lillà e cenere. Qui Veneranda Iuvenza vi ha ricevuto nel suo padiglione tra i filari e vi ha dato la mappa del covo di Domina; qui, la notte prima di Pietraluna, vi ha umiliati sul suo scranno di ebano e vi ha tolto Lyraeth. Dopo l'assedio l'avete trovata vuota e difesa da quattro Armature d'Argento e Ombra con dentro anime imprigionate — Berardo de Còlle Lungo, Celestina, un contadino — e da un Comandante di ferro che parlava con la voce di Iuvenza.\n\nSotto la ruggine e i loti, sul cancello, aquile, soli raggianti e due Lune che abbracciano il Sole. Nelle cantine il mosaico: « DOMVS AVREA AESTIVA — SANGVIS AVREVS CVSTODIAT ». La residenza estiva degli Aurex: la casa non è mai stata dei Velthuria. Nello studio, il Cristallo di Memoria, la lettera per l'Abate Gofferio con duecento monete d'oro, il diario di Iuvenza; nel magazzino, lo stendardo di Aldric Aurex. Adamus l'ha destinata a lazzaretto per gli sfollati del porto.",
+  "gm": "Forcinum può formalizzare la donazione come lazzaretto. Il diario di Iuvenza parla di un « passaggio sotto la Basilica Aurea » chiamato « la chiave vera » e di sfiducia verso i Celamanti. Voce (Porta del Sole): il cavaliere solare del bassorilievo è uguale a un simbolo nelle rovine sotto la Tenuta — rovine ancora inesplorate. Lu Biondo, ferito alla gamba, è tra i Naviganti di guardia.",
+  "atti": [
+   4,
+   6,
+   9,
+   11
+  ],
+  "links": [
+   "jn-veneranda-iuvenza",
+   "jn-berardo-de-colle-lungo",
+   "jn-celestina",
+   "jn-lu-biondo-e-storto",
+   "jn-gabrielus-forcinum"
+  ]
+ },
+ {
+  "id": "jn-torre-di-ombretra",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Fuori le mura",
+  "title": "La Torre di Ombretra e i Giardini del Silenzio",
+  "sub": "Antica torre di pietra e ossidiana oltre le mura",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "Oltre le mura, nei Giardini del Silenzio, un'antica e solitaria torre di pietra e ossidiana. La figura incappucciata vi ci ha condotti attraverso una Julianova deserta e spettrale, le strade che si allungavano e mutavano. Dentro, stanze cariche di energia arcana fino alla Sala della Soglia, dove « Il Custode » vi ha parlato del Primo e del Secondo Sigillo e vi ha dato la profezia delle sei ombre sotto sei lune. Dalla cima avete visto le tre Navi Rosse, e siete corsi giù per la pineta verso la spiaggia.",
+  "gm": "Posizione rispetto alla città non specificata: tra le mura e la spiaggia della battaglia, oltre una pineta. Il Custode e la Torre non sono più ricomparsi dopo l'Atto I.",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-spiaggia-della-battaglia",
+   "jn-lu-spicchje-di-luna"
+  ]
+ },
+ {
+  "id": "jn-spiaggia-della-battaglia",
+  "cat": "luogo",
+  "city": "julianova",
+  "group": "Fuori le mura",
+  "title": "La Spiaggia di Julianova",
+  "sub": "Dove è stato respinto l'Assalto Silenzioso",
+  "img": null,
+  "state": "visitato",
+  "status": null,
+  "pub": "La spiaggia sotto la pineta, dove avete intercettato lo sbarco dei Forgiati Lunari guidati da un Berserker. Adamus in forma di orso, Maximus come un muro, e poi Silvanus e Fenix con le truppe di Julianova. Qui avete catturato vivo Umbrax e siete rientrati in città come gli eroi della spiaggia.",
+  "gm": "",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-umbrax",
+   "jn-silvanus",
+   "jn-fenix"
+  ]
+ },
+ {
+  "id": "jn-severian-altherion",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Concilio Ristretto",
+  "title": "Primus Severian Altherion",
+  "sub": "Primo Cittadino di Julia Nova",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, nel Palazzo del Sole. Ha dato a Silvanus il mandato per Teramum.",
+  "pub": "Il Primo Cittadino, l'uomo che dovrebbe governare Julia Nova e che governa il Concilio come può. Vi ha congedati la prima volta con un mandato ufficioso e disperato: « Trovate il traditore. Avete un giorno. Non fidatevi di nessuno di noi. » Sulla Terrazza dei Venti ha rovesciato il calice vedendo Silvanus vivo — « Madama Iuvenza ha detto che eravate caduto » — e ha sventolato i registri: Iuvenza è la banca della città, dichiararla nemica significa morire di fame. Gli hanno risposto le rotte della Gilda di Adamus, il grano di Canzanium e il vino di Secernium. Alla fine ha ceduto al miracolo del sangue.",
+  "gm": "Paralizzato dalla paura; senza Iuvenza è « una nave senza timone » (Silvanus). Voci: non dorme da settimane, parla da solo nello studio; ha rifiutato tre volte a Virellius l'ispezione degli archivi — « non rifiuterà una quarta ». Leva: la paura, e la certezza che la Crociata offre.",
+  "atti": [
+   1,
+   4,
+   6,
+   9
+  ],
+  "links": [
+   "jn-palazzo-del-sole",
+   "jn-torre-del-sole"
+  ]
+ },
+ {
+  "id": "jn-aulo-dernas",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Concilio Ristretto",
+  "title": "Aulo Dernas di Castemar",
+  "sub": "Capo di Casa Castemar, i Fondatori Caduti",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, nella Tenuta Castemar. Ha approvato il mandato della Crociata.",
+  "pub": "Capo di Casa Castemar — « Rinati dalle Ceneri » — la casata che rifondò Julia Nova dopo la Guerra delle Due Lune e che da allora è stata decimata da 'incidenti' e debiti verso le Gilde. Al Concilio, furioso, ha mostrato il simbolo del Sole trovato addosso a un Forgiato caduto nella caserma: la corruzione è già dentro le mura, forse persino tra i preti. Sulla Terrazza ha gridato alla sedizione, finché Maximus, col sigillo dello Stratega, ha ribaltato la logica: non si attacca il Duca, lo si libera. Vuole sentirsi generale.",
+  "gm": "L'unico nobile che sa della stirpe Aurex: lo ha scoperto decenni fa, lo conserva. Concede udienza più facilmente a un Cerullius. INCOERENZA tra le fonti: la guida lo descrive come patriarca di 92 anni, il Doc. 9 come « giovane e idealista » a capo di una casata in rovina. Casa Castemar e Casa Velthuria si odiavano.",
+  "atti": [
+   4,
+   9
+  ],
+  "links": [
+   "jn-tenuta-castemar"
+  ]
+ },
+ {
+  "id": "jn-cyrius-meren",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Concilio Ristretto",
+  "title": "Arconte Cyrius Meren",
+  "sub": "Capo della Gilda dei Cieli Inversi — astrologi, scrutatori, spie",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, nella Torre dei Cieli Inversi. Ha in mano il Cristallo di Memoria per estrarne i nomi.",
+  "pub": "L'Arconte riceve al piano più alto della Torre, su un mosaico di stelle. Al Concilio ha detto parole oscure: « Il sigillo non si è spezzato… si è riscritto. E la sua nuova legge è l'oblio. » Dopo Pietraluna ha avvertito Mattheus che Silvanus è « un'Eclissi che cammina » e che la scatola d'ossidiana è il filatterio di Lyaras: il Lich non è morto, è in pausa, e solo la forgia di annullamento sotto la Cattedrale Ducale di Teramum può spezzarlo. « I libri proibiti sono pericolosi perché contengono verità che qualcuno ha trovato scomodo sapere. » Prima della marcia Mattheus gli ha affidato il Cristallo di Memoria.",
+  "gm": "L'alleato più informato nella Città Alta: conosce i movimenti del Concilio e la situazione a Teramum, sospetta della vera natura del Cristallo. NON sa dell'Aurex — ma ci è vicino (e ora, dopo la Terrazza dei Venti, lo sa come tutti). Il Manuale gli attribuisce « un'agenda misteriosa »; chiedere ai Cieli Inversi significa entrare in debito con lui. Voce: la notte dei Forgiati misurava qualcosa nel cielo.",
+  "atti": [
+   4,
+   9,
+   11
+  ],
+  "links": [
+   "jn-biblioteca-cieli-inversi",
+   "jn-frate-odilon",
+   "jn-mastro-evaristo"
+  ]
+ },
+ {
+  "id": "jn-veneranda-iuvenza",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Concilio Ristretto",
+  "title": "Veneranda Iuvenza di Velthuria",
+  "sub": "La Dama Ragno — matriarca di Casa Velthuria, l'Ombra di Julianova",
+  "img": "Veneranda Iuvenza Velthuria.jpg",
+  "state": "incontrato",
+  "status": "Viva. Fuggita da Julia Nova verso Teramum per farsi nominare Reggente. Vi aspetta lì: « Come la serpe che aspetta il topo. »",
+  "pub": "Capelli bianchi, occhi neri come pozzi. Al Concilio ha rotto il silenzio solo per indicare « le serpi del porto ». Nei suoi vigneti vi ha dato la mappa del covo di Domina: « Avete disturbato molti equilibri. Questo vi rende pericolosi. Ma anche… inevitabili. » Poi ha fatto uccidere Tonio e Marco, vi ha rubato Lyraeth e vi ha rispediti a Pietraluna a fare il suo lavoro sporco: « Voi siete martelli. E lui è una chiave. » Ha venduto la vostra missione a Lyaras. Ha lasciato Altavia con i cancelli spalancati e un elmo bruciato della Guardia su una picca alla Via Salaria: « Il tuo confine finisce qui. » Il suo esercito, il Loto Nero, blocca la strada per Teramum; l'Abate Gofferio è comprato con le sue monete; il suo Comandante di ferro vi ha promesso « altri giocattoli, più nuovi, più forti » a Teramum. Vuole Silvanus vivo.",
+  "gm": "Sapeva dell'esistenza del Sigillo della Marea Nera sotto il Palazzo. Il diario parla del « passaggio sotto la Basilica Aurea — la chiave vera » e diffida dei Celamanti. Complotta con un uomo incappucciato di Teramum contro Lucius Grazianus. Casa Velthuria: « Ciò che la Luna Nasconde », legata a culti lunari oscuri. Oswald sa qualcosa dei Velthuria (un incidente anni fa).",
+  "atti": [
+   4,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-tenuta-di-altavia",
+   "jn-lu-grise"
+  ]
+ },
+ {
+  "id": "jn-domina-syel",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Concilio Ristretto",
+  "title": "Domina Syel Faredan",
+  "sub": "Ex Capo della Gilda dei Naviganti Grigi — « Signore del Mare »",
+  "img": null,
+  "state": "incontrato",
+  "status": "Morta. Uccisa nel suo covo nelle scogliere a nord la notte della luna nuova. Il suo seggio al Concilio è vuoto.",
+  "pub": "Al Concilio ha sminuito tutto come « superstizioni di pescatori ubriachi », ma i più attenti hanno colto la frase in codice della sua gilda: « Il mare ha smesso di parlare, ora sussurra ». All'Ufficio Portuale avete scoperto che prendeva in consegna casse da una nave elfica non registrata. Nel covo l'avete sentita litigare con gli emissari di Sylva Noctis — « L'accordo era il caos, elfo, non l'apocalisse! » — e poi, con un urlo (« SCIACQUATIV'! ») e un braciere rovesciato, ha incendiato la caverna di fiamme verdi. È caduta sulla sabbia con una maledizione: « lu liquore » è già nell'acqua, nei pozzi, « la sete arriverà per tutti ». Il suo libro mastro cifrato e la mappa dei covi della costa sono vostri.",
+  "gm": "Silvanus ha ricostruito che le sparizioni erano punti ciechi nelle rotte della Gilda: Domina « puliva la strada ». Voce del Labirinto: alcuni vecchi Naviganti non hanno cambiato lealtà e aspettano. Il seggio del Signore del Mare può essere reclamato da Adamus.",
+  "atti": [
+   4,
+   5
+  ],
+  "links": [
+   "jn-covo-della-conchiglia",
+   "jn-yuri"
+  ]
+ },
+ {
+  "id": "jn-cardinal-virellius",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Chiesa e culti",
+  "title": "Cardinal Virellius Sanctorus",
+  "sub": "Voce Suprema della Chiesa del Sole a Julia Nova — Inquisitore Straordinario",
+  "img": "Cardinal Virellius.jpg",
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, nella Basilica. Dopo il « miracolo » ha proclamato Silvanus Erede del Sole e ha consegnato ad Alessandros il Dito di San Berardo.",
+  "pub": "Inviato da Solaria con pieni poteri per sradicare l'eresia sulla costa. Al Concilio ha tuonato di epurazione divina puntando il dito contro di voi; in Basilica ha coperto Alessandros e Mattheus di accuse, ma anche lui indicava il porto. Dopo Pietraluna: « La gente vi chiama eroi… ma io vedo solo ombre che si allungano. » Sulla Terrazza dei Venti ha chiesto chi garantisse che ciò che era tornato dall'isola fosse davvero Silvanus — e quando il sangue ha disegnato il Sole e le Due Lune è caduto in ginocchio: « MIRACOLO! GLORIA ALL'ARDENTUS! » Alessandros lo ha poi trovato nella cripta, in tonaca di sacco: « Per trent'anni ho predicato che l'ombra era il nemico… Insegnami. Come si prega un Dio che accetta il buio? » Ha avvertito: attento all'Abate Gofferio, un uomo di libri, non di miracoli.",
+  "gm": "La sua fede è autentica e pericolosa: vede eretici ovunque perché ci sono davvero. Sorveglianza magica sulla costa: la magia druidica di Adamus e la devozione a Mortus di Mattheus restano un rischio. Ha comprato qualcosa da Erminio. Tiene un dossier sui PG. Rivale mortale dell'Arcimandrita Impalox di Teramum. Voce: ha chiesto di ispezionare il laboratorio di Torvus e due inquisitori sono tornati con le dita rotte. Un accolito della Basilica è un infiltrato Celomante.",
+  "atti": [
+   4,
+   9,
+   10
+  ],
+  "links": [
+   "jn-basilica-fiamma-eterna",
+   "jn-sorella-almerya"
+  ]
+ },
+ {
+  "id": "jn-sorella-almerya",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Chiesa e culti",
+  "title": "Sorella Almerya",
+  "sub": "Alta Custode dei Santuari Minori del Sole",
+  "img": "Sorella Almerya.jpg",
+  "state": "incontrato",
+  "status": "Viva. A Julia Nova, nella Basilica. Alleata discreta dentro la Chiesa.",
+  "pub": "Al Concilio, in lacrime, ha rivelato che le reliquie del Tempio si raffreddano e la Fiamma Eterna vacilla: una pestilenza dello spirito. In Basilica, di nascosto da Virellius, vi ha sussurrato la sua visione — la Fata Oscura che piangeva indicando il mare: « La ferita… è nel porto. »",
+  "gm": "L'unica alleata interna alla Basilica. Int o Percezione CD 13 per riconoscerla come possibile contatto. Vede ciò che Virellius non vuole vedere.",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-basilica-fiamma-eterna",
+   "jn-cardinal-virellius"
+  ]
+ },
+ {
+  "id": "jn-padre-cassio",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Chiesa e culti",
+  "title": "Padre Cassio",
+  "sub": "Sacerdote di Mortus — Tempio dei Poveri, il Balcone",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, nel Tempio di Mortus. Ha dato a Mattheus la lista dei fedeli di Teramum.",
+  "pub": "Sempre nel piccolo tempio dalla porta aperta, o nel quartiere a visitare chi sta morendo. « Mortus non giudica. Non condanna. Accoglie tutti alla fine, ricchi e poveri, onesti e colpevoli. È l'unico davvero imparziale. » Mattheus lo ha cercato la vigilia di Colleventoso e ha pregato con lui tra le bare prima della marcia; Cassio gli ha lasciato una lista di fedeli di Mortus a Teramum, in cima Frate Davide de li Piccole Vie. Ogni settimana benedice i morti senza nome della Cripta.",
+  "gm": "Sa della devozione di Mattheus (la luce argentea) e non lo denuncia. Conosce Margherita, che lo aiuta. Voce: andato a Teramum tre anni fa, tornato cambiato, dorme con la porta barricata. « Mortus non prende. Mortus aspetta. »",
+  "atti": [
+   1,
+   11
+  ],
+  "links": [
+   "jn-tempio-mortus",
+   "jn-cripta-senza-nome",
+   "jn-margherita-de-li-scurelle"
+  ]
+ },
+ {
+  "id": "jn-margherita-de-li-scurelle",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Chiesa e culti",
+  "title": "Margherita 'de li Scurèlle'",
+  "sub": "Erborista del Canneto Verde",
+  "img": null,
+  "state": "segreto",
+  "status": "Viva. A Julia Nova, nella sua bottega al Canneto Verde.",
+  "pub": "Una donna sulla cinquantina con le mani forti e lo sguardo che vede troppo. Conosce ogni erba del Ducato. E qualcosa in più. «Cos'è che vi fa male? Non mi rispondere subito — pensaci. La risposta rapida è sempre sbagliata.»",
+  "gm": "Sacerdotessa segreta di Maia, la principale del Tempio di Lunaria. Rimedi magici rari a metà prezzo a chi conosce il culto lunare. Voci: ha curato un soldato di Fenix con tessuto metallico sotto la pelle; le sue erbe non crescono in nessun posto conosciuto, qualcuno le porta di notte; era a corte vent'anni fa, non dice quale.",
+  "atti": [],
+  "links": [
+   "jn-bottega-margherita",
+   "jn-tempio-lunaria",
+   "jn-padre-cassio"
+  ]
+ },
+ {
+  "id": "jn-frate-ambrose",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Chiesa e culti",
+  "title": "Frate Ambrose de la Bòna Morte",
+  "sub": "Frate di Mortus — distribuisce pane alla Piazza del Pane",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, ogni mattina alla Piazza del Pane.",
+  "pub": "Passa ogni mattina all'accampamento civile della Piazza del Pane a distribuire pane e benedizioni di Mortus alle famiglie che hanno perso la casa.",
+  "gm": "Se la donazione di Altavia viene annunciata alla Piazza del Pane, ringrazia pubblicamente e la notizia gira in un'ora. Possibile secondo contatto di Mortus per Mattheus.",
+  "atti": [],
+  "links": [
+   "jn-piazza-del-pane",
+   "jn-padre-cassio"
+  ]
+ },
+ {
+  "id": "jn-frate-odilon",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Chiesa e culti",
+  "title": "Frate Odilon de Serlum",
+  "sub": "Bibliotecario della Torre dei Cieli Inversi",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, nella Biblioteca dei Cieli Inversi.",
+  "pub": "Il bibliotecario della Torre: un frate che gestisce gli scaffali circolari sotto la cupola di vetro.",
+  "gm": "Custodisce una sezione riservata di testi proibiti dalla Chiesa (Storia CD 14 / 10 con Meren / 18 senza). INCOERENZA: il Manuale parla di un « Priore Odilon de Serlum » dell'Ordine d'Acciaio a Cëvëtëlla, fanatico che attende un Eroe del Sole. Decidere se è la stessa persona (spia dell'Ordine in biblioteca?) o un omonimo.",
+  "atti": [],
+  "links": [
+   "jn-biblioteca-cieli-inversi",
+   "jn-cyrius-meren"
+  ]
+ },
+ {
+  "id": "jn-fenix",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Comandante Fenix",
+  "sub": "Comandante della Guardia Nord — l'uomo che tiene insieme Julia Nova",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Rimasto a Julia Nova a comandare la città mentre la Crociata marcia. Vi ha stretto la mano uno per uno alla partenza.",
+  "pub": "Comandante veterano, parla in dialetto anche quando non dovrebbe. È accorso sulla spiaggia con Silvanus e le truppe, e dopo la Caserma Est ha messo la città sotto chiave: « Nessuno entra, nessuno esce ». Vi ha salvati dall'arresto dopo la rissa al porto. Accusato da Lyraeth di essere una pedina inconsapevole — le sue pattuglie scomparse usate come materia prima — la sua rabbia era autentica: « Andate a Pietraluna. Io cercherò di tenere insieme i pezzi qui. » Con l'Acido Solare di Torvus ha spezzato l'assedio. Vi ha accolti al ritorno con una benda sporca e l'occhio iniettato di sangue accusandovi di diserzione, finché Silvanus non è uscito dall'ombra: « Abbassa la spada, fratello. » Da giovane aveva giurato fratellanza d'armi con Silvanus; suo padre comandava la Legione sotto cui servì Nardìne. « Silvàne. La gènte te stà a guàrdà. »",
+  "gm": "Accesso permanente al Palazzo del Sole. Sa che Silvanus è Aurelius e deve far credere a tutti che l'Erede sia cenere. QG: Tenda di Comando sulla Piazza Alta e rovine della Caserma Est. Voci: tre soldati in isolamento per aver rifiutato il turno notturno; prigionieri non annunciati nelle cantine della caserma; il Sergente Marcellus fa domande su Adamus. Il filo del padre di Fenix e della Legione è ancora da sviluppare.",
+  "atti": [
+   1,
+   4,
+   6,
+   7,
+   9,
+   10,
+   11,
+   12
+  ],
+  "links": [
+   "jn-caserma-est",
+   "jn-piazza-alta",
+   "jn-silvanus",
+   "jn-sergente-marco"
+  ]
+ },
+ {
+  "id": "jn-silvanus",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Capitan Silvanus Ardentus",
+  "sub": "Comandante della Caserma Est — l'Ardentus, capo della Crociata",
+  "img": "Capitan Silvanus.jpg",
+  "state": "incontrato",
+  "status": "Vivo. Non è più a Julia Nova: marcia con la Crociata del Sole e delle Due Lune verso Teramum.",
+  "pub": "Il Capitano della Caserma Est, febbrile e consumato da notti insonni, che vi ha detto di non fidarvi di nessuno, nemmeno del Concilio — e che la notte stessa è stato trascinato via da Therxil sotto i vostri occhi. Lo avete ritrovato incatenato a un altare di ossidiana a Pietraluna: è Aurelius, l'ultimo sangue solare, figlio dell'Imperatore morto nelle fiamme di Solaria, con gli occhi ora d'oro fuso screziato d'argento. « Il mio nome è morto vent'anni fa. Da questo momento io sono solo Silvanus. » Ha bussato tre colpi alla Caserma Est — « Il mio turno di guardia non è finito » — ha piantato la spada nella pietra della Terrazza dei Venti e con il proprio sangue ha disegnato il Sole e le Due Lune. Con lo stendardo del nonno Aldric Aurex sulle ginocchia ha parlato alla città di crociata: « Per il Sole. Per le Due Lune. Per il Ducato d'Aprutium. » Non parla mai in dialetto: straniero in patria.",
+  "gm": "Il seggio della Caserma Est al Concilio. Il segreto è stato reso pubblico sulla Terrazza (Atto IX). Non deve avvicinarsi al filatterio di Lyaras. Ha intuito che Vicarus e Mattheus portano « pesi » da Pietraluna. Ha un « secondo segreto » ancora in riserva (Manuale). La frattura con Vicarus dopo la palla di fuoco su Vasco (Atto XII) non è ricomposta.",
+  "atti": [
+   1,
+   2,
+   4,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-caserma-est",
+   "jn-fenix",
+   "jn-piazza-alta",
+   "jn-tenuta-di-altavia"
+  ]
+ },
+ {
+  "id": "jn-sergente-marco",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Sergente Marco « Lu Sbrègne »",
+  "sub": "Sergente della Guardia Cittadina, secondo di Fenix",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, al porto con la Guardia.",
+  "pub": "Il sergente delle guardie cittadine che stava per arrestarvi dopo la rissa al porto, prima che Forcinum e Fenix disinnescassero la bomba. Al vostro sbarco dalla Perla Silenziosa era lui sulla banchina a coordinare il trasporto dei cadaveri: « Siete vivi?! Il Comandante è alla Piazza Alta! Sta tenendo insieme la città con lo sputo! Noi qui stiamo affogando nei morti! »",
+  "gm": "Non confondere con Marco il Navigante Grigio ucciso da Iuvenza (Atto VI).",
+  "atti": [
+   4,
+   9
+  ],
+  "links": [
+   "jn-fenix",
+   "jn-quartiere-del-porto"
+  ]
+ },
+ {
+  "id": "jn-sergente-nardine",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Sergente Nardìne 'Lu Cancèlle'",
+  "sub": "Veterano di guardia alla Porta del Sole",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, alla Porta Nord-Est.",
+  "pub": "Un veterano con i capelli grigi e una cicatrice che gli attraversa la guancia. Non lascia passare nessuno senza sapere chi è, da dove viene e dove va. Non è cattivo: è preciso, e trent'anni di frontiera li ha passati essendo preciso. Al vostro ritorno da Altavia ha abbassato le lance: « Quèlle che avéte fàtte là fòre… la cìtte v'è gràte. Ànche se nge pó dìcele. » « Jàte pure. E state attenti. Teramum non è Julia Nova. »",
+  "gm": "Alleato affidabile ma non flessibile. Sa di due messaggeri senza livrea usciti di notte (li ha lasciati passare, non dice perché) e di un carro coperto. Ha rifiutato un ordine diretto di Virellius. Ha servito sotto il padre di Fenix e sa cose della Legione che non mette nei rapporti. La guida lo colloca anche alla Torre di Guardia Nord di giorno.",
+  "atti": [
+   11
+  ],
+  "links": [
+   "jn-porta-del-sole",
+   "jn-posto-guardia-nardine",
+   "jn-fenix"
+  ]
+ },
+ {
+  "id": "jn-brizio",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Brizio « Lu Spada Secca »",
+  "sub": "Veterano della Caserma Est, un braccio solo",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Marcia con la Crociata (ha lasciato Julia Nova con voi).",
+  "pub": "Veterano della Caserma Est, terrorizzato da un nemico che non vuole oro ma vuole « svuotarti ». La notte della battaglia ha lasciato a Pippo parole disperate — « La ronda… a nord… la scogliera… non è solo contrabbando » — e l'avete creduto perduto. Invece è stato il suo grido a svegliare la caserma quando Silvanus ha bussato: « È turnate! Madonna santa, lu Capitan' è vive! » Affila la spada col braccio buono, gira col vino a Lu Callaròne, e quando Silvanus ha detto 'crociata' ha masticato stupore: « Ammazza. » Nel convoglio ferma i carri per una vipera: « Lu perìcole vère nun fà rumóre. »",
+  "gm": "L'Atto IV lo lasciava per morto (ultime parole), l'Atto IX lo fa vivo con un braccio solo: la ferita spiega la contraddizione. Voce (guida): si aggira attorno alle rovine « per i ladri di pietre », in realtà aspetta notizie da qualcuno.",
+  "atti": [
+   4,
+   9,
+   11,
+   12
+  ],
+  "links": [
+   "jn-caserma-est",
+   "jn-pippo"
+  ]
+ },
+ {
+  "id": "jn-pippo",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Pippo « Lu Scudo »",
+  "sub": "Giovane recluta della Caserma Est",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Marcia con la Crociata.",
+  "pub": "Giovane recluta, tormentato dall'aver visto suo cugino tra i Forgiati della spiaggia. Vi ha riferito le ultime parole di Brizio e vi ha aiutati a trovare il cerchio a matita sulla mappa di Silvanus. Ha lasciato cadere la lanterna quando il Capitano è tornato a bussare. Il vino co' la gazzosa è suo: « Pulice la gola dalla polvere, dicene. » In marcia racconta del nonno carrettiere, e davanti alla masseria bruciata dei Colabelle, per la prima volta, non parla.",
+  "gm": "",
+  "atti": [
+   4,
+   9,
+   12
+  ],
+  "links": [
+   "jn-caserma-est",
+   "jn-brizio"
+  ]
+ },
+ {
+  "id": "jn-sorella-peppa",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Sorella Peppa",
+  "sub": "Cuoca della Caserma Est",
+  "img": null,
+  "state": "incontrato",
+  "status": "Viva. A Julia Nova, alla Caserma Est.",
+  "pub": "La cuoca della caserma, che passa allo Scudo Spezzato a controllare che i suoi ragazzi mangino qualcosa di caldo. La sua polenta vi ha svegliati l'ultimo giorno; a Lu Callaròne riempiva le scodelle: « Magnate, fijè. Che dumane Dije ce pensa. » E dopo il discorso della crociata: « Mangiate ancora un po' prima di partire. La zuppa è ancora calda. »",
+  "gm": "Sa sempre cosa succede in caserma prima di chiunque altro. Voce: porta il cibo a prigionieri nelle cantine mai annunciati ufficialmente.",
+  "atti": [
+   11
+  ],
+  "links": [
+   "jn-caserma-est",
+   "jn-locanda-scudo-spezzato"
+  ]
+ },
+ {
+  "id": "jn-sergente-marcellus",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Sergente Marcellus",
+  "sub": "Sergente della Guardia alla Sentinella",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, nel quartiere della Sentinella.",
+  "pub": "Un sergente della guarnigione di Fenix nel quartiere della Caserma Est.",
+  "gm": "Voce: sta facendo domande in giro su Adamus — chi è, da dove viene, cosa vuole veramente. Per conto di Fenix o per conto suo? Solo nella tabella voci della guida.",
+  "atti": [],
+  "links": [
+   "jn-la-sentinella",
+   "jn-fenix"
+  ]
+ },
+ {
+  "id": "jn-nunziati-lu-verdun",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Nunziatì 'Lu Verdùn'",
+  "sub": "Portinaio della Caserma Est, sopravvissuto all'assalto",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, tra le rovine della Caserma Est. Non dorme da settimane.",
+  "pub": "Il portinaio sopravvissuto all'assalto della Caserma Est. Non ha dormito da settimane: vede Forgiati ovunque.",
+  "gm": "« O forse li vede davvero » (guida, voce 2). Possibile testimone di ciò che entra ed esce dalla caserma di notte.",
+  "atti": [],
+  "links": [
+   "jn-caserma-est"
+  ]
+ },
+ {
+  "id": "jn-umbrax",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Guardia",
+  "title": "Umbrax, il Forgiato Antico",
+  "sub": "Berserker Forgiato catturato sulla spiaggia — prigioniero",
+  "img": null,
+  "state": "incontrato",
+  "status": "Prigioniero nelle prigioni del Palazzo del Sole (ultima notizia: Atto I). Sorte dopo l'assedio non nota.",
+  "pub": "Il terrificante Berserker che guidava lo sbarco dei Forgiati Lunari sulla spiaggia di Julianova. Lo avete catturato vivo; Maximus e Alessandros lo hanno interrogato nelle prigioni cercando di strappare informazioni alla sua mente spezzata.",
+  "gm": "Dopo la morte di Lyaras (il Primo Forgiato) i Forgiati sopravvissuti vagano « come bestie senza più una mente che li guidi » (Atto IX): cosa ne è di Umbrax? Filo aperto: potrebbe essere stato liberato dal Secondo Sigillo purificato, o restare un guscio.",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-ala-ovest-prigioni",
+   "jn-spiaggia-della-battaglia"
+  ]
+ },
+ {
+  "id": "jn-torvus-halderan",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Gilde e mestieri",
+  "title": "Maestro Torvus Halderan",
+  "sub": "Nano, Capogilda del Martello Bianco — inventore del Fuoco Verde",
+  "img": "Maestro Torvus.jpg",
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, alla Grande Forgia. Ha promesso le sue fucine alla Crociata e ha forgiato per Alessandros.",
+  "pub": "Il signore non ufficiale di Julia Nova quando si tratta di ferro, acciaio e fuoco. Ha esaminato un frammento del nemico — « Roba d'elf'… ma guasta » — e vi ha mostrato la sua fucina sigillata: « Loro parl'. Io… prepare le risposte. » Le risposte erano le macchine d'assedio che hanno vomitato l'Acido Solare sulle Navi Rosse, sciogliendone tre in trenta secondi e salvando la città con Fenix. Al Concilio è l'unico che si oppone ai poteri d'emergenza di Virellius; sulla Terrazza ha promesso le fucine alla Crociata. « Il ferro dice la verità. Non mente, non intriga, non fa politica. Si plasma o si rompe. »",
+  "gm": "Sa qualcosa sulla natura metallica dei Forgiati che non ha rivelato (schegge d'anima). Segreto grande: il Fuoco Verde è magia lunare, essenza di Noxtua, conoscenza del Clan Halderan — se la Chiesa lo scoprisse, rogo. Ha commissionato una piccola imbarcazione rapida al Cantiere. Vuole il frammento pulsante nella Cripta dei Senza Nome. Parla di metalli che non dovrebbero esistere (il « fabbro » di Teramum). Voci: fumo verde dalla Forgia; inquisitori con le dita rotte.",
+  "atti": [
+   4,
+   7,
+   9,
+   10
+  ],
+  "links": [
+   "jn-grande-forgia",
+   "jn-laboratorio-torvus",
+   "jn-elara-manodoro"
+  ]
+ },
+ {
+  "id": "jn-elara-manodoro",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Gilde e mestieri",
+  "title": "Elara Manodoro",
+  "sub": "Armaiola, apprendista di Torvus — mezzelfa",
+  "img": null,
+  "state": "incontrato",
+  "status": "Viva. A Julia Nova, nelle Fucine. Legata a Vicarus dal Talismano dell'Eco.",
+  "pub": "L'armaiola dagli oggetti dal potenziale dormiente, conosciuta al mercato della Gilda. A Vicarus, col Bastone di Lyaras in mano: « Quello non è un bastone da mago, Cerullius. È un condotto. Un'antenna. » Nel suo retrobottega, con il volto striato di fuliggine, ha forgiato con lui il Talismano dell'Eco dal ferro lunare corrotto dei Forgiati — « Questo non è acciaio. È dolore solidificato » — perché potesse sentire la sua verità ovunque: « Non sparire nel silenzio, promettimelo. »",
+  "gm": "Talismano dell'Eco: Sending 1/giorno, +1 ai TS Carisma. Voce: il suo 'ferro lunare' non è estratto dalla terra ma cade dal cielo in certe notti. Unica persona oltre a Torvus ammessa nel laboratorio del Fuoco Verde. Il nome oscilla tra Elara ed Eleara nelle fonti.",
+  "atti": [
+   4,
+   9,
+   10
+  ],
+  "links": [
+   "jn-bottega-elara",
+   "jn-torvus-halderan"
+  ]
+ },
+ {
+  "id": "jn-oswald-grigiomanto",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Gilde e mestieri",
+  "title": "Oswald Grigiomanto",
+  "sub": "Fabbro-mercante, ex mercenario — Emporio del Tuttofare",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, all'Emporio. Ha consegnato le armature ad Alessandros e Maximus.",
+  "pub": "Ex mercenario, oggi fabbro-mercante: conosce ogni cliente per nome e vizio. « Quello che si può comprare, lo vendo. Quello che non si può comprare, di solito non lo chiedo neanche. » Alessandros ha trattato acciaio nel suo retrobottega; prima della marcia ha consegnato le armature — a Maximus con un fregio in regalo, lo stemma di Julia Nova.",
+  "gm": "Sa qualcosa dei Velthuria che non dice volentieri: un incidente anni fa. Voci: tre identità in tre città, a Teramum si chiama altrimenti; sta per lasciare Julia Nova, ha venduto proprietà. Il nome oscilla tra Oswald e Osvaldo.",
+  "atti": [
+   4,
+   9,
+   11
+  ],
+  "links": [
+   "jn-emporio-tuttofare",
+   "jn-mantelli-bianchi-sud"
+  ]
+ },
+ {
+  "id": "jn-barnabus-fildargento",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Gilde e mestieri",
+  "title": "Barnabus « Barba » Fildargento",
+  "sub": "Titolare del bazar al mercato della Gilda",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, al mercato del Martello Bianco.",
+  "pub": "Il titolare del bazar al mercato della Gilda, conosciuto il giorno in cui avete preso il polso della città malata con Forcinum.",
+  "gm": "Solo nominato nell'Atto IV. Nessun dettaglio ulteriore nelle fonti.",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-bottega-elara"
+  ]
+ },
+ {
+  "id": "jn-erminio-lu-cardanette",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Gilde e mestieri",
+  "title": "Erminio 'Lu Cardanétte'",
+  "sub": "Fabbro di oggetti arcani e meccanici",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, nel suo laboratorio alle Fucine Sud.",
+  "pub": "Fabbro specializzato in oggetti che hanno qualcosa di magico o meccanico di insolito. « Non creo magia. Creo meccanismi precisi che producono effetti che sembrano magici. C'è differenza. Non che importi a voi. »",
+  "gm": "Crea trappole, serrature impossibili, orologeria. Ha consegnato qualcosa a Virellius e si è chiuso a chiave per tre giorni. Voce: apprendista di un alchimista imperiale prima di venire a Julia Nova.",
+  "atti": [],
+  "links": [
+   "jn-laboratorio-erminio",
+   "jn-cardinal-virellius"
+  ]
+ },
+ {
+  "id": "jn-pasquale-lu-rematore",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Gilde e mestieri",
+  "title": "Pasquale 'Lu Rematore'",
+  "sub": "Mastro d'ascia, sovrintendente del Cantiere Navale",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, al Cantiere Navale.",
+  "pub": "Sovrintende il cantiere con la calma di chi sa che il mare non aspetta. « Ho perso un figlio in mare. Ho perso un fratello ai Forgiati. Ma le navi si costruiscono lo stesso. Perché se non le costruiamo noi, chi lo fa? »",
+  "gm": "Sta costruendo l'imbarcazione segreta di Torvus. Ha una mappa dei fondali del porto: ci sono cose sul fondo che non dovrebbero esserci. Stesso soprannome di Rafèle del faro.",
+  "atti": [],
+  "links": [
+   "jn-cantiere-navale"
+  ]
+ },
+ {
+  "id": "jn-orazio-lu-scucitore",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Gilde e mestieri",
+  "title": "Orazio 'Lu Scucitóre'",
+  "sub": "Commerciante di abiti al Mercato delle Stoffe",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, al Mercato delle Stoffe.",
+  "pub": "Un commerciante di abiti tra le bancarelle del Balcone.",
+  "gm": "Vende anche travestimenti e documenti di viaggio falsi. Richiede contatto tramite i Naviganti o Forcinum.",
+  "atti": [],
+  "links": [
+   "jn-mercato-delle-stoffe"
+  ]
+ },
+ {
+  "id": "jn-gabrielus-forcinum",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Legge e sapere",
+  "title": "Gabrielus Forcinum",
+  "sub": "Avvocato — parlantina forbita e latino a fiumi",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova. Il vostro « tutor legalis »: siete in debito con lui.",
+  "pub": "Un vecchio amico avanzato dall'ombra nel vicolo del porto quando le guardie stavano per arrestarvi: ha invocato una legitima defensa e un editto inesistente, e vi ha portati nel suo « vero ufficio » sul retro della Vetreria del Giudice. Lì ha tracciato la strategia: la rissa è il sintomo, serve un instrumentum regni contro Domina. È stato lui, tramite Fenix, a farvi convocare di nuovo dal Concilio. « Il diritto è complicato. La realtà è ancora più complicata. Per questo mi pagano. »",
+  "gm": "Conosce la storia legale di Altavia (può formalizzare il lazzaretto), il problema di eredità del maniero Cerullius e il testamento sigillato nel Mausoleo Aquaviva. Tramite per Orazio. Voce: ha un cliente che paga in oro senza nome e le cui cause vincono sempre.",
+  "atti": [
+   4,
+   6
+  ],
+  "links": [
+   "jn-studio-forcinum",
+   "jn-vetreria-del-giudice",
+   "jn-donato-lu-serpe"
+  ]
+ },
+ {
+  "id": "jn-mastro-evaristo",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Legge e sapere",
+  "title": "Mastro Evaristo di Colledara",
+  "sub": "Vecchio scriba della Biblioteca dei Cieli Inversi",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, nella Biblioteca.",
+  "pub": "Il vecchio scriba che ha guidato Vicarus e Mattheus nella decifrazione del Tomo del Ricordo Spezzato: l'anima non viene dominata, viene cancellata — uno specchio vuoto in cui proiettare un nuovo riflesso; i Forgiati non hanno più un « io » ma un « noi », l'eco della volontà di un Primo Forgiato.",
+  "gm": "",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-biblioteca-cieli-inversi",
+   "jn-cyrius-meren"
+  ]
+ },
+ {
+  "id": "jn-yuri",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Yuri « l'Amaro » (Anima Nera)",
+  "sub": "Luogotenente della Gilda dei Naviganti Grigi",
+  "img": "Yuri Anima Nera.jpg",
+  "state": "incontrato",
+  "status": "Vivo. Rimasto a Julia Nova a reggere la Gilda per Adamus durante la Crociata.",
+  "pub": "Uno dei tre superstiti del covo di Domina che hanno riconosciuto Adamus come Capo: logica e forza. Sempre presente al Covo — « Capo. Siediti. C'è 'na cosa che devi sapere prima che te lo dica qualcun altro. » Ha tenuto la Perla al largo di Pietraluna e vi ha accolti al ritorno: « Ci avéveme scommesse l'aneme che non turnavate cchiù! » Ha salvato il magazzino con Adamus, ha chiesto il nome nuovo per l'Ancora Spezzata, ha mandato i suoi ad Altavia ed è rimasto al cancello con le dita che tremavano. Nelle cantine: « 'Sta casa nun è de li Velthuria. È de li Padroni Veri. E Silvanus… 'sta casa è sua. » « Quànne li criatùre jòchene a la mòrte, la mòrte ha già vìnte. »",
+  "gm": "Usa il Pozzo di Mara per messaggi brevi ai Naviganti. Ha visto gli occhi d'oro di Silvanus: il silenzio dell'equipaggio è un rischio. I due soprannomi (« l'Amaro » nell'Atto IX, « Anima Nera » nel ritratto) convivono.",
+  "atti": [
+   5,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "links": [
+   "jn-covo-della-conchiglia",
+   "jn-ancora-spezzata",
+   "jn-pozzo-di-mara"
+  ]
+ },
+ {
+  "id": "jn-anacleto",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Anacleto 'Lu Quattrocchi'",
+  "sub": "Navigante Grigio — porta le notizie del mattino",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, con la Gilda.",
+  "pub": "Uno dei tre superstiti del covo che hanno accettato Adamus come Capo (il coraggio). Era sulla Perla Silenziosa al largo di Pietraluna. Porta notizie al Covo ogni mattina.",
+  "gm": "« Alcune vere. » Voce: lavora anche per il Palazzo del Sole, o per la Basilica, o per entrambi. Nessuno è sicuro. Un possibile doppiogiochista da tenere in mano.",
+  "atti": [
+   5,
+   7
+  ],
+  "links": [
+   "jn-covo-della-conchiglia",
+   "jn-yuri"
+  ]
+ },
+ {
+  "id": "jn-achilluc",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Achilluc",
+  "sub": "Navigante Grigio — l'interesse",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, con la Gilda (ultima menzione: Atto V).",
+  "pub": "Il terzo dei superstiti del covo di Domina; Adamus lo ha convinto facendo leva sul suo interesse.",
+  "gm": "Non più nominato dopo l'Atto V.",
+  "atti": [
+   5
+  ],
+  "links": [
+   "jn-covo-della-conchiglia"
+  ]
+ },
+ {
+  "id": "jn-klevin",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Klevin",
+  "sub": "Giovane Navigante Grigio, marinaio della Perla Silenziosa",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, con la Gilda (ultima menzione: Atto VIII).",
+  "pub": "Il giovane che ha porto una coperta a Silvanus sulla Perla — e che, vedendone gli occhi d'oro e le bende intrise di un sangue che non è sangue, ha gridato « Quill' è 'na cosa! 'Na stregonerie! ». Adamus ha disinnescato l'ammutinamento della paura: la balestra è stata abbassata, ma non riposta.",
+  "gm": "Ha visto troppo. Quanto reggerà il suo silenzio?",
+  "atti": [
+   7,
+   8
+  ],
+  "links": [
+   "jn-yuri"
+  ]
+ },
+ {
+  "id": "jn-ciccillo-lu-sorce",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Ciccillo « Lu Sorce »",
+  "sub": "Ragazzino dei Naviganti Grigi, quindici anni — portatore dello stendardo",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Partito con la Crociata come portatore dello stendardo; ferito al fianco dai lupi nel Bosco (Atto XII).",
+  "pub": "Magro come un chiodo, fazzoletto grigio al collo, memoria da elefante. Si è gettato ai piedi di Adamus alla Caserma Est: « Capo! È 'nu macello lassù! Quella casa è maledetta! Le statue d'lu giardino se so' mosse! » È lui che ha portato in Piazza Alta l'involto con lo stendardo del Sole e delle Due Lune, e lui lo porta arrotolato sulla schiena in marcia.",
+  "gm": "Conosce ogni vicolo del porto e dove si nascondono le cose che non dovrebbero esserci; sa distinguere uno sbarco lecito da uno illecito alla Spiaggia Ovest. Ha visto una nave piccola e veloce con bandiera sconosciuta. Sorte dopo la ferita dell'Atto XII da confermare (non compare esplicitamente nel roster del Registro Strategico).",
+  "atti": [
+   11,
+   12
+  ],
+  "links": [
+   "jn-spiaggia-ovest",
+   "jn-quartiere-del-porto",
+   "jn-yuri"
+  ]
+ },
+ {
+  "id": "jn-lu-biondo-e-storto",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Lu Biondo e Storto",
+  "sub": "Due Naviganti Grigi mandati ad Altavia",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivi. A Julia Nova. Lu Biondo ha la gamba rovinata ma vivrà.",
+  "pub": "Intrappolati oltre le mura di Altavia dalle Armature Animate, Lu Biondo con una gamba aperta fino all'osso. Le vostre mani lo hanno strappato alla morte sul tetto della dependance. Storto ha pianto senza vergogna: « Ve devo la vita. Pe' sempre, Capo. Basta che chiamate, e noi veniamo. Pure dall'inferno. »",
+  "gm": "Un debito di sangue verso Adamus: due uomini che verrebbero « pure dall'inferno ».",
+  "atti": [
+   11
+  ],
+  "links": [
+   "jn-tenuta-di-altavia",
+   "jn-yuri"
+  ]
+ },
+ {
+  "id": "jn-tonio-e-marco",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Tonio e Marco",
+  "sub": "Naviganti Grigi uccisi dagli assassini di Iuvenza",
+  "img": null,
+  "state": "incontrato",
+  "status": "Morti. Uccisi al Covo della Conchiglia dagli assassini di Iuvenza, che li ha chiamati « costi operativi ».",
+  "pub": "I due Naviganti lasciati di guardia a Lyraeth. Al ritorno dal Concilio avete trovato il massacro: nebbia innaturale sul molo, serrature forzate, e ovunque il profumo di Loto d'Ombra. Iuvenza ne ha parlato con gelida indifferenza. La Gilda non dimentica.",
+  "gm": "",
+  "atti": [
+   6
+  ],
+  "links": [
+   "jn-covo-della-conchiglia",
+   "jn-veneranda-iuvenza"
+  ]
+ },
+ {
+  "id": "jn-loretta-lu-lenzuole",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Naviganti Grigi",
+  "title": "Loretta 'Lu Lenzuòle'",
+  "sub": "Informatrice del Labirinto",
+  "img": null,
+  "state": "segreto",
+  "status": "Viva. A Julia Nova, nei Vicoli Grigi.",
+  "pub": "Un'informatrice dei Vicoli Grigi.",
+  "gm": "Voce: ha memorie di ogni persona che ha incontrato — le scrive in un libro cifrato cucito nella fodera del mantello. Un archivio vivente della città.",
+  "atti": [],
+  "links": [
+   "jn-vicoli-grigi"
+  ]
+ },
+ {
+  "id": "jn-rafele-lu-rematore",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "Rafèle 'Lu Rematore'",
+  "sub": "Guardiano del faro, pescatore con una gamba di legno",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, al Faro del Porto Vecchio.",
+  "pub": "Pescatore con una gamba di legno, guardiano del faro da quarant'anni. Lo avete sentito a Lu Spicchje di Luna, la sera del compleanno, parlare terrorizzato di navi silenziose dalle vele cremisi. « Ho visto le Navi Rosse tre settimane prima che arrivassero. L'ho detto al Palazzo. Mi hanno detto che avevo bevuto troppo. » Ogni mattina passa dalla Spiaggia Ovest a parlare con i pescatori.",
+  "gm": "Conosce ogni nave che passa. Potrebbe aver visto partire la nave di Iuvenza e notato qualcosa di strano (Intuizione CD 11: nasconde qualcosa).",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-faro-porto-vecchio",
+   "jn-spiaggia-ovest",
+   "jn-lu-spicchje-di-luna"
+  ]
+ },
+ {
+  "id": "jn-giacomi-lu-ventarole",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "Giacomì 'Lu Ventaròle'",
+  "sub": "Marinaio di Julianova",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo (presumibilmente). A Julia Nova (ultima menzione: Atto I).",
+  "pub": "Un marinaio che, con Rafèle, la sera del compleanno parlava di coste avvolte nel mistero e di persone tornate dal mare senza memoria né volontà.",
+  "gm": "Solo nell'Atto I.",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-lu-spicchje-di-luna"
+  ]
+ },
+ {
+  "id": "jn-mastro-biagio",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "Mastro Biagio « Lu Spilorce »",
+  "sub": "Oste dell'Ancora Spezzata, socio della Gilda",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, al bancone dell'Ancora Spezzata (o come si chiamerà).",
+  "pub": "Si asciuga la fronte con un cencio unto e calcola i danni con gli occhi: « Capo Adamus… 500 monete d'oro. È il prezzo per i muri. » Adamus non lo ha cacciato: gli ha offerto società, e l'avidità ha vinto sulla paura. Stretta di mano viscida ma ferma. « Jo faccio l'oste. Non chiedo nient'altro. E voi non chiedete a me di fare altro. »",
+  "gm": "Conosce clienti e fornitori e sa annacquare la birra senza farsi beccare. Un paio d'orecchie al bancone: sente tutto quello che si dice al porto.",
+  "atti": [
+   10
+  ],
+  "links": [
+   "jn-ancora-spezzata"
+  ]
+ },
+ {
+  "id": "jn-darius-velascuri",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "Darius Velascuri",
+  "sub": "Mercante di spezie e tessuti — mercante di segreti",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, nella sua bottega al porto.",
+  "pub": "Apparentemente vende spezie, tessuti, oggetti di viaggio. « Tutto si vende. La domanda è solo: chi paga di più? »",
+  "gm": "Vende informazioni: Teramum, le Casate, il nome 'Frate Davide' in contesto sospetto. 20/50 mo, Persuasione CD 13. Ha ricevuto un messaggio cifrato. (proposta) candidato per il « mercante del porto » nel roster degli infiltrati Celomanti.",
+  "atti": [],
+  "links": [
+   "jn-bottega-velascuri"
+  ]
+ },
+ {
+  "id": "jn-mastro-gerolamo",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "Mastro Gerolamo",
+  "sub": "Funzionario dell'Ufficio Portuale",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, all'Ufficio Portuale.",
+  "pub": "Un funzionario dell'Ufficio Portuale. Uno di loro, terrorizzato, vi ha confessato della nave elfica non registrata e delle casse di Domina Syel.",
+  "gm": "(proposta) È lui il funzionario dell'Atto IV. Accetta bustarelle solo in monete d'argento, mai d'oro, e non spiega perché.",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-ufficio-portuale"
+  ]
+ },
+ {
+  "id": "jn-zi-menne",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "Zi' Mènne de li Còzze",
+  "sub": "Pescatore-contrabbandiere della Spiaggia Ovest",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, sempre sulla sua barca fuori dalla Porta Piccola.",
+  "pub": "Sempre sulla barca, sempre a riparare qualcosa, mai disponibile — tranne quando lo sei davvero: allora si siede, tira fuori la pipa e ascolta. « Le Nàve Rùsce? Eh. Le ho viste. Prima che arrivassero ccà. E so' da dove vengono, pure. Ma 'na cosa del genere… nun se dice gratis. »",
+  "gm": "Sa che le Navi Rosse vengono da un porto nascosto nelle caverne costiere a sud. 50 mo o un favore dei Naviganti; Persuasione CD 12. Ha un figlio nei magazzini del porto di Teramum.",
+  "atti": [],
+  "links": [
+   "jn-barca-zi-menne"
+  ]
+ },
+ {
+  "id": "jn-antonia-la-rivere",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "Antonia 'La Rìvere'",
+  "sub": "Pescivendola della Via del Sale",
+  "img": null,
+  "state": "segreto",
+  "status": "Viva. A Julia Nova, alla Via del Sale.",
+  "pub": "La pescivendola della Via del Sale, che sa tutto di tutto.",
+  "gm": "Fonte su Tortoscuro e la costa sud.",
+  "atti": [],
+  "links": [
+   "jn-via-del-sale"
+  ]
+ },
+ {
+  "id": "jn-agente-neron",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Porto e mare",
+  "title": "L'agente di Casa Neròn",
+  "sub": "Rappresentante dei Signori della Flotta a Julia Nova",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, al magazzino Neròn.",
+  "pub": "L'agente che gestisce per Casa Neròn il grande magazzino della Via del Sale.",
+  "gm": "Neutrale in modo quasi aggressivo; nervoso per le flotte. Ha incontrato Virellius in segreto. Nome non dato nelle fonti.",
+  "atti": [],
+  "links": [
+   "jn-magazzino-neron"
+  ]
+ },
+ {
+  "id": "jn-tonino-la-botte",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Tonino « La Botte »",
+  "sub": "Locandiere de « Lu Spicchje di Luna »",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, alla sua locanda (ultima menzione: Atto I).",
+  "pub": "L'oste gioviale che vi ha accolti per il compleanno di Mattheus, tra abbracci e racconti, prima che i sussurri dei marinai incrinassero la festa.",
+  "gm": "Solo nell'Atto I. Il ritratto « Tonino.jpg » potrebbe essere il suo o del Tonìno di Mushanè: non assegnato.",
+  "atti": [
+   1
+  ],
+  "links": [
+   "jn-lu-spicchje-di-luna"
+  ]
+ },
+ {
+  "id": "jn-donato-lu-serpe",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Donato « Lu Serpe », Laurenzia e Nonna Bartolda",
+  "sub": "La famiglia della Vetreria del Giudice",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivi. A Julia Nova, alla Vetreria del Giudice.",
+  "pub": "Donato « Lu Serpe », sua moglie Laurenzia e la silenziosa Nonna Bartolda gestiscono il locale nella Città Alta sul cui retro Forcinum tiene il suo « vero ufficio ».",
+  "gm": "",
+  "atti": [
+   4
+  ],
+  "links": [
+   "jn-vetreria-del-giudice",
+   "jn-gabrielus-forcinum"
+  ]
+ },
+ {
+  "id": "jn-cipriano-lu-grille",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Cipriano 'Lu Grìlle'",
+  "sub": "Oste del Canto del Grillo",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, al Canneto Verde.",
+  "pub": "Sordo da un orecchio, sente tutto quello che non dovrebbe. « Qui si mangia, si beve e non si fanno domande. O almeno, io non ne faccio. »",
+  "gm": "Vende informazioni ai Naviganti, alla Basilica e forse ad altri. Non prende partito, prende monete.",
+  "atti": [],
+  "links": [
+   "jn-osteria-canto-del-grillo"
+  ]
+ },
+ {
+  "id": "jn-salvio-lu-luppe",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Salvio 'Lu Luppe'",
+  "sub": "Padrone della Locanda della Luna Storta",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, nei Vicoli Grigi.",
+  "pub": "Occhi che sembrano contare i soldi mentre ti parla. « Qui non è successo niente. Non è successo niente ieri. Non succederà niente domani. Vuoi un letto o no? »",
+  "gm": "",
+  "atti": [],
+  "links": [
+   "jn-locanda-luna-storta"
+  ]
+ },
+ {
+  "id": "jn-nicola-lu-mulinare",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Nicola 'Lu Mulinàre'",
+  "sub": "Oste del Mulino Fermo, fuori la Porta delle Colline",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Fuori le mura di Julia Nova, alla sua osteria.",
+  "pub": "Non fa domande. « Posto per dormire? Quattro soldi. Cena? Due. Silenzio sulle domande? Gratis, per abitudine. »",
+  "gm": "Una stanza si affitta solo su raccomandazione. Non confondere con Nìcola, il contadino delle terre dell'Abate (Atto XII).",
+  "atti": [],
+  "links": [
+   "jn-osteria-mulino-fermo"
+  ]
+ },
+ {
+  "id": "jn-dama-lellena",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Dama Lellèna 'de li Faliscòrpi'",
+  "sub": "Nobildonna pettegola dei Giardini della Rimembranza",
+  "img": null,
+  "state": "segreto",
+  "status": "Viva. A Julia Nova, nel Quartiere Nobiliare.",
+  "pub": "Una dama del Quartiere Nobiliare che frequenta i Giardini della Rimembranza.",
+  "gm": "Nota chi si siede sulla panchina vicino alla fontana e lo avvicina: ha sempre notizie da vendere, al prezzo di conversazione e un po' di attenzione.",
+  "atti": [],
+  "links": [
+   "jn-giardini-rimembranza"
+  ]
+ },
+ {
+  "id": "jn-sir-ottavio",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Sir Ottavio 'Lu Specchiaròle'",
+  "sub": "Venditore cieco di specchi, Quartiere Nobiliare",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. A Julia Nova, introvabile quando lo si cerca.",
+  "pub": "Un cavaliere cieco che vende specchi nel Quartiere Nobiliare.",
+  "gm": "Voce: i suoi specchi mostrano cose che non ci sono. La Guardia vuole interrogarlo ma nessuno riesce a trovarlo. Solo nella tabella voci. Non confondere con Ottavio Ceruso (ritratto di Bëllindë).",
+  "atti": [],
+  "links": [
+   "jn-quartiere-nobiliare"
+  ]
+ },
+ {
+  "id": "jn-micucci-lu-fuossatore",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Micucci 'Lu Fuossatóre'",
+  "sub": "Guardiano del cimitero",
+  "img": null,
+  "state": "segreto",
+  "status": "Vivo. Fuori la Porta dei Morti, nel recinto del cimitero.",
+  "pub": "Il guardiano del cimitero fuori le mura.",
+  "gm": "Non lascia mai il recinto di notte: « qualcuno deve restare a sentire ». Sa delle luci tra le tombe e forse della botola.",
+  "atti": [],
+  "links": [
+   "jn-cimitero-moderno",
+   "jn-botola-necropoli"
+  ]
+ },
+ {
+  "id": "jn-titta-il-fornaio",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Titta il Fornaio",
+  "sub": "Fornaio del mercato, sfollato dall'assedio",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. A Julia Nova, tra gli sfollati.",
+  "pub": "Ha perso casa e bottega nell'assedio. Guidava le trenta persone affamate che al guado del Vomano volevano assaltare i carri dei Barbus: « Tìne lu pane e l'oglie pe' li signuri, mentre li fije nostre se magnene la polvere? » Luigis lo ha convinto senza sangue, e i suoi uomini hanno tirato i carri fuori dal fango.",
+  "gm": "Un volto del mercato che Adamus conosce. Possibile portavoce degli sfollati per il lazzaretto di Altavia.",
+  "atti": [
+   10
+  ],
+  "links": [
+   "jn-piazza-del-pane",
+   "jn-zio-nando"
+  ]
+ },
+ {
+  "id": "jn-zio-nando",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Zio Nando",
+  "sub": "Carrettiere di Casa Barbus",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Ha portato i carri dei Barbus a Julia Nova; poi presumibilmente tornato a Secernium.",
+  "pub": "Sulla cassetta del carro impantanato, balestra in mano, davanti a trenta affamati. Alla Porta Sud, con gli occhi lucidi, a Luigis: « Tuo padre ha detto solo una cosa: 'Dite a mio figlio che se serve acciaio, fonderemo gli aratri. Ma per ora, che mangino.' »",
+  "gm": "",
+  "atti": [
+   10
+  ],
+  "links": [
+   "jn-titta-il-fornaio"
+  ]
+ },
+ {
+  "id": "jn-ariellia-ragaiola",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Popolo e taverne",
+  "title": "Ariellia Ragaiola",
+  "sub": "Maestra di lettere nel quartiere popolare — compagna di Matthios",
+  "img": null,
+  "state": "noto",
+  "status": "Viva. A Julia Nova, dove aspetta Matthios.",
+  "pub": "Umana del Luminor Settentrionale, maestra di lettere e storie in una scuola del quartiere popolare, per i bambini che il sistema preferirebbe dimenticare. Appassionata di racconti antichi, devota fervente della Fiamma Solare: composta, riflessiva, religiosa — il contrasto più assurdo del mondo con Matthios.",
+  "gm": "Non compare nei diari. Il contatto con Virellius (fede autentica) e con i bambini del quartiere può essere un aggancio.",
+  "atti": [],
+  "links": [
+   "jn-popolare-ovest"
+  ]
+ },
+ {
+  "id": "jn-berardo-de-colle-lungo",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Tenuta di Altavia",
+  "title": "Berardo de Còlle Lungo",
+  "sub": "Anima liberata da un'Armatura Animata — vecchio servitore dei Padroni Veri",
+  "img": null,
+  "state": "incontrato",
+  "status": "Morto e liberato. La sua anima è andata via da Altavia benedicendovi.",
+  "pub": "Vecchio servitore dei Padroni Veri con l'aquila dorata sulla livrea, imprigionato quarant'anni in un'Armatura d'Argento e Ombra: « Quarant'anne so' stato là dentro… Che lu Sole e le Du' Lune ve benedicano, figlie. » Per un istante il cortile ha profumato di pane appena sfornato.",
+  "gm": "Terzo « Berardo » delle fonti (con il Sindaco di Colleventoso e San Berardo). Testimone che la Tenuta era degli Aurex.",
+  "atti": [
+   11
+  ],
+  "links": [
+   "jn-tenuta-di-altavia"
+  ]
+ },
+ {
+  "id": "jn-celestina",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Tenuta di Altavia",
+  "title": "Celestina Colabello",
+  "sub": "Anima liberata da un'Armatura Animata — cameriera dal sorriso vuoto",
+  "img": null,
+  "state": "incontrato",
+  "status": "Morta e liberata. Vi ha affidato un messaggio per la madre Assunta, a Tortoreto.",
+  "pub": "La cameriera dal sorriso vuoto: « Dicìteje a mi' ma'… sta a Tortoreto… se chiama Assunta… dicìteje che la fija sua l'amava… »",
+  "gm": "Promessa aperta: trovare Assunta Colabello a Tortoreto, vicino alla chiesa di San Nicola. La masseria bruciata dei Colabelle sulla Via delle Colline (Atto XII) è forse la stessa famiglia.",
+  "atti": [
+   11
+  ],
+  "links": [
+   "jn-tenuta-di-altavia"
+  ]
+ },
+ {
+  "id": "jn-lu-grise",
+  "cat": "png",
+  "city": "julianova",
+  "group": "Tenuta di Altavia",
+  "title": "Lu Grise — l'Osservatore",
+  "sub": "Spia di Veneranda Iuvenza",
+  "img": null,
+  "state": "incontrato",
+  "status": "Vivo. Vi segue da Julia Nova; era a Mushanè con i mercenari vesperiani.",
+  "pub": "La figura grigia al servizio di Iuvenza. Vi ha seguiti da Julia Nova; al ponte di Mushanè era appoggiato a un albero tra i mercenari senza insegne, e in chiesa non ha combattuto: ha parlato piano e ha aizzato i cani di qualcun altro contro di voi.",
+  "gm": "(proposta) È l'« ombra ammantata che non parla » che vi ha condotti dai vigneti al sentiero dei contrabbandieri nell'Atto V. Scheda completa nel compendio di Mushanè.",
+  "atti": [
+   5,
+   12,
+   14
+  ],
+  "links": [
+   "jn-veneranda-iuvenza"
+  ]
+ }
+]
