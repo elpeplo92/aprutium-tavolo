@@ -37,13 +37,13 @@ blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/`
 ## Come si pubblica una nuova versione (procedura standard)
 
 1. Modifica `src/tavolo.html`.
-2. Alza il numero di versione: cerca `title="Versione della pagina">v42</span>` → v43, ecc.
+2. Alza il numero di versione: cerca `title="Versione della pagina">v44</span>` → v45, ecc.
    Una versione per ogni pubblicazione, sempre. Giuseppe controlla il numero in alto a destra
    nella pagina per capire se vede quella nuova (i browser fanno cache).
 3. `python3 build.py` → deve stampare "ok: ... versione vNN ... immagini usate" senza MANCANTI.
 4. Prova la pagina: apri `index.html` con Playwright/Chromium headless, controlla che non ci siano
    errori in console e che compaiano la mappa e i token. Non pubblicare mai senza una prova.
-5. `git add -A && git commit -m "v43: cosa è cambiato" && git push origin main`.
+5. `git add -A && git commit -m "v45: cosa è cambiato" && git push origin main`.
 6. Dopo ~1 minuto è online. Dì a Giuseppe il numero di versione e cosa è cambiato, in due righe.
 
 Piano B se il push da qui non funziona: crea `aprutium-tavolo-site-vNN.tgz` con `index.html`,
@@ -71,9 +71,18 @@ sovrascrivere un file esistente lì fallisce in silenzio) e lui fa doppio click 
 
 ## Cose note / limiti
 
+- **TRAPPOLA FIREBASE — leggere prima di toccare lo stato.** Realtime Database non conserva gli
+  array vuoti: la chiave sparisce del tutto. Uno stato salvato con `fog.ops: []`, `log: []`,
+  `order: []` torna indietro SENZA quelle chiavi, e ogni `for...of` su di loro va in errore.
+  In v44 questo aveva spento la nebbia, il tasto Porte (che non diventava più giallo perché
+  `drawFog()` andava in errore prima del toggle della classe), il tasto Muri (che restava
+  incastrato acceso) e "Rivela intorno al gruppo". La correzione è la funzione `normalize(s)`
+  in testa al sorgente, chiamata da `merge()` a ogni lettura: ricostruisce la forma dello stato.
+  **Qualunque nuovo campo array o oggetto dello stato va aggiunto a `SHAPE_ARR` / `SHAPE_OBJ`.**
 - Il "Gobbo" (co-narratore live, sezione `#secGobbo`) usa `claude.use('sample')`: funziona SOLO
-  nell'artifact claude.ai, non sul sito pubblico. Sul sito la sezione va tenuta nascosta o
-  sostituita con una chiamata sicura (da decidere con Giuseppe, senza mai mettere chiavi API nel client).
+  nell'artifact claude.ai. Dalla v44 la sezione si nasconde da sola sul sito pubblico (dove
+  `window.claude` non esiste) invece di offrire bottoni muti. Per farlo funzionare sul sito
+  servirebbe un backend: mai chiavi API nel client.
 - Esiste ancora l'artifact claude.ai del tavolo (v42, https://claude.ai/code/artifact/a30177dd-72ce-45df-a4aa-1aa72f45e8ee)
   con il suo db separato: è il vecchio canale, il sito è quello buono. Non tenerli sincronizzati a mano.
 - I giocatori (personaggi): Alessandro→Alessandros Cerullius, Vincenzo→Vicarus Cerullius,
