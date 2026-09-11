@@ -354,7 +354,7 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <h1>APRUTIUM · Atto Terzo</h1><span class="eyebrow" id="ver" title="Versione della pagina">v45</span>
+    <h1>APRUTIUM · Atto Terzo</h1><span class="eyebrow" id="ver" title="Versione della pagina">v46</span>
     <span class="eyebrow pl" id="sceneName">Sotto Bëllindë</span><label class="gm row" style="gap:6px"><span class="eyebrow">Scena</span><select id="sceneSel" style="max-width:260px"></select></label>
     <button id="btnComp" class="mini" style="border-color:var(--gold-dim)">Compendio</button>
     <span class="spacer"></span>
@@ -1706,6 +1706,7 @@ function c3Chain(e){ const out=[]; let cur=e; let guard=0; while(cur&&cur.parent
 function c3Incomplete(e){ return !(e.pub&&e.pub.trim())||!c2Img(e); }
 
 /* --- il contenitore --- */
+document.getElementById('btnComp').onclick=()=>openCompendio();
 openCompendio=function(){
   openModal(`<div class="c3"><aside class="c3nav" id="c3nav"></aside><section class="c3main" id="compBody"></section><aside class="c3det" id="compDetail"></aside></div><div id="c3zoom"><img alt=""></div>`,'comp');
   const z=document.getElementById('c3zoom'); z.onclick=()=>{ z.style.display='none'; };

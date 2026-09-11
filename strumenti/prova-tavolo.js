@@ -70,6 +70,10 @@ const file = path.resolve(process.argv[2] || 'index.html');
       };
       for (const [nome, fn] of Object.entries(viste)) { provati++; try { fn(); } catch (e) { rotte.push(nome + ' → ' + e.name + ': ' + e.message); } }
 
+      // Compendio: il tasto vero deve aprire il pannello a tre colonne (bug v45: il tasto puntava alla funzione vecchia)
+      provati++;
+      try { closeModal(); document.getElementById('btnComp').click(); if(!document.querySelector('.c3')) rotte.push('Compendio → il tasto apre la cornice vecchia, non il pannello a tre colonne'); closeModal(); }
+      catch (e) { rotte.push('Compendio (clic sul tasto) → ' + e.name + ': ' + e.message); }
       const ver = (document.getElementById('ver') || {}).textContent;
       return { rotte, provati, ver };
     });
