@@ -27,23 +27,29 @@ blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/`
 | `build.py` | `python3 build.py` copia il sorgente in `index.html` e controlla che le immagini esistano. `--inline` produce `dist/tavolo-unico.html` (tutto in un file, solo per l'artifact claude.ai). `--extract FILE` fa il contrario. |
 | `index.html` | **GENERATO** da build.py. Non modificarlo a mano. |
 | `src/ext*_ui.js`, `src/poi_imgs.js` | Storico dei moduli già integrati in tavolo.html (ext6 = Gobbo, ext7 = Compendio v2). Solo riferimento. |
+| `contenuti/mondo/*.json` | **FONTE UNICA della sezione "Il Mondo di Ea"** (v45): un file per voce — atlante, 28 nazioni + Terre Neutrali, 10 province, Ducato, 8 contee, 43 borghi. Schema: `id` (= nome file), `cat:"mondo"`, `livello` (atlante/nazione/provincia/ducato/contea/borgo), `parent`, `group`, `title`, `sub`, `img` e `mappa` (NOME LEGGIBILE dell'immagine, es. `Mappa di Teramum.jpg`), `colore` (tinta della scheda senza immagine), `scheda` (coppie chiave/valore), `state`, `pub`, `gm`, `atti`, `links`, `tag`, `tavolo` (scena da aprire). **Si modificano QUESTI file, non il blocco nel sorgente.** |
+| `contenuti/mondo/_immagini_nuove.json` | Nome leggibile → `img/xxx.jpg` per le immagini aggiunte dopo `COMP_IMG`. |
 | `comp/data7.js` | Dati del Compendio (`COMPENDIO_DATA`, 375 voci + `COMP_IMG`) già inclusi in tavolo.html. Rigenerato da `comp/out/*.json`. |
 | `comp/out/*.json` | Voci del Compendio per città/categoria (julianova, mushane, bellinde, fazioni, miti, oggetti, crociata, quest, diario). Schema in `comp/SCHEMA.md`. |
 | `stato/stato_fb.json` | Snapshot dello stato di gioco caricato in Firebase `partita/stato` (token, log, override). |
 | `sessioni/` | Diario dell'ultimo Atto (XVI) e log della sessione. La copia "ufficiale" è nel Progetto. |
+| `strumenti/prova-tavolo.js` | **La prova da lanciare prima di ogni pubblicazione.** `node strumenti/prova-tavolo.js` (oppure su `src/tavolo.html`). Preme tutti i bottoni nei due ruoli dopo aver simulato il giro dei dati su Firebase. |
 | `strumenti/PUBBLICA-TAVOLO.bat` | Pubblicazione manuale dal PC di Giuseppe (piano B, vedi sotto). |
 | `.nojekyll` | Obbligatorio per GitHub Pages (serve i file così come sono). |
 
 ## Come si pubblica una nuova versione (procedura standard)
 
 1. Modifica `src/tavolo.html`.
-2. Alza il numero di versione: cerca `title="Versione della pagina">v44</span>` → v45, ecc.
+2. Alza il numero di versione: cerca `title="Versione della pagina">v45</span>` → v46, ecc.
    Una versione per ogni pubblicazione, sempre. Giuseppe controlla il numero in alto a destra
    nella pagina per capire se vede quella nuova (i browser fanno cache).
-3. `python3 build.py` → deve stampare "ok: ... versione vNN ... immagini usate" senza MANCANTI.
-4. Prova la pagina: apri `index.html` con Playwright/Chromium headless, controlla che non ci siano
-   errori in console e che compaiano la mappa e i token. Non pubblicare mai senza una prova.
-5. `git add -A && git commit -m "v45: cosa è cambiato" && git push origin main`.
+3. `python3 build.py` → prima rigenera il blocco `/*@MONDO_DATA*/…/*@/MONDO_DATA*/` dentro `src/tavolo.html` dai file di `contenuti/` (o solo quello: `python3 build.py --contenuti`), poi copia in `index.html`. Deve stampare "ok: ... versione vNN ... immagini usate" senza MANCANTI.
+4. **Prova obbligatoria: `node strumenti/prova-tavolo.js`.** Simula il giro dei dati su Firebase e
+   preme tutti i bottoni nei due ruoli. Deve finire con "Nessun problema: si può pubblicare".
+   Se stampa anche un solo ROTTO, non si pubblica. Guardare solo la console del browser NON basta:
+   i guasti di questo tavolo sono quasi sempre muti (un `onclick` che va in errore non stampa nulla
+   e lascia il bottone lì, inerte). Serve premere i bottoni davvero.
+5. `git add -A && git commit -m "v46: cosa è cambiato" && git push origin main`.
 6. Dopo ~1 minuto è online. Dì a Giuseppe il numero di versione e cosa è cambiato, in due righe.
 
 Piano B se il push da qui non funziona: crea `aprutium-tavolo-site-vNN.tgz` con `index.html`,
@@ -59,6 +65,26 @@ sovrascrivere un file esistente lì fallisce in silenzio) e lui fa doppio click 
 - Auth: **Anonima** per i giocatori; **Email/password** per il master, utente `master@aprutium.it`
   (la password la conosce solo Giuseppe: non chiedergliela, non scriverla mai nel repo).
 - Regole: `partita/**` lettura/scrittura per utenti autenticati; `master/**` solo per master@aprutium.it.
+- **Piano Spark: 100 connessioni simultanee.** Una connessione = una scheda del browser aperta.
+  Sette persone al tavolo non lo sfiorano; tenerlo a mente solo se un giorno il link gira largo.
+  Altri tetti (validi su tutti i piani): profondità 32 livelli, stringa singola max 10 MB,
+  scrittura singola max 16 MB. Fonte: https://firebase.google.com/docs/database/usage/limits
+- **COSA PERDE FIREBASE — la trappola che ha già fatto danni.** Realtime Database non è un archivio
+  JSON fedele. Butta via, senza avvisare:
+  · le liste vuote (`[]`) — la chiave sparisce del tutto;
+  · gli oggetti vuoti (`{}`) — idem;
+  · i valori `null` — idem.
+  Inoltre un `undefined` dentro i dati fa fallire l'intera scrittura.
+  Un salvataggio con `fog.ops: []` torna indietro senza `ops`, e `for (const o of f.ops)` va in errore.
+  L'11/09/2026 questo aveva ucciso 13 comandi (Inizia scontro, Prossimo turno, Termina, Porte,
+  Rivela intorno al gruppo, aree degli incantesimi, bestiario, tiri segreti/visibili, Annulla
+  movimento, TS contro morte, Tira libero) — tutti muti, nessun messaggio. Il tasto Muri restava
+  incastrato acceso e il tasto Porte non si accendeva mai, perché `drawFog()` andava in errore
+  prima del cambio di colore.
+  **La difesa è la funzione `normalize(s)` in testa al sorgente**, chiamata da `merge()` a ogni
+  lettura: ricostruisce la forma dello stato. Ogni campo nuovo dello stato va aggiunto a
+  `SHAPE_ARR` (liste) o `SHAPE_OBJ` (oggetti), altrimenti il problema si ripresenta identico.
+  Controprova fatta: stesso codice con un database fedele → 0 errori; con Firebase → 13 comandi morti.
 - La pagina scrive/legge un solo documento: `partita/stato` (JSON con `tokens`, `log`, `poiPos`,
   `compOv`, `comp2`, `inv`, ecc.). Funzioni chiave in tavolo.html: `fbConnect()`, `fbMasterLogin()`,
   l'adapter espone `db.doc(path).get/set/onSnapshot` come il vecchio db degli artifact.
@@ -68,6 +94,16 @@ sovrascrivere un file esistente lì fallisce in silenzio) e lui fa doppio click 
   console Firebase dal suo Chrome (Claude in Chrome) oppure aggiornare `stato/stato_fb.json` qui e
   caricarlo dalla pagina stessa via `javascript_tool` (`firebase.database().ref('partita/stato').set(...)`).
   Le chiamate dirette a googleapis/firebaseio dal container Claude sono bloccate dalla rete.
+
+## Il Compendio a tre colonne (v45)
+
+Il Compendio è un pannello a tre colonne: elenco a sinistra (sezioni, Raccolte, Visibilità), griglia di schede
+al centro, dettaglio a destra (`#compDetail`). La sezione "Il Mondo di Ea" è ad albero: chip per livello
+(Mappe, Nazioni, Province, Ducato, Contee, Borghi), briciole di pane, tab Panoramica / Collegamenti / Note.
+Codice: blocco "ESTENSIONE 8" in fondo al sorgente (`openCompendio`, `renderCompendio`, `c3RenderBody`,
+`c3RenderDetail`). Le altre sezioni usano ancora `renderC2Entry`, che ora scrive nel pannello di dettaglio.
+Preferiti e Recenti stanno in `localStorage` (per persona, per browser); le Note del master in
+`S.notes['c2:'+id]` (Firebase, condivise fra i dispositivi del master).
 
 ## Cose note / limiti
 
