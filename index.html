@@ -86,6 +86,12 @@ header .spacer{flex:1}
 #world img{display:block;width:1448px;height:1086px;pointer-events:none}
 #grid{position:absolute;inset:0;pointer-events:none}
 #fog{position:absolute;left:0;top:0;pointer-events:none}
+#fogsmoke{position:absolute;left:0;top:0;width:1448px;height:1086px;pointer-events:none;display:none;-webkit-mask-size:100% 100%;mask-size:100% 100%;overflow:hidden}
+#fogsmoke::before,#fogsmoke::after{content:'';position:absolute;inset:-50%;background:radial-gradient(circle at 20% 30%,rgba(140,155,180,.07),transparent 35%),radial-gradient(circle at 70% 60%,rgba(140,155,180,.06),transparent 40%),radial-gradient(circle at 45% 85%,rgba(140,155,180,.05),transparent 30%);animation:smokeA 46s linear infinite}
+#fogsmoke::after{animation-duration:71s;animation-direction:reverse;opacity:.7}
+@keyframes smokeA{0%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(6%,-4%) rotate(3deg)}100%{transform:translate(0,0) rotate(0deg)}}
+@media (prefers-reduced-motion:reduce){#fogsmoke::before,#fogsmoke::after{animation:none}}
+
 #stage.fogtool{cursor:cell}
 #tokens{position:absolute;inset:0;pointer-events:none}
 .tok{pointer-events:auto}
@@ -388,7 +394,7 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1>APRUTIUM</h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v59</span></div>
+    <div class="brand"><h1>APRUTIUM</h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v60</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -403,7 +409,7 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
   <main id="stage">
     <div id="world">
       <img id="mapimg" alt="Mappa del dungeon">
-      <svg id="grid"></svg><canvas id="walls" width="1448" height="1086"></canvas><canvas id="fog" width="1448" height="1086"></canvas><div id="pois"></div><div id="places"></div>
+      <svg id="grid"></svg><canvas id="walls" width="1448" height="1086"></canvas><canvas id="fog" width="1448" height="1086"></canvas><div id="fogsmoke"></div><div id="pois"></div><div id="places"></div>
       <div id="tokens"></div>
       <svg id="aoe"></svg><svg id="measure"></svg>
       <div id="dragm"></div><div id="confirm"><div id="confirmTxt"></div><div class="row" style="justify-content:flex-start"><button id="mvYes" class="primary">Conferma</button><button id="mvNo">Annulla</button></div><div class="row" style="justify-content:flex-start"><button id="mvDash" title="Azione Scatto: raddoppia il movimento per questo turno">Corri (movimento ×2)</button></div></div>
@@ -676,22 +682,34 @@ function drawMeasure(a,b,final){
 const fogC=document.getElementById('fog'), fogCtx=fogC.getContext('2d');
 let fogTool=null; // 'r' | 'h'
 const FOG_R=()=>S.grid.size*4; // raggio pennello: 4 caselle = 6 m
+const fogMask=document.createElement('canvas'); fogMask.width=1448; fogMask.height=1086; const fogMaskCtx=fogMask.getContext('2d');
+const fogNoise=(()=>{ const c=document.createElement('canvas'); c.width=c.height=512; const x=c.getContext('2d'); x.fillStyle='#000'; x.fillRect(0,0,512,512);
+  for(let i=0;i<220;i++){ const r=50+Math.random()*130, px=Math.random()*512, py=Math.random()*512; const a=.025+Math.random()*.05;
+    for(const [ox,oy] of [[0,0],[512,0],[-512,0],[0,512],[0,-512],[512,512],[-512,-512],[512,-512],[-512,512]]){ const g=x.createRadialGradient(px+ox,py+oy,0,px+ox,py+oy,r); g.addColorStop(0,`rgba(95,108,130,${a})`); g.addColorStop(1,'rgba(95,108,130,0)'); x.fillStyle=g; x.beginPath(); x.arc(px+ox,py+oy,r,0,Math.PI*2); x.fill(); } }
+  return c; })();
 function drawFog(){
   const f=S.fog||{on:false,ops:[]};
   fogCtx.clearRect(0,0,MAP_W,MAP_H);
+  const smoke=document.getElementById('fogsmoke'); if(smoke) smoke.style.display='none';
   if(!f.on||(typeof CUR!=='undefined'&&CUR&&!CUR.fog)){ return; }
   if(IS_GM&&typeof editTool!=='undefined'&&editTool==='wall') return;
-  fogCtx.globalCompositeOperation='source-over';
-  fogCtx.fillStyle=IS_GM?'rgba(8,5,3,.55)':'rgb(8,5,3)'; fogCtx.fillRect(0,0,MAP_W,MAP_H);
+  /* 1. maschera delle zone svelate (nero = si vede) */
+  const m=fogMaskCtx; m.clearRect(0,0,MAP_W,MAP_H);
   for(const o of f.ops){
-    fogCtx.globalCompositeOperation=o.t==='r'?'destination-out':'source-over';
-    fogCtx.fillStyle=IS_GM?'rgba(8,5,3,.55)':'rgb(8,5,3)';
-    if(o.t==='r'&&o.los){ const pts=losPoly(o.x,o.y,o.r); fogCtx.fillStyle='rgba(0,0,0,1)'; fogCtx.beginPath(); pts.forEach((p,i)=>i?fogCtx.lineTo(p[0],p[1]):fogCtx.moveTo(p[0],p[1])); fogCtx.closePath(); fogCtx.fill(); continue; }
-    const g=fogCtx.createRadialGradient(o.x,o.y,o.r*.7,o.x,o.y,o.r);
-    if(o.t==='r'){ g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(1,'rgba(0,0,0,0)'); fogCtx.fillStyle=g; }
-    fogCtx.beginPath(); fogCtx.arc(o.x,o.y,o.r,0,Math.PI*2); fogCtx.fill();
+    m.globalCompositeOperation=o.t==='r'?'source-over':'destination-out'; m.fillStyle='rgba(0,0,0,1)';
+    if(o.t==='r'&&o.los){ const pts=losPoly(o.x,o.y,o.r); m.beginPath(); pts.forEach((p,i)=>i?m.lineTo(p[0],p[1]):m.moveTo(p[0],p[1])); m.closePath(); m.fill(); continue; }
+    if(o.t==='r'){ const g=m.createRadialGradient(o.x,o.y,o.r*.7,o.x,o.y,o.r); g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(1,'rgba(0,0,0,0)'); m.fillStyle=g; }
+    m.beginPath(); m.arc(o.x,o.y,o.r,0,Math.PI*2); m.fill();
   }
+  m.globalCompositeOperation='source-over';
+  /* 2. coltre: buio blu notte + fumo, poi si ritaglia la maschera con i bordi sfumati */
   fogCtx.globalCompositeOperation='source-over';
+  fogCtx.fillStyle=IS_GM?'rgba(6,9,15,.62)':'rgb(6,9,15)'; fogCtx.fillRect(0,0,MAP_W,MAP_H);
+  fogCtx.globalAlpha=IS_GM?.45:.8; const pat=fogCtx.createPattern(fogNoise,'repeat'); fogCtx.fillStyle=pat; fogCtx.fillRect(0,0,MAP_W,MAP_H); fogCtx.globalAlpha=1;
+  fogCtx.globalCompositeOperation='destination-out'; fogCtx.filter='blur(9px)'; fogCtx.drawImage(fogMask,0,0); fogCtx.filter='none';
+  fogCtx.globalCompositeOperation='source-over';
+  /* 3. strato di fumo che si muove, ritagliato dalla stessa nebbia */
+  if(smoke){ try{ const url=fogC.toDataURL('image/png'); smoke.style.webkitMaskImage=`url(${url})`; smoke.style.maskImage=`url(${url})`; smoke.style.display=''; }catch(e){} }
 }
 function fogVisible(x,y){ const f=S.fog; if(!f||!f.on) return true; let v=false; for(const o of f.ops){ if(Math.hypot(o.x-x,o.y-y)<o.r*.9){ if(o.los&&!lineClear(o.x,o.y,x,y)) continue; v=(o.t==='r'); } } return v; }
 function fogOp(t,x,y,r,los){ S.fog=S.fog||{on:true,ops:[]}; const last=S.fog.ops[S.fog.ops.length-1]; if(last&&last.t===t&&!los&&Math.hypot(last.x-x,last.y-y)<r*.35) return; const op={t,x:Math.round(x),y:Math.round(y),r:Math.round(r||FOG_R())}; if(los) op.los=1; S.fog.ops.push(op); if(S.fog.ops.length>600) S.fog.ops.splice(0,S.fog.ops.length-600); drawFog(); }
