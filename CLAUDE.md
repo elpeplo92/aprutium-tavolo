@@ -231,3 +231,7 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 ## v68 (12/09/2026)
 
 - Corpo 20px, tutte le taglie del CSS +2px. Draconis anche in corsivo e grassetto corsivo (`font/Draconis-Italic.otf`, `Draconis-BoldItalic.otf`). Grassetto: nomi, titoli, etichette, pulsanti primari, chi tira nel Registro. Corsivo: note, testi da leggere ai giocatori, note del master. Regola in fondo al CSS («grassetto e corsivo (v68)»).
+
+## v69 (12/09/2026)
+
+- Tutte le taglie del CSS +3px (corpo 23px). Colonne: 250 / mappa / 340 (guida) / 370 (regia). Giuseppe vuole caratteri grandi: prima di ridurre qualcosa, chiedere.
