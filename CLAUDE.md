@@ -180,3 +180,12 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 ## v58 (12/09/2026)
 
 - Schede dei PG a sinistra **orizzontali** (come nel mockup di Giuseppe): ritratto 68px a sinistra con il badge iniziativa sull'angolo, a destra nome (solo il primo nome per i PG, il nome intero nel `title`), PF «26 / 36» e barra. Colonna 236px. Struttura: `.med > .pic(.init,.disc) + .info(.nm,.hpn,.hpbar,.condrow,.ds)`. Il `.med` non ha più l'immagine di sfondo: sta su `.pic`.
+
+## v59 (12/09/2026) — punti d'interesse (PDI) e token dei PG
+
+- **Token dei PG**: `PG_TOKENS` (id → `img/<md5>.png`, i file `TOKEN - PG …` di `05_Immagini\Token Roll20`, con l'anello verde già dentro l'immagine). Classe `.tok.hastok`: niente bordo colorato né sfondo; resta solo il bagliore oro del turno attivo. Alias in `_immagini.json`.
+- **PDI, tipi** (`poiKind`): porta, trappola, enigma, dettaglio, scontro, stanza, corridoio, scena, persona. I vecchi `lore→dettaglio`, `boss→scontro`, `passaggio→porta`. Icone in `POI_ICONS` (+ `unknown` = «?»).
+- **Visibilità**: i giocatori vedono ogni PDI come «?» finché il master non lo svela (`S.poiRev[id]`, in `SHAPE_OBJ` e in `merge`). Tipi **nascosti** (`poiHidden`: trappola, dettaglio, porta con `segreta:true`) non compaiono affatto finché non svelati. Il master vede sempre l'icona vera; se non svelato ha anello tratteggiato + badge «?» (`.poi.unrev`).
+- **Scheda PDI (master)**: «Svela/Nascondi ai giocatori»; «Da leggere ai giocatori» = `text`; Note del master = `gm`; per i nascosti «Per notarlo: Percezione CD `spotDc`» (default 13, campo `spot` per cambiare abilità) a un PG o a tutto il gruppo → `S.request.poi=id`; `poiCheckReveal(tot)` (in `doRoll` e `rollFor`) svela da solo se qualcuno passa. La prova del punto (`skill/dc/ok/ko`) resta separata, anche lei a uno o a tutti.
+- I giocatori che cliccano un «?» vedono solo «Qualcosa, qui — il master vi dirà cosa vedete».
+- Regola di Giuseppe: ogni PDI ha immagine, testo da leggere, note master; prova quasi sempre; bottino solo dove c'è (da fare: voci con «Assegna a…» PG/Party/Crociata → `S.inv`). Prossimo: aggiungere a Sotto Bëllindë i PDI stanza/corridoio/scena dagli handout (lista da approvare).
