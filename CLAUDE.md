@@ -29,6 +29,7 @@ blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/`
 | `src/ext*_ui.js`, `src/poi_imgs.js` | Storico dei moduli già integrati in tavolo.html (ext6 = Gobbo, ext7 = Compendio v2). Solo riferimento. |
 | `contenuti/mondo/*.json` | **FONTE UNICA della sezione "Il Mondo di Ea"** (v45): un file per voce — atlante, 28 nazioni + Terre Neutrali, 10 province, Ducato, 8 contee, 43 borghi. Schema: `id` (= nome file), `cat:"mondo"`, `livello` (atlante/nazione/provincia/ducato/contea/borgo), `parent`, `group`, `title`, `sub`, `img` e `mappa` (NOME LEGGIBILE dell'immagine, es. `Mappa di Teramum.jpg`), `colore` (tinta della scheda senza immagine), `scheda` (coppie chiave/valore), `state`, `pub`, `gm`, `atti`, `links`, `tag`, `tavolo` (scena da aprire). **Si modificano QUESTI file, non il blocco nel sorgente.** |
 | `contenuti/mondo/_immagini_nuove.json` | Nome leggibile → `img/xxx.jpg` per le immagini aggiunte dopo `COMP_IMG`. |
+| `contenuti/mondo/_immagini_nuove.json` (voci `Mondo — <titolo>.png`) | **Le immagini degli handout del Mondo.** Ogni voce ha `img: "Mondo — <titolo>.png"` (nome stabile) e questa tabella dice dov'è il file: `img/xxx.jpg` (locale, definitivo) oppure un URL `https://d8j0ntlcm91z4.cloudfront.net/...` (provvisorio: render Higgsfield v47, il container non li scarica → 403). `c2Img` e `build.py` accettano entrambe le forme. **Fonte delle immagini definitive: Giuseppe le mette in `7_Aprutium/05_Immagini/Immagini Compendio - Il mondo/`** con nome `Nazione - X.jpg`, `Provincia - X.jpg`, `Contea - X.jpg`, `Borgo - X.jpg` (X = pezzo del titolo; "Magnafort" = Regno Nanico). Claude le stage-a, le riduce a 1920 px di lato lungo, jpg q85 progressivo, nome md5, le scrive in `Sito/img/` con `device_commit_files` (≤20 MB a file, ≤100 MB a chiamata: le immagini NON vanno nel tgz) e cambia SOLO questa tabella. Al 12/09/2026 (v48): 47 locali (29 nazioni, 9 province, 8 contee, Alba, copertina "Il Mondo di Ea"), 45 ancora esterne (Impero Aureo, prov. Aprutium, Ducato, 42 borghi) — elenco in `Sito/immagini-mondo.txt`, scaricabile con `Sito/SCARICA-IMMAGINI-MONDO.bat`. Le mappe (`mappa`) sono export Azgaar e non si rigenerano. |
 | `comp/data7.js` | Dati del Compendio (`COMPENDIO_DATA`, 375 voci + `COMP_IMG`) già inclusi in tavolo.html. Rigenerato da `comp/out/*.json`. |
 | `comp/out/*.json` | Voci del Compendio per città/categoria (julianova, mushane, bellinde, fazioni, miti, oggetti, crociata, quest, diario). Schema in `comp/SCHEMA.md`. |
 | `stato/stato_fb.json` | Snapshot dello stato di gioco caricato in Firebase `partita/stato` (token, log, override). |
@@ -126,6 +127,9 @@ Preferiti e Recenti stanno in `localStorage` (per persona, per browser); le Note
   La sezione "Naviganti Grigi / Perla Silenziosa" del Compendio è visibile SOLO ad Adamus e al master.
 - Compendio: tre stati per voce (visitato/incontrato, noto, segreto); override del master in
   `S.compOv[id]`, voci nuove in `S.comp2`, inventario per PG in `S.inv[pgId]`, tutti sincronizzati live.
+- `python3 build.py` in una copia di lavoro senza la cartella `img/` completa stampa MANCANTI ed esce con errore 1: è
+  normale se il pacchetto che consegni non contiene `img/` (il repo su GitHub le ha già). Controlla che la lista
+  siano solo immagini vecchie già online, poi lancia comunque `node strumenti/prova-tavolo.js`.
 - Mappa attuale: Bëllindë. I POI sono trascinabili dal master (`S.poiPos`).
 
 ## Come lavora Giuseppe

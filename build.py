@@ -75,7 +75,7 @@ def contenuti():
         assert e["id"] == fn[:-5], f"{fn}: l'id deve essere il nome del file"
         for k in ("img", "mappa"):
             v = e.get(k)
-            if v and not v.startswith("img/"):
+            if v and not v.startswith("img/") and not v.startswith("http"):
                 if v in comp_img: e[k] = comp_img[v]
                 else: mancanti.append(f"{e['id']}: {k} «{v}»"); e[k] = None
         voci.append(e)
