@@ -200,3 +200,8 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Quarta colonna `#guide` (solo master; `body.isgm` → griglia `236px 1fr 320px 340px`) tra la mappa e la Regia. Sopra `#guideTop`: `#luogoGM` (handout del luogo, per le scene-luogo) oppure `#sceneGuide` (per le scene-mappa: le schede di `SCENE_HANDOUTS` elencate da `SCENE_GUIDE[scena]` in ordine di gioco, ognuna apribile lì o «Apri» a tutto schermo). Sotto `#guideLog`: il **Registro** (`#secLog`), spostato lì da `applyRole` quando si è master; per i giocatori resta nella colonna destra.
 - Nelle scene-luogo si nascondono dock, zoom, strumenti e HUD (`renderGuide`).
 - Decisione di Giuseppe: il Registro sta sotto la guida della scena, così segue i tiri mentre legge.
+
+## v62–v63 (12/09/2026)
+
+- v62: tolto `will-change:transform` da `#world` (bloccava la resa a 100% e ingrandiva come una foto: token e mappa sgranati allo zoom).
+- v63: azioni del giocatore a gruppi **Azione / Azione bonus / Reazione / Senza azione** (`ACT_ECO`) con icona e colore per tipo (`ACT_ICON`: mischia, distanza, incantesimo, cura, speciale). Ogni azione in `DEFAULT_STATE` ha `tipo` ed `eco`; se mancano, `actTipo()` indovina dal nome. Tolta la nota «Trascina il tuo token…».
