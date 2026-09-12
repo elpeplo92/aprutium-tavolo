@@ -1,26 +1,26 @@
 {
  "id": "jn-torre-di-ombretra",
  "tipo": "luogo",
- "titolo": "La Torre di Ombretra e i Giardini del Silenzio",
- "sottotitolo": "Antica torre di pietra e ossidiana oltre le mura",
+ "titolo": "La Torre di Ombretra",
+ "sottotitolo": "Antica torre di pietra e ossidiana oltre la Porta del Vento",
  "citta": "julianova",
- "gruppo": "Fuori le mura",
+ "gruppo": "9. Porta Nord « Porta del Vento »",
  "livello": "luogo",
- "parent": "borgo-giglie",
- "img": "Luogo — La Torre di Ombretra e i Giardini del Silenzio.jpg",
+ "parent": "jn-porta-del-vento",
+ "img": "LUOGO - La Torre di Ombretra.jpg",
  "stato": "visitato",
  "atti": [
   1
  ],
  "compendio": true,
  "scheda": {
-  "Tipo": "Antica torre di pietra e ossidiana oltre le mura",
-  "Dove": "Fuori le mura"
+  "Tipo": "Antica torre di pietra e ossidiana oltre la Porta del Vento",
+  "Zona": "9. Porta Nord « Porta del Vento » — fuori le mura"
  },
  "pub": [
   {
    "t": "Aspetto esterno",
-   "txt": "Oltre le mura, nei Giardini del Silenzio, un'antica e solitaria torre di pietra e ossidiana, fra la città e la pineta che scende alla spiaggia."
+   "txt": "Oltre le mura, fuori dalla Porta del Vento, un'antica e solitaria torre di pietra e ossidiana, fra la città e la pineta che scende alla spiaggia. Vi si arriva attraversando i Giardini del Silenzio."
   },
   {
    "t": "Cosa sanno i personaggi",
@@ -31,14 +31,11 @@
   {
    "t": "Note del master",
    "txt": "Il Custode e la Torre non sono più ricomparsi dopo l'Atto I."
-  },
-  {
-   "t": "Da decidere (canon)",
-   "txt": "Posizione rispetto alla città non specificata: tra le mura e la spiaggia della battaglia, oltre una pineta."
   }
  ],
  "prove": [],
  "links": [
+  "jn-giardini-del-silenzio",
   "jn-spiaggia-della-battaglia",
   "jn-lu-spicchje-di-luna"
  ]

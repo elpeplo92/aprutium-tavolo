@@ -28,7 +28,7 @@ blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/`
 | `index.html` | **GENERATO** da build.py. Non modificarlo a mano. |
 | `src/ext*_ui.js`, `src/poi_imgs.js` | Storico dei moduli già integrati in tavolo.html (ext6 = Gobbo, ext7 = Compendio v2). Solo riferimento. |
 | `contenuti/mondo/*.json` | **FONTE UNICA della sezione "Il Mondo di Ea"** (v45; chiavi in forma tavolo, non ancora tradotte allo schema italiano): un file per voce — atlante, 28 nazioni + Terre Neutrali, 10 province, Ducato, 8 contee, 43 borghi. Schema: `id` (= nome file), `cat:"mondo"`, `livello` (atlante/nazione/provincia/ducato/contea/borgo), `parent`, `group`, `title`, `sub`, `img` e `mappa` (NOME LEGGIBILE dell'immagine, es. `Mappa di Teramum.jpg`), `colore` (tinta della scheda senza immagine), `scheda` (coppie chiave/valore), `state`, `pub`, `gm`, `atti`, `links`, `tag`, `tavolo` (scena da aprire). **Si modificano QUESTI file, non il blocco nel sorgente.** |
-| `contenuti/luoghi/*.json` | **FONTE UNICA dei Luoghi** (v49): 107 file — Julia Nova 70 (15 quartieri + 55 luoghi), Mushanè 22, Bëllindë 15. Schema del doc "Formato dei contenuti" (chiavi italiane): `id`, `tipo:"luogo"`, `titolo`, `sottotitolo`, `citta`, `gruppo`, `livello` (quartiere/luogo), `parent` (id del quartiere o del borgo del Mondo: `borgo-giglie`, `borgo-mushane`, `borgo-bellinde`), `img` (nome leggibile `Luogo — <titolo>.jpg`), `mappa` (immagine della mappa, solo i 15 quartieri), `stato`, `atti`, `scheda`, `pub` e `gm` (ELENCHI di blocchi `{t,txt}`), `prove` (`{t,skill,dc,ok,ko}`), `links`, `tavolo`, `segnaposto` (`{scena:"bellinde",id:"l1",num,x,y}` — solo i 15 di Bëllindë). `build.py` li traduce nella forma del tavolo (`_runtime`) e dai 15 con segnaposto genera anche l'array `LUOGHI` (handout a doppia sezione sulla mappa): **una cosa, un file**. |
+| `contenuti/luoghi/*.json` | **FONTE UNICA dei Luoghi** (v49, riordinati v52-53): 98 file — Julia Nova 61 (15 quartieri + 46 luoghi), Mushanè 22, Bëllindë 15. Schema del doc "Formato dei contenuti" (chiavi italiane): `id`, `tipo:"luogo"`, `titolo`, `sottotitolo`, `citta`, `gruppo`, `livello` (quartiere/luogo), `parent` (id del quartiere o del borgo del Mondo: `borgo-giglie`, `borgo-mushane`, `borgo-bellinde`), `img` (nome leggibile `Luogo — <titolo>.jpg`), `mappa` (immagine della mappa, solo i 15 quartieri), `stato`, `atti`, `scheda`, `pub` e `gm` (ELENCHI di blocchi `{t,txt}`), `prove` (`{t,skill,dc,ok,ko}`), `links`, `tavolo`, `segnaposto` (`{scena:"bellinde",id:"l1",num,x,y}` — solo i 15 di Bëllindë). `build.py` li traduce nella forma del tavolo (`_runtime`) e dai 15 con segnaposto genera anche l'array `LUOGHI` (handout a doppia sezione sulla mappa): **una cosa, un file**. |
 | `contenuti/_immagini.json` | Nome leggibile → `img/xxx.jpg` (locale, definitivo) oppure URL `https://d8j0ntlcm91z4.cloudfront.net/...` (provvisorio: render Higgsfield). Vale per tutte le categorie (Mondo e Luoghi). `c2Img` e `build.py` accettano `img/...` e `http(s)://...`. Al 12/09/2026 (v50): Mondo 47 locali + 45 URL; Luoghi 107 URL. Le immagini definitive le fornisce Giuseppe in `7_Aprutium/05_Immagini/Immagini Compendio - Il mondo/` (nomi `Nazione - X.jpg`, `Provincia - X.jpg`, `Contea - X.jpg`, `Borgo - X.jpg`, `Luogo - X.jpg`) oppure le scarica con `Sito/SCARICA-IMMAGINI-MONDO.bat` / `SCARICA-IMMAGINI-LUOGHI.bat`; Claude le riduce (1920 px, jpg q85), nome md5, le scrive in `Sito/img/` con `device_commit_files` (≤20 MB a file, ≤100 MB a chiamata; le immagini NON vanno nel tgz) e cambia SOLO questa tabella. Le mappe (`mappa`) sono export Azgaar o mappe dei quartieri: non si rigenerano. |
 | `comp/data7.js` | Dati del Compendio (`COMPENDIO_DATA`, 375 voci + `COMP_IMG`) già inclusi in tavolo.html. Rigenerato da `comp/out/*.json`. |
 | `comp/out/*.json` | Voci del Compendio per città/categoria (julianova, mushane, bellinde, fazioni, miti, oggetti, crociata, quest, diario). Schema in `comp/SCHEMA.md`. |
@@ -37,6 +37,26 @@ blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/`
 | `strumenti/prova-tavolo.js` | **La prova da lanciare prima di ogni pubblicazione.** `node strumenti/prova-tavolo.js` (oppure su `src/tavolo.html`). Preme tutti i bottoni nei due ruoli dopo aver simulato il giro dei dati su Firebase. |
 | `strumenti/PUBBLICA-TAVOLO.bat` | Pubblicazione manuale dal PC di Giuseppe (piano B, vedi sotto). |
 | `.nojekyll` | Obbligatorio per GitHub Pages (serve i file così come sono). |
+
+## Come si struttura un luogo (regola di Giuseppe, 12/09/2026)
+
+Ogni città del Compendio si costruisce a livelli, dall'alto in basso, e ogni livello ha **due immagini**:
+`img` (l'illustrazione: com'è visto) e `mappa` (la mappa VTT: dove stanno le cose). Modello: la cartella
+`7_Aprutium/05_Immagini/Mappe - Bëllindë/`.
+
+1. **La città** (voce del Mondo, `borgo-*`): `img` = veduta della città (`Julia Nova - veduta della città.png`,
+   `Bëllindë - veduta del borgo.jpg`); `mappa` = mappa VTT della città con i punti d'interesse numerati
+   (`Julia Nova - mappa con i punti d'interesse.png`; per Bëllindë la mappa illustrata del borgo, che è anche la scena del tavolo).
+2. **I quartieri** (solo se la città è grande: Julia Nova ne ha 15, `livello: quartiere`): `img` = illustrazione del
+   quartiere; `mappa` = mappa VTT del quartiere (`Q-NN … (dettaglio).png`).
+3. **I luoghi** dentro i quartieri (o direttamente sotto la città, se è piccola come Bëllindë e Mushanè):
+   `img` = illustrazione del luogo (`LUOGO - <nome>.png`); `mappa` = mappa VTT del luogo, quando esiste.
+
+Le immagini le fa Giuseppe (Midjourney) e le mette in `05_Immagini/Mappe - <Città>/` con questi nomi; il nome del
+file è la chiave in `contenuti/_immagini.json`. Nel Compendio: `img` è la copertina della scheda, `mappa` si apre
+con «Apri mappa». Un luogo che Giuseppe non ha raccontato al tavolo non entra nel Compendio, anche se sta nella Guida
+(12/09: tolti da Julia Nova Giardini della Rimembranza, Ala Ovest, Cortile della Milizia, Pozzo di Mara, Piazza del
+Silenzio, Trabocco della Luna, Botola della Necropoli, Magazzino Neròn; Laboratorio di Torvus fuso nella Grande Forgia → 61 luoghi).
 
 ## Come si pubblica una nuova versione (procedura standard)
 
