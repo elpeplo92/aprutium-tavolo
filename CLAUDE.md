@@ -227,3 +227,7 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 
 - Logo: immagine `img/logo-aprutium.png` (PNG trasparente di Giuseppe, ridotto a 900px) dentro `h1`, alto 46px. Il testo «APRUTIUM» non c'è più.
 - Draconis è ora anche il font del testo corrente (`--ui`), corpo 18px, interlinea 1.5, spaziatura .02em. Richiesta di Giuseppe: «va usato su tutto». Se qualcosa risulta illeggibile, alzare il corpo, non cambiare font.
+
+## v68 (12/09/2026)
+
+- Corpo 20px, tutte le taglie del CSS +2px. Draconis anche in corsivo e grassetto corsivo (`font/Draconis-Italic.otf`, `Draconis-BoldItalic.otf`). Grassetto: nomi, titoli, etichette, pulsanti primari, chi tira nel Registro. Corsivo: note, testi da leggere ai giocatori, note del master. Regola in fondo al CSS («grassetto e corsivo (v68)»).
