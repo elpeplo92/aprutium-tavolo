@@ -159,3 +159,13 @@ Diretto, frasi corte, niente gergo; vuole la raccomandazione prima del ragioname
 Non conosce git/Firebase/GitHub: non chiedergli operazioni tecniche se puoi farle tu; se proprio
 servono, una sola istruzione per volta, con lo screenshot in mente. Quando gli riporti un lavoro:
 numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
+
+## v55 (12/09/2026) — nuova grafica
+
+- Font: `Cinzel` solo per il logo (`--logo`), `Cormorant Garamond` per i titoli (`--display`), `Source Sans 3` per il testo (`--ui`). Corpo 16px; nel CSS le taglie sono state alzate di un gradino (11→13, 12→14, 13→15, 14→15). Giuseppe trovava i testi troppo piccoli: **non tornare sotto i 13px**.
+- Barra in alto unica: logo · tab con icone **Tavolo / Diario / Compendio** (`#navTavolo`, `#navDiario`, `#btnComp`) · fase · presenza «N online» · «Vista» (il vecchio SEI, `#roleSel`). Il Compendio resta una finestra sopra il tavolo (`#modal`, che ora parte sotto la barra: `inset:60px 0 0 0`, z-index 8; header z-index 9). Diario = `openArchive()` (le sessioni archiviate dal Registro).
+- Il menu Scena del master sta nel pannello destro (prima sezione); i giocatori vedono il nome della scena nell'HUD in alto a destra insieme alla scala.
+- Colonna sinistra 196px, medaglioni 170px. Pannello destro 340px, sezioni come schede (`.sec` con bordo e raggio; `.sec:empty` nascosta).
+- Dock in basso al centro (`#dock`): Muovi · Misura · Tira dadi · Ping. Ping = un clic sulla mappa (il doppio clic funziona ancora). Tira dadi = modale con d4…d100 + espressione, va nel Registro come evento `sys`. Zoom in basso a destra (`#zoomlbl`, `#zin2/#zout2`); i vecchi `#zin/#zout` restano nascosti.
+- Presenza: `partita/presenza/<uid>` con `onDisconnect().remove()`; conteggio in `#liveTxt`.
+- Il Gobbo (assistente AI nel tavolo) è stato **tolto** su richiesta di Giuseppe: non era usabile sul sito pubblico. Il Gobbo è Claude in chat.
