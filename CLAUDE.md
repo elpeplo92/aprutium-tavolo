@@ -235,3 +235,8 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 ## v69 (12/09/2026)
 
 - Tutte le taglie del CSS +3px (corpo 23px). Colonne: 250 / mappa / 340 (guida) / 370 (regia). Giuseppe vuole caratteri grandi: prima di ridurre qualcosa, chiedere.
+
+## v70 (12/09/2026) — font dei manuali D&D
+
+- I manuali 5e usano Bookmania (testo), Mrs Eaves Small Caps (titoli di sezione), Scala Sans (tabelle e blocchi statistiche), Modesto Condensed (titoli dei capitoli). Cloni liberi (CC-BY-SA 4.0, pacchetto Solbera, `font/LICENSE-Solbera-CC-BY-SA.txt`): **Bookinsanity**, **Mr Eaves Small Caps**, **Scaly Sans / Scaly Sans Caps**, **Nodesto Caps Condensed**. Tutti in `font/`.
+- Variabili: `--ui` Bookinsanity (testo corrente, corsivo per note e testi da leggere), `--caps` Mr Eaves (h2, eyebrow, tab, summary), `--display` Nodesto (titoli grandi, nomi nelle schede), `--sans` Scaly Sans (pulsanti, select, numeri, PF, tabelle, note delle azioni). Draconis non è più usato (i file restano). Corpo 21px.
