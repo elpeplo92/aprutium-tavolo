@@ -205,3 +205,25 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 
 - v62: tolto `will-change:transform` da `#world` (bloccava la resa a 100% e ingrandiva come una foto: token e mappa sgranati allo zoom).
 - v63: azioni del giocatore a gruppi **Azione / Azione bonus / Reazione / Senza azione** (`ACT_ECO`) con icona e colore per tipo (`ACT_ICON`: mischia, distanza, incantesimo, cura, speciale). Ogni azione in `DEFAULT_STATE` ha `tipo` ed `eco`; se mancano, `actTipo()` indovina dal nome. Tolta la nota «Trascina il tuo token…».
+
+## v64 (12/09/2026) — azioni complete dei PG (regole 2024)
+
+- Pannello Azioni del giocatore: tre schede **Azione / Azione bonus / Reazione** (`actTab`), ogni voce con icona, nota breve (`note`: slot, CD, maestria, usi) e tiro. In fondo «Per tutti»: le azioni generiche del regolamento (`GENERIC_ACTS`: Attacco, Scatto, Disimpegno, Schivata, Aiuto, Nascondersi, Cercare, Studiare, Influenzare, Usare oggetto, Prepararsi; reazione: Azione preparata). Le voci senza tiro vanno nel Registro come nota.
+- Le liste stanno in `DEFAULT_STATE.tokens[pg].actions` e sono generate da `scarica/azioni_v64.py` (fonte: `SHEETS` + regole 2024). Rifare da lì, non a mano.
+- Dubbi sulle schede segnalati a Giuseppe (v64): CA di Alessandros 22 (cotta 16 + scudo 2 = 18); Vicarus tiro incantesimi era +10 (con Bastone +2 dovrebbe essere +8, CD 16) e ha 5 trucchetti invece di 4; Adamus ha 11 incantesimi preparati (max 9) e Trovare famiglio non è druidico (ok solo via Compagno selvatico); Mattheus ha due talenti di 4° (Robusto e Condottiero ispiratore) ma un solo aumento al 4°; Alessandros ha 7 incantesimi preparati oltre a Punizione divina (max 5).
+
+## v65 (12/09/2026) — bersaglio e danno automatico
+
+- `doAction` con `atk` o `dmg` apre `openTargetPicker`: elenco dei token in vista (`targetsFor`: prima gli avversari, ordinati per distanza in metri; omonimi numerati; PF visibili se master o PG; CA solo al master). «Solo il tiro, senza bersaglio» = comportamento vecchio (`plainRoll`).
+- Attacco (`resolveAttack`): d20 + `atk` contro la CA del bersaglio; 20 = critico (dadi raddoppiati, `rollDmg`), 1 = mancato; se colpisce `applyDamage` (PF temporanei prima) e nel Registro «COLPITO/MANCATO → bersaglio (a N PF)». Multiattacco = due tiri sullo stesso bersaglio.
+- Incantesimo con TS (`resolveSave`): danno tirato una volta, poi per ogni bersaglio i pulsanti Tutto / Metà / Niente (chi ha lanciato o il master decide dopo il TS). Vale per PG e mostri.
+- Font `Draconis` per il logo/titoli (`--logo`): `@font-face` che cerca `Sito/font/Draconis.ttf` (o `.otf`); se il file manca resta Cinzel. Giuseppe deve mettere il file lì.
+
+## v66 (12/09/2026) — font Draconis
+
+- `Sito/font/Draconis.otf` e `Draconis-Bold.otf` (da `7_Aprutium\Font Draconis`, licenza Pixel Sagas: uso personale). `--logo` e `--display` = Draconis: logo (32px), titoli di sezione `h2` (18px, senza maiuscoletto forzato), titoli delle modali (30px), nomi nelle schede. Il testo corrente resta Source Sans 3: Draconis è condensato e sotto i 16px non si legge. La cartella `font/` va nel pacchetto.
+
+## v67 (12/09/2026)
+
+- Logo: immagine `img/logo-aprutium.png` (PNG trasparente di Giuseppe, ridotto a 900px) dentro `h1`, alto 46px. Il testo «APRUTIUM» non c'è più.
+- Draconis è ora anche il font del testo corrente (`--ui`), corpo 18px, interlinea 1.5, spaziatura .02em. Richiesta di Giuseppe: «va usato su tutto». Se qualcosa risulta illeggibile, alzare il corpo, non cambiare font.
