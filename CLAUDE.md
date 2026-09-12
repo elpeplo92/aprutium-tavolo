@@ -169,3 +169,14 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Dock in basso al centro (`#dock`): Muovi · Misura · Tira dadi · Ping. Ping = un clic sulla mappa (il doppio clic funziona ancora). Tira dadi = modale con d4…d100 + espressione, va nel Registro come evento `sys`. Zoom in basso a destra (`#zoomlbl`, `#zin2/#zout2`); i vecchi `#zin/#zout` restano nascosti.
 - Presenza: `partita/presenza/<uid>` con `onDisconnect().remove()`; conteggio in `#liveTxt`.
 - Il Gobbo (assistente AI nel tavolo) è stato **tolto** su richiesta di Giuseppe: non era usabile sul sito pubblico. Il Gobbo è Claude in chat.
+
+## v57 (12/09/2026)
+
+- Palette: dal marrone al **blu notte** (`--ground:#070A11 --panel:#0E131D --panel2:#151C2A --line:#263042`, inchiostro `#E8E3D6`). L'oro resta. I colori dei token (marroni/verdi nel JS) non si toccano.
+- Colonna sinistra 184px; i medaglioni hanno altezza `clamp(92px,calc((100vh - 168px)/6),170px)`: i sei PG stanno sempre tutti nello schermo.
+- Riquadro iniziativa del master, tre clic: 1° chiede al giocatore (si illumina), 2° tira al posto suo, 3° azzera (`.init.reset`, torna il d20). L'azzeramento toglie il PG da `S.order` e da `S.request`.
+- Compendio: la × generale della finestra è nascosta (si esce con la tab Tavolo o Esc); la scheda si chiude con «‹ Torna all'elenco».
+
+## v58 (12/09/2026)
+
+- Schede dei PG a sinistra **orizzontali** (come nel mockup di Giuseppe): ritratto 68px a sinistra con il badge iniziativa sull'angolo, a destra nome (solo il primo nome per i PG, il nome intero nel `title`), PF «26 / 36» e barra. Colonna 236px. Struttura: `.med > .pic(.init,.disc) + .info(.nm,.hpn,.hpbar,.condrow,.ds)`. Il `.med` non ha più l'immagine di sfondo: sta su `.pic`.
