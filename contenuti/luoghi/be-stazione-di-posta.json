@@ -1,0 +1,85 @@
+{
+ "id": "be-stazione-di-posta",
+ "tipo": "luogo",
+ "titolo": "10. Stazione di Posta",
+ "sottotitolo": "stalla di posta e rimonte — il collo di bottiglia di ogni notizia che parte da Bëllindë",
+ "citta": "bellinde",
+ "gruppo": "Fuori le mura",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 10. Stazione di Posta.jpg",
+ "stato": "visitato",
+ "atti": [
+  16
+ ],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l10",
+  "num": 10,
+  "x": 1108,
+  "y": 725
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "stalla di posta e rimonte — il collo di bottiglia di ogni notizia che parte da Bëllindë",
+  "Luogo": "[LUOGO — Bëllindë], subito dentro la Porta di Levante — sette minuti da [LUOGO — Piazza Grande]",
+  "Chi la tiene": "Cola Sciacquapiè, mastro di stalla",
+  "Orari": "dall’alba al coprifuoco. Un ragazzo dorme nella stalla, per le urgenze.",
+  "Prezzi": "cavallo a nolo 2 fiorini al giorno più cauzione; stallaggio 3 gofferine a notte",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Una corte acciottolata con una tettoia lunga, otto poste per cavalli, una vasca d’abbeverata e l’odore pulito di paglia e cuoio. Sul muro, sotto la tettoia, sono appesi finimenti in fila per taglia. Da qui la Porta di Levante è a cinquanta passi: chi parte per Teramum, parte da questo cortile."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Sei cavalli nelle poste, tutti in carne e ben ferrati — bestie da lavoro, non da guerra. Un uomo piccolo e storto d’anca striglia una giumenta parlandole fitto, come si parla a una che capisce. Su un leggio accanto alla porta della selleria c’è un registro aperto, con una pietra sopra i fogli per via del vento."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Il registro delle rimonte sul leggio: pubblico per uso, se non per diritto.\n• Sei cavalli su otto poste. Una posta vuota da ieri sera.\n• Il via vai della Porta di Levante, a vista."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Un cavallo manca: il settimo. È quello preso ieri sera, dopo il tramonto, dall’uomo partito verso Teramum — il quarto forestiero. Cola se lo aspetta indietro dalla posta successiva fra due giorni, «se va tutte bone» (?).\n• Nel pomeriggio parte il corriere ordinario verso levante, con la borsa dei dispacci e delle lettere private. Chiunque può affidargli una lettera — e chiunque, volendo, può contare su questo.\n• Due bestie della Crociata sono qui per una ferratura."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Cola Sciacquapiè] — mastro di stalla, cinquant’anni, un’anca rotta da un calcio vent’anni fa.\nQui e ora: di buon umore perché ha clienti. Parla ai cavalli e attraverso i cavalli: se vuoi sapere qualcosa da lui, fatti trovare a strigliare una bestia. Non è omertoso — è solo convinto che i fatti dei viaggiatori non siano affari suoi, finché qualcuno non gli spiega perché dovrebbero esserlo.\n[PNG — Il ragazzo di stalla] — dodici anni, dorme nella paglia.\nQui e ora: ha visto in faccia l’uomo partito ieri sera: «Une che nen guardave nisciune.» (?) Uno che non guardava nessuno."
+  },
+  {
+   "t": "Servizi",
+   "txt": "ServizioPrezzoNote\nCavallo a nolo fino alla posta successiva2 fiorini + 5 di cauzionesi rende alla posta, la cauzione torna con la bestia\nStallaggio con biada3 gofferine a notte—\nFerraturala fa [LUOGO — Fucina di Bëllindë]Cola porta e riporta le bestie: 2 gofferine\nLettera col corriere ordinario2 gofferineparte nel pomeriggio, a Teramum in un giorno e mezzo\nCorriere espresso1 fiorino + il noloparte subito, a Teramum in un giorno"
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "AlbaArriva la posta da Teramum: dispacci, lettere, voci fresche della capitale.\nMattinaÈ l’ora in cui i «senza livrea» hanno sempre preso i cavalli, tutta la settimana.\nPomeriggioParte il corriere ordinario. Dal [LUOGO — Il Balcone] lo si vede sparire dietro le colline.\nCoprifuocoCola chiude e consegna le chiavi della selleria al [LUOGO — Corpo di Guardia]. Di notte nessuno parte da Bëllindë a cavallo — in teoria.\nSegreti del luogo\n• Questo cortile è il punto dove si ferma il corriere della cellula. Se l’orologio arriva alla tacca 4, l’uomo che parte per Teramum passa da qui, e chi ha messo qualcuno di guardia lo intercetta. Ruggiero, con un nome e una ragione, lo ferma lui. → [PNG — Ruggiero de’ Santi]\n• Cola ha fatto partire l’uomo di ieri sera fuori orario per il triplo della tariffa, e lo sa che non si fa. Se ne parla, minimizza — ma se Ruggiero lo viene a sapere da altri, per Cola sono guai, e questo lo rende ricattabile con dolcezza."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Ruggiero de’ Santi] · [PNG — Ottavio Ceruso]\nLuoghi vicini: [LUOGO — Porta di Levante] · [LUOGO — Il Balcone]\nScene: [EVENTO — Il quarto uomo verso Teramum]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Persuasione CD 13, o due gofferine — il registro delle rimonte",
+   "skill": "Persuasione",
+   "dc": 13,
+   "ok": "nell’ultima settimana quattro cavalli sono stati presi da uomini senza livrea, sempre nella stessa ora del mattino, e resi alla posta successiva. Nessun nome vero: firmano con segni. E ieri sera, dopo il tramonto — orario in cui Cola di norma non dà bestie — un uomo ha pagato il triplo per partire subito.",
+   "ko": "Cola mette la mano sul registro senza sgarbo: «Chiste è de lu servizie. Ce vo’ na parola de lu sergente.» (?) — la strada resta aperta passando da [PNG — Ruggiero de’ Santi], che la parola la dà."
+  },
+  {
+   "t": "Addestrare Animali o Sopravvivenza CD 12 — i cavalli",
+   "skill": "Addestrare Animali o Sopravvivenza",
+   "dc": 12,
+   "ok": "la giumenta che Cola striglia ha i segni di una corsa dura recente: è la bestia tornata dalla tratta di ieri notte con un altro cavaliere, in cambio. Chi corre di notte su questa strada paga o ha molta fretta — o tutt’e due.",
+   "ko": "bestie ben tenute. Cola è uno che i cavalli li ama più dei cristiani, e si vede."
+  }
+ ],
+ "links": []
+}

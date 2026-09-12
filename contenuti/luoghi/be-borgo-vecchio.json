@@ -1,0 +1,132 @@
+{
+ "id": "be-borgo-vecchio",
+ "tipo": "luogo",
+ "titolo": "13. Borgo Vecchio",
+ "sottotitolo": "quartiere popolare, il più antico dell’abitato",
+ "citta": "bellinde",
+ "gruppo": "Il Borgo Vecchio",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 13. Borgo Vecchio.jpg",
+ "stato": "visitato",
+ "atti": [
+  16
+ ],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l13",
+  "num": 13,
+  "x": 478,
+  "y": 780
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "quartiere popolare, il più antico dell’abitato",
+  "Luogo": "[LUOGO — Bëllindë], versante sud-occidentale — quattro minuti da [LUOGO — Piazza Grande]",
+  "Chi ci comanda": "nessuno. La guardia non ci scende di ronda.",
+  "Abitanti": "un centinaio — bottai, funai, lavandaie, vecchi",
+  "Accessibilità": "libera di giorno. Dopo il terzo rintocco si chiude da solo.",
+  "Collegato a": "[LUOGO — Bëllindë] · [ESPLORAZIONE — Sotto Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Il Borgo Vecchio comincia dove la Via Maggiore si stringe e il selciato buono finisce. Tre vicoli scendono verso il basso: il più largo è quello di mezzo, e sul muro all’imbocco c’è un’edicola votiva con la nicchia vuota e la mensola consumata dall’uso. Gli altri due sono scale.\nDa qui si vedono i tetti scendere a gradoni, appoggiati l’uno all’altro. E ci si accorge del silenzio prima ancora di mettere un piede giù: alle vostre spalle la città fa rumore, e a venti passi da qui il rumore semplicemente smette."
+  },
+  {
+   "t": "Entrando",
+   "txt": "I vicoli non lasciano passare due persone affiancate. Le case si reggono a vicenda, con archi che scavalcano la strada all’altezza del primo piano e scale esterne di pietra che salgono verso porte piccole. Il sole ci arriva per due ore al giorno, e adesso non è una di quelle.\nI piani terra sono fatti di blocchi grandi e squadrati, troppo ben tagliati per essere case di bottai. Sopra, mattoni e legno. Ogni porta ha accanto una botola o una scaletta: sotto ogni casa c’è una cantina, e le cantine comunicano.\nAl centro si apre uno slargo, e in mezzo allo slargo sporge dal selciato un blocco di pietra antica inclinato che nessuno ha mai tolto. Sull’altro lato c’è un pozzo, con la bocca coperta da tre assi e una pietra."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Sui tetti intorno allo slargo non c’è un nido. Sui tetti a cinquanta passi ce ne sono a decine.\n• Le imposte delle case che danno sullo slargo sono chiuse, anche quelle delle case abitate.\n• Sui davanzali c’è del pane.\n• I muri dei piani terra sono in blocchi squadrati enormi, senza malta.\n• Il Pozzo Cieco è stato chiuso di recente e in fretta.\n• I ragazzini giocano dappertutto tranne che sullo slargo."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Il pozzo è stato chiuso. Da quando Rocco Serrafredda è morto, due uomini del Conte hanno inchiodato tre assi sulla bocca del Pozzo Cieco e ci hanno appoggiato sopra una pietra. Lavoro fatto in fretta e male.\n• Za’ Filumena mette il pane due volte al giorno. Prima lo metteva solo al vespro. Da una settimana lo mette anche a mezzogiorno, e non lo spiega a nessuno.\n• Nella cantina di mezzo di Mastro Zaccaria è passato qualcuno. Lui giura di non averla aperta da un anno, ed è sincero.\n• Nel pomeriggio una donna attraversa lo slargo tirandosi dietro un cane per il collare. Il cane non abbaia e non si oppone: pianta le zampe alla stessa altezza dove le piantano tutti."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Mastro Zaccaria] — bottaio, sessant’anni, mani grosse. Bottega sullo slargo, tre cantine sotto.\nQui e ora: ha una commessa di tini da finire e parla mentre lavora. Apre le sue cantine a chiunque glielo chieda in modo civile, e non capisce perché interessino a qualcuno.\n[PNG — Za’ Filumena] — vedova, ottantadue anni, sta sulla scala esterna del vicolo di mezzo dalla mattina alla sera.\nQui e ora: vuole parlare. Ha visto Rocco risalire dal pozzo e non l’ha ancora raccontato a nessuno che l’abbia stata a sentire fino in fondo.\n[PNG — I ragazzini del Borgo] — sei o sette, fra gli otto e i dodici anni.\nQui e ora: curiosi degli armati e attaccati a chiunque regali qualcosa. Sanno il nome del ragazzo tornato indietro tre anni fa e non lo dicono.\n→ [PNG — Nunzia Serrafredda] abita qui. Qui e ora: se è con il gruppo, le porte si aprono senza tiri.\n→ [PNG — Cascia la Sguscia] non è visibile. Qui e ora: è passata dalle cantine stanotte e ripasserà stasera."
+  },
+  {
+   "t": "Servizi",
+   "txt": "Il Borgo Vecchio non è un posto dove si compra. Si trovano soltanto le cose che servono a chi lavora sotto terra — il che, oggi, è esattamente quello che serve.\nServizioPrezzoTempo\nRiparazione di botti, ceste, secchi2–8 gofferinemezza giornata\nCorda di canapa intrecciata su misura1 fiorino ogni 15 msubito se in magazzino, un giorno se su misura\nBucato3 gofferine a fardelloun giorno\nDisponibile oggi\nOggettoQuantitàPrezzo\nCorda di canapa, 15 m4 matasse1 fiorino\nLanterna schermata25 gofferine\nOlio da lanterna, boccetta (6 ore)91 gofferina\nTorceuna ventina1 gofferina per 5\nPiede di porco, mazza, badile1 ciascunoin prestito da Zaccaria, gratis se glieli riportano\nSacco di tela cerata34 gofferine\nSu ordinazione\nScale a pioli fino a sei metri, argani da pozzo, carrucole nuove — Zaccaria le fa in due giorni e costano il doppio se le vuoi domani.\nNon disponibile\nArmi, armature, munizioni, cavalli, medicine, pergamene, componenti per incantesimi, nulla di magico. Per il ferro c’è [LUOGO — Fucina di Bëllindë], per le cure [LUOGO — Pieve di San Vincenzo]."
+  },
+  {
+   "t": "Se chiedono informazioni",
+   "txt": "Nessun tiro per il primo livello. Persuasione CD 12 per il secondo, gratis se c’è con loro Nunzia.\nDa chiCosa si ottiene\n[PNG — Za’ Filumena]Ha visto Rocco risalire dal pozzo: «S’è assettate llà, e nen s’è àuzate pe’ nu’ quarte d’ore.» (?) Sul pane: «Se mette pe’ chi téne fame e nen po’ trasì.» (?) — per chi ha fame e non può entrare.\n[PNG — Mastro Zaccaria]Che due mesi fa una ronda ha giurato di aver sentito una campana sotto il pavimento di una casa, e che sono venuti a controllare e non c’era niente. Che la cantina di mezzo non la apre da un anno perché «non serve», e che se qualcuno ci è entrato non è passato dalla sua porta.\nI ragazziniChe sullo slargo non ci si gioca: «nen ce se joca e bbaste» (?). Che tre anni fa due ragazzi più grandi sono entrati «dalla porta bassa» e ne è tornato uno.\nChiunque, sul pozzoChe l’acqua non c’è da prima che nascesse il più vecchio della via, e che il Conte il mese scorso ci ha mandato un uomo a vedere se si poteva rimettere in uso.\nPer conversazioni più lunghe: [PNG — Nunzia Serrafredda] · [PNG — Don Fulgenzio da Chimblë]"
+  },
+  {
+   "t": "I tre punti del quartiere",
+   "txt": "Il Pozzo Cieco\nBocca larga tre piedi, carrucola marcita, tre assi inchiodate di traverso e una pietra sopra. Le assi si tolgono in un minuto a mani nude: sono state messe per dire «non entrate», non per impedirlo.\nScende dritto per nove metri e finisce su un pavimento asciutto. Per calarsi: trenta piedi di corda, oppure Atletica CD 10 sugli appigli della muratura.\nSuccesso: si arriva in fondo in un minuto, senza rumore.\nFallimento: scivola per due metri e resta appeso — 1d6 contusioni e un rumore che nello slargo si sente benissimo. Za’ Filumena si affaccia, e da quel momento il quartiere sa.\n→ [ESPLORAZIONE — Sotto Bëllindë] · [TRANSIZIONE — La Discesa]\nLa Porta Murata\nIn fondo al vicolo più basso, nel muro di una casa disabitata: un arco basso tamponato con mattoni e malta di tre anni fa, e sopra la fascia di pietra incisa.\nDietro la tamponatura ci sono tre metri di terra di riporto. Si scava in un’ora con gli attrezzi giusti, e mezzo quartiere se ne accorge. Non è l’ingresso comodo: è l’ingresso che annuncia a tutta Bëllindë che ci state andando.\nChi ha murato quell’arco è [PNG — Don Fulgenzio da Chimblë], tre anni fa, con le proprie mani. Non lo ammette per nessuna prova di abilità: lo dice soltanto a chi gli riporta la frase di Rocco Serrafredda.\nLe cantine di Mastro Zaccaria\nTre cantine comunicanti sotto la bottega. La terza sfonda su un muro di blocchi squadrati, con un’apertura bassa che non è stata fatta da un muratore.\nÈ la via che usa la cellula, ed è l’unico ingresso che permette di scendere senza farsi vedere.\n→ [ESPLORAZIONE — Sotto Bëllindë] · [PNG — Cascia la Sguscia] · [LUOGO — Fondaco delle Lane]"
+  },
+  {
+   "t": "Il quartiere nel corso della giornata",
+   "txt": "MattinaLe lavandaie scendono al lavatoio fuori le mura. Il quartiere resta ai vecchi e ai ragazzini.\nMezzogiornoZa’ Filumena mette il pane. Chi la vede fa finta di niente.\nPomeriggioZaccaria lavora con la porta aperta e il rumore del maglio riempie lo slargo: da questo momento la prova di Percezione sulla campana è impossibile finché non smette.\nVesproIl pane torna sui davanzali, stavolta ovunque. Le imposte si chiudono una dopo l’altra.\nTerzo rintoccoCatenacci. Nessuno per strada. La guardia non scende quaggiù nemmeno di ronda: chi resta è solo.\nNotteChi lavora nelle cantine lavora adesso.\nSegreti del luogo\n• Le cantine di Zaccaria sono la via d’accesso e di fuga della cellula di Velthuria. Lui non lo sa.\n• La Porta Murata è stata chiusa da Don Fulgenzio tre anni fa, dopo che due ragazzi ci sono entrati e ne è tornato uno solo.\n• La «campana» sotto il pavimento non è una campana.\n• Il blocco inclinato della Pietra Storta non è una pietra caduta: è l’angolo superiore di una struttura sepolta, e affiora.\nCosa non si scopre da quassù\n• Che cosa ci sia realmente sotto. Nessuna prova fatta in superficie lo rivela. Il quartiere può dire soltanto che c’è qualcosa e da quanto.\n• Il nome del ragazzo tornato indietro. I ragazzini lo sanno e non lo dicono; gli adulti cambiano discorso. Lo dice soltanto Don Fulgenzio.\n• Chi usa le cantine adesso. Le impronte dicono tre persone e nient’altro: il collegamento col Fondaco delle Lane si fa altrove.\n• Che cosa abbia sentito Rocco. Za’ Filumena l’ha visto risalire e sedersi. Nessuno l’ha sentito parlare fino al giorno dopo."
+  },
+  {
+   "t": "Scene collegate",
+   "txt": "[TRANSIZIONE — La Discesa] · [SCENA — Il pane a mezzogiorno]"
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Nunzia Serrafredda] · [PNG — Don Fulgenzio da Chimblë] · [PNG — Ruggiero de’ Santi] · [PNG — Cascia la Sguscia]\nLuoghi vicini: [LUOGO — Piazza Grande] · [LUOGO — Fucina di Bëllindë] · [LUOGO — Porta di Ponente]\nSotto: [ESPLORAZIONE — Sotto Bëllindë]\nScene: [SCENA — La Porta Murata] · [TRANSIZIONE — La Discesa] · [SCENA — Il pane a mezzogiorno] · [SCENA — Il funerale di Rocco] · [INSEGUIMENTO — La fuga di Ceruso]\nMappe: [MAPPA — Bëllindë] · [MAPPA — Sotto Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Natura o Sopravvivenza CD 14 — gli animali",
+   "skill": "Natura o Sopravvivenza",
+   "dc": 14,
+   "ok": "i cani si fermano sempre nello stesso punto, che non è l’imbocco del vicolo ma una linea invisibile tre passi più avanti, identica per tutti. Non è il comportamento di una bestia che teme un predatore: è quello di una bestia a cui è stato detto di non andare oltre.",
+   "ko": "le bestie evitano la zona. Umidità, cantine allagate, forse esalazioni dal sottosuolo: un posto malsano, e loro lo sentono prima di noi."
+  },
+  {
+   "t": "Indagare CD 13 — la cantina di mezzo di Mastro Zaccaria",
+   "skill": "Indagare",
+   "dc": 13,
+   "ok": "polvere calpestata di fresco, un chiodo piantato nel muro all’altezza giusta per una lanterna, e impronte di tre paia di scarpe diverse. Una è piccola e leggera. Le tracce vanno verso il fondo e non tornano indietro.",
+   "ko": "la cantina è in disordine e qualcuno ci è entrato, ma non si capisce né quanti né quando. Resta il chiodo, che vede chiunque: è pulito."
+  },
+  {
+   "t": "Indagare CD 15 — i muri delle cantine",
+   "skill": "Indagare",
+   "dc": 15,
+   "ok": "le cantine non sono state scavate. Sono state sfondate dentro qualcosa che c’era già: i blocchi squadrati senza malta proseguono oltre il punto in cui il muro di mattoni li interrompe. Sotto il Borgo Vecchio c’è una costruzione, e le case ci si sono appoggiate sopra.",
+   "ko": "lavoro molto vecchio e molto solido, di gente che sapeva tagliare la pietra meglio di chiunque a Bëllindë oggi."
+  },
+  {
+   "t": "Storia CD 14 — la fascia incisa sopra la Porta Murata",
+   "skill": "Storia",
+   "dc": 14,
+   "ok": "i segni non sono una scrittura: sono una misura. Qualcuno ha registrato lì sopra una profondità e una data, con un sistema che l’Impero non ha mai usato.",
+   "ko": "decorazione geometrica antica, molto più vecchia dell’arco che decora, e non riconducibile a nessuno stile imperiale.\nAlessandros riconosce i segni senza tirare: li ha già visti a Pietraluna."
+  },
+  {
+   "t": "Arcana CD 15 — sullo slargo o nelle cantine",
+   "skill": "Arcana",
+   "dc": 15,
+   "ok": "il flusso arcano qui non è corrotto e non è ostile. È fermo, come acqua in una cisterna chiusa. Qualcosa lo trattiene, e lo trattiene da molto tempo.",
+   "ko": "nessuna aura, nessuna traccia di incantesimo, nessuna maledizione. In un quartiere dove i cani non entrano, questa assenza è a sua volta un’informazione."
+  },
+  {
+   "t": "Religione CD 12 — il pane sui davanzali",
+   "skill": "Religione",
+   "dc": 12,
+   "ok": "è un’offerta alla Vecchia Madre, non una scaramanzia generica. Il rito prevede che il pane si metta prima del buio, si tolga prima dell’alba e non lo mangi nessuno. Metterlo anche a mezzogiorno significa che qualcuno ha smesso di sentirsi al sicuro di giorno.",
+   "ko": "usanza contadina contro la malasorte. Chi la pratica non saprebbe spiegarla neanche se glielo si chiedesse."
+  },
+  {
+   "t": "Percezione CD 15 — solo in silenzio, e solo nelle cantine",
+   "skill": "Percezione",
+   "dc": 15,
+   "ok": "un suono bassissimo sotto il pavimento, a intervalli lunghi e irregolari. Non è acqua. Chi ha vissuto vicino a un campanile lo riconosce: è una campana grande, colpita molto piano, molto lontano, molto sotto.",
+   "ko": "il rumore dell’acqua nelle condutture vecchie, o il legno che si assesta. In case così vecchie c’è sempre qualcosa che si muove."
+  }
+ ],
+ "links": []
+}

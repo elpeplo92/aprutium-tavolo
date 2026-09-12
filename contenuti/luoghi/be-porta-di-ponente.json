@@ -1,0 +1,78 @@
+{
+ "id": "be-porta-di-ponente",
+ "tipo": "luogo",
+ "titolo": "11. Porta di Ponente",
+ "sottotitolo": "porta urbana verso Mushanè e le Terre di Mezzo",
+ "citta": "bellinde",
+ "gruppo": "Guardia e porte",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 11. Porta di Ponente.jpg",
+ "stato": "noto",
+ "atti": [],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l11",
+  "num": 11,
+  "x": 322,
+  "y": 878
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "porta urbana verso Mushanè e le Terre di Mezzo",
+  "Luogo": "[LUOGO — Bëllindë], capo basso — sei minuti da [LUOGO — Piazza Grande]",
+  "Chi la tiene": "due guardie per turno, sotto [PNG — Ruggiero de’ Santi]",
+  "Orari": "aperta dall’alba al terzo rintocco. Di notte si entra solo chiamando la guardia, e con una buona ragione.",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Un arco di pietra a doppia ghiera con due lance incrociate appese sopra la volta — trofeo di una guerra che nessuno ricorda più. I battenti di quercia sono aperti contro il muro, e si vede dai cardini che vengono chiusi davvero, ogni sera. Fuori, la strada di Mushanè scende in tornanti fra i muretti; a dieci minuti, sul prato del tratturo, il [LUOGO — Campo della Crociata]."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Sotto la volta, incassato nel muro, c’è un banco di pietra levigato da generazioni di gomiti, e sul banco il registro degli ingressi: un librone rilegato in cuoio, una boccetta d’inchiostro col tappo legato allo spago, una penna consumata. Una delle due guardie scrive; l’altra guarda chi arriva. Sul muro, un bando fresco: quello di Teramum."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Il registro: nome, provenienza, causale, giorno — per ogni forestiero che entra. I locali passano con un cenno.\n• Il bando di Teramum affisso sotto la volta.\n• Chi entra e chi esce, perché di porta ce n’è una sola da questo lato."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Il turno è raddoppiato da stamattina, ordine di Ruggiero: quattro occhi invece di due.\n• Il passaggio è il doppio del normale: contadini che scendono a vedere i crociati, crociati che salgono a comprare. Le guardie registrano e sudano.\n• A metà mattina, per il cambio del turno, la porta resta con un uomo solo per un quarto d’ora. Ruggiero lo sa e non gli piace."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "Le guardie del turno — oggi [PNG — Cecco] (vedi [LUOGO — Corpo di Guardia]) e un anziano di nome [PNG — Bartolo].\nQui e ora: Bartolo scrive e borbotta; Cecco guarda gli avventurieri più di quanto guardi la strada. Nessuno dei due nega informazioni semplici: gli orari, la strada, chi è passato di grosso.\n[PNG — Ruggiero de’ Santi] — Qui e ora: all’alba è qui per l’apertura. Poi passa due volte al giorno, senza orario."
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "AlbaApertura: Ruggiero presente. Entrano i carri dei casali per il mercato.\nTerzaCambio del turno: un uomo solo per un quarto d’ora. Chi vuole entrare o uscire senza essere registrato, lo sa — e la cellula lo sa da nove giorni.\nVesproRientro dei contadini. La coda più lunga della giornata: nella calca, il controllo è una formalità.\nTerzo rintoccoChiusura dei battenti. Da qui all’alba, chi bussa parla con lo spioncino.\nSegreti del luogo\n• Il registro è la prova documentale che collega i quattro forestieri fra loro: stessa causale, scritta con le stesse parole, dettata evidentemente dalla stessa bocca. Insieme al registro delle pesate di [LUOGO — Piazza Grande], smonta la copertura di Ceruso su carta.\n• Il quarto d’ora scoperto del cambio turno è il varco che la cellula ha usato due volte per far entrare cose — non persone — senza registro: un plico, e una cassetta lunga un braccio. Bartolo ricorda la cassetta, se gli si chiede: «Robba de lu mercante de lana. Ferramenta, dicett’isse.» (?)"
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Ruggiero de’ Santi] · [PNG — Ottavio Ceruso]\nLuoghi vicini: [LUOGO — Locanda Lu Deng’ Rott’] · [LUOGO — Campo della Crociata]\nScene: [SCENA — L’arrivo a Bëllindë]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Persuasione CD 12 — vedere il registro",
+   "skill": "Persuasione",
+   "dc": 12,
+   "ok": "nove giorni, quattro forestieri, stessa causale: mercatura di lane. Tre ancora in città; il quarto uscito ieri sera, registrato in uscita con una sola parola: Teramum.",
+   "ko": "«Il registro è del sergente.» Si torna con Ruggiero o con due righe del Conte — un’ora persa, non una porta chiusa."
+  },
+  {
+   "t": "Percezione CD 13 — osservando la porta per un’ora",
+   "skill": "Percezione",
+   "dc": 13,
+   "ok": "un uomo con un cappello a tesa larga esce, scende verso il campo della Crociata, torna dopo mezz’ora, rientra. Non porta niente e non compra niente. La guardia non lo registra: è entrato in città nove giorni fa, quindi per lei è un residente.",
+   "ko": "traffico continuo, facce troppe. Se qualcuno sta osservando il campo, si confonde benissimo."
+  }
+ ],
+ "links": []
+}

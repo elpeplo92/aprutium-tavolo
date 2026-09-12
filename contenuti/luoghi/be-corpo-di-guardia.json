@@ -1,0 +1,82 @@
+{
+ "id": "be-corpo-di-guardia",
+ "tipo": "luogo",
+ "titolo": "6. Corpo di Guardia",
+ "sottotitolo": "caserma della guardia comitale",
+ "citta": "bellinde",
+ "gruppo": "Guardia e porte",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 6. Corpo di Guardia.jpg",
+ "stato": "noto",
+ "atti": [],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l6",
+  "num": 6,
+  "x": 900,
+  "y": 218
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "caserma della guardia comitale",
+  "Luogo": "[LUOGO — Bëllindë], Via Maggiore alta — quattro minuti da [LUOGO — Piazza Grande]",
+  "Chi comanda": "[PNG — Ruggiero de’ Santi]",
+  "Accesso": "chiunque può bussare. Si entra nella prima stanza; oltre, solo invitati.",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Una casa robusta a un piano solo, con le finestre strette e la porta sempre aperta durante il giorno. Sopra l’architrave, lo stemma dei Melacera dipinto e ridipinto. Davanti, una panca dove c’è sempre una guardia seduta che non sembra fare niente e vede tutto."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Una sala unica con una tavola lunga dove si mangia in piedi, una rastrelliera con venti lance, sei brande contro il muro per il turno di notte, e in fondo una porta di quercia con lo spioncino: la cella, una sola. Alle pareti, appesi a chiodi, i turni di guardia scritti su tavolette di legno.\nOdora di cuoio, brodo e olio per le lame. È un posto povero e in ordine, come il suo sergente."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Venti lance in rastrelliera, sei brande, una cella. La forza di Bëllindë è tutta qui, e non è molta.\n• Le tavolette dei turni: nomi, porte, orari. Chiunque sappia leggere capisce in un minuto come è sorvegliata la città.\n• Metà delle guardie sono ragazzi sotto i venticinque anni. L’altra metà è gente che ha fatto solo questo mestiere."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Ruggiero ha raddoppiato i turni alle porte da stamattina, di sua iniziativa. Il Conte non gliel’ha chiesto.\n• La cella è vuota, ed è vuota da tre settimane. L’ultimo ospite: un carrettiere ubriaco.\n• Un ragazzo di guardia è appena tornato dal controllare dove alloggiano i tre forestieri — se Ruggiero ha saputo della causale «mercatura di lane». Riferisce a lui, non a voi."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Ruggiero de’ Santi] — Qui e ora: a mezzogiorno mangia qui, in piedi. È il posto dove è più facile trovarlo, e il posto dove è più sergente e meno diplomatico.\n[PNG — Cecco] — guardia, diciannove anni.\nQui e ora: tiene la panca fuori. Guarda gli avventurieri come si guarda quello che si vorrebbe diventare. Era amico del ragazzo sparito, e non ne parla da tre anni perché nessuno gliel’ha mai chiesto.\n[PNG — Furio] — il più anziano dopo Ruggiero, quarant’anni, un occhio solo.\nQui e ora: pulisce le lame e ascolta. Se Ruggiero passa il gruppo a collaborativo, è Furio che viene assegnato a loro."
+  },
+  {
+   "t": "Servizi",
+   "txt": "CosaCome\nDenunciare un fatto, consegnare una provaA Ruggiero, o a Furio in sua assenza\nCustodia di un prigionieroLa cella — una sola: se i PG catturano qualcuno, va tenuto qui o al campo\nChiedere uominiVedi la tabella prezzi in [PNG — Ruggiero de’ Santi]"
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "Alba e tramontoCambio dei turni: per mezz’ora la sala è piena e rumorosa.\nMezzogiornoRuggiero mangia qui. Udienza informale per chiunque si presenti con qualcosa di serio.\nNotteSei uomini fuori, due dentro, il resto a casa. Se succede qualcosa di grosso di notte, la campana della Pieve batte a martello e in dieci minuti la sala si riempie.\nSegreti del luogo\n• Il rapporto sulla ronda che sentì la campana sotto il pavimento, due mesi fa, esiste per iscritto: Ruggiero lo tiene in un cassetto invece che negli atti, insieme alle altre segnalazioni sul Borgo Vecchio che non ha mai girato al Conte. È il suo punto di reticenza — e la prova che la guardia sa più di quanto ammette.\n• Cecco sa il nome del ragazzo tornato indietro tre anni fa. È la seconda via per averlo, oltre a Don Fulgenzio — ma parlarne gli costa, e davanti a Ruggiero non lo farà mai."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Ruggiero de’ Santi]\nLuoghi vicini: [LUOGO — Piazza Grande] · [LUOGO — Rocca dei Melacera]\nScene: [SCENA — L’interrogatorio di Ceruso] · [EVENTO — Chiudere la bocca di Ceruso]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Percezione CD 12 — le tavolette dei turni",
+   "skill": "Percezione",
+   "dc": 12,
+   "ok": "nessun turno copre il [LUOGO — Borgo Vecchio]. Tutte le altre zone hanno un nome e un orario; quella zona semplicemente non esiste sulle tavolette, e lo spazio dove ci starebbe è stato piallato.",
+   "ko": "turni ordinari, scritti con la grafia di chi scrive poco. La città è coperta porta per porta."
+  },
+  {
+   "t": "Intuizione CD 13 — parlando con le guardie giovani",
+   "skill": "Intuizione",
+   "dc": 13,
+   "ok": "i ragazzi hanno una soggezione strana verso il Borgo Vecchio: non è un ordine ricevuto, è una cosa che si tramandano fra loro. Uno di loro, Cecco, tre anni fa era amico del ragazzo sparito — e se qualcuno lo capisce, Cecco diventa una fonte che Ruggiero non controlla.",
+   "ko": "ragazzi di paese che fanno la guardia: chiacchierano di paghe, di ragazze e della Crociata, come tutti."
+  }
+ ],
+ "links": []
+}

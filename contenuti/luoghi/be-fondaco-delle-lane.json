@@ -1,0 +1,91 @@
+{
+ "id": "be-fondaco-delle-lane",
+ "tipo": "luogo",
+ "titolo": "8. Fondaco delle Lane",
+ "sottotitolo": "magazzino e banco di commercio della lana",
+ "citta": "bellinde",
+ "gruppo": "Il borgo",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 8. Fondaco delle Lane.jpg",
+ "stato": "visitato",
+ "atti": [
+  16
+ ],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l8",
+  "num": 8,
+  "x": 833,
+  "y": 762
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "magazzino e banco di commercio della lana",
+  "Luogo": "[LUOGO — Bëllindë], Via Maggiore bassa — due minuti da [LUOGO — Piazza Grande]",
+  "Chi lo occupa": "[PNG — Ottavio Ceruso], in affitto da nove giorni. Il proprietario vero è un lanaiolo di Teramum che non si vede da anni.",
+  "Orari": "banco aperto da terza a vespro",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Un magazzino a due piani con un portone largo da carri e una porticina laterale. Sull’architrave, l’insegna scolorita di un vello appeso. Dal portone aperto esce odore di lanolina e si vedono balle di lana accatastate fino al soffitto."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Il piano terra è un deposito vero: balle, stadere, un banco con registri e campioni di filato. Tutto in ordine, tutto plausibile. Una scala di legno sale al piano di sopra, dove si intravedono un tavolo, delle brande e una finestra che dà sul retro.\nL’uomo dietro il banco vi accoglie prima ancora che abbiate parlato: «Voi siete quelli delle due lune. Sedete, sedete. Qui il vino è cattivo ma è onesto.»"
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Un commercio di lana perfettamente normale, a occhio profano.\n• Due manovali che lavorano piano e guardano spesso la porta.\n• La scala per il piano di sopra, e che il piano di sopra è abitato.\n• La botola della cantina, dietro le balle: chiusa con un lucchetto nuovo, l’unica cosa nuova di tutto il magazzino."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Il fondaco è il quartier generale della cellula. Ceruso lavora al banco, i due manovali fanno finta di spostare balle, Cascia dorme di giorno al piano di sopra.\n• La lana però c’è davvero — comprata dal precedente affittuario e mai spostata. La copertura si regge su merce vera.\n• Sotto il magazzino c’è una cantina, e la cantina è il motivo per cui Ceruso ha scelto proprio questo edificio."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Ottavio Ceruso] — Qui e ora: al banco, cordiale, con la chiave del lucchetto in tasca e la borsa dei documenti mai a più di due passi. Se si sente scoperto non combatte: scende in cantina e sparisce nel varco.\nI due manovali — assunti a Teramum, sanno poco.\nQui e ora: spostano balle senza costrutto. Uno dei due, [PNG — Renzo], ha capito in che guaio si trova e cerca un modo per uscirne: è lui il sottoposto che può vendere il padrone. → la leva 2 in [PNG — Ottavio Ceruso]\n[PNG — Cascia la Sguscia] — Qui e ora: dorme al piano di sopra fino a metà pomeriggio. Se la casa viene invasa di giorno, esce dalla finestra sul retro e non la vede nessuno."
+  },
+  {
+   "t": "Servizi",
+   "txt": "ServizioPrezzoNote\nLana grezza, balla3 fiorinice n’è in abbondanza, e Ceruso vende volentieri: fa scena\nFilato, campionia pesoprezzi corretti — ha studiato\n«Informazioni di mercato»un bicchiereè il suo modo di far sedere la gente e farla parlare"
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "TerzaCeruso apre il banco. I manovali «lavorano».\nMezzogiornoCeruso va alla [LUOGO — Locanda Lu Deng’ Rott’], al suo tavolo. Il fondaco resta ai manovali: è il momento buono per parlare con Renzo.\nMetà pomeriggioCascia si sveglia. Da qui al buio, il piano di sopra non è più vuoto.\nNotteLa cantina lavora: il varco, le vie sotterranee, i segni di gesso. Chi sorveglia il fondaco di notte vede lume di candela filtrare dalla botola.\nSegreti del luogo\n• Nella borsa che Ceruso non molla mai: la lista in cifra dei volontari di Maximus, 60 fiorini, e il sigillo da viaggio in osso nero identico a quello di Lu Grise — la prova che collega Bëllindë a chi pagava Mushanè.\n• Il varco in cantina sbuca nelle vie sotterranee ed è il percorso da cui la cellula può lasciare Bëllindë senza passare dalle porte. → [ESPLORAZIONE — Sotto Bëllindë]\n• Nessuno della cellula sa cosa ci sia più in profondità. Hanno usato le cisterne perché erano comode. I segni di gesso giallo marcano le vie «sicure» — secondo loro.\nCosa non si scopre qui\n• Il nome di Iuvenza. Ceruso non lo pronuncia e non c’è scritto da nessuna parte: c’è solo «V.» e il sigillo nero. Il collegamento lo fa chi ha visto le carte di Mushanè."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Ottavio Ceruso] · [PNG — Cascia la Sguscia] · [PNG — Ilario]\nLuoghi vicini: [LUOGO — Piazza Grande] · [LUOGO — Casa del Notaio] · [LUOGO — Borgo Vecchio]\nSotto: [ESPLORAZIONE — Sotto Bëllindë]\nScene: [INSEGUIMENTO — La fuga di Ceruso] · [SITUAZIONE — Cellula di Ceruso]\nMappe: [MAPPA — Bëllindë] · [MAPPA — Sotto Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Percezione CD 13 — il magazzino",
+   "skill": "Percezione",
+   "dc": 13,
+   "ok": "le balle vicino al portone hanno la polvere di mesi; nessuna è stata caricata o scaricata di recente. Un fondaco che lavora muove la merce — questo la custodisce.",
+   "ko": "un magazzino pieno e ordinato. Se qualcosa non va, non si vede da qui."
+  },
+  {
+   "t": "Intuizione CD 15 — conversando con Ceruso",
+   "skill": "Intuizione",
+   "dc": 15,
+   "ok": "le sue domande sono una raccolta di informazioni condotta bene: quanti siete di preciso, chi comanda davvero, quando ripartite. Una di troppo, fatta troppo bene.",
+   "ko": "un mercante curioso e generoso. La curiosità è il mestiere dei mercanti."
+  },
+  {
+   "t": "Indagare CD 14 — la cantina, se ci arrivano",
+   "skill": "Indagare",
+   "dc": 14,
+   "ok": "la cantina è vuota di merce e piena di segni di passaggio: impronte, cera di candela fresca, e in fondo un varco aperto nel muro antico, puntellato di recente, da cui arriva aria ferma. Sul muro accanto al varco, un segno di gessetto giallo. È l’ingresso della cellula alle vie sotterranee — e il collegamento con le cantine di Zaccaria nel [LUOGO — Borgo Vecchio].",
+   "ko": "una cantina vuota e umida. Il varco è dietro un telo da imballaggio appeso: si trova al secondo sguardo, o tornando con una lanterna."
+  }
+ ],
+ "links": []
+}

@@ -1,0 +1,82 @@
+{
+ "id": "be-pieve-di-san-vincenzo",
+ "tipo": "luogo",
+ "titolo": "4. Pieve di San Vincenzo",
+ "sottotitolo": "chiesa della Fiamma Solare, unica della città",
+ "citta": "bellinde",
+ "gruppo": "Chiesa",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 4. Pieve di San Vincenzo.jpg",
+ "stato": "noto",
+ "atti": [],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l4",
+  "num": 4,
+  "x": 835,
+  "y": 352
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "chiesa della Fiamma Solare, unica della città",
+  "Luogo": "[LUOGO — Bëllindë], Via Maggiore — tre minuti da [LUOGO — Piazza Grande]",
+  "Chi la tiene": "[PNG — Don Fulgenzio da Chimblë], da sette anni",
+  "Orari": "aperta dall’alba al terzo rintocco. Messa all’alba e al vespro.",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Un campanile basso e quadrato, un sagrato in pendenza lastricato di pietre consumate, e una facciata semplice con un solo fregio: il disco della Fiamma sopra il portale, dorato di fresco. Tutto è pulito, ordinato, riparato — in un modo che dopo un po’ comincia a sembrare quasi ostile, come una casa dove non si può toccare niente."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Dentro fa fresco e c’è odore di cera buona. Una navata sola, banchi diritti, un altare di pietra chiara con il disco solare in rame lucidato. Le pareti sono bianche di calce recente.\nSolo che la calce, in due punti, non basta a nascondere quello che c’è sotto: lungo la parete di settentrione si indovinano ombre di figure dipinte, affreschi vecchi coperti da mani di bianco date più volte, e sempre riaffioranti."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• La chiesa è povera ma tenuta in modo impeccabile: qui non è mai girato denaro sporco.\n• Sotto la calce della parete nord affiorano ombre di un affresco antico.\n• Il registro dei battesimi e delle morti sta su un leggio nella sacrestia, e Don Fulgenzio lo mostra a chi lo chiede con rispetto.\n• Non c’è nessuna reliquia esposta: la Pieve non ne possiede."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Don Fulgenzio sa già tutto: chi siete, cosa ha concesso il Conte a Mattheus, e cosa è successo a Mushanè — nella versione che è arrivata fin qui, che non è quella giusta.\n• Il corpo di Rocco Serrafredda non è qui: giace nella cella mortuaria del [LUOGO — Camposanto], in attesa che qualcuno decida cosa farne. La famiglia bussa a questa porta ogni giorno, e ogni giorno riceve lo stesso no.\n• Il sacrestano sta ridando il bianco alla parete di settentrione, per la terza volta quest’anno."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Don Fulgenzio da Chimblë] — Qui e ora: cortese, gelido, in attesa. Sa che Mattheus verrà, e ha già deciso le prime tre cose da dirgli.\n[PNG — Fra’ Bonizio] — sacrestano, sessantacinque anni, mezzo cieco.\nQui e ora: imbianca la parete nord bofonchiando. È qui da quarant’anni, cioè da prima di Don Fulgenzio, ed è l’unico che ricorda com’era l’affresco quando ancora si vedeva: «Ce stevéne tre tunne. Une ’n mezze e ddu’ a lu late.» (?) Lo dice solo se nessun prete lo sente."
+  },
+  {
+   "t": "Servizi",
+   "txt": "ServizioPrezzoNote\nCure e medicamenti sempliciofferta liberacon predica in omaggio\nBenedizioni, messe per i defuntioffertasolo per morti in grazia — e qui casca l’asino\nConsultare i registrigratisalla presenza di Don Fulgenzio\nAsilo sacro—concesso a chiunque lo chieda: su questo Don Fulgenzio non discute, nemmeno col Conte"
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "AlbaMessa: una ventina di presenti, quasi tutte donne.\nMattinaDon Fulgenzio riceve sul sagrato: liti, coscienze, elemosine.\nPomeriggioLa chiesa resta aperta e quasi vuota. Fra’ Bonizio imbianca. È il momento per parlare col sacrestano da soli.\nVesproMessa piena: metà città. Oggi tutti si voltano quando entra un forestiero.\nSegreti del luogo\n• Le due settimane bianche del registro coincidono con la sparizione del ragazzo nel Borgo Vecchio, tre anni fa. In quelle due settimane Don Fulgenzio non ha registrato nulla perché non era in grado di scrivere: è il periodo in cui ha fatto murare la porta. Non lo ammette per nessuna prova — solo la frase di Rocco lo apre.\n• L’affresco sotto la calce è la prova che la Pieve nasce su un culto più antico. Fra’ Bonizio lo sa e non sa di saperlo.\nCosa non si scopre qui\n• Cosa c’è sotto il Borgo Vecchio. Don Fulgenzio non lo sa: sa solo cosa è uscito da lì tre anni fa, e nemmeno quello per intero.\n• Il nome del ragazzo tornato. Lo dice soltanto lui, e soltanto a chi gli porta la frase di Rocco."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Don Fulgenzio da Chimblë] · [PNG — Nunzia Serrafredda]\nLuoghi vicini: [LUOGO — Piazza Grande] · [LUOGO — Camposanto]\nScene: [SCENA — Il funerale di Rocco]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Religione CD 14 — l’affresco sotto la calce",
+   "skill": "Religione",
+   "dc": 14,
+   "ok": "dalle ombre si riconosce lo schema: una figura centrale raggiata e due tondi ai lati, uno chiaro e uno scuro. È l’iconografia proibita — il Sole fra le Due Lune — e questa chiesa è stata costruita da gente che la dipingeva ancora. La calce la copre; il muro la restituisce.",
+   "ko": "figure di santi, forse una processione. Troppo rovinato per dire di più — ma chiunque veda le ombre capisce che il sacrestano non sta imbiancando per pulizia."
+  },
+  {
+   "t": "Indagare CD 13 — il registro delle morti",
+   "skill": "Indagare",
+   "dc": 13,
+   "ok": "il registro è tenuto alla perfezione, giorno per giorno, da sette anni — tranne un punto. Tre anni fa mancano due settimane: le pagine ci sono, ma sono bianche. Nessuna morte registrata, nessun battesimo, niente. In una città di millequattrocento anime, due settimane senza un solo atto non esistono.",
+   "ko": "un registro esemplare, la calligrafia di un uomo preciso. La data della morte di Rocco non c’è — ma quello si sapeva già: non è stato registrato perché non è stato benedetto."
+  }
+ ],
+ "links": []
+}

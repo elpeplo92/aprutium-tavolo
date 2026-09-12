@@ -1,0 +1,82 @@
+{
+ "id": "be-rocca-dei-melacera",
+ "tipo": "luogo",
+ "titolo": "2. Rocca dei Melacera",
+ "sottotitolo": "residenza fortificata del Conte, sede del governo",
+ "citta": "bellinde",
+ "gruppo": "Piazza e Rocca",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 2. Rocca dei Melacera.jpg",
+ "stato": "noto",
+ "atti": [],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l2",
+  "num": 2,
+  "x": 1018,
+  "y": 88
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "residenza fortificata del Conte, sede del governo",
+  "Luogo": "[LUOGO — Bëllindë], capo alto della città — sei minuti in salita da [LUOGO — Piazza Grande]",
+  "Proprietario": "[PNG — Conte Gisulfo Melacera]",
+  "Accesso": "su convocazione o richiesta d’udienza. Il gruppo, dopo la firma, entra annunciandosi al corpo di guardia del portone.",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "La Rocca chiude la città come un tappo chiude una bottiglia: dove lo sperone si restringe, i Melacera hanno piantato un blocco di pietra scura con due torri tozze e un portone rinforzato di ferro. Non è grande e non è bella. È il tipo di costruzione che non è mai stata presa, e si vede dal fatto che nessuno si è mai preso il disturbo di abbellirla.\nLa parte bassa delle mura è fatta di blocchi enormi e squadrati, di un’altra epoca e di un’altra mano. Sopra, la pietra dei Melacera ci si appoggia come un cappello su una testa più vecchia."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Oltre il portone c’è un cortile stretto e in pendenza: una scuderia per sei cavalli, una sala d’armi con la porta aperta, la legnaia, un pozzo con la carrucola nuova. Due guardie al portone e una sulla torre.\nLa scala esterna sale alla sala alta, dove il Conte riceve: un camino acceso anche d’agosto, un tavolo lungo segnato dall’uso, le pareti coperte di carte — mappe del contado, confini, un albero di famiglia. Dietro il seggio del Conte, una porta bassa dà sulle sue stanze private."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• La Rocca è tenuta da poche guardie: tre di giorno, e si vede che bastano.\n• La parte bassa delle mura è molto più antica della parte alta.\n• Nel cortile c’è via vai di gente del contado: la Rocca è un ufficio, non solo una fortezza.\n• Dalla sala alta si vede il Balcone, e dal Balcone la strada di Teramum."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• La dichiarazione originale è qui, nella cassa a due chiavi della sala alta. Una chiave ce l’ha Gisulfo al collo, l’altra il notaio [PNG — Ilderico Panzalonga].\n• Gisulfo non ha dormito e riceve più volentieri del solito: un uomo che ha appena scommesso cerca compagnia.\n• Un messo del contado aspetta nel cortile da metà mattina: porta la voce che sulla strada di Teramum c’è più movimento di corrieri del normale."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Conte Gisulfo Melacera] — Qui e ora: irritabile e stranamente sincero. Riceve, offre vino, e prima o poi racconta del pozzo e dell’uomo che ci ha mandato — credendo di raccontare un dispiacere.\n[PNG — Ruggiero de’ Santi] — Qui e ora: passa due volte al giorno a rapporto. Se il gruppo lo cerca e non è alle porte, è qui.\n[PNG — Messer Anselmo] — castaldo, amministra le terre. Vecchio, preciso, geloso delle sue carte.\nQui e ora: sta facendo i conti di quanto grano la città può vendere alla Crociata senza restare scoperta d’inverno, e il conto non gli piace."
+  },
+  {
+   "t": "Servizi",
+   "txt": "CosaCome\nUdienza dal ConteRichiesta al portone; dopo la firma, concessa in giornata\nConfronto del bando di Teramum con l’originale della dichiarazioneCon il permesso del Conte, alla presenza del notaio\nScorta di due uominiConcessa da Gisulfo per una richiesta ben posta — vedi [PNG — Conte Gisulfo Melacera]\nAcquisti a prezzo di casaIl −25% in [LUOGO — Piazza Grande] è ordine suo"
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "MattinaUdienze del contado: contadini, liti di confine, il castaldo che scrive.\nMezzogiornoGisulfo mangia solo, nella sala alta. È il momento migliore per parlargli senza orecchie.\nPomeriggioIl Conte sale al Balcone e guarda la strada di Teramum. Lo fa da ieri sera, e prima non lo faceva mai.\nNottePortone sbarrato, una guardia sulla torre. La Rocca di notte non riceve nessuno.\nSegreti del luogo\n• La cassa a due chiavi si apre solo con entrambe le chiavi: chi vuole la dichiarazione originale deve passare sia dal Conte sia dal notaio — o scassinare (Destrezza, arnesi da scasso, CD 17, e la sala alta non resta mai vuota a lungo).\n• Il nome raschiato dall’albero di famiglia è un filo volutamente aperto: non è ancora deciso chi fosse.\n• Gisulfo non sa nulla di ciò che sta sotto la città. La Rocca però ci sta letteralmente sopra: le sue cantine più profonde sono murate da prima dei Melacera."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Conte Gisulfo Melacera] · [PNG — Ruggiero de’ Santi] · [PNG — Ilderico Panzalonga]\nLuoghi vicini: [LUOGO — Il Balcone] · [LUOGO — Porta di Levante]\nScene: [SCENA — Udienza alla Rocca]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Storia CD 13 — le fondamenta",
+   "skill": "Storia",
+   "dc": 13,
+   "ok": "la parte bassa è pretuzia, come i piani terra del [LUOGO — Borgo Vecchio]. E c’è di più: i blocchi della Rocca e quelli del Borgo hanno lo stesso taglio e lo stesso modulo. Erano la stessa costruzione. Qualunque cosa fosse, andava dal capo alto dello sperone fino al quartiere basso.",
+   "ko": "fondamenta molto più antiche del resto, riusate con intelligenza da chi ha costruito sopra."
+  },
+  {
+   "t": "Percezione CD 14 — nella sala alta",
+   "skill": "Percezione",
+   "dc": 14,
+   "ok": "sull’albero di famiglia appeso alla parete, un nome della terza generazione è stato raschiato via. Il raschio è vecchio. Se lo si chiede a Gisulfo, risponde con leggerezza studiata: «Ogni famiglia ha un nome che non si dice. Il nostro almeno l’abbiamo raschiato con ordine.» — e non aggiunge altro. (Filo libero per il futuro: chi era, e perché.)",
+   "ko": "un albero di famiglia curato, con più rami morti che vivi. I Melacera sono rimasti in pochi."
+  }
+ ],
+ "links": []
+}

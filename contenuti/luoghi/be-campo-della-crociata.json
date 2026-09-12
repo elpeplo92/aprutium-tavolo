@@ -1,0 +1,82 @@
+{
+ "id": "be-campo-della-crociata",
+ "tipo": "luogo",
+ "titolo": "15. Campo della Crociata",
+ "sottotitolo": "accampamento della colonna, fuori le mura",
+ "citta": "bellinde",
+ "gruppo": "Fuori le mura",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 15. Campo della Crociata.jpg",
+ "stato": "noto",
+ "atti": [],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l15",
+  "num": 15,
+  "x": 98,
+  "y": 865
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "accampamento della colonna, fuori le mura",
+  "Luogo": "sul prato del tratturo, fuori [LUOGO — Porta di Ponente] — dieci minuti da [LUOGO — Piazza Grande]",
+  "Chi comanda": "Silvanus Ardentus; in sua assenza, il PG più alto in grado presente",
+  "Forza": "39 persone, 5 carri, 23 bestie — il dettaglio è nel [HANDOUT — Registro della Crociata]",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Cinque carri disposti in cerchio sul prato del tratturo, le tende in mezzo, le bestie al pascolo sotto gli olivi con due uomini di guardia. Al centro, piantato in un cumulo di pietre, lo stendardo nuovo: il Sole e le Due Lune che il vento del Balcone non lascia mai fermo.\nIntorno, a distanza rispettosa, Bëllindë guarda: bambini seduti sui muretti, donne che vendono pane e fichi, un paio di ragazzi che parlano coi vesperiani a gesti."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Dentro il cerchio dei carri il campo lavora: Mastro Colangelo ripara un mozzo, il Dottor Albino ha steso la sua roba sul Carro IV, Brizio e Pippo giocano a dadi con due milizie, e Kostandìn tiene i suoi vesperiani occupati a riparare finimenti — un uomo che sa che le mani ferme fanno i pensieri storti.\nIl Carro V, quello del seguito Pompizius, sta un po’ discosto, col telone sempre mezzo chiuso."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Lo stato del campo: ordinato, sorvegliato, con turni di guardia già assegnati da Kostandìn secondo l’uso vesperiano.\n• I curiosi sul tratturo, a tutte le ore di luce.\n• Il Carro IV allestito da infermeria; il Carro V discosto."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Il campo è un teatro: la città viene a guardare, e ogni gesto dei crociati — una lite, una gentilezza, una preghiera — diventa una voce in [LUOGO — Piazza Grande] entro un’ora.\n• Un uomo col cappello a tesa larga è passato due volte lungo il tratturo, e la seconda volta si è fermato a contare i carri muovendo le labbra. Percezione passiva 14 per notarlo; Luigis lo nota comunque.\n• Le razioni calano: chi tiene i conti del [HANDOUT — Registro della Crociata] sa che senza acquisti in piazza l’autonomia scende oggi a cinque giorni.\n• Sul Carro V c’è una bocca in più che nessuno ha ancora contato."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "Silvanus Ardentus — Qui e ora: passa la giornata fra il campo e la città. Al campo parla poco e guarda molto: il modo in cui i suoi trattano i curiosi gli interessa più di qualsiasi rapporto.\nKostandìn — Qui e ora: tiene i suoi occupati e conta i giorni dalla stretta di mano con Maximus. Se Maximus passa, lo saluta con un cenno che contiene una domanda.\nDottor Albino — Qui e ora: ha sistemato il Carro IV e si annoia: nessun ferito grave. È il primo che noterebbe le gallette sparite, se qualcuno gli desse il pensiero.\nIosephus Pompizius — Qui e ora: fa la spola fra il campo e la città: il figlio del locandiere sa parlare coi bottegai come nessun altro della colonna.\nIl clandestino del Carro V — non ancora scoperto. → [PNG — Il fraticello]"
+  },
+  {
+   "t": "Servizi",
+   "txt": "CosaNote\nInfermeria (Carro IV)Dottor Albino + chiunque sappia di medicina\nRiparazioni da campoMastro Colangelo e Mastro Giustino: carri, finimenti, legno\nCustodia di un prigionieropossibile, con turni dedicati — e trentanove testimoni"
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "AlbaLe bestie al pascolo, i fuochi accesi. Frate Martino dice una preghiera e metà campo ci va.\nGiornoIl viavai coi curiosi e le vendicole. L’uomo col cappello, due volte.\nSeraLa città chiude le porte: il campo resta solo, fuori. I turni di guardia di Kostandìn valgono da qui all’alba.\nNotteChiunque esca dal Borgo Vecchio per via sotterranea sbuca fuori dalle mura — cioè dalla parte del campo. Le due sentinelle sono l’unica linea fra la cellula in fuga e la strada aperta.\nSegreti del luogo\n• Il fraticello sta sotto il telone del Carro V da Mushanè: due gallette, una borraccia e uno strappo ad altezza d’occhio sono tutta la sua impronta. Viene scoperto quando qualcuno ispeziona il carro sul serio, o quando Mattheus torna al campo e il ragazzo non regge più.\n• L’uomo col cappello è uno dei due di Ceruso: sta contando forza, carri e turni. Il suo conteggio è nella lista in cifra nella borsa del mercante.\n• La paga dei vesperiani è una miccia lenta: se passa un’altra settimana senza che nessuno ne parli, la coesione della colonna scende di una tacca. Basta una parola di Maximus — e la cassa della compagnia di Lekë, che è sui carri — per spegnerla."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Il fraticello] · [PNG — Ottavio Ceruso]\nLuoghi vicini: [LUOGO — Porta di Ponente] · [LUOGO — Camposanto]\nDocumenti: [HANDOUT — Registro della Crociata]\nScene: [SCENA — La scoperta del clandestino] · [SCENA — L’arrivo a Bëllindë] · [INSEGUIMENTO — La fuga di Ceruso]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Percezione CD 12 — girando fra i carri",
+   "skill": "Percezione",
+   "dc": 12,
+   "ok": "dal Carro V, sotto il telone, mancano due gallette e una borraccia è stata riempita alla botte di notte — il civile Pompizius che ci dorme accanto giura di non essere stato lui. E in un angolo del telone, dall’interno, c’è un piccolo strappo ad altezza d’occhio: di occhio basso.",
+   "ko": "un campo in ordine. Se manca qualcosa, con trentanove persone non se ne accorge nessuno."
+  },
+  {
+   "t": "Intuizione CD 13 — parlando coi vesperiani",
+   "skill": "Intuizione",
+   "dc": 13,
+   "ok": "gli uomini di Kostandìn sono tranquilli ma in attesa: la prima paga da parte della Crociata non è ancora stata versata, e nel loro mestiere la prima paga è il contratto vero. Kostandìn non l’ha chiesta per orgoglio. La aspetta.",
+   "ko": "mercenari che fanno i mercenari: riparano, mangiano, guardano le donne del paese."
+  }
+ ],
+ "links": []
+}

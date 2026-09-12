@@ -1,0 +1,118 @@
+{
+ "id": "be-piazza-grande",
+ "tipo": "luogo",
+ "titolo": "1. Piazza Grande",
+ "sottotitolo": "piazza del mercato, peso pubblico, luogo dei bandi",
+ "citta": "bellinde",
+ "gruppo": "Piazza e Rocca",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 1. Piazza Grande.jpg",
+ "stato": "visitato",
+ "atti": [
+  16
+ ],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l1",
+  "num": 1,
+  "x": 765,
+  "y": 597
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "piazza del mercato, peso pubblico, luogo dei bandi",
+  "Luogo": "[LUOGO — Bëllindë], metà della Via Maggiore — è il centro da cui si misurano tutte le distanze in città",
+  "Chi ci comanda": "il pesatore pubblico per le misure, [PNG — Ruggiero de’ Santi] per tutto il resto",
+  "Orari": "banchi da prima luce a vespro. Il peso pubblico chiude a nona.",
+  "Prezzi": "standard.",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "La Via Maggiore si allarga all’improvviso e diventa una piazza lunga e stretta, in leggera pendenza, chiusa su un lato da una loggia a tre archi e sull’altro dalle case dei mercanti. È l’unico posto di Bëllindë dove entra il sole per tutto il giorno, ed è anche l’unico dove i carri riescono ad arrivare: da qui in poi, chi ha merce se la porta a spalla.\nSi sente prima di vederla. Voci, una campanella, il rumore di un carro sui ciottoli, e sotto tutto il resto un colpo di metallo lento e regolare che viene dalla loggia."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Sotto la loggia c’è il peso pubblico: una stadera grande quanto un uomo, appesa a una trave, e accanto una cassa di pesi di bronzo bollati. È da lì che viene il rumore.\nI banchi occupano il centro: grano, farro, ceci, formaggi in forme scure, olio in orci, matasse di lana grezza. Sul lato in ombra, la carne salata e le pelli. Su una parete della loggia sono inchiodati i bandi: fogli sovrapposti, alcuni sbiaditi da mesi, l’ultimo ancora bianco.\nA un capo della piazza c’è una gogna di legno consumato, senza nessuno dentro. Ci appoggiano sopra i sacchi."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Si compra e si vende di tutto tranne armi, medicine e cavalli.\n• Sotto la loggia c’è una stadera pubblica e un uomo che la usa tutto il giorno.\n• Sulla parete della loggia ci sono i bandi affissi, e l’ultimo è fresco.\n• C’è una gogna, e non la usa nessuno da anni.\n• I carri arrivano fin qui e non oltre.\n• Nessuno è armato, tranne due guardie del Conte che stanno ferme agli imbocchi."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Il bando di Teramum è affisso sotto la loggia, inchiodato sopra gli altri. È la copia che il notaio ha tratto dall’originale del Conte. La gente lo legge, o si fa leggere, e poi guarda voi.\n• Il mercato è più pieno del solito. Metà della città è scesa in piazza per lo stesso motivo per cui ci sono venuti anche i vostri: vedersi.\n• Donna Egidia ha tirato fuori il grano buono senza che nessuno glielo chiedesse. Sa che c’è una colonna di trentanove persone accampata fuori dalle mura e sa contare.\n• Due uomini stanno sotto la loggia dal mattino e non hanno comprato niente."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Mastro Berardo lu Pesatùre] — pesatore pubblico, cinquant’anni, sordo da un orecchio, onestissimo per orgoglio di mestiere.\nQui e ora: lavora e parla poco, ma se qualcuno si interessa alla stadera si illumina e non la smette più. Mostra il registro a chiunque lo chieda: è pubblico, e per lui è un vanto.\n[PNG — Donna Egidia Vernacchia] — grano, farro, olio, e due carri suoi. Vedova, contratta come un notaio.\nQui e ora: ha già calcolato quanto vale la Crociata e vi aspetta. Applica il −25% del Conte senza discutere, e poi cerca di rivendervi due muli che non valgono il prezzo.\n[PNG — Mimì lu Bannitòre] — banditore, magro, voce enorme.\nQui e ora: ha letto il bando di Teramum tre volte stamattina, come gli hanno ordinato, e non gli è piaciuto farlo. Si fa pagare per annunciare qualsiasi cosa non contraddica un bando del Conte.\n→ Le due guardie agli imbocchi rispondono a [PNG — Ruggiero de’ Santi]. Non intervengono per le discussioni; intervengono per il ferro."
+  },
+  {
+   "t": "Servizi",
+   "txt": "ServizioPrezzoTempo\nPesata pubblica e bollo1 gofferina a pesatapochi minuti\nConsultare il registro delle pesategratisun’ora, o una prova riuscita\nAnnuncio del banditore5 gofferine per tre giri di piazzamezz’ora\nFacchini per caricare i carri2 gofferine a testamezza giornata\nDeposito merce sotto la loggia1 gofferina al giorno—\nL’annuncio del banditore è lo strumento più utile della piazza. Cinque gofferine comprano la voce più forte di Bëllindë per mezz’ora: è il modo per convocare qualcuno, far sapere che si cerca gente, o smentire qualcosa in pubblico. → [SCENA — La chiamata in piazza]"
+  },
+  {
+   "t": "Inventario",
+   "txt": "Disponibile oggi\nPrezzi già al netto del −25% concesso dal Conte. Una razione = una persona per un giorno.\nMerceQuantitàPrezzoResa\nSacco di grano26 sacchi1 fiorino e 5 gofferine20 razioni l’uno\nFarro e ceci, sacco141 fiorino16 razioni l’uno\nCarne salata, barile63 fiorini30 razioni l’uno\nFormaggio, formauna trentina4 gofferine8 razioni l’una\nOlio, orcio92 fiorini—\nForaggio, balla403 gofferine1 giorno per 4 bestie\nVino, botticellaquante ne vogliono1 fiorino—\nMuli26 fiorini l’uno (ne valgono 4)—\nCarro a due ruote, usato112 fiorini—\nPer la Crociata, in pratica: trentanove bocche consumano 39 razioni al giorno. Dodici sacchi di grano — 18 fiorini — sono sei giorni di autonomia in più. Quaranta balle di foraggio coprono dieci giorni per ventitré bestie. Tutto il magazzino della piazza non basta comunque ad arrivare a Teramum senza ricomprare per strada. → [HANDOUT — Registro della Crociata]\nSu ordinazione\nDonna Egidia fa arrivare dai casali quello che oggi non ha: altro grano in due giorni, un terzo carro in tre, buoi in una settimana. Chiede metà in anticipo.\nNon disponibile\nArmi, armature, munizioni, cavalli da sella, medicine oltre gli infusi delle erbaiole, componenti per incantesimi, pergamene, nulla di magico. Per il ferro c’è [LUOGO — Fucina di Bëllindë], per i cavalli [LUOGO — Stazione di Posta], per le cure [LUOGO — Pieve di San Vincenzo]."
+  },
+  {
+   "t": "Se chiedono informazioni",
+   "txt": "La piazza è il posto dove si sa tutto e non si dice niente di preciso. Nessun tiro per il primo livello; Persuasione CD 12 o un acquisto per il secondo.\nDa chiCosa si ottiene\nMastro BerardoChi ha pesato cosa e quando, per chiunque, senza fare domande sul perché. Se gli si chiede del mercante di lane: «Quello? Viene, pesa poco e paga subito. Un cliente perfetto e un mercante scarso.»\nDonna EgidiaQuanto può permettersi la città, chi paga in ritardo, e che il Conte in vent’anni non le ha mai chiesto uno sconto per nessuno — fino a ieri sera.\n[PNG — Mimì lu Bannitòre]Tutti i bandi degli ultimi mesi, a memoria. E che negli ultimi nove giorni due forestieri gli hanno pagato un annuncio a testa: uno cercava lana, l’altro cercava «chiunque abbia lavorato nelle cisterne vecchie».\nLa gente ai banchiLe voci correnti → tabella in [LUOGO — Bëllindë]. Sul bando di Teramum tutti hanno un’opinione e nessuno l’ha letto per intero."
+  },
+  {
+   "t": "La piazza nel corso della giornata",
+   "txt": "Prima luceArrivano i carri dai casali. Per un’ora la piazza è solo mercanti: è il momento in cui si contratta sul serio.\nTerzaIl banditore legge i bandi. Oggi legge quello di Teramum, e mentre lo legge la piazza si zittisce.\nMezzogiornoI banchi restano, le botteghe della Via Maggiore chiudono. La piazza diventa il posto dove si mangia in piedi.\nNonaIl peso pubblico chiude e Mastro Berardo porta il registro a casa. Da qui a domani, quella prova non si può fare.\nVesproSi smonta. In venti minuti la piazza si svuota e restano solo le bucce.\nSe pioveTutta la città si sposta sotto la loggia. Diventa impossibile parlare senza essere sentiti, e impossibile passare inosservati.\nSegreti del luogo\n• I due uomini sotto la loggia lavorano per [PNG — Ottavio Ceruso]. Contano chi entra e chi esce dalla piazza e, da oggi, chi parla con voi. Non sono armati e non attaccano.\n• Il registro delle pesate è la prova che smonta la copertura di Ceruso, e sta lì da nove giorni alla luce del sole perché nessuno ha pensato di guardarla.\n• Il secondo annuncio pagato al banditore — chiunque abbia lavorato nelle cisterne vecchie — è stato pagato quattro giorni prima che Rocco Serrafredda si impiccasse.\nCosa non si scopre qui\n• Per chi lavora Ceruso. Il registro prova che non è un mercante. Non dice altro.\n• Chi ha pagato il secondo annuncio. Mimì non ricorda la faccia: «Uno che pagava. Mica li guardo.»\n• Se il bando sia autentico. Qui c’è solo la copia notarile. Il confronto si fa alla [LUOGO — Rocca dei Melacera] o alla [LUOGO — Casa del Notaio]."
+  },
+  {
+   "t": "Scene collegate",
+   "txt": "[SCENA — La chiamata in piazza] · [EVENTO — Il Bando di Teramum]"
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Ruggiero de’ Santi] · [PNG — Ottavio Ceruso]\nLuoghi vicini: [LUOGO — Casa del Notaio] · [LUOGO — Pieve di San Vincenzo] · [LUOGO — Borgo Vecchio] · [LUOGO — Fondaco delle Lane]\nDocumenti: [HANDOUT — Registro della Crociata] · [EVENTO — Il Bando di Teramum]\nScene: [SCENA — La chiamata in piazza] · [EVENTO — Il Bando di Teramum]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Percezione CD 12 — la folla",
+   "skill": "Percezione",
+   "dc": 12,
+   "ok": "due uomini sotto la loggia sono lì da troppo tempo per non aver comprato niente, e guardano nella direzione sbagliata rispetto ai banchi: guardano chi entra in piazza. Se vengono fissati, uno dei due si stacca e va a comprare del formaggio.",
+   "ko": "la piazza è piena e rumorosa, e metà della gente sta guardando voi — il che rende impossibile capire chi vi stia guardando davvero."
+  },
+  {
+   "t": "Indagare CD 13 — il registro del peso pubblico",
+   "skill": "Indagare",
+   "dc": 13,
+   "ok": "negli ultimi nove giorni Ottavio Ceruso, mercante di lane, ha fatto pesare lana due volte per un totale di undici libbre. Un mercante di lane vero, in nove giorni, ne pesa qualche centinaio. Ha comprato quel tanto che basta perché il suo nome comparisse sul registro.",
+   "ko": "il registro è fitto, scritto male e in ordine di pesata, non di nome. Ci vuole più tempo: torna con un’ora libera, oppure con qualcuno che sappia leggere in fretta, e la prova riesce automaticamente.\nÈ una prova materiale nel senso che intende [PNG — Ruggiero de’ Santi]: non un sospetto, una scrittura pubblica."
+  },
+  {
+   "t": "Storia CD 12 — la loggia e i bandi",
+   "skill": "Storia",
+   "dc": 12,
+   "ok": "nella pietra del pilastro centrale della loggia sono incise le misure ufficiali — il braccio, il passo, lo staio. Sono misure imperiali antiche, di due secoli prima di quelle in uso, e nessuno le ha mai scalpellate via. Bëllindë commercia ancora usando lo staio vecchio, e chi arriva da Teramum ci rimette sempre un po’.",
+   "ko": "incisioni consumate sul pilastro, sicuramente misure di qualche tipo, ormai illeggibili senza toccarle."
+  },
+  {
+   "t": "Indagare CD 14 — il bando di Teramum affisso",
+   "skill": "Indagare",
+   "dc": 14,
+   "ok": "è una copia notarile, non l’originale, e il notaio ha copiato anche la formula di autenticazione — il che significa che l’originale ce l’ha il Conte e che qualcuno può confrontarli. In fondo, sotto la data, c’è una riga che nessuno legge mai: il bando è stato spedito a undici comunità del Ducato, e sono elencate.",
+   "ko": "il testo è quello che si aspettavano. Sedizione, aggressione ad autorità ecclesiastiche, reclutamento illecito, e il divieto di fornire uomini, cavalli, armi, vettovaglie o ospitalità."
+  },
+  {
+   "t": "Rapidità di Mano CD 13 — contro chi ha una borsa",
+   "skill": "Rapidità di Mano",
+   "dc": 13,
+   "ok": "spariscono con 2d10 gofferine. Se vengono inseguiti, corrono verso il [LUOGO — Borgo Vecchio] e nessuno li segue.",
+   "ko": "vengono presi per il polso. La piazza guarda, e cosa succede dopo dipende da quello che decide chi li ha presi — a Bëllindë per il furto si paga una multa, non si perde una mano."
+  }
+ ],
+ "links": []
+}

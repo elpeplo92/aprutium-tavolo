@@ -1,0 +1,85 @@
+{
+ "id": "be-casa-del-notaio",
+ "tipo": "luogo",
+ "titolo": "7. Casa del Notaio",
+ "sottotitolo": "studio notarile, archivio degli atti della contea",
+ "citta": "bellinde",
+ "gruppo": "Il borgo",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 7. Casa del Notaio.jpg",
+ "stato": "visitato",
+ "atti": [
+  16
+ ],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l7",
+  "num": 7,
+  "x": 918,
+  "y": 516
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "studio notarile, archivio degli atti della contea",
+  "Luogo": "[LUOGO — Bëllindë], a un minuto da [LUOGO — Piazza Grande]",
+  "Proprietario": "[PNG — Ilderico Panzalonga], notaio del Conte da ventidue anni",
+  "Orari": "da terza a vespro.",
+  "Prezzi": "1 fiorino a copia autenticata; consulti a discrezione",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Una casa stretta a due piani con la porta verde e una targa di ottone lucidata ogni mattina: Ilderico Panzalonga, Notaro. La finestra del piano terra ha una grata — l’unica grata di tutta la via."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Un banco alto che taglia la stanza in due, e dietro il banco tre casse ferrate piene di rogiti, uno scaffale di registri e un tavolo da scrittura con l’occorrente disposto in ordine maniacale. L’aria sa di ceralacca, inchiostro e polvere di carta.\nUn ragazzo con le dita macchiate d’inchiostro copia atti a testa bassa. Dal piano di sopra scendono i passi lenti di qualcuno che cammina pensando."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Le tre casse ferrate, con serrature serie. La grata alla finestra.\n• Il garzone nervoso, il notaio preciso.\n• L’orario inchiodato alla porta: chiuso da nona al vespro. Lo sa tutta la città."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• La copia in deposito della dichiarazione di Gisulfo è qui, nella cassa di mezzo, come vuole la forma: una copia al Conte, una alla Crociata, una in deposito. È l’obiettivo della cellula.\n• Ilderico sta ricopiando il bando di Teramum per l’affissione nei casali, e più lo copia meno gli piace.\n• Ilario suda, e non per il caldo. → [PNG — Ilario]"
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Ilderico Panzalonga] — notaio, sessant’anni, pignolo, incorrotto per pignoleria.\nQui e ora: inquieto per il bando che sta copiando, e felice di parlarne con chiunque capisca di atti: è la sua materia, e in città non ne può parlare con nessuno.\n[PNG — Ilario] — garzone, diciannove anni.\nQui e ora: ha già detto a Ceruso quando la stanza resta vuota, e se ne sta pentendo così forte che si vede. Trattato bene, torna dal gruppo da solo entro un’ora."
+  },
+  {
+   "t": "Servizi",
+   "txt": "ServizioPrezzoTempo\nCopia autenticata di un atto1 fiorinomezza giornata\nVerifica di un sigillo o di una formula2 fioriniun’ora — ed è il miglior perito a quattro leghe da Teramum\nDeposito di un documento1 fiorino al mesenella cassa, a chiave\nScrittura di lettere, contratti, procureda 5 gofferinein giornata"
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "TerzaApre. Fila di contadini per atti e liti.\nNonaChiude. Ilderico e Ilario escono a mangiare. La stanza con le casse resta vuota fino al vespro — e lo sa tutta la città, compresa la cellula.\nVesproRiapre per un’ora, poi Ilderico sale al piano di sopra dove abita.\nNotteIl notaio dorme sopra il suo archivio, e ha il sonno leggero. Un’intrusione notturna (Furtività CD 14, serratura CD 15) lo sveglia con un fallimento qualsiasi — e sveglio, urla.\nSegreti del luogo\n• La finestra fra nona e vespro è il piano della cellula: Cascia entra dal retro, apre la cassa di mezzo (ci mette dieci minuti) e prende la copia in deposito. Se l’orologio della cellula arriva alla tacca 5 e nessuno l’ha fermata, avviene oggi.\n• Ilderico tiene la seconda chiave della cassa a due chiavi della Rocca appesa al collo, sotto la camicia. Non la toglie mai, nemmeno per dormire.\n• L’annotazione «formula del 22° anno» è il primo indizio concreto su come viene fabbricata la carta di Teramum: chi la produce attinge a forme d’archivio, non alla cancelleria viva.\nCosa non si scopre qui\n• Chi ha ordinato il bando. Ilderico può dire com’è fatto, non chi l’ha fatto.\n• Che Ilario ha già parlato. Lo dice solo lui, e solo se trattato bene."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Ilderico Panzalonga] · [PNG — Ilario] · [PNG — Ottavio Ceruso]\nLuoghi vicini: [LUOGO — Piazza Grande] · [LUOGO — Fondaco delle Lane]\nScene: [EVENTO — Il furto della dichiarazione]\nDocumenti: [EVENTO — Il Bando di Teramum]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Intuizione CD 12 — il garzone",
+   "skill": "Intuizione",
+   "dc": 12,
+   "ok": "Ilario nasconde qualcosa. CD 16: è paura, non malizia — e la paura cresce quando si parla di forestieri.",
+   "ko": "un apprendista timido davanti a gente armata. Normale."
+  },
+  {
+   "t": "Indagare CD 14 — il bando, confrontato con la copia affissa",
+   "skill": "Indagare",
+   "dc": 14,
+   "ok": "Ilderico ha copiato il bando due volte, e nella prima copia — scartata, ma non ancora bruciata — ha annotato a margine, per sé: «formula del 22° anno». Se gli si chiede cosa significhi, esita, poi lo dice: la formula di autenticazione usata nel bando è quella in uso ventidue anni fa, quando lui era praticante a Teramum. La cancelleria l’ha cambiata da un decennio. Autentica, ma vecchia: chi ha scritto il bando ha imparato le forme molto tempo fa, o le ha copiate da un archivio.",
+   "ko": "copia fedele, mano professionale, nulla da eccepire. Resta l’annotazione a margine, che chiunque può vedere: ma senza la domanda giusta Ilderico non la spiega."
+  }
+ ],
+ "links": []
+}

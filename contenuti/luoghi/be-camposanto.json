@@ -1,0 +1,78 @@
+{
+ "id": "be-camposanto",
+ "tipo": "luogo",
+ "titolo": "14. Camposanto",
+ "sottotitolo": "cimitero cittadino, fuori le mura",
+ "citta": "bellinde",
+ "gruppo": "Fuori le mura",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 14. Camposanto.jpg",
+ "stato": "segreto",
+ "atti": [],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l14",
+  "num": 14,
+  "x": 497,
+  "y": 1063
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "cimitero cittadino, fuori le mura",
+  "Luogo": "a mezzogiorno delle mura, fra gli oliveti — dodici minuti da [LUOGO — Piazza Grande]",
+  "Chi lo tiene": "[PNG — Don Fulgenzio da Chimblë] per la parte consacrata; nessuno per il resto",
+  "Orari": "sempre aperto. Il becchino viene al bisogno.",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Un rettangolo di terra cinto da un muretto a secco alto un metro, fra gli olivi, con un cancello di ferro che non si chiude a chiave. Croci di pietra e di legno in file storte, qualche lapide delle famiglie che contano, cipressi ai quattro angoli.\nNell’angolo di levante, oltre una linea di pietre bianche interrate, l’erba cresce alta e non ci sono croci: la Fossa dei Senza Nome — forestieri, suicidi, morti senza sacramenti. Il muretto, da quel lato, è più basso: come se nemmeno il muro ci tenesse."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Addossata al muro di ponente c’è una cella mortuaria di pietra, con la porta di legno e il tetto a una falda. Davanti alla porta, sull’erba, qualcuno ha lasciato un mazzo di fiori di campo legato con lo spago. Sono freschi di stamattina.\nDentro la cella, su un’asse fra due cavalletti, giace un corpo avvolto in un lenzuolo cucito. È lì da sette giorni. La calce sparsa a terra tiene a bada l’odore, non del tutto."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• La divisione netta: terra consacrata con le croci, e l’angolo d’erba alta oltre le pietre bianche.\n• La cella mortuaria, il lenzuolo cucito, la calce, i fiori freschi.\n• La buca aperta nell’angolo dei Senza Nome.\n• Dal camposanto si vede bene il fianco sud della città e il [LUOGO — Campo della Crociata] in lontananza."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Il corpo di Rocco Serrafredda è nella cella mortuaria, in attesa che qualcuno decida cosa farne. Don Fulgenzio nega la terra consacrata; la famiglia rifiuta la Fossa. Lo stallo dura da una settimana, e d’agosto non può durare un’altra.\n• I fiori davanti alla porta li porta Nunzia, ogni mattina, prima di andare al lavatoio. → [PNG — Nunzia Serrafredda]\n• Il becchino ha già scavato la fossa — nella Fossa dei Senza Nome, su ordine del prete. La buca aperta si vede dal cancello. Nunzia lo sa, e per questo il tempo stringe."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Menotto] — becchino, età indefinibile, parla poco e beve il giusto.\nQui e ora: ripulisce la buca che ha scavato e non è contento di averla scavata: «Lu Cavatore m’ha accunciate lu puzze de casa, du’ anne fa. Gratis.» (?) Se Mattheus celebra, Menotto è il primo del paese a togliersi il cappello — e i sassi bianchi a coppie, nella Fossa, li mette lui.\n[PNG — Nunzia Serrafredda] — Qui e ora: al mattino presto, coi fiori. È qui che è più facile che trovi il coraggio di avvicinare «quello che parla coi morti»."
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "Mattina prestoNunzia coi fiori. Nessun altro.\nGiornoQualche visita alle tombe. Menotto che lavora.\nDomaniSe nessuno interviene, Rocco va nella buca senza rito: Don Fulgenzio ha dato a Menotto l’ordine per domattina. È l’orologio della miniquest: la scena del funerale o si gioca oggi, o si gioca come sepoltura già avvenuta.\nNotteIl camposanto è fuori le mura: dopo il coprifuoco è irraggiungibile dalla città — ma non dal [LUOGO — Campo della Crociata].\nSegreti del luogo\n• Le unghie di Rocco sono l’unica prova fisica di ciò che gli è successo: nei sei giorni fra la discesa e la morte, di notte, tornava a grattare pietra. Dove? Nessuno l’ha seguito. (La risposta è la [LUOGO — Borgo Vecchio] (Porta Murata): sotto le sue unghie c’è malta di tre anni e pietra antica insieme.)\n• Il funerale di Rocco, se Mattheus lo celebra, è la scena in cui Mortus mette radici a Bëllindë: Menotto, Nunzia, e chiunque del Borgo venga a vedere. → [SCENA — Il funerale di Rocco]\nCosa non si scopre qui\n• Cosa ha sentito Rocco là sotto. Il corpo dice cosa ha fatto dopo. Cosa ha sentito lo sa solo lui — e nessun incantesimo del gruppo può chiederglielo: la verità va ricostruita dai segni, da Nunzia, da Fulgenzio e dal ragazzo tornato."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Nunzia Serrafredda] · [PNG — Don Fulgenzio da Chimblë]\nLuoghi vicini: [LUOGO — Pieve di San Vincenzo] · [LUOGO — Campo della Crociata]\nScene: [SCENA — Il funerale di Rocco]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Esaminare il corpo",
+   "skill": "",
+   "dc": null,
+   "ok": "",
+   "ko": ""
+  },
+  {
+   "t": "Religione CD 12 — la Fossa dei Senza Nome",
+   "skill": "Religione",
+   "dc": 12,
+   "ok": "in mezzo all’erba alta, seminascosti, ci sono sassi bianchi disposti a coppie su alcune sepolture: il segno con cui, nella fede vecchia, si affidavano i morti alla Vecchia Madre quando la Chiesa li rifiutava. Qualcuno a Bëllindë continua a farlo: i Senza Nome non sono così senza nome come vuole il registro.",
+   "ko": "erba, terra smossa in tempi diversi, nessuna croce. L’abbandono che ci si aspetta."
+  }
+ ],
+ "links": []
+}

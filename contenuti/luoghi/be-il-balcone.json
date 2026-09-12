@@ -1,0 +1,78 @@
+{
+ "id": "be-il-balcone",
+ "tipo": "luogo",
+ "titolo": "3. Il Balcone",
+ "sottotitolo": "bastione panoramico sulle mura nord — il posto che dà il soprannome alla città",
+ "citta": "bellinde",
+ "gruppo": "Piazza e Rocca",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 3. Il Balcone.jpg",
+ "stato": "noto",
+ "atti": [],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l3",
+  "num": 3,
+  "x": 500,
+  "y": 278
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "bastione panoramico sulle mura nord — il posto che dà il soprannome alla città",
+  "Luogo": "[LUOGO — Bëllindë], mura nord — quattro minuti da [LUOGO — Piazza Grande]",
+  "Chi ci comanda": "nessuno. È di tutti, ed è il posto più frequentato della città dopo la piazza.",
+  "Accesso": "libero, giorno e notte.",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Il camminamento delle mura nord si allarga in una terrazza lunga trenta passi, chiusa da una ringhiera di pietra consumata da generazioni di gomiti. La chiamano il Balcone, e da qui viene il nome che tutto il Ducato dà a Bëllindë.\nSotto, la rupe cade dritta per trecento piedi. Davanti, la valle del Tordinum si apre per miglia: il fiume che luccica, i campi, e la strada per Teramum che corre visibile per tre leghe prima di sparire dietro le colline. Nelle giornate limpide, all’orizzonte, il profilo del Gigante Dormiente."
+  },
+  {
+   "t": "Entrando",
+   "txt": "C’è sempre qualcuno: due vecchi che guardano la valle come si guarda un fuoco, una donna che stende i panni sulle merlature, un ragazzino che tira sassi nel vuoto e li ascolta non arrivare. Il vento non smette mai, e dopo un po’ non lo si sente più: si sente quando smette."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Tutta la strada di Teramum per tre leghe: chiunque arrivi o parta verso levante, da qui si vede con ore di anticipo.\n• Il traffico di oggi: carri di contadini, un gregge, e più cavalieri soli del normale, tutti nella stessa direzione.\n• La [LUOGO — Stazione di Posta] e la Porta di Levante, in basso a destra.\n• Il fumo dei casali nella valle, e il guado del Tordinum."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Ze’ Cristofano] — ottant’anni, ex mulattiere, sta sul Balcone da mattina a sera con un cappello di paglia.\nQui e ora: conosce la strada di Teramum a memoria e commenta tutto quello che ci si muove sopra. È lui il primo a dire, senza che nessuno chieda: «Mai viste tante staffette da quanne è morte lu Duca.» (?)\n[PNG — Conte Gisulfo Melacera] — Qui e ora: nel pomeriggio viene quassù da solo e guarda la strada. Chi lo avvicina qui lo trova più sincero che nella sala alta."
+  },
+  {
+   "t": "Se chiedono informazioni",
+   "txt": "Da chiCosa si ottiene\n[PNG — Ze’ Cristofano]Il traffico degli ultimi giorni, a memoria: quante staffette, a che ora, e che nessuna si ferma mai a Bëllindë — «passene e bbaste» (?). E la strada per Teramum palmo a palmo: i guadi, le osterie, i due punti dove «la strada se stregne e nen ce se passa a doje carre» (?) — utile per chi pensa alle imboscate, in un senso o nell’altro."
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "MattinaVecchi e panni stesi. La luce migliore per guardare la valle.\nPomeriggioGisulfo, da solo. E il cavaliere senza insegne che parte.\nTramontoMezza città sale a guardare. È l’ora in cui il Balcone è più affollato e meno adatto ai discorsi riservati.\nNotteDeserto e ventoso. Chi vuole parlare senza testimoni parla qui — e infatti non è detto che sia solo.\nSegreti del luogo\n• Uno dei due uomini di [PNG — Ottavio Ceruso] sale al Balcone due volte al giorno, a mattina e a vespro, e guarda la strada come tutti. Sta controllando che il corriere della cellula sia passato: quando lo vede sparire dietro le colline, scende e riferisce.\n• Il punto della ringhiera dove i gomiti hanno consumato di più la pietra è esattamente quello da cui si vede la Basilica di Teramum nelle giornate limpide. Bëllindë guarda la capitale da secoli, sempre dallo stesso punto."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Conte Gisulfo Melacera] · [PNG — Ottavio Ceruso]\nLuoghi vicini: [LUOGO — Rocca dei Melacera] · [LUOGO — Stazione di Posta]\nScene: [SCENA — L’arrivo a Bëllindë]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Percezione CD 13 — un’ora di osservazione della strada",
+   "skill": "Percezione",
+   "dc": 13,
+   "ok": "nel pomeriggio parte dalla Stazione di Posta un cavaliere solo, a passo lungo, senza insegne, che non si ferma al guado come fanno tutti. Chi parte così non porta merci: porta parole.",
+   "ko": "il traffico è tanto e tutto sembra uguale. Resta l’impressione — corretta — che verso Teramum si muova più gente del normale."
+  },
+  {
+   "t": "Natura CD 12 — il cielo",
+   "skill": "Natura",
+   "dc": 12,
+   "ok": "i rapaci che girano sulla valle sono dove devono essere — tranne che sopra un punto: la verticale del [LUOGO — Borgo Vecchio], alle spalle. Lì il cielo è vuoto, e lo è in un modo che non dipende dal vento.",
+   "ko": "giornata ventosa, gli uccelli si tengono alti. Niente di strano."
+  }
+ ],
+ "links": []
+}

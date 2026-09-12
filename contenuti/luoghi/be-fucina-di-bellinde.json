@@ -1,0 +1,93 @@
+{
+ "id": "be-fucina-di-bellinde",
+ "tipo": "luogo",
+ "titolo": "9. Fucina di Bëllindë",
+ "sottotitolo": "fabbro e maniscalco — l’unico ferro serio della città",
+ "citta": "bellinde",
+ "gruppo": "Fuori le mura",
+ "livello": "luogo",
+ "parent": "borgo-bellinde",
+ "img": "Luogo — 9. Fucina di Bëllindë.jpg",
+ "stato": "visitato",
+ "atti": [
+  16
+ ],
+ "compendio": true,
+ "segnaposto": {
+  "scena": "bellinde",
+  "id": "l9",
+  "num": 9,
+  "x": 765,
+  "y": 955
+ },
+ "tavolo": "bellinde",
+ "scheda": {
+  "Tipo": "fabbro e maniscalco — l’unico ferro serio della città",
+  "Luogo": "[LUOGO — Bëllindë], sotto le mura sud — cinque minuti da [LUOGO — Piazza Grande]",
+  "Proprietario": "Mastro Sabbatino, detto lu Ferrare",
+  "Orari": "dall’alba al tramonto. Il maglio si sente da mezza città.",
+  "Prezzi": "standard per riparazioni e attrezzi; +10% sulle armi «perché non è il mio mestiere e lo faccio male volentieri»",
+  "Collegato a": "[LUOGO — Bëllindë]"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Il clangore arriva prima dell’insegna. La fucina occupa un basso edificio addossato alle mura sud, annerito dal fumo di due generazioni, con una tettoia sotto cui si accatastano cerchioni da carro, vomeri, ferri di cavallo e una fila di zappe nuove. L’insegna è un ferro di mulo inchiodato storto."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Il calore investe come una mano aperta. La forgia occupa la parete di fondo, il mantice soffia, e le scintille salgono verso travi nere come pece. Alle pareti: martelli, tenaglie, falci, catene — attrezzi da lavoro, quasi niente armi. Su un banco laterale, in disparte, tre punte di lancia nuove e una cotta di maglia a metà di una riparazione.\nUn uomo largo quanto la porta batte una barra rossa sull’incudine. Un ragazzo aziona il mantice e guarda voi invece del fuoco."
+  },
+  {
+   "t": "Cosa si vede automaticamente",
+   "txt": "• Si lavorano attrezzi agricoli e ferrature, non armi: le tre punte sul banco sono un’eccezione visibile.\n• Il lavoro è buono: chiunque capisca di ferro vede una mano seria.\n• C’è una porta sul retro che dà verso le mura.\n• Sopra il camino è appesa una spada vecchia, fuori posto in mezzo agli attrezzi."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Sabbatino sta finendo un ordine per la guardia: dodici punte di lancia, chieste da [PNG — Ruggiero de’ Santi] tre giorni fa — cioè prima che la Crociata arrivasse. Ruggiero si stava già preparando a qualcosa.\n• Il carbone scarseggia: il carbonaio dei casali non è sceso questa settimana, e Sabbatino bestemmia piano ogni volta che apre la cassa.\n• L’apprendista muore dalla voglia di parlare con gli avventurieri, e il maestro lo sa."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "[PNG — Mastro Sabbatino lu Ferrare] — cinquantacinque anni, vedovo, mani come tenaglie. Statistiche: popolano, ma con FOR 16.\nQui e ora: pressato dall’ordine e corto di carbone: sbrigativo con chi fa domande, gentile con chi compra o chi porta carbone. La spada del camino era di suo nonno, «sergente sotto l’Impero»: la mostra con orgoglio e non sa cosa significhino i segni abrasi.\n[PNG — Tonino] — apprendista, quindici anni.\nQui e ora: vuole vedere le armi dei PG, vuole sentire di Mushanè, vuole tutto. In cambio racconta ogni pettegolezzo della città senza filtro — compreso che «lu maestre nen ce va cchiù a pijar’ l’acqua a lu puzze vicine a le mura» (?): il pozzo vicino alle mura sud dà acqua che sa di ferro da un mese."
+  },
+  {
+   "t": "Servizi",
+   "txt": "ServizioPrezzoTempo\nAffilatura2 gofferinemezz’ora\nRiparazione semplice (arma, attrezzo)5 gofferine1–2 ore\nRiparazione armaturada 1 fiorinosecondo il danno — la mezza armatura vesperiana di Lekë non la sa riparare\nFerratura4 gofferine a zampamezz’ora\nLavori su commissione (ferramenta, catene, ganci, puntelli)variabile1–3 giorni"
+  },
+  {
+   "t": "Inventario",
+   "txt": "Disponibile oggi\nOggettoQuantitàPrezzo\nLancia41 fiorino\nAscia da lavoro (usabile in combattimento)65 gofferine\nPugnale54 gofferine\nScudo di legno cerchiato31 fiorino\nPiede di porco, mazza ferrata da cantiere, chiodi, cateneabbondantida 3 gofferine\nLanterne di ferro schermate46 gofferine\nSu ordinazione\nSpade semplici (una settimana), cotte di maglia (un mese, e ve lo sconsiglia lui), qualsiasi ferramenta in due giorni.\nNon disponibile\nArmi da guerra finite, balestre, armature complete, acciaio damascato, qualsiasi cosa magica. «Pe’ ste cose ce sta Teramum, e purtateve li solde.» (?)"
+  },
+  {
+   "t": "Se chiedono informazioni",
+   "txt": "Da chiCosa si ottiene\nSabbatinoSull’ordine delle lance: «Me l’ha chieste lu sergente tre juorne fa. Nen m’ha ditte pecché, e ije nen ce l’ho chieste.» (?) Su Gisulfo: «Paga. A me abbasta quesse.» (?)\n[PNG — Tonino]Tutto quello che gira in città, versione ragazzini — compreso il nome che gli adulti non dicono: il ragazzo tornato dal Borgo Vecchio tre anni fa. Tonino era piccolo, ma il nome lo sa. Lo dice solo lontano dal maestro, e dirlo gli fa paura."
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "Alba–nonaMaglio in funzione: parlare qui dentro significa urlare. Il rumore riempie anche lo slargo del Borgo Vecchio.\nNonaPausa. Sabbatino mangia sotto la tettoia: è il momento per parlargli.\nPomeriggioFerrature e clienti. Tonino fa commissioni in giro: intercettabile da solo.\nTramontoLa forgia si copre. Sabbatino consegna le lance finite al [LUOGO — Corpo di Guardia] di persona.\nSegreti del luogo\n• L’ordine delle dodici lance dice una cosa sola ma importante: Ruggiero si prepara dal giorno in cui ha ricevuto notizia di Mushanè, prima ancora di vedere la Crociata. Il sergente sa fiutare il tempo come il Conte.\n• Tonino è la terza via al nome del ragazzo tornato (con Don Fulgenzio e Cecco della guardia) — la più facile da aprire e la più crudele da usare: è un ragazzino.\n• L’acqua ferrosa del pozzo presso le mura sud è un segnale minore che qualcosa, sotto, si sta muovendo di nuovo: i livelli e i sapori delle falde attorno al colle stanno cambiando da un mese."
+  },
+  {
+   "t": "Collegamenti",
+   "txt": "Luogo principale: [LUOGO — Bëllindë]\nPNG: [PNG — Ruggiero de’ Santi]\nLuoghi vicini: [LUOGO — Borgo Vecchio] · [LUOGO — Piazza Grande] · [LUOGO — Corpo di Guardia]\nMappe: [MAPPA — Bëllindë]"
+  }
+ ],
+ "prove": [
+  {
+   "t": "Indagare CD 13 — le punte di lancia",
+   "skill": "Indagare",
+   "dc": 13,
+   "ok": "sono in serie, stessa misura, stessa mano: un ordine unico e recente, non riparazioni. Contando quelle finite e le grezze: dodici. La guardia di Bëllindë ha venti uomini e lance per tutti — queste sono di scorta. Qualcuno si prepara a un’emergenza.",
+   "ko": "punte nuove e ben fatte. La guarnigione rinnova l’equipaggiamento: succede."
+  },
+  {
+   "t": "Storia CD 15 — la spada sopra il camino",
+   "skill": "Storia",
+   "dc": 15,
+   "ok": "foggia imperiale di almeno due secoli fa, elsa da ufficiale, e sulla lama un’incisione consumata: un sole — e ai lati due segni abrasi di proposito, con la pietra, in un’epoca in cui cancellarli conveniva. Chi ha visto l’affresco della [LUOGO — Pieve di San Vincenzo] riconosce lo schema al volo.",
+   "ko": "una spada vecchia e onorata, tenuta oliata. Un cimelio di famiglia."
+  }
+ ],
+ "links": []
+}
