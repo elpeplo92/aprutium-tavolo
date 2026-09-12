@@ -194,3 +194,9 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 
 - `drawFog` in tre passi: (1) maschera delle zone svelate su un canvas fuori schermo (`fogMask`), (2) coltre blu notte `rgb(6,9,15)` + texture di fumo procedurale (`fogNoise`, 512px, blob replicati sui bordi per non vedere le giunture) ritagliata con `destination-out` e `filter:blur(9px)` → bordi sfumati anche sui poligoni di linea di vista, (3) `#fogsmoke`: strato CSS con fumo che si muove (animazioni 46s/71s), mascherato con `mask-image` = dataURL del canvas della nebbia. Il master vede la coltre al 62%.
 - `img/161b43d7ae87.jpg` nella copia di lavoro è una copia del PNG di Giuseppe (serve solo agli screenshot; il repo ha il suo).
+
+## v61 (12/09/2026) — colonna «Guida della scena»
+
+- Quarta colonna `#guide` (solo master; `body.isgm` → griglia `236px 1fr 320px 340px`) tra la mappa e la Regia. Sopra `#guideTop`: `#luogoGM` (handout del luogo, per le scene-luogo) oppure `#sceneGuide` (per le scene-mappa: le schede di `SCENE_HANDOUTS` elencate da `SCENE_GUIDE[scena]` in ordine di gioco, ognuna apribile lì o «Apri» a tutto schermo). Sotto `#guideLog`: il **Registro** (`#secLog`), spostato lì da `applyRole` quando si è master; per i giocatori resta nella colonna destra.
+- Nelle scene-luogo si nascondono dock, zoom, strumenti e HUD (`renderGuide`).
+- Decisione di Giuseppe: il Registro sta sotto la guida della scena, così segue i tiri mentre legge.

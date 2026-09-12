@@ -258,6 +258,20 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
 
 /* right panel */
 #side{border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0;overflow-y:auto;padding:10px;gap:10px}
+body.isgm #app{grid-template-columns:236px 1fr 320px 340px}
+#guide{border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0}
+#guideTop{flex:1 1 58%;min-height:0;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:10px}
+#guideLog{flex:1 1 42%;min-height:0;overflow-y:auto;padding:10px;border-top:1px solid var(--line);display:flex;flex-direction:column}
+#guideLog .sec{flex:1}
+#sceneGuide details{border-top:1px solid var(--line);padding:6px 0}
+#sceneGuide details:first-of-type{border-top:none}
+#sceneGuide summary{cursor:pointer;font-weight:600;font-size:15px;color:var(--gold);list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center}
+#sceneGuide summary::-webkit-details-marker{display:none}
+#sceneGuide summary .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);font-weight:500;flex:none}
+#sceneGuide h4{margin:10px 0 3px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim)}
+#sceneGuide p{margin:0 0 6px;font-size:15px;line-height:1.5}
+#sceneGuide .intro{color:var(--ink-dim);font-style:italic;font-size:14px;margin:4px 0 6px}
+
 .sec{padding:14px 16px;background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius)}
 .sec.hidden{display:none!important}
 .sec:empty{display:none}
@@ -394,7 +408,7 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1>APRUTIUM</h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v60</span></div>
+    <div class="brand"><h1>APRUTIUM</h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v61</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -418,10 +432,14 @@ h2.collh::before{content:'▾';display:inline-block;width:12px;margin-right:2px;
     <div id="zoomctl"><button id="zin" title="Ingrandisci" class="hidden">+</button><button id="zout" title="Riduci" class="hidden">−</button><button id="fogReveal" class="gm" title="Nebbia: rivela (clicca o trascina sulla mappa)"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1.5 10s3-5.5 8.5-5.5S18.5 10 18.5 10s-3 5.5-8.5 5.5S1.5 10 1.5 10z"/><circle cx="10" cy="10" r="2.5"/></svg></button><button id="wallTool" class="gm" title="Muri: clicca le caselle per renderle pavimento o muro"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 5h16M2 10h16M2 15h16M6 5v5M13 5v5M9 10v5M15 10v5"/></svg></button><button id="doorTool" class="gm" title="Porte: un clic mette una porta chiusa, un secondo la rende passaggio segreto, un terzo la toglie"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 18V3h10v15M15 18H5M12 10.5h.01"/></svg></button><div class="gm aoectl"><button data-aoe="cerchio" title="Area: cerchio (clicca il centro)">◯</button><button data-aoe="cono" title="Area: cono (clicca l’origine, poi la direzione)">◺</button><button data-aoe="linea" title="Area: linea (clicca l’origine, poi la direzione)">╱</button><input type="number" id="aoeSize" value="6" min="1.5" step="1.5" title="metri (raggio del cerchio, lunghezza di cono e linea)"><button id="aoeClear" title="Togli l’area">✕</button></div><button id="fogHide" class="gm" title="Nebbia: copri di nuovo"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1.5 10s3-5.5 8.5-5.5S18.5 10 18.5 10s-3 5.5-8.5 5.5S1.5 10 1.5 10z"/><path d="M3 17 17 3"/></svg></button><button id="btnMeasure" title="Misura una distanza: clicca due punti"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 14 14 2l4 4L6 18z"/><path d="m5 11 2 2M8 8l2 2M11 5l2 2"/></svg></button></div>
   </main>
 
+  <aside id="guide" class="gm">
+    <div id="guideTop"><div class="sec gm hidden" id="luogoGM"></div><div class="sec" id="sceneGuide"></div></div>
+    <div id="guideLog"></div>
+  </aside>
+
   <aside id="side">
     <!-- GM -->
     <div class="sec gm"><h2>Scena</h2><select id="sceneSel" style="width:100%"></select></div>
-    <div class="sec gm hidden" id="luogoGM"></div>
     <div class="sec gm dungeon-only">
       <h2>Scontro</h2>
       <div class="row">
@@ -523,6 +541,8 @@ function applyRole(){
   IS_GM = ROLE==='master'; me = IS_GM?null:ROLE;
   document.querySelectorAll('.gm').forEach(e=>e.classList.toggle('hidden',!IS_GM));
   document.querySelectorAll('.pl').forEach(e=>e.classList.toggle('hidden',IS_GM));
+  document.body.classList.toggle('isgm',IS_GM);
+  { const lg=document.getElementById('secLog'); const home=IS_GM?document.getElementById('guideLog'):document.getElementById('side'); if(lg&&home&&lg.parentElement!==home) home.appendChild(lg); }
   try{ localStorage.setItem('aprutium.role',ROLE); }catch(e){}
 }
 applyRole();
@@ -881,7 +901,7 @@ function render(){
   const mp=document.getElementById('modePill'); mp.textContent=fight?'Fase · Scontro':'Fase · Esplorazione'; mp.classList.toggle('fight',fight); mp.classList.toggle('on',!fight);
   const rp=document.getElementById('roundPill'); rp.style.display=fight?'':'none'; rp.textContent='Round '+S.round;
   document.getElementById('btnNext').disabled=!fight; document.getElementById('btnEnd').disabled=!fight; document.getElementById('btnStart').disabled=fight;
-  applyScene(); drawGrid(); drawWalls(); drawFog(); renderPois(); renderPlaces(); drawAoe(S.aoe); renderAoeBox(); renderPing(); renderShow(); checkTurn(); if(!dragging&&!pending) renderTokens(); renderRail(); renderRemoved(); if(delArmed!==selected){ delArmed=null; const b=document.getElementById('selDel'); if(b) b.textContent='Rimuovi dalla mappa'; }
+  applyScene(); renderGuide(); drawGrid(); drawWalls(); drawFog(); renderPois(); renderPlaces(); drawAoe(S.aoe); renderAoeBox(); renderPing(); renderShow(); checkTurn(); if(!dragging&&!pending) renderTokens(); renderRail(); renderRemoved(); if(delArmed!==selected){ delArmed=null; const b=document.getElementById('selDel'); if(b) b.textContent='Rimuovi dalla mappa'; }
   document.getElementById('gmNotes').textContent=S.gmNotes; { const b=document.getElementById('fogOn'); if(b) b.textContent=(S.fog&&S.fog.on)?'Disattiva':'Attiva'; const p=document.getElementById('btnPublic'); if(p){ p.textContent=S.publicRolls?'visibili ai giocatori':'segreti'; p.classList.toggle('primary',!!S.publicRolls); } }
   // selezione
   const t=S.tokens[selected];
@@ -1414,6 +1434,26 @@ function openPng(p){
   if(IS_GM&&p.img) html+=`<div class="row" style="margin-top:14px"><button class="primary" id="pngShow">Mostra il ritratto ai giocatori</button></div>`;
   openModal(html,'sheet');
   const b=document.querySelector('#modal #pngShow'); if(b) b.onclick=()=>{ showToPlayers({img:p.img,title:p.name}); toast('Ritratto mostrato ai giocatori'); };
+}
+/* ---------- guida della scena (colonna del master) ---------- */
+const SCENE_GUIDE={
+  sotto:['scenalaportamurata','transizioneladiscesa','scenaladiscesa','scenalultimocustode','scenamicuccio','aftermathritornoallaluce'],
+  bellinde:['recapdallemuradimushanealbalconedaprutium','scenalarrivoabellinde','scenalachiamatainpiazza','scenailpaneamezzogiorno','scenailbandolettoadaltavoce','scenalapiazzavuoleunarisposta','scenadallaroccaallapiazza','scenaudienzaallarocca','scenafuoridallarocca','scenaleprovedavantiagisulfo','scenailfuneraledirocco','indagineilcorpodirocco','scenanunziaserrafreddamiofratellodeveandaresottoterra','scenalascopertadelclandestino','scenalaretataalfondaco','scenalinterrogatoriodiceruso','scenachiuderelaboccadiceruso','eventochiuderelaboccadiceruso','situazionelacelluladiceruso','scenalafugadiceruso','inseguimentolafugadiceruso','eventolevacuazionedellacellula','eventoilcorrierediteramum','scenafermareilcorriere','eventoilplicodivespro','eventoilquartouomoversoteramum','inseguimentosullastradaditeramum','scenailfurtodelladichiarazione','eventoilfurtodelladichiarazione','eventoilbandoditeramum','eventolanotteabellinde','scenailragazzotornato','scenaleportesichiudono','transizionelapartenzadabellinde']
+};
+let guideOpen={};
+function renderGuide(){
+  { const lu=CUR&&CUR.id==='luogo'; for(const id of ['dock','zoomlbl','zoomctl','hud']){ const el=document.getElementById(id); if(el) el.style.display=lu?'none':''; } }
+  const box=document.getElementById('sceneGuide'); if(!box) return;
+  if(!IS_GM||!CUR||CUR.id==='luogo'){ box.classList.add('hidden'); return; }
+  const ids=SCENE_GUIDE[CUR.id]||[]; const list=ids.map(id=>SCENE_HANDOUTS.find(x=>x.id===id)).filter(Boolean);
+  const key=CUR.id+'|'+list.length; if(box.dataset.key===key){ box.classList.remove('hidden'); return; } box.dataset.key=key;
+  box.classList.remove('hidden');
+  let html=`<h2>Guida della scena — ${CUR.name}</h2><p class="note" style="margin:0 0 8px">${list.length} schede, in ordine di gioco. Clicca un titolo per aprirla qui, «Apri» per averla grande.</p>`;
+  for(const sc of list){ const kind=(sc.title.split(' — ')[0]||'').trim(); const name=sc.title.slice(kind.length+3);
+    html+=`<details data-sid="${sc.id}" ${guideOpen[sc.id]?'open':''}><summary><span>${name}</span><span class="k">${kind}</span></summary>${sc.intro?`<p class="intro">${sc.intro.replace(/\n/g,'<br>')}</p>`:''}${sc.secs.map(x=>`<h4>${x.t}</h4><p>${(x.txt||'').replace(/\n/g,'<br>')}</p>`).join('')}<div class="row"><button class="mini" data-openscene="${sc.id}">Apri</button></div></details>`; }
+  box.innerHTML=html;
+  box.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{ guideOpen[d.dataset.sid]=d.open; }));
+  box.querySelectorAll('[data-openscene]').forEach(b=>b.onclick=()=>{ const sc=SCENE_HANDOUTS.find(x=>x.id===b.dataset.openscene); if(sc) openSceneHandout(sc); });
 }
 function openSceneHandout(sc){
   let html=`<div class="eyebrow">Handout</div><h2 class="big">${sc.title}</h2>${sc.intro?`<p class="lore" style="font-size:14px">${sc.intro.replace(/\n/g,'<br>')}</p>`:''}`;
