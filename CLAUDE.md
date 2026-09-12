@@ -240,3 +240,8 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 
 - I manuali 5e usano Bookmania (testo), Mrs Eaves Small Caps (titoli di sezione), Scala Sans (tabelle e blocchi statistiche), Modesto Condensed (titoli dei capitoli). Cloni liberi (CC-BY-SA 4.0, pacchetto Solbera, `font/LICENSE-Solbera-CC-BY-SA.txt`): **Bookinsanity**, **Mr Eaves Small Caps**, **Scaly Sans / Scaly Sans Caps**, **Nodesto Caps Condensed**. Tutti in `font/`.
 - Variabili: `--ui` Bookinsanity (testo corrente, corsivo per note e testi da leggere), `--caps` Mr Eaves (h2, eyebrow, tab, summary), `--display` Nodesto (titoli grandi, nomi nelle schede), `--sans` Scaly Sans (pulsanti, select, numeri, PF, tabelle, note delle azioni). Draconis non è più usato (i file restano). Corpo 21px.
+
+## v71 (12/09/2026) — scala tipografica rimessa in ordine
+
+- Dopo i tre aumenti a gradini le taglie erano incoerenti. Ora scala fissa in fondo al CSS («scala tipografica (v71)»): corpo 19 · piccolo 15/17 · sezioni 22 (Mr Eaves) · titoli 30/34 (Nodesto) · logo 46px. Colonne: 224 (gruppo) / mappa / 300 (guida) / 330 (regia) — la mappa deve restare almeno metà schermo a 2000px.
+- Per cambiare le taglie si tocca SOLO quel blocco finale, non i valori sparsi.
