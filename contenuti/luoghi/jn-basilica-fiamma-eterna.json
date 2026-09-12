@@ -4,7 +4,7 @@
  "titolo": "Basilica della Fiamma Eterna",
  "sottotitolo": "La Cattedrale — Basilica Solare di Valerus, tra le zone 1 e 2",
  "citta": "julianova",
- "gruppo": "Città Alta",
+ "gruppo": "Strutture speciali della Città Alta",
  "livello": "luogo",
  "parent": "borgo-giglie",
  "img": "Luogo — Basilica della Fiamma Eterna.jpg",
@@ -15,20 +15,50 @@
   10
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "La Cattedrale — Basilica Solare di Valerus, tra le zone 1 e 2",
+  "Dove": "Strutture speciali della Città Alta"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Il secondo edificio più alto di Julia Nova dopo la Torre del Sole. Facciata di pietra bianca, rosone circolare con vetri giallo-arancio, campane che suonano ogni ora. La Fiamma Eterna arde sul portale principale, un fuoco magico che non si spegne da duecento anni; dentro, navata alta, altare d'oro, guardie dell'Ordine d'Acciaio ai lati e un incenso così denso che fa lacrimare gli occhi."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Il secondo edificio più alto di Julia Nova dopo la Torre del Sole. Facciata di pietra bianca, rosone circolare con vetri giallo-arancio, campane che suonano ogni ora. La Fiamma Eterna arde sul portale principale, un fuoco magico che non si spegne da duecento anni; dentro, navata alta, altare d'oro, guardie dell'Ordine d'Acciaio ai lati e un incenso così denso che fa lacrimare gli occhi.\n\nQuando ci siete entrati la prima volta la Fiamma era ridotta a un moccolo tremolante: Sorella Almerya vi ha sussurrato di nascosto la sua visione (« La ferita è nel porto »), e Virellius vi ha coperti di accuse. Dopo l'assedio Alessandros ha ritrovato il Cardinale nella cripta, in tonaca di sacco davanti al sarcofago di San Berardo, con la fede in frantumi: hanno pregato insieme e Virellius gli ha consegnato il Dito di San Berardo."
+   "txt": "Quando ci siete entrati la prima volta la Fiamma era ridotta a un moccolo tremolante: Sorella Almerya vi ha sussurrato di nascosto la sua visione (« La ferita è nel porto »), e Virellius vi ha coperti di accuse. Dopo l'assedio Alessandros ha ritrovato il Cardinale nella cripta, in tonaca di sacco davanti al sarcofago di San Berardo, con la fede in frantumi: hanno pregato insieme e Virellius gli ha consegnato il Dito di San Berardo."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Zona pericolosa per i PG prima dell'Atto IX: Virellius li tollerava perché utili a Fenix. Se sapesse di Mattheus (Mortus) o del legame di Adamus con Maia cambierebbe atteggiamento — anche dopo la 'conversione' nella cripta, la sua Chiesa resta l'Inquisizione. Sorella Almerya è l'alleata interna: Int o Percezione CD 13 per riconoscerla come contatto. Udienza con Virellius: Persuasione CD 16; fallimento = un segretario annota nome e visita negli archivi dell'Inquisizione. Roster di Pietraluna: un accolito della Basilica è agente Celomante infiltrato (identità ancora da assegnare). Voce: passaggio murato tra Palazzo del Sole e Basilica."
+   "txt": "Zona pericolosa per i PG prima dell'Atto IX: Virellius li tollerava perché utili a Fenix. Se sapesse di Mattheus (Mortus) o del legame di Adamus con Maia cambierebbe atteggiamento — anche dopo la 'conversione' nella cripta, la sua Chiesa resta l'Inquisizione. Sorella Almerya è l'alleata interna: Int o Percezione CD 13 per riconoscerla come contatto. Udienza con Virellius: Persuasione CD 16; fallimento = un segretario annota nome e visita negli archivi dell'Inquisizione."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Passaggio murato tra Palazzo del Sole e Basilica."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Roster di Pietraluna: un accolito della Basilica è agente Celomante infiltrato (identità ancora da assegnare)."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Udienza con il Cardinale",
+   "skill": "Persuasione",
+   "dc": 16,
+   "ok": "Virellius vi riceve. È freddo, valutativo. Vi concede dieci minuti, e ogni parola viene pesata.",
+   "ko": "il Cardinale « non ha tempo ». Un segretario prende nota della visita e del vostro nome: la nota va negli archivi dell'Inquisizione."
+  },
+  {
+   "t": "Riconoscere un'alleata",
+   "skill": "Percezione",
+   "dc": 13,
+   "ok": "Sorella Almerya: l'unica che vi guarda senza calcolo. È un contatto possibile dentro la Basilica.",
+   "ko": "volti chiusi e incenso. Nessuno da cui aspettarsi aiuto."
+  }
+ ],
  "links": [
   "jn-cardinal-virellius",
   "jn-sorella-almerya",

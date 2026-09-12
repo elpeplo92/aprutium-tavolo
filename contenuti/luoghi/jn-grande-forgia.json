@@ -1,35 +1,70 @@
 {
  "id": "jn-grande-forgia",
  "tipo": "luogo",
- "titolo": "La Grande Forgia — Centro della Gilda",
- "sottotitolo": "Sede del Martello Bianco",
+ "titolo": "La Grande Forgia — Centro della Gilda e Laboratorio di Torvus",
+ "sottotitolo": "Sede del Martello Bianco; nel retrobottega sigillato nasce il Fuoco Verde",
  "citta": "julianova",
- "gruppo": "3. Quartiere dei Mantelli Bianchi",
+ "gruppo": "3. Quartiere dei Mantelli Bianchi (Nord)",
  "livello": "luogo",
  "parent": "jn-mantelli-bianchi-nord",
- "img": "Luogo — La Grande Forgia — Centro della Gilda.jpg",
+ "img": "Luogo — La Grande Forgia — Centro della Gilda e Laboratorio di Torvus.jpg",
  "stato": "visitato",
  "atti": [
   4,
   10
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Sede del Martello Bianco",
+  "Zona": "3. Quartiere dei Mantelli Bianchi (Nord)"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Un edificio che sembra fatto di fumo e acciaio. La Grande Forgia non ha finestre, solo aperture per far uscire il calore; la temperatura all'interno è insopportabile per chi non è abituato. Al centro l'incudine principale, alta quanto un uomo: Torvus Halderan ci lavora sopra personalmente quando qualcosa è importante."
+  },
+  {
+   "t": "Entrando — il laboratorio",
+   "txt": "Il retrobottega di Torvus è vietato a chiunque non sia Elara o un apprendista fidato. Le pareti sono coperte di schizzi, formule, campioni di metallo; al centro un alambicco di rame produce un liquido verde brillante. Il Fuoco Verde non brucia l'organico: brucia solo il ferro animato, ed è questo che ferma i Forgiati."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Un edificio che sembra fatto di fumo e acciaio. La Grande Forgia non ha finestre, solo aperture per far uscire il calore; la temperatura all'interno è insopportabile per chi non è abituato. Al centro l'incudine principale, alta quanto un uomo: Torvus Halderan ci lavora sopra personalmente quando qualcosa è importante. Qui Torvus ha esaminato un frammento del nemico (« Roba d'elf'… ma guasta ») e qui, nei tre giorni prima della marcia, ha forgiato per Alessandros."
+   "txt": "Qui Torvus ha esaminato un frammento del nemico (« Roba d'elf'… ma guasta ») e qui, nei tre giorni prima della marcia, ha forgiato per Alessandros. Torvus ve lo ha mostrato sigillato — « Loro parl'. Io… prepare le risposte » — e dalle mura lo avete visto sciogliere tre Navi Rosse in trenta secondi."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
    "txt": "Persuasione o Baratto CD 13: Torvus accetta di forgiare/riparare/potenziare in cambio di un favore futuro o materiale raro (ferro lunare, scaglie di Forgiato), 1-3 giorni. Fallimento: «Torna quando la città non è assediata», si può riprovare con un'offerta migliore."
+  },
+  {
+   "t": "Note del master — il laboratorio",
+   "txt": "Gli appunti contengono informazioni cruciali: i Forgiati sono animati da frammenti di un'anima, schegge; distruggi l'anima-madre e si fermano tutti (Int Arcano CD 15). Se la Chiesa lo scoprisse, Torvus finirebbe sul rogo."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Il Manuale aggiunge il segreto vero: il Fuoco Verde (« Acido Solare » è depistaggio) è magia lunare, frammenti dell'essenza di Noxtua — conoscenza del Clan Halderan."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Convincere Torvus a lavorare per voi",
+   "skill": "Persuasione",
+   "dc": 13,
+   "ok": "Torvus accetta di forgiare, riparare o potenziare in cambio di un favore futuro o di materiale raro (ferro lunare, scaglie di Forgiato). Tempo: 1–3 giorni.",
+   "ko": "« Torna quando la città non è assediata. » Si può riprovare con un'offerta migliore."
+  },
+  {
+   "t": "Gli appunti di Torvus",
+   "skill": "Arcano",
+   "dc": 15,
+   "ok": "i Forgiati sono animati da frammenti di un'anima — schegge, non un'entità completa. Distrutta l'anima-madre, si fermano tutti.",
+   "ko": "formule e schizzi: capite che il Fuoco Verde colpisce solo il ferro animato, niente di più."
+  }
+ ],
  "links": [
-  "jn-torvus-halderan",
-  "jn-mantelli-bianchi-nord"
+  "jn-elara-manodoro",
+  "jn-mantelli-bianchi-nord",
+  "jn-torvus-halderan"
  ]
 }

@@ -4,7 +4,7 @@
  "titolo": "14. Porta Sud-Est « Porta del Sale »",
  "sottotitolo": "Mura sud-est — verso Tortoscuro e le saline",
  "citta": "julianova",
- "gruppo": "Porte e mura",
+ "gruppo": "14. Porta Sud-Est « Porta del Sale »",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 14 Julianova.jpg",
@@ -12,22 +12,29 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "14",
+  "Posizione": "Mura sud-est, verso Tortoscuro e le saline",
+  "Atmosfera": "Presidiata, commerciale — traffico di sale, pesce, mercanti del sud"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "La Porta del Sale prende il nome dalla Via del Sale, la strada antica che collegava le saline di Tortoscuro ai mercati dell'entroterra. Oggi è una porta commerciale intensa: carri di sale, pesce essiccato, olio di oliva. I mercanti del sud la usano più di qualsiasi altra. Il controllo è più attento di quello della Porta delle Colline: il sale vale oro, e la corruzione dell'Ufficio Portuale si replica anche qui."
   }
  ],
  "gm": [
   {
-   "t": "Note del master",
-   "txt": "Voci d6: le saline di Tortoscuro abbandonate, il sale sta finendo; Casa Neròn ritira le navi dai porti del sud; un mercante arrestato e rilasciato per un artefatto 'trovato tra i rottami dei Forgiati', poi sparito; l'agente Neròn ha incontrato Virellius in segreto; qualcuno compra scorte alimentari per sei mesi di città; di notte la Via del Sale è pattugliata da civili con la cintura troppo gonfia. Nell'Atto X i carri dei Barbus entrano dalla « Porta Sud » — non è specificato se questa o la 13."
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Le saline di Tortoscuro abbandonate, il sale sta finendo.\n2. Casa Neròn ritira le navi dai porti del sud.\n3. Un mercante arrestato e rilasciato per un artefatto 'trovato tra i rottami dei Forgiati', poi sparito.\n4. L'agente Neròn ha incontrato Virellius in segreto.\n5. Qualcuno compra scorte alimentari per sei mesi di città.\n6. Di notte la Via del Sale è pattugliata da civili con la cintura troppo gonfia."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Nell'Atto X i carri dei Barbus entrano dalla « Porta Sud » — non è specificato se questa o la 13."
   }
  ],
  "prove": [],
  "links": [
-  "jn-via-del-sale",
-  "jn-magazzino-neron"
+  "jn-via-del-sale"
  ]
 }

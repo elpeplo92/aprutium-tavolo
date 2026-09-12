@@ -11,10 +11,13 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Tre navi in costruzione, altrettante in riparazione",
+  "Zona": "10. Quartiere dei Mantelli Bianchi (Sud)"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "Un cantiere sempre attivo. Tre navi in costruzione contemporaneamente, altrettante in riparazione. I mastri d'ascia sono i più preziosi dopo i fabbri. Da quando i Forgiati hanno danneggiato il porto, il lavoro è raddoppiato. Pasquale 'Lu Rematore' sovrintende tutto con la calma di chi sa che il mare non aspetta."
   }
  ],
@@ -24,7 +27,15 @@
    "txt": "Sta costruendo qualcosa di segreto: una piccola imbarcazione rapida commissionata da Torvus. Percezione CD 14 per notare la costruzione insolita. Non accessibile ai PG per ora."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Guardando il cantiere",
+   "skill": "Percezione",
+   "dc": 14,
+   "ok": "in fondo, sotto un telo, una costruzione insolita: piccola, rapida, non commerciale. Non è per voi, non ancora.",
+   "ko": "tre navi in costruzione e tre in riparazione, come dicono tutti."
+  }
+ ],
  "links": [
   "jn-pasquale-lu-rematore",
   "jn-torvus-halderan"

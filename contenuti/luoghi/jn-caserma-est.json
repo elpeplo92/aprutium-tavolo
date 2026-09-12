@@ -4,7 +4,7 @@
  "titolo": "Rovine della Caserma Est — QG di Fenix",
  "sottotitolo": "Metà crollata, metà ancora in piedi",
  "citta": "julianova",
- "gruppo": "12. Quartiere Popolare Sud",
+ "gruppo": "12. Quartiere Popolare Sud « La Sentinella »",
  "livello": "luogo",
  "parent": "jn-la-sentinella",
  "img": "Luogo — Rovine della Caserma Est — QG di Fenix.jpg",
@@ -17,17 +17,32 @@
   11
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Metà crollata, metà ancora in piedi",
+  "Zona": "12. Quartiere Popolare Sud « La Sentinella »"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Metà crollata, metà ancora in piedi. La parte funzionante è stata trasformata con travi di legno, tende militari, lampade a olio. Mappe sul tavolo, segnalini di piombo, odore di cera e caffè d'orzo. Fenix lavora qui; Silvanus riceve qui."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Metà crollata, metà ancora in piedi. La parte funzionante è stata trasformata con travi di legno, tende militari, lampade a olio. Mappe sul tavolo, segnalini di piombo, odore di cera e caffè d'orzo. Fenix lavora qui; Silvanus riceve qui; il gruppo si incontra qui.\n\nÈ la vostra casa a Julia Nova. Qui Silvanus vi ha affidato la missione di Colleventoso; qui, la notte del ritorno, il portone è stato sfondato e Silvanus trascinato via da Therxil, e all'alba si sono contate dodici guardie cadute. Qui Silvanus è tornato a bussare tre colpi secchi — « Il mio turno di guardia non è finito » — e Brizio ha gridato « È turnate! ». Zuppa di ceci neri, la Riserva del Barbas, il vino co' la gazzosa di Pippo. Qui avete dormito l'ultima notte prima della marcia."
+   "txt": "È la vostra casa a Julia Nova: il gruppo si incontra qui. Qui Silvanus vi ha affidato la missione di Colleventoso; qui, la notte del ritorno, il portone è stato sfondato e Silvanus trascinato via da Therxil, e all'alba si sono contate dodici guardie cadute. Qui Silvanus è tornato a bussare tre colpi secchi — « Il mio turno di guardia non è finito » — e Brizio ha gridato « È turnate! ». Qui avete dormito l'ultima notte prima della marcia: zuppa di ceci neri, la Riserva del Barbas, il vino co' la gazzosa di Pippo."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Hub principale della campagna a Julia Nova. Nella sala mappe c'è la mappa del Ducato con le posizioni aggiornate. Sulla mappa operativa di Silvanus il cerchio a matita sulla baia a nord (« Eco? »). Un simbolo inciso nel pavimento dopo l'incubo condiviso (Atto IV) — filo mai ripreso. Silvanus aveva trovato in caserma registri falsificati di 'pesce guasto' scaricato di notte alle Scogliere del Silenzio (traffico di persone): le prove potrebbero esistere ancora. Battuta di Fenix: «Chiudète la pòrte. Quèlle che se dìce ccà nde esce de ccà.»"
+   "txt": "Hub principale della campagna a Julia Nova. Nella sala mappe c'è la mappa del Ducato con le posizioni aggiornate. Sulla mappa operativa di Silvanus il cerchio a matita sulla baia a nord (« Eco? »). Silvanus aveva trovato in caserma registri falsificati di 'pesce guasto' scaricato di notte alle Scogliere del Silenzio (traffico di persone): le prove potrebbero esistere ancora. Quèlle che se dìce ccà nde esce de ccà.»"
+  },
+  {
+   "t": "Battute pronte",
+   "txt": "«Chiudète la pòrte."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Un simbolo inciso nel pavimento dopo l'incubo condiviso (Atto IV) — filo mai ripreso."
   }
  ],
  "prove": [],

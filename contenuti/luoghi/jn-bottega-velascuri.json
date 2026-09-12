@@ -11,20 +11,35 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Spezie, tessuti, oggetti di viaggio… e informazioni",
+  "Zona": "6. Quartiere del Porto"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "Apparentemente vende spezie, tessuti, oggetti di viaggio. Darius Velascuri conosce tutti e tutto: «Tutto si vende. La domanda è solo: chi paga di più? E a te, amico mio, perché dovrei fare uno sconto?»"
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "In realtà vende informazioni. Sa di Teramum — situazione politica, movimenti delle Casate — e ha sentito il nome 'Frate Davide' in contesto sospetto. 20 mo generali, 50 mo specifiche; Persuasione CD 13 per abbassare il prezzo. Voce: ha ricevuto un messaggio cifrato e ha lo sguardo di chi sa troppo."
+   "txt": "In realtà vende informazioni. Sa di Teramum — situazione politica, movimenti delle Casate — e ha sentito il nome 'Frate Davide' in contesto sospetto. 20 mo generali, 50 mo specifiche; Persuasione CD 13 per abbassare il prezzo."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Ha ricevuto un messaggio cifrato e ha lo sguardo di chi sa troppo."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Trattare sul prezzo",
+   "skill": "Persuasione",
+   "dc": 13,
+   "ok": "Darius abbassa: 20 mo per informazioni generali, 50 per quelle specifiche, meno un terzo.",
+   "ko": "« Il prezzo è il prezzo, amico mio. »"
+  }
+ ],
  "links": [
   "jn-darius-velascuri"
  ]

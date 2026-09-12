@@ -11,20 +11,39 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Casa ancestrale dei Cerullius, sprangata",
+  "Zona": "1. Quartiere Nobiliare"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "Un maniero che sembra respirare a fatica. Le pietre sono buone, l'architettura è nobile, ma le finestre sono sprangate e il giardino è incolto. Sull'arco: due spade incrociate sotto un sole nascente, lo stemma dei Cerullius. Qualcuno ha lasciato un mazzo di fiori freschi sul gradino. Non c'è nessuno in vista."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Solo per Alessandros / Vicarus: il maniero è di diritto loro. All'interno mobili coperti da teli, archivio familiare intatto, un passaggio segreto verso i sotterranei della Città Alta. Indagare richiede 2 ore; Indagine (Int) CD 13: successo = archivio con lettere di credito, sigillo di cera con lo stemma Cerullius (prova d'identità a Teramum) e il passaggio; fallimento = archivio ma non il passaggio, lettere difficili da decifrare. Forcinum sa che il maniero ha un problema di eredità irrisolto. Voce: sigillato da un testamento imperiale, invendibile senza un discendente diretto. Nei diari i PG non ci sono mai entrati."
+   "txt": "Solo per Alessandros / Vicarus: il maniero è di diritto loro. All'interno mobili coperti da teli, archivio familiare intatto, un passaggio segreto verso i sotterranei della Città Alta. Indagare richiede 2 ore; Indagine (Int) CD 13: successo = archivio con lettere di credito, sigillo di cera con lo stemma Cerullius (prova d'identità a Teramum) e il passaggio; fallimento = archivio ma non il passaggio, lettere difficili da decifrare. Forcinum sa che il maniero ha un problema di eredità irrisolto."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Sigillato da un testamento imperiale, invendibile senza un discendente diretto."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Nei diari i PG non ci sono mai entrati."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "L'archivio di famiglia (due ore di ricerca)",
+   "skill": "Indagare",
+   "dc": 13,
+   "ok": "trovate l'archivio con le lettere di credito, un sigillo di cera con lo stemma Cerullius — prova d'identità utile a Teramum — e il passaggio verso i sotterranei della Città Alta.",
+   "ko": "trovate l'archivio ma non il passaggio. Le lettere di credito esistono ma sono difficili da decifrare."
+  }
+ ],
  "links": [
   "jn-quartiere-nobiliare",
   "jn-gabrielus-forcinum"

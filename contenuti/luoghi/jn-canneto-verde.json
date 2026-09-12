@@ -4,7 +4,7 @@
  "titolo": "4. Quartiere del Canneto Verde",
  "sottotitolo": "« Lu Cannéte » — Città Bassa occidentale, ai piedi del colle",
  "citta": "julianova",
- "gruppo": "Città Bassa",
+ "gruppo": "4. Quartiere del Canneto Verde",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 4 Julianova.jpg",
@@ -12,17 +12,25 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "4",
+  "Posizione": "Città Bassa occidentale, ai piedi del colle",
+  "Atmosfera": "Umido, verde, odore di erbe e fango — il quartiere dei guaritori"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "Il Canneto Verde prende il nome dai canali d'irrigazione che attraversano il quartiere, un'eredità dell'antico insediamento imperiale. I canali portano acqua fresca dalla collina, e lungo le sponde crescono canne, salice, menta selvatica. È il quartiere più verde della città e anche il più tranquillo: qui vivono i guaritori, le erboriste, i conciatori. Non ci sono Gilde forti, non ci sono nobili, non ci sono soldati fissi. La gente ti guarda con curiosità, non con sospetto."
   }
  ],
  "gm": [
   {
-   "t": "Note del master",
-   "txt": "Nei diari i PG non ci sono mai stati. Voci d6: i canali vengono da una sorgente sotto la collina, luci nell'acqua di notte; Margherita ha curato un soldato di Fenix con tessuto metallico sotto la pelle; c'è un secondo accesso alla rete fognaria imperiale, noto solo a chi viveva qui prima della fondazione; Cipriano vende informazioni a tutti; le erbe di Margherita non crescono in nessun posto conosciuto; l'acqua dei canali era più calda l'inverno scorso — « qualcosa si sveglia sotto »."
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. I canali vengono da una sorgente sotto la collina, luci nell'acqua di notte.\n2. Margherita ha curato un soldato di Fenix con tessuto metallico sotto la pelle.\n3. C'è un secondo accesso alla rete fognaria imperiale, noto solo a chi viveva qui prima della fondazione.\n4. Cipriano vende informazioni a tutti.\n5. Le erbe di Margherita non crescono in nessun posto conosciuto.\n6. L'acqua dei canali era più calda l'inverno scorso — « qualcosa si sveglia sotto »."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Nei diari i PG non ci sono mai stati."
   }
  ],
  "prove": [],

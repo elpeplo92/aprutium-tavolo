@@ -7,21 +7,32 @@
  "gruppo": "1. Quartiere Nobiliare",
  "livello": "luogo",
  "parent": "jn-quartiere-nobiliare",
- "img": "Luogo — Tenuta di Casa Castemar.jpg",
+ "img": "LUOGO - Tenuta di Casa Castemar.png",
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Fortezza-villa del patriarca Aulo Dernas",
+  "Zona": "1. Quartiere Nobiliare"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Una fortezza-villa che occupa un intero isolato. Mura alte tre metri, guardie in livrea rossa e blu. L'aquila di Castemar — due teste, una rivolta al sole e una alla luna — campeggia sull'arco d'ingresso. Aulo Dernas di Castemar, il patriarca, si trova qui quasi ogni pomeriggio: è il vecchio più potente della città e sa esattamente quanto vale quella consapevolezza."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Una fortezza-villa che occupa un intero isolato. Mura alte tre metri, guardie in livrea rossa e blu. L'aquila di Castemar — due teste, una rivolta al sole e una alla luna — campeggia sull'arco d'ingresso. Aulo Dernas di Castemar, il patriarca, si trova qui quasi ogni pomeriggio: è il vecchio più potente della città e sa esattamente quanto vale quella consapevolezza. Lo avete conosciuto al Concilio, non in casa sua."
+   "txt": "Aulo Dernas lo avete conosciuto al Concilio, non in casa sua."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Aulo è l'unico nobile che sa della stirpe Aurex — lo ha scoperto decenni fa. Non lo usa: lo conserva. PG con Alessandros o Vicarus ottengono udienza più facilmente (famiglia Cerullius nota). Battuta: «Ho novantadue anni, avventuriero. Ho visto cadere tre imperatori e costruire due chiese. Cosa credi di potermi offrire che non abbia già avuto?»"
+   "txt": "Aulo è l'unico nobile che sa della stirpe Aurex — lo ha scoperto decenni fa. Non lo usa: lo conserva. PG con Alessandros o Vicarus ottengono udienza più facilmente (famiglia Cerullius nota). Ho visto cadere tre imperatori e costruire due chiese. Cosa credi di potermi offrire che non abbia già avuto?»"
+  },
+  {
+   "t": "Battute pronte",
+   "txt": "«Ho novantadue anni, avventuriero."
   }
  ],
  "prove": [],

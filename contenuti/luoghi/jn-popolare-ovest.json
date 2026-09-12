@@ -4,7 +4,7 @@
  "titolo": "7. Quartiere Popolare Ovest",
  "sottotitolo": "« Il Balcone » — pendice occidentale, tra Città Alta e Bassa",
  "citta": "julianova",
- "gruppo": "Città Bassa",
+ "gruppo": "7. Quartiere Popolare Ovest",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 7 Julianova.jpg",
@@ -15,17 +15,29 @@
   11
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "7",
+  "Posizione": "Tra Città Alta e Bassa, pendice occidentale",
+  "Atmosfera": "Rispettabile, laborioso — il quartiere della gente onesta"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Il Balcone è il quartiere della gente che lavora: sarte, calzolai, notai, insegnanti privati, piccoli commercianti. Non è ricco, non è povero. È ordinato. Le case hanno le finestre con i vasi di fiori. I bambini giocano per strada fino al tramonto. Le botteghe chiudono prima del buio. Non succede quasi mai niente di interessante qui. Quasi."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Il Balcone è il quartiere della gente che lavora: sarte, calzolai, notai, insegnanti privati, piccoli commercianti. Non è ricco, non è povero. È ordinato. Le case hanno le finestre con i vasi di fiori. I bambini giocano per strada fino al tramonto. Le botteghe chiudono prima del buio. Non succede quasi mai niente di interessante qui. Quasi.\n\nQui c'è il piccolo Tempio di Mortus dove Mattheus è andato a pregare, e lo studio dell'avvocato Forcinum."
+   "txt": "Qui c'è il piccolo Tempio di Mortus dove Mattheus è andato a pregare, e lo studio dell'avvocato Forcinum."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Voci d6: Padre Cassio è tornato cambiato da Teramum e dorme con la porta barricata; Forcinum ha un cliente che paga in oro senza nome e vince sempre; il culto di Maia ha una rete sotterranea tra Julia Nova, Teramum e altre tre città; al Mercato delle Stoffe un venditore appare solo quando piove; Margherita era a corte vent'anni fa; tre notai spariti nell'ultimo mese, 'partiti per affari'. Ariellia Ragaiola, la compagna di Matthios, insegna in una scuola del quartiere popolare (proposta: qui)."
+   "txt": "Ariellia Ragaiola, la compagna di Matthios, insegna in una scuola del quartiere popolare (proposta: qui)."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Padre Cassio è tornato cambiato da Teramum e dorme con la porta barricata.\n2. Forcinum ha un cliente che paga in oro senza nome e vince sempre.\n3. Il culto di Maia ha una rete sotterranea tra Julia Nova, Teramum e altre tre città.\n4. Al Mercato delle Stoffe un venditore appare solo quando piove.\n5. Margherita era a corte vent'anni fa.\n6. Tre notai spariti nell'ultimo mese, 'partiti per affari'."
   }
  ],
  "prove": [],

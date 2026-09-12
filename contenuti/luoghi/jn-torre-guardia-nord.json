@@ -4,17 +4,20 @@
  "titolo": "Torre di Guardia Nord — Postazione di vedetta",
  "sottotitolo": "La torre più alta delle mura nord",
  "citta": "julianova",
- "gruppo": "9. Porta Nord",
+ "gruppo": "9. Porta Nord « Porta del Vento »",
  "livello": "luogo",
  "parent": "jn-porta-del-vento",
  "img": "Luogo — Torre di Guardia Nord — Postazione di vedetta.jpg",
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "La torre più alta delle mura nord",
+  "Zona": "9. Porta Nord « Porta del Vento »"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "La torre più alta delle mura nord. Di qui si vede la campagna fino all'orizzonte: in un giorno limpido i monti lontani e, se sai dove guardare, la macchia della Tenuta di Altavia sulla collina."
   }
  ],
@@ -24,7 +27,15 @@
    "txt": "Percezione CD 12 per individuare movimenti sospetti sulla strada verso la Tenuta o le colline. Di giorno è di guardia il Sergente Nardìne 'Lu Cancèlle' (la guida lo colloca anche alla Porta del Sole): impossibile ingannarlo facilmente."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Un'ora di osservazione",
+   "skill": "Percezione",
+   "dc": 12,
+   "ok": "movimenti sospetti sulla strada per la Tenuta di Altavia o verso le colline.",
+   "ko": "carri, greggi, e la campagna che non dice niente."
+  }
+ ],
  "links": [
   "jn-sergente-nardine",
   "jn-tenuta-di-altavia"

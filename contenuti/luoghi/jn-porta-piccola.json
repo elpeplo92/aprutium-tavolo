@@ -4,7 +4,7 @@
  "titolo": "15. Porta Ovest « Porta Piccola »",
  "sottotitolo": "Mura ovest — la porta dei pescatori e dei contrabbandieri",
  "citta": "julianova",
- "gruppo": "Porte e mura",
+ "gruppo": "15. Porta Ovest « Porta Piccola »",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 15 Julianova.jpg",
@@ -12,17 +12,21 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "15",
+  "Posizione": "Mura ovest, verso la spiaggia dei pescatori",
+  "Atmosfera": "Spesso incustodita — la porta dei pescatori e dei contrabbandieri"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "La Porta Piccola non ha un arco monumentale, non ha bassorilievi, non ha guardie d'onore. È una porta di legno rinforzata, bassa, che sembra sempre sul punto di cedere. I pescatori la usano dall'alba al tramonto: si apre e si chiude venti volte al giorno. Di notte è 'chiusa', nel senso che il catenaccio c'è. Ma il catenaccio è piccolo. I contrabbandieri lo sanno. Le guardie lo sanno. Qualcuno viene pagato perché lo sappiano e facciano finta di non saperlo."
   }
  ],
  "gm": [
   {
-   "t": "Note del master",
-   "txt": "Voci d6: aperta di notte quattro volte nell'ultima settimana, tracce di barca sulla sabbia; Zi' Mènne ha un figlio nei magazzini del porto di Teramum; una cassa nascosta tra gli scogli a nord, troppo pesante per i ladri normali; le stelle si riflettono stranamente nell'acqua, come se fosse più profonda; un Navigante Grigio trovato morto sulla spiaggia dieci giorni fa, 'annegamento accidentale' — nuotava meglio di un delfino; Ciccillo ha visto una nave piccola e veloce con bandiera sconosciuta tre notti fa."
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Aperta di notte quattro volte nell'ultima settimana, tracce di barca sulla sabbia.\n2. Zi' Mènne ha un figlio nei magazzini del porto di Teramum.\n3. Una cassa nascosta tra gli scogli a nord, troppo pesante per i ladri normali.\n4. Le stelle si riflettono stranamente nell'acqua, come se fosse più profonda.\n5. Un Navigante Grigio trovato morto sulla spiaggia dieci giorni fa, 'annegamento accidentale' — nuotava meglio di un delfino.\n6. Ciccillo ha visto una nave piccola e veloce con bandiera sconosciuta tre notti fa."
   }
  ],
  "prove": [],

@@ -11,20 +11,35 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Erboristeria — lucertola verde su campo giallo",
+  "Zona": "4. Quartiere del Canneto Verde"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "L'insegna è una lucertola verde su campo giallo. La bottega è piena di mazzi di erbe appese al soffitto, barattoli di ogni colore, e un gatto nero che dorme sempre sul bancone. Margherita è una donna sulla cinquantina con le mani forti e lo sguardo che vede troppo. Conosce ogni erba del Ducato."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Margherita è sacerdotessa segreta di Maia (la sacerdotessa principale del Tempio di Lunaria). Vende erbe normali a chiunque; a chi dimostra di conoscere Maia offre rimedi magici rari a metà prezzo. Conosce Padre Cassio e lo aiuta. Percezione o Arcano CD 12: simbolo di Maia (luna falce su blu) nascosto dietro un'erba secca sul retro → un grado di fiducia in più. Battuta: «Cos'è che vi fa male? Non mi rispondere subito — pensaci. La risposta rapida è sempre sbagliata.»"
+   "txt": "Margherita è sacerdotessa segreta di Maia (la sacerdotessa principale del Tempio di Lunaria). Vende erbe normali a chiunque; a chi dimostra di conoscere Maia offre rimedi magici rari a metà prezzo. Conosce Padre Cassio e lo aiuta. Percezione o Arcano CD 12: simbolo di Maia (luna falce su blu) nascosto dietro un'erba secca sul retro → un grado di fiducia in più. Non mi rispondere subito — pensaci. La risposta rapida è sempre sbagliata.»"
+  },
+  {
+   "t": "Battute pronte",
+   "txt": "«Cos'è che vi fa male?"
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Il retro della bottega",
+   "skill": "Percezione",
+   "dc": 12,
+   "ok": "dietro un'erba secca, un simbolo di Maia: la luna falce su sfondo blu. Margherita se ne accorge, e si fida di voi un grado in più.",
+   "ko": "erbe, barattoli, un gatto. Margherita è gentile e non rivela nulla."
+  }
+ ],
  "links": [
   "jn-margherita-de-li-scurelle",
   "jn-tempio-lunaria"

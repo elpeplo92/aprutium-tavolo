@@ -4,7 +4,7 @@
  "titolo": "2. Palazzo del Sole",
  "sottotitolo": "« La Cittadella » — centro della Città Alta, il punto più elevato",
  "citta": "julianova",
- "gruppo": "Città Alta",
+ "gruppo": "2. Palazzo del Sole",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 2 Julianova.jpg",
@@ -19,24 +19,42 @@
   11
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "2",
+  "Posizione": "Centro della Città Alta, il punto più elevato",
+  "Atmosfera": "Imponente, intimidatorio, freddo come la pietra"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Il Palazzo del Sole domina Julia Nova come un padre severo domina una famiglia che non ama ma controlla. La Torre del Sole al centro è alta quaranta metri: si vede dal mare, dalla campagna, dai villaggi sulle colline. La pietra è gialla di tufo, quasi dorata al tramonto. Le guardie ai cancelli non sorridono mai. Questo è il cuore del governo: Severian Altherion, il Primo Cittadino, lavora qui, e qui si riunisce il Concilio Ristretto."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Il Palazzo del Sole domina Julia Nova come un padre severo domina una famiglia che non ama ma controlla. La Torre del Sole al centro è alta quaranta metri: si vede dal mare, dalla campagna, dai villaggi sulle colline. La pietra è gialla di tufo, quasi dorata al tramonto. Le guardie ai cancelli non sorridono mai.\n\nQuesto è il cuore del governo: Severian Altherion, il Primo Cittadino, lavora qui, e qui si riunisce il Concilio Ristretto. Vi siete stati come eroi della spiaggia, come sospetti dopo la Caserma Est, come testimoni della morte di Domina, e infine sulla Terrazza dei Venti, dove Silvanus ha ottenuto il mandato per Teramum. Dopo l'assedio la Torre è sfregiata da un dardo di balista e le vetrate sono in frantumi."
+   "txt": "Vi siete stati come eroi della spiaggia, come sospetti dopo la Caserma Est, come testimoni della morte di Domina, e infine sulla Terrazza dei Venti, dove Silvanus ha ottenuto il mandato per Teramum. Dopo l'assedio la Torre è sfregiata da un dardo di balista e le vetrate sono in frantumi."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Accesso: convocazione ufficiale oppure Persuasione/Inganno CD 17 con storia credibile. Il Concilio si riunisce martedì e venerdì; Fenix ha accesso permanente. Voci d6: Severian non dorme da settimane e parla da solo; voto segreto tre giorni fa noto solo a Torvus e Fenix; le prigioni del terzo livello non sono mai vuote e chi entra non sempre esce dalle porte principali; Virellius ha chiesto tre volte di ispezionare gli archivi, Altherion ha rifiutato tre volte; passaggio murato verso la Basilica; la Torre poggia su una struttura molto più antica (pietre diverse alla base)."
+   "txt": "Accesso: convocazione ufficiale oppure Persuasione/Inganno CD 17 con storia credibile. Il Concilio si riunisce martedì e venerdì; Fenix ha accesso permanente."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Severian non dorme da settimane e parla da solo.\n2. Voto segreto tre giorni fa noto solo a Torvus e Fenix.\n3. Le prigioni del terzo livello non sono mai vuote e chi entra non sempre esce dalle porte principali.\n4. Virellius ha chiesto tre volte di ispezionare gli archivi, Altherion ha rifiutato tre volte.\n5. Passaggio murato verso la Basilica.\n6. La Torre poggia su una struttura molto più antica (pietre diverse alla base)."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Entrare senza convocazione",
+   "skill": "Persuasione",
+   "dc": 17,
+   "ok": "con una storia credibile passate i cancelli. Un segretario vi accompagna e non vi lascia mai soli.",
+   "ko": "« Il Palazzo non riceve. » Il vostro nome finisce sul registro delle guardie."
+  }
+ ],
  "links": [
   "jn-torre-del-sole",
-  "jn-ala-ovest-prigioni",
-  "jn-cortile-milizia",
   "jn-piazza-alta",
   "jn-scala-dei-venti",
   "jn-severian-altherion",

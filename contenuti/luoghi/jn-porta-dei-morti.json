@@ -4,7 +4,7 @@
  "titolo": "8. Porta Nord-Ovest « Porta dei Morti »",
  "sottotitolo": "Mura nord-ovest — verso il Cimitero",
  "citta": "julianova",
- "gruppo": "Porte e mura",
+ "gruppo": "8. Porta Nord-Ovest « Porta dei Morti »",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 8 Julianova.jpg",
@@ -12,23 +12,26 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "8",
+  "Posizione": "Mura nord-ovest, verso il Cimitero",
+  "Atmosfera": "Silenziosa di giorno, sigillata di notte — la porta che nessuno vuole usare"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "La Porta dei Morti prende il nome dal fatto che da qui escono i cortei funebri verso il cimitero fuori le mura. Di giorno è aperta ma poco sorvegliata — due guardie, non sempre svegli. Di notte viene sigillata con tre catenacci e un sigillo magico rinnovato ogni luna. Fuori: la strada del cimitero, diritta, fiancheggiata da cipressi. Di notte si vedono luci tremolanti tra le tombe. I soldati giurano che sono fiaccole abbandonate. I vecchi giurano che non lo sono."
   }
  ],
  "gm": [
   {
-   "t": "Note del master",
-   "txt": "Voci d6: mai forzata dall'esterno in trecento anni, ma qualcosa ha provato dall'interno; il Mausoleo Aquaviva ha una stanza segreta voluta da Julius; tre notti fa la Cripta dei Senza Nome è stata aperta dall'interno; Micucci 'Lu Fuossatóre' non lascia mai il recinto di notte, 'qualcuno deve restare a sentire'; le luci hanno cadenza regolare, come segnali; la botola dietro il Mausoleo esiste davvero."
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Mai forzata dall'esterno in trecento anni, ma qualcosa ha provato dall'interno.\n2. Il Mausoleo Aquaviva ha una stanza segreta voluta da Julius.\n3. Tre notti fa la Cripta dei Senza Nome è stata aperta dall'interno.\n4. Micucci 'Lu Fuossatóre' non lascia mai il recinto di notte, 'qualcuno deve restare a sentire'.\n5. Le luci hanno cadenza regolare, come segnali.\n6. La botola dietro il Mausoleo esiste davvero."
   }
  ],
  "prove": [],
  "links": [
   "jn-cimitero-moderno",
-  "jn-cripta-senza-nome",
-  "jn-botola-necropoli"
+  "jn-cripta-senza-nome"
  ]
 }

@@ -4,7 +4,7 @@
  "titolo": "Bottega di Elara Manodoro e mercato della Gilda",
  "sottotitolo": "L'armaiola dagli oggetti dal potenziale dormiente",
  "citta": "julianova",
- "gruppo": "3. Quartiere dei Mantelli Bianchi",
+ "gruppo": "3. Quartiere dei Mantelli Bianchi (Nord)",
  "livello": "luogo",
  "parent": "jn-mantelli-bianchi-nord",
  "img": "Luogo — Bottega di Elara Manodoro e mercato della Gilda.jpg",
@@ -15,17 +15,28 @@
   10
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "L'armaiola dagli oggetti dal potenziale dormiente",
+  "Zona": "3. Quartiere dei Mantelli Bianchi (Nord)"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Al mercato della Gilda del Martello Bianco, fra il bazar di Barnabus « Barba » Fildargento e la bottega di Oswald, il banco di Elara Manodoro: l'armaiola dagli oggetti « dal potenziale dormiente », mezzelfa, apprendista di Torvus."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Al mercato della Gilda del Martello Bianco avete conosciuto Elara Manodoro, l'armaiola dagli oggetti dal potenziale dormiente, il bazar di Barnabus « Barba » Fildargento e la bottega di Oswald. Nel retrobottega di Elara, dopo l'assedio, il metallo dei Forgiati distrutti si contorceva in un crogiolo come un lamento umano: Vicarus e lei, con la spilla come diapason, ne hanno tratto il Talismano dell'Eco."
+   "txt": "Qui avete conosciuto Elara. Nel suo retrobottega, dopo l'assedio, il metallo dei Forgiati distrutti si contorceva in un crogiolo come un lamento umano: Vicarus e lei, con la spilla come diapason, ne hanno tratto il Talismano dell'Eco."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Luogo dei diari (non nella guida). Il ferro lunare corrotto « non si forgia col fuoco, va convinto »."
+   "txt": "Il ferro lunare corrotto « non si forgia col fuoco, va convinto »."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Luogo dei diari (non nella guida)."
   }
  ],
  "prove": [],

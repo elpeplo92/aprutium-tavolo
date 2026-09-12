@@ -130,10 +130,19 @@ def contenuti():
             r.pop("segnaposto", None)
             voci.append(r)
     ordine = {"atlante":0,"nazione":1,"provincia":2,"ducato":3,"contea":4,"borgo":5,"quartiere":6,"luogo":7}
+    def zona(e):
+        # numero della zona/quartiere: dal titolo (i quartieri) o dal gruppo (i luoghi dentro un quartiere); 99 per il resto
+        m = re.match(r"\s*(\d+)", e.get("group") or "") or re.match(r"\s*(\d+)", e["title"])
+        return int(m.group(1)) if m else 99
+    def natkey(t):
+        return [int(x) if x.isdigit() else x.lower() for x in re.split(r"(\d+)", t)]
     def key(e):
         g = e.get("group")
-        return (e.get("cat") != "mondo", CITTA.index(e["city"]) if e.get("city") in CITTA else 9, ordine.get(e.get("livello"), 9),
-                GRUPPI_MONDO.index(g) if g in GRUPPI_MONDO else 99, e.get("num") or 0, e["title"])
+        if e.get("cat") == "luogo":
+            # città → zona (1..15, poi i gruppi senza numero) → nome del gruppo → prima il quartiere, poi i suoi luoghi → titolo naturale
+            return (1, CITTA.index(e["city"]) if e.get("city") in CITTA else 9, zona(e), g or "",
+                    0 if e.get("livello") == "quartiere" else 1, e.get("num") or 0, natkey(e["title"]))
+        return (0, 0, 0, ordine.get(e.get("livello"), 9), GRUPPI_MONDO.index(g) if g in GRUPPI_MONDO else 99, e.get("num") or 0, natkey(e["title"]))
     voci.sort(key=key)
     cats = sorted({e["cat"] for e in voci})
     blocco = (CONT_START + "const CONTENUTI_CATS=" + json.dumps(cats) + ";const CONTENUTI_DATA="
@@ -153,7 +162,7 @@ def contenuti():
     open(SRC, "w", encoding="utf-8").write(html)
     n = {c: sum(1 for e in voci if e["cat"] == c) for c in cats}
     print(f"ok: contenuti scritti in src/tavolo.html — {n}; {len(luoghi)} segnaposto di Bëllindë"
-          + (f"\n  IMMAGINI NON RISOLTE ({len(mancanti)}): " + "; ".join(mancanti) if mancanti else ""))
+          + (f"\n  IMMAGINI NON RISOLTE ({len(mancanti)}): " + "; ".join(mancanti[:8]) + (" …" if len(mancanti) > 8 else "") if mancanti else ""))
 
 def build():
     contenuti()

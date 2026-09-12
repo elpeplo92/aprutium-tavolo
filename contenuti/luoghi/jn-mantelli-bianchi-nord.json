@@ -4,7 +4,7 @@
  "titolo": "3. Quartiere dei Mantelli Bianchi (Nord)",
  "sottotitolo": "« Le Fucine (Nord) » — confine tra Città Alta e Bassa, lato nord",
  "citta": "julianova",
- "gruppo": "Città Alta",
+ "gruppo": "3. Quartiere dei Mantelli Bianchi (Nord)",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 3 Julianova.jpg",
@@ -16,23 +16,34 @@
   10
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "3",
+  "Posizione": "Confine tra Città Alta e Bassa, lato nord",
+  "Atmosfera": "Rumoroso, caldo, odore di ferro e fumo — mai silenzioso"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Senti il Quartiere dei Mantelli Bianchi prima di vederlo. Il rumore — martelli su incudini, sibili di vapore, il crepitio delle forge — è costante come il respiro. L'aria è grigia di fuliggine. I fabbri indossano grembiuli di cuoio bianco, i 'Mantelli Bianchi', anche se non sono più bianchi dal primo giorno di lavoro. La Gilda del Martello Bianco governa questo quartiere più di qualsiasi guardia o nobile: Torvus Halderan, il Nano, è il signore non ufficiale di Julia Nova quando si tratta di ferro, acciaio e fuoco."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Senti il Quartiere dei Mantelli Bianchi prima di vederlo. Il rumore — martelli su incudini, sibili di vapore, il crepitio delle forge — è costante come il respiro. L'aria è grigia di fuliggine. I fabbri indossano grembiuli di cuoio bianco, i 'Mantelli Bianchi', anche se non sono più bianchi dal primo giorno di lavoro.\n\nLa Gilda del Martello Bianco governa questo quartiere più di qualsiasi guardia o nobile: Torvus Halderan, il Nano, è il signore non ufficiale di Julia Nova quando si tratta di ferro, acciaio e fuoco. Qui avete visto le fucine ardere di furia innaturale prima dell'assedio, e da qui sono uscite le macchine che hanno sciolto le Navi Rosse. Dopo l'assedio decine di fabbri battevano all'unisono per riparare i cardini delle porte."
+   "txt": "Qui avete visto le fucine ardere di furia innaturale prima dell'assedio, e da qui sono uscite le macchine che hanno sciolto le Navi Rosse. Dopo l'assedio decine di fabbri battevano all'unisono per riparare i cardini delle porte."
   }
  ],
  "gm": [
   {
-   "t": "Note del master",
-   "txt": "Voci d6: il 'ferro lunare' di Elara cade dal cielo in certe notti; Torvus ha respinto un'ispezione di Virellius e due inquisitori sono stati trovati con le dita rotte; Oswald ha tre identità in tre città; il cantiere navale costruisce qualcosa di grande e segreto; Erminio ha venduto un oggetto a Virellius e da allora non parla; il fumo della Grande Forgia è diventato verde scuro tre notti fa. Il Manuale colloca qui anche la « sede dell'Inquisizione » — da armonizzare con la Basilica."
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Il 'ferro lunare' di Elara cade dal cielo in certe notti.\n2. Torvus ha respinto un'ispezione di Virellius e due inquisitori sono stati trovati con le dita rotte.\n3. Oswald ha tre identità in tre città.\n4. Il cantiere navale costruisce qualcosa di grande e segreto.\n5. Erminio ha venduto un oggetto a Virellius e da allora non parla.\n6. Il fumo della Grande Forgia è diventato verde scuro tre notti fa."
+  },
+  {
+   "t": "Da decidere (canon)",
+   "txt": "Il Manuale colloca qui anche la « sede dell'Inquisizione » — da armonizzare con la Basilica."
   }
  ],
  "prove": [],
  "links": [
   "jn-grande-forgia",
-  "jn-laboratorio-torvus",
   "jn-emporio-tuttofare",
   "jn-bottega-elara",
   "jn-torvus-halderan"

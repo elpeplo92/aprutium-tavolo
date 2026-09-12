@@ -4,7 +4,7 @@
  "titolo": "1. Quartiere Nobiliare",
  "sottotitolo": "« La Corte » — la parte più alta della Città Alta",
  "citta": "julianova",
- "gruppo": "Città Alta",
+ "gruppo": "1. Quartiere Nobiliare",
  "livello": "quartiere",
  "parent": "borgo-giglie",
  "mappa": "Quartiere 1 Julianova.jpg",
@@ -17,25 +17,44 @@
   11
  ],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Zona": "1",
+  "Posizione": "Parte più alta della Città Alta",
+  "Atmosfera": "Silenzioso, profumato, ostile agli estranei"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Le strade del Quartiere Nobiliare sono lastricate di pietra bianca e pulite come la faccia di un condannato prima dell'esecuzione. L'aria profuma di gelsomino e incenso. I portoni sono di quercia massiccia, con stemmi in ferro battuto. Le finestre hanno tende. Sempre. I nobili che incontri camminano con scorte armate e sguardi che non ti vedono. I mendicanti non esistono: vengono cacciati prima dell'alba. È la parte più alta della città, la più lontana dal mare, dalla puzza e dal sudore. È anche la più pericolosa."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Le strade del Quartiere Nobiliare sono lastricate di pietra bianca e pulite come la faccia di un condannato prima dell'esecuzione. L'aria profuma di gelsomino e incenso. I portoni sono di quercia massiccia, con stemmi in ferro battuto. Le finestre hanno tende. Sempre.\n\nI nobili che incontri camminano con scorte armate e sguardi che non ti vedono. I mendicanti non esistono: vengono cacciati prima dell'alba. È la parte più alta della città, la più lontana dal mare, dalla puzza e dal sudore. È anche la più pericolosa.\n\nCi siete passati più volte: nel retrobottega della Vetreria del Giudice con Forcinum, nella fuga notturna tra i vicoli in cui l'armatura di Alessandros ha risposto alla luna, e salendo alla Torre dei Cieli Inversi."
+   "txt": "Ci siete passati più volte: nel retrobottega della Vetreria del Giudice con Forcinum, nella fuga notturna tra i vicoli in cui l'armatura di Alessandros ha risposto alla luna, e salendo alla Torre dei Cieli Inversi."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "I PG senza abbigliamento nobile o accompagnatore riconoscibile vengono fermati dalle guardie private entro 2 minuti: Carisma (Persuasione) CD 14 o vengono 'invitati' a tornare nella Città Bassa. Voci d6: il Maniero Cerullius è sigillato da un testamento imperiale; Castemar e Velthuria si odiavano, ora Aulo dorme meglio; la notte dei Forgiati Meren misurava qualcosa nel cielo dal tetto; Sir Ottavio 'Lu Specchiaròle' vende specchi che mostrano cose che non ci sono; il giardiniere dei Giardini non è mai lo stesso due giorni di seguito; la statua di Julius piange quando piove."
+   "txt": "I PG senza abbigliamento nobile o accompagnatore riconoscibile vengono fermati dalle guardie private entro 2 minuti: Carisma (Persuasione) CD 14 o vengono 'invitati' a tornare nella Città Bassa."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Il Maniero Cerullius è sigillato da un testamento imperiale.\n2. Castemar e Velthuria si odiavano, ora Aulo dorme meglio.\n3. La notte dei Forgiati Meren misurava qualcosa nel cielo dal tetto.\n4. Sir Ottavio 'Lu Specchiaròle' vende specchi che mostrano cose che non ci sono.\n5. Il giardiniere dei Giardini non è mai lo stesso due giorni di seguito.\n6. La statua di Julius piange quando piove."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Le guardie private",
+   "skill": "Persuasione",
+   "dc": 14,
+   "ok": "vi lasciano passare: avete l'aria, o la scusa, di chi ha a che fare con una casa nobile.",
+   "ko": "venite « invitati » a tornare nella Città Bassa entro due minuti, con cortesia e senza discussione."
+  }
+ ],
  "links": [
   "jn-tenuta-castemar",
   "jn-maniero-cerullius",
   "jn-biblioteca-cieli-inversi",
-  "jn-giardini-rimembranza",
   "jn-basilica-fiamma-eterna",
   "jn-vetreria-del-giudice"
  ]

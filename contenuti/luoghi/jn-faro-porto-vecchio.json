@@ -11,11 +11,18 @@
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Trenta metri di pietra bianca con una fiamma che non si spegne",
+  "Zona": "6. Quartiere del Porto"
+ },
  "pub": [
   {
+   "t": "Aspetto esterno",
+   "txt": "Trenta metri di pietra bianca, con una fiamma magica in cima che non si spegne mai — nemmeno durante la tempesta, nemmeno durante l'attacco dei Forgiati. Il guardiano del faro è Rafèle 'Lu Rematore', un pescatore con una gamba di legno che vede tutto quello che entra ed esce dal porto da quarant'anni."
+  },
+  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Trenta metri di pietra bianca, con una fiamma magica in cima che non si spegne mai — nemmeno durante la tempesta, nemmeno durante l'attacco dei Forgiati. Il guardiano del faro è Rafèle 'Lu Rematore', un pescatore con una gamba di legno che vede tutto quello che entra ed esce dal porto da quarant'anni. Lo avete sentito parlare delle Navi Rosse, terrorizzato, la sera del compleanno di Mattheus."
+   "txt": "Lo avete sentito parlare delle Navi Rosse, terrorizzato, la sera del compleanno di Mattheus."
   }
  ],
  "gm": [
@@ -24,7 +31,15 @@
    "txt": "Rafèle conosce ogni nave che passa: se i PG vogliono sapere chi è arrivato o partito, è lui il contatto. Potrebbe aver visto la nave di Iuvenza partire e notato qualcosa di strano: Intuizione CD 11 per capire che nasconde qualcosa. «Ho visto le Navi Rosse tre settimane prima che arrivassero. L'ho detto al Palazzo. Mi hanno detto che avevo bevuto troppo.»"
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Parlando con Rafèle",
+   "skill": "Intuizione",
+   "dc": 11,
+   "ok": "sta nascondendo qualcosa: ha visto partire una nave — quella di Iuvenza — e ha notato un dettaglio che non ha detto a nessuno.",
+   "ko": "un vecchio pescatore che parla di navi. Niente di più."
+  }
+ ],
  "links": [
   "jn-rafele-lu-rematore"
  ]

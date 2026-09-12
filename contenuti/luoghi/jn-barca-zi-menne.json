@@ -4,17 +4,20 @@
  "titolo": "Barca di Zi' Mènne de li Còzze — Il Contrabbandiere",
  "sottotitolo": "Una barca grande quanto due, con la stiva troppo profonda",
  "citta": "julianova",
- "gruppo": "15. Porta Ovest",
+ "gruppo": "15. Porta Ovest « Porta Piccola »",
  "livello": "luogo",
  "parent": "jn-porta-piccola",
  "img": "Luogo — Barca di Zi' Mènne de li Còzze — Il Contrabbandiere.jpg",
  "stato": "noto",
  "atti": [],
  "compendio": true,
- "scheda": {},
+ "scheda": {
+  "Tipo": "Una barca grande quanto due, con la stiva troppo profonda",
+  "Zona": "15. Porta Ovest « Porta Piccola »"
+ },
  "pub": [
   {
-   "t": "Cosa sanno i personaggi",
+   "t": "Aspetto esterno",
    "txt": "Una barca di pesca grande quanto due normali, con la stiva troppo profonda per il tipo di pesca che dovrebbe fare. Zi' Mènne è sempre sulla barca, sempre a riparare qualcosa, mai disponibile per conversazione. Tranne quando lo sei davvero: allora si siede, tira fuori la pipa, e ascolta."
   }
  ],
@@ -24,7 +27,15 @@
    "txt": "Zi' Mènne ha incontrato le Navi Rosse in mare prima dell'attacco e sa da dove vengono: non dal mare aperto, da un porto nascosto nelle caverne costiere a sud. Prezzo: 50 mo o un favore significativo dei Naviganti; Persuasione CD 12 per trattare."
   }
  ],
- "prove": [],
+ "prove": [
+  {
+   "t": "Trattare con Zi' Mènne",
+   "skill": "Persuasione",
+   "dc": 12,
+   "ok": "il prezzo scende: 50 mo, oppure un favore dei Naviganti. E lui parla delle Navi Rosse.",
+   "ko": "« 'Na cosa del genere nun se dice gratis. » Tira fuori la pipa e non dice altro."
+  }
+ ],
  "links": [
   "jn-zi-menne"
  ]
