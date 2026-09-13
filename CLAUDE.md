@@ -245,3 +245,9 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 
 - Dopo i tre aumenti a gradini le taglie erano incoerenti. Ora scala fissa in fondo al CSS («scala tipografica (v71)»): corpo 19 · piccolo 15/17 · sezioni 22 (Mr Eaves) · titoli 30/34 (Nodesto) · logo 46px. Colonne: 224 (gruppo) / mappa / 300 (guida) / 330 (regia) — la mappa deve restare almeno metà schermo a 2000px.
 - Per cambiare le taglie si tocca SOLO quel blocco finale, non i valori sparsi.
+
+## v72 (12/09/2026) — guida della scena punto per punto
+
+- Tolta la sezione «Note del master» dal pannello destro (obsoleta per Giuseppe). I dati restano in `S.gmNotes`; i riferimenti a `notesToggle`/`gmNotes` sono protetti da `if`.
+- `renderGuide()` per le scene-mappa elenca i PDI della scena **in ordine di gioco** (`POI_ORDER[scena]`, per `sotto`: pozzo → murata crollata → intercapedine → solchi → linea → rilievi → catene → memorie → micuccio → sigillo → murata) come schede `.gpoi` apribili: numero, icona del tipo, titolo, stato (svelato / nascosto / ?), «Da leggere ai giocatori», «Note del master», prova, e i tasti «Vai sulla mappa» (`centerOn`), «Apri», «Chiedi Percezione al gruppo» (richiesta con `poi` → svelamento automatico), «Chiedi <abilità> al gruppo», «Svela ai giocatori / Nascondi». Sotto seguono le «Schede della scena» (`SCENE_GUIDE`). Una scena nuova va aggiunta sia a `POI_ORDER` sia a `SCENE_GUIDE`.
+- Controllo fatto sull'handout «ESPLORAZIONE — Sotto Bëllindë»: i suoi punti (pozzo, porta murata crollata, intercapedine, Aree 1–6, cuore/Quarto Sigillo, uscita) sono tutti coperti dagli 11 PDI esistenti. Nessun PDI nuovo creato.

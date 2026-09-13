@@ -280,6 +280,14 @@ body.isgm #app{grid-template-columns:224px 1fr 300px 330px}
 #guideLog{flex:1 1 42%;min-height:0;overflow-y:auto;padding:10px;border-top:1px solid var(--line);display:flex;flex-direction:column}
 #guideLog .sec{flex:1}
 #sceneGuide details{border-top:1px solid var(--line);padding:6px 0}
+#sceneGuide .gpoi summary{align-items:center}
+#sceneGuide .gnum{flex:none;width:26px;height:26px;border-radius:50%;background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--sans);font-size:14px;color:var(--ink-dim)}
+#sceneGuide .gpoi.rev .gnum{background:var(--gold);color:#1A1207;border-color:var(--gold)}
+#sceneGuide .gpoi summary i{flex:none;width:22px;height:22px;color:var(--pc);display:grid;place-items:center}
+#sceneGuide .gpoi summary i svg{width:18px;height:18px}
+#sceneGuide .gt{flex:1;min-width:0;font-size:16px;line-height:1.15}
+#sceneGuide .gpoi summary .k{white-space:nowrap;font-size:13px}
+#sceneGuide .gbody{padding:4px 0 4px 34px}
 #sceneGuide details:first-of-type{border-top:none}
 #sceneGuide summary{cursor:pointer;font-weight:600;font-size:17px;color:var(--gold);list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center}
 #sceneGuide summary::-webkit-details-marker{display:none}
@@ -483,7 +491,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v71</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v72</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -555,10 +563,6 @@ button.mini{font-size:15px;padding:4px 8px}
 
 
 
-    <div class="sec gm">
-      <div class="row split"><h2>Note del master</h2><button id="notesToggle" style="padding:2px 8px;font-size:12px">Espandi</button></div>
-      <div class="gmnote" id="gmNotes"></div>
-    </div>
 
     <!-- PLAYER -->
     <div class="sec pl">
@@ -735,6 +739,7 @@ document.getElementById('mapimg').src = MAP_SRC;
 let view={x:0,y:0,k:1};
 function applyView(){ world.style.transform=`translate(${view.x}px,${view.y}px) scale(${view.k})`; }
 function fit(){ const r=stage.getBoundingClientRect(); view.k=Math.min(r.width/MAP_W,r.height/MAP_H); view.x=(r.width-MAP_W*view.k)/2; view.y=(r.height-MAP_H*view.k)/2; applyView(); }
+function centerOn(x,y){ const r=stage.getBoundingClientRect(); view.x=r.width/2-x*view.k; view.y=r.height/2-y*view.k; applyView(); }
 function zoomAt(f,cx,cy){ const r=stage.getBoundingClientRect(); cx=cx??r.width/2; cy=cy??r.height/2; const nk=Math.max(.2,Math.min(4,view.k*f)); view.x=cx-(cx-view.x)*(nk/view.k); view.y=cy-(cy-view.y)*(nk/view.k); view.k=nk; applyView(); }
 stage.addEventListener('wheel',e=>{ e.preventDefault(); const r=stage.getBoundingClientRect(); zoomAt(e.deltaY<0?1.12:1/1.12,e.clientX-r.left,e.clientY-r.top); },{passive:false});
 document.getElementById('zin').onclick=()=>zoomAt(1.25); document.getElementById('zout').onclick=()=>zoomAt(.8); 
@@ -808,7 +813,7 @@ function drawFog(){
 function fogVisible(x,y){ const f=S.fog; if(!f||!f.on) return true; let v=false; for(const o of f.ops){ if(Math.hypot(o.x-x,o.y-y)<o.r*.9){ if(o.los&&!lineClear(o.x,o.y,x,y)) continue; v=(o.t==='r'); } } return v; }
 function fogOp(t,x,y,r,los){ S.fog=S.fog||{on:true,ops:[]}; const last=S.fog.ops[S.fog.ops.length-1]; if(last&&last.t===t&&!los&&Math.hypot(last.x-x,last.y-y)<r*.35) return; const op={t,x:Math.round(x),y:Math.round(y),r:Math.round(r||FOG_R())}; if(los) op.los=1; S.fog.ops.push(op); if(S.fog.ops.length>600) S.fog.ops.splice(0,S.fog.ops.length-600); drawFog(); }
 function setFogTool(t){ fogTool=(fogTool===t)?null:t; measuring=false; measurePts=[]; stage.classList.toggle('measuring',false); document.getElementById('btnMeasure').classList.remove('primary'); stage.classList.toggle('fogtool',!!fogTool); document.getElementById('fogReveal').classList.toggle('primary',fogTool==='r'); document.getElementById('fogHide').classList.toggle('primary',fogTool==='h'); }
-document.getElementById('notesToggle').onclick=()=>{ const n=document.getElementById('gmNotes'); n.classList.toggle('open'); document.getElementById('notesToggle').textContent=n.classList.contains('open')?'Riduci':'Espandi'; };
+{ const _nt=document.getElementById('notesToggle'); if(_nt) _nt.onclick=()=>{ const n=document.getElementById('gmNotes'); n.classList.toggle('open'); document.getElementById('notesToggle').textContent=n.classList.contains('open')?'Riduci':'Espandi'; }; }
 document.getElementById('fogReveal').onclick=()=>setFogTool('r');
 document.getElementById('fogHide').onclick=()=>setFogTool('h');
 document.getElementById('fogOn').onclick=()=>{ S.fog=S.fog||{on:true,ops:[]}; S.fog.on=!S.fog.on; save(true); };
@@ -1037,7 +1042,7 @@ function render(){
   const rp=document.getElementById('roundPill'); rp.style.display=fight?'':'none'; rp.textContent='Round '+S.round;
   document.getElementById('btnNext').disabled=!fight; document.getElementById('btnEnd').disabled=!fight; document.getElementById('btnStart').disabled=fight;
   applyScene(); renderGuide(); drawGrid(); drawWalls(); drawFog(); renderPois(); renderPlaces(); drawAoe(S.aoe); renderAoeBox(); renderPing(); renderShow(); checkTurn(); if(!dragging&&!pending) renderTokens(); renderRail(); renderRemoved(); if(delArmed!==selected){ delArmed=null; const b=document.getElementById('selDel'); if(b) b.textContent='Rimuovi dalla mappa'; }
-  document.getElementById('gmNotes').textContent=S.gmNotes; { const b=document.getElementById('fogOn'); if(b) b.textContent=(S.fog&&S.fog.on)?'Disattiva':'Attiva'; const p=document.getElementById('btnPublic'); if(p){ p.textContent=S.publicRolls?'visibili ai giocatori':'segreti'; p.classList.toggle('primary',!!S.publicRolls); } }
+  { const _gn=document.getElementById('gmNotes'); if(_gn) _gn.textContent=S.gmNotes; } { const b=document.getElementById('fogOn'); if(b) b.textContent=(S.fog&&S.fog.on)?'Disattiva':'Attiva'; const p=document.getElementById('btnPublic'); if(p){ p.textContent=S.publicRolls?'visibili ai giocatori':'segreti'; p.classList.toggle('primary',!!S.publicRolls); } }
   // selezione
   const t=S.tokens[selected];
   document.getElementById('selEmpty').classList.toggle('hidden',!!t); document.getElementById('selBox').classList.toggle('hidden',!t);
@@ -1574,6 +1579,7 @@ function openPng(p){
   const b=document.querySelector('#modal #pngShow'); if(b) b.onclick=()=>{ showToPlayers({img:p.img,title:p.name}); toast('Ritratto mostrato ai giocatori'); };
 }
 /* ---------- guida della scena (colonna del master) ---------- */
+const POI_ORDER={ sotto:['pozzo','murata_crollata','intercapedine','solchi','linea','rilievi','catene','memorie','micuccio','sigillo','murata'] };
 const SCENE_GUIDE={
   sotto:['scenalaportamurata','transizioneladiscesa','scenaladiscesa','scenalultimocustode','scenamicuccio','aftermathritornoallaluce'],
   bellinde:['recapdallemuradimushanealbalconedaprutium','scenalarrivoabellinde','scenalachiamatainpiazza','scenailpaneamezzogiorno','scenailbandolettoadaltavoce','scenalapiazzavuoleunarisposta','scenadallaroccaallapiazza','scenaudienzaallarocca','scenafuoridallarocca','scenaleprovedavantiagisulfo','scenailfuneraledirocco','indagineilcorpodirocco','scenanunziaserrafreddamiofratellodeveandaresottoterra','scenalascopertadelclandestino','scenalaretataalfondaco','scenalinterrogatoriodiceruso','scenachiuderelaboccadiceruso','eventochiuderelaboccadiceruso','situazionelacelluladiceruso','scenalafugadiceruso','inseguimentolafugadiceruso','eventolevacuazionedellacellula','eventoilcorrierediteramum','scenafermareilcorriere','eventoilplicodivespro','eventoilquartouomoversoteramum','inseguimentosullastradaditeramum','scenailfurtodelladichiarazione','eventoilfurtodelladichiarazione','eventoilbandoditeramum','eventolanotteabellinde','scenailragazzotornato','scenaleportesichiudono','transizionelapartenzadabellinde']
@@ -1584,13 +1590,30 @@ function renderGuide(){
   const box=document.getElementById('sceneGuide'); if(!box) return;
   if(!IS_GM||!CUR||CUR.id==='luogo'){ box.classList.add('hidden'); return; }
   const ids=SCENE_GUIDE[CUR.id]||[]; const list=ids.map(id=>SCENE_HANDOUTS.find(x=>x.id===id)).filter(Boolean);
-  const key=CUR.id+'|'+list.length; if(box.dataset.key===key){ box.classList.remove('hidden'); return; } box.dataset.key=key;
+  const key=CUR.id+'|'+list.length+'|'+Object.keys(S.poiRev||{}).sort().join(','); if(box.dataset.key===key){ box.classList.remove('hidden'); return; } box.dataset.key=key;
   box.classList.remove('hidden');
-  let html=`<h2>Guida della scena</h2><p class="note" style="margin:0 0 8px"><b>${CUR.name}</b> · ${list.length} schede in ordine di gioco. Clicca un titolo per leggerla qui, «Apri» per averla grande.</p>`;
+  let html=`<h2>Guida della scena</h2><p class="note" style="margin:0 0 8px"><b>${CUR.name}</b></p>`;
+  const order=(POI_ORDER[CUR.id]||[]).map(id=>POIS.find(p=>p.id===id)).filter(Boolean);
+  if(order.length){
+    html+=`<div class="eyebrow" style="margin:6px 0 4px">Punti d’interesse, in ordine di gioco</div>`;
+    order.forEach((p,n)=>{ const kk=poiKind(p), rev=poiRevealed(p), hid=poiHidden(p); const ic=POI_ICONS[kk]||POI_ICONS.unknown;
+      html+=`<details class="gpoi ${rev?'rev':''}" data-pid="${p.id}" ${guideOpen['poi:'+p.id]?'open':''}><summary><span class="gnum">${n+1}</span><i style="--pc:${ic[0]}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[1]}</svg></i><span class="gt">${p.title}</span><span class="k">${rev?'svelato':(hid?'nascosto':'?')}</span></summary>
+        <div class="gbody"><h4>Da leggere ai giocatori</h4><p class="lore">${p.text}</p>${p.gm?`<h4>Note del master</h4><p>${p.gm}</p>`:''}
+        ${hid&&!rev?`<p class="note">Per notarlo: <b>${p.spot||'Percezione'} CD ${p.spotDc||13}</b> — se almeno uno passa, si svela da solo.</p>`:''}
+        ${p.skill?`<p class="note">Prova: <b>${p.skill} CD ${p.dc||13}</b></p>`:''}
+        <div class="row" style="margin-top:6px"><button class="mini" data-gv="${p.id}">Vai sulla mappa</button><button class="mini" data-go="${p.id}">Apri</button>${hid&&!rev?`<button class="mini primary" data-gspot="${p.id}">Chiedi ${p.spot||'Percezione'} al gruppo</button>`:''}${p.skill?`<button class="mini" data-gask="${p.id}">Chiedi ${p.skill} al gruppo</button>`:''}<button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi':'Svela ai giocatori'}</button></div></div></details>`; });
+  }
+  if(list.length) html+=`<div class="eyebrow" style="margin:14px 0 4px">Schede della scena</div>`;
   for(const sc of list){ const kind=(sc.title.split(' — ')[0]||'').trim(); const name=sc.title.slice(kind.length+3);
     html+=`<details data-sid="${sc.id}" ${guideOpen[sc.id]?'open':''}><summary><span>${name}</span><span class="k">${kind}</span></summary>${sc.intro?`<p class="intro">${sc.intro.replace(/\n/g,'<br>')}</p>`:''}${sc.secs.map(x=>`<h4>${x.t}</h4><p>${(x.txt||'').replace(/\n/g,'<br>')}</p>`).join('')}<div class="row"><button class="mini" data-openscene="${sc.id}">Apri</button></div></details>`; }
   box.innerHTML=html;
-  box.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{ guideOpen[d.dataset.sid]=d.open; }));
+  box.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{ guideOpen[d.dataset.sid||('poi:'+d.dataset.pid)]=d.open; }));
+  const P=id=>POIS.find(p=>p.id===id); const allPg=()=>Object.keys(S.tokens).filter(i=>S.tokens[i].kind==='pg');
+  box.querySelectorAll('[data-gv]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.gv); const pp=(S.poiPos||{})[p.id]||p; centerOn(pp.x,pp.y); });
+  box.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>openPoi(P(b.dataset.go)));
+  box.querySelectorAll('[data-grev]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.grev); poiReveal(p,!poiRevealed(p)); });
+  box.querySelectorAll('[data-gspot]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.gspot); S.request={id:'r-'+Date.now(),skill:p.spot||'Percezione',dc:p.spotDc||13,targets:allPg(),poi:p.id}; log({kind:'sys',txt:`Il master chiede ${p.spot||'Percezione'} a tutto il gruppo`}); save(true); });
+  box.querySelectorAll('[data-gask]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.gask); S.request={id:'r-'+Date.now(),skill:p.skill,dc:p.dc||13,targets:allPg()}; log({kind:'sys',txt:`Il master chiede ${p.skill} a tutto il gruppo`}); save(true); });
   box.querySelectorAll('[data-openscene]').forEach(b=>b.onclick=()=>{ const sc=SCENE_HANDOUTS.find(x=>x.id===b.dataset.openscene); if(sc) openSceneHandout(sc); });
 }
 function openSceneHandout(sc){
