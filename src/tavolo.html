@@ -130,6 +130,8 @@ header .spacer{flex:1}
 #hud .tag{background:rgba(8,11,18,.85);border:1px solid var(--line);padding:5px 12px;border-radius:8px;font-size:17px;font-variant-numeric:tabular-nums}
 #zoomctl{position:absolute;left:12px;top:12px;display:flex;flex-direction:column;gap:4px;padding:6px;background:rgba(8,11,18,.85);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 #zoomctl button{width:40px;height:40px;padding:0;background:rgba(18,24,36,.9);display:grid;place-items:center;border-radius:8px}
+#dice3d{position:absolute;inset:0;pointer-events:none;z-index:3}
+#dice3d canvas{width:100%!important;height:100%!important;display:block}
 #dock{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:4px;padding:6px;background:rgba(8,11,18,.9);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);z-index:4}
 #dock button{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:84px;padding:8px 10px;background:none;border:1px solid transparent;border-radius:10px;font-size:17px;color:var(--ink-dim)}
 #dock button svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -491,7 +493,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v72</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v73</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -511,6 +513,7 @@ button.mini{font-size:15px;padding:4px 8px}
       <svg id="aoe"></svg><svg id="measure"></svg>
       <div id="dragm"></div><div id="confirm"><div id="confirmTxt"></div><div class="row" style="justify-content:flex-start"><button id="mvYes" class="primary">Conferma</button><button id="mvNo">Annulla</button></div><div class="row" style="justify-content:flex-start"><button id="mvDash" title="Azione Scatto: raddoppia il movimento per questo turno">Corri (movimento ×2)</button></div></div>
     </div>
+    <div id="dice3d"></div>
     <div id="dock"><button id="dkMove" class="on" title="Trascina i token e la mappa"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><path d="M9 5l3-3 3 3M9 19l3 3 3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg><span>Muovi</span></button><button id="dkMeasure" title="Misura una distanza: clicca due punti"><svg viewBox="0 0 24 24"><path d="M3 17L17 3l4 4L7 21z"/><path d="M8 12l2 2M11 9l2 2M14 6l2 2"/></svg><span>Misura</span></button><button id="dkDice" title="Tira i dadi"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/></svg><span>Tira dadi</span></button><button id="dkPing" title="Indica un punto sulla mappa a tutti"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Ping</span></button></div><div id="zoomlbl"><button id="zout2" title="Riduci">−</button><span id="zoomPct">100%</span><button id="zin2" title="Ingrandisci">+</button></div><div id="luogoView" style="display:none"></div><div id="turnBanner"></div><div id="aoeBox" class="tag" style="display:none"></div><div id="hud"><span class="tag pl" id="sceneName">Sotto Bëllindë</span><span class="tag" id="hudScale">1 casella = 1,5 m</span><span class="tag" id="hudSel"></span></div>
     <div id="zoomctl"><button id="zin" title="Ingrandisci" class="hidden">+</button><button id="zout" title="Riduci" class="hidden">−</button><button id="fogReveal" class="gm" title="Nebbia: rivela (clicca o trascina sulla mappa)"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1.5 10s3-5.5 8.5-5.5S18.5 10 18.5 10s-3 5.5-8.5 5.5S1.5 10 1.5 10z"/><circle cx="10" cy="10" r="2.5"/></svg></button><button id="wallTool" class="gm" title="Muri: clicca le caselle per renderle pavimento o muro"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 5h16M2 10h16M2 15h16M6 5v5M13 5v5M9 10v5M15 10v5"/></svg></button><button id="doorTool" class="gm" title="Porte: un clic mette una porta chiusa, un secondo la rende passaggio segreto, un terzo la toglie"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 18V3h10v15M15 18H5M12 10.5h.01"/></svg></button><div class="gm aoectl"><button data-aoe="cerchio" title="Area: cerchio (clicca il centro)">◯</button><button data-aoe="cono" title="Area: cono (clicca l’origine, poi la direzione)">◺</button><button data-aoe="linea" title="Area: linea (clicca l’origine, poi la direzione)">╱</button><input type="number" id="aoeSize" value="6" min="1.5" step="1.5" title="metri (raggio del cerchio, lunghezza di cono e linea)"><button id="aoeClear" title="Togli l’area">✕</button></div><button id="fogHide" class="gm" title="Nebbia: copri di nuovo"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1.5 10s3-5.5 8.5-5.5S18.5 10 18.5 10s-3 5.5-8.5 5.5S1.5 10 1.5 10z"/><path d="M3 17 17 3"/></svg></button><button id="btnMeasure" title="Misura una distanza: clicca due punti"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 14 14 2l4 4L6 18z"/><path d="m5 11 2 2M8 8l2 2M11 5l2 2"/></svg></button></div>
   </main>
@@ -685,7 +688,7 @@ function save(immediate){
   const doIt = ()=>ref.set(toRemote(S)).catch(e=>{ console.error('salvataggio fallito',e); setLive(false); });
   immediate ? doIt() : (saveTimer = setTimeout(doIt, 120));
 }
-function log(ev){ S.log = [{t:Date.now(),sc:S.scene||'sotto',...ev}, ...S.log].slice(0,60); }
+function log(ev){ if(DICE_BUF.length){ if(Date.now()-DICE_T<3000) ev.dice=DICE_BUF.map(d=>d.join(':')).join(','); DICE_BUF=[]; } S.log = [{t:Date.now(),sc:S.scene||'sotto',...ev}, ...S.log].slice(0,60); }
 
 
 /* ---------- Firebase (versione pubblica su GitHub Pages) ---------- */
@@ -904,8 +907,8 @@ function renderRail(){
 }
 
 /* ---------- scontro ---------- */
-const d20=()=>1+Math.floor(Math.random()*20);
-function rollExpr(expr){ let total=0, parts=[]; for(const m of expr.replace(/\s/g,'').matchAll(/([+-]?)(\d*)d(\d+)|([+-]?\d+)/g)){ if(m[3]){ const n=+(m[2]||1), f=+m[3], sg=m[1]==='-'?-1:1; const rs=[]; for(let i=0;i<n;i++){ const r=1+Math.floor(Math.random()*f); rs.push(r); total+=sg*r; } parts.push(`${m[1]}${n}d${f}[${rs.join(',')}]`);} else if(m[4]){ total+=+m[4]; parts.push(m[4]); } } return {total,parts:parts.join(' ')}; }
+const d20=()=>{ const r=1+Math.floor(Math.random()*20); DICE_BUF.push([20,r]); DICE_T=Date.now(); return r; };
+function rollExpr(expr){ let total=0, parts=[]; for(const m of expr.replace(/\s/g,'').matchAll(/([+-]?)(\d*)d(\d+)|([+-]?\d+)/g)){ if(m[3]){ const n=+(m[2]||1), f=+m[3], sg=m[1]==='-'?-1:1; const rs=[]; for(let i=0;i<n;i++){ const r=1+Math.floor(Math.random()*f); rs.push(r); DICE_BUF.push([f,r]); DICE_T=Date.now(); total+=sg*r; } parts.push(`${m[1]}${n}d${f}[${rs.join(',')}]`);} else if(m[4]){ total+=+m[4]; parts.push(m[4]); } } return {total,parts:parts.join(' ')}; }
 function doAction(tokId,a){
   const t=S.tokens[tokId]; if(!t) return;
   let count=1, act=a;
@@ -1032,8 +1035,54 @@ function renderActions(container,tokId){
 }
 
 /* ---------- render ---------- */
+
+/* ===== DADI 3D (v73): i dadi cadono sulla mappa, uguali per tutti =====
+   d20() e rollExpr() annotano i dadi tirati in DICE_BUF; log() li scrive nell'evento (ev.dice = "20:17,8:5,8:3").
+   Ogni tavolo aperto, quando vede nel Registro un evento nuovo con dice, anima gli stessi risultati
+   (dice-box-threejs, notazione "1d20+2d8@17,5,3": esito predeterminato). Libreria in dice/ (MIT). */
+let DICE_BUF=[], DICE_T=0;
+const D3={seen:new Set(),t0:Date.now(),box:null,loading:null,q:Promise.resolve(),timer:null,dead:false};
+function dice3dOn(){ try{ return localStorage.getItem('dadi3d')!=='off'; }catch(_){ return true; } }
+function dice3dSound(){ try{ return localStorage.getItem('dadi3dSuono')==='on'; }catch(_){ return false; } }
+function dice3dNotation(spec){
+  const faces=[4,6,8,10,12,20,100], groups=new Map();
+  for(const p of String(spec).split(',')){ const [f,v]=p.split(':').map(Number); if(!faces.includes(f)||!(v>=1)) continue;
+    if(f===100){ const ones=v%10, tens=(v-ones)%100; if(!groups.has(100)) groups.set(100,[]); groups.get(100).push(tens); if(!groups.has(10)) groups.set(10,[]); groups.get(10).push(ones||10); }
+    else { if(!groups.has(f)) groups.set(f,[]); groups.get(f).push(v); } }
+  if(!groups.size) return null;
+  let tot=0; const parts=[], vals=[];
+  for(const [f,vs] of groups){ tot+=vs.length; parts.push(vs.length+'d'+f); vals.push(...vs); }
+  if(tot>30) return null;
+  return parts.join('+')+'@'+vals.join(',');
+}
+function dice3dLoad(){
+  if(D3.box) return Promise.resolve(D3.box); if(D3.loading) return D3.loading;
+  D3.loading=new Promise((res,rej)=>{
+    const el=document.getElementById('dice3d'); if(!el||!el.clientWidth){ rej(new Error('nessuno spazio per i dadi')); return; }
+    const sc=document.createElement('script'); sc.src='dice/dice-box-threejs.umd.js';
+    sc.onload=()=>{ try{ const DB=window['dice-box-threejs']; const C=DB&&(DB.default||DB);
+      const b=new C('#dice3d',{assetPath:'dice/',sounds:dice3dSound(),shadows:true,light_intensity:1.1,baseScale:150,strength:1.2,gravity_multiplier:400,
+        theme_customColorset:{name:'aprutium',foreground:'#1A1207',background:'#D2A94A',outline:'#3a2a08',texture:'bronze03',material:'metal'}});
+      b.initialize().then(()=>{ D3.box=b; res(b); }).catch(rej); }catch(e){ rej(e); } };
+    sc.onerror=()=>rej(new Error('dice/dice-box-threejs.umd.js non trovato')); document.head.appendChild(sc);
+  }).catch(e=>{ D3.dead=true; console.warn('Dadi 3D spenti:',e&&e.message); throw e; });
+  return D3.loading;
+}
+function dice3dRoll(spec){
+  if(D3.dead||!dice3dOn()) return; const n=dice3dNotation(spec); if(!n) return;
+  D3.q=D3.q.then(()=>dice3dLoad()).then(b=>{ clearTimeout(D3.timer); return Promise.resolve(b.roll(n)); })
+    .then(()=>new Promise(r=>{ D3.timer=setTimeout(()=>{ try{ D3.box.clearDice(); }catch(_){} },4500); setTimeout(r,1200); }))
+    .catch(()=>{});
+}
+function dice3dSync(){
+  const L=S.log||[]; for(const ev of L){ if(!ev||!ev.dice) continue; const k=ev.t+'|'+(ev.who||'')+'|'+(ev.txt||ev.name||ev.skill||'');
+    if(D3.seen.has(k)) continue; D3.seen.add(k); if(Date.now()-D3.t0<4000) continue; /* i tiri già nel Registro all'apertura non si rianimano */ if(ev.gm&&!IS_GM) continue; dice3dRoll(ev.dice); }
+  if(D3.seen.size>400){ D3.seen=new Set([...D3.seen].slice(-200)); }
+}
+function dice3dSetSound(on){ try{ localStorage.setItem('dadi3dSuono',on?'on':'off'); }catch(_){} if(D3.box){ D3.box.sounds=on; if(on) D3.box.loadSounds().catch(()=>{}); } }
 function render(){
   if(!READY) return;
+  dice3dSync();
   { const pgs=Object.entries(S.tokens).filter(([,x])=>x.kind==='pg'); const want=['master',...pgs.map(([id])=>id)].join('|');
     if(roleSel.dataset.want!==want){ roleSel.innerHTML=''; roleSel.add(new Option('il Master','master')); for(const [id,x] of pgs) roleSel.add(new Option(x.name,id)); roleSel.dataset.want=want; }
     roleSel.value=ROLE; }
@@ -2102,7 +2151,9 @@ READY=true; render();
   stage.addEventListener('pointerdown',e=>{ if(!pingMode) return; if(e.target.closest('button,#confirm,#zoomctl,#dock,#hud,#zoomlbl')) return; e.stopImmediatePropagation(); doPing(toMap(e)); pingMode=false; syncDock(); },true);
   setInterval(syncDock,400);
   $('dkDice').onclick=()=>{
-    openModal(`<div class="eyebrow">Dadi</div><h2 class="big">Tira i dadi</h2><div class="row" id="diceBtns">${['d4','d6','d8','d10','d12','d20','d100'].map(d=>`<button data-d="${d}">${d}</button>`).join('')}</div><div class="row" style="margin-top:12px"><input type="text" id="diceExpr" placeholder="es. 2d6+3" style="flex:1"><button class="primary" id="diceGo">Tira</button></div><div id="diceOut" style="margin-top:14px;min-height:48px"></div><p class="note" style="margin:10px 0 0">Il risultato finisce nel Registro, visibile a tutti.</p>`);
+    openModal(`<div class="eyebrow">Dadi</div><h2 class="big">Tira i dadi</h2><div class="row" id="diceBtns">${['d4','d6','d8','d10','d12','d20','d100'].map(d=>`<button data-d="${d}">${d}</button>`).join('')}</div><div class="row" style="margin-top:12px"><input type="text" id="diceExpr" placeholder="es. 2d6+3" style="flex:1"><button class="primary" id="diceGo">Tira</button></div><div id="diceOut" style="margin-top:14px;min-height:48px"></div><p class="note" style="margin:10px 0 0">Il risultato finisce nel Registro, visibile a tutti.</p><div class="row" style="margin-top:10px;gap:14px"><label class="row" style="gap:6px"><input type="checkbox" id="d3on" ${dice3dOn()?'checked':''}> Dadi 3D sulla mappa</label><label class="row" style="gap:6px"><input type="checkbox" id="d3snd" ${dice3dSound()?'checked':''}> Suono dei dadi</label></div>`);
+    $('modal').querySelector('#d3on').onchange=e=>{ try{ localStorage.setItem('dadi3d',e.target.checked?'on':'off'); }catch(_){} };
+    $('modal').querySelector('#d3snd').onchange=e=>dice3dSetSound(e.target.checked);
     const box=$('modal'); const who=IS_GM?'Il master':(S.tokens[me]?S.tokens[me].name:'Qualcuno');
     const go=expr=>{ if(!expr) return; let r=null; try{ r=rollExpr(expr); }catch(_){} if(!r||!r.parts||isNaN(r.total)){ box.querySelector('#diceOut').innerHTML='<span class="note">Non capisco: scrivi per esempio 2d6+3</span>'; return; }
       box.querySelector('#diceOut').innerHTML=`<b style="font-family:var(--display);font-size:40px;color:var(--gold);line-height:1">${r.total}</b> <span class="note" style="margin-left:10px">${expr} → ${r.parts}</span>`;
