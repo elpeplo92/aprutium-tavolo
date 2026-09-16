@@ -167,6 +167,8 @@ header .spacer{flex:1}
 .poi i{width:26px;height:26px;border-radius:50%;background:rgba(6,9,15,.92);border:2px solid var(--pc);color:var(--pc);display:grid;place-items:center;box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 12px var(--pc);animation:glow 2.2s infinite;transition:transform .15s}
 .poi i svg{width:16px;height:16px}
 .poi:hover i{transform:scale(1.3)}
+.poi.selected i{outline:2px solid var(--gold);outline-offset:4px}
+.poi:focus-visible{outline:1px dashed var(--gold);outline-offset:6px}
 .poi.unrev i{border-style:dashed;animation:none;opacity:.8}
 .poi.unrev::after{content:'?';position:absolute;top:-6px;right:-6px;width:16px;height:16px;border-radius:50%;background:var(--gold);color:#1A1207;font:700 15px var(--ui);display:grid;place-items:center}
 @keyframes glow{0%,100%{box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 8px var(--pc)}50%{box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 18px var(--pc)}}
@@ -504,7 +506,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v75</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v76</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -687,7 +689,7 @@ function merge(remote){
 }
 function toRemote(s){
   const out={};
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv']) if(s[k]!==undefined) out[k]=s[k];
+  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev']) if(s[k]!==undefined) out[k]=s[k];
   out.tokens={};
   for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
   return out;
@@ -1007,14 +1009,14 @@ document.getElementById('btnAsk').onclick=()=>{ const t=S.tokens[selected]; if(!
 document.getElementById('btnMeasure').onclick=()=>{ if(fogTool) setFogTool(fogTool); measuring=!measuring; measurePts=[]; stage.classList.toggle('measuring',measuring); document.getElementById('btnMeasure').classList.toggle('primary',measuring); if(!measuring) document.getElementById('measure').innerHTML=''; };
 
 /* ---------- giocatore ---------- */
-function rollFor(tokId,skill){ const t=S.tokens[tokId]; if(!t) return; const r=d20(), mod=t.mods[skill]??0, tot=r+mod; if(skill==='Iniziativa'){ t.init=tot; sortOrder(); } log({kind:'roll',who:t.name+' (tirato dal master)',skill,r,mod,tot,dc:null}); if(S.request&&S.request.skill===skill){ poiCheckReveal(tot); S.request.targets=S.request.targets.filter(i=>i!==tokId); if(!S.request.targets.length) S.request=null; } save(true); }
+function rollFor(tokId,skill){ const t=S.tokens[tokId]; if(!t) return; const r=d20(), mod=t.mods[skill]??0, tot=r+mod; if(skill==='Iniziativa'){ t.init=tot; sortOrder(); } log({kind:'roll',who:t.name+' (tirato dal master)',skill,r,mod,tot,dc:null}); if(S.request&&S.request.skill===skill){ poiCheckReveal(tot,tokId,skill,S.request.id); S.request.targets=S.request.targets.filter(i=>i!==tokId); if(!S.request.targets.length) S.request=null; } save(true); }
 function doRoll(skill,dc,reqId){
   const t=S.tokens[me]; if(!t) return;
   const r=d20(), mod=t.mods[skill]??0, tot=r+mod;
   const ev={kind:'roll',who:t.name,skill,r,mod,tot,dc:dc??null};
   if(skill==='Iniziativa'){ t.init=tot; sortOrder(); }
   log(ev);
-  if(reqId&&S.request&&S.request.id===reqId){ poiCheckReveal(tot); S.request.targets=S.request.targets.filter(i=>i!==me); if(!S.request.targets.length) S.request=null; }
+  if(reqId&&S.request&&S.request.id===reqId){ poiCheckReveal(tot,me,skill,reqId); S.request.targets=S.request.targets.filter(i=>i!==me); if(!S.request.targets.length) S.request=null; }
   save(true);
 }
 document.getElementById('btnRoll').onclick=()=>{ if(S.request) doRoll(S.request.skill,S.request.dc,S.request.id); };
@@ -1374,51 +1376,170 @@ POI_ICONS.corridoio=['#8A9BB5','<path d="M4 3v18M20 3v18M8 12h8M13 9l3 3-3 3"/>'
 POI_ICONS.scena=['#5B8FA8','<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 15l5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.5"/>'];
 POI_ICONS.unknown=['#B8B2A4','<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/>'];
 const POI_KIND_NAME={trappola:'Trappola',scontro:'Scontro',enigma:'Enigma',lore:'Dettaglio',dettaglio:'Dettaglio',persona:'Persona',boss:'Scontro',passaggio:'Porta',porta:'Porta',stanza:'Stanza',corridoio:'Corridoio',scena:'Scena'};
-/* PDI nascosti: invisibili ai giocatori finché una prova non li svela */
+/* PDI v2 (authoring, not Firebase): schemaVersion:2, id, title, visibility:'evident'|'hidden',
+   image, imagePrompt, text, gm, discovery?:{dc,autoReveal:false}, modules:[] (ordered/repeatable).
+   Check module: {id,type:'check',focus,skill,dc,outcomes:[{kind,min?,max?,text}]}.
+   Outcome kind: criticalFailure|failure|baseSuccess|fullSuccess|natural20. Bounds refer to the
+   total; natural20 refers to the raw d20. No automatic outcome selection in this patch.
+   Other module types (focus/dialogue/combat/loot/xp/continuation) retain their authoring payload.
+   Legacy img/skill/dc/ok/ko and initial x/y remain readable without rewriting POIS. */
+const POI_IMAGE_STYLE='Painted fantasy illustration in classic Dungeons & Dragons rulebook style';
+function poiText(value){ return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function poiDc(value){ return Number.isFinite(value)&&value>=0?value:null; }
+function poiDiscoveryDc(p){ return poiDc(p.discovery&&Object.hasOwn(p.discovery,'dc')?p.discovery.dc:p.spotDc); }
+function poiImage(p){ const image=p.image??p.img; return POI_IMGS[image]||(/^(img\/|https?:\/\/)/.test(image||'')?image:''); }
+function poiModules(p){
+  if(Array.isArray(p.modules)) return p.modules;
+  if(!p.skill) return [];
+  const dc=poiDc(p.dc);
+  return [{id:'legacy-check',type:'check',skill:p.skill,dc,outcomes:[{kind:'baseSuccess',label:'Successo',text:p.ok||'',...(dc==null?{}:{min:dc})},{kind:'failure',label:'Fallimento',text:p.ko||'',...(dc==null?{}:{max:dc-1})}]}];
+}
+// Authoring validation; legacy definitions are exempt until explicitly migrated to v2.
+function validatePoiDefinition(p){
+  if(p.schemaVersion!==2) return [];
+  const errors=[];
+  if(!p.id||!p.title) errors.push('ID e titolo obbligatori');
+  if(!['evident','hidden'].includes(p.visibility)) errors.push('Visibilità evidente/nascosta obbligatoria');
+  if(!p.image||!poiImage(p)) errors.push('Immagine obbligatoria');
+  if(typeof p.imagePrompt!=='string'||!p.imagePrompt.includes(POI_IMAGE_STYLE)) errors.push('Prompt immagine privo della frase stilistica obbligatoria');
+  if(p.discovery&&p.discovery.dc!=null&&poiDc(p.discovery.dc)==null) errors.push('CD di scoperta non valida');
+  if(p.modules!=null&&!Array.isArray(p.modules)) errors.push('I moduli devono essere una lista');
+  const ids=new Set();
+  for(const m of poiModules(p)){
+    if(!m||typeof m!=='object'){ errors.push('Modulo non valido'); continue; }
+    if(!m.id||ids.has(m.id)) errors.push('Ogni modulo richiede un ID univoco'); ids.add(m.id);
+    if(m.type!=='check') continue;
+    if(!m.focus&&!m.title) errors.push('Ogni prova richiede un focus o motivo');
+    if(!m.skill||poiDc(m.dc)==null) errors.push('Ogni prova richiede abilità e CD');
+    if(m.outcomes!=null&&!Array.isArray(m.outcomes)){ errors.push('Le fasce devono essere una lista'); continue; }
+    for(const o of m.outcomes||[]){
+      if(!o||typeof o!=='object'){ errors.push('Fascia di esito non valida'); continue; }
+      if(!['criticalFailure','failure','baseSuccess','fullSuccess','natural20'].includes(o.kind)||typeof o.text!=='string') errors.push('Fascia di esito non valida');
+      if((o.min!=null&&!Number.isFinite(o.min))||(o.max!=null&&!Number.isFinite(o.max))||(o.min!=null&&o.max!=null&&o.min>o.max)) errors.push('Limiti della fascia non validi');
+    }
+  }
+  return errors;
+}
+function renderPoiModules(p){
+  const names={criticalFailure:'Fallimento critico',failure:'Fallimento',baseSuccess:'Successo base',fullSuccess:'Successo pieno',natural20:'20 naturale'};
+  return poiModules(p).map(m=>{
+    if(m.type!=='check') return ['focus','dialogue','continuation'].includes(m.type)?`<section><h4>${poiText(m.title||({focus:'Focus',dialogue:'Dialogo',continuation:'Prosecuzione'})[m.type])}</h4><p>${poiText(m.text||'')}</p></section>`:'';
+    const dc=poiDc(m.dc);
+    return `<section class="poi-check" style="margin-top:14px">${m.focus||m.title?`<h4>${poiText(m.focus||m.title)}</h4>`:''}<div class="row"><b>${poiText(m.skill)}${dc==null?'':' — CD '+dc}</b><button data-poi-check="${poiText(m.id)}">Richiedi ${poiText(m.skill)}</button></div><div class="outcome">${(m.outcomes||[]).map(o=>`<div><span class="${o.kind==='failure'||o.kind==='criticalFailure'?'fail':'pass'}">${poiText(o.label||names[o.kind]||o.kind)}${o.kind==='natural20'?'':(o.min!=null&&o.max!=null?' · '+o.min+'–'+o.max:o.min!=null?' · da '+o.min:o.max!=null?' · fino a '+o.max:'')}</span><p>${poiText(o.text)}</p></div>`).join('')}</div></section>`;
+  }).join('');
+}
+function openPoiRequest(p,moduleId=null){
+  if(!IS_GM) return;
+  const discovery=moduleId===null, module=discovery?null:poiModules(p).find(m=>m.id===moduleId&&m.type==='check');
+  if(!discovery&&!module) return;
+  const skill=discovery?'Percezione':module.skill, dc=discovery?poiDiscoveryDc(p):poiDc(module.dc);
+  const pgs=Object.entries(S.tokens).filter(([,t])=>t.kind==='pg');
+  openModal(`<h2 class="big" data-poi-master>Richiedi ${poiText(skill)}</h2><p>${discovery?'Scoperta del PDI':'Interazione nel PDI'} · ${poiText(p.title)}${module&&(module.focus||module.title)?' · '+poiText(module.focus||module.title):''}</p><p class="note">${dc==null?(discovery?'CD di scoperta non definita: il risultato non svelerà automaticamente il PDI.':'CD non definita.'):('CD '+dc+(discovery&&p.discovery?.autoReveal!==true?' · Lo svelamento resta al Master.':''))}</p><label>Destinatario <select id="poiRequestWho"><option value="" disabled selected>Scegli destinatario</option><option value="*">Tutto il gruppo</option>${pgs.map(([id,t])=>`<option value="${poiText(id)}">${poiText(t.name)}</option>`).join('')}</select></label><div class="row" style="margin-top:12px"><button id="poiRequestCancel">Annulla</button><button class="primary" id="poiRequestSend" disabled>Richiedi ${poiText(skill)}</button></div>`,'poibox');
+  const who=document.getElementById('poiRequestWho'), send=document.getElementById('poiRequestSend');
+  who.onchange=()=>{ send.disabled=!(who.value==='*'||S.tokens[who.value]?.kind==='pg'); };
+  document.getElementById('poiRequestCancel').onclick=closeModal;
+  send.onclick=()=>{
+    if(!IS_GM||!who.value) return;
+    const targets=who.value==='*'?Object.keys(S.tokens).filter(id=>S.tokens[id].kind==='pg'):[who.value].filter(id=>S.tokens[id]?.kind==='pg'); if(!targets.length) return;
+    S.request={id:'r-'+Date.now(),skill,dc,targets,poi:p.id,poiPurpose:discovery?'discovery':'interaction',...(discovery?{}:{poiModule:module.id})};
+    log({kind:'sys',txt:`Il master chiede ${who.value==='*'?'a tutti':'a '+S.tokens[who.value].name} una prova di ${skill}`}); save(true); closeModal();
+  };
+  who.focus();
+}
+/* Visibilità esplicita per i nuovi PDI; classificazione precedente per quelli legacy. */
 function poiKind(p){ return ({lore:'dettaglio',boss:'scontro',passaggio:'porta'})[p.kind]||p.kind||'dettaglio'; }
-function poiHidden(p){ const k=poiKind(p); return k==='trappola'||k==='dettaglio'||(k==='porta'&&p.segreta); }
+function poiHidden(p){ if(p.visibility==='hidden') return true; if(p.visibility==='evident') return false; const k=poiKind(p); return k==='trappola'||k==='dettaglio'||(k==='porta'&&p.segreta); }
 function poiRevealed(p){ return !!((S.poiRev||{})[p.id]); }
-function poiReveal(p,on){ S.poiRev=S.poiRev||{}; if(on) S.poiRev[p.id]=true; else delete S.poiRev[p.id]; log({kind:'sys',txt:on?`Svelato: ${p.title}`:`Nascosto di nuovo: ${p.title}`}); save(true); }
+function poiReveal(p,on){ if(!IS_GM) return; S.poiRev=S.poiRev||{}; if(on) S.poiRev[p.id]=true; else delete S.poiRev[p.id]; log({kind:'sys',txt:on?`Svelato: ${p.title}`:`Nascosto di nuovo: ${p.title}`}); save(true); }
 
 const poisEl=document.getElementById('pois');
-function poiVisible(p){ if(IS_GM) return true; const pp=(S.poiPos||{})[p.id]||p; if(!fogVisible(pp.x,pp.y)) return false; return poiRevealed(p)||!poiHidden(p); }
+let selectedPoi=null;
+// No override: keep the original coordinates. An explicit marker survives Firebase's null pruning.
+function poiPosition(p){ const pp=(S.poiPos||{})[p.id]; if(pp&&pp.placed===false) return null; const pos=pp||(p.schemaVersion===2?null:p); return pos&&Number.isFinite(pos.x)&&Number.isFinite(pos.y)?pos:null; }
+function selectPoi(id){ selectedPoi=id; poisEl.querySelectorAll('.poi').forEach(d=>d.classList.toggle('selected',d.dataset.poiId===id)); }
+function poiOnMap(p){
+  if(!IS_GM||CUR.id!=='sotto') return;
+  let pp=poiPosition(p);
+  if(!pp){
+    const r=stage.getBoundingClientRect();
+    // Centre of the visible portion of the map, excluding any empty space around it.
+    const x1=Math.max(0,-view.x/view.k), x2=Math.min(MAP_W,(r.width-view.x)/view.k);
+    const y1=Math.max(0,-view.y/view.k), y2=Math.min(MAP_H,(r.height-view.y)/view.k);
+    pp={x:Math.round(x1<x2?(x1+x2)/2:MAP_W/2),y:Math.round(y1<y2?(y1+y2)/2:MAP_H/2)};
+    S.poiPos=S.poiPos||{}; S.poiPos[p.id]=pp; selectPoi(p.id); save(true);
+  }
+  closeModal(); centerOn(pp.x,pp.y); selectPoi(p.id);
+  const marker=[...poisEl.querySelectorAll('.poi')].find(d=>d.dataset.poiId===p.id); if(marker) marker.focus({preventScroll:true});
+}
+function confirmPoiRemoval(p){
+  if(!IS_GM||CUR.id!=='sotto'||!poiPosition(p)) return;
+  openModal('<h2 class="big" data-poi-master>Rimuovere questo PDI dalla mappa?</h2><p>La scheda del PDI resterà nella scena e potrà essere riposizionata.</p><div class="row"><button id="poiRemoveCancel">Annulla</button><button class="danger" id="poiRemoveConfirm">Rimuovi dalla mappa</button></div>','poibox');
+  document.getElementById('poiRemoveCancel').onclick=closeModal;
+  document.getElementById('poiRemoveConfirm').onclick=()=>{ if(!IS_GM||CUR.id!=='sotto') return; S.poiPos=S.poiPos||{}; S.poiPos[p.id]={placed:false}; selectPoi(null); closeModal(); save(true); };
+  document.getElementById('poiRemoveCancel').focus();
+}
+window.addEventListener('pointerdown',e=>{ if(selectedPoi&&!e.target.closest('.poi,#modal,[data-gv],[data-go]')) selectPoi(null); },true);
+window.addEventListener('keydown',e=>{
+  if(!IS_GM||CUR.id!=='sotto'||!selectedPoi||dragging||e.repeat||e.ctrlKey||e.metaKey||e.altKey||!['Delete','Canc'].includes(e.key)) return;
+  if(e.target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"])')) return;
+  const modal=document.getElementById('modal');
+  if(modal.style.display==='flex'&&!modal.querySelector('[data-poi-popup="'+selectedPoi+'"]')) return;
+  const p=POIS.find(p=>p.id===selectedPoi); if(p&&poiPosition(p)){ e.preventDefault(); confirmPoiRemoval(p); }
+});
+function poiVisible(p){ const pp=poiPosition(p); if(!pp) return false; if(IS_GM) return true; if(!fogVisible(pp.x,pp.y)) return false; return poiRevealed(p)||!poiHidden(p); }
+function poiPopupKey(p){ return [IS_GM,poiRevealed(p),!!poiPosition(p)].join('|'); }
+function syncPoiPopup(){
+  const modal=document.getElementById('modal'); if(modal.style.display!=='flex') return;
+  if(!IS_GM&&modal.querySelector('[data-poi-master]')){ closeModal(); modal.querySelector('.box').innerHTML=''; return; }
+  const head=modal.querySelector('[data-poi-popup]'); if(!head) return;
+  const p=POIS.find(p=>p.id===head.dataset.poiPopup);
+  if(!p||CUR.id!=='sotto'||(!IS_GM&&!poiVisible(p))){ closeModal(); modal.querySelector('.box').innerHTML=''; return; }
+  if(head.dataset.poiView!==poiPopupKey(p)) openPoi(p);
+}
 function renderPois(){
-  poisEl.innerHTML=''; if(CUR.id!=='sotto') return;
+  syncPoiPopup();
+  poisEl.innerHTML=''; if(!IS_GM||CUR.id!=='sotto') selectedPoi=null; if(CUR.id!=='sotto') return;
+  if(selectedPoi&&!POIS.some(p=>p.id===selectedPoi&&poiPosition(p))) selectedPoi=null;
   for(const p of POIS){
     if(!poiVisible(p)) continue;
-    const pp=(S.poiPos||{})[p.id]||p; const d=document.createElement('div'); d.className='poi k-'+(p.kind||'lore'); d.style.left=pp.x+'px'; d.style.top=pp.y+'px'; const rev=poiRevealed(p); const kk=poiKind(p); d.title=IS_GM?((POI_KIND_NAME[kk]||'')+' · '+p.title+(rev?'':' · non svelato')):(rev?(POI_KIND_NAME[kk]||'')+' · '+p.title:'Punto d’interesse'); const ic=(IS_GM||rev)?(POI_ICONS[kk]||POI_ICONS.unknown):POI_ICONS.unknown; if(IS_GM&&!rev) d.classList.add('unrev'); d.style.setProperty('--pc',ic[0]); d.innerHTML=`<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[1]}</svg></i>`;
-    d.addEventListener('pointerdown',e=>{ e.stopPropagation(); if(!IS_GM) return; e.preventDefault(); const start=toMap(e); let moved=false; dragging=true;
+    const pp=poiPosition(p); const d=document.createElement('div'); const rev=poiRevealed(p); d.className='poi k-'+(!IS_GM&&!rev?'unknown':p.kind||'lore'); d.dataset.poiId=p.id; d.classList.toggle('selected',IS_GM&&selectedPoi===p.id); d.style.left=pp.x+'px'; d.style.top=pp.y+'px'; const kk=poiKind(p); d.title=IS_GM?(p.title+(rev?' · svelato':' · non svelato')):(rev?p.title:'Punto d’interesse'); const ic=(IS_GM||rev)?(POI_ICONS[kk]||POI_ICONS.unknown):POI_ICONS.unknown; if(IS_GM&&!rev) d.classList.add('unrev'); d.style.setProperty('--pc',ic[0]); d.innerHTML=`<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[1]}</svg></i>`;
+    d.tabIndex=0; d.setAttribute('role','button'); d.setAttribute('aria-label',d.title);
+    d.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); if(IS_GM) selectPoi(p.id); openPoi(p); } });
+    d.addEventListener('pointerdown',e=>{ e.stopPropagation(); if(!IS_GM||e.button!==0) return; e.preventDefault(); selectPoi(p.id); d.focus({preventScroll:true}); const start=toMap(e); let moved=false; dragging=true;
       const mv=ev=>{ const q=toMap(ev); if(!moved&&Math.hypot(q.x-start.x,q.y-start.y)<6) return; moved=true; d.style.left=q.x+'px'; d.style.top=q.y+'px'; };
-      const up=ev=>{ window.removeEventListener('pointermove',mv); window.removeEventListener('pointerup',up); dragging=false; if(moved){ const q=toMap(ev); S.poiPos=S.poiPos||{}; S.poiPos[p.id]={x:Math.round(q.x),y:Math.round(q.y)}; save(true); toast('Punto spostato: '+p.title); } else openPoi(p); };
-      window.addEventListener('pointermove',mv); window.addEventListener('pointerup',up); });
+      const cleanup=()=>{ window.removeEventListener('pointermove',mv); window.removeEventListener('pointerup',up); window.removeEventListener('pointercancel',cancel); dragging=false; };
+      const up=ev=>{ cleanup(); if(!IS_GM||CUR.id!=='sotto'||!poiPosition(p)){ renderPois(); return; } if(moved){ const q=toMap(ev); S.poiPos=S.poiPos||{}; S.poiPos[p.id]={x:Math.round(q.x),y:Math.round(q.y)}; save(true); toast('Punto spostato: '+p.title); } else openPoi(p); };
+      const cancel=()=>{ cleanup(); renderPois(); };
+      window.addEventListener('pointermove',mv); window.addEventListener('pointerup',up); window.addEventListener('pointercancel',cancel); });
     if(!IS_GM) d.onclick=()=>openPoi(p);
     poisEl.appendChild(d);
   }
 }
 function openPoi(p){
-  const kk=poiKind(p), rev=poiRevealed(p), hid=poiHidden(p);
-  if(!IS_GM&&!rev){ openModal(`<div class="eyebrow">Punto d’interesse</div><h2 class="big">Qualcosa, qui</h2><p class="lore">Non l’avete ancora esaminato. Il master vi dirà cosa vedete.</p>`,'poibox'); return; }
-  let html=`<div class="eyebrow">${POI_KIND_NAME[kk]||'Punto d’interesse'}${IS_GM?(rev?' · <span style="color:var(--green)">svelato ai giocatori</span>':' · <span style="color:#F0B7AE">non svelato</span>'):''}</div><h2 class="big">${p.title}</h2>`;
-  if(p.img&&POI_IMGS[p.img]) html+=`<img class="poiimg" src="${POI_IMGS[p.img]}" alt="">`;
+  if(!IS_GM&&!poiVisible(p)) return;
+  const rev=poiRevealed(p), head=`data-poi-popup="${poiText(p.id)}" data-poi-view="${poiPopupKey(p)}"`;
+  if(!IS_GM&&!rev){ openModal(`<h2 class="big" ${head}>Qualcosa, qui</h2><p class="lore">Non l’avete ancora esaminato. Il master vi dirà cosa vedete.</p>`,'poibox'); return; }
+  let html=`<h2 class="big" ${head}>${poiText(p.title)}</h2>`;
+  if(IS_GM) html+=`<div class="eyebrow">${poiHidden(p)?'PDI nascosto':'PDI evidente'} · ${rev?'svelato ai giocatori':'non svelato'}</div><div class="row" style="margin:10px 0 12px"><button class="${rev?'':'primary'}" id="poiRev">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button><button id="poiPerception">Richiedi Percezione</button><button id="poiMap">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button></div>`;
+  const img=poiImage(p);
+  if(img) html+='<img class="poiimg" id="poiImage" style="object-fit:contain" alt="">';
   html+=`<div class="eyebrow" style="margin-top:6px">Da leggere ai giocatori</div><p class="lore">${p.text}</p>`;
-  if(IS_GM){
-    const pgs=Object.entries(S.tokens).filter(([,x])=>x.kind==='pg');
-    const sk=p.skill||'', dc=p.dc||13; const spot=p.spot||'Percezione', spotDc=p.spotDc||13;
-    const who=(id)=>`<select id="${id}"><option value="*">Tutto il gruppo</option>${pgs.map(([i,x])=>`<option value="${i}">${x.name}</option>`).join('')}</select>`;
-    html+=`<div class="row" style="margin:8px 0 12px"><button class="${rev?'':'primary'}" id="poiRev">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button></div>`;
-    html+=`<div class="gmbox"><div class="eyebrow">Note del master</div><p>${p.gm||''}</p>`;
-    if(hid&&!rev) html+=`<div class="row" style="margin-bottom:8px"><span class="eyebrow">Per notarlo</span><b>${spot} CD ${spotDc}</b>${who('poiSpotWho')}<button class="primary" id="poiSpot">Richiedi</button></div><p class="note" style="margin:-4px 0 10px">Se almeno uno passa, il punto si svela da solo ai giocatori.</p>`;
-    if(sk) html+=`<div class="row"><span class="eyebrow">Prova</span><b>${sk} CD ${dc}</b>${who('poiWho')}<button class="primary" id="poiAsk">Richiedi</button></div><div class="outcome"><div><span class="pass">Successo</span><p>${p.ok||''}</p></div><div><span class="fail">Fallimento</span><p>${p.ko||''}</p></div></div>`;
-    html+=`</div>`;
-  }
+  if(IS_GM) html+=`<div class="gmbox"><div class="eyebrow">Note per il Master</div><p>${p.gm||''}</p>${renderPoiModules(p)}</div>`;
   openModal(html,'poibox');
-  const ask=(selId,sk,dc,poi)=>{ const w=document.getElementById(selId).value; const targets=w==='*'?Object.keys(S.tokens).filter(i=>S.tokens[i].kind==='pg'):[w]; S.request={id:'r-'+Date.now(),skill:sk,dc,targets,poi}; log({kind:'sys',txt:`Il master chiede ${w==='*'?'a tutti':'a '+S.tokens[w].name} una prova di ${sk}`}); save(true); closeModal(); };
-  const b=document.querySelector('#modal #poiAsk'); if(b) b.onclick=()=>ask('poiWho',p.skill,p.dc||13,null);
-  const sb=document.querySelector('#modal #poiSpot'); if(sb) sb.onclick=()=>ask('poiSpotWho',p.spot||'Percezione',p.spotDc||13,p.id);
-  const rb=document.querySelector('#modal #poiRev'); if(rb) rb.onclick=()=>{ poiReveal(p,!rev); closeModal(); };
+  const picture=document.querySelector('#modal #poiImage'); if(picture){ picture.src=img; picture.alt=p.title; }
+  const mapButton=document.querySelector('#modal #poiMap'); if(mapButton) mapButton.onclick=()=>poiOnMap(p);
+  const perception=document.querySelector('#modal #poiPerception'); if(perception) perception.onclick=()=>openPoiRequest(p);
+  document.querySelectorAll('#modal [data-poi-check]').forEach(b=>b.onclick=()=>openPoiRequest(p,b.dataset.poiCheck));
+  const rb=document.querySelector('#modal #poiRev'); if(rb) rb.onclick=()=>{ poiReveal(p,!poiRevealed(p)); openPoi(p); };
 }
-/* una prova riuscita svela il PDI collegato alla richiesta */
-function poiCheckReveal(tot){ const q=S.request; if(!q||!q.poi||q.dc==null||tot<q.dc) return; const p=POIS.find(x=>x.id===q.poi); if(p&&!poiRevealed(p)){ S.poiRev=S.poiRev||{}; S.poiRev[p.id]=true; log({kind:'sys',txt:`Svelato: ${p.title}`}); } }
+/* Solo scoperta esplicita, con CD autoriale e automazione scelta dal Master/autore. */
+function poiCheckReveal(tot,tokId,skill,reqId){
+  const q=S.request;
+  if(!q||q.id!==reqId||q.poiPurpose!=='discovery'||skill!=='Percezione'||q.skill!==skill||!q.targets.includes(tokId)||!Number.isFinite(tot)) return;
+  const p=POIS.find(x=>x.id===q.poi), dc=p?poiDiscoveryDc(p):null;
+  if(!p||p.discovery?.autoReveal!==true||dc==null||q.dc!==dc||tot<dc||poiRevealed(p)) return;
+  S.poiRev=S.poiRev||{}; S.poiRev[p.id]=true; log({kind:'sys',txt:`Svelato: ${p.title}`});
+}
 
 /* ---------- muri e porte (editor del master) ---------- */
 const wallsC=document.getElementById('walls'), wallsCtx=wallsC.getContext('2d');
@@ -1655,7 +1776,7 @@ function renderGuide(){
   const box=document.getElementById('sceneGuide'); if(!box) return;
   if(!IS_GM||!CUR||CUR.id==='luogo'){ box.classList.add('hidden'); return; }
   const ids=SCENE_GUIDE[CUR.id]||[]; const list=ids.map(id=>SCENE_HANDOUTS.find(x=>x.id===id)).filter(Boolean);
-  const key=CUR.id+'|'+list.length+'|'+Object.keys(S.poiRev||{}).sort().join(','); if(box.dataset.key===key){ box.classList.remove('hidden'); return; } box.dataset.key=key;
+  const key=CUR.id+'|'+list.length+'|'+Object.keys(S.poiRev||{}).sort().join(',')+'|'+POIS.filter(p=>!poiPosition(p)).map(p=>p.id).join(','); if(box.dataset.key===key){ box.classList.remove('hidden'); return; } box.dataset.key=key;
   box.classList.remove('hidden');
   let html=`<h2>Guida della scena</h2><p class="note" style="margin:0 0 8px"><b>${CUR.name}</b></p>`;
   const order=(POI_ORDER[CUR.id]||[]).map(id=>POIS.find(p=>p.id===id)).filter(Boolean);
@@ -1663,22 +1784,19 @@ function renderGuide(){
     html+=`<div class="eyebrow" style="margin:6px 0 4px">Punti d’interesse, in ordine di gioco</div>`;
     order.forEach((p,n)=>{ const kk=poiKind(p), rev=poiRevealed(p), hid=poiHidden(p); const ic=POI_ICONS[kk]||POI_ICONS.unknown;
       html+=`<details class="gpoi ${rev?'rev':''}" data-pid="${p.id}" ${guideOpen['poi:'+p.id]?'open':''}><summary><span class="gnum">${n+1}</span><i style="--pc:${ic[0]}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[1]}</svg></i><span class="gt">${p.title}</span><span class="k">${rev?'svelato':(hid?'nascosto':'?')}</span></summary>
-        <div class="gbody"><h4>Da leggere ai giocatori</h4><p class="lore">${p.text}</p>${p.gm?`<h4>Note del master</h4><p>${p.gm}</p>`:''}
-        ${hid&&!rev?`<p class="note">Per notarlo: <b>${p.spot||'Percezione'} CD ${p.spotDc||13}</b> — se almeno uno passa, si svela da solo.</p>`:''}
-        ${p.skill?`<p class="note">Prova: <b>${p.skill} CD ${p.dc||13}</b></p>`:''}
-        <div class="row" style="margin-top:6px"><button class="mini" data-gv="${p.id}">Vai sulla mappa</button><button class="mini" data-go="${p.id}">Apri</button>${hid&&!rev?`<button class="mini primary" data-gspot="${p.id}">Chiedi ${p.spot||'Percezione'} al gruppo</button>`:''}${p.skill?`<button class="mini" data-gask="${p.id}">Chiedi ${p.skill} al gruppo</button>`:''}<button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi':'Svela ai giocatori'}</button></div></div></details>`; });
+        <div class="gbody"><div class="row" style="margin-top:6px"><button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button><button class="mini" data-gspot="${p.id}">Richiedi Percezione</button><button class="mini" data-gv="${p.id}">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button><button class="mini" data-go="${p.id}">Apri</button></div><h4>Da leggere ai giocatori</h4><p class="lore">${p.text}</p>${p.gm?`<h4>Note per il Master</h4><p>${p.gm}</p>`:''}${renderPoiModules(p)}</div></details>`; });
   }
   if(list.length) html+=`<div class="eyebrow" style="margin:14px 0 4px">Schede della scena</div>`;
   for(const sc of list){ const kind=(sc.title.split(' — ')[0]||'').trim(); const name=sc.title.slice(kind.length+3);
     html+=`<details data-sid="${sc.id}" ${guideOpen[sc.id]?'open':''}><summary><span>${name}</span><span class="k">${kind}</span></summary>${sc.intro?`<p class="intro">${sc.intro.replace(/\n/g,'<br>')}</p>`:''}${sc.secs.map(x=>`<h4>${x.t}</h4><p>${(x.txt||'').replace(/\n/g,'<br>')}</p>`).join('')}<div class="row"><button class="mini" data-openscene="${sc.id}">Apri</button></div></details>`; }
   box.innerHTML=html;
   box.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{ guideOpen[d.dataset.sid||('poi:'+d.dataset.pid)]=d.open; }));
-  const P=id=>POIS.find(p=>p.id===id); const allPg=()=>Object.keys(S.tokens).filter(i=>S.tokens[i].kind==='pg');
-  box.querySelectorAll('[data-gv]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.gv); const pp=(S.poiPos||{})[p.id]||p; centerOn(pp.x,pp.y); });
+  const P=id=>POIS.find(p=>p.id===id);
+  box.querySelectorAll('[data-gv]').forEach(b=>b.onclick=()=>poiOnMap(P(b.dataset.gv)));
   box.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>openPoi(P(b.dataset.go)));
   box.querySelectorAll('[data-grev]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.grev); poiReveal(p,!poiRevealed(p)); });
-  box.querySelectorAll('[data-gspot]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.gspot); S.request={id:'r-'+Date.now(),skill:p.spot||'Percezione',dc:p.spotDc||13,targets:allPg(),poi:p.id}; log({kind:'sys',txt:`Il master chiede ${p.spot||'Percezione'} a tutto il gruppo`}); save(true); });
-  box.querySelectorAll('[data-gask]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.gask); S.request={id:'r-'+Date.now(),skill:p.skill,dc:p.dc||13,targets:allPg()}; log({kind:'sys',txt:`Il master chiede ${p.skill} a tutto il gruppo`}); save(true); });
+  box.querySelectorAll('[data-gspot]').forEach(b=>b.onclick=()=>openPoiRequest(P(b.dataset.gspot)));
+  box.querySelectorAll('[data-poi-check]').forEach(b=>b.onclick=()=>openPoiRequest(P(b.closest('[data-pid]').dataset.pid),b.dataset.poiCheck));
   box.querySelectorAll('[data-openscene]').forEach(b=>b.onclick=()=>{ const sc=SCENE_HANDOUTS.find(x=>x.id===b.dataset.openscene); if(sc) openSceneHandout(sc); });
 }
 function openSceneHandout(sc){
