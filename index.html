@@ -506,7 +506,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v79</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v80</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1275,7 +1275,126 @@ const BESTIARIO = [
 
 /* ===== PUNTI INTERATTIVI DEL DUNGEON ===== */
 const POIS = [
- {id:'intercapedine',kind:'passaggio',x:945,y:435,title:'La breccia di Adamus',text:'Dietro la parete sfondata non c’è terra. C’è vuoto: un passaggio stretto, da percorrere chini, corre parallelo alla galleria. Niente solchi sul pavimento. Niente iscrizioni. Come se aveste aperto il retro di un enorme meccanismo.',gm:'RULING (sessione set 2026) — vecchia intercapedine di servizio. I comandi della Galleria non sono progettati per chi passa di qui: per Mattheus solo tracce debolissime di magia attraverso la parete. Prosegue ~20 m, piega a destra e si ricongiunge oltre il tratto pericoloso, poco prima della Caserma degli Armigeri. Non è un’autostrada verso il Sigillo.',skill:'Percezione',dc:12,ok:'Dal fondo del cunicolo filtra la stessa luce della galleria: sbocca più avanti, oltre i solchi. Nessun rumore di passi dentro: nessuno lo usa da molto.',ko:'Buio e polvere. Il cunicolo prosegue, ma non capite dove porti.'},
+ {
+   "schemaVersion": 2,
+   "id": "intercapedine",
+   "kind": "passaggio",
+   "title": "Prima Nicchia Murata",
+   "visibility": "hidden",
+   "legacyPosition": {"x": 945, "y": 435},
+   "discovery": {
+     "enabled": true,
+     "dc": 13,
+     "autoReveal": true,
+     "trigger": "Se qualcuno colpisce o sonda la parete in quel punto, suona vuoto. È scoperto senza tiro. Al tavolo è andata così: Adamus ha sfondato la parete.",
+     "outcomes": [
+       {"kind": "criticalFailure", "min": 1, "max": 5, "text": "La parete sembra uguale a tutto il resto."},
+       {"kind": "failure", "min": 6, "max": 12, "text": "Qualche pietra è più piccola delle altre. Sarà l'età."},
+       {"kind": "baseSuccess", "min": 13, "max": 15, "text": "Una parte della parete è fatta di pietre piccole e malta, sporcate di polvere per sembrare roccia. Il PDI viene scoperto."},
+       {"kind": "fullSuccess", "min": 16, "max": 19, "text": "Sotto la toppa si vede il profilo di un'apertura. Qui un tempo si passava. Il PDI viene scoperto."},
+       {"kind": "natural20", "text": "Le pietre piccole e la malta chiara sono le stesse del muro in fondo al corridoio. Chi ha chiuso quello ha chiuso anche questo. Il PDI viene scoperto."}
+     ]
+   },
+   "image": null,
+   "imagePending": true,
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, inside a long underground hall with a floor of worn flagstones crossed by long parallel double-edged channels, a close view of the left wall of rough irregular boulders where one section has been filled in with small stones and pale mortar, smeared with dust and grime so it almost blends with the rock around it, the faint outline of an old opening still visible under the patch, a bronze disc set in the floor channel nearby, torchlight from the side, deep shadow --ar 4:3",
+   "text": "Ora che sapete dove guardare, non vedete altro.\n\nNella roccia della parete c'è una toppa: pietre piccole, malta chiara, e sopra polvere e sporco passati apposta perché si confondesse con il resto.\n\nDa lontano funziona. Da vicino no.\n\nSotto si vede il profilo di un'apertura. Qui una volta si passava.",
+   "gm": "Dietro c'è un passaggio breve che porta alla Caserma degli Armigeri (PDI 09).\n\nLa chiusura è della stessa mano del muro del corridoio (PDI 03). Chi sia non è stabilito.\n\nCome per il PDI 03, aprirla non è in dubbio: contano il tempo e il rumore.",
+   "modules": [
+     {
+       "id": "chiusura",
+       "type": "check",
+       "focus": "Focus 1 — La chiusura",
+       "skill": "Indagare",
+       "dc": 12,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Una toppa nella parete. Niente di più."},
+         {"kind": "failure", "min": 5, "max": 11, "text": "È recente, come il muro del corridoio. Anni, non secoli."},
+         {"kind": "baseSuccess", "min": 12, "max": 14, "text": "Le pietre sono state messe da questa parte, dalla galleria, per chiudere un passaggio che c'era già."},
+         {"kind": "fullSuccess", "min": 15, "max": 19, "text": "La malta è più debole lungo un lato. Lavorando lì si apre senza buttare giù tutto."},
+         {"kind": "natural20", "text": "Qui non volevano solo chiudere: volevano che nessuno sapesse che c'era un passaggio. Per questo lo sporco sopra."}
+       ]
+     },
+     {
+       "id": "aprire",
+       "type": "focus",
+       "title": "Focus 2 — Aprire il passaggio",
+       "text": "Nessuna prova per riuscirci. Decidono loro come:\n\nSfondarlo: molto rumore. «La prima pietra resiste. La seconda si spacca. Poi una parte della parete cede verso l'interno con un boato.»\n\nSmontarlo: lento, quasi silenzioso. Se hanno trovato il lato debole con l'Indagare, va più veloce."
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 3 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nLa toppa non è magica. I filamenti restano nella galleria, lungo i solchi. Dietro questa parete non vanno."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "text": "La parete cede. Dietro non c'è terra: c'è vuoto.\n\nUn passaggio breve, senza solchi sul pavimento. In fondo si apre una sala rettangolare.\n\nLungo le due pareti lunghe, nel buio, stanno delle figure in armatura antica, in fila, con le lance dritte. Immobili.\n\nSul pavimento, proprio all'ingresso della sala, corre una linea scura.\n\nChe cosa fate?"
+     }
+   ]
+ },
+ {
+   "schemaVersion": 2,
+   "id": "seconda_nicchia",
+   "kind": "passaggio",
+   "title": "Seconda Nicchia Murata",
+   "visibility": "hidden",
+   "legacyPosition": {"x": 990, "y": 555},
+   "discovery": {
+     "enabled": true,
+     "dc": 14,
+     "autoReveal": true,
+     "trigger": "Anche qui, se qualcuno colpisce o sonda la parete in quel punto, suona vuoto: scoperto senza tiro.\n\nSe il gruppo ha già trovato la Prima Nicchia (PDI 05), sa cosa cercare: vantaggio alla prova.",
+     "outcomes": [
+       {"kind": "criticalFailure", "min": 1, "max": 5, "text": "La parete è continua. Solo roccia e sporco."},
+       {"kind": "failure", "min": 6, "max": 13, "text": "Qualche pietra ha una forma strana, ma niente che vi sembri un disegno."},
+       {"kind": "baseSuccess", "min": 14, "max": 16, "text": "Una fessura verticale sottile, troppo dritta per essere naturale. Seguendola si vede il bordo di una toppa. Il PDI viene scoperto."},
+       {"kind": "fullSuccess", "min": 17, "max": 19, "text": "La toppa ha la forma di un'apertura, larga quanto una persona. Qualcuno l'ha chiusa e poi ha lavorato la superficie perché sembrasse roccia. Il PDI viene scoperto."},
+       {"kind": "natural20", "text": "Riconoscete la mano: pietre piccole e malta chiara, come il muro del corridoio e la prima nicchia. Qui però il lavoro è molto più accurato. Il PDI viene scoperto."}
+     ]
+   },
+   "image": null,
+   "imagePending": true,
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, the lower end of a long underground hall with a floor of worn flagstones crossed by long parallel double-edged channels and bronze discs set in them, a close view of the left wall of rough irregular boulders where a section has been carefully filled with fitted stones and pale mortar, then coated with dust and grime so well that it is almost invisible, only a faint vertical seam betraying it, torchlight grazing the wall from the side, deep shadow --ar 4:3",
+   "text": "Ora che avete visto la fessura, il resto viene da sé.\n\nUna parte della parete è stata chiusa con pietre piccole e malta chiara, poi coperta di polvere e sporco con molta cura, pietra per pietra.\n\nSotto c'è il profilo di un'apertura, larga quanto una persona.\n\nIl muro in fondo al corridoio era stato tirato su in fretta. Questo no. Chi ha chiuso questo passaggio voleva che nessuno lo trovasse mai.",
+   "gm": "Dietro c'è un passaggio breve che porta alla Sala delle Ordinanze (PDI 11). È la sala che sblocca la Porta di Pietra (PDI 07).\n\nÈ la stessa mano del PDI 03 e del PDI 05. Chi sia non è stabilito. Questa chiusura è la più curata delle tre: il passaggio che contava di più andava nascosto meglio.\n\nAprirla non è in dubbio: contano il tempo e il rumore.",
+   "modules": [
+     {
+       "id": "chiusura",
+       "type": "check",
+       "focus": "Focus 1 — La chiusura",
+       "skill": "Indagare",
+       "dc": 13,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Le pietre sono troppo simili alla parete per capire come sia stata fatta."},
+         {"kind": "failure", "min": 5, "max": 12, "text": "È una chiusura recente, come le altre. Anni, non secoli."},
+         {"kind": "baseSuccess", "min": 13, "max": 15, "text": "La toppa riempie un'apertura che c'era già. La roccia intorno non è stata toccata: è servita da cornice."},
+         {"kind": "fullSuccess", "min": 16, "max": 19, "text": "È un lavoro lento e preciso. Chi l'ha fatto aveva tempo, e nessuno che lo cercasse."},
+         {"kind": "natural20", "text": "Dietro la superficie la malta è sottile. Sapendo dove lavorare, si apre senza fatica e quasi senza rumore."}
+       ]
+     },
+     {
+       "id": "aprire",
+       "type": "focus",
+       "title": "Focus 2 — Aprire il passaggio",
+       "text": "Nessuna prova per riuscirci. Decidono loro come:\n\nSfondarlo: molto rumore, che rimbomba in tutta la galleria.\n\nSmontarlo: lento, quasi silenzioso. Con il 20 dell'Indagare, più veloce."
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 3 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nLa toppa non è magica. I filamenti della galleria non passano di qui."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "text": "Tolte le ultime pietre, la parete smette di essere una parete. Dietro c'è un passaggio breve, e in fondo una sala.\n\nÈ diversa da tutto quello che avete visto finora. È ovale, e le pareti non sono nude: sono coperte di rilievi scolpiti, figure di pietra una accanto all'altra.\n\nAl centro, in fila, ci sono tre dispositivi rotondi incassati nel pavimento.\n\nTutto qui dentro sembra fatto per essere guardato da un punto preciso.\n\nChe cosa fate?"
+     }
+   ]
+ },
  {
    "schemaVersion": 2,
    "id": "murata_crollata",
@@ -1283,146 +1402,193 @@ const POIS = [
    "title": "Muro con Strano Rigonfiamento",
    "visibility": "evident",
    "legacyPosition": {
-     "x": 975,
-     "y": 255
+     "x": 930,
+     "y": 150
    },
    "discovery": {
      "enabled": false
    },
    "image": "img/a512a92ab90d.png",
-   "imagePrompt": "A rebuilt stone wall blocking the end of an ancient underground corridor. The corridor itself is made of massive dark stone blocks, perfectly cut and fitted, but the blocking wall is clearly different: smaller, irregular stones held together with coarse mortar, visibly built later to seal the passage. In the center-right portion of the wall there is a strange outward bulge, as if something from the far side once pressed or struck hard enough to deform the masonry. The wall looks old, damp and heavy, with cracks, rough repairs and accumulated dust. The surrounding corridor remains austere, narrow and oppressive, with ancient fitted blocks on the floor, walls and ceiling. No characters, no creatures, no visible magic, no glowing symbols, no text, no UI. Painted fantasy illustration in classic Dungeons & Dragons rulebook style\n\nTraditional hand-painted gouache and oil illustration with clearly visible brush strokes and matte pigment, muted slate blue, cool gray and restrained earth ochre. Not photorealistic, not a 3D render, no cinematic HDR. View from inside the corridor approaching its blocked end. The irregular infill wall remains closed and heavy, with a clearly visible but modest rounded outward bulge on its center-right at human height. No opening, no view through the wall, no visible cause of the bulge, no creature silhouette.",
-   "text": "Il corridoio termina contro un muro che non appartiene al resto della struttura.\nI grandi blocchi regolari che vi hanno accompagnato fin qui si interrompono di colpo, sostituiti da una tamponatura grezza di pietre più piccole, irregolari, legate da malta.\nQualcuno ha chiuso questo passaggio molto tempo dopo la costruzione originaria.\nMa non è questo l’aspetto più strano.\nA circa altezza d’uomo, una porzione della muratura sporge leggermente verso di voi.\nNon si tratta di un semplice cedimento: la superficie sembra essersi gonfiata verso l’esterno.\nCome se, dall’altra parte, qualcosa avesse spinto con forza contro il muro.\nL’aria qui è più ferma che nel resto del corridoio.\nE più pesante.",
-   "gm": "Questo è il muro ricostruito che separa il corridoio dalla Galleria della Schiera.\nDeve risultare subito chiaro che non appartiene alla costruzione antica, ma è un’aggiunta successiva.\nIl rigonfiamento serve ad attirare l’attenzione dei giocatori e a comunicare che il muro non è perfettamente stabile e che qualcosa, in passato, ha esercitato una pressione o un urto dall’altro lato.\nNon rivelare ancora con certezza la natura di ciò che c’è oltre: la funzione del PDI è portare il gruppo a esaminare, dedurre e infine decidere se forzare o aprire un varco.",
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, the end of an ancient straight corridor of huge squared stone blocks laid without mortar, blocked by a crude wall of small irregular stones and pale fresh mortar, trowel marks and stones set in haste, the middle of the wall bulging outward toward the viewer with a crack spreading from its centre in five directions, two straight grooves in the floor running right under the wall, dust on the ground, torchlight from the left --ar 4:3",
+   "text": "Il corridoio finisce contro un muro che non c'entra niente con il resto.\n\nIntorno, i blocchi enormi e perfetti. Il muro invece è fatto di pietre piccole e irregolari, tenute insieme da malta chiara. È recente: anni, non secoli.\n\nÈ un lavoro rozzo, tirato su sopra una costruzione perfetta.\n\nA metà altezza il muro si gonfia verso di voi. Al centro di quella gobba la malta si è spaccata, e la crepa si apre in cinque direzioni.\n\nCome se qualcosa, dall'altra parte, avesse spinto. Una volta sola.\n\nI due solchi del pavimento arrivano fino al muro e ci passano sotto.",
+   "gm": "Il muro è stato costruito per chiudere quello che c'è oltre: la stanzetta e, dopo, la Galleria della Schiera. Chi l'abbia costruito e cosa abbia spinto da dietro non è stabilito.\n\nIl muro è già rovinato. Aprirlo non è in dubbio: quello che conta è quanto tempo ci mettono e quanto rumore fanno. Un guerriero lo capisce senza tiro.\n\nQuando il primo PG arriva a un passo dal muro, il ritmo si ferma con lui.",
    "modules": [
      {
        "id": "muratura",
        "type": "check",
-       "focus": "Focus 1 — La muratura ricostruita",
-       "trigger": "Se i giocatori esaminano il muro come costruzione:",
-       "text": "Da vicino la differenza è ancora più evidente. Le pietre del muro sono più piccole, meno uniformi e tenute insieme da una malta ormai vecchia e screpolata.",
+       "focus": "Focus 1 — La muratura",
+       "text": "Che sia recente e fatto male si vede senza tiro.",
        "skill": "Indagare",
        "dc": 11,
        "outcomes": [
          {
            "kind": "criticalFailure",
-           "text": "La muratura è rozza ma compatta. Vi limitate a concludere che qualcuno abbia chiuso il passaggio.",
+           "text": "Un muro recente, fatto male. Niente di più.",
            "min": 1,
            "max": 4
          },
          {
            "kind": "failure",
-           "text": "Il muro è chiaramente posteriore rispetto al corridoio, ma non riuscite a stimarne lo stato o il metodo con cui è stato costruito.",
+           "text": "La malta è chiara, quasi fresca. Anni, non secoli.",
            "min": 5,
            "max": 10
          },
          {
            "kind": "baseSuccess",
-           "text": "Questo passaggio è stato murato deliberatamente.\nNon si tratta di un crollo naturale né di un tamponamento improvvisato all’ultimo momento.",
+           "text": "Colpi di cazzuola, pietre messe dove capitava. È stato fatto in fretta, per chiudere, non per durare.",
            "min": 11,
            "max": 13
          },
          {
            "kind": "fullSuccess",
-           "text": "Le pietre e la malta non sono disposte per reggere per sempre: sembrano pensate soprattutto per chiudere in fretta un varco già esistente.\nIl muro è robusto, ma non è parte integrante della struttura.",
+           "text": "Le pietre riempiono un'apertura che c'era già. Prima qui si passava.",
            "min": 14,
            "max": 19
          },
          {
            "kind": "natural20",
-           "text": "Osservando la distribuzione delle crepe e delle giunture, capite che questa tamponatura è stata realizzata sfruttando il profilo di un’apertura preesistente.\nIn altre parole: qui prima c’era davvero un passaggio, poi murato intenzionalmente."
+           "text": "Le sbavature di malta sporgono tutte verso di voi. Chi l'ha costruito lavorava da questa parte: ha chiuso qualcosa che stava di là."
          }
        ]
      },
      {
        "id": "rigonfiamento",
        "type": "check",
-       "focus": "Focus 2 — Il rigonfiamento",
-       "trigger": "Se un personaggio concentra l’attenzione sulla parte sporgente del muro:",
-       "text": "Le pietre in quel punto non sono semplicemente fuori asse. Alcune risultano leggermente spinte in avanti rispetto alle altre.",
+       "focus": "Focus 2 — Il rigonfiamento e la crepa",
        "skill": "Percezione",
        "dc": 12,
        "outcomes": [
          {
            "kind": "criticalFailure",
-           "text": "L’umidità e la scarsa luce vi impediscono di leggere bene la superficie. Vi sembra solo una deformazione generica della muratura.",
+           "text": "Il muro è deformato. Non capite da cosa.",
            "min": 1,
            "max": 4
          },
          {
            "kind": "failure",
-           "text": "La muratura è effettivamente deformata, ma non riuscite a capire da cosa possa dipendere.",
+           "text": "La crepa parte dal centro della gobba e si divide in cinque rami.",
            "min": 5,
            "max": 11
          },
          {
            "kind": "baseSuccess",
-           "text": "Il rigonfiamento non ha l’aspetto di un cedimento verso il basso.\nQualcosa ha spinto dall’altra parte verso di voi.",
+           "text": "Non è un cedimento verso il basso. La spinta è arrivata dall'altra parte, verso di voi.",
            "min": 12,
            "max": 14
          },
          {
            "kind": "fullSuccess",
-           "text": "Le pietre non mostrano segni di semplice assestamento.\nLa pressione è arrivata dall’interno del muro o, più probabilmente, da oltre il passaggio murato.\nQualcosa ha urtato o premuto con forza sufficiente a deformare la tamponatura.",
+           "text": "Una spinta sola, forte. I bordi della crepa sono netti: non si è allargata col tempo.",
            "min": 15,
            "max": 19
          },
          {
            "kind": "natural20",
-           "text": "Oltre alla deformazione, notate che alcune fughe della malta sono fessurate in modo radiale attorno alla parte sporgente.\nNon è stato un colpo leggero né un cedimento lento: dev’essere stato un impatto violento o una spinta poderosa esercitata da dietro."
+           "text": "Infilando le dita nella crepa, la malta cede sotto la pressione. Il muro è già compromesso: basta poco per farlo venire giù."
          }
        ]
      },
      {
-       "id": "varco",
-       "type": "check",
-       "focus": "Focus 3 — Forzare un varco",
-       "trigger": "Se i giocatori decidono di provare ad aprire il passaggio con strumenti, colpi o forza bruta:",
-       "text": "Il muro non sembra impossibile da rompere, ma farlo richiederà rumore, tempo e fatica.",
-       "skill": "Atletica",
-       "dc": 14,
-       "outcomes": [
-         {
-           "kind": "criticalFailure",
-           "text": "I colpi fanno saltare solo schegge di malta e qualche frammento di pietra.\nIl muro regge, e l’impatto rimbomba nel corridoio.",
-           "min": 1,
-           "max": 4
-         },
-         {
-           "kind": "failure",
-           "text": "Riuscite a danneggiare la superficie, ma non ad aprire un varco sufficiente per passare.\nIl muro è più ostinato di quanto sembrasse.",
-           "min": 5,
-           "max": 13
-         },
-         {
-           "kind": "baseSuccess",
-           "text": "Una parte della tamponatura cede.\nSi apre una breccia stretta, abbastanza da vedere oltre ma non ancora abbastanza comoda da attraversare senza ulteriori sforzi.",
-           "min": 14,
-           "max": 16
-         },
-         {
-           "kind": "fullSuccess",
-           "text": "Le pietre cedono in rapida successione.\nIn breve aprite un varco sufficiente per passare uno alla volta.",
-           "min": 17,
-           "max": 19
-         },
-         {
-           "kind": "natural20",
-           "text": "Individuate subito il punto più debole e lo sfruttate al meglio.\nIl muro cede molto più rapidamente del previsto, lasciando un’apertura abbastanza ampia da permettere il passaggio del gruppo con relativa facilità."
-         }
-       ],
-       "gm": "Questa prova può essere fatta da un singolo personaggio oppure da più personaggi che collaborano, secondo la tua gestione al tavolo."
+       "id": "crepa",
+       "type": "focus",
+       "title": "Focus 3 — Guardare attraverso la crepa",
+       "text": "Nessun tiro.\n\nSenza luce:\n\nSolo buio. Non passa neanche un filo d'aria.\n\nCon una luce accostata alla fessura:\n\nAll'inizio solo pietra. Poi trovate l'angolo giusto.\n\nDi là c'è spazio. Altri blocchi antichi, senza malta. Vedete una striscia di pavimento: i due solchi continuano, perfettamente diritti.\n\nSe restano in silenzio ad ascoltare:\n\nDall'altra parte cade un granello di malta. Tic.\n\nPoi niente. Nessun respiro, nessun movimento."
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 4 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nIl muro non è magico.\n\nI filamenti di Ammaliamento che seguivano i solchi passano sotto la parete e continuano oltre. Qualunque cosa li alimenti, sta dall'altra parte."
+     },
+     {
+       "id": "aprire",
+       "type": "focus",
+       "title": "Focus 5 — Aprire il muro",
+       "text": "Nessuna prova per riuscirci. Decidono loro come:\n\nAbbatterlo: pochi minuti, molto rumore. Il colpo rimbomba lungo tutto il corridoio.\n\nSmontarlo pietra per pietra: lento, quasi silenzioso.\n\nForzare la crepa: il muro, già rovinato, può venire giù da solo, di colpo."
      },
      {
        "id": "prosecuzione",
        "type": "continuation",
        "title": "Prosecuzione",
-       "trigger": "Se il gruppo apre almeno una breccia nel muro:",
-       "text": "Oltre la tamponatura l’oscurità si apre in uno spazio più ampio.\nL’aria cambia subito: non è più quella ferma del corridoio, ma quella di una sala chiusa da lungo tempo.\nAttraverso l’apertura intravedete una camera molto più grande, sorretta dagli stessi grandi blocchi antichi, con una serie di figure immobili allineate nel buio.\nNon sembrano disposte a caso.\nSembrano in attesa.\nAvete appena aperto l’accesso a un ambiente più vasto.\nDavanti a voi si estende la Galleria della Schiera.\nChe cosa fate?"
+       "text": "Il muro cede. Le pietre rotolano sul pavimento e alzano una nube di polvere bianca.\n\nQuando la polvere si posa, oltre il varco c'è una piccola stanza quadrata, lastricata di pietre tonde. I due solchi la attraversano dritti.\n\nSul lato opposto un passaggio scende nel buio. Da lì sale un'aria diversa, più ampia, come di un grande spazio chiuso.\n\nPoi il ritmo riprende. Più vicino.\n\nTAC.\n\nTAC.\n\nChe cosa fate?"
      }
    ]
  },
  {id:'solchi',kind:'trappola',x:1095,y:465,title:'I solchi nel pavimento',text:'Sul pavimento corrono solchi paralleli, consumati e regolari, come se migliaia di piedi avessero marciato sulle stesse linee per anni. In fondo, il buio. E nel buio, un ritmo.',gm:'Area 1 — Galleria della Schiera. Ondate di comandi («ALLINEATI» «AVANTI» «FERMI») quando qualcuno attraversa i punti di comando: TS Sag CD 13, fallire = un passo, mai di più. Le pietre incise che pulsano sono le rune: danno o Arcano con metodo le spegne. Individuazione del Magico mostra la trama tesa lungo i solchi.',skill:'TS Sag',dc:13,ok:'Il personaggio sente l’ordine («ALLINEATI», «AVANTI», «FERMI») ma resta padrone dei propri passi. Capisce da dove arriva: una pietra incisa che pulsa col ritmo.',ko:'Un solo gesto imposto: un passo sul solco sbagliato, verso il pozzo aperto o l’acqua nera. Mai più di un passo. Una mano ferma di un compagno lo blocca, sempre.'},
- {id:'linea',kind:'scontro',x:705,y:405,title:'La linea sul pavimento',text:'Una linea scura attraversa l’ingresso della sala. Oltre, sei figure in armatura antica stanno lungo la parete, lance verticali. Nessun movimento.',gm:'Area 2 — Caserma. Chi supera la linea attiva i sei Armigeri: sei teste si alzano insieme. Rivelali qui. Maximus riconosce la formazione senza tiri.',img:'armor',skill:'Percezione',dc:12,ok:'Nota che le sei figure non sono statue: le giunture delle armature sono lucide, le lance non hanno polvere. E vede la linea scura come un confine deliberato.',ko:'Le vede come statue in armatura, decorazione della caserma. La linea è solo una crepa nel pavimento.'},
+ {
+   "schemaVersion": 2,
+   "id": "linea",
+   "kind": "scontro",
+   "title": "La Caserma degli Armigeri",
+   "visibility": "evident",
+   "legacyPosition": {"x": 705, "y": 345},
+   "discovery": {"enabled": false},
+   "image": null,
+   "imagePending": true,
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a long rectangular underground barracks of dressed stone inside walls of rough boulders, along both long walls a row of ancient armored figures standing to attention with tall spears held upright, between them stone weapon racks holding old spears and round shields, iron torch brackets at the four corners, an empty flagstone floor in the middle, a thin dark line inlaid across the threshold in the foreground, dust everywhere, torchlight from the doorway --ar 4:3",
+   "text": "La sala è lunga e rettangolare, più curata di tutto il resto: le pareti interne sono di pietra squadrata.\n\nLungo le due pareti lunghe stanno delle figure in armatura antica, sull'attenti. Sette per parte. Ognuna tiene una lancia dritta accanto a sé.\n\nTra una figura e l'altra ci sono rastrelliere di pietra, con lance e scudi rotondi ancora al loro posto.\n\nIl centro della sala è vuoto. Polvere dappertutto.\n\nSul pavimento, proprio sulla soglia, corre una linea scura.\n\nNessuno si muove.",
+   "gm": "Delle quattordici figure, sei sono Armigeri Vincolati: sono le tre centrali di ogni parete. Le altre otto sono armature vuote.\n\nC'è una linea scura su tutti e tre gli ingressi: est (dalla Prima Nicchia), ovest (verso il Brak), sud (verso la Sala delle Ordinanze). Chi la supera sveglia i sei. Tutti e sei alzano la testa nello stesso momento.\n\nScheda: Armigero Vincolato nel Bestiario (22 PF, CA 17, Lancia +4, 1d8+2).\n\nFormazione: con almeno 3 Armigeri adiacenti, +2 CA e +1d4 ai danni.\nImmuni a veleno, charme, paura e sonno.\nNon parlano.\n\nCome combattono:\n\nPrimo round: si allineano, tre adiacenti, e avanzano insieme di 7,5 m.\nDal secondo round: colpiscono di lancia il bersaglio più vicino alla schiera, senza mai sparpagliarsi.\nChi viene spinto fuori dalla formazione, nel suo turno rientra invece di attaccare.\nNon inseguono oltre la linea: sulla soglia si fermano e tornano al muro. Il gruppo può sempre ritirarsi.\n\nLeva del Master:\n\nTroppo facile: al terzo round si stacca dal muro una delle armature «vuote» più vicine alla linea. Non era vuota. Al massimo due.\nTroppo difficile: chi esce dalla linea è salvo, e gli Armigeri caduti non vengono sostituiti.",
+   "modules": [
+     {
+       "id": "figure",
+       "type": "check",
+       "focus": "Focus 1 — Le figure",
+       "skill": "Percezione",
+       "dc": 12,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Statue in armatura. Decorazione."},
+         {"kind": "failure", "min": 5, "max": 11, "text": "Sono armature vere, non pietra. Antichissime."},
+         {"kind": "baseSuccess", "min": 12, "max": 14, "text": "Alcune non sono come le altre. Hanno le giunture lucide, e sulle loro lance non c'è polvere."},
+         {"kind": "fullSuccess", "min": 15, "max": 19, "text": "Sono sei, le tre centrali di ogni parete. Le altre otto sono coperte di polvere, e dalle fessure degli elmi si vede che sono vuote."},
+         {"kind": "natural20", "text": "I sei hanno lo stesso identico respiro, anche se non respirano: le spalle si alzano e si abbassano al ritmo del TAC."}
+       ]
+     },
+     {
+       "id": "linea",
+       "type": "check",
+       "focus": "Focus 2 — La linea",
+       "skill": "Indagare",
+       "dc": 12,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Una crepa scura nel pavimento."},
+         {"kind": "failure", "min": 5, "max": 11, "text": "Non è una crepa: è una linea incisa e riempita di metallo annerito."},
+         {"kind": "baseSuccess", "min": 12, "max": 14, "text": "Corre dritta da uno stipite all'altro, e c'è uguale anche sugli altri ingressi. È un confine."},
+         {"kind": "fullSuccess", "min": 15, "max": 19, "text": "È dello stesso metallo dei dischi della galleria. Fa parte dello stesso sistema."},
+         {"kind": "natural20", "text": "Dal lato interno la polvere sulla linea è intatta. Da quello esterno no: qualcuno si è fermato qui, ha guardato, e non è entrato."}
+       ]
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 3 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nDalla linea partono filamenti di Ammaliamento. Non vanno a tutte le figure: vanno solo a sei, le tre centrali di ogni parete. Le altre otto sono spente."
+     },
+     {
+       "id": "formazione",
+       "type": "focus",
+       "title": "Focus 4 — Riconoscere la formazione",
+       "text": "Un PG con addestramento militare, senza tiro, appena si muovono:\n\nÈ una schiera. Tre davanti, compatti, lance basse. Finché restano uniti sono un muro. Se ne stacchi uno, gli altri si scoprono."
+     },
+     {
+       "id": "loot",
+       "type": "focus",
+       "title": "Loot",
+       "text": "Nelle rastrelliere: lance e scudi rotondi antichi, pesanti e ben conservati. Non sono magici. Vanno bene per l'armeria della Crociata.\n\nAssegna → Loot della Crociata"
+     },
+     {
+       "id": "exp",
+       "type": "focus",
+       "title": "EXP",
+       "text": "Sconfitta dei sei Armigeri: 1.200 PE, cioè 240 a testa per 5 PG. Aggiungi 200 per ogni armatura «vuota» che hai svegliato con la leva."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "text": "Quando l'ultimo Armigero cade, il ritmo non si ferma. Le armature vuote restano lungo le pareti, immobili come prima.\n\nLa sala ha altre due uscite.\n\nA ovest un corridoio scende e piega verso sinistra. Da lì arriva un odore di ferro vecchio e, piano, un tintinnio di catene.\n\nA sud un passaggio breve porta verso una sala più ampia.\n\nChe cosa fate?"
+     }
+   ]
+ },
  {id:'rilievi',kind:'enigma',x:705,y:555,title:'I rilievi della Sala delle Ordinanze',text:'Le pareti sono coperte di rilievi: comandante, ufficiali, soldati. Ogni scena di obbedienza termina in una sconfitta: schiere perfette che marciano dentro il disastro. L’ultimo rilievo è diverso: il comandante depone il simbolo del rango, e tre persone azionano tre dispositivi insieme. Sotto, un’iscrizione: «L’ordine piega.» «Il giuramento lega soltanto chi lo pronuncia.»',gm:'Area 3 — puzzle: tre comandi attivati contemporaneamente, nessuno può dare l’ordine agli altri (il dispositivo si blocca). Storia/Religione CD 14 dà solo un indizio interpretativo. Apre le aree profonde e insegna il rito finale.',skill:'Storia',dc:14,ok:'Riconosce nel gesto del comandante che depone il rango un’abdicazione rituale dell’epoca della Guerra: tre volontà libere che scelgono lo stesso istante. È l’indizio: il meccanismo non si comanda, si condivide.',ko:'Legge scene di battaglia e di obbedienza, nulla di più. Il puzzle resta da capire al tavolo: nessun tiro lo risolve.'},
  {id:'catene',kind:'scontro',x:315,y:435,title:'Le catene',text:'Catene spesse quanto un braccio partono dai quattro angoli e convergono su una creatura seduta davanti alla porta. Per un momento credete che sia morta. Poi il petto si muove. Una volta. Lentamente.',gm:'Area 4 — Il Brak. Oltre il segno nel pavimento apre gli occhi, si alza, prende l’arma. Ordine ricevuto due secoli fa: «PROTEGGI QUESTA PORTA». Le catene reggono 2 round. Spezzare il vincolo è la soluzione migliore: guarda la porta, guarda loro, se ne va.',skill:'Intuizione',dc:13,ok:'La creatura non è ostile: è in attesa. Esegue un ordine antico e non guarda voi, guarda la porta. Sciogliere quell’ordine potrebbe bastare.',ko:'Vede solo un mostro incatenato pronto a scattare. Se oltrepassa il segno, il Brak si alza e prende l’arma.'},
  {id:'memorie',kind:'lore',x:435,y:765,title:'La Camera delle Memorie',text:'Nicchie basse lungo le pareti, e in ognuna oggetti ordinati con cura: un elmo, una lettera mai spedita, una lancia spezzata a metà. Chi li tocca sente il freddo di una notte di due secoli fa.',gm:'Area 5 — frammenti della Guerra delle Due Lune. Lore, nessun tiro. Se vuoi un incontro: uno Spettro della Guerra (bestiario).',skill:'Religione',dc:14,ok:'Riconosce oggetti votivi dell’Alleanza: chi li ha lasciati qui non li ha abbandonati, li ha consegnati. Frammenti della Guerra delle Due Lune, e un nome inciso: Cyrius Meren.',ko:'Vede reliquie di soldati morti da secoli. Toccarle dà solo freddo.'},
@@ -1564,16 +1730,14 @@ const POIS = [
      "enabled": false
    },
    "image": "img/fa67f4804925.png",
-   "imagePrompt": "A narrow ancient underground corridor extending in a perfectly straight line beneath a medieval town. Massive dark stone blocks form the walls, floor and ceiling, precisely cut and fitted together with almost invisible joints and no visible mortar. The passage is austere, functional and unnervingly regular, with no decoration, no furniture and no visible doors. Moisture darkens parts of the stone, with faint mineral streaks and traces of age. At the far end of the corridor, barely visible in the distance, the regular ancient masonry appears to terminate against a rougher section of stonework that looks different from the rest, but its exact nature is not yet clear. Deep shadows, oppressive silence, grounded ancient military architecture, no characters, no creatures, no visible magic, no glowing symbols, no text, no UI. Painted fantasy illustration in classic Dungeons & Dragons rulebook style\n\nClearly visible traditional painted brushwork, matte gouache and oil illustration, muted slate-blue stone, cool gray and restrained earth tones, consistent with the painted Il Pozzo Cieco illustration. No photographic rendering, no 3D render, no cinematic HDR. The distant change in stone must remain subtle: do not show a bulge, deformation, cracking or anything pushing through the far wall.",
-   "text": "Superata l’apertura alla base del pozzo, il passaggio continua davanti a voi in linea perfettamente retta.\n\nÈ stretto abbastanza da costringervi a procedere quasi in fila.\n\nLe pareti, il pavimento e perfino il soffitto sono costruiti con gli stessi grandi blocchi scuri che avete visto nella parte inferiore del pozzo.\n\nQui però la loro regolarità è ancora più evidente.\n\nNessuna decorazione. Nessuna iscrizione. Nessuna nicchia.\n\nSolo pietra.\n\nLe giunzioni fra i blocchi sono così precise che, in alcuni punti, è difficile distinguere dove finisca una pietra e inizi la successiva.\n\nIl corridoio prosegue per parecchi metri senza deviazioni.\n\nIn fondo, però, la continuità della muratura sembra interrompersi.\n\nLa pietra cambia.",
-   "gm": "Il corridoio appartiene alla struttura antica.\n\nNon contiene ancora un pericolo diretto e non deve diventare una sequenza di prove inutili.\n\nLa sua funzione in questa fase è far percepire ai giocatori la forte differenza fra la costruzione antica e ciò che troveranno in fondo: il muro ricostruito del PDI 03.\n\nSe il ritmo già introdotto nella discesa è attivo nella scena, continua a essere udibile, debole e regolare, proveniente da più avanti.",
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a long perfectly straight underground corridor wide enough for two men side by side, walls and ceiling of huge squared stone blocks laid without mortar, two straight parallel grooves worn smooth into the floor running the whole length of the passage, the light of a single torch fading after a few metres into total darkness, and far away at the end the faint shape of a rougher wall, cold still air, deep shadow --ar 4:3",
+   "text": "Il corridoio è largo abbastanza per due persone affiancate, e perfettamente diritto.\n\nPareti e soffitto sono fatti degli stessi blocchi enormi del fondo del pozzo, accostati senza malta.\n\nSul pavimento corrono due solchi paralleli, lisci, scavati nella pietra. Vanno dritti davanti a voi e spariscono nel buio.\n\nL'aria è ferma. E ai vostri passi, dal fondo, risponde il ritmo.\n\nTAC. TAC. TAC.",
+   "gm": "Il ritmo è quello che resta di un comando di marcia. Risponde ai passi e si ferma quando il gruppo si ferma.\n\nQui non c'è pericolo. I solchi sono i primi due della Schiera: la Galleria ne ha decine.\n\nSenso Divino: niente. Nessun celestiale, immondo o non morto.",
    "modules": [
      {
-       "id": "costruzione",
+       "id": "solchi",
        "type": "check",
-       "focus": "Focus — La costruzione del corridoio",
-       "trigger": "Se un giocatore decide esplicitamente di esaminare le pareti, il soffitto o la tecnica costruttiva:",
-       "text": "Da vicino l’impressione di regolarità aumenta. Non vedete quasi alcuno spazio fra un blocco e l’altro.",
+       "focus": "Focus 1 — I solchi",
        "skill": "Indagare",
        "dc": 12,
        "outcomes": [
@@ -1581,39 +1745,43 @@ const POIS = [
            "kind": "criticalFailure",
            "min": 1,
            "max": 4,
-           "text": "Le superfici sono troppo uniformi per ricavarne qualcosa di preciso. Vi sembra soltanto una costruzione molto solida."
+           "text": "Due solchi. Forse ruote di carro."
          },
          {
            "kind": "failure",
            "min": 5,
            "max": 11,
-           "text": "È evidente che la tecnica utilizzata qui è molto diversa da quella delle costruzioni comuni di Bëllindë, ma non riuscite a stabilire altro."
+           "text": "Non sono ruote: il fondo è largo e liscio come un piede. Sono consumati dal camminare."
          },
          {
            "kind": "baseSuccess",
            "min": 12,
            "max": 14,
-           "text": "I blocchi non sono semplicemente ben posati.\n\nSono stati tagliati in modo da combaciare quasi perfettamente, senza bisogno di grandi quantità di malta."
+           "text": "Migliaia di passi, sempre sulle stesse due linee, sempre alla stessa distanza."
          },
          {
            "kind": "fullSuccess",
            "min": 15,
            "max": 19,
-           "text": "La costruzione sembra progettata per durare.\n\nNon vedete rattoppi, cedimenti strutturali o modifiche lungo il passaggio.\n\nTutto il corridoio sembra appartenere a una sola fase costruttiva."
+           "text": "La distanza tra i due solchi è quella di due uomini in marcia, spalla a spalla. Qui si camminava in fila, in formazione."
          },
          {
            "kind": "natural20",
-           "text": "Seguendo le giunzioni lungo le pareti riuscite a riconoscere una continuità quasi assoluta nell’intero corridoio.\n\nProprio per questo, ciò che vedete in fondo risalta immediatamente: quella parte non appartiene alla costruzione originale.\n\nQualcuno è intervenuto successivamente per chiudere il passaggio."
+           "text": "I solchi vanno dritti fino in fondo al corridoio, e sembrano passare sotto quello che c'è laggiù. Continuano oltre."
          }
-       ],
-       "gm": "Questo non rivela ancora cosa ci sia dietro né il rigonfiamento: prepara semplicemente il PDI successivo."
+       ]
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 2 — Individuazione del Magico",
+       "text": "Nessun tiro. Se qualcuno lancia l'incantesimo:\n\nLa magia non viene da una creatura, e non c'è un oggetto che brilla. È nella pietra stessa.\n\nLungo i solchi corrono filamenti debolissimi. Pulsano. Tre pulsazioni, pausa. Tre pulsazioni, pausa. Esattamente come il ritmo.\n\nÈ Ammaliamento. Antichissimo. Non sembra fatto per colpire qualcuno: sembra fatto per dirigerlo.\n\nNon riuscite a datarlo. Non è solo vecchio: appartiene a un modo diverso di costruire la magia.\n\nQuando vi fermate e il ritmo tace, anche le pulsazioni si fermano. E i filamenti proseguono davanti a voi, nel buio."
      },
      {
        "id": "prosecuzione",
        "type": "continuation",
        "title": "Prosecuzione",
-       "text": "Continuate ad avanzare.\n\nPiù vi avvicinate al fondo, più la differenza diventa evidente.\n\nI grandi blocchi regolari terminano bruscamente.\n\nDavanti a voi il corridoio è stato chiuso con pietre più piccole, irregolari, tenute insieme da malta.\n\nNon è il modo in cui è stato costruito tutto il resto.\n\nÈ un muro aggiunto dopo.\n\nE quando arrivate abbastanza vicino, notate qualcosa di ancora più strano.\n\nLa superficie non è perfettamente piatta.\n\nUna parte della muratura sporge verso di voi.\n\nCome se, dall’altra parte, qualcosa avesse esercitato una forza sufficiente a deformarla.\n\nChe cosa fate?",
-       "gm": "Questa Prosecuzione introduce direttamente il PDI 03 — Muro con Strano Rigonfiamento, senza anticiparne ancora gli esiti o ciò che si trova oltre."
+       "text": "Avanzate. Il ritmo vi accompagna, tre battute e silenzio, tre battute e silenzio.\n\nDopo qualche minuto la luce trova la fine del corridoio.\n\nMa non è la stessa pietra antica. Il passaggio è chiuso da un muro.\n\nI solchi ci arrivano dritti, e ci spariscono sotto.\n\nChe cosa fate?"
      }
    ]
  },
@@ -1627,100 +1795,131 @@ const POIS = [
      "enabled": false
    },
    "image": "img/73cd7111044b.png",
-   "imagePrompt": "A vast ancient underground hall beneath a medieval town, seen from the entrance breach. The chamber is long, solemn and oppressive, built from massive dark stone blocks precisely cut and fitted together with almost no visible mortar. Along both sides of the hall stands a silent formation of ancient armored figures or stone guardians, arranged in an orderly line like a ceremonial or military gallery. Their silhouettes are rigid, watchful and uniform, creating the impression of a disciplined ancient host standing in eternal stillness. The floor is broad stone paving, with visible linear grooves cut or worn into parts of the surface. On one side are two sealed wall sections or bricked-up niches, subtly distinct from the original architecture. At the far end of the hall stands a great blocked stone door, monumental and heavy. The atmosphere is solemn, ancient, military and deeply unsettling. No active combat, no visible magic effects, no characters, no text, no UI. Painted fantasy illustration in classic Dungeons & Dragons rulebook style\n\nTraditional hand-painted gouache and oil illustration with visible expressive brushwork and matte pigment, muted slate blue, cool gray and restrained earth ochre, consistent with the previous dungeon illustrations. No photorealism, no 3D render, no cinematic HDR. No living adventurers or identifiable creatures: only ambiguous motionless armored silhouettes whose material and nature remain unclear in shadow. Both orderly ranks, two later bricked-up side niches, linear floor grooves and the monumental closed stone door must be legible within one broad hall composition.",
-   "text": "Oltre la breccia, il passaggio si apre in una sala molto più ampia.\nIl soffitto si alza sopra di voi e il corridoio lascia il posto a una galleria lunga, costruita con la stessa pietra scura e precisa che avete già visto nel sottosuolo più antico.\nMa qui la funzione del luogo cambia.\nL’ambiente non sembra più un semplice passaggio.\nSembra una sala concepita per essere attraversata, osservata... o sorvegliata.\nLungo i lati della galleria, disposte in ordine regolare, si distinguono figure immobili allineate come una schiera silenziosa.\nLa loro presenza dà alla sala un carattere quasi militare, cerimoniale.\nIl pavimento si stende davanti a voi in grandi lastre di pietra. In alcuni tratti mostra segni netti, linee e abrasioni che interrompono la regolarità della superficie.\nSulle pareti si notano anche punti anomali: tratti murati che non sembrano appartenere alla costruzione originaria.\nIn fondo alla sala, infine, si erge una grande porta di pietra.\nChiusa.\nBloccata.\nE chiaramente importante.",
-   "gm": "La Galleria della Schiera è il PDI ambientale contenitore della prima grande sala del dungeon.\nLa sua funzione è:\n- rallentare il ritmo;\n- dare ai giocatori la percezione di essere entrati in un ambiente strutturato e significativo;\n- offrire più direzioni di attenzione;\n- introdurre i quattro PDI interni senza forzarne immediatamente uno.\nI quattro PDI figli da richiamare qui sono:\n- PDI 05 — Prima Nicchia Murata\n- PDI 06 — Seconda Nicchia Murata\n- PDI 07 — Porta di Pietra\n- PDI 08 — I Solchi del Pavimento\nLe figure della schiera devono apparire inizialmente come presenze immobili e inquietanti, senza chiarire subito se siano statue, armigeri, costrutti o altro. Il punto non è rivelare tutto subito, ma far capire che la sala non è neutra.\nQuesta sala deve far sentire i giocatori osservati, anche se nulla si muove.",
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a long wide underground gallery of huge squared stone blocks laid without mortar, many straight parallel grooves worn into the floor all running the same way, some shallow and some deep as if cut by countless marching feet, round flat copper discs set into the floor along one side, green with age, farther on the floor sunk and collapsed in places and a still pool of black water with grooves running straight into it, at the far end a huge closed stone door, no people, torchlight swallowed by the dark --ar 4:3",
+   "text": "Il passaggio scende e si apre su una galleria lunga, molto più ampia del corridoio.\n\nIl pavimento è attraversato da molti solchi paralleli, tutti diretti dalla stessa parte. Alcuni sono profondi pochi millimetri. Altri sono consumati nella pietra, come se migliaia di piedi avessero percorso sempre le stesse linee.\n\nLungo un lato, incassati nel pavimento, spiccano dei dischi rotondi di rame, opachi e verdastri.\n\nLa galleria non è intatta. Più avanti il pavimento è sprofondato, c'è un crollo, e in una depressione ristagna acqua nera, immobile. Alcuni solchi ci vanno dritti dentro.\n\nIn fondo, una grande porta di pietra. Chiusa.\n\nPoi il ritmo, di nuovo.\n\nTAC.\n\nUna pausa.\n\nTAC.\n\nE una parola che non arriva dalle orecchie. La sentite nelle gambe, nel corpo. Per un istante ognuno di voi sa esattamente dove dovrebbe mettersi.\n\n«ALLINEATI.»",
+   "gm": "La Galleria dà ordini a chi la attraversa e tratta il gruppo come una schiera di soldati. Gli ordini sono tre: ALLINEATI, AVANTI, FERMI. Non ne esistono altri.\n\nGli ordini sono un effetto dell'ambiente, non di una creatura. Protezione dal Bene e dal Male non serve. Chi fallisce il tiro salvezza non diventa Affascinato: fa un solo gesto, poi il controllo torna suo.\n\nI pericoli (crollo, acqua nera, pavimento sprofondato) si vedono senza prove.\n\nAVANTI, i dischi e i pericoli lungo i solchi: vedi PDI 08.",
    "modules": [
      {
-       "id": "figure",
+       "id": "allineati",
        "type": "check",
-       "focus": "Focus 1 — Le figure della schiera",
-       "trigger": "Se i personaggi concentrano l’attenzione sulle figure allineate:",
-       "text": "Da dove siete, le sagome sembrano tutte rivolte nella stessa direzione e mantenute in una disposizione rigorosa, come membri di una formazione antica rimasta immobile per secoli.",
-       "skill": "Percezione",
-       "dc": 11,
+       "focus": "Evento — «ALLINEATI»",
+       "trigger": "Scatta appena il gruppo entra nella Galleria. Chi arriva dopo, a ordine già passato, non tira.",
+       "skill": "TS Sag",
+       "skillLabel": "Tiro salvezza su Saggezza",
+       "dc": 13,
+       "requestLabel": "Richiedi TS Saggezza → Gruppo",
+       "requestTarget": "*",
        "outcomes": [
          {
-           "kind": "criticalFailure",
-           "text": "L’oscurità e la distanza vi impediscono di distinguere bene i dettagli. Riuscite solo a confermare che non si tratta di un disordine casuale.",
-           "min": 1,
-           "max": 4
-         },
-         {
            "kind": "failure",
-           "text": "Le figure sono chiaramente disposte con intenzione, ma non riuscite ancora a capire se siano statue, armature o qualcos’altro.",
-           "min": 5,
-           "max": 10
+           "label": "Fallimento",
+           "text": "Il corpo decide prima di voi. Un passo, uno solo, e vi ritrovate su un solco: spalle dritte, distanze regolari. Poi il controllo torna vostro.",
+           "max": 12
          },
          {
            "kind": "baseSuccess",
-           "text": "La disposizione è troppo regolare per essere decorativa.\nQuelle figure sembrano schierate secondo una logica militare.",
-           "min": 11,
-           "max": 13
-         },
-         {
-           "kind": "fullSuccess",
-           "text": "La postura e l’allineamento delle sagome ricordano una formazione d’attesa o di guardia.\nIl luogo sembra concepito non solo per essere attraversato, ma anche per essere presidiato.",
-           "min": 14,
-           "max": 19
-         },
-         {
-           "kind": "natural20",
-           "text": "Osservando come le figure sono disposte rispetto allo spazio della sala, capite che non sono state collocate per abbellire l’ambiente.\nSono lì per definire un ordine, una funzione, forse perfino una procedura.\nQuesta non è una semplice galleria: è uno spazio disciplinato."
+           "label": "Successo",
+           "text": "Il comando vi afferra le gambe. Stringete i denti e restate fermi.",
+           "min": 13
          }
-       ]
+       ],
+       "gm": "Dopo l'ordine si può uscire dai solchi senza tiro."
+     },
+     {
+       "id": "addestramento",
+       "type": "focus",
+       "title": "Un PG con addestramento militare, senza tiro",
+       "text": "Le posizioni non sono casuali. È una disposizione militare elementare. Questo posto vi sta mettendo in formazione. Vi sta trattando da soldati."
+     },
+     {
+       "id": "magia_allineati",
+       "type": "focus",
+       "title": "Chi ha Individuazione del Magico attiva",
+       "text": "Nel momento in cui arriva l'ordine, la trama si accende. I filamenti corrono lungo i solchi e si tendono sotto i piedi di chi ha obbedito. Poi si allentano, come corde appena mollate. Su chi ha resistito non hanno presa."
+     },
+     {
+       "id": "guardare",
+       "type": "focus",
+       "title": "Focus 1 — Guardare la Galleria",
+       "text": "Nessun tiro. Con Individuazione del Magico attiva:\n\nLa trama non copre tutta la sala in modo uniforme. Corre lungo i solchi e si addensa in alcuni punti, come nodi di una rete: sono i dischi di rame. A ogni TAC, i dischi pulsano nello stesso istante.\n\nQuesta galleria non contiene un meccanismo. È un meccanismo."
      },
      {
        "id": "sala",
        "type": "check",
        "focus": "Focus 2 — La sala nel suo insieme",
-       "trigger": "Se i personaggi si fermano a osservare l’intera galleria come ambiente:",
-       "text": "Più la osservate, più la sala vi appare costruita secondo una logica precisa. Nulla sembra disposto a caso.",
        "skill": "Indagare",
        "dc": 12,
        "outcomes": [
          {
            "kind": "criticalFailure",
-           "text": "L’impressione generale vi sovrasta più dei dettagli. Coglierne la struttura complessiva vi risulta difficile.",
+           "text": "Solchi, crolli, rame. Niente che si tenga insieme.",
            "min": 1,
            "max": 4
          },
          {
            "kind": "failure",
-           "text": "Capite che la sala ha una funzione importante, ma non riuscite a intuire come i diversi elementi si colleghino fra loro.",
+           "text": "I solchi sono stati usati apposta, ma non capite a cosa servissero.",
            "min": 5,
            "max": 11
          },
          {
            "kind": "baseSuccess",
-           "text": "Le figure allineate, le murature laterali e la grande porta in fondo sembrano parte di uno stesso disegno.\nLa galleria non è un semplice snodo: è un ambiente di passaggio controllato.",
+           "text": "I solchi sono corsie, larghe quanto un uomo in marcia e distanziate come le file di una formazione.",
            "min": 12,
            "max": 14
          },
          {
            "kind": "fullSuccess",
-           "text": "Tutto lascia pensare che questa sala servisse a gestire l’accesso ad altri ambienti.\nLe nicchie murate, i segni sul pavimento e la porta finale indicano che qui un tempo avvenivano operazioni o movimenti regolati.",
+           "text": "Le corsie portano tutte verso la porta in fondo. Qui si faceva marciare qualcuno in ordine, in una sola direzione.",
            "min": 15,
            "max": 19
          },
          {
            "kind": "natural20",
-           "text": "Vi rendete conto che la galleria non è soltanto una stanza importante: è un punto di smistamento e controllo.\nI vari elementi della sala non sono accessori.\nSono indizi di funzioni diverse, tutte collegate fra loro.\nVale la pena esaminarli uno per uno."
+           "text": "Alcuni solchi vicino alle pareti laterali finiscono contro la pietra, di netto. Come se un tempo continuassero oltre."
+         }
+       ]
+     },
+     {
+       "id": "storia",
+       "type": "check",
+       "focus": "Focus 3 — Esiste qualcosa sotto Bëllindë?",
+       "skill": "Storia",
+       "dc": 15,
+       "outcomes": [
+         {
+           "kind": "failure",
+           "label": "Fallimento",
+           "text": "Il Borgo Vecchio è antico, e sotto una città è normale trovare pozzi e cantine. Nessuna fonte parla di qualcosa sotto Bëllindë.",
+           "max": 14
+         },
+         {
+           "kind": "baseSuccess",
+           "label": "Successo",
+           "text": "Bëllindë non è stata costruita tutta insieme. Il Borgo Vecchio è molto più antico del resto, con cantine, pozzi e fondazioni che scendono più del dovuto. Alcune strutture sembrano costruite sopra qualcosa che c'era già. Ma nella storia ufficiale non c'è nessun complesso sotterraneo.",
+           "min": 15,
+           "max": 19
+         },
+         {
+           "kind": "fullSuccess",
+           "label": "20 o più",
+           "text": "Le cronache diventano stranamente vaghe proprio quando parlano delle fondamenta più antiche. Non rovine famose: strutture più vecchie del borgo, inglobate e dimenticate.",
+           "min": 20
          }
        ],
-       "gm": "Questo è il gancio che giustifica naturalmente il passaggio ai PDI figli."
+       "gm": "Non rivelare mai: Quarto Sigillo, Custodi, Celamanti, eserciti, Camera delle Memorie."
      },
      {
        "id": "pdi_interni",
        "type": "focus",
-       "title": "PDI interni collegati",
-       "text": "PDI 05 — Prima Nicchia Murata\nPDI 06 — Seconda Nicchia Murata\nPDI 07 — Porta di Pietra\nPDI 08 — I Solchi del Pavimento"
+       "title": "PDI collegati",
+       "text": "05 Prima Nicchia Murata (nascosta) · 06 Seconda Nicchia Murata (nascosta) · 07 Porta di Pietra · 08 I Solchi del Pavimento"
      },
      {
        "id": "prosecuzione",
        "type": "continuation",
        "title": "Prosecuzione",
-       "text": "La galleria resta immobile davanti a voi.\nNessuno vi viene incontro.\nNulla si muove.\nEppure ogni elemento della sala sembra aspettare una decisione da parte vostra.\nPotete avvicinarvi alle figure della schiera, esaminare le murature laterali, osservare i segni sul pavimento oppure dirigervi verso la grande porta di pietra in fondo.\nChe cosa fate?"
+       "text": "L'ordine si spegne. Il ritmo no: continua, regolare, dal fondo della galleria.\n\nNessuno vi viene incontro. Nulla si muove.\n\nMa adesso sapete che questo posto dà ordini. E che si aspetta di essere obbedito.\n\nChe cosa fate?"
      }
    ]
  },
@@ -1841,7 +2040,7 @@ function validatePoiDefinition(p){
   const errors=[];
   if(!p.id||!p.title) errors.push('ID e titolo obbligatori');
   if(!['evident','hidden'].includes(p.visibility)) errors.push('Visibilità evidente/nascosta obbligatoria');
-  if(!p.image||!poiImage(p)) errors.push('Immagine obbligatoria');
+  if((!p.image||!poiImage(p))&&!p.imagePending) errors.push('Immagine obbligatoria');
   const hasAuthoredPrompt=typeof p.imagePrompt==='string'&&p.imagePrompt.includes(POI_IMAGE_STYLE);
   const hasExternalImage=typeof p.imageSource==='string'&&p.imageSource.trim().length>0;
   if(!hasAuthoredPrompt&&!hasExternalImage) errors.push('Prompt o fonte dell’immagine obbligatori');
@@ -1869,17 +2068,23 @@ function renderPoiModules(p){
     const intro=`${m.trigger?`<p class="note">${poiText(m.trigger)}</p>`:''}${m.text?`<p class="lore">${poiParagraphs(m.text)}</p>`:''}`, note=m.gm?`<p class="note">${poiParagraphs(m.gm)}</p>`:'';
     if(m.type!=='check') return ['focus','dialogue','continuation'].includes(m.type)?`<section><h4>${poiText(m.title||({focus:'Focus',dialogue:'Dialogo',continuation:'Prosecuzione'})[m.type])}</h4>${intro}${note}</section>`:'';
     const dc=poiDc(m.dc);
-    return `<section class="poi-check" style="margin-top:14px">${m.focus||m.title?`<h4>${poiText(m.focus||m.title)}</h4>`:''}${intro}<div class="row"><b>${poiText(m.skill)}${dc==null?'':' — CD '+dc}</b><button data-poi-check="${poiText(m.id)}">${poiText(m.requestLabel||('Richiedi '+m.skill))}</button></div><div class="outcome"${p.schemaVersion===2?' style="grid-template-columns:1fr"':''}>${(m.outcomes||[]).map(o=>`<div><span class="${o.kind==='failure'||o.kind==='criticalFailure'?'fail':'pass'}">${poiText(o.label||names[o.kind]||o.kind)}${o.kind==='natural20'?'':(o.min!=null&&o.max!=null?' · '+o.min+'–'+o.max:o.min!=null?' · da '+o.min:o.max!=null?' · fino a '+o.max:'')}</span><p>${poiParagraphs(o.text)}</p></div>`).join('')}</div>${note}</section>`;
+    return `<section class="poi-check" style="margin-top:14px">${m.focus||m.title?`<h4>${poiText(m.focus||m.title)}</h4>`:''}${intro}<div class="row"><b>${poiText(m.skillLabel||m.skill)}${dc==null?'':' — CD '+dc}</b><button data-poi-check="${poiText(m.id)}">${poiText(m.requestLabel||('Richiedi '+m.skill))}</button></div><div class="outcome"${p.schemaVersion===2?' style="grid-template-columns:1fr"':''}>${(m.outcomes||[]).map(o=>`<div><span class="${o.kind==='failure'||o.kind==='criticalFailure'?'fail':'pass'}">${poiText(o.label||names[o.kind]||o.kind)}${o.kind==='natural20'?'':(o.min!=null&&o.max!=null?' · '+o.min+'–'+o.max:o.min!=null?' · da '+o.min:o.max!=null?' · fino a '+o.max:'')}</span><p>${poiParagraphs(o.text)}</p></div>`).join('')}</div>${note}</section>`;
   }).join('');
+}
+function renderPoiDiscovery(p){
+  const d=p.discovery;
+  if(!d||!Array.isArray(d.outcomes)||!d.outcomes.length) return '';
+  const names={criticalFailure:'Fallimento critico',failure:'Fallimento',baseSuccess:'Successo base',fullSuccess:'Successo pieno',natural20:'20 naturale'}, dc=poiDiscoveryDc(p);
+  return `<section class="poi-check" style="margin-top:14px"><h4>Scoperta</h4>${d.trigger?`<p class="note">${poiParagraphs(d.trigger)}</p>`:''}<div class="row"><b>Percezione${dc==null?'':' — CD '+dc}</b></div><div class="outcome" style="grid-template-columns:1fr">${d.outcomes.map(o=>`<div><span class="${o.kind==='failure'||o.kind==='criticalFailure'?'fail':'pass'}">${poiText(o.label||names[o.kind]||o.kind)}${o.kind==='natural20'?'':(o.min!=null&&o.max!=null?' · '+o.min+'–'+o.max:o.min!=null?' · da '+o.min:o.max!=null?' · fino a '+o.max:'')}</span><p>${poiParagraphs(o.text)}</p></div>`).join('')}</div></section>`;
 }
 function openPoiRequest(p,moduleId=null){
   if(!IS_GM) return;
   const discovery=moduleId===null, module=discovery?null:poiModules(p).find(m=>m.id===moduleId&&m.type==='check');
   if(discovery&&!poiDiscoveryEnabled(p)) return;
   if(!discovery&&!module) return;
-  const skill=discovery?'Percezione':module.skill, dc=discovery?poiDiscoveryDc(p):poiDc(module.dc);
+  const skill=discovery?'Percezione':module.skill, dc=discovery?poiDiscoveryDc(p):poiDc(module.dc), preset=discovery?null:module.requestTarget;
   const pgs=Object.entries(S.tokens).filter(([,t])=>t.kind==='pg');
-  openModal(`<h2 class="big" data-poi-master>Richiedi ${poiText(skill)}</h2><p>${discovery?'Scoperta del PDI':'Interazione nel PDI'} · ${poiText(p.title)}${module&&(module.focus||module.title)?' · '+poiText(module.focus||module.title):''}</p><p class="note">${dc==null?(discovery?'CD di scoperta non definita: il risultato non svelerà automaticamente il PDI.':'CD non definita.'):('CD '+dc+(discovery&&p.discovery?.autoReveal!==true?' · Lo svelamento resta al Master.':''))}</p><label>Destinatario <select id="poiRequestWho"><option value="" disabled selected>Scegli destinatario</option><option value="*">Tutto il gruppo</option>${pgs.map(([id,t])=>`<option value="${poiText(id)}">${poiText(t.name)}</option>`).join('')}</select></label><div class="row" style="margin-top:12px"><button id="poiRequestCancel">Annulla</button><button class="primary" id="poiRequestSend" disabled>Richiedi ${poiText(skill)}</button></div>`,'poibox');
+  openModal(`<h2 class="big" data-poi-master>Richiedi ${poiText(skill)}</h2><p>${discovery?'Scoperta del PDI':'Interazione nel PDI'} · ${poiText(p.title)}${module&&(module.focus||module.title)?' · '+poiText(module.focus||module.title):''}</p><p class="note">${dc==null?(discovery?'CD di scoperta non definita: il risultato non svelerà automaticamente il PDI.':'CD non definita.'):('CD '+dc+(discovery&&p.discovery?.autoReveal!==true?' · Lo svelamento resta al Master.':''))}</p><label>Destinatario <select id="poiRequestWho"><option value="" disabled ${preset?'':'selected'}>Scegli destinatario</option><option value="*" ${preset==='*'?'selected':''}>Tutto il gruppo</option>${pgs.map(([id,t])=>`<option value="${poiText(id)}" ${preset===id?'selected':''}>${poiText(t.name)}</option>`).join('')}</select></label><div class="row" style="margin-top:12px"><button id="poiRequestCancel">Annulla</button><button class="primary" id="poiRequestSend" ${preset?'':'disabled'}>Richiedi ${poiText(skill)}</button></div>`,'poibox');
   const who=document.getElementById('poiRequestWho'), send=document.getElementById('poiRequestSend');
   who.onchange=()=>{ send.disabled=!(who.value==='*'||S.tokens[who.value]?.kind==='pg'); };
   document.getElementById('poiRequestCancel').onclick=closeModal;
@@ -1969,7 +2174,7 @@ function openPoi(p){
   const img=poiImage(p);
   if(img) html+='<img class="poiimg" id="poiImage" style="height:auto;max-height:none;object-fit:contain" alt="">';
   html+=`<div class="eyebrow" style="margin-top:6px">Da leggere ai giocatori</div><p class="lore">${p.schemaVersion===2?poiParagraphs(p.text):p.text}</p>`;
-  if(IS_GM) html+=`<div class="gmbox"><div class="eyebrow">Note per il Master</div><p>${p.schemaVersion===2?poiParagraphs(p.gm):p.gm||''}</p>${renderPoiModules(p)}</div>`;
+  if(IS_GM) html+=`<div class="gmbox">${renderPoiDiscovery(p)}<div class="eyebrow" style="margin-top:14px">Note per il Master</div><p>${p.schemaVersion===2?poiParagraphs(p.gm):p.gm||''}</p>${renderPoiModules(p)}</div>`;
   openModal(html,'poibox');
   const picture=document.querySelector('#modal #poiImage'); if(picture){ picture.src=img; picture.alt=p.title; }
   const mapButton=document.querySelector('#modal #poiMap'); if(mapButton) mapButton.onclick=()=>poiOnMap(p);
@@ -2210,7 +2415,7 @@ function openPng(p){
   const b=document.querySelector('#modal #pngShow'); if(b) b.onclick=()=>{ showToPlayers({img:p.img,title:p.name}); toast('Ritratto mostrato ai giocatori'); };
 }
 /* ---------- guida della scena (colonna del master) ---------- */
-const POI_ORDER={ sotto:['pozzo','strano_corridoio','murata_crollata','galleria_schiera','intercapedine','solchi','linea','rilievi','catene','memorie','micuccio','sigillo','murata'] };
+const POI_ORDER={ sotto:['pozzo','strano_corridoio','murata_crollata','galleria_schiera','intercapedine','seconda_nicchia','solchi','linea','rilievi','catene','memorie','micuccio','sigillo','murata'] };
 const SCENE_GUIDE={
   sotto:['scenalaportamurata','transizioneladiscesa','scenaladiscesa','scenalultimocustode','scenamicuccio','aftermathritornoallaluce'],
   bellinde:['recapdallemuradimushanealbalconedaprutium','scenalarrivoabellinde','scenalachiamatainpiazza','scenailpaneamezzogiorno','scenailbandolettoadaltavoce','scenalapiazzavuoleunarisposta','scenadallaroccaallapiazza','scenaudienzaallarocca','scenafuoridallarocca','scenaleprovedavantiagisulfo','scenailfuneraledirocco','indagineilcorpodirocco','scenanunziaserrafreddamiofratellodeveandaresottoterra','scenalascopertadelclandestino','scenalaretataalfondaco','scenalinterrogatoriodiceruso','scenachiuderelaboccadiceruso','eventochiuderelaboccadiceruso','situazionelacelluladiceruso','scenalafugadiceruso','inseguimentolafugadiceruso','eventolevacuazionedellacellula','eventoilcorrierediteramum','scenafermareilcorriere','eventoilplicodivespro','eventoilquartouomoversoteramum','inseguimentosullastradaditeramum','scenailfurtodelladichiarazione','eventoilfurtodelladichiarazione','eventoilbandoditeramum','eventolanotteabellinde','scenailragazzotornato','scenaleportesichiudono','transizionelapartenzadabellinde']
