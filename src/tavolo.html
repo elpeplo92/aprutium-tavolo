@@ -506,7 +506,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v76</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v77</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1285,7 +1285,120 @@ const POIS = [
  {id:'micuccio',kind:'persona',x:645,y:795,title:'Il ragazzo seduto contro il muro',text:'All’inizio sembra una statua. Un ragazzo. Seduto contro il muro. Le mani sulle ginocchia. Gli occhi aperti. Poi uno degli occhi si muove. Vi guarda.',gm:'Area 6 — Micuccio, il ragazzo che tre anni fa non uscì. «Non posso.» «Andare.» «Ha detto di restare.» Il comando non è un charme: Dissolvi Magie lo indebolisce, liberarlo richiede spezzare la runa della camera (Individuazione del Magico) o purificare il Sigillo. Trascinarlo fuori a forza lo fa soffrire: mai ucciderlo per questo. Dopo la liberazione collassa: richiede cure.',img:'ghost',skill:'Medicina',dc:13,ok:'Il ragazzo non mangia da tempo eppure vive: qualcosa lo mantiene. Non è malattia, è vincolo. Trascinarlo fuori con la forza lo farebbe soffrire.',ko:'Sembra un ragazzo denutrito e in stato di shock: portarlo via a braccia pare la cosa giusta, e non lo è.'},
  {id:'sigillo',kind:'boss',x:945,y:795,title:'Il Sigillo',text:'Tre piloni. Al centro un cristallo che non brilla: scandisce. Davanti al cristallo, inginocchiato, un uomo in un’armatura di un’altra epoca. Il conteggio termina. Non rallenta. Finisce.',gm:'Il cuore — CLIMAX. «Alt.» «Identificatevi.» «Ordine di accesso?» «Allora tornate indietro.» «Ultimo avvertimento.» Solo poi il ferro. Purificazione: i tre piloni spenti e riaccesi a mano, insieme, da volontà libere (CONCORDIA). Poi SCENA — L’Ultimo Custode.',skill:'Arcano',dc:15,ok:'Il cristallo non brilla: scandisce. Il conteggio non rallenta, finisce. Chi supera la prova capisce che l’uomo inginocchiato non usa il Sigillo: è il Sigillo che usa lui, e i tre piloni sono le sue mani.',ko:'Percepisce solo un’enorme pressione magica; nessuna idea su come agire finché i Piloni non parlano.'},
  {id:'murata',kind:'passaggio',x:1275,y:765,title:'La porta murata',text:'In fondo alla galleria, dove il corridoio dovrebbe continuare, una porta di ferro è stata murata dall’interno. Sulla pietra, graffi. Dall’altra parte.',gm:'SCENA — La Porta Murata (vedi handout). Uscita alternativa / retroguardia.',skill:'Indagare',dc:13,ok:'I graffi sono dall’altra parte, dal basso verso l’alto: qualcuno ha cercato di uscire, non di entrare. La malta è più recente delle pietre intorno.',ko:'Una porta murata, vecchia come tutto il resto.'},
- {id:'pozzo',kind:'passaggio',x:255,y:105,title:'Il pozzo con la scala',text:'Un pozzo di pietra, largo quanto un uomo con le braccia aperte. Una scala di legno scende nel buio; i pioli sono nuovi rispetto a tutto il resto.',gm:'Accesso dalla superficie (La Discesa). I pioli nuovi: qualcuno è sceso di recente (Rocco).',skill:'Sopravvivenza',dc:12,ok:'I pioli sono nuovi: tagliati da poche settimane. Qualcuno è sceso di recente, da solo, e non è risalito da qui.',ko:'Una scala come tante; l’umidità nasconde ogni traccia.'},
+ {
+   "schemaVersion": 2,
+   "id": "pozzo",
+   "kind": "passaggio",
+   "title": "Il Pozzo Cieco",
+   "visibility": "evident",
+   "legacyPosition": {
+     "x": 255,
+     "y": 105
+   },
+   "discovery": {
+     "enabled": false
+   },
+   "image": "img/82c25967f4eb.png",
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style. A clearly HAND-PAINTED traditional gouache and oil illustration for an old fantasy adventure book. Expressive visible brush strokes, broad matte pigment shapes, selectively suggested stone details, subtle painted edges, limited palette of slate blue, cool gray, muted earth ochre and moss green. The brushwork and deliberate drawn shapes must remain visible throughout the architecture. Readable illustrated shadows, atmospheric depth, a quiet archaeological sense of mystery. NOT a photograph, NOT a photorealistic digital painting, NOT a 3D render, NOT a video game screenshot. No glossy surfaces, photographic microtexture, cinematic lens effects or HDR.\n\nIl Pozzo Cieco: inside an ancient subterranean well beneath a medieval hill town, viewed from near the bottom. An intimate, slightly off-centre composition showing the lower shaft, its small distant opening above, and a narrow straight corridor opening in the wall at floor level. A little pale daylight washes across the damp stones. The upper shaft is made of small irregular rough medieval stones; deeper down it changes abruptly into enormous dark rectangular stone blocks, tightly fitted without visible mortar. Emphasize this architectural contrast through block scale and painted shape, rather than hyper-detailed texture. The bottom is plain uneven damp stone with old mineral stains, not flooded. The perfectly straight narrow corridor is built from the same ancient blocks, lit only for its first few metres before disappearing into deep painted blue-black shadow.\n\nOne thick ordinary rope hangs quietly along the side of the shaft and stops several metres above the floor. Its lower end is a small, subdued detail, with no knot or close-up fibres; it must not visibly disclose whether it was deliberately cut or broke. No ladder. No people, creatures, skulls, weapons, doors, ornament, visible magic, glowing symbols, text, captions, borders or UI. Landscape composition 4:3.",
+   "text": "Scendendo, i rumori di Bëllindë si fanno sempre più lontani.\n\nL'aria cambia prima ancora della pietra: diventa più fredda, immobile, con un odore di umidità, ferro e acqua vecchia.\n\nLa muratura del pozzo prosegue per diversi metri in pietre irregolari, le stesse che potreste aspettarvi sotto una costruzione del borgo.\n\nPiù in basso, però, qualcosa cambia.\n\nLe pietre diventano molto più grandi. Blocchi scuri, regolari, accostati gli uni agli altri con una precisione che contrasta nettamente con la parte superiore.\n\nLungo una delle pareti pende ancora una corda. Scende dall'alto, ma termina prima di raggiungere il fondo.\n\nSotto di voi il pozzo si allarga appena.\n\nE sulla parete davanti a voi non c'è altra pietra: si apre un corridoio stretto, perfettamente diritto, che scompare nel buio.",
+   "gm": "La parte superiore appartiene al pozzo costruito dagli abitanti di Bëllindë. La struttura inferiore è precedente.\n\nLa corda è stata recisa deliberatamente ed è legata alla discesa di Rocco, ma il PDI da solo non deve rivelare chi l'abbia tagliata né perché.\n\nIl complesso sotterraneo non deve ancora essere identificato nella sua funzione.",
+   "modules": [
+     {
+       "id": "corda",
+       "type": "check",
+       "focus": "Focus 1 — La corda",
+       "trigger": "Se un giocatore concentra l'attenzione sulla corda:",
+       "text": "Da vicino potete osservarne meglio l'estremità. Le fibre sono ancora distinguibili nonostante l'umidità del pozzo.",
+       "skill": "Percezione",
+       "dc": 11,
+       "outcomes": [
+         {
+           "kind": "criticalFailure",
+           "text": "La corda è bagnata e sporca. Le fibre all'estremità sono troppo compresse e incrostate per capire come si sia spezzata.",
+           "min": 1,
+           "max": 4
+         },
+         {
+           "kind": "failure",
+           "text": "L'estremità è danneggiata, ma non riuscite a distinguere se sia stata recisa o se abbia ceduto sotto tensione.",
+           "min": 5,
+           "max": 10
+         },
+         {
+           "kind": "baseSuccess",
+           "text": "Le fibre non sono strappate in maniera irregolare. La corda è stata tagliata.",
+           "min": 11,
+           "max": 14
+         },
+         {
+           "kind": "fullSuccess",
+           "text": "Il taglio attraversa quasi tutte le fibre nella stessa direzione.\n\nNon ha ceduto per il peso e non è stata consumata lentamente: qualcuno l'ha recisa con una lama.",
+           "min": 15,
+           "max": 19
+         },
+         {
+           "kind": "natural20",
+           "text": "Il taglio non è soltanto netto.\n\nOsservando come le fibre sono piegate verso il basso, capite che la corda era sotto tensione quando è stata recisa.\n\nQualcuno la stava usando — o vi era appeso qualcosa — nel momento in cui è stata tagliata."
+         }
+       ],
+       "gm": "Non identifica automaticamente Rocco."
+     },
+     {
+       "id": "muratura",
+       "type": "check",
+       "focus": "Focus 2 — La muratura",
+       "trigger": "Se un giocatore concentra l'attenzione sulle pietre inferiori:",
+       "text": "Da vicino la differenza fra le due costruzioni è ancora più evidente. Il punto in cui la muratura comune incontra i grandi blocchi inferiori corre tutto intorno al pozzo.",
+       "skill": "Percezione",
+       "dc": 12,
+       "outcomes": [
+         {
+           "kind": "criticalFailure",
+           "text": "Le incrostazioni e l'umidità confondono le giunzioni. Riuscite soltanto a confermare che sono stati usati materiali differenti.",
+           "min": 1,
+           "max": 5
+         },
+         {
+           "kind": "failure",
+           "text": "I blocchi inferiori sono certamente lavorati in maniera diversa, ma non riuscite a ricavarne altro.",
+           "min": 6,
+           "max": 11
+         },
+         {
+           "kind": "baseSuccess",
+           "text": "Tra i grandi blocchi inferiori non vedete quasi traccia di malta.\n\nSono stati tagliati per combaciare direttamente fra loro.",
+           "min": 12,
+           "max": 14
+         },
+         {
+           "kind": "fullSuccess",
+           "text": "Guardando il punto di contatto vi accorgete che la muratura irregolare superiore si appoggia sui blocchi antichi.\n\nLe due strutture non sono contemporanee.\n\nIl pozzo è stato costruito sopra qualcosa che esisteva già.",
+           "min": 15,
+           "max": 19
+         },
+         {
+           "kind": "natural20",
+           "text": "In alcuni punti vedete chiaramente dove i costruttori del pozzo hanno adattato le proprie pietre alla superficie dei blocchi inferiori.\n\nNon hanno semplicemente incontrato queste rovine scavando.\n\nChi ha realizzato questa parte del pozzo sapeva che la struttura sottostante esisteva e ha deliberatamente costruito l'accesso sopra di essa."
+         }
+       ]
+     },
+     {
+       "id": "corridoio",
+       "type": "focus",
+       "title": "Focus 3 — Il corridoio",
+       "trigger": "Se guardano dentro:",
+       "text": "Oltre l'apertura, il pavimento continua quasi perfettamente in piano.\n\nLe pareti sono costruite con gli stessi grandi blocchi che avete visto nel fondo del pozzo.\n\nLa luce raggiunge soltanto i primi metri. Più avanti, il corridoio scompare completamente nel buio.",
+       "gm": "Nessuna prova automatica: il corridoio è davanti a loro.\n\nSe qualcuno cerca rumori, correnti d'aria, tracce o altri dettagli specifici, la prova viene fatta in risposta a quella precisa azione, non perché il PDI contiene genericamente una prova."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "trigger": "Quando tutti hanno raggiunto il fondo:",
+       "text": "Dal fondo del pozzo l'apertura sopra di voi sembra molto più piccola.\n\nLa luce proveniente da Bëllindë cade verticalmente sulla pietra e si ferma pochi passi dentro il corridoio.\n\nOltre quel limite resta soltanto il buio.\n\nEntrandovi, anche l'eco del pozzo cambia. I vostri passi non salgono più verso la superficie: corrono davanti a voi lungo le pareti.\n\nPer diversi metri il passaggio prosegue diritto.\n\nPoi, dal buio, arriva un suono.\n\nTac.\n\nUna pausa.\n\nTac.\n\nUn'altra pausa, identica alla prima.\n\nTac.\n\nIl ritmo continua.\n\nNon viene dal pozzo dietro di voi.\n\nViene da qualche parte più avanti.\n\nChe cosa fate?"
+     }
+   ]
+ },
 ];
 
 const POI_IMGS={armor:'img/d11857bd179f.jpg',ghost:'img/85d2e38b40c3.jpg'};
@@ -1377,15 +1490,18 @@ POI_ICONS.scena=['#5B8FA8','<rect x="3" y="5" width="18" height="14" rx="2"/><pa
 POI_ICONS.unknown=['#B8B2A4','<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/>'];
 const POI_KIND_NAME={trappola:'Trappola',scontro:'Scontro',enigma:'Enigma',lore:'Dettaglio',dettaglio:'Dettaglio',persona:'Persona',boss:'Scontro',passaggio:'Porta',porta:'Porta',stanza:'Stanza',corridoio:'Corridoio',scena:'Scena'};
 /* PDI v2 (authoring, not Firebase): schemaVersion:2, id, title, visibility:'evident'|'hidden',
-   image, imagePrompt, text, gm, discovery?:{dc,autoReveal:false}, modules:[] (ordered/repeatable).
-   Check module: {id,type:'check',focus,skill,dc,outcomes:[{kind,min?,max?,text}]}.
+   image, imagePrompt, text, gm, discovery?:{enabled,dc,autoReveal:false}, modules:[] (ordered/repeatable).
+   Check module: {id,type:'check',focus,trigger?,text?,gm?,skill,dc,outcomes:[{kind,min?,max?,text}]}.
    Outcome kind: criticalFailure|failure|baseSuccess|fullSuccess|natural20. Bounds refer to the
    total; natural20 refers to the raw d20. No automatic outcome selection in this patch.
    Other module types (focus/dialogue/combat/loot/xp/continuation) retain their authoring payload.
-   Legacy img/skill/dc/ok/ko and initial x/y remain readable without rewriting POIS. */
+   Legacy img/skill/dc/ok/ko and initial x/y remain readable without rewriting POIS.
+   legacyPosition optionally preserves the original map position when migrating an existing PDI. */
 const POI_IMAGE_STYLE='Painted fantasy illustration in classic Dungeons & Dragons rulebook style';
 function poiText(value){ return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function poiParagraphs(value){ return poiText(value).replace(/\n/g,'<br>'); }
 function poiDc(value){ return Number.isFinite(value)&&value>=0?value:null; }
+function poiDiscoveryEnabled(p){ return p.discovery?.enabled!==false; }
 function poiDiscoveryDc(p){ return poiDc(p.discovery&&Object.hasOwn(p.discovery,'dc')?p.discovery.dc:p.spotDc); }
 function poiImage(p){ const image=p.image??p.img; return POI_IMGS[image]||(/^(img\/|https?:\/\/)/.test(image||'')?image:''); }
 function poiModules(p){
@@ -1423,14 +1539,16 @@ function validatePoiDefinition(p){
 function renderPoiModules(p){
   const names={criticalFailure:'Fallimento critico',failure:'Fallimento',baseSuccess:'Successo base',fullSuccess:'Successo pieno',natural20:'20 naturale'};
   return poiModules(p).map(m=>{
-    if(m.type!=='check') return ['focus','dialogue','continuation'].includes(m.type)?`<section><h4>${poiText(m.title||({focus:'Focus',dialogue:'Dialogo',continuation:'Prosecuzione'})[m.type])}</h4><p>${poiText(m.text||'')}</p></section>`:'';
+    const intro=`${m.trigger?`<p class="note">${poiText(m.trigger)}</p>`:''}${m.text?`<p class="lore">${poiParagraphs(m.text)}</p>`:''}`, note=m.gm?`<p class="note">${poiParagraphs(m.gm)}</p>`:'';
+    if(m.type!=='check') return ['focus','dialogue','continuation'].includes(m.type)?`<section><h4>${poiText(m.title||({focus:'Focus',dialogue:'Dialogo',continuation:'Prosecuzione'})[m.type])}</h4>${intro}${note}</section>`:'';
     const dc=poiDc(m.dc);
-    return `<section class="poi-check" style="margin-top:14px">${m.focus||m.title?`<h4>${poiText(m.focus||m.title)}</h4>`:''}<div class="row"><b>${poiText(m.skill)}${dc==null?'':' — CD '+dc}</b><button data-poi-check="${poiText(m.id)}">Richiedi ${poiText(m.skill)}</button></div><div class="outcome">${(m.outcomes||[]).map(o=>`<div><span class="${o.kind==='failure'||o.kind==='criticalFailure'?'fail':'pass'}">${poiText(o.label||names[o.kind]||o.kind)}${o.kind==='natural20'?'':(o.min!=null&&o.max!=null?' · '+o.min+'–'+o.max:o.min!=null?' · da '+o.min:o.max!=null?' · fino a '+o.max:'')}</span><p>${poiText(o.text)}</p></div>`).join('')}</div></section>`;
+    return `<section class="poi-check" style="margin-top:14px">${m.focus||m.title?`<h4>${poiText(m.focus||m.title)}</h4>`:''}${intro}<div class="row"><b>${poiText(m.skill)}${dc==null?'':' — CD '+dc}</b><button data-poi-check="${poiText(m.id)}">Richiedi ${poiText(m.skill)}</button></div><div class="outcome"${p.schemaVersion===2?' style="grid-template-columns:1fr"':''}>${(m.outcomes||[]).map(o=>`<div><span class="${o.kind==='failure'||o.kind==='criticalFailure'?'fail':'pass'}">${poiText(o.label||names[o.kind]||o.kind)}${o.kind==='natural20'?'':(o.min!=null&&o.max!=null?' · '+o.min+'–'+o.max:o.min!=null?' · da '+o.min:o.max!=null?' · fino a '+o.max:'')}</span><p>${poiParagraphs(o.text)}</p></div>`).join('')}</div>${note}</section>`;
   }).join('');
 }
 function openPoiRequest(p,moduleId=null){
   if(!IS_GM) return;
   const discovery=moduleId===null, module=discovery?null:poiModules(p).find(m=>m.id===moduleId&&m.type==='check');
+  if(discovery&&!poiDiscoveryEnabled(p)) return;
   if(!discovery&&!module) return;
   const skill=discovery?'Percezione':module.skill, dc=discovery?poiDiscoveryDc(p):poiDc(module.dc);
   const pgs=Object.entries(S.tokens).filter(([,t])=>t.kind==='pg');
@@ -1455,7 +1573,7 @@ function poiReveal(p,on){ if(!IS_GM) return; S.poiRev=S.poiRev||{}; if(on) S.poi
 const poisEl=document.getElementById('pois');
 let selectedPoi=null;
 // No override: keep the original coordinates. An explicit marker survives Firebase's null pruning.
-function poiPosition(p){ const pp=(S.poiPos||{})[p.id]; if(pp&&pp.placed===false) return null; const pos=pp||(p.schemaVersion===2?null:p); return pos&&Number.isFinite(pos.x)&&Number.isFinite(pos.y)?pos:null; }
+function poiPosition(p){ const pp=(S.poiPos||{})[p.id]; if(pp&&pp.placed===false) return null; const pos=pp||(p.schemaVersion===2?p.legacyPosition:p); return pos&&Number.isFinite(pos.x)&&Number.isFinite(pos.y)?pos:null; }
 function selectPoi(id){ selectedPoi=id; poisEl.querySelectorAll('.poi').forEach(d=>d.classList.toggle('selected',d.dataset.poiId===id)); }
 function poiOnMap(p){
   if(!IS_GM||CUR.id!=='sotto') return;
@@ -1520,11 +1638,11 @@ function openPoi(p){
   const rev=poiRevealed(p), head=`data-poi-popup="${poiText(p.id)}" data-poi-view="${poiPopupKey(p)}"`;
   if(!IS_GM&&!rev){ openModal(`<h2 class="big" ${head}>Qualcosa, qui</h2><p class="lore">Non l’avete ancora esaminato. Il master vi dirà cosa vedete.</p>`,'poibox'); return; }
   let html=`<h2 class="big" ${head}>${poiText(p.title)}</h2>`;
-  if(IS_GM) html+=`<div class="eyebrow">${poiHidden(p)?'PDI nascosto':'PDI evidente'} · ${rev?'svelato ai giocatori':'non svelato'}</div><div class="row" style="margin:10px 0 12px"><button class="${rev?'':'primary'}" id="poiRev">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button><button id="poiPerception">Richiedi Percezione</button><button id="poiMap">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button></div>`;
+  if(IS_GM) html+=`<div class="eyebrow">${poiHidden(p)?'PDI nascosto':'PDI evidente'} · ${rev?'svelato ai giocatori':'non svelato'}</div><div class="row" style="margin:10px 0 12px"><button class="${rev?'':'primary'}" id="poiRev">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button>${poiDiscoveryEnabled(p)?'<button id="poiPerception">Richiedi Percezione</button>':''}<button id="poiMap">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button></div>`;
   const img=poiImage(p);
-  if(img) html+='<img class="poiimg" id="poiImage" style="object-fit:contain" alt="">';
-  html+=`<div class="eyebrow" style="margin-top:6px">Da leggere ai giocatori</div><p class="lore">${p.text}</p>`;
-  if(IS_GM) html+=`<div class="gmbox"><div class="eyebrow">Note per il Master</div><p>${p.gm||''}</p>${renderPoiModules(p)}</div>`;
+  if(img) html+='<img class="poiimg" id="poiImage" style="height:auto;max-height:none;object-fit:contain" alt="">';
+  html+=`<div class="eyebrow" style="margin-top:6px">Da leggere ai giocatori</div><p class="lore">${p.schemaVersion===2?poiParagraphs(p.text):p.text}</p>`;
+  if(IS_GM) html+=`<div class="gmbox"><div class="eyebrow">Note per il Master</div><p>${p.schemaVersion===2?poiParagraphs(p.gm):p.gm||''}</p>${renderPoiModules(p)}</div>`;
   openModal(html,'poibox');
   const picture=document.querySelector('#modal #poiImage'); if(picture){ picture.src=img; picture.alt=p.title; }
   const mapButton=document.querySelector('#modal #poiMap'); if(mapButton) mapButton.onclick=()=>poiOnMap(p);
@@ -1537,7 +1655,7 @@ function poiCheckReveal(tot,tokId,skill,reqId){
   const q=S.request;
   if(!q||q.id!==reqId||q.poiPurpose!=='discovery'||skill!=='Percezione'||q.skill!==skill||!q.targets.includes(tokId)||!Number.isFinite(tot)) return;
   const p=POIS.find(x=>x.id===q.poi), dc=p?poiDiscoveryDc(p):null;
-  if(!p||p.discovery?.autoReveal!==true||dc==null||q.dc!==dc||tot<dc||poiRevealed(p)) return;
+  if(!p||!poiDiscoveryEnabled(p)||p.discovery?.autoReveal!==true||dc==null||q.dc!==dc||tot<dc||poiRevealed(p)) return;
   S.poiRev=S.poiRev||{}; S.poiRev[p.id]=true; log({kind:'sys',txt:`Svelato: ${p.title}`});
 }
 
@@ -1784,7 +1902,7 @@ function renderGuide(){
     html+=`<div class="eyebrow" style="margin:6px 0 4px">Punti d’interesse, in ordine di gioco</div>`;
     order.forEach((p,n)=>{ const kk=poiKind(p), rev=poiRevealed(p), hid=poiHidden(p); const ic=POI_ICONS[kk]||POI_ICONS.unknown;
       html+=`<details class="gpoi ${rev?'rev':''}" data-pid="${p.id}" ${guideOpen['poi:'+p.id]?'open':''}><summary><span class="gnum">${n+1}</span><i style="--pc:${ic[0]}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[1]}</svg></i><span class="gt">${p.title}</span><span class="k">${rev?'svelato':(hid?'nascosto':'?')}</span></summary>
-        <div class="gbody"><div class="row" style="margin-top:6px"><button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button><button class="mini" data-gspot="${p.id}">Richiedi Percezione</button><button class="mini" data-gv="${p.id}">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button><button class="mini" data-go="${p.id}">Apri</button></div><h4>Da leggere ai giocatori</h4><p class="lore">${p.text}</p>${p.gm?`<h4>Note per il Master</h4><p>${p.gm}</p>`:''}${renderPoiModules(p)}</div></details>`; });
+        <div class="gbody"><div class="row" style="margin-top:6px"><button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button>${poiDiscoveryEnabled(p)?`<button class="mini" data-gspot="${p.id}">Richiedi Percezione</button>`:''}<button class="mini" data-gv="${p.id}">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button><button class="mini" data-go="${p.id}">Apri</button></div><h4>Da leggere ai giocatori</h4><p class="lore">${p.schemaVersion===2?poiParagraphs(p.text):p.text}</p>${p.gm?`<h4>Note per il Master</h4><p>${p.schemaVersion===2?poiParagraphs(p.gm):p.gm}</p>`:''}${renderPoiModules(p)}</div></details>`; });
   }
   if(list.length) html+=`<div class="eyebrow" style="margin:14px 0 4px">Schede della scena</div>`;
   for(const sc of list){ const kind=(sc.title.split(' — ')[0]||'').trim(); const name=sc.title.slice(kind.length+3);
