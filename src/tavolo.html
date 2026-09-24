@@ -133,7 +133,8 @@ header .spacer{flex:1}
 .tok.selected{outline:2px dashed var(--gold)}
 .tok.ghost{opacity:.4;border-style:dashed}
 .tok.down{filter:grayscale(1);opacity:.55}
-.tok .lbl{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:2px;white-space:nowrap;font:500 15px var(--ui);background:rgba(0,0,0,.7);padding:1px 6px;border-radius:3px;letter-spacing:.03em}
+.tok .lbl{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:1px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:600 10px/1.25 var(--ui);background:rgba(0,0,0,.72);padding:0 4px;border-radius:3px;letter-spacing:.02em}
+.tok:hover .lbl,.tok.selected .lbl,.tok.active .lbl{max-width:180px;font-size:11px}
 .tok .hpr{position:absolute;bottom:-3px;left:10%;right:10%;height:4px;background:#232B3B;border-radius:2px;overflow:hidden}
 .tok .hpr i{display:block;height:100%;background:var(--green)}
 .tok .hpr i.low{background:var(--blood)}
@@ -509,7 +510,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v95</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v96</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
