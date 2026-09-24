@@ -509,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v94</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v95</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -632,7 +632,7 @@ const SQUARE_M = 1.5;
 const PLAYER_V85 = {
  alessandros:{cls:'Paladino 5 · Giuramento di Devozione',hpMax:44,ac:22,mods:{Iniziativa:1,Atletica:6,Acrobazia:4,Furtività:1,'Rapidità di mano':1,Arcano:-1,Storia:2,Indagare:-1,Natura:-1,Religione:2,'Addestrare animali':0,Intuizione:3,Medicina:0,Percezione:0,Sopravvivenza:0,Inganno:5,Intimidire:5,Intrattenere:2,Persuasione:5,'TS For':3,'TS Des':1,'TS Cos':2,'TS Int':-1,'TS Sag':3,'TS Car':5},actions:[{n:'Multiattacco: 2 × Spada lunga'},{n:'Spada lunga (1 mano)',atk:8,dmg:'1d8+3'},{n:'Spada lunga (2 mani)',atk:8,dmg:'1d10+3'},{n:'Giavellotto',atk:6,dmg:'1d6+3'},{n:'Acqua santa (TS Des CD 12)',dmg:'2d8'},{n:'Cura ferite',dmg:'2d8+2'},{n:'Punizione divina',dmg:'2d8'},{n:'Imposizione delle mani: riserva 25 PF'},{n:'Arma sacra: +2 al colpo per 10 minuti'}]},
  adamus:{cls:'Druido 5 · Cerchio della Luna',hpMax:35,ac:15,mods:{Iniziativa:2,Atletica:-1,Acrobazia:2,Furtività:2,'Rapidità di mano':2,Arcano:1,Storia:1,Indagare:1,Natura:4,Religione:4,'Addestrare animali':6,Intuizione:3,Medicina:6,Percezione:3,Sopravvivenza:6,Inganno:1,Intimidire:1,Intrattenere:1,Persuasione:1,'TS For':-1,'TS Des':2,'TS Cos':1,'TS Int':4,'TS Sag':6,'TS Car':1},actions:[{n:'Bastone (1 mano)',atk:2,dmg:'1d6-1'},{n:'Bastone (2 mani)',atk:2,dmg:'1d8-1'},{n:'Bastone con Shillelagh',atk:6,dmg:'1d10+3'},{n:'Falcetto',atk:2,dmg:'1d4-1'},{n:'Fuoco fatuo stellare',atk:6,dmg:'2d8'},{n:'Frusta di spine',atk:6,dmg:'2d6'},{n:'Raggio di luna (TS Cos CD 14)',dmg:'2d10'},{n:'Cura ferite',dmg:'2d8+3'},{n:'Evoca animali (slot 3°)'},{n:'Forma selvatica / Forme del Cerchio'}]},
- luigis:{cls:'Ranger 5 · Signore delle Bestie',hpMax:44,ac:14,mods:{Iniziativa:2,Atletica:-1,Acrobazia:2,Furtività:2,'Rapidità di mano':2,Arcano:4,Storia:4,Indagare:1,Natura:4,Religione:1,'Addestrare animali':7,Intuizione:7,Medicina:4,Percezione:10,Sopravvivenza:7,Inganno:0,Intimidire:0,Intrattenere:0,Persuasione:0,'TS For':2,'TS Des':5,'TS Cos':2,'TS Int':1,'TS Sag':4,'TS Car':0},actions:[{n:'Multiattacco: 2 × Arco lungo'},{n:'Arco lungo',atk:7,dmg:'1d8+2'},{n:'Tocco folgorante',atk:7,dmg:'2d8'},{n:'Cura ferite',dmg:'2d8+4'},{n:'Marchio del cacciatore',dmg:'1d6'},{n:'Gelsomina: Colpo',atk:7,dmg:'1d8+6'},{n:'Passo velato: teletrasporto 9 m'},{n:'Passare senza tracce (slot 2°)'},{n:'Colpo intrappolante (TS For CD 15)'}]},
+ luigis:{cls:'Ranger 5 · Signore delle Bestie',hpMax:44,ac:14,mods:{Iniziativa:2,Atletica:-1,Acrobazia:2,Furtività:2,'Rapidità di mano':2,Arcano:4,Storia:4,Indagare:1,Natura:4,Religione:1,'Addestrare animali':7,Intuizione:7,Medicina:4,Percezione:10,Sopravvivenza:7,Inganno:0,Intimidire:0,Intrattenere:0,Persuasione:0,'TS For':2,'TS Des':5,'TS Cos':2,'TS Int':1,'TS Sag':4,'TS Car':0},actions:[{n:'Multiattacco: 2 × Arco lungo'},{n:'Arco lungo',atk:7,dmg:'1d8+2'},{n:'Tocco folgorante',atk:7,dmg:'2d8'},{n:'Cura ferite',dmg:'2d8+4'},{n:'Marchio del cacciatore',dmg:'1d6'},{n:'Zenith: Colpo',atk:7,dmg:'1d8+6'},{n:'Passo velato: teletrasporto 9 m'},{n:'Passare senza tracce (slot 2°)'},{n:'Colpo intrappolante (TS For CD 15)'}]},
  mattheus:{cls:'Chierico 5 · Dominio della Vita',hpMax:48,ac:18,mods:{Iniziativa:1,Atletica:0,Acrobazia:1,Furtività:1,'Rapidità di mano':1,Arcano:3,Storia:2,Indagare:-1,Natura:-1,Religione:6,'Addestrare animali':4,Intuizione:7,Medicina:7,Percezione:7,Sopravvivenza:4,Inganno:0,Intimidire:0,Intrattenere:0,Persuasione:0,'TS For':0,'TS Des':1,'TS Cos':2,'TS Int':-1,'TS Sag':7,'TS Car':3},actions:[{n:'Mazza',atk:3,dmg:'1d6'},{n:'Fiamma sacra (TS Des CD 15)',dmg:'2d8'},{n:'Rintocco di morte (TS Sag CD 15)',dmg:'2d8'},{n:'Dardo guida',atk:7,dmg:'4d6'},{n:'Cura ferite',dmg:'2d8+7'},{n:'Spiriti guardiani (TS Sag CD 15)',dmg:'3d8'},{n:'Dissolvi magie'},{n:'Rianimare'},{n:'Parola guaritrice',dmg:'2d4+7'},{n:'Arma spirituale',atk:7,dmg:'1d8+4'}]},
  maximus:{cls:'Guerriero 5 · Cavaliere Runico',hpMax:44,ac:18,mods:{Iniziativa:1,Atletica:7,Acrobazia:4,Furtività:4,'Rapidità di mano':1,Arcano:0,Storia:3,Indagare:0,Natura:0,Religione:0,'Addestrare animali':4,Intuizione:4,Medicina:1,Percezione:4,Sopravvivenza:4,Inganno:-1,Intimidire:-1,Intrattenere:-1,Persuasione:-1,'TS For':7,'TS Des':1,'TS Cos':5,'TS Int':0,'TS Sag':1,'TS Car':-1},actions:[{n:'Multiattacco: 2 attacchi'},{n:'Spadone +1',atk:8,dmg:'2d6+5'},{n:'Maglio',atk:7,dmg:'2d6+4'},{n:'Mazzafrusto',atk:7,dmg:'1d8+4'},{n:'Lancia',atk:7,dmg:'1d6+4'},{n:'Giavellotto',atk:7,dmg:'1d6+4'},{n:'Arco lungo',atk:4,dmg:'1d8+1'},{n:'Recupero energie',dmg:'1d10+5'},{n:'Possanza del gigante: +1d6 una volta per turno'},{n:'Azione impetuosa'},{n:'Spostamento tattico'}]},
  vicarus:{cls:'Stregone 5 · Stregoneria Draconica',hpMax:37,ac:11,mods:{Iniziativa:1,Atletica:-1,Acrobazia:1,Furtività:1,'Rapidità di mano':1,Arcano:3,Storia:3,Indagare:0,Natura:0,Religione:0,'Addestrare animali':1,Intuizione:4,Medicina:1,Percezione:1,Sopravvivenza:1,Inganno:7,Intimidire:7,Intrattenere:7,Persuasione:7,'TS For':-1,'TS Des':1,'TS Cos':5,'TS Int':0,'TS Sag':1,'TS Car':7},actions:[{n:'Dardo di fuoco',atk:11,dmg:'2d10'},{n:'Tocco folgorante',atk:11,dmg:'2d8'},{n:'Esplosione stregonesca',atk:11,dmg:'2d8'},{n:'Sfera cromatica',atk:11,dmg:'3d8'},{n:'Raggio rovente (3 raggi)',atk:11,dmg:'2d6'},{n:'Palla di fuoco (TS Des CD 17)',dmg:'8d6'},{n:'Paura (TS Sag CD 17)'},{n:'Volare (concentrazione)'},{n:'Controincantesimo'},{n:'Stregoneria innata'},{n:'Scudo (reazione): +5 CA'}]}
@@ -727,7 +727,7 @@ let S = normalize(structuredClone(DEFAULT_STATE));
 let db = null, ref = null, saveTimer = null;
 let selected = null, measuring = false, measurePts = [];
 
-const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','preFormThp','giant'];
+const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','preFormThp','giant','owner'];
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
@@ -892,8 +892,8 @@ document.getElementById('fogReset').onclick=()=>{ S.fog={on:true,ops:[]}; save(t
 document.getElementById('fogParty').onclick=()=>{ for(const t of Object.values(S.tokens)) if(t.kind==='pg') fogOp('r',t.x,t.y,S.grid.size*6,true); save(true); };
 /* ---------- token ---------- */
 const tokensEl=document.getElementById('tokens'), dragm=document.getElementById('dragm');
-function canMove(id){ const t=S.tokens[id]; if(!t) return false; if(IS_GM) return true; if(t.kind!=='pg'||id!==me) return false; if(S.mode==='scontro') return S.order[S.turn]===id; return true; }
-function visible(id){ const t=S.tokens[id]; if(IS_GM) return true; if(t.hidden) return false; if(t.kind==='pg') return true; return fogVisible(t.x,t.y); }
+function canMove(id){ const t=S.tokens[id]; if(!t) return false; if(IS_GM) return true; const mine=(t.kind==='pg'&&id===me)||t.owner===me; if(!mine) return false; if(S.mode==='scontro') return S.order[S.turn]===me; return true; }
+function visible(id){ const t=S.tokens[id]; if(IS_GM) return true; if(t.hidden) return false; if(t.kind==='pg'||t.owner) return true; return fogVisible(t.x,t.y); }
 function renderTokens(){
   const s=S.grid.size, activeId=S.mode==='scontro'?S.order[S.turn]:null;
   tokensEl.innerHTML='';
@@ -906,7 +906,7 @@ function renderTokens(){
     d.style.left=t.x+'px'; d.style.top=t.y+'px';
     d.classList.toggle('active',id===activeId); d.classList.toggle('selected',id===selected); d.classList.toggle('ghost',!!t.hidden); d.classList.toggle('down',t.hp<=0); d.classList.toggle('locked',!canMove(id));
     const hpPct=Math.max(0,Math.min(100,100*t.hp/t.hpMax));
-    d.innerHTML=`${(t.tokimg||t.img)?'':t.short}<span class="lbl">${t.name}</span>${condHtml(t,true)}${(IS_GM||t.kind==='pg')?`<span class="hpr"><i class="${hpPct<=30?'low':''}" style="width:${hpPct}%"></i></span>`:''}`;
+    d.innerHTML=`${(t.tokimg||t.img)?'':t.short}<span class="lbl">${t.name}</span>${condHtml(t,true)}${(IS_GM||t.kind==='pg'||t.owner===me)?`<span class="hpr"><i class="${hpPct<=30?'low':''}" style="width:${hpPct}%"></i></span>`:''}`;
     d.addEventListener('pointerdown',e=>startDrag(e,id));
     tokensEl.appendChild(d);
   }
@@ -991,9 +991,9 @@ function doAction(tokId,a){
 }
 /* ---------- bersaglio: scegli chi colpire, il danno si applica da solo ---------- */
 function targetsFor(tokId){
-  const me_=S.tokens[tokId]; const mine=me_.kind==='pg';
+  const me_=S.tokens[tokId]; const mine=me_.kind!=='nemico';
   const list=Object.entries(S.tokens).filter(([id,t])=>id!==tokId&&t.hp!=null&&!(t.hidden&&!IS_GM)&&(IS_GM||fogVisible(t.x,t.y)))
-    .map(([id,t])=>({id,t,same:(t.kind==='pg')===mine,dist:distM(me_,t)})).sort((a,b)=>(a.same-b.same)||(a.dist-b.dist)||a.t.name.localeCompare(b.t.name));
+    .map(([id,t])=>({id,t,same:(t.kind!=='nemico')===mine,dist:distM(me_,t)})).sort((a,b)=>(a.same-b.same)||(a.dist-b.dist)||a.t.name.localeCompare(b.t.name));
   const seen={}; for(const o of list){ seen[o.t.name]=(seen[o.t.name]||0)+1; } const n={}; for(const o of list){ if(seen[o.t.name]>1){ n[o.t.name]=(n[o.t.name]||0)+1; o.label=`${o.t.name} ${n[o.t.name]}`; } else o.label=o.t.name; }
   return list;
 }
@@ -1119,6 +1119,22 @@ function setGiantMight(on){
   t.giant=!!on; t.size=on?2:1; log({kind:'sys',txt:on?`${t.name} attiva Possanza del gigante e diventa Grande`:`${t.name} termina Possanza del gigante`});
   save(true); renderSheet('maximus');
 }
+const ZENITH={name:'Zenith',short:'Z',kind:'alleato',owner:'luigis',color:'#6E9E5B',hp:30,hpMax:30,ac:16,speed:12,size:1,mods:{Iniziativa:2,'TS For':5,'TS Des':2,'TS Cos':3,'TS Int':-2,'TS Sag':4,'TS Car':0,Atletica:5,Percezione:4,Furtività:2},actions:[
+  {n:'Colpo',tipo:'mischia',eco:'bonus',atk:7,dmg:'1d8+6',note:'Luigis comanda Zenith con un’azione bonus'},
+  {n:'Carica',tipo:'mischia',eco:'bonus',atk:7,dmg:'1d8+6+1d6',note:'Dopo almeno 6 m in linea retta: +1d6 e TS For CD 15 o prono'},
+  {n:'Schivata',tipo:'speciale',eco:'azione',note:'Se Luigis non la comanda, Zenith usa Schivata'}
+]};
+function zenithPosition(){
+  const l=S.tokens.luigis, step=S.grid.size||30, base=l?{x:l.x,y:l.y}:{x:600,y:360};
+  for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1],[1,1],[-1,1],[1,-1],[-1,-1]]){ const p=snap({x:base.x+dx*step,y:base.y+dy*step}); if(walkable(p.x,p.y)&&!Object.values(S.tokens).some(t=>Math.hypot(t.x-p.x,t.y-p.y)<step*.7)) return p; }
+  return snap({x:base.x+step,y:base.y});
+}
+function summonZenith(on){
+  if(!canAct('luigis')) return;
+  if(on){ if(!S.tokens.zenith){ const p=zenithPosition(); S.tokens.zenith={custom:true,...structuredClone(ZENITH),x:p.x,y:p.y,init:null,hidden:false,movedM:0,dash:false,conds:[]}; log({kind:'sys',txt:'Luigis evoca Zenith'}); } selected='zenith'; }
+  else if(S.tokens.zenith){ delete S.tokens.zenith; S.order=S.order.filter(id=>id!=='zenith'); if(selected==='zenith') selected=null; log({kind:'sys',txt:'Zenith viene congedata'}); }
+  save(true); renderSheet('luigis');
+}
 let actTab='azione';
 function renderActions(container,tokId){
   container.innerHTML=''; const t=S.tokens[tokId]; if(!t||!t.actions) return;
@@ -1217,7 +1233,8 @@ function render(){
     const pc=S.tokens[me];
     const playerForm=pc?activeWildForm(me,pc):null;
     document.getElementById('plStats').innerHTML=pc?`<b>Nome</b><span>${pc.name}</span><b>Classe</b><span>${pc.cls||''}</span><b>Forma</b><span>${playerForm?'Toro':(me==='maximus'&&pc.giant?'Gigante':'Normale')}</span><b>Taglia</b><span>${(pc.size||1)>1?'Grande':'Media'}</span><b>Punti ferita</b><span>${pc.hp} / ${pc.hpMax}${pc.thp?` (+${pc.thp} temp.)`:''}</span><b>Classe armatura</b><span>${playerForm?.ac??pc.ac??'—'}</span>${(S.mode==='scontro'||pc.init!=null)?`<b>Iniziativa</b><span>${pc.init??'da tirare'}</span><b>Movimento</b><span>${((pc.speed||9)*(pc.dash?2:1)-(pc.movedM||0)).toLocaleString('it-IT')} / ${(pc.speed||9)*(pc.dash?2:1)} m${pc.dash?' (scatto)':''}</span>`:''}`:'<span class="note">Scegli il tuo personaggio in alto a destra.</span>';
-    renderActions(document.getElementById('actions'),me);
+    const controlled=selected&&S.tokens[selected]?.owner===me?selected:me;
+    renderActions(document.getElementById('actions'),controlled);
     const asked=S.request&&me&&S.request.targets.includes(me);
     document.getElementById('askBox').classList.toggle('hidden',!asked);
     const notice=document.getElementById('requestNotice'); notice.classList.toggle('hidden',!asked);
@@ -1342,9 +1359,9 @@ const SHEETS = {
  luigis:{abil:{For:8,Des:14,Cos:14,Int:12,Sag:18,Car:10},prof:3,speed:9,level:5,background:'Sapiente',xp:'465 / 14.000',hitDice:'5d10',passive:20,languages:'Comune, Lingua dei Segni Comune, Druidico, Elfico, Sottocomune',coins:'63 ma · 510 mo',
   spell:{stat:'Sag',dc:15,atk:7,slots:{1:4,2:2},list:['Shocking Grasp','Mage Hand','Speak with Animals','Entangle',"Tasha's Hideous Laughter",'Ensnaring Strike','Longstrider','Jump',"Hunter's Mark",'Cure Wounds','Pass without Trace','Misty Step']},
   feats:['Fortunato','Tiro con l’arco (+2 a distanza)','Iniziato alla magia (Mago)','Toccato dalle Fate'],
-  features:['Attacco Extra','Esploratore abile','Nemico prescelto','Compagno primevo: Gelsomina (mucca)','Maestria delle armi'],
+  features:['Attacco Extra','Esploratore abile','Nemico prescelto','Compagna primeva: Zenith (Bestia della terra)','Maestria delle armi'],
   equip:['Arco lungo','Scimitarra','Spada corta','Armatura di cuoio borchiato','Bastone chiodato','Stivali alati (sintonizzati)','Torce e zaino'],
-  lore:'Ranger Signore delle Bestie della Casata Barbus di Secernium, rivale storica dei Cerullius. Provocatore nato: trova il punto debole di tutti prima di sedersi. Il suo compagno animale è Gelsomina, una mucca: comica in pace, una carica a testa bassa in battaglia. Fidanzato con Clarentia, della Terpuria Centrale. Percezione passiva 20: nel gruppo, è lui che nota le cose.'},
+  lore:'Ranger Signore delle Bestie della Casata Barbus di Secernium, rivale storica dei Cerullius. Provocatore nato: trova il punto debole di tutti prima di sedersi. La sua compagna primeva è Zenith, una Bestia della terra evocata. Fidanzato con Clarentia, della Terpuria Centrale. Percezione passiva 20: nel gruppo, è lui che nota le cose.'},
  mattheus:{abil:{For:11,Des:12,Cos:15,Int:9,Sag:18,Car:10},prof:3,speed:9,level:5,background:'Accolito',xp:'6.500 / 14.000',hitDice:'5d8',passive:17,languages:'Comune, Celestiale, Sottocomune',coins:'252 mo',
   spell:{stat:'Sag',dc:15,atk:7,slots:{1:4,2:3,3:2},list:['Thaumaturgy','Sacred Flame','Light','Spare the Dying','Toll the Dead','Guidance','Command','Guiding Bolt','Sanctuary','Protection from Evil and Good','Bless','Healing Word','Cure Wounds','Inflict Wounds','Prayer of Healing','Aid','Lesser Restoration','Spiritual Weapon','Revivify','Dispel Magic','Mass Healing Word','Spirit Guardians']},
   feats:['Fortunato','Iniziato alla magia (Chierico)','Robusto','Condottiero ispiratore'],
@@ -2713,7 +2730,7 @@ window.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
 
 /* ---------- scheda del personaggio ---------- */
 let sheetTab='car';
-function canAct(id){ return IS_GM || id===me; }
+function canAct(id){ return IS_GM || id===me || S.tokens[id]?.owner===me; }
 function sheetRollMod(id,skill){
   const t=S.tokens[id], sh=SHEETS[id], form=activeWildForm(id,t); if(!t||!sh||!form) return t?.mods?.[skill]??0;
   if(skill.startsWith('TS ')){ const a=skill.slice(3); if(['For','Des','Cos'].includes(a)) return modCalc(form.abil[a]); }
@@ -2723,13 +2740,14 @@ function sheetRollMod(id,skill){
 function openSheet(id,tab){ if(tab) sheetTab=tab; renderSheet(id); }
 function renderSheet(id){
   const t=S.tokens[id], sh=SHEETS[id]; if(!t||!sh) return;
-  const mine=canAct(id), form=activeWildForm(id,t), abil=form?{...sh.abil,...form.abil}:sh.abil;
+  const mine=canAct(id), form=activeWildForm(id,t), abil=form?{...sh.abil,...form.abil}:sh.abil, zenith=!!S.tokens.zenith;
   const shownAc=form?form.ac:t.ac, shownSpeed=form?form.speed:sh.speed, shownName=form?`${t.name} — ${form.name}`:t.name;
   const tabs=[['car','Caratteristiche'],['inc','Incantesimi'],['eq','Equipaggiamento'],['sto','Storia']].filter(([k])=>k!=='inc'||sh.spell);
   let body='';
   if(sheetTab==='car'){
     if(id==='adamus') body+=`<div class="tag" style="display:block;margin-bottom:12px;border-color:${form?'var(--green)':'var(--gold-dim)'}"><div class="row split"><div><b>Forma Selvatica${form?' — Toro attivo':''}</b><div class="note">${form?'Taglia Grande · CA 16 · Velocità 12 m · PF temporanei '+(t.thp||0)+'/15':'Trasformazione disponibile: Toro'}</div></div>${mine?`<button class="${form?'danger':'primary'}" id="wildToggle">${form?'Torna normale':'Diventa Toro'}</button>`:''}</div></div>`;
     if(id==='maximus') body+=`<div class="tag" style="display:block;margin-bottom:12px;border-color:${t.giant?'var(--green)':'var(--gold-dim)'}"><div class="row split"><div><b>Possanza del gigante${t.giant?' — attiva':''}</b><div class="note">${t.giant?'Taglia Grande · vantaggio a prove e TS di Forza · +1d6 danni una volta per turno':'Diventi Grande per 1 minuto e aggiungi 1d6 danni una volta per turno'}</div></div>${mine?`<button class="${t.giant?'danger':'primary'}" id="giantToggle">${t.giant?'Termina':'Diventa Grande'}</button>`:''}</div></div>`;
+    if(id==='luigis') body+=`<div class="tag" style="display:block;margin-bottom:12px;border-color:${zenith?'var(--green)':'var(--gold-dim)'}"><div class="row split"><div><b>Compagna primeva: Zenith${zenith?' — evocata':''}</b><div class="note">${zenith?'30 PF · CA 16 · velocità 12 m · clicca il suo token per usare le azioni':'Bestia della terra: appare accanto a Luigis'}</div></div>${mine?`<button class="${zenith?'danger':'primary'}" id="zenithToggle">${zenith?'Congeda':'Evoca Zenith'}</button>`:''}</div></div>`;
     body+=`<div class="abils">`+Object.entries(abil).map(([k,v])=>`<div class="ab"><div class="k">${k}</div><div class="v">${v}</div><div class="m">${fmtMod(modCalc(v))}</div><button class="roll ${mine?'':'off'}" data-roll="TS ${k}" title="Tiro salvezza">TS ${fmtMod(form&&['For','Des','Cos'].includes(k)?modCalc(v):(t.mods['TS '+k]??modCalc(v)))}</button></div>`).join('')+`</div>`;
     body+=`<div class="skills">`+Object.entries(ABIL_SKILLS).flatMap(([a,list])=>list.map(s=>`<button class="sk ${mine?'':'off'}" data-roll="${s}"><span>${s}</span><small>${a}</small><b>${fmtMod(sheetRollMod(id,s))}</b></button>`)).join('')+`</div>`;
     body+=`<div class="kv" style="margin-top:12px"><b>Classe</b><span>${t.cls||''}</span><b>Forma</b><span>${form?form.name:(t.giant?'Grande — Possanza del gigante':'Normale')}</span><b>Taglia</b><span>${(t.size||1)>1?'Grande':'Media'}</span><b>Livello</b><span>${sh.level||'—'}</span><b>Background</b><span>${sh.background||'—'}</span><b>Esperienza</b><span>${sh.xp||'—'}</span><b>Classe armatura</b><span>${shownAc}</span><b>Punti ferita</b><span>${t.hp} / ${t.hpMax}${t.thp?' + '+t.thp+' temporanei':''}</span><b>Dadi vita</b><span>${sh.hitDice||'—'}</span><b>Velocità</b><span>${shownSpeed} m</span><b>Competenza</b><span>+${sh.prof}</span><b>Iniziativa</b><span>${fmtMod(t.mods.Iniziativa||0)}</span><b>Percezione passiva</b><span>${sh.passive??'—'}</span><b>Lingue</b><span>${sh.languages||'—'}</span></div>`;
@@ -2763,6 +2781,7 @@ function renderSheet(id){
     box.querySelectorAll('[data-cast]').forEach(b=>b.onclick=()=>castSpell(id,b.dataset.cast));
     const wild=box.querySelector('#wildToggle'); if(wild) wild.onclick=()=>setWildShape(!form);
     const giant=box.querySelector('#giantToggle'); if(giant) giant.onclick=()=>setGiantMight(!t.giant);
+    const zen=box.querySelector('#zenithToggle'); if(zen) zen.onclick=()=>summonZenith(!zenith);
     const rs=box.querySelector('#restShort'); if(rs) rs.onclick=()=>{ log({kind:'sys',txt:`${t.name} fa un riposo breve`}); save(); renderSheet(id); };
     const rl=box.querySelector('#restLong'); if(rl) rl.onclick=()=>{ t.used={}; t.pts=0; t.hp=t.hpMax; t.lay=0; log({kind:'sys',txt:`${t.name} fa un riposo lungo: PF e slot al massimo`}); save(); renderSheet(id); };
   }

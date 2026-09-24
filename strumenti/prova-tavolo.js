@@ -120,6 +120,19 @@ const file = path.resolve(process.argv[2] || 'index.html');
           setGiantMight(false);
           Object.assign(a,oldA); Object.assign(m,oldM); closeModal();
         } catch (e) { rotte.push('Trasformazioni Adamus/Maximus → '+e.name+': '+e.message); }
+
+        provati++;
+        try {
+          const oldZenith=S.tokens.zenith?structuredClone(S.tokens.zenith):null;
+          summonZenith(true);
+          const z=S.tokens.zenith, remoteZ=toRemote(S).tokens.zenith;
+          if(!z||z.owner!=='luigis'||z.hp!==30||z.ac!==16||z.speed!==12||z.actions[0]?.n!=='Colpo') rotte.push('Zenith → evocazione, scheda o controllo di Luigis non corretti');
+          if(!remoteZ||remoteZ.owner!=='luigis'||remoteZ.speed!==12) rotte.push('Zenith → evocazione non sincronizzata');
+          summonZenith(false);
+          if(S.tokens.zenith) rotte.push('Zenith → congedo non riuscito');
+          if(oldZenith) S.tokens.zenith=oldZenith;
+          closeModal();
+        } catch (e) { rotte.push('Evocazione di Zenith → '+e.name+': '+e.message); }
       }
 
       if (!IS_GM) {
