@@ -133,8 +133,11 @@ header .spacer{flex:1}
 .tok.selected{outline:2px dashed var(--gold)}
 .tok.ghost{opacity:.4;border-style:dashed}
 .tok.down{filter:grayscale(1);opacity:.55}
-.tok .lbl{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:1px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:600 10px/1.25 var(--ui);background:rgba(0,0,0,.72);padding:0 4px;border-radius:3px;letter-spacing:.02em}
-.tok:hover .lbl,.tok.selected .lbl,.tok.active .lbl{max-width:180px;font-size:11px}
+.tok .lbl{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:1px;max-width:62px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:600 8px/1.2 var(--ui);background:rgba(0,0,0,.68);padding:0 3px;border-radius:2px;letter-spacing:0;pointer-events:none}
+.tok .lbl .full{display:none}
+.tok:hover .lbl,.tok.selected .lbl,.tok.active .lbl{max-width:130px;font-size:9px;z-index:6}
+.tok:hover .lbl .short,.tok.selected .lbl .short,.tok.active .lbl .short{display:none}
+.tok:hover .lbl .full,.tok.selected .lbl .full,.tok.active .lbl .full{display:inline}
 .tok .hpr{position:absolute;bottom:-3px;left:10%;right:10%;height:4px;background:#232B3B;border-radius:2px;overflow:hidden}
 .tok .hpr i{display:block;height:100%;background:var(--green)}
 .tok .hpr i.low{background:var(--blood)}
@@ -510,7 +513,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v96</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v97</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -900,6 +903,7 @@ function renderTokens(){
   tokensEl.innerHTML='';
   if(CUR.id==='bellinde'){ renderPartyToken(); return; }
   if(CUR.id!=='sotto') return;
+  const labelCount={};
   for(const [id,t] of Object.entries(S.tokens)){
     if(!visible(id)) continue;
     const d=document.createElement('div'); d.className='tok'; d.dataset.id=id; d.style.setProperty('--c',t.color); const timg=PG_TOKENS[id]||t.tokimg||t.img; if(timg){ d.style.backgroundImage=`url(${timg})`; if(PG_TOKENS[id]) d.classList.add('hastok'); }
@@ -907,7 +911,14 @@ function renderTokens(){
     d.style.left=t.x+'px'; d.style.top=t.y+'px';
     d.classList.toggle('active',id===activeId); d.classList.toggle('selected',id===selected); d.classList.toggle('ghost',!!t.hidden); d.classList.toggle('down',t.hp<=0); d.classList.toggle('locked',!canMove(id));
     const hpPct=Math.max(0,Math.min(100,100*t.hp/t.hpMax));
-    d.innerHTML=`${(t.tokimg||t.img)?'':t.short}<span class="lbl">${t.name}</span>${condHtml(t,true)}${(IS_GM||t.kind==='pg'||t.owner===me)?`<span class="hpr"><i class="${hpPct<=30?'low':''}" style="width:${hpPct}%"></i></span>`:''}`;
+    let shortLabel=t.name;
+    if(t.kind==='pg') shortLabel=t.name.split(' ')[0];
+    else if(/armigero vincolato/i.test(t.name)){ labelCount.arm=(labelCount.arm||0)+1; shortLabel='Arm. '+labelCount.arm; }
+    else if(/ultimo custode/i.test(t.name)) shortLabel='Custode';
+    else if(/brak/i.test(t.name)) shortLabel='Brak';
+    else if(/^pilone/i.test(t.name)) shortLabel='Pilone';
+    else if(t.name.length>12) shortLabel=t.short||t.name.slice(0,10)+'…';
+    d.innerHTML=`${(t.tokimg||t.img)?'':t.short}<span class="lbl"><span class="short">${shortLabel}</span><span class="full">${t.name}</span></span>${condHtml(t,true)}${(IS_GM||t.kind==='pg'||t.owner===me)?`<span class="hpr"><i class="${hpPct<=30?'low':''}" style="width:${hpPct}%"></i></span>`:''}`;
     d.addEventListener('pointerdown',e=>startDrag(e,id));
     tokensEl.appendChild(d);
   }
