@@ -334,6 +334,9 @@ body.isgm #app{grid-template-columns:224px 1fr 300px 330px}
 .ev .pass{color:#9FD08A;font-weight:700}.ev .fail{color:#F0B7AE;font-weight:700}
 .ask{border:1px solid var(--gold);border-radius:6px;padding:12px;background:linear-gradient(180deg,rgba(201,162,74,.15),transparent)}
 .ask .big{font-family:var(--display);font-size:19px;margin:4px 0 10px}
+.request-notice{margin:8px 0 12px;padding:12px;border:1px solid var(--gold);border-radius:8px;background:linear-gradient(135deg,rgba(201,162,74,.24),rgba(201,162,74,.06));box-shadow:0 0 0 0 rgba(201,162,74,.45);animation:requestPulse 1.8s ease-in-out infinite}
+.request-notice .big{font-family:var(--display);font-size:20px;color:var(--ink);margin:3px 0 9px}
+@keyframes requestPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,74,.35)}50%{box-shadow:0 0 0 5px rgba(201,162,74,0)}}
 .note{font-size:17px;color:var(--ink-dim)}
 .tgtlist{display:flex;flex-direction:column;gap:4px;max-height:50vh;overflow:auto}
 .tgt{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;cursor:pointer;background:var(--panel2)}
@@ -506,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v87</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v88</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -601,6 +604,7 @@ button.mini{font-size:15px;padding:4px 8px}
 
     <div class="sec grow" id="secLog">
       <div class="row split"><h2>Registro</h2><span class="row" style="gap:4px"><button class="mini" id="btnOpenArchive" title="Sessioni archiviate">Archivio</button><button class="mini gm" id="btnArchive" title="Chiude la sessione e la conserva nell’archivio">Archivia</button><button class="mini gm" id="btnClearLog">Svuota</button></span></div>
+      <div id="requestNotice" class="request-notice pl hidden"><div class="eyebrow">Richiesta del Master</div><div class="big" id="requestNoticeText"></div><button class="primary" id="requestNoticeRoll" style="width:100%">Tira ora</button></div>
       <div id="log"></div>
     </div>
   </aside>
@@ -1143,6 +1147,14 @@ function dice3dSync(){
   if(D3.seen.size>400){ D3.seen=new Set([...D3.seen].slice(-200)); }
 }
 function dice3dSetSound(on){ try{ localStorage.setItem('dadi3dSuono',on?'on':'off'); }catch(_){} if(D3.box){ D3.box.sounds=on; if(on) D3.box.loadSounds().catch(()=>{}); } }
+let announcedRequestKey='';
+function announcePlayerRequest(q){
+  if(IS_GM||!me||!q||!q.targets||!q.targets.includes(me)) return;
+  const key=me+'|'+q.id; if(announcedRequestKey===key) return; announcedRequestKey=key;
+  const t=S.tokens[me], mod=t?.mods?.[q.skill]??0;
+  openModal(`<div class="eyebrow">Richiesta del Master</div><h2 class="big">Tira ${q.skill}</h2><p class="lore">Il Master ti ha chiesto una prova. Il risultato verrà inserito automaticamente nel Registro.</p><button class="primary" id="requestPopupRoll" style="width:100%;font-size:18px">Tira ${q.skill} · d20 ${mod>=0?'+':'−'}${Math.abs(mod)}</button>`,'poibox');
+  document.getElementById('requestPopupRoll').onclick=()=>{ closeModal(); doRoll(q.skill,q.dc,q.id); };
+}
 function render(){
   if(!READY) return;
   dice3dSync();
@@ -1169,7 +1181,8 @@ function render(){
     renderActions(document.getElementById('actions'),me);
     const asked=S.request&&me&&S.request.targets.includes(me);
     document.getElementById('askBox').classList.toggle('hidden',!asked);
-    if(asked){ const mod=S.tokens[me].mods[S.request.skill]??0; document.getElementById('askTxt').textContent=S.request.skill; document.getElementById('btnRoll').textContent=`Tira ${S.request.skill} (d20 ${mod>=0?'+':'−'}${Math.abs(mod)})`; }
+    const notice=document.getElementById('requestNotice'); notice.classList.toggle('hidden',!asked);
+    if(asked){ const q=S.request, mod=S.tokens[me].mods[q.skill]??0; document.getElementById('askTxt').textContent=q.skill; document.getElementById('btnRoll').textContent=`Tira ${q.skill} (d20 ${mod>=0?'+':'−'}${Math.abs(mod)})`; document.getElementById('requestNoticeText').textContent=`Prova di ${q.skill}`; const nb=document.getElementById('requestNoticeRoll'); nb.textContent=`Tira ${q.skill} · d20 ${mod>=0?'+':'−'}${Math.abs(mod)}`; nb.onclick=()=>doRoll(q.skill,q.dc,q.id); announcePlayerRequest(q); }
     document.getElementById('btnFree').disabled=!me;
     const dead=pc&&pc.hp<=0&&!(pc.ds&&pc.ds.stable); document.getElementById('dsBox').classList.toggle('hidden',!dead); if(dead){ const d=pc.ds||{s:0,f:0}; document.getElementById('dsTxt').textContent=`Successi ${d.s}/3 · Fallimenti ${d.f}/3`; }
   }

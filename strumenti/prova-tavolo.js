@@ -101,6 +101,19 @@ const file = path.resolve(process.argv[2] || 'index.html');
         } catch (e) { rotte.push('PDI 14/15 e ritratti → ' + e.name + ': ' + e.message); }
       }
 
+      if (!IS_GM) {
+        provati++;
+        try {
+          closeModal(); announcedRequestKey = '';
+          S.request = { id: 'test-richiesta', skill: 'Percezione', dc: 13, targets: [me] };
+          render();
+          const notice = document.getElementById('requestNotice');
+          if (!notice || notice.classList.contains('hidden') || notice.parentElement?.id !== 'secLog') rotte.push('Richiesta prova → avviso non visibile accanto al Registro');
+          if (document.getElementById('modal').style.display !== 'flex' || !document.getElementById('requestPopupRoll')) rotte.push('Richiesta prova → popup non mostrato al giocatore');
+          closeModal(); S.request = null; render();
+        } catch (e) { rotte.push('Richiesta prova giocatore → ' + e.name + ': ' + e.message); }
+      }
+
       // Compendio: il tasto vero deve aprire il pannello a tre colonne (bug v45: il tasto puntava alla funzione vecchia)
       provati++;
       try { closeModal(); document.getElementById('btnComp').click(); if(!document.querySelector('.c3')) rotte.push('Compendio → il tasto apre la cornice vecchia, non il pannello a tre colonne'); closeModal(); }
