@@ -506,7 +506,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v82</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v83</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -668,6 +668,15 @@ function normalize(s){
   if(typeof s.round!=='number') s.round=1;
   if(typeof s.turn!=='number') s.turn=0;
   if(typeof s.gmNotes!=='string') s.gmNotes='';
+  const vhaerun=s.tokens.brak;
+  if(vhaerun&&vhaerun.hpMax===68){
+    const ratio=Math.max(0,Math.min(1,(Number(vhaerun.hp)||68)/68));
+    Object.assign(vhaerun,{name:'Vhaerun, comandante Brak',short:'V',hp:Math.round(110*ratio),hpMax:110,ac:16,
+      actions:[{n:'Ascia pesante',atk:8,dmg:'1d12+5'},{n:"Secondo colpo d'ascia",atk:8,dmg:'1d12+5'},{n:'Carica (+2d8 se si muove 3 m in linea)',atk:8,dmg:'1d12+5+2d8'},{n:'Spinta / Presa (Atletica +8)'},{n:'Urlo di comando (1 volta): TS Sag 14 o Spaventato per 1 minuto'}],
+      note:'GS 5 · 1.800 PE · CA 16 · PF 110 · Vel 9 m (3 m nei primi due round per le catene) · Non si allontana oltre 6 m dalla porta.',
+      tac:"Parla finché nessuno entra nel cerchio, lo attacca o tenta di passare la porta. Poi usa due colpi d'ascia e attacca chi è più vicino alla porta. Se il gruppo si ritira, torna a sedersi.",
+      lines:['«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»','«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun.»','«È andata via. La voce.»']});
+  }
   return s;
 }
 let S = normalize(structuredClone(DEFAULT_STATE));
@@ -1262,7 +1271,7 @@ const SHEETS = {
 /* ===== BESTIARIO DI EA (dagli handout; le voci segnate PROPOSTA sono da ratificare) ===== */
 const BESTIARIO = [
  {id:'armigero',name:'Armigero Vincolato',short:'A',color:'#8C7A5A',hp:22,ac:17,init:1,size:1,actions:[{n:'Lancia',atk:4,dmg:'1d8+2'},{n:'Lancia in formazione (+1d4)',atk:4,dmg:'1d8+2+1d4'},{n:'Lancia a due mani',atk:4,dmg:'1d10+2'},{n:'Spinta con lo scudo (Atletica +4)'}],note:'GS 1/2–1 · Immune: veleno, charme, paura, sonno · Non parla, non insegue oltre la caserma. FORMAZIONE: con ≥3 adiacenti, +2 CA e +1d4 danni.',src:'Sotto Bëllindë',tac:"Inerti finché qualcuno supera la linea. Poi si muovono come un solo corpo: al primo round si allineano (tre adiacenti) e avanzano insieme di 7,5 m; dal secondo attaccano di lancia il bersaglio più vicino alla schiera, mai sparpagliandosi. Se uno viene spinto fuori dalla formazione, nel suo turno rientra invece di attaccare (Riallineamento). Non inseguono fuori dalla caserma: sulla soglia si fermano e tornano al muro.",lines:["Nessuna parola. Solo il ritmo: sei lance che battono il pavimento insieme.", "Quando la formazione si spezza, un rumore di giunture che si cercano."]},
- {id:'brak',name:'Brak Vincolato',short:'B',color:'#7A5A3A',hp:68,ac:14,init:0,size:2,actions:[{n:'Arma pesante',atk:6,dmg:'2d8+4'},{n:'Carica (+2d8)',atk:6,dmg:'2d8+4+2d8'},{n:'Spallata',atk:6,dmg:'2d4+4'},{n:'Spinta / Presa (Atletica +6)'}],note:'GS 3–4 · Vel 9 m · Consegna: non si allontana oltre 6 m dalla porta. Sciogliere il vincolo evita lo scontro.',src:'Sotto Bëllindë',tac:"Finché nessuno supera il segno nel pavimento resta seduto. Al primo passo oltre il segno: si alza, prende l’arma, e nel primo turno carica il più vicino (Carica +2d8). Poi ogni turno attacca chi è più vicino alla porta, mai chi è lontano da essa: la porta è tutto. Se qualcuno prova a passare la porta, usa la spinta per rimetterlo indietro. Non insegue oltre 6 m dalla porta: se arretrate, torna e si siede. Se il vincolo viene spezzato, si ferma a metà gesto.",lines:["«Proteggi… questa… porta.» (con la voce di chi ripete, non di chi pensa)", "Un ringhio basso quando qualcuno tocca le catene.", "Quando il vincolo si spezza: guarda la porta, guarda voi, e se ne va senza una parola."]},
+ {id:'brak',name:'Vhaerun, comandante Brak',short:'V',color:'#7A5A3A',hp:110,ac:16,init:0,size:2,actions:[{n:'Ascia pesante',atk:8,dmg:'1d12+5'},{n:"Secondo colpo d'ascia",atk:8,dmg:'1d12+5'},{n:'Carica (+2d8)',atk:8,dmg:'1d12+5+2d8'},{n:'Spinta / Presa (Atletica +8)'},{n:'Urlo di comando (TS Sag 14)'}],note:'GS 5 · 1.800 PE · Vel 9 m (3 m nei primi due round per le catene) · TS For +8, Sag +3 · Spaventato 1 minuto con Urlo di comando, 1 volta · Non si allontana oltre 6 m dalla porta.',src:'Sotto Bëllindë',tac:"Parla finché nessuno entra nel cerchio, lo attacca o tenta di passare la porta. Poi usa due colpi d'ascia e attacca chi è più vicino alla porta. Se il gruppo esce dal cerchio e dal raggio della porta, torna a sedersi: lo scontro può sempre fermarsi. Spegnere il disco annulla l'ordine ma non apre il collare.",lines:["«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»", "«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun.»", "Quando il vincolo si spezza: «È andata via. La voce.»"]},
  {id:'brak_guerriero',name:'Brak (guerriero della Guerra)',short:'B',color:'#6E4A2A',hp:59,ac:13,init:1,size:2,actions:[{n:'Ascia bipenne',atk:6,dmg:'1d12+4'},{n:'Giavellotto',atk:6,dmg:'1d6+4'},{n:'Aggressivo: si avvicina di 9 m con azione bonus'}],note:'PROPOSTA (orco → Brak, elfi forgiati dall’Abisso). GS 2. Vedi compendio delle razze, cap. VIII.',src:'Compendio delle razze',tac:"Aggressivo: azione bonus per avvicinarsi di 9 m, poi ascia sul più debole in vista. Combatte fino alla morte se ha un capo che lo guarda; senza capo, sotto un terzo dei PF fugge.",lines:["Urla in una lingua che era elfica e non lo è più."]},
  {id:'custode',name:'Custode dell’Ultimo Ordine',short:'C',color:'#5B8FA8',hp:150,ac:18,init:2,size:2,actions:[{n:'Multiattacco: 2 × Lama d’ordinanza'},{n:'Lama d’ordinanza',atk:7,dmg:'1d10+4'},{n:'Leggendaria: Attacco',atk:7,dmg:'1d10+4'},{n:'Leggendaria: comando di un Pilone attivo'},{n:'Leggendaria: spostamento 6 m senza AdO'},{n:'ORDINE: FERMO (TS Sag 14 → velocità 0)'},{n:'ORDINE: INDIETRO (TS Sag 14 → spinto 6 m)'},{n:'ORDINE: COLPISCI (TS Sag 14 → reazione: attacca un alleato)'},{n:'Fase II: rigenera 10 PF',dmg:'10'}],note:'Boss. 3 azioni leggendarie/round · Immune: charme, paura, sfinimento · Fase II a metà PF.',src:'Il Quarto Sigillo',tac:"Non attacca a vista: ascolta, chiede l’ordine di accesso, avverte. Al primo round di scontro: multiattacco sul personaggio in armatura più pesante (riconosce il rango) e ORDINE: FERMO sull’incantatore più lontano. Ogni round usa le tre azioni leggendarie a fine turno altrui: un attacco a chi si è appena avvicinato, un ordine dal Pilone acceso più vicino ai personaggi, uno spostamento per restare tra il gruppo e il Sigillo. Non lascia mai il cristallo scoperto. A metà PF (Fase II) il ritmo accelera: gli ordini arrivano gratis a inizio round e rigenera 10 PF finché un Pilone è acceso — dì ai giocatori che i fili di luce corrono verso i piloni.",lines:["«Alt.» «Identificatevi.»", "«Ordine di accesso?» «Allora tornate indietro.»", "«Ultimo avvertimento.»", "In Fase II, con voce che non è più solo sua: «Il conteggio… ricomincia.»", "Sconfitto: «L’ordine… è finito.»"]},
  {id:'pilone',name:'Pilone del Comando',short:'P',color:'#6E6E8C',hp:25,ac:15,init:-5,size:1,noInit:true,actions:[],note:'Oggetto. CA 15, PF 25, immune veleno/psichico. Spento anche col gesto dell’abdicazione (nessun tiro) o Dissolvi Magie CD 15.',src:'Il Quarto Sigillo',tac:"Non agisce da solo: è il Custode a comandarlo (azione leggendaria) o, in Fase II, si attiva da sé a inizio round. Ogni Pilone impartisce un solo ordine, sempre lo stesso. Spento (danni, gesto dell’abdicazione, Dissolvi Magie), quell’ordine sparisce per sempre.",lines:["Una voce di pietra, senza bocca: «FERMO.» / «INDIETRO.» / «COLPISCI.»"]},
@@ -1731,10 +1740,313 @@ const POIS = [
      }
    ]
  },
- {id:'rilievi',kind:'enigma',x:705,y:555,title:'I rilievi della Sala delle Ordinanze',text:'Le pareti sono coperte di rilievi: comandante, ufficiali, soldati. Ogni scena di obbedienza termina in una sconfitta: schiere perfette che marciano dentro il disastro. L’ultimo rilievo è diverso: il comandante depone il simbolo del rango, e tre persone azionano tre dispositivi insieme. Sotto, un’iscrizione: «L’ordine piega.» «Il giuramento lega soltanto chi lo pronuncia.»',gm:'Area 3 — puzzle: tre comandi attivati contemporaneamente, nessuno può dare l’ordine agli altri (il dispositivo si blocca). Storia/Religione CD 14 dà solo un indizio interpretativo. Apre le aree profonde e insegna il rito finale.',skill:'Storia',dc:14,ok:'Riconosce nel gesto del comandante che depone il rango un’abdicazione rituale dell’epoca della Guerra: tre volontà libere che scelgono lo stesso istante. È l’indizio: il meccanismo non si comanda, si condivide.',ko:'Legge scene di battaglia e di obbedienza, nulla di più. Il puzzle resta da capire al tavolo: nessun tiro lo risolve.'},
- {id:'catene',kind:'scontro',x:315,y:435,title:'Le catene',text:'Catene spesse quanto un braccio partono dai quattro angoli e convergono su una creatura seduta davanti alla porta. Per un momento credete che sia morta. Poi il petto si muove. Una volta. Lentamente.',gm:'Area 4 — Il Brak. Oltre il segno nel pavimento apre gli occhi, si alza, prende l’arma. Ordine ricevuto due secoli fa: «PROTEGGI QUESTA PORTA». Le catene reggono 2 round. Spezzare il vincolo è la soluzione migliore: guarda la porta, guarda loro, se ne va.',skill:'Intuizione',dc:13,ok:'La creatura non è ostile: è in attesa. Esegue un ordine antico e non guarda voi, guarda la porta. Sciogliere quell’ordine potrebbe bastare.',ko:'Vede solo un mostro incatenato pronto a scattare. Se oltrepassa il segno, il Brak si alza e prende l’arma.'},
- {id:'memorie',kind:'lore',x:435,y:765,title:'La Camera delle Memorie',text:'Nicchie basse lungo le pareti, e in ognuna oggetti ordinati con cura: un elmo, una lettera mai spedita, una lancia spezzata a metà. Chi li tocca sente il freddo di una notte di due secoli fa.',gm:'Area 5 — frammenti della Guerra delle Due Lune. Lore, nessun tiro. Se vuoi un incontro: uno Spettro della Guerra (bestiario).',skill:'Religione',dc:14,ok:'Riconosce oggetti votivi dell’Alleanza: chi li ha lasciati qui non li ha abbandonati, li ha consegnati. Frammenti della Guerra delle Due Lune, e un nome inciso: Cyrius Meren.',ko:'Vede reliquie di soldati morti da secoli. Toccarle dà solo freddo.'},
- {id:'micuccio',kind:'persona',x:645,y:795,title:'Il ragazzo seduto contro il muro',text:'All’inizio sembra una statua. Un ragazzo. Seduto contro il muro. Le mani sulle ginocchia. Gli occhi aperti. Poi uno degli occhi si muove. Vi guarda.',gm:'Area 6 — Micuccio, il ragazzo che tre anni fa non uscì. «Non posso.» «Andare.» «Ha detto di restare.» Il comando non è un charme: Dissolvi Magie lo indebolisce, liberarlo richiede spezzare la runa della camera (Individuazione del Magico) o purificare il Sigillo. Trascinarlo fuori a forza lo fa soffrire: mai ucciderlo per questo. Dopo la liberazione collassa: richiede cure.',img:'ghost',skill:'Medicina',dc:13,ok:'Il ragazzo non mangia da tempo eppure vive: qualcosa lo mantiene. Non è malattia, è vincolo. Trascinarlo fuori con la forza lo farebbe soffrire.',ko:'Sembra un ragazzo denutrito e in stato di shock: portarlo via a braccia pare la cosa giusta, e non lo è.'},
+ {
+   "schemaVersion": 2,
+   "id": "catene",
+   "kind": "scontro",
+   "title": "La Prigione del Brak",
+   "visibility": "evident",
+   "legacyPosition": {"x": 315, "y": 435},
+   "discovery": {"enabled": false},
+   "image": "img/17453c94db19.jpg",
+   "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+   "text": "Una stanza quasi quadrata. Il pavimento è fatto di lastre disposte a cerchio, sempre più piccole verso il centro.\n\nDai quattro angoli partono quattro catene, grosse quanto un braccio. Si incrociano al centro, su un collare di ferro.\n\nE dentro il collare c'è qualcuno, seduto a terra.\n\nEnorme. Pelle grigio-verde, zanne, spalle come una porta. Un'ascia pesante sulle ginocchia. Addosso i resti di un'armatura scura, e sul petto un'insegna grattata via.\n\nMa il viso non è quello di una bestia. Gli zigomi sono alti. Le orecchie sono lunghe e appuntite, tagliate a metà.\n\nHa gli occhi aperti. Non guarda voi. Guarda il passaggio in basso a destra.\n\nPoi parla. Una voce bassa, con un accento che non avete mai sentito.\n\n«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»",
+   "gm": "Vhaerun è un Brak. Per i Celamanti era il Primo Strumento della Terza Schiera, comandante delle loro orde nella Guerra delle Due Lune. L'Ultimo Custode lo sconfisse faccia a faccia e, invece di ucciderlo, lo incatenò qui imponendogli attraverso il Sigillo un solo ordine: «PROTEGGI QUESTA PORTA».\n\nL'ordine ha la voce del Custode. Vhaerun la sente a ogni battito del ritmo da duecento anni. Con una sola parola nella testa per tanto tempo, l'obbedienza dei Celamanti si è consumata e la memoria gli è tornata: sa di essere stato un elfo, forse l'unico Brak vivo che lo sappia.\n\nIl disco di metallo accanto alla porta porta l'ordine; il collare è ferro vero, con una serratura antica. Spegnere l'ordine non apre il collare.\n\nIl cerchio è l'anello più interno di lastre. Entrarci, attaccarlo o tentare di passare la porta mentre il disco pulsa fa partire lo scontro. Fuori dal cerchio si può parlare quanto si vuole. Vhaerun vuole essere liberato o ucciso, non restare qui.\n\nRegola del dialogo: dice soltanto ciò che ha visto e sentito. Non nomina il Custode, il Sigillo o persone che i PG non hanno ancora incontrato.",
+   "modules": [
+     {
+       "id": "prova_forza",
+       "type": "focus",
+       "title": "Focus 1 — La prova della catena",
+       "text": "Prima di rispondere, Vhaerun sposta l'ascia e allunga una catena fuori dal cerchio.\n\n«Non parlo con chi non conosco. Prendete la catena. Tirate. Se mi spostate, rispondo.»\n\nVhaerun ha +7. Un campione alla volta, al meglio di tre tiri. Il gruppo può provare con più campioni.\n\nIl PG vince: Vhaerun scivola di un palmo. «Bene. Chiedete.» Risponde volentieri, senza prezzo.\n\nIl PG perde: «Deboli. Ma siete i primi da tanto tempo. Chiedete lo stesso.» Ogni risposta costa una notizia vera dal mondo di sopra.\n\n20 naturale: Vhaerun ride, chiede il nome del PG e da quel momento parla soltanto con lui."
+     },
+     {
+       "id": "dialogo",
+       "type": "focus",
+       "title": "Focus 2 — Parlare con Vhaerun",
+       "text": "Chi sei?\n\n«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun. Usate quello. Fa male sentirlo. Va bene che faccia male.»\n\nCosa sei?\n\n«I vostri libri dicono che siamo bestie? Bene. Così è più facile. Anch'io lo dicevo dei vostri.»\n\nPerché sei incatenato?\n\n«Ero un comandante. Ho perso. Chi mi ha battuto non mi ha ucciso: mi ha messo qui, e nella testa una parola sola. E la parola ha la sua voce. Tutti i giorni. Da allora.»\n\nChi ti ha messo qui?\n\n«Un comandante dei vostri. L'ho combattuto, faccia a faccia. Poi è sceso più in basso, e non l'ho mai sentito tornare. Ma lo sento parlare. Ogni volta che il ritmo batte.»\n\nDa quanto sei qui?\n\n«Da quando c'era la guerra. Contate voi.»\n\nTi ricordi di prima?\n\n«Con una parola sola in testa per tanto tempo, c'è stato posto per il resto. È tornato piano. Un fiume. Una donna che cantava. Le mie orecchie, prima che le tagliassero.»\n\nCosa proteggi?\n\n«Quella porta. Non so cosa c'è dietro. Non l'ho mai saputo. Me l'hanno detto e basta.»\n\nCos'è questo posto? Il ritmo?\n\n«È il posto dove i vostri davano ordini. Una volta ne obbedivano a migliaia, qui sotto. Adesso obbedisco solo io.»\n\nChi ha murato i passaggi?\n\n«Non li ho visti. Li ho sentiti. Due. Uno camminava leggero e aveva paura. L'altro no. Pietre, per tre notti. Qui non sono entrati.»\n\nC'è qualcun altro qui sotto?\n\n«Qualcuno respira. Piano. Da qualche parte, oltre queste pareti. Da anni. Non so chi.»\n\nCosa vuoi?\n\n«Liberatemi o uccidetemi. Ma non lasciatemi qui.»\n\nLe sue domande: «Chi ha vinto?» «I Brak ci sono ancora? Sono liberi?» Le Orde Libere del nord sono per lui una speranza; le Orde di Gridraz, che vivono soltanto di guerra, un lutto."
+     },
+     {
+       "id": "intuizione",
+       "type": "check",
+       "focus": "Focus 3 — Capire Vhaerun",
+       "skill": "Intuizione",
+       "dc": 13,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Un mostro incatenato, pronto a scattare."},
+         {"kind": "failure", "min": 5, "max": 12, "text": "Parla come un soldato. Vi misura."},
+         {"kind": "baseSuccess", "min": 13, "max": 15, "text": "Non è ostile. Sta eseguendo un ordine che odia."},
+         {"kind": "fullSuccess", "min": 16, "max": 19, "text": "Non mente. Ha paura di una cosa sola: che ve ne andiate senza decidere."},
+         {"kind": "natural20", "text": "Quando dice il suo nome, per un istante la voce cambia: più alta, più leggera. È la voce di qualcun altro, di prima."}
+       ]
+     },
+     {
+       "id": "disco",
+       "type": "check",
+       "focus": "Focus 4 — Il disco di metallo",
+       "skill": "Indagare o Arcano",
+       "dc": 14,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 5, "text": "Un disco di metallo, come quelli della galleria ma più grande."},
+         {"kind": "failure", "min": 6, "max": 13, "text": "Pulsa al ritmo, e le catene vibrano con lui."},
+         {"kind": "baseSuccess", "min": 14, "max": 16, "text": "Non tiene il corpo. Tiene la volontà: gli ripete di continuo lo stesso ordine."},
+         {"kind": "fullSuccess", "min": 17, "max": 19, "text": "Se il disco tace, l'ordine si spegne. Il collare no."},
+         {"kind": "natural20", "text": "Il disco non crea l'ordine: lo riceve da più in basso, oltre la porta di pietra, e lo ripete con la voce di qualcuno."}
+       ]
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 5 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nVhaerun è avvolto di filamenti. Non vengono dalle catene: partono dal disco accanto alla porta e gli arrivano dritti alla testa. Dal disco, un filo più spesso scende nel pavimento, verso il basso."
+     },
+     {
+       "id": "liberare",
+       "type": "focus",
+       "title": "Focus 6 — Liberare Vhaerun",
+       "text": "Spegnere l'ordine non richiede prove. Basta spaccare o zittire il disco, usare il gesto dell'abdicazione imparato nella Sala delle Ordinanze, oppure purificare il Sigillo o uccidere l'Ultimo Custode.\n\nVhaerun chiude gli occhi. «È andata via. La voce.»\n\nIl collare va aperto a parte. Un fallimento costa soltanto tempo; con un successo la serratura cede e le catene cadono.\n\nSe qualcuno invece gli ordina di andarsene, obbedisce, ma è soltanto un padrone nuovo al posto di quello vecchio. «Un'altra voce. Bene. Almeno questa ha una faccia.»"
+     },
+     {
+       "id": "scontro",
+       "type": "focus",
+       "title": "Scontro — Vhaerun, comandante Brak",
+       "text": "Lo scontro parte se qualcuno entra nel cerchio, lo attacca o prova a passare la porta mentre il disco pulsa. Vhaerun si alza, prende l'ascia e dice: «Vi avevo detto di fermarvi.»\n\nGS 5, 1.800 PE. 110 PF, CA 16, velocità 9 m. For +5, Cos +4. TS For +8, Sag +3. Multiattacco: due colpi d'ascia, +8, 1d12+5 ciascuno. Carica: dopo almeno 3 m in linea retta, il primo colpo infligge +2d8. Urlo di comando, una volta: TS Saggezza CD 14 o Spaventato per 1 minuto. Spinta e Presa: Atletica +8.\n\nColpisce chi è più vicino alla porta e non se ne allontana oltre 6 m. Le catene gli danno velocità 3 m nei primi due round. Se il gruppo esce dal cerchio e dal raggio della porta, torna a sedersi: ci si può sempre fermare e parlare."
+     },
+     {
+       "id": "exp",
+       "type": "focus",
+       "title": "EXP",
+       "text": "Vhaerun liberato o sconfitto: 1.800 PE, cioè 360 a testa per 5 PG. Se viene lasciato incatenato: niente."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "text": "Liberato:\n\nVhaerun si alza senza catene. È più alto di quanto sembrava. Si tocca il collo dove c'era il ferro.\n\n«Andate dove dovete andare. Io...» Guarda la porta, poi il corridoio da cui siete venuti. «Io non so dove si va, quando nessuno te lo dice.»\n\nOrdine spento, collare ancora chiuso:\n\n«La voce se n'è andata. Il ferro no.»\n\nUcciso:\n\nVhaerun cade sul cerchio. Prima di chiudere gli occhi dice una parola in una lingua sconosciuta. Il disco continua a pulsare.\n\nLasciato lì:\n\n«Tornerete. Lo dicono tutti.»\n\nSe tornano dopo il Sigillo: Vhaerun è in piedi fin dove le catene lo consentono. «Ha smesso di parlare.» Una pausa. «È morto?»\n\nChe cosa fate?"
+     }
+   ]
+ },
+ {
+   "schemaVersion": 2,
+   "id": "rilievi",
+   "kind": "enigma",
+   "title": "La Sala delle Ordinanze",
+   "visibility": "evident",
+   "legacyPosition": {"x": 705, "y": 555},
+   "discovery": {"enabled": false},
+   "image": "img/df4aeaf8bb3f.jpg",
+   "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+   "text": "La sala è ovale, e per la prima volta qui sotto le pareti non sono nude.\n\nSono coperte di rilievi scolpiti, sei grandi riquadri di pietra, tre per parte. Soldati, ufficiali, un comandante.\n\nAl centro del pavimento, in fila, ci sono tre dispositivi rotondi di bronzo. I due ai lati hanno una sbarra per girarli. Quello in mezzo è più grande, fatto di anelli uno dentro l'altro, e al centro ha un incavo vuoto.\n\nSotto l'ultimo rilievo corre un'iscrizione.\n\nIl ritmo, qui, si sente appena.",
+   "gm": "Questa sala sblocca la Porta di Pietra e insegna il rito finale per il Sigillo: cooperazione libera, non obbedienza.\n\nIl meccanismo richiede che qualcuno deponga nell'incavo centrale un simbolo del proprio rango; poi tre persone devono girare i dispositivi nello stesso istante. Nessuno deve ordinare agli altri di farlo. Se un personaggio comanda o se usano il TAC per sincronizzarsi, i dispositivi si bloccano: hanno obbedito al Sigillo.\n\nFunziona tutto ciò che nasce da una scelta comune: contare insieme, guardarsi e respirare insieme, tenersi per mano. Se uno solo decide per gli altri, il meccanismo si blocca.\n\nDispositivo bloccato: un colpo sordo, i tre dispositivi tornano indietro e il ritmo lontano accelera. Si può riprovare senza limite. Girarne uno da solo lo fa tornare indietro appena si lascia la sbarra.",
+   "modules": [
+     {
+       "id": "rilievi",
+       "type": "focus",
+       "title": "Focus 1 — I sei rilievi",
+       "text": "Nessun tiro.\n\nPrimo: un comandante alza la mano e le schiere marciano, perfette.\n\nSecondo: marciano dentro un fiume in piena. Nessuno esce dalla fila.\n\nTerzo: marciano contro un muro di lance. Cadono in fila.\n\nQuarto: marciano verso un precipizio. Il primo è già nel vuoto, gli altri continuano.\n\nQuinto: il comandante è solo davanti a un campo di morti allineati.\n\nSesto: il comandante si toglie qualcosa dal petto e lo posa a terra. Accanto, tre figure girano tre ruote. Non si guardano come superiore e subordinati: si guardano e basta.\n\nSotto: «L'ORDINE PIEGA.» «IL GIURAMENTO LEGA SOLTANTO CHI LO PRONUNCIA.»"
+     },
+     {
+       "id": "interpretare",
+       "type": "check",
+       "focus": "Focus 2 — Interpretare i rilievi",
+       "skill": "Storia o Religione",
+       "dc": 14,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 5, "text": "Scene di guerra e di obbedienza. Un monumento militare."},
+         {"kind": "failure", "min": 6, "max": 13, "text": "Ogni scena di obbedienza finisce in una sconfitta. Qualcuno ha voluto dirlo chiaro."},
+         {"kind": "baseSuccess", "min": 14, "max": 16, "text": "Il gesto del comandante che posa l'insegna è un'abdicazione: rinuncia al comando."},
+         {"kind": "fullSuccess", "min": 17, "max": 19, "text": "Le tre figure agiscono insieme senza un capo. Il meccanismo non si comanda: si condivide."},
+         {"kind": "natural20", "text": "«Il giuramento lega soltanto chi lo pronuncia»: nessuno può obbedire per un altro. Ciascuno deve scegliere da solo, e scegliere la stessa cosa."}
+       ]
+     },
+     {
+       "id": "dispositivi",
+       "type": "check",
+       "focus": "Focus 3 — I dispositivi di bronzo",
+       "skill": "Indagare",
+       "dc": 13,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Bronzo antico, pesante. Qualcosa li collega sotto il pavimento."},
+         {"kind": "failure", "min": 5, "max": 12, "text": "Girandone uno da soli, si muove e poi torna indietro. Servono tutti e tre."},
+         {"kind": "baseSuccess", "min": 13, "max": 15, "text": "Devono muoversi nello stesso istante. Basta un attimo di ritardo e tornano indietro."},
+         {"kind": "fullSuccess", "min": 16, "max": 19, "text": "Il dispositivo centrale non gira finché l'incavo è vuoto. Ci va messo qualcosa."},
+         {"kind": "natural20", "text": "Gli anelli centrali sono consumati da molte mani, ma l'incavo non porta segni di chiavi: vi hanno posato oggetti diversi, ogni volta."}
+       ]
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 4 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nDai tre dispositivi partono filamenti sottili sotto il pavimento. Due vanno verso la galleria; quello centrale scende più in basso, verso la grande porta di pietra. Qui la trama è debole e calma. Questa sala non dà ordini."
+     },
+     {
+       "id": "risoluzione",
+       "type": "focus",
+       "title": "Risoluzione del meccanismo",
+       "text": "I tre dispositivi girano insieme, senza un suono.\n\nPoi, dalla roccia, un colpo sordo. Un secondo. Lontano, nella galleria, tutti i dischi di rame vibrano nello stesso istante.\n\nDa qualche parte più in basso, pietra scorre su pietra.\n\nL'oggetto posato nell'incavo resta lì: il dispositivo centrale si chiude sopra di lui.\n\nPer il Master: la Porta di Pietra è sbloccata. L'oggetto non si riprende. È il prezzo dell'abdicazione."
+     },
+     {
+       "id": "exp",
+       "type": "focus",
+       "title": "EXP",
+       "text": "Meccanismo risolto: 750 PE, cioè 150 a testa per 5 PG."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "text": "La sala torna silenziosa. Sul sesto riquadro il comandante continua a posare la sua insegna, per sempre.\n\nIl passaggio in basso scende verso altre stanze. Da lì arriva aria più fredda, e l'odore di qualcosa di chiuso da molto tempo.\n\nChe cosa fate?"
+     }
+   ]
+ },
+ {
+   "schemaVersion": 2,
+   "id": "micuccio",
+   "kind": "persona",
+   "title": "Micuccio",
+   "visibility": "evident",
+   "legacyPosition": {"x": 645, "y": 795},
+   "discovery": {"enabled": false},
+   "image": "img/edb0f9f727e9.jpg",
+   "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+   "text": "Una stanza piccola, quadrata. Per terra, qualche cosa lasciata lì: un rotolo di corda, una borsa di cuoio, una brocca vuota, una lanterna spenta da chissà quanto.\n\nE contro il muro, seduto, c'è un ragazzo.\n\nMagro. Pallido. La schiena dritta, le mani appoggiate sulle ginocchia, una da una parte e una dall'altra, precise. Gli occhi aperti.\n\nSui capelli e sulle spalle c'è polvere. Tanta. Come su una statua.\n\nPoi uno dei suoi occhi si muove. Vi guarda.\n\nLe labbra si muovono appena, a tempo col ritmo:\n\n«...trecentododici... trecentotredici...»",
+   "gm": "È Micuccio, il ragazzo del Borgo Vecchio sceso qui tre anni fa con Titta. Titta è fuggito senza aspettarlo; in paese credono Micuccio morto.\n\nL'ordine RESTA è legato alla stanza dalla linea chiara tracciata intorno a lui. Non è charme: lo mantiene vivo senza cibo né acqua e lo tiene fermo. La voce è quella dell'Ultimo Custode, ma Micuccio la chiama soltanto «la voce».\n\nConta i passi del ritmo da tre anni. Da quando è morto Rocco il ritmo è salito e lui conta più in fretta. La corda, la borsa, la brocca e la lanterna sono ciò che aveva portato con sé.",
+   "modules": [
+     {
+       "id": "dialogo",
+       "type": "focus",
+       "title": "Focus 1 — Parlare con Micuccio",
+       "text": "Se qualcuno gli parla o si avvicina, smette di contare. Solo gli occhi si muovono.\n\n«Non posso.»\n\nSe gli chiedono di venire via: «Andare. Non posso andare. Ha detto di restare.»\n\nChi l'ha detto? «La voce. Quella che conta.» Guarda in alto. «Adesso conta più forte.»\n\nCome ti chiami? «Micuccio.» Una lunga pausa. «Mi chiamavo.»\n\nDa quanto sei qui? «Trecentoquattordici.» È il numero del conteggio, non dei giorni.\n\nEri da solo? «Titta.» Gli occhi si riempiono. «Titta ha corso. Io no. Io ho obbedito prima di decidere.»\n\nSe nominano la famiglia o il Borgo: «Mamma sta bene?» Non inventare nomi: la famiglia non ne ha ancora nel canone."
+     },
+     {
+       "id": "medicina",
+       "type": "check",
+       "focus": "Focus 2 — Esaminare Micuccio",
+       "skill": "Medicina",
+       "dc": 13,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Un ragazzo denutrito, sotto shock. Portarlo via a braccia sembra la cosa giusta."},
+         {"kind": "failure", "min": 5, "max": 12, "text": "È debolissimo, ma il cuore batte regolare. A tempo col ritmo."},
+         {"kind": "baseSuccess", "min": 13, "max": 15, "text": "Non mangia da tempo, eppure vive. Non è malattia: qualcosa lo tiene in vita."},
+         {"kind": "fullSuccess", "min": 16, "max": 19, "text": "Qualunque cosa lo tenga, lo tiene anche fermo. Trascinarlo fuori con la forza gli farebbe male."},
+         {"kind": "natural20", "text": "Ha tre anni in più di quando è sceso, ma il corpo non li mostra. È cresciuto di pochissimo, come se qui il tempo passasse piano."}
+       ]
+     },
+     {
+       "id": "runa",
+       "type": "check",
+       "focus": "Focus 3 — La linea chiara",
+       "skill": "Indagare o Arcano",
+       "dc": 14,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 5, "text": "Una linea chiara tracciata per terra. Forse calce."},
+         {"kind": "failure", "min": 6, "max": 13, "text": "È una runa, un disegno che chiude uno spazio intorno al ragazzo."},
+         {"kind": "baseSuccess", "min": 14, "max": 16, "text": "È un ordine scritto nella pietra: tiene chi c'è dentro. Se la linea si spezza, l'ordine cade."},
+         {"kind": "fullSuccess", "min": 17, "max": 19, "text": "Spezzarla non basta a farlo stare bene: il ragazzo crollerà. Ma sarà libero."},
+         {"kind": "natural20", "text": "La runa riceve l'ordine da più in basso, come i dischi della galleria. Se il ritmo si spegnesse, questa linea morirebbe da sola."}
+       ]
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 4 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nLa linea brilla di Ammaliamento, forte. Dalla linea un filo sale fino alla testa del ragazzo. Un altro scende nel pavimento, verso il basso, dove batte il ritmo."
+     },
+     {
+       "id": "liberare",
+       "type": "focus",
+       "title": "Focus 5 — Spezzare il vincolo",
+       "text": "Nessuna prova. Basta raschiare, rompere o cancellare la linea; anche purificare il Sigillo la spegne da lontano. Dissolvi Magie non la spezza, ma permette a Micuccio di muoversi e parlare liberamente per 1 minuto.\n\nQuando il vincolo cade, Micuccio smette di contare, si guarda le mani e crolla in avanti. Respira ma non si regge: Medicina CD 10 o qualsiasi cura magica lo rende trasportabile; altrimenti va portato a braccia.\n\nSe viene trascinato fuori senza spezzare la linea, urla, gli sanguina il naso e cerca il pavimento. Oltre la porta sviene, senza morire, finché la linea non si spezza o non viene riportato dentro."
+     },
+     {
+       "id": "exp",
+       "type": "focus",
+       "title": "EXP",
+       "text": "Micuccio liberato: 750 PE, cioè 150 a testa per 5 PG."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "text": "Liberato:\n\nMicuccio respira piano tra le braccia di chi lo tiene. Dopo un po' apre gli occhi. «Il ritmo.» Una pausa. «Sta ancora contando.»\n\nDal passaggio a destra il ritmo arriva più forte che da qualunque altra parte.\n\nLasciato lì:\n\nUscendo, dietro di voi il ragazzo ricomincia a contare, piano, da dove si era fermato.\n\nChe cosa fate?"
+     }
+   ]
+ },
+ {
+   "schemaVersion": 2,
+   "id": "memorie",
+   "kind": "lore",
+   "title": "La Camera delle Memorie",
+   "visibility": "evident",
+   "legacyPosition": {"x": 435, "y": 765},
+   "discovery": {"enabled": false},
+   "image": null,
+   "imagePending": true,
+   "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a square underground memorial chamber of dressed stone, four low niches in the corners each holding a few objects laid out with care, an old helmet, a folded letter, a spear broken in half, a small worn statuette with a stub of candle, in the middle of the floor a large raised stone slab covered edge to edge with tiny carved names, nearby a tomb lid carved with the effigy of a soldier, small heaps of offerings gathered in the corners, dust, a single candle flame, deep quiet --ar 4:3",
+   "text": "Una stanza quadrata, silenziosa. Qui il ritmo si sente appena, come se la pietra lo tenesse fuori.\n\nAgli angoli, quattro nicchie basse. In ognuna ci sono pochi oggetti, messi in ordine con cura. Un elmo. Una lettera piegata. Una lancia spezzata a metà. Una statuetta consumata, con un mozzicone di candela.\n\nAl centro c'è una grande lastra di pietra, sollevata dal pavimento. È coperta da un bordo all'altro di scritte minuscole, incise.\n\nAccanto, sul coperchio di una tomba, è scolpito un soldato disteso, con le mani sulla spada.\n\nNegli angoli, a mucchietti, altre cose: fibbie, anelli, un pettine, una scarpa da bambino.\n\nNessuno le ha buttate lì. Le hanno lasciate.",
+   "gm": "È il luogo della memoria della guarnigione dell'Alleanza che stava qui sotto nella Guerra delle Due Lune. Chi è morto qui ha lasciato le sue cose; chi è sopravvissuto le ha consegnate.\n\nLa lastra centrale porta i nomi dei caduti e di chi serviva qui. Tra centinaia di nomi c'è Cyrius Meren. Qui il ritmo quasi non arriva: è l'unica stanza che il Sigillo non tocca.",
+   "modules": [
+     {
+       "id": "oggetti",
+       "type": "focus",
+       "title": "Focus 1 — Gli oggetti nelle nicchie",
+       "text": "Nessun tiro. Chi tocca un oggetto sente per un istante il freddo di una notte di due secoli fa.\n\nL'elmo: una fila di uomini spalla a spalla. Una voce dice «AVANTI» e tutti fanno un passo. Nessuno ha paura. Nessuno ha scelto.\n\nLa lettera: «Mamma, qui sotto non si sente il tempo. Il comandante dice che teniamo la porta del mondo. Io tengo il passo. Quando torno ti porto il sale. Se non torno, qualcuno ti porterà questa.» Non è mai partita.\n\nLa lancia spezzata: ferro, un grido in una lingua sconosciuta, poi la lancia si spezza tra una mano grigio-verde e una umana.\n\nLa statuetta: una donna con una luna in mano. Sotto la candela qualcuno ha pregato a lungo. Una parola: «ritorna»."
+     },
+     {
+       "id": "lastra",
+       "type": "check",
+       "focus": "Focus 2 — La lastra dei nomi",
+       "skill": "Storia",
+       "dc": 14,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 5, "text": "Nomi. Centinaia. Scritti in una grafia antica."},
+         {"kind": "failure", "min": 6, "max": 13, "text": "Sono soldati. Una croce indica i morti, un cerchio chi è tornato a casa."},
+         {"kind": "baseSuccess", "min": 14, "max": 15, "text": "Sono i nomi di una guarnigione dell'Alleanza. Le cose nelle nicchie sono state consegnate, una per una."},
+         {"kind": "fullSuccess", "min": 16, "max": 19, "text": "Fra gli ultimi nomi, uno non ha né croce né cerchio: Cyrius Meren. Non è morto qui e non è tornato a casa: è andato via."},
+         {"kind": "natural20", "text": "Accanto al nome di Cyrius Meren c'è una stella con un occhio, incisa da una mano diversa e più recente."}
+       ],
+       "gm": "Se Mattheus è presente, il nome dell'uomo che gli ha dato la custodia del Filatterio dice già abbastanza."
+     },
+     {
+       "id": "tomba",
+       "type": "check",
+       "focus": "Focus 3 — La tomba del comandante",
+       "skill": "Indagare",
+       "dc": 12,
+       "outcomes": [
+         {"kind": "criticalFailure", "min": 1, "max": 4, "text": "Un soldato scolpito in un'armatura antica."},
+         {"kind": "failure", "min": 5, "max": 11, "text": "Il coperchio non è mai stato aperto. Sotto la polvere, la pietra è intatta."},
+         {"kind": "baseSuccess", "min": 12, "max": 14, "text": "La tomba è vuota. Il coperchio è soltanto appoggiato, e sotto non c'è nessuno."},
+         {"kind": "fullSuccess", "min": 15, "max": 19, "text": "È una tomba preparata per qualcuno che non ci è mai entrato. Sul bordo è inciso un grado, non un nome: comandante."},
+         {"kind": "natural20", "text": "Sul petto della figura manca un'insegna, scalpellata via: lo stesso gesto del comandante nella Sala delle Ordinanze."}
+       ],
+       "gm": "La tomba era destinata all'Ultimo Custode, che non è mai morto. Non dirlo direttamente ai giocatori."
+     },
+     {
+       "id": "magia",
+       "type": "focus",
+       "title": "Focus 4 — Individuazione del Magico",
+       "text": "Nessun tiro.\n\nNessuna trama di comando. Solo un velo debolissimo di magia su ogni oggetto delle nicchie: il ricordo di chi li ha tenuti."
+     },
+     {
+       "id": "spettro",
+       "type": "focus",
+       "title": "Evento — Lo Spettro della Guerra",
+       "text": "Trigger: qualcuno porta via un oggetto.\n\nLa candela si piega. L'aria diventa gelida. Dal muro esce una figura trasparente in armatura antica e ripete sempre lo stesso nome.\n\nScheda: Spettro della Guerra nel Bestiario, 45 PF, CA 12, Tocco vitale +5, 3d6, passa attraverso i muri. Se l'oggetto viene rimesso al suo posto, lo spettro si ferma e rientra nel muro.\n\nUsalo soltanto se il gruppo sta andando troppo liscio: dopo c'è il Custode."
+     },
+     {
+       "id": "loot",
+       "type": "focus",
+       "title": "Loot",
+       "text": "Nulla da prendere. È il senso della stanza. Chi prende qualcosa sveglia lo spettro."
+     },
+     {
+       "id": "prosecuzione",
+       "type": "continuation",
+       "title": "Prosecuzione",
+       "text": "Uscite lasciando tutto come l'avete trovato. Dietro di voi la candela della statuetta continua a bruciare, anche se nessuno la tiene accesa da duecento anni.\n\nDal passaggio a destra, verso la stanzetta del ragazzo e oltre, il ritmo torna a farsi sentire.\n\nChe cosa fate?"
+     }
+   ]
+ },
  {id:'sigillo',kind:'boss',x:945,y:795,title:'Il Sigillo',text:'Tre piloni. Al centro un cristallo che non brilla: scandisce. Davanti al cristallo, inginocchiato, un uomo in un’armatura di un’altra epoca. Il conteggio termina. Non rallenta. Finisce.',gm:'Il cuore — CLIMAX. «Alt.» «Identificatevi.» «Ordine di accesso?» «Allora tornate indietro.» «Ultimo avvertimento.» Solo poi il ferro. Purificazione: i tre piloni spenti e riaccesi a mano, insieme, da volontà libere (CONCORDIA). Poi SCENA — L’Ultimo Custode.',skill:'Arcano',dc:15,ok:'Il cristallo non brilla: scandisce. Il conteggio non rallenta, finisce. Chi supera la prova capisce che l’uomo inginocchiato non usa il Sigillo: è il Sigillo che usa lui, e i tre piloni sono le sue mani.',ko:'Percepisce solo un’enorme pressione magica; nessuna idea su come agire finché i Piloni non parlano.'},
  {id:'murata',kind:'passaggio',x:1275,y:765,title:'La porta murata',text:'In fondo alla galleria, dove il corridoio dovrebbe continuare, una porta di ferro è stata murata dall’interno. Sulla pietra, graffi. Dall’altra parte.',gm:'SCENA — La Porta Murata (vedi handout). Uscita alternativa / retroguardia.',skill:'Indagare',dc:13,ok:'I graffi sono dall’altra parte, dal basso verso l’alto: qualcuno ha cercato di uscire, non di entrare. La malta è più recente delle pietre intorno.',ko:'Una porta murata, vecchia come tutto il resto.'},
  {
@@ -2560,7 +2872,7 @@ function openPng(p){
   const b=document.querySelector('#modal #pngShow'); if(b) b.onclick=()=>{ showToPlayers({img:p.img,title:p.name}); toast('Ritratto mostrato ai giocatori'); };
 }
 /* ---------- guida della scena (colonna del master) ---------- */
-const POI_ORDER={ sotto:['pozzo','strano_corridoio','murata_crollata','galleria_schiera','intercapedine','seconda_nicchia','porta_pietra','solchi','linea','rilievi','catene','memorie','micuccio','sigillo','murata'] };
+const POI_ORDER={ sotto:['pozzo','strano_corridoio','murata_crollata','galleria_schiera','intercapedine','seconda_nicchia','porta_pietra','solchi','linea','catene','rilievi','micuccio','memorie','sigillo','murata'] };
 const SCENE_GUIDE={
   sotto:['scenalaportamurata','transizioneladiscesa','scenaladiscesa','scenalultimocustode','scenamicuccio','aftermathritornoallaluce'],
   bellinde:['recapdallemuradimushanealbalconedaprutium','scenalarrivoabellinde','scenalachiamatainpiazza','scenailpaneamezzogiorno','scenailbandolettoadaltavoce','scenalapiazzavuoleunarisposta','scenadallaroccaallapiazza','scenaudienzaallarocca','scenafuoridallarocca','scenaleprovedavantiagisulfo','scenailfuneraledirocco','indagineilcorpodirocco','scenanunziaserrafreddamiofratellodeveandaresottoterra','scenalascopertadelclandestino','scenalaretataalfondaco','scenalinterrogatoriodiceruso','scenachiuderelaboccadiceruso','eventochiuderelaboccadiceruso','situazionelacelluladiceruso','scenalafugadiceruso','inseguimentolafugadiceruso','eventolevacuazionedellacellula','eventoilcorrierediteramum','scenafermareilcorriere','eventoilplicodivespro','eventoilquartouomoversoteramum','inseguimentosullastradaditeramum','scenailfurtodelladichiarazione','eventoilfurtodelladichiarazione','eventoilbandoditeramum','eventolanotteabellinde','scenailragazzotornato','scenaleportesichiudono','transizionelapartenzadabellinde']

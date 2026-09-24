@@ -80,6 +80,12 @@ const file = path.resolve(process.argv[2] || 'index.html');
           if (!document.getElementById('poiRemove')) rotte.push('PDI → manca il comando visibile «Rimuovi dalla mappa»');
           closeModal();
         } catch (e) { rotte.push('PDI (rimozione dalla mappa) → ' + e.name + ': ' + e.message); }
+
+        provati++;
+        for (const p of POIS.filter(x => x.schemaVersion === 2)) {
+          const errors = validatePoiDefinition(p);
+          if (errors.length) rotte.push('PDI «' + p.title + '» → ' + errors.join('; '));
+        }
       }
 
       // Compendio: il tasto vero deve aprire il pannello a tre colonne (bug v45: il tasto puntava alla funzione vecchia)
