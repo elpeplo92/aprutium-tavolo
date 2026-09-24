@@ -186,6 +186,23 @@ const file = path.resolve(process.argv[2] || 'index.html');
 
       provati++;
       try {
+        const ids=['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
+        for(const id of ids){
+          openSheet(id,'eq');
+          const cards=[...document.querySelectorAll('#modal [data-inv-card]')], text=document.querySelector('#modal .sheetbody')?.textContent||'';
+          if(cards.length<12||!text.includes('Valore')||!text.includes('Statistiche / bonus')||!document.getElementById('invSearch')) rotte.push('Zaino '+id+' → inventario incompleto o privo di dettagli e ricerca');
+        }
+        openSheet('vicarus','eq');
+        const staff=[...document.querySelectorAll('#modal [data-inv-card]')].find(x=>x.textContent.includes('Bastone di Lyaras'));
+        if(!staff||!staff.textContent.includes('Comando — 1 carica')||!staff.textContent.includes('Bastone arcano +2')) rotte.push('Zaino Vicarus → incantesimi, cariche o bonus del Bastone non visibili');
+        const search=document.getElementById('invSearch'); search.value='filatterio'; search.dispatchEvent(new Event('input'));
+        openSheet('mattheus','eq');
+        if(![...document.querySelectorAll('#modal [data-inv-card]')].some(x=>x.textContent.includes('Filatterio di Lyaras'))) rotte.push('Zaino Mattheus → manca il Filatterio');
+        sheetTab='car'; closeModal();
+      } catch (e) { rotte.push('Zaini dettagliati dei personaggi → '+e.name+': '+e.message); }
+
+      provati++;
+      try {
         const ids = ['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
         const colori = ids.map(id => dice3dTheme(id).background);
         if (new Set(colori).size !== ids.length) rotte.push('Dadi 3D → i giocatori non hanno sei colori distinti');
