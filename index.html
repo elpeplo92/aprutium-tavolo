@@ -513,7 +513,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v98</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v99</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -704,12 +704,15 @@ function normalize(s){
       tac:"Parla finché nessuno entra nel cerchio, lo attacca o tenta di passare la porta. Poi usa due colpi d'ascia e attacca chi è più vicino alla porta. Se il gruppo si ritira, torna a sedersi.",
       lines:['«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»','«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun.»','«È andata via. La voce.»']});
   }
-  if(vhaerun) vhaerun.img='img/monster-vhaerun-brak.png';
-  for(let i=1;i<=6;i++) if(s.tokens['armigero'+i]) s.tokens['armigero'+i].img='img/monster-armigero-vincolato.png';
+  if(vhaerun){ vhaerun.img='img/monster-vhaerun-brak.png'; Object.assign(vhaerun.mods||(vhaerun.mods={}),{'TS For':8,'TS Des':0,'TS Cos':4,'TS Int':1,'TS Sag':3,'TS Car':1}); }
+  for(let i=1;i<=6;i++) if(s.tokens['armigero'+i]){
+    const arm=s.tokens['armigero'+i]; arm.img='img/monster-armigero-vincolato.png';
+    Object.assign(arm.mods||(arm.mods={}),{'TS For':2,'TS Des':1,'TS Cos':2,'TS Int':-2,'TS Sag':0,'TS Car':-3});
+  }
   const custode=s.tokens.custode;
   if(custode){
     const oldMax=Number(custode.hpMax)||125, oldHp=Math.max(0,Math.min(oldMax,Number(custode.hp)||oldMax));
-    Object.assign(custode,{name:'L’Ultimo Custode',short:'C',img:'img/monster-ultimo-custode.png',hp:oldMax===125?oldHp:Math.max(0,125-(oldMax-oldHp)),hpMax:125,ac:18,mods:{...(custode.mods||{}),Iniziativa:2},
+    Object.assign(custode,{name:'L’Ultimo Custode',short:'C',img:'img/monster-ultimo-custode.png',hp:oldMax===125?oldHp:Math.max(0,125-(oldMax-oldHp)),hpMax:125,ac:18,mods:{...(custode.mods||{}),Iniziativa:2,'TS For':7,'TS Des':2,'TS Cos':7,'TS Int':1,'TS Sag':5,'TS Car':0},
       actions:[{n:'Multiattacco: 2 × Lama d’ordinanza'},{n:'Lama d’ordinanza',atk:7,dmg:'1d10+4'},{n:'Azione leggendaria — Attacco',atk:7,dmg:'1d10+4'},{n:'Azione leggendaria — Comando di un pilone (TS Sag CD 14)'},{n:'Azione leggendaria — Movimento di 6 m senza AdO'}],
       note:'GS 8 · 3.900 PE · CA 18 · PF 125 · Vel 9 m · Iniziativa +2 · competenza nei TS For, Cos e Sag · immune: affascinato, spaventato, esausto.',
       tac:'Tre azioni leggendarie per round, una alla fine del turno di un’altra creatura. FERMO: velocità 0 fino alla fine del turno seguente. INDIETRO: spinta di 6 m. COLPISCI: reazione per attaccare un alleato adiacente. A 63 PF, gli ordini dei piloni attivi scattano gratis a inizio round e recupera 10 PF se almeno un pilone è attivo. Resta fra il gruppo e il cristallo.',
@@ -720,7 +723,7 @@ function normalize(s){
   piloni.forEach((pilone,i)=>{
     if(!pilone) return;
     const oldMax=Number(pilone.hpMax)||20, oldHp=Math.max(0,Math.min(oldMax,Number(pilone.hp)||oldMax));
-    Object.assign(pilone,{name:nomiPiloni[i],hp:oldMax===20?oldHp:Math.round(20*(oldHp/oldMax)),hpMax:20,ac:15,
+    Object.assign(pilone,{name:nomiPiloni[i],hp:oldMax===20?oldHp:Math.round(20*(oldHp/oldMax)),hpMax:20,ac:15,mods:{...(pilone.mods||{}),'TS For':3,'TS Des':-5,'TS Cos':5,'TS Int':-5,'TS Sag':-5,'TS Car':-5},
       note:'CA 15 · PF 20 · immune veleno/psichico. Si spegne con danni o ruotando il rame: Arcano CD 14 o Arnesi da scasso CD 14.',
       tac:'Quando si spegne, il Custode non può più usare il suo ordine. In Fase II basta almeno un pilone attivo perché il Custode recuperi 10 PF a round.',
       lines:['La luce fredda pulsa dentro le scanalature di rame.']});
@@ -1264,7 +1267,7 @@ function render(){
     const d=document.createElement('div'); d.className='ev '+ev.kind+(ev.gm?' gmonly':'');
     if(ev.kind==='roll'){
       const dcTxt=(IS_GM&&ev.dc)?` · CD ${ev.dc} <span class="${ev.tot>=ev.dc?'pass':'fail'}">${ev.tot>=ev.dc?'riuscita':'fallita'}</span>`:'';
-      d.innerHTML=`<div class="who">${ev.who}</div><div>${ev.skill}: <span class="big">${ev.tot}</span> <span class="note">(d20 ${ev.r} ${ev.mod>=0?'+':'−'} ${Math.abs(ev.mod)}${ev.bless?` + Benedizione d4 ${ev.bless}`:''})</span>${dcTxt}</div>`;
+      d.innerHTML=`<div class="who">${ev.who}</div><div>${ev.skill}: <span class="big">${ev.tot}</span> <span class="note">(d20 ${ev.r}${ev.disadvantage&&ev.extra!=null?` / ${ev.extra}, svantaggio`:''} ${ev.mod>=0?'+':'−'} ${Math.abs(ev.mod)}${ev.bless?` + Benedizione d4 ${ev.bless}`:''})</span>${dcTxt}</div>`;
     } else if(ev.kind==='spell'){
       const atk=ev.atk!=null?`colpisce <span class="big">${ev.atk}</span> <span class="note">(d20 ${ev.r}${ev.bless?` + Benedizione d4 ${ev.bless}`:''})</span>${ev.crit?' <span class="pass">CRITICO</span>':''}`:'';
       const dmg=ev.dmg!=null?`${atk?' · ':''}danno <span class="big">${ev.crit?ev.dmg*2:ev.dmg}</span> <span class="note">(${ev.dmgTxt})</span>`:'';
@@ -1355,6 +1358,27 @@ const SPELLS = {
  'Fly':{it:'Volare',l:3,t:'Azione',r:'Contatto',d:'Per 10 minuti una creatura ottiene velocità di volo 18 m. Concentrazione.'},
  'Fireball':{it:'Palla di fuoco',l:3,t:'Azione',r:'45 m',d:'Esplosione di raggio 6 m: TS Destrezza o 8d6 fuoco, metà se supera.',dmg:'8d6'},
  'Fear':{it:'Paura',l:3,t:'Azione',r:'Personale (cono 9 m)',d:'Le creature nel cono fanno un TS Saggezza o lasciano ciò che impugnano e diventano spaventate. Concentrazione, 1 minuto.'},
+};
+
+/* Gli incantesimi che richiedono subito un tiro salvezza. Gli effetti che si
+   attivano solo dopo un attacco (punizioni, grandine di spine, soffio del
+   drago) restano fuori: il loro TS non va tirato al momento del lancio. */
+const SPELL_SAVES={
+ 'Animal Friendship':{ability:'Sag',many:false,condition:'affascinato'},
+ 'Moonbeam':{ability:'Cos',many:true,onSuccess:'half'},
+ 'Compelled Duel':{ability:'Sag',many:false},
+ "Tasha's Hideous Laughter":{ability:'Sag',many:false,conditions:['prono','incapacitato'],rounds:10},
+ 'Entangle':{ability:'For',many:true,condition:'trattenuto',rounds:10},
+ 'Sacred Flame':{ability:'Des',many:false,onSuccess:'none'},
+ 'Toll the Dead':{ability:'Sag',many:false,onSuccess:'none'},
+ 'Command':{ability:'Sag',many:false},
+ 'Inflict Wounds':{ability:'Cos',many:false,onSuccess:'half'},
+ 'Spirit Guardians':{ability:'Sag',many:true,onSuccess:'half'},
+ 'Thunderwave':{ability:'Cos',many:true,onSuccess:'half'},
+ 'Shatter':{ability:'Cos',many:true,onSuccess:'half',constructDisadvantage:true},
+ 'Zone of Truth':{ability:'Car',many:true},
+ 'Fireball':{ability:'Des',many:true,onSuccess:'half'},
+ 'Fear':{ability:'Sag',many:true,condition:'spaventato',rounds:10}
 };
 
 /* ===== SCHEDE: caratteristiche, slot, incantesimi, equipaggiamento, storia ===== */
@@ -2801,11 +2825,86 @@ function renderSheet(id){
     const rl=box.querySelector('#restLong'); if(rl) rl.onclick=()=>{ t.used={}; t.pts=0; t.hp=t.hpMax; t.lay=0; log({kind:'sys',txt:`${t.name} fa un riposo lungo: PF e slot al massimo`}); save(); renderSheet(id); };
   }
 }
+function canSpendSpellSlot(t,sp,l){
+  if(l<=0) return true;
+  t.used=t.used||{};
+  if((t.used[l]||0)>=(sp.slots[l]||0)){ toast('Nessuno slot di livello '+l); return false; }
+  return true;
+}
+function spendSpellSlot(t,l){ if(l>0){ t.used=t.used||{}; t.used[l]=(t.used[l]||0)+1; } }
+function monsterSaveMod(t,ability){
+  const skill='TS '+ability;
+  if(Number.isFinite(t?.mods?.[skill])) return t.mods[skill];
+  /* Le vecchie pedine salvate prima della v99 avevano soltanto Iniziativa.
+     Questi valori tengono affidabili anche quelle già presenti nella partita. */
+  if(/^Armigero Vincolato$/.test(t?.name||'')) return ({For:2,Des:1,Cos:2,Int:-2,Sag:0,Car:-3})[ability]??0;
+  if(/Vhaerun|Brak/i.test(t?.name||'')) return ({For:8,Des:0,Cos:4,Int:1,Sag:3,Car:1})[ability]??0;
+  if(/Ultimo Custode/i.test(t?.name||'')) return ({For:7,Des:2,Cos:7,Int:1,Sag:5,Car:0})[ability]??0;
+  if(/^Pilone/.test(t?.name||'')) return ({For:3,Des:-5,Cos:5,Int:-5,Sag:-5,Car:-5})[ability]??0;
+  return 0;
+}
+function spellEnemyTargets(){
+  const out=Object.entries(S.tokens).filter(([,x])=>x.kind==='nemico'&&x.hp>0&&(!x.hidden||IS_GM)&&(IS_GM||fogVisible(x.x,x.y)))
+    .map(([id,t])=>({id,t})).sort((a,b)=>a.t.name.localeCompare(b.t.name));
+  const totals={}; for(const o of out) totals[o.t.name]=(totals[o.t.name]||0)+1;
+  const seen={}; for(const o of out){ seen[o.t.name]=(seen[o.t.name]||0)+1; o.label=totals[o.t.name]>1?`${o.t.name} ${seen[o.t.name]}`:o.t.name; }
+  return out;
+}
+function spellDamageExpr(name,d,ids){
+  if(name==='Toll the Dead'&&ids.length===1){ const x=S.tokens[ids[0]]; if(x&&x.hp<x.hpMax) return '2d12'; }
+  return d.dmg||null;
+}
+function resolveSpellSave(id,name,ids){
+  const caster=S.tokens[id], sh=SHEETS[id], d=SPELLS[name], rule=SPELL_SAVES[name], dc=sh.spell.dc, skill='TS '+rule.ability;
+  if(!caster||!d||!rule||!ids.length) return;
+  spendSpellSlot(caster,d.l);
+  const expr=spellDamageExpr(name,d,ids), damage=expr?rollExpr(expr):null;
+  log({kind:'spell',who:caster.name,name:d.it,lvl:d.l,dmg:damage?.total,dmgTxt:damage?.parts});
+  let failed=0, passed=0;
+  for(const tid of ids){
+    const target=S.tokens[tid]; if(!target) continue;
+    const mod=monsterSaveMod(target,rule.ability), r1=d20();
+    let r=r1, extra=null;
+    if(rule.constructDisadvantage&&/Armigero|Custode|Pilone|pietra|metallo/i.test(`${target.name} ${target.note||''}`)){ extra=d20(); r=Math.min(r1,extra); }
+    const total=r+mod, ok=total>=dc; if(ok) passed++; else failed++;
+    log({kind:'roll',gm:!S.publicRolls,who:`${target.name} · ${d.it}`,skill,r,mod,tot:total,dc,extra,disadvantage:extra!=null});
+    let amount=0;
+    if(damage) amount=ok?(rule.onSuccess==='half'?Math.floor(damage.total/2):0):damage.total;
+    if(amount>0){
+      applyDamage(target,amount);
+      log({kind:'hit',txt:`${target.name} ${ok?'supera':'fallisce'} il ${skill} e subisce ${amount} danni da ${d.it} (${target.hp}/${target.hpMax})`});
+      if(target.hp<=0) log({kind:'hit',txt:`${target.name} cade a 0 PF`});
+    } else if(damage){
+      log({kind:'sys',txt:`${target.name} supera il ${skill} ed evita ${d.it}`});
+    } else {
+      log({kind:'sys',txt:`${target.name} ${ok?'supera':'fallisce'} il ${skill} contro ${d.it}`});
+    }
+    if(!ok){
+      const conds=rule.conditions||[rule.condition].filter(Boolean);
+      for(const condition of conds){ target.conds=target.conds||[]; target.conds=target.conds.filter(c=>c.n!==condition); target.conds.push({n:condition,r:rule.rounds??null,source:id,spell:name}); }
+    }
+  }
+  save(true);
+  toast(`${d.it}: ${failed} falliti, ${passed} superati`);
+}
+function openSpellSavePicker(id,name){
+  const caster=S.tokens[id], sh=SHEETS[id], d=SPELLS[name], rule=SPELL_SAVES[name]; if(!caster||!sh?.spell||!d||!rule) return;
+  if(!canSpendSpellSlot(caster,sh.spell,d.l)) return;
+  const enemies=spellEnemyTargets(), inArea=new Set(S.aoe?aoeTargets(S.aoe):[]), type=rule.many?'checkbox':'radio';
+  const rows=enemies.map(o=>`<label class="tgt"><input type="${type}" name="spellTgt" value="${o.id}" ${rule.many&&inArea.has(o.id)?'checked':''}><span class="tn">${o.label}</span><span class="note">PF ${o.t.hp}/${o.t.hpMax} · TS ${rule.ability} ${fmtMod(monsterSaveMod(o.t,rule.ability))}</span></label>`).join('');
+  openModal(`<div class="eyebrow">${caster.name} · CD ${sh.spell.dc}</div><h2 class="big">${d.it}</h2><p class="note">Scegli ${rule.many?'uno o più mostri':'il mostro'}. Il tavolo tirerà automaticamente il TS ${rule.ability}, applicherà i danni e registrerà l’esito.${S.aoe&&rule.many?' I mostri nell’area sono già selezionati.':''}</p><div class="tgtlist">${rows||'<span class="note">Nessun mostro disponibile.</span>'}</div><div class="row" style="margin-top:12px"><button class="primary" id="spellSaveGo">Lancia e tira i TS</button><button id="spellSaveOnly">Lancia senza bersagli</button><button id="spellSaveCancel">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal');
+  box.querySelector('#spellSaveCancel').onclick=closeModal;
+  box.querySelector('#spellSaveOnly').onclick=()=>{ spendSpellSlot(caster,d.l); log({kind:'spell',who:caster.name,name:d.it,lvl:d.l}); closeModal(); save(true); };
+  box.querySelector('#spellSaveGo').onclick=()=>{ const ids=[...box.querySelectorAll('[name=spellTgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un mostro'); return; } closeModal(); resolveSpellSave(id,name,ids); };
+}
 function castSpell(id,name){
   const t=S.tokens[id], sh=SHEETS[id], d=SPELLS[name]; if(!t||!sh||!d) return;
   if(d.it==='Benedizione'){ openBlessPicker(id); return; }
+  if(SPELL_SAVES[name]){ openSpellSavePicker(id,name); return; }
   const sp=sh.spell, l=d.l;
-  if(l>0){ t.used=t.used||{}; if((t.used[l]||0)>=(sp.slots[l]||0)){ toast('Nessuno slot di livello '+l); return; } t.used[l]=(t.used[l]||0)+1; }
+  if(!canSpendSpellSlot(t,sp,l)) return;
+  spendSpellSlot(t,l);
   const ev={kind:'spell',who:t.name,name:d.it,lvl:l};
   if(d.atk){ const r=d20(), bless=blessBonus(t); ev.r=r; ev.bless=bless; ev.atk=r+sp.atk+bless; ev.crit=r===20; }
   if(d.dmg){ const x=rollExpr(d.dmg); ev.dmg=x.total; ev.dmgTxt=x.parts; }

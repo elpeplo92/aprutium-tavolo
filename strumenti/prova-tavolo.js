@@ -144,6 +144,22 @@ const file = path.resolve(process.argv[2] || 'index.html');
           const bonus=blessBonus(S.tokens.maximus); if(bonus<1||bonus>4) rotte.push('Benedizione → il bonus automatico 1d4 non viene tirato');
           clearBlessing('mattheus'); mt.used=oldUsed; for(const id of ids) S.tokens[id].conds=oldConds[id]; closeModal();
         } catch (e) { rotte.push('Benedizione di Mattheus → '+e.name+': '+e.message); }
+
+        provati++;
+        try {
+          const enemy=S.tokens.armigero1, oldHp=enemy.hp, oldLog=structuredClone(S.log), oldRandom=Math.random;
+          Math.random=()=>0;
+          openSpellSavePicker('mattheus','Sacred Flame');
+          const target=document.querySelector('#modal [name="spellTgt"][value="armigero1"]');
+          if(!target||!document.getElementById('spellSaveGo')) rotte.push('TS incantesimi → scelta automatica dei mostri non disponibile');
+          else { target.checked=true; document.getElementById('spellSaveGo').click(); }
+          const saveRoll=S.log.find(e=>e.kind==='roll'&&e.who?.includes('Fiamma sacra'));
+          if(!saveRoll||saveRoll.skill!=='TS Des'||saveRoll.dc!==SHEETS.mattheus.spell.dc) rotte.push('TS incantesimi → tiro del mostro o CD dell’incantatore errati');
+          if(enemy.hp>=oldHp) rotte.push('TS incantesimi → il fallimento non applica automaticamente il danno');
+          const casterSaveSpells=Object.values(SHEETS).filter(s=>s.spell).flatMap(s=>s.spell.list).filter(n=>SPELL_SAVES[n]);
+          if(!casterSaveSpells.includes('Moonbeam')||!casterSaveSpells.includes('Sacred Flame')||!casterSaveSpells.includes('Fireball')||!casterSaveSpells.includes('Compelled Duel')) rotte.push('TS incantesimi → non copre tutti gli incantatori');
+          Math.random=oldRandom; enemy.hp=oldHp; S.log=oldLog; closeModal();
+        } catch (e) { rotte.push('Tiri salvezza automatici dei mostri → '+e.name+': '+e.message); }
       }
 
       if (!IS_GM) {
