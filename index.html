@@ -506,7 +506,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v86</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v87</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -3138,7 +3138,7 @@ function openPng(p){
   const b=document.querySelector('#modal #pngShow'); if(b) b.onclick=()=>{ showToPlayers({img:p.img,title:p.name}); toast('Ritratto mostrato ai giocatori'); };
 }
 /* ---------- guida della scena (colonna del master) ---------- */
-const POI_ORDER={ sotto:['pozzo','strano_corridoio','murata_crollata','galleria_schiera','intercapedine','seconda_nicchia','porta_pietra','solchi','linea','catene','rilievi','micuccio','memorie','sigillo','murata'] };
+const POI_ORDER={ sotto:['pozzo','strano_corridoio','murata_crollata','galleria_schiera','intercapedine','seconda_nicchia','porta_pietra','solchi','linea','catene','rilievi','micuccio','memorie','sigillo','ultimo_custode','murata'] };
 const SCENE_GUIDE={
   sotto:['scenalaportamurata','transizioneladiscesa','scenaladiscesa','scenalultimocustode','scenamicuccio','aftermathritornoallaluce'],
   bellinde:['recapdallemuradimushanealbalconedaprutium','scenalarrivoabellinde','scenalachiamatainpiazza','scenailpaneamezzogiorno','scenailbandolettoadaltavoce','scenalapiazzavuoleunarisposta','scenadallaroccaallapiazza','scenaudienzaallarocca','scenafuoridallarocca','scenaleprovedavantiagisulfo','scenailfuneraledirocco','indagineilcorpodirocco','scenanunziaserrafreddamiofratellodeveandaresottoterra','scenalascopertadelclandestino','scenalaretataalfondaco','scenalinterrogatoriodiceruso','scenachiuderelaboccadiceruso','eventochiuderelaboccadiceruso','situazionelacelluladiceruso','scenalafugadiceruso','inseguimentolafugadiceruso','eventolevacuazionedellacellula','eventoilcorrierediteramum','scenafermareilcorriere','eventoilplicodivespro','eventoilquartouomoversoteramum','inseguimentosullastradaditeramum','scenailfurtodelladichiarazione','eventoilfurtodelladichiarazione','eventoilbandoditeramum','eventolanotteabellinde','scenailragazzotornato','scenaleportesichiudono','transizionelapartenzadabellinde']

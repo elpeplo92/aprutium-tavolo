@@ -91,7 +91,7 @@ const file = path.resolve(process.argv[2] || 'index.html');
         try {
           const epilogo = POIS.find(x => x.id === 'ultimo_custode');
           const sigillo = POIS.find(x => x.id === 'sigillo');
-          if (!epilogo || epilogo.visibility !== 'hidden' || epilogo.image !== 'img/pdi-15-ultimo-custode.png') rotte.push('PDI 15 → scheda nascosta o immagine non configurata');
+          if (!epilogo || epilogo.visibility !== 'hidden' || epilogo.image !== 'img/pdi-15-ultimo-custode.png' || !POI_ORDER.sotto.includes('ultimo_custode')) rotte.push('PDI 15 → scheda nascosta, immagine o guida non configurata');
           if (!sigillo || sigillo.modules.some(x => x.id === 'timer') || !JSON.stringify(sigillo).includes('FERMO') || !JSON.stringify(sigillo).includes('63 PF')) rotte.push('PDI 14 → regole del Custode non allineate');
           if (S.tokens.custode.hpMax !== 125 || S.tokens.custode.img !== 'img/monster-ultimo-custode.png') rotte.push('Custode → statistiche o ritratto non allineati');
           if (S.tokens.brak.img !== 'img/monster-vhaerun-brak.png' || !S.tokens.armigero1.img) rotte.push('Mostri → ritratti non collegati');
