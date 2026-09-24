@@ -113,6 +113,15 @@ const file = path.resolve(process.argv[2] || 'index.html');
           if (document.getElementById('modal').style.display !== 'flex' || !document.getElementById('requestPopupRoll')) rotte.push('Richiesta prova → popup non mostrato al giocatore');
           closeModal(); S.request = null; render();
         } catch (e) { rotte.push('Richiesta prova giocatore → ' + e.name + ': ' + e.message); }
+
+        provati++;
+        try {
+          document.getElementById('dkDice').click();
+          document.getElementById('diceExpr').value = '1d6';
+          document.getElementById('diceGo').click();
+          if (S.log[0]?.who !== S.tokens[me].name || dice3dOwner(S.log[0]) !== me) rotte.push('Dadi 3D → il tiro libero perde il colore del giocatore');
+          closeModal();
+        } catch (e) { rotte.push('Dadi 3D (tiro libero del giocatore) → ' + e.name + ': ' + e.message); }
       }
 
       provati++;
@@ -134,7 +143,11 @@ const file = path.resolve(process.argv[2] || 'index.html');
 
     if (ruolo === 'master') {
       try {
-        await page.evaluate(async () => { const box = await dice3dLoad(); await box.updateConfig({ theme_customColorset: dice3dTheme('vicarus') }); });
+        await page.evaluate(async () => {
+          const box = await dice3dLoad(), theme = dice3dTheme('vicarus');
+          await box.updateConfig({ theme_customColorset: theme });
+          if (box.colorData.background !== theme.background || box.colorData.texture.name !== 'none') throw new Error('il motore non applica il colore pieno del giocatore');
+        });
       } catch (e) { esito.rotte.push('Dadi 3D → cambio colore reale non riuscito: ' + e.message); }
     }
 

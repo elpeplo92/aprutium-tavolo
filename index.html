@@ -509,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v90</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v91</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1114,11 +1114,11 @@ function renderActions(container,tokId){
    (dice-box-threejs, notazione "1d20+2d8@17,5,3": esito predeterminato). Libreria in dice/ (MIT). */
 let DICE_BUF=[], DICE_T=0;
 const D3={seen:new Set(),t0:Date.now(),box:null,loading:null,q:Promise.resolve(),timer:null,dead:false};
-const DICE_PLAYER_COLORS={alessandros:'#C9A24A',adamus:'#5B8FA8',luigis:'#6E9E5B',mattheus:'#B08968',maximus:'#B5392C',vicarus:'#A64AC9'};
+const DICE_PLAYER_COLORS={alessandros:'#E0A800',adamus:'#1976D2',luigis:'#2E9B4B',mattheus:'#E8E1D1',maximus:'#C62828',vicarus:'#8E44D6'};
 function dice3dOwner(ev){ const who=String(ev?.who||''); return Object.entries(S.tokens||{}).find(([id,t])=>t.kind==='pg'&&who.startsWith(t.name))?.[0]||null; }
 function dice3dTheme(owner){
   const background=DICE_PLAYER_COLORS[owner]||'#D2A94A', dark=['adamus','luigis','maximus','vicarus'].includes(owner);
-  return {name:'aprutium-'+(owner||'master'),foreground:dark?'#F7F0DE':'#1A1207',background,outline:dark?'#17130D':'#3A2A08',texture:'bronze03',material:'metal'};
+  return {name:'aprutium-'+(owner||'master')+'-v2',foreground:dark?'#FFFFFF':'#1A1207',background,outline:dark?'#10131A':'#4A3B24',texture:'none',material:'plastic'};
 }
 function dice3dOn(){ try{ return localStorage.getItem('dadi3d')!=='off'; }catch(_){ return true; } }
 function dice3dSound(){ try{ return localStorage.getItem('dadi3dSuono')==='on'; }catch(_){ return false; } }
@@ -3684,7 +3684,7 @@ READY=true; render();
     const box=$('modal'); const who=IS_GM?'Il master':(S.tokens[me]?S.tokens[me].name:'Qualcuno');
     const go=expr=>{ if(!expr) return; let r=null; try{ r=rollExpr(expr); }catch(_){} if(!r||!r.parts||isNaN(r.total)){ box.querySelector('#diceOut').innerHTML='<span class="note">Non capisco: scrivi per esempio 2d6+3</span>'; return; }
       box.querySelector('#diceOut').innerHTML=`<b style="font-family:var(--display);font-size:40px;color:var(--gold);line-height:1">${r.total}</b> <span class="note" style="margin-left:10px">${expr} → ${r.parts}</span>`;
-      log({kind:'sys',txt:`${who} tira ${expr}: ${r.total} (${r.parts})`}); save(true); };
+      log({kind:'sys',who,txt:`${who} tira ${expr}: ${r.total} (${r.parts})`}); save(true); };
     box.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>go('1'+b.dataset.d));
     box.querySelector('#diceGo').onclick=()=>go(box.querySelector('#diceExpr').value.trim());
     box.querySelector('#diceExpr').addEventListener('keydown',e=>{ if(e.key==='Enter') box.querySelector('#diceGo').click(); });
