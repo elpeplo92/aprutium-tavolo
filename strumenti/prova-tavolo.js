@@ -203,6 +203,17 @@ const file = path.resolve(process.argv[2] || 'index.html');
 
       provati++;
       try {
+        const ids=['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
+        for(const id of ids){
+          openSheet(id,'sto');
+          const text=document.querySelector('#modal .sheetbody')?.textContent||'';
+          if(document.querySelectorAll('#modal .storychapter').length<4||document.querySelectorAll('#modal .storybond').length<4||!text.includes('Dove si trova adesso')||!text.includes('Galleria della Schiera')) rotte.push('Storia '+id+' → passato, avventura, legami o posizione attuale incompleti');
+        }
+        sheetTab='car'; closeModal();
+      } catch (e) { rotte.push('Storie dettagliate dei personaggi → '+e.name+': '+e.message); }
+
+      provati++;
+      try {
         const ids = ['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
         const colori = ids.map(id => dice3dTheme(id).background);
         if (new Set(colori).size !== ids.length) rotte.push('Dadi 3D → i giocatori non hanno sei colori distinti');
