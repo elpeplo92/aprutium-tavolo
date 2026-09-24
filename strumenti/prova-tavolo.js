@@ -86,6 +86,19 @@ const file = path.resolve(process.argv[2] || 'index.html');
           const errors = validatePoiDefinition(p);
           if (errors.length) rotte.push('PDI «' + p.title + '» → ' + errors.join('; '));
         }
+
+        provati++;
+        try {
+          const epilogo = POIS.find(x => x.id === 'ultimo_custode');
+          const sigillo = POIS.find(x => x.id === 'sigillo');
+          if (!epilogo || epilogo.visibility !== 'hidden' || epilogo.image !== 'img/pdi-15-ultimo-custode.png') rotte.push('PDI 15 → scheda nascosta o immagine non configurata');
+          if (!sigillo || sigillo.modules.some(x => x.id === 'timer') || !JSON.stringify(sigillo).includes('FERMO') || !JSON.stringify(sigillo).includes('63 PF')) rotte.push('PDI 14 → regole del Custode non allineate');
+          if (S.tokens.custode.hpMax !== 125 || S.tokens.custode.img !== 'img/monster-ultimo-custode.png') rotte.push('Custode → statistiche o ritratto non allineati');
+          if (S.tokens.brak.img !== 'img/monster-vhaerun-brak.png' || !S.tokens.armigero1.img) rotte.push('Mostri → ritratti non collegati');
+          openMonster('custode');
+          if (!document.querySelector('#modal .portrait')) rotte.push('Scheda mostro → il ritratto non viene mostrato');
+          closeModal();
+        } catch (e) { rotte.push('PDI 14/15 e ritratti → ' + e.name + ': ' + e.message); }
       }
 
       // Compendio: il tasto vero deve aprire il pannello a tre colonne (bug v45: il tasto puntava alla funzione vecchia)

@@ -506,7 +506,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v85</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v86</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -692,26 +692,26 @@ function normalize(s){
       tac:"Parla finché nessuno entra nel cerchio, lo attacca o tenta di passare la porta. Poi usa due colpi d'ascia e attacca chi è più vicino alla porta. Se il gruppo si ritira, torna a sedersi.",
       lines:['«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»','«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun.»','«È andata via. La voce.»']});
   }
+  if(vhaerun) vhaerun.img='img/monster-vhaerun-brak.png';
+  for(let i=1;i<=6;i++) if(s.tokens['armigero'+i]) s.tokens['armigero'+i].img='img/monster-armigero-vincolato.png';
   const custode=s.tokens.custode;
-  if(custode&&custode.actions&&custode.actions.some(a=>String(a.n||'').includes('Lama d’ordinanza'))){
-    const ratio=Math.max(0,Math.min(1,(Number(custode.hp)||150)/150));
-    Object.assign(custode,{name:'L’Ultimo Custode',short:'C',hp:Math.round(150*ratio),hpMax:150,ac:18,
-      actions:[{n:'Multiattacco: 2 × Spada del Giuramento'},{n:'Spada del Giuramento',atk:8,dmg:'2d8+5'},{n:'Ordine — Fermati (TS Sag)'},{n:'Ordine — Vieni (TS Sag)'},{n:'Ordine — Inginocchiati (TS Sag)'},{n:'Ordine — Lascia (TS Sag)'},{n:'Ricordo della Schiera: +3 CA contro un attacco in mischia'},{n:'Fase II: 3 × Spada del Giuramento',atk:8,dmg:'2d8+5'}],
-      note:'GS 8 · 3.900 PE · CA 18 (16 in Fase II) · PF 150 · Vel 9 m · TS For +8, Cos +6, Sag +6 · Immune: affascinato, spaventato · Non può uscire dal cerchio d’argento.',
-      tac:"Protegge prima i piloni, poi il cristallo, poi se stesso. Recupera 5 PF a turno per ogni pilone acceso. Ordine è un’azione bonus: CD 12 + piloni accesi; ogni uso gli infligge 5 danni da forza. A 75 PF o con tutti i piloni spenti entra in Fase II: perde Ordine e rigenerazione, CA 16, tre attacchi.",
-      lines:['«Alt.»','«Identificatevi.»','«Ordine di accesso?»','«Allora tornate indietro.»','«Ultimo avvertimento.»','«…Quanto tempo?»','«Ho giurato.»']});
+  if(custode){
+    const oldMax=Number(custode.hpMax)||125, oldHp=Math.max(0,Math.min(oldMax,Number(custode.hp)||oldMax));
+    Object.assign(custode,{name:'L’Ultimo Custode',short:'C',img:'img/monster-ultimo-custode.png',hp:oldMax===125?oldHp:Math.max(0,125-(oldMax-oldHp)),hpMax:125,ac:18,mods:{...(custode.mods||{}),Iniziativa:2},
+      actions:[{n:'Multiattacco: 2 × Lama d’ordinanza'},{n:'Lama d’ordinanza',atk:7,dmg:'1d10+4'},{n:'Azione leggendaria — Attacco',atk:7,dmg:'1d10+4'},{n:'Azione leggendaria — Comando di un pilone (TS Sag CD 14)'},{n:'Azione leggendaria — Movimento di 6 m senza AdO'}],
+      note:'GS 8 · 3.900 PE · CA 18 · PF 125 · Vel 9 m · Iniziativa +2 · competenza nei TS For, Cos e Sag · immune: affascinato, spaventato, esausto.',
+      tac:'Tre azioni leggendarie per round, una alla fine del turno di un’altra creatura. FERMO: velocità 0 fino alla fine del turno seguente. INDIETRO: spinta di 6 m. COLPISCI: reazione per attaccare un alleato adiacente. A 63 PF, gli ordini dei piloni attivi scattano gratis a inizio round e recupera 10 PF se almeno un pilone è attivo. Resta fra il gruppo e il cristallo.',
+      lines:['«Alt.»','«Identificatevi.»','«Ordine di accesso?»','«Allora tornate indietro.»','«Ultimo avvertimento.»','«Ho giurato.»']});
   }
   const piloni=[s.tokens.pilone1,s.tokens.pilone2,s.tokens.pilone3];
-  const nomiPiloni=['Pilone — ALLINEATI','Pilone — AVANTI','Pilone — FERMI'];
+  const nomiPiloni=['Pilone — FERMO','Pilone — INDIETRO','Pilone — COLPISCI'];
   piloni.forEach((pilone,i)=>{
     if(!pilone) return;
-    if(pilone.hpMax===25){
-      const ratio=Math.max(0,Math.min(1,(Number(pilone.hp)||25)/25));
-      Object.assign(pilone,{name:nomiPiloni[i],hp:Math.round(20*ratio),hpMax:20,ac:15,
-        note:'CA 15 · PF 20 · immune veleno/psichico. Si spegne con danni o ruotando il rame: Arcano CD 14 o Arnesi da scasso CD 14.',
-        tac:'Quando si spegne, il suo ordine muore per sempre; la CD di Ordine scende di 1 e il Custode perde 5 PF di rigenerazione a turno.',
-        lines:['La luce fredda pulsa dentro le scanalature di rame.']});
-    }
+    const oldMax=Number(pilone.hpMax)||20, oldHp=Math.max(0,Math.min(oldMax,Number(pilone.hp)||oldMax));
+    Object.assign(pilone,{name:nomiPiloni[i],hp:oldMax===20?oldHp:Math.round(20*(oldHp/oldMax)),hpMax:20,ac:15,
+      note:'CA 15 · PF 20 · immune veleno/psichico. Si spegne con danni o ruotando il rame: Arcano CD 14 o Arnesi da scasso CD 14.',
+      tac:'Quando si spegne, il Custode non può più usare il suo ordine. In Fase II basta almeno un pilone attivo perché il Custode recuperi 10 PF a round.',
+      lines:['La luce fredda pulsa dentro le scanalature di rame.']});
   });
   return s;
 }
@@ -736,7 +736,7 @@ function toRemote(s){
   const out={};
   for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev']) if(s[k]!==undefined) out[k]=s[k];
   out.tokens={};
-  for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
+  for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,img:t.img||'',mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
   return out;
 }
 function save(immediate){
@@ -1315,11 +1315,11 @@ const SHEETS = {
 
 /* ===== BESTIARIO DI EA (dagli handout; le voci segnate PROPOSTA sono da ratificare) ===== */
 const BESTIARIO = [
- {id:'armigero',name:'Armigero Vincolato',short:'A',color:'#8C7A5A',hp:22,ac:17,init:1,size:1,actions:[{n:'Lancia',atk:4,dmg:'1d8+2'},{n:'Lancia in formazione (+1d4)',atk:4,dmg:'1d8+2+1d4'},{n:'Lancia a due mani',atk:4,dmg:'1d10+2'},{n:'Spinta con lo scudo (Atletica +4)'}],note:'GS 1/2–1 · Immune: veleno, charme, paura, sonno · Non parla, non insegue oltre la caserma. FORMAZIONE: con ≥3 adiacenti, +2 CA e +1d4 danni.',src:'Sotto Bëllindë',tac:"Inerti finché qualcuno supera la linea. Poi si muovono come un solo corpo: al primo round si allineano (tre adiacenti) e avanzano insieme di 7,5 m; dal secondo attaccano di lancia il bersaglio più vicino alla schiera, mai sparpagliandosi. Se uno viene spinto fuori dalla formazione, nel suo turno rientra invece di attaccare (Riallineamento). Non inseguono fuori dalla caserma: sulla soglia si fermano e tornano al muro.",lines:["Nessuna parola. Solo il ritmo: sei lance che battono il pavimento insieme.", "Quando la formazione si spezza, un rumore di giunture che si cercano."]},
- {id:'brak',name:'Vhaerun, comandante Brak',short:'V',color:'#7A5A3A',hp:110,ac:16,init:0,size:2,actions:[{n:'Ascia pesante',atk:8,dmg:'1d12+5'},{n:"Secondo colpo d'ascia",atk:8,dmg:'1d12+5'},{n:'Carica (+2d8)',atk:8,dmg:'1d12+5+2d8'},{n:'Spinta / Presa (Atletica +8)'},{n:'Urlo di comando (TS Sag 14)'}],note:'GS 5 · 1.800 PE · Vel 9 m (3 m nei primi due round per le catene) · TS For +8, Sag +3 · Spaventato 1 minuto con Urlo di comando, 1 volta · Non si allontana oltre 6 m dalla porta.',src:'Sotto Bëllindë',tac:"Parla finché nessuno entra nel cerchio, lo attacca o tenta di passare la porta. Poi usa due colpi d'ascia e attacca chi è più vicino alla porta. Se il gruppo esce dal cerchio e dal raggio della porta, torna a sedersi: lo scontro può sempre fermarsi. Spegnere il disco annulla l'ordine ma non apre il collare.",lines:["«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»", "«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun.»", "Quando il vincolo si spezza: «È andata via. La voce.»"]},
+{id:'armigero',name:'Armigero Vincolato',short:'A',color:'#8C7A5A',img:'img/monster-armigero-vincolato.png',hp:22,ac:17,init:1,size:1,actions:[{n:'Lancia',atk:4,dmg:'1d8+2'},{n:'Lancia in formazione (+1d4)',atk:4,dmg:'1d8+2+1d4'},{n:'Lancia a due mani',atk:4,dmg:'1d10+2'},{n:'Spinta con lo scudo (Atletica +4)'}],note:'GS 1/2–1 · Immune: veleno, charme, paura, sonno · Non parla, non insegue oltre la caserma. FORMAZIONE: con ≥3 adiacenti, +2 CA e +1d4 danni.',src:'Sotto Bëllindë',tac:"Inerti finché qualcuno supera la linea. Poi si muovono come un solo corpo: al primo round si allineano (tre adiacenti) e avanzano insieme di 7,5 m; dal secondo attaccano di lancia il bersaglio più vicino alla schiera, mai sparpagliandosi. Se uno viene spinto fuori dalla formazione, nel suo turno rientra invece di attaccare (Riallineamento). Non inseguono fuori dalla caserma: sulla soglia si fermano e tornano al muro.",lines:["Nessuna parola. Solo il ritmo: sei lance che battono il pavimento insieme.", "Quando la formazione si spezza, un rumore di giunture che si cercano."]},
+ {id:'brak',name:'Vhaerun, comandante Brak',short:'V',color:'#7A5A3A',img:'img/monster-vhaerun-brak.png',hp:110,ac:16,init:0,size:2,actions:[{n:'Ascia pesante',atk:8,dmg:'1d12+5'},{n:"Secondo colpo d'ascia",atk:8,dmg:'1d12+5'},{n:'Carica (+2d8)',atk:8,dmg:'1d12+5+2d8'},{n:'Spinta / Presa (Atletica +8)'},{n:'Urlo di comando (TS Sag 14)'}],note:'GS 5 · 1.800 PE · Vel 9 m (3 m nei primi due round per le catene) · TS For +8, Sag +3 · Spaventato 1 minuto con Urlo di comando, 1 volta · Non si allontana oltre 6 m dalla porta.',src:'Sotto Bëllindë',tac:"Parla finché nessuno entra nel cerchio, lo attacca o tenta di passare la porta. Poi usa due colpi d'ascia e attacca chi è più vicino alla porta. Se il gruppo esce dal cerchio e dal raggio della porta, torna a sedersi: lo scontro può sempre fermarsi. Spegnere il disco annulla l'ordine ma non apre il collare.",lines:["«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»", "«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun.»", "Quando il vincolo si spezza: «È andata via. La voce.»"]},
  {id:'brak_guerriero',name:'Brak (guerriero della Guerra)',short:'B',color:'#6E4A2A',hp:59,ac:13,init:1,size:2,actions:[{n:'Ascia bipenne',atk:6,dmg:'1d12+4'},{n:'Giavellotto',atk:6,dmg:'1d6+4'},{n:'Aggressivo: si avvicina di 9 m con azione bonus'}],note:'PROPOSTA (orco → Brak, elfi forgiati dall’Abisso). GS 2. Vedi compendio delle razze, cap. VIII.',src:'Compendio delle razze',tac:"Aggressivo: azione bonus per avvicinarsi di 9 m, poi ascia sul più debole in vista. Combatte fino alla morte se ha un capo che lo guarda; senza capo, sotto un terzo dei PF fugge.",lines:["Urla in una lingua che era elfica e non lo è più."]},
- {id:'custode',name:'L’Ultimo Custode',short:'C',color:'#5B8FA8',hp:150,ac:18,init:0,size:2,actions:[{n:'Multiattacco: 2 × Spada del Giuramento'},{n:'Spada del Giuramento',atk:8,dmg:'2d8+5'},{n:'Ordine — Fermati (TS Sag)'},{n:'Ordine — Vieni (TS Sag)'},{n:'Ordine — Inginocchiati (TS Sag)'},{n:'Ordine — Lascia (TS Sag)'},{n:'Ricordo della Schiera: +3 CA contro un attacco in mischia'},{n:'Fase II: 3 × Spada del Giuramento',atk:8,dmg:'2d8+5'}],note:'GS 8 · 3.900 PE · CA 18 (16 in Fase II) · PF 150 · Vel 9 m · TS For +8, Cos +6, Sag +6 · Immune: affascinato, spaventato · Non può uscire dal cerchio d’argento.',src:'La Stanza del Quarto Sigillo',tac:"Protegge prima i piloni, poi il cristallo, poi se stesso. Recupera 5 PF a turno per ogni pilone acceso. Ordine è un’azione bonus: CD 12 + piloni accesi; ogni uso gli infligge 5 danni da forza. A 75 PF o con tutti i piloni spenti entra in Fase II: perde Ordine e rigenerazione, CA 16, tre attacchi. Non insegue oltre l’argento.",lines:["«Alt.»", "«Identificatevi.»", "«Ordine di accesso?»", "«Allora tornate indietro.»", "«Ultimo avvertimento.»", "In Fase II: «…Quanto tempo?»", "«Ho giurato.»"]},
- {id:'pilone',name:'Pilone del Comando',short:'P',color:'#6E6E8C',hp:20,ac:15,init:-5,size:1,noInit:true,actions:[],note:'Oggetto Grande · CA 15 · PF 20 · immune veleno/psichico. Si spegne con danni oppure ruotando il rame: Arcano CD 14 o Arnesi da scasso CD 14.',src:'La Stanza del Quarto Sigillo',tac:"Ogni pilone acceso rigenera 5 PF del Custode e alza di 1 la CD di Ordine. Spegnerlo uccide per sempre l’ordine inciso: ALLINEATI, AVANTI o FERMI. Il quarto pilone, CONGEDO, è già spaccato e non si riaccende durante lo scontro.",lines:["La luce fredda pulsa dentro le scanalature di rame."]},
+ {id:'custode',name:'L’Ultimo Custode',short:'C',color:'#5B8FA8',img:'img/monster-ultimo-custode.png',hp:125,ac:18,init:2,size:2,actions:[{n:'Multiattacco: 2 × Lama d’ordinanza'},{n:'Lama d’ordinanza',atk:7,dmg:'1d10+4'},{n:'Azione leggendaria — Attacco',atk:7,dmg:'1d10+4'},{n:'Azione leggendaria — Comando di un pilone (TS Sag CD 14)'},{n:'Azione leggendaria — Movimento di 6 m senza AdO'}],note:'GS 8 · 3.900 PE · Vel 9 m · competenza nei TS For, Cos e Sag · immune: affascinato, spaventato, esausto.',src:'La Stanza del Quarto Sigillo',tac:'Tre azioni leggendarie per round, una alla fine del turno di un’altra creatura. FERMO: velocità 0 fino alla fine del turno seguente. INDIETRO: spinta di 6 m. COLPISCI: reazione per attaccare un alleato adiacente. A 63 PF gli ordini attivi scattano gratis a inizio round e recupera 10 PF se almeno un pilone è attivo. Primo round: attacca l’armatura più pesante e usa FERMO sull’incantatore più lontano.',lines:['«Alt.»','«Identificatevi.»','«Ordine di accesso?»','«Allora tornate indietro.»','«Ultimo avvertimento.»','«Ho giurato.»']},
+ {id:'pilone',name:'Pilone del Comando',short:'P',color:'#6E6E8C',hp:20,ac:15,init:-5,size:1,noInit:true,actions:[],note:'Oggetto Grande · CA 15 · PF 20 · immune veleno/psichico. Si spegne con danni oppure ruotando il rame: Arcano CD 14 o Arnesi da scasso CD 14.',src:'La Stanza del Quarto Sigillo',tac:'FERMO azzera la velocità; INDIETRO spinge di 6 m; COLPISCI obbliga a usare la reazione contro un alleato adiacente. Spegnerne uno elimina quell’ordine. In Fase II gli ordini rimasti scattano gratis a inizio round e almeno un pilone attivo fa recuperare 10 PF al Custode.',lines:['La luce fredda pulsa dentro le scanalature di rame.']},
  {id:'mercenario',name:'Mercenario vesperiano',short:'V',color:'#8A3A3A',hp:32,ac:16,init:2,size:1,actions:[{n:'Spada lunga',atk:5,dmg:'1d8+3'},{n:'Balestra pesante',atk:4,dmg:'1d10+2'},{n:'Parata (reazione: +2 CA)'}],note:'PROPOSTA (veterano, GS 2–3). Le compagnie di Vesperia: professionisti, senza contratto non combattono.',src:'Mushanè',tac:"Professionista: prima la balestra da lontano, poi spada e parata. Cerca sempre il compagno accanto: due contro uno. Sotto la metà dei PF chiede quartiere: senza paga non muore per nessuno.",lines:["«Nessuno ci paga per morire qui.»", "«Kapitàn?» (cerca ordini che non arrivano)"]},
  {id:'sergente',name:'Sergente mercenario',short:'S',color:'#A64A3A',hp:52,ac:17,init:2,size:1,actions:[{n:'Multiattacco: 2 × Spada lunga'},{n:'Spada lunga',atk:6,dmg:'1d8+4'},{n:'Comando: un alleato entro 9 m fa un attacco (azione bonus)'}],note:'PROPOSTA (capitano, GS 3–4). Come Kostandìn.',src:'Mushanè',tac:"Comanda: ogni round usa Comando per far attaccare un alleato, e attacca due volte chi sembra il capo del gruppo. Se resta solo, tratta.",lines:["«Tenete la linea!»", "«Quanto vi pagano, per questo?»"]},
  {id:'forgiato',name:'Forgiato',short:'F',color:'#7A7A9A',hp:39,ac:14,init:0,size:1,actions:[{n:'Colpo di ferro',atk:5,dmg:'1d8+3'},{n:'Presa (Atletica +5)'}],note:'PROPOSTA. Uomini svuotati e trasformati in automi (Biancosale, Navi Rosse). Immune: charme, paura, sonno · Vulnerabile: tuono.',src:'Atto Secondo',tac:"Senza paura e senza iniziativa propria: avanza dritto sul bersaglio più vicino, afferra e colpisce. Vulnerabile al tuono: un Frantumare li disorienta un round.",lines:["Un canto a bocca chiusa, sempre la stessa nota."]},
@@ -2104,7 +2104,7 @@ const POIS = [
    "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
    "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a round underground chamber seen from its doorway, walls of rough uneven fieldstones and boulders, floor of worn flagstones with a large eight-pointed star inlaid in pale stone and thin silver lines, at the center a waist-high rough stone plinth holding a large pale blue crystal, dull, not glowing, only a faint slow pulse deep inside, four squat pylons of dark stone banded with copper rings standing on the points of the star around it, three with a faint cold blue light in their rings, the fourth cracked down the middle and dead, two faded red war banners hanging from iron poles on the far wall, torches in iron brackets, kneeling before the crystal with his back to the viewer a man in heavy archaic plate armour of a much older era, head bowed, both hands on the pommel of a sword planted point-down in front of him, dust in the air, cold blue light against warm torchlight --ar 4:3",
    "text": "Oltre la soglia la stanza è rotonda. Pietre grezze, messe una sull'altra senza malta, come nel resto di questo posto. Sul pavimento corre una stella a otto punte, di pietra chiara e fili d'argento, così grande che la state già calpestando.\n\nSulle punte della stella ci sono quattro piloni di pietra scura, cerchiati di rame. In tre si muove una luce fredda. Il quarto è spaccato dall'alto in basso, ed è spento.\n\nAl centro c'è un cristallo che non brilla: scandisce. A ogni battito la luce nei piloni risponde. È lo stesso battito che vi segue da quando siete scesi nel pozzo.\n\nDavanti al cristallo, inginocchiato, c'è un uomo in un'armatura di un'altra epoca. Ha la spada piantata davanti a sé, le mani sull'elsa, la testa china. Sulla parete in fondo pendono due stendardi rossi, scoloriti fino al colore della ruggine.\n\nFate un passo. Il conteggio termina. Non rallenta. Finisce.\n\nNel silenzio l'uomo alza la testa. Non si volta.\n\n«Alt.»\n\nChe cosa fate?",
-   "gm": "È il cuore di Sotto Bëllindë e lo scontro finale. Il cristallo è il Quarto Sigillo. Da qui partono gli ordini impersonali della Galleria; gli ordini con una voce, come PROTEGGI QUESTA PORTA per Vhaerun e RESTA per Micuccio, sono del Custode.\n\nNon rivelare qui il suo nome, la sua storia, il legame con il Filatterio di Mattheus o con Cyrius Meren: appartengono al PDI 15. Il Custode parla soltanto per ordini e formule.\n\nTre piloni sono attivi: ALLINEATI, AVANTI, FERMI. Sul quarto la parola CONGEDO è stata grattata via con una lama; è l'unico ordine che avrebbe permesso al Custode di andarsene. Il quarto non si riaccende in questo PDI. Spegnere un pilone elimina quell'ordine per sempre anche nella Galleria.\n\nIl Custode non può uscire dalla stella, raggio circa 6 metri. I PG possono uscire quando vogliono. Se se ne vanno, torna in ginocchio e dopo un minuto il conteggio riprende; recupera PF soltanto grazie ai piloni ancora accesi.\n\nQuando dice «Identificatevi», guarda per un battito Mattheus o chi porta il Filatterio: l'oggetto diventa freddo e pesante. Non spiegare ancora.\n\nSe Vhaerun, liberato, li segue, si ferma sulla soglia: «Non davanti a lui.» Il Custode gli ordina «Torna al tuo posto.» Con il collare spezzato non ha effetto, e Vhaerun ride.",
+    "gm": "È il cuore di Sotto Bëllindë e lo scontro finale. Il cristallo è il Quarto Sigillo. Da qui partono gli ordini impersonali della Galleria; gli ordini con una voce, come PROTEGGI QUESTA PORTA per Vhaerun e RESTA per Micuccio, sono del Custode.\n\nNon rivelare qui il suo nome, la sua storia, il legame con il Filatterio di Mattheus o con Cyrius Meren: appartengono al PDI 15. Il Custode parla soltanto per ordini e formule.\n\nTre piloni sono attivi: FERMO, INDIETRO, COLPISCI. Sul quarto la parola CONGEDO è stata grattata via con una lama; è l'unico ordine che avrebbe permesso al Custode di andarsene. Il quarto non si riaccende in questo PDI. Spegnere un pilone elimina quell'ordine per sempre.\n\nIl Custode non può uscire dalla stella, raggio circa 6 metri. I PG possono uscire quando vogliono. Se se ne vanno, torna in ginocchio e attende.\n\nQuando dice «Identificatevi», guarda per un battito Mattheus o chi porta il Filatterio: l'oggetto diventa freddo e pesante. Non spiegare ancora.\n\nSe Vhaerun, liberato, li segue, si ferma sulla soglia: «Non davanti a lui.» Il Custode gli ordina «Torna al tuo posto.» Con il collare spezzato non ha effetto, e Vhaerun ride.\n\nA 0 PF il Custode cade ma non muore. La purificazione del Sigillo resta una scena separata e conduce al PDI 15.",
    "modules": [
      {
        "id": "avvertimenti",
@@ -2137,7 +2137,7 @@ const POIS = [
        "outcomes": [
          {"kind": "criticalFailure", "min": 1, "max": 5, "text": "Il rame risponde al tocco: subisci 1d6 danni psichici e il Custode ti guarda."},
          {"kind": "failure", "min": 6, "max": 12, "text": "Pietra, rame, una luce che pulsa."},
-         {"kind": "baseSuccess", "min": 13, "max": 15, "text": "Sugli anelli superiori: ALLINEATI, AVANTI, FERMI. Sono gli ordini della Galleria."},
+          {"kind": "baseSuccess", "min": 13, "max": 15, "text": "Sugli anelli superiori: FERMO, INDIETRO, COLPISCI. Sono ordini da campo, pensati per governare i corpi."},
          {"kind": "fullSuccess", "min": 16, "max": 19, "text": "Sul quarto la parola è stata grattata via; resta una C. Ruotando di un quarto il rame dei piloni attivi si interromperebbe il flusso."},
          {"kind": "natural20", "text": "La parola grattata è CONGEDO."}
        ]
@@ -2188,25 +2188,19 @@ const POIS = [
        "id": "scontro",
        "type": "focus",
        "title": "Scontro — L'Ultimo Custode",
-       "text": "Per 5 PG di 5° livello. GS 8, 3.900 PE. CA 18, PF 150 (120 se il gruppo è allo stremo), velocità 9 m. For +5, Cos +3, Sag +3; TS For +8, Cos +6, Sag +6; immune ad affascinato e spaventato.\n\nIl Cerchio: non può uscire dall'argento. Legame dei Piloni: a inizio turno recupera 5 PF per ogni pilone acceso. Non può essere sorpreso.\n\nMultiattacco: due Spade del Giuramento, +8, 2d8+5 taglienti. Ordine, azione bonus: una creatura entro 18 m fa un TS Saggezza, CD 12 + piloni accesi. Fermati: velocità 0; Vieni: usa la reazione per avvicinarsi senza AdO; Inginocchiati: prona; Lascia: lascia ciò che tiene. Ogni Ordine infligge al Custode 5 danni da forza non riducibili. Dopo il secondo, Arcano CD 13 rivela che comandare lo consuma.\n\nReazione, Ricordo della Schiera: +3 CA contro un attacco in mischia che lo colpirebbe. Protegge prima i piloni, poi il cristallo, poi se stesso."
+        "text": "Per 5 PG. GS 8, 3.900 PE. CA 18, PF 125, velocità 9 m, iniziativa +2. Competenza nei TS Forza, Costituzione e Saggezza; immune ad affascinato, spaventato ed esausto.\n\nMultiattacco: due attacchi con la Lama d'ordinanza, +7 a colpire, 1d10+4 taglienti.\n\nHa 3 azioni leggendarie per round, da usare una alla volta alla fine del turno di un'altra creatura: Attacco; attivare il comando di un pilone; muoversi di 6 m senza provocare attacchi di opportunità. Ogni comando richiede TS Saggezza CD 14. FERMO: velocità 0 fino alla fine del turno seguente. INDIETRO: spinta di 6 m. COLPISCI: il bersaglio usa la reazione per attaccare un alleato adiacente. Nessun ordine fa perdere il turno.\n\nPrimo round: due attacchi contro chi porta l'armatura più pesante, poi FERMO sull'incantatore più lontano. Resta sempre fra il gruppo e il cristallo. A 0 PF cade, ma non muore: il Sigillo resta corrotto finché non viene purificato."
      },
      {
        "id": "piloni_scontro",
        "type": "focus",
        "title": "I piloni in combattimento",
-       "text": "Tre piloni attivi: CA 15, PF 20, immuni a psichico e veleno. Da adiacente si possono spegnere senza romperli con un'Azione: Arcano CD 14 oppure Arnesi da scasso CD 14, ruotando il rame.\n\nQuando un pilone si spegne, l'ordine inciso muore per sempre, la CD di Ordine scende di 1 e il Custode perde 5 PF di rigenerazione a turno. La prima volta barcolla come per un colpo al petto."
+        "text": "Tre piloni attivi: CA 15, PF 20, immuni a psichico e veleno. Da adiacente si possono spegnere senza romperli con un'Azione: Arcano CD 14 oppure Arnesi da scasso CD 14, ruotando il rame.\n\nQuando un pilone si spegne, il Custode non può più usare quell'ordine. Il quarto pilone, CONGEDO, è già spaccato e non si riaccende durante lo scontro."
      },
      {
        "id": "fase_due",
        "type": "focus",
        "title": "Fase II — Il conteggio non riparte",
-       "text": "Scatta quando il Custode scende a 75 PF o quando tutti e tre i piloni sono spenti. Se scatta a 75 PF, assorbe i piloni rimasti: ottiene 10 PF temporanei per ciascuno e quegli ordini muoiono per sempre.\n\nLe luci nei piloni muoiono. Il cristallo batte una volta, a vuoto, e non batte più. Dal centro della pietra azzurra sale una crepa sottile, come ghiaccio sul fiume. Fa freddo, di colpo.\n\nL'uomo vi guarda. Per la prima volta la voce è la sua, non quella di un ordine.\n\n«…Quanto tempo?»\n\nPerde Ordine e Legame dei Piloni, la CA scende a 16 e compie tre attacchi invece di due. Continua: «Ho giurato.» Per fermarlo senza ucciderlo, Persuasione CD 15 dicendogli che il giuramento lega solo chi lo pronuncia; vantaggio se il gruppo ha compiuto il rito nella Sala delle Ordinanze. Se riesce: «Allora fatelo voi.»"
-     },
-     {
-       "id": "timer",
-       "type": "focus",
-       "title": "Il cristallo si spacca — timer visibile",
-       "text": "Conteggio d'iniziativa 20. Round 1: crepa sottile e freddo. Round 2: chi è nella stella fa TS Costituzione CD 13 o subisce 2d6 freddo. Round 3: stesso TS, 3d6 freddo. Fine round 4: il Sigillo si rompe."
+        "text": "Scatta quando il Custode scende a 63 PF. All'inizio di ogni round, tutti gli ordini dei piloni ancora attivi si manifestano senza consumare azioni leggendarie; assegna ciascun ordine a un bersaglio sensato, senza ripetere lo stesso bersaglio se puoi evitarlo.\n\nFinché almeno un pilone resta attivo, il Custode recupera 10 PF all'inizio del proprio turno. Non cambia CA e continua a compiere due attacchi. Spegnere tutti i piloni elimina sia gli ordini gratuiti sia la rigenerazione."
      },
      {
        "id": "rito",
@@ -2227,8 +2221,99 @@ const POIS = [
        "text": "Il silenzio adesso è diverso. Non è l'attesa del prossimo battito: è solo silenzio.\n\nLa spada scivola dalle mani dell'uomo e tocca la pietra. Lui resta in piedi, al centro della stella, e per la prima volta sembra non sapere cosa fare delle mani.\n\nPoi alza gli occhi. Non guarda il cristallo. Guarda Mattheus.\n\nChe cosa fate?\n\n→ PDI 15: L'Ultimo Custode"
      }
    ]
- },
- {id:'murata',kind:'passaggio',x:1275,y:765,title:'La porta murata',text:'In fondo alla galleria, dove il corridoio dovrebbe continuare, una porta di ferro è stata murata dall’interno. Sulla pietra, graffi. Dall’altra parte.',gm:'SCENA — La Porta Murata (vedi handout). Uscita alternativa / retroguardia.',skill:'Indagare',dc:13,ok:'I graffi sono dall’altra parte, dal basso verso l’alto: qualcuno ha cercato di uscire, non di entrare. La malta è più recente delle pietre intorno.',ko:'Una porta murata, vecchia come tutto il resto.'},
+  },
+  {
+    "schemaVersion": 2,
+    "id": "ultimo_custode",
+    "kind": "persona",
+    "title": "L'Ultimo Custode",
+    "visibility": "hidden",
+    "legacyPosition": {"x": 945, "y": 795},
+    "discovery": {"enabled": false},
+    "image": "img/pdi-15-ultimo-custode.png",
+    "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+    "text": "La luce del cristallo cambia. Non diventa più forte: diventa presente.\n\nL'uomo riverso sulla pietra inspira. È un respiro vero, corto, doloroso. Solleva appena il viso.\n\n«L'ordine…»\n\nGuarda i piloni spenti, poi le proprie mani.\n\n«…è finito.»\n\nPer la prima volta i suoi occhi mettono a fuoco voi, non la soglia alle vostre spalle.\n\n«Adesso ricordo.»",
+    "gm": "Rivela questo PDI soltanto dopo la purificazione del Quarto Sigillo. Il Custode è un uomo, un Praefectus dell'epoca della Guerra. Il suo ordine era: «Nessuno oltrepassi la soglia. Il Sigillo non lasci Bëllindë. Attendi il cambio.» Il cambio non è mai arrivato e il Sigillo lo ha tenuto in vita.\n\nNon dargli un nome proprio: il Sigillo glielo ha consumato. Non confermare legami con i Custodi del Ciclo. Di Cyrius Meren conosce il nome e riconosce la sua custodia, ma non lo ha mai incontrato. La scena termina col suo sacrificio volontario per rinforzare il Filatterio.",
+    "modules": [
+      {
+        "id": "visioni",
+        "type": "focus",
+        "title": "Tre ricordi — senza tiro",
+        "text": "Il cristallo mostra tre immagini a tutti.\n\n1. Un esercito sotto due lune. Migliaia di soldati si muovono come un corpo solo. Una voce dice: «La scelta è il punto in cui nasce l'errore. Toglieremo la necessità di scegliere.»\n\n2. Lo stesso cristallo avvolto in catene e rune. Non possono distruggerlo: scelgono di contenerlo.\n\n3. Un soldato ancora giovane riceve l'ordine di custodire la soglia e attendere il cambio. Gli altri partono. Nessuno torna."
+      },
+      {
+        "id": "dialogo",
+        "type": "dialogue",
+        "title": "Parlare con il Custode",
+        "text": "CHI SEI? — «Ero il Praefectus di questa custodia. Il mio nome è rimasto dentro il Sigillo. Chiamatemi Custode: è l'ultima cosa che ricordo di essere stato.»\n\nQUALE ERA IL TUO ORDINE? — «Nessuno oltrepassi la soglia. Il Sigillo non lasci Bëllindë. Attendi il cambio.» Pausa. «Il cambio non è venuto.»\n\nDA QUANTO TEMPO? — Guarda la polvere sugli stendardi. «Abbastanza perché il conteggio diventasse tutto ciò che ero.»\n\nLA GUERRA — Non racconta vincitori. Ricorda un esercito che voleva eliminare l'incertezza trasformando la volontà in obbedienza. Il Sigillo era uno dei suoi strumenti.\n\nCYRIUS MEREN — «Conosco il nome. Non l'uomo. Quella custodia porta la sua trama: sobria, precisa, fatta per trattenere senza possedere.»\n\nMICUCCIO — «Un ordine troppo piccolo per un bambino e troppo grande per una vita.»\n\nTITTA E ROCCO — «Sono scesi dove la città aveva dimenticato di guardare. Uno è tornato col silenzio dentro. L'altro non è tornato.» Non sa chi abbia tagliato la corda.\n\nVHAERUN — Se è presente: «Primo Strumento della Terza Schiera.» Vhaerun risponde: «Non più.» Il Custode annuisce: «No. Non più.»\n\nGLI ARMIGERI — «Erano soldati. Poi il comando ha imparato a muoverli senza di loro.»\n\nLA TOMBA VUOTA — «Non era una tomba. Era un posto preparato per qualcuno che non arrivò.»\n\nLA PORTA SIGILLATA — «Sotto ci sono cose che il Quarto Sigillo non comandava. Le teneva lontane.»"
+      },
+      {
+        "id": "intuizione",
+        "type": "check",
+        "focus": "Focus — Che cosa gli resta",
+        "skill": "Intuizione",
+        "dc": 13,
+        "outcomes": [
+          {"kind": "criticalFailure", "min": 1, "max": 5, "text": "Ti sembra sereno. Non lo è."},
+          {"kind": "failure", "min": 6, "max": 12, "text": "È stanco oltre ciò che un corpo dovrebbe poter sopportare."},
+          {"kind": "baseSuccess", "min": 13, "max": 15, "text": "Non ha più un posto nel mondo che ha custodito."},
+          {"kind": "fullSuccess", "min": 16, "max": 19, "text": "Sta cercando l'ultima cosa che possa fare per scelta, non per ordine."},
+          {"kind": "natural20", "text": "Ha già deciso di morire, ma vuole che la sua morte appartenga a qualcosa che abbia scelto lui."}
+        ]
+      },
+      {
+        "id": "filatterio",
+        "type": "dialogue",
+        "title": "Il Filatterio",
+        "text": "Quando vede la custodia portata da Mattheus, il Custode tende una mano senza pretendere che gliela consegnino.\n\n«Questa non è una prigione. È una promessa mantenuta male.»\n\nSpiega che la trama sta cedendo: il Filatterio continua a trattenere ciò che contiene, ma consuma se stesso. Può essere rinforzato soltanto trasformando una vita ancora legata alla magia del Sigillo in una nuova chiusura. Non chiede a nessuno di sacrificarsi. Sta parlando di sé."
+      },
+      {
+        "id": "arcano_filatterio",
+        "type": "check",
+        "focus": "Focus — Leggere il Filatterio",
+        "skill": "Arcano",
+        "dc": 14,
+        "outcomes": [
+          {"kind": "criticalFailure", "min": 1, "max": 5, "text": "La trama ti risponde con un TUM sordo. Hai svantaggio alla prossima prova di Saggezza prima di un riposo lungo."},
+          {"kind": "failure", "min": 6, "max": 13, "text": "Vedi soltanto linee luminose che si stringono attorno a qualcosa di invisibile."},
+          {"kind": "baseSuccess", "min": 14, "max": 16, "text": "È una custodia reale: non distrugge ciò che contiene, lo separa dal mondo."},
+          {"kind": "fullSuccess", "min": 17, "max": 19, "text": "Le linee non sono spezzate dall'esterno: vengono consumate dall'interno."},
+          {"kind": "natural20", "text": "La custodia può essere rinforzata, ma la nuova trama deve bruciare qualcosa di vivo e già legato allo stesso potere."}
+        ]
+      },
+      {
+        "id": "sacrificio",
+        "type": "focus",
+        "title": "La scelta del Custode",
+        "text": "Il Custode chiede il Filatterio, oppure posa la mano sulla custodia se Mattheus non vuole lasciarla. Le linee del cristallo gli risalgono il braccio. Il primo TUM piega la luce. Il secondo gli svuota il volto.\n\nA Mattheus: «Non aprirla. Non per pietà, non per paura, non per sapere.»\n\nAl terzo battito le incisioni del Filatterio si accendono dall'interno. Per un istante una voce lontanissima sembra bussare. Il Custode stringe la presa.\n\n«Sei ancora lì.»\n\nNon è una domanda. Quando la nuova chiusura si completa, lascia andare la custodia. Il suo ultimo gesto è volontario."
+      },
+      {
+        "id": "cambio",
+        "type": "focus",
+        "title": "Dargli il cambio",
+        "text": "Se qualcuno gli dice formalmente «Ti do il cambio», il Custode si raddrizza per l'ultima volta e consegna il posto come un soldato.\n\n«Posto consegnato.»\n\nIl pilone spezzato di CONGEDO emette un solo lampo color ambra. Non torna attivo: riconosce soltanto che, finalmente, l'ordine è terminato."
+      },
+      {
+        "id": "ultime_parole",
+        "type": "dialogue",
+        "title": "Prima che finisca",
+        "text": "Lascia spazio ai personaggi. Può rispondere a un'ultima domanda o rivolgere una frase breve a ciascuno, basata su ciò che ha visto nello scontro: a chi ha resistito a un ordine, «Conserva quella scelta»; a chi ha protetto un compagno, «Questo non era comando»; a Mattheus, «Custodire non significa possedere.»\n\nNon conosce il futuro e non consegna profezie. Per la prima volta parla soltanto come un uomo."
+      },
+      {
+        "id": "bottino",
+        "type": "focus",
+        "title": "Ciò che resta",
+        "text": "Non fissare una risposta unica per il corpo: può svanire nella luce, restare dentro l'armatura o lasciare soltanto polvere. La scelta è di tono e non dà indizi ulteriori.\n\nLa Lama d'ordinanza e l'armatura sono antiche ma non più magiche. Possono restare come reliquie narrative; se vendute, usa un valore modesto e non trattarle come ricompensa principale. Il vero lascito è il Filatterio rinforzato."
+      },
+      {
+        "id": "prosecuzione",
+        "type": "continuation",
+        "title": "Prosecuzione — Il ritorno alla luce",
+        "text": "Il cristallo non scandisce più nulla. I piloni sono pietra e rame. Per la prima volta da quando siete scesi, il sotterraneo non aspetta un ordine.\n\nDietro di voi il corridoio conduce al pozzo e alla luce di Bëllindë. Davanti restano le conseguenze di ciò che avete liberato, spento e promesso.\n\n→ S27: Ritorno alla luce"
+      }
+    ]
+  },
+  {id:'murata',kind:'passaggio',x:1275,y:765,title:'La porta murata',text:'In fondo alla galleria, dove il corridoio dovrebbe continuare, una porta di ferro è stata murata dall’interno. Sulla pietra, graffi. Dall’altra parte.',gm:'SCENA — La Porta Murata (vedi handout). Uscita alternativa / retroguardia.',skill:'Indagare',dc:13,ok:'I graffi sono dall’altra parte, dal basso verso l’alto: qualcuno ha cercato di uscire, non di entrare. La malta è più recente delle pietre intorno.',ko:'Una porta murata, vecchia come tutto il resto.'},
  {
    "schemaVersion": 2,
    "id": "pozzo",
@@ -2631,7 +2716,8 @@ function castSpell(id,name){
 
 function openMonster(id){ const t=S.tokens[id]; if(!t) return;
   const mods=Object.entries(t.mods||{}).filter(([k])=>k!=='Iniziativa').map(([k,v])=>`<li>${k} ${fmtMod(v)}</li>`).join('');
-  openModal(`<div class="eyebrow">Bestiario di Ea</div><h2 class="big">${t.name}</h2><div class="kv"><b>Classe armatura</b><span>${t.ac}</span><b>Punti ferita</b><span>${t.hp} / ${t.hpMax}</span><b>Iniziativa</b><span>${fmtMod(t.mods.Iniziativa||0)}</span><b>Taglia</b><span>${(t.size||1)>1?'Grande':'Media'}</span></div><h3>Regole</h3><p class="lore" style="font-size:14px">${t.note||'—'}</p><h3>Azioni</h3><ul>${(t.actions||[]).map(a=>`<li>${a.n}${a.atk!=null?` · colpire +${a.atk}`:''}${a.dmg?` · danno ${a.dmg}`:''}</li>`).join('')}</ul>${mods?`<h3>Tiri</h3><ul>${mods}</ul>`:''}<h3>Come combatte</h3><p class="lore" style="font-size:14px">${t.tac||'—'}</p><h3>Cosa dice</h3><ul>${(t.lines||[]).map(l=>`<li><i>${l}</i></li>`).join('')||'<li>—</li>'}</ul>`,'poibox'); }
+  const head=t.img?`<div class="sheethead"><div class="portrait" style="background-image:url('${t.img}')"></div><div><div class="eyebrow">Bestiario di Ea</div><h2 class="big">${t.name}</h2></div></div>`:`<div class="eyebrow">Bestiario di Ea</div><h2 class="big">${t.name}</h2>`;
+  openModal(`${head}<div class="kv"><b>Classe armatura</b><span>${t.ac}</span><b>Punti ferita</b><span>${t.hp} / ${t.hpMax}</span><b>Iniziativa</b><span>${fmtMod(t.mods.Iniziativa||0)}</span><b>Taglia</b><span>${(t.size||1)>1?'Grande':'Media'}</span></div><h3>Regole</h3><p class="lore" style="font-size:14px">${t.note||'—'}</p><h3>Azioni</h3><ul>${(t.actions||[]).map(a=>`<li>${a.n}${a.atk!=null?` · colpire +${a.atk}`:''}${a.dmg?` · danno ${a.dmg}`:''}</li>`).join('')}</ul>${mods?`<h3>Tiri</h3><ul>${mods}</ul>`:''}<h3>Come combatte</h3><p class="lore" style="font-size:14px">${t.tac||'—'}</p><h3>Cosa dice</h3><ul>${(t.lines||[]).map(l=>`<li><i>${l}</i></li>`).join('')||'<li>—</li>'}</ul>`,'poibox'); }
 /* ---------- punti interattivi ---------- */
 const POI_ICONS={
  trappola:['#D9822B','<path d="M3 17 7 7l3 7 3-9 3 8 3-5 2 9"/>'],
@@ -2867,7 +2953,7 @@ document.getElementById('btnAddBest').onclick=()=>{
   // cerca una casella libera vicino al centro dell'area visibile
   const r=stage.getBoundingClientRect(); const c=toMap({clientX:r.left+r.width/2,clientY:r.top+r.height/2}); let p=snap(c);
   if(!walkable(p.x,p.y)){ outer: for(let d=1;d<12;d++) for(let dx=-d;dx<=d;dx++) for(let dy=-d;dy<=d;dy++){ const q={x:p.x+dx*30,y:p.y+dy*30}; if(walkable(q.x,q.y)){ p=q; break outer; } } }
-  S.tokens[id]={custom:true,name:b.name,short:b.short,kind:'nemico',color:b.color,x:p.x,y:p.y,hp:b.hp,hpMax:b.hp,ac:b.ac,init:null,hidden:true,size:b.size||1,noInit:!!b.noInit,mods:{Iniziativa:b.init},actions:b.actions,note:b.note,tac:b.tac||'',lines:b.lines||[]};
+  S.tokens[id]={custom:true,name:b.name,short:b.short,kind:'nemico',color:b.color,img:b.img||'',x:p.x,y:p.y,hp:b.hp,hpMax:b.hp,ac:b.ac,init:null,hidden:true,size:b.size||1,noInit:!!b.noInit,mods:{Iniziativa:b.init},actions:b.actions,note:b.note,tac:b.tac||'',lines:b.lines||[]};
   selected=id; log({kind:'sys',gm:true,txt:`${b.name} messo sulla mappa (nascosto)`}); save();
 };
 
