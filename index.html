@@ -513,7 +513,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v97</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v98</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -731,7 +731,7 @@ let S = normalize(structuredClone(DEFAULT_STATE));
 let db = null, ref = null, saveTimer = null;
 let selected = null, measuring = false, measurePts = [];
 
-const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','preFormThp','giant','owner'];
+const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','preFormThp','giant','owner','blessLinkedAt'];
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
@@ -994,8 +994,11 @@ function renderRail(){
 /* ---------- scontro ---------- */
 const d20=()=>{ const r=1+Math.floor(Math.random()*20); DICE_BUF.push([20,r]); DICE_T=Date.now(); return r; };
 function rollExpr(expr){ let total=0, parts=[]; for(const m of expr.replace(/\s/g,'').matchAll(/([+-]?)(\d*)d(\d+)|([+-]?\d+)/g)){ if(m[3]){ const n=+(m[2]||1), f=+m[3], sg=m[1]==='-'?-1:1; const rs=[]; for(let i=0;i<n;i++){ const r=1+Math.floor(Math.random()*f); rs.push(r); DICE_BUF.push([f,r]); DICE_T=Date.now(); total+=sg*r; } parts.push(`${m[1]}${n}d${f}[${rs.join(',')}]`);} else if(m[4]){ total+=+m[4]; parts.push(m[4]); } } return {total,parts:parts.join(' ')}; }
+function hasCondition(t,name){ return !!(t?.conds||[]).some(c=>c.n===name); }
+function blessBonus(t){ return hasCondition(t,'benedetto')?rollExpr('1d4').total:0; }
 function doAction(tokId,a){
   const t=S.tokens[tokId]; if(!t) return;
+  if(a.n==='Benedizione'){ openBlessPicker(tokId); return; }
   let count=1, act=a;
   if(/^Multiattacco/.test(a.n)){ const base=(t.actions||[]).find(x=>x.atk!=null&&!/Leggendaria|Multiattacco/.test(x.n)); if(!base) return; act=base; count=2; }
   if(act.atk==null&&!act.dmg){ log({kind:'sys',txt:`${t.name}: ${act.n}`}); save(true); return; }
@@ -1020,11 +1023,11 @@ function openTargetPicker(tokId,a,count){
   box.querySelector('#tgtNone').onclick=()=>{ closeModal(); for(let k=0;k<count;k++) plainRoll(tokId,a); };
   box.querySelector('#tgtGo').onclick=()=>{ const ids=[...box.querySelectorAll('input[name=tgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un bersaglio'); return; } closeModal(); if(isAtk){ for(let k=0;k<count;k++) resolveAttack(tokId,a,ids[0]); } else resolveSave(tokId,a,ids); };
 }
-function plainRoll(tokId,a){ const t=S.tokens[tokId]; const ev={kind:'atk',who:t.name,name:a.n}; if(t.kind==='nemico'&&!S.publicRolls) ev.gm=true; if(a.atk!=null){ const r=d20(); ev.r=r; ev.atk=r+a.atk; ev.crit=r===20; ev.fumble=r===1; } if(a.dmg){ const d=rollDmg(a.dmg,ev.crit); ev.dmg=d.total; ev.dmgTxt=d.txt; ev.dmgFinal=true; } log(ev); save(true); }
+function plainRoll(tokId,a){ const t=S.tokens[tokId]; const ev={kind:'atk',who:t.name,name:a.n}; if(t.kind==='nemico'&&!S.publicRolls) ev.gm=true; if(a.atk!=null){ const r=d20(), bless=blessBonus(t); ev.r=r; ev.bless=bless; ev.atk=r+a.atk+bless; ev.crit=r===20; ev.fumble=r===1; } if(a.dmg){ const d=rollDmg(a.dmg,ev.crit); ev.dmg=d.total; ev.dmgTxt=d.txt; ev.dmgFinal=true; } log(ev); save(true); }
 function resolveAttack(tokId,a,targetId){
   const t=S.tokens[tokId], tg=S.tokens[targetId]; if(!t||!tg) return;
-  const r=d20(); const crit=r===20, fumble=r===1; const tot=r+a.atk; const hit=crit||(!fumble&&tg.ac!=null&&tot>=tg.ac)||(tg.ac==null&&!fumble);
-  const ev={kind:'atk',who:t.name,name:a.n,target:tg.name,tid:targetId,r,atk:tot,crit,fumble,hit,dmgFinal:true}; if(t.kind==='nemico'&&!S.publicRolls) ev.gm=true;
+  const r=d20(), bless=blessBonus(t); const crit=r===20, fumble=r===1; const tot=r+a.atk+bless; const hit=crit||(!fumble&&tg.ac!=null&&tot>=tg.ac)||(tg.ac==null&&!fumble);
+  const ev={kind:'atk',who:t.name,name:a.n,target:tg.name,tid:targetId,r,bless,atk:tot,crit,fumble,hit,dmgFinal:true}; if(t.kind==='nemico'&&!S.publicRolls) ev.gm=true;
   if(hit&&a.dmg){ const d=rollDmg(a.dmg,crit); ev.dmg=d.total; ev.dmgTxt=d.txt; applyDamage(tg,d.total); ev.hpAfter=tg.hp; if(tg.hp<=0) ev.down=true; }
   log(ev); if(ev.down) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); save(true);
 }
@@ -1076,11 +1079,11 @@ document.getElementById('btnAsk').onclick=()=>{ const t=S.tokens[selected]; if(!
 document.getElementById('btnMeasure').onclick=()=>{ if(fogTool) setFogTool(fogTool); measuring=!measuring; measurePts=[]; stage.classList.toggle('measuring',measuring); document.getElementById('btnMeasure').classList.toggle('primary',measuring); if(!measuring) document.getElementById('measure').innerHTML=''; };
 
 /* ---------- giocatore ---------- */
-function rollFor(tokId,skill,forcedMod){ const t=S.tokens[tokId]; if(!t) return; const r=d20(), mod=forcedMod??t.mods[skill]??0, tot=r+mod; if(skill==='Iniziativa'){ t.init=tot; sortOrder(); } log({kind:'roll',who:t.name+' (tirato dal master)',skill,r,mod,tot,dc:null}); if(S.request&&S.request.skill===skill){ poiCheckReveal(tot,tokId,skill,S.request.id); S.request.targets=S.request.targets.filter(i=>i!==tokId); if(!S.request.targets.length) S.request=null; } save(true); }
+function rollFor(tokId,skill,forcedMod){ const t=S.tokens[tokId]; if(!t) return; const r=d20(), mod=forcedMod??t.mods[skill]??0, bless=skill.startsWith('TS ')?blessBonus(t):0, tot=r+mod+bless; if(skill==='Iniziativa'){ t.init=tot; sortOrder(); } log({kind:'roll',who:t.name+' (tirato dal master)',skill,r,mod,bless,tot,dc:null}); if(S.request&&S.request.skill===skill){ poiCheckReveal(tot,tokId,skill,S.request.id); S.request.targets=S.request.targets.filter(i=>i!==tokId); if(!S.request.targets.length) S.request=null; } save(true); }
 function doRoll(skill,dc,reqId,forcedMod){
   const t=S.tokens[me]; if(!t) return;
-  const r=d20(), mod=forcedMod??t.mods[skill]??0, tot=r+mod;
-  const ev={kind:'roll',who:t.name,skill,r,mod,tot,dc:dc??null};
+  const r=d20(), mod=forcedMod??t.mods[skill]??0, bless=skill.startsWith('TS ')?blessBonus(t):0, tot=r+mod+bless;
+  const ev={kind:'roll',who:t.name,skill,r,mod,bless,tot,dc:dc??null};
   if(skill==='Iniziativa'){ t.init=tot; sortOrder(); }
   log(ev);
   if(reqId&&S.request&&S.request.id===reqId){ poiCheckReveal(tot,me,skill,reqId); S.request.targets=S.request.targets.filter(i=>i!==me); if(!S.request.targets.length) S.request=null; }
@@ -1261,16 +1264,16 @@ function render(){
     const d=document.createElement('div'); d.className='ev '+ev.kind+(ev.gm?' gmonly':'');
     if(ev.kind==='roll'){
       const dcTxt=(IS_GM&&ev.dc)?` · CD ${ev.dc} <span class="${ev.tot>=ev.dc?'pass':'fail'}">${ev.tot>=ev.dc?'riuscita':'fallita'}</span>`:'';
-      d.innerHTML=`<div class="who">${ev.who}</div><div>${ev.skill}: <span class="big">${ev.tot}</span> <span class="note">(d20 ${ev.r} ${ev.mod>=0?'+':'−'} ${Math.abs(ev.mod)})</span>${dcTxt}</div>`;
+      d.innerHTML=`<div class="who">${ev.who}</div><div>${ev.skill}: <span class="big">${ev.tot}</span> <span class="note">(d20 ${ev.r} ${ev.mod>=0?'+':'−'} ${Math.abs(ev.mod)}${ev.bless?` + Benedizione d4 ${ev.bless}`:''})</span>${dcTxt}</div>`;
     } else if(ev.kind==='spell'){
-      const atk=ev.atk!=null?`colpisce <span class="big">${ev.atk}</span> <span class="note">(d20 ${ev.r})</span>${ev.crit?' <span class="pass">CRITICO</span>':''}`:'';
+      const atk=ev.atk!=null?`colpisce <span class="big">${ev.atk}</span> <span class="note">(d20 ${ev.r}${ev.bless?` + Benedizione d4 ${ev.bless}`:''})</span>${ev.crit?' <span class="pass">CRITICO</span>':''}`:'';
       const dmg=ev.dmg!=null?`${atk?' · ':''}danno <span class="big">${ev.crit?ev.dmg*2:ev.dmg}</span> <span class="note">(${ev.dmgTxt})</span>`:'';
       const heal=ev.heal!=null?`cura <span class="big">${ev.heal}</span> <span class="note">(${ev.healTxt})</span>`:'';
       d.innerHTML=`<div class="who">${ev.who} · ${ev.name}${ev.lvl?` (liv. ${ev.lvl})`:''}</div><div>${atk}${dmg}${heal}${(!atk&&!dmg&&!heal)?'lanciato':''}</div>`;
     } else if(ev.kind==='atk'){
       d.className='ev roll';
       const res=ev.hit===true?' <span class="pass">COLPITO</span>':(ev.hit===false?' <span class="fail">MANCATO</span>':'');
-      const atk=ev.atk!=null?`colpisce <span class="big">${ev.atk}</span> <span class="note">(d20 ${ev.r})</span>${ev.crit?' <span class="pass">CRITICO</span>':''}${ev.fumble?' <span class="fail">1 naturale</span>':''}${res}`:'';
+      const atk=ev.atk!=null?`colpisce <span class="big">${ev.atk}</span> <span class="note">(d20 ${ev.r}${ev.bless?` + Benedizione d4 ${ev.bless}`:''})</span>${ev.crit?' <span class="pass">CRITICO</span>':''}${ev.fumble?' <span class="fail">1 naturale</span>':''}${res}`:'';
       const shown=ev.dmg!=null?(ev.dmgFinal?ev.dmg:(ev.crit?ev.dmg*2:ev.dmg)):null;
       const dmg=shown!=null?`${atk?' · ':''}danno <span class="big">${shown}</span> <span class="note">(${ev.dmgTxt}${(!ev.dmgFinal&&ev.crit)?', raddoppiato':''})</span>`:'';
       const tgt=ev.target?` → ${ev.target}`:''; const tt=ev.tid?S.tokens[ev.tid]:null; const hp=(ev.hpAfter!=null&&tt&&(IS_GM||tt.kind==='pg'))?` <span class="note">(${ev.target} a ${ev.hpAfter} PF)</span>`:'';
@@ -2800,13 +2803,25 @@ function renderSheet(id){
 }
 function castSpell(id,name){
   const t=S.tokens[id], sh=SHEETS[id], d=SPELLS[name]; if(!t||!sh||!d) return;
+  if(d.it==='Benedizione'){ openBlessPicker(id); return; }
   const sp=sh.spell, l=d.l;
   if(l>0){ t.used=t.used||{}; if((t.used[l]||0)>=(sp.slots[l]||0)){ toast('Nessuno slot di livello '+l); return; } t.used[l]=(t.used[l]||0)+1; }
   const ev={kind:'spell',who:t.name,name:d.it,lvl:l};
-  if(d.atk){ const r=d20(); ev.r=r; ev.atk=r+sp.atk; ev.crit=r===20; }
+  if(d.atk){ const r=d20(), bless=blessBonus(t); ev.r=r; ev.bless=bless; ev.atk=r+sp.atk+bless; ev.crit=r===20; }
   if(d.dmg){ const x=rollExpr(d.dmg); ev.dmg=x.total; ev.dmgTxt=x.parts; }
   if(d.heal){ const x=rollExpr(d.heal); const mod=modCalc(sh.abil[sp.stat])+(id==='mattheus'?2+5:0); ev.heal=x.total+mod; ev.healTxt=x.parts+' + '+mod; }
   log(ev); save(true); renderSheet(id);
+}
+function openBlessPicker(id){
+  const t=S.tokens[id], sh=SHEETS[id]; if(!t||!sh?.spell) return;
+  t.used=t.used||{}; const previous=(S.log||[]).find(ev=>ev.kind==='spell'&&ev.name==='Benedizione'&&ev.who===t.name), legacy=!!(previous&&!hasCondition(t,'concentrazione')&&t.blessLinkedAt!==previous.t&&Date.now()-previous.t<1800000);
+  if(!legacy&&(t.used[1]||0)>=(sh.spell.slots[1]||0)){ toast('Nessuno slot di livello 1'); return; }
+  const allies=Object.entries(S.tokens).filter(([,x])=>x.kind!=='nemico'&&!x.hidden&&x.hp>0).map(([tid,x])=>({id:tid,t:x,d:distM(t,x)})).sort((a,b)=>a.d-b.d);
+  openModal(`<div class="eyebrow">${t.name} · concentrazione</div><h2 class="big">Benedizione</h2><p class="note">${legacy?'<b>Il lancio è già nel registro: non verrà consumato un altro slot.</b><br>':''}Scegli fino a tre alleati. Per 1 minuto aggiungono automaticamente 1d4 ai tiri per colpire e ai tiri salvezza.</p><div class="tgtlist">${allies.map(o=>`<label class="tgt"><input type="checkbox" name="blessTgt" value="${o.id}"><span class="tn">${o.t.name}</span><span class="note">${o.d.toLocaleString('it-IT')} m</span></label>`).join('')}</div><div class="row" style="margin-top:12px"><button class="primary" id="blessGo">${legacy?'Applica Benedizione':'Lancia Benedizione'}</button><button id="blessCancel">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal');
+  box.querySelectorAll('[name=blessTgt]').forEach(c=>c.onchange=()=>{ const checked=[...box.querySelectorAll('[name=blessTgt]:checked')]; box.querySelectorAll('[name=blessTgt]:not(:checked)').forEach(x=>x.disabled=checked.length>=3); });
+  box.querySelector('#blessCancel').onclick=closeModal;
+  box.querySelector('#blessGo').onclick=()=>{ const ids=[...box.querySelectorAll('[name=blessTgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un alleato'); return; } const castAt=legacy?previous.t:Date.now(); if(!legacy){ t.used[1]=(t.used[1]||0)+1; log({t:castAt,kind:'spell',who:t.name,name:'Benedizione',lvl:1}); } t.blessLinkedAt=castAt; clearBlessing(id); for(const tid of ids){ const target=S.tokens[tid]; target.conds=target.conds||[]; target.conds=target.conds.filter(c=>c.n!=='benedetto'); target.conds.push({n:'benedetto',r:10,source:id}); } t.conds=(t.conds||[]).filter(c=>c.n!=='concentrazione'); t.conds.push({n:'concentrazione',r:10,source:'benedizione'}); log({kind:'sys',txt:`Benedizione su ${ids.map(tid=>S.tokens[tid].name).join(', ')}`}); closeModal(); save(true); };
 }
 
 function openMonster(id){ const t=S.tokens[id]; if(!t) return;
@@ -3075,8 +3090,9 @@ function checkTurn(){
 const CONDS=[['prono','Prono'],['afferrato','Afferrato'],['trattenuto','Trattenuto'],['spaventato','Spaventato'],['avvelenato','Avvelenato'],['affascinato','Affascinato'],['accecato','Accecato'],['assordato','Assordato'],['stordito','Stordito'],['incapacitato','Incapacitato'],['paralizzato','Paralizzato'],['invisibile','Invisibile'],['concentrazione','Concentrazione'],['benedetto','Benedetto'],['marchiato','Marchiato'],['scatto','In scatto']];
 const CONDS_ABBR={prono:'PRN',afferrato:'AFF',trattenuto:'TRA',spaventato:'SPA',avvelenato:'VEL',affascinato:'CHA',accecato:'CIE',assordato:'SOR',stordito:'STO',incapacitato:'INC',paralizzato:'PAR',invisibile:'INV',concentrazione:'CON',benedetto:'BEN',marchiato:'MAR',scatto:'SCA'};
 function condLabel(k){ const c=CONDS.find(x=>x[0]===k); return c?c[1]:k; }
-function toggleCond(id,k,rounds){ const t=S.tokens[id]; if(!t) return; t.conds=t.conds||[]; const i=t.conds.findIndex(c=>c.n===k); if(i>=0){ t.conds.splice(i,1); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} non è più ${condLabel(k).toLowerCase()}`}); } else { t.conds.push({n:k,r:rounds||null}); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name}: ${condLabel(k).toLowerCase()}${rounds?` per ${rounds} round`:''}`}); } save(); }
-function tickConds(id){ const t=S.tokens[id]; if(!t||!t.conds) return; t.conds=t.conds.filter(c=>{ if(c.r==null) return true; c.r--; if(c.r<=0){ log({kind:'sys',txt:`${t.name}: finisce ${condLabel(c.n).toLowerCase()}`}); return false; } return true; }); }
+function clearBlessing(source){ for(const x of Object.values(S.tokens)) x.conds=(x.conds||[]).filter(c=>!(c.n==='benedetto'&&c.source===source)); }
+function toggleCond(id,k,rounds){ const t=S.tokens[id]; if(!t) return; t.conds=t.conds||[]; const i=t.conds.findIndex(c=>c.n===k); if(i>=0){ const old=t.conds[i]; t.conds.splice(i,1); if(old.n==='concentrazione'&&old.source==='benedizione') clearBlessing(id); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} non è più ${condLabel(k).toLowerCase()}`}); } else { t.conds.push({n:k,r:rounds||null}); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name}: ${condLabel(k).toLowerCase()}${rounds?` per ${rounds} round`:''}`}); } save(); }
+function tickConds(id){ const t=S.tokens[id]; if(!t||!t.conds) return; t.conds=t.conds.filter(c=>{ if(c.r==null) return true; c.r--; if(c.r<=0){ if(c.n==='concentrazione'&&c.source==='benedizione') clearBlessing(id); log({kind:'sys',txt:`${t.name}: finisce ${condLabel(c.n).toLowerCase()}`}); return false; } return true; }); }
 function renderCondChips(){
   const box=document.getElementById('condBox'); if(!box) return; const t=S.tokens[selected]; if(!t){ box.innerHTML=''; return; }
   const have=new Set((t.conds||[]).map(c=>c.n));

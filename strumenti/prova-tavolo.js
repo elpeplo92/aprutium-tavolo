@@ -133,6 +133,17 @@ const file = path.resolve(process.argv[2] || 'index.html');
           if(oldZenith) S.tokens.zenith=oldZenith;
           closeModal();
         } catch (e) { rotte.push('Evocazione di Zenith → '+e.name+': '+e.message); }
+
+        provati++;
+        try {
+          const ids=['mattheus','maximus','luigis'], mt=S.tokens.mattheus, oldUsed=structuredClone(mt.used||{}), oldConds=Object.fromEntries(ids.map(id=>[id,structuredClone(S.tokens[id].conds||[])]));
+          mt.used={...(mt.used||{}),1:0}; openBlessPicker('mattheus');
+          for(const id of ids){ const c=document.querySelector(`#modal [name="blessTgt"][value="${id}"]`); if(c){ c.checked=true; c.dispatchEvent(new Event('change')); } }
+          document.querySelector('#modal #blessGo')?.click();
+          if(!ids.every(id=>hasCondition(S.tokens[id],'benedetto'))||!hasCondition(mt,'concentrazione')) rotte.push('Benedizione → non applica effetto e concentrazione ai bersagli');
+          const bonus=blessBonus(S.tokens.maximus); if(bonus<1||bonus>4) rotte.push('Benedizione → il bonus automatico 1d4 non viene tirato');
+          clearBlessing('mattheus'); mt.used=oldUsed; for(const id of ids) S.tokens[id].conds=oldConds[id]; closeModal();
+        } catch (e) { rotte.push('Benedizione di Mattheus → '+e.name+': '+e.message); }
       }
 
       if (!IS_GM) {
