@@ -506,7 +506,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v80</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v81</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -2425,8 +2425,7 @@ function renderGuide(){
   { const lu=CUR&&CUR.id==='luogo'; for(const id of ['dock','zoomlbl','zoomctl','hud']){ const el=document.getElementById(id); if(el) el.style.display=lu?'none':''; } }
   const box=document.getElementById('sceneGuide'); if(!box) return;
   if(!IS_GM||!CUR||CUR.id==='luogo'){ box.classList.add('hidden'); return; }
-  const ids=SCENE_GUIDE[CUR.id]||[]; const list=ids.map(id=>SCENE_HANDOUTS.find(x=>x.id===id)).filter(Boolean);
-  const key=CUR.id+'|'+list.length+'|'+Object.keys(S.poiRev||{}).sort().join(',')+'|'+POIS.filter(p=>!poiPosition(p)).map(p=>p.id).join(','); if(box.dataset.key===key){ box.classList.remove('hidden'); return; } box.dataset.key=key;
+  const key=CUR.id+'|'+Object.keys(S.poiRev||{}).sort().join(',')+'|'+POIS.filter(p=>!poiPosition(p)).map(p=>p.id).join(','); if(box.dataset.key===key){ box.classList.remove('hidden'); return; } box.dataset.key=key;
   box.classList.remove('hidden');
   let html=`<h2>Guida della scena</h2><p class="note" style="margin:0 0 8px"><b>${CUR.name}</b></p>`;
   const order=(POI_ORDER[CUR.id]||[]).map(id=>POIS.find(p=>p.id===id)).filter(Boolean);
@@ -2434,11 +2433,8 @@ function renderGuide(){
     html+=`<div class="eyebrow" style="margin:6px 0 4px">Punti d’interesse, in ordine di gioco</div>`;
     order.forEach((p,n)=>{ const kk=poiKind(p), rev=poiRevealed(p), hid=poiHidden(p); const ic=POI_ICONS[kk]||POI_ICONS.unknown;
       html+=`<details class="gpoi ${rev?'rev':''}" data-pid="${p.id}" ${guideOpen['poi:'+p.id]?'open':''}><summary><span class="gnum">${n+1}</span><i style="--pc:${ic[0]}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[1]}</svg></i><span class="gt">${p.title}</span><span class="k">${rev?'svelato':(hid?'nascosto':'?')}</span></summary>
-        <div class="gbody"><div class="row" style="margin-top:6px"><button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button>${poiDiscoveryEnabled(p)?`<button class="mini" data-gspot="${p.id}">Richiedi Percezione</button>`:''}<button class="mini" data-gv="${p.id}">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button><button class="mini" data-go="${p.id}">Apri</button></div><h4>Da leggere ai giocatori</h4><p class="lore">${p.schemaVersion===2?poiParagraphs(p.text):p.text}</p>${p.gm?`<h4>Note per il Master</h4><p>${p.schemaVersion===2?poiParagraphs(p.gm):p.gm}</p>`:''}${renderPoiModules(p)}</div></details>`; });
+        <div class="gbody"><div class="row" style="margin-top:6px"><button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button>${poiDiscoveryEnabled(p)?`<button class="mini" data-gspot="${p.id}">Richiedi Percezione</button>`:''}<button class="mini" data-gv="${p.id}">${poiPosition(p)?'Vai sulla mappa':'Posiziona sulla mappa'}</button><button class="mini" data-go="${p.id}">Apri</button></div><h4>Da leggere ai giocatori</h4><p class="lore">${p.schemaVersion===2?poiParagraphs(p.text):p.text}</p>${renderPoiDiscovery(p)}${p.gm?`<h4>Note per il Master</h4><p>${p.schemaVersion===2?poiParagraphs(p.gm):p.gm}</p>`:''}${renderPoiModules(p)}</div></details>`; });
   }
-  if(list.length) html+=`<div class="eyebrow" style="margin:14px 0 4px">Schede della scena</div>`;
-  for(const sc of list){ const kind=(sc.title.split(' — ')[0]||'').trim(); const name=sc.title.slice(kind.length+3);
-    html+=`<details data-sid="${sc.id}" ${guideOpen[sc.id]?'open':''}><summary><span>${name}</span><span class="k">${kind}</span></summary>${sc.intro?`<p class="intro">${sc.intro.replace(/\n/g,'<br>')}</p>`:''}${sc.secs.map(x=>`<h4>${x.t}</h4><p>${(x.txt||'').replace(/\n/g,'<br>')}</p>`).join('')}<div class="row"><button class="mini" data-openscene="${sc.id}">Apri</button></div></details>`; }
   box.innerHTML=html;
   box.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{ guideOpen[d.dataset.sid||('poi:'+d.dataset.pid)]=d.open; }));
   const P=id=>POIS.find(p=>p.id===id);
@@ -2447,7 +2443,6 @@ function renderGuide(){
   box.querySelectorAll('[data-grev]').forEach(b=>b.onclick=()=>{ const p=P(b.dataset.grev); poiReveal(p,!poiRevealed(p)); });
   box.querySelectorAll('[data-gspot]').forEach(b=>b.onclick=()=>openPoiRequest(P(b.dataset.gspot)));
   box.querySelectorAll('[data-poi-check]').forEach(b=>b.onclick=()=>openPoiRequest(P(b.closest('[data-pid]').dataset.pid),b.dataset.poiCheck));
-  box.querySelectorAll('[data-openscene]').forEach(b=>b.onclick=()=>{ const sc=SCENE_HANDOUTS.find(x=>x.id===b.dataset.openscene); if(sc) openSceneHandout(sc); });
 }
 function openSceneHandout(sc){
   let html=`<div class="eyebrow">Handout</div><h2 class="big">${sc.title}</h2>${sc.intro?`<p class="lore" style="font-size:14px">${sc.intro.replace(/\n/g,'<br>')}</p>`:''}`;
