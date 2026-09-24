@@ -509,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v92</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v93</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -727,7 +727,7 @@ let S = normalize(structuredClone(DEFAULT_STATE));
 let db = null, ref = null, saveTimer = null;
 let selected = null, measuring = false, measurePts = [];
 
-const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds'];
+const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','giant'];
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
@@ -965,7 +965,8 @@ function renderRail(){
     if(t.img){ m.classList.add('hasimg'); }
     m.classList.toggle('ishidden',!!t.hidden);
     const rolled=t.init!=null; const canAsk=t.kind==='pg'&&(IS_GM||id===me); const waiting=!rolled&&S.request&&S.request.skill==='Iniziativa'&&S.request.targets.includes(id);
-    m.innerHTML=`<div class="pic"${t.img?` style="background-image:url('${t.img}')"`:''}><span class="init ${rolled?'':'d20'} ${canAsk&&!rolled?'ask':''} ${rolled&&IS_GM&&t.kind==='pg'?'reset':''} ${waiting?'waiting':''}" title="${rolled?(IS_GM&&t.kind==='pg'?'Iniziativa '+t.init+' — clicca per azzerarla':'Iniziativa'):(IS_GM?(waiting?'Richiesta inviata a '+t.name+' — clicca di nuovo per tirare tu al posto suo':'Chiedi l’iniziativa a '+t.name):(id===me?'Tira l’iniziativa':'Iniziativa da tirare'))}">${rolled?t.init:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><path d="M12 2v6l9-1M12 8l-9-1M12 8l7 9H5z"/><path d="M12 22v-5"/></svg>`}</span><div class="disc">${t.short}</div></div><div class="info"><div class="nm" title="${t.name}">${t.kind==='pg'?t.name.split(' ')[0]:t.name}</div>${showHp?`<div class="hpn ${pct<=30?'low':''}">${t.hp} <small>/ ${t.hpMax}</small></div><div class="hpbar"><i class="${pct<=30?'low':''}" style="width:${pct}%"></i></div>`:''}${condHtml(t,true)}${dsHtml(t)}</div>`;
+    const formLabel=activeWildForm(id,t)?' · Toro':(id==='maximus'&&t.giant?' · Gigante':'');
+    m.innerHTML=`<div class="pic"${t.img?` style="background-image:url('${t.img}')"`:''}><span class="init ${rolled?'':'d20'} ${canAsk&&!rolled?'ask':''} ${rolled&&IS_GM&&t.kind==='pg'?'reset':''} ${waiting?'waiting':''}" title="${rolled?(IS_GM&&t.kind==='pg'?'Iniziativa '+t.init+' — clicca per azzerarla':'Iniziativa'):(IS_GM?(waiting?'Richiesta inviata a '+t.name+' — clicca di nuovo per tirare tu al posto suo':'Chiedi l’iniziativa a '+t.name):(id===me?'Tira l’iniziativa':'Iniziativa da tirare'))}">${rolled?t.init:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><path d="M12 2v6l9-1M12 8l-9-1M12 8l7 9H5z"/><path d="M12 22v-5"/></svg>`}</span><div class="disc">${t.short}</div></div><div class="info"><div class="nm" title="${t.name}${formLabel}">${t.kind==='pg'?t.name.split(' ')[0]:t.name}${formLabel}</div>${showHp?`<div class="hpn ${pct<=30?'low':''}">${t.hp} <small>/ ${t.hpMax}</small></div><div class="hpbar"><i class="${pct<=30?'low':''}" style="width:${pct}%"></i></div>`:''}${condHtml(t,true)}${dsHtml(t)}</div>`;
     m.onclick=()=>select(id);
     if(t.kind==='pg'&&SHEETS[id]){
       const sheet=document.createElement('button'); sheet.type='button'; sheet.className='rail-sheet'; sheet.textContent='Scheda'; sheet.setAttribute('aria-label','Apri scheda di '+t.name);
@@ -1063,10 +1064,10 @@ document.getElementById('btnAsk').onclick=()=>{ const t=S.tokens[selected]; if(!
 document.getElementById('btnMeasure').onclick=()=>{ if(fogTool) setFogTool(fogTool); measuring=!measuring; measurePts=[]; stage.classList.toggle('measuring',measuring); document.getElementById('btnMeasure').classList.toggle('primary',measuring); if(!measuring) document.getElementById('measure').innerHTML=''; };
 
 /* ---------- giocatore ---------- */
-function rollFor(tokId,skill){ const t=S.tokens[tokId]; if(!t) return; const r=d20(), mod=t.mods[skill]??0, tot=r+mod; if(skill==='Iniziativa'){ t.init=tot; sortOrder(); } log({kind:'roll',who:t.name+' (tirato dal master)',skill,r,mod,tot,dc:null}); if(S.request&&S.request.skill===skill){ poiCheckReveal(tot,tokId,skill,S.request.id); S.request.targets=S.request.targets.filter(i=>i!==tokId); if(!S.request.targets.length) S.request=null; } save(true); }
-function doRoll(skill,dc,reqId){
+function rollFor(tokId,skill,forcedMod){ const t=S.tokens[tokId]; if(!t) return; const r=d20(), mod=forcedMod??t.mods[skill]??0, tot=r+mod; if(skill==='Iniziativa'){ t.init=tot; sortOrder(); } log({kind:'roll',who:t.name+' (tirato dal master)',skill,r,mod,tot,dc:null}); if(S.request&&S.request.skill===skill){ poiCheckReveal(tot,tokId,skill,S.request.id); S.request.targets=S.request.targets.filter(i=>i!==tokId); if(!S.request.targets.length) S.request=null; } save(true); }
+function doRoll(skill,dc,reqId,forcedMod){
   const t=S.tokens[me]; if(!t) return;
-  const r=d20(), mod=t.mods[skill]??0, tot=r+mod;
+  const r=d20(), mod=forcedMod??t.mods[skill]??0, tot=r+mod;
   const ev={kind:'roll',who:t.name,skill,r,mod,tot,dc:dc??null};
   if(skill==='Iniziativa'){ t.init=tot; sortOrder(); }
   log(ev);
@@ -1092,13 +1093,39 @@ const GENERIC_ACTS={
  reazione:[A_('Azione preparata','speciale','Quello che hai dichiarato con Prepararsi')]
 };
 function A_(n,tipo,note){ return {n,tipo,eco:'generic',note}; }
+const WILD_FORMS={
+  toro:{name:'Toro',size:2,ac:16,speed:12,thp:15,abil:{For:18,Des:10,Cos:14},
+    actions:[
+      {n:'Incornata',tipo:'mischia',eco:'azione',atk:7,dmg:'1d6+4',note:'Attacco naturale'},
+      {n:'Carica del toro',tipo:'mischia',eco:'azione',atk:7,dmg:'1d6+4+2d6',note:'Dopo almeno 6 m in linea retta: +2d6 e TS For CD 15 o prono'},
+      {n:'Spinta con le corna',tipo:'speciale',eco:'azione',note:'Atletica +7; spinge oppure rende prono'}
+    ]}
+};
+function activeWildForm(id,t){ return id==='adamus'&&t?.form&&t.form!=='normale'?WILD_FORMS[t.form]:null; }
+function tokenActions(id,t){
+  const form=activeWildForm(id,t); if(form) return form.actions;
+  const actions=[...(t?.actions||[])];
+  if(id==='maximus'&&t?.giant) actions.push({n:'Danno di Possanza del gigante',tipo:'speciale',eco:'gratuita',dmg:'1d6',note:'Una volta per turno, dopo un colpo riuscito'});
+  return actions;
+}
+function setWildShape(on){
+  const t=S.tokens.adamus; if(!t||!canAct('adamus')) return;
+  if(on){ const form=WILD_FORMS.toro; t.form='toro'; t.formThp=form.thp; t.thp=Math.max(Number(t.thp)||0,form.thp); t.size=form.size; t.speed=form.speed; log({kind:'sys',txt:`${t.name} assume la Forma Selvatica: ${form.name}`}); }
+  else { t.form='normale'; t.formThp=0; t.thp=0; t.size=1; t.speed=9; log({kind:'sys',txt:`${t.name} torna alla forma normale`}); }
+  save(true); renderSheet('adamus');
+}
+function setGiantMight(on){
+  const t=S.tokens.maximus; if(!t||!canAct('maximus')) return;
+  t.giant=!!on; t.size=on?2:1; log({kind:'sys',txt:on?`${t.name} attiva Possanza del gigante e diventa Grande`:`${t.name} termina Possanza del gigante`});
+  save(true); renderSheet('maximus');
+}
 let actTab='azione';
 function renderActions(container,tokId){
   container.innerHTML=''; const t=S.tokens[tokId]; if(!t||!t.actions) return;
   const tabs=document.createElement('div'); tabs.className='acttabs';
-  for(const [eco,label] of [['azione','Azione'],['bonus','Azione bonus'],['reazione','Reazione']]){ const b=document.createElement('button'); b.textContent=label; b.classList.toggle('on',actTab===eco); b.onclick=()=>{ actTab=eco; renderActions(container,tokId); }; tabs.appendChild(b); }
+  for(const [eco,label] of ACT_ECO){ const b=document.createElement('button'); b.textContent=label; b.classList.toggle('on',actTab===eco); b.onclick=()=>{ actTab=eco; renderActions(container,tokId); }; tabs.appendChild(b); }
   container.appendChild(tabs);
-  const mine=t.actions.filter(a=>actEco(a)===actTab); const gen=GENERIC_ACTS[actTab]||[];
+  const mine=tokenActions(tokId,t).filter(a=>actEco(a)===actTab); const gen=GENERIC_ACTS[actTab]||[];
   const add=(a,generic)=>{ const tp=actTipo(a); const b=document.createElement('button'); b.className='act t-'+tp+(generic?' generic':'');
     b.innerHTML=`<svg viewBox="0 0 24 24">${ACT_ICON[tp]||ACT_ICON.speciale}</svg><span class="abody"><span class="an">${a.n}</span>${a.note?`<span class="anote">${a.note}</span>`:''}</span><span class="ad">${a.atk!=null?`+${a.atk}`:''}${a.atk!=null&&a.dmg?' · ':''}${a.dmg||''}</span>`;
     b.title=ACT_TIPO_NAME[tp]+(a.atk!=null?` · attacco +${a.atk}`:'')+(a.dmg?` · danno ${a.dmg}`:''); b.onclick=()=>doAction(tokId,a); container.appendChild(b); };
@@ -1184,11 +1211,12 @@ function render(){
   document.getElementById('selName').textContent=t?t.name:'';
   document.getElementById('hudSel').textContent=t?`${t.name} · PF ${t.hp}/${t.hpMax}`+(S.mode==='scontro'?` · movimento ${((t.speed||9)*(t.dash?2:1)-(t.movedM||0)).toLocaleString('it-IT')} m`:''):'';
   document.getElementById('hudSel').style.display=t?'':'none';
-  renderCondChips(); if(t){ document.getElementById('thpIn').value=t.thp||''; document.getElementById('dsSel').innerHTML=dsHtml(t); document.getElementById('selHp').textContent=`${t.hp} / ${t.hpMax}`+(t.thp?` (+${t.thp} temp.)`:''); document.getElementById('selAc').textContent=t.ac?`CA ${t.ac}`:''; renderActions(document.getElementById('gmActions'),selected); document.getElementById('selTac').innerHTML=t.kind==='nemico'?`<div class="tacbox"><div class="eyebrow">Come combatte</div><p>${t.tac||'—'}</p>${(t.lines&&t.lines.length)?`<div class="eyebrow">Cosa dice</div><ul>${t.lines.map(l=>`<li>${l}</li>`).join('')}</ul>`:''}<button id="btnMonster">Scheda completa del mostro</button></div>`:''; { const bm=document.getElementById('btnMonster'); if(bm) bm.onclick=()=>openMonster(selected); } document.getElementById('selInit').value=t.init??''; document.getElementById('selHide').textContent=t.hidden?'Mostra ai giocatori':'Nascondi ai giocatori'; document.getElementById('selInitLbl').parentElement.querySelectorAll('#selInitLbl, #selInit').forEach(e=>e.closest('span,b').style.display=S.mode==='scontro'?'':'none'); document.getElementById('askRow').style.display=t.kind==='pg'?'':'none'; document.getElementById('initRow').style.display=t.kind==='pg'?'':'none'; }
+  renderCondChips(); if(t){ const selectedForm=activeWildForm(selected,t); document.getElementById('thpIn').value=t.thp||''; document.getElementById('dsSel').innerHTML=dsHtml(t); document.getElementById('selHp').textContent=`${t.hp} / ${t.hpMax}`+(t.thp?` (+${t.thp} temp.)`:''); document.getElementById('selAc').textContent=`CA ${selectedForm?.ac??t.ac??'—'} · ${(t.size||1)>1?'Grande':'Media'}`; renderActions(document.getElementById('gmActions'),selected); document.getElementById('selTac').innerHTML=t.kind==='nemico'?`<div class="tacbox"><div class="eyebrow">Come combatte</div><p>${t.tac||'—'}</p>${(t.lines&&t.lines.length)?`<div class="eyebrow">Cosa dice</div><ul>${t.lines.map(l=>`<li>${l}</li>`).join('')}</ul>`:''}<button id="btnMonster">Scheda completa del mostro</button></div>`:''; { const bm=document.getElementById('btnMonster'); if(bm) bm.onclick=()=>openMonster(selected); } document.getElementById('selInit').value=t.init??''; document.getElementById('selHide').textContent=t.hidden?'Mostra ai giocatori':'Nascondi ai giocatori'; document.getElementById('selInitLbl').parentElement.querySelectorAll('#selInitLbl, #selInit').forEach(e=>e.closest('span,b').style.display=S.mode==='scontro'?'':'none'); document.getElementById('askRow').style.display=t.kind==='pg'?'':'none'; document.getElementById('initRow').style.display=t.kind==='pg'?'':'none'; }
   // giocatore
   if(!IS_GM){
     const pc=S.tokens[me];
-    document.getElementById('plStats').innerHTML=pc?`<b>Nome</b><span>${pc.name}</span><b>Classe</b><span>${pc.cls||''}</span><b>Punti ferita</b><span>${pc.hp} / ${pc.hpMax}${pc.thp?` (+${pc.thp} temp.)`:''}</span><b>Classe armatura</b><span>${pc.ac??'—'}</span>${(S.mode==='scontro'||pc.init!=null)?`<b>Iniziativa</b><span>${pc.init??'da tirare'}</span><b>Movimento</b><span>${((pc.speed||9)*(pc.dash?2:1)-(pc.movedM||0)).toLocaleString('it-IT')} / ${(pc.speed||9)*(pc.dash?2:1)} m${pc.dash?' (scatto)':''}</span>`:''}`:'<span class="note">Scegli il tuo personaggio in alto a destra.</span>';
+    const playerForm=pc?activeWildForm(me,pc):null;
+    document.getElementById('plStats').innerHTML=pc?`<b>Nome</b><span>${pc.name}</span><b>Classe</b><span>${pc.cls||''}</span><b>Forma</b><span>${playerForm?'Toro':(me==='maximus'&&pc.giant?'Gigante':'Normale')}</span><b>Taglia</b><span>${(pc.size||1)>1?'Grande':'Media'}</span><b>Punti ferita</b><span>${pc.hp} / ${pc.hpMax}${pc.thp?` (+${pc.thp} temp.)`:''}</span><b>Classe armatura</b><span>${playerForm?.ac??pc.ac??'—'}</span>${(S.mode==='scontro'||pc.init!=null)?`<b>Iniziativa</b><span>${pc.init??'da tirare'}</span><b>Movimento</b><span>${((pc.speed||9)*(pc.dash?2:1)-(pc.movedM||0)).toLocaleString('it-IT')} / ${(pc.speed||9)*(pc.dash?2:1)} m${pc.dash?' (scatto)':''}</span>`:''}`:'<span class="note">Scegli il tuo personaggio in alto a destra.</span>';
     renderActions(document.getElementById('actions'),me);
     const asked=S.request&&me&&S.request.targets.includes(me);
     document.getElementById('askBox').classList.toggle('hidden',!asked);
@@ -2686,16 +2714,26 @@ window.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
 /* ---------- scheda del personaggio ---------- */
 let sheetTab='car';
 function canAct(id){ return IS_GM || id===me; }
+function sheetRollMod(id,skill){
+  const t=S.tokens[id], sh=SHEETS[id], form=activeWildForm(id,t); if(!t||!sh||!form) return t?.mods?.[skill]??0;
+  if(skill.startsWith('TS ')){ const a=skill.slice(3); if(['For','Des','Cos'].includes(a)) return modCalc(form.abil[a]); }
+  for(const [a,list] of Object.entries(ABIL_SKILLS)) if(['For','Des','Cos'].includes(a)&&list.includes(skill)) return modCalc(form.abil[a]);
+  return t.mods[skill]??0;
+}
 function openSheet(id,tab){ if(tab) sheetTab=tab; renderSheet(id); }
 function renderSheet(id){
   const t=S.tokens[id], sh=SHEETS[id]; if(!t||!sh) return;
-  const mine=canAct(id);
+  const mine=canAct(id), form=activeWildForm(id,t), abil=form?{...sh.abil,...form.abil}:sh.abil;
+  const shownAc=form?form.ac:t.ac, shownSpeed=form?form.speed:sh.speed, shownName=form?`${t.name} — ${form.name}`:t.name;
   const tabs=[['car','Caratteristiche'],['inc','Incantesimi'],['eq','Equipaggiamento'],['sto','Storia']].filter(([k])=>k!=='inc'||sh.spell);
   let body='';
   if(sheetTab==='car'){
-    body+=`<div class="abils">`+Object.entries(sh.abil).map(([k,v])=>`<div class="ab"><div class="k">${k}</div><div class="v">${v}</div><div class="m">${fmtMod(modCalc(v))}</div><button class="roll ${mine?'':'off'}" data-roll="TS ${k}" title="Tiro salvezza">TS ${fmtMod(t.mods['TS '+k]??modCalc(v))}</button></div>`).join('')+`</div>`;
-    body+=`<div class="skills">`+Object.entries(ABIL_SKILLS).flatMap(([a,list])=>list.map(s=>`<button class="sk ${mine?'':'off'}" data-roll="${s}"><span>${s}</span><small>${a}</small><b>${fmtMod(t.mods[s]??0)}</b></button>`)).join('')+`</div>`;
-    body+=`<div class="kv" style="margin-top:12px"><b>Classe</b><span>${t.cls||''}</span><b>Livello</b><span>${sh.level||'—'}</span><b>Background</b><span>${sh.background||'—'}</span><b>Esperienza</b><span>${sh.xp||'—'}</span><b>Classe armatura</b><span>${t.ac}</span><b>Punti ferita</b><span>${t.hp} / ${t.hpMax}</span><b>Dadi vita</b><span>${sh.hitDice||'—'}</span><b>Velocità</b><span>${sh.speed} m</span><b>Competenza</b><span>+${sh.prof}</span><b>Iniziativa</b><span>${fmtMod(t.mods.Iniziativa||0)}</span><b>Percezione passiva</b><span>${sh.passive??'—'}</span><b>Lingue</b><span>${sh.languages||'—'}</span></div>`;
+    if(id==='adamus') body+=`<div class="tag" style="display:block;margin-bottom:12px;border-color:${form?'var(--green)':'var(--gold-dim)'}"><div class="row split"><div><b>Forma Selvatica${form?' — Toro attivo':''}</b><div class="note">${form?'Taglia Grande · CA 16 · Velocità 12 m · PF temporanei '+(t.thp||0)+'/15':'Trasformazione disponibile: Toro'}</div></div>${mine?`<button class="${form?'danger':'primary'}" id="wildToggle">${form?'Torna normale':'Diventa Toro'}</button>`:''}</div></div>`;
+    if(id==='maximus') body+=`<div class="tag" style="display:block;margin-bottom:12px;border-color:${t.giant?'var(--green)':'var(--gold-dim)'}"><div class="row split"><div><b>Possanza del gigante${t.giant?' — attiva':''}</b><div class="note">${t.giant?'Taglia Grande · vantaggio a prove e TS di Forza · +1d6 danni una volta per turno':'Diventi Grande per 1 minuto e aggiungi 1d6 danni una volta per turno'}</div></div>${mine?`<button class="${t.giant?'danger':'primary'}" id="giantToggle">${t.giant?'Termina':'Diventa Grande'}</button>`:''}</div></div>`;
+    body+=`<div class="abils">`+Object.entries(abil).map(([k,v])=>`<div class="ab"><div class="k">${k}</div><div class="v">${v}</div><div class="m">${fmtMod(modCalc(v))}</div><button class="roll ${mine?'':'off'}" data-roll="TS ${k}" title="Tiro salvezza">TS ${fmtMod(form&&['For','Des','Cos'].includes(k)?modCalc(v):(t.mods['TS '+k]??modCalc(v)))}</button></div>`).join('')+`</div>`;
+    body+=`<div class="skills">`+Object.entries(ABIL_SKILLS).flatMap(([a,list])=>list.map(s=>`<button class="sk ${mine?'':'off'}" data-roll="${s}"><span>${s}</span><small>${a}</small><b>${fmtMod(sheetRollMod(id,s))}</b></button>`)).join('')+`</div>`;
+    body+=`<div class="kv" style="margin-top:12px"><b>Classe</b><span>${t.cls||''}</span><b>Forma</b><span>${form?form.name:(t.giant?'Grande — Possanza del gigante':'Normale')}</span><b>Taglia</b><span>${(t.size||1)>1?'Grande':'Media'}</span><b>Livello</b><span>${sh.level||'—'}</span><b>Background</b><span>${sh.background||'—'}</span><b>Esperienza</b><span>${sh.xp||'—'}</span><b>Classe armatura</b><span>${shownAc}</span><b>Punti ferita</b><span>${t.hp} / ${t.hpMax}${t.thp?' + '+t.thp+' temporanei':''}</span><b>Dadi vita</b><span>${sh.hitDice||'—'}</span><b>Velocità</b><span>${shownSpeed} m</span><b>Competenza</b><span>+${sh.prof}</span><b>Iniziativa</b><span>${fmtMod(t.mods.Iniziativa||0)}</span><b>Percezione passiva</b><span>${sh.passive??'—'}</span><b>Lingue</b><span>${sh.languages||'—'}</span></div>`;
+    if(form) body+=`<h3>Azioni del Toro</h3><ul>${form.actions.map(a=>`<li><b>${a.n}</b>${a.atk!=null?` · colpire +${a.atk}`:''}${a.dmg?` · danno ${a.dmg}`:''}${a.note?` — ${a.note}`:''}</li>`).join('')}</ul>`;
     body+=`<h3>Privilegi</h3><ul>${(sh.features||[]).map(f=>`<li>${f}</li>`).join('')}</ul><h3>Talenti</h3><ul>${(sh.feats||[]).map(f=>`<li>${f}</li>`).join('')}</ul>`;
   } else if(sheetTab==='inc' && sh.spell){
     const sp=sh.spell, used=t.used||{};
@@ -2711,18 +2749,20 @@ function renderSheet(id){
       }
     }
   } else if(sheetTab==='eq'){
-    body+=`<div class="kv"><b>Monete</b><span>${sh.coins||'—'}</span></div><h3>Equipaggiamento</h3><ul>${(sh.equip||[]).map(f=>`<li>${f}</li>`).join('')}</ul><h3>Azioni in combattimento</h3><ul>${(t.actions||[]).map(a=>`<li>${a.n}${a.atk!=null?` · colpire +${a.atk}`:''}${a.dmg?` · danno ${a.dmg}`:''}</li>`).join('')}</ul>`;
+    body+=`<div class="kv"><b>Monete</b><span>${sh.coins||'—'}</span></div><h3>Equipaggiamento</h3><ul>${(sh.equip||[]).map(f=>`<li>${f}</li>`).join('')}</ul><h3>Azioni in combattimento</h3><ul>${tokenActions(id,t).map(a=>`<li>${a.n}${a.atk!=null?` · colpire +${a.atk}`:''}${a.dmg?` · danno ${a.dmg}`:''}</li>`).join('')}</ul>`;
   } else {
     body+=`<p class="lore">${sh.lore}</p>`;
   }
-  openModal(`<div class="sheethead"><div class="portrait" style="background-image:url(${t.img})"></div><div><div class="eyebrow">${t.cls||''}</div><h2 class="big">${t.name}</h2><div class="note">PF ${t.hp}/${t.hpMax} · CA ${t.ac}${t.init!=null?' · Iniziativa '+t.init:''}</div></div></div><div class="tabs">${tabs.map(([k,l])=>`<button class="${sheetTab===k?'on':''}" data-tab="${k}">${l}</button>`).join('')}</div><div class="sheetbody">${body}</div>`,'sheet');
+  openModal(`<div class="sheethead"><div class="portrait" style="background-image:url(${t.img})"></div><div><div class="eyebrow">${t.cls||''}</div><h2 class="big">${shownName}</h2><div class="note">PF ${t.hp}/${t.hpMax}${t.thp?' + '+t.thp+' temporanei':''} · CA ${shownAc} · ${(t.size||1)>1?'Grande':'Media'}${t.init!=null?' · Iniziativa '+t.init:''}</div></div></div><div class="tabs">${tabs.map(([k,l])=>`<button class="${sheetTab===k?'on':''}" data-tab="${k}">${l}</button>`).join('')}</div><div class="sheetbody">${body}</div>`,'sheet');
   const box=document.querySelector('#modal .box');
   box.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{ sheetTab=b.dataset.tab; renderSheet(id); });
   if(mine){
-    box.querySelectorAll('[data-roll]').forEach(b=>b.onclick=()=>{ const sk=b.dataset.roll; if(IS_GM) rollFor(id,sk); else doRoll(sk,null,null); toast(`${t.name}: tiro di ${sk} nel registro`); });
+    box.querySelectorAll('[data-roll]').forEach(b=>b.onclick=()=>{ const sk=b.dataset.roll, mod=sheetRollMod(id,sk); if(IS_GM) rollFor(id,sk,mod); else doRoll(sk,null,null,mod); toast(`${t.name}: tiro di ${sk} nel registro`); });
     box.querySelectorAll('[data-slot]').forEach(p=>p.onclick=()=>{ const l=p.dataset.slot, i=+p.dataset.i; t.used=t.used||{}; t.used[l]=(i<(t.used[l]||0))?i:i+1; save(); renderSheet(id); });
     box.querySelectorAll('[data-pt]').forEach(p=>p.onclick=()=>{ const i=+p.dataset.pt; t.pts=(i<(t.pts||0))?i:i+1; save(); renderSheet(id); });
     box.querySelectorAll('[data-cast]').forEach(b=>b.onclick=()=>castSpell(id,b.dataset.cast));
+    const wild=box.querySelector('#wildToggle'); if(wild) wild.onclick=()=>setWildShape(!form);
+    const giant=box.querySelector('#giantToggle'); if(giant) giant.onclick=()=>setGiantMight(!t.giant);
     const rs=box.querySelector('#restShort'); if(rs) rs.onclick=()=>{ log({kind:'sys',txt:`${t.name} fa un riposo breve`}); save(); renderSheet(id); };
     const rl=box.querySelector('#restLong'); if(rl) rl.onclick=()=>{ t.used={}; t.pts=0; t.hp=t.hpMax; t.lay=0; log({kind:'sys',txt:`${t.name} fa un riposo lungo: PF e slot al massimo`}); save(); renderSheet(id); };
   }

@@ -100,6 +100,24 @@ const file = path.resolve(process.argv[2] || 'index.html');
           if (!document.querySelector('#modal .portrait')) rotte.push('Scheda mostro → il ritratto non viene mostrato');
           closeModal();
         } catch (e) { rotte.push('PDI 14/15 e ritratti → ' + e.name + ': ' + e.message); }
+
+        provati++;
+        try {
+          const a=S.tokens.adamus, m=S.tokens.maximus, oldA={form:a.form,size:a.size,thp:a.thp,formThp:a.formThp,speed:a.speed}, oldM={giant:m.giant,size:m.size};
+          setWildShape(true);
+          if(a.form!=='toro'||a.size!==2||a.thp!==15||activeWildForm('adamus',a)?.name!=='Toro'||tokenActions('adamus',a)[0]?.n!=='Incornata') rotte.push('Adamus → Forma Selvatica del Toro non aggiorna scheda, PF temporanei, azioni e token');
+          if(!document.querySelector('#modal #wildToggle')||!document.querySelector('#modal .sheethead')?.textContent.includes('Toro')) rotte.push('Adamus → scheda trasformata non visibile');
+          const remoteA=toRemote(S).tokens.adamus;
+          if(remoteA.form!=='toro'||remoteA.size!==2) rotte.push('Adamus → trasformazione non sincronizzata');
+          setWildShape(false);
+          setGiantMight(true);
+          if(!m.giant||m.size!==2||!tokenActions('maximus',m).some(x=>x.n.includes('Possanza'))) rotte.push('Maximus → Possanza del gigante non aggiorna azioni e token');
+          if(!document.querySelector('#modal #giantToggle')||!document.querySelector('#modal .sheethead')?.textContent.includes('Grande')) rotte.push('Maximus → scheda gigante non visibile');
+          const remoteM=toRemote(S).tokens.maximus;
+          if(!remoteM.giant||remoteM.size!==2) rotte.push('Maximus → trasformazione non sincronizzata');
+          setGiantMight(false);
+          Object.assign(a,oldA); Object.assign(m,oldM); closeModal();
+        } catch (e) { rotte.push('Trasformazioni Adamus/Maximus → '+e.name+': '+e.message); }
       }
 
       if (!IS_GM) {
