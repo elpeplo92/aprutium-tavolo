@@ -70,6 +70,18 @@ const file = path.resolve(process.argv[2] || 'index.html');
       };
       for (const [nome, fn] of Object.entries(viste)) { provati++; try { fn(); } catch (e) { rotte.push(nome + ' → ' + e.name + ': ' + e.message); } }
 
+      // Il Master deve poter togliere un PDI dalla mappa senza cancellarne la scheda.
+      if (IS_GM) {
+        provati++;
+        try {
+          S.scene = 'sotto'; applyScene();
+          const p = POIS.find(x => x.id === 'porta_pietra');
+          openPoi(p);
+          if (!document.getElementById('poiRemove')) rotte.push('PDI → manca il comando visibile «Rimuovi dalla mappa»');
+          closeModal();
+        } catch (e) { rotte.push('PDI (rimozione dalla mappa) → ' + e.name + ': ' + e.message); }
+      }
+
       // Compendio: il tasto vero deve aprire il pannello a tre colonne (bug v45: il tasto puntava alla funzione vecchia)
       provati++;
       try { closeModal(); document.getElementById('btnComp').click(); if(!document.querySelector('.c3')) rotte.push('Compendio → il tasto apre la cornice vecchia, non il pannello a tre colonne'); closeModal(); }
@@ -82,6 +94,16 @@ const file = path.resolve(process.argv[2] || 'index.html');
     if (esito.rotte.length) { rotti += esito.rotte.length; esito.rotte.forEach(x => console.log('  ROTTO: ' + x)); }
     else console.log('  tutto a posto');
     if (erroriPagina.length) { rotti += erroriPagina.length; erroriPagina.forEach(x => console.log('  ERRORE DI PAGINA: ' + x)); }
+    await page.close();
+  }
+
+  // Ogni giocatore deve poter entrare direttamente col proprio personaggio dal link ?ruolo=… .
+  for (const ruolo of ['alessandros', 'adamus', 'luigis', 'mattheus', 'maximus', 'vicarus']) {
+    const page = await browser.newPage();
+    await page.goto('file://' + file + '?ruolo=' + ruolo);
+    await page.waitForTimeout(400);
+    const ok = await page.evaluate(r => ROLE === r && me === r && !IS_GM && !!S.tokens[r], ruolo);
+    if (!ok) { rotti++; console.log('  ROTTO: link giocatore ?ruolo=' + ruolo); }
     await page.close();
   }
 
