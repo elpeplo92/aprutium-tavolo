@@ -509,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v88</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v89</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -778,7 +778,7 @@ async function fbMasterLogin(){
     box.querySelector('#mgo').onclick=go; box.querySelector('#mpw').addEventListener('keydown',e=>{ if(e.key==='Enter') go(); });
     box.querySelector('#mno').onclick=()=>{ closeModal(); res(false); };
     box.querySelector('.close').onclick=()=>{ closeModal(); res(false); };
-    setTimeout(()=>box.querySelector('#mpw').focus(),50);
+    setTimeout(()=>box.querySelector('#mpw')?.focus(),50);
   });
 }
 
@@ -1109,6 +1109,12 @@ function renderActions(container,tokId){
    (dice-box-threejs, notazione "1d20+2d8@17,5,3": esito predeterminato). Libreria in dice/ (MIT). */
 let DICE_BUF=[], DICE_T=0;
 const D3={seen:new Set(),t0:Date.now(),box:null,loading:null,q:Promise.resolve(),timer:null,dead:false};
+const DICE_PLAYER_COLORS={alessandros:'#C9A24A',adamus:'#5B8FA8',luigis:'#6E9E5B',mattheus:'#B08968',maximus:'#B5392C',vicarus:'#A64AC9'};
+function dice3dOwner(ev){ const who=String(ev?.who||''); return Object.entries(S.tokens||{}).find(([id,t])=>t.kind==='pg'&&who.startsWith(t.name))?.[0]||null; }
+function dice3dTheme(owner){
+  const background=DICE_PLAYER_COLORS[owner]||'#D2A94A', dark=['adamus','luigis','maximus','vicarus'].includes(owner);
+  return {name:'aprutium-'+(owner||'master'),foreground:dark?'#F7F0DE':'#1A1207',background,outline:dark?'#17130D':'#3A2A08',texture:'bronze03',material:'metal'};
+}
 function dice3dOn(){ try{ return localStorage.getItem('dadi3d')!=='off'; }catch(_){ return true; } }
 function dice3dSound(){ try{ return localStorage.getItem('dadi3dSuono')==='on'; }catch(_){ return false; } }
 function dice3dNotation(spec){
@@ -1129,21 +1135,21 @@ function dice3dLoad(){
     const sc=document.createElement('script'); sc.src='dice/dice-box-threejs.umd.js';
     sc.onload=()=>{ try{ const DB=window['dice-box-threejs']; const C=DB&&(DB.default||DB);
       const b=new C('#dice3d',{assetPath:'dice/',sounds:dice3dSound(),shadows:true,light_intensity:1.1,baseScale:150,strength:1.2,gravity_multiplier:400,
-        theme_customColorset:{name:'aprutium',foreground:'#1A1207',background:'#D2A94A',outline:'#3a2a08',texture:'bronze03',material:'metal'}});
+        theme_customColorset:dice3dTheme(null)});
       b.initialize().then(()=>{ D3.box=b; res(b); }).catch(rej); }catch(e){ rej(e); } };
     sc.onerror=()=>rej(new Error('dice/dice-box-threejs.umd.js non trovato')); document.head.appendChild(sc);
   }).catch(e=>{ D3.dead=true; console.warn('Dadi 3D spenti:',e&&e.message); throw e; });
   return D3.loading;
 }
-function dice3dRoll(spec){
+function dice3dRoll(spec,owner=null){
   if(D3.dead||!dice3dOn()) return; const n=dice3dNotation(spec); if(!n) return;
-  D3.q=D3.q.then(()=>dice3dLoad()).then(b=>{ clearTimeout(D3.timer); return Promise.resolve(b.roll(n)); })
+  D3.q=D3.q.then(()=>dice3dLoad()).then(async b=>{ clearTimeout(D3.timer); await b.updateConfig({theme_customColorset:dice3dTheme(owner)}); return b.roll(n); })
     .then(()=>new Promise(r=>{ D3.timer=setTimeout(()=>{ try{ D3.box.clearDice(); }catch(_){} },4500); setTimeout(r,1200); }))
     .catch(()=>{});
 }
 function dice3dSync(){
   const L=S.log||[]; for(const ev of L){ if(!ev||!ev.dice) continue; const k=ev.t+'|'+(ev.who||'')+'|'+(ev.txt||ev.name||ev.skill||'');
-    if(D3.seen.has(k)) continue; D3.seen.add(k); if(Date.now()-D3.t0<4000) continue; /* i tiri già nel Registro all'apertura non si rianimano */ if(ev.gm&&!IS_GM) continue; dice3dRoll(ev.dice); }
+    if(D3.seen.has(k)) continue; D3.seen.add(k); if(Date.now()-D3.t0<4000) continue; /* i tiri già nel Registro all'apertura non si rianimano */ if(ev.gm&&!IS_GM) continue; dice3dRoll(ev.dice,dice3dOwner(ev)); }
   if(D3.seen.size>400){ D3.seen=new Set([...D3.seen].slice(-200)); }
 }
 function dice3dSetSound(on){ try{ localStorage.setItem('dadi3dSuono',on?'on':'off'); }catch(_){} if(D3.box){ D3.box.sounds=on; if(on) D3.box.loadSounds().catch(()=>{}); } }
@@ -3677,7 +3683,7 @@ READY=true; render();
     box.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>go('1'+b.dataset.d));
     box.querySelector('#diceGo').onclick=()=>go(box.querySelector('#diceExpr').value.trim());
     box.querySelector('#diceExpr').addEventListener('keydown',e=>{ if(e.key==='Enter') box.querySelector('#diceGo').click(); });
-    setTimeout(()=>box.querySelector('#diceExpr').focus(),50);
+    setTimeout(()=>box.querySelector('#diceExpr')?.focus(),50);
   };
   /* presenza: chi è collegato adesso (partita/presenza/<uid>) */
   let presOn=false;

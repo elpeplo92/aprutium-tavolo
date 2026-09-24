@@ -114,6 +114,15 @@ const file = path.resolve(process.argv[2] || 'index.html');
         } catch (e) { rotte.push('Richiesta prova giocatore → ' + e.name + ': ' + e.message); }
       }
 
+      provati++;
+      try {
+        const ids = ['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
+        const colori = ids.map(id => dice3dTheme(id).background);
+        if (new Set(colori).size !== ids.length) rotte.push('Dadi 3D → i giocatori non hanno sei colori distinti');
+        for (const id of ids) if (dice3dTheme(id).background !== DICE_PLAYER_COLORS[id]) rotte.push('Dadi 3D → colore errato per ' + id);
+        if (dice3dOwner({who:S.tokens.vicarus.name}) !== 'vicarus') rotte.push('Dadi 3D → il tiro non riconosce il giocatore');
+      } catch (e) { rotte.push('Colori dadi 3D → ' + e.name + ': ' + e.message); }
+
       // Compendio: il tasto vero deve aprire il pannello a tre colonne (bug v45: il tasto puntava alla funzione vecchia)
       provati++;
       try { closeModal(); document.getElementById('btnComp').click(); if(!document.querySelector('.c3')) rotte.push('Compendio → il tasto apre la cornice vecchia, non il pannello a tre colonne'); closeModal(); }
@@ -121,6 +130,12 @@ const file = path.resolve(process.argv[2] || 'index.html');
       const ver = (document.getElementById('ver') || {}).textContent;
       return { rotte, provati, ver };
     });
+
+    if (ruolo === 'master') {
+      try {
+        await page.evaluate(async () => { const box = await dice3dLoad(); await box.updateConfig({ theme_customColorset: dice3dTheme('vicarus') }); });
+      } catch (e) { esito.rotte.push('Dadi 3D → cambio colore reale non riuscito: ' + e.message); }
+    }
 
     console.log(`\nRUOLO ${ruolo === 'master' ? 'MASTER' : 'GIOCATORE'} — versione ${esito.ver} — provati ${esito.provati} comandi`);
     if (esito.rotte.length) { rotti += esito.rotte.length; esito.rotte.forEach(x => console.log('  ROTTO: ' + x)); }
