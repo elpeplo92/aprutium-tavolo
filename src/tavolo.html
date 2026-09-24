@@ -509,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v93</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v94</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -727,7 +727,7 @@ let S = normalize(structuredClone(DEFAULT_STATE));
 let db = null, ref = null, saveTimer = null;
 let selected = null, measuring = false, measurePts = [];
 
-const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','giant'];
+const LIVE=['x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','preFormThp','giant'];
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
@@ -1110,8 +1110,8 @@ function tokenActions(id,t){
 }
 function setWildShape(on){
   const t=S.tokens.adamus; if(!t||!canAct('adamus')) return;
-  if(on){ const form=WILD_FORMS.toro; t.form='toro'; t.formThp=form.thp; t.thp=Math.max(Number(t.thp)||0,form.thp); t.size=form.size; t.speed=form.speed; log({kind:'sys',txt:`${t.name} assume la Forma Selvatica: ${form.name}`}); }
-  else { t.form='normale'; t.formThp=0; t.thp=0; t.size=1; t.speed=9; log({kind:'sys',txt:`${t.name} torna alla forma normale`}); }
+  if(on){ const form=WILD_FORMS.toro; if(!activeWildForm('adamus',t)) t.preFormThp=Number(t.thp)||0; t.form='toro'; t.formThp=form.thp; t.thp=form.thp; t.size=form.size; t.speed=form.speed; log({kind:'sys',txt:`${t.name} assume la Forma Selvatica: ${form.name}`}); }
+  else { t.form='normale'; t.formThp=0; t.thp=Number(t.preFormThp)||0; t.preFormThp=0; t.size=1; t.speed=9; log({kind:'sys',txt:`${t.name} torna alla forma normale`}); }
   save(true); renderSheet('adamus');
 }
 function setGiantMight(on){

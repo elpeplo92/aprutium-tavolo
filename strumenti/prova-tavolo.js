@@ -103,13 +103,15 @@ const file = path.resolve(process.argv[2] || 'index.html');
 
         provati++;
         try {
-          const a=S.tokens.adamus, m=S.tokens.maximus, oldA={form:a.form,size:a.size,thp:a.thp,formThp:a.formThp,speed:a.speed}, oldM={giant:m.giant,size:m.size};
+          const a=S.tokens.adamus, m=S.tokens.maximus, oldA={form:a.form,size:a.size,thp:a.thp,formThp:a.formThp,preFormThp:a.preFormThp,speed:a.speed}, oldM={giant:m.giant,size:m.size};
+          a.thp=8;
           setWildShape(true);
           if(a.form!=='toro'||a.size!==2||a.thp!==15||activeWildForm('adamus',a)?.name!=='Toro'||tokenActions('adamus',a)[0]?.n!=='Incornata') rotte.push('Adamus → Forma Selvatica del Toro non aggiorna scheda, PF temporanei, azioni e token');
           if(!document.querySelector('#modal #wildToggle')||!document.querySelector('#modal .sheethead')?.textContent.includes('Toro')) rotte.push('Adamus → scheda trasformata non visibile');
           const remoteA=toRemote(S).tokens.adamus;
           if(remoteA.form!=='toro'||remoteA.size!==2) rotte.push('Adamus → trasformazione non sincronizzata');
           setWildShape(false);
+          if(a.thp!==8) rotte.push('Adamus → i PF temporanei precedenti non vengono ripristinati al ritorno');
           setGiantMight(true);
           if(!m.giant||m.size!==2||!tokenActions('maximus',m).some(x=>x.n.includes('Possanza'))) rotte.push('Maximus → Possanza del gigante non aggiorna azioni e token');
           if(!document.querySelector('#modal #giantToggle')||!document.querySelector('#modal .sheethead')?.textContent.includes('Grande')) rotte.push('Maximus → scheda gigante non visibile');
