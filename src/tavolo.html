@@ -509,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v89</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v90</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -640,6 +640,10 @@ const PLAYER_V85 = {
 
 /* ---------- ruolo ---------- */
 const params = new URLSearchParams(location.search);
+// Le prove automatiche devono essere completamente isolate dalla partita vera:
+// senza questo blocco una pagina locale poteva collegarsi a Firebase e salvare
+// sulla mappa reale i clic simulati prima di ogni pubblicazione.
+const TEST_MODE = params.get('prova') === '1';
 let ROLE = params.get('ruolo') || (()=>{ try{ return localStorage.getItem('aprutium.role')||'master'; }catch(e){ return 'master'; } })();
 let IS_GM = ROLE==='master';
 let me = IS_GM ? null : ROLE;
@@ -785,6 +789,7 @@ async function fbMasterLogin(){
 let READY=false;
 (async()=>{
   await new Promise(r=>setTimeout(r,0));
+  if(TEST_MODE){ setLive(false); render(); return; }
   if(window.FIREBASE_CONFIG&&window.firebase){ db = await fbConnect(); }
   else { try{ db = await claude.use('db'); }catch(e){ db=null; } }
   if(!db){ setLive(false); render(); return; }
