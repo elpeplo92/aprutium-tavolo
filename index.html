@@ -234,7 +234,7 @@ details.spell p{margin:6px 0 4px;color:var(--ink);font-size:17px;line-height:1.5
 .tok .condrow .cond{font-size:15px;padding:0 3px}
 .ds{display:flex;gap:8px;justify-content:center;font-size:17px;letter-spacing:2px}
 .ds .ok{color:#9FD08A}.ds .ko{color:#F0B7AE}.ds.stable{color:#9FD08A;font-size:17px;text-align:center}
-.ping{position:absolute;transform:translate(-50%,-50%);pointer-events:none;z-index:7}
+.ping{position:absolute;transform:translate(-50%,-50%) scale(var(--ping-inv,1));transform-origin:center;pointer-events:none;z-index:7}
 .ping i{position:absolute;left:-30px;top:-30px;width:60px;height:60px;border:3px solid var(--gold);border-radius:50%;animation:pingring 1.2s ease-out infinite}
 .ping i:nth-child(2){animation-delay:.4s}
 .ping span{position:absolute;top:34px;left:50%;transform:translateX(-50%);font-size:17px;color:var(--gold);white-space:nowrap;text-shadow:0 1px 2px #000}
@@ -509,7 +509,7 @@ button.mini{font-size:15px;padding:4px 8px}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v91</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v92</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario"><svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path d="M5 18a3 3 0 013-3h11"/><path d="M9 7h6M9 11h6"/></svg>Diario</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -795,7 +795,7 @@ let READY=false;
   if(!db){ setLive(false); render(); return; }
   ref = db.doc('partita/stato');
   const snap = await ref.get().catch(()=>null);
-  if(snap && snap.exists){ S = merge(snap.data()); }
+  if(snap && snap.exists){ S = merge(snap.data()); lastPing=S.ping?.id||S.ping?.t||0; }
   else if(IS_GM){ await ref.set(S).catch(()=>{}); }
   setLive(true);
   ref.onSnapshot(s=>{ if(!s.exists) return; if(s.metadata.hasPendingWrites) return; S = merge(s.data()); render(); }, ()=>setLive(false));
@@ -3054,8 +3054,13 @@ function renderAoeBox(){
 
 /* ---------- ping ---------- */
 let lastPing=0;
-function doPing(p){ S.ping={x:Math.round(p.x),y:Math.round(p.y),t:Date.now(),by:IS_GM?'Master':(S.tokens[me]?S.tokens[me].name:'?')}; save(true); }
-function renderPing(){ const p=S.ping; if(!p||p.t===lastPing||Date.now()-p.t>6000) return; lastPing=p.t; const el=document.createElement('div'); el.className='ping'; el.style.left=p.x+'px'; el.style.top=p.y+'px'; el.innerHTML='<i></i><i></i><span>'+p.by+'</span>'; document.getElementById('world').appendChild(el); beep('soft'); setTimeout(()=>el.remove(),2600); }
+function doPing(p){ S.ping={id:'ping-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),x:Math.round(p.x),y:Math.round(p.y),t:Date.now(),by:IS_GM?'Master':(S.tokens[me]?S.tokens[me].name:'?'),role:ROLE}; save(true); }
+function renderPing(){
+  const p=S.ping, key=p&&(p.id||p.t); if(!p||key===lastPing) return; lastPing=key;
+  const el=document.createElement('div'); el.className='ping'; el.style.left=p.x+'px'; el.style.top=p.y+'px'; el.style.setProperty('--ping-inv',String(1/Math.max(.2,view.k||1)));
+  el.style.setProperty('--gold',DICE_PLAYER_COLORS[p.role]||'#E8C85A'); el.innerHTML='<i></i><i></i><span>'+p.by+'</span>';
+  document.getElementById('world').appendChild(el); beep('soft'); setTimeout(()=>el.remove(),3200);
+}
 stage.addEventListener('dblclick',e=>{ if(e.target.closest('.tok, button, #confirm, #zoomctl')) return; doPing(toMap(e)); });
 
 /* ---------- morte e PF temporanei ---------- */

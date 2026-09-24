@@ -133,6 +133,17 @@ const file = path.resolve(process.argv[2] || 'index.html');
         if (dice3dOwner({who:S.tokens.vicarus.name}) !== 'vicarus') rotte.push('Dadi 3D → il tiro non riconosce il giocatore');
       } catch (e) { rotte.push('Colori dadi 3D → ' + e.name + ': ' + e.message); }
 
+      provati++;
+      try {
+        document.querySelectorAll('.ping').forEach(e => e.remove());
+        lastPing = 0;
+        S.ping = { id:'ping-prova-remota', t:Date.now()-60000, x:300, y:300, by:'Vicarus Cerullius', role:'vicarus' };
+        renderPing();
+        const ping = document.querySelector('.ping');
+        if (!ping || ping.style.getPropertyValue('--gold') !== DICE_PLAYER_COLORS.vicarus || !(parseFloat(ping.style.getPropertyValue('--ping-inv')) > 0)) rotte.push('Ping giocatore → non visibile, non colorato o dipendente dall’orologio');
+        ping?.remove(); S.ping = null;
+      } catch (e) { rotte.push('Ping giocatore → ' + e.name + ': ' + e.message); }
+
       // Compendio: il tasto vero deve aprire il pannello a tre colonne (bug v45: il tasto puntava alla funzione vecchia)
       provati++;
       try { closeModal(); document.getElementById('btnComp').click(); if(!document.querySelector('.c3')) rotte.push('Compendio → il tasto apre la cornice vecchia, non il pannello a tre colonne'); closeModal(); }
