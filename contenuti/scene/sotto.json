@@ -1,0 +1,2007 @@
+{
+  "id": "sotto",
+  "nome": "Sotto Bëllindë — Oltre la Porta",
+  "menu": "Sotto Bëllindë",
+  "ordine": 1,
+  "mappa": {
+    "img": "img/161b43d7ae87.jpg",
+    "larghezza": 1448,
+    "altezza": 1086,
+    "griglia": true,
+    "muri": [
+      "000000000000000000000000000000000000000000000000",
+      "000000001100000000000000000000000000000000000000",
+      "000000011111000000000000000000000000000000000000",
+      "000000010011000000111110000100011110000000000000",
+      "000000011111111111111111111111111110000000000000",
+      "000000011110111111111111111111111110000000000000",
+      "000000000000011000011100001110011110000000000000",
+      "000000000000000000000000000000001100000000000000",
+      "000000000000000000000100000000001110000000000000",
+      "000000000000000000001111111100001111000000000000",
+      "000000000000000000001111111100011111100000000000",
+      "000000000000000001111111111110011111110000000000",
+      "000000000000000011111111111111111111111000000000",
+      "000000001111110011001111111100001111111000000000",
+      "000000011111111001001111111100001111111100000000",
+      "000000011111111011000001100000000111111100000000",
+      "000000111111111111001111111000000111111100000000",
+      "000000111111111100011111111100000111111100000000",
+      "000000011111111100011111111111111111111100000000",
+      "000000011111111111111111111110000011111100000000",
+      "000000011111111000011111111100000001111000000000",
+      "000000000000000000001111111100111000011000000000",
+      "000000000000000000000011100001111100001000000000",
+      "000000000011111110000001100011111110001000000000",
+      "000000000011111111000111100111111111001111100000",
+      "000000000011111111111111111111101111111111010000",
+      "000000000011111111111111101111101111100111010000",
+      "000000000011111111001111000011111111000001110000",
+      "000000000011111110001111000011111110000000000000",
+      "000000000000000000000000000001111110000000000000",
+      "000000000000000000000000000000111000000000000000",
+      "000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000",
+      "000000000000000000000000000000000000000000000000"
+    ]
+  },
+  "regole": {
+    "nebbia": true,
+    "muri": true,
+    "token": "tutti",
+    "strumentiDungeon": true,
+    "segnaposto": false
+  },
+  "punti": [
+    {
+      "schemaVersion": 2,
+      "id": "pozzo",
+      "kind": "passaggio",
+      "title": "Il Pozzo Cieco",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 255,
+        "y": 105
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/a62faefceae0.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "text": "Scendendo, Bëllindë si allontana. Per i primi metri sentite ancora voci, vento, passi sul selciato. Poi niente.\n\nLa luce in alto diventa un cerchio, poi una moneta. L'aria sa di ferro e di acqua vecchia.\n\nA metà discesa la pietra cambia. Finiscono le pietre irregolari del pozzo. Sotto cominciano blocchi enormi, squadrati, accostati senza malta. Non sono stati costruiti insieme al pozzo.\n\nAccanto alla corda, fissato alla pietra, pende un vecchio pezzo di corda. Un moncone. Tagliato di netto.\n\nIn fondo il pozzo non finisce. La parete si apre di lato su un corridoio. Buio. Perfettamente diritto.\n\nE c'è un silenzio sbagliato. Niente carri, niente campane, niente cigolio del pozzo. Come se Bëllindë fosse molto più lontana di quanto dovrebbe.",
+      "gm": "I blocchi squadrati sono più antichi di Bëllindë: il pozzo è stato scavato sopra una struttura che esisteva già.\n\nIl moncone è stato tagliato con una lama ed è legato alla morte di Rocco. Da qui non si scopre chi l'ha tagliato.",
+      "modules": [
+        {
+          "id": "corda",
+          "type": "check",
+          "focus": "Focus 1 — Il moncone di corda",
+          "text": "Che sia tagliato si vede senza tiro.",
+          "skill": "Percezione",
+          "dc": 11,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "text": "Tagliato, sì. L'umidità ha gonfiato le fibre, non capite altro.",
+              "min": 1,
+              "max": 4
+            },
+            {
+              "kind": "failure",
+              "text": "Un taglio pulito. Una lama.",
+              "min": 5,
+              "max": 10
+            },
+            {
+              "kind": "baseSuccess",
+              "text": "Le fibre sono recise tutte alla stessa altezza. Non ha ceduto: qualcuno l'ha tagliata.",
+              "min": 11,
+              "max": 14
+            },
+            {
+              "kind": "fullSuccess",
+              "text": "Il taglio attraversa le fibre in una sola direzione, con un colpo solo.",
+              "min": 15,
+              "max": 19
+            },
+            {
+              "kind": "natural20",
+              "text": "Le fibre sono piegate verso il basso: la corda era tesa quando è stata tagliata. Qualcuno ci era appeso, o la stava usando."
+            }
+          ]
+        },
+        {
+          "id": "muratura",
+          "type": "check",
+          "focus": "Focus 2 — Le due murature",
+          "skill": "Percezione",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "text": "Incrostazioni e umidità. Materiali diversi, niente di più.",
+              "min": 1,
+              "max": 5
+            },
+            {
+              "kind": "failure",
+              "text": "I blocchi di sotto sono lavorati in un altro modo, e non c'è malta.",
+              "min": 6,
+              "max": 11
+            },
+            {
+              "kind": "baseSuccess",
+              "text": "I grandi blocchi combaciano tra loro senza malta. Sono stati tagliati apposta.",
+              "min": 12,
+              "max": 14
+            },
+            {
+              "kind": "fullSuccess",
+              "text": "Le pietre del pozzo poggiano sui blocchi antichi. Prima c'erano i blocchi, poi è venuto il pozzo.",
+              "min": 15,
+              "max": 19
+            },
+            {
+              "kind": "natural20",
+              "text": "Chi ha costruito il pozzo ha tagliato le proprie pietre per adattarle ai blocchi. Non li ha trovati per caso: sapeva che erano lì."
+            }
+          ]
+        },
+        {
+          "id": "ritmo",
+          "type": "check",
+          "focus": "Focus 3 — Il ritmo",
+          "trigger": "Parte da solo appena fanno i primi passi nel corridoio (vedi Prosecuzione). Se cercano di capirlo:",
+          "skill": "Percezione o Indagare",
+          "dc": 14,
+          "requestLabel": "Richiedi",
+          "outcomes": [
+            {
+              "kind": "failure",
+              "label": "Fallimento",
+              "text": "È regolare e risponde ai vostri passi. Non capite cosa lo produce.",
+              "max": 13
+            },
+            {
+              "kind": "baseSuccess",
+              "label": "Successo",
+              "text": "Non è qualcuno che conta. Scandisce il movimento: è il tempo di una marcia, come un comando che tiene il passo di un esercito che non c'è più.",
+              "min": 14
+            }
+          ]
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "trigger": "Appena fanno i primi passi nel corridoio:",
+          "text": "Siete in fondo. Davanti a voi il corridoio, e oltre i primi metri solo buio.\n\nFate tre passi. Dal buio risponde qualcosa.\n\nTAC. TAC. TAC.\n\nSilenzio. Altri tre passi.\n\nTAC. TAC. TAC.\n\nVi fermate. E il ritmo si ferma con voi.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "strano_corridoio",
+      "kind": "corridoio",
+      "title": "Strano Corridoio",
+      "visibility": "evident",
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/c54a88fe6867.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a long perfectly straight underground corridor wide enough for two men side by side, walls and ceiling of huge squared stone blocks laid without mortar, two straight parallel grooves worn smooth into the floor running the whole length of the passage, the light of a single torch fading after a few metres into total darkness, and far away at the end the faint shape of a rougher wall, cold still air, deep shadow --ar 4:3",
+      "text": "Il corridoio è largo abbastanza per due persone affiancate, e perfettamente diritto.\n\nPareti e soffitto sono fatti degli stessi blocchi enormi del fondo del pozzo, accostati senza malta.\n\nSul pavimento corrono due solchi paralleli, lisci, scavati nella pietra. Vanno dritti davanti a voi e spariscono nel buio.\n\nL'aria è ferma. E ai vostri passi, dal fondo, risponde il ritmo.\n\nTAC. TAC. TAC.",
+      "gm": "Il ritmo è quello che resta di un comando di marcia. Risponde ai passi e si ferma quando il gruppo si ferma.\n\nQui non c'è pericolo. I solchi sono i primi due della Schiera: la Galleria ne ha decine.\n\nSenso Divino: niente. Nessun celestiale, immondo o non morto.",
+      "modules": [
+        {
+          "id": "solchi",
+          "type": "check",
+          "focus": "Focus 1 — I solchi",
+          "skill": "Indagare",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Due solchi. Forse ruote di carro."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 11,
+              "text": "Non sono ruote: il fondo è largo e liscio come un piede. Sono consumati dal camminare."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 12,
+              "max": 14,
+              "text": "Migliaia di passi, sempre sulle stesse due linee, sempre alla stessa distanza."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 15,
+              "max": 19,
+              "text": "La distanza tra i due solchi è quella di due uomini in marcia, spalla a spalla. Qui si camminava in fila, in formazione."
+            },
+            {
+              "kind": "natural20",
+              "text": "I solchi vanno dritti fino in fondo al corridoio, e sembrano passare sotto quello che c'è laggiù. Continuano oltre."
+            }
+          ]
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 2 — Individuazione del Magico",
+          "text": "Nessun tiro. Se qualcuno lancia l'incantesimo:\n\nLa magia non viene da una creatura, e non c'è un oggetto che brilla. È nella pietra stessa.\n\nLungo i solchi corrono filamenti debolissimi. Pulsano. Tre pulsazioni, pausa. Tre pulsazioni, pausa. Esattamente come il ritmo.\n\nÈ Ammaliamento. Antichissimo. Non sembra fatto per colpire qualcuno: sembra fatto per dirigerlo.\n\nNon riuscite a datarlo. Non è solo vecchio: appartiene a un modo diverso di costruire la magia.\n\nQuando vi fermate e il ritmo tace, anche le pulsazioni si fermano. E i filamenti proseguono davanti a voi, nel buio."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Avanzate. Il ritmo vi accompagna, tre battute e silenzio, tre battute e silenzio.\n\nDopo qualche minuto la luce trova la fine del corridoio.\n\nMa non è la stessa pietra antica. Il passaggio è chiuso da un muro.\n\nI solchi ci arrivano dritti, e ci spariscono sotto.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "murata_crollata",
+      "kind": "passaggio",
+      "title": "Muro con Strano Rigonfiamento",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 930,
+        "y": 150
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/1093ac79bd68.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, the end of an ancient straight corridor of huge squared stone blocks laid without mortar, blocked by a crude wall of small irregular stones and pale fresh mortar, trowel marks and stones set in haste, the middle of the wall bulging outward toward the viewer with a crack spreading from its centre in five directions, two straight grooves in the floor running right under the wall, dust on the ground, torchlight from the left --ar 4:3",
+      "text": "Il corridoio finisce contro un muro che non c'entra niente con il resto.\n\nIntorno, i blocchi enormi e perfetti. Il muro invece è fatto di pietre piccole e irregolari, tenute insieme da malta chiara. È recente: anni, non secoli.\n\nÈ un lavoro rozzo, tirato su sopra una costruzione perfetta.\n\nA metà altezza il muro si gonfia verso di voi. Al centro di quella gobba la malta si è spaccata, e la crepa si apre in cinque direzioni.\n\nCome se qualcosa, dall'altra parte, avesse spinto. Una volta sola.\n\nI due solchi del pavimento arrivano fino al muro e ci passano sotto.",
+      "gm": "Il muro è stato costruito per chiudere quello che c'è oltre: la stanzetta e, dopo, la Galleria della Schiera. Chi l'abbia costruito e cosa abbia spinto da dietro non è stabilito.\n\nIl muro è già rovinato. Aprirlo non è in dubbio: quello che conta è quanto tempo ci mettono e quanto rumore fanno. Un guerriero lo capisce senza tiro.\n\nQuando il primo PG arriva a un passo dal muro, il ritmo si ferma con lui.",
+      "modules": [
+        {
+          "id": "muratura",
+          "type": "check",
+          "focus": "Focus 1 — La muratura",
+          "text": "Che sia recente e fatto male si vede senza tiro.",
+          "skill": "Indagare",
+          "dc": 11,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "text": "Un muro recente, fatto male. Niente di più.",
+              "min": 1,
+              "max": 4
+            },
+            {
+              "kind": "failure",
+              "text": "La malta è chiara, quasi fresca. Anni, non secoli.",
+              "min": 5,
+              "max": 10
+            },
+            {
+              "kind": "baseSuccess",
+              "text": "Colpi di cazzuola, pietre messe dove capitava. È stato fatto in fretta, per chiudere, non per durare.",
+              "min": 11,
+              "max": 13
+            },
+            {
+              "kind": "fullSuccess",
+              "text": "Le pietre riempiono un'apertura che c'era già. Prima qui si passava.",
+              "min": 14,
+              "max": 19
+            },
+            {
+              "kind": "natural20",
+              "text": "Le sbavature di malta sporgono tutte verso di voi. Chi l'ha costruito lavorava da questa parte: ha chiuso qualcosa che stava di là."
+            }
+          ]
+        },
+        {
+          "id": "rigonfiamento",
+          "type": "check",
+          "focus": "Focus 2 — Il rigonfiamento e la crepa",
+          "skill": "Percezione",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "text": "Il muro è deformato. Non capite da cosa.",
+              "min": 1,
+              "max": 4
+            },
+            {
+              "kind": "failure",
+              "text": "La crepa parte dal centro della gobba e si divide in cinque rami.",
+              "min": 5,
+              "max": 11
+            },
+            {
+              "kind": "baseSuccess",
+              "text": "Non è un cedimento verso il basso. La spinta è arrivata dall'altra parte, verso di voi.",
+              "min": 12,
+              "max": 14
+            },
+            {
+              "kind": "fullSuccess",
+              "text": "Una spinta sola, forte. I bordi della crepa sono netti: non si è allargata col tempo.",
+              "min": 15,
+              "max": 19
+            },
+            {
+              "kind": "natural20",
+              "text": "Infilando le dita nella crepa, la malta cede sotto la pressione. Il muro è già compromesso: basta poco per farlo venire giù."
+            }
+          ]
+        },
+        {
+          "id": "crepa",
+          "type": "focus",
+          "title": "Focus 3 — Guardare attraverso la crepa",
+          "text": "Nessun tiro.\n\nSenza luce:\n\nSolo buio. Non passa neanche un filo d'aria.\n\nCon una luce accostata alla fessura:\n\nAll'inizio solo pietra. Poi trovate l'angolo giusto.\n\nDi là c'è spazio. Altri blocchi antichi, senza malta. Vedete una striscia di pavimento: i due solchi continuano, perfettamente diritti.\n\nSe restano in silenzio ad ascoltare:\n\nDall'altra parte cade un granello di malta. Tic.\n\nPoi niente. Nessun respiro, nessun movimento."
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 4 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nIl muro non è magico.\n\nI filamenti di Ammaliamento che seguivano i solchi passano sotto la parete e continuano oltre. Qualunque cosa li alimenti, sta dall'altra parte."
+        },
+        {
+          "id": "aprire",
+          "type": "focus",
+          "title": "Focus 5 — Aprire il muro",
+          "text": "Nessuna prova per riuscirci. Decidono loro come:\n\nAbbatterlo: pochi minuti, molto rumore. Il colpo rimbomba lungo tutto il corridoio.\n\nSmontarlo pietra per pietra: lento, quasi silenzioso.\n\nForzare la crepa: il muro, già rovinato, può venire giù da solo, di colpo."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Il muro cede. Le pietre rotolano sul pavimento e alzano una nube di polvere bianca.\n\nQuando la polvere si posa, oltre il varco c'è una piccola stanza quadrata, lastricata di pietre tonde. I due solchi la attraversano dritti.\n\nSul lato opposto un passaggio scende nel buio. Da lì sale un'aria diversa, più ampia, come di un grande spazio chiuso.\n\nPoi il ritmo riprende. Più vicino.\n\nTAC.\n\nTAC.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "galleria_schiera",
+      "kind": "stanza",
+      "title": "La Galleria della Schiera",
+      "visibility": "evident",
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/51a8f5aaa2d5.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a long wide underground gallery of huge squared stone blocks laid without mortar, many straight parallel grooves worn into the floor all running the same way, some shallow and some deep as if cut by countless marching feet, round flat copper discs set into the floor along one side, green with age, farther on the floor sunk and collapsed in places and a still pool of black water with grooves running straight into it, at the far end a huge closed stone door, no people, torchlight swallowed by the dark --ar 4:3",
+      "text": "Il passaggio scende e si apre su una galleria lunga, molto più ampia del corridoio.\n\nIl pavimento è attraversato da molti solchi paralleli, tutti diretti dalla stessa parte. Alcuni sono profondi pochi millimetri. Altri sono consumati nella pietra, come se migliaia di piedi avessero percorso sempre le stesse linee.\n\nLungo un lato, incassati nel pavimento, spiccano dei dischi rotondi di rame, opachi e verdastri.\n\nLa galleria non è intatta. Più avanti il pavimento è sprofondato, c'è un crollo, e in una depressione ristagna acqua nera, immobile. Alcuni solchi ci vanno dritti dentro.\n\nIn fondo, una grande porta di pietra. Chiusa.\n\nPoi il ritmo, di nuovo.\n\nTAC.\n\nUna pausa.\n\nTAC.\n\nE una parola che non arriva dalle orecchie. La sentite nelle gambe, nel corpo. Per un istante ognuno di voi sa esattamente dove dovrebbe mettersi.\n\n«ALLINEATI.»",
+      "gm": "La Galleria dà ordini a chi la attraversa e tratta il gruppo come una schiera di soldati. Gli ordini sono tre: ALLINEATI, AVANTI, FERMI. Non ne esistono altri.\n\nGli ordini sono un effetto dell'ambiente, non di una creatura. Protezione dal Bene e dal Male non serve. Chi fallisce il tiro salvezza non diventa Affascinato: fa un solo gesto, poi il controllo torna suo.\n\nI pericoli (crollo, acqua nera, pavimento sprofondato) si vedono senza prove.\n\nAVANTI, i dischi e i pericoli lungo i solchi: vedi PDI 08.",
+      "modules": [
+        {
+          "id": "allineati",
+          "type": "check",
+          "focus": "Evento — «ALLINEATI»",
+          "trigger": "Scatta appena il gruppo entra nella Galleria. Chi arriva dopo, a ordine già passato, non tira.",
+          "skill": "TS Sag",
+          "skillLabel": "Tiro salvezza su Saggezza",
+          "dc": 13,
+          "requestLabel": "Richiedi TS Saggezza → Gruppo",
+          "requestTarget": "*",
+          "outcomes": [
+            {
+              "kind": "failure",
+              "label": "Fallimento",
+              "text": "Il corpo decide prima di voi. Un passo, uno solo, e vi ritrovate su un solco: spalle dritte, distanze regolari. Poi il controllo torna vostro.",
+              "max": 12
+            },
+            {
+              "kind": "baseSuccess",
+              "label": "Successo",
+              "text": "Il comando vi afferra le gambe. Stringete i denti e restate fermi.",
+              "min": 13
+            }
+          ],
+          "gm": "Dopo l'ordine si può uscire dai solchi senza tiro."
+        },
+        {
+          "id": "addestramento",
+          "type": "focus",
+          "title": "Un PG con addestramento militare, senza tiro",
+          "text": "Le posizioni non sono casuali. È una disposizione militare elementare. Questo posto vi sta mettendo in formazione. Vi sta trattando da soldati."
+        },
+        {
+          "id": "magia_allineati",
+          "type": "focus",
+          "title": "Chi ha Individuazione del Magico attiva",
+          "text": "Nel momento in cui arriva l'ordine, la trama si accende. I filamenti corrono lungo i solchi e si tendono sotto i piedi di chi ha obbedito. Poi si allentano, come corde appena mollate. Su chi ha resistito non hanno presa."
+        },
+        {
+          "id": "guardare",
+          "type": "focus",
+          "title": "Focus 1 — Guardare la Galleria",
+          "text": "Nessun tiro. Con Individuazione del Magico attiva:\n\nLa trama non copre tutta la sala in modo uniforme. Corre lungo i solchi e si addensa in alcuni punti, come nodi di una rete: sono i dischi di rame. A ogni TAC, i dischi pulsano nello stesso istante.\n\nQuesta galleria non contiene un meccanismo. È un meccanismo."
+        },
+        {
+          "id": "sala",
+          "type": "check",
+          "focus": "Focus 2 — La sala nel suo insieme",
+          "skill": "Indagare",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "text": "Solchi, crolli, rame. Niente che si tenga insieme.",
+              "min": 1,
+              "max": 4
+            },
+            {
+              "kind": "failure",
+              "text": "I solchi sono stati usati apposta, ma non capite a cosa servissero.",
+              "min": 5,
+              "max": 11
+            },
+            {
+              "kind": "baseSuccess",
+              "text": "I solchi sono corsie, larghe quanto un uomo in marcia e distanziate come le file di una formazione.",
+              "min": 12,
+              "max": 14
+            },
+            {
+              "kind": "fullSuccess",
+              "text": "Le corsie portano tutte verso la porta in fondo. Qui si faceva marciare qualcuno in ordine, in una sola direzione.",
+              "min": 15,
+              "max": 19
+            },
+            {
+              "kind": "natural20",
+              "text": "Alcuni solchi vicino alle pareti laterali finiscono contro la pietra, di netto. Come se un tempo continuassero oltre."
+            }
+          ]
+        },
+        {
+          "id": "storia",
+          "type": "check",
+          "focus": "Focus 3 — Esiste qualcosa sotto Bëllindë?",
+          "skill": "Storia",
+          "dc": 15,
+          "outcomes": [
+            {
+              "kind": "failure",
+              "label": "Fallimento",
+              "text": "Il Borgo Vecchio è antico, e sotto una città è normale trovare pozzi e cantine. Nessuna fonte parla di qualcosa sotto Bëllindë.",
+              "max": 14
+            },
+            {
+              "kind": "baseSuccess",
+              "label": "Successo",
+              "text": "Bëllindë non è stata costruita tutta insieme. Il Borgo Vecchio è molto più antico del resto, con cantine, pozzi e fondazioni che scendono più del dovuto. Alcune strutture sembrano costruite sopra qualcosa che c'era già. Ma nella storia ufficiale non c'è nessun complesso sotterraneo.",
+              "min": 15,
+              "max": 19
+            },
+            {
+              "kind": "fullSuccess",
+              "label": "20 o più",
+              "text": "Le cronache diventano stranamente vaghe proprio quando parlano delle fondamenta più antiche. Non rovine famose: strutture più vecchie del borgo, inglobate e dimenticate.",
+              "min": 20
+            }
+          ],
+          "gm": "Non rivelare mai: Quarto Sigillo, Custodi, Celamanti, eserciti, Camera delle Memorie."
+        },
+        {
+          "id": "pdi_interni",
+          "type": "focus",
+          "title": "PDI collegati",
+          "text": "05 Prima Nicchia Murata (nascosta) · 06 Seconda Nicchia Murata (nascosta) · 07 Porta di Pietra · 08 I Solchi del Pavimento"
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "L'ordine si spegne. Il ritmo no: continua, regolare, dal fondo della galleria.\n\nNessuno vi viene incontro. Nulla si muove.\n\nMa adesso sapete che questo posto dà ordini. E che si aspetta di essere obbedito.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "intercapedine",
+      "kind": "passaggio",
+      "title": "Prima Nicchia Murata",
+      "visibility": "hidden",
+      "legacyPosition": {
+        "x": 945,
+        "y": 435
+      },
+      "discovery": {
+        "enabled": true,
+        "dc": 13,
+        "autoReveal": true,
+        "trigger": "Se qualcuno colpisce o sonda la parete in quel punto, suona vuoto. È scoperto senza tiro. Al tavolo è andata così: Adamus ha sfondato la parete.",
+        "outcomes": [
+          {
+            "kind": "criticalFailure",
+            "min": 1,
+            "max": 5,
+            "text": "La parete sembra uguale a tutto il resto."
+          },
+          {
+            "kind": "failure",
+            "min": 6,
+            "max": 12,
+            "text": "Qualche pietra è più piccola delle altre. Sarà l'età."
+          },
+          {
+            "kind": "baseSuccess",
+            "min": 13,
+            "max": 15,
+            "text": "Una parte della parete è fatta di pietre piccole e malta, sporcate di polvere per sembrare roccia. Il PDI viene scoperto."
+          },
+          {
+            "kind": "fullSuccess",
+            "min": 16,
+            "max": 19,
+            "text": "Sotto la toppa si vede il profilo di un'apertura. Qui un tempo si passava. Il PDI viene scoperto."
+          },
+          {
+            "kind": "natural20",
+            "text": "Le pietre piccole e la malta chiara sono le stesse del muro in fondo al corridoio. Chi ha chiuso quello ha chiuso anche questo. Il PDI viene scoperto."
+          }
+        ]
+      },
+      "image": "img/6f2afb4fc544.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, inside a long underground hall with a floor of worn flagstones crossed by long parallel double-edged channels, a close view of the left wall of rough irregular boulders where one section has been filled in with small stones and pale mortar, smeared with dust and grime so it almost blends with the rock around it, the faint outline of an old opening still visible under the patch, a bronze disc set in the floor channel nearby, torchlight from the side, deep shadow --ar 4:3",
+      "text": "Ora che sapete dove guardare, non vedete altro.\n\nNella roccia della parete c'è una toppa: pietre piccole, malta chiara, e sopra polvere e sporco passati apposta perché si confondesse con il resto.\n\nDa lontano funziona. Da vicino no.\n\nSotto si vede il profilo di un'apertura. Qui una volta si passava.",
+      "gm": "Dietro c'è un passaggio breve che porta alla Caserma degli Armigeri (PDI 09).\n\nLa chiusura è della stessa mano del muro del corridoio (PDI 03). Chi sia non è stabilito.\n\nCome per il PDI 03, aprirla non è in dubbio: contano il tempo e il rumore.",
+      "modules": [
+        {
+          "id": "chiusura",
+          "type": "check",
+          "focus": "Focus 1 — La chiusura",
+          "skill": "Indagare",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Una toppa nella parete. Niente di più."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 11,
+              "text": "È recente, come il muro del corridoio. Anni, non secoli."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 12,
+              "max": 14,
+              "text": "Le pietre sono state messe da questa parte, dalla galleria, per chiudere un passaggio che c'era già."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 15,
+              "max": 19,
+              "text": "La malta è più debole lungo un lato. Lavorando lì si apre senza buttare giù tutto."
+            },
+            {
+              "kind": "natural20",
+              "text": "Qui non volevano solo chiudere: volevano che nessuno sapesse che c'era un passaggio. Per questo lo sporco sopra."
+            }
+          ]
+        },
+        {
+          "id": "aprire",
+          "type": "focus",
+          "title": "Focus 2 — Aprire il passaggio",
+          "text": "Nessuna prova per riuscirci. Decidono loro come:\n\nSfondarlo: molto rumore. «La prima pietra resiste. La seconda si spacca. Poi una parte della parete cede verso l'interno con un boato.»\n\nSmontarlo: lento, quasi silenzioso. Se hanno trovato il lato debole con l'Indagare, va più veloce."
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 3 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nLa toppa non è magica. I filamenti restano nella galleria, lungo i solchi. Dietro questa parete non vanno."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "La parete cede. Dietro non c'è terra: c'è vuoto.\n\nUn passaggio breve, senza solchi sul pavimento. In fondo si apre una sala rettangolare.\n\nLungo le due pareti lunghe, nel buio, stanno delle figure in armatura antica, in fila, con le lance dritte. Immobili.\n\nSul pavimento, proprio all'ingresso della sala, corre una linea scura.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "seconda_nicchia",
+      "kind": "passaggio",
+      "title": "Seconda Nicchia Murata",
+      "visibility": "hidden",
+      "legacyPosition": {
+        "x": 990,
+        "y": 555
+      },
+      "discovery": {
+        "enabled": true,
+        "dc": 14,
+        "autoReveal": true,
+        "trigger": "Anche qui, se qualcuno colpisce o sonda la parete in quel punto, suona vuoto: scoperto senza tiro.\n\nSe il gruppo ha già trovato la Prima Nicchia (PDI 05), sa cosa cercare: vantaggio alla prova.",
+        "outcomes": [
+          {
+            "kind": "criticalFailure",
+            "min": 1,
+            "max": 5,
+            "text": "La parete è continua. Solo roccia e sporco."
+          },
+          {
+            "kind": "failure",
+            "min": 6,
+            "max": 13,
+            "text": "Qualche pietra ha una forma strana, ma niente che vi sembri un disegno."
+          },
+          {
+            "kind": "baseSuccess",
+            "min": 14,
+            "max": 16,
+            "text": "Una fessura verticale sottile, troppo dritta per essere naturale. Seguendola si vede il bordo di una toppa. Il PDI viene scoperto."
+          },
+          {
+            "kind": "fullSuccess",
+            "min": 17,
+            "max": 19,
+            "text": "La toppa ha la forma di un'apertura, larga quanto una persona. Qualcuno l'ha chiusa e poi ha lavorato la superficie perché sembrasse roccia. Il PDI viene scoperto."
+          },
+          {
+            "kind": "natural20",
+            "text": "Riconoscete la mano: pietre piccole e malta chiara, come il muro del corridoio e la prima nicchia. Qui però il lavoro è molto più accurato. Il PDI viene scoperto."
+          }
+        ]
+      },
+      "image": "img/596105f47359.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, the lower end of a long underground hall with a floor of worn flagstones crossed by long parallel double-edged channels and bronze discs set in them, a close view of the left wall of rough irregular boulders where a section has been carefully filled with fitted stones and pale mortar, then coated with dust and grime so well that it is almost invisible, only a faint vertical seam betraying it, torchlight grazing the wall from the side, deep shadow --ar 4:3",
+      "text": "Ora che avete visto la fessura, il resto viene da sé.\n\nUna parte della parete è stata chiusa con pietre piccole e malta chiara, poi coperta di polvere e sporco con molta cura, pietra per pietra.\n\nSotto c'è il profilo di un'apertura, larga quanto una persona.\n\nIl muro in fondo al corridoio era stato tirato su in fretta. Questo no. Chi ha chiuso questo passaggio voleva che nessuno lo trovasse mai.",
+      "gm": "Dietro c'è un passaggio breve che porta alla Sala delle Ordinanze (PDI 11). È la sala che sblocca la Porta di Pietra (PDI 07).\n\nÈ la stessa mano del PDI 03 e del PDI 05. Chi sia non è stabilito. Questa chiusura è la più curata delle tre: il passaggio che contava di più andava nascosto meglio.\n\nAprirla non è in dubbio: contano il tempo e il rumore.",
+      "modules": [
+        {
+          "id": "chiusura",
+          "type": "check",
+          "focus": "Focus 1 — La chiusura",
+          "skill": "Indagare",
+          "dc": 13,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Le pietre sono troppo simili alla parete per capire come sia stata fatta."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 12,
+              "text": "È una chiusura recente, come le altre. Anni, non secoli."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "La toppa riempie un'apertura che c'era già. La roccia intorno non è stata toccata: è servita da cornice."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "È un lavoro lento e preciso. Chi l'ha fatto aveva tempo, e nessuno che lo cercasse."
+            },
+            {
+              "kind": "natural20",
+              "text": "Dietro la superficie la malta è sottile. Sapendo dove lavorare, si apre senza fatica e quasi senza rumore."
+            }
+          ]
+        },
+        {
+          "id": "aprire",
+          "type": "focus",
+          "title": "Focus 2 — Aprire il passaggio",
+          "text": "Nessuna prova per riuscirci. Decidono loro come:\n\nSfondarlo: molto rumore, che rimbomba in tutta la galleria.\n\nSmontarlo: lento, quasi silenzioso. Con il 20 dell'Indagare, più veloce."
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 3 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nLa toppa non è magica. I filamenti della galleria non passano di qui."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Tolte le ultime pietre, la parete smette di essere una parete. Dietro c'è un passaggio breve, e in fondo una sala.\n\nÈ diversa da tutto quello che avete visto finora. È ovale, e le pareti non sono nude: sono coperte di rilievi scolpiti, figure di pietra una accanto all'altra.\n\nAl centro, in fila, ci sono tre dispositivi rotondi incassati nel pavimento.\n\nTutto qui dentro sembra fatto per essere guardato da un punto preciso.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "porta_pietra",
+      "kind": "passaggio",
+      "title": "Porta di Pietra",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 1125,
+        "y": 690
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/58f8e08f27e8.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: at the far end of a vast subterranean military gallery, a monumental ancient door made from two enormous dark stone slabs fitted perfectly into a massive rectangular frame, no visible hinges, handle, lock or keyhole, a single hairline seam between the slabs, faint geometric seams and shallow carved lines running through the frame like parts of a buried mechanism, severe functional architecture of huge precisely fitted stone blocks, oppressive stillness, no characters, no creatures, no visible magic, no glowing symbols, no text --ar 4:3",
+      "text": "In fondo alla Galleria della Schiera, la parete è occupata quasi interamente da una porta di pietra.\n\nÈ molto più grande delle altre aperture che avete incontrato.\n\nDue enormi lastre verticali sono inserite in una cornice dello stesso materiale scuro del resto della struttura.\n\nNon vedete cardini.\n\nNon vedete maniglie.\n\nNon c'è serratura.\n\nLe due superfici combaciano così perfettamente che al centro rimane soltanto una linea sottile.\n\nAi lati e lungo la cornice corrono incisioni geometriche poco profonde, troppo regolari per essere semplice decorazione.\n\nLa porta è chiusa.\n\nE non sembra avere alcuna intenzione di muoversi.",
+      "gm": "La porta conduce al settore finale del complesso. Una volta sbloccata, da qui si raggiunge il tratto che permette di andare verso la Stanza del Quarto Sigillo oppure verso l'uscita dal dungeon.\n\nNon può essere aperta con una normale prova di Forza, scasso o semplice danneggiamento. Il meccanismo di apertura è collegato alla Sala delle Ordinanze.\n\nFinché quel meccanismo non viene risolto, la porta rimane bloccata. Non rivelare subito dove si trova la soluzione: i giocatori devono dedurlo esplorando il complesso.",
+      "modules": [
+        {
+          "id": "esaminare",
+          "type": "check",
+          "focus": "Focus 1 — Esaminare la porta",
+          "trigger": "Se i personaggi la osservano da vicino, la superficie è quasi perfettamente liscia. Le incisioni continuano lungo la cornice e sembrano connettersi a piccoli punti di giunzione nella pietra.",
+          "skill": "Indagare",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "La porta appare semplicemente massiccia e perfettamente costruita. Non riuscite a individuare alcun sistema di apertura."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 11,
+              "text": "Capite che non è una porta ordinaria, ma non riuscite a capire come venga azionata."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 12,
+              "max": 14,
+              "text": "Non trovate serrature, cardini o meccanismi accessibili dall'esterno. La porta deve essere controllata da qualcosa che si trova altrove."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 15,
+              "max": 19,
+              "text": "Le linee incise sulla cornice non sono decorative. Sembrano proseguire dentro la muratura, come parti visibili di un sistema interno. La porta non è stata progettata per essere aperta manualmente da questo lato."
+            },
+            {
+              "kind": "natural20",
+              "text": "Seguendo le incisioni individuate più punti in cui la pietra sembra trasmettere movimento o pressione verso l'interno della parete. Il sistema è collegato a un meccanismo remoto: questa porta è l'elemento finale di un dispositivo più grande."
+            }
+          ]
+        },
+        {
+          "id": "forzare",
+          "type": "focus",
+          "title": "Focus 2 — Cercare un modo per forzarla",
+          "text": "Se provano a spingerla, colpirla, fare leva o cercare una serratura, non trovano alcun punto in cui lavorare. Le lastre sono incassate nella struttura e non mostrano cerniere accessibili.\n\nAtletica: nessuna prova. Anche facendo forza, la porta non si muove. Non è una questione di peso: qualcosa la tiene bloccata all'interno della struttura.\n\nAttrezzi da scasso: nessuna prova. Non esiste una serratura su cui lavorare.\n\nDanneggiamento: i colpi producono rumore e segni superficiali, ma non costituiscono un metodo realistico per aprirla."
+        },
+        {
+          "id": "incisioni",
+          "type": "check",
+          "focus": "Focus 3 — Le incisioni geometriche",
+          "trigger": "Le linee non formano parole né simboli riconoscibili. Sembrano seguire una logica di percorso, collegando diversi punti della cornice.",
+          "skill": "Arcano",
+          "dc": 13,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Le incisioni non vi ricordano alcun sistema magico che conoscete."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 12,
+              "text": "Non riconoscete rune, glifi o formule."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "Non sembrano iscrizioni magiche. La loro disposizione è più vicina a quella di un circuito o di un meccanismo che a quella di un incantesimo."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Se c'è magia nella porta, non è concentrata nelle incisioni. I segni sembrano descrivere o accompagnare un sistema fisico incorporato nella struttura."
+            },
+            {
+              "kind": "natural20",
+              "text": "Le incisioni sembrano guidare o distribuire qualcosa attraverso la pietra. Non sapete se si tratti di pressione, energia o movimento, ma la porta è progettata per ricevere un comando proveniente da altrove."
+            }
+          ]
+        },
+        {
+          "id": "sblocco",
+          "type": "focus",
+          "title": "Stato dopo la Sala delle Ordinanze",
+          "text": "Quando il meccanismo della Sala delle Ordinanze viene risolto:\n\nUn colpo sordo attraversa la pietra. Poi un secondo.\n\nLe incisioni lungo la cornice vibrano appena sotto la polvere. Dal centro arriva un rumore profondo, come pietra che scorre contro pietra dopo secoli di immobilità.\n\nLa linea verticale fra le due lastre si allarga lentamente. La porta si sta aprendo."
+        },
+        {
+          "id": "bloccata",
+          "type": "continuation",
+          "title": "Prosecuzione — Porta ancora bloccata",
+          "text": "Per quanto la esaminiate, la porta rimane immobile.\n\nNon c'è nulla qui davanti che sembri in grado di comandarne l'apertura.\n\nSe esiste un sistema per sbloccarla, dovrete cercarlo altrove nel complesso.\n\nDietro di voi la Galleria della Schiera rimane aperta, con le sue murature anomale e i passaggi ancora da esplorare.\n\nChe cosa fate?"
+        },
+        {
+          "id": "aperta",
+          "type": "continuation",
+          "title": "Prosecuzione — Porta sbloccata",
+          "text": "Le due lastre si separano abbastanza da lasciar passare una persona.\n\nOltre la soglia, il percorso continua per un breve tratto e poi si divide.\n\nUna direzione conduce ancora più in profondità, verso il cuore della struttura. L'altra prosegue verso un'aria diversa, più mobile, con un debole sentore di terra e vegetazione.\n\nPer la prima volta da quando siete scesi, avete davanti una scelta che può portarvi più dentro oppure fuori.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "solchi",
+      "kind": "trappola",
+      "title": "I Solchi del Pavimento",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 1095,
+        "y": 465
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/8302bf2d4dd2.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: the floor of a vast ancient underground military gallery crossed by many long parallel grooves worn deep into stone by countless marching feet, round flat copper discs set directly into the floor along the grooves, darkened and green with age, farther ahead some grooves continuing without deviation toward a collapsed section, a sunken floor and a still pool of black water, severe monumental stone architecture, torchlight swallowed by deep shadow, no people, no creatures, no visible magic, no text --ar 4:3",
+      "text": "I solchi attraversano la Galleria da un capo all'altro, paralleli e regolari. Alcuni sono appena segnati. Altri sono consumati nella pietra dalla ripetizione dello stesso passo.\n\nA intervalli precisi, direttamente nel pavimento, sono incassati dischi rotondi di rame. La superficie è scura e verdastra per l'ossidazione.\n\nPiù avanti la Galleria è danneggiata: pietra sprofondata, un crollo e una pozza d'acqua nera.\n\nI solchi non deviano. Continuano dritti anche verso i punti pericolosi.",
+      "gm": "Questo PDI gestisce il comando «AVANTI», i dischi di rame e i pericoli lungo i solchi.\n\nI pericoli si vedono senza prova. Il sistema non protegge chi obbedisce e non distingue un percorso sicuro da uno interrotto.\n\nIl comando è un effetto magico ambientale, non proviene da una creatura. Protezione dal Bene e dal Male non aiuta e il fallimento non applica la condizione Affascinato.\n\nChi fallisce compie un solo passo imposto, poi recupera completamente il controllo. Un compagno può trattenerlo o sollevarlo: il comando può muovere il corpo, ma non renderlo più forte di ciò che lo blocca.",
+      "modules": [
+        {
+          "id": "avanti",
+          "type": "check",
+          "focus": "Evento — «AVANTI»",
+          "trigger": "Scatta quando il gruppo supera uno dei dischi di rame e avanza nel tratto in cui alcuni solchi conducono verso il crollo, il pavimento sprofondato o l'acqua nera.",
+          "skill": "TS Sag",
+          "skillLabel": "Tiro salvezza su Saggezza",
+          "dc": 13,
+          "requestLabel": "Richiedi TS Saggezza → Gruppo",
+          "requestTarget": "*",
+          "outcomes": [
+            {
+              "kind": "failure",
+              "label": "Fallimento",
+              "max": 12,
+              "text": "Per un istante perdete la proprietà del passo. Il piede avanza da solo lungo il solco: un passo, soltanto uno. Poi il controllo torna vostro."
+            },
+            {
+              "kind": "baseSuccess",
+              "label": "Successo",
+              "min": 13,
+              "text": "Sentite il comando cercare di trasformare il vostro movimento in obbedienza, ma restate padroni del passo."
+            }
+          ],
+          "gm": "Chi non è ancora entrato nel tratto interessato non tira. Ogni nuovo punto di comando può produrre un nuovo ordine, ma ciascun fallimento impone sempre un solo gesto."
+        },
+        {
+          "id": "trattenere",
+          "type": "focus",
+          "title": "Focus 1 — Trattenere chi obbedisce",
+          "text": "Nessuna prova se il personaggio non oppone resistenza. Una mano ferma, una presa o sollevarlo dal pavimento impediscono al passo imposto di portarlo nel pericolo.\n\nLa magia non viene spezzata: l'ordine non ha più un movimento possibile da eseguire."
+        },
+        {
+          "id": "dischi",
+          "type": "check",
+          "focus": "Focus 2 — I dischi di rame",
+          "text": "I dischi sono visibili senza tiro. La prova serve a comprenderne la funzione.",
+          "skill": "Indagare o Arcano",
+          "dc": 13,
+          "requestLabel": "Richiedi",
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Rame antico incassato nella pietra. Non capite perché sia qui."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 12,
+              "text": "I dischi fanno parte della costruzione e sono disposti a intervalli regolari, ma la loro funzione vi sfugge."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "Il ritmo e la vibrazione attraversano il disco nello stesso istante. Non è la fonte del sistema: riceve e trasmette il comando in questo tratto."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Ogni disco è un nodo della rete. Interromperne uno renderebbe muto questo settore, senza spegnere il resto della Galleria."
+            },
+            {
+              "kind": "natural20",
+              "text": "Le incisioni sul bordo indicano dove il disco scarica la propria vibrazione nella pietra. Sapete dove colpire o intervenire per disattivarlo senza attivare accidentalmente il comando."
+            }
+          ]
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 3 — Individuazione del Magico",
+          "text": "La trama di Ammaliamento corre lungo i solchi e si addensa nei dischi di rame. A ogni TAC tutti i dischi pulsano nello stesso istante.\n\nQuando arriva «AVANTI», i filamenti si tendono verso chi sta attraversando il tratto."
+        },
+        {
+          "id": "disattivare",
+          "type": "focus",
+          "title": "Focus 4 — Disattivare un disco",
+          "text": "I dischi possono essere spezzati con danni sufficienti oppure disattivati intervenendo nel punto individuato con Indagare o Arcano.\n\nUn disco disattivato non spegne l'intero sistema: rende muto soltanto il tratto di Galleria che serviva."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Il comando si spegne e il passo torna vostro.\n\nDavanti, i solchi continuano verso la grande Porta di Pietra. Ai lati della Galleria restano le due murature anomale che nascondono altri passaggi.\n\nIl ritmo non si ferma.\n\nTAC.\n\nPausa.\n\nTAC.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "linea",
+      "kind": "scontro",
+      "title": "La Caserma degli Armigeri",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 705,
+        "y": 345
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/a04462f97b3a.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a long rectangular underground barracks of dressed stone inside walls of rough boulders, along both long walls a row of ancient armored figures standing to attention with tall spears held upright, between them stone weapon racks holding old spears and round shields, iron torch brackets at the four corners, an empty flagstone floor in the middle, a thin dark line inlaid across the threshold in the foreground, dust everywhere, torchlight from the doorway --ar 4:3",
+      "text": "La sala è lunga e rettangolare, più curata di tutto il resto: le pareti interne sono di pietra squadrata.\n\nLungo le due pareti lunghe stanno delle figure in armatura antica, sull'attenti. Sette per parte. Ognuna tiene una lancia dritta accanto a sé.\n\nTra una figura e l'altra ci sono rastrelliere di pietra, con lance e scudi rotondi ancora al loro posto.\n\nIl centro della sala è vuoto. Polvere dappertutto.\n\nSul pavimento, proprio sulla soglia, corre una linea scura.\n\nNessuno si muove.",
+      "gm": "Delle quattordici figure, sei sono Armigeri Vincolati: sono le tre centrali di ogni parete. Le altre otto sono armature vuote.\n\nC'è una linea scura su tutti e tre gli ingressi: est (dalla Prima Nicchia), ovest (verso il Brak), sud (verso la Sala delle Ordinanze). Chi la supera sveglia i sei. Tutti e sei alzano la testa nello stesso momento.\n\nScheda: Armigero Vincolato nel Bestiario (22 PF, CA 17, Lancia +4, 1d8+2).\n\nFormazione: con almeno 3 Armigeri adiacenti, +2 CA e +1d4 ai danni.\nImmuni a veleno, charme, paura e sonno.\nNon parlano.\n\nCome combattono:\n\nPrimo round: si allineano, tre adiacenti, e avanzano insieme di 7,5 m.\nDal secondo round: colpiscono di lancia il bersaglio più vicino alla schiera, senza mai sparpagliarsi.\nChi viene spinto fuori dalla formazione, nel suo turno rientra invece di attaccare.\nNon inseguono oltre la linea: sulla soglia si fermano e tornano al muro. Il gruppo può sempre ritirarsi.\n\nLeva del Master:\n\nTroppo facile: al terzo round si stacca dal muro una delle armature «vuote» più vicine alla linea. Non era vuota. Al massimo due.\nTroppo difficile: chi esce dalla linea è salvo, e gli Armigeri caduti non vengono sostituiti.",
+      "modules": [
+        {
+          "id": "figure",
+          "type": "check",
+          "focus": "Focus 1 — Le figure",
+          "skill": "Percezione",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Statue in armatura. Decorazione."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 11,
+              "text": "Sono armature vere, non pietra. Antichissime."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 12,
+              "max": 14,
+              "text": "Alcune non sono come le altre. Hanno le giunture lucide, e sulle loro lance non c'è polvere."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 15,
+              "max": 19,
+              "text": "Sono sei, le tre centrali di ogni parete. Le altre otto sono coperte di polvere, e dalle fessure degli elmi si vede che sono vuote."
+            },
+            {
+              "kind": "natural20",
+              "text": "I sei hanno lo stesso identico respiro, anche se non respirano: le spalle si alzano e si abbassano al ritmo del TAC."
+            }
+          ]
+        },
+        {
+          "id": "linea",
+          "type": "check",
+          "focus": "Focus 2 — La linea",
+          "skill": "Indagare",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Una crepa scura nel pavimento."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 11,
+              "text": "Non è una crepa: è una linea incisa e riempita di metallo annerito."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 12,
+              "max": 14,
+              "text": "Corre dritta da uno stipite all'altro, e c'è uguale anche sugli altri ingressi. È un confine."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 15,
+              "max": 19,
+              "text": "È dello stesso metallo dei dischi della galleria. Fa parte dello stesso sistema."
+            },
+            {
+              "kind": "natural20",
+              "text": "Dal lato interno la polvere sulla linea è intatta. Da quello esterno no: qualcuno si è fermato qui, ha guardato, e non è entrato."
+            }
+          ]
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 3 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nDalla linea partono filamenti di Ammaliamento. Non vanno a tutte le figure: vanno solo a sei, le tre centrali di ogni parete. Le altre otto sono spente."
+        },
+        {
+          "id": "formazione",
+          "type": "focus",
+          "title": "Focus 4 — Riconoscere la formazione",
+          "text": "Un PG con addestramento militare, senza tiro, appena si muovono:\n\nÈ una schiera. Tre davanti, compatti, lance basse. Finché restano uniti sono un muro. Se ne stacchi uno, gli altri si scoprono."
+        },
+        {
+          "id": "loot",
+          "type": "focus",
+          "title": "Loot",
+          "text": "Nelle rastrelliere: lance e scudi rotondi antichi, pesanti e ben conservati. Non sono magici. Vanno bene per l'armeria della Crociata.\n\nAssegna → Loot della Crociata"
+        },
+        {
+          "id": "exp",
+          "type": "focus",
+          "title": "EXP",
+          "text": "Sconfitta dei sei Armigeri: 1.200 PE, cioè 240 a testa per 5 PG. Aggiungi 200 per ogni armatura «vuota» che hai svegliato con la leva."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Quando l'ultimo Armigero cade, il ritmo non si ferma. Le armature vuote restano lungo le pareti, immobili come prima.\n\nLa sala ha altre due uscite.\n\nA ovest un corridoio scende e piega verso sinistra. Da lì arriva un odore di ferro vecchio e, piano, un tintinnio di catene.\n\nA sud un passaggio breve porta verso una sala più ampia.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "catene",
+      "kind": "scontro",
+      "title": "La Prigione del Brak",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 315,
+        "y": 435
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/17453c94db19.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "text": "Una stanza quasi quadrata. Il pavimento è fatto di lastre disposte a cerchio, sempre più piccole verso il centro.\n\nDai quattro angoli partono quattro catene, grosse quanto un braccio. Si incrociano al centro, su un collare di ferro.\n\nE dentro il collare c'è qualcuno, seduto a terra.\n\nEnorme. Pelle grigio-verde, zanne, spalle come una porta. Un'ascia pesante sulle ginocchia. Addosso i resti di un'armatura scura, e sul petto un'insegna grattata via.\n\nMa il viso non è quello di una bestia. Gli zigomi sono alti. Le orecchie sono lunghe e appuntite, tagliate a metà.\n\nHa gli occhi aperti. Non guarda voi. Guarda il passaggio in basso a destra.\n\nPoi parla. Una voce bassa, con un accento che non avete mai sentito.\n\n«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»",
+      "gm": "Vhaerun è un Brak. Per i Celamanti era il Primo Strumento della Terza Schiera, comandante delle loro orde nella Guerra delle Due Lune. L'Ultimo Custode lo sconfisse faccia a faccia e, invece di ucciderlo, lo incatenò qui imponendogli attraverso il Sigillo un solo ordine: «PROTEGGI QUESTA PORTA».\n\nL'ordine ha la voce del Custode. Vhaerun la sente a ogni battito del ritmo da duecento anni. Con una sola parola nella testa per tanto tempo, l'obbedienza dei Celamanti si è consumata e la memoria gli è tornata: sa di essere stato un elfo, forse l'unico Brak vivo che lo sappia.\n\nIl disco di metallo accanto alla porta porta l'ordine; il collare è ferro vero, con una serratura antica. Spegnere l'ordine non apre il collare.\n\nIl cerchio è l'anello più interno di lastre. Entrarci, attaccarlo o tentare di passare la porta mentre il disco pulsa fa partire lo scontro. Fuori dal cerchio si può parlare quanto si vuole. Vhaerun vuole essere liberato o ucciso, non restare qui.\n\nRegola del dialogo: dice soltanto ciò che ha visto e sentito. Non nomina il Custode, il Sigillo o persone che i PG non hanno ancora incontrato.",
+      "modules": [
+        {
+          "id": "prova_forza",
+          "type": "focus",
+          "title": "Focus 1 — La prova della catena",
+          "text": "Prima di rispondere, Vhaerun sposta l'ascia e allunga una catena fuori dal cerchio.\n\n«Non parlo con chi non conosco. Prendete la catena. Tirate. Se mi spostate, rispondo.»\n\nVhaerun ha +7. Un campione alla volta, al meglio di tre tiri. Il gruppo può provare con più campioni.\n\nIl PG vince: Vhaerun scivola di un palmo. «Bene. Chiedete.» Risponde volentieri, senza prezzo.\n\nIl PG perde: «Deboli. Ma siete i primi da tanto tempo. Chiedete lo stesso.» Ogni risposta costa una notizia vera dal mondo di sopra.\n\n20 naturale: Vhaerun ride, chiede il nome del PG e da quel momento parla soltanto con lui."
+        },
+        {
+          "id": "dialogo",
+          "type": "focus",
+          "title": "Focus 2 — Parlare con Vhaerun",
+          "text": "Chi sei?\n\n«Mi chiamavano Primo Strumento della Terza Schiera. Prima ancora avevo un nome. Vhaerun. Usate quello. Fa male sentirlo. Va bene che faccia male.»\n\nCosa sei?\n\n«I vostri libri dicono che siamo bestie? Bene. Così è più facile. Anch'io lo dicevo dei vostri.»\n\nPerché sei incatenato?\n\n«Ero un comandante. Ho perso. Chi mi ha battuto non mi ha ucciso: mi ha messo qui, e nella testa una parola sola. E la parola ha la sua voce. Tutti i giorni. Da allora.»\n\nChi ti ha messo qui?\n\n«Un comandante dei vostri. L'ho combattuto, faccia a faccia. Poi è sceso più in basso, e non l'ho mai sentito tornare. Ma lo sento parlare. Ogni volta che il ritmo batte.»\n\nDa quanto sei qui?\n\n«Da quando c'era la guerra. Contate voi.»\n\nTi ricordi di prima?\n\n«Con una parola sola in testa per tanto tempo, c'è stato posto per il resto. È tornato piano. Un fiume. Una donna che cantava. Le mie orecchie, prima che le tagliassero.»\n\nCosa proteggi?\n\n«Quella porta. Non so cosa c'è dietro. Non l'ho mai saputo. Me l'hanno detto e basta.»\n\nCos'è questo posto? Il ritmo?\n\n«È il posto dove i vostri davano ordini. Una volta ne obbedivano a migliaia, qui sotto. Adesso obbedisco solo io.»\n\nChi ha murato i passaggi?\n\n«Non li ho visti. Li ho sentiti. Due. Uno camminava leggero e aveva paura. L'altro no. Pietre, per tre notti. Qui non sono entrati.»\n\nC'è qualcun altro qui sotto?\n\n«Qualcuno respira. Piano. Da qualche parte, oltre queste pareti. Da anni. Non so chi.»\n\nCosa vuoi?\n\n«Liberatemi o uccidetemi. Ma non lasciatemi qui.»\n\nLe sue domande: «Chi ha vinto?» «I Brak ci sono ancora? Sono liberi?» Le Orde Libere del nord sono per lui una speranza; le Orde di Gridraz, che vivono soltanto di guerra, un lutto."
+        },
+        {
+          "id": "intuizione",
+          "type": "check",
+          "focus": "Focus 3 — Capire Vhaerun",
+          "skill": "Intuizione",
+          "dc": 13,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Un mostro incatenato, pronto a scattare."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 12,
+              "text": "Parla come un soldato. Vi misura."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "Non è ostile. Sta eseguendo un ordine che odia."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Non mente. Ha paura di una cosa sola: che ve ne andiate senza decidere."
+            },
+            {
+              "kind": "natural20",
+              "text": "Quando dice il suo nome, per un istante la voce cambia: più alta, più leggera. È la voce di qualcun altro, di prima."
+            }
+          ]
+        },
+        {
+          "id": "disco",
+          "type": "check",
+          "focus": "Focus 4 — Il disco di metallo",
+          "skill": "Indagare o Arcano",
+          "dc": 14,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Un disco di metallo, come quelli della galleria ma più grande."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 13,
+              "text": "Pulsa al ritmo, e le catene vibrano con lui."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 14,
+              "max": 16,
+              "text": "Non tiene il corpo. Tiene la volontà: gli ripete di continuo lo stesso ordine."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 17,
+              "max": 19,
+              "text": "Se il disco tace, l'ordine si spegne. Il collare no."
+            },
+            {
+              "kind": "natural20",
+              "text": "Il disco non crea l'ordine: lo riceve da più in basso, oltre la porta di pietra, e lo ripete con la voce di qualcuno."
+            }
+          ]
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 5 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nVhaerun è avvolto di filamenti. Non vengono dalle catene: partono dal disco accanto alla porta e gli arrivano dritti alla testa. Dal disco, un filo più spesso scende nel pavimento, verso il basso."
+        },
+        {
+          "id": "liberare",
+          "type": "focus",
+          "title": "Focus 6 — Liberare Vhaerun",
+          "text": "Spegnere l'ordine non richiede prove. Basta spaccare o zittire il disco, usare il gesto dell'abdicazione imparato nella Sala delle Ordinanze, oppure purificare il Sigillo o uccidere l'Ultimo Custode.\n\nVhaerun chiude gli occhi. «È andata via. La voce.»\n\nIl collare va aperto a parte. Un fallimento costa soltanto tempo; con un successo la serratura cede e le catene cadono.\n\nSe qualcuno invece gli ordina di andarsene, obbedisce, ma è soltanto un padrone nuovo al posto di quello vecchio. «Un'altra voce. Bene. Almeno questa ha una faccia.»"
+        },
+        {
+          "id": "scontro",
+          "type": "focus",
+          "title": "Scontro — Vhaerun, comandante Brak",
+          "text": "Lo scontro parte se qualcuno entra nel cerchio, lo attacca o prova a passare la porta mentre il disco pulsa. Vhaerun si alza, prende l'ascia e dice: «Vi avevo detto di fermarvi.»\n\nGS 5, 1.800 PE. 110 PF, CA 16, velocità 9 m. For +5, Cos +4. TS For +8, Sag +3. Multiattacco: due colpi d'ascia, +8, 1d12+5 ciascuno. Carica: dopo almeno 3 m in linea retta, il primo colpo infligge +2d8. Urlo di comando, una volta: TS Saggezza CD 14 o Spaventato per 1 minuto. Spinta e Presa: Atletica +8.\n\nColpisce chi è più vicino alla porta e non se ne allontana oltre 6 m. Le catene gli danno velocità 3 m nei primi due round. Se il gruppo esce dal cerchio e dal raggio della porta, torna a sedersi: ci si può sempre fermare e parlare."
+        },
+        {
+          "id": "exp",
+          "type": "focus",
+          "title": "EXP",
+          "text": "Vhaerun liberato o sconfitto: 1.800 PE, cioè 360 a testa per 5 PG. Se viene lasciato incatenato: niente."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Liberato:\n\nVhaerun si alza senza catene. È più alto di quanto sembrava. Si tocca il collo dove c'era il ferro.\n\n«Andate dove dovete andare. Io...» Guarda la porta, poi il corridoio da cui siete venuti. «Io non so dove si va, quando nessuno te lo dice.»\n\nOrdine spento, collare ancora chiuso:\n\n«La voce se n'è andata. Il ferro no.»\n\nUcciso:\n\nVhaerun cade sul cerchio. Prima di chiudere gli occhi dice una parola in una lingua sconosciuta. Il disco continua a pulsare.\n\nLasciato lì:\n\n«Tornerete. Lo dicono tutti.»\n\nSe tornano dopo il Sigillo: Vhaerun è in piedi fin dove le catene lo consentono. «Ha smesso di parlare.» Una pausa. «È morto?»\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "rilievi",
+      "kind": "enigma",
+      "title": "La Sala delle Ordinanze",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 705,
+        "y": 555
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/df4aeaf8bb3f.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "text": "La sala è ovale, e per la prima volta qui sotto le pareti non sono nude.\n\nSono coperte di rilievi scolpiti, sei grandi riquadri di pietra, tre per parte. Soldati, ufficiali, un comandante.\n\nAl centro del pavimento, in fila, ci sono tre dispositivi rotondi di bronzo. I due ai lati hanno una sbarra per girarli. Quello in mezzo è più grande, fatto di anelli uno dentro l'altro, e al centro ha un incavo vuoto.\n\nSotto l'ultimo rilievo corre un'iscrizione.\n\nIl ritmo, qui, si sente appena.",
+      "gm": "Questa sala sblocca la Porta di Pietra e insegna il rito finale per il Sigillo: cooperazione libera, non obbedienza.\n\nIl meccanismo richiede che qualcuno deponga nell'incavo centrale un simbolo del proprio rango; poi tre persone devono girare i dispositivi nello stesso istante. Nessuno deve ordinare agli altri di farlo. Se un personaggio comanda o se usano il TAC per sincronizzarsi, i dispositivi si bloccano: hanno obbedito al Sigillo.\n\nFunziona tutto ciò che nasce da una scelta comune: contare insieme, guardarsi e respirare insieme, tenersi per mano. Se uno solo decide per gli altri, il meccanismo si blocca.\n\nDispositivo bloccato: un colpo sordo, i tre dispositivi tornano indietro e il ritmo lontano accelera. Si può riprovare senza limite. Girarne uno da solo lo fa tornare indietro appena si lascia la sbarra.",
+      "modules": [
+        {
+          "id": "rilievi",
+          "type": "focus",
+          "title": "Focus 1 — I sei rilievi",
+          "text": "Nessun tiro.\n\nPrimo: un comandante alza la mano e le schiere marciano, perfette.\n\nSecondo: marciano dentro un fiume in piena. Nessuno esce dalla fila.\n\nTerzo: marciano contro un muro di lance. Cadono in fila.\n\nQuarto: marciano verso un precipizio. Il primo è già nel vuoto, gli altri continuano.\n\nQuinto: il comandante è solo davanti a un campo di morti allineati.\n\nSesto: il comandante si toglie qualcosa dal petto e lo posa a terra. Accanto, tre figure girano tre ruote. Non si guardano come superiore e subordinati: si guardano e basta.\n\nSotto: «L'ORDINE PIEGA.» «IL GIURAMENTO LEGA SOLTANTO CHI LO PRONUNCIA.»"
+        },
+        {
+          "id": "interpretare",
+          "type": "check",
+          "focus": "Focus 2 — Interpretare i rilievi",
+          "skill": "Storia o Religione",
+          "dc": 14,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Scene di guerra e di obbedienza. Un monumento militare."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 13,
+              "text": "Ogni scena di obbedienza finisce in una sconfitta. Qualcuno ha voluto dirlo chiaro."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 14,
+              "max": 16,
+              "text": "Il gesto del comandante che posa l'insegna è un'abdicazione: rinuncia al comando."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 17,
+              "max": 19,
+              "text": "Le tre figure agiscono insieme senza un capo. Il meccanismo non si comanda: si condivide."
+            },
+            {
+              "kind": "natural20",
+              "text": "«Il giuramento lega soltanto chi lo pronuncia»: nessuno può obbedire per un altro. Ciascuno deve scegliere da solo, e scegliere la stessa cosa."
+            }
+          ]
+        },
+        {
+          "id": "dispositivi",
+          "type": "check",
+          "focus": "Focus 3 — I dispositivi di bronzo",
+          "skill": "Indagare",
+          "dc": 13,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Bronzo antico, pesante. Qualcosa li collega sotto il pavimento."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 12,
+              "text": "Girandone uno da soli, si muove e poi torna indietro. Servono tutti e tre."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "Devono muoversi nello stesso istante. Basta un attimo di ritardo e tornano indietro."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Il dispositivo centrale non gira finché l'incavo è vuoto. Ci va messo qualcosa."
+            },
+            {
+              "kind": "natural20",
+              "text": "Gli anelli centrali sono consumati da molte mani, ma l'incavo non porta segni di chiavi: vi hanno posato oggetti diversi, ogni volta."
+            }
+          ]
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 4 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nDai tre dispositivi partono filamenti sottili sotto il pavimento. Due vanno verso la galleria; quello centrale scende più in basso, verso la grande porta di pietra. Qui la trama è debole e calma. Questa sala non dà ordini."
+        },
+        {
+          "id": "risoluzione",
+          "type": "focus",
+          "title": "Risoluzione del meccanismo",
+          "text": "I tre dispositivi girano insieme, senza un suono.\n\nPoi, dalla roccia, un colpo sordo. Un secondo. Lontano, nella galleria, tutti i dischi di rame vibrano nello stesso istante.\n\nDa qualche parte più in basso, pietra scorre su pietra.\n\nL'oggetto posato nell'incavo resta lì: il dispositivo centrale si chiude sopra di lui.\n\nPer il Master: la Porta di Pietra è sbloccata. L'oggetto non si riprende. È il prezzo dell'abdicazione."
+        },
+        {
+          "id": "exp",
+          "type": "focus",
+          "title": "EXP",
+          "text": "Meccanismo risolto: 750 PE, cioè 150 a testa per 5 PG."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "La sala torna silenziosa. Sul sesto riquadro il comandante continua a posare la sua insegna, per sempre.\n\nIl passaggio in basso scende verso altre stanze. Da lì arriva aria più fredda, e l'odore di qualcosa di chiuso da molto tempo.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "micuccio",
+      "kind": "persona",
+      "title": "Micuccio",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 645,
+        "y": 795
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/edb0f9f727e9.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "text": "Una stanza piccola, quadrata. Per terra, qualche cosa lasciata lì: un rotolo di corda, una borsa di cuoio, una brocca vuota, una lanterna spenta da chissà quanto.\n\nE contro il muro, seduto, c'è un ragazzo.\n\nMagro. Pallido. La schiena dritta, le mani appoggiate sulle ginocchia, una da una parte e una dall'altra, precise. Gli occhi aperti.\n\nSui capelli e sulle spalle c'è polvere. Tanta. Come su una statua.\n\nPoi uno dei suoi occhi si muove. Vi guarda.\n\nLe labbra si muovono appena, a tempo col ritmo:\n\n«...trecentododici... trecentotredici...»",
+      "gm": "È Micuccio, il ragazzo del Borgo Vecchio sceso qui tre anni fa con Titta. Titta è fuggito senza aspettarlo; in paese credono Micuccio morto.\n\nL'ordine RESTA è legato alla stanza dalla linea chiara tracciata intorno a lui. Non è charme: lo mantiene vivo senza cibo né acqua e lo tiene fermo. La voce è quella dell'Ultimo Custode, ma Micuccio la chiama soltanto «la voce».\n\nConta i passi del ritmo da tre anni. Da quando è morto Rocco il ritmo è salito e lui conta più in fretta. La corda, la borsa, la brocca e la lanterna sono ciò che aveva portato con sé.",
+      "modules": [
+        {
+          "id": "dialogo",
+          "type": "focus",
+          "title": "Focus 1 — Parlare con Micuccio",
+          "text": "Se qualcuno gli parla o si avvicina, smette di contare. Solo gli occhi si muovono.\n\n«Non posso.»\n\nSe gli chiedono di venire via: «Andare. Non posso andare. Ha detto di restare.»\n\nChi l'ha detto? «La voce. Quella che conta.» Guarda in alto. «Adesso conta più forte.»\n\nCome ti chiami? «Micuccio.» Una lunga pausa. «Mi chiamavo.»\n\nDa quanto sei qui? «Trecentoquattordici.» È il numero del conteggio, non dei giorni.\n\nEri da solo? «Titta.» Gli occhi si riempiono. «Titta ha corso. Io no. Io ho obbedito prima di decidere.»\n\nSe nominano la famiglia o il Borgo: «Mamma sta bene?» Non inventare nomi: la famiglia non ne ha ancora nel canone."
+        },
+        {
+          "id": "medicina",
+          "type": "check",
+          "focus": "Focus 2 — Esaminare Micuccio",
+          "skill": "Medicina",
+          "dc": 13,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Un ragazzo denutrito, sotto shock. Portarlo via a braccia sembra la cosa giusta."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 12,
+              "text": "È debolissimo, ma il cuore batte regolare. A tempo col ritmo."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "Non mangia da tempo, eppure vive. Non è malattia: qualcosa lo tiene in vita."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Qualunque cosa lo tenga, lo tiene anche fermo. Trascinarlo fuori con la forza gli farebbe male."
+            },
+            {
+              "kind": "natural20",
+              "text": "Ha tre anni in più di quando è sceso, ma il corpo non li mostra. È cresciuto di pochissimo, come se qui il tempo passasse piano."
+            }
+          ]
+        },
+        {
+          "id": "runa",
+          "type": "check",
+          "focus": "Focus 3 — La linea chiara",
+          "skill": "Indagare o Arcano",
+          "dc": 14,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Una linea chiara tracciata per terra. Forse calce."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 13,
+              "text": "È una runa, un disegno che chiude uno spazio intorno al ragazzo."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 14,
+              "max": 16,
+              "text": "È un ordine scritto nella pietra: tiene chi c'è dentro. Se la linea si spezza, l'ordine cade."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 17,
+              "max": 19,
+              "text": "Spezzarla non basta a farlo stare bene: il ragazzo crollerà. Ma sarà libero."
+            },
+            {
+              "kind": "natural20",
+              "text": "La runa riceve l'ordine da più in basso, come i dischi della galleria. Se il ritmo si spegnesse, questa linea morirebbe da sola."
+            }
+          ]
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 4 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nLa linea brilla di Ammaliamento, forte. Dalla linea un filo sale fino alla testa del ragazzo. Un altro scende nel pavimento, verso il basso, dove batte il ritmo."
+        },
+        {
+          "id": "liberare",
+          "type": "focus",
+          "title": "Focus 5 — Spezzare il vincolo",
+          "text": "Nessuna prova. Basta raschiare, rompere o cancellare la linea; anche purificare il Sigillo la spegne da lontano. Dissolvi Magie non la spezza, ma permette a Micuccio di muoversi e parlare liberamente per 1 minuto.\n\nQuando il vincolo cade, Micuccio smette di contare, si guarda le mani e crolla in avanti. Respira ma non si regge: Medicina CD 10 o qualsiasi cura magica lo rende trasportabile; altrimenti va portato a braccia.\n\nSe viene trascinato fuori senza spezzare la linea, urla, gli sanguina il naso e cerca il pavimento. Oltre la porta sviene, senza morire, finché la linea non si spezza o non viene riportato dentro."
+        },
+        {
+          "id": "exp",
+          "type": "focus",
+          "title": "EXP",
+          "text": "Micuccio liberato: 750 PE, cioè 150 a testa per 5 PG."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Liberato:\n\nMicuccio respira piano tra le braccia di chi lo tiene. Dopo un po' apre gli occhi. «Il ritmo.» Una pausa. «Sta ancora contando.»\n\nDal passaggio a destra il ritmo arriva più forte che da qualunque altra parte.\n\nLasciato lì:\n\nUscendo, dietro di voi il ragazzo ricomincia a contare, piano, da dove si era fermato.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "memorie",
+      "kind": "lore",
+      "title": "La Camera delle Memorie",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 435,
+        "y": 765
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/743ec51890b7.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a square underground memorial chamber of dressed stone, four low niches in the corners each holding a few objects laid out with care, an old helmet, a folded letter, a spear broken in half, a small worn statuette with a stub of candle, in the middle of the floor a large raised stone slab covered edge to edge with tiny carved names, nearby a tomb lid carved with the effigy of a soldier, small heaps of offerings gathered in the corners, dust, a single candle flame, deep quiet --ar 4:3",
+      "text": "Una stanza quadrata, silenziosa. Qui il ritmo si sente appena, come se la pietra lo tenesse fuori.\n\nAgli angoli, quattro nicchie basse. In ognuna ci sono pochi oggetti, messi in ordine con cura. Un elmo. Una lettera piegata. Una lancia spezzata a metà. Una statuetta consumata, con un mozzicone di candela.\n\nAl centro c'è una grande lastra di pietra, sollevata dal pavimento. È coperta da un bordo all'altro di scritte minuscole, incise.\n\nAccanto, sul coperchio di una tomba, è scolpito un soldato disteso, con le mani sulla spada.\n\nNegli angoli, a mucchietti, altre cose: fibbie, anelli, un pettine, una scarpa da bambino.\n\nNessuno le ha buttate lì. Le hanno lasciate.",
+      "gm": "È il luogo della memoria della guarnigione dell'Alleanza che stava qui sotto nella Guerra delle Due Lune. Chi è morto qui ha lasciato le sue cose; chi è sopravvissuto le ha consegnate.\n\nLa lastra centrale porta i nomi dei caduti e di chi serviva qui. Tra centinaia di nomi c'è Cyrius Meren. Qui il ritmo quasi non arriva: è l'unica stanza che il Sigillo non tocca.",
+      "modules": [
+        {
+          "id": "oggetti",
+          "type": "focus",
+          "title": "Focus 1 — Gli oggetti nelle nicchie",
+          "text": "Nessun tiro. Chi tocca un oggetto sente per un istante il freddo di una notte di due secoli fa.\n\nL'elmo: una fila di uomini spalla a spalla. Una voce dice «AVANTI» e tutti fanno un passo. Nessuno ha paura. Nessuno ha scelto.\n\nLa lettera: «Mamma, qui sotto non si sente il tempo. Il comandante dice che teniamo la porta del mondo. Io tengo il passo. Quando torno ti porto il sale. Se non torno, qualcuno ti porterà questa.» Non è mai partita.\n\nLa lancia spezzata: ferro, un grido in una lingua sconosciuta, poi la lancia si spezza tra una mano grigio-verde e una umana.\n\nLa statuetta: una donna con una luna in mano. Sotto la candela qualcuno ha pregato a lungo. Una parola: «ritorna»."
+        },
+        {
+          "id": "lastra",
+          "type": "check",
+          "focus": "Focus 2 — La lastra dei nomi",
+          "skill": "Storia",
+          "dc": 14,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Nomi. Centinaia. Scritti in una grafia antica."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 13,
+              "text": "Sono soldati. Una croce indica i morti, un cerchio chi è tornato a casa."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 14,
+              "max": 15,
+              "text": "Sono i nomi di una guarnigione dell'Alleanza. Le cose nelle nicchie sono state consegnate, una per una."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Fra gli ultimi nomi, uno non ha né croce né cerchio: Cyrius Meren. Non è morto qui e non è tornato a casa: è andato via."
+            },
+            {
+              "kind": "natural20",
+              "text": "Accanto al nome di Cyrius Meren c'è una stella con un occhio, incisa da una mano diversa e più recente."
+            }
+          ],
+          "gm": "Se Mattheus è presente, il nome dell'uomo che gli ha dato la custodia del Filatterio dice già abbastanza."
+        },
+        {
+          "id": "tomba",
+          "type": "check",
+          "focus": "Focus 3 — La tomba del comandante",
+          "skill": "Indagare",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Un soldato scolpito in un'armatura antica."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 11,
+              "text": "Il coperchio non è mai stato aperto. Sotto la polvere, la pietra è intatta."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 12,
+              "max": 14,
+              "text": "La tomba è vuota. Il coperchio è soltanto appoggiato, e sotto non c'è nessuno."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 15,
+              "max": 19,
+              "text": "È una tomba preparata per qualcuno che non ci è mai entrato. Sul bordo è inciso un grado, non un nome: comandante."
+            },
+            {
+              "kind": "natural20",
+              "text": "Sul petto della figura manca un'insegna, scalpellata via: lo stesso gesto del comandante nella Sala delle Ordinanze."
+            }
+          ],
+          "gm": "La tomba era destinata all'Ultimo Custode, che non è mai morto. Non dirlo direttamente ai giocatori."
+        },
+        {
+          "id": "magia",
+          "type": "focus",
+          "title": "Focus 4 — Individuazione del Magico",
+          "text": "Nessun tiro.\n\nNessuna trama di comando. Solo un velo debolissimo di magia su ogni oggetto delle nicchie: il ricordo di chi li ha tenuti."
+        },
+        {
+          "id": "spettro",
+          "type": "focus",
+          "title": "Evento — Lo Spettro della Guerra",
+          "text": "Trigger: qualcuno porta via un oggetto.\n\nLa candela si piega. L'aria diventa gelida. Dal muro esce una figura trasparente in armatura antica e ripete sempre lo stesso nome.\n\nScheda: Spettro della Guerra nel Bestiario, 45 PF, CA 12, Tocco vitale +5, 3d6, passa attraverso i muri. Se l'oggetto viene rimesso al suo posto, lo spettro si ferma e rientra nel muro.\n\nUsalo soltanto se il gruppo sta andando troppo liscio: dopo c'è il Custode."
+        },
+        {
+          "id": "loot",
+          "type": "focus",
+          "title": "Loot",
+          "text": "Nulla da prendere. È il senso della stanza. Chi prende qualcosa sveglia lo spettro."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione",
+          "text": "Uscite lasciando tutto come l'avete trovato. Dietro di voi la candela della statuetta continua a bruciare, anche se nessuno la tiene accesa da duecento anni.\n\nDal passaggio a destra, verso la stanzetta del ragazzo e oltre, il ritmo torna a farsi sentire.\n\nChe cosa fate?"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "sigillo",
+      "kind": "boss",
+      "title": "La Stanza del Quarto Sigillo",
+      "visibility": "evident",
+      "legacyPosition": {
+        "x": 945,
+        "y": 795
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/bb08f65f2b5f.jpg",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "imagePrompt": "Painted fantasy illustration in classic Dungeons & Dragons rulebook style, oil painting texture, NOT photorealistic: beneath a small walled hilltop town, a round underground chamber seen from its doorway, walls of rough uneven fieldstones and boulders, floor of worn flagstones with a large eight-pointed star inlaid in pale stone and thin silver lines, at the center a waist-high rough stone plinth holding a large pale blue crystal, dull, not glowing, only a faint slow pulse deep inside, four squat pylons of dark stone banded with copper rings standing on the points of the star around it, three with a faint cold blue light in their rings, the fourth cracked down the middle and dead, two faded red war banners hanging from iron poles on the far wall, torches in iron brackets, kneeling before the crystal with his back to the viewer a man in heavy archaic plate armour of a much older era, head bowed, both hands on the pommel of a sword planted point-down in front of him, dust in the air, cold blue light against warm torchlight --ar 4:3",
+      "text": "Oltre la soglia la stanza è rotonda. Pietre grezze, messe una sull'altra senza malta, come nel resto di questo posto. Sul pavimento corre una stella a otto punte, di pietra chiara e fili d'argento, così grande che la state già calpestando.\n\nSulle punte della stella ci sono quattro piloni di pietra scura, cerchiati di rame. In tre si muove una luce fredda. Il quarto è spaccato dall'alto in basso, ed è spento.\n\nAl centro c'è un cristallo che non brilla: scandisce. A ogni battito la luce nei piloni risponde. È lo stesso battito che vi segue da quando siete scesi nel pozzo.\n\nDavanti al cristallo, inginocchiato, c'è un uomo in un'armatura di un'altra epoca. Ha la spada piantata davanti a sé, le mani sull'elsa, la testa china. Sulla parete in fondo pendono due stendardi rossi, scoloriti fino al colore della ruggine.\n\nFate un passo. Il conteggio termina. Non rallenta. Finisce.\n\nNel silenzio l'uomo alza la testa. Non si volta.\n\n«Alt.»\n\nChe cosa fate?",
+      "gm": "È il cuore di Sotto Bëllindë e lo scontro finale. Il cristallo è il Quarto Sigillo. Da qui partono gli ordini impersonali della Galleria; gli ordini con una voce, come PROTEGGI QUESTA PORTA per Vhaerun e RESTA per Micuccio, sono del Custode.\n\nNon rivelare qui il suo nome, la sua storia, il legame con il Filatterio di Mattheus o con Cyrius Meren: appartengono al PDI 15. Il Custode parla soltanto per ordini e formule.\n\nTre piloni sono attivi: FERMO, INDIETRO, COLPISCI. Sul quarto la parola CONGEDO è stata grattata via con una lama; è l'unico ordine che avrebbe permesso al Custode di andarsene. Il quarto non si riaccende in questo PDI. Spegnere un pilone elimina quell'ordine per sempre.\n\nIl Custode non può uscire dalla stella, raggio circa 6 metri. I PG possono uscire quando vogliono. Se se ne vanno, torna in ginocchio e attende.\n\nQuando dice «Identificatevi», guarda per un battito Mattheus o chi porta il Filatterio: l'oggetto diventa freddo e pesante. Non spiegare ancora.\n\nSe Vhaerun, liberato, li segue, si ferma sulla soglia: «Non davanti a lui.» Il Custode gli ordina «Torna al tuo posto.» Con il collare spezzato non ha effetto, e Vhaerun ride.\n\nA 0 PF il Custode cade ma non muore. La purificazione del Sigillo resta una scena separata e conduce al PDI 15.",
+      "modules": [
+        {
+          "id": "avvertimenti",
+          "type": "focus",
+          "title": "Fase 0 — La scala degli avvertimenti",
+          "text": "Una battuta per ogni passo; il Custode non si ripete e non spiega.\n\n1. Entrano: «Alt.»\n2. Parlano o si muovono: si alza senza voltarsi. «Identificatevi.»\n3. Rispondono: si volta. «Ordine di accesso?»\n4. Nessun ordine è valido: «Allora tornate indietro.»\n5. Restano, avanzano o toccano qualcosa: estrae la spada. «Ultimo avvertimento.»\n6. Un altro passo o un gesto verso cristallo o piloni: tirate l'iniziativa.\n\nTitoli e gradi: «Non riconosciuto.» Ordini inventati: «Ordine non valido.» La frase della Sala delle Ordinanze, o il suo senso, gli cambia la voce: nel primo round non usa Ordine e chi ha parlato ha vantaggio ai TS contro Ordine per tutto lo scontro. Se attaccano prima, non può essere sorpreso."
+        },
+        {
+          "id": "cristallo",
+          "type": "check",
+          "focus": "Focus 1 — Il cristallo",
+          "skill": "Arcano",
+          "dc": 15,
+          "text": "Individuazione del Magico conta come successo pieno. Se il cristallo viene colpito non si scalfisce: restituisce 2d6 danni da tuono senza TS e l'arma cade di mano.",
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Il battito ti entra nel petto. Per un minuto, quando qualcuno ti dà un ordine, fai un passo per obbedire prima di accorgertene."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 14,
+              "text": "È magia antica e fortissima. Non capisci altro."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 15,
+              "max": 16,
+              "text": "È un sigillo, una chiusura, non un'arma. I fili dai piloni al cristallo sono comando: lo stesso intreccio dei dischi della Galleria."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 17,
+              "max": 19,
+              "text": "Il sigillo è sano ma è stato legato al comando. Togliendo il comando senza sostituirlo, il cristallo resta senza ciò che lo tiene insieme."
+            },
+            {
+              "kind": "natural20",
+              "text": "Se colpisci il cristallo non lo rompi: lo fai urlare, e lui ti restituisce il colpo."
+            }
+          ]
+        },
+        {
+          "id": "piloni",
+          "type": "check",
+          "focus": "Focus 2 — I piloni",
+          "skill": "Indagare",
+          "dc": 13,
+          "text": "Individuazione del Magico: ammaliamento. Ogni pilone attivo manda un filo al cristallo e uno verso la Galleria; il quarto è vuoto.",
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Il rame risponde al tocco: subisci 1d6 danni psichici e il Custode ti guarda."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 12,
+              "text": "Pietra, rame, una luce che pulsa."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "Sugli anelli superiori: FERMO, INDIETRO, COLPISCI. Sono ordini da campo, pensati per governare i corpi."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Sul quarto la parola è stata grattata via; resta una C. Ruotando di un quarto il rame dei piloni attivi si interromperebbe il flusso."
+            },
+            {
+              "kind": "natural20",
+              "text": "La parola grattata è CONGEDO."
+            }
+          ]
+        },
+        {
+          "id": "custode_intuizione",
+          "type": "check",
+          "focus": "Focus 3 — Il Custode: capirlo",
+          "skill": "Intuizione",
+          "dc": 14,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Sembra soltanto una macchina. Nel primo round hai svantaggio al TS contro Ordine."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 13,
+              "text": "È un soldato che fa il suo dovere."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 14,
+              "max": 16,
+              "text": "Non vuole combattere. Vi sta dando ogni occasione per andarvene."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 17,
+              "max": 19,
+              "text": "Dare un ordine gli costa qualcosa: ogni volta serra la mascella."
+            },
+            {
+              "kind": "natural20",
+              "text": "Conta ancora, dentro. Ha soltanto smesso di farlo ad alta voce."
+            }
+          ]
+        },
+        {
+          "id": "custode_storia",
+          "type": "check",
+          "focus": "Focus 3 — Il Custode: armatura e stendardi",
+          "skill": "Storia",
+          "dc": 15,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Lo scambi per un cavaliere imperiale d'oggi."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 14,
+              "text": "È un'armatura antica."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 15,
+              "max": 16,
+              "text": "La forgia è dell'epoca della Guerra, non di dopo."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 17,
+              "max": 19,
+              "text": "Gli stendardi rossi appartengono a una Schiera, non a una casata. La fascia lo identifica come comandante."
+            },
+            {
+              "kind": "natural20",
+              "text": "Nelle cronache questi stendardi risultano distrutti in battaglia. Qualcuno li ha portati quaggiù invece di lasciarli morire."
+            }
+          ]
+        },
+        {
+          "id": "stella",
+          "type": "check",
+          "focus": "Focus 4 — La stella",
+          "skill": "Percezione",
+          "dc": 12,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 4,
+              "text": "Mentre guardi il pavimento il Custode fa un passo: perdi un passo della scala."
+            },
+            {
+              "kind": "failure",
+              "min": 5,
+              "max": 11,
+              "text": "Una bella stella."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 12,
+              "max": 14,
+              "text": "L'argento forma un cerchio sul bordo esterno della stella; i piloni stanno sopra quel bordo."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 15,
+              "max": 19,
+              "text": "Davanti al cristallo ci sono due incavi consumati dalle ginocchia. Lui non si è mai alzato e non ha mai superato l'argento."
+            },
+            {
+              "kind": "natural20",
+              "text": "Oltre l'argento non c'è una sola sua impronta. Non può uscire dal cerchio."
+            }
+          ]
+        },
+        {
+          "id": "scontro",
+          "type": "focus",
+          "title": "Scontro — L'Ultimo Custode",
+          "text": "Per 5 PG. GS 8, 3.900 PE. CA 18, PF 125, velocità 9 m, iniziativa +2. Competenza nei TS Forza, Costituzione e Saggezza; immune ad affascinato, spaventato ed esausto.\n\nMultiattacco: due attacchi con la Lama d'ordinanza, +7 a colpire, 1d10+4 taglienti.\n\nHa 3 azioni leggendarie per round, da usare una alla volta alla fine del turno di un'altra creatura: Attacco; attivare il comando di un pilone; muoversi di 6 m senza provocare attacchi di opportunità. Ogni comando richiede TS Saggezza CD 14. FERMO: velocità 0 fino alla fine del turno seguente. INDIETRO: spinta di 6 m. COLPISCI: il bersaglio usa la reazione per attaccare un alleato adiacente. Nessun ordine fa perdere il turno.\n\nPrimo round: due attacchi contro chi porta l'armatura più pesante, poi FERMO sull'incantatore più lontano. Resta sempre fra il gruppo e il cristallo. A 0 PF cade, ma non muore: il Sigillo resta corrotto finché non viene purificato."
+        },
+        {
+          "id": "piloni_scontro",
+          "type": "focus",
+          "title": "I piloni in combattimento",
+          "text": "Tre piloni attivi: CA 15, PF 20, immuni a psichico e veleno. Da adiacente si possono spegnere senza romperli con un'Azione: Arcano CD 14 oppure Arnesi da scasso CD 14, ruotando il rame.\n\nQuando un pilone si spegne, il Custode non può più usare quell'ordine. Il quarto pilone, CONGEDO, è già spaccato e non si riaccende durante lo scontro."
+        },
+        {
+          "id": "fase_due",
+          "type": "focus",
+          "title": "Fase II — Il conteggio non riparte",
+          "text": "Scatta quando il Custode scende a 63 PF. All'inizio di ogni round, tutti gli ordini dei piloni ancora attivi si manifestano senza consumare azioni leggendarie; assegna ciascun ordine a un bersaglio sensato, senza ripetere lo stesso bersaglio se puoi evitarlo.\n\nFinché almeno un pilone resta attivo, il Custode recupera 10 PF all'inizio del proprio turno. Non cambia CA e continua a compiere due attacchi. Spegnere tutti i piloni elimina sia gli ordini gratuiti sia la rigenerazione."
+        },
+        {
+          "id": "rito",
+          "type": "focus",
+          "title": "Il rito — Riaccendere i tre piloni",
+          "text": "Servono tre volontà libere, ognuna con la mano su un pilone spento diverso; il quarto non conta. Tutte usano l'Azione nello stesso round e fanno TS Saggezza CD 13. Chi fallisce è respinto di 1,5 m; gli altri tengono la luce per un round e si riprova.\n\nNessuno può dare il via. Se qualcuno dice «ora», conta o impartisce qualunque comando, il suo pilone si accende di luce fredda con la parola di comando: il rito fallisce e chi ha parlato subisce 1d6 psichici. Al tavolo: chi tocca un pilone mette la mano sul tavolo; nessuno conta; quando è pronto, batte.\n\nPuò partecipare ogni volontà libera, incluso Vhaerun se liberato e se sceglie lui. Quando riesce, la luce torna ambra e respira invece di pulsare; la crepa si richiude. Il Sigillo passa dal comando alla collaborazione volontaria.\n\nEffetti: i dischi della Galleria si spengono; gli Armigeri rimasti si inginocchiano; il collare di Vhaerun tace; la linea di rune di Micuccio si spegne e lui smette di contare; la luce ambra nel suo muro diventa uguale a quella dei piloni."
+        },
+        {
+          "id": "ricompense",
+          "type": "focus",
+          "title": "Bottino e PE",
+          "text": "Nessun bottino qui: la spada e il resto appartengono al PDI 15. Custode sconfitto o fermato: 3.900 PE. Sigillo purificato: +1.500 PE. Totale: 5.400 PE, cioè 1.080 a testa per 5 PG."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione — Dopo la purificazione",
+          "text": "Il silenzio adesso è diverso. Non è l'attesa del prossimo battito: è solo silenzio.\n\nLa spada scivola dalle mani dell'uomo e tocca la pietra. Lui resta in piedi, al centro della stella, e per la prima volta sembra non sapere cosa fare delle mani.\n\nPoi alza gli occhi. Non guarda il cristallo. Guarda Mattheus.\n\nChe cosa fate?\n\n→ PDI 15: L'Ultimo Custode"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 2,
+      "id": "ultimo_custode",
+      "kind": "persona",
+      "title": "L'Ultimo Custode",
+      "visibility": "hidden",
+      "legacyPosition": {
+        "x": 945,
+        "y": 795
+      },
+      "discovery": {
+        "enabled": false
+      },
+      "image": "img/pdi-15-ultimo-custode.png",
+      "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
+      "text": "La luce del cristallo cambia. Non diventa più forte: diventa presente.\n\nL'uomo riverso sulla pietra inspira. È un respiro vero, corto, doloroso. Solleva appena il viso.\n\n«L'ordine…»\n\nGuarda i piloni spenti, poi le proprie mani.\n\n«…è finito.»\n\nPer la prima volta i suoi occhi mettono a fuoco voi, non la soglia alle vostre spalle.\n\n«Adesso ricordo.»",
+      "gm": "Rivela questo PDI soltanto dopo la purificazione del Quarto Sigillo. Il Custode è un uomo, un Praefectus dell'epoca della Guerra. Il suo ordine era: «Nessuno oltrepassi la soglia. Il Sigillo non lasci Bëllindë. Attendi il cambio.» Il cambio non è mai arrivato e il Sigillo lo ha tenuto in vita.\n\nNon dargli un nome proprio: il Sigillo glielo ha consumato. Non confermare legami con i Custodi del Ciclo. Di Cyrius Meren conosce il nome e riconosce la sua custodia, ma non lo ha mai incontrato. La scena termina col suo sacrificio volontario per rinforzare il Filatterio.",
+      "modules": [
+        {
+          "id": "visioni",
+          "type": "focus",
+          "title": "Tre ricordi — senza tiro",
+          "text": "Il cristallo mostra tre immagini a tutti.\n\n1. Un esercito sotto due lune. Migliaia di soldati si muovono come un corpo solo. Una voce dice: «La scelta è il punto in cui nasce l'errore. Toglieremo la necessità di scegliere.»\n\n2. Lo stesso cristallo avvolto in catene e rune. Non possono distruggerlo: scelgono di contenerlo.\n\n3. Un soldato ancora giovane riceve l'ordine di custodire la soglia e attendere il cambio. Gli altri partono. Nessuno torna."
+        },
+        {
+          "id": "dialogo",
+          "type": "dialogue",
+          "title": "Parlare con il Custode",
+          "text": "CHI SEI? — «Ero il Praefectus di questa custodia. Il mio nome è rimasto dentro il Sigillo. Chiamatemi Custode: è l'ultima cosa che ricordo di essere stato.»\n\nQUALE ERA IL TUO ORDINE? — «Nessuno oltrepassi la soglia. Il Sigillo non lasci Bëllindë. Attendi il cambio.» Pausa. «Il cambio non è venuto.»\n\nDA QUANTO TEMPO? — Guarda la polvere sugli stendardi. «Abbastanza perché il conteggio diventasse tutto ciò che ero.»\n\nLA GUERRA — Non racconta vincitori. Ricorda un esercito che voleva eliminare l'incertezza trasformando la volontà in obbedienza. Il Sigillo era uno dei suoi strumenti.\n\nCYRIUS MEREN — «Conosco il nome. Non l'uomo. Quella custodia porta la sua trama: sobria, precisa, fatta per trattenere senza possedere.»\n\nMICUCCIO — «Un ordine troppo piccolo per un bambino e troppo grande per una vita.»\n\nTITTA E ROCCO — «Sono scesi dove la città aveva dimenticato di guardare. Uno è tornato col silenzio dentro. L'altro non è tornato.» Non sa chi abbia tagliato la corda.\n\nVHAERUN — Se è presente: «Primo Strumento della Terza Schiera.» Vhaerun risponde: «Non più.» Il Custode annuisce: «No. Non più.»\n\nGLI ARMIGERI — «Erano soldati. Poi il comando ha imparato a muoverli senza di loro.»\n\nLA TOMBA VUOTA — «Non era una tomba. Era un posto preparato per qualcuno che non arrivò.»\n\nLA PORTA SIGILLATA — «Sotto ci sono cose che il Quarto Sigillo non comandava. Le teneva lontane.»"
+        },
+        {
+          "id": "intuizione",
+          "type": "check",
+          "focus": "Focus — Che cosa gli resta",
+          "skill": "Intuizione",
+          "dc": 13,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "Ti sembra sereno. Non lo è."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 12,
+              "text": "È stanco oltre ciò che un corpo dovrebbe poter sopportare."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 13,
+              "max": 15,
+              "text": "Non ha più un posto nel mondo che ha custodito."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 16,
+              "max": 19,
+              "text": "Sta cercando l'ultima cosa che possa fare per scelta, non per ordine."
+            },
+            {
+              "kind": "natural20",
+              "text": "Ha già deciso di morire, ma vuole che la sua morte appartenga a qualcosa che abbia scelto lui."
+            }
+          ]
+        },
+        {
+          "id": "filatterio",
+          "type": "dialogue",
+          "title": "Il Filatterio",
+          "text": "Quando vede la custodia portata da Mattheus, il Custode tende una mano senza pretendere che gliela consegnino.\n\n«Questa non è una prigione. È una promessa mantenuta male.»\n\nSpiega che la trama sta cedendo: il Filatterio continua a trattenere ciò che contiene, ma consuma se stesso. Può essere rinforzato soltanto trasformando una vita ancora legata alla magia del Sigillo in una nuova chiusura. Non chiede a nessuno di sacrificarsi. Sta parlando di sé."
+        },
+        {
+          "id": "arcano_filatterio",
+          "type": "check",
+          "focus": "Focus — Leggere il Filatterio",
+          "skill": "Arcano",
+          "dc": 14,
+          "outcomes": [
+            {
+              "kind": "criticalFailure",
+              "min": 1,
+              "max": 5,
+              "text": "La trama ti risponde con un TUM sordo. Hai svantaggio alla prossima prova di Saggezza prima di un riposo lungo."
+            },
+            {
+              "kind": "failure",
+              "min": 6,
+              "max": 13,
+              "text": "Vedi soltanto linee luminose che si stringono attorno a qualcosa di invisibile."
+            },
+            {
+              "kind": "baseSuccess",
+              "min": 14,
+              "max": 16,
+              "text": "È una custodia reale: non distrugge ciò che contiene, lo separa dal mondo."
+            },
+            {
+              "kind": "fullSuccess",
+              "min": 17,
+              "max": 19,
+              "text": "Le linee non sono spezzate dall'esterno: vengono consumate dall'interno."
+            },
+            {
+              "kind": "natural20",
+              "text": "La custodia può essere rinforzata, ma la nuova trama deve bruciare qualcosa di vivo e già legato allo stesso potere."
+            }
+          ]
+        },
+        {
+          "id": "sacrificio",
+          "type": "focus",
+          "title": "La scelta del Custode",
+          "text": "Il Custode chiede il Filatterio, oppure posa la mano sulla custodia se Mattheus non vuole lasciarla. Le linee del cristallo gli risalgono il braccio. Il primo TUM piega la luce. Il secondo gli svuota il volto.\n\nA Mattheus: «Non aprirla. Non per pietà, non per paura, non per sapere.»\n\nAl terzo battito le incisioni del Filatterio si accendono dall'interno. Per un istante una voce lontanissima sembra bussare. Il Custode stringe la presa.\n\n«Sei ancora lì.»\n\nNon è una domanda. Quando la nuova chiusura si completa, lascia andare la custodia. Il suo ultimo gesto è volontario."
+        },
+        {
+          "id": "cambio",
+          "type": "focus",
+          "title": "Dargli il cambio",
+          "text": "Se qualcuno gli dice formalmente «Ti do il cambio», il Custode si raddrizza per l'ultima volta e consegna il posto come un soldato.\n\n«Posto consegnato.»\n\nIl pilone spezzato di CONGEDO emette un solo lampo color ambra. Non torna attivo: riconosce soltanto che, finalmente, l'ordine è terminato."
+        },
+        {
+          "id": "ultime_parole",
+          "type": "dialogue",
+          "title": "Prima che finisca",
+          "text": "Lascia spazio ai personaggi. Può rispondere a un'ultima domanda o rivolgere una frase breve a ciascuno, basata su ciò che ha visto nello scontro: a chi ha resistito a un ordine, «Conserva quella scelta»; a chi ha protetto un compagno, «Questo non era comando»; a Mattheus, «Custodire non significa possedere.»\n\nNon conosce il futuro e non consegna profezie. Per la prima volta parla soltanto come un uomo."
+        },
+        {
+          "id": "bottino",
+          "type": "focus",
+          "title": "Ciò che resta",
+          "text": "Non fissare una risposta unica per il corpo: può svanire nella luce, restare dentro l'armatura o lasciare soltanto polvere. La scelta è di tono e non dà indizi ulteriori.\n\nLa Lama d'ordinanza e l'armatura sono antiche ma non più magiche. Possono restare come reliquie narrative; se vendute, usa un valore modesto e non trattarle come ricompensa principale. Il vero lascito è il Filatterio rinforzato."
+        },
+        {
+          "id": "prosecuzione",
+          "type": "continuation",
+          "title": "Prosecuzione — Il ritorno alla luce",
+          "text": "Il cristallo non scandisce più nulla. I piloni sono pietra e rame. Per la prima volta da quando siete scesi, il sotterraneo non aspetta un ordine.\n\nDietro di voi il corridoio conduce al pozzo e alla luce di Bëllindë. Davanti restano le conseguenze di ciò che avete liberato, spento e promesso.\n\n→ S27: Ritorno alla luce"
+        }
+      ]
+    },
+    {
+      "id": "murata",
+      "kind": "passaggio",
+      "x": 1275,
+      "y": 765,
+      "title": "La porta murata",
+      "text": "In fondo alla galleria, dove il corridoio dovrebbe continuare, una porta di ferro è stata murata dall’interno. Sulla pietra, graffi. Dall’altra parte.",
+      "gm": "SCENA — La Porta Murata (vedi handout). Uscita alternativa / retroguardia.",
+      "skill": "Indagare",
+      "dc": 13,
+      "ok": "I graffi sono dall’altra parte, dal basso verso l’alto: qualcuno ha cercato di uscire, non di entrare. La malta è più recente delle pietre intorno.",
+      "ko": "Una porta murata, vecchia come tutto il resto."
+    }
+  ],
+  "guida": [
+    "scenalaportamurata",
+    "transizioneladiscesa",
+    "scenaladiscesa",
+    "scenalultimocustode",
+    "scenamicuccio",
+    "aftermathritornoallaluce"
+  ]
+}

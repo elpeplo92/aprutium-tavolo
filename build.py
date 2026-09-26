@@ -118,7 +118,7 @@ def contenuti():
     raw, voci = [], []
     for cat in sorted(os.listdir(CONT)):
         d = os.path.join(CONT, cat)
-        if not os.path.isdir(d): continue
+        if not os.path.isdir(d) or cat == "scene": continue   # le scene hanno il loro blocco: vedi scene()
         for fn in sorted(os.listdir(d)):
             if not fn.endswith(".json") or fn.startswith("_"): continue
             e = json.load(open(os.path.join(d, fn), encoding="utf-8"))
@@ -164,8 +164,49 @@ def contenuti():
     print(f"ok: contenuti scritti in src/tavolo.html — {n}; {len(luoghi)} segnaposto di Bëllindë"
           + (f"\n  IMMAGINI NON RISOLTE ({len(mancanti)}): " + "; ".join(mancanti[:8]) + (" …" if len(mancanti) > 8 else "") if mancanti else ""))
 
+SCENE_START, SCENE_END = "/*@SCENE*/", "/*@/SCENE*/"
+
+def scene():
+    """Una scena, un file: contenuti/scene/<id>.json contiene mappa, regole, punti d'interesse (già in
+    ordine di gioco) e schede della guida. Qui si controllano e si scrivono nel blocco SCENE_DATA.
+    Gli id delle scene e dei punti sono le chiavi dello stato su Firebase (S.scene, S.poiPos,
+    S.poiRev): cambiarli fa perdere posizioni e svelamenti della partita in corso."""
+    import json
+    html = open(SRC, encoding="utf-8").read()
+    d = os.path.join(CONT, "scene")
+    scene, errori, visti = [], [], {}
+    for fn in sorted(os.listdir(d)):
+        if not fn.endswith(".json") or fn.startswith("_"): continue
+        s = json.load(open(os.path.join(d, fn), encoding="utf-8"))
+        sid = s.get("id")
+        if sid != fn[:-5]: errori.append(f"{fn}: l'id deve essere il nome del file")
+        m = s.get("mappa") or {}
+        for k in ("img", "larghezza", "altezza"):
+            if not m.get(k): errori.append(f"{sid}: manca mappa.{k}")
+        if (s.get("regole") or {}).get("token") not in ("tutti", "gruppo", "nessuno"):
+            errori.append(f"{sid}: regole.token deve essere tutti / gruppo / nessuno")
+        if (s.get("regole") or {}).get("muri") and not m.get("muri"):
+            errori.append(f"{sid}: regole.muri è acceso ma manca mappa.muri")
+        for p in s.get("punti") or []:
+            pid = p.get("id")
+            if not pid: errori.append(f"{sid}: un punto senza id"); continue
+            if pid in visti: errori.append(f"{sid}: il punto «{pid}» esiste già in {visti[pid]}")
+            visti[pid] = sid
+        for h in s.get("guida") or []:
+            if f'"id": "{h}"' not in html: errori.append(f"{sid}: la scheda della guida «{h}» non esiste in SCENE_HANDOUTS")
+        scene.append(s)
+    if errori:
+        print("SCENE CON ERRORI:\n  " + "\n  ".join(errori)); sys.exit(1)
+    scene.sort(key=lambda s: (s.get("ordine") or 99, s["id"]))
+    blocco = SCENE_START + "const SCENE_DATA=" + json.dumps(scene, ensure_ascii=False, separators=(",", ":")) + ";" + SCENE_END
+    a = html.index(SCENE_START); b = html.index(SCENE_END) + len(SCENE_END)
+    html = html[:a] + blocco + html[b:]
+    open(SRC, "w", encoding="utf-8").write(html)
+    print(f"ok: scene scritte in src/tavolo.html — " + ", ".join(f"{s['id']} ({len(s.get('punti') or [])} punti)" for s in scene))
+
 def build():
     contenuti()
+    scene()
     shutil.copyfile(SRC, OUT)
     html = open(SRC, encoding="utf-8").read()
     used = set(re.findall(r"img/[0-9a-f]{12}\.[a-z]+", html))
@@ -178,6 +219,6 @@ def build():
 if __name__ == "__main__":
     a = sys.argv[1:]
     if a[:1] == ["--inline"]: inline()
-    elif a[:1] == ["--contenuti"]: contenuti()
+    elif a[:1] == ["--contenuti"]: contenuti(); scene()
     elif a[:1] == ["--extract"]: extract(a[1])
     else: build()

@@ -19,8 +19,10 @@ const file = path.resolve(process.argv[2] || 'index.html');
 
 (async () => {
   let chromium;
-  try { ({ chromium } = require('playwright')); }
-  catch (e) { console.error('Serve playwright: npm i playwright'); process.exit(2); }
+  for (const lib of ['playwright', 'playwright-core']) {
+    try { ({ chromium } = require(lib)); break; } catch (e) {}
+  }
+  if (!chromium) { console.error('Serve playwright: npm i playwright'); process.exit(2); }
 
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM || '/opt/pw-browsers/chromium' });
   let rotti = 0;
@@ -29,7 +31,7 @@ const file = path.resolve(process.argv[2] || 'index.html');
     const page = await browser.newPage();
     const erroriPagina = [];
     page.on('pageerror', e => erroriPagina.push(e.message));
-    await page.goto('file://' + file + '?prova=1&ruolo=' + ruolo);
+    await page.goto(require('url').pathToFileURL(file).href + '?prova=1&ruolo=' + ruolo);
     await page.waitForTimeout(1800);
 
     const esito = await page.evaluate(() => {
@@ -260,7 +262,7 @@ const file = path.resolve(process.argv[2] || 'index.html');
   // Ogni giocatore deve poter entrare direttamente col proprio personaggio dal link ?ruolo=… .
   for (const ruolo of ['alessandros', 'adamus', 'luigis', 'mattheus', 'maximus', 'vicarus']) {
     const page = await browser.newPage();
-    await page.goto('file://' + file + '?prova=1&ruolo=' + ruolo);
+    await page.goto(require('url').pathToFileURL(file).href + '?prova=1&ruolo=' + ruolo);
     await page.waitForTimeout(400);
     const ok = await page.evaluate(r => ROLE === r && me === r && !IS_GM && !!S.tokens[r], ruolo);
     if (!ok) { rotti++; console.log('  ROTTO: link giocatore ?ruolo=' + ruolo); }
