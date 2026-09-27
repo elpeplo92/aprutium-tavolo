@@ -442,3 +442,13 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Incantesimo nuovo dello stesso tipo (es. Deflagrazione occulta): una riga in `SPELL_MULTI`.
 - Prova dedicata `multi-test.js` (scratchpad): 21 controlli. `prova-tavolo.js` verde nei due ruoli.
 - **Da sistemare, non fatto**: nella scheda Attacchi Esplosione stregonesca, Sfera cromatica e Raggio rovente compaiono come «Attacco in mischia» (sono a distanza): è solo l'etichetta, il tiro è giusto.
+
+## v123 (27/09/2026) — Legame di interdizione
+
+- **Verifica chiesta da Giuseppe** (Alessandros lo ha lanciato su Maximus): nel tavolo il Legame era solo testo. Lanciarlo scriveva una riga nel Registro e non applicava niente.
+- **Regola 2024** (Warding Bond, 2° livello, contatto, 1 ora, senza concentrazione, due anelli di platino da 50 mo): chi lo riceve ha CA +1, +1 ai tiri salvezza e resistenza a tutti i danni; ogni volta che subisce danni, chi lo ha lanciato subisce la stessa quantità. Finisce se chi lo ha lanciato va a 0 PF, se i due sono a più di 18 m, se viene lanciato di nuovo su uno dei due.
+- **Codice**: blocco «LEGAME DI INTERDIZIONE (v123)» in fondo allo script. Condizione nuova `legame` in `CONDS` (sigla LEG), con `source` = id di chi l'ha lanciato: sta in `t.conds`, quindi è già sincronizzata. `bondOf/bondOn`, `tokAc(t,base)` (CA con il +1), `bondEnd`, `bondEndAll`, `bondRest`, `bondCheck` (0 PF e distanza), `castBond` (finestra di lancio: solo alleati, a contatto per i giocatori, il master può scegliere chiunque; «Senza slot» rimette un Legame già lanciato al tavolo). Ridefiniti lì, con il vecchio chiamato dentro: `applyDamage` (metà dei danni a chi è protetto, arrotondata per difetto, la stessa quantità a chi ha lanciato, riga di spiegazione nel Registro), `fxGuidance` e `tokenSaveMod` (+1 ai TS), `castSpell`.
+- **Agganci nel codice esistente** (11, script `legame-edits.js` nello scratchpad): `tokAc` al posto di `tg.ac` / `t.ac` in `resolveAttack`, `resolveCast`, `resolveCastMulti`, Selezione, intestazione e Attacchi della scheda, Calcolo CA (riga «Legame di interdizione +1»), elenchi dei bersagli; `bondRest(id)` nei due tasti Riposo; `bondCheck()` in `render()` accanto a `spotScan()` (solo tavolo del master, non durante un trascinamento).
+- La resistenza vale anche per i danni tolti a mano dal master (−10, −5, −1, Togli): il Registro scrive quanti ne ha subiti davvero.
+- **Non fatto**: +1 al tiro salvezza contro la morte; controllo degli anelli di platino; durata di 1 ora (finisce con un riposo o a mano).
+- Prova dedicata `legame-test.js` (scratchpad): 34 controlli. `multi-test.js` 21. `prova-tavolo.js` verde nei due ruoli.

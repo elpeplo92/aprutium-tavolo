@@ -1208,12 +1208,15 @@ button.chip>svg.uico{margin-right:.3em;width:1em;height:1em}
 .mstep b{min-width:1.6em;text-align:center;font-family:var(--sans);font-size:21px;color:var(--gold)}
 .mstep button{padding:4px 9px;line-height:1}
 .mleft{margin:10px 0 6px;font-family:var(--sans);color:var(--ink)} .mleft b{color:var(--gold)}
+/* ===== LEGAME DI INTERDIZIONE (v123) ===== */
+.bondwhat{margin:0 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--radius);font-family:var(--sans);color:var(--ink)} .bondwhat b{color:var(--gold)}
+.tgt input:disabled+.tn{opacity:.55}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v122</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v123</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1884,7 +1887,7 @@ function rollDmg(expr,crit){ const d=rollExpr(expr); if(!crit) return {total:d.t
 function openTargetPicker(tokId,a,count){
   const t=S.tokens[tokId]; const list=targetsFor(tokId); const isAtk=a.atk!=null;
   const showHp=x=>IS_GM||x.kind==='pg';
-  const row=(o)=>`<label class="tgt ${o.same?'same':''}"><input type="${isAtk?'radio':'checkbox'}" name="tgt" value="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${showHp(o.t)?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${o.t.ac}`:''}</span></label>`;
+  const row=(o)=>`<label class="tgt ${o.same?'same':''}"><input type="${isAtk?'radio':'checkbox'}" name="tgt" value="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${showHp(o.t)?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${tokAc(o.t)}`:''}</span></label>`;
   openModal(`<div class="eyebrow">${t.name}${count>1?' · Multiattacco':''}</div><h2 class="big">${a.n}</h2><p class="note" style="margin:0 0 8px">${isAtk?`Tiro per colpire +${a.atk}${a.dmg?` · danno ${a.dmg}`:''}. Scegli il bersaglio: se lo colpisci, i danni si tolgono da soli.`:`Danno ${a.dmg}. Scegli i bersagli: dopo il tiro decidi per ognuno se subisce tutto, metà o niente.`}${a.note?`<br><span style="color:var(--ink-dim)">${a.note}</span>`:''}</p>${isAtk?`<div class="fxadv" style="margin:0 0 8px"><label><input type="radio" name="tAdv" value="" checked> Normale</label><label><input type="radio" name="tAdv" value="v" ${t.adv==='v'?'checked':''}> Vantaggio</label><label><input type="radio" name="tAdv" value="s" ${t.adv==='s'?'checked':''}> Svantaggio</label></div>`:''}<div class="tgtlist">${list.map(row).join('')||'<span class="note">Nessun bersaglio in vista.</span>'}</div><div class="row" style="margin-top:12px"><button class="primary" id="tgtGo">Tira</button><button id="tgtNone">Solo il tiro, senza bersaglio</button></div>`,'poibox');
   const box=document.getElementById('modal');
   const setAdv=()=>{ const v=box.querySelector('[name=tAdv]:checked')?.value; if(v) t.adv=v; else delete t.adv; };
@@ -1895,7 +1898,7 @@ function openTargetPicker(tokId,a,count){
 function plainRoll(tokId,a){ const t=S.tokens[tokId]; const ev={kind:'atk',who:t.name,name:a.n}; if(t.kind==='nemico'&&!S.publicRolls) ev.gm=true; if(a.atk!=null){ const R=fxD20(t,fxIsSpell(a)?'incantesimo':'attacco'), r=R.r, bless=blessBonus(t), AB=fxAtkBonus(t,a); ev.r=r; ev.bless=bless; ev.atk=r+a.atk+bless+AB.b; ev.crit=r===20; ev.fumble=r===1; const notes=[R.why,...AB.why].filter(Boolean); if(notes.length) ev.name+=` (${notes.join(', ')})`; } if(a.dmg){ const d=fxDamage(t,a,ev.crit); ev.dmg=d.total; ev.dmgTxt=d.txt; ev.dmgFinal=true; } log(ev); save(true); }
 function resolveAttack(tokId,a,targetId){
   const t=S.tokens[tokId], tg=S.tokens[targetId]; if(!t||!tg) return;
-  const R=fxD20(t,fxIsSpell(a)?'incantesimo':'attacco'), r=R.r, bless=blessBonus(t), AB=fxAtkBonus(t,a); const crit=r===20, fumble=r===1; const tot=r+a.atk+bless+AB.b; const hit=crit||(!fumble&&tg.ac!=null&&tot>=tg.ac)||(tg.ac==null&&!fumble);
+  const R=fxD20(t,fxIsSpell(a)?'incantesimo':'attacco'), r=R.r, bless=blessBonus(t), AB=fxAtkBonus(t,a); const crit=r===20, fumble=r===1; const tot=r+a.atk+bless+AB.b; const hit=crit||(!fumble&&tg.ac!=null&&tot>=tokAc(tg))||(tg.ac==null&&!fumble);
   const notes=[R.why,...AB.why].filter(Boolean);
   const ev={kind:'atk',who:t.name,name:a.n+(notes.length?` (${notes.join(', ')})`:''),target:tg.name,tid:targetId,r,bless,atk:tot,crit,fumble,hit,dmgFinal:true}; if(R.extra!=null){ ev.extra=R.extra; ev.disadvantage=!!R.dis; } if(t.kind==='nemico'&&!S.publicRolls) ev.gm=true;
   if(hit&&a.dmg){ const d=fxDamage(t,a,crit), red=fxReduce(tg,a,d.total); ev.dmg=red.v; ev.dmgTxt=d.txt+red.txt; applyDamage(tg,red.v); ev.hpAfter=tg.hp; if(tg.hp<=0) ev.down=true; }
@@ -2100,6 +2103,7 @@ function announcePlayerRequest(q){
 function render(){
   if(!READY) return;
   if(IS_GM&&(TEST_MODE||FB_LOADED)&&spotScan()) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0);
+  if(IS_GM&&(TEST_MODE||FB_LOADED)&&!dragging&&!pending&&bondCheck()) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0);
   dice3dSync();
   { const pgs=Object.entries(S.tokens).filter(([,x])=>x.kind==='pg'); const want=['master',...pgs.map(([id])=>id)].join('|');
     if(roleSel.dataset.want!==want){ roleSel.innerHTML=''; roleSel.add(new Option('il Master','master')); for(const [id,x] of pgs) roleSel.add(new Option(x.name,id)); roleSel.dataset.want=want; }
@@ -2116,7 +2120,7 @@ function render(){
   document.getElementById('selName').textContent=t?t.name:'';
   document.getElementById('hudSel').textContent=t?`${t.name} · PF ${t.hp}/${t.hpMax}`+(S.mode==='scontro'?` · movimento ${((t.speed||9)*(t.dash?2:1)-(t.movedM||0)).toLocaleString('it-IT')} m`:''):'';
   document.getElementById('hudSel').style.display=t?'':'none';
-  renderCondChips(); if(t){ const selectedForm=activeWildForm(selected,t); document.getElementById('thpIn').value=t.thp||''; document.getElementById('dsSel').innerHTML=dsHtml(t); document.getElementById('selHp').textContent=`${t.hp} / ${t.hpMax}`+(t.thp?` (+${t.thp} temp.)`:''); document.getElementById('selPass').textContent=spotPassiva(t); document.getElementById('selAc').textContent=`CA ${selectedForm?.ac??t.ac??'—'} · ${(t.size||1)>1?'Grande':'Media'}`; renderActions(document.getElementById('gmActions'),selected); document.getElementById('selTac').innerHTML=t.kind==='nemico'?`${monsterSavesHtml(selected)}<div class="tacbox"><div class="eyebrow">Come combatte</div><p>${t.tac||'—'}</p>${(t.lines&&t.lines.length)?`<div class="eyebrow">Cosa dice</div><ul>${t.lines.map(l=>`<li>${l}</li>`).join('')}</ul>`:''}<button id="btnMonster">Scheda completa del mostro</button></div>`:''; { const bm=document.getElementById('btnMonster'); if(bm) bm.onclick=()=>openMonster(selected); } document.getElementById('selInit').value=t.init??''; document.getElementById('selHide').textContent=t.hidden?'Mostra ai giocatori':'Nascondi ai giocatori'; document.getElementById('selInitLbl').parentElement.querySelectorAll('#selInitLbl, #selInit').forEach(e=>e.closest('span,b').style.display=S.mode==='scontro'?'':'none'); document.getElementById('askRow').style.display=t.kind==='pg'?'':'none'; document.getElementById('initRow').style.display=t.kind==='pg'?'':'none'; }
+  renderCondChips(); if(t){ const selectedForm=activeWildForm(selected,t); document.getElementById('thpIn').value=t.thp||''; document.getElementById('dsSel').innerHTML=dsHtml(t); document.getElementById('selHp').textContent=`${t.hp} / ${t.hpMax}`+(t.thp?` (+${t.thp} temp.)`:''); document.getElementById('selPass').textContent=spotPassiva(t); document.getElementById('selAc').textContent=`CA ${tokAc(t,selectedForm?.ac)??'—'} · ${(t.size||1)>1?'Grande':'Media'}`; renderActions(document.getElementById('gmActions'),selected); document.getElementById('selTac').innerHTML=t.kind==='nemico'?`${monsterSavesHtml(selected)}<div class="tacbox"><div class="eyebrow">Come combatte</div><p>${t.tac||'—'}</p>${(t.lines&&t.lines.length)?`<div class="eyebrow">Cosa dice</div><ul>${t.lines.map(l=>`<li>${l}</li>`).join('')}</ul>`:''}<button id="btnMonster">Scheda completa del mostro</button></div>`:''; { const bm=document.getElementById('btnMonster'); if(bm) bm.onclick=()=>openMonster(selected); } document.getElementById('selInit').value=t.init??''; document.getElementById('selHide').textContent=t.hidden?'Mostra ai giocatori':'Nascondi ai giocatori'; document.getElementById('selInitLbl').parentElement.querySelectorAll('#selInitLbl, #selInit').forEach(e=>e.closest('span,b').style.display=S.mode==='scontro'?'':'none'); document.getElementById('askRow').style.display=t.kind==='pg'?'':'none'; document.getElementById('initRow').style.display=t.kind==='pg'?'':'none'; }
   // giocatore
   if(!IS_GM){
     const pc=S.tokens[me];
@@ -2550,7 +2554,7 @@ function renderSheet(id){
   if(!['pan','inv','att','inc','cap','bg','dia'].includes(sheetTab)||(sheetTab==='inc'&&!sh.spell&&!hasItemSpells)) sheetTab='pan';
   sheetOf=id;
   const mine=canAct(id), form=activeWildForm(id,t), abil=form?{...sh.abil,...form.abil}:sh.abil, zenith=!!S.tokens.zenith;
-  const shownAc=form?form.ac:t.ac, shownSpeed=form?form.speed:sh.speed, shownName=form?`${t.name} — ${form.name}`:t.name;
+  const shownAc=tokAc(t,form?form.ac:t.ac), shownSpeed=form?form.speed:sh.speed, shownName=form?`${t.name} — ${form.name}`:t.name;
   const ICO={occ:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',ca:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',ini:'<path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><path d="M12 22V12M20.5 7L12 12 3.5 7"/>',vel:'<path d="M13 4a2 2 0 100-.01M9 20l2-6 3 2v5M7 12l3-4 4 1 2 3 3 1"/>',com:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>'};
   const svg=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
   const ini=t.mods?.Iniziativa??modCalc(abil.Des), hpPct=Math.max(0,Math.min(100,100*t.hp/t.hpMax));
@@ -2615,7 +2619,7 @@ function renderSheet(id){
     const wild=box.querySelector('#wildToggle'); if(wild) wild.onclick=()=>setWildShape(!form);
     const giant=box.querySelector('#giantToggle'); if(giant) giant.onclick=()=>setGiantMight(!t.giant);
     const zen=box.querySelector('#zenithToggle'); if(zen) zen.onclick=()=>summonZenith(!zenith);
-    const rs=box.querySelector('#restShort'); if(rs) rs.onclick=()=>{ const R=(sh.pg&&sh.pg.risorse)||[]; if(t.res) R.forEach((x,i)=>{ if(/breve/i.test(x.recupero||'')) delete t.res[i]; }); log({kind:'sys',txt:`${t.name} fa un riposo breve`}); save(); renderSheet(id); };
+    const rs=box.querySelector('#restShort'); if(rs) rs.onclick=()=>{ const R=(sh.pg&&sh.pg.risorse)||[]; if(t.res) R.forEach((x,i)=>{ if(/breve/i.test(x.recupero||'')) delete t.res[i]; }); bondRest(id); log({kind:'sys',txt:`${t.name} fa un riposo breve`}); save(); renderSheet(id); };
     box.querySelectorAll('[data-sact]').forEach(b=>b.onclick=()=>{ const a=sheetActList(id,t)[+b.dataset.sact]; if(a){ closeModal(); doAction(id,a); } });
     box.querySelectorAll('[data-scast]').forEach(b=>b.onclick=()=>{ closeModal(); castSpell(id,b.dataset.scast); });
     const da=box.querySelector('#diaAdd'); if(da) da.onclick=()=>{ const txt=(box.querySelector('#diaTxt').value||'').trim(), ti=(box.querySelector('#diaTit').value||'').trim(); if(!txt){ toast('Scrivi qualcosa nel diario'); return; }
@@ -2623,7 +2627,7 @@ function renderSheet(id){
     const dt=box.querySelector('#diaTxt'); if(dt) dt.oninput=()=>{ sheetDiaDraft=dt.value; };
     box.querySelectorAll('[data-diadel]').forEach(b=>b.onclick=()=>{ const k=b.dataset.diadel; if(b.dataset.armed!=='1'){ b.dataset.armed='1'; b.textContent='Conferma'; b.classList.add('danger'); return; } if(S.diari[id]) delete S.diari[id][k]; save(true); renderSheet(id); });
     box.querySelectorAll('[data-res]').forEach(p=>p.onclick=()=>{ const r=+p.dataset.res, k=+p.dataset.k; t.res=t.res||{}; const u=+t.res[r]||0; t.res[r]=(k<u)?k:k+1; if(t.res[r]>u){ useResource(id,r,true); } else save(); renderSheet(id); });
-    const rl=box.querySelector('#restLong'); if(rl) rl.onclick=()=>{ t.used={}; t.pts=0; t.res={}; t.xs={}; t.ich={}; t.fx={}; t.hp=t.hpMax; t.lay=0; log({kind:'sys',txt:`${t.name} fa un riposo lungo: PF e slot al massimo`}); save(); renderSheet(id); };
+    const rl=box.querySelector('#restLong'); if(rl) rl.onclick=()=>{ t.used={}; t.pts=0; t.res={}; t.xs={}; t.ich={}; t.fx={}; t.hp=t.hpMax; t.lay=0; bondRest(id); log({kind:'sys',txt:`${t.name} fa un riposo lungo: PF e slot al massimo`}); save(); renderSheet(id); };
   }
 }
 let sheetOf=null, sheetInvSel=null, sheetInvCat='Tutti', sheetInvQ='';
@@ -2699,7 +2703,7 @@ function sheetAttacksHtml(id,sh,t,form,mine){
   const groups=ACT_ECO.map(([k,l])=>[l,atk.filter(({a})=>actEco(a)===k)]).filter(([,xs])=>xs.length);
   const extra=(sh.features||[]).some(f=>/^Attacco Extra/.test(f));
   const list=groups.map(([l,xs])=>`<h3>${l}</h3><div class="shlist">${xs.map(({a,i})=>sheetActCard(a,i,mine,'Attacca')).join('')}</div>`).join('')||'<p class="note">Nessun attacco registrato.</p>';
-  const side=`<section class="shpanel">${fxPanelHtml(id,t,mine)}<h2 style="margin-top:16px">In combattimento</h2><div class="kv"><b>Attacchi per azione</b><span>${extra&&!form?'2 (Attacco Extra)':'1'}</span><b>Competenza</b><span>+${sh.prof}</span><b>CA</b><span>${form?form.ac:t.ac}</span><b>Velocità</b><span>${form?form.speed:sh.speed} m</span></div><p class="note" style="margin-top:12px">«Attacca» apre la scelta del bersaglio: se colpisci, i danni si tolgono da soli. Con 20 naturale è critico: i dadi del danno raddoppiano.</p></section>`;
+  const side=`<section class="shpanel">${fxPanelHtml(id,t,mine)}<h2 style="margin-top:16px">In combattimento</h2><div class="kv"><b>Attacchi per azione</b><span>${extra&&!form?'2 (Attacco Extra)':'1'}</span><b>Competenza</b><span>+${sh.prof}</span><b>CA</b><span>${tokAc(t,form?form.ac:t.ac)}</span><b>Velocità</b><span>${form?form.speed:sh.speed} m</span></div><p class="note" style="margin-top:12px">«Attacca» apre la scelta del bersaglio: se colpisci, i danni si tolgono da soli. Con 20 naturale è critico: i dadi del danno raddoppiano.</p></section>`;
   return `<div class="shgrid att"><section class="shpanel"><h2>Attacchi${form?' — '+poiText(form.name):''}</h2>${list}</section>${side}</div>`;
 }
 function sheetFeaturesHtml(id,sh,t,form,mine){
@@ -2902,8 +2906,8 @@ function sheetInventoryHtml(id,sh,t){
     if(slot==='primaria'||slot==='armatura'){ const a1=invActFor(id,t,sel), a2=invActFor(id,t,cur), c1=invArmorCA(sel), c2=cur&&invArmorCA(cur), pr=it=>it?String(it.stats||'').split('·').slice(1,3).map(s=>s.trim()).join(', ')||'—':'—';
       const rowsC=slot==='primaria'?[['Danni',a1?.dmg||String(sel.stats||'').split('·')[0],a2?.dmg||(cur?String(cur.stats||'').split('·')[0]:'—')],['Tiro per colpire',a1?'+'+a1.atk:'—',a2?'+'+a2.atk:'—'],['Proprietà',pr(sel),pr(cur)]]:[['Classe armatura',c1?`${c1.base}${c1.dex?' + Des':''}`:'—',c2?`${c2.base}${c2.dex?' + Des':''}`:'—'],['Proprietà',pr(sel),pr(cur)]];
       cmp=cur===sel?`<p class="note">${poiText(sel.n)} è già equipaggiato.</p>`:`<div class="cmp"><span></span><b class="c1">${poiText(sel.n)}<small>(selezionato)</small></b><b class="c2">${cur?poiText(cur.n):'Niente'}<small>(attuale)</small></b>${rowsC.map(([k,x,y])=>`<span>${k}</span><em class="c1">${poiText(x||'—')}</em><em class="c2">${poiText(y||'—')}</em>`).join('')}</div>`; } }
-  const ca=invCaBreakdown(id,t,eq);
-  const right=`<div class="invright"><section class="shpanel"><h2>Confronto equipaggiato</h2>${cmp}</section><section class="shpanel"><h2>Dettagli e lore</h2><p class="lore">${poiText(sel?.desc||'—')}</p></section><section class="shpanel"><h2>Calcolo CA</h2><div class="cacalc"><div class="cashield">${svg(INV_ICON.Armature)}<b>${t.ac}</b></div><div class="kv">${ca.map(([k,v])=>`<b>${poiText(k)}</b><span>${v>=0?'+':'−'}${Math.abs(v)}</span>`).join('')}</div></div></section></div>`;
+  const ca=invCaBreakdown(id,t,eq).concat(bondOn(t)?[['Legame di interdizione',1]]:[]);
+  const right=`<div class="invright"><section class="shpanel"><h2>Confronto equipaggiato</h2>${cmp}</section><section class="shpanel"><h2>Dettagli e lore</h2><p class="lore">${poiText(sel?.desc||'—')}</p></section><section class="shpanel"><h2>Calcolo CA</h2><div class="cacalc"><div class="cashield">${svg(INV_ICON.Armature)}<b>${tokAc(t)}</b></div><div class="kv">${ca.map(([k,v])=>`<b>${poiText(k)}</b><span>${v>=0?'+':'−'}${Math.abs(v)}</span>`).join('')}</div></div></section></div>`;
   return `<div class="invwrap"><div class="shgrid inv">${left}${table}${card}${right}</div><div class="hbwrap">${hotbarHtml(id,true)}${hbPickerHtml(id)}</div></div>`;
 }
 function invActionsHtml(it,equipped,small){
@@ -3065,7 +3069,7 @@ function castSpell(id,name,opt={}){
   const sv=spellSaveOf(name,d), isAtk=!!d.atk, heal=!!d.heal, dmg=!!d.dmg;
   const list=targetsFor(id), many=!isAtk&&(heal||sv?.rule?.many!==false);
   const dcOf=()=>sp.dc+(fxOn(t,'innata')?1:0);
-  const row=o=>`<label class="tgt ${o.same?'same':''}"><input type="${isAtk?'radio':'checkbox'}" name="cTgt" value="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${(IS_GM||o.t.kind==='pg')?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${o.t.ac}`:''}${sv&&IS_GM?` · TS ${sv.ability} ${fmtMod(tokenSaveMod(o.t,sv.ability))}`:''}</span></label>`;
+  const row=o=>`<label class="tgt ${o.same?'same':''}"><input type="${isAtk?'radio':'checkbox'}" name="cTgt" value="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${(IS_GM||o.t.kind==='pg')?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${tokAc(o.t)}`:''}${sv&&IS_GM?` · TS ${sv.ability} ${fmtMod(tokenSaveMod(o.t,sv.ability))}`:''}</span></label>`;
   const what=isAtk?`Attacco con incantesimo +${sp.atk}`:sv?`Tiro salvezza su ${ABIL_IT[sv.ability]||sv.ability}, CD ${dcOf()}${sv.half?' (metà dei danni se lo supera)':''}`:heal?'Cura':'Effetto';
   openModal(`<div class="eyebrow">${poiText(t.name)} lancia</div><h2 class="big">${poiText(d.it)}</h2><p class="note" style="margin:0 0 8px">${poiText(base===0?'Trucchetto':base+'° livello')} · ${poiText(d.t||'')} · ${poiText(d.r||'')} · ${what}${dmg?` · danno ${poiText(base===0?cantripExpr(d.dmg,level):d.dmg)}`:''}${heal?` · cura ${poiText(d.heal)} + ${modCalc(sh.abil[sp.stat]||10)}`:''}</p>
     ${base>0?`<label>Slot <select id="cSlot">${opts}</select></label>`:''}
@@ -3099,7 +3103,7 @@ function resolveCast(id,name,slot,ids,meta=[],mcost=0){
   const names=ids.map(i=>S.tokens[i]?.name).filter(Boolean);
   if(d.atk){ /* attacco con incantesimo: un bersaglio, contro la CA */
     const tg=S.tokens[ids[0]]; const R=fxD20(t,'incantesimo'), r=R.r, bless=blessBonus(t), tot=r+sp.atk+bless, crit=r===20, fumble=r===1;
-    const hit=crit||(!fumble&&(tg.ac==null||tot>=tg.ac));
+    const hit=crit||(!fumble&&(tg.ac==null||tot>=tokAc(tg)));
     const ev={kind:'atk',who:t.name,name:d.it+lvlTxt+(R.why?` (${R.why})`:''),target:tg.name,tid:ids[0],r,bless,atk:tot,crit,fumble,hit,dmgFinal:true}; if(R.extra!=null){ ev.extra=R.extra; ev.disadvantage=!!R.dis; }
     if(hit&&dmgExpr){ const x=fxRoll(dmgExpr,{crit,min:fire?2:0}); let v=x.total, txt=x.txt; if(fxOn(t,'marchio')){ const m=fxRoll('1d6',{crit}); v+=m.total; txt+=' + Marchio del cacciatore '+m.txt; } ev.dmg=v; ev.dmgTxt=txt; applyDamage(tg,v); ev.hpAfter=tg.hp; if(tg.hp<=0) ev.down=true; }
     log(ev); if(ev.down) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); save(true); return; }
@@ -4618,7 +4622,7 @@ function castSpellMulti(id,name,opt={}){
   const firstFree=slots.find(l=>cap(l)-(used[l]||0)>0);
   const meta=sp.points?metaKnown(id):[];
   const list=targetsFor(id);
-  const row=o=>`<div class="tgt multi ${o.same?'same':''}" data-mrow="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${(IS_GM||o.t.kind==='pg')?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${o.t.ac}`:''}</span><span class="mstep"><button type="button" data-mm="-1" data-mid="${o.id}" title="Togli un ${M.uno}">−</button><b data-mn="${o.id}">0</b><button type="button" data-mm="1" data-mid="${o.id}" title="Aggiungi un ${M.uno}">+</button></span></div>`;
+  const row=o=>`<div class="tgt multi ${o.same?'same':''}" data-mrow="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${(IS_GM||o.t.kind==='pg')?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${tokAc(o.t)}`:''}</span><span class="mstep"><button type="button" data-mm="-1" data-mid="${o.id}" title="Togli un ${M.uno}">−</button><b data-mn="${o.id}">0</b><button type="button" data-mm="1" data-mid="${o.id}" title="Aggiungi un ${M.uno}">+</button></span></div>`;
   const what=M.atk?`Attacco con incantesimo +${sp.atk} per ogni ${M.uno}`:`Colpisce sempre, senza tiro`;
   openModal(`<div class="eyebrow">${poiText(t.name)} lancia</div><h2 class="big">${poiText(d.it)}</h2><p class="note" style="margin:0 0 8px">${base}° livello · ${poiText(d.t||'')} · ${poiText(d.r||'')} · ${what} · danno ${M.dmg} per ${M.uno}</p>
     <label>Slot <select id="cSlot">${opts}</select></label>
@@ -4659,7 +4663,7 @@ function resolveCastMulti(id,name,slot,ids,meta=[],mcost=0,adv=''){
     if(M.atk){
       if(adv) t.adv=adv; else delete t.adv;
       const R=fxD20(t,'incantesimo'), r=R.r, bless=blessBonus(t), sum=r+sp.atk+bless, crit=r===20, fumble=r===1;
-      const hit=crit||(!fumble&&(tg.ac==null||sum>=tg.ac));
+      const hit=crit||(!fumble&&(tg.ac==null||sum>=tokAc(tg)));
       const ev={kind:'atk',who:t.name,name:`${d.it}${k===0?lvlTxt:''} · ${quale}`+(R.why?` (${R.why})`:''),target:tg.name,tid,r,bless,atk:sum,crit,fumble,hit,dmgFinal:true}; if(R.extra!=null){ ev.extra=R.extra; ev.disadvantage=!!R.dis; }
       if(hit){ const x=danno(crit); ev.dmg=x.v; ev.dmgTxt=x.txt; applyDamage(tg,x.v); ev.hpAfter=tg.hp; if(tg.hp<=0) ev.down=true; }
       log(ev); if(ev.down) log({kind:'hit',txt:`${tg.name} cade a 0 PF`});
@@ -4669,6 +4673,72 @@ function resolveCastMulti(id,name,slot,ids,meta=[],mcost=0,adv=''){
     }
   });
   delete t.adv; save(true);
+}
+/* ===== LEGAME DI INTERDIZIONE (v123) =====
+   Warding Bond, regole 2024. Prima era solo testo: lanciarlo scriveva una riga nel Registro e basta.
+   Chi lo riceve porta la condizione «legame» ({n:'legame',source:<id di chi lo ha lanciato>}): sta in t.conds, quindi viaggia su Firebase.
+   Finché c'è:  CA +1 (tokAc)  ·  tiri salvezza +1 (fxGuidance, tokenSaveMod)  ·  resistenza a tutti i danni: ne subisce la metà (applyDamage)
+                ·  ogni volta che subisce danni, chi lo ha lanciato subisce la stessa quantità (applyDamage).
+   Finisce:     chi lo ha lanciato va a 0 PF  ·  i due sono a più di 18 m (bondCheck, dal tavolo del master)  ·  viene lanciato di nuovo
+                su uno dei due  ·  uno dei due fa un riposo (dura 1 ora)  ·  il master toglie la condizione dalla Selezione.
+   Se il master mette la condizione a mano (senza chi lancia) valgono i bonus e la resistenza, non il danno condiviso.
+   Non fatto: il +1 al tiro salvezza contro la morte; i due anelli di platino da 50 mo non sono controllati. */
+CONDS.push(['legame','Legame di interdizione']); CONDS_ABBR.legame='LEG';
+const BOND_M=18, BOND_TOUCH=1.5;
+function bondOf(t){ return ((t&&t.conds)||[]).find(c=>c.n==='legame'); }
+function bondOn(t){ return !!bondOf(t); }
+function tokAc(t,base){ const a=base??(t&&t.ac); return a==null?a:(+a)+(bondOn(t)?1:0); }
+function bondEnd(tid,why){ const t=S.tokens[tid], c=bondOf(t); if(!c) return false; const by=c.source&&S.tokens[c.source]; t.conds=t.conds.filter(x=>x.n!=='legame'); log({kind:'sys',txt:`Legame di interdizione${by?` di ${by.name}`:''} su ${t.name}: finisce${why?` (${why})`:''}`}); return true; }
+function bondEndAll(id,why){ let n=0; for(const [k,x] of Object.entries(S.tokens)){ const c=bondOf(x); if(c&&(k===id||c.source===id)&&bondEnd(k,why)) n++; } return n; }
+function bondRest(id){ return bondEndAll(id,'riposo: è passata più di un’ora'); }
+function bondCheck(){ let n=0;
+  for(const [k,x] of Object.entries(S.tokens)){ const c=bondOf(x); if(!c||!c.source) continue; const by=S.tokens[c.source]; if(!by) continue;
+    if(by.hp!=null&&by.hp<=0){ if(bondEnd(k,`${by.name} è a 0 PF`)) n++; }
+    else if(by.x!=null&&x.x!=null&&distM(by,x)>BOND_M){ if(bondEnd(k,`sono a più di ${BOND_M} m`)) n++; } }
+  return n; }
+const applyDamageSenzaLegame=applyDamage;
+applyDamage=function(t,v){
+  const c=bondOf(t); if(!c||!(v>0)) return applyDamageSenzaLegame(t,v);
+  const meta=Math.floor(v/2), tid=fxIdOf(t), by=c.source&&S.tokens[c.source];
+  applyDamageSenzaLegame(t,meta);
+  let txt=`Legame di interdizione: ${t.name} ha resistenza, subisce ${meta} danni invece di ${v} (${t.hp}/${t.hpMax})`;
+  if(by&&by!==t&&meta>0){ applyDamageSenzaLegame(by,meta); txt+=` · ${by.name} ne subisce altrettanti: ${meta} (${by.hp}/${by.hpMax})`; }
+  log({kind:'hit',txt});
+  if(by&&by.hp<=0){ log({kind:'hit',txt:`${by.name} cade a 0 PF`}); if(tid) bondEnd(tid,`${by.name} è a 0 PF`); }
+};
+const fxGuidanceSenzaLegame=fxGuidance;
+fxGuidance=function(t,skill){ const g=fxGuidanceSenzaLegame(t,skill); return String(skill).startsWith('TS ')&&bondOn(t)?{b:g.b+1,txt:[g.txt,'Legame di interdizione +1'].filter(Boolean).join(', ')}:g; };
+const tokenSaveModSenzaLegame=tokenSaveMod;
+tokenSaveMod=function(t,ab){ return tokenSaveModSenzaLegame(t,ab)+(bondOn(t)?1:0); };
+const castSpellSenzaLegame=castSpell;
+castSpell=function(id,name,opt={}){ return name==='Warding Bond'&&SPELLS[name]&&S.tokens[id]&&SHEETS[id]?castBond(id,opt):castSpellSenzaLegame(id,name,opt); };
+function castBond(id,opt={}){
+  const name='Warding Bond', t=S.tokens[id], sh=SHEETS[id], d=SPELLS[name], sp=sh.spell||{slots:{}}, used=t.used||{}, base=+d.l||2;
+  const xs=t.xs||{}, cap=l=>(sp.slots?.[l]||0)+(xs[l]||0);
+  const slots=[...new Set([...Object.keys(sp.slots||{}),...Object.keys(xs)].map(Number))].filter(l=>l>=base&&cap(l)>0).sort((a,b)=>a-b);
+  const opts=slots.map(l=>{ const left=cap(l)-(used[l]||0); return `<option value="${l}" ${left<=0?'disabled':''}>Slot di ${l}° livello — ne restano ${Math.max(0,left)}</option>`; }).join('')+`<option value="0">Senza slot (già lanciato al tavolo, oggetto, pergamena)</option>`;
+  const firstFree=slots.find(l=>cap(l)-(used[l]||0)>0);
+  const list=targetsFor(id).filter(o=>o.same), vicino=o=>o.dist<=BOND_TOUCH;
+  const row=o=>`<label class="tgt ${vicino(o)?'':'same'}"><input type="radio" name="cTgt" value="${o.id}" ${vicino(o)||IS_GM?'':'disabled'}><span class="tn">${o.label}${bondOn(o.t)?' · ha già un Legame':''}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${vicino(o)?'':' · troppo lontano: serve il contatto'} · PF ${o.t.hp}/${o.t.hpMax}</span></label>`;
+  openModal(`<div class="eyebrow">${poiText(t.name)} lancia</div><h2 class="big">${poiText(d.it)}</h2><p class="note" style="margin:0 0 8px">${base}° livello · Azione · Contatto · dura 1 ora, senza concentrazione · servono due anelli di platino da 50 mo, uno a testa</p>
+    <p class="bondwhat">Chi lo riceve ha <b>CA +1</b>, <b>+1 ai tiri salvezza</b> e <b>resistenza a tutti i danni</b>. Ogni volta che subisce danni, <b>${poiText(t.name)} subisce la stessa quantità</b>. Finisce se ${poiText(t.name)} va a 0 PF o se vi allontanate più di ${BOND_M} m.</p>
+    <label>Slot <select id="cSlot">${opts}</select></label>
+    <p class="note" style="margin:8px 0 4px">Scegli chi proteggere (a contatto):</p><div class="tgtlist">${list.map(row).join('')||'<span class="note">Nessun alleato in vista.</span>'}</div>
+    <div class="row" style="margin-top:12px"><button class="primary" id="cGo">Lancia</button><button id="cBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal'), sel=box.querySelector('#cSlot'); if(firstFree) sel.value=String(firstFree); if(opt.free||!firstFree) sel.value='0';
+  box.querySelector('#cBack').onclick=()=>renderSheet(id);
+  box.querySelector('#cGo').onclick=()=>{
+    const slot=+sel.value||0, tid=box.querySelector('[name=cTgt]:checked')?.value, tg=S.tokens[tid];
+    if(!tg){ toast('Scegli chi proteggere'); return; }
+    if(slot>0&&(used[slot]||0)>=cap(slot)){ toast('Nessuno slot di livello '+slot); return; }
+    if(slot>0){ t.used=t.used||{}; if((t.used[slot]||0)>=((sp.slots||{})[slot]||0)&&((t.xs||{})[slot]||0)>0){ t.xs[slot]--; } else t.used[slot]=(t.used[slot]||0)+1; }
+    bondEndAll(id,'lanciato di nuovo'); bondEndAll(tid,'lanciato di nuovo');
+    tg.conds=tg.conds||[]; tg.conds.push({n:'legame',source:id,spell:name});
+    closeModal();
+    log({kind:'spell',who:t.name,name:`${d.it}${slot>0?` (slot di ${slot}°)`:' (senza slot)'} → ${tg.name}`,lvl:slot||base});
+    log({kind:'sys',txt:`${tg.name}: CA ${tokAc(tg)} (+1), +1 ai tiri salvezza, resistenza a tutti i danni. I danni che subisce li subisce anche ${t.name}. Dura 1 ora, entro ${BOND_M} m.`});
+    save(true);
+  };
 }
 /* ===== SIMBOLI DEI TASTI (v120) =====
    Ogni tasto ha il suo simbolo, con lo stesso tratto delle icone di Tavolo / Scheda / Compendio e del dock
@@ -4784,6 +4854,7 @@ const UI_ICO={
  c_benedetto:'<path d="M12 6l1.8 4.2L18 12l-4.2 1.8L12 18l-1.8-4.2L6 12l4.2-1.8z"/><path d="M12 1.5v2M12 20.5v2M1.5 12h2M20.5 12h2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M19.4 4.6L18 6M6 18l-1.4 1.4"/>',
  c_marchiato:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/>',
  c_scatto:'<path d="M5 6l6 6-6 6M13 6l6 6-6 6"/>',
+ c_legame:'<path d="M10 14a4.5 4.5 0 006.4 0l3-3A4.5 4.5 0 0013 4.6l-1.2 1.2"/><path d="M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1.2-1.2"/>',
 };
 const UI_ICO_ID={mvYes:'ok',mvNo:'x',mvDash:'run',zout2:'minus',zin2:'plus',zin:'plus',zout:'minus',aoeClear:'x',
  btnStart:'swords',btnNext:'next',btnEnd:'flag',btnAddBest:'pinAdd',fogOn:'fog',fogParty:'fogParty',fogAll:'sun',fogReset:'fogAll',
