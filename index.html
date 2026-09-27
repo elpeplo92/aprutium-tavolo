@@ -1220,12 +1220,14 @@ button.chip>svg.uico{margin-right:.3em;width:1em;height:1em}
 .tok .condrow .cond i{margin-left:1px}
 .tok:hover .condrow,.tok.selected .condrow{max-width:96px;z-index:7}
 .tok:hover .condrow .cond,.tok.selected .condrow .cond{font-size:9px}
+/* ===== ARMA SACRA (v125) ===== */
+.fxtog.on[data-fx="armaSacra"] b::after{content:' · attiva';font-weight:400;color:var(--gold)}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v124</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v125</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1389,8 +1391,8 @@ function pgNorm(s){ return String(s||'').toLowerCase().replace(/\(.*?\)/g,'').re
      (−3 ai danni contundenti/perforanti/taglienti delle armi subiti). */
 const PG_AUTO={
   alessandros:{fix:{'Spada lunga (1 mano)':{atk:6,dmg:'1d8+5'},'Spada lunga (2 mani)':{atk:6,dmg:'1d10+3'},"Colpo senz'armi":{atk:6}},
-    toggles:[{id:'armaSacra',n:'Arma sacra',d:'Incanalare divinità, 10 minuti: +2 (Carisma) ai tiri per colpire con le armi.'},
-             {id:'favore',n:'Favore divino',d:'Incantesimo (concentrazione, 1 minuto): +1d4 danni radiosi a ogni colpo con un’arma.'}],
+    toggles:[{id:'armaSacra',n:'Arma sacra',d:'1 uso di Incanalare divinità, 10 minuti: +2 (Carisma) ai tiri per colpire con l’arma da mischia scelta; luce 6 m + 6 m.'},
+             {id:'favore',n:'Favore divino',d:'Incantesimo (azione bonus, 1 minuto, senza concentrazione): +1d4 danni radiosi a ogni colpo con un’arma.'}],
     passivi:['savage','ham']},
   maximus:{fix:{'Randello pesante +1':{atk:8,dmg:'1d8+5'},'Spadone +1':{atk:8,dmg:'2d6+5'}},passivi:['gwf','savage','giant','pietra']},
   luigis:{toggles:[{id:'marchio',n:'Marchio del cacciatore',d:'Incantesimo (concentrazione, 1 ora): +1d6 danni da forza a ogni colpo contro il bersaglio marchiato.'}],passivi:[]},
@@ -1449,7 +1451,7 @@ function fxRoll(expr,{crit=false,min=0,savage=false}={}){
 }
 /* bonus al tiro per colpire (numero) e note */
 function fxAtkBonus(t,a){ const id=fxIdOf(t), sh=SHEETS[id]; let b=0; const why=[];
-  if(fxIsWeapon(a)&&fxOn(t,'armaSacra')&&sh){ const m=modCalc(sh.abil.Car||10); b+=Math.max(1,m); why.push(`Arma sacra +${Math.max(1,m)}`); }
+  if(fxIsWeapon(a)&&sacraApplies(t,a)&&sh){ const m=modCalc(sh.abil.Car||10); b+=Math.max(1,m); why.push(`Arma sacra +${Math.max(1,m)}`); }
   return {b,why}; }
 /* danno di un colpo: espressione dell'azione + extra da effetti */
 function fxDamage(t,a,crit){ const id=fxIdOf(t), weapon=fxIsWeapon(a), extras=[];
@@ -1472,7 +1474,7 @@ function fxPanelHtml(id,t,mine){
   return `<div class="fxpanel"><h2>Effetti e tiri</h2><div class="fxadv"><button class="${t.adv==='v'?'on':''}" ${mine?'data-adv="v"':'disabled'}>Vantaggio al prossimo tiro</button><button class="${t.adv==='s'?'on':''}" ${mine?'data-adv="s"':'disabled'}>Svantaggio al prossimo tiro</button></div><div class="fxtogs">${tog.map(btn).join('')}</div>${(cfg.passivi||[]).length?`<h3>Sempre attivi</h3><ul class="fxpass">${cfg.passivi.map(p=>`<li>${poiText(FX_PASSIVI[p]||p)}</li>`).join('')}</ul>`:''}</div>`;
 }
 function fxBind(box,id){ const t=S.tokens[id]; if(!t||!canAct(id)) return;
-  box.querySelectorAll('[data-fx]').forEach(b=>b.onclick=()=>{ t.fx=t.fx||{}; const k=b.dataset.fx; if(t.fx[k]) delete t.fx[k]; else { t.fx[k]=true; } log({kind:'sys',txt:`${t.name}: ${(([...(fxCfg(id).toggles||[]),...FX_GENERALI].find(x=>x.id===k)||{}).n)||k} ${t.fx[k]?'attivo':'terminato'}`}); save(true); renderSheet(id); });
+  box.querySelectorAll('[data-fx]').forEach(b=>b.onclick=()=>{ t.fx=t.fx||{}; const k=b.dataset.fx; if(t.fx[k]){ delete t.fx[k]; if(k==='armaSacra'&&t.light&&t.light.key==='armaSacra') delete t.light; } else if(k==='armaSacra'){ sacraOpen(id,{fromSheet:true}); return; } else { t.fx[k]=true; } log({kind:'sys',txt:`${t.name}: ${(([...(fxCfg(id).toggles||[]),...FX_GENERALI].find(x=>x.id===k)||{}).n)||k} ${t.fx[k]?'attivo':'terminato'}`}); save(true); renderSheet(id); });
   box.querySelectorAll('[data-adv]').forEach(b=>b.onclick=()=>{ t.adv=t.adv===b.dataset.adv?null:b.dataset.adv; if(!t.adv) delete t.adv; save(true); renderSheet(id); }); }
 
 /* ---------- ruolo ---------- */
@@ -2628,7 +2630,7 @@ function renderSheet(id){
     const wild=box.querySelector('#wildToggle'); if(wild) wild.onclick=()=>setWildShape(!form);
     const giant=box.querySelector('#giantToggle'); if(giant) giant.onclick=()=>setGiantMight(!t.giant);
     const zen=box.querySelector('#zenithToggle'); if(zen) zen.onclick=()=>summonZenith(!zenith);
-    const rs=box.querySelector('#restShort'); if(rs) rs.onclick=()=>{ const R=(sh.pg&&sh.pg.risorse)||[]; if(t.res) R.forEach((x,i)=>{ if(/breve/i.test(x.recupero||'')) delete t.res[i]; }); bondRest(id); log({kind:'sys',txt:`${t.name} fa un riposo breve`}); save(); renderSheet(id); };
+    const rs=box.querySelector('#restShort'); if(rs) rs.onclick=()=>{ const R=(sh.pg&&sh.pg.risorse)||[]; if(t.res) R.forEach((x,i)=>{ restShortOne(t,x,i); }); bondRest(id); sacraEnd(id,'riposo: sono passati più di 10 minuti'); log({kind:'sys',txt:`${t.name} fa un riposo breve`}); save(); renderSheet(id); };
     box.querySelectorAll('[data-sact]').forEach(b=>b.onclick=()=>{ const a=sheetActList(id,t)[+b.dataset.sact]; if(a){ closeModal(); doAction(id,a); } });
     box.querySelectorAll('[data-scast]').forEach(b=>b.onclick=()=>{ closeModal(); castSpell(id,b.dataset.scast); });
     const da=box.querySelector('#diaAdd'); if(da) da.onclick=()=>{ const txt=(box.querySelector('#diaTxt').value||'').trim(), ti=(box.querySelector('#diaTit').value||'').trim(); if(!txt){ toast('Scrivi qualcosa nel diario'); return; }
@@ -2636,7 +2638,7 @@ function renderSheet(id){
     const dt=box.querySelector('#diaTxt'); if(dt) dt.oninput=()=>{ sheetDiaDraft=dt.value; };
     box.querySelectorAll('[data-diadel]').forEach(b=>b.onclick=()=>{ const k=b.dataset.diadel; if(b.dataset.armed!=='1'){ b.dataset.armed='1'; b.textContent='Conferma'; b.classList.add('danger'); return; } if(S.diari[id]) delete S.diari[id][k]; save(true); renderSheet(id); });
     box.querySelectorAll('[data-res]').forEach(p=>p.onclick=()=>{ const r=+p.dataset.res, k=+p.dataset.k; t.res=t.res||{}; const u=+t.res[r]||0; t.res[r]=(k<u)?k:k+1; if(t.res[r]>u){ useResource(id,r,true); } else save(); renderSheet(id); });
-    const rl=box.querySelector('#restLong'); if(rl) rl.onclick=()=>{ t.used={}; t.pts=0; t.res={}; t.xs={}; t.ich={}; t.fx={}; t.hp=t.hpMax; t.lay=0; bondRest(id); log({kind:'sys',txt:`${t.name} fa un riposo lungo: PF e slot al massimo`}); save(); renderSheet(id); };
+    const rl=box.querySelector('#restLong'); if(rl) rl.onclick=()=>{ t.used={}; t.pts=0; t.res={}; t.xs={}; t.ich={}; t.fx={}; t.hp=t.hpMax; t.lay=0; bondRest(id); sacraEnd(id,'riposo: sono passati più di 10 minuti'); log({kind:'sys',txt:`${t.name} fa un riposo lungo: PF e slot al massimo`}); save(); renderSheet(id); };
   }
 }
 let sheetOf=null, sheetInvSel=null, sheetInvCat='Tutti', sheetInvQ='';
@@ -4749,6 +4751,76 @@ function castBond(id,opt={}){
     save(true);
   };
 }
+/* ===== ARMA SACRA (v125) =====
+   Giuramento di Devozione, regole 2024. Prima il bonus (+Carisma ai tiri per colpire) era giusto, ma si accendeva SOLO dall'interruttore
+   in «Effetti e tiri»: il tasto «Arma sacra» tra le azioni e il pallino di Incanalare divinità scrivevano una riga nel Registro e basta.
+   In più valeva su tutte le armi insieme (giavellotto lanciato compreso), non spendeva l'uso e l'arma non faceva luce.
+   Ora i tre ingressi (azione «Arma sacra», pallino/voce «Incanalare divinità», interruttore) aprono la stessa finestra sacraOpen():
+   si sceglie UN'arma da mischia, si spende 1 uso di Incanalare divinità, t.fx.armaSacra = nome dell'arma, luce 6 m + 6 m (t.light, chiave 'armaSacra').
+   Il bonus vale solo per gli attacchi in mischia con quell'arma (sacraApplies, usata da fxAtkBonus). Non costa un'azione: si attiva con l'azione Attacco.
+   Finisce: interruttore spento, riposo breve o lungo, oppure attivandola su un'altra arma. I 10 minuti non sono contati.
+   Danni radiosi a scelta: il tavolo non distingue i tipi di danno, lo dice il giocatore.
+   SPELL_FX: lanciare Favore divino o Marchio del cacciatore accende da solo il suo effetto (prima si doveva accendere a mano l'interruttore). */
+const SACRA_RE=/^arma sacra/i;
+function sacraWeaponName(a){ return String((a&&a.n)||'').replace(/\(.*?\)/g,'').replace(/\s+/g,' ').trim(); }
+function sacraHas(id){ return (fxCfg(id).toggles||[]).some(x=>x.id==='armaSacra'); }
+function sacraWeapons(id){ const t=S.tokens[id], seen=new Set(); return (tokenActions(id,t)||[]).filter(a=>a.atk!=null&&fxIsWeapon(a)&&actTipo(a)==='mischia'&&!/^multiattacco/i.test(a.n)).map(sacraWeaponName).filter(n=>n&&!seen.has(n)&&seen.add(n)); }
+function sacraApplies(t,a){ const v=t&&t.fx&&t.fx.armaSacra; if(!v||actTipo(a)!=='mischia') return false; return v===true||sacraWeaponName(a)===v; }
+function sacraRes(id){ const R=((SHEETS[id]||{}).pg||{}).risorse||[], i=R.findIndex(r=>/incanalare divinit/i.test(r.n)); return i<0?null:{i,max:+R[i].max||0,used:+((S.tokens[id].res||{})[i])||0}; }
+function sacraEnd(id,why){ const t=S.tokens[id]; if(!t) return false; const on=!!(t.fx&&t.fx.armaSacra), luce=!!(t.light&&t.light.key==='armaSacra'); if(on) delete t.fx.armaSacra; if(luce) delete t.light; if(on||luce) log({kind:'sys',txt:`${t.name}: Arma sacra terminata${why?` (${why})`:''}`}); return on||luce; }
+function sacraOpen(id,opt={}){
+  const t=S.tokens[id], sh=SHEETS[id]; if(!t||!sh) return;
+  const R=sacraRes(id), left=R?Math.max(0,R.max-R.used):0, armi=sacraWeapons(id), car=Math.max(1,modCalc(sh.abil.Car||10));
+  const cur=typeof (t.fx&&t.fx.armaSacra)==='string'?t.fx.armaSacra:'', scelta=cur&&armi.includes(cur)?cur:armi[0];
+  const torna=()=>{ if(opt.fromSheet) renderSheet(id); else closeModal(); };
+  openModal(`<div class="eyebrow">${poiText(t.name)} · Incanalare divinità</div><h2 class="big">Arma sacra</h2>
+    <p class="bondwhat"><b>+${car} ai tiri per colpire</b> con l’arma scelta (il tuo Carisma), per 10 minuti. L’arma fa <b>luce intensa per 6 m</b> e fioca per altri 6 m. A ogni colpo puoi scegliere <b>danni radiosi</b> al posto di quelli dell’arma. Si attiva mentre fai l’azione Attacco: <b>non costa un’azione</b>.</p>
+    <p class="note" style="margin:0 0 4px">Quale arma da mischia impugni?</p>
+    <div class="tgtlist">${armi.map(n=>`<label class="tgt"><input type="radio" name="sArma" value="${poiText(n)}" ${n===scelta?'checked':''}><span class="tn">${poiText(n)}</span>${n===cur?'<span class="note">attiva adesso</span>':''}</label>`).join('')||'<span class="note">Nessuna arma da mischia tra gli attacchi.</span>'}</div>
+    <p class="mleft">${opt.spent?'L’uso di Incanalare divinità è già stato segnato.':`Incanalare divinità: ne ${left===1?'resta':'restano'} <b>${left}</b> di ${R?R.max:0}.`}</p>
+    ${opt.spent?'':`<label class="row" style="gap:8px"><input type="checkbox" id="sGratis"> Già attivata al tavolo: non spendere l’uso</label>`}
+    <div class="row" style="margin-top:12px"><button class="primary" id="sGo">Attiva</button><button id="sBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal');
+  box.querySelector('#sBack').onclick=()=>{ if(opt.onCancel) opt.onCancel(); torna(); };
+  box.querySelector('#sGo').onclick=()=>{
+    const arma=box.querySelector('[name=sArma]:checked')?.value; if(!arma){ toast('Scegli l’arma'); return; }
+    const gratis=!!opt.spent||!!box.querySelector('#sGratis')?.checked;
+    if(!gratis&&left<=0){ toast('Incanalare divinità: nessun uso rimasto'); return; }
+    if(!gratis&&R){ t.res=t.res||{}; t.res[R.i]=R.used+1; }
+    const dopo=R?Math.max(0,R.max-(+((t.res||{})[R.i])||0)):0;
+    t.fx=t.fx||{}; t.fx.armaSacra=arma;
+    if(!t.light||t.light.key==='armaSacra'){ t.light={key:'armaSacra',n:'Arma sacra',b:6,d:6}; if(S.fog&&S.fog.on&&CUR&&CUR.fog) fogOp('r',t.x,t.y,sightPx(t),true); }
+    log({kind:'sys',txt:`${t.name} attiva Arma sacra su ${arma}: +${car} ai tiri per colpire per 10 minuti, luce 6 m + 6 m, danni radiosi a scelta${R?` (Incanalare divinità: ${dopo} di ${R.max})`:''}`});
+    save(true); torna();
+  };
+}
+function sacraChannel(id,i,counted){
+  const t=S.tokens[id], R=sacraRes(id); if(!t||!R) return;
+  if(!counted&&R.max&&R.used>=R.max){ toast('Incanalare divinità: nessun uso rimasto'); return; }
+  const annulla=()=>{ if(counted){ t.res=t.res||{}; t.res[i]=Math.max(0,(+t.res[i]||1)-1); save(); } };
+  openModal(`<div class="eyebrow">${poiText(t.name)}</div><h2 class="big">Incanalare divinità</h2><p class="note" style="margin:0 0 10px">Quale effetto vuoi creare?</p>
+    <div class="row"><button class="primary" id="cdSacra">Arma sacra</button><button id="cdPerc">Percezione del divino</button><button id="cdBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal'), torna=()=>{ if(counted) renderSheet(id); else closeModal(); };
+  box.querySelector('#cdSacra').onclick=()=>sacraOpen(id,{spent:!!counted,fromSheet:!!counted,onCancel:annulla});
+  box.querySelector('#cdPerc').onclick=()=>{ useResourceSenzaSacra(id,i,counted); torna(); };
+  box.querySelector('#cdBack').onclick=()=>{ annulla(); torna(); };
+}
+const useResourceSenzaSacra=useResource;
+useResource=function(id,i,counted){ const r=(((SHEETS[id]||{}).pg||{}).risorse||[])[i]; if(r&&/incanalare divinit/i.test(r.n)&&sacraHas(id)&&S.tokens[id]){ setTimeout(()=>sacraChannel(id,i,counted),0); return; } return useResourceSenzaSacra(id,i,counted); };
+const doActionSenzaSacra=doAction;
+doAction=function(tokId,a){ return a&&SACRA_RE.test(a.n||'')&&sacraHas(tokId)&&SHEETS[tokId]?sacraOpen(tokId):doActionSenzaSacra(tokId,a); };
+const actEcoSenzaSacra=actEco;
+actEco=function(a){ return a&&SACRA_RE.test(a.n||'')?'gratuita':actEcoSenzaSacra(a); };
+const SPELL_FX={'Divine Favor':['favore','+1d4 danni radiosi a ogni colpo con un’arma, per 1 minuto'],"Hunter's Mark":['marchio','+1d6 danni a ogni colpo contro il bersaglio marchiato, per 1 ora (concentrazione)']};
+const resolveCastSenzaFx=resolveCast;
+resolveCast=function(id,name,...resto){ const r=resolveCastSenzaFx(id,name,...resto), e=SPELL_FX[name], t=S.tokens[id];
+  if(e&&t&&(fxCfg(id).toggles||[]).some(x=>x.id===e[0])&&!fxOn(t,e[0])){ t.fx=t.fx||{}; t.fx[e[0]]=true; log({kind:'sys',txt:`${t.name}: ${SPELLS[name].it} attivo — ${e[1]}`}); save(true); }
+  return r; };
+/* Riposo breve: «1 uso a riposo breve, tutti a riposo lungo» ridà UN uso (prima li ridava tutti); le risorse da riposo lungo che citano il riposo breve
+   solo tra parentesi (punti stregoneria) non si toccano; «riposo breve o lungo» torna piena. */
+function restShortOne(t,x,i){ const rec=String(x.recupero||''), u=+((t.res||{})[i])||0; if(!u) return;
+  if(/^1 uso (a|con) riposo breve/i.test(rec)){ if(u>1) t.res[i]=u-1; else delete t.res[i]; }
+  else if(/^(al termine di ogni )?riposo breve/i.test(rec)) delete t.res[i]; }
 /* ===== SIMBOLI DEI TASTI (v120) =====
    Ogni tasto ha il suo simbolo, con lo stesso tratto delle icone di Tavolo / Scheda / Compendio e del dock
    (24×24, filo 1.8, colore del testo: oro sui tasti accesi, scuro sui tasti oro, rosso sui tasti di pericolo).
