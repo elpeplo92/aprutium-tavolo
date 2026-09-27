@@ -1,0 +1,1385 @@
+{
+ "id": "adamus",
+ "nome": "Adamus Marotianus",
+ "specie": "Umano",
+ "classe": "Druido",
+ "sottoclasse": "Cerchio della Luna",
+ "livello": 5,
+ "background": "Eremita",
+ "pe": "1.665 / 14.000",
+ "ca": 15,
+ "pf_max": 35,
+ "iniziativa": 2,
+ "velocita_m": 9,
+ "competenza": 3,
+ "percezione_passiva": 13,
+ "taglia": "Media",
+ "caratteristiche": {
+  "For": 8,
+  "Des": 14,
+  "Cos": 13,
+  "Int": 12,
+  "Sag": 17,
+  "Car": 12
+ },
+ "ts": {
+  "For": {
+   "mod": -1,
+   "comp": false
+  },
+  "Des": {
+   "mod": 2,
+   "comp": false
+  },
+  "Cos": {
+   "mod": 1,
+   "comp": false
+  },
+  "Int": {
+   "mod": 4,
+   "comp": true
+  },
+  "Sag": {
+   "mod": 6,
+   "comp": true
+  },
+  "Car": {
+   "mod": 1,
+   "comp": false
+  }
+ },
+ "abilita": {
+  "Atletica": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Acrobazia": {
+   "mod": 2,
+   "comp": "no"
+  },
+  "Furtività": {
+   "mod": 2,
+   "comp": "no"
+  },
+  "Rapidità di mano": {
+   "mod": 2,
+   "comp": "no"
+  },
+  "Arcano": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Storia": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Indagare": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Natura": {
+   "mod": 4,
+   "comp": "competente"
+  },
+  "Religione": {
+   "mod": 4,
+   "comp": "competente"
+  },
+  "Addestrare animali": {
+   "mod": 6,
+   "comp": "competente"
+  },
+  "Intuizione": {
+   "mod": 3,
+   "comp": "no"
+  },
+  "Medicina": {
+   "mod": 6,
+   "comp": "competente"
+  },
+  "Percezione": {
+   "mod": 3,
+   "comp": "no"
+  },
+  "Sopravvivenza": {
+   "mod": 6,
+   "comp": "competente"
+  },
+  "Inganno": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Intimidire": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Intrattenere": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Persuasione": {
+   "mod": 1,
+   "comp": "no"
+  }
+ },
+ "competenze": {
+  "armature": "Leggere, medie (Guardiano), scudi",
+  "armi": "Semplici, da guerra (Guardiano)",
+  "strumenti": "Kit da erborista",
+  "lingue": "Comune, Druidico, Silvano, Sottocomune"
+ },
+ "sensi": "Percezione passiva 13 · nessuna scurovisione",
+ "resistenze": "Nessuna",
+ "condizioni_speciali": "Nessuna immunità. Sovraccarico (135,34 lb su 120 lb). Allineamento: Caotico Buono.",
+ "risorse": [
+  {
+   "n": "Forma selvatica",
+   "max": 2,
+   "recupero": "1 uso con riposo breve, tutti con riposo lungo",
+   "note": "Si spende anche per Compagno selvatico; Rinascita selvatica permette di convertirla da/in slot."
+  },
+  {
+   "n": "Rinascita selvatica (Forma selvatica → slot di 1° livello)",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Spendi 1 uso di Forma selvatica per ottenere uno slot di 1° livello (nessuna azione)."
+  },
+  {
+   "n": "Punti fortuna (Fortunato)",
+   "max": 3,
+   "recupero": "riposo lungo",
+   "note": "Pari al bonus di competenza."
+  },
+  {
+   "n": "Ispirazione eroica (Intraprendente)",
+   "max": 1,
+   "recupero": "la ottieni a ogni riposo lungo",
+   "note": "Tratto umano: la si guadagna finendo un riposo lungo."
+  },
+  {
+   "n": "Slot incantesimo di 1° livello",
+   "max": 4,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Slot incantesimo di 2° livello",
+   "max": 3,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Slot incantesimo di 3° livello",
+   "max": 2,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Medaglione Lunare Fratturato",
+   "max": 1,
+   "recupero": "1 volta al giorno",
+   "note": "Resiste a un effetto mentale (charme, paura, suggestione); si spezza dopo 3 usi totali."
+  }
+ ],
+ "privilegi": [
+  {
+   "n": "Druidico",
+   "fonte": "Druido 1",
+   "d": "Conosci il Druidico, la lingua segreta dei druidi, e hai sempre preparato l'incantesimo Parlare con gli animali (non conta nel limite). Puoi lasciare messaggi nascosti in Druidico: tu e chi conosce la lingua li notate automaticamente; gli altri ne notano la presenza con una prova di Intelligenza (Indagare) CD 15 ma non possono decifrarli senza magia.",
+   "usi": ""
+  },
+  {
+   "n": "Ordine primordiale: Guardiano",
+   "fonte": "Druido 1",
+   "d": "Addestrato alla battaglia: ottieni competenza nelle armi da guerra e l'addestramento nelle armature medie.",
+   "usi": ""
+  },
+  {
+   "n": "Incantesimi",
+   "fonte": "Druido 1",
+   "d": "Lanci incantesimi da druido usando la Saggezza (CD 14, attacco +6), con un focus druidico (il bastone ferrato vale come focus). Conosci 3 trucchetti da druido (più Fuoco fatuo stellare del Cerchio); ogni volta che sali di livello puoi sostituirne uno. Slot: 4 di 1°, 3 di 2°, 2 di 3°, recuperati con un riposo lungo. Al 5° livello prepari 9 incantesimi di 1°-3° livello dalla lista del druido; gli incantesimi sempre preparati (Druidico, Cerchio della Luna) non contano. Dopo ogni riposo lungo puoi cambiare la lista dei preparati.",
+   "usi": ""
+  },
+  {
+   "n": "Forma selvatica",
+   "fonte": "Druido 2",
+   "d": "Come azione bonus assumi la forma di una Bestia che conosci. Resti in forma per un numero di ore pari a metà del livello da druido (2 ore) o finché non usi di nuovo Forma selvatica, diventi Incapacitato o muori; puoi uscirne prima con un'azione bonus. Usi: 2; recuperi 1 uso con un riposo breve e tutti con un riposo lungo. Forme conosciute: al 5° livello 6 forme, GS massimo normalmente 1/2 e senza velocità di volare (con il Cerchio della Luna il GS massimo è 1). Dopo un riposo lungo puoi sostituire una forma conosciuta. Regole in forma: mantieni personalità, ricordi e capacità di parlare; ottieni PF temporanei pari al livello da druido (con il Cerchio: 15, vedi Forme del Cerchio). Le tue statistiche sono sostituite da quelle della bestia, ma mantieni tipo di creatura, Punti Ferita, dadi vita, Intelligenza, Saggezza e Carisma, privilegi di classe, lingue e talenti, e le tue competenze in abilità e tiri salvezza (usi il tuo bonus di competenza; se il modificatore della bestia è più alto usi quello). Non puoi lanciare incantesimi (tranne quelli del Cerchio della Luna), ma la trasformazione non interrompe la concentrazione. L'equipaggiamento cade, si fonde con la forma o viene indossato a discrezione del DM. FORME CONOSCIUTE riportate sulla scheda (sezione Backstory, sotto «Livello 1»): Orso, Cavallo, Lupo, Cervo. La scheda NON indica la variante precisa né le statistiche: quelle sotto sono le più probabili dal Manuale dei Mostri 2024 (da confermare con Giuseppe). In forma selvatica tieni i TUOI PF, dadi vita, Int/Sag/Car, competenze in abilità e TS, privilegi e talenti; ottieni 15 PF temporanei e CA 16 se la bestia ne ha meno (Forme del Cerchio). • ORSO — Orso bruno (Brown Bear, GS 1): Grande, CA 11→16, velocità 12 m, scalare 9 m; For 17, Des 12, Cos 15; scurovisione 18 m, Percezione +3. Multiattacco: Morso +5, 1d8+3 perforanti, e Artiglio +5, 1d4+3 taglienti (bersaglio Grande o più piccolo cade Prono). (Alternativa: Orso nero, GS 1/2, Media, 9 m + scalare/nuotare 9 m, For 15, due attacchi Squarciare +4, 1d6+2 taglienti.) • CAVALLO — Cavallo da galoppo (Riding Horse, GS 1/4): Grande, CA 11→16, velocità 18 m; For 16, Des 13, Cos 12; Zoccoli +5, 1d8+3 contundenti. • LUPO — Lupo (Wolf, GS 1/4): Medio, CA 12→16, velocità 12 m; For 14, Des 15, Cos 12; scurovisione 18 m, Percezione +5, Furtività +4; Tattiche di branco (vantaggio se un alleato non incapacitato è entro 1,5 m dal bersaglio); Morso +4, 1d6+2 perforanti e bersaglio Medio o più piccolo Prono. • CERVO — la scheda non dice se Cervo (Deer, GS 0: Medio, velocità 15 m, Des 16, attacco debole) o Alce (Elk, GS 1/4: Grande, velocità 15 m, For 16, Testata +5, 1d6+3 contundenti, danni extra in carica). Nota: al 5° livello le forme conosciute dovrebbero essere 6 (GS massimo 1 grazie al Cerchio della Luna, nessuna con volare fino all'8°); la scheda ne elenca 4.",
+   "usi": "2 (1 con riposo breve, tutti con riposo lungo)"
+  },
+  {
+   "n": "Compagno selvatico",
+   "fonte": "Druido 2",
+   "d": "Come azione Magia puoi spendere uno slot incantesimo o un uso di Forma selvatica per lanciare Trovare il famiglio senza componenti materiali. Il famiglio così evocato è un Folletto (Fey) e scompare quando finisci un riposo lungo.",
+   "usi": "slot o uso di Forma selvatica"
+  },
+  {
+   "n": "Aumento dei punteggi di caratteristica (talento)",
+   "fonte": "Druido 4",
+   "d": "Al 4° livello hai preso un talento: Incantatore da guerra (vedi Talenti). Il privilegio ritorna ai livelli 8, 12 e 16.",
+   "usi": ""
+  },
+  {
+   "n": "Rinascita selvatica",
+   "fonte": "Druido 5",
+   "d": "Una volta per ognuno dei tuoi turni, se non hai usi di Forma selvatica rimasti, puoi riottenerne uno spendendo uno slot incantesimo (nessuna azione). Inoltre puoi spendere un uso di Forma selvatica (nessuna azione) per ottenere uno slot di 1° livello, ma non puoi farlo di nuovo finché non finisci un riposo lungo.",
+   "usi": "slot→Forma: 1 per turno · Forma→slot: 1 per riposo lungo"
+  },
+  {
+   "n": "Forme del Cerchio",
+   "fonte": "Cerchio della Luna 3",
+   "d": "Quando assumi una Forma selvatica incanali la magia lunare: GS massimo della forma = livello da druido diviso 3 (arrotondato per difetto) = 1; finché resti in forma la tua CA è 13 + modificatore di Saggezza (= 16) se superiore a quella della bestia; ottieni PF temporanei pari a tre volte il livello da druido (= 15) invece che pari al livello.",
+   "usi": ""
+  },
+  {
+   "n": "Incantesimi del Cerchio della Luna",
+   "fonte": "Cerchio della Luna 3",
+   "d": "Hai sempre preparati: dal 3° livello Cura ferite, Raggio di luna e Fuoco fatuo stellare; dal 5° Evoca animali; poi Fonte di luce lunare (7°) e Cura ferite di massa (9°). Puoi lanciare gli incantesimi di questo privilegio anche mentre sei in Forma selvatica.",
+   "usi": ""
+  }
+ ],
+ "tratti_specie": [
+  {
+   "n": "Taglia Media",
+   "d": "Umano di taglia Media (occupa uno spazio di 1,5 × 1,5 m)."
+  },
+  {
+   "n": "Intraprendente",
+   "d": "Ottieni Ispirazione eroica ogni volta che finisci un riposo lungo."
+  },
+  {
+   "n": "Abile",
+   "d": "Ottieni competenza in un'abilità a tua scelta (la scheda non indica quale; delle 5 abilità competenti, 2 vengono dal druido e 2 dall'Eremita: Medicina e Religione)."
+  },
+  {
+   "n": "Versatile",
+   "d": "Ottieni un talento delle origini a scelta: Fortunato."
+  }
+ ],
+ "talenti": [
+  {
+   "n": "Guaritore",
+   "fonte": "Origine (background Eremita)",
+   "d": "Medico da battaglia: se hai una borsa del guaritore, puoi spenderne un uso e curare una creatura entro 1,5 m con un'azione Utilizzare; quella creatura può spendere uno dei suoi dadi vita, tu lo tiri e recupera PF pari al risultato + il tuo bonus di competenza (+3). Ritirare le cure: quando tiri un dado per stabilire i PF recuperati con un incantesimo o con Medico da battaglia, puoi ritirare ogni 1 e devi usare il nuovo risultato. (Attenzione: la scheda non elenca una borsa del guaritore nell'inventario.)"
+  },
+  {
+   "n": "Fortunato",
+   "fonte": "Origine (Umano: Versatile)",
+   "d": "Hai 3 punti fortuna (pari al bonus di competenza), recuperati con un riposo lungo. Vantaggio: quando tiri un d20 per una prova d20, puoi spendere 1 punto per avere vantaggio. Svantaggio: quando una creatura tira un d20 per un attacco contro di te, puoi spendere 1 punto per imporle svantaggio."
+  },
+  {
+   "n": "Incantatore da guerra",
+   "fonte": "Livello 4",
+   "d": "+1 a Intelligenza, Saggezza o Carisma (massimo 20) — applicato alla Saggezza (17). Concentrazione: vantaggio ai TS su Costituzione per mantenere la concentrazione. Incantesimo reattivo: quando una creatura provoca un attacco di opportunità da te uscendo dalla tua portata, puoi usare la reazione per lanciarle contro un incantesimo con tempo di lancio di un'azione che bersagli solo quella creatura, invece dell'attacco. Componenti somatiche: puoi eseguirle anche con armi o scudo in una o entrambe le mani."
+  }
+ ],
+ "attacchi": [
+  {
+   "n": "Bastone ferrato (a due mani)",
+   "atk": 2,
+   "dmg": "1d8-1",
+   "tipo": "contundenti",
+   "proprieta": "Versatile",
+   "maestria": "",
+   "note": "Portata 1,5 m. Il druido non ha il privilegio Maestria nelle armi: la proprietà di maestria dell'arma non si applica."
+  },
+  {
+   "n": "Bastone ferrato (a una mano)",
+   "atk": 2,
+   "dmg": "1d6-1",
+   "tipo": "contundenti",
+   "proprieta": "Versatile",
+   "maestria": "",
+   "note": "Portata 1,5 m. Il druido non ha il privilegio Maestria nelle armi: la proprietà di maestria dell'arma non si applica."
+  },
+  {
+   "n": "Bastone ferrato con Shillelagh",
+   "atk": 6,
+   "dmg": "1d10+3",
+   "tipo": "contundenti o forza (a scelta)",
+   "proprieta": "Versatile",
+   "maestria": "",
+   "note": "Trucchetto (azione bonus, 1 minuto): usa Saggezza per attacco e danni; al 5° livello il dado diventa d10."
+  },
+  {
+   "n": "Falcetto",
+   "atk": 2,
+   "dmg": "1d4-1",
+   "tipo": "taglienti",
+   "proprieta": "Leggera",
+   "maestria": "",
+   "note": "Portata 1,5 m. Il druido non ha il privilegio Maestria nelle armi: la proprietà di maestria dell'arma non si applica."
+  },
+  {
+   "n": "Falcetto (mano secondaria)",
+   "atk": 2,
+   "dmg": "1d4",
+   "tipo": "taglienti",
+   "proprieta": "Leggera",
+   "maestria": "",
+   "note": "Attacco extra con azione bonus dopo aver attaccato con un'altra arma Leggera (la scheda riporta 1d4; con modificatore negativo sarebbe 1d4-1)."
+  },
+  {
+   "n": "Torcia",
+   "atk": 2,
+   "dmg": "1",
+   "tipo": "fuoco",
+   "proprieta": "Arma semplice da mischia (improvvisata)",
+   "maestria": "",
+   "note": "Portata 1,5 m."
+  },
+  {
+   "n": "Colpo senz'armi",
+   "atk": 2,
+   "dmg": "0",
+   "tipo": "contundenti",
+   "proprieta": "",
+   "maestria": "",
+   "note": "La scheda riporta 0 danni (1 + For -1)."
+  },
+  {
+   "n": "Olio (lancio su creatura o oggetto)",
+   "atk": "",
+   "dmg": "5",
+   "tipo": "fuoco",
+   "proprieta": "Gittata 6 m",
+   "maestria": "",
+   "note": "Sostituisce un attacco dell'azione Attacco: TS Des CD 13 o il bersaglio è coperto d'olio; se subisce danni da fuoco prima che si asciughi (1 minuto) subisce 5 danni da fuoco extra."
+  },
+  {
+   "n": "Fuoco fatuo stellare",
+   "atk": 6,
+   "dmg": "2d8",
+   "tipo": "radiosi",
+   "proprieta": "Trucchetto · 18 m",
+   "maestria": "",
+   "note": "Il bersaglio emette luce fioca in un raggio di 3 m e non può beneficiare della condizione Invisibile fino alla fine del tuo prossimo turno."
+  },
+  {
+   "n": "Frusta di spine",
+   "atk": 6,
+   "dmg": "2d6",
+   "tipo": "perforanti",
+   "proprieta": "Trucchetto · 9 m (attacco in mischia con incantesimo)",
+   "maestria": "",
+   "note": "Se il bersaglio è Grande o più piccolo puoi tirarlo di 3 m verso di te."
+  },
+  {
+   "n": "Lama infuocata",
+   "atk": 6,
+   "dmg": "3d6+3",
+   "tipo": "fuoco",
+   "proprieta": "2° livello · azione Magia",
+   "maestria": "",
+   "note": "Concentrazione, 10 minuti."
+  },
+  {
+   "n": "Pugnale di ghiaccio (Ice Knife)",
+   "atk": 6,
+   "dmg": "1d10",
+   "tipo": "perforanti",
+   "proprieta": "1° livello · 18 m",
+   "maestria": "",
+   "note": "Esplosione, colpito o mancato: bersaglio e creature entro 1,5 m TS Des CD 14 o 2d6 freddo."
+  },
+  {
+   "n": "Raggio di luna",
+   "atk": "",
+   "dmg": "2d10",
+   "tipo": "radiosi",
+   "proprieta": "2° livello · 36 m · TS Cos CD 14",
+   "maestria": "",
+   "note": "Metà danni se superato; le creature mutaforma tornano alla forma vera."
+  },
+  {
+   "n": "Sfera infuocata",
+   "atk": "",
+   "dmg": "2d6",
+   "tipo": "fuoco",
+   "proprieta": "2° livello · 18 m · TS Des CD 14",
+   "maestria": "",
+   "note": "Metà danni se superato."
+  },
+  {
+   "n": "Scaldare il metallo",
+   "atk": "",
+   "dmg": "2d8",
+   "tipo": "fuoco",
+   "proprieta": "2° livello · 18 m",
+   "maestria": "",
+   "note": "Nessun tiro per colpire; TS Cos CD 14 o lascia cadere l'oggetto."
+  },
+  {
+   "n": "Crescita di spine",
+   "atk": "",
+   "dmg": "2d4",
+   "tipo": "perforanti",
+   "proprieta": "2° livello · 45 m",
+   "maestria": "",
+   "note": "Ogni 1,5 m percorsi nell'area."
+  },
+  {
+   "n": "Onda tonante",
+   "atk": "",
+   "dmg": "2d8",
+   "tipo": "tuono",
+   "proprieta": "1° livello · cubo 4,5 m · TS Cos CD 14",
+   "maestria": "",
+   "note": "Spinti di 3 m se falliscono."
+  },
+  {
+   "n": "Evoca animali",
+   "atk": "",
+   "dmg": "3d10",
+   "tipo": "taglienti",
+   "proprieta": "3° livello · 18 m · TS Des CD 14",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Blocca persone",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS Sag CD 14",
+   "maestria": "",
+   "note": "Paralizzato."
+  },
+  {
+   "n": "Intralciare",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS For CD 14",
+   "maestria": "",
+   "note": "Trattenuto."
+  },
+  {
+   "n": "Luminescenza",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS Des CD 14",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Charme su persone",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS Sag CD 14",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Amicizia con gli animali",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS Sag CD 14",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Folata di vento",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS For CD 14",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Ingrandire/Ridurre (bersaglio non consenziente)",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS Cos CD 14",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Messaggero animale",
+   "atk": "",
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "TS Car CD 14",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Parola guaritrice",
+   "atk": "",
+   "dmg": "2d4+3",
+   "tipo": "cura",
+   "proprieta": "1° livello · 18 m",
+   "maestria": "",
+   "note": ""
+  },
+  {
+   "n": "Cura ferite",
+   "atk": "",
+   "dmg": "2d8+3",
+   "tipo": "cura",
+   "proprieta": "1° livello · contatto",
+   "maestria": "",
+   "note": "La scheda nella riga di attacco riporta 2d8 senza modificatore; la descrizione aggiunge il modificatore di lancio (+3)."
+  }
+ ],
+ "incantesimi": {
+  "caratteristica": "Sag",
+  "cd": 14,
+  "attacco": 6,
+  "slot": {
+   "1": 4,
+   "2": 3,
+   "3": 2
+  },
+  "lista": [
+   {
+    "en": "Starry Wisp",
+    "it": "Fuoco fatuo stellare",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Cerchio della Luna"
+   },
+   {
+    "en": "Thorn Whip",
+    "it": "Frusta di spine",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Spare the Dying",
+    "it": "Risparmiare i morenti",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Shillelagh",
+    "it": "Shillelagh",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Charm Person",
+    "it": "Charme su persone",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Animal Friendship",
+    "it": "Amicizia con gli animali",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Cure Wounds",
+    "it": "Cura ferite",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Cerchio della Luna"
+   },
+   {
+    "en": "Speak with Animals",
+    "it": "Parlare con gli animali",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Druidico"
+   },
+   {
+    "en": "Fog Cloud",
+    "it": "Nube di nebbia",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Jump",
+    "it": "Saltare",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Longstrider",
+    "it": "Passo veloce",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Detect Poison and Disease",
+    "it": "Individuazione di veleni e malattie",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Thunderwave",
+    "it": "Onda tonante",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Entangle",
+    "it": "Intralciare",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Ice Knife",
+    "it": "Pugnale di ghiaccio (Ice Knife)",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Protection from Evil and Good",
+    "it": "Protezione dal bene e dal male",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Find Familiar",
+    "it": "Trovare il famiglio",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Druido (Compagno selvatico)"
+   },
+   {
+    "en": "Purify Food and Drink",
+    "it": "Purificare cibo e bevande",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Create or Destroy Water",
+    "it": "Creare o distruggere acqua",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Goodberry",
+    "it": "Bacche benefiche",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Faerie Fire",
+    "it": "Luminescenza",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Healing Word",
+    "it": "Parola guaritrice",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Detect Magic",
+    "it": "Individuazione del magico",
+    "l": 1,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Locate Animals or Plants",
+    "it": "Localizzare animali o vegetali",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Beast Sense",
+    "it": "Sensi bestiali (Beast Sense)",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Find Traps",
+    "it": "Trovare trappole",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Continual Flame",
+    "it": "Fiamma perenne",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Barkskin",
+    "it": "Pelle coriacea (Barkskin)",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Augury",
+    "it": "Presagio",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Enhance Ability",
+    "it": "Potenziare caratteristica",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Animal Messenger",
+    "it": "Messaggero animale",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Heat Metal",
+    "it": "Scaldare il metallo",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Moonbeam",
+    "it": "Raggio di luna",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Cerchio della Luna"
+   },
+   {
+    "en": "Pass without Trace",
+    "it": "Passare senza tracce",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Flame Blade",
+    "it": "Lama infuocata",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Aid",
+    "it": "Aiuto",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Enlarge/Reduce",
+    "it": "Ingrandire/Ridurre",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Spike Growth",
+    "it": "Crescita di spine",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Locate Object",
+    "it": "Localizzare oggetti",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Flaming Sphere",
+    "it": "Sfera infuocata",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Summon Beast",
+    "it": "Evoca bestia (Summon Beast)",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Protection from Poison",
+    "it": "Protezione dai veleni",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Hold Person",
+    "it": "Blocca persone",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Darkvision",
+    "it": "Scurovisione",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Gust of Wind",
+    "it": "Folata di vento",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Lesser Restoration",
+    "it": "Ristorare inferiore",
+    "l": 2,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Plant Growth",
+    "it": "Crescita vegetale",
+    "l": 3,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   },
+   {
+    "en": "Conjure Animals",
+    "it": "Evoca animali",
+    "l": 3,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Cerchio della Luna"
+   },
+   {
+    "en": "Aura of Vitality",
+    "it": "Aura di vitalità",
+    "l": 3,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Druido"
+   }
+  ]
+ },
+ "incantesimi_nuovi": {
+  "Charm Person": {
+   "it": "Charme su persone",
+   "l": 1,
+   "t": "Azione",
+   "r": "9 m",
+   "d": "Ammaliamento · V, S · durata 1 ora. Un Umanoide che vedi entro gittata effettua un TS su Saggezza (CD 14), con vantaggio se tu o i tuoi alleati lo state combattendo. Se fallisce ha la condizione Affascinato finché l'incantesimo non termina o finché tu o i tuoi alleati non lo danneggiate; la creatura affascinata è amichevole verso di te. Quando l'incantesimo termina, il bersaglio sa di essere stato affascinato da te. Livelli superiori: un bersaglio aggiuntivo per ogni livello di slot sopra il 1°."
+  },
+  "Fog Cloud": {
+   "it": "Nube di nebbia",
+   "l": 1,
+   "t": "Azione",
+   "r": "36 m",
+   "d": "Evocazione · V, S · Concentrazione, fino a 1 ora. Crei una sfera di nebbia di 6 m di raggio centrata su un punto entro gittata; l'area è pesantemente oscurata. Dura per la durata o finché un vento forte (come quello di Folata di vento) non la disperde. Livelli superiori: il raggio aumenta di 6 m per ogni livello di slot sopra il 1°."
+  },
+  "Ice Knife": {
+   "it": "Pugnale di ghiaccio (Ice Knife)",
+   "l": 1,
+   "t": "Azione",
+   "r": "18 m",
+   "d": "Evocazione · S, M (una goccia d'acqua o un pezzo di ghiaccio) · istantaneo. Crei una scheggia di ghiaccio e la scagli contro una creatura entro gittata: attacco a distanza con incantesimo (+6); se colpisce infligge 1d10 danni perforanti. Colpito o mancato, la scheggia esplode: il bersaglio e ogni creatura entro 1,5 m da esso devono superare un TS su Destrezza (CD 14) o subire 2d6 danni da freddo. Livelli superiori: i danni da freddo aumentano di 1d6 per ogni livello di slot sopra il 1°.",
+   "atk": true,
+   "dmg": "1d10"
+  },
+  "Create or Destroy Water": {
+   "it": "Creare o distruggere acqua",
+   "l": 1,
+   "t": "Azione",
+   "r": "9 m",
+   "d": "Trasmutazione · V, S, M (un misto di acqua e sabbia) · istantaneo. Scegli uno dei due effetti. Creare acqua: crei fino a 10 galloni (circa 38 litri) di acqua pulita in un contenitore aperto entro gittata, oppure la fai cadere come pioggia in un cubo di 9 m, spegnendo le fiamme esposte. Distruggere acqua: distruggi fino a 10 galloni d'acqua in un contenitore aperto, oppure dissolvi la nebbia in un cubo di 9 m. Livelli superiori: +10 galloni d'acqua oppure +1,5 m di lato del cubo per ogni livello di slot sopra il 1°."
+  },
+  "Goodberry": {
+   "it": "Bacche benefiche",
+   "l": 1,
+   "t": "Azione",
+   "r": "Personale",
+   "d": "Evocazione · V, S, M (un rametto di vischio) · durata 24 ore. Nella tua mano compaiono dieci bacche infuse di magia per la durata. Una creatura può usare un'azione bonus per mangiarne una: ogni bacca fa recuperare 1 PF e fornisce nutrimento sufficiente per un giorno. Le bacche non mangiate scompaiono al termine dell'incantesimo.",
+   "heal": "1"
+  },
+  "Faerie Fire": {
+   "it": "Luminescenza",
+   "l": 1,
+   "t": "Azione",
+   "r": "18 m",
+   "d": "Invocazione · V · Concentrazione, fino a 1 minuto. Gli oggetti in un cubo di 6 m entro gittata vengono delineati da luce blu, verde o viola (a scelta); ogni creatura nel cubo è delineata anch'essa se fallisce un TS su Destrezza (CD 14). Per la durata, oggetti e creature colpiti emettono luce fioca in un raggio di 3 m e non possono beneficiare della condizione Invisibile. I tiri per colpire contro una creatura o un oggetto colpiti hanno vantaggio se l'attaccante può vederli."
+  },
+  "Locate Animals or Plants": {
+   "it": "Localizzare animali o vegetali",
+   "l": 2,
+   "t": "Azione o rituale",
+   "r": "Personale",
+   "d": "Divinazione · V, S, M (un po' di pelo di segugio) · istantaneo. Descrivi o nomina un tipo specifico di Bestia, creatura Vegetale o pianta non magica: scopri direzione e distanza dell'esemplare più vicino di quel tipo entro 8 km (5 miglia), se presente."
+  },
+  "Beast Sense": {
+   "it": "Sensi bestiali (Beast Sense)",
+   "l": 2,
+   "t": "Azione o rituale",
+   "r": "Contatto",
+   "d": "Divinazione · S · Concentrazione, fino a 1 ora. Tocchi una Bestia consenziente: per la durata puoi percepire attraverso i suoi sensi oltre che con i tuoi, beneficiando di eventuali sensi speciali che possiede quando percepisci attraverso di essa."
+  },
+  "Find Traps": {
+   "it": "Trovare trappole",
+   "l": 2,
+   "t": "Azione",
+   "r": "36 m",
+   "d": "Divinazione · V, S · istantaneo. Percepisci qualsiasi trappola entro gittata e in linea di vista. Per questo incantesimo una trappola è qualunque oggetto o meccanismo creato per causare danni o pericolo (ad esempio Allarme, Glifo di interdizione o una fossa meccanica), ma non una debolezza naturale del pavimento, un soffitto instabile o una voragine nascosta. Scopri che una trappola è presente e la natura generale del pericolo, ma non la sua posizione."
+  },
+  "Continual Flame": {
+   "it": "Fiamma perenne",
+   "l": 2,
+   "t": "Azione",
+   "r": "Contatto",
+   "d": "Invocazione · V, S, M (polvere di rubino del valore di almeno 50 mo, consumata) · finché non viene dissolto. Una fiamma scaturisce da un oggetto che tocchi: emette luce intensa in un raggio di 6 m e luce fioca per altri 6 m. Sembra una fiamma normale, ma non produce calore e non consuma combustibile; può essere coperta o nascosta ma non soffocata o spenta."
+  },
+  "Barkskin": {
+   "it": "Pelle coriacea (Barkskin)",
+   "l": 2,
+   "t": "Azione bonus",
+   "r": "Contatto",
+   "d": "Trasmutazione · V, S, M (una manciata di corteccia) · durata 1 ora (nessuna concentrazione). Tocchi una creatura consenziente: fino al termine dell'incantesimo la sua pelle assume l'aspetto della corteccia e la sua Classe Armatura è 17 se era inferiore."
+  },
+  "Animal Messenger": {
+   "it": "Messaggero animale",
+   "l": 2,
+   "t": "Azione o rituale",
+   "r": "9 m",
+   "d": "Ammaliamento · V, S, M (un boccone di cibo) · durata 24 ore. Una Bestia Minuscola che vedi entro gittata deve superare un TS su Carisma (CD 14) o tenta di recapitare un tuo messaggio (se il suo GS non è 0 supera automaticamente il TS). Indichi un luogo che hai visitato e un destinatario con una descrizione generica, e comunichi un messaggio di massimo 25 parole. La bestia viaggia verso il luogo per la durata percorrendo circa 40 km (25 miglia) ogni 24 ore, o 80 km (50 miglia) se vola. Arrivata, recapita il messaggio imitando la tua voce; se non arriva prima della fine dell'incantesimo il messaggio va perso e la bestia torna dove l'hai lanciato. Livelli superiori: durata +48 ore per ogni livello di slot sopra il 2°."
+  },
+  "Heat Metal": {
+   "it": "Scaldare il metallo",
+   "l": 2,
+   "t": "Azione",
+   "r": "18 m",
+   "d": "Trasmutazione · V, S, M (un pezzo di ferro e una fiamma) · Concentrazione, fino a 1 minuto. Scegli un oggetto di metallo lavorato che vedi entro gittata (un'arma di metallo, un'armatura media o pesante di metallo…) e lo rendi incandescente. Ogni creatura a contatto fisico con l'oggetto subisce 2d8 danni da fuoco quando lanci l'incantesimo; nei turni successivi puoi usare un'azione bonus per infliggere di nuovo questi danni se l'oggetto è entro gittata. Se una creatura che tiene o indossa l'oggetto subisce i danni, deve superare un TS su Costituzione (CD 14) o lasciarlo cadere se può; se non lo lascia cadere, ha svantaggio ai tiri per colpire e alle prove di caratteristica fino all'inizio del tuo prossimo turno. Livelli superiori: +1d8 danni per ogni livello di slot sopra il 2°.",
+   "dmg": "2d8"
+  },
+  "Flame Blade": {
+   "it": "Lama infuocata",
+   "l": 2,
+   "t": "Azione bonus",
+   "r": "Personale",
+   "d": "Invocazione · V, S, M (una foglia di sommacco) · Concentrazione, fino a 10 minuti. Evochi nella mano libera una lama di fuoco simile a una scimitarra. Se la lasci andare scompare, ma puoi evocarla di nuovo con un'azione bonus. Con un'azione Magia puoi effettuare un attacco in mischia con incantesimo (+6) con la lama: se colpisci infliggi 3d6 + modificatore di Saggezza (3d6+3) danni da fuoco. La lama emette luce intensa in un raggio di 3 m e fioca per altri 3 m. Livelli superiori: +1d6 danni per ogni livello di slot sopra il 2°.",
+   "atk": true,
+   "dmg": "3d6+3"
+  },
+  "Enlarge/Reduce": {
+   "it": "Ingrandire/Ridurre",
+   "l": 2,
+   "t": "Azione",
+   "r": "9 m",
+   "d": "Trasmutazione · V, S, M (un pizzico di polvere di ferro) · Concentrazione, fino a 1 minuto. Ingrandisci o riduci una creatura o un oggetto che vedi entro gittata (un oggetto non deve essere indossato né trasportato). Una creatura non consenziente può effettuare un TS su Costituzione (CD 14): se lo supera non ha effetto. Ciò che la creatura indossa e trasporta cambia taglia con lei; gli oggetti lasciati cadere tornano normali. Ingrandire: taglia +1 categoria, vantaggio alle prove e ai TS su Forza, le sue armi ingrandite o i colpi senz'armi infliggono 1d4 danni extra. Ridurre: taglia −1 categoria, svantaggio alle prove e ai TS su Forza, i suoi attacchi con armi ridotte o colpi senz'armi infliggono 1d4 danni in meno (minimo 1)."
+  },
+  "Spike Growth": {
+   "it": "Crescita di spine",
+   "l": 2,
+   "t": "Azione",
+   "r": "45 m",
+   "d": "Trasmutazione · V, S, M (sette spine) · Concentrazione, fino a 10 minuti. Il terreno in una sfera di 6 m di raggio centrata su un punto entro gittata si copre di spine e aculei: l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno subisce 2d4 danni perforanti per ogni 1,5 m percorsi. La trasformazione è mimetizzata: una creatura che non vedeva l'area al momento del lancio deve compiere un'azione Cercare e superare una prova di Saggezza (Percezione o Sopravvivenza) CD 14 per riconoscere il pericolo prima di entrarvi.",
+   "dmg": "2d4"
+  },
+  "Locate Object": {
+   "it": "Localizzare oggetti",
+   "l": 2,
+   "t": "Azione",
+   "r": "Personale",
+   "d": "Divinazione · V, S, M (un ramoscello biforcuto) · Concentrazione, fino a 10 minuti. Descrivi o nomina un oggetto che ti è familiare: percepisci la direzione in cui si trova se è entro 300 m, e se è in movimento ne conosci la direzione. Puoi localizzare un oggetto specifico solo se lo hai visto da vicino (entro 9 m) almeno una volta; in alternativa trovi l'oggetto più vicino di un certo tipo. Qualunque spessore di piombo tra te e l'oggetto blocca l'incantesimo."
+  },
+  "Flaming Sphere": {
+   "it": "Sfera infuocata",
+   "l": 2,
+   "t": "Azione",
+   "r": "18 m",
+   "d": "Evocazione · V, S, M (una pallina di cera) · Concentrazione, fino a 1 minuto. Crei una sfera di fuoco di 1,5 m di diametro in uno spazio libero sul terreno entro gittata. Ogni creatura che termina il turno entro 1,5 m dalla sfera effettua un TS su Destrezza (CD 14): 2d6 danni da fuoco se fallisce, metà se lo supera. Con un'azione bonus puoi spostare la sfera fino a 9 m facendola rotolare; se la sposti nello spazio di una creatura, quella effettua il TS e la sfera si ferma per quel turno. Può superare barriere alte fino a 1,5 m e saltare fosse larghe fino a 3 m. Incendia gli oggetti infiammabili non indossati né trasportati ed emette luce intensa in un raggio di 6 m e fioca per altri 6 m. Livelli superiori: +1d6 danni per ogni livello di slot sopra il 2°.",
+   "dmg": "2d6"
+  },
+  "Summon Beast": {
+   "it": "Evoca bestia (Summon Beast)",
+   "l": 2,
+   "t": "Azione",
+   "r": "27 m",
+   "d": "Evocazione · V, S, M (una piuma, un ciuffo di pelo e una coda di pesce dentro una ghianda dorata del valore di almeno 200 mo) · Concentrazione, fino a 1 ora. Evochi uno spirito bestiale che compare in uno spazio libero entro gittata e usa il blocco statistiche Spirito bestiale; scegli l'ambiente (Aria, Terra o Acqua) e l'aspetto animale. Scompare a 0 PF o al termine dell'incantesimo. È tuo alleato, condivide la tua iniziativa e agisce subito dopo di te; obbedisce ai tuoi comandi verbali (nessuna azione), altrimenti usa Schivare e si allontana dal pericolo. Spirito bestiale (in sintesi, da verificare sul Manuale): CA 11 + livello dell'incantesimo; PF 20 (Aria) o 30 (Terra/Acqua) + 5 per ogni livello sopra il 2°; For 18, Des 11, Cos 16; velocità 9 m più scalare 9 m (Terra), volare 18 m (Aria) o nuotare 9 m (Acqua); Tattiche di branco (Terra/Acqua), Volo radente (Aria), respirare sott'acqua (Acqua); Multiattacco: attacchi pari a metà del livello dell'incantesimo; Squarciare: +6 (tuo attacco con incantesimo), 1d8 + 4 + livello dell'incantesimo danni perforanti. Livelli superiori: usa il livello dello slot nelle statistiche."
+  },
+  "Protection from Poison": {
+   "it": "Protezione dai veleni",
+   "l": 2,
+   "t": "Azione",
+   "r": "Contatto",
+   "d": "Abiurazione · V, S · durata 1 ora. Tocchi una creatura e poni fine alla condizione Avvelenato su di essa. Per la durata il bersaglio ha vantaggio ai TS per evitare o terminare la condizione Avvelenato e ha resistenza ai danni da veleno."
+  },
+  "Hold Person": {
+   "it": "Blocca persone",
+   "l": 2,
+   "t": "Azione",
+   "r": "18 m",
+   "d": "Ammaliamento · V, S, M (un pezzetto di ferro dritto) · Concentrazione, fino a 1 minuto. Scegli un Umanoide che vedi entro gittata: deve superare un TS su Saggezza (CD 14) o avere la condizione Paralizzato per la durata. Alla fine di ogni suo turno ripete il TS; se lo supera l'incantesimo termina su di lui. Livelli superiori: un Umanoide aggiuntivo per ogni livello di slot sopra il 2°."
+  },
+  "Darkvision": {
+   "it": "Scurovisione",
+   "l": 2,
+   "t": "Azione",
+   "r": "Contatto",
+   "d": "Trasmutazione · V, S, M (una carota secca) · durata 8 ore. Una creatura consenziente che tocchi ottiene scurovisione con raggio di 45 m per la durata."
+  },
+  "Gust of Wind": {
+   "it": "Folata di vento",
+   "l": 2,
+   "t": "Azione",
+   "r": "Personale (linea di 18 m)",
+   "d": "Invocazione · V, S, M (un seme di legume) · Concentrazione, fino a 1 minuto. Una linea di vento forte lunga 18 m e larga 3 m soffia da te nella direzione scelta. Ogni creatura nella linea deve superare un TS su Forza (CD 14) o essere spinta di 4,5 m lontano da te lungo la linea; lo stesso TS lo fa chi termina il turno nella linea. Muoversi verso di te nella linea costa 1,5 m di movimento extra per ogni 1,5 m (2 per 1). Il vento disperde gas e vapori, spegne candele e fiamme non protette, e ha il 50% di probabilità di spegnere quelle protette (lanterne). Con un'azione bonus nei turni successivi puoi cambiare direzione."
+  },
+  "Plant Growth": {
+   "it": "Crescita vegetale",
+   "l": 3,
+   "t": "Azione (Rigoglio) o 8 ore (Arricchimento)",
+   "r": "45 m",
+   "d": "Trasmutazione · V, S · istantaneo. L'effetto dipende dal tempo di lancio. Rigoglio (azione): tutte le piante normali in una sfera di 30 m di raggio centrata su un punto entro gittata diventano fitte e intricate; chi si muove nell'area spende 1,2 m di movimento per ogni 30 cm (4 per 1). Puoi escludere dall'effetto aree di qualunque dimensione. Arricchimento (8 ore): tutte le piante entro 800 m (mezzo miglio) da un punto entro gittata sono arricchite per 365 giorni e producono il doppio del raccolto; possono beneficiare di un solo Crescita vegetale all'anno."
+  },
+  "Aura of Vitality": {
+   "it": "Aura di vitalità",
+   "l": 3,
+   "t": "Azione",
+   "r": "Personale (emanazione di 9 m)",
+   "d": "Invocazione · V · Concentrazione, fino a 1 minuto. Energia curativa si irradia da te in un'aura di 9 m che si muove con te. Fino al termine dell'incantesimo, con un'azione bonus puoi far recuperare 2d6 PF a una creatura nell'aura (te compreso). (Con Guaritore puoi ritirare gli 1.)",
+   "heal": "2d6"
+  }
+ },
+ "inventario": [
+  {
+   "n": "Armatura di cuoio",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "10 lb",
+   "valore": "",
+   "stats": "Armatura leggera · CA 11 + mod. Des",
+   "desc": "Indossata (CA 15 con scudo)."
+  },
+  {
+   "n": "Bastone ferrato",
+   "q": 2,
+   "cat": "Armi",
+   "peso": "8 lb (4 lb ciascuno)",
+   "valore": "",
+   "stats": "1d6 contundenti (1d8 a due mani) · Versatile · Maestria: Rovesciare (non usabile dal druido)",
+   "desc": "Vale come focus druidico. La scheda lo elenca due volte (una fra l'equipaggiamento indossato)."
+  },
+  {
+   "n": "Scudo",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "6 lb",
+   "valore": "",
+   "stats": "+2 CA",
+   "desc": "Indossare o togliere: azione Utilizzare."
+  },
+  {
+   "n": "Falcetto",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "2 lb",
+   "valore": "",
+   "stats": "1d4 taglienti · Leggera · Maestria: Graffiare (Nick, non usabile dal druido)",
+   "desc": ""
+  },
+  {
+   "n": "Zaino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "",
+   "stats": "Contiene fino a 30 lb in 1 piede cubo",
+   "desc": "Può servire anche da bisaccia."
+  },
+  {
+   "n": "Torcia",
+   "q": 10,
+   "cat": "Equipaggiamento",
+   "peso": "10 lb (totale)",
+   "valore": "",
+   "stats": "Brucia 1 ora · luce intensa 6 m + fioca 6 m · come arma: 1 danno da fuoco",
+   "desc": ""
+  },
+  {
+   "n": "Lanterna Sempreluce",
+   "q": 1,
+   "cat": "Oggetti magici",
+   "peso": "1 lb",
+   "valore": "",
+   "stats": "Luce intensa 4,5 m e fioca per altri 9 m",
+   "desc": "La scheda riporta il testo della lampada (luce intensa 15 ft, fioca altri 30 ft); il nome indica che non si spegne/non consuma olio."
+  },
+  {
+   "n": "Abiti da viaggiatore",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "4 lb",
+   "valore": "",
+   "stats": "",
+   "desc": "Indumenti resistenti pensati per il viaggio."
+  },
+  {
+   "n": "Medaglione Lunare Fratturato",
+   "q": 1,
+   "cat": "Oggetti magici",
+   "peso": "1 lb",
+   "valore": "",
+   "stats": "1 volta al giorno: resisti a un effetto mentale (charme, paura, suggestione) · si spezza dopo 3 usi",
+   "desc": "Un amuleto d'argento annerito."
+  },
+  {
+   "n": "Corda dell'arrampicata",
+   "q": 1,
+   "cat": "Oggetti magici",
+   "peso": "2,5 lb",
+   "valore": "",
+   "stats": "",
+   "desc": "Nessuna descrizione nella scheda (probabilmente la Corda dell'arrampicata / Rope of Climbing della Guida del DM)."
+  },
+  {
+   "n": "Pozione di guarigione superiore",
+   "q": 5,
+   "cat": "Consumabili",
+   "peso": "1 lb (come da scheda)",
+   "valore": "",
+   "stats": "Recupera 8d4+8 PF",
+   "desc": ""
+  },
+  {
+   "n": "Polvere di Corruzione",
+   "q": 1,
+   "cat": "Oggetti e indizi",
+   "peso": "0,2 lb",
+   "valore": "",
+   "stats": "Debole aura di necromanzia",
+   "desc": "Una borsa di seta nera con una polvere viola scuro, pesante e oleosa al tatto. Sembra un componente rituale raro, forse velenoso."
+  },
+  {
+   "n": "Fiala di «Lacrime di Pietraluna»",
+   "q": 1,
+   "cat": "Consumabili",
+   "peso": "0,2 lb",
+   "valore": "",
+   "stats": "Come una pozione di resistenza ai danni psichici per 1 ora",
+   "desc": ""
+  },
+  {
+   "n": "Pacco dell'esploratore",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "Contiene: zaino, giaciglio, 2 ampolle d'olio, 10 razioni, corda, acciarino, 10 torce, otre",
+   "desc": "Nella scheda i contenuti sono elencati anche come voci separate (peso già contato lì)."
+  },
+  {
+   "n": "Kit da erborista",
+   "q": 6,
+   "cat": "Strumenti",
+   "peso": "18 lb (9 lb per ognuna delle 2 voci da 3)",
+   "valore": "",
+   "stats": "Intelligenza · identificare una pianta CD 10 · crea antitossina, candela, borsa del guaritore, pozione di guarigione",
+   "desc": "La scheda lo riporta due volte, 3 kit per voce."
+  },
+  {
+   "n": "Giaciglio",
+   "q": 2,
+   "cat": "Equipaggiamento",
+   "peso": "14 lb (7 lb ciascuno)",
+   "valore": "",
+   "stats": "Dormendoci si superano automaticamente i TS contro il freddo estremo",
+   "desc": "La scheda lo riporta due volte."
+  },
+  {
+   "n": "Ampolla d'olio",
+   "q": 5,
+   "cat": "Consumabili",
+   "peso": "5 lb (1 lb ciascuna)",
+   "valore": "",
+   "stats": "Lancio: sostituisce un attacco, bersaglio entro 6 m, TS Des CD 13 o coperto d'olio; se subisce danni da fuoco entro 1 minuto +5 danni da fuoco. Versato (azione Utilizzare): copre un quadrato di 1,5 m; se acceso brucia per 2 round e infligge 5 danni da fuoco a chi entra o termina il turno lì (una volta per turno). Come combustibile: 6 ore in lampada o lanterna.",
+   "desc": "La scheda riporta due voci: 2 + 3."
+  },
+  {
+   "n": "Razioni",
+   "q": 10,
+   "cat": "Consumabili",
+   "peso": "20 lb (totale)",
+   "valore": "",
+   "stats": "1 giorno di cibo ciascuna",
+   "desc": "Carne secca, frutta secca, gallette e noci."
+  },
+  {
+   "n": "Corda",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "",
+   "stats": "Nodo: Rapidità di mano CD 10 · spezzarla: Atletica CD 20 · liberarsi: Acrobazia CD 15",
+   "desc": "Si può legare una creatura solo se Afferrata, Incapacitata o Trattenuta; con le gambe legate è Trattenuta."
+  },
+  {
+   "n": "Acciarino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "",
+   "stats": "Accende candela, lampada, lanterna o torcia con un'azione bonus; altri fuochi in 1 minuto",
+   "desc": ""
+  },
+  {
+   "n": "Otre",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "",
+   "stats": "Contiene 4 pinte (circa 2 litri)",
+   "desc": ""
+  },
+  {
+   "n": "Libro (filosofia)",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "",
+   "desc": ""
+  },
+  {
+   "n": "Pozione di guarigione",
+   "q": 2,
+   "cat": "Consumabili",
+   "peso": "1 lb (come da scheda)",
+   "valore": "",
+   "stats": "Recupera 2d4+2 PF",
+   "desc": "Bere o somministrare una pozione richiede un'azione (così la scheda; nel 2024 è un'azione bonus)."
+  },
+  {
+   "n": "Tazza di legno (0,5 l)",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0,2 lb",
+   "valore": "",
+   "stats": "",
+   "desc": "«La tazza con la quale bevo ogni cosa.»"
+  },
+  {
+   "n": "Ametista pura",
+   "q": 3,
+   "cat": "Tesori",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "",
+   "desc": "Pietra preziosa rivendibile (valore non indicato)."
+  },
+  {
+   "n": "Indizio: lista di nomi",
+   "q": 1,
+   "cat": "Oggetti e indizi",
+   "peso": "0,1 lb",
+   "valore": "",
+   "stats": "",
+   "desc": "Il «roster» degli agenti Celomanti infiltrati a Julia Nova (include un mercante del porto e un accolito della Basilica)."
+  }
+ ],
+ "carico": "135,34 lb",
+ "capacita": "120 lb",
+ "monete": "691 mo · 66 ma",
+ "aspetto": "Taglia Media (la scheda non descrive l'aspetto).",
+ "personalita": {
+  "tratti": "",
+  "ideali": "",
+  "legami": "",
+  "difetti": ""
+ },
+ "storia_scheda": "Eremita. Hai trascorso i primi anni della tua vita isolato in una capanna o in un monastero, ben oltre i confini dell'insediamento più vicino. In quei giorni i tuoi unici compagni erano le creature della foresta e chi di tanto in tanto veniva a portarti notizie del mondo esterno e provviste. La solitudine ti ha permesso di trascorrere molte ore a riflettere sui misteri della creazione. [Sotto, la scheda annota: «Livello 1 — Orso, Cavallo, Lupo, Cervo» (forme selvatiche conosciute).]",
+ "progressione": "",
+ "note": "Allineamento Caotico Buono. Nessun oggetto in sintonia. Forme selvatiche annotate nella scheda: Orso, Cavallo, Lupo, Cervo.",
+ "differenze": [
+  "Nome: la scheda Roll20 riporta «ADAMUS MAROTIANUS» (come il sito e il token); solo il nome del file PDF usa «Mariotianus».",
+  "Lingue: scheda «Common, Druidic, Sylvan, Undercommon» → Comune, Druidico, Silvano, Sottocomune; il sito (SHEETS.languages) ha «Elfico» al posto del Silvano.",
+  "Forme selvatiche: la scheda elenca Orso, Cavallo, Lupo, Cervo; il sito (WILD_FORMS) ha solo il Toro, che non compare sulla scheda. Mancano nel sito le altre forme; inoltre al 5° livello le forme conosciute dovrebbero essere 6 (la scheda ne elenca 4).",
+  "Incantesimi: la scheda elenca 4 trucchetti e 45 incantesimi di 1°-3° livello; SHEETS.spell.list ne ha solo 16. Mancano nel sito: Charm Person, Fog Cloud, Jump, Longstrider, Thunderwave, Entangle, Ice Knife, Protection from Evil and Good, Create or Destroy Water, Goodberry, Faerie Fire, Healing Word, Locate Animals or Plants, Beast Sense, Find Traps, Continual Flame, Barkskin, Animal Messenger, Heat Metal, Flame Blade, Aid, Enlarge/Reduce, Spike Growth, Locate Object, Flaming Sphere, Summon Beast, Protection from Poison, Hold Person, Darkvision, Gust of Wind, Lesser Restoration, Plant Growth, Aura of Vitality.",
+  "Preparazione: nella scheda la colonna PR è spuntata solo per Cure Wounds, Speak with Animals, Find Familiar, Moonbeam e Conjure Animals (i sempre preparati); gli altri 9 preparati da druido di 5° livello non sono indicati. Il sito tratta come preparati 7 incantesimi non indicati dalla scheda (Animal Friendship, Detect Poison and Disease, Purify Food and Drink, Detect Magic, Augury, Enhance Ability, Pass without Trace): da chiedere al giocatore.",
+  "Incantesimi non presenti come chiave in SPELLS (aggiunti in incantesimi_nuovi): Charm Person, Fog Cloud, Ice Knife, Create or Destroy Water, Goodberry, Faerie Fire, Locate Animals or Plants, Beast Sense, Find Traps, Continual Flame, Barkskin, Animal Messenger, Heat Metal, Flame Blade, Enlarge/Reduce, Spike Growth, Locate Object, Flaming Sphere, Summon Beast, Protection from Poison, Hold Person, Darkvision, Gust of Wind, Plant Growth, Aura of Vitality.",
+  "PLAYER_V85.actions: mancano Falcetto (mano secondaria) 1d4, Torcia (+2, 1 fuoco), Colpo senz'armi (+2, 0), Olio (TS Des CD 13, 5 fuoco), Lama infuocata (+6, 3d6+3), Pugnale di ghiaccio (+6, 1d10 + 2d6 freddo TS Des 14), Sfera infuocata (2d6), Scaldare il metallo (2d8), Crescita di spine (2d4), Onda tonante (2d8), Parola guaritrice (2d4+3) e i TS degli incantesimi di controllo (Blocca persone, Intralciare, Luminescenza, Charme, Folata di vento…). Evoca animali non ha i danni (3d10 taglienti, TS Des CD 14).",
+  "DEFAULT_STATE.tokens.adamus è ancora al 4° livello: «Druido 4», PF 29/29 (scheda 35), Natura/Religione +3, Addestrare animali/Medicina/Sopravvivenza +5, TS Int +3/TS Sag +5, attacchi +1, Shillelagh +5 1d8+3, trucchetti +5 a 1d8/1d6 (scheda: +4/+6, attacchi +2, Shillelagh +6 1d10+3, trucchetti +6 2d8/2d6).",
+  "DEFAULT_STATE: le note «Maestria Topple/Nick» sugli attacchi del bastone e del falcetto sono errate: il druido non ha Maestria nelle armi.",
+  "PF temporanei: la scheda al momento dell'esportazione riporta 8 PF temporanei (35/35 PF).",
+  "SHEETS.features: mancano Druidico, Incantesimi, Aumento dei punteggi di caratteristica (talento); mancano del tutto i tratti di specie (Intraprendente → Ispirazione eroica a ogni riposo lungo, Abile, Versatile).",
+  "Talenti: mancano nel sito le descrizioni/meccaniche (Guaritore con Medico da battaglia che richiede una borsa del guaritore – assente nell'inventario; Fortunato con 3 punti fortuna; Incantatore da guerra con Incantesimo reattivo).",
+  "Inventario: il sito dà peso della pozione di guarigione 0,5 lb (scheda 1 lb per 2 pozioni) e peso «—» a pozione superiore e libro; assegna valori (es. Libro 25 mo, Kit 5 mo) che la scheda non riporta. Nome in SHEETS.equip «Polvere della Corruzione» → scheda «Polvere di Corruzione». La Lanterna Sempreluce nella scheda ha le distanze di una lampada (4,5 m/9 m): il sito concorda.",
+  "Carico: scheda 135,34 lb su capacità 120 lb (Sovraccarico) — il sito concorda.",
+  "Scheda: la riga di attacco di Cure Wounds riporta 2d8 senza il +3; quella di Shillelagh nella descrizione dice d8 ma l'attacco usa correttamente 1d10+3 (5° livello)."
+ ]
+}

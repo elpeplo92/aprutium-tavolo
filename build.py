@@ -118,7 +118,7 @@ def contenuti():
     raw, voci = [], []
     for cat in sorted(os.listdir(CONT)):
         d = os.path.join(CONT, cat)
-        if not os.path.isdir(d) or cat == "scene" or cat.startswith("_"): continue   # _bestiario ecc.: vedi bestiario()   # le scene hanno il loro blocco: vedi scene()
+        if not os.path.isdir(d) or cat in ("scene", "pg") or cat.startswith("_"): continue   # _bestiario ecc.: vedi bestiario()   # le scene hanno il loro blocco: vedi scene()
         for fn in sorted(os.listdir(d)):
             if not fn.endswith(".json") or fn.startswith("_"): continue
             e = json.load(open(os.path.join(d, fn), encoding="utf-8"))
@@ -246,10 +246,41 @@ def bestiario():
     open(SRC, "w", encoding="utf-8").write(html)
     print(f"ok: bestiario aggiuntivo — {len(voci)} creature")
 
+PG_START, PG_END = "/*@PG*/", "/*@/PG*/"
+def pg():
+    """Schede Roll20 complete dei PG: contenuti/pg/<id>.json → blocco PG_DATA del sorgente (senza il campo «differenze», che è per Claude)."""
+    import json
+    d = os.path.join(CONT, "pg"); voci = {}
+    if os.path.isdir(d):
+        for fn in sorted(os.listdir(d)):
+            if not fn.endswith(".json"): continue
+            e = json.load(open(os.path.join(d, fn), encoding="utf-8")); e.pop("differenze", None); voci[e["id"]] = e
+    html = open(SRC, encoding="utf-8").read()
+    a = html.index(PG_START); b = html.index(PG_END) + len(PG_END)
+    html = html[:a] + PG_START + "const PG_DATA=" + json.dumps(voci, ensure_ascii=False, separators=(",", ":")) + ";" + PG_END + html[b:]
+    open(SRC, "w", encoding="utf-8").write(html)
+    print(f"ok: schede dei PG — {', '.join(voci) or 'nessuna'}")
+
+INC_START, INC_END = "/*@INCANTESIMI*/", "/*@/INCANTESIMI*/"
+def incantesimi():
+    """Testi di regolamento completi: contenuti/_incantesimi/*.json (chiave = nome inglese di SPELLS) → blocco SPELLS_EXTRA."""
+    import json
+    d = os.path.join(CONT, "_incantesimi"); voci = {}
+    if os.path.isdir(d):
+        for fn in sorted(os.listdir(d)):
+            if fn.endswith(".json"): voci.update(json.load(open(os.path.join(d, fn), encoding="utf-8")))
+    html = open(SRC, encoding="utf-8").read()
+    a = html.index(INC_START); b = html.index(INC_END) + len(INC_END)
+    html = html[:a] + INC_START + "const SPELLS_EXTRA=" + json.dumps(voci, ensure_ascii=False, separators=(",", ":")) + ";" + INC_END + html[b:]
+    open(SRC, "w", encoding="utf-8").write(html)
+    print(f"ok: incantesimi completi — {len(voci)}")
+
 def build():
     contenuti()
     scene()
     bestiario()
+    pg()
+    incantesimi()
     shutil.copyfile(SRC, OUT)
     html = open(SRC, encoding="utf-8").read()
     used = set(re.findall(r"img/[0-9a-f]{12}\.[a-z]+", html))

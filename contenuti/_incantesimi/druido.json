@@ -1,0 +1,334 @@
+{
+"Starry Wisp": {
+  "it": "Fuoco fatuo stellare", "l": 0, "scuola": "Invocazione",
+  "t": "Azione", "r": "18 m", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Scagli un granello di luce contro una creatura o un oggetto entro gittata. Effettua un attacco a distanza con incantesimo contro il bersaglio.\n\nSe colpisci, il bersaglio subisce 1d8 danni radiosi e, fino alla fine del tuo turno successivo, emette luce fioca in un raggio di 3 m e non può beneficiare della condizione Invisibile.",
+  "superiore": "Potenziamento del trucchetto: i danni aumentano di 1d8 quando raggiungi il 5° livello (2d8), l'11° (3d8) e il 17° (4d8).",
+  "atk": true, "dmg": "2d8"
+},
+"Thorn Whip": {
+  "it": "Frusta di spine", "l": 0, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "9 m", "componenti": "V, S, M (lo stelo di una pianta spinosa)", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Crei una lunga frusta vegetale coperta di spine che sferza a tuo comando una creatura entro gittata. Effettua un attacco in mischia con incantesimo contro il bersaglio.\n\nSe colpisci, il bersaglio subisce 1d6 danni perforanti e, se è di taglia Grande o inferiore, puoi tirarlo fino a 3 m più vicino a te.",
+  "superiore": "Potenziamento del trucchetto: i danni aumentano di 1d6 quando raggiungi il 5° livello (2d6), l'11° (3d6) e il 17° (4d6).",
+  "atk": true, "dmg": "2d6"
+},
+"Spare the Dying": {
+  "it": "Risparmiare i morenti", "l": 0, "scuola": "Necromanzia",
+  "t": "Azione", "r": "4,5 m", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Scegli una creatura entro gittata che abbia 0 Punti Ferita e non sia morta. La creatura diventa Stabile.",
+  "superiore": "Potenziamento del trucchetto: la gittata raddoppia quando raggiungi il 5° livello (9 m), l'11° (18 m) e il 17° (36 m)."
+},
+"Shillelagh": {
+  "it": "Randello incantato", "l": 0, "scuola": "Trasmutazione",
+  "t": "Azione bonus", "r": "Personale", "componenti": "V, S, M (vischio)", "durata": "1 minuto",
+  "conc": false, "rituale": false,
+  "d": "Un randello o un bastone ferrato che impugni viene infuso del potere della natura. Per la durata, puoi usare la tua caratteristica da incantatore al posto della Forza per i tiri per colpire e per i danni degli attacchi in mischia con quell'arma, e il dado di danno dell'arma diventa un d8.\n\nSe l'attacco infligge danni, possono essere danni da forza oppure del tipo normale dell'arma (a tua scelta).\n\nL'incantesimo termina prima se lo lanci di nuovo o se lasci andare l'arma.",
+  "superiore": "Potenziamento del trucchetto: il dado di danno diventa d10 al 5° livello, d12 all'11° e 2d6 al 17°."
+},
+"Charm Person": {
+  "it": "Charme su persone", "l": 1, "scuola": "Ammaliamento",
+  "t": "Azione", "r": "9 m", "componenti": "V, S", "durata": "1 ora",
+  "conc": false, "rituale": false,
+  "d": "Un Umanoide che puoi vedere entro gittata effettua un tiro salvezza su Saggezza contro la CD dei tuoi incantesimi; lo effettua con vantaggio se tu o i tuoi alleati lo state combattendo.\n\nSe fallisce, il bersaglio ha la condizione Affascinato finché l'incantesimo non termina o finché tu o i tuoi alleati non gli infliggete danni. La creatura affascinata è amichevole nei tuoi confronti.\n\nQuando l'incantesimo termina, il bersaglio sa di essere stato affascinato da te.",
+  "superiore": "Uso di uno slot di livello superiore: puoi bersagliare una creatura aggiuntiva per ogni livello dello slot superiore al 1°."
+},
+"Animal Friendship": {
+  "it": "Amicizia con gli animali", "l": 1, "scuola": "Ammaliamento",
+  "t": "Azione", "r": "9 m", "componenti": "V, S, M (un boccone di cibo)", "durata": "24 ore",
+  "conc": false, "rituale": false,
+  "d": "Bersagli una Bestia che puoi vedere entro gittata. Il bersaglio deve superare un tiro salvezza su Saggezza contro la CD dei tuoi incantesimi o avere la condizione Affascinato per la durata.\n\nSe tu o uno dei tuoi alleati infliggete danni al bersaglio, l'incantesimo termina.",
+  "superiore": "Uso di uno slot di livello superiore: puoi bersagliare una Bestia aggiuntiva per ogni livello dello slot superiore al 1°."
+},
+"Cure Wounds": {
+  "it": "Cura ferite", "l": 1, "scuola": "Abiurazione",
+  "t": "Azione", "r": "Contatto", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Una creatura che tocchi recupera un numero di Punti Ferita pari a 2d8 + il tuo modificatore di caratteristica da incantatore.",
+  "superiore": "Uso di uno slot di livello superiore: la guarigione aumenta di 2d8 per ogni livello dello slot superiore al 1°.",
+  "heal": "2d8"
+},
+"Speak with Animals": {
+  "it": "Parlare con gli animali", "l": 1, "scuola": "Divinazione",
+  "t": "Azione", "r": "Personale", "componenti": "V, S", "durata": "10 minuti",
+  "conc": false, "rituale": true,
+  "d": "Per la durata puoi comprendere le Bestie e comunicare verbalmente con loro, e puoi usare con esse qualsiasi opzione di abilità dell'azione Influenzare.\n\nLa maggior parte delle Bestie ha poco da dire su argomenti che non riguardano la sopravvivenza o la compagnia, ma come minimo una Bestia può darti informazioni sui luoghi e sui mostri vicini, compreso ciò che può percepire o ha percepito nell'ultimo giorno."
+},
+"Fog Cloud": {
+  "it": "Nube di nebbia", "l": 1, "scuola": "Evocazione",
+  "t": "Azione", "r": "36 m", "componenti": "V, S", "durata": "Concentrazione, fino a 1 ora",
+  "conc": true, "rituale": false,
+  "d": "Crei una sfera di nebbia del raggio di 6 m centrata su un punto entro gittata. L'area della sfera è pesantemente oscurata.\n\nLa nebbia dura per la durata o finché un vento forte (come quello creato da Folata di vento) non la disperde.",
+  "superiore": "Uso di uno slot di livello superiore: il raggio della nebbia aumenta di 6 m per ogni livello dello slot superiore al 1°."
+},
+"Jump": {
+  "it": "Salto", "l": 1, "scuola": "Trasmutazione",
+  "t": "Azione bonus", "r": "Contatto", "componenti": "V, S, M (la zampa posteriore di una cavalletta)", "durata": "1 minuto",
+  "conc": false, "rituale": false,
+  "d": "Tocchi una creatura consenziente. Una volta in ciascuno dei suoi turni, finché l'incantesimo non termina, quella creatura può saltare fino a 9 m spendendo 3 m di movimento.",
+  "superiore": "Uso di uno slot di livello superiore: puoi bersagliare una creatura aggiuntiva per ogni livello dello slot superiore al 1°."
+},
+"Longstrider": {
+  "it": "Passo veloce", "l": 1, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "Contatto", "componenti": "V, S, M (un pizzico di terra)", "durata": "1 ora",
+  "conc": false, "rituale": false,
+  "d": "Tocchi una creatura. La Velocità del bersaglio aumenta di 3 m finché l'incantesimo non termina.",
+  "superiore": "Uso di uno slot di livello superiore: puoi bersagliare una creatura aggiuntiva per ogni livello dello slot superiore al 1°."
+},
+"Detect Poison and Disease": {
+  "it": "Individuazione delle malattie e dei veleni", "l": 1, "scuola": "Divinazione",
+  "t": "Azione", "r": "Personale", "componenti": "V, S, M (una foglia di tasso)", "durata": "Concentrazione, fino a 10 minuti",
+  "conc": true, "rituale": true,
+  "d": "Per la durata percepisci la posizione di veleni, creature velenose o dal morso velenoso e contagi magici entro 9 m da te. In ogni caso percepisci il tipo di veleno, di creatura o di contagio.\n\nL'incantesimo è bloccato da 30 cm di pietra, terra o legno, da 2,5 cm di metallo o da una sottile lamina di piombo."
+},
+"Thunderwave": {
+  "it": "Onda tonante", "l": 1, "scuola": "Invocazione",
+  "t": "Azione", "r": "Personale (cubo di 4,5 m)", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Liberi un'ondata di energia tonante. Ogni creatura in un cubo di 4,5 m che parte da te effettua un tiro salvezza su Costituzione contro la CD dei tuoi incantesimi.\n\nSe fallisce, una creatura subisce 2d8 danni da tuono ed è spinta di 3 m lontano da te. Se lo supera, subisce solo la metà dei danni.\n\nInoltre, gli oggetti non fissati che si trovano interamente all'interno del cubo sono spinti di 3 m lontano da te, e un boato tonante è udibile fino a 90 m di distanza.",
+  "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d8 per ogni livello dello slot superiore al 1°.",
+  "dmg": "2d8"
+},
+"Entangle": {
+  "it": "Intralciare", "l": 1, "scuola": "Evocazione",
+  "t": "Azione", "r": "27 m", "componenti": "V, S", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Piante avviluppanti spuntano dal terreno in un quadrato di 6 m di lato entro gittata. Per la durata, queste piante rendono il terreno dell'area terreno difficile. Scompaiono quando l'incantesimo termina.\n\nOgni creatura (tranne te) che si trova nell'area quando lanci l'incantesimo deve superare un tiro salvezza su Forza contro la CD dei tuoi incantesimi o avere la condizione Trattenuto finché l'incantesimo non termina.\n\nUna creatura trattenuta può usare un'azione per effettuare una prova di Forza (Atletica) contro la CD dei tuoi incantesimi. Se ha successo, si libera dalle piante e non è più trattenuta da esse."
+},
+"Ice Knife": {
+  "it": "Pugnale di ghiaccio", "l": 1, "scuola": "Evocazione",
+  "t": "Azione", "r": "18 m", "componenti": "S, M (una goccia d'acqua o un pezzo di ghiaccio)", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Crei una scheggia di ghiaccio e la scagli contro una creatura entro gittata. Effettua un attacco a distanza con incantesimo contro il bersaglio. Se colpisci, il bersaglio subisce 1d10 danni perforanti.\n\nChe colpisca o manchi, la scheggia poi esplode. Il bersaglio e ogni creatura entro 1,5 m da esso devono superare un tiro salvezza su Destrezza contro la CD dei tuoi incantesimi o subire 2d6 danni da freddo.",
+  "superiore": "Uso di uno slot di livello superiore: i danni da freddo aumentano di 1d6 per ogni livello dello slot superiore al 1°.",
+  "atk": true, "dmg": "1d10"
+},
+"Protection from Evil and Good": {
+  "it": "Protezione dal bene e dal male", "l": 1, "scuola": "Abiurazione",
+  "t": "Azione", "r": "Contatto", "componenti": "V, S, M (una fiasca di acqua santa del valore di almeno 25 mo, che l'incantesimo consuma)", "durata": "Concentrazione, fino a 10 minuti",
+  "conc": true, "rituale": false,
+  "d": "Finché l'incantesimo non termina, una creatura consenziente che tocchi è protetta contro le creature che sono Aberrazioni, Celestiali, Elementali, Folletti, Immondi o Non morti. La protezione conferisce diversi benefici.\n\nLe creature di quei tipi hanno svantaggio ai tiri per colpire contro il bersaglio. Inoltre, il bersaglio non può essere posseduto da esse né ricevere da esse le condizioni Affascinato o Spaventato.\n\nSe il bersaglio è già posseduto, affascinato o spaventato da una creatura del genere, ha vantaggio a ogni nuovo tiro salvezza contro l'effetto relativo.\n\nComponente materiale: una fiasca di acqua santa del valore di almeno 25 mo, consumata dall'incantesimo."
+},
+"Find Familiar": {
+  "it": "Trova famiglio", "l": 1, "scuola": "Evocazione",
+  "t": "1 ora", "r": "3 m", "componenti": "V, S, M (incenso acceso del valore di almeno 10 mo, che l'incantesimo consuma)", "durata": "Istantanea",
+  "conc": false, "rituale": true,
+  "d": "Ottieni i servigi di un famiglio, uno spirito che assume una forma animale a tua scelta: Gatto, Gufo, Falco, Donnola, Lucertola, Pipistrello, Polpo, Ragno, Rana, Ratto, Corvo, oppure un'altra Bestia con Grado di Sfida 0. Il famiglio compare in uno spazio libero entro gittata e ha le statistiche della forma scelta, ma è un Celestiale, un Folletto o un Immondo (a tua scelta) invece che una Bestia.\n\nConnessione telepatica. Finché il famiglio si trova entro 30 m da te, potete comunicare telepaticamente. Inoltre, con un'azione bonus puoi vedere attraverso i suoi occhi e sentire ciò che sente fino all'inizio del tuo turno successivo, ottenendo i benefici degli eventuali sensi speciali che possiede.\n\nInfine, quando lanci un incantesimo con gittata a contatto, il tuo famiglio può trasmettere il contatto. Deve trovarsi entro 30 m da te e deve usare la sua reazione per trasmettere il contatto quando lanci l'incantesimo.\n\nCombattimento. Il famiglio è un alleato tuo e dei tuoi alleati. Tira la propria iniziativa e agisce nel proprio turno. Un famiglio non può attaccare, ma può compiere normalmente altre azioni.\n\nScomparsa del famiglio. Quando il famiglio scende a 0 Punti Ferita, scompare. Ricompare quando lanci di nuovo questo incantesimo. Con un'azione Magia puoi congedarlo temporaneamente in una dimensione tascabile, oppure congedarlo per sempre. Con un'azione Magia, mentre è congedato temporaneamente, puoi farlo ricomparire in uno spazio libero entro 9 m da te. Ogni volta che il famiglio scende a 0 PF o scompare nella dimensione tascabile, lascia nel suo spazio tutto ciò che indossava o trasportava.\n\nUn solo famiglio. Non puoi avere più di un famiglio alla volta. Se lanci questo incantesimo mentre hai già un famiglio, gli fai invece assumere una nuova forma ammissibile.\n\nComponente materiale: incenso acceso del valore di almeno 10 mo, consumato dall'incantesimo."
+},
+"Purify Food and Drink": {
+  "it": "Purificare cibo e bevande", "l": 1, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "3 m", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": true,
+  "d": "Rimuovi veleno e marciume dal cibo e dalle bevande non magici all'interno di una sfera del raggio di 1,5 m centrata su un punto entro gittata."
+},
+"Create or Destroy Water": {
+  "it": "Creare o distruggere acqua", "l": 1, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "9 m", "componenti": "V, S, M (un miscuglio di acqua e sabbia)", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Compi uno dei seguenti effetti.\n\nCreare acqua. Crei fino a 10 galloni (circa 40 litri) di acqua pulita entro gittata in un contenitore aperto. In alternativa, l'acqua cade come pioggia in un cubo di 9 m entro gittata, spegnendo le fiamme esposte in quell'area.\n\nDistruggere acqua. Distruggi fino a 10 galloni (circa 40 litri) d'acqua in un contenitore aperto entro gittata. In alternativa, distruggi la nebbia in un cubo di 9 m entro gittata.",
+  "superiore": "Uso di uno slot di livello superiore: crei o distruggi 10 galloni (circa 40 litri) d'acqua aggiuntivi, oppure il lato del cubo aumenta di 1,5 m, per ogni livello dello slot superiore al 1°."
+},
+"Goodberry": {
+  "it": "Bacche benefiche", "l": 1, "scuola": "Evocazione",
+  "t": "Azione", "r": "Personale", "componenti": "V, S, M (un rametto di vischio)", "durata": "24 ore",
+  "conc": false, "rituale": false,
+  "d": "Nella tua mano compaiono dieci bacche infuse di magia.\n\nUna creatura può usare un'azione bonus per mangiare una bacca. Mangiare una bacca fa recuperare 1 Punto Ferita, e la bacca fornisce nutrimento sufficiente a sostentare una creatura per un giorno.\n\nLe bacche non mangiate scompaiono quando l'incantesimo termina.",
+  "heal": "1"
+},
+"Faerie Fire": {
+  "it": "Luminescenza", "l": 1, "scuola": "Invocazione",
+  "t": "Azione", "r": "18 m", "componenti": "V", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Gli oggetti in un cubo di 6 m entro gittata vengono delineati da una luce blu, verde o viola (a tua scelta). Anche ogni creatura nel cubo viene delineata se fallisce un tiro salvezza su Destrezza contro la CD dei tuoi incantesimi.\n\nPer la durata, gli oggetti e le creature influenzati emettono luce fioca in un raggio di 3 m e non possono beneficiare della condizione Invisibile.\n\nI tiri per colpire contro una creatura o un oggetto influenzato hanno vantaggio se l'attaccante può vederlo."
+},
+"Healing Word": {
+  "it": "Parola guaritrice", "l": 1, "scuola": "Abiurazione",
+  "t": "Azione bonus", "r": "18 m", "componenti": "V", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Una creatura a tua scelta che puoi vedere entro gittata recupera un numero di Punti Ferita pari a 2d4 + il tuo modificatore di caratteristica da incantatore.",
+  "superiore": "Uso di uno slot di livello superiore: la guarigione aumenta di 2d4 per ogni livello dello slot superiore al 1°.",
+  "heal": "2d4"
+},
+"Detect Magic": {
+  "it": "Individuazione del magico", "l": 1, "scuola": "Divinazione",
+  "t": "Azione", "r": "Personale", "componenti": "V, S", "durata": "Concentrazione, fino a 10 minuti",
+  "conc": true, "rituale": true,
+  "d": "Per la durata percepisci la presenza di effetti magici entro 9 m da te. Se percepisci effetti del genere, puoi compiere l'azione Magia per vedere una debole aura attorno a ogni creatura o oggetto visibile nell'area che porta la magia e, se un effetto è stato creato da un incantesimo, scopri la scuola di magia dell'incantesimo.\n\nL'incantesimo è bloccato da 30 cm di pietra, terra o legno, da 2,5 cm di metallo o da una sottile lamina di piombo.\n\nNota di campagna: sotto Bëllindë è l'unico modo per vedere la trama dei comandi."
+},
+"Locate Animals or Plants": {
+  "it": "Localizzare animali o vegetali", "l": 2, "scuola": "Divinazione",
+  "t": "Azione", "r": "Personale", "componenti": "V, S, M (un po' di pelo di segugio)", "durata": "Istantanea",
+  "conc": false, "rituale": true,
+  "d": "Descrivi o nomina un tipo specifico di Bestia, di creatura Vegetale o di pianta non magica. Scopri la direzione e la distanza della creatura o pianta di quel tipo più vicina entro 7,5 km (5 miglia), se ce n'è una."
+},
+"Beast Sense": {
+  "it": "Sensi bestiali", "l": 2, "scuola": "Divinazione",
+  "t": "Azione", "r": "Contatto", "componenti": "S", "durata": "Concentrazione, fino a 1 ora",
+  "conc": true, "rituale": true,
+  "d": "Tocchi una Bestia consenziente. Per la durata puoi percepire attraverso i sensi della Bestia oltre che con i tuoi.\n\nQuando percepisci attraverso i sensi della Bestia, benefici degli eventuali sensi speciali che possiede."
+},
+"Find Traps": {
+  "it": "Trova trappole", "l": 2, "scuola": "Divinazione",
+  "t": "Azione", "r": "36 m", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Percepisci qualsiasi trappola entro gittata che si trovi in linea di vista. Ai fini di questo incantesimo, una trappola comprende qualsiasi oggetto o meccanismo creato per causare danni o altri pericoli. Quindi l'incantesimo percepirebbe un incantesimo Allarme o Glifo di interdizione o una trappola meccanica a fossa, ma non rivelerebbe un punto debole naturale del pavimento, un soffitto instabile o una voragine nascosta.\n\nL'incantesimo rivela che è presente una trappola, ma non la sua posizione. Scopri però la natura generale del pericolo posto da una trappola che percepisci."
+},
+"Continual Flame": {
+  "it": "Fiamma perenne", "l": 2, "scuola": "Invocazione",
+  "t": "Azione", "r": "Contatto", "componenti": "V, S, M (polvere di rubino del valore di almeno 50 mo, che l'incantesimo consuma)", "durata": "Finché non viene dissolto",
+  "conc": false, "rituale": false,
+  "d": "Una fiamma scaturisce da un oggetto che tocchi. L'effetto proietta luce intensa in un raggio di 6 m e luce fioca per ulteriori 6 m. Sembra una fiamma normale, ma non produce calore e non consuma combustibile.\n\nLa fiamma può essere coperta o nascosta, ma non soffocata né spenta.\n\nComponente materiale: polvere di rubino del valore di almeno 50 mo, consumata dall'incantesimo."
+},
+"Barkskin": {
+  "it": "Pelle di corteccia", "l": 2, "scuola": "Trasmutazione",
+  "t": "Azione bonus", "r": "Contatto", "componenti": "V, S, M (una manciata di corteccia)", "durata": "1 ora",
+  "conc": false, "rituale": false,
+  "d": "Tocchi una creatura consenziente. Finché l'incantesimo non termina, la pelle del bersaglio assume l'aspetto della corteccia e il bersaglio ha Classe Armatura 17, se la sua CA è inferiore."
+},
+"Augury": {
+  "it": "Presagio", "l": 2, "scuola": "Divinazione",
+  "t": "1 minuto", "r": "Personale", "componenti": "V, S, M (bastoncini, ossa, carte o altri strumenti divinatori marchiati appositamente, del valore di almeno 25 mo)", "durata": "Istantanea",
+  "conc": false, "rituale": true,
+  "d": "Ricevi un presagio da un'entità ultraterrena sull'esito di una linea d'azione che intendi intraprendere entro i prossimi 30 minuti. Il DM sceglie il presagio tra i seguenti:\n\nBene: esito positivo. Male: esito negativo. Bene e male: esito sia positivo sia negativo. Indifferenza: esito né positivo né negativo.\n\nL'incantesimo non tiene conto delle circostanze, come altri incantesimi, che potrebbero cambiare l'esito.\n\nSe lanci l'incantesimo più di una volta prima di terminare un riposo lungo, c'è una probabilità cumulativa del 25% per ogni lancio dopo il primo di non ricevere alcuna risposta.\n\nComponente materiale: strumenti divinatori del valore di almeno 25 mo (non consumati)."
+},
+"Enhance Ability": {
+  "it": "Potenziare caratteristica", "l": 2, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "Contatto", "componenti": "V, S, M (pelo o una piuma di una bestia)", "durata": "Concentrazione, fino a 1 ora",
+  "conc": true, "rituale": false,
+  "d": "Tocchi una creatura e scegli Forza, Destrezza, Intelligenza, Saggezza o Carisma. Per la durata, il bersaglio ha vantaggio alle prove di caratteristica che usano la caratteristica scelta.",
+  "superiore": "Uso di uno slot di livello superiore: puoi bersagliare una creatura aggiuntiva per ogni livello dello slot superiore al 2°."
+},
+"Animal Messenger": {
+  "it": "Messaggero animale", "l": 2, "scuola": "Ammaliamento",
+  "t": "Azione", "r": "9 m", "componenti": "V, S, M (un boccone di cibo)", "durata": "24 ore",
+  "conc": false, "rituale": true,
+  "d": "Una Bestia Minuscola a tua scelta che puoi vedere entro gittata deve superare un tiro salvezza su Carisma contro la CD dei tuoi incantesimi, altrimenti tenta di recapitare un messaggio per te (se il Grado di Sfida del bersaglio non è 0, supera automaticamente il tiro salvezza).\n\nSpecifichi un luogo che hai visitato e un destinatario che corrisponda a una descrizione generica, come «una persona con l'uniforme della guardia cittadina» o «un nano dai capelli rossi con un cappello a punta». Comunichi anche un messaggio di massimo venticinque parole.\n\nPer la durata la Bestia viaggia verso il luogo indicato, percorrendo circa 37,5 km (25 miglia) ogni 24 ore, oppure 75 km (50 miglia) se può volare. Quando arriva, recapita il messaggio alla creatura che hai descritto, imitando la tua comunicazione.\n\nSe la Bestia non raggiunge la destinazione prima che l'incantesimo termini, il messaggio va perduto e la Bestia torna nel luogo in cui hai lanciato l'incantesimo.",
+  "superiore": "Uso di uno slot di livello superiore: la durata aumenta di 48 ore per ogni livello dello slot superiore al 2°."
+},
+"Heat Metal": {
+  "it": "Riscaldare il metallo", "l": 2, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "18 m", "componenti": "V, S, M (un pezzo di ferro e una fiamma)", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Scegli un oggetto di metallo lavorato che puoi vedere entro gittata, come un'arma di metallo o un'armatura media o pesante di metallo. Rendi l'oggetto rovente.\n\nOgni creatura a contatto fisico con l'oggetto subisce 2d8 danni da fuoco quando lanci l'incantesimo. Finché l'incantesimo non termina, puoi usare un'azione bonus in ciascuno dei tuoi turni successivi per infliggere di nuovo questi danni, se l'oggetto è entro gittata.\n\nSe una creatura impugna o indossa l'oggetto e ne subisce i danni, deve superare un tiro salvezza su Costituzione contro la CD dei tuoi incantesimi o lasciar cadere l'oggetto, se può. Se non lascia cadere l'oggetto, ha svantaggio ai tiri per colpire e alle prove di caratteristica fino all'inizio del tuo turno successivo.",
+  "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d8 per ogni livello dello slot superiore al 2°.",
+  "dmg": "2d8"
+},
+"Moonbeam": {
+  "it": "Raggio di luna", "l": 2, "scuola": "Invocazione",
+  "t": "Azione", "r": "36 m", "componenti": "V, S, M (una foglia di menisperma)", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Un raggio argenteo di luce pallida discende in un cilindro del raggio di 1,5 m e alto 12 m, centrato su un punto entro gittata. Finché l'incantesimo non termina, il cilindro è pieno di luce fioca, e nei turni successivi puoi usare un'azione bonus per spostare il cilindro fino a 18 m.\n\nQuando il cilindro compare, ogni creatura al suo interno effettua un tiro salvezza su Costituzione contro la CD dei tuoi incantesimi. Se fallisce, una creatura subisce 2d10 danni radiosi e, se ha cambiato forma (per esempio a causa dell'incantesimo Metamorfosi), torna alla sua forma reale e non può cambiare forma finché non lascia il cilindro. Se lo supera, subisce solo la metà dei danni.\n\nUna creatura effettua questo tiro salvezza anche quando l'area dell'incantesimo si sposta nel suo spazio e quando entra nell'area dell'incantesimo o vi termina il proprio turno. Una creatura effettua questo tiro salvezza una sola volta per turno.",
+  "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d10 per ogni livello dello slot superiore al 2°.",
+  "dmg": "2d10"
+},
+"Pass without Trace": {
+  "it": "Passare senza tracce", "l": 2, "scuola": "Abiurazione",
+  "t": "Azione", "r": "Personale", "componenti": "V, S, M (ceneri di vischio bruciato)", "durata": "Concentrazione, fino a 1 ora",
+  "conc": true, "rituale": false,
+  "d": "Per la durata irradi un'aura occultante in un'emanazione di 9 m. Mentre si trovano nell'aura, tu e ogni creatura a tua scelta ottenete bonus +10 alle prove di Destrezza (Furtività) e non lasciate tracce."
+},
+"Flame Blade": {
+  "it": "Lama infuocata", "l": 2, "scuola": "Invocazione",
+  "t": "Azione bonus", "r": "Personale", "componenti": "V, S, M (una foglia di sommacco)", "durata": "Concentrazione, fino a 10 minuti",
+  "conc": true, "rituale": false,
+  "d": "Evochi una lama di fuoco nella tua mano libera. La lama è simile per dimensioni e forma a una scimitarra e dura per la durata. Se lasci andare la lama, scompare, ma puoi evocarla di nuovo con un'azione bonus.\n\nCon un'azione Magia puoi effettuare un attacco in mischia con incantesimo con la lama di fuoco. Se colpisci, il bersaglio subisce danni da fuoco pari a 3d6 + il tuo modificatore di caratteristica da incantatore.\n\nLa lama infuocata emette luce intensa in un raggio di 3 m e luce fioca per ulteriori 3 m.",
+  "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d6 per ogni livello dello slot superiore al 2°.",
+  "atk": true, "dmg": "3d6"
+},
+"Aid": {
+  "it": "Aiuto", "l": 2, "scuola": "Abiurazione",
+  "t": "Azione", "r": "9 m", "componenti": "V, S, M (una striscia di stoffa bianca)", "durata": "8 ore",
+  "conc": false, "rituale": false,
+  "d": "Scegli fino a tre creature entro gittata. I Punti Ferita massimi e attuali di ciascun bersaglio aumentano di 5 per la durata.",
+  "superiore": "Uso di uno slot di livello superiore: i Punti Ferita di ciascun bersaglio aumentano di ulteriori 5 per ogni livello dello slot superiore al 2°."
+},
+"Enlarge/Reduce": {
+  "it": "Ingrandire/Ridurre", "l": 2, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "9 m", "componenti": "V, S, M (un pizzico di polvere di ferro)", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Per la durata, l'incantesimo ingrandisce o riduce una creatura o un oggetto che puoi vedere entro gittata (vedi l'effetto scelto qui sotto). Un oggetto bersagliato non deve essere né indossato né trasportato. Se il bersaglio è una creatura non consenziente, può effettuare un tiro salvezza su Costituzione contro la CD dei tuoi incantesimi; se lo supera, l'incantesimo non ha effetto.\n\nTutto ciò che una creatura bersagliata indossa e trasporta cambia taglia insieme a essa. Qualsiasi oggetto che lascia cadere torna subito alla taglia normale. Un'arma da lancio o una munizione torna alla taglia normale subito dopo aver colpito o mancato un bersaglio.\n\nIngrandire. La taglia del bersaglio aumenta di una categoria, ad esempio da Media a Grande. Il bersaglio ha vantaggio alle prove di Forza e ai tiri salvezza su Forza. I suoi attacchi con le armi ingrandite o i colpi senz'armi infliggono 1d4 danni extra se colpiscono.\n\nRidurre. La taglia del bersaglio diminuisce di una categoria, ad esempio da Media a Piccola. Il bersaglio ha svantaggio alle prove di Forza e ai tiri salvezza su Forza. I suoi attacchi con le armi ridotte o i colpi senz'armi infliggono 1d4 danni in meno se colpiscono (i danni non possono scendere sotto 1)."
+},
+"Spike Growth": {
+  "it": "Crescita di spine", "l": 2, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "45 m", "componenti": "V, S, M (sette spine)", "durata": "Concentrazione, fino a 10 minuti",
+  "conc": true, "rituale": false,
+  "d": "Il terreno in una sfera del raggio di 6 m centrata su un punto entro gittata si copre di aculei e spine dure. Per la durata l'area diventa terreno difficile.\n\nQuando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti per ogni 1,5 m percorsi.\n\nLa trasformazione del terreno è mimetizzata per sembrare naturale. Qualsiasi creatura che non può vedere l'area quando l'incantesimo viene lanciato deve compiere l'azione Cercare e superare una prova di Saggezza (Percezione o Sopravvivenza) contro la CD dei tuoi incantesimi per riconoscere il terreno come pericoloso prima di entrarvi.",
+  "dmg": "2d4"
+},
+"Locate Object": {
+  "it": "Localizzare oggetti", "l": 2, "scuola": "Divinazione",
+  "t": "Azione", "r": "Personale", "componenti": "V, S, M (un ramoscello biforcuto)", "durata": "Concentrazione, fino a 10 minuti",
+  "conc": true, "rituale": false,
+  "d": "Descrivi o nomina un oggetto che ti è familiare. Percepisci la direzione in cui si trova l'oggetto, se è entro 300 m da te. Se l'oggetto è in movimento, conosci la direzione del suo movimento.\n\nL'incantesimo può localizzare uno specifico oggetto a te noto, se lo hai visto da vicino (entro 9 m) almeno una volta. In alternativa, l'incantesimo può localizzare l'oggetto più vicino di un tipo particolare, come un certo tipo di indumento, gioiello, mobile, attrezzo o arma.\n\nL'incantesimo non può localizzare un oggetto se uno strato di piombo, di qualunque spessore, blocca il percorso diretto tra te e l'oggetto."
+},
+"Flaming Sphere": {
+  "it": "Sfera infuocata", "l": 2, "scuola": "Invocazione",
+  "t": "Azione", "r": "18 m", "componenti": "V, S, M (una pallina di cera)", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Crei una sfera di fuoco del diametro di 1,5 m in uno spazio libero sul terreno entro gittata. Dura per la durata.\n\nOgni creatura che termina il proprio turno entro 1,5 m dalla sfera effettua un tiro salvezza su Destrezza contro la CD dei tuoi incantesimi, subendo 2d6 danni da fuoco se fallisce, o la metà di questi danni se lo supera.\n\nCon un'azione bonus puoi spostare la sfera fino a 9 m, facendola rotolare sul terreno. Se sposti la sfera nello spazio di una creatura, quella creatura effettua il tiro salvezza contro la sfera e la sfera smette di muoversi per quel turno.\n\nQuando sposti la sfera, puoi farle superare barriere alte fino a 1,5 m e farle saltare fosse larghe fino a 3 m. Gli oggetti infiammabili che non sono indossati né trasportati prendono fuoco se toccati dalla sfera, che emette luce intensa in un raggio di 6 m e luce fioca per ulteriori 6 m.",
+  "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d6 per ogni livello dello slot superiore al 2°.",
+  "dmg": "2d6"
+},
+"Summon Beast": {
+  "it": "Evoca bestia", "l": 2, "scuola": "Evocazione",
+  "t": "Azione", "r": "27 m", "componenti": "V, S, M (una piuma, un ciuffo di pelo e una coda di pesce dentro una ghianda dorata del valore di almeno 200 mo)", "durata": "Concentrazione, fino a 1 ora",
+  "conc": true, "rituale": false,
+  "d": "Richiami uno spirito bestiale. Si manifesta in uno spazio libero che puoi vedere entro gittata e usa il blocco statistiche dello Spirito bestiale. Quando lanci l'incantesimo, scegli un ambiente: Aria, Terra o Acqua. La creatura somiglia a un animale a tua scelta originario dell'ambiente scelto, che determina alcuni dettagli del suo blocco statistiche. La creatura scompare quando scende a 0 Punti Ferita o quando l'incantesimo termina.\n\nLa creatura è un alleato tuo e dei tuoi alleati. In combattimento condivide il tuo conteggio di iniziativa, ma svolge il proprio turno subito dopo il tuo. Obbedisce ai tuoi comandi verbali (non ti richiede alcuna azione). Se non gliene impartisci, compie l'azione Schivata e usa il movimento per evitare il pericolo.\n\nSpirito bestiale. Bestia Piccola, neutrale. CA 11 + il livello dell'incantesimo. PF 20 (solo Aria) o 30 (solo Terra e Acqua) + 5 per ogni livello dell'incantesimo superiore al 2°. Velocità 9 m; scalare 9 m (solo Terra); volare 18 m (solo Aria); nuotare 9 m (solo Acqua). FOR 18, DES 11, COS 16, INT 4, SAG 14, CAR 5. Scurovisione 18 m, Percezione passiva 12. Linguaggi: comprende i linguaggi che conosci.\n\nIncursione in volo (solo Aria): la bestia non provoca attacchi di opportunità quando vola fuori dalla portata di un nemico. Tattiche di branco (solo Terra e Acqua): la bestia ha vantaggio ai tiri per colpire contro una creatura se almeno uno dei suoi alleati si trova entro 1,5 m da quella creatura e non ha la condizione Incapacitato. Respirare sott'acqua (solo Acqua): la bestia può respirare solo sott'acqua.\n\nMultiattacco: la bestia effettua un numero di attacchi Squarciare pari alla metà del livello dell'incantesimo (arrotondato per difetto). Squarciare: tiro per colpire in mischia pari al tuo modificatore di attacco con incantesimo, portata 1,5 m. Colpito: 1d8 + 4 + il livello dell'incantesimo danni perforanti.\n\nComponente materiale: una ghianda dorata del valore di almeno 200 mo (non consumata).",
+  "superiore": "Uso di uno slot di livello superiore: usa il livello dello slot come livello dell'incantesimo nel blocco statistiche."
+},
+"Protection from Poison": {
+  "it": "Protezione dai veleni", "l": 2, "scuola": "Abiurazione",
+  "t": "Azione", "r": "Contatto", "componenti": "V, S", "durata": "1 ora",
+  "conc": false, "rituale": false,
+  "d": "Tocchi una creatura e poni fine alla condizione Avvelenato su di essa.\n\nPer la durata, il bersaglio ha vantaggio ai tiri salvezza per evitare o porre fine alla condizione Avvelenato e ha resistenza ai danni da veleno."
+},
+"Hold Person": {
+  "it": "Blocca persone", "l": 2, "scuola": "Ammaliamento",
+  "t": "Azione", "r": "18 m", "componenti": "V, S, M (un pezzo di ferro dritto)", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Scegli un Umanoide che puoi vedere entro gittata. Il bersaglio deve superare un tiro salvezza su Saggezza contro la CD dei tuoi incantesimi o avere la condizione Paralizzato per la durata.\n\nAlla fine di ciascuno dei suoi turni, il bersaglio ripete il tiro salvezza; se lo supera, l'incantesimo termina su di lui.",
+  "superiore": "Uso di uno slot di livello superiore: puoi bersagliare un Umanoide aggiuntivo per ogni livello dello slot superiore al 2°."
+},
+"Darkvision": {
+  "it": "Scurovisione", "l": 2, "scuola": "Trasmutazione",
+  "t": "Azione", "r": "Contatto", "componenti": "V, S, M (una carota secca)", "durata": "8 ore",
+  "conc": false, "rituale": false,
+  "d": "Per la durata, una creatura consenziente che tocchi ottiene scurovisione con un raggio di 45 m."
+},
+"Gust of Wind": {
+  "it": "Folata di vento", "l": 2, "scuola": "Invocazione",
+  "t": "Azione", "r": "Personale (linea di 18 m)", "componenti": "V, S, M (un seme di legume)", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Per la durata, una linea di vento forte lunga 18 m e larga 3 m soffia da te in una direzione a tua scelta.\n\nOgni creatura nella linea deve superare un tiro salvezza su Forza contro la CD dei tuoi incantesimi o essere spinta di 4,5 m lontano da te nella direzione della linea. Una creatura che termina il proprio turno nella linea deve effettuare lo stesso tiro salvezza.\n\nQualsiasi creatura nella linea deve spendere 60 cm di movimento per ogni 30 cm di cui si sposta quando si avvicina a te (in pratica, movimento raddoppiato).\n\nLa folata disperde gas e vapori e spegne candele e fiamme non protette simili nell'area. Fa danzare violentemente le fiamme protette, come quelle delle lanterne, e ha il 50% di probabilità di spegnerle.\n\nCon un'azione bonus nei tuoi turni successivi puoi cambiare la direzione in cui la linea soffia da te."
+},
+"Lesser Restoration": {
+  "it": "Ristorare inferiore", "l": 2, "scuola": "Abiurazione",
+  "t": "Azione bonus", "r": "Contatto", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Tocchi una creatura e poni fine a una condizione su di essa: Accecato, Assordato, Avvelenato o Paralizzato."
+},
+"Plant Growth": {
+  "it": "Crescita vegetale", "l": 3, "scuola": "Trasmutazione",
+  "t": "Azione o 8 ore", "r": "45 m", "componenti": "V, S", "durata": "Istantanea",
+  "conc": false, "rituale": false,
+  "d": "Questo incantesimo incanala vitalità nelle piante. Il tempo di lancio che usi determina se l'incantesimo ha l'effetto Rigoglio o Arricchimento.\n\nRigoglio (azione). Scegli un punto entro gittata. Tutte le piante normali in una sfera del raggio di 30 m centrata su quel punto diventano fitte e rigogliose. Una creatura che si muove attraverso quell'area deve spendere 1,2 m di movimento per ogni 30 cm di cui si sposta (in pratica, 4 volte il movimento normale). Puoi escludere dall'effetto una o più zone di qualsiasi dimensione all'interno dell'area dell'incantesimo.\n\nArricchimento (8 ore). Tutte le piante in un raggio di 750 m (mezzo miglio) centrato su un punto entro gittata vengono arricchite per 365 giorni. Al raccolto, le piante producono il doppio della normale quantità di cibo. Possono beneficiare di un solo incantesimo Crescita vegetale all'anno."
+},
+"Conjure Animals": {
+  "it": "Evoca animali", "l": 3, "scuola": "Evocazione",
+  "t": "Azione", "r": "18 m", "componenti": "V, S", "durata": "Concentrazione, fino a 10 minuti",
+  "conc": true, "rituale": false,
+  "d": "Evochi spiriti della natura che compaiono come un branco Grande di animali spettrali e intangibili in uno spazio libero che puoi vedere entro gittata. Il branco dura per la durata e scegli tu la forma animale degli spiriti, ad esempio lupi, serpenti o uccelli.\n\nHai vantaggio ai tiri salvezza su Forza mentre ti trovi entro 1,5 m dal branco, e quando ti muovi nel tuo turno puoi anche spostare il branco fino a 9 m in uno spazio libero che puoi vedere.\n\nOgni volta che il branco si sposta entro 3 m da una creatura che puoi vedere, e ogni volta che una creatura che puoi vedere entra in uno spazio entro 3 m dal branco o vi termina il proprio turno, puoi costringere quella creatura a effettuare un tiro salvezza su Destrezza contro la CD dei tuoi incantesimi. Se lo fallisce, la creatura subisce 3d10 danni taglienti. Una creatura effettua questo tiro salvezza una sola volta per turno.",
+  "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d10 per ogni livello dello slot superiore al 3°.",
+  "dmg": "3d10"
+},
+"Aura of Vitality": {
+  "it": "Aura di vitalità", "l": 3, "scuola": "Abiurazione",
+  "t": "Azione", "r": "Personale", "componenti": "V", "durata": "Concentrazione, fino a 1 minuto",
+  "conc": true, "rituale": false,
+  "d": "Energia curativa si irradia da te in un'emanazione di 9 m.\n\nFinché l'incantesimo non termina, puoi usare un'azione bonus per far recuperare 2d6 Punti Ferita a una creatura nell'aura (te compreso).",
+  "heal": "2d6"
+}
+}

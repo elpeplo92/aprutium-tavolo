@@ -1,0 +1,167 @@
+{
+  "Minor Illusion": {
+    "it": "Illusione minore", "l": 0, "scuola": "Illusione",
+    "t": "Azione", "r": "9 m", "componenti": "S, M (un po' di vello)", "durata": "1 minuto",
+    "conc": false, "rituale": false,
+    "d": "Crei un suono o l'immagine di un oggetto entro gittata, che dura per tutta la durata. L'illusione termina se la congedi (nessuna azione richiesta) o se lanci di nuovo questo incantesimo.\n\nSe crei un suono, il suo volume può andare da un sussurro a un urlo. Può essere la tua voce, la voce di qualcun altro, il ruggito di un leone, un rullo di tamburi o qualsiasi altro suono tu scelga. Il suono può continuare ininterrotto per tutta la durata, oppure puoi produrre suoni distinti in momenti diversi prima che l'incantesimo termini.\n\nSe crei l'immagine di un oggetto (per esempio una sedia, impronte fangose o un piccolo forziere), non può essere più grande di un cubo di 1,5 m. L'immagine non può produrre suoni, luce, odori né alcun altro effetto sensoriale. Un'interazione fisica con l'immagine rivela che è un'illusione, perché le cose possono passarci attraverso.\n\nSe una creatura effettua l'azione Studiare per esaminare il suono o l'immagine, può capire che è un'illusione superando una prova di Intelligenza (Indagare) contro la CD del tiro salvezza dei tuoi incantesimi. Se la creatura scopre l'illusione, questa diventa evanescente per lei."
+  },
+  "Shocking Grasp": {
+    "it": "Tocco folgorante", "l": 0, "scuola": "Invocazione",
+    "t": "Azione", "r": "Contatto", "componenti": "V, S", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Un fulmine scaturisce da te verso una creatura che tenti di toccare. Effettua un attacco con incantesimo in mischia contro il bersaglio. Se colpisci, il bersaglio subisce 1d8 danni da fulmine e non può effettuare attacchi di opportunità fino all'inizio del suo turno successivo.\n\n(Nella versione 2024 non c'è più il vantaggio contro chi indossa armatura di metallo, e il bersaglio può comunque usare le altre reazioni: perde solo gli attacchi di opportunità.)",
+    "superiore": "Potenziamento del trucchetto: i danni aumentano di 1d8 quando raggiungi il 5° livello (2d8), l'11° livello (3d8) e il 17° livello (4d8).",
+    "atk": true, "dmg": "2d8"
+  },
+  "Sorcerous Burst": {
+    "it": "Esplosione stregonesca", "l": 0, "scuola": "Invocazione",
+    "t": "Azione", "r": "36 m", "componenti": "V, S", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Scagli energia magica contro una creatura o un oggetto entro gittata. Effettua un attacco con incantesimo a distanza contro il bersaglio. Se colpisci, il bersaglio subisce 1d8 danni di un tipo a tua scelta: acido, freddo, fuoco, fulmine, psichici, tuono o veleno.\n\nSe tiri un 8 su un d8 di questo incantesimo, puoi tirare un altro d8 e aggiungerlo ai danni. Quando lanci questo incantesimo, il numero massimo di d8 aggiuntivi che puoi aggiungere in questo modo è pari al tuo modificatore di caratteristica da incantatore.",
+    "superiore": "Potenziamento del trucchetto: i danni aumentano di 1d8 quando raggiungi il 5° livello (2d8), l'11° livello (3d8) e il 17° livello (4d8).",
+    "atk": true, "dmg": "2d8"
+  },
+  "Fire Bolt": {
+    "it": "Dardo di fuoco", "l": 0, "scuola": "Invocazione",
+    "t": "Azione", "r": "36 m", "componenti": "V, S", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Scagli un granello di fuoco contro una creatura o un oggetto entro gittata. Effettua un attacco con incantesimo a distanza contro il bersaglio. Se colpisci, il bersaglio subisce 1d10 danni da fuoco.\n\nUn oggetto infiammabile colpito da questo incantesimo prende fuoco, se non è indossato o trasportato.",
+    "superiore": "Potenziamento del trucchetto: i danni aumentano di 1d10 quando raggiungi il 5° livello (2d10), l'11° livello (3d10) e il 17° livello (4d10).",
+    "atk": true, "dmg": "2d10"
+  },
+  "Mage Hand": {
+    "it": "Mano magica", "l": 0, "scuola": "Evocazione",
+    "t": "Azione", "r": "9 m", "componenti": "V, S", "durata": "1 minuto",
+    "conc": false, "rituale": false,
+    "d": "Una mano spettrale fluttuante appare in un punto a tua scelta entro gittata. La mano dura per tutta la durata. Svanisce se si trova a più di 9 m da te o se lanci di nuovo questo incantesimo.\n\nQuando lanci l'incantesimo puoi usare la mano per manipolare un oggetto, aprire una porta o un contenitore non chiusi a chiave, riporre o prendere un oggetto da un contenitore aperto, oppure versare il contenuto di una fiala.\n\nNei turni successivi, con l'azione Magia puoi controllare di nuovo la mano per compiere una di queste attività. Ogni volta puoi muovere la mano fino a 9 m.\n\nLa mano non può attaccare, attivare oggetti magici o trasportare più di 2,5 kg.",
+    "superiore": ""
+  },
+  "Magic Missile": {
+    "it": "Dardo incantato", "l": 1, "scuola": "Invocazione",
+    "t": "Azione", "r": "36 m", "componenti": "V, S", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Crei tre dardi luminosi di forza magica. Ogni dardo colpisce una creatura a tua scelta che puoi vedere entro gittata. Un dardo infligge 1d4 + 1 danni da forza al suo bersaglio. I dardi colpiscono tutti simultaneamente e puoi dirigerli contro una sola creatura o contro più creature.\n\nI dardi colpiscono automaticamente: non serve alcun tiro per colpire né tiro salvezza.",
+    "superiore": "Uso di uno slot di livello superiore: l'incantesimo crea un dardo in più per ogni livello di slot superiore al 1°.",
+    "atk": false, "dmg": "3d4+3"
+  },
+  "Shield": {
+    "it": "Scudo", "l": 1, "scuola": "Abiurazione",
+    "t": "Reazione, che effettui quando vieni colpito da un tiro per colpire o sei bersaglio di Dardo incantato", "r": "Personale", "componenti": "V, S", "durata": "1 round",
+    "conc": false, "rituale": false,
+    "d": "Appare una barriera invisibile di forza magica che ti protegge. Fino all'inizio del tuo turno successivo ottieni un bonus di +5 alla Classe Armatura, anche contro l'attacco che ha innescato l'incantesimo, e non subisci danni da Dardo incantato.",
+    "superiore": ""
+  },
+  "Chromatic Orb": {
+    "it": "Sfera cromatica", "l": 1, "scuola": "Invocazione",
+    "t": "Azione", "r": "27 m", "componenti": "V, S, M (un diamante del valore di almeno 50 mo)", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Scagli una sfera di energia contro un bersaglio entro gittata. Scegli acido, freddo, fuoco, fulmine, tuono o veleno come tipo della sfera, poi effettua un attacco con incantesimo a distanza contro il bersaglio. Se colpisci, il bersaglio subisce 3d8 danni del tipo scelto.\n\nSe ottieni lo stesso numero su due o più d8, la sfera balza verso un bersaglio diverso a tua scelta entro 9 m dal bersaglio. Effettua un tiro per colpire contro il nuovo bersaglio e un nuovo tiro dei danni. La sfera non può balzare di nuovo, a meno che tu non abbia lanciato l'incantesimo con uno slot di 2° livello o superiore.\n\nIl diamante non viene consumato.",
+    "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d8 per ogni livello di slot superiore al 1°. La sfera può balzare un numero massimo di volte pari al livello dello slot speso, e una creatura può essere bersagliata una sola volta per ogni lancio dell'incantesimo.",
+    "atk": true, "dmg": "3d8"
+  },
+  "Dragon's Breath": {
+    "it": "Soffio del drago", "l": 2, "scuola": "Trasmutazione",
+    "t": "Azione bonus", "r": "Contatto", "componenti": "V, S, M (un peperoncino piccante)", "durata": "Concentrazione, fino a 1 minuto",
+    "conc": true, "rituale": false,
+    "d": "Tocchi una creatura consenziente e scegli acido, freddo, fuoco, fulmine o veleno. Finché l'incantesimo non termina, il bersaglio può effettuare l'azione Magia per esalare un cono di 4,5 m. Ogni creatura nell'area effettua un tiro salvezza su Destrezza (CD del tiro salvezza dei tuoi incantesimi): se lo fallisce subisce 3d6 danni del tipo scelto, se lo supera subisce la metà dei danni.\n\nIl bersaglio può esalare di nuovo in ognuno dei suoi turni, finché dura l'incantesimo.",
+    "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d6 per ogni livello di slot superiore al 2°.",
+    "atk": false, "dmg": "3d6"
+  },
+  "Alter Self": {
+    "it": "Alterare se stesso", "l": 2, "scuola": "Trasmutazione",
+    "t": "Azione", "r": "Personale", "componenti": "V, S", "durata": "Concentrazione, fino a 1 ora",
+    "conc": true, "rituale": false,
+    "d": "Alteri la tua forma fisica. Scegli una delle opzioni seguenti. I suoi effetti durano per tutta la durata; in questo periodo puoi effettuare un'azione Magia per sostituire l'opzione scelta con un'altra.\n\nAdattamento acquatico. Ti spuntano branchie e ti crescono membrane tra le dita. Puoi respirare sott'acqua e ottieni una velocità di nuoto pari alla tua velocità.\n\nCambiare aspetto. Alteri il tuo aspetto. Decidi il tuo aspetto, compresi altezza, peso, lineamenti, timbro della voce, lunghezza dei capelli, colorazione e altre caratteristiche distintive. Puoi apparire come un membro di un'altra specie, ma nessuna delle tue statistiche cambia. Non puoi apparire come una creatura di taglia diversa e la tua forma di base resta la stessa: se sei bipede, per esempio, non puoi diventare quadrupede. Per la durata, puoi effettuare un'azione Magia per cambiare di nuovo aspetto in questo modo.\n\nArmi naturali. Ti crescono artigli (taglienti), zanne (perforanti), corna (perforanti) o zoccoli (contundenti). Quando usi il tuo colpo senz'armi per infliggere danni con questa nuova crescita, infliggi 1d6 danni del tipo indicato fra parentesi invece dei normali danni del colpo senz'armi, e per i tiri per colpire e per i danni usi il tuo modificatore di caratteristica da incantatore invece della Forza.\n\n(Per Vicarus, stregone, la caratteristica da incantatore è il Carisma: tiro per colpire = Carisma + bonus di competenza, danni = 1d6 + Carisma. Non c'è più il +1 magico della versione 2014.)",
+    "superiore": "",
+    "atk": false, "dmg": "1d6"
+  },
+  "Mirror Image": {
+    "it": "Immagine speculare", "l": 2, "scuola": "Illusione",
+    "t": "Azione", "r": "Personale", "componenti": "V, S", "durata": "1 minuto",
+    "conc": false, "rituale": false,
+    "d": "Tre duplicati illusori di te appaiono nel tuo spazio. Finché l'incantesimo non termina, i duplicati si muovono con te e imitano le tue azioni, cambiando posizione in modo che sia impossibile capire quale immagine sia quella vera.\n\nOgni volta che una creatura ti colpisce con un tiro per colpire durante la durata dell'incantesimo, tira un d6 per ciascuno dei duplicati rimasti. Se almeno uno dei d6 ottiene 3 o più, viene colpito uno dei duplicati al posto tuo, e quel duplicato viene distrutto. Per il resto i duplicati ignorano tutti gli altri danni ed effetti. L'incantesimo termina quando tutti e tre i duplicati sono stati distrutti.\n\nUna creatura non è influenzata da questo incantesimo se ha la condizione accecato, vista cieca o visione del vero.",
+    "superiore": ""
+  },
+  "Scorching Ray": {
+    "it": "Raggio rovente", "l": 2, "scuola": "Invocazione",
+    "t": "Azione", "r": "36 m", "componenti": "V, S", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Scagli tre raggi di fuoco. Puoi dirigerli contro un solo bersaglio entro gittata o contro più bersagli. Effettua un attacco con incantesimo a distanza per ciascun raggio. Se colpisce, il bersaglio subisce 2d6 danni da fuoco.",
+    "superiore": "Uso di uno slot di livello superiore: crei un raggio in più per ogni livello di slot superiore al 2°.",
+    "atk": true, "dmg": "2d6"
+  },
+  "Shatter": {
+    "it": "Frantumare", "l": 2, "scuola": "Invocazione",
+    "t": "Azione", "r": "18 m", "componenti": "V, S, M (una scheggia di mica)", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Un rumore assordante esplode da un punto a tua scelta entro gittata. Ogni creatura in una sfera di 3 m di raggio centrata su quel punto effettua un tiro salvezza su Costituzione (CD del tiro salvezza dei tuoi incantesimi): se lo fallisce subisce 3d8 danni da tuono, se lo supera subisce la metà dei danni. Un costrutto ha svantaggio al tiro salvezza.\n\nAnche un oggetto non magico che non sia indossato o trasportato subisce i danni se si trova nell'area dell'incantesimo.",
+    "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d8 per ogni livello di slot superiore al 2°.",
+    "atk": false, "dmg": "3d8"
+  },
+  "Counterspell": {
+    "it": "Controincantesimo", "l": 3, "scuola": "Abiurazione",
+    "t": "Reazione, che effettui quando vedi una creatura entro 18 m da te lanciare un incantesimo con componenti verbali, somatiche o materiali", "r": "18 m", "componenti": "S", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Tenti di interrompere una creatura mentre sta lanciando un incantesimo. La creatura effettua un tiro salvezza su Costituzione (CD del tiro salvezza dei tuoi incantesimi). Se lo fallisce, l'incantesimo si dissolve senza effetto e l'azione, l'azione bonus o la reazione usata per lanciarlo va sprecata. Se quell'incantesimo era lanciato con uno slot incantesimo, lo slot non viene speso.\n\n(Nella versione 2024 non ci sono più l'annullamento automatico né la prova di caratteristica in base al livello dell'incantesimo: c'è solo il tiro salvezza, qualunque sia il livello.)",
+    "superiore": ""
+  },
+  "Fly": {
+    "it": "Volare", "l": 3, "scuola": "Trasmutazione",
+    "t": "Azione", "r": "Contatto", "componenti": "V, S, M (una penna remigante di un uccello qualsiasi)", "durata": "Concentrazione, fino a 10 minuti",
+    "conc": true, "rituale": false,
+    "d": "Tocchi una creatura consenziente. Per la durata, il bersaglio ottiene una velocità di volo di 18 m e può fluttuare. Quando l'incantesimo termina, il bersaglio cade se è ancora in volo, a meno che non possa fermare la caduta.",
+    "superiore": "Uso di uno slot di livello superiore: puoi bersagliare una creatura in più per ogni livello di slot superiore al 3°."
+  },
+  "Fireball": {
+    "it": "Palla di fuoco", "l": 3, "scuola": "Invocazione",
+    "t": "Azione", "r": "45 m", "componenti": "V, S, M (una pallina di guano di pipistrello e zolfo)", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Una scia luminosa parte da te verso un punto a tua scelta entro gittata e poi sboccia in un'esplosione di fiamme. Ogni creatura in una sfera di 6 m di raggio centrata su quel punto effettua un tiro salvezza su Destrezza (CD del tiro salvezza dei tuoi incantesimi): se lo fallisce subisce 8d6 danni da fuoco, se lo supera subisce la metà dei danni.\n\nGli oggetti infiammabili nell'area che non sono indossati o trasportati prendono fuoco.",
+    "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d6 per ogni livello di slot superiore al 3°.",
+    "atk": false, "dmg": "8d6"
+  },
+  "Fear": {
+    "it": "Paura", "l": 3, "scuola": "Illusione",
+    "t": "Azione", "r": "Personale (cono di 9 m)", "componenti": "V, S, M (una piuma bianca)", "durata": "Concentrazione, fino a 1 minuto",
+    "conc": true, "rituale": false,
+    "d": "Ogni creatura in un cono di 9 m deve superare un tiro salvezza su Saggezza (CD del tiro salvezza dei tuoi incantesimi), altrimenti lascia cadere ciò che impugna e ha la condizione spaventato per la durata.\n\nUna creatura spaventata da questo incantesimo, in ognuno dei suoi turni, effettua l'azione Scatto e si allontana da te seguendo il percorso più sicuro disponibile, a meno che non abbia un posto dove spostarsi.\n\nSe la creatura termina il suo turno in uno spazio da cui non ha linea di vista verso di te, effettua un tiro salvezza su Saggezza. Se lo supera, l'incantesimo termina per quella creatura.",
+    "superiore": ""
+  },
+  "Rary's Telepathic Bond": {
+    "it": "Legame telepatico di Rary", "l": 5, "scuola": "Divinazione",
+    "t": "Azione o rituale", "r": "9 m", "componenti": "V, S, M (due uova)", "durata": "1 ora",
+    "conc": false, "rituale": true,
+    "d": "Crei un legame telepatico fra un massimo di otto creature consenzienti a tua scelta entro gittata, collegando psichicamente ciascuna creatura a tutte le altre per la durata. Le creature che non sono in grado di comunicare in alcun linguaggio non sono influenzate da questo incantesimo.\n\nFinché l'incantesimo non termina, i bersagli possono comunicare telepaticamente attraverso il legame, che abbiano o meno un linguaggio in comune. La comunicazione è possibile a qualsiasi distanza, ma non può estendersi ad altri piani di esistenza.\n\n(Per Vicarus è disponibile solo spendendo 5 cariche del Bastone di Lyaras Vel'Quoril.)",
+    "superiore": ""
+  },
+  "Hunter's Mark": {
+    "it": "Marchio del cacciatore", "l": 1, "scuola": "Divinazione",
+    "t": "Azione bonus", "r": "27 m", "componenti": "V", "durata": "Concentrazione, fino a 1 ora",
+    "conc": true, "rituale": false,
+    "d": "Marchi magicamente come tua preda una creatura che puoi vedere entro gittata. Finché l'incantesimo non termina, infliggi 1d6 danni da forza extra al bersaglio ogni volta che lo colpisci con un tiro per colpire. Hai inoltre vantaggio a ogni prova di Saggezza (Percezione o Sopravvivenza) che effettui per trovarlo.\n\nSe il bersaglio scende a 0 punti ferita prima che l'incantesimo termini, puoi effettuare un'azione bonus per spostare il marchio su una nuova creatura che puoi vedere entro gittata.",
+    "superiore": "Uso di uno slot di livello superiore: la concentrazione può durare più a lungo con uno slot di 3°-4° livello (fino a 8 ore) o di 5° livello o superiore (fino a 24 ore).",
+    "atk": false, "dmg": "1d6"
+  },
+  "Tasha's Hideous Laughter": {
+    "it": "Risata incontenibile di Tasha", "l": 1, "scuola": "Ammaliamento",
+    "t": "Azione", "r": "9 m", "componenti": "V, S, M (una torta e una piuma)", "durata": "Concentrazione, fino a 1 minuto",
+    "conc": true, "rituale": false,
+    "d": "Una creatura che puoi vedere entro gittata effettua un tiro salvezza su Saggezza (CD del tiro salvezza dei tuoi incantesimi). Se lo fallisce, ha le condizioni prono e incapacitato per la durata. Durante questo periodo ride in modo incontrollabile, se è in grado di ridere, e non può porre fine da sola alla condizione prono.\n\nAl termine di ciascuno dei suoi turni e ogni volta che subisce danni, il bersaglio effettua un altro tiro salvezza su Saggezza. Ha vantaggio al tiro salvezza se è innescato da danni. Se lo supera, l'incantesimo termina.",
+    "superiore": "Uso di uno slot di livello superiore: puoi bersagliare una creatura in più per ogni livello di slot superiore al 1°."
+  },
+  "Ensnaring Strike": {
+    "it": "Colpo intrappolante", "l": 1, "scuola": "Evocazione",
+    "t": "Azione bonus, che effettui subito dopo aver colpito una creatura con un'arma", "r": "Personale", "componenti": "V", "durata": "Concentrazione, fino a 1 minuto",
+    "conc": true, "rituale": false,
+    "d": "Mentre colpisci il bersaglio, sopra di esso compaiono viticci avvinghianti, e il bersaglio effettua un tiro salvezza su Forza (CD del tiro salvezza dei tuoi incantesimi). Una creatura di taglia Grande o superiore ha vantaggio a questo tiro salvezza. Se lo fallisce, il bersaglio ha la condizione trattenuto finché l'incantesimo non termina. Se lo supera, i viticci avvizziscono e l'incantesimo termina.\n\nFinché è trattenuto, il bersaglio subisce 1d6 danni perforanti all'inizio di ciascuno dei suoi turni. Il bersaglio, o una creatura entro la sua portata, può effettuare un'azione per compiere una prova di Forza (Atletica) contro la CD del tiro salvezza dei tuoi incantesimi. Se la supera, l'incantesimo termina.",
+    "superiore": "Uso di uno slot di livello superiore: i danni aumentano di 1d6 per ogni livello di slot superiore al 1°.",
+    "atk": false, "dmg": "1d6"
+  },
+  "Misty Step": {
+    "it": "Passo velato", "l": 2, "scuola": "Evocazione",
+    "t": "Azione bonus", "r": "Personale", "componenti": "V", "durata": "Istantanea",
+    "conc": false, "rituale": false,
+    "d": "Avvolto per un istante da una nebbia argentea, ti teletrasporti fino a 9 m in uno spazio libero che puoi vedere.\n\n(Con il talento Toccato dai Folletti puoi lanciarlo una volta senza spendere uno slot, e recuperi questo uso con un riposo lungo; puoi anche lanciarlo con gli slot che hai.)",
+    "superiore": ""
+  }
+}

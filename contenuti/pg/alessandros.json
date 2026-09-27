@@ -1,0 +1,663 @@
+{
+ "id": "alessandros",
+ "nome": "Alessandros Cerullius",
+ "specie": "Umano",
+ "classe": "Paladino",
+ "sottoclasse": "Giuramento di Devozione",
+ "livello": 5,
+ "background": "Nobile",
+ "pe": "3.500 / 14.000",
+ "ca": 22,
+ "pf_max": 44,
+ "iniziativa": 1,
+ "velocita_m": 9,
+ "competenza": 3,
+ "percezione_passiva": 10,
+ "taglia": "Media",
+ "caratteristiche": {
+  "For": 17,
+  "Des": 12,
+  "Cos": 14,
+  "Int": 8,
+  "Sag": 10,
+  "Car": 15
+ },
+ "ts": {
+  "For": {
+   "mod": 3,
+   "comp": false
+  },
+  "Des": {
+   "mod": 1,
+   "comp": false
+  },
+  "Cos": {
+   "mod": 2,
+   "comp": false
+  },
+  "Int": {
+   "mod": -1,
+   "comp": false
+  },
+  "Sag": {
+   "mod": 3,
+   "comp": true
+  },
+  "Car": {
+   "mod": 5,
+   "comp": true
+  }
+ },
+ "abilita": {
+  "Atletica": {
+   "mod": 6,
+   "comp": "competente"
+  },
+  "Acrobazia": {
+   "mod": 4,
+   "comp": "competente"
+  },
+  "Furtività": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Rapidità di mano": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Arcano": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Storia": {
+   "mod": 2,
+   "comp": "competente"
+  },
+  "Indagare": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Natura": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Religione": {
+   "mod": 2,
+   "comp": "competente"
+  },
+  "Addestrare animali": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Intuizione": {
+   "mod": 3,
+   "comp": "competente"
+  },
+  "Medicina": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Percezione": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Sopravvivenza": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Inganno": {
+   "mod": 5,
+   "comp": "competente"
+  },
+  "Intimidire": {
+   "mod": 5,
+   "comp": "competente"
+  },
+  "Intrattenere": {
+   "mod": 2,
+   "comp": "no"
+  },
+  "Persuasione": {
+   "mod": 5,
+   "comp": "competente"
+  }
+ },
+ "competenze": {
+  "armature": "Leggere, medie, pesanti, scudi",
+  "armi": "Semplici, da guerra",
+  "strumenti": "Set di dadi",
+  "lingue": "Comune, Elfico, Sottocomune"
+ },
+ "sensi": "Percezione passiva 10 · nessuna scurovisione",
+ "resistenze": "Nessuna (resistenze, vulnerabilità e immunità: nessuna secondo la scheda). Con armatura pesante, Maestro delle armature pesanti riduce di 3 i danni contundenti, perforanti e taglienti subiti dagli attacchi.",
+ "condizioni_speciali": "Nessuna immunità alle condizioni. La scheda riporta 8 PF temporanei nel campo TEMP.",
+ "risorse": [
+  {
+   "n": "Incanalare divinità",
+   "max": 2,
+   "recupero": "1 uso a riposo breve, tutti a riposo lungo",
+   "note": "Effetti: Percezione del divino, Arma sacra. CD dei tiri salvezza = CD incantesimi 13."
+  },
+  {
+   "n": "Imposizione delle mani",
+   "max": 25,
+   "recupero": "riposo lungo",
+   "note": "Riserva di 25 PF (5 × livello da Paladino). 5 punti rimuovono la condizione Avvelenato."
+  },
+  {
+   "n": "Punizione del paladino (Punizione divina gratuita)",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Lancia Punizione divina senza spendere uno slot."
+  },
+  {
+   "n": "Cavalcatura fedele (Trova cavalcatura gratuito)",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Lancia Trova cavalcatura senza spendere uno slot."
+  },
+  {
+   "n": "Ispirazione eroica (Intraprendente)",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Tratto umano: la ottiene ogni volta che termina un riposo lungo."
+  },
+  {
+   "n": "Slot incantesimo di 1° livello",
+   "max": 4,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Slot incantesimo di 2° livello",
+   "max": 2,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Acqua santa",
+   "max": 1,
+   "recupero": "consumabile",
+   "note": "Una fiala nello zaino."
+  }
+ ],
+ "privilegi": [
+  {
+   "n": "Imposizione delle mani",
+   "fonte": "Paladino 1",
+   "d": "Hai una riserva di guarigione pari a 5 × livello da Paladino (25 PF), che si ricarica al termine di un riposo lungo. Come azione bonus tocchi una creatura (anche te stesso) e le fai recuperare PF attingendo alla riserva, fino al massimo rimasto. In alternativa puoi spendere 5 PF della riserva per rimuovere la condizione Avvelenato dalla creatura: quei punti non curano anche PF.",
+   "usi": "Riserva 25 PF / riposo lungo"
+  },
+  {
+   "n": "Incantesimi",
+   "fonte": "Paladino 1",
+   "d": "Lanci incantesimi da Paladino tramite preghiera e meditazione. Caratteristica: Carisma (CD 13, attacco +5). Slot: 4 di 1° livello e 2 di 2° livello, recuperati con un riposo lungo. Al livello 5 prepari sei incantesimi da Paladino di 1° o 2° livello; gli incantesimi sempre preparati concessi da altri privilegi non contano nel limite. Dopo un riposo lungo puoi sostituire un incantesimo preparato con un altro da Paladino per cui hai slot. Puoi usare un simbolo sacro come focus da incantatore.",
+   "usi": ""
+  },
+  {
+   "n": "Maestria nelle armi",
+   "fonte": "Paladino 1",
+   "d": "Puoi usare le proprietà di maestria di due tipi di armi con cui sei competente. Dopo ogni riposo lungo puoi cambiare i tipi scelti. Sulla scheda: Spada lunga con Fiaccare (Sap: se colpisci una creatura, ha svantaggio al suo prossimo tiro per colpire prima dell'inizio del tuo turno successivo), attiva; Rallentare (Slow: se colpisci e infliggi danni, la Velocità del bersaglio diminuisce di 3 m fino all'inizio del tuo turno successivo, massimo 3 m anche con più colpi), segnata «Inactive» per giavellotto e altre armi.",
+   "usi": "Tipi modificabili a ogni riposo lungo"
+  },
+  {
+   "n": "Stile di combattimento",
+   "fonte": "Paladino 2",
+   "d": "Ottieni un talento Stile di combattimento a scelta: scelto Duellare (vedi Talenti).",
+   "usi": ""
+  },
+  {
+   "n": "Punizione del paladino",
+   "fonte": "Paladino 2",
+   "d": "Hai sempre preparato l'incantesimo Punizione divina. Inoltre puoi lanciarlo senza spendere uno slot incantesimo, ma poi devi terminare un riposo lungo prima di poterlo fare di nuovo in questo modo.",
+   "usi": "1 lancio gratuito / riposo lungo"
+  },
+  {
+   "n": "Incanalare divinità",
+   "fonte": "Paladino 3",
+   "d": "Incanali energia divina dai Piani Esterni per alimentare effetti magici; ogni volta scegli quale effetto creare. Hai 2 usi: ne recuperi uno al termine di un riposo breve e tutti al termine di un riposo lungo (3 usi al livello 11). Se un effetto richiede un tiro salvezza, la CD è quella dei tuoi incantesimi (13). Effetti disponibili: Percezione del divino e Arma sacra.",
+   "usi": "2 / 1 a riposo breve, tutti a riposo lungo"
+  },
+  {
+   "n": "Percezione del divino",
+   "fonte": "Paladino 3 (Incanalare divinità)",
+   "d": "Come azione bonus, spendendo un uso di Incanalare divinità, apri la tua consapevolezza per individuare Celestiali, Immondi e Non morti. Per i successivi 10 minuti, o finché non hai la condizione Incapacitato, conosci la posizione e il tipo di ogni creatura di quei tipi entro 18 m da te. Nello stesso raggio percepisci anche la presenza di luoghi od oggetti consacrati o profanati, come con l'incantesimo Santificare (Hallow).",
+   "usi": "1 uso di Incanalare divinità"
+  },
+  {
+   "n": "Arma sacra",
+   "fonte": "Giuramento di Devozione 3 (Incanalare divinità)",
+   "d": "Quando effettui l'azione Attacco, puoi spendere un uso di Incanalare divinità per infondere energia positiva in un'arma da mischia che impugni. Per 10 minuti o finché non riusi questo privilegio, aggiungi il tuo modificatore di Carisma ai tiri per colpire con quell'arma (+2, minimo +1) e ogni colpo può infliggere il suo tipo di danno normale oppure danni radianti. L'arma emette luce intensa in un raggio di 6 m e luce fioca per altri 6 m. Puoi terminare l'effetto in anticipo (nessuna azione richiesta); termina anche se non stai portando l'arma.",
+   "usi": "1 uso di Incanalare divinità"
+  },
+  {
+   "n": "Incantesimi del Giuramento di Devozione",
+   "fonte": "Giuramento di Devozione 3",
+   "d": "Hai sempre preparati gli incantesimi del giuramento, che non contano nel numero di incantesimi preparati. Livello 3: Protezione dal male e dal bene, Scudo della fede. Livello 5: Aiuto, Zona di verità. (Futuri: livello 9 Faro di speranza, Dissolvi magie; 13 Libertà di movimento, Guardiano della fede; 17 Comunione, Colpo infuocato.)",
+   "usi": ""
+  },
+  {
+   "n": "Aumento dei punteggi di caratteristica",
+   "fonte": "Paladino 4",
+   "d": "Ottieni il talento Aumento dei punteggi di caratteristica o un altro talento per cui hai i requisiti: scelto Maestro delle armature pesanti. Lo riottieni ai livelli 8, 12 e 16.",
+   "usi": ""
+  },
+  {
+   "n": "Attacco extra",
+   "fonte": "Paladino 5",
+   "d": "Quando effettui l'azione Attacco nel tuo turno, puoi attaccare due volte invece di una.",
+   "usi": ""
+  },
+  {
+   "n": "Cavalcatura fedele",
+   "fonte": "Paladino 5",
+   "d": "Puoi chiamare in aiuto una cavalcatura ultraterrena. Hai sempre preparato l'incantesimo Trova cavalcatura e puoi lanciarlo una volta senza spendere uno slot; recuperi questa capacità al termine di un riposo lungo.",
+   "usi": "1 lancio gratuito / riposo lungo"
+  }
+ ],
+ "tratti_specie": [
+  {
+   "n": "Taglia Media",
+   "d": "Occupa uno spazio di 1,5 × 1,5 m."
+  },
+  {
+   "n": "Intraprendente (Resourceful)",
+   "d": "Ottieni Ispirazione eroica ogni volta che termini un riposo lungo."
+  },
+  {
+   "n": "Abile (Skillful)",
+   "d": "Ottieni competenza in un'abilità a tua scelta."
+  },
+  {
+   "n": "Versatile",
+   "d": "Ottieni un talento delle origini a tua scelta: scelto Attaccante selvaggio (Savage Attacker)."
+  }
+ ],
+ "talenti": [
+  {
+   "n": "Duellare (Dueling)",
+   "fonte": "Stile di combattimento (Paladino 2)",
+   "d": "Quando impugni un'arma da mischia in una mano e nessun'altra arma, ottieni un bonus di +2 ai tiri per i danni con quell'arma."
+  },
+  {
+   "n": "Maestro delle armature pesanti (Heavy Armor Master)",
+   "fonte": "Livello 4",
+   "d": "Talento generale (requisiti: livello 4+, addestramento nelle armature pesanti). Aumento di caratteristica: +1 a Forza o Costituzione (massimo 20). Riduzione del danno: quando vieni colpito da un attacco mentre indossi un'armatura pesante, i danni contundenti, perforanti e taglienti inflitti da quell'attacco sono ridotti di un ammontare pari al tuo bonus di competenza (3)."
+  },
+  {
+   "n": "Attaccante selvaggio (Savage Attacker)",
+   "fonte": "Origine (Umano, Versatile)",
+   "d": "Una volta per turno, quando colpisci un bersaglio con un'arma, puoi tirare due volte i dadi dei danni dell'arma e usare il risultato che preferisci."
+  },
+  {
+   "n": "Abile (Skilled)",
+   "fonte": "Origine (background Nobile)",
+   "d": "Ottieni competenza in una qualsiasi combinazione di tre abilità o strumenti a tua scelta. Ripetibile: puoi prendere questo talento più volte."
+  }
+ ],
+ "attacchi": [
+  {
+   "n": "Spada lunga (una mano)",
+   "atk": 8,
+   "dmg": "1d8+3",
+   "tipo": "taglienti",
+   "proprieta": "Versatile (1d10)",
+   "maestria": "Fiaccare (Sap)",
+   "note": "Portata 1,5 m. Con Duellare le regole darebbero +2 danni (vedi differenze)."
+  },
+  {
+   "n": "Spada lunga (due mani)",
+   "atk": 8,
+   "dmg": "1d10+3",
+   "tipo": "taglienti",
+   "proprieta": "Versatile",
+   "maestria": "Fiaccare (Sap)",
+   "note": "Portata 1,5 m."
+  },
+  {
+   "n": "Colpo senz'armi",
+   "atk": 8,
+   "dmg": "4",
+   "tipo": "contundenti",
+   "proprieta": "",
+   "maestria": "",
+   "note": "Pugno, calcio, testata: danni pari a 1 + modificatore di Forza. Portata 1,5 m."
+  },
+  {
+   "n": "Lanciare acqua santa",
+   "atk": null,
+   "dmg": "2d8",
+   "tipo": "radianti",
+   "proprieta": "Gittata 6 m",
+   "maestria": "",
+   "note": "Sostituisce uno degli attacchi dell'azione Attacco. Una creatura visibile entro 6 m fa un TS Destrezza CD 12 o subisce 2d8 danni radianti se è un Immondo o un Non morto."
+  },
+  {
+   "n": "Punizione divina",
+   "atk": null,
+   "dmg": "2d8",
+   "tipo": "radianti",
+   "proprieta": "Azione bonus dopo aver colpito",
+   "maestria": "",
+   "note": "+1d8 contro Immondi e Non morti; +1d8 per slot superiore al 1°."
+  },
+  {
+   "n": "Punizione tonante",
+   "atk": null,
+   "dmg": "2d6",
+   "tipo": "tuono",
+   "proprieta": "Azione bonus dopo aver colpito",
+   "maestria": "",
+   "note": "TS Forza CD 13 o spinto di 3 m e Prono."
+  },
+  {
+   "n": "Duello obbligato",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "9 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 13."
+  },
+  {
+   "n": "Zona di verità",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "18 m",
+   "maestria": "",
+   "note": "TS Carisma CD 13."
+  },
+  {
+   "n": "Cura ferite",
+   "atk": null,
+   "dmg": "2d8+2",
+   "tipo": "guarigione",
+   "proprieta": "Contatto",
+   "maestria": "",
+   "note": "PF recuperati."
+  }
+ ],
+ "incantesimi": {
+  "caratteristica": "Car",
+  "cd": 13,
+  "attacco": 5,
+  "slot": {
+   "1": 4,
+   "2": 2
+  },
+  "punti_stregoneria": null,
+  "lista": [
+   {
+    "en": "Cure Wounds",
+    "it": "Cura ferite",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Paladino"
+   },
+   {
+    "en": "Thunderous Smite",
+    "it": "Punizione tonante",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Paladino"
+   },
+   {
+    "en": "Bless",
+    "it": "Benedizione",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Paladino"
+   },
+   {
+    "en": "Divine Favor",
+    "it": "Favore divino",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Paladino"
+   },
+   {
+    "en": "Compelled Duel",
+    "it": "Duello obbligato",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Paladino"
+   },
+   {
+    "en": "Warding Bond",
+    "it": "Legame di interdizione",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Paladino"
+   },
+   {
+    "en": "Divine Smite",
+    "it": "Punizione divina",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Punizione del paladino"
+   },
+   {
+    "en": "Find Steed",
+    "it": "Trova cavalcatura",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Cavalcatura fedele"
+   },
+   {
+    "en": "Protection from Evil and Good",
+    "it": "Protezione dal male e dal bene",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Giuramento di Devozione"
+   },
+   {
+    "en": "Shield of Faith",
+    "it": "Scudo della fede",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Giuramento di Devozione"
+   },
+   {
+    "en": "Aid",
+    "it": "Aiuto",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Giuramento di Devozione"
+   },
+   {
+    "en": "Zone of Truth",
+    "it": "Zona di verità",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Giuramento di Devozione"
+   }
+  ]
+ },
+ "incantesimi_nuovi": {},
+ "inventario": [
+  {
+   "n": "Spada lunga",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "3 lb",
+   "valore": "15 mo",
+   "stats": "1d8 taglienti (1d10 a due mani) · Versatile · Maestria: Fiaccare (Sap)",
+   "desc": "Arma da guerra da mischia. Versatile: a due mani infligge 1d10."
+  },
+  {
+   "n": "Giavellotto",
+   "q": 6,
+   "cat": "Armi",
+   "peso": "12 lb (2 lb ciascuno)",
+   "valore": "5 ma ciascuno",
+   "stats": "1d6 perforanti · Lancio (9/36 m) · Maestria: Rallentare (Slow, segnata inattiva sulla scheda)",
+   "desc": "Arma semplice da mischia e da lancio."
+  },
+  {
+   "n": "Cotta di maglia",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "55 lb",
+   "valore": "75 mo",
+   "stats": "Scheda: CA 18 · Forza 13 · svantaggio a Furtività (PHB 2024: CA 16)",
+   "desc": "Armatura pesante. La scheda Roll20 la etichetta anche «Breastplate» e le assegna CA 18."
+  },
+  {
+   "n": "Scudo",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "6 lb",
+   "valore": "10 mo",
+   "stats": "+2 CA",
+   "desc": "Si indossa o si toglie con l'azione Utilizzare."
+  },
+  {
+   "n": "Simbolo sacro",
+   "q": 1,
+   "cat": "Focus",
+   "peso": "0 lb",
+   "valore": "5 mo",
+   "stats": "Focus da incantatore per Paladino",
+   "desc": "Tipo non specificato sulla scheda."
+  },
+  {
+   "n": "Veste",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "4 lb",
+   "valore": "1 mo",
+   "stats": "",
+   "desc": "Ha un significato professionale o cerimoniale: alcuni eventi e luoghi ammettono solo chi indossa una veste con certi colori o simboli."
+  },
+  {
+   "n": "Abiti eleganti",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "6 lb",
+   "valore": "15 mo",
+   "stats": "",
+   "desc": "Tessuti costosi e dettagli di pregio; alcuni eventi e luoghi ammettono solo chi li indossa."
+  },
+  {
+   "n": "Lampada",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "5 ma",
+   "stats": "Luce intensa 4,5 m e fioca per altri 9 m",
+   "desc": "Brucia olio come combustibile."
+  },
+  {
+   "n": "Zaino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "2 mo",
+   "stats": "Contiene fino a 30 lb",
+   "desc": "Può fungere anche da bisaccia."
+  },
+  {
+   "n": "Coperta",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "3 lb",
+   "valore": "5 ma",
+   "stats": "Vantaggio ai TS contro il freddo estremo mentre ci si è avvolti",
+   "desc": ""
+  },
+  {
+   "n": "Set di dadi",
+   "q": 1,
+   "cat": "Strumenti",
+   "peso": "0 lb",
+   "valore": "1 ma",
+   "stats": "Saggezza · scoprire se qualcuno bara CD 10 · vincere la partita CD 20",
+   "desc": ""
+  },
+  {
+   "n": "Razioni",
+   "q": 7,
+   "cat": "Consumabili",
+   "peso": "14 lb (2 lb ciascuna)",
+   "valore": "5 ma ciascuna",
+   "stats": "1 giorno di cibo ciascuna",
+   "desc": "Carne secca, frutta secca, gallette e noci. Vedi «Malnutrizione» nel glossario."
+  },
+  {
+   "n": "Acciarino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "5 ma",
+   "stats": "Accendere candela, lampada, lanterna o torcia: azione bonus · altri fuochi: 1 minuto",
+   "desc": "Pietra focaia, acciarino ed esca."
+  },
+  {
+   "n": "Acqua santa",
+   "q": 1,
+   "cat": "Consumabili",
+   "peso": "1 lb",
+   "valore": "25 mo",
+   "stats": "Sostituisce un attacco · 6 m · TS Des CD 12 · 2d8 radianti a Immondi e Non morti",
+   "desc": "Fiala lanciabile."
+  },
+  {
+   "n": "Pacco del sacerdote",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "33 mo",
+   "stats": "Zaino, coperta, acqua santa, lampada, 7 razioni, veste, acciarino",
+   "desc": "Il contenuto è elencato anche separatamente nella scheda."
+  },
+  {
+   "n": "Profumo",
+   "q": 1,
+   "cat": "Consumabili",
+   "peso": "0,25 lb",
+   "valore": "5 mo",
+   "stats": "Per 1 ora: vantaggio alle prove di Carisma (Persuasione) per influenzare un umanoide Indifferente entro 1,5 m",
+   "desc": "Fiala da 4 once."
+  }
+ ],
+ "carico": "113,71 lb",
+ "capacita": "255 lb",
+ "monete": "108 mo · 15 mp",
+ "aspetto": "Taglia: Media (nessun'altra descrizione sulla scheda).",
+ "personalita": {
+  "tratti": "",
+  "ideali": "",
+  "legami": "",
+  "difetti": ""
+ },
+ "storia_scheda": "Nobile. Sei cresciuto in un castello, circondato da ricchezza, potere e privilegi. La tua famiglia di aristocratici minori ti ha garantito un'istruzione di prim'ordine, che in parte hai apprezzato e in parte hai detestato. Il tempo passato al castello, soprattutto le lunghe ore trascorse a osservare la tua famiglia a corte, ti ha anche insegnato molto sulla leadership.",
+ "progressione": "Livelli 8, 12, 16: nuovo Aumento dei punteggi di caratteristica o talento. Livello 9: incantesimi del giuramento Faro di speranza e Dissolvi magie. Livello 11: terzo uso di Incanalare divinità.",
+ "note": "Allineamento: Legale Buono. La scheda riporta 8 PF temporanei. Ispirazione eroica presente come campo (tratto Intraprendente). Nessun oggetto magico in sintonia.",
+ "differenze": [
+  "CA: sito 22 = scheda 22, ma il valore è incoerente con le regole: cotta di maglia (CA 16 nel PHB 2024; la scheda la etichetta «Breastplate» con CA 18) + scudo +2 = 18 (o 20 con il valore della scheda), non 22. Da verificare col giocatore.",
+  "Spada lunga: sito e scheda +8 / 1d8+3, ma per le regole il tiro è +6 (For +3, comp. +3; +8 solo con Arma sacra attiva) e il danno a una mano con Duellare dovrebbe essere 1d8+5. Da verificare.",
+  "Manca nel sito l'attacco Colpo senz'armi (+8, 4 contundenti) presente nella scheda.",
+  "Il sito ha l'attacco Giavellotto (+6, 1d6+3), che la scheda non elenca tra WEAPONS & DAMAGE (il giavellotto è solo nell'inventario); la maestria Rallentare (Slow) è segnata «Inactive» sulla scheda, mentre il sito la dà per attiva.",
+  "Mancano tra le azioni del sito Punizione tonante (2d6 tuono, TS For CD 13), Duello obbligato (TS Sag CD 13) e Zona di verità (TS Car CD 13), presenti in COMBAT REFERENCE.",
+  "Privilegi mancanti nel sito: Punizione del paladino (Punizione divina gratis 1/riposo lungo), Stile di combattimento, Incantesimi, Incantesimi del Giuramento di Devozione, Aumento dei punteggi di caratteristica; Incanalare divinità non indica i 2 usi (1 recuperato a riposo breve).",
+  "Tratti di specie umani assenti nel sito: Intraprendente (Ispirazione eroica a ogni riposo lungo), Abile, Versatile, Taglia Media.",
+  "Talento Skilled chiamato «Esperto» nel sito: il nome corretto è Abile. I talenti nel sito non hanno descrizione né fonte.",
+  "SPELLS['Find Steed']: sito tempo di lancio «10 minuti», scheda (2024) «Azione»; descrizione nel sito molto ridotta (mancano il blocco Destriero ultraterreno, l'iniziativa condivisa e la scomparsa).",
+  "La scheda riporta 8 PF temporanei; il sito non li indica.",
+  "Allineamento Legale Buono presente nella scheda, assente nel sito.",
+  "Inventario: il sito usa categorie non previste (Abbigliamento, Provviste, Contenitori) per veste, abiti eleganti, razioni e pacco del sacerdote; per il resto oggetti, quantità, carico (113,71 lb) e capacità (255 lb) coincidono con la scheda. Tutti gli incantesimi della scheda esistono già in SPELLS."
+ ]
+}
