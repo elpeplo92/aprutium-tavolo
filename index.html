@@ -1095,12 +1095,36 @@ details.pgfeat>summary .featimg{flex:none;width:36px;height:36px;border-radius:5
 #abtip b{font-family:var(--caps);color:var(--gold);font-size:20px;line-height:1.2}
 #abtip small{color:var(--ink-dim);font-family:var(--sans);font-size:15px}
 #abtip p{margin:4px 0 0;color:var(--ink);font-size:16px;line-height:1.4}
+/* ===== BARRA RAPIDA A QUADRATINI (v118) ===== */
+#quickbar{width:min(880px,calc(100% - 40px));padding:6px 8px 8px;gap:4px;background:rgba(8,11,18,.93);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.55)}
+#quickbar .qbtabs{width:100%;padding:0;background:none;border:0;border-radius:0}
+#quickbar .qbtabs .qbhide{margin-left:auto;padding:6px 10px}
+#quickbar .qbhelp{width:100%;font-size:14px;color:var(--ink-dim);font-style:italic;text-align:center}
+#quickbar .qbtiles{width:100%;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;max-height:212px;overflow-y:auto;padding:2px}
+.qbtile{position:relative;flex:none;width:80px;height:100px;padding:0 0 4px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;background:#070A11;border:1px solid var(--line);border-radius:8px;overflow:hidden;cursor:pointer;color:var(--ink)}
+.qbtile:hover:not(:disabled){border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.qbtile:disabled{opacity:.4;cursor:not-allowed}
+.qbtile .qbimg{width:78px;height:64px;object-fit:cover;flex:none;border-bottom:1px solid var(--line)}
+.qbtile svg{width:34px;height:34px;margin:14px 0 13px;flex:none;fill:none;stroke:var(--gold);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.qbtile .qbn{font-family:var(--sans);font-size:13px;line-height:1.1;text-align:center;padding:0 3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.qbtile .qbq{position:absolute;top:44px;right:3px;font-style:normal;font-family:var(--sans);font-size:13px;font-weight:700;color:#fff;background:rgba(0,0,0,.7);padding:0 4px;border-radius:4px}
+.qbtile .qbnum{position:absolute;top:2px;left:4px;font-style:normal;font-family:var(--sans);font-size:13px;color:#fff;text-shadow:0 1px 2px #000}
+.qbtile .qbstar,.qbtile .qbdel{position:absolute;top:1px;right:3px;font-style:normal;font-size:17px;line-height:1;color:#fff;text-shadow:0 1px 3px #000;opacity:0;transition:opacity .12s}
+.qbtile:hover .qbstar,.qbtile:hover .qbdel,.qbtile .qbstar.on{opacity:1}
+.qbtile .qbstar.on{color:var(--gold)}
+.qbtile.empty{justify-content:center;border-style:dashed;color:var(--ink-dim)}
+.qbtile.empty .qbplus{font-size:26px}
+.qbtile.gone{opacity:.45}
+.qbtile.lit{border-color:#E8A54A;box-shadow:0 0 10px rgba(255,170,60,.55)}
+/* luce del token (torcia, lampada, lanterna) */
+.tlight{position:absolute;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(circle,rgba(255,196,110,.34) 0%,rgba(255,170,80,.22) var(--b,50%),rgba(255,150,60,.08) calc(var(--b,50%) + 8%),rgba(255,140,50,0) 100%);animation:tflick 2.6s ease-in-out infinite alternate}
+@keyframes tflick{0%{opacity:.85;transform:translate(-50%,-50%) scale(1)}50%{opacity:1}100%{opacity:.9;transform:translate(-50%,-50%) scale(1.02)}}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v117</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v118</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1452,7 +1476,7 @@ let S = normalize(structuredClone(DEFAULT_STATE));
 let db = null, ref = null, saveTimer = null;
 let selected = null, measuring = false, measurePts = [];
 
-const LIVE=['xs','ich','res','fx','adv','fxT','x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','preFormThp','giant','owner','blessLinkedAt'];
+const LIVE=['light','xs','ich','res','fx','adv','fxT','x','y','hp','hpMax','init','hidden','movedM','dash','used','pts','lay','conds','thp','ds','size','speed','form','formThp','preFormThp','giant','owner','blessLinkedAt'];
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
@@ -1615,7 +1639,7 @@ document.getElementById('fogHide').onclick=()=>setFogTool('h');
 document.getElementById('fogOn').onclick=()=>{ S.fog=S.fog||{on:true,ops:[]}; S.fog.on=!S.fog.on; save(true); };
 document.getElementById('fogAll').onclick=()=>{ S.fog={on:true,ops:[{t:'r',x:MAP_W/2,y:MAP_H/2,r:Math.hypot(MAP_W,MAP_H)}]}; save(true); };
 document.getElementById('fogReset').onclick=()=>{ S.fog={on:true,ops:[]}; save(true); };
-document.getElementById('fogParty').onclick=()=>{ for(const t of Object.values(S.tokens)) if(t.kind==='pg') fogOp('r',t.x,t.y,S.grid.size*6,true); save(true); };
+document.getElementById('fogParty').onclick=()=>{ for(const t of Object.values(S.tokens)) if(t.kind==='pg') fogOp('r',t.x,t.y,sightPx(t),true); save(true); };
 /* ---------- token ---------- */
 const tokensEl=document.getElementById('tokens'), dragm=document.getElementById('dragm');
 function canMove(id){ const t=S.tokens[id]; if(!t) return false; if(IS_GM) return true; const mine=(t.kind==='pg'&&id===me)||t.owner===me; if(!mine) return false; if(S.mode==='scontro') return S.order[S.turn]===me; if(exploreFrozen()) return false; return true; }
@@ -1628,6 +1652,7 @@ function renderTokens(){
   const labelCount={};
   for(const [id,t] of Object.entries(S.tokens)){
     if(!visible(id)) continue;
+    if(t.light&&lightPx(t)){ const L=document.createElement('div'), r=lightPx(t), rb=(+t.light.b||0)/SQUARE_M*S.grid.size; L.className='tlight'; L.style.left=t.x+'px'; L.style.top=t.y+'px'; L.style.width=L.style.height=(2*r)+'px'; L.style.setProperty('--b',Math.round(100*rb/r)+'%'); tokensEl.appendChild(L); }
     const d=document.createElement('div'); d.className='tok'; d.dataset.id=id; d.style.setProperty('--c',t.color); const timg=PG_TOKENS[id]||t.tokimg||t.img; if(timg){ d.style.backgroundImage=`url(${timg})`; if(PG_TOKENS[id]) d.classList.add('hastok'); }
     const big=t.size||(t.kind==='nemico'&&t.hpMax>=80?2:1); d.style.width=d.style.height=(s*big*0.94)+'px'; d.style.fontSize=(s*big*.4)+'px'; d.style.borderWidth=Math.max(2,Math.round(s*.06))+'px';
     d.style.left=t.x+'px'; d.style.top=t.y+'px';
@@ -1677,7 +1702,7 @@ function cancelMove(){ pending=null; confirmEl.style.display='none'; render(); }
 document.getElementById('mvNo').onclick=cancelMove;
 document.getElementById('mvDash').onclick=()=>{ if(!pending) return; const t=S.tokens[pending.id]; t.dash=true; log({kind:'sys',txt:`${t.name} usa l’azione Scatto`}); const p=pending; proposeMove(p.id,p.from,p.to,p.el); };
 for(const id of ['mvNo','mvYes','mvDash']){ const b=document.getElementById(id); b.addEventListener('pointerdown',e=>{ e.stopPropagation(); e.preventDefault(); if(!b.disabled) b.onclick(); },{capture:true}); b.onclick=b.onclick||null; }
-document.getElementById('mvYes').onclick=()=>{ if(!pending) return; const {id,from,to}=pending; const t=S.tokens[id]; if(!t){cancelMove();return;} const m=distM(from,to); if(S.mode==='scontro'&&!IS_GM){ const lim=(t.speed||9)*(t.dash?2:1)-(t.movedM||0); if(m>lim+0.01){ toast('Fuori portata: usa Corri oppure Annulla'); return; } } t.x=to.x; t.y=to.y; if(t.kind==='pg'&&S.fog&&S.fog.on) fogOp('r',to.x,to.y,S.grid.size*6,true); if(S.mode==='scontro') t.movedM=(t.movedM||0)+m; log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} si sposta di ${m.toLocaleString('it-IT')} m`}); pending=null; confirmEl.style.display='none'; save(); };
+document.getElementById('mvYes').onclick=()=>{ if(!pending) return; const {id,from,to}=pending; const t=S.tokens[id]; if(!t){cancelMove();return;} const m=distM(from,to); if(S.mode==='scontro'&&!IS_GM){ const lim=(t.speed||9)*(t.dash?2:1)-(t.movedM||0); if(m>lim+0.01){ toast('Fuori portata: usa Corri oppure Annulla'); return; } } t.x=to.x; t.y=to.y; if(t.kind==='pg'&&S.fog&&S.fog.on) fogOp('r',to.x,to.y,sightPx(t),true); if(S.mode==='scontro') t.movedM=(t.movedM||0)+m; log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} si sposta di ${m.toLocaleString('it-IT')} m`}); pending=null; confirmEl.style.display='none'; save(); };
 window.addEventListener('keydown',e=>{ if(e.key==='Escape'&&pending) cancelMove(); if(e.key==='Enter'&&pending){ const y=document.getElementById('mvYes'); if(!y.disabled) y.onclick(); } });
 
 /* ---------- medaglioni ---------- */
@@ -1754,6 +1779,7 @@ function doAction(tokId,a){
   let count=1, act=a;
   if(/^Multiattacco/.test(a.n)){ const base=(t.actions||[]).find(x=>x.atk!=null&&!/Leggendaria|Multiattacco/.test(x.n)); if(!base) return; act=base; count=2; }
   if(act.atk==null&&!act.dmg){ log({kind:'sys',txt:`${t.name}: ${act.n}`}); save(true); return; }
+  if(t.kind==='pg'&&actItem(tokId,act)===null){ toast(`Non ne hai più nello zaino: ${act.n}`); return; }
   openTargetPicker(tokId,act,count);
 }
 /* ---------- bersaglio: scegli chi colpire, il danno si applica da solo ---------- */
@@ -1773,8 +1799,9 @@ function openTargetPicker(tokId,a,count){
   openModal(`<div class="eyebrow">${t.name}${count>1?' · Multiattacco':''}</div><h2 class="big">${a.n}</h2><p class="note" style="margin:0 0 8px">${isAtk?`Tiro per colpire +${a.atk}${a.dmg?` · danno ${a.dmg}`:''}. Scegli il bersaglio: se lo colpisci, i danni si tolgono da soli.`:`Danno ${a.dmg}. Scegli i bersagli: dopo il tiro decidi per ognuno se subisce tutto, metà o niente.`}${a.note?`<br><span style="color:var(--ink-dim)">${a.note}</span>`:''}</p>${isAtk?`<div class="fxadv" style="margin:0 0 8px"><label><input type="radio" name="tAdv" value="" checked> Normale</label><label><input type="radio" name="tAdv" value="v" ${t.adv==='v'?'checked':''}> Vantaggio</label><label><input type="radio" name="tAdv" value="s" ${t.adv==='s'?'checked':''}> Svantaggio</label></div>`:''}<div class="tgtlist">${list.map(row).join('')||'<span class="note">Nessun bersaglio in vista.</span>'}</div><div class="row" style="margin-top:12px"><button class="primary" id="tgtGo">Tira</button><button id="tgtNone">Solo il tiro, senza bersaglio</button></div>`,'poibox');
   const box=document.getElementById('modal');
   const setAdv=()=>{ const v=box.querySelector('[name=tAdv]:checked')?.value; if(v) t.adv=v; else delete t.adv; };
-  box.querySelector('#tgtNone').onclick=()=>{ setAdv(); const v=t.adv; closeModal(); for(let k=0;k<count;k++){ if(v) t.adv=v; plainRoll(tokId,a); } };
-  box.querySelector('#tgtGo').onclick=()=>{ const ids=[...box.querySelectorAll('input[name=tgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un bersaglio'); return; } setAdv(); const v=t.adv; closeModal(); if(isAtk){ for(let k=0;k<count;k++){ if(v) t.adv=v; resolveAttack(tokId,a,ids[0]); } } else resolveSave(tokId,a,ids); };
+  const spend=()=>{ if(t.kind==='pg'&&actItem(tokId,a)){ actSpend(tokId,a); save(true); } };
+  box.querySelector('#tgtNone').onclick=()=>{ setAdv(); const v=t.adv; closeModal(); for(let k=0;k<count;k++){ if(v) t.adv=v; plainRoll(tokId,a); } spend(); };
+  box.querySelector('#tgtGo').onclick=()=>{ const ids=[...box.querySelectorAll('input[name=tgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un bersaglio'); return; } setAdv(); const v=t.adv; closeModal(); if(isAtk){ for(let k=0;k<count;k++){ if(v) t.adv=v; resolveAttack(tokId,a,ids[0]); } } else resolveSave(tokId,a,ids); spend(); };
 }
 function plainRoll(tokId,a){ const t=S.tokens[tokId]; const ev={kind:'atk',who:t.name,name:a.n}; if(t.kind==='nemico'&&!S.publicRolls) ev.gm=true; if(a.atk!=null){ const R=fxD20(t,fxIsSpell(a)?'incantesimo':'attacco'), r=R.r, bless=blessBonus(t), AB=fxAtkBonus(t,a); ev.r=r; ev.bless=bless; ev.atk=r+a.atk+bless+AB.b; ev.crit=r===20; ev.fumble=r===1; const notes=[R.why,...AB.why].filter(Boolean); if(notes.length) ev.name+=` (${notes.join(', ')})`; } if(a.dmg){ const d=fxDamage(t,a,ev.crit); ev.dmg=d.total; ev.dmgTxt=d.txt; ev.dmgFinal=true; } log(ev); save(true); }
 function resolveAttack(tokId,a,targetId){
@@ -1855,7 +1882,7 @@ const ACT_ICON={
  speciale:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
 };
 const ACT_TIPO_NAME={mischia:'Attacco in mischia',distanza:'Attacco a distanza',incantesimo:'Incantesimo',cura:'Cura',speciale:'Capacità'};
-const ACT_ECO=[['azione','Azione'],['bonus','Azione bonus'],['reazione','Reazione'],['gratuita','Senza azione']];
+const ACT_ECO=[['azione','Azione'],['bonus','Azione bonus'],['reazione','Reazione'],['gratuita','Gratuita']];
 function actTipo(a){ if(a.tipo) return a.tipo; const n=(a.n||'').toLowerCase(); if(/cura|guarig|recupero|preserv|imposizione/.test(n)) return 'cura'; if(/arco|balestr|giavell|dardo|fionda|lancio|acqua santa/.test(n)) return 'distanza'; if(a.atk!=null||/spada|mazza|ascia|lancia|pugnale|bastone|maglio|falc|frust|morso|artigli/.test(n)) return 'mischia'; if(a.dmg) return 'incantesimo'; return 'speciale'; }
 function actEco(a){ return a.eco||'azione'; }
 const GENERIC_ACTS={
@@ -1916,7 +1943,7 @@ function renderActionsOld(container,tokId){
     b.innerHTML=`<svg viewBox="0 0 24 24">${ACT_ICON[tp]||ACT_ICON.speciale}</svg><span class="abody"><span class="an">${a.n}</span>${a.note?`<span class="anote">${a.note}</span>`:''}</span><span class="ad">${a.atk!=null?`+${a.atk}`:''}${a.atk!=null&&a.dmg?' · ':''}${a.dmg||''}</span>`;
     b.title=ACT_TIPO_NAME[tp]+(a.atk!=null?` · attacco +${a.atk}`:'')+(a.dmg?` · danno ${a.dmg}`:''); b.onclick=()=>doAction(tokId,a); container.appendChild(b); };
   for(const a of mine) add(a,false);
-  if(gen.length){ const h=document.createElement('div'); h.className='eyebrow'; h.style.margin='10px 0 4px'; h.textContent='Per tutti'; container.appendChild(h); for(const a of gen) add(a,true); }
+  if(gen.length){ const h=document.createElement('div'); h.className='eyebrow'; h.style.margin='10px 0 4px'; h.textContent='Azioni comuni'; container.appendChild(h); for(const a of gen) add(a,true); }
 }
 
 /* ---------- render ---------- */
@@ -2125,7 +2152,7 @@ for(const [k,v] of Object.entries(SPELLS_EXTRA)) SPELLS[k]={...(SPELLS[k]||{}),.
 const ICO_BYNAME=(()=>{ const m={}; for(const [k,v] of Object.entries(ICONE_DATA.abilita||{})){ const i=k.indexOf('|'); (m[k.slice(i+1)]=m[k.slice(i+1)]||[]).push([k.slice(0,i),v]); } return m; })();
 function icoItem(n){ return (ICONE_DATA.oggetti||{})[n]||null; }
 function icoAbil(n,grp){ const A=ICONE_DATA.abilita||{}; if(grp&&A[grp+'|'+n]) return A[grp+'|'+n]; const xs=ICO_BYNAME[n];
-  if(!xs) return icoItem(n); const g=grp&&xs.find(x=>x[0]===grp); return (g||xs.find(x=>x[0]!=='Per tutti')||xs[0])[1]; }
+  if(!xs){ const b=String(n).replace(/\s*[(:—].*$/,'').trim(); return icoItem(n)||(b&&b!==n?icoAbil(b,grp):null); } const g=grp&&xs.find(x=>x[0]===grp); return (g||xs.find(x=>x[0]!=='Per tutti')||xs[0])[1]; }
 const icoAct=a=>a?icoAbil(a.n,isAttackAct(a)?'Attacchi':'Capacità'):null;
 const icoSpell=en=>SPELLS[en]?icoAbil(SPELLS[en].it,'Incantesimi'):null;
 const icoImg=(p,cls)=>p?`<img class="${cls||'icoimg'}" src="${p[0]}" alt="" loading="lazy" draggable="false">`:'';
@@ -2644,7 +2671,7 @@ function invItems(id){
 function invSlotFor(it){
   const n=it.n.toLowerCase();
   if(/elmo|cappello|cappuccio|corona|diadem|copricapo|maschera/.test(n)) return 'testa';
-  if(/stival/.test(n)) return 'stivali'; if(/amulet|medaglion|ciondol/.test(n)) return 'amuleto'; if(/anell/.test(n)) return 'anello1'; if(/mantell|cappa\b/.test(n)) return 'mantello'; if(/guant|bracc/.test(n)) return 'mani'; if(/elmo|cappuccio|corona|diadem/.test(n)) return 'testa';
+  if(/torcia|lanterna|lampada/.test(n)) return 'secondaria'; if(/stival/.test(n)) return 'stivali'; if(/amulet|medaglion|ciondol/.test(n)) return 'amuleto'; if(/anell/.test(n)) return 'anello1'; if(/mantell|cappa\b/.test(n)) return 'mantello'; if(/guant|bracc/.test(n)) return 'mani'; if(/elmo|cappuccio|corona|diadem/.test(n)) return 'testa';
   if(it.cat==='Armature') return /scudo/.test(n)?'secondaria':'armatura';
   if(/^Armi/.test(it.cat)||(/magic/i.test(it.cat)&&/bastone|verga|bacchetta|spada|ascia|arco|mazza|lancia|martello|pugnale/.test(n))) return 'primaria'; if(it.cat==='Focus') return 'secondaria';
   if(/armatura|cotta|corazza|piastre/.test(n)) return 'armatura';
@@ -2683,11 +2710,14 @@ function hbGet(id){ const t=S.tokens[id]; if(!t) return {}; const h=(S.hotbar||{
 function hbSet(id,slot,val){ S.hotbar=S.hotbar||{}; const cur={...hbGet(id)}; if(val) cur[slot]=val; else cur[slot]={k:'none'}; S.hotbar[id]=cur; }
 function hbIcon(e,id){ if(!e||e.k==='none') return ''; if(e.k==='spell') return ACT_ICON.incantesimo; if(e.k==='act'){ const a=tokenActions(id,S.tokens[id]).find(x=>x.n===e.ref); return ACT_ICON[a?actTipo(a):'speciale']||ACT_ICON.speciale; } const it=invItems(id).find(i=>i.key===e.ref); return INV_ICON[it?.cat]||INV_ICON.Equipaggiamento; }
 /* immagine e testo del riquadro per una casella della barra (v117) */
+function hbCat(e,id){ const i=e.ref.indexOf('|'), grp=e.ref.slice(0,i), n=e.ref.slice(i+1); return actionCatalog(id).find(x=>x.grp===grp&&x.n===n)||actionCatalog(id).find(x=>x.n===n)||null; }
 function hbInfo(e,id){
+  if(e.k==='cat'){ const x=hbCat(e,id), i=e.ref.indexOf('|'), grp=e.ref.slice(0,i), n=e.ref.slice(i+1), it=x&&x.item?invItems(id).find(y=>y.key===x.item):null;
+    return {p:it?icoItem(it.n):icoAbil(n,grp),t:n,s:x?x.sub:'Non più disponibile',d:it?[it.stats,it.desc].filter(Boolean).join(' — '):icoText(id,n,grp),gone:!x}; }
   if(e.k==='spell'){ const d=SPELLS[e.ref]||{}; return {p:icoSpell(e.ref),t:d.it||e.label,s:[d.l==0?'Trucchetto':d.l?d.l+'° livello':'',d.t,d.r].filter(Boolean).join(' · '),d:d.d||''}; }
   if(e.k==='act'){ const a=tokenActions(id,S.tokens[id]).find(x=>x.n===e.ref); const s=a?[a.atk!=null?'Colpire +'+a.atk:'',a.dmg?(actTipo(a)==='cura'?'Cura ':'Danno ')+a.dmg:''].filter(Boolean).join(' · '):'';
     return {p:icoAct(a)||icoAbil(e.ref),t:e.label,s,d:(a&&a.note)||icoText(id,e.ref,'Capacità')}; }
-  const it=invItems(id).find(i=>i.key===e.ref); return {p:icoItem(it?it.n:e.label),t:e.label,s:it?[it.cat,it.q>1?'×'+it.q:''].filter(Boolean).join(' · '):'Non più nello zaino',d:it?[it.stats,it.desc].filter(Boolean).join(' — '):''};
+  const it=invItems(id).find(i=>i.key===e.ref); return {p:icoItem(it?it.n:e.label),t:e.label,s:it?[it.cat,it.q>1?'×'+it.q:''].filter(Boolean).join(' · '):'Non più nello zaino',d:it?[it.stats,it.desc].filter(Boolean).join(' — '):'',gone:!it};
 }
 function hotbarHtml(id,big){
   const h=hbGet(id), mine=canAct(id);
@@ -2706,11 +2736,39 @@ function hbUse(id,slot){
   const e=hbGet(id)[slot]; if(!e||e.k==='none'||!canAct(id)) return; const t=S.tokens[id];
   if(e.k==='act'){ const a=tokenActions(id,t).find(x=>x.n===e.ref); if(a){ closeModal(); doAction(id,a); } return; }
   if(e.k==='spell'){ closeModal(); castSpell(id,e.ref); return; }
-  invUse(id,e.ref);
+  if(e.k==='cat'){ const x=hbCat(e,id); if(!x){ toast('Non più disponibile'); return; } if(x.disabled){ toast(x.n+': nessun uso rimasto'); return; } closeModal(); x.run(); return; }
+  invRun(id,e.ref);
 }
 const INV_HEAL=[[/guarigione suprema/i,'10d4+20'],[/guarigione superiore/i,'8d4+8'],[/guarigione maggiore/i,'4d4+4'],[/pozione di guarigione/i,'2d4+2']];
+/* ===== OGGETTI DA USARE, CONSUMO E LUCE (v118) =====
+   Consumabili e fonti di luce compaiono nella barra rapida (Oggetti). Olio, acqua santa e triboli lanciati con l'azione d'attacco
+   tolgono un pezzo dallo zaino (invSpendFor). Torcia, lampada e lanterna: t.light={key,n,b,d} (luce intensa b m + fioca d m, in LIVE);
+   il token ha l'alone e, muovendosi, svela la nebbia fino a b+d metri (almeno 9 m, come senza luce). Accendere una torcia ne consuma una. */
+const LIGHTS=[[/torcia/i,{b:6,d:6,spend:true}],[/lanterna/i,{b:4.5,d:9}],[/lampada/i,{b:4.5,d:9}]];
+function lightOf(it){ const m=it&&LIGHTS.find(([re])=>re.test(it.n)); return m?m[1]:null; }
+function lightPx(t){ return t&&t.light?((+t.light.b||0)+(+t.light.d||0))/SQUARE_M*S.grid.size:0; }
+function sightPx(t){ return Math.max(S.grid.size*6,lightPx(t)); }
+const INV_THROW=[[/olio/i,/^olio/i],[/acqua santa/i,/acqua santa/i],[/triboli/i,/triboli/i]];
+function invUsable(it){ return /Consumabili/.test(it.cat)||!!lightOf(it)||/triboli/i.test(it.n); }
+function invThrowAct(id,t,it){ const m=INV_THROW.find(([ri])=>ri.test(it.n)); if(!m) return null; return tokenActions(id,t).find(a=>m[1].test(a.n.replace(/^(lanciare|usare i)\s+/i,''))&&(a.dmg||a.atk!=null))||null; }
+function actItem(id,a){ const m=INV_THROW.find(([,ra])=>ra.test(String(a.n).replace(/^(lanciare|usare i)\s+/i,''))); if(!m) return undefined; return invItems(id).find(i=>m[0].test(i.n))||null; }
+function actSpend(id,a){ const it=actItem(id,a); if(!it) return; invTake(id,it,1); const left=it.q-1; log({kind:'sys',txt:`${S.tokens[id].name}: ${it.n} ${left>0?`(ne restano ${left})`:'(era l’ultimo)'}`}); }
+function invRun(id,key){ const t=S.tokens[id], it=invItems(id).find(i=>i.key===key); if(!t||!it){ toast('Oggetto non più nello zaino'); return; }
+  const thr=invThrowAct(id,t,it); if(thr){ closeModal(); doAction(id,thr); return; } invUse(id,key); }
+function lightToggle(id,it){
+  const t=S.tokens[id]; if(!t) return;
+  if(t.light&&(!it||t.light.key===it.key)){ const n=t.light.n; delete t.light; log({kind:'sys',txt:`${t.name} spegne ${n.toLowerCase()}`}); save(true); return; }
+  const L=lightOf(it); if(!L) return;
+  t.light={key:it.key,n:it.n,b:L.b,d:L.d};
+  S.equip=S.equip||{}; const set=S.equip[id]=S.equip[id]||{}, eq=invEquip(id,invItems(id)); if(!(eq.secondaria&&/scudo/i.test(eq.secondaria.n))) set.secondaria=it.key;
+  if(L.spend){ invTake(id,it,1); if(it.q-1>0) t.light.key=it.key; }
+  log({kind:'sys',txt:`${t.name} accende ${/torcia/i.test(it.n)?'una torcia':it.n.toLowerCase()}: luce intensa ${L.b} m, fioca per altri ${L.d} m${L.spend?` (ne restano ${it.q-1})`:''}`});
+  if(S.fog&&S.fog.on&&CUR&&CUR.fog) fogOp('r',t.x,t.y,sightPx(t),true);
+  save(true);
+}
 function invUse(id,key){
   const t=S.tokens[id], it=invItems(id).find(i=>i.key===key); if(!t||!it){ toast('Oggetto non più nello zaino'); return; }
+  if(lightOf(it)){ lightToggle(id,it); if(sheetOf===id&&document.querySelector('#modal .sheet2wrap')) renderSheet(id); return; }
   const heal=INV_HEAL.find(([re])=>re.test(it.n));
   if(heal){ const x=rollExpr(heal[1]); const before=t.hp; t.hp=Math.min(t.hpMax,t.hp+x.total); log({kind:'sys',txt:`${t.name} beve ${it.n}: +${x.total} PF (${x.parts}) → ${t.hp}/${t.hpMax}`}); if(before===t.hp) toast('PF già al massimo'); }
   else log({kind:'sys',txt:`${t.name} usa ${it.n}`});
@@ -2761,7 +2819,7 @@ function sheetInventoryHtml(id,sh,t){
 }
 function invActionsHtml(it,equipped,small){
   const slot=invSlotFor(it), c=small?'mini ':'';
-  return `${slot?`<button class="${c}${equipped?'':'primary'} eqbtn" data-invequip="${poiText(it.key)}">${equipped?'Togli':'Equipaggia'}</button>`:''}${/Consumabili/.test(it.cat)?`<button class="${c}" data-invuse="${poiText(it.key)}">Usa</button>`:''}<button class="${c}" data-invbar="${poiText(it.key)}">Aggiungi alla barra</button><button class="${c}" data-invgive="${poiText(it.key)}">Trasferisci</button><button class="${c}danger" data-invdrop="${poiText(it.key)}">Lascia</button>${sheetInvAct&&sheetInvAct.key===it.key&&sheetInvAct.what==='give'?`<div class="invgive"><select id="invGiveTo">${pgList().filter(([k])=>k!==sheetOf).map(([k,x])=>`<option value="${k}">${poiText(x.name)}</option>`).join('')}</select>${it.q>1?`<input type="number" id="invGiveN" min="1" max="${it.q}" value="1">`:''}<button class="${c}primary" id="invGiveGo">Dai</button></div>`:''}`;
+  return `${slot?`<button class="${c}${equipped?'':'primary'} eqbtn" data-invequip="${poiText(it.key)}">${equipped?'Togli':'Equipaggia'}</button>`:''}${lightOf(it)?`<button class="${c}${S.tokens[sheetOf]?.light?.key===it.key?'':'primary'}" data-invuse="${poiText(it.key)}">${S.tokens[sheetOf]?.light?.key===it.key?'Spegni':'Accendi'}</button>`:/Consumabili/.test(it.cat)?`<button class="${c}" data-invuse="${poiText(it.key)}">${/pozione/i.test(it.n)?'Bevi':'Usa'}</button>`:''}<button class="${c}" data-invbar="${poiText(it.key)}">Aggiungi alla barra</button><button class="${c}" data-invgive="${poiText(it.key)}">Trasferisci</button><button class="${c}danger" data-invdrop="${poiText(it.key)}">Lascia</button>${sheetInvAct&&sheetInvAct.key===it.key&&sheetInvAct.what==='give'?`<div class="invgive"><select id="invGiveTo">${pgList().filter(([k])=>k!==sheetOf).map(([k,x])=>`<option value="${k}">${poiText(x.name)}</option>`).join('')}</select>${it.q>1?`<input type="number" id="invGiveN" min="1" max="${it.q}" value="1">`:''}<button class="${c}primary" id="invGiveGo">Dai</button></div>`:''}`;
 }
 function sheetInvBind(box,id){
   const t=S.tokens[id], items=invItems(id), byKey=k=>items.find(i=>i.key===k), rer=()=>renderSheet(id);
@@ -2773,7 +2831,7 @@ function sheetInvBind(box,id){
   const invSearch=box.querySelector('#invSearch'); if(invSearch){ invSearch.oninput=()=>{ const q=invSearch.value.trim().toLowerCase(); sheetInvQ=invSearch.value; let n=0; box.querySelectorAll('.invrow[data-invi]').forEach(r=>{ const on=!q||r.dataset.search.includes(q); r.classList.toggle('hidden',!on); if(on) n++; }); box.querySelector('#invEmpty').classList.toggle('hidden',n>0); }; if(sheetInvQ) invSearch.oninput(); }
   if(!canAct(id)) return;
   box.querySelectorAll('[data-invequip]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); const it=byKey(b.dataset.invequip); if(!it) return; const eq=invEquip(id,items), slotNow=Object.keys(eq).find(k=>eq[k]===it); S.equip=S.equip||{}; const set=S.equip[id]=S.equip[id]||{};
-    if(slotNow){ set[slotNow]='-'; log({kind:'sys',txt:`${t.name} toglie ${it.n}`}); }
+    if(slotNow){ set[slotNow]='-'; log({kind:'sys',txt:`${t.name} toglie ${it.n}`}); if(t.light&&t.light.key===it.key) delete t.light; }
     else { let slot=invSlotFor(it); if(slot==='anello1'&&eq.anello1) slot='anello2'; set[slot]=it.key; log({kind:'sys',txt:`${t.name} equipaggia ${it.n}`}); }
     sheetInvMenu=null; save(true); rer(); });
   box.querySelectorAll('[data-invuse]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); sheetInvMenu=null; invUse(id,b.dataset.invuse); });
@@ -3024,7 +3082,7 @@ function sorceryBind(box,id){ const t=S.tokens[id], sp=(SHEETS[id]||{}).spell; i
    Fonti: azioni del token (attacchi e capacità), incantesimi lanciabili (tempo di lancio → tipo), incantesimi degli oggetti,
    risorse della scheda Roll20 (privilegi con usi), azioni per tutti. Lo usano il pannello «Azioni» a destra e la barra rapida
    sopra i comandi della mappa (menu a due livelli). */
-const CAT_ECO=[['azione','Azione'],['bonus','Azione bonus'],['reazione','Reazione'],['gratuita','Senza azione']];
+const CAT_ECO=[['azione','Azione'],['bonus','Azione bonus'],['reazione','Reazione'],['gratuita','Gratuite']];
 function ecoOfTime(t){ const s=String(t||'').toLowerCase(); return /bonus/.test(s)?'bonus':/reazione/.test(s)?'reazione':'azione'; }
 const RES_ECO=[[/recupero energie|forma selvatica|possanza|stregoneria innata|marchio|imposizione/i,'bonus'],[/azione impetuosa|punti fortuna|ispirazione|fonte della magia|ripristino/i,'gratuita'],[/runa/i,'reazione'],[/incanalare|preservare|esibizione|scacciare/i,'azione']];
 function ecoOfRes(n){ for(const [re,e] of RES_ECO) if(re.test(n)) return e; return 'gratuita'; }
@@ -3037,9 +3095,13 @@ function actionCatalog(id){
   if(sh&&sh.spell&&!activeWildForm(id,t)){ const sp=sh.spell;
     for(const en of sp.list||[]){ const d=SPELLS[en]; if(!d) continue; const l=+d.l||0;
       const free=l===0||Object.keys(sp.slots||{}).some(k=>+k>=l&&((sp.slots[k]||0)+((t.xs||{})[k]||0)-(used[k]||0))>0);
-      out.push({eco:ecoOfTime(d.t),grp:'Incantesimi',n:d.it,sub:(l===0?'trucchetto':l+'° livello')+(d.r?' · '+d.r:''),tipo:'incantesimo',lvl:l,disabled:!free,run:()=>castSpell(id,en)}); } }
+      out.push({eco:ecoOfTime(d.t),grp:'Incantesimi',n:d.it,sub:(l===0?'trucchetto':l+'° livello')+(d.r?' · '+d.r:''),tipo:'incantesimo',lvl:l,en,disabled:!free,run:()=>castSpell(id,en)}); } }
   invItems(id).filter(it=>(it.spells||[]).length).forEach(it=>it.spells.forEach((s,i)=>{ const key=itemSpellKey(s), d=key?SPELLS[key]:null;
     out.push({eco:d?ecoOfTime(d.t):/forza del toro/i.test(s)?'bonus':'azione',grp:'Oggetti',n:s,sub:it.n,tipo:'speciale',run:()=>useItemSpell(id,it.key,i)}); }));
+  // oggetti da usare (v118): pozioni e consumabili, fonti di luce. Le pozioni si bevono con un'azione bonus (regole 2024).
+  invItems(id).filter(invUsable).forEach(it=>{ const L=lightOf(it), thr=invThrowAct(id,t,it), lit=L&&t.light&&t.light.key===it.key, heal=INV_HEAL.find(([re])=>re.test(it.n));
+    out.push({eco:/pozione/i.test(it.n)||L?'bonus':'azione',grp:'Oggetti',n:it.n,item:it.key,sub:[`×${it.q}`,L?(lit?'accesa: premi per spegnere':`luce ${L.b} m + ${L.d} m`):heal?'cura '+heal[1]:thr?'da lanciare':''].filter(Boolean).join(' · '),tipo:heal?'cura':thr?'distanza':'speciale',on:lit,run:()=>invRun(id,it.key)}); });
+  if(t.light&&!out.some(x=>x.on)) out.push({eco:'bonus',grp:'Oggetti',n:t.light.n,sub:'accesa: premi per spegnere',tipo:'speciale',on:true,run:()=>lightToggle(id,null)});
   if(sh&&sh.spell&&sh.spell.points){ const left=ptsLeft(id);
     metaKnown(id).forEach(m=>out.push({eco:m.k==='rapido'?'bonus':'azione',grp:'Capacità',n:'Metamagia: '+m.n,sub:`${m.c||'livello'} punti · restano ${left}`,tipo:'incantesimo',disabled:left<(m.c||1),run:()=>openMetaPicker(id,m.k)}));
     out.push({eco:'bonus',grp:'Capacità',n:'Fonte della magia: crea uno slot',sub:`punti stregoneria ${left}`,tipo:'speciale',run:()=>openSheet(id,'inc')});
@@ -3083,7 +3145,7 @@ function renderActions(container,tokId){
   container.appendChild(tabs);
   const mine=cat.filter(x=>x.eco===actTab);
   for(const g of ['Attacchi','Capacità','Incantesimi','Oggetti','Per tutti']){ const xs=mine.filter(x=>x.grp===g); if(!xs.length) continue;
-    const h=document.createElement('div'); h.className='eyebrow actgrp'; h.textContent=g+' ('+xs.length+')'; const key=actTab+'|'+g; const closed=actGrpOpen[key]===false||(actGrpOpen[key]===undefined&&g==='Per tutti');
+    const h=document.createElement('div'); h.className='eyebrow actgrp'; h.textContent=(g==='Per tutti'?'Azioni comuni':g)+' ('+xs.length+')'; const key=actTab+'|'+g; const closed=actGrpOpen[key]===false||(actGrpOpen[key]===undefined&&g==='Per tutti');
     h.classList.toggle('closed',closed); h.onclick=()=>{ actGrpOpen[key]=closed; renderActions(container,tokId); }; container.appendChild(h);
     if(closed) continue;
     for(const x of xs){ const b=document.createElement('button'); const tp=x.tipo||'speciale'; b.className='act t-'+tp+(x.grp==='Per tutti'?' generic':''); b.disabled=!!x.disabled;
@@ -3092,23 +3154,46 @@ function renderActions(container,tokId){
       b.innerHTML=`${p?icoImg(p,'actimg'):`<svg viewBox="0 0 24 24">${ACT_ICON[tp]||ACT_ICON.speciale}</svg>`}<span class="abody"><span class="an">${poiText(x.n)}</span>${x.sub?`<span class="anote">${poiText(x.sub)}</span>`:''}</span>`;
       b.onclick=()=>x.run(); container.appendChild(b); } }
 }
-/* barra rapida sopra i comandi della mappa: primo livello = tipo, secondo = voci */
-let qbOpen=null;
+/* ===== BARRA RAPIDA (v118): sopra le categorie, sotto le azioni in quadratini =====
+   Categorie: Rapide (le 8 caselle scelte dal giocatore, aperta di default) · Azione · Azione bonus · Reazione · Gratuite
+   (non costano un'azione) · Incantesimi · Oggetti (pozioni, consumabili, luce, poteri degli oggetti) · Comuni (Scatto,
+   Schivata, Nascondersi… valgono per tutti). Il quadratino ha l'icona e il nome; al passaggio del mouse il riquadro con
+   la descrizione; la stellina aggiunge l'azione alle Rapide ({k:'cat',ref:'gruppo|nome'}). qbOpen='' nasconde i quadratini. */
+let qbOpen='fav';
+const QB_HELP={fav:'Le tue azioni preferite: aggiungile con la stellina ☆ sui quadratini delle altre categorie',azione:'Costano l’azione del turno',bonus:'Costano l’azione bonus del turno',reazione:'Si usano in risposta a qualcosa, anche nel turno di altri',gratuita:'Non costano un’azione: si usano quando serve',inc:'Tutti gli incantesimi che conosci',ogg:'Pozioni, consumabili, luce e poteri degli oggetti',per:'Azioni che ogni personaggio può fare (Scatto, Schivata, Nascondersi…)'};
+function qbTileHtml(o){
+  return `<button class="qbtile t-${o.tipo||'speciale'} ${o.p?'hasimg':''} ${o.on?'lit':''} ${o.gone?'gone':''}" ${o.attr} ${o.disabled?'disabled':''}${tipAttrs(o.p,o.t,o.s,o.d)}>${o.p?icoImg(o.p,'qbimg'):`<svg viewBox="0 0 24 24">${o.svg||ACT_ICON[o.tipo]||ACT_ICON.speciale}</svg>`}<span class="qbn">${poiText(o.t)}</span>${o.q?`<em class="qbq">×${o.q}</em>`:''}${o.num?`<i class="qbnum">${o.num}</i>`:''}${o.star?`<i class="qbstar ${o.starOn?'on':''}" data-qstar="${poiText(o.star)}" title="${o.starOn?'Togli dalle Rapide':'Aggiungi alle Rapide'}">${o.starOn?'★':'☆'}</i>`:''}${o.del?`<i class="qbdel" data-qdel="${o.del}" title="Togli dalle Rapide">×</i>`:''}</button>`;
+}
 function renderQuickBar(){
   const dock=document.getElementById('dock'); if(!dock) return; let el=document.getElementById('quickbar');
   if(!el){ el=document.createElement('div'); el.id='quickbar'; dock.parentElement.appendChild(el); }
   const id=IS_GM?(selected&&S.tokens[selected]?.kind==='pg'?selected:null):(selected&&S.tokens[selected]?.owner===me?selected:me);
   if(!id||(CUR&&CUR.id==='luogo')||!S.tokens[id]){ el.style.display='none'; return; }
   el.style.display='';
-  const cat=actionCatalog(id), h=hbGet(id);
-  const groups=[...CAT_ECO.map(([k,l])=>[k,l,cat.filter(x=>x.eco===k&&x.grp!=='Per tutti')]),['inc','Incantesimi',cat.filter(x=>x.grp==='Incantesimi')],['ogg','Oggetti',cat.filter(x=>x.grp==='Oggetti')],['per','Per tutti',cat.filter(x=>x.grp==='Per tutti')]].filter(g=>g[2].length);
-  const fav=Object.values(h).filter(e=>e&&e.k&&e.k!=='none').length;
-  if(qbOpen&&qbOpen!=='fav'&&!groups.some(g=>g[0]===qbOpen)) qbOpen=null;
-  const pop=qbOpen==='fav'?`<div class="qbpop">${hotbarHtml(id,false)}</div>`:qbOpen?(()=>{ const g=groups.find(x=>x[0]===qbOpen); return `<div class="qbpop"><div class="qbhead"><b>${poiText(g[1])}</b><small>${poiText(S.tokens[id].name)}</small></div><div class="qblist">${g[2].map((x,i)=>{ const p=icoAbil(x.n,x.grp); return `<button class="qbitem t-${x.tipo||'speciale'} ${p?'hasimg':''}" data-qi="${i}" ${x.disabled?'disabled':''}${tipAttrs(p,x.n,x.sub,icoText(id,x.n,x.grp))}>${p?icoImg(p,'qbimg'):`<svg viewBox="0 0 24 24">${ACT_ICON[x.tipo]||ACT_ICON.speciale}</svg>`}<span><b>${poiText(x.n)}</b>${x.sub?`<small>${poiText(x.sub)}</small>`:''}</span></button>`; }).join('')}</div></div>`; })():'';
-  el.innerHTML=`${pop}<div class="qbtabs">${fav?`<button class="${qbOpen==='fav'?'on':''}" data-qg="fav">★ Rapide</button>`:''}${groups.map(g=>`<button class="${qbOpen===g[0]?'on':''}" data-qg="${g[0]}">${poiText(g[1])} <small>${g[2].length}</small></button>`).join('')}</div>`;
-  el.querySelectorAll('[data-qg]').forEach(b=>b.onclick=()=>{ qbOpen=qbOpen===b.dataset.qg?null:b.dataset.qg; renderQuickBar(); });
-  if(qbOpen&&qbOpen!=='fav'){ const g=groups.find(x=>x[0]===qbOpen); el.querySelectorAll('[data-qi]').forEach(b=>b.onclick=()=>{ const x=g[2][+b.dataset.qi]; qbOpen=null; renderQuickBar(); x.run(); }); }
-  if(qbOpen==='fav') el.querySelectorAll('[data-hbslot]').forEach(c=>c.onclick=()=>{ qbOpen=null; hbUse(id,c.dataset.hbslot); });
+  const cat=actionCatalog(id), h=hbGet(id), mine=canAct(id);
+  const groups=[['fav','Rapide',[]],...CAT_ECO.map(([k,l])=>[k,l,cat.filter(x=>x.eco===k&&x.grp!=='Per tutti')]),['inc','Incantesimi',cat.filter(x=>x.grp==='Incantesimi')],['ogg','Oggetti',cat.filter(x=>x.grp==='Oggetti')],['per','Comuni',cat.filter(x=>x.grp==='Per tutti')]].filter(g=>g[0]==='fav'||g[2].length);
+  if(qbOpen&&!groups.some(g=>g[0]===qbOpen)) qbOpen='fav';
+  const favRefs=new Set(Object.values(h).filter(e=>e&&e.k==='cat').map(e=>e.ref));
+  const g=groups.find(x=>x[0]===qbOpen);
+  let tiles='';
+  if(qbOpen==='fav'){
+    tiles=Array.from({length:8},(_,i)=>{ const s='s'+(i+1), e=h[s]&&h[s].k!=='none'?h[s]:null;
+      if(!e) return `<button class="qbtile empty" data-hbslot="${s}" title="Casella vuota: scegli un’azione nelle altre categorie e premi la stellina ☆"><span class="qbplus">+</span><i class="qbnum">${i+1}</i></button>`;
+      const inf=hbInfo(e,id), it=e.k==='item'?invItems(id).find(x=>x.key===e.ref):null;
+      return qbTileHtml({p:inf.p,t:inf.t,s:inf.s,d:inf.d,svg:hbIcon(e,id),attr:`data-hbslot="${s}"`,q:it&&it.q>1?it.q:0,gone:inf.gone,num:i+1,del:mine?s:''}); }).join('');
+  } else if(g){
+    tiles=g[2].map((x,i)=>{ const it=x.item?invItems(id).find(y=>y.key===x.item):null, key=x.grp+'|'+x.n;
+      return qbTileHtml({p:it?icoItem(it.n):icoAbil(x.n,x.grp),t:x.n,s:x.sub,d:it?[it.stats,it.desc].filter(Boolean).join(' — '):icoText(id,x.n,x.grp),tipo:x.tipo,attr:`data-qi="${i}"`,disabled:x.disabled,on:x.on,q:it&&it.q>1?it.q:0,star:mine?key:'',starOn:favRefs.has(key)}); }).join('');
+  }
+  el.innerHTML=`<div class="qbtabs">${groups.map(x=>`<button class="${qbOpen===x[0]?'on':''}" data-qg="${x[0]}" title="${poiText(QB_HELP[x[0]]||'')}">${x[0]==='fav'?'★ ':''}${poiText(x[1])}${x[0]!=='fav'?` <small>${x[2].length}</small>`:''}</button>`).join('')}<button class="qbhide" data-qg="" title="${qbOpen?'Nascondi i quadratini':'Mostra i quadratini'}">${qbOpen?'▾':'▴'}</button></div>${qbOpen?`<div class="qbhelp">${poiText(QB_HELP[qbOpen]||'')}</div><div class="qbtiles">${tiles}</div>`:''}`;
+  el.querySelectorAll('[data-qg]').forEach(b=>b.onclick=()=>{ const v=b.dataset.qg; qbOpen=v===''?(qbOpen?'':'fav'):v; renderQuickBar(); });
+  if(g&&qbOpen!=='fav') el.querySelectorAll('[data-qi]').forEach(b=>b.onclick=ev=>{ if(ev.target.closest('[data-qstar]')) return; const x=g[2][+b.dataset.qi]; if(!x||x.disabled) return; if(!mine){ toast('Solo il giocatore del personaggio (o il master) può usarla'); return; } x.run(); });
+  if(qbOpen==='fav') el.querySelectorAll('[data-hbslot]').forEach(c=>c.onclick=ev=>{ if(ev.target.closest('[data-qdel]')) return; const e=h[c.dataset.hbslot]; if(!e||e.k==='none'){ toast('Scegli una categoria qui sopra e premi la stellina ☆ su un’azione'); return; } if(!mine) return; hbUse(id,c.dataset.hbslot); });
+  el.querySelectorAll('[data-qstar]').forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); const ref=b.dataset.qstar, cur=hbGet(id), has=Object.entries(cur).find(([,e])=>e&&e.k==='cat'&&e.ref===ref);
+    if(has){ hbSet(id,has[0],null); save(true); renderQuickBar(); toast('Tolta dalle Rapide'); return; }
+    const free=['s1','s2','s3','s4','s5','s6','s7','s8'].find(s=>!cur[s]||cur[s].k==='none'); if(!free){ toast('Rapide piene: togli qualcosa prima (la × sul quadratino)'); return; }
+    hbSet(id,free,{k:'cat',ref,label:ref.slice(ref.indexOf('|')+1)}); save(true); renderQuickBar(); toast('Aggiunta alle Rapide, casella '+free.slice(1)); });
+  el.querySelectorAll('[data-qdel]').forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); hbSet(id,b.dataset.qdel,null); save(true); renderQuickBar(); });
 }
 /* scelta del vantaggio prima di un tiro (prove, TS, iniziativa) */
 function askAdvThen(tokId,label,fn){
