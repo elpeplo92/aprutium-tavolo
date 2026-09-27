@@ -1202,12 +1202,18 @@ button.chip>svg.uico{margin-right:.3em;width:1em;height:1em}
 .acttabs button>svg.uico{margin-right:0}
 .c3card .star>svg.uico,.qbstar>svg.uico,.qbdel>svg.uico{margin:0;width:1em;height:1em;vertical-align:-.12em}
 .qbstar>svg.uico,.qbdel>svg.uico{filter:drop-shadow(0 1px 2px #000)}
+/* ===== INCANTESIMI A PIÙ COLPI (v122) ===== */
+.tgt.multi{cursor:pointer}
+.mstep{display:inline-flex;align-items:center;gap:6px;flex:none}
+.mstep b{min-width:1.6em;text-align:center;font-family:var(--sans);font-size:21px;color:var(--gold)}
+.mstep button{padding:4px 9px;line-height:1}
+.mleft{margin:10px 0 6px;font-family:var(--sans);color:var(--ink)} .mleft b{color:var(--gold)}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v121</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v122</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -4587,6 +4593,83 @@ READY=true; render();
   }
   setInterval(presence,1500);
 })();
+/* ===== INCANTESIMI A PIÙ COLPI (v122) =====
+   Raggio rovente: 3 raggi, +1 per ogni livello di slot sopra il 2°; OGNI raggio ha il suo tiro per colpire e i suoi 2d6 da fuoco.
+   Dardo incantato: 3 dardi, +1 per ogni livello di slot sopra il 1°; 1d4+1 da forza ciascuno, colpiscono sempre.
+   Nella finestra di lancio ogni colpo si assegna a un bersaglio (anche tutti sullo stesso). Prima il tavolo tirava un solo d20
+   per Raggio rovente e non aggiungeva dardi a Dardo incantato. Incantesimo nuovo dello stesso tipo: una riga in SPELL_MULTI.
+   castSpell e doAction passano da qui solo per questi incantesimi; per tutti gli altri restano quelli di prima. */
+const SPELL_MULTI={
+ 'Scorching Ray':{n:3,dmg:'2d6',atk:true,uno:'raggio',piu:'raggi'},
+ 'Magic Missile':{n:3,dmg:'1d4+1',atk:false,uno:'dardo',piu:'dardi'}
+};
+function multiCount(name,slot){ const m=SPELL_MULTI[name], base=+SPELLS[name].l||0; return m.n+Math.max(0,(slot||base)-base); }
+function multiSpellOf(a){ const n=pgNorm(a&&a.n); return n?Object.keys(SPELL_MULTI).find(k=>SPELLS[k]&&(n===pgNorm(SPELLS[k].it)||n.startsWith(pgNorm(SPELLS[k].it)+' '))):undefined; }
+const castSpellUno=castSpell;
+castSpell=function(id,name,opt={}){ return SPELL_MULTI[name]&&SPELLS[name]&&S.tokens[id]&&SHEETS[id]?castSpellMulti(id,name,opt):castSpellUno(id,name,opt); };
+const doActionUno=doAction;
+doAction=function(tokId,a){ const t=S.tokens[tokId], en=t&&t.kind==='pg'&&SHEETS[tokId]?multiSpellOf(a):undefined; return en?castSpell(tokId,en):doActionUno(tokId,a); };
+function castSpellMulti(id,name,opt={}){
+  const t=S.tokens[id], sh=SHEETS[id], d=SPELLS[name], M=SPELL_MULTI[name];
+  const sp=sh.spell||{slots:{},dc:8+(sh.prof||2)+modCalc(sh.abil?.Car||10),atk:(sh.prof||2)+modCalc(sh.abil?.Car||10),stat:'Car'}, used=t.used||{}, base=+d.l||0;
+  const xs=t.xs||{}, cap=l=>(sp.slots?.[l]||0)+(xs[l]||0);
+  const slots=[...new Set([...Object.keys(sp.slots||{}),...Object.keys(xs)].map(Number))].filter(l=>l>=base&&cap(l)>0).sort((a,b)=>a-b);
+  const opts=slots.map(l=>{ const left=cap(l)-(used[l]||0); return `<option value="${l}" ${left<=0?'disabled':''}>Slot di ${l}° livello — ${multiCount(name,l)} ${M.piu} — ne restano ${Math.max(0,left)}</option>`; }).join('')+`<option value="0">Senza slot (lancio gratuito, oggetto, pergamena) — ${multiCount(name,0)} ${M.piu}</option>`;
+  const firstFree=slots.find(l=>cap(l)-(used[l]||0)>0);
+  const meta=sp.points?metaKnown(id):[];
+  const list=targetsFor(id);
+  const row=o=>`<div class="tgt multi ${o.same?'same':''}" data-mrow="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${(IS_GM||o.t.kind==='pg')?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${o.t.ac}`:''}</span><span class="mstep"><button type="button" data-mm="-1" data-mid="${o.id}" title="Togli un ${M.uno}">−</button><b data-mn="${o.id}">0</b><button type="button" data-mm="1" data-mid="${o.id}" title="Aggiungi un ${M.uno}">+</button></span></div>`;
+  const what=M.atk?`Attacco con incantesimo +${sp.atk} per ogni ${M.uno}`:`Colpisce sempre, senza tiro`;
+  openModal(`<div class="eyebrow">${poiText(t.name)} lancia</div><h2 class="big">${poiText(d.it)}</h2><p class="note" style="margin:0 0 8px">${base}° livello · ${poiText(d.t||'')} · ${poiText(d.r||'')} · ${what} · danno ${M.dmg} per ${M.uno}</p>
+    <label>Slot <select id="cSlot">${opts}</select></label>
+    ${M.atk&&fxOn(t,'innata')?`<p class="note" style="margin:6px 0 0;color:var(--gold)">Stregoneria innata attiva: ogni ${M.uno} ha già vantaggio.</p>`:''}
+    ${M.atk?`<div class="fxadv" style="margin:8px 0"><label><input type="radio" name="cAdv" value="" checked> ${fxOn(t,'innata')?'Normale (con vantaggio da Stregoneria innata)':'Normale'}</label><label><input type="radio" name="cAdv" value="v" ${t.adv==='v'?'checked':''}> Vantaggio</label><label><input type="radio" name="cAdv" value="s" ${t.adv==='s'?'checked':''}> Svantaggio</label></div>`:''}
+    ${meta.length?`<div class="cmeta"><b>Metamagia</b> <small class="note">punti stregoneria: ${ptsLeft(id)}</small>${meta.map(m=>`<label title="${poiText(m.d)}"><input type="checkbox" name="cMeta" value="${m.k}"> ${poiText(m.n)} <small>(${m.c||'livello'})</small></label>`).join('')}</div>`:''}
+    <p class="mleft" id="cLeft"></p><div class="tgtlist">${list.map(row).join('')||'<span class="note">Nessuno in vista.</span>'}</div>
+    <div class="row" style="margin-top:12px"><button class="primary" id="cGo">Lancia</button><button id="cBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal'), sel=box.querySelector('#cSlot'); if(firstFree) sel.value=String(firstFree); if(opt.free||!firstFree) sel.value='0'; (opt.meta||[]).forEach(k=>{ const c=box.querySelector(`[name=cMeta][value="${k}"]`); if(c) c.checked=true; });
+  const n={}, tot=()=>multiCount(name,+sel.value||0), dati=()=>Object.values(n).reduce((a,b)=>a+b,0);
+  const mostra=()=>{ const r=tot()-dati(); box.querySelectorAll('[data-mn]').forEach(b=>{ b.textContent=n[b.dataset.mn]||0; }); box.querySelector('#cLeft').innerHTML=r>0?`<b>${tot()} ${M.piu}</b>: ne restano da assegnare <b>${r}</b>. Premi + accanto al bersaglio.`:`<b>${tot()} ${M.piu}</b>: tutti assegnati.`; };
+  box.querySelectorAll('[data-mm]').forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); const i=b.dataset.mid, v=+b.dataset.mm; if(v>0&&dati()>=tot()){ toast(`Hai già assegnato tutti i ${M.piu}`); return; } n[i]=Math.max(0,(n[i]||0)+v); mostra(); });
+  box.querySelectorAll('[data-mrow]').forEach(r=>r.onclick=()=>{ const i=r.dataset.mrow; if(dati()>=tot()) return; n[i]=(n[i]||0)+1; mostra(); });
+  sel.onchange=()=>{ if(dati()>tot()) for(const k in n) n[k]=0; mostra(); };
+  if(list.length===1) n[list[0].id]=tot();
+  mostra();
+  box.querySelector('#cBack').onclick=()=>renderSheet(id);
+  box.querySelector('#cGo').onclick=()=>{
+    const slot=+sel.value||0;
+    if(slot>0&&(used[slot]||0)>=cap(slot)){ toast('Nessuno slot di livello '+slot); return; }
+    const mk=[...box.querySelectorAll('[name=cMeta]:checked')].map(x=>x.value), mcost=mk.reduce((a,k)=>{ const m=META_DEFS.find(x=>x.k===k); return a+(m.c||Math.max(1,slot||base)); },0);
+    if(mcost>ptsLeft(id)){ toast('Punti stregoneria insufficienti per la metamagia'); return; }
+    if(dati()!==tot()){ toast(dati()?`Devi ancora assegnare ${tot()-dati()} ${M.piu}`:'Scegli i bersagli: premi + accanto a chi vuoi colpire'); return; }
+    const ids=list.flatMap(o=>Array.from({length:n[o.id]||0},()=>o.id));
+    const adv=box.querySelector('[name=cAdv]:checked')?.value||'';
+    closeModal(); resolveCastMulti(id,name,slot,ids,mk,mcost,adv);
+  };
+}
+function resolveCastMulti(id,name,slot,ids,meta=[],mcost=0,adv=''){
+  const t=S.tokens[id], sh=SHEETS[id], d=SPELLS[name], M=SPELL_MULTI[name], sp=sh.spell||{slots:{},atk:(sh.prof||2)+modCalc(sh.abil?.Car||10),stat:'Car'}, base=+d.l||0;
+  if(slot>0){ t.used=t.used||{}; if((t.used[slot]||0)>=((sp.slots||{})[slot]||0)&&((t.xs||{})[slot]||0)>0){ t.xs[slot]--; } else t.used[slot]=(t.used[slot]||0)+1; }
+  if(mcost){ t.pts=(+t.pts||0)+mcost; }
+  const metaTxt=meta.length?' · '+meta.map(k=>META_DEFS.find(m=>m.k===k)?.n).join(', ')+(mcost?` (${mcost} punti)`:'')+(meta.includes('rapido')?' — lanciato con un’azione bonus':''):'';
+  const lvlTxt=(slot>0?` (slot di ${slot}°)`:' (senza slot)')+metaTxt, tot=ids.length, fire=fxHas(id,'adepto_fuoco')&&fxFire(d);
+  const danno=crit=>{ const x=fxRoll(M.dmg,{crit,min:fire?2:0}); let v=x.total, txt=x.txt; if(fxOn(t,'marchio')){ const m=fxRoll('1d6',{crit}); v+=m.total; txt+=' + Marchio del cacciatore '+m.txt; } return {v,txt}; };
+  if(!M.atk) log({kind:'spell',who:t.name,name:`${d.it}${lvlTxt}: ${tot} ${tot===1?M.uno:M.piu}`,lvl:slot||base});
+  ids.forEach((tid,k)=>{ const tg=S.tokens[tid]; if(!tg) return; const quale=`${M.uno} ${k+1} di ${tot}`;
+    if(M.atk){
+      if(adv) t.adv=adv; else delete t.adv;
+      const R=fxD20(t,'incantesimo'), r=R.r, bless=blessBonus(t), sum=r+sp.atk+bless, crit=r===20, fumble=r===1;
+      const hit=crit||(!fumble&&(tg.ac==null||sum>=tg.ac));
+      const ev={kind:'atk',who:t.name,name:`${d.it}${k===0?lvlTxt:''} · ${quale}`+(R.why?` (${R.why})`:''),target:tg.name,tid,r,bless,atk:sum,crit,fumble,hit,dmgFinal:true}; if(R.extra!=null){ ev.extra=R.extra; ev.disadvantage=!!R.dis; }
+      if(hit){ const x=danno(crit); ev.dmg=x.v; ev.dmgTxt=x.txt; applyDamage(tg,x.v); ev.hpAfter=tg.hp; if(tg.hp<=0) ev.down=true; }
+      log(ev); if(ev.down) log({kind:'hit',txt:`${tg.name} cade a 0 PF`});
+    } else {
+      const x=danno(false); applyDamage(tg,x.v);
+      log({kind:'hit',txt:`${tg.name} subisce ${x.v} danni da ${d.it} · ${quale} (${x.txt}) (${tg.hp}/${tg.hpMax})`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`});
+    }
+  });
+  delete t.adv; save(true);
+}
 /* ===== SIMBOLI DEI TASTI (v120) =====
    Ogni tasto ha il suo simbolo, con lo stesso tratto delle icone di Tavolo / Scheda / Compendio e del dock
    (24×24, filo 1.8, colore del testo: oro sui tasti accesi, scuro sui tasti oro, rosso sui tasti di pericolo).
@@ -4742,6 +4825,7 @@ function uiIcoKey(b,raw,t){
   if(d.invcat) return UI_ICO_INVCAT[d.invcat.toLowerCase()]||'';
   if(d.aoe) return {cerchio:'aoeCircle',cono:'aoeCone',linea:'aoeLine'}[d.aoe]||'';
   if(d.hp!==undefined) return +d.hp<0?'dmg':'heal';
+  if(d.mm) return +d.mm<0?'minus':'plus';
   if(d.adv) return d.adv==='s'?'dis':'adv';
   if(d.d) return UI_ICO[d.d]?d.d:'d20';
   if(d.qg!==undefined) return d.qg===''?(raw.includes('▴')?'chevU':'chevD'):(UI_ICO_QG[d.qg]||'');
