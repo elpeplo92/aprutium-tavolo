@@ -159,7 +159,7 @@ const file = path.resolve(process.argv[2] || 'index.html');
           if(!saveRoll||saveRoll.skill!=='TS Des'||saveRoll.dc!==SHEETS.mattheus.spell.dc) rotte.push('TS incantesimi → tiro del mostro o CD dell’incantatore errati');
           if(enemy.hp>=oldHp) rotte.push('TS incantesimi → il fallimento non applica automaticamente il danno');
           const casterSaveSpells=Object.values(SHEETS).filter(s=>s.spell).flatMap(s=>s.spell.list).filter(n=>SPELL_SAVES[n]);
-          if(!casterSaveSpells.includes('Moonbeam')||!casterSaveSpells.includes('Sacred Flame')||!casterSaveSpells.includes('Fireball')||!casterSaveSpells.includes('Compelled Duel')) rotte.push('TS incantesimi → non copre tutti gli incantatori');
+          if(!casterSaveSpells.includes('Moonbeam')||!casterSaveSpells.includes('Toll the Dead')||!casterSaveSpells.includes('Fireball')||!casterSaveSpells.includes('Compelled Duel')) rotte.push('TS incantesimi → non copre tutti gli incantatori');
           Math.random=oldRandom; enemy.hp=oldHp; S.log=oldLog; closeModal();
         } catch (e) { rotte.push('Tiri salvezza automatici dei mostri → '+e.name+': '+e.message); }
       }

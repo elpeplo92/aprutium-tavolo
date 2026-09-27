@@ -5,7 +5,7 @@
  "classe": "Chierico",
  "sottoclasse": "Dominio della Vita",
  "livello": 5,
- "background": "Accolito",
+ "background": "Saggio",
  "pe": "6.500 / 14.000",
  "ca": 18,
  "pf_max": 48,
@@ -66,8 +66,8 @@
    "comp": "no"
   },
   "Arcano": {
-   "mod": 3,
-   "comp": "no"
+   "mod": 6,
+   "comp": "competente"
   },
   "Storia": {
    "mod": 2,
@@ -82,8 +82,8 @@
    "comp": "no"
   },
   "Religione": {
-   "mod": 6,
-   "comp": "competente"
+   "mod": 3,
+   "comp": "no"
   },
   "Addestrare animali": {
    "mod": 4,
@@ -145,10 +145,10 @@
    "note": "Pari al bonus di competenza. 1 punto: vantaggio a un proprio Test del d20, oppure svantaggio a un tiro per colpire contro di sé."
   },
   {
-   "n": "Iniziato alla magia: lancio gratuito",
+   "n": "Iniziato alla magia: Scudo gratuito",
    "max": 1,
    "recupero": "riposo lungo",
-   "note": "L'incantesimo di 1° livello scelto con il talento si lancia una volta senza slot (la scheda non specifica quale sia)."
+   "note": "Scudo (1° livello, dal talento Iniziato alla magia (Mago)) si lancia una volta senza slot; l'uso torna con un riposo lungo. Si può lanciare anche con i propri slot."
   },
   {
    "n": "Ispirazione eroica",
@@ -191,7 +191,7 @@
   {
    "n": "Incantesimi (Spellcasting)",
    "fonte": "Chierico 1",
-   "d": "Lancia incantesimi del Chierico con la Saggezza (CD dei TS 15, attacco con incantesimo +7). Conosce i trucchetti del Chierico e prepara ogni giorno una lista di incantesimi di 1° livello o superiore dalla lista del Chierico (9 al 5° livello, esclusi quelli sempre preparati). Recupera tutti gli slot con un riposo lungo; al termine di un riposo lungo può cambiare gli incantesimi preparati. Ogni volta che sale di livello da Chierico può sostituire un trucchetto con un altro della lista. Può usare un simbolo sacro come focus da incantatore.",
+   "d": "Lancia incantesimi del Chierico con la Saggezza (CD dei TS 15, attacco con incantesimo +7). Conosce i trucchetti del Chierico e prepara ogni giorno una lista di incantesimi di 1° livello o superiore dalla lista del Chierico (9 al 5° livello, esclusi quelli sempre preparati). Recupera tutti gli slot con un riposo lungo; al termine di un riposo lungo può cambiare gli incantesimi preparati. Ogni volta che sale di livello da Chierico può sostituire un trucchetto con un altro della lista. Può usare un simbolo sacro come focus da incantatore. REGOLA DEL TAVOLO (27/09/2026): niente preparazione. Conosce tutti gli incantesimi della lista del chierico dei livelli per cui ha slot e li lancia spendendo uno slot; la lista completa è nella sezione Incantesimi.",
    "usi": "Slot: 4 di 1°, 3 di 2°, 2 di 3°"
   },
   {
@@ -274,9 +274,9 @@
    "d": "Ha un numero di Punti fortuna pari al bonus di competenza (3), che recupera con un riposo lungo. Vantaggio: quando tira un d20 per un Test del d20 può spendere 1 punto per avere vantaggio al tiro. Svantaggio: quando una creatura tira un d20 per un tiro per colpire contro di lui, può spendere 1 punto per imporre svantaggio a quel tiro."
   },
   {
-   "n": "Iniziato alla magia (Chierico)",
-   "fonte": "Origine",
-   "d": "Impara due trucchetti dalla lista del Chierico (Saggezza come caratteristica da incantatore). Sceglie inoltre un incantesimo di 1° livello della stessa lista: lo ha sempre preparato, può lanciarlo una volta senza slot e ne recupera l'uso con un riposo lungo; può anche lanciarlo con i propri slot. Ogni volta che sale di livello può sostituire uno degli incantesimi scelti con un altro dello stesso livello della stessa lista. La scheda non indica quali trucchetti e quale incantesimo di 1° livello provengano dal talento."
+   "n": "Iniziato alla magia (Mago)",
+   "fonte": "Origine (background Saggio)",
+   "d": "Due trucchetti dalla lista del Mago: Dardo di fuoco e Mano magica. Un incantesimo di 1° livello della lista del Mago: Scudo, sempre preparato; si lancia una volta senza slot (l'uso torna con un riposo lungo) e anche con i propri slot. Caratteristica da incantatore scelta: Saggezza (CD 15, attacco +7). Ogni volta che sale di livello può sostituire uno di questi incantesimi con un altro dello stesso livello della lista del Mago."
   },
   {
    "n": "Robusto (Tough)",
@@ -309,13 +309,13 @@
    "note": "Danni 1 + modificatore di Forza (+0)."
   },
   {
-   "n": "Fiamma sacra",
-   "atk": null,
-   "dmg": "2d8",
-   "tipo": "radiosi",
-   "proprieta": "Trucchetto · 18 m",
+   "n": "Dardo di fuoco",
+   "atk": 7,
+   "dmg": "2d10",
+   "tipo": "fuoco",
+   "proprieta": "Trucchetto · 36 m (attacco a distanza con incantesimo)",
    "maestria": "",
-   "note": "TS Destrezza CD 15; il bersaglio non beneficia di mezza copertura o copertura a tre quarti."
+   "note": "Iniziato alla magia (Mago), con la Saggezza. Un oggetto infiammabile colpito prende fuoco se non è indossato né trasportato."
   },
   {
    "n": "Rintocco di morte (a PF pieni)",
@@ -437,12 +437,20 @@
     "fonte": "Chierico"
    },
    {
-    "en": "Sacred Flame",
-    "it": "Fiamma sacra",
+    "en": "Fire Bolt",
+    "it": "Dardo di fuoco",
     "l": 0,
     "preparato": true,
     "sempre": true,
-    "fonte": "Chierico"
+    "fonte": "Iniziato alla magia (Mago)"
+   },
+   {
+    "en": "Mage Hand",
+    "it": "Mano magica",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Iniziato alla magia (Mago)"
    },
    {
     "en": "Light",
@@ -541,6 +549,70 @@
     "fonte": "Chierico"
    },
    {
+    "en": "Shield",
+    "it": "Scudo",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Iniziato alla magia (Mago)"
+   },
+   {
+    "en": "Bane",
+    "it": "Anatema",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Create or Destroy Water",
+    "it": "Creare o distruggere acqua",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Detect Evil and Good",
+    "it": "Individuazione del bene e del male",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Detect Magic",
+    "it": "Individuazione del magico",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Detect Poison and Disease",
+    "it": "Individuazione delle malattie e dei veleni",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Purify Food and Drink",
+    "it": "Purificare cibo e bevande",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Shield of Faith",
+    "it": "Scudo della fede",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
     "en": "Prayer of Healing",
     "it": "Preghiera di guarigione",
     "l": 2,
@@ -573,6 +645,110 @@
     "fonte": "Chierico"
    },
    {
+    "en": "Augury",
+    "it": "Presagio",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Blindness/Deafness",
+    "it": "Cecità/Sordità",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Calm Emotions",
+    "it": "Calmare emozioni",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Continual Flame",
+    "it": "Fiamma perenne",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Enhance Ability",
+    "it": "Potenziare caratteristica",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Find Traps",
+    "it": "Trova trappole",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Gentle Repose",
+    "it": "Riposo inviolato",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Hold Person",
+    "it": "Blocca persone",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Locate Object",
+    "it": "Localizzare oggetti",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Protection from Poison",
+    "it": "Protezione dai veleni",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Silence",
+    "it": "Silenzio",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Warding Bond",
+    "it": "Legame di interdizione",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Zone of Truth",
+    "it": "Zona di verità",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
     "en": "Revivify",
     "it": "Rianimare",
     "l": 3,
@@ -599,6 +775,142 @@
    {
     "en": "Spirit Guardians",
     "it": "Guardiani spirituali",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Animate Dead",
+    "it": "Animare morti",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Aura of Vitality",
+    "it": "Aura di vitalità",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Beacon of Hope",
+    "it": "Faro di speranza",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Bestow Curse",
+    "it": "Scagliare maledizione",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Clairvoyance",
+    "it": "Chiaroveggenza",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Create Food and Water",
+    "it": "Creare cibo e acqua",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Daylight",
+    "it": "Luce diurna",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Feign Death",
+    "it": "Morte apparente",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Glyph of Warding",
+    "it": "Glifo di interdizione",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Magic Circle",
+    "it": "Cerchio magico",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Meld into Stone",
+    "it": "Fondersi nella pietra",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Protection from Energy",
+    "it": "Protezione dall'energia",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Remove Curse",
+    "it": "Rimuovi maledizione",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Sending",
+    "it": "Inviare",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Speak with Dead",
+    "it": "Parlare con i morti",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Tongues",
+    "it": "Linguaggi",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Water Walk",
+    "it": "Camminare sull'acqua",
     "l": 3,
     "preparato": true,
     "sempre": false,
@@ -781,9 +1093,9 @@
   "legami": "",
   "difetti": ""
  },
- "storia_scheda": "Accolito. Ti sei votato al servizio in un tempio, annidato in una città o isolato in un bosco sacro. Lì celebravi riti in onore di un dio o di un pantheon. Hai servito sotto un sacerdote e studiato la religione. Grazie agli insegnamenti del tuo sacerdote e alla tua devozione, hai anche imparato a incanalare una piccola parte di potere divino al servizio del tuo luogo di culto e delle persone che vi pregavano.",
+ "storia_scheda": "Saggio. Hai trascorso gli anni della tua formazione viaggiando tra manieri e monasteri, svolgendo lavori e servizi occasionali in cambio dell'accesso alle loro biblioteche. Hai passato lunghe serate a studiare libri e pergamene, imparando le conoscenze del multiverso, perfino i rudimenti della magia, e la tua mente ne desidera ancora di più.",
  "progressione": "Dominio della Vita: al 7° livello Aura di vita e Interdizione alla morte sempre preparati; al 9° Ristorare superiore e Cura ferite di massa. Scintilla divina 2d8 al 7°. Aumento dei punteggi di caratteristica di nuovo ai livelli 8, 12, 16.",
- "note": "PF attuali 44/48, PF temporanei 8. Dadi vita 5d8 (nessuno speso). Monete: 0 mr, 0 ma, 0 me, 252 mo, 0 mp. Sintonie: nessuna. Allineamento Caotico Buono. La scheda non distingue quali trucchetti e quale incantesimo di 1° livello derivino da Iniziato alla magia (Chierico): da regole ne spetterebbero 7 (4 del Chierico al 5° livello + 1 Taumaturgo + 2 del talento) ma la scheda ne elenca 6; gli incantesimi di 1°+ non di dominio sono 10 = 9 preparati + 1 del talento. Nota: la scheda ha tre talenti di origine (Fortunato, Iniziato alla magia, Robusto) più Leader ispiratore; da regole Umano (Versatile) + Accolito ne danno due, il terzo è probabilmente un dono di campagna.",
+ "note": "PF attuali 44/48, PF temporanei 8. Dadi vita 5d8 (nessuno speso). Monete: 0 mr, 0 ma, 0 me, 252 mo, 0 mp. Sintonie: nessuna. Allineamento Caotico Buono. Trucchetti: 5 da chierico (4 al 5° livello + 1 del Taumaturgo) e 2 da Iniziato alla magia (Mago); dal 27/09/2026 conosce tutta la lista del chierico (regola del tavolo: niente preparazione). Nota: la scheda ha tre talenti di origine (Fortunato, Iniziato alla magia, Robusto) più Leader ispiratore; da regole Umano (Versatile) + Accolito ne danno due, il terzo è probabilmente un dono di campagna.",
  "differenze": [
   "Codice castSpell: per mattheus aggiunge alle cure mod Sag + 2 + 5 (fisso, come se fosse il livello del personaggio); Discepolo della vita dà 2 + livello dello SLOT (es. +3 a 1°, +5 a 3°): le cure del sito sono gonfiate di 2-4 PF con slot di 1°-2°.",
   "SHEETS.features scrive 'Discepolo della vita (cure +2+livello)': va precisato 'livello dello slot', e solo per incantesimi lanciati con slot.",
@@ -810,7 +1122,7 @@
    "armi": "Semplici",
    "strumenti": "Nessuno",
    "abilita": [
-    "Storia",
+    "Intuizione",
     "Medicina"
    ],
    "note": "Il Chierico sceglie 2 abilità fra Storia, Intuizione, Medicina, Persuasione, Religione. Ordine divino Taumaturgo (Chierico 1): un trucchetto in più e bonus pari al mod. Sag alle prove di Int (Arcano o Religione) — non è competenza (Arcano +3 senza competenza è corretto). Il Protettore avrebbe dato armi da guerra e armature pesanti: non preso."
@@ -827,15 +1139,15 @@
    ]
   },
   "background": {
-   "nome": "Accolito",
+   "nome": "Saggio",
    "abilita": [
-    "Intuizione",
-    "Religione"
+    "Arcano",
+    "Storia"
    ],
    "strumenti": "Strumenti da calligrafo",
-   "talento": "Iniziato alla magia (Chierico)",
-   "lingue": "Nessuna dal background (Comune + 2 lingue standard alla creazione)",
-   "caratteristiche": "Intelligenza, Saggezza, Carisma"
+   "talento": "Iniziato alla magia (Mago)",
+   "lingue": "Nessuna dal background",
+   "caratteristiche": "Costituzione, Intelligenza, Saggezza (+2 Sag, +1 Int)"
   },
   "talenti": [
    {
@@ -843,8 +1155,8 @@
     "concede": "Nessuna competenza (Umano, Versatile)"
    },
    {
-    "nome": "Iniziato alla magia (Chierico)",
-    "concede": "Nessuna competenza (Accolito)"
+    "nome": "Iniziato alla magia (Mago)",
+    "concede": "Nessuna competenza (Saggio)"
    },
    {
     "nome": "Robusto (Tough)",
@@ -865,10 +1177,11 @@
    "Sottocomune"
   ],
   "verifica": [
-   "Abilità: 5 competenti = Chierico 2 (Storia, Medicina) + Accolito 2 (Intuizione, Religione) + Abile 1 (Percezione): il conto torna.",
-   "TS (Sag, Car), armature leggere/medie/scudi, armi semplici e Strumenti da calligrafo (Accolito) tornano.",
-   "Talento Robusto (Tough): terzo talento di origine senza fonte (Umano Versatile → Fortunato, Accolito → Iniziato alla magia): probabile dono di campagna, da confermare.",
-   "Lingue: Celestiale e Sottocomune sono lingue rare nel 2024 e occupano il posto delle 2 lingue standard iniziali (nessuna lingua standard scelta). Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: probabile concessione di campagna, da confermare."
+   "Abilità: 5 competenti = Saggio 2 (Arcano, Storia) + Chierico 2 (Intuizione, Medicina) + Abile 1 (Percezione): il conto torna.",
+   "TS (Sag, Car), armature leggere/medie/scudi, armi semplici e Strumenti da calligrafo (Saggio) tornano.",
+   "Talento Robusto (Tough): terzo talento di origine senza fonte (Umano Versatile → Fortunato, Saggio → Iniziato alla magia (Mago)): probabile dono di campagna, da confermare.",
+   "Lingue: Celestiale e Sottocomune sono lingue rare nel 2024 e occupano il posto delle 2 lingue standard iniziali (nessuna lingua standard scelta). Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: probabile concessione di campagna, da confermare.",
+   "27/09/2026: su richiesta del giocatore il background passa da Accolito a Saggio (Iniziato alla magia (Mago): Dardo di fuoco, Mano magica, Scudo). Lascia la competenza in Religione (resta +3 grazie al Taumaturgo), prende Arcano (+6). Trucchetti da chierico: 5 (tolta Fiamma sacra)."
   ]
  }
 }
