@@ -56,7 +56,6 @@
     "segnaposto": false
   },
   "intro": {
-    "bozza": true,
     "leggi": "Sotto Bëllindë c'è qualcosa di più vecchio della città.\n\nIl Pozzo Cieco del Borgo Vecchio non dà più acqua da anni. All'anello, in alto, pende ancora la corda di Rocco, tagliata a mezza altezza. Sotto, il buio.\n\nDa qui in giù, la luce la portate voi.",
     "note": "Se Ruggiero scende con loro, si ferma alla porta murata: tiene la corda e la ritirata, non va oltre.\n\nAi primi passi nel corridoio parte il ritmo: risponde ai loro passi e si ferma quando si fermano.\n\nI punti qui sotto sono in ordine di gioco (ingresso dal Pozzo Cieco).",
     "ingressi": [
@@ -94,7 +93,6 @@
       "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
       "text": "Scendendo, Bëllindë si allontana. Per i primi metri sentite ancora voci, vento, passi sul selciato. Poi niente.\n\nLa luce in alto diventa un cerchio, poi una moneta. L'aria sa di ferro e di acqua vecchia.\n\nA metà discesa la pietra cambia. Finiscono le pietre irregolari del pozzo. Sotto cominciano blocchi enormi, squadrati, accostati senza malta. Non sono stati costruiti insieme al pozzo.\n\nAccanto alla corda, fissato alla pietra, pende un vecchio pezzo di corda. Un moncone. Tagliato di netto.\n\nIn fondo il pozzo non finisce. La parete si apre di lato su un corridoio. Buio. Perfettamente diritto.\n\nE c'è un silenzio sbagliato. Niente carri, niente campane, niente cigolio del pozzo. Come se Bëllindë fosse molto più lontana di quanto dovrebbe.",
       "breve": "Il gruppo scende nel pozzo. Durante la discesa possono fermarsi sul moncone di corda tagliato e sulle due murature. Sul fondo, ai primi passi nel corridoio, parte il ritmo. Da qui si prosegue verso lo Strano Corridoio.",
-      "breveBozza": true,
       "gm": "I blocchi squadrati sono più antichi di Bëllindë: il pozzo è stato scavato sopra una struttura che esisteva già.\n\nIl moncone è stato tagliato con una lama ed è legato alla morte di Rocco. Da qui non si scopre chi l'ha tagliato.",
       "moduli": [
         {
@@ -102,7 +100,6 @@
           "tipo": "dettaglio",
           "titolo": "Il moncone di corda",
           "parte": "indizio",
-          "bozza": true,
           "seme": "Un moncone. Tagliato di netto.",
           "innesco": "Qualcuno guarda o tocca il moncone durante la discesa, o torna a esaminarlo dal fondo.",
           "leggi": "Il moncone pende a un palmo dalla vostra corda. Canapa vecchia, scurita dall'acqua. L'estremità non è sfilacciata: finisce di netto.",
@@ -159,7 +156,6 @@
           "tipo": "dettaglio",
           "titolo": "Le due murature",
           "parte": "indizio",
-          "bozza": true,
           "seme": "Non sono stati costruiti insieme al pozzo.",
           "innesco": "Qualcuno osserva le pareti mentre scende, o tocca i blocchi sul fondo.",
           "leggi": "Da vicino la differenza è netta. Sopra, pietre piccole tenute dalla malta. Sotto, blocchi grandi come un uomo, freddi al tocco.",
@@ -215,7 +211,6 @@
           "tipo": "prosecuzione",
           "titolo": "Nel corridoio",
           "parte": "evento",
-          "bozza": true,
           "innesco": "Appena fanno i primi passi nel corridoio:",
           "leggi": "Siete in fondo. Davanti a voi il corridoio, e oltre i primi metri solo buio.\n\nFate tre passi. Dal buio risponde qualcosa.\n\nTAC. TAC. TAC.\n\nSilenzio. Altri tre passi.\n\nTAC. TAC. TAC.\n\nVi fermate. E il ritmo si ferma con voi.\n\nChe cosa fate?",
           "dopo": "Il ritmo risponde ai loro passi e si ferma quando si fermano. Se cercano di capirlo, apri «Il ritmo». Se avanzano, si va allo Strano Corridoio.",
@@ -229,7 +224,6 @@
           "tipo": "dettaglio",
           "titolo": "Il ritmo",
           "parte": "evento",
-          "bozza": true,
           "innesco": "Parte da solo appena fanno i primi passi nel corridoio (vedi Prosecuzione). Se cercano di capirlo:",
           "prove": [
             {
@@ -330,8 +324,7 @@
           "daqui": [
             "magia",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -345,8 +338,7 @@
           "daqui": [
             "solchi",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "prosecuzione",
@@ -358,12 +350,10 @@
             "murata_crollata"
           ],
           "innesco": "Quando decidono di avanzare lungo il corridoio:",
-          "dopo": "Il corridoio finisce contro un muro recente, e i solchi ci passano sotto. Si va al Muro con Strano Rigonfiamento.",
-          "bozza": true
+          "dopo": "Il corridoio finisce contro un muro recente, e i solchi ci passano sotto. Si va al Muro con Strano Rigonfiamento."
         }
       ],
       "breve": "Un corridoio diritto di blocchi antichi, con due solchi sul pavimento e il ritmo che risponde ai passi. Qui non c'è pericolo: possono esaminare i solchi o usare Individuazione del Magico. Avanzando arrivano al Muro con Strano Rigonfiamento.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -442,8 +432,7 @@
             "rigonfiamento",
             "crepa",
             "aprire"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "rigonfiamento",
@@ -498,8 +487,7 @@
           "daqui": [
             "crepa",
             "aprire"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "crepa",
@@ -514,8 +502,7 @@
           "daqui": [
             "magia",
             "aprire"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -528,8 +515,7 @@
           "rilancio": "I filamenti spariscono sotto la parete. Che cosa fate?",
           "daqui": [
             "aprire"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "aprire",
@@ -542,8 +528,7 @@
           "rilancio": "Il muro aspetta. Come lo aprite?",
           "daqui": [
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "prosecuzione",
@@ -555,12 +540,10 @@
             "galleria_schiera"
           ],
           "innesco": "Appena il muro viene giù, in qualunque modo:",
-          "dopo": "Oltre il varco c'è la stanzetta quadrata, e il passaggio scende verso la Galleria della Schiera. Il ritmo è ripreso, più vicino.",
-          "bozza": true
+          "dopo": "Oltre il varco c'è la stanzetta quadrata, e il passaggio scende verso la Galleria della Schiera. Il ritmo è ripreso, più vicino."
         }
       ],
       "breve": "Il corridoio finisce contro un muro recente e rozzo, gonfiato da una spinta arrivata dall'altra parte. Possono esaminare muratura, gobba e crepa, poi aprirlo: riesce sempre, conta il tempo e il rumore. Oltre c'è una stanzetta e il passaggio che scende verso la Galleria della Schiera.",
-      "breveBozza": true,
       "nota": {
         "cd": 12
       }
@@ -616,8 +599,7 @@
             "addestramento",
             "magia_allineati",
             "sala"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "addestramento",
@@ -632,8 +614,7 @@
           "daqui": [
             "sala",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia_allineati",
@@ -647,8 +628,7 @@
           "daqui": [
             "guardare",
             "sala"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "guardare",
@@ -662,8 +642,7 @@
           "daqui": [
             "sala",
             "solchi"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "sala",
@@ -719,8 +698,7 @@
             "storia",
             "porta_pietra",
             "intercapedine"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "storia",
@@ -762,8 +740,7 @@
           "daqui": [
             "sala",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "pdi_interni",
@@ -778,7 +755,6 @@
             "porta_pietra",
             "solchi"
           ],
-          "bozza": true,
           "note": "05 Prima Nicchia Murata (nascosta) · 06 Seconda Nicchia Murata (nascosta) · 07 Porta di Pietra · 08 I Solchi del Pavimento"
         },
         {
@@ -793,12 +769,10 @@
             "solchi"
           ],
           "innesco": "Quando l'ordine è passato e il gruppo si guarda intorno:",
-          "dopo": "Sanno che la Galleria dà ordini e si aspetta obbedienza. Il prossimo punto è la Prima Nicchia Murata; AVANTI e i pericoli lungo i solchi si giocano ai Solchi del Pavimento.",
-          "bozza": true
+          "dopo": "Sanno che la Galleria dà ordini e si aspetta obbedienza. Il prossimo punto è la Prima Nicchia Murata; AVANTI e i pericoli lungo i solchi si giocano ai Solchi del Pavimento."
         }
       ],
       "breve": "Appena entrano, la Galleria ordina «ALLINEATI»: TS Saggezza CD 13, chi fallisce fa un solo passo su un solco. Possono studiare la sala, i dischi di rame e la storia del borgo; crollo e acqua nera si vedono senza prove. Da qui si va alle nicchie murate, alla Porta di Pietra e ai Solchi del Pavimento.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -908,8 +882,7 @@
           "daqui": [
             "aprire",
             "magia"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "aprire",
@@ -922,8 +895,7 @@
           "rilancio": "Polvere e pietre davanti a voi. Che cosa fate?",
           "daqui": [
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -938,8 +910,7 @@
             "chiusura",
             "aprire",
             "solchi"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "prosecuzione",
@@ -952,12 +923,10 @@
             "seconda_nicchia"
           ],
           "innesco": "Appena la parete cede, sfondata o smontata:",
-          "dopo": "Sono all'ingresso della Caserma degli Armigeri: vai alla Caserma. Se tornano indietro, la galleria prosegue verso la Seconda Nicchia.",
-          "bozza": true
+          "dopo": "Sono all'ingresso della Caserma degli Armigeri: vai alla Caserma. Se tornano indietro, la galleria prosegue verso la Seconda Nicchia."
         }
       ],
       "breve": "Una toppa nella parete della galleria nasconde un vecchio passaggio. Si apre senza prova: contano il tempo e il rumore. Dietro c'è la Caserma degli Armigeri, con la linea scura all'ingresso.",
-      "breveBozza": true,
       "nota": {
         "cd": 13
       }
@@ -1067,8 +1036,7 @@
           "daqui": [
             "aprire",
             "magia"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "aprire",
@@ -1081,8 +1049,7 @@
           "rilancio": "Polvere e pietre davanti a voi. Che cosa fate?",
           "daqui": [
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -1096,8 +1063,7 @@
           "daqui": [
             "chiusura",
             "aprire"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "prosecuzione",
@@ -1110,12 +1076,10 @@
             "porta_pietra"
           ],
           "innesco": "Appena tolgono le ultime pietre:",
-          "dopo": "Sono nella Sala delle Ordinanze, la sala che sblocca la Porta di Pietra: vai alla Sala delle Ordinanze.",
-          "bozza": true
+          "dopo": "Sono nella Sala delle Ordinanze, la sala che sblocca la Porta di Pietra: vai alla Sala delle Ordinanze."
         }
       ],
       "breve": "Una seconda toppa nella galleria, nascosta con più cura della prima. Si apre senza prova: contano il tempo e il rumore. Dietro c'è la Sala delle Ordinanze, che sblocca la Porta di Pietra.",
-      "breveBozza": true,
       "nota": {
         "cd": 14
       }
@@ -1193,8 +1157,7 @@
             "incisioni",
             "forzare",
             "bloccata"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "forzare",
@@ -1209,8 +1172,7 @@
           "daqui": [
             "esaminare",
             "bloccata"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "incisioni",
@@ -1265,8 +1227,7 @@
           "daqui": [
             "esaminare",
             "bloccata"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "sblocco",
@@ -1279,8 +1240,7 @@
           "rilancio": "La pietra scorre ancora. Che cosa fate?",
           "daqui": [
             "aperta"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "bloccata",
@@ -1294,8 +1254,7 @@
             "galleria_schiera",
             "intercapedine",
             "seconda_nicchia"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "aperta",
@@ -1307,12 +1266,10 @@
             "solchi"
           ],
           "innesco": "Quando la porta si è aperta e la attraversano:",
-          "dopo": "Da qui si va verso la Stanza del Quarto Sigillo oppure verso l'uscita dal dungeon.",
-          "bozza": true
+          "dopo": "Da qui si va verso la Stanza del Quarto Sigillo oppure verso l'uscita dal dungeon."
         }
       ],
       "breve": "Una porta enorme, senza cardini né serratura, che non si apre con la forza. Si comanda dalla Sala delle Ordinanze: finché lì il meccanismo non è risolto, il gruppo torna nella galleria a cercare. Aperta, porta verso la Stanza del Quarto Sigillo o verso l'uscita.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -1373,8 +1330,7 @@
             "trattenere",
             "dischi",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "trattenere",
@@ -1389,8 +1345,7 @@
             "avanti",
             "dischi",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "dischi",
@@ -1448,8 +1403,7 @@
             "disattivare",
             "magia",
             "avanti"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -1463,8 +1417,7 @@
           "daqui": [
             "dischi",
             "disattivare"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "disattivare",
@@ -1477,8 +1430,7 @@
           "rilancio": "In questo tratto il ritmo sembra più lontano. Che cosa fate?",
           "daqui": [
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "prosecuzione",
@@ -1490,12 +1442,10 @@
             "linea"
           ],
           "innesco": "Quando il gruppo ha superato il tratto dei solchi:",
-          "dopo": "Il comando tace, il ritmo no. Da qui si prosegue verso la Caserma degli Armigeri.",
-          "bozza": true
+          "dopo": "Il comando tace, il ritmo no. Da qui si prosegue verso la Caserma degli Armigeri."
         }
       ],
       "breve": "Il gruppo attraversa la Galleria lungo i solchi. Superato un disco di rame scatta il comando «AVANTI»: chi fallisce il tiro salvezza fa un solo passo verso il pericolo, e un compagno può trattenerlo. I dischi si possono studiare e disattivare. Da qui si prosegue verso la Caserma degli Armigeri.",
-      "breveBozza": true,
       "nota": {
         "cd": 12
       }
@@ -1573,8 +1523,7 @@
             "linea",
             "magia",
             "formazione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "linea",
@@ -1630,8 +1579,7 @@
             "figure",
             "magia",
             "formazione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -1645,8 +1593,7 @@
           "daqui": [
             "figure",
             "linea"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "formazione",
@@ -1661,8 +1608,7 @@
             "exp",
             "loot",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "loot",
@@ -1676,8 +1622,18 @@
           "daqui": [
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Nelle rastrelliere: lance e scudi rotondi antichi, pesanti e ben conservati. Non sono magici. Vanno bene per l'armeria della Crociata.\n\nAssegna → Loot della Crociata"
+          "note": "Nelle rastrelliere: lance e scudi rotondi antichi, pesanti e ben conservati. Non sono magici. Vanno bene per l'armeria della Crociata.\n\nAssegna → Loot della Crociata",
+          "bottino": [
+            {
+              "n": "Lance e scudi rotondi antichi",
+              "q": 1,
+              "cat": "Armi",
+              "a": "crociata",
+              "valore": "Non stabilito",
+              "stats": "Non magici",
+              "desc": "Dalle rastrelliere della Caserma degli Armigeri: pesanti e ben conservati."
+            }
+          ]
         },
         {
           "id": "exp",
@@ -1689,8 +1645,8 @@
             "loot",
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Sconfitta dei sei Armigeri: 1.200 PE, cioè 240 a testa per 5 PG. Aggiungi 200 per ogni armatura «vuota» che hai svegliato con la leva."
+          "note": "Sconfitta dei sei Armigeri: 1.200 PE, cioè 240 a testa per 5 PG. Aggiungi 200 per ogni armatura «vuota» che hai svegliato con la leva. Nel tasto «Assegna PE» puoi correggere il totale.",
+          "pe": 1200
         },
         {
           "id": "prosecuzione",
@@ -1703,12 +1659,10 @@
             "rilievi"
           ],
           "innesco": "Quando l'ultimo Armigero cade:",
-          "dopo": "A ovest si va alla Prigione del Brak, a sud verso la Sala delle Ordinanze. Il ritmo continua.",
-          "bozza": true
+          "dopo": "A ovest si va alla Prigione del Brak, a sud verso la Sala delle Ordinanze. Il ritmo continua."
         }
       ],
       "breve": "Una caserma con quattordici figure in armatura: sei sono Armigeri Vincolati, e si svegliano se qualcuno supera la linea scura sulla soglia. Prima di entrare si possono studiare figure e linea; se si combatte, gli Armigeri non inseguono oltre la linea. Da qui si prosegue a ovest verso la Prigione del Brak.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -1728,8 +1682,8 @@
       },
       "image": "img/17453c94db19.jpg",
       "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
-      "text": "Una stanza quasi quadrata. Il pavimento è fatto di lastre disposte a cerchio, sempre più piccole verso il centro.\n\nDai quattro angoli partono quattro catene, grosse quanto un braccio. Si incrociano al centro, su un collare di ferro.\n\nE dentro il collare c'è qualcuno, seduto a terra.\n\nEnorme. Pelle grigio-verde, zanne, spalle come una porta. Un'ascia pesante sulle ginocchia. Addosso i resti di un'armatura scura, e sul petto un'insegna grattata via.\n\nMa il viso non è quello di una bestia. Gli zigomi sono alti. Le orecchie sono lunghe e appuntite, tagliate a metà.\n\nHa gli occhi aperti. Non guarda voi. Guarda il passaggio in basso a destra.\n\nPoi parla. Una voce bassa, con un accento che non avete mai sentito.\n\n«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»",
-      "gm": "Vhaerun è un Brak. Per i Celamanti era il Primo Strumento della Terza Schiera, comandante delle loro orde nella Guerra delle Due Lune. L'Ultimo Custode lo sconfisse faccia a faccia e, invece di ucciderlo, lo incatenò qui imponendogli attraverso il Sigillo un solo ordine: «PROTEGGI QUESTA PORTA».\n\nL'ordine ha la voce del Custode. Vhaerun la sente a ogni battito del ritmo da duecento anni. Con una sola parola nella testa per tanto tempo, l'obbedienza dei Celamanti si è consumata e la memoria gli è tornata: sa di essere stato un elfo, forse l'unico Brak vivo che lo sappia.\n\nIl disco di metallo accanto alla porta porta l'ordine; il collare è ferro vero, con una serratura antica. Spegnere l'ordine non apre il collare.\n\nIl cerchio è l'anello più interno di lastre. Entrarci, attaccarlo o tentare di passare la porta mentre il disco pulsa fa partire lo scontro. Fuori dal cerchio si può parlare quanto si vuole. Vhaerun vuole essere liberato o ucciso, non restare qui.\n\nRegola del dialogo: dice soltanto ciò che ha visto e sentito. Non nomina il Custode, il Sigillo o persone che i PG non hanno ancora incontrato.",
+      "text": "Una stanza quasi quadrata. Il pavimento è fatto di lastre disposte a cerchio, sempre più piccole verso il centro.\n\nDai quattro angoli partono quattro catene, grosse quanto un braccio. Si incrociano al centro, su un collare di ferro.\n\nE dentro il collare c'è qualcuno, seduto a terra.\n\nEnorme. Pelle grigio-verde, zanne, spalle come una porta. Sulle ginocchia, un'ascia bipenne enorme: sul dorso, fra le due lame, sono incise due lune. Addosso i resti di un'armatura scura, e sul petto un'insegna grattata via.\n\nMa il viso non è quello di una bestia. Gli zigomi sono alti. Le orecchie sono lunghe e appuntite, tagliate a metà.\n\nHa gli occhi aperti. Non guarda voi. Guarda il passaggio in basso a destra.\n\nPoi parla. Una voce bassa, con un accento che non avete mai sentito.\n\n«Fermi. Oltre il cerchio vi ucciderei. Non perché lo voglio. Perché devo.»",
+      "gm": "Vhaerun è un Brak. Per i Celamanti era il Primo Strumento della Terza Schiera, comandante delle loro orde nella Guerra delle Due Lune. L'Ultimo Custode lo sconfisse faccia a faccia e, invece di ucciderlo, lo incatenò qui imponendogli attraverso il Sigillo un solo ordine: «PROTEGGI QUESTA PORTA».\n\nL'ordine ha la voce del Custode. Vhaerun la sente a ogni battito del ritmo da duecento anni. Con una sola parola nella testa per tanto tempo, l'obbedienza dei Celamanti si è consumata e la memoria gli è tornata: sa di essere stato un elfo, forse l'unico Brak vivo che lo sappia.\n\nIl disco di metallo accanto alla porta porta l'ordine; il collare è ferro vero, con una serratura antica. Spegnere l'ordine non apre il collare.\n\nIl cerchio è l'anello più interno di lastre. Entrarci, attaccarlo o tentare di passare la porta mentre il disco pulsa fa partire lo scontro. Fuori dal cerchio si può parlare quanto si vuole. Vhaerun vuole essere liberato o ucciso, non restare qui.\n\nRegola del dialogo: dice soltanto ciò che ha visto e sentito. Non nomina il Custode, il Sigillo o persone che i PG non hanno ancora incontrato.\n\nL'ascia (NUOVO DETTAGLIO, giocato al tavolo): è una bipenne con due lune incise e non è un'arma dei Brak. È la chiave del dispositivo centrale della Sala delle Ordinanze. Il Custode gliel'ha messa in mano quando lo ha incatenato: il posto più sicuro per una chiave erano le mani di chi aveva l'ordine di non far passare nessuno. Senza l'ascia i dispositivi della Sala girano a vuoto.\n\nAl tavolo: Maximus lo ha liberato e Vhaerun ha consegnato l'ascia al gruppo. La voce però non se n'è andata del tutto: adesso che è libero, il Custode si è accorto di lui e prova a riprenderselo. Esplode nella Sala delle Ordinanze, quando l'ascia tocca l'incavo.",
       "moduli": [
         {
           "id": "prova_forza",
@@ -1743,8 +1697,7 @@
           "daqui": [
             "dialogo",
             "intuizione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "dialogo",
@@ -1760,8 +1713,7 @@
             "intuizione",
             "disco",
             "liberare"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "intuizione",
@@ -1815,8 +1767,7 @@
             "dialogo",
             "disco",
             "liberare"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "disco",
@@ -1872,8 +1823,7 @@
           "daqui": [
             "liberare",
             "magia"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -1887,8 +1837,7 @@
           "daqui": [
             "disco",
             "liberare"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "liberare",
@@ -1902,8 +1851,7 @@
           "daqui": [
             "exp",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "scontro",
@@ -1918,8 +1866,7 @@
             "exp",
             "prosecuzione",
             "dialogo"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "exp",
@@ -1930,8 +1877,8 @@
           "daqui": [
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Vhaerun liberato o sconfitto: 1.800 PE, cioè 360 a testa per 5 PG. Se viene lasciato incatenato: niente."
+          "note": "Solo se Vhaerun viene sconfitto qui, ancora incatenato: 1.800 PE. Se è stato liberato, i PE si danno nella Sala delle Ordinanze, a fine scontro («Il ritorno di Vhaerun»).",
+          "pe": 1800
         },
         {
           "id": "prosecuzione",
@@ -1943,12 +1890,10 @@
             "rilievi"
           ],
           "innesco": "Quando la questione di Vhaerun è chiusa, in un modo o nell'altro:",
-          "dopo": "Da qui si prosegue verso la Sala delle Ordinanze. Se tornano dopo il Sigillo, usa l'ultima parte del testo.",
-          "bozza": true
+          "dopo": "Da qui si prosegue verso la Sala delle Ordinanze. Se tornano dopo il Sigillo, usa l'ultima parte del testo. Liberato: la voce del Custode torna a cercarlo, e lo scontro esplode nella Sala delle Ordinanze quando posano l'ascia."
         }
       ],
       "breve": "Vhaerun, un Brak incatenato, custodisce la porta e parla con chi resta fuori dal cerchio. Si può metterlo alla prova, interrogarlo, studiare il disco che gli impone l'ordine e liberarlo; entrare nel cerchio o forzare la porta fa partire lo scontro. Da qui si prosegue verso i Rilievi.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -1968,15 +1913,15 @@
       },
       "image": "img/df4aeaf8bb3f.jpg",
       "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
-      "text": "La sala è ovale, e per la prima volta qui sotto le pareti non sono nude.\n\nSono coperte di rilievi scolpiti, sei grandi riquadri di pietra, tre per parte. Soldati, ufficiali, un comandante.\n\nAl centro del pavimento, in fila, ci sono tre dispositivi rotondi di bronzo. I due ai lati hanno una sbarra per girarli. Quello in mezzo è più grande, fatto di anelli uno dentro l'altro, e al centro ha un incavo vuoto.\n\nSotto l'ultimo rilievo corre un'iscrizione.\n\nIl ritmo, qui, si sente appena.",
-      "gm": "Questa sala sblocca la Porta di Pietra e insegna il rito finale per il Sigillo: cooperazione libera, non obbedienza.\n\nIl meccanismo richiede che qualcuno deponga nell'incavo centrale un simbolo del proprio rango; poi tre persone devono girare i dispositivi nello stesso istante. Nessuno deve ordinare agli altri di farlo. Se un personaggio comanda o se usano il TAC per sincronizzarsi, i dispositivi si bloccano: hanno obbedito al Sigillo.\n\nFunziona tutto ciò che nasce da una scelta comune: contare insieme, guardarsi e respirare insieme, tenersi per mano. Se uno solo decide per gli altri, il meccanismo si blocca.\n\nDispositivo bloccato: un colpo sordo, i tre dispositivi tornano indietro e il ritmo lontano accelera. Si può riprovare senza limite. Girarne uno da solo lo fa tornare indietro appena si lascia la sbarra.",
+      "text": "La sala è ovale, e per la prima volta qui sotto le pareti non sono nude.\n\nSono coperte di rilievi scolpiti, sei grandi riquadri di pietra, tre per parte. Soldati, ufficiali, un comandante.\n\nAl centro del pavimento, in fila, ci sono tre dispositivi rotondi di bronzo. I due ai lati hanno una sbarra per girarli. Quello in mezzo è più grande, fatto di anelli uno dentro l'altro, e al centro ha un incavo vuoto, largo, a forma di due falci di luna schiena contro schiena.\n\nSotto l'ultimo rilievo corre un'iscrizione.\n\nIl ritmo, qui, si sente appena.",
+      "gm": "Questa sala sblocca la Porta di Pietra e insegna il rito finale per il Sigillo: cooperazione libera, non obbedienza.\n\nIl meccanismo richiede che nell'incavo centrale venga posata l'ascia bipenne delle due lune, che il Custode aveva messo in mano a Vhaerun (Prigione del Brak); senza l'ascia i dispositivi girano a vuoto; poi tre persone devono girare i dispositivi nello stesso istante. Nessuno deve ordinare agli altri di farlo. Se un personaggio comanda o se usano il TAC per sincronizzarsi, i dispositivi si bloccano: hanno obbedito al Sigillo.\n\nFunziona tutto ciò che nasce da una scelta comune: contare insieme, guardarsi e respirare insieme, tenersi per mano. Se uno solo decide per gli altri, il meccanismo si blocca.\n\nDispositivo bloccato: un colpo sordo, i tre dispositivi tornano indietro e il ritmo lontano accelera. Si può riprovare senza limite. Girarne uno da solo lo fa tornare indietro appena si lascia la sbarra.",
       "moduli": [
         {
           "id": "rilievi",
           "tipo": "dettaglio",
           "titolo": "I sei rilievi",
           "parte": "indizio",
-          "leggi": "Primo: un comandante alza la mano e le schiere marciano, perfette.\n\nSecondo: marciano dentro un fiume in piena. Nessuno esce dalla fila.\n\nTerzo: marciano contro un muro di lance. Cadono in fila.\n\nQuarto: marciano verso un precipizio. Il primo è già nel vuoto, gli altri continuano.\n\nQuinto: il comandante è solo davanti a un campo di morti allineati.\n\nSesto: il comandante si toglie qualcosa dal petto e lo posa a terra. Accanto, tre figure girano tre ruote. Non si guardano come superiore e subordinati: si guardano e basta.\n\nSotto: «L'ORDINE PIEGA.» «IL GIURAMENTO LEGA SOLTANTO CHI LO PRONUNCIA.»",
+          "leggi": "Primo: un comandante alza la mano e le schiere marciano, perfette.\n\nSecondo: marciano dentro un fiume in piena. Nessuno esce dalla fila.\n\nTerzo: marciano contro un muro di lance. Cadono in fila.\n\nQuarto: marciano verso un precipizio. Il primo è già nel vuoto, gli altri continuano.\n\nQuinto: il comandante è solo davanti a un campo di morti allineati.\n\nSesto: il comandante posa a terra la sua arma, un'ascia a due lame. Accanto, tre figure girano tre ruote. Non si guardano come superiore e subordinati: si guardano e basta.\n\nSotto: «L'ORDINE PIEGA.» «IL GIURAMENTO LEGA SOLTANTO CHI LO PRONUNCIA.»",
           "seme": "Sono coperte di rilievi scolpiti, sei grandi riquadri di pietra, tre per parte.",
           "innesco": "Qualcuno si avvicina alle pareti e guarda i rilievi uno per uno.\nNessun tiro.",
           "dopo": "Hanno visto la storia: ogni obbedienza finisce male, e nel sesto riquadro il comandante posa l'insegna mentre tre figure girano insieme. È la soluzione del meccanismo, se sanno leggerla.",
@@ -1984,8 +1929,7 @@
           "daqui": [
             "interpretare",
             "dispositivi"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "interpretare",
@@ -2041,8 +1985,7 @@
           "daqui": [
             "dispositivi",
             "risoluzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "dispositivi",
@@ -2092,13 +2035,12 @@
           "seme": "Al centro del pavimento, in fila, ci sono tre dispositivi rotondi di bronzo.",
           "innesco": "Qualcuno esamina i dispositivi, prova a girare una sbarra o guarda l'incavo centrale.",
           "leggi": "Bronzo scuro, freddo, pesante. Le sbarre sono lucide dove si mettono le mani. Gli anelli del dispositivo centrale combaciano senza un filo di luce, e l'incavo al centro è vuoto.",
-          "dopo": "Sanno che servono tre persone nello stesso istante e, con 16 o più, che nell'incavo va posato qualcosa. Se uno comanda o usano il TAC per sincronizzarsi, i dispositivi si bloccano e tornano indietro; si può riprovare senza limite.",
+          "dopo": "Sanno che servono tre persone nello stesso istante e, con 16 o più, che nell'incavo va posato qualcosa di grande, a due lame curve: senza, i dispositivi girano a vuoto. Se uno comanda o usano il TAC per sincronizzarsi, i dispositivi si bloccano e tornano indietro; si può riprovare senza limite.",
           "rilancio": "Tre sbarre, un incavo vuoto. Che cosa fate?",
           "daqui": [
-            "risoluzione",
+            "vhaerun",
             "magia"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -2112,24 +2054,37 @@
           "daqui": [
             "dispositivi",
             "risoluzione"
+          ]
+        },
+        {
+          "id": "vhaerun",
+          "tipo": "scontro",
+          "titolo": "Il ritorno di Vhaerun",
+          "parte": "evento",
+          "innesco": "Appena l'ascia delle due lune tocca l'incavo. Vhaerun, liberato, li ha seguiti o arriva di corsa dal passaggio.",
+          "leggi": "Il bronzo dell'incavo tintinna contro le due lame.\n\nDal passaggio arriva un passo pesante. Vhaerun è sulla soglia. Si tiene la testa con una mano.\n\n«Non sono io.» La voce gli si spezza. «È tornata. Mi guarda.»\n\nPoi alza gli occhi. Non sono più i suoi.",
+          "note": "Il Custode lo aveva dimenticato: adesso che la chiave si muove, lo riprende. Vhaerun non vuole combattere, ma obbedisce.\n\nSenza catene: velocità 9 m, nessun limite di distanza. Stesse statistiche della Prigione (GS 5, CA 16, 110 PF, due colpi d'ascia +8, 1d12+5; Urlo di comando una volta, TS Saggezza CD 14). Non ha più l'ascia: combatte a mani nude e con le catene spezzate ai polsi, stesso bonus e stesso danno.\n\nOgni round, all'inizio del suo turno, la voce gli dà un comando: FERMO (un PG a scelta, TS Saggezza CD 14 o velocità 0 fino al suo prossimo turno), INDIETRO (spinta di 3 m a un PG colpito), COLPISCI (attacca chi sta girando un dispositivo). Sono le stesse parole dei piloni del Sigillo: i giocatori le imparano qui.\n\nIntanto il meccanismo si può risolvere: tre PG girano insieme, per scelta comune. Se uno urla ordini agli altri, i dispositivi si bloccano e tornano indietro.\n\nTra un colpo e l'altro parla: «Non sono io.» «Fermatemi.» Non nomina mai il Custode.\n\nFinale: sotto i 55 PF la voce si allenta. Un PG può spendere la sua azione per chiamarlo per nome e dirgli qualcosa di vero: Persuasione o Intimidire CD 15. Se riesce, Vhaerun si ferma da solo e la voce lo lascia per sempre. Oppure lo uccidono.",
+          "dopo": "Fermato col suo nome: Vhaerun è libero davvero, siede contro il muro e respira. Se il gruppo va al Sigillo può seguirli fino alla soglia. Ucciso: cade vicino ai dispositivi e dice una parola in una lingua sconosciuta. In entrambi i casi 1.800 PE.",
+          "rilancio": "Il ritmo, lontano, accelera. Che cosa fate?",
+          "daqui": [
+            "risoluzione"
           ],
-          "bozza": true
+          "pe": 1800
         },
         {
           "id": "risoluzione",
           "tipo": "dettaglio",
           "titolo": "Risoluzione del meccanismo",
           "parte": "evento",
-          "leggi": "I tre dispositivi girano insieme, senza un suono.\n\nPoi, dalla roccia, un colpo sordo. Un secondo. Lontano, nella galleria, tutti i dischi di rame vibrano nello stesso istante.\n\nDa qualche parte più in basso, pietra scorre su pietra.\n\nL'oggetto posato nell'incavo resta lì: il dispositivo centrale si chiude sopra di lui.",
-          "innesco": "Qualcuno posa un simbolo del proprio rango nell'incavo e tre PG girano i dispositivi insieme, per scelta comune, senza che nessuno comandi.",
-          "dopo": "La Porta di Pietra è sbloccata. L'oggetto posato resta chiuso nel dispositivo centrale e non si riprende. Hanno imparato il modo che servirà davanti al Sigillo.",
+          "leggi": "I tre dispositivi girano insieme, senza un suono.\n\nPoi, dalla roccia, un colpo sordo. Un secondo. Lontano, nella galleria, tutti i dischi di rame vibrano nello stesso istante.\n\nDa qualche parte più in basso, pietra scorre su pietra.\n\nL'ascia resta nell'incavo: il dispositivo centrale si chiude sopra le due lame.",
+          "innesco": "L'ascia delle due lune è nell'incavo e tre PG girano i dispositivi insieme, per scelta comune, senza che nessuno comandi.",
+          "dopo": "La Porta di Pietra è sbloccata. L'ascia resta chiusa nel dispositivo fino alla purificazione del Sigillo. Hanno imparato il modo che servirà davanti al Sigillo.",
           "rilancio": "Pietra che scorre su pietra, da qualche parte sotto di voi. Che cosa fate?",
           "daqui": [
             "exp",
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Per il Master: la Porta di Pietra è sbloccata. L'oggetto non si riprende. È il prezzo dell'abdicazione."
+          "note": "La Porta di Pietra è sbloccata. L'ascia resta chiusa nel dispositivo finché il Quarto Sigillo non è purificato: allora il dispositivo si riapre e l'ascia si può riprendere (Stanza del Quarto Sigillo, Ricompense)."
         },
         {
           "id": "exp",
@@ -2141,8 +2096,8 @@
           "daqui": [
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Meccanismo risolto: 750 PE, cioè 150 a testa per 5 PG."
+          "note": "Meccanismo risolto: 750 PE, cioè 150 a testa per 5 PG.",
+          "pe": 750
         },
         {
           "id": "prosecuzione",
@@ -2154,12 +2109,10 @@
             "micuccio"
           ],
           "innesco": "Quando il meccanismo è risolto e il gruppo si prepara a lasciare la sala:",
-          "dopo": "La Porta di Pietra è aperta. Il passaggio in basso porta alla stanzetta di Micuccio.",
-          "bozza": true
+          "dopo": "La Porta di Pietra è aperta. Il passaggio in basso porta alla stanzetta di Micuccio."
         }
       ],
-      "breve": "Sala-enigma: sei rilievi raccontano il prezzo dell'obbedienza e tre dispositivi di bronzo aspettano. Per sbloccare la Porta di Pietra qualcuno posa nell'incavo un simbolo del proprio rango e tre PG girano insieme, senza che nessuno comandi. Poi si scende verso la stanzetta di Micuccio.",
-      "breveBozza": true,
+      "breve": "Sala-enigma: sei rilievi raccontano il prezzo dell'obbedienza e tre dispositivi di bronzo girano a vuoto. Serve l'ascia di Vhaerun nell'incavo, poi tre PG girano insieme, senza che nessuno comandi. Quando l'ascia tocca l'incavo, la voce riprende Vhaerun: scontro. Poi si scende verso la stanzetta di Micuccio.",
       "nota": {
         "cd": 10
       }
@@ -2196,8 +2149,7 @@
             "medicina",
             "runa",
             "liberare"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "medicina",
@@ -2252,8 +2204,7 @@
           "daqui": [
             "runa",
             "liberare"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "runa",
@@ -2308,8 +2259,7 @@
           "daqui": [
             "liberare",
             "magia"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -2323,8 +2273,7 @@
           "daqui": [
             "runa",
             "liberare"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "liberare",
@@ -2338,7 +2287,6 @@
             "exp",
             "prosecuzione"
           ],
-          "bozza": true,
           "note": "Nessuna prova. Basta raschiare, rompere o cancellare la linea; anche purificare il Sigillo la spegne da lontano. Dissolvi Magie non la spezza, ma permette a Micuccio di muoversi e parlare liberamente per 1 minuto.\n\nQuando il vincolo cade, Micuccio smette di contare, si guarda le mani e crolla in avanti. Respira ma non si regge: Medicina CD 10 o qualsiasi cura magica lo rende trasportabile; altrimenti va portato a braccia.\n\nSe viene trascinato fuori senza spezzare la linea, urla, gli sanguina il naso e cerca il pavimento. Oltre la porta sviene, senza morire, finché la linea non si spezza o non viene riportato dentro."
         },
         {
@@ -2351,8 +2299,8 @@
           "daqui": [
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Micuccio liberato: 750 PE, cioè 150 a testa per 5 PG."
+          "note": "Micuccio liberato: 750 PE, cioè 150 a testa per 5 PG.",
+          "pe": 750
         },
         {
           "id": "prosecuzione",
@@ -2364,12 +2312,10 @@
             "memorie"
           ],
           "innesco": "Quando il gruppo lascia la stanza, con Micuccio o senza:",
-          "dopo": "Leggi la parte giusta: liberato o lasciato lì. Si prosegue verso la Camera delle Memorie.",
-          "bozza": true
+          "dopo": "Leggi la parte giusta: liberato o lasciato lì. Si prosegue verso la Camera delle Memorie."
         }
       ],
       "breve": "In una stanzetta c'è Micuccio, il ragazzo del Borgo Vecchio sceso qui tre anni fa con Titta: vivo, immobile, conta i passi del ritmo. Lo tiene fermo una linea chiara per terra: spezzarla lo libera, trascinarlo fuori senza spezzarla gli fa male. Poi si va verso la Camera delle Memorie.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -2407,8 +2353,7 @@
             "lastra",
             "tomba",
             "spettro"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "lastra",
@@ -2464,8 +2409,7 @@
           "daqui": [
             "tomba",
             "oggetti"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "tomba",
@@ -2521,8 +2465,7 @@
           "daqui": [
             "lastra",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "magia",
@@ -2536,8 +2479,7 @@
           "daqui": [
             "oggetti",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "spettro",
@@ -2552,7 +2494,6 @@
             "oggetti",
             "prosecuzione"
           ],
-          "bozza": true,
           "note": "Scheda: Spettro della Guerra nel Bestiario, 45 PF, CA 12, Tocco vitale +5, 3d6, passa attraverso i muri. Se l'oggetto viene rimesso al suo posto, lo spettro si ferma e rientra nel muro.\n\nUsalo soltanto se il gruppo sta andando troppo liscio: dopo c'è il Custode."
         },
         {
@@ -2568,8 +2509,18 @@
             "spettro",
             "prosecuzione"
           ],
-          "bozza": true,
           "note": "Nulla da prendere. È il senso della stanza. Chi prende qualcosa sveglia lo spettro."
+        },
+        {
+          "id": "riposo",
+          "tipo": "dettaglio",
+          "titolo": "Un riposo breve",
+          "parte": "evento",
+          "innesco": "Il gruppo è provato e vuole fermarsi prima di andare avanti.",
+          "note": "Qui il ritmo quasi non arriva: è l'unica stanza che il Sigillo non tocca. Un riposo breve qui è sicuro, nessuno li disturba. Serve dopo lo scontro con Vhaerun, prima del Custode.",
+          "daqui": [
+            "prosecuzione"
+          ]
         },
         {
           "id": "prosecuzione",
@@ -2581,12 +2532,10 @@
             "sigillo"
           ],
           "innesco": "Quando il gruppo lascia la stanza:",
-          "dopo": "Il ritmo torna a farsi sentire. Si prosegue verso il Sigillo.",
-          "bozza": true
+          "dopo": "Il ritmo torna a farsi sentire. Si prosegue verso il Sigillo."
         }
       ],
       "breve": "La stanza della memoria della guarnigione: oggetti lasciati nelle nicchie, una lastra con centinaia di nomi, una tomba vuota. Tra i nomi c'è Cyrius Meren. Qui il ritmo quasi non arriva; chi porta via qualcosa sveglia lo spettro. Poi si va verso il Sigillo.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -2626,8 +2575,7 @@
             "custode_storia",
             "stella",
             "scontro"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "cristallo",
@@ -2684,8 +2632,7 @@
             "piloni",
             "rito",
             "avvertimenti"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "piloni",
@@ -2742,8 +2689,7 @@
             "piloni_scontro",
             "cristallo",
             "avvertimenti"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "custode_intuizione",
@@ -2798,8 +2744,7 @@
           "daqui": [
             "avvertimenti",
             "custode_storia"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "custode_storia",
@@ -2854,8 +2799,7 @@
           "daqui": [
             "custode_intuizione",
             "avvertimenti"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "stella",
@@ -2910,8 +2854,7 @@
           "daqui": [
             "avvertimenti",
             "piloni"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "scontro",
@@ -2926,8 +2869,7 @@
             "piloni_scontro",
             "fase_due",
             "rito"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "piloni_scontro",
@@ -2942,7 +2884,6 @@
             "rito",
             "scontro"
           ],
-          "bozza": true,
           "note": "Tre piloni attivi: CA 15, PF 20, immuni a psichico e veleno. Da adiacente si possono spegnere senza romperli con un'Azione: Arcano CD 14 oppure Arnesi da scasso CD 14, ruotando il rame.\n\nQuando un pilone si spegne, il Custode non può più usare quell'ordine. Il quarto pilone, CONGEDO, è già spaccato e non si riaccende durante lo scontro."
         },
         {
@@ -2957,8 +2898,7 @@
           "daqui": [
             "piloni_scontro",
             "rito"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "rito",
@@ -2972,8 +2912,7 @@
           "daqui": [
             "prosecuzione",
             "ricompense"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "ricompense",
@@ -2985,8 +2924,19 @@
           "daqui": [
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Nessun bottino qui: la spada e il resto appartengono al PDI 15. Custode sconfitto o fermato: 3.900 PE. Sigillo purificato: +1.500 PE. Totale: 5.400 PE, cioè 1.080 a testa per 5 PG."
+          "note": "Nessun bottino qui: la spada e il resto appartengono al PDI 15. Custode sconfitto o fermato: 3.900 PE. Sigillo purificato: +1.500 PE. Totale: 5.400 PE, cioè 1.080 a testa per 5 PG. Quando il Sigillo è purificato, il dispositivo della Sala delle Ordinanze si riapre: l'ascia delle due lune si può riprendere.",
+          "pe": 5400,
+          "bottino": [
+            {
+              "n": "Ascia bipenne delle Due Lune",
+              "q": 1,
+              "cat": "Armi magiche",
+              "peso": "3,5 kg",
+              "valore": "Non stabilito",
+              "stats": "Ascia bipenne +1 · 1d12 + 1 taglienti · pesante, a due mani · maestria: Fendere",
+              "desc": "Una bipenne enorme. Sul dorso, fra le due lame, sono incise due lune. Era nelle mani di Vhaerun, nella Prigione del Brak: la chiave del dispositivo centrale della Sala delle Ordinanze."
+            }
+          ]
         },
         {
           "id": "prosecuzione",
@@ -2998,12 +2948,10 @@
             "ultimo_custode"
           ],
           "innesco": "Appena il rito riesce e il Sigillo è purificato.",
-          "dopo": "Il Custode non combatte più. Si passa all'Ultimo Custode, dove ricorda e parla.",
-          "bozza": true
+          "dopo": "Il Custode non combatte più. Si passa all'Ultimo Custode, dove ricorda e parla."
         }
       ],
       "breve": "La stanza del Quarto Sigillo: il Custode li ferma con una scala di avvertimenti e, se insistono, parte lo scontro finale. Prima o durante possono studiare cristallo, piloni, stella e Custode; spegnendo i piloni e facendo il rito purificano il Sigillo. Dopo la purificazione si va all'Ultimo Custode.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }
@@ -3038,8 +2986,7 @@
           "daqui": [
             "dialogo",
             "intuizione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "dialogo",
@@ -3054,8 +3001,7 @@
             "intuizione",
             "filatterio",
             "cambio"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "intuizione",
@@ -3109,8 +3055,7 @@
           "daqui": [
             "dialogo",
             "filatterio"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "filatterio",
@@ -3125,8 +3070,7 @@
             "arcano_filatterio",
             "sacrificio",
             "cambio"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "arcano_filatterio",
@@ -3180,8 +3124,7 @@
           "daqui": [
             "sacrificio",
             "filatterio"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "sacrificio",
@@ -3195,8 +3138,7 @@
           "daqui": [
             "ultime_parole",
             "bottino"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "cambio",
@@ -3210,8 +3152,7 @@
           "daqui": [
             "sacrificio",
             "ultime_parole"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "ultime_parole",
@@ -3225,8 +3166,7 @@
           "daqui": [
             "bottino",
             "prosecuzione"
-          ],
-          "bozza": true
+          ]
         },
         {
           "id": "bottino",
@@ -3238,8 +3178,25 @@
           "daqui": [
             "prosecuzione"
           ],
-          "bozza": true,
-          "note": "Non fissare una risposta unica per il corpo: può svanire nella luce, restare dentro l'armatura o lasciare soltanto polvere. La scelta è di tono e non dà indizi ulteriori.\n\nLa Lama d'ordinanza e l'armatura sono antiche ma non più magiche. Possono restare come reliquie narrative; se vendute, usa un valore modesto e non trattarle come ricompensa principale. Il vero lascito è il Filatterio rinforzato."
+          "note": "Non fissare una risposta unica per il corpo: può svanire nella luce, restare dentro l'armatura o lasciare soltanto polvere. La scelta è di tono e non dà indizi ulteriori.\n\nLa Lama d'ordinanza e l'armatura sono antiche ma non più magiche. Possono restare come reliquie narrative; se vendute, usa un valore modesto e non trattarle come ricompensa principale. Il vero lascito è il Filatterio rinforzato.",
+          "bottino": [
+            {
+              "n": "Lama d'ordinanza del Custode",
+              "q": 1,
+              "cat": "Armi",
+              "valore": "Modesto (non stabilito)",
+              "stats": "Antica, non più magica",
+              "desc": "Reliquia dell'Ultimo Custode."
+            },
+            {
+              "n": "Armatura del Custode",
+              "q": 1,
+              "cat": "Armature",
+              "valore": "Modesto (non stabilito)",
+              "stats": "Antica, non più magica",
+              "desc": "Reliquia dell'Ultimo Custode."
+            }
+          ]
         },
         {
           "id": "prosecuzione",
@@ -3252,12 +3209,10 @@
           ],
           "innesco": "Quando decidono di lasciare la stanza.",
           "dopo": "Il sotterraneo è in silenzio. Si risale verso la luce di Bëllindë; la porta murata resta come uscita alternativa.",
-          "rilancio": "Il corridoio vi aspetta, e oltre, la luce. Che cosa fate?",
-          "bozza": true
+          "rilancio": "Il corridoio vi aspetta, e oltre, la luce. Che cosa fate?"
         }
       ],
       "breve": "Dopo la purificazione il Custode ricorda: il cristallo mostra tre visioni e lui risponde alle domande. Poi vede il Filatterio di Mattheus e sceglie di sacrificarsi per rinforzarlo. Da qui si risale verso la luce, con la porta murata come uscita alternativa.",
-      "breveBozza": true,
       "nota": {
         "auto": false
       }
@@ -3305,12 +3260,10 @@
           "innesco": "Qualcuno esamina la porta, la muratura o i graffi.",
           "leggi": "Ferro vecchio, coperto di ruggine. Davanti, pietre grezze murate strette, senza un varco.",
           "dopo": "Con 13 o più sanno che qualcuno ha cercato di uscire, non di entrare, e che la malta è più recente delle pietre intorno.",
-          "rilancio": "La porta resta chiusa, muta. Che cosa fate?",
-          "bozza": true
+          "rilancio": "La porta resta chiusa, muta. Che cosa fate?"
         }
       ],
       "breve": "In fondo alla galleria c'è una porta di ferro murata dall'interno, con graffi dall'altra parte. È l'uscita alternativa e la retroguardia; qui si ferma Ruggiero se scende con loro. È anche l'ingresso per chi arriva dalla terza cantina seguendo le vie di servizio.",
-      "breveBozza": true,
       "nota": {
         "cd": 10
       }

@@ -58,12 +58,14 @@ Ogni modulo, in quest'ordine:
    - Le fasce si accendono da sole quando arrivano i tiri.
 6. **`dopo`** — *E adesso*, per il master: cosa cambia, cosa sanno davvero, a cosa si collega.
 7. **`rilancio`** — una frase che **ridà la parola ai giocatori** («… Che cosa fate?»). Si può mostrare.
-8. **`daqui`** — *Da qui*: altri moduli dello stesso punto o il PDI successivo. Diventano pulsanti.
+8. **`pe`** — PE totali che il gruppo guadagna quando il modulo si chiude. Nella Guida diventa il tasto «Assegna PE…»: il master sceglie chi era presente e i PE si dividono in parti uguali.
+9. **`bottino`** — gli oggetti trovati qui: `{n, q, cat, peso, valore, stats, desc, a}` (`a` = a chi andrebbe: id del PG o `crociata`), oppure `{n, monete: {mo: 120}}` per le monete. Tasto «Assegna bottino…»: ogni oggetto finisce nello zaino del PG scelto o nell'armeria della Crociata. Si può annullare.
+10. **`daqui`** — *Da qui*: altri moduli dello stesso punto o il PDI successivo. Diventano pulsanti.
 
 Regole di scrittura:
 - Istruzioni per il master e testo da leggere **mai mescolati** nello stesso campo.
 - Niente segreti nei campi mostrabili (`text`, `leggi`, `esiti.leggi`, `rilancio`).
-- I testi nuovi non ancora approvati da Giuseppe hanno `"bozza": true` (sul modulo) o `"breveBozza": true`.
+- Niente segnalini «bozza»: quello che è scritto nel sito è il testo buono (regola di Giuseppe, 27/09/2026).
 - Quello che il master mostra resta nel punto: i giocatori lo ritrovano in «Cosa avete scoperto qui» e nella loro Guida.
 
 ## 4. Controlli automatici
