@@ -315,3 +315,10 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Rarità: i dati non ce l'hanno. Si usa `rar` se presente, altrimenti Comune / Magico / Missione (Oggetti e indizi). Non inventare rarità.
 - Stato nuovo (in `SHAPE_OBJ`, `merge`, `toRemote`): `S.equip[pg][slot]` (chiave oggetto o `'-'`; senza scelta, gli slot si riempiono da soli: armatura che dà la CA del token, scudo, arma del primo attacco), `S.invOut[pg][chiave]` (pezzi della scheda ceduti/lasciati/consumati), `S.hotbar[pg].s1…s8`. Chiavi: `n:<nome>` per gli oggetti della scheda, `i:<id>` per quelli di `S.inv`.
 - **Barra rapida**: 8 caselle in fondo all'inventario (trascina righe dello zaino o carte degli Attacchi, oppure + su una casella vuota); la stessa barra compare sul Tavolo sopra il dock (`#hotbarTable`, `renderTableHotbar`): il giocatore vede la sua, il master quella del PG selezionato. Le pozioni di guarigione tirano e applicano la cura (`INV_HEAL`) e scalano la quantità.
+
+## v108 (27/09/2026) — adattamento allo schermo
+
+- Blocco CSS «ADATTAMENTO ALLO SCHERMO (v108)» in fondo allo stile. Riferimento: 1920×1080 al 100% (Giuseppe). I giocatori con portatili o con lo zoom di Windows al 125-150% hanno 1280-1536 px utili: sotto 1700 e 1440 px le colonne del Tavolo si stringono (rail 200/190, Guida, colonna destra 300/270) e la mappa guadagna spazio; la pagina non scorre più (`#app>*{min-height:0}`, `#railWrap` scorre da solo).
+- Registro: al massimo 48% della colonna destra (36% sotto gli 800 px di altezza), altezza iniziale 30% dello schermo.
+- Scheda: sotto 1600 px di larghezza o 860 di altezza il corpo scorre invece di schiacciare i riquadri; statistiche su una seconda riga; inventario a due colonne; sotto 760 px di altezza scorre tutta la finestra della scheda. I caratteri del testo NON si rimpiccioliscono (regola di Giuseppe), tranne i nomi nella colonna dei personaggi sotto 1440 px.
+- Prova: `res.js` (Playwright) a 1920×940, 1536×730, 1366×650, 1280×600, master e giocatore, Tavolo + Panoramica + Inventario.

@@ -980,12 +980,56 @@ select,input[type=text],input[type=number],textarea,.shpanel .invsearch{backgrou
 #hotbarTable .hbslot{width:70px;height:58px} #hotbarTable .hbl{max-width:64px;font-size:12px} #hotbarTable .hbslot:not(.full){display:none}
 @media (max-width:1500px){.shgrid.inv{grid-template-columns:minmax(230px,.8fr) minmax(0,2fr) minmax(270px,1fr)}.invright{grid-column:1/-1;flex-direction:row}.invright .shpanel{flex:1}}
 @media (max-width:900px){.shgrid.inv{grid-template-columns:1fr;height:auto}.invwrap{height:auto}.invright{flex-direction:column}.hotbar{flex-wrap:wrap}.hbcells{flex-wrap:wrap}}
+/* ===== ADATTAMENTO ALLO SCHERMO (v108) =====
+   Riferimento: 1920×1080 al 100% (lo schermo di Giuseppe). Portatili e schermi con lo zoom di Windows al 125-150%
+   hanno 1280-1536 px di larghezza utile e 600-800 di altezza: colonne più strette, Registro che non copre i comandi,
+   scheda che scorre invece di schiacciarsi. I caratteri del testo non si rimpiccioliscono. */
+#app>*{min-height:0}
+#railWrap{overflow-y:auto;overflow-x:hidden}
+#side>#secLog{max-height:48%}
+@media (max-height:800px){#side>#secLog{max-height:36%}}
+.shtabs{flex-wrap:wrap}
+@media (max-width:1700px){
+  body #app,body.isgm #app{grid-template-columns:200px minmax(0,1fr) clamp(260px,20vw,340px) 300px}
+}
+@media (max-width:1440px){
+  body #app,body.isgm #app{grid-template-columns:190px minmax(0,1fr) clamp(240px,19vw,290px) 270px}
+  #rail .nm{font-size:14px;letter-spacing:.02em}
+  .phasebtn b{font-size:15px;letter-spacing:.04em}
+}
+/* scheda del personaggio: sotto i 1600 px o i 860 px di altezza il corpo scorre e i riquadri tengono la loro altezza naturale */
+@media (max-width:1600px),(max-height:860px){
+  .shbody{overflow-y:auto}
+  .shbody .shgrid,.shbody .invwrap{height:auto}
+  .shbody .shpanel{overflow:visible}
+  .shbody .invcard{overflow:visible}
+  .shbody .invright{overflow:visible}
+  .shgrid.inv{grid-template-columns:minmax(300px,.9fr) minmax(0,2fr)}
+  .shgrid.inv .invright{flex-direction:row;flex-wrap:wrap} .shgrid.inv .invright .shpanel{flex:1 1 260px}
+  .shhead{grid-template-columns:auto minmax(200px,1fr) auto auto;gap:14px 20px;padding:12px 20px 10px}
+  .shhead .shstats{order:9;grid-column:1/-1;flex-wrap:wrap}
+  .shhead .shstat{min-width:100px;padding:6px 10px}
+  .shport{width:120px;height:96px}
+  .shwho h1{font-size:30px}
+  .shtabs button{padding:8px 14px}
+}
+@media (max-height:760px){
+  #modal .box.sheet2{height:calc(100vh - 72px);max-height:calc(100vh - 72px)}
+  .sheet2wrap{overflow-y:auto}
+  .sheet2wrap .shbody{flex:none;overflow:visible}
+}
+@media (max-width:1100px){
+  .shgrid.inv{grid-template-columns:1fr}
+  .shhead{grid-template-columns:auto 1fr}
+  .shhead .shconds,.shhead .shback{grid-column:1/-1}
+  .shback{flex-direction:row;align-items:center;justify-content:space-between}
+}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v107</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v108</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1132,7 +1176,7 @@ function logResizerInit(){
   const lg=document.getElementById('secLog'); if(!lg||lg.querySelector('.loggrip')) return;
   const grip=document.createElement('div'); grip.className='loggrip'; grip.title='Trascina per allargare o stringere il registro'; lg.prepend(grip);
   const setH=h=>{ const max=Math.round(window.innerHeight*0.8); h=Math.max(120,Math.min(max,Math.round(h))); lg.style.height=h+'px'; return h; };
-  let saved=null; try{ saved=+localStorage.getItem('aprutium.logH'); }catch(e){} setH(saved||260);
+  let saved=null; try{ saved=+localStorage.getItem('aprutium.logH'); }catch(e){} setH(saved||Math.min(260,Math.round(window.innerHeight*0.3)));
   grip.addEventListener('pointerdown',e=>{ e.preventDefault(); const y0=e.clientY, h0=lg.getBoundingClientRect().height; grip.setPointerCapture(e.pointerId);
     const mv=ev=>setH(h0+(y0-ev.clientY)); const up=ev=>{ grip.removeEventListener('pointermove',mv); grip.removeEventListener('pointerup',up); try{ localStorage.setItem('aprutium.logH',String(setH(h0+(y0-ev.clientY)))); }catch(err){} };
     grip.addEventListener('pointermove',mv); grip.addEventListener('pointerup',up); });
