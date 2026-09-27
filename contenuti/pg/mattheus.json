@@ -14,34 +14,113 @@
  "competenza": 3,
  "percezione_passiva": 17,
  "taglia": "Media",
- "caratteristiche": {"For": 11, "Des": 12, "Cos": 15, "Int": 9, "Sag": 18, "Car": 10},
+ "caratteristiche": {
+  "For": 11,
+  "Des": 12,
+  "Cos": 15,
+  "Int": 9,
+  "Sag": 18,
+  "Car": 10
+ },
  "ts": {
-  "For": {"mod": 0, "comp": false},
-  "Des": {"mod": 1, "comp": false},
-  "Cos": {"mod": 2, "comp": false},
-  "Int": {"mod": -1, "comp": false},
-  "Sag": {"mod": 7, "comp": true},
-  "Car": {"mod": 3, "comp": true}
+  "For": {
+   "mod": 0,
+   "comp": false
+  },
+  "Des": {
+   "mod": 1,
+   "comp": false
+  },
+  "Cos": {
+   "mod": 2,
+   "comp": false
+  },
+  "Int": {
+   "mod": -1,
+   "comp": false
+  },
+  "Sag": {
+   "mod": 7,
+   "comp": true
+  },
+  "Car": {
+   "mod": 3,
+   "comp": true
+  }
  },
  "abilita": {
-  "Atletica": {"mod": 0, "comp": "no"},
-  "Acrobazia": {"mod": 1, "comp": "no"},
-  "Furtività": {"mod": 1, "comp": "no"},
-  "Rapidità di mano": {"mod": 1, "comp": "no"},
-  "Arcano": {"mod": 3, "comp": "no"},
-  "Storia": {"mod": 2, "comp": "competente"},
-  "Indagare": {"mod": -1, "comp": "no"},
-  "Natura": {"mod": -1, "comp": "no"},
-  "Religione": {"mod": 6, "comp": "competente"},
-  "Addestrare animali": {"mod": 4, "comp": "no"},
-  "Intuizione": {"mod": 7, "comp": "competente"},
-  "Medicina": {"mod": 7, "comp": "competente"},
-  "Percezione": {"mod": 7, "comp": "competente"},
-  "Sopravvivenza": {"mod": 4, "comp": "no"},
-  "Inganno": {"mod": 0, "comp": "no"},
-  "Intimidire": {"mod": 0, "comp": "no"},
-  "Intrattenere": {"mod": 0, "comp": "no"},
-  "Persuasione": {"mod": 0, "comp": "no"}
+  "Atletica": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Acrobazia": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Furtività": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Rapidità di mano": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Arcano": {
+   "mod": 3,
+   "comp": "no"
+  },
+  "Storia": {
+   "mod": 2,
+   "comp": "competente"
+  },
+  "Indagare": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Natura": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Religione": {
+   "mod": 6,
+   "comp": "competente"
+  },
+  "Addestrare animali": {
+   "mod": 4,
+   "comp": "no"
+  },
+  "Intuizione": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Medicina": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Percezione": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Sopravvivenza": {
+   "mod": 4,
+   "comp": "no"
+  },
+  "Inganno": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Intimidire": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Intrattenere": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Persuasione": {
+   "mod": 0,
+   "comp": "no"
+  }
  },
  "competenze": {
   "armature": "Armature leggere, armature medie, scudi (la scheda Roll20 mostra le caselle LIGHT MEDIUM HEAVY SHIELDS senza indicare quali siano spuntate; da regole 2024 il Chierico Taumaturgo ha armature leggere e medie e scudi)",
@@ -53,113 +132,655 @@
  "resistenze": "Nessuna (vulnerabilità e immunità: nessuna)",
  "condizioni_speciali": "Nessuna immunità a condizioni. Mezza armatura: svantaggio alle prove di Destrezza (Furtività).",
  "risorse": [
-  {"n": "Incanalare divinità", "max": 2, "recupero": "1 uso con riposo breve, tutti con riposo lungo", "note": "Scintilla divina, Scacciare non morti (con Bruciare i non morti) o Preservare la vita. CD 15."},
-  {"n": "Punti fortuna (Fortunato)", "max": 3, "recupero": "riposo lungo", "note": "Pari al bonus di competenza. 1 punto: vantaggio a un proprio Test del d20, oppure svantaggio a un tiro per colpire contro di sé."},
-  {"n": "Iniziato alla magia: lancio gratuito", "max": 1, "recupero": "riposo lungo", "note": "L'incantesimo di 1° livello scelto con il talento si lancia una volta senza slot (la scheda non specifica quale sia)."},
-  {"n": "Ispirazione eroica", "max": 1, "recupero": "riposo lungo (tratto Intraprendente)", "note": "Si spende per ritirare un qualsiasi dado appena tirato, tenendo il nuovo risultato."},
-  {"n": "Slot incantesimo di 1° livello", "max": 4, "recupero": "riposo lungo", "note": ""},
-  {"n": "Slot incantesimo di 2° livello", "max": 3, "recupero": "riposo lungo", "note": ""},
-  {"n": "Slot incantesimo di 3° livello", "max": 2, "recupero": "riposo lungo", "note": ""},
-  {"n": "Esibizione rinvigorente (Leader ispiratore)", "max": 1, "recupero": "al termine di ogni riposo breve o lungo", "note": "Fino a sei alleati entro 9 m (incluso sé) ottengono 9 PF temporanei (livello 5 + Sag 4). La scheda riporta attualmente 8 PF temporanei."},
-  {"n": "Dadi vita", "max": 5, "recupero": "riposo lungo (tutti)", "note": "5d8"}
+  {
+   "n": "Incanalare divinità",
+   "max": 2,
+   "recupero": "1 uso con riposo breve, tutti con riposo lungo",
+   "note": "Scintilla divina, Scacciare non morti (con Bruciare i non morti) o Preservare la vita. CD 15."
+  },
+  {
+   "n": "Punti fortuna (Fortunato)",
+   "max": 3,
+   "recupero": "riposo lungo",
+   "note": "Pari al bonus di competenza. 1 punto: vantaggio a un proprio Test del d20, oppure svantaggio a un tiro per colpire contro di sé."
+  },
+  {
+   "n": "Iniziato alla magia: lancio gratuito",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "L'incantesimo di 1° livello scelto con il talento si lancia una volta senza slot (la scheda non specifica quale sia)."
+  },
+  {
+   "n": "Ispirazione eroica",
+   "max": 1,
+   "recupero": "riposo lungo (tratto Intraprendente)",
+   "note": "Si spende per ritirare un qualsiasi dado appena tirato, tenendo il nuovo risultato."
+  },
+  {
+   "n": "Slot incantesimo di 1° livello",
+   "max": 4,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Slot incantesimo di 2° livello",
+   "max": 3,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Slot incantesimo di 3° livello",
+   "max": 2,
+   "recupero": "riposo lungo",
+   "note": ""
+  },
+  {
+   "n": "Esibizione rinvigorente (Leader ispiratore)",
+   "max": 1,
+   "recupero": "al termine di ogni riposo breve o lungo",
+   "note": "Fino a sei alleati entro 9 m (incluso sé) ottengono 9 PF temporanei (livello 5 + Sag 4). La scheda riporta attualmente 8 PF temporanei."
+  },
+  {
+   "n": "Dadi vita",
+   "max": 5,
+   "recupero": "riposo lungo (tutti)",
+   "note": "5d8"
+  }
  ],
  "privilegi": [
-  {"n": "Incantesimi (Spellcasting)", "fonte": "Chierico 1", "d": "Lancia incantesimi del Chierico con la Saggezza (CD dei TS 15, attacco con incantesimo +7). Conosce i trucchetti del Chierico e prepara ogni giorno una lista di incantesimi di 1° livello o superiore dalla lista del Chierico (9 al 5° livello, esclusi quelli sempre preparati). Recupera tutti gli slot con un riposo lungo; al termine di un riposo lungo può cambiare gli incantesimi preparati. Ogni volta che sale di livello da Chierico può sostituire un trucchetto con un altro della lista. Può usare un simbolo sacro come focus da incantatore.", "usi": "Slot: 4 di 1°, 3 di 2°, 2 di 3°"},
-  {"n": "Ordine divino: Taumaturgo", "fonte": "Chierico 1", "d": "Conosce un trucchetto aggiuntivo della lista del Chierico. Inoltre il legame mistico con il divino gli dà un bonus alle prove di Intelligenza (Arcano o Religione) pari al suo modificatore di Saggezza (minimo +1): attualmente +4.", "usi": ""},
-  {"n": "Incanalare divinità", "fonte": "Chierico 2", "d": "Incanala energia divina direttamente dai Piani Esterni per creare effetti magici. Ogni volta che la usa sceglie un effetto: Scintilla divina, Scacciare non morti o Preservare la vita (Dominio della Vita). Se l'effetto richiede un tiro salvezza, la CD è quella degli incantesimi del Chierico (15).", "usi": "2 usi; recupera 1 uso con riposo breve e tutti con riposo lungo"},
-  {"n": "Incanalare divinità: Scintilla divina", "fonte": "Chierico 2", "d": "Azione Magia: punta il simbolo sacro verso un'altra creatura che vede entro 9 m e tira 1d8 + modificatore di Saggezza (1d8+4). Sceglie se far recuperare alla creatura quel numero di Punti Ferita, oppure costringerla a un tiro salvezza su Costituzione (CD 15): se fallisce subisce danni necrotici o radiosi (a scelta) pari al totale, se riesce la metà (arrotondata per difetto). Il dado aumenta a 2d8 al 7° livello, 3d8 al 13° e 4d8 al 18°.", "usi": "Spende 1 uso di Incanalare divinità"},
-  {"n": "Incanalare divinità: Scacciare non morti", "fonte": "Chierico 2", "d": "Azione Magia: presenta il simbolo sacro e censura i non morti. Ogni non morto a sua scelta entro 9 m deve superare un tiro salvezza su Saggezza (CD 15) o avere le condizioni Spaventato e Incapacitato per 1 minuto; per quella durata cerca di allontanarsi il più possibile da lui nei suoi turni. L'effetto termina prima su una creatura se questa subisce danni, se Mattheus diventa Incapacitato o se muore.", "usi": "Spende 1 uso di Incanalare divinità"},
-  {"n": "Bruciare i non morti (Sear Undead)", "fonte": "Chierico 5", "d": "Ogni volta che usa Scacciare non morti può tirare un numero di d8 pari al suo modificatore di Saggezza (minimo 1d8), quindi 4d8, e sommarli. Ogni non morto che fallisce il tiro salvezza contro quell'uso di Scacciare non morti subisce danni radiosi pari al totale. Questi danni non pongono fine all'effetto di Scacciare.", "usi": "Con Scacciare non morti"},
-  {"n": "Discepolo della vita", "fonte": "Dominio della Vita 3", "d": "Quando un incantesimo lanciato con uno slot fa recuperare Punti Ferita a una creatura, quella creatura recupera nel turno del lancio Punti Ferita aggiuntivi pari a 2 + il livello dello slot speso (es. +3 con uno slot di 1°, +5 con uno slot di 3°). Non si applica ai lanci senza slot (per esempio il lancio gratuito di Iniziato alla magia) né ai trucchetti.", "usi": ""},
-  {"n": "Incantesimi del Dominio della Vita", "fonte": "Dominio della Vita 3", "d": "Ha sempre preparati, senza contarli nel limite: Aiuto, Benedizione, Cura ferite, Ristorare inferiore (dal 3° livello); Parola guaritrice di massa, Rianimare (dal 5°). In futuro: Aura di vita e Interdizione alla morte (7°), Ristorare superiore e Cura ferite di massa (9°).", "usi": ""},
-  {"n": "Preservare la vita", "fonte": "Dominio della Vita 3", "d": "Azione Magia: presenta il simbolo sacro e spende un uso di Incanalare divinità per evocare energia curativa che ripristina un totale di Punti Ferita pari a cinque volte il livello da Chierico (25 PF). Sceglie creature Sanguinanti entro 9 m (può includere sé stesso) e divide quei PF tra loro. Non può riportare una creatura oltre la metà del suo massimo di Punti Ferita.", "usi": "Spende 1 uso di Incanalare divinità"},
-  {"n": "Aumento dei punteggi di caratteristica", "fonte": "Chierico 4", "d": "Ottiene il talento Aumento dei punteggi di caratteristica o un altro talento per cui ha i requisiti: scelto Leader ispiratore. Lo ottiene di nuovo ai livelli 8, 12 e 16.", "usi": ""}
+  {
+   "n": "Incantesimi (Spellcasting)",
+   "fonte": "Chierico 1",
+   "d": "Lancia incantesimi del Chierico con la Saggezza (CD dei TS 15, attacco con incantesimo +7). Conosce i trucchetti del Chierico e prepara ogni giorno una lista di incantesimi di 1° livello o superiore dalla lista del Chierico (9 al 5° livello, esclusi quelli sempre preparati). Recupera tutti gli slot con un riposo lungo; al termine di un riposo lungo può cambiare gli incantesimi preparati. Ogni volta che sale di livello da Chierico può sostituire un trucchetto con un altro della lista. Può usare un simbolo sacro come focus da incantatore.",
+   "usi": "Slot: 4 di 1°, 3 di 2°, 2 di 3°"
+  },
+  {
+   "n": "Ordine divino: Taumaturgo",
+   "fonte": "Chierico 1",
+   "d": "Conosce un trucchetto aggiuntivo della lista del Chierico. Inoltre il legame mistico con il divino gli dà un bonus alle prove di Intelligenza (Arcano o Religione) pari al suo modificatore di Saggezza (minimo +1): attualmente +4.",
+   "usi": ""
+  },
+  {
+   "n": "Incanalare divinità",
+   "fonte": "Chierico 2",
+   "d": "Incanala energia divina direttamente dai Piani Esterni per creare effetti magici. Ogni volta che la usa sceglie un effetto: Scintilla divina, Scacciare non morti o Preservare la vita (Dominio della Vita). Se l'effetto richiede un tiro salvezza, la CD è quella degli incantesimi del Chierico (15).",
+   "usi": "2 usi; recupera 1 uso con riposo breve e tutti con riposo lungo"
+  },
+  {
+   "n": "Incanalare divinità: Scintilla divina",
+   "fonte": "Chierico 2",
+   "d": "Azione Magia: punta il simbolo sacro verso un'altra creatura che vede entro 9 m e tira 1d8 + modificatore di Saggezza (1d8+4). Sceglie se far recuperare alla creatura quel numero di Punti Ferita, oppure costringerla a un tiro salvezza su Costituzione (CD 15): se fallisce subisce danni necrotici o radiosi (a scelta) pari al totale, se riesce la metà (arrotondata per difetto). Il dado aumenta a 2d8 al 7° livello, 3d8 al 13° e 4d8 al 18°.",
+   "usi": "Spende 1 uso di Incanalare divinità"
+  },
+  {
+   "n": "Incanalare divinità: Scacciare non morti",
+   "fonte": "Chierico 2",
+   "d": "Azione Magia: presenta il simbolo sacro e censura i non morti. Ogni non morto a sua scelta entro 9 m deve superare un tiro salvezza su Saggezza (CD 15) o avere le condizioni Spaventato e Incapacitato per 1 minuto; per quella durata cerca di allontanarsi il più possibile da lui nei suoi turni. L'effetto termina prima su una creatura se questa subisce danni, se Mattheus diventa Incapacitato o se muore.",
+   "usi": "Spende 1 uso di Incanalare divinità"
+  },
+  {
+   "n": "Bruciare i non morti (Sear Undead)",
+   "fonte": "Chierico 5",
+   "d": "Ogni volta che usa Scacciare non morti può tirare un numero di d8 pari al suo modificatore di Saggezza (minimo 1d8), quindi 4d8, e sommarli. Ogni non morto che fallisce il tiro salvezza contro quell'uso di Scacciare non morti subisce danni radiosi pari al totale. Questi danni non pongono fine all'effetto di Scacciare.",
+   "usi": "Con Scacciare non morti"
+  },
+  {
+   "n": "Discepolo della vita",
+   "fonte": "Dominio della Vita 3",
+   "d": "Quando un incantesimo lanciato con uno slot fa recuperare Punti Ferita a una creatura, quella creatura recupera nel turno del lancio Punti Ferita aggiuntivi pari a 2 + il livello dello slot speso (es. +3 con uno slot di 1°, +5 con uno slot di 3°). Non si applica ai lanci senza slot (per esempio il lancio gratuito di Iniziato alla magia) né ai trucchetti.",
+   "usi": ""
+  },
+  {
+   "n": "Incantesimi del Dominio della Vita",
+   "fonte": "Dominio della Vita 3",
+   "d": "Ha sempre preparati, senza contarli nel limite: Aiuto, Benedizione, Cura ferite, Ristorare inferiore (dal 3° livello); Parola guaritrice di massa, Rianimare (dal 5°). In futuro: Aura di vita e Interdizione alla morte (7°), Ristorare superiore e Cura ferite di massa (9°).",
+   "usi": ""
+  },
+  {
+   "n": "Preservare la vita",
+   "fonte": "Dominio della Vita 3",
+   "d": "Azione Magia: presenta il simbolo sacro e spende un uso di Incanalare divinità per evocare energia curativa che ripristina un totale di Punti Ferita pari a cinque volte il livello da Chierico (25 PF). Sceglie creature Sanguinanti entro 9 m (può includere sé stesso) e divide quei PF tra loro. Non può riportare una creatura oltre la metà del suo massimo di Punti Ferita.",
+   "usi": "Spende 1 uso di Incanalare divinità"
+  },
+  {
+   "n": "Aumento dei punteggi di caratteristica",
+   "fonte": "Chierico 4",
+   "d": "Ottiene il talento Aumento dei punteggi di caratteristica o un altro talento per cui ha i requisiti: scelto Leader ispiratore. Lo ottiene di nuovo ai livelli 8, 12 e 16.",
+   "usi": ""
+  }
  ],
  "tratti_specie": [
-  {"n": "Taglia Media", "d": "Occupa uno spazio di 1,5 × 1,5 m."},
-  {"n": "Intraprendente (Resourceful)", "d": "Ottiene Ispirazione eroica ogni volta che termina un riposo lungo."},
-  {"n": "Abile (Skillful)", "d": "Ottiene competenza in un'abilità a sua scelta (dalla distribuzione delle competenze, presumibilmente Percezione)."},
-  {"n": "Versatile", "d": "Ottiene un talento di origine a sua scelta."}
+  {
+   "n": "Taglia Media",
+   "d": "Occupa uno spazio di 1,5 × 1,5 m."
+  },
+  {
+   "n": "Intraprendente (Resourceful)",
+   "d": "Ottiene Ispirazione eroica ogni volta che termina un riposo lungo."
+  },
+  {
+   "n": "Abile (Skillful)",
+   "d": "Ottiene competenza in un'abilità a sua scelta (dalla distribuzione delle competenze, presumibilmente Percezione)."
+  },
+  {
+   "n": "Versatile",
+   "d": "Ottiene un talento di origine a sua scelta."
+  }
  ],
  "talenti": [
-  {"n": "Fortunato (Lucky)", "fonte": "Origine", "d": "Ha un numero di Punti fortuna pari al bonus di competenza (3), che recupera con un riposo lungo. Vantaggio: quando tira un d20 per un Test del d20 può spendere 1 punto per avere vantaggio al tiro. Svantaggio: quando una creatura tira un d20 per un tiro per colpire contro di lui, può spendere 1 punto per imporre svantaggio a quel tiro."},
-  {"n": "Iniziato alla magia (Chierico)", "fonte": "Origine", "d": "Impara due trucchetti dalla lista del Chierico (Saggezza come caratteristica da incantatore). Sceglie inoltre un incantesimo di 1° livello della stessa lista: lo ha sempre preparato, può lanciarlo una volta senza slot e ne recupera l'uso con un riposo lungo; può anche lanciarlo con i propri slot. Ogni volta che sale di livello può sostituire uno degli incantesimi scelti con un altro dello stesso livello della stessa lista. La scheda non indica quali trucchetti e quale incantesimo di 1° livello provengano dal talento."},
-  {"n": "Robusto (Tough)", "fonte": "Origine", "d": "Il massimo dei Punti Ferita aumenta di un ammontare pari al doppio del livello del personaggio quando ottiene il talento, e di 2 ulteriori PF a ogni livello successivo (attualmente +10 PF)."},
-  {"n": "Leader ispiratore (Inspiring Leader)", "fonte": "Livello 4", "d": "Aumento di caratteristica: +1 a Saggezza o Carisma (massimo 20). Esibizione rinvigorente: quando termina un riposo breve o lungo può fare un discorso, un canto o una danza ispirante; sceglie fino a sei alleati (può includere sé stesso) entro 9 m che assistono: ognuno ottiene Punti Ferita temporanei pari al livello del personaggio + il modificatore della caratteristica aumentata con il talento (5 + 4 = 9 se Saggezza)."}
+  {
+   "n": "Fortunato (Lucky)",
+   "fonte": "Origine",
+   "d": "Ha un numero di Punti fortuna pari al bonus di competenza (3), che recupera con un riposo lungo. Vantaggio: quando tira un d20 per un Test del d20 può spendere 1 punto per avere vantaggio al tiro. Svantaggio: quando una creatura tira un d20 per un tiro per colpire contro di lui, può spendere 1 punto per imporre svantaggio a quel tiro."
+  },
+  {
+   "n": "Iniziato alla magia (Chierico)",
+   "fonte": "Origine",
+   "d": "Impara due trucchetti dalla lista del Chierico (Saggezza come caratteristica da incantatore). Sceglie inoltre un incantesimo di 1° livello della stessa lista: lo ha sempre preparato, può lanciarlo una volta senza slot e ne recupera l'uso con un riposo lungo; può anche lanciarlo con i propri slot. Ogni volta che sale di livello può sostituire uno degli incantesimi scelti con un altro dello stesso livello della stessa lista. La scheda non indica quali trucchetti e quale incantesimo di 1° livello provengano dal talento."
+  },
+  {
+   "n": "Robusto (Tough)",
+   "fonte": "Origine",
+   "d": "Il massimo dei Punti Ferita aumenta di un ammontare pari al doppio del livello del personaggio quando ottiene il talento, e di 2 ulteriori PF a ogni livello successivo (attualmente +10 PF)."
+  },
+  {
+   "n": "Leader ispiratore (Inspiring Leader)",
+   "fonte": "Livello 4",
+   "d": "Aumento di caratteristica: +1 a Saggezza o Carisma (massimo 20). Esibizione rinvigorente: quando termina un riposo breve o lungo può fare un discorso, un canto o una danza ispirante; sceglie fino a sei alleati (può includere sé stesso) entro 9 m che assistono: ognuno ottiene Punti Ferita temporanei pari al livello del personaggio + il modificatore della caratteristica aumentata con il talento (5 + 4 = 9 se Saggezza)."
+  }
  ],
  "attacchi": [
-  {"n": "Mazza", "atk": 3, "dmg": "1d6", "tipo": "contundenti", "proprieta": "Arma semplice da mischia, portata 1,5 m", "maestria": "Rallentare (Sap)", "note": "La scheda indica la maestria Sap, ma il Chierico non ha il privilegio Maestria nelle armi: non utilizzabile."},
-  {"n": "Colpo senza armi", "atk": 3, "dmg": "1", "tipo": "contundenti", "proprieta": "Portata 1,5 m", "maestria": "", "note": "Danni 1 + modificatore di Forza (+0)."},
-  {"n": "Fiamma sacra", "atk": null, "dmg": "2d8", "tipo": "radiosi", "proprieta": "Trucchetto · 18 m", "maestria": "", "note": "TS Destrezza CD 15; il bersaglio non beneficia di mezza copertura o copertura a tre quarti."},
-  {"n": "Rintocco di morte (a PF pieni)", "atk": null, "dmg": "2d8", "tipo": "necrotici", "proprieta": "Trucchetto · 18 m", "maestria": "", "note": "TS Saggezza CD 15."},
-  {"n": "Rintocco di morte (bersaglio ferito)", "atk": null, "dmg": "2d12", "tipo": "necrotici", "proprieta": "Trucchetto · 18 m", "maestria": "", "note": "TS Saggezza CD 15; se al bersaglio manca qualche PF."},
-  {"n": "Lanciare acqua santa", "atk": null, "dmg": "2d8", "tipo": "radiosi", "proprieta": "Gittata 6 m", "maestria": "", "note": "Sostituisce un attacco dell'azione Attacco. TS Destrezza CD 12; danni solo a Immondi e Non morti."},
-  {"n": "Dardo guidato", "atk": 7, "dmg": "4d6", "tipo": "radiosi", "proprieta": "Incantesimo 1° · 36 m", "maestria": "", "note": "Il prossimo tiro per colpire contro il bersaglio prima della fine del turno successivo di Mattheus ha vantaggio."},
-  {"n": "Infliggere ferite", "atk": null, "dmg": "2d10", "tipo": "necrotici", "proprieta": "Incantesimo 1° · contatto", "maestria": "", "note": "TS Costituzione CD 15, metà danni se riesce."},
-  {"n": "Arma spirituale", "atk": 7, "dmg": "1d8+4", "tipo": "forza", "proprieta": "Incantesimo 2° · 18 m · azione bonus", "maestria": "", "note": "Attacco con incantesimo in mischia; nei turni successivi azione bonus per muoverla di 6 m e riattaccare."},
-  {"n": "Guardiani spirituali", "atk": null, "dmg": "3d8", "tipo": "radiosi", "proprieta": "Incantesimo 3° · emanazione 4,5 m", "maestria": "", "note": "TS Saggezza CD 15, metà danni se riesce; una volta per turno per creatura."},
-  {"n": "Scintilla divina", "atk": null, "dmg": "1d8+4", "tipo": "necrotici o radiosi", "proprieta": "Incanalare divinità · 9 m", "maestria": "", "note": "TS Costituzione CD 15, metà danni se riesce. In alternativa cura 1d8+4 PF."},
-  {"n": "Scacciare non morti + Bruciare i non morti", "atk": null, "dmg": "4d8", "tipo": "radiosi", "proprieta": "Incanalare divinità · 9 m", "maestria": "", "note": "TS Saggezza CD 15; i non morti che falliscono sono Spaventati e Incapacitati e subiscono i danni. Il riepilogo di combattimento Roll20 indica 1d8, ma il testo di Sear Undead dà d8 pari al modificatore di Saggezza (4d8)."},
-  {"n": "Comando", "atk": null, "dmg": "", "tipo": "", "proprieta": "Incantesimo 1° · 18 m", "maestria": "", "note": "TS Saggezza CD 15."},
-  {"n": "Santuario", "atk": null, "dmg": "", "tipo": "", "proprieta": "Incantesimo 1° · 9 m · azione bonus", "maestria": "", "note": "Chi bersaglia la creatura protetta fa TS Saggezza CD 15."}
+  {
+   "n": "Mazza",
+   "atk": 3,
+   "dmg": "1d6",
+   "tipo": "contundenti",
+   "proprieta": "Arma semplice da mischia, portata 1,5 m",
+   "maestria": "Rallentare (Sap)",
+   "note": "La scheda indica la maestria Sap, ma il Chierico non ha il privilegio Maestria nelle armi: non utilizzabile."
+  },
+  {
+   "n": "Colpo senza armi",
+   "atk": 3,
+   "dmg": "1",
+   "tipo": "contundenti",
+   "proprieta": "Portata 1,5 m",
+   "maestria": "",
+   "note": "Danni 1 + modificatore di Forza (+0)."
+  },
+  {
+   "n": "Fiamma sacra",
+   "atk": null,
+   "dmg": "2d8",
+   "tipo": "radiosi",
+   "proprieta": "Trucchetto · 18 m",
+   "maestria": "",
+   "note": "TS Destrezza CD 15; il bersaglio non beneficia di mezza copertura o copertura a tre quarti."
+  },
+  {
+   "n": "Rintocco di morte (a PF pieni)",
+   "atk": null,
+   "dmg": "2d8",
+   "tipo": "necrotici",
+   "proprieta": "Trucchetto · 18 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 15."
+  },
+  {
+   "n": "Rintocco di morte (bersaglio ferito)",
+   "atk": null,
+   "dmg": "2d12",
+   "tipo": "necrotici",
+   "proprieta": "Trucchetto · 18 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 15; se al bersaglio manca qualche PF."
+  },
+  {
+   "n": "Lanciare acqua santa",
+   "atk": null,
+   "dmg": "2d8",
+   "tipo": "radiosi",
+   "proprieta": "Gittata 6 m",
+   "maestria": "",
+   "note": "Sostituisce un attacco dell'azione Attacco. TS Destrezza CD 12; danni solo a Immondi e Non morti."
+  },
+  {
+   "n": "Dardo guidato",
+   "atk": 7,
+   "dmg": "4d6",
+   "tipo": "radiosi",
+   "proprieta": "Incantesimo 1° · 36 m",
+   "maestria": "",
+   "note": "Il prossimo tiro per colpire contro il bersaglio prima della fine del turno successivo di Mattheus ha vantaggio."
+  },
+  {
+   "n": "Infliggere ferite",
+   "atk": null,
+   "dmg": "2d10",
+   "tipo": "necrotici",
+   "proprieta": "Incantesimo 1° · contatto",
+   "maestria": "",
+   "note": "TS Costituzione CD 15, metà danni se riesce."
+  },
+  {
+   "n": "Arma spirituale",
+   "atk": 7,
+   "dmg": "1d8+4",
+   "tipo": "forza",
+   "proprieta": "Incantesimo 2° · 18 m · azione bonus",
+   "maestria": "",
+   "note": "Attacco con incantesimo in mischia; nei turni successivi azione bonus per muoverla di 6 m e riattaccare."
+  },
+  {
+   "n": "Guardiani spirituali",
+   "atk": null,
+   "dmg": "3d8",
+   "tipo": "radiosi",
+   "proprieta": "Incantesimo 3° · emanazione 4,5 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 15, metà danni se riesce; una volta per turno per creatura."
+  },
+  {
+   "n": "Scintilla divina",
+   "atk": null,
+   "dmg": "1d8+4",
+   "tipo": "necrotici o radiosi",
+   "proprieta": "Incanalare divinità · 9 m",
+   "maestria": "",
+   "note": "TS Costituzione CD 15, metà danni se riesce. In alternativa cura 1d8+4 PF."
+  },
+  {
+   "n": "Scacciare non morti + Bruciare i non morti",
+   "atk": null,
+   "dmg": "4d8",
+   "tipo": "radiosi",
+   "proprieta": "Incanalare divinità · 9 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 15; i non morti che falliscono sono Spaventati e Incapacitati e subiscono i danni. Il riepilogo di combattimento Roll20 indica 1d8, ma il testo di Sear Undead dà d8 pari al modificatore di Saggezza (4d8)."
+  },
+  {
+   "n": "Comando",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "Incantesimo 1° · 18 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 15."
+  },
+  {
+   "n": "Santuario",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "Incantesimo 1° · 9 m · azione bonus",
+   "maestria": "",
+   "note": "Chi bersaglia la creatura protetta fa TS Saggezza CD 15."
+  }
  ],
  "incantesimi": {
   "caratteristica": "Sag",
   "cd": 15,
   "attacco": 7,
-  "slot": {"1": 4, "2": 3, "3": 2},
+  "slot": {
+   "1": 4,
+   "2": 3,
+   "3": 2
+  },
   "punti_stregoneria": null,
   "lista": [
-   {"en": "Thaumaturgy", "it": "Taumaturgia", "l": 0, "preparato": true, "sempre": true, "fonte": "Chierico"},
-   {"en": "Sacred Flame", "it": "Fiamma sacra", "l": 0, "preparato": true, "sempre": true, "fonte": "Chierico"},
-   {"en": "Light", "it": "Luce", "l": 0, "preparato": true, "sempre": true, "fonte": "Chierico"},
-   {"en": "Spare the Dying", "it": "Risparmiare i morenti", "l": 0, "preparato": true, "sempre": true, "fonte": "Chierico"},
-   {"en": "Toll the Dead", "it": "Rintocco di morte", "l": 0, "preparato": true, "sempre": true, "fonte": "Chierico"},
-   {"en": "Guidance", "it": "Guida", "l": 0, "preparato": true, "sempre": true, "fonte": "Chierico"},
-   {"en": "Command", "it": "Comando", "l": 1, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Guiding Bolt", "it": "Dardo guidato", "l": 1, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Sanctuary", "it": "Santuario", "l": 1, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Protection from Evil and Good", "it": "Protezione dal male e dal bene", "l": 1, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Bless", "it": "Benedizione", "l": 1, "preparato": true, "sempre": true, "fonte": "Dominio della Vita"},
-   {"en": "Healing Word", "it": "Parola guaritrice", "l": 1, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Cure Wounds", "it": "Cura ferite", "l": 1, "preparato": true, "sempre": true, "fonte": "Dominio della Vita"},
-   {"en": "Inflict Wounds", "it": "Infliggere ferite", "l": 1, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Prayer of Healing", "it": "Preghiera di guarigione", "l": 2, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Aid", "it": "Aiuto", "l": 2, "preparato": true, "sempre": true, "fonte": "Dominio della Vita"},
-   {"en": "Lesser Restoration", "it": "Ristorare inferiore", "l": 2, "preparato": true, "sempre": true, "fonte": "Dominio della Vita"},
-   {"en": "Spiritual Weapon", "it": "Arma spirituale", "l": 2, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Revivify", "it": "Rianimare", "l": 3, "preparato": true, "sempre": true, "fonte": "Dominio della Vita"},
-   {"en": "Dispel Magic", "it": "Dissolvi magie", "l": 3, "preparato": true, "sempre": false, "fonte": "Chierico"},
-   {"en": "Mass Healing Word", "it": "Parola guaritrice di massa", "l": 3, "preparato": true, "sempre": true, "fonte": "Dominio della Vita"},
-   {"en": "Spirit Guardians", "it": "Guardiani spirituali", "l": 3, "preparato": true, "sempre": false, "fonte": "Chierico"}
+   {
+    "en": "Thaumaturgy",
+    "it": "Taumaturgia",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Sacred Flame",
+    "it": "Fiamma sacra",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Light",
+    "it": "Luce",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Spare the Dying",
+    "it": "Risparmiare i morenti",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Toll the Dead",
+    "it": "Rintocco di morte",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Guidance",
+    "it": "Guida",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Command",
+    "it": "Comando",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Guiding Bolt",
+    "it": "Dardo guidato",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Sanctuary",
+    "it": "Santuario",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Protection from Evil and Good",
+    "it": "Protezione dal male e dal bene",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Bless",
+    "it": "Benedizione",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Dominio della Vita"
+   },
+   {
+    "en": "Healing Word",
+    "it": "Parola guaritrice",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Cure Wounds",
+    "it": "Cura ferite",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Dominio della Vita"
+   },
+   {
+    "en": "Inflict Wounds",
+    "it": "Infliggere ferite",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Prayer of Healing",
+    "it": "Preghiera di guarigione",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Aid",
+    "it": "Aiuto",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Dominio della Vita"
+   },
+   {
+    "en": "Lesser Restoration",
+    "it": "Ristorare inferiore",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Dominio della Vita"
+   },
+   {
+    "en": "Spiritual Weapon",
+    "it": "Arma spirituale",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Revivify",
+    "it": "Rianimare",
+    "l": 3,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Dominio della Vita"
+   },
+   {
+    "en": "Dispel Magic",
+    "it": "Dissolvi magie",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   },
+   {
+    "en": "Mass Healing Word",
+    "it": "Parola guaritrice di massa",
+    "l": 3,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Dominio della Vita"
+   },
+   {
+    "en": "Spirit Guardians",
+    "it": "Guardiani spirituali",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Chierico"
+   }
   ]
  },
  "incantesimi_nuovi": {},
  "inventario": [
-  {"n": "Simbolo sacro: amuleto", "q": 1, "cat": "Focus", "peso": "1 lb", "valore": "5 mo", "stats": "Focus da incantatore per Chierico o Paladino", "desc": "Simbolo sacro a forma di amuleto, indossato o impugnato; ingioiellato o dipinto per incanalare la magia divina."},
-  {"n": "Simbolo sacro: emblema", "q": 1, "cat": "Focus", "peso": "—", "valore": "5 mo", "stats": "Focus da incantatore per Chierico o Paladino", "desc": "Emblema portato su stoffa (tabarro, stendardo) o su uno scudo."},
-  {"n": "Lampada", "q": 1, "cat": "Equipaggiamento", "peso": "1 lb", "valore": "5 ma", "stats": "Luce intensa 4,5 m e fioca per altri 9 m", "desc": "Brucia olio come combustibile."},
-  {"n": "Veste", "q": 2, "cat": "Equipaggiamento", "peso": "4 lb ciascuna", "valore": "1 mo ciascuna", "stats": "Abito cerimoniale o professionale", "desc": "Alcuni eventi e luoghi ammettono solo chi indossa una veste con certi colori o simboli. La scheda elenca due vesti."},
-  {"n": "Camicia di maglia", "q": 1, "cat": "Armature", "peso": "20 lb", "valore": "50 mo", "stats": "CA 13 + Des (massimo +2) · armatura media", "desc": "Non indossata (la CA 18 deriva dalla mezza armatura)."},
-  {"n": "Scudo", "q": 1, "cat": "Armature", "peso": "6 lb", "valore": "10 mo", "stats": "+2 CA", "desc": "Indossarlo o toglierlo richiede l'azione Utilizzare."},
-  {"n": "Mezza armatura", "q": 1, "cat": "Armature", "peso": "40 lb", "valore": "750 mo", "stats": "CA 15 + Des (massimo +2) · armatura media · svantaggio a Furtività", "desc": "Armatura indossata."},
-  {"n": "Mazza", "q": 1, "cat": "Armi", "peso": "4 lb", "valore": "5 mo", "stats": "1d6 contundenti · arma semplice da mischia · maestria: Rallentare (Sap)", "desc": "Competente."},
-  {"n": "Zaino", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "2 mo", "stats": "Contiene fino a 30 lb in 1 piede cubo", "desc": "Può servire anche come bisaccia."},
-  {"n": "Filatterio di Lyaras", "q": 1, "cat": "Oggetti e indizi", "peso": "0 lb", "valore": "", "stats": "", "desc": "Nota della scheda: portarlo a Teramum nelle catacombe e distruggerlo nella forgia antica."},
-  {"n": "Acciarino", "q": 1, "cat": "Equipaggiamento", "peso": "1 lb", "valore": "5 ma", "stats": "Accende candela, lampada, lanterna o torcia con un'azione bonus; altri fuochi in 1 minuto", "desc": "Pietra focaia, acciarino ed esca."},
-  {"n": "Libro (preghiere)", "q": 1, "cat": "Equipaggiamento", "peso": "0 lb", "valore": "", "stats": "", "desc": "Libro di preghiere."},
-  {"n": "Strumenti da calligrafo", "q": 1, "cat": "Strumenti", "peso": "5 lb", "valore": "10 mo", "stats": "Caratteristica: Destrezza · Utilizzo: scrivere testi con svolazzi che proteggono dalla contraffazione (CD 15) · Creazione: inchiostro, pergamena magica", "desc": "Competente."},
-  {"n": "Razioni", "q": 7, "cat": "Consumabili", "peso": "14 lb (2 lb ciascuna)", "valore": "5 ma ciascuna", "stats": "1 giorno di cibo per razione", "desc": "Carne secca, frutta secca, gallette e noci."},
-  {"n": "Pergamena", "q": 10, "cat": "Equipaggiamento", "peso": "0 lb", "valore": "1 ma ciascuna", "stats": "Circa 250 parole scritte a mano per foglio", "desc": ""},
-  {"n": "Acqua santa", "q": 1, "cat": "Consumabili", "peso": "1 lb", "valore": "25 mo", "stats": "Gittata 6 m · TS Des CD 12 · 2d8 radiosi a Immondi e Non morti", "desc": "Sostituisce uno degli attacchi dell'azione Attacco."},
-  {"n": "Coperta", "q": 1, "cat": "Equipaggiamento", "peso": "3 lb", "valore": "5 ma", "stats": "Vantaggio ai TS contro il freddo estremo mentre si è avvolti", "desc": ""},
-  {"n": "Pacco del sacerdote", "q": 1, "cat": "Equipaggiamento", "peso": "0 lb", "valore": "33 mo", "stats": "Zaino, coperta, acqua santa, lampada, 7 razioni, veste, acciarino", "desc": "I contenuti sono elencati anche singolarmente nella scheda (peso 0 per non contarli due volte)."}
+  {
+   "n": "Simbolo sacro: amuleto",
+   "q": 1,
+   "cat": "Focus",
+   "peso": "1 lb",
+   "valore": "5 mo",
+   "stats": "Focus da incantatore per Chierico o Paladino",
+   "desc": "Simbolo sacro a forma di amuleto, indossato o impugnato; ingioiellato o dipinto per incanalare la magia divina."
+  },
+  {
+   "n": "Simbolo sacro: emblema",
+   "q": 1,
+   "cat": "Focus",
+   "peso": "—",
+   "valore": "5 mo",
+   "stats": "Focus da incantatore per Chierico o Paladino",
+   "desc": "Emblema portato su stoffa (tabarro, stendardo) o su uno scudo."
+  },
+  {
+   "n": "Lampada",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "5 ma",
+   "stats": "Luce intensa 4,5 m e fioca per altri 9 m",
+   "desc": "Brucia olio come combustibile."
+  },
+  {
+   "n": "Veste",
+   "q": 2,
+   "cat": "Equipaggiamento",
+   "peso": "4 lb ciascuna",
+   "valore": "1 mo ciascuna",
+   "stats": "Abito cerimoniale o professionale",
+   "desc": "Alcuni eventi e luoghi ammettono solo chi indossa una veste con certi colori o simboli. La scheda elenca due vesti."
+  },
+  {
+   "n": "Camicia di maglia",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "20 lb",
+   "valore": "50 mo",
+   "stats": "CA 13 + Des (massimo +2) · armatura media",
+   "desc": "Non indossata (la CA 18 deriva dalla mezza armatura)."
+  },
+  {
+   "n": "Scudo",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "6 lb",
+   "valore": "10 mo",
+   "stats": "+2 CA",
+   "desc": "Indossarlo o toglierlo richiede l'azione Utilizzare."
+  },
+  {
+   "n": "Mezza armatura",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "40 lb",
+   "valore": "750 mo",
+   "stats": "CA 15 + Des (massimo +2) · armatura media · svantaggio a Furtività",
+   "desc": "Armatura indossata."
+  },
+  {
+   "n": "Mazza",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "4 lb",
+   "valore": "5 mo",
+   "stats": "1d6 contundenti · arma semplice da mischia · maestria: Rallentare (Sap)",
+   "desc": "Competente."
+  },
+  {
+   "n": "Zaino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "2 mo",
+   "stats": "Contiene fino a 30 lb in 1 piede cubo",
+   "desc": "Può servire anche come bisaccia."
+  },
+  {
+   "n": "Filatterio di Lyaras",
+   "q": 1,
+   "cat": "Oggetti e indizi",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "",
+   "desc": "Nota della scheda: portarlo a Teramum nelle catacombe e distruggerlo nella forgia antica."
+  },
+  {
+   "n": "Acciarino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "5 ma",
+   "stats": "Accende candela, lampada, lanterna o torcia con un'azione bonus; altri fuochi in 1 minuto",
+   "desc": "Pietra focaia, acciarino ed esca."
+  },
+  {
+   "n": "Libro (preghiere)",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "",
+   "desc": "Libro di preghiere."
+  },
+  {
+   "n": "Strumenti da calligrafo",
+   "q": 1,
+   "cat": "Strumenti",
+   "peso": "5 lb",
+   "valore": "10 mo",
+   "stats": "Caratteristica: Destrezza · Utilizzo: scrivere testi con svolazzi che proteggono dalla contraffazione (CD 15) · Creazione: inchiostro, pergamena magica",
+   "desc": "Competente."
+  },
+  {
+   "n": "Razioni",
+   "q": 7,
+   "cat": "Consumabili",
+   "peso": "14 lb (2 lb ciascuna)",
+   "valore": "5 ma ciascuna",
+   "stats": "1 giorno di cibo per razione",
+   "desc": "Carne secca, frutta secca, gallette e noci."
+  },
+  {
+   "n": "Pergamena",
+   "q": 10,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "1 ma ciascuna",
+   "stats": "Circa 250 parole scritte a mano per foglio",
+   "desc": ""
+  },
+  {
+   "n": "Acqua santa",
+   "q": 1,
+   "cat": "Consumabili",
+   "peso": "1 lb",
+   "valore": "25 mo",
+   "stats": "Gittata 6 m · TS Des CD 12 · 2d8 radiosi a Immondi e Non morti",
+   "desc": "Sostituisce uno degli attacchi dell'azione Attacco."
+  },
+  {
+   "n": "Coperta",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "3 lb",
+   "valore": "5 ma",
+   "stats": "Vantaggio ai TS contro il freddo estremo mentre si è avvolti",
+   "desc": ""
+  },
+  {
+   "n": "Pacco del sacerdote",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "33 mo",
+   "stats": "Zaino, coperta, acqua santa, lampada, 7 razioni, veste, acciarino",
+   "desc": "I contenuti sono elencati anche singolarmente nella scheda (peso 0 per non contarli due volte)."
+  }
  ],
  "carico": "114,04 lb",
  "capacita": "165 lb",
  "monete": "252 mo",
  "aspetto": "Fede: Morthus. Taglia: Media. Allineamento: Caotico Buono.",
- "personalita": {"tratti": "", "ideali": "", "legami": "", "difetti": ""},
+ "personalita": {
+  "tratti": "",
+  "ideali": "",
+  "legami": "",
+  "difetti": ""
+ },
  "storia_scheda": "Accolito. Ti sei votato al servizio in un tempio, annidato in una città o isolato in un bosco sacro. Lì celebravi riti in onore di un dio o di un pantheon. Hai servito sotto un sacerdote e studiato la religione. Grazie agli insegnamenti del tuo sacerdote e alla tua devozione, hai anche imparato a incanalare una piccola parte di potere divino al servizio del tuo luogo di culto e delle persone che vi pregavano.",
  "progressione": "Dominio della Vita: al 7° livello Aura di vita e Interdizione alla morte sempre preparati; al 9° Ristorare superiore e Cura ferite di massa. Scintilla divina 2d8 al 7°. Aumento dei punteggi di caratteristica di nuovo ai livelli 8, 12, 16.",
  "note": "PF attuali 44/48, PF temporanei 8. Dadi vita 5d8 (nessuno speso). Monete: 0 mr, 0 ma, 0 me, 252 mo, 0 mp. Sintonie: nessuna. Allineamento Caotico Buono. La scheda non distingue quali trucchetti e quale incantesimo di 1° livello derivino da Iniziato alla magia (Chierico): da regole ne spetterebbero 7 (4 del Chierico al 5° livello + 1 Taumaturgo + 2 del talento) ma la scheda ne elenca 6; gli incantesimi di 1°+ non di dominio sono 10 = 9 preparati + 1 del talento. Nota: la scheda ha tre talenti di origine (Fortunato, Iniziato alla magia, Robusto) più Leader ispiratore; da regole Umano (Versatile) + Accolito ne danno due, il terzo è probabilmente un dono di campagna.",
@@ -177,5 +798,77 @@
   "Maestria Sap della mazza indicata nell'inventario del sito: il Chierico non ha il privilegio Maestria nelle armi, quindi non si applica.",
   "Inventario: il sito chiama 'Il Filatterio (custodia di Cyrius Meren)' e gli dà valore 'Non vendibile'; la scheda riporta solo 'Filatterio di Lyaras' con la nota della missione (il legame con Cyrius Meren non è nella scheda). Libro di preghiere: sito 25 mo, scheda senza valore.",
   "Nessuna differenza su caratteristiche, CA 18, PF max 48, competenza, TS, abilità, slot, CD/attacco incantesimi, lingue, monete (252 mo), carico 114,04/165 lb e lista incantesimi (tutti presenti in SPELLS)."
- ]
+ ],
+ "competenze_fonti": {
+  "classe": {
+   "nome": "Chierico",
+   "ts": [
+    "Sag",
+    "Car"
+   ],
+   "armature": "Leggere, medie, scudi",
+   "armi": "Semplici",
+   "strumenti": "Nessuno",
+   "abilita": [
+    "Storia",
+    "Medicina"
+   ],
+   "note": "Il Chierico sceglie 2 abilità fra Storia, Intuizione, Medicina, Persuasione, Religione. Ordine divino Taumaturgo (Chierico 1): un trucchetto in più e bonus pari al mod. Sag alle prove di Int (Arcano o Religione) — non è competenza (Arcano +3 senza competenza è corretto). Il Protettore avrebbe dato armi da guerra e armature pesanti: non preso."
+  },
+  "sottoclasse": {
+   "nome": "Dominio della Vita",
+   "concede": "Nel 2024 nessuna competenza (le armature pesanti erano del Dominio della Vita 2014)"
+  },
+  "specie": {
+   "nome": "Umano",
+   "concede": "Abile (Skillful): 1 abilità a scelta — Percezione (non è nella lista del Chierico, quindi viene per forza da qui); Versatile: talento di origine — Fortunato (Lucky); Intraprendente: Ispirazione eroica. Nessuna lingua dalla specie nel 2024",
+   "abilita": [
+    "Percezione"
+   ]
+  },
+  "background": {
+   "nome": "Accolito",
+   "abilita": [
+    "Intuizione",
+    "Religione"
+   ],
+   "strumenti": "Strumenti da calligrafo",
+   "talento": "Iniziato alla magia (Chierico)",
+   "lingue": "Nessuna dal background (Comune + 2 lingue standard alla creazione)",
+   "caratteristiche": "Intelligenza, Saggezza, Carisma"
+  },
+  "talenti": [
+   {
+    "nome": "Fortunato (Lucky)",
+    "concede": "Nessuna competenza (Umano, Versatile)"
+   },
+   {
+    "nome": "Iniziato alla magia (Chierico)",
+    "concede": "Nessuna competenza (Accolito)"
+   },
+   {
+    "nome": "Robusto (Tough)",
+    "concede": "Nessuna competenza — talento di origine SENZA FONTE"
+   },
+   {
+    "nome": "Leader ispiratore (Inspiring Leader)",
+    "concede": "Nessuna competenza (livello 4)"
+   }
+  ],
+  "maestrie": {
+   "abilita": [],
+   "fonte": "Nessuna Maestria (Expertise)"
+  },
+  "lingue": [
+   "Comune",
+   "Celestiale",
+   "Sottocomune"
+  ],
+  "verifica": [
+   "Abilità: 5 competenti = Chierico 2 (Storia, Medicina) + Accolito 2 (Intuizione, Religione) + Abile 1 (Percezione): il conto torna.",
+   "TS (Sag, Car), armature leggere/medie/scudi, armi semplici e Strumenti da calligrafo (Accolito) tornano.",
+   "Talento Robusto (Tough): terzo talento di origine senza fonte (Umano Versatile → Fortunato, Accolito → Iniziato alla magia): probabile dono di campagna, da confermare.",
+   "Lingue: Celestiale e Sottocomune sono lingue rare nel 2024 e occupano il posto delle 2 lingue standard iniziali (nessuna lingua standard scelta). Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: probabile concessione di campagna, da confermare."
+  ]
+ }
 }

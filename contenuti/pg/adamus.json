@@ -1350,6 +1350,18 @@
    "valore": "",
    "stats": "",
    "desc": "Il «roster» degli agenti Celomanti infiltrati a Julia Nova (include un mercante del porto e un accolito della Basilica)."
+  },
+  {
+   "n": "Elmo del toro",
+   "q": 1,
+   "cat": "Oggetti magici",
+   "peso": "3 lb",
+   "valore": "Non indicato",
+   "stats": "Elmo con corna taurine · 1 carica · si recupera con un riposo lungo",
+   "desc": "Strappato a uno sgherro di Lyaras durante l'attacco alla caserma d'Est. Una volta per riposo lungo chi lo indossa invoca la Forza del toro: per 1 ora ha vantaggio alle prove e ai tiri salvezza di Forza.",
+   "incantesimi": [
+    "Forza del toro — 1 carica"
+   ]
   }
  ],
  "carico": "135,34 lb",
@@ -1381,5 +1393,74 @@
   "Inventario: il sito dà peso della pozione di guarigione 0,5 lb (scheda 1 lb per 2 pozioni) e peso «—» a pozione superiore e libro; assegna valori (es. Libro 25 mo, Kit 5 mo) che la scheda non riporta. Nome in SHEETS.equip «Polvere della Corruzione» → scheda «Polvere di Corruzione». La Lanterna Sempreluce nella scheda ha le distanze di una lampada (4,5 m/9 m): il sito concorda.",
   "Carico: scheda 135,34 lb su capacità 120 lb (Sovraccarico) — il sito concorda.",
   "Scheda: la riga di attacco di Cure Wounds riporta 2d8 senza il +3; quella di Shillelagh nella descrizione dice d8 ma l'attacco usa correttamente 1d10+3 (5° livello)."
- ]
+ ],
+ "competenze_fonti": {
+  "classe": {
+   "nome": "Druido",
+   "ts": [
+    "Int",
+    "Sag"
+   ],
+   "armature": "Leggere, scudi (+ medie dal Guardiano)",
+   "armi": "Semplici (+ da guerra dal Guardiano)",
+   "strumenti": "Kit da erborista",
+   "abilita": [
+    "Natura",
+    "Sopravvivenza"
+   ],
+   "note": "Il Druido sceglie 2 abilità fra Arcano, Addestrare animali, Intuizione, Medicina, Natura, Percezione, Religione, Sopravvivenza. Ordine primordiale Guardiano (Druido 1): armi da guerra e addestramento nelle armature medie. Druidico (Druido 1): lingua Druidico. Attribuzione fra classe e Abile ricostruita (Natura, Sopravvivenza e Addestrare animali sono tutte nella lista)."
+  },
+  "sottoclasse": {
+   "nome": "Cerchio della Luna",
+   "concede": ""
+  },
+  "specie": {
+   "nome": "Umano",
+   "concede": "Abile (Skillful): 1 abilità a scelta — Addestrare animali (attribuzione ricostruita); Versatile: talento di origine — Fortunato (Lucky); Intraprendente: Ispirazione eroica. Nessuna lingua dalla specie nel 2024",
+   "abilita": [
+    "Addestrare animali"
+   ]
+  },
+  "background": {
+   "nome": "Eremita",
+   "abilita": [
+    "Medicina",
+    "Religione"
+   ],
+   "strumenti": "Kit da erborista",
+   "talento": "Guaritore (Healer)",
+   "lingue": "Nessuna dal background (Comune + 2 lingue standard alla creazione)",
+   "caratteristiche": "Costituzione, Saggezza, Carisma"
+  },
+  "talenti": [
+   {
+    "nome": "Guaritore (Healer)",
+    "concede": "Nessuna competenza (Eremita)"
+   },
+   {
+    "nome": "Fortunato (Lucky)",
+    "concede": "Nessuna competenza (Umano, Versatile)"
+   },
+   {
+    "nome": "Incantatore da guerra (War Caster)",
+    "concede": "Nessuna competenza (livello 4)"
+   }
+  ],
+  "maestrie": {
+   "abilita": [],
+   "fonte": "Nessuna Maestria (Expertise)"
+  },
+  "lingue": [
+   "Comune",
+   "Druidico",
+   "Silvano",
+   "Sottocomune"
+  ],
+  "verifica": [
+   "Abilità: 5 competenti = Druido 2 + Eremita 2 (Medicina, Religione) + Abile 1: il conto torna.",
+   "TS (Int, Sag), armature leggere/medie/scudi e armi semplici/da guerra (Druido + Guardiano) tornano.",
+   "Kit da erborista concesso due volte (Druido ed Eremita): una competenza sprecata; il PHB 2024 non prevede un rimpiazzo automatico, eventualmente il master può concedere un altro strumento.",
+   "Lingue: Druidico ok (classe). Silvano e Sottocomune sono lingue rare nel 2024 e occupano il posto delle 2 lingue standard iniziali (nessuna lingua standard scelta). Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: probabile concessione di campagna, da confermare."
+  ]
+ }
 }

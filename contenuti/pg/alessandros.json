@@ -376,6 +376,15 @@
    "proprieta": "Contatto",
    "maestria": "",
    "note": "PF recuperati."
+  },
+  {
+   "n": "Scimitarra +1",
+   "atk": 7,
+   "dmg": "1d6+6",
+   "tipo": "taglienti",
+   "proprieta": "Accurata, Leggera, magica +1",
+   "maestria": "Rapidità",
+   "note": "Forza +3, competenza +3, magica +1; Duellare +2 ai danni impugnata a una mano"
   }
  ],
  "incantesimi": {
@@ -507,13 +516,22 @@
    "desc": "Arma semplice da mischia e da lancio."
   },
   {
-   "n": "Cotta di maglia",
+   "n": "Armatura dei Cerullius",
    "q": 1,
    "cat": "Armature",
-   "peso": "55 lb",
-   "valore": "75 mo",
-   "stats": "Scheda: CA 18 · Forza 13 · svantaggio a Furtività (PHB 2024: CA 16)",
-   "desc": "Armatura pesante. La scheda Roll20 la etichetta anche «Breastplate» e le assegna CA 18."
+   "peso": "65 lb",
+   "valore": "Non vendibile",
+   "stats": "Armatura completa · CA 18 · Forza 15 · svantaggio a Furtività · alla luce lunare rivela le Due Lune",
+   "desc": "L'armatura ancestrale di Casa Cerullius, col simbolo di Valerus sul petto. Sotto la luna il Sole ha rivelato ai fianchi le effigi delle Due Lune. Dopo l'assedio Torvus Halderan l'ha rifatta in tre giorni di fuoco continuo e Oswald Grigiomanto l'ha consegnata: sul pettorale, accanto al Sole, uno spazio lasciato libero per le Due Lune, se Alessandros lo vorrà."
+  },
+  {
+   "n": "Scimitarra +1",
+   "q": 1,
+   "cat": "Armi magiche",
+   "peso": "3 lb",
+   "valore": "Non indicato",
+   "stats": "+1 ai tiri per colpire e ai danni · 1d6 taglienti · Accurata, Leggera · Maestria: Rapidità (Nick)",
+   "desc": "Dal bottino della liberazione di Mushanè: lama ricurva e brunita, foggia del sud vesperiano, che taglia meglio di quanto dovrebbe."
   },
   {
    "n": "Scudo",
@@ -658,6 +676,78 @@
   "SPELLS['Find Steed']: sito tempo di lancio «10 minuti», scheda (2024) «Azione»; descrizione nel sito molto ridotta (mancano il blocco Destriero ultraterreno, l'iniziativa condivisa e la scomparsa).",
   "La scheda riporta 8 PF temporanei; il sito non li indica.",
   "Allineamento Legale Buono presente nella scheda, assente nel sito.",
-  "Inventario: il sito usa categorie non previste (Abbigliamento, Provviste, Contenitori) per veste, abiti eleganti, razioni e pacco del sacerdote; per il resto oggetti, quantità, carico (113,71 lb) e capacità (255 lb) coincidono con la scheda. Tutti gli incantesimi della scheda esistono già in SPELLS."
- ]
+  "Inventario: il sito usa categorie non previste (Abbigliamento, Provviste, Contenitori) per veste, abiti eleganti, razioni e pacco del sacerdote; per il resto oggetti, quantità, carico (113,71 lb) e capacità (255 lb) coincidono con la scheda. Tutti gli incantesimi della scheda esistono già in SPELLS.",
+  "v113: Cotta di maglia sostituita dall'Armatura dei Cerullius (armatura completa, CA 18: con lo scudo 20 per le regole; il token resta a 22 finché Giuseppe non decide). Aggiunta la Scimitarra +1 di Mushanè (nel canone era del gruppo, non assegnata)."
+ ],
+ "competenze_fonti": {
+  "classe": {
+   "nome": "Paladino",
+   "ts": [
+    "Sag",
+    "Car"
+   ],
+   "armature": "Leggere, medie, pesanti, scudi",
+   "armi": "Semplici, da guerra",
+   "strumenti": "Nessuno",
+   "abilita": [
+    "Atletica",
+    "Intimidire"
+   ],
+   "note": "Il Paladino sceglie 2 abilità fra Atletica, Intuizione, Intimidire, Medicina, Persuasione, Religione. La scheda non dice quali: attribuzione ricostruita (Atletica e Intimidire), intercambiabile con Intuizione/Religione assegnate sotto ad Abile/Skilled."
+  },
+  "sottoclasse": {
+   "nome": "Giuramento di Devozione",
+   "concede": ""
+  },
+  "specie": {
+   "nome": "Umano",
+   "concede": "Abile (Skillful): 1 abilità a scelta — Intuizione (attribuzione ricostruita); Versatile: talento di origine — Attaccante selvaggio (Savage Attacker); Intraprendente: Ispirazione eroica. Nessuna lingua dalla specie nel 2024",
+   "abilita": [
+    "Intuizione"
+   ]
+  },
+  "background": {
+   "nome": "Nobile",
+   "abilita": [
+    "Storia",
+    "Persuasione"
+   ],
+   "strumenti": "Un tipo di set da gioco — Set di dadi",
+   "talento": "Abile (Skilled)",
+   "lingue": "Nessuna dal background (Comune + 2 lingue standard alla creazione)",
+   "caratteristiche": "Forza, Intelligenza, Carisma"
+  },
+  "talenti": [
+   {
+    "nome": "Abile (Skilled)",
+    "concede": "3 competenze (abilità o strumenti): Acrobazia, Inganno, Religione (attribuzione ricostruita; Acrobazia e Inganno non sono nella lista del Paladino, quindi vengono per forza da Abile/Skilled)"
+   },
+   {
+    "nome": "Attaccante selvaggio (Savage Attacker)",
+    "concede": "Nessuna competenza (Umano, Versatile)"
+   },
+   {
+    "nome": "Duellare (Dueling)",
+    "concede": "Nessuna competenza (Stile di combattimento, Paladino 2)"
+   },
+   {
+    "nome": "Maestro delle armature pesanti (Heavy Armor Master)",
+    "concede": "Nessuna competenza (requisito addestramento nelle armature pesanti: soddisfatto dal Paladino)"
+   }
+  ],
+  "maestrie": {
+   "abilita": [],
+   "fonte": "Nessuna Maestria (Expertise)"
+  },
+  "lingue": [
+   "Comune",
+   "Elfico",
+   "Sottocomune"
+  ],
+  "verifica": [
+   "Abilità: 8 competenti = Paladino 2 + Nobile 2 (Storia, Persuasione) + Abile 1 + Skilled 3: il conto torna; la scheda non indica la ripartizione fra classe, Abile e Skilled.",
+   "TS (Sag, Car), armature, armi e Set di dadi (Nobile) tornano.",
+   "Lingue: Comune ed Elfico (standard) ok; Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: probabile concessione di campagna, da confermare."
+  ]
+ }
 }

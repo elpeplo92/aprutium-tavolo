@@ -14,34 +14,113 @@
  "competenza": 3,
  "percezione_passiva": 11,
  "taglia": "Media",
- "caratteristiche": {"For": 8, "Des": 13, "Cos": 14, "Int": 11, "Sag": 12, "Car": 18},
+ "caratteristiche": {
+  "For": 8,
+  "Des": 13,
+  "Cos": 14,
+  "Int": 11,
+  "Sag": 12,
+  "Car": 18
+ },
  "ts": {
-  "For": {"mod": -1, "comp": false},
-  "Des": {"mod": 1, "comp": false},
-  "Cos": {"mod": 5, "comp": true},
-  "Int": {"mod": 0, "comp": false},
-  "Sag": {"mod": 1, "comp": false},
-  "Car": {"mod": 7, "comp": true}
+  "For": {
+   "mod": -1,
+   "comp": false
+  },
+  "Des": {
+   "mod": 1,
+   "comp": false
+  },
+  "Cos": {
+   "mod": 5,
+   "comp": true
+  },
+  "Int": {
+   "mod": 0,
+   "comp": false
+  },
+  "Sag": {
+   "mod": 1,
+   "comp": false
+  },
+  "Car": {
+   "mod": 7,
+   "comp": true
+  }
  },
  "abilita": {
-  "Atletica": {"mod": -1, "comp": "no"},
-  "Acrobazia": {"mod": 1, "comp": "no"},
-  "Furtività": {"mod": 1, "comp": "no"},
-  "Rapidità di mano": {"mod": 1, "comp": "no"},
-  "Arcano": {"mod": 3, "comp": "competente"},
-  "Storia": {"mod": 3, "comp": "competente"},
-  "Indagare": {"mod": 0, "comp": "no"},
-  "Natura": {"mod": 0, "comp": "no"},
-  "Religione": {"mod": 0, "comp": "no"},
-  "Addestrare animali": {"mod": 1, "comp": "no"},
-  "Intuizione": {"mod": 4, "comp": "competente"},
-  "Medicina": {"mod": 1, "comp": "no"},
-  "Percezione": {"mod": 1, "comp": "no"},
-  "Sopravvivenza": {"mod": 1, "comp": "no"},
-  "Inganno": {"mod": 7, "comp": "competente"},
-  "Intimidire": {"mod": 7, "comp": "competente"},
-  "Intrattenere": {"mod": 7, "comp": "competente"},
-  "Persuasione": {"mod": 7, "comp": "competente"}
+  "Atletica": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Acrobazia": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Furtività": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Rapidità di mano": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Arcano": {
+   "mod": 3,
+   "comp": "competente"
+  },
+  "Storia": {
+   "mod": 3,
+   "comp": "competente"
+  },
+  "Indagare": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Natura": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Religione": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Addestrare animali": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Intuizione": {
+   "mod": 4,
+   "comp": "competente"
+  },
+  "Medicina": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Percezione": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Sopravvivenza": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Inganno": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Intimidire": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Intrattenere": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Persuasione": {
+   "mod": 7,
+   "comp": "competente"
+  }
  },
  "competenze": {
   "armature": "Nessuna",
@@ -53,115 +132,673 @@
  "resistenze": "Nessuna (nessuna vulnerabilità né immunità)",
  "condizioni_speciali": "Nessuna immunità a condizioni. Maledizione del Bastone di Lyaras (se sintonizzato): sente i sussurri della Fata Oscura e ha svantaggio ai tiri salvezza contro la pazzia.",
  "risorse": [
-  {"n": "Punti stregoneria", "max": 5, "recupero": "riposo lungo (in parte con Ripristino stregonesco dopo un riposo breve)", "note": "Alimentano Metamagia e la creazione di slot incantesimo (Fonte della magia)."},
-  {"n": "Stregoneria innata", "max": 2, "recupero": "riposo lungo", "note": "Azione bonus, 1 minuto: +1 alla CD degli incantesimi da stregone e vantaggio ai tiri per colpire con gli incantesimi da stregone."},
-  {"n": "Ripristino stregonesco", "max": 1, "recupero": "riposo lungo", "note": "Alla fine di un riposo breve recupera fino a 2 punti stregoneria (metà del livello da stregone, per difetto)."},
-  {"n": "Punti fortuna (Fortunato)", "max": 3, "recupero": "riposo lungo", "note": "1 punto: vantaggio a un proprio Test del d20, oppure svantaggio a un tiro per colpire contro di sé."},
-  {"n": "Ispirazione eroica", "max": 1, "recupero": "riposo lungo (Intraprendente)", "note": "Si spende per ripetere un tiro di dado appena effettuato; si deve usare il nuovo risultato."},
-  {"n": "Cariche del Bastone di Lyaras Vel'Quoril", "max": 10, "recupero": "1d6+4 all'alba", "note": "Comando 1 carica · Immagine speculare 2 · Paura 3 · Legame telepatico di Rary 5."},
-  {"n": "Slot incantesimo", "max": 9, "recupero": "riposo lungo", "note": "4 di 1° livello, 3 di 2°, 2 di 3°."}
+  {
+   "n": "Punti stregoneria",
+   "max": 5,
+   "recupero": "riposo lungo (in parte con Ripristino stregonesco dopo un riposo breve)",
+   "note": "Alimentano Metamagia e la creazione di slot incantesimo (Fonte della magia)."
+  },
+  {
+   "n": "Stregoneria innata",
+   "max": 2,
+   "recupero": "riposo lungo",
+   "note": "Azione bonus, 1 minuto: +1 alla CD degli incantesimi da stregone e vantaggio ai tiri per colpire con gli incantesimi da stregone."
+  },
+  {
+   "n": "Ripristino stregonesco",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Alla fine di un riposo breve recupera fino a 2 punti stregoneria (metà del livello da stregone, per difetto)."
+  },
+  {
+   "n": "Punti fortuna (Fortunato)",
+   "max": 3,
+   "recupero": "riposo lungo",
+   "note": "1 punto: vantaggio a un proprio Test del d20, oppure svantaggio a un tiro per colpire contro di sé."
+  },
+  {
+   "n": "Ispirazione eroica",
+   "max": 1,
+   "recupero": "riposo lungo (Intraprendente)",
+   "note": "Si spende per ripetere un tiro di dado appena effettuato; si deve usare il nuovo risultato."
+  },
+  {
+   "n": "Cariche del Bastone di Lyaras Vel'Quoril",
+   "max": 10,
+   "recupero": "1d6+4 all'alba",
+   "note": "Comando 1 carica · Immagine speculare 2 · Paura 3 · Legame telepatico di Rary 5."
+  },
+  {
+   "n": "Slot incantesimo",
+   "max": 9,
+   "recupero": "riposo lungo",
+   "note": "4 di 1° livello, 3 di 2°, 2 di 3°."
+  }
  ],
  "privilegi": [
-  {"n": "Incantesimi (Spellcasting)", "fonte": "Stregone 1", "d": "Lancia incantesimi da stregone usando il Carisma (CD e attacco: vedi sezione incantesimi). Conosce 5 trucchetti (4 al 1° livello, +1 al 4°); ogni volta che sale di livello può sostituire un trucchetto con un altro trucchetto da stregone. Prepara incantesimi di 1° livello o superiore da una lista: al 5° livello 9 incantesimi preparati, più quelli sempre preparati degli Incantesimi draconici, che non contano nel limite. Ogni volta che sale di livello può sostituire un incantesimo preparato con un altro da stregone di cui ha gli slot. Recupera tutti gli slot con un riposo lungo. Può usare un focus arcano come focus da incantatore.", "usi": "Slot: 4 × 1°, 3 × 2°, 2 × 3°"},
-  {"n": "Stregoneria innata (Innate Sorcery)", "fonte": "Stregone 1", "d": "Come azione bonus scatena la magia innata per 1 minuto. Per la durata: la CD dei tiri salvezza dei suoi incantesimi da stregone aumenta di 1 e ha vantaggio ai tiri per colpire degli incantesimi da stregone che lancia.", "usi": "2 usi, recuperati con un riposo lungo"},
-  {"n": "Fonte della magia (Font of Magic)", "fonte": "Stregone 2", "d": "Ha 5 punti stregoneria al 5° livello e li recupera tutti con un riposo lungo. Convertire slot in punti: può spendere uno slot incantesimo per ottenere punti stregoneria pari al livello dello slot (nessuna azione). Creare slot: come azione bonus trasforma punti stregoneria in uno slot incantesimo (al massimo di 5° livello): 1° = 2 punti (min. liv. 2), 2° = 3 punti (liv. 3), 3° = 5 punti (liv. 5), 4° = 6 punti (liv. 7), 5° = 7 punti (liv. 9). Gli slot creati svaniscono al termine di un riposo lungo.", "usi": "5 punti stregoneria"},
-  {"n": "Metamagia (Metamagic)", "fonte": "Stregone 2", "d": "Conosce due opzioni di Metamagia (Incantesimo rapido e Incantesimo intensificato). Per usarne una spende i punti stregoneria indicati; si può applicare una sola opzione di Metamagia a ogni incantesimo, salvo diversa indicazione. Ogni volta che sale di livello può sostituire un'opzione con un'altra; ne ottiene altre due al 10° e al 17° livello.", "usi": "Costo in punti stregoneria"},
-  {"n": "Metamagia: Incantesimo rapido (Quickened Spell)", "fonte": "Stregone 2", "d": "Costo 2 punti stregoneria. Quando lancia un incantesimo con tempo di lancio di un'azione, può cambiarlo in un'azione bonus per quel lancio. Non può farlo se nel turno ha già lanciato un incantesimo di 1° livello o superiore, e dopo averlo fatto non può lanciare altri incantesimi di 1° livello o superiore in quel turno.", "usi": "2 punti stregoneria"},
-  {"n": "Metamagia: Incantesimo intensificato (Heightened Spell)", "fonte": "Stregone 2", "d": "Costo 2 punti stregoneria. Quando lancia un incantesimo che costringe una creatura a effettuare un tiro salvezza, dà a un bersaglio dell'incantesimo svantaggio ai tiri salvezza contro quell'incantesimo.", "usi": "2 punti stregoneria"},
-  {"n": "Resilienza draconica (Draconic Resilience)", "fonte": "Stregoneria draconica 3", "d": "Il suo massimo dei punti ferita aumenta di 3, e di 1 ogni volta che ottiene un altro livello da stregone (già incluso nei 37 PF). Parti del corpo sono coperte di scaglie: mentre non indossa un'armatura, la sua CA base è 10 + modificatore di Destrezza + modificatore di Carisma (= 15). NB: la scheda Roll20 riporta CA 11, che non applica questo privilegio.", "usi": "Permanente"},
-  {"n": "Incantesimi draconici (Draconic Spells)", "fonte": "Stregoneria draconica 3", "d": "Ha sempre preparati, senza che contino nel limite: dal 3° livello Alterare se stesso, Sfera cromatica, Comando, Soffio del drago; dal 5° Paura e Volare. Al 7° otterrà Occhio arcano e Charme sui mostri, al 9° Leggende e tradizioni e Evoca drago.", "usi": "Sempre preparati"},
-  {"n": "Aumento dei punteggi di caratteristica (Ability Score Improvement)", "fonte": "Stregone 4", "d": "Ottiene il talento Aumento dei punteggi di caratteristica o un altro talento per cui ha i requisiti: scelto Adepto elementale (fuoco). Si ripete ai livelli 8, 12 e 16.", "usi": ""},
-  {"n": "Ripristino stregonesco (Sorcerous Restoration)", "fonte": "Stregone 5", "d": "Quando termina un riposo breve può recuperare punti stregoneria spesi, fino a un massimo pari alla metà del suo livello da stregone arrotondata per difetto (2 al 5° livello). Una volta usato, non può farlo di nuovo finché non termina un riposo lungo.", "usi": "1 volta per riposo lungo"}
+  {
+   "n": "Incantesimi (Spellcasting)",
+   "fonte": "Stregone 1",
+   "d": "Lancia incantesimi da stregone usando il Carisma (CD e attacco: vedi sezione incantesimi). Conosce 5 trucchetti (4 al 1° livello, +1 al 4°); ogni volta che sale di livello può sostituire un trucchetto con un altro trucchetto da stregone. Prepara incantesimi di 1° livello o superiore da una lista: al 5° livello 9 incantesimi preparati, più quelli sempre preparati degli Incantesimi draconici, che non contano nel limite. Ogni volta che sale di livello può sostituire un incantesimo preparato con un altro da stregone di cui ha gli slot. Recupera tutti gli slot con un riposo lungo. Può usare un focus arcano come focus da incantatore.",
+   "usi": "Slot: 4 × 1°, 3 × 2°, 2 × 3°"
+  },
+  {
+   "n": "Stregoneria innata (Innate Sorcery)",
+   "fonte": "Stregone 1",
+   "d": "Come azione bonus scatena la magia innata per 1 minuto. Per la durata: la CD dei tiri salvezza dei suoi incantesimi da stregone aumenta di 1 e ha vantaggio ai tiri per colpire degli incantesimi da stregone che lancia.",
+   "usi": "2 usi, recuperati con un riposo lungo"
+  },
+  {
+   "n": "Fonte della magia (Font of Magic)",
+   "fonte": "Stregone 2",
+   "d": "Ha 5 punti stregoneria al 5° livello e li recupera tutti con un riposo lungo. Convertire slot in punti: può spendere uno slot incantesimo per ottenere punti stregoneria pari al livello dello slot (nessuna azione). Creare slot: come azione bonus trasforma punti stregoneria in uno slot incantesimo (al massimo di 5° livello): 1° = 2 punti (min. liv. 2), 2° = 3 punti (liv. 3), 3° = 5 punti (liv. 5), 4° = 6 punti (liv. 7), 5° = 7 punti (liv. 9). Gli slot creati svaniscono al termine di un riposo lungo.",
+   "usi": "5 punti stregoneria"
+  },
+  {
+   "n": "Metamagia (Metamagic)",
+   "fonte": "Stregone 2",
+   "d": "Conosce due opzioni di Metamagia (Incantesimo rapido e Incantesimo intensificato). Per usarne una spende i punti stregoneria indicati; si può applicare una sola opzione di Metamagia a ogni incantesimo, salvo diversa indicazione. Ogni volta che sale di livello può sostituire un'opzione con un'altra; ne ottiene altre due al 10° e al 17° livello.",
+   "usi": "Costo in punti stregoneria"
+  },
+  {
+   "n": "Metamagia: Incantesimo rapido (Quickened Spell)",
+   "fonte": "Stregone 2",
+   "d": "Costo 2 punti stregoneria. Quando lancia un incantesimo con tempo di lancio di un'azione, può cambiarlo in un'azione bonus per quel lancio. Non può farlo se nel turno ha già lanciato un incantesimo di 1° livello o superiore, e dopo averlo fatto non può lanciare altri incantesimi di 1° livello o superiore in quel turno.",
+   "usi": "2 punti stregoneria"
+  },
+  {
+   "n": "Metamagia: Incantesimo intensificato (Heightened Spell)",
+   "fonte": "Stregone 2",
+   "d": "Costo 2 punti stregoneria. Quando lancia un incantesimo che costringe una creatura a effettuare un tiro salvezza, dà a un bersaglio dell'incantesimo svantaggio ai tiri salvezza contro quell'incantesimo.",
+   "usi": "2 punti stregoneria"
+  },
+  {
+   "n": "Resilienza draconica (Draconic Resilience)",
+   "fonte": "Stregoneria draconica 3",
+   "d": "Il suo massimo dei punti ferita aumenta di 3, e di 1 ogni volta che ottiene un altro livello da stregone (già incluso nei 37 PF). Parti del corpo sono coperte di scaglie: mentre non indossa un'armatura, la sua CA base è 10 + modificatore di Destrezza + modificatore di Carisma (= 15). NB: la scheda Roll20 riporta CA 11, che non applica questo privilegio.",
+   "usi": "Permanente"
+  },
+  {
+   "n": "Incantesimi draconici (Draconic Spells)",
+   "fonte": "Stregoneria draconica 3",
+   "d": "Ha sempre preparati, senza che contino nel limite: dal 3° livello Alterare se stesso, Sfera cromatica, Comando, Soffio del drago; dal 5° Paura e Volare. Al 7° otterrà Occhio arcano e Charme sui mostri, al 9° Leggende e tradizioni e Evoca drago.",
+   "usi": "Sempre preparati"
+  },
+  {
+   "n": "Aumento dei punteggi di caratteristica (Ability Score Improvement)",
+   "fonte": "Stregone 4",
+   "d": "Ottiene il talento Aumento dei punteggi di caratteristica o un altro talento per cui ha i requisiti: scelto Adepto elementale (fuoco). Si ripete ai livelli 8, 12 e 16.",
+   "usi": ""
+  },
+  {
+   "n": "Ripristino stregonesco (Sorcerous Restoration)",
+   "fonte": "Stregone 5",
+   "d": "Quando termina un riposo breve può recuperare punti stregoneria spesi, fino a un massimo pari alla metà del suo livello da stregone arrotondata per difetto (2 al 5° livello). Una volta usato, non può farlo di nuovo finché non termina un riposo lungo.",
+   "usi": "1 volta per riposo lungo"
+  }
  ],
  "tratti_specie": [
-  {"n": "Taglia Media", "d": "Occupa uno spazio di 1,5 × 1,5 m."},
-  {"n": "Intraprendente (Resourceful)", "d": "Ottiene Ispirazione eroica ogni volta che termina un riposo lungo."},
-  {"n": "Abile (Skillful)", "d": "Ottiene competenza in un'abilità a sua scelta."},
-  {"n": "Versatile", "d": "Ottiene un talento di origine a sua scelta (scelto: Fortunato)."}
+  {
+   "n": "Taglia Media",
+   "d": "Occupa uno spazio di 1,5 × 1,5 m."
+  },
+  {
+   "n": "Intraprendente (Resourceful)",
+   "d": "Ottiene Ispirazione eroica ogni volta che termina un riposo lungo."
+  },
+  {
+   "n": "Abile (Skillful)",
+   "d": "Ottiene competenza in un'abilità a sua scelta."
+  },
+  {
+   "n": "Versatile",
+   "d": "Ottiene un talento di origine a sua scelta (scelto: Fortunato)."
+  }
  ],
  "talenti": [
-  {"n": "Esperto (Skilled)", "fonte": "Origine (background Nobile)", "d": "Ottiene competenza in qualsiasi combinazione di tre abilità o strumenti a sua scelta. Ripetibile."},
-  {"n": "Fortunato (Lucky)", "fonte": "Origine (Umano: Versatile)", "d": "Ha punti fortuna pari al bonus di competenza (3) e li recupera tutti con un riposo lungo. Vantaggio: quando tira un d20 per un Test del d20, può spendere 1 punto fortuna per avere vantaggio al tiro. Svantaggio: quando una creatura tira un d20 per un tiro per colpire contro di lui, può spendere 1 punto fortuna per imporre svantaggio a quel tiro."},
-  {"n": "Adepto elementale — fuoco (Elemental Adept)", "fonte": "Livello 4", "d": "Requisiti: livello 4+, privilegio Incantesimi o Magia del patto. Aumento di caratteristica: +1 a Intelligenza, Saggezza o Carisma (massimo 20). Padronanza dell'energia: gli incantesimi che lancia ignorano la resistenza ai danni da fuoco; inoltre, quando tira i danni di un incantesimo che infligge danni da fuoco, può trattare ogni 1 su un dado di danno come un 2. Ripetibile scegliendo ogni volta un tipo di danno diverso."}
+  {
+   "n": "Esperto (Skilled)",
+   "fonte": "Origine (background Nobile)",
+   "d": "Ottiene competenza in qualsiasi combinazione di tre abilità o strumenti a sua scelta. Ripetibile."
+  },
+  {
+   "n": "Fortunato (Lucky)",
+   "fonte": "Origine (Umano: Versatile)",
+   "d": "Ha punti fortuna pari al bonus di competenza (3) e li recupera tutti con un riposo lungo. Vantaggio: quando tira un d20 per un Test del d20, può spendere 1 punto fortuna per avere vantaggio al tiro. Svantaggio: quando una creatura tira un d20 per un tiro per colpire contro di lui, può spendere 1 punto fortuna per imporre svantaggio a quel tiro."
+  },
+  {
+   "n": "Adepto elementale — fuoco (Elemental Adept)",
+   "fonte": "Livello 4",
+   "d": "Requisiti: livello 4+, privilegio Incantesimi o Magia del patto. Aumento di caratteristica: +1 a Intelligenza, Saggezza o Carisma (massimo 20). Padronanza dell'energia: gli incantesimi che lancia ignorano la resistenza ai danni da fuoco; inoltre, quando tira i danni di un incantesimo che infligge danni da fuoco, può trattare ogni 1 su un dado di danno come un 2. Ripetibile scegliendo ogni volta un tipo di danno diverso."
+  }
  ],
  "attacchi": [
-  {"n": "Dardo di fuoco (Fire Bolt)", "atk": 9, "dmg": "2d10", "tipo": "fuoco", "proprieta": "Trucchetto · Azione · 36 m", "maestria": "", "note": "Scheda Roll20: +11 nella tabella attacchi, ma il riquadro incantesimi dà +9 (vedi differenze). Adepto elementale: gli 1 contano come 2 e ignora la resistenza al fuoco."},
-  {"n": "Tocco folgorante (Shocking Grasp)", "atk": 9, "dmg": "2d8", "tipo": "fulmine", "proprieta": "Trucchetto · Azione · Contatto", "maestria": "", "note": "Attacco con incantesimo in mischia; vantaggio se il bersaglio indossa armatura di metallo; il bersaglio non può effettuare reazioni fino all'inizio del suo turno successivo. Scheda: +11."},
-  {"n": "Esplosione stregonesca (Sorcerous Burst)", "atk": 9, "dmg": "2d8", "tipo": "acido, freddo, fuoco, fulmine, veleno, psichico o tuono", "proprieta": "Trucchetto · Azione · 36 m", "maestria": "", "note": "Ogni 8 sul d8 fa tirare un altro d8, fino a 4 d8 extra (mod. Carisma). Scheda: +11."},
-  {"n": "Sfera cromatica (Chromatic Orb)", "atk": 9, "dmg": "3d8", "tipo": "acido, freddo, fuoco, fulmine, veleno o tuono", "proprieta": "1° livello · Azione · 27 m", "maestria": "", "note": "Con due o più dadi uguali la sfera balza su un altro bersaglio entro 9 m (nuovo attacco e nuovi danni). Scheda: +11."},
-  {"n": "Raggio rovente (Scorching Ray)", "atk": 9, "dmg": "2d6", "tipo": "fuoco", "proprieta": "2° livello · Azione · 36 m", "maestria": "", "note": "Tre raggi, un tiro per colpire ciascuno. Scheda: +11."},
-  {"n": "Dardo incantato (Magic Missile)", "atk": null, "dmg": "1d4+1", "tipo": "forza", "proprieta": "1° livello · Azione · 36 m", "maestria": "", "note": "Tre dardi che colpiscono automaticamente, 1d4+1 ciascuno (+1 dardo per slot superiore al 1°)."},
-  {"n": "Onda di tuono (Thunderwave)", "atk": null, "dmg": "2d8", "tipo": "tuono", "proprieta": "1° livello · Azione · cubo di 4,5 m", "maestria": "", "note": "TS Costituzione CD 17 (la tabella attacchi della scheda indica CD 15): fallito 2d8 e spinto di 3 m, riuscito metà."},
-  {"n": "Comando (Command)", "atk": null, "dmg": "", "tipo": "", "proprieta": "1° livello · Azione · 18 m", "maestria": "", "note": "TS Saggezza CD 17 (tabella della scheda: CD 15)."},
-  {"n": "Soffio del drago (Dragon's Breath)", "atk": null, "dmg": "3d6", "tipo": "acido, freddo, fuoco, fulmine o veleno", "proprieta": "2° livello · Azione bonus · Contatto", "maestria": "", "note": "TS Destrezza CD 17 (tabella della scheda: CD 15), cono di 4,5 m, metà se riuscito."},
-  {"n": "Frantumare (Shatter)", "atk": null, "dmg": "3d8", "tipo": "tuono", "proprieta": "2° livello · Azione · 18 m", "maestria": "", "note": "TS Costituzione CD 17 (scheda: CD 15), sfera di raggio 3 m; svantaggio per le creature di materiale inorganico."},
-  {"n": "Controincantesimo (Counterspell)", "atk": null, "dmg": "", "tipo": "", "proprieta": "3° livello · Reazione · 18 m", "maestria": "", "note": "Il lanciatore fa un TS Costituzione CD 17 (scheda: CD 15)."},
-  {"n": "Palla di fuoco (Fireball)", "atk": null, "dmg": "8d6", "tipo": "fuoco", "proprieta": "3° livello · Azione · 45 m", "maestria": "", "note": "TS Destrezza CD 17 (scheda: CD 15), sfera di raggio 6 m, metà se riuscito. Adepto elementale."},
-  {"n": "Paura (Fear)", "atk": null, "dmg": "", "tipo": "", "proprieta": "3° livello · Azione · cono di 9 m", "maestria": "", "note": "TS Saggezza CD 17 (scheda: CD 15)."},
-  {"n": "Bastone di Lyaras Vel'Quoril (come bastone ferrato a due mani)", "atk": 4, "dmg": "1d8+1", "tipo": "contundenti", "proprieta": "Versatile", "maestria": "", "note": "Riga «New Item» della scheda Roll20: For −1 + competenza 3 + bonus +2 del bastone."},
-  {"n": "Colpo senz'armi", "atk": 2, "dmg": "0", "tipo": "contundenti", "proprieta": "", "maestria": "", "note": "Danni pari a 1 + mod. Forza (= 0)."},
-  {"n": "Olio (lanciato su creatura o oggetto)", "atk": null, "dmg": "5", "tipo": "fuoco", "proprieta": "6 m", "maestria": "", "note": "Sostituisce un attacco dell'azione Attacco. TS Destrezza CD 12 o il bersaglio è coperto d'olio; se subisce danni da fuoco prima che l'olio si asciughi (1 minuto) prende 5 danni da fuoco extra."},
-  {"n": "Triboli (Caltrops, azione Usare)", "atk": null, "dmg": "1", "tipo": "perforanti", "proprieta": "Quadrato di 1,5 m entro 1,5 m", "maestria": "", "note": "Chi entra nell'area per la prima volta in un turno: TS Destrezza CD 15 o 1 danno perforante e velocità 0 fino all'inizio del suo turno successivo. Recuperarli richiede 10 minuti."}
+  {
+   "n": "Dardo di fuoco (Fire Bolt)",
+   "atk": 9,
+   "dmg": "2d10",
+   "tipo": "fuoco",
+   "proprieta": "Trucchetto · Azione · 36 m",
+   "maestria": "",
+   "note": "Scheda Roll20: +11 nella tabella attacchi, ma il riquadro incantesimi dà +9 (vedi differenze). Adepto elementale: gli 1 contano come 2 e ignora la resistenza al fuoco."
+  },
+  {
+   "n": "Tocco folgorante (Shocking Grasp)",
+   "atk": 9,
+   "dmg": "2d8",
+   "tipo": "fulmine",
+   "proprieta": "Trucchetto · Azione · Contatto",
+   "maestria": "",
+   "note": "Attacco con incantesimo in mischia; vantaggio se il bersaglio indossa armatura di metallo; il bersaglio non può effettuare reazioni fino all'inizio del suo turno successivo. Scheda: +11."
+  },
+  {
+   "n": "Esplosione stregonesca (Sorcerous Burst)",
+   "atk": 9,
+   "dmg": "2d8",
+   "tipo": "acido, freddo, fuoco, fulmine, veleno, psichico o tuono",
+   "proprieta": "Trucchetto · Azione · 36 m",
+   "maestria": "",
+   "note": "Ogni 8 sul d8 fa tirare un altro d8, fino a 4 d8 extra (mod. Carisma). Scheda: +11."
+  },
+  {
+   "n": "Sfera cromatica (Chromatic Orb)",
+   "atk": 9,
+   "dmg": "3d8",
+   "tipo": "acido, freddo, fuoco, fulmine, veleno o tuono",
+   "proprieta": "1° livello · Azione · 27 m",
+   "maestria": "",
+   "note": "Con due o più dadi uguali la sfera balza su un altro bersaglio entro 9 m (nuovo attacco e nuovi danni). Scheda: +11."
+  },
+  {
+   "n": "Raggio rovente (Scorching Ray)",
+   "atk": 9,
+   "dmg": "2d6",
+   "tipo": "fuoco",
+   "proprieta": "2° livello · Azione · 36 m",
+   "maestria": "",
+   "note": "Tre raggi, un tiro per colpire ciascuno. Scheda: +11."
+  },
+  {
+   "n": "Dardo incantato (Magic Missile)",
+   "atk": null,
+   "dmg": "1d4+1",
+   "tipo": "forza",
+   "proprieta": "1° livello · Azione · 36 m",
+   "maestria": "",
+   "note": "Tre dardi che colpiscono automaticamente, 1d4+1 ciascuno (+1 dardo per slot superiore al 1°)."
+  },
+  {
+   "n": "Onda di tuono (Thunderwave)",
+   "atk": null,
+   "dmg": "2d8",
+   "tipo": "tuono",
+   "proprieta": "1° livello · Azione · cubo di 4,5 m",
+   "maestria": "",
+   "note": "TS Costituzione CD 17 (la tabella attacchi della scheda indica CD 15): fallito 2d8 e spinto di 3 m, riuscito metà."
+  },
+  {
+   "n": "Comando (Command)",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "1° livello · Azione · 18 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 17 (tabella della scheda: CD 15)."
+  },
+  {
+   "n": "Soffio del drago (Dragon's Breath)",
+   "atk": null,
+   "dmg": "3d6",
+   "tipo": "acido, freddo, fuoco, fulmine o veleno",
+   "proprieta": "2° livello · Azione bonus · Contatto",
+   "maestria": "",
+   "note": "TS Destrezza CD 17 (tabella della scheda: CD 15), cono di 4,5 m, metà se riuscito."
+  },
+  {
+   "n": "Frantumare (Shatter)",
+   "atk": null,
+   "dmg": "3d8",
+   "tipo": "tuono",
+   "proprieta": "2° livello · Azione · 18 m",
+   "maestria": "",
+   "note": "TS Costituzione CD 17 (scheda: CD 15), sfera di raggio 3 m; svantaggio per le creature di materiale inorganico."
+  },
+  {
+   "n": "Controincantesimo (Counterspell)",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "3° livello · Reazione · 18 m",
+   "maestria": "",
+   "note": "Il lanciatore fa un TS Costituzione CD 17 (scheda: CD 15)."
+  },
+  {
+   "n": "Palla di fuoco (Fireball)",
+   "atk": null,
+   "dmg": "8d6",
+   "tipo": "fuoco",
+   "proprieta": "3° livello · Azione · 45 m",
+   "maestria": "",
+   "note": "TS Destrezza CD 17 (scheda: CD 15), sfera di raggio 6 m, metà se riuscito. Adepto elementale."
+  },
+  {
+   "n": "Paura (Fear)",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "3° livello · Azione · cono di 9 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 17 (scheda: CD 15)."
+  },
+  {
+   "n": "Bastone di Lyaras Vel'Quoril (come bastone ferrato a due mani)",
+   "atk": 4,
+   "dmg": "1d8+1",
+   "tipo": "contundenti",
+   "proprieta": "Versatile",
+   "maestria": "",
+   "note": "Riga «New Item» della scheda Roll20: For −1 + competenza 3 + bonus +2 del bastone."
+  },
+  {
+   "n": "Colpo senz'armi",
+   "atk": 2,
+   "dmg": "0",
+   "tipo": "contundenti",
+   "proprieta": "",
+   "maestria": "",
+   "note": "Danni pari a 1 + mod. Forza (= 0)."
+  },
+  {
+   "n": "Olio (lanciato su creatura o oggetto)",
+   "atk": null,
+   "dmg": "5",
+   "tipo": "fuoco",
+   "proprieta": "6 m",
+   "maestria": "",
+   "note": "Sostituisce un attacco dell'azione Attacco. TS Destrezza CD 12 o il bersaglio è coperto d'olio; se subisce danni da fuoco prima che l'olio si asciughi (1 minuto) prende 5 danni da fuoco extra."
+  },
+  {
+   "n": "Triboli (Caltrops, azione Usare)",
+   "atk": null,
+   "dmg": "1",
+   "tipo": "perforanti",
+   "proprieta": "Quadrato di 1,5 m entro 1,5 m",
+   "maestria": "",
+   "note": "Chi entra nell'area per la prima volta in un turno: TS Destrezza CD 15 o 1 danno perforante e velocità 0 fino all'inizio del suo turno successivo. Recuperarli richiede 10 minuti."
+  }
  ],
  "incantesimi": {
   "caratteristica": "Car",
   "cd": 17,
   "attacco": 9,
-  "slot": {"1": 4, "2": 3, "3": 2},
+  "slot": {
+   "1": 4,
+   "2": 3,
+   "3": 2
+  },
   "punti_stregoneria": 5,
   "note_calcolo": "Base: CD 15 e attacco +7 (8/0 + competenza 3 + Carisma 4). La scheda Roll20 mostra CD 17 e +9 nel riquadro Incantesimi (include il +2 del Bastone di Lyaras), ma +11 e CD 15 nella tabella Attacchi: valori incoerenti. Con Stregoneria innata la CD sale a 18.",
   "lista": [
-   {"en": "Minor Illusion", "it": "Illusione minore", "l": 0, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Shocking Grasp", "it": "Tocco folgorante", "l": 0, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Sorcerous Burst", "it": "Esplosione stregonesca", "l": 0, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Fire Bolt", "it": "Dardo di fuoco", "l": 0, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Mage Hand", "it": "Mano magica", "l": 0, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Thunderwave", "it": "Onda di tuono", "l": 1, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Magic Missile", "it": "Dardo incantato", "l": 1, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Shield", "it": "Scudo", "l": 1, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Detect Magic", "it": "Individuazione del magico", "l": 1, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Chromatic Orb", "it": "Sfera cromatica", "l": 1, "preparato": true, "sempre": true, "fonte": "Stregoneria draconica"},
-   {"en": "Command", "it": "Comando", "l": 1, "preparato": true, "sempre": true, "fonte": "Stregoneria draconica (anche dal Bastone, 1 carica)"},
-   {"en": "Dragon's Breath", "it": "Soffio del drago", "l": 2, "preparato": true, "sempre": true, "fonte": "Stregoneria draconica"},
-   {"en": "Alter Self", "it": "Alterare se stesso", "l": 2, "preparato": true, "sempre": true, "fonte": "Stregoneria draconica"},
-   {"en": "Mirror Image", "it": "Immagine speculare", "l": 2, "preparato": true, "sempre": false, "fonte": "Stregone (anche dal Bastone, 2 cariche)"},
-   {"en": "Scorching Ray", "it": "Raggio rovente", "l": 2, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Shatter", "it": "Frantumare", "l": 2, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Counterspell", "it": "Controincantesimo", "l": 3, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Fly", "it": "Volare", "l": 3, "preparato": true, "sempre": true, "fonte": "Stregoneria draconica"},
-   {"en": "Fireball", "it": "Palla di fuoco", "l": 3, "preparato": true, "sempre": false, "fonte": "Stregone"},
-   {"en": "Fear", "it": "Paura", "l": 3, "preparato": true, "sempre": true, "fonte": "Stregoneria draconica (anche dal Bastone, 3 cariche)"},
-   {"en": "Rary's Telepathic Bond", "it": "Legame telepatico di Rary", "l": 5, "preparato": false, "sempre": false, "fonte": "Solo dal Bastone di Lyaras (5 cariche)"}
+   {
+    "en": "Minor Illusion",
+    "it": "Illusione minore",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Shocking Grasp",
+    "it": "Tocco folgorante",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Sorcerous Burst",
+    "it": "Esplosione stregonesca",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Fire Bolt",
+    "it": "Dardo di fuoco",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Mage Hand",
+    "it": "Mano magica",
+    "l": 0,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Thunderwave",
+    "it": "Onda di tuono",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Magic Missile",
+    "it": "Dardo incantato",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Shield",
+    "it": "Scudo",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Detect Magic",
+    "it": "Individuazione del magico",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Chromatic Orb",
+    "it": "Sfera cromatica",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Stregoneria draconica"
+   },
+   {
+    "en": "Command",
+    "it": "Comando",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Stregoneria draconica (anche dal Bastone, 1 carica)"
+   },
+   {
+    "en": "Dragon's Breath",
+    "it": "Soffio del drago",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Stregoneria draconica"
+   },
+   {
+    "en": "Alter Self",
+    "it": "Alterare se stesso",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Stregoneria draconica"
+   },
+   {
+    "en": "Mirror Image",
+    "it": "Immagine speculare",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone (anche dal Bastone, 2 cariche)"
+   },
+   {
+    "en": "Scorching Ray",
+    "it": "Raggio rovente",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Shatter",
+    "it": "Frantumare",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Counterspell",
+    "it": "Controincantesimo",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Fly",
+    "it": "Volare",
+    "l": 3,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Stregoneria draconica"
+   },
+   {
+    "en": "Fireball",
+    "it": "Palla di fuoco",
+    "l": 3,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Stregone"
+   },
+   {
+    "en": "Fear",
+    "it": "Paura",
+    "l": 3,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Stregoneria draconica (anche dal Bastone, 3 cariche)"
+   },
+   {
+    "en": "Rary's Telepathic Bond",
+    "it": "Legame telepatico di Rary",
+    "l": 5,
+    "preparato": false,
+    "sempre": false,
+    "fonte": "Solo dal Bastone di Lyaras (5 cariche)"
+   }
   ]
  },
  "incantesimi_nuovi": {
-  "Rary's Telepathic Bond": {"it": "Legame telepatico di Rary", "l": 5, "t": "Azione o rituale", "r": "9 m", "d": "Divinazione, rituale (V, S, M: due uova). Durata 1 ora. Crea un legame telepatico fra fino a otto creature consenzienti a scelta entro gittata, collegate psichicamente fra loro. Le creature che non hanno un linguaggio in comune non vengono collegate. Finché dura l'incantesimo, i collegati possono comunicare telepaticamente attraverso il legame, che capiscano o meno una lingua comune; la comunicazione è possibile a qualsiasi distanza, ma non si estende ad altri piani di esistenza. Per Vicarus è disponibile solo spendendo 5 cariche del Bastone di Lyaras Vel'Quoril."}
+  "Rary's Telepathic Bond": {
+   "it": "Legame telepatico di Rary",
+   "l": 5,
+   "t": "Azione o rituale",
+   "r": "9 m",
+   "d": "Divinazione, rituale (V, S, M: due uova). Durata 1 ora. Crea un legame telepatico fra fino a otto creature consenzienti a scelta entro gittata, collegate psichicamente fra loro. Le creature che non hanno un linguaggio in comune non vengono collegate. Finché dura l'incantesimo, i collegati possono comunicare telepaticamente attraverso il legame, che capiscano o meno una lingua comune; la comunicazione è possibile a qualsiasi distanza, ma non si estende ad altri piani di esistenza. Per Vicarus è disponibile solo spendendo 5 cariche del Bastone di Lyaras Vel'Quoril."
+  }
  },
  "inventario": [
-  {"n": "Bastone di Lyaras Vel'Quoril", "q": 1, "cat": "Oggetti magici", "peso": "0 lb", "valore": "", "stats": "Bastone ferrato · arma semplice da mischia · Bastone arcano +2 (proprietà suggerite) · 10 cariche, recupera 1d6+4 cariche all'alba · a due mani (Versatile) +4, 1d8+1 contundenti", "desc": "Spendendo cariche lancia: Comando (1 carica), Immagine speculare (2), Paura (3), Legame telepatico di Rary (5). Maledizione (suggerita): finché è sintonizzato sente i sussurri della Fata Oscura e ha svantaggio ai tiri salvezza contro la pazzia.", "sintonia": "Sì (maledizione suggerita)", "incantesimi": ["Comando — 1 carica", "Immagine speculare — 2 cariche", "Paura — 3 cariche", "Legame telepatico di Rary — 5 cariche"]},
-  {"n": "Torcia", "q": 10, "cat": "Equipaggiamento", "peso": "10 lb (1 lb ciascuna)", "valore": "1 mr ciascuna", "stats": "Luce intensa 6 m + fioca 6 m · 1 ora · arma semplice da mischia: 1 danno da fuoco", "desc": "Quando si effettua l'azione Attacco si può attaccare con la torcia come arma semplice da mischia."},
-  {"n": "Lancia", "q": 1, "cat": "Armi", "peso": "3 lb", "valore": "1 mo", "stats": "1d6 perforanti (1d8 a due mani) · Lancio (6/18 m), Versatile · Maestria: Fiaccare (Sap)", "desc": "Arma semplice da mischia."},
-  {"n": "Abiti pregiati (Fine Clothes)", "q": 1, "cat": "Equipaggiamento", "peso": "6 lb", "valore": "15 mo", "stats": "", "desc": "Tessuti costosi e dettagli di pregio; alcuni eventi e luoghi ammettono solo chi li indossa."},
-  {"n": "Pugnale", "q": 2, "cat": "Armi", "peso": "2 lb (1 lb ciascuno)", "valore": "2 mo ciascuno", "stats": "1d4 perforanti · Accurata, Leggera, Lancio (6/18 m) · Maestria: Graffiare (Nick)", "desc": "Arma semplice da mischia."},
-  {"n": "Zaino", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "2 mo", "stats": "Contiene fino a 30 lb in 1 piede cubo", "desc": "Può servire anche da bisaccia."},
-  {"n": "Piede di porco", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "2 mo", "stats": "Vantaggio alle prove di Forza in cui si può sfruttare la leva", "desc": ""},
-  {"n": "Pozione di guarigione superiore", "q": 1, "cat": "Consumabili", "peso": "0 lb", "valore": "", "stats": "Recupera 8d4+8 PF · berla è un'azione bonus", "desc": "Il liquido rosso luccica quando viene agitato."},
-  {"n": "Razioni", "q": 10, "cat": "Consumabili", "peso": "20 lb (2 lb ciascuna)", "valore": "5 ma ciascuna", "stats": "1 giorno di cibo ciascuna", "desc": "Carne secca, frutta secca, gallette e noci. Vedi Malnutrizione nel glossario."},
-  {"n": "Profumo", "q": 1, "cat": "Equipaggiamento", "peso": "0,25 lb", "valore": "5 mo", "stats": "Per 1 ora: vantaggio alle prove di Carisma (Persuasione) per influenzare un umanoide Indifferente entro 1,5 m", "desc": "Fiala da 4 once."},
-  {"n": "Ampolla d'olio", "q": 2, "cat": "Consumabili", "peso": "2 lb (1 lb ciascuna)", "valore": "1 ma ciascuna", "stats": "Lancio 6 m · TS Des CD 12 · +5 fuoco se il bersaglio oliato prende fuoco", "desc": "Versare su un quadrato di 1,5 m (azione Usare): se acceso brucia fino alla fine del turno 2 round dopo e infligge 5 danni da fuoco a chi entra o termina il turno lì (una volta per turno). Come combustibile: 6 ore in una lampada o lanterna."},
-  {"n": "Focus arcano (cristallo)", "q": 1, "cat": "Focus", "peso": "0 lb", "valore": "10 mo", "stats": "Focus da incantatore per gli incantesimi da stregone", "desc": ""},
-  {"n": "Acciarino", "q": 1, "cat": "Equipaggiamento", "peso": "1 lb", "valore": "5 ma", "stats": "Accende candela, lampada, lanterna o torcia con un'azione bonus; altri fuochi in 1 minuto", "desc": "Pietra focaia, acciarino ed esca."},
-  {"n": "Otre", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "2 ma", "stats": "Contiene fino a 4 pinte", "desc": "Senza acqua a sufficienza si rischia la disidratazione."},
-  {"n": "Corda", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "1 mo", "stats": "Nodo: Destrezza (Rapidità di mano) CD 10 · spezzarla: Forza (Atletica) CD 20 · liberarsi: Destrezza (Acrobazia) CD 15 con un'azione", "desc": "Può legare solo una creatura Afferrata, Incapacitata o Trattenuta; con le gambe legate è Trattenuta finché non si libera."},
-  {"n": "Triboli", "q": 1, "cat": "Equipaggiamento", "peso": "2 lb", "valore": "1 mo", "stats": "Quadrato di 1,5 m · TS Des CD 15 o 1 perforante e velocità 0", "desc": "Azione Usare per spargerli entro 1,5 m; 10 minuti per recuperarli."},
-  {"n": "Set di dadi", "q": 1, "cat": "Strumenti", "peso": "0 lb", "valore": "1 ma", "stats": "Saggezza · capire se qualcuno bara CD 10, vincere la partita CD 20", "desc": "Strumento con cui è competente."},
-  {"n": "Dotazione da esploratore di dungeon (Dungeoneer's Pack)", "q": 1, "cat": "Equipaggiamento", "peso": "0 lb", "valore": "12 mo", "stats": "", "desc": "Contiene zaino, triboli, piede di porco, 2 ampolle d'olio, 10 razioni, corda, acciarino, 10 torce e otre (già elencati singolarmente sopra)."}
+  {
+   "n": "Bastone di Lyaras Vel'Quoril",
+   "q": 1,
+   "cat": "Oggetti magici",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "Bastone ferrato · arma semplice da mischia · Bastone arcano +2 (proprietà suggerite) · 10 cariche, recupera 1d6+4 cariche all'alba · a due mani (Versatile) +4, 1d8+1 contundenti",
+   "desc": "Spendendo cariche lancia: Comando (1 carica), Immagine speculare (2), Paura (3), Legame telepatico di Rary (5). Maledizione (suggerita): finché è sintonizzato sente i sussurri della Fata Oscura e ha svantaggio ai tiri salvezza contro la pazzia.",
+   "sintonia": "Sì (maledizione suggerita)",
+   "incantesimi": [
+    "Comando — 1 carica",
+    "Immagine speculare — 2 cariche",
+    "Paura — 3 cariche",
+    "Legame telepatico di Rary — 5 cariche"
+   ]
+  },
+  {
+   "n": "Torcia",
+   "q": 10,
+   "cat": "Equipaggiamento",
+   "peso": "10 lb (1 lb ciascuna)",
+   "valore": "1 mr ciascuna",
+   "stats": "Luce intensa 6 m + fioca 6 m · 1 ora · arma semplice da mischia: 1 danno da fuoco",
+   "desc": "Quando si effettua l'azione Attacco si può attaccare con la torcia come arma semplice da mischia."
+  },
+  {
+   "n": "Lancia",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "3 lb",
+   "valore": "1 mo",
+   "stats": "1d6 perforanti (1d8 a due mani) · Lancio (6/18 m), Versatile · Maestria: Fiaccare (Sap)",
+   "desc": "Arma semplice da mischia."
+  },
+  {
+   "n": "Abiti pregiati (Fine Clothes)",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "6 lb",
+   "valore": "15 mo",
+   "stats": "",
+   "desc": "Tessuti costosi e dettagli di pregio; alcuni eventi e luoghi ammettono solo chi li indossa."
+  },
+  {
+   "n": "Pugnale",
+   "q": 2,
+   "cat": "Armi",
+   "peso": "2 lb (1 lb ciascuno)",
+   "valore": "2 mo ciascuno",
+   "stats": "1d4 perforanti · Accurata, Leggera, Lancio (6/18 m) · Maestria: Graffiare (Nick)",
+   "desc": "Arma semplice da mischia."
+  },
+  {
+   "n": "Zaino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "2 mo",
+   "stats": "Contiene fino a 30 lb in 1 piede cubo",
+   "desc": "Può servire anche da bisaccia."
+  },
+  {
+   "n": "Piede di porco",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "2 mo",
+   "stats": "Vantaggio alle prove di Forza in cui si può sfruttare la leva",
+   "desc": ""
+  },
+  {
+   "n": "Pozione di guarigione superiore",
+   "q": 1,
+   "cat": "Consumabili",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "Recupera 8d4+8 PF · berla è un'azione bonus",
+   "desc": "Il liquido rosso luccica quando viene agitato."
+  },
+  {
+   "n": "Razioni",
+   "q": 10,
+   "cat": "Consumabili",
+   "peso": "20 lb (2 lb ciascuna)",
+   "valore": "5 ma ciascuna",
+   "stats": "1 giorno di cibo ciascuna",
+   "desc": "Carne secca, frutta secca, gallette e noci. Vedi Malnutrizione nel glossario."
+  },
+  {
+   "n": "Profumo",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0,25 lb",
+   "valore": "5 mo",
+   "stats": "Per 1 ora: vantaggio alle prove di Carisma (Persuasione) per influenzare un umanoide Indifferente entro 1,5 m",
+   "desc": "Fiala da 4 once."
+  },
+  {
+   "n": "Ampolla d'olio",
+   "q": 2,
+   "cat": "Consumabili",
+   "peso": "2 lb (1 lb ciascuna)",
+   "valore": "1 ma ciascuna",
+   "stats": "Lancio 6 m · TS Des CD 12 · +5 fuoco se il bersaglio oliato prende fuoco",
+   "desc": "Versare su un quadrato di 1,5 m (azione Usare): se acceso brucia fino alla fine del turno 2 round dopo e infligge 5 danni da fuoco a chi entra o termina il turno lì (una volta per turno). Come combustibile: 6 ore in una lampada o lanterna."
+  },
+  {
+   "n": "Focus arcano (cristallo)",
+   "q": 1,
+   "cat": "Focus",
+   "peso": "0 lb",
+   "valore": "10 mo",
+   "stats": "Focus da incantatore per gli incantesimi da stregone",
+   "desc": ""
+  },
+  {
+   "n": "Acciarino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "5 ma",
+   "stats": "Accende candela, lampada, lanterna o torcia con un'azione bonus; altri fuochi in 1 minuto",
+   "desc": "Pietra focaia, acciarino ed esca."
+  },
+  {
+   "n": "Otre",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "2 ma",
+   "stats": "Contiene fino a 4 pinte",
+   "desc": "Senza acqua a sufficienza si rischia la disidratazione."
+  },
+  {
+   "n": "Corda",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "1 mo",
+   "stats": "Nodo: Destrezza (Rapidità di mano) CD 10 · spezzarla: Forza (Atletica) CD 20 · liberarsi: Destrezza (Acrobazia) CD 15 con un'azione",
+   "desc": "Può legare solo una creatura Afferrata, Incapacitata o Trattenuta; con le gambe legate è Trattenuta finché non si libera."
+  },
+  {
+   "n": "Triboli",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "2 lb",
+   "valore": "1 mo",
+   "stats": "Quadrato di 1,5 m · TS Des CD 15 o 1 perforante e velocità 0",
+   "desc": "Azione Usare per spargerli entro 1,5 m; 10 minuti per recuperarli."
+  },
+  {
+   "n": "Set di dadi",
+   "q": 1,
+   "cat": "Strumenti",
+   "peso": "0 lb",
+   "valore": "1 ma",
+   "stats": "Saggezza · capire se qualcuno bara CD 10, vincere la partita CD 20",
+   "desc": "Strumento con cui è competente."
+  },
+  {
+   "n": "Dotazione da esploratore di dungeon (Dungeoneer's Pack)",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "12 mo",
+   "stats": "",
+   "desc": "Contiene zaino, triboli, piede di porco, 2 ampolle d'olio, 10 razioni, corda, acciarino, 10 torce e otre (già elencati singolarmente sopra)."
+  }
  ],
  "carico": "70,41 lb",
  "capacita": "120 lb",
  "monete": "59 mr · 56 ma · 0 me · 93 mo · 0 mp",
  "aspetto": "Taglia Media. Allineamento: Caotico Buono.",
- "personalita": {"tratti": "", "ideali": "", "legami": "", "difetti": ""},
+ "personalita": {
+  "tratti": "",
+  "ideali": "",
+  "legami": "",
+  "difetti": ""
+ },
  "storia_scheda": "Nobile. È cresciuto in un castello, circondato da ricchezza, potere e privilegi. La sua famiglia di aristocratici minori gli ha assicurato un'istruzione di prim'ordine, che in parte ha apprezzato e in parte ha mal sopportato. Il tempo trascorso al castello, soprattutto le molte ore passate a osservare la famiglia a corte, gli ha anche insegnato molto sull'arte del comando.",
  "progressione": "Al 7° livello di stregone ottiene sempre preparati Occhio arcano e Charme sui mostri; al 9° Leggende e tradizioni ed Evoca drago (Incantesimi draconici). Nuovi talenti ai livelli 8, 12, 16. Nuove opzioni di Metamagia al 10° e al 17°.",
  "note": "La scheda contiene segnaposto vuoti di Roll20: un trucchetto «New Spell» (livello 0) e un'arma «New Item» (+4, 1d8+1, 1,5 m) che corrisponde al Bastone usato a due mani. Allineamento Caotico Buono.",
@@ -179,5 +816,73 @@
   "Inventario sito (INVENTORIES.vicarus): solo Bastone, Torce, Lancia, Abiti pregiati. Mancano: 2 Pugnali, Zaino, Piede di porco, Pozione di guarigione superiore (8d4+8), 10 Razioni, Profumo, 2 Ampolle d'olio, Focus arcano (cristallo), Acciarino, Otre, Corda, Triboli, Set di dadi, Dotazione da esploratore di dungeon.",
   "SHEETS.vicarus.equip non cita pugnali (2), pozione, focus arcano né la dotazione da esploratore di dungeon.",
   "Azioni del sito (PLAYER_V85): mancano Dardo incantato, Onda di tuono, Comando, Soffio del drago, Frantumare, Immagine speculare, Pozione di guarigione superiore, olio, triboli, bastone (+4 1d8+1) e le opzioni di Metamagia (Rapido, Intensificato)."
- ]
+ ],
+ "competenze_fonti": {
+  "classe": {
+   "nome": "Stregone",
+   "ts": [
+    "Cos",
+    "Car"
+   ],
+   "armature": "Nessuna",
+   "armi": "Semplici",
+   "strumenti": "Nessuno",
+   "abilita": [
+    "Inganno",
+    "Intimidire"
+   ],
+   "note": "Lo Stregone sceglie 2 abilità fra Arcano, Inganno, Intimidire, Intuizione, Persuasione, Religione. Attribuzione ricostruita: la scheda non indica la ripartizione."
+  },
+  "sottoclasse": {
+   "nome": "Stregoneria draconica (Draconic Sorcery)",
+   "concede": "Nel 2024 nessuna competenza né lingua (il Draconico era concesso dall'Origine draconica 2014)"
+  },
+  "specie": {
+   "nome": "Umano",
+   "concede": "Abile (Skillful): 1 abilità a scelta — Intrattenere (attribuzione ricostruita; non è nella lista dello Stregone); Versatile: talento di origine — Fortunato (Lucky); Intraprendente: Ispirazione eroica. Nessuna lingua dalla specie nel 2024",
+   "abilita": [
+    "Intrattenere"
+   ]
+  },
+  "background": {
+   "nome": "Nobile",
+   "abilita": [
+    "Storia",
+    "Persuasione"
+   ],
+   "strumenti": "Un tipo di set da gioco — Set di dadi",
+   "talento": "Abile (Skilled)",
+   "lingue": "Nessuna dal background (Comune + 2 lingue standard alla creazione)",
+   "caratteristiche": "Forza, Intelligenza, Carisma"
+  },
+  "talenti": [
+   {
+    "nome": "Abile (Skilled)",
+    "concede": "3 competenze (abilità o strumenti): Arcano, Intuizione + una terza non presente sulla scheda"
+   },
+   {
+    "nome": "Fortunato (Lucky)",
+    "concede": "Nessuna competenza (Umano, Versatile)"
+   },
+   {
+    "nome": "Adepto elementale — fuoco (Elemental Adept)",
+    "concede": "Nessuna competenza (livello 4)"
+   }
+  ],
+  "maestrie": {
+   "abilita": [],
+   "fonte": "Nessuna Maestria (Expertise)"
+  },
+  "lingue": [
+   "Comune",
+   "Draconico",
+   "Sottocomune"
+  ],
+  "verifica": [
+   "Abilità: 7 competenti ma le fonti ne concedono 8 (Stregone 2 + Nobile 2 + Abile 1 + Skilled 3): manca una competenza (abilità o strumento) di Abile (Skilled) non scelta o non segnata sulla scheda.",
+   "TS (Cos, Car), nessuna armatura, armi semplici e Set di dadi (Nobile) tornano.",
+   "Lingue: Draconico ok come lingua standard 2024 (non viene dalla sottoclasse); Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: probabile concessione di campagna, da confermare.",
+   "Nome del talento: nei talenti del file è 'Esperto (Skilled)', nel PHB 2024 italiano è Abile."
+  ]
+ }
 }

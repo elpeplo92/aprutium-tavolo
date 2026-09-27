@@ -14,34 +14,113 @@
  "competenza": 3,
  "percezione_passiva": 20,
  "taglia": "Media",
- "caratteristiche": {"For": 8, "Des": 14, "Cos": 14, "Int": 12, "Sag": 18, "Car": 10},
+ "caratteristiche": {
+  "For": 8,
+  "Des": 14,
+  "Cos": 14,
+  "Int": 12,
+  "Sag": 18,
+  "Car": 10
+ },
  "ts": {
-  "For": {"mod": 2, "comp": true},
-  "Des": {"mod": 5, "comp": true},
-  "Cos": {"mod": 2, "comp": false},
-  "Int": {"mod": 1, "comp": false},
-  "Sag": {"mod": 4, "comp": false},
-  "Car": {"mod": 0, "comp": false}
+  "For": {
+   "mod": 2,
+   "comp": true
+  },
+  "Des": {
+   "mod": 5,
+   "comp": true
+  },
+  "Cos": {
+   "mod": 2,
+   "comp": false
+  },
+  "Int": {
+   "mod": 1,
+   "comp": false
+  },
+  "Sag": {
+   "mod": 4,
+   "comp": false
+  },
+  "Car": {
+   "mod": 0,
+   "comp": false
+  }
  },
  "abilita": {
-  "Atletica": {"mod": -1, "comp": "no"},
-  "Acrobazia": {"mod": 2, "comp": "no"},
-  "Furtività": {"mod": 2, "comp": "no"},
-  "Rapidità di mano": {"mod": 2, "comp": "no"},
-  "Arcano": {"mod": 4, "comp": "competente"},
-  "Storia": {"mod": 4, "comp": "competente"},
-  "Indagare": {"mod": 1, "comp": "no"},
-  "Natura": {"mod": 4, "comp": "competente"},
-  "Religione": {"mod": 1, "comp": "no"},
-  "Addestrare animali": {"mod": 7, "comp": "competente"},
-  "Intuizione": {"mod": 7, "comp": "competente"},
-  "Medicina": {"mod": 4, "comp": "no"},
-  "Percezione": {"mod": 10, "comp": "esperto"},
-  "Sopravvivenza": {"mod": 7, "comp": "competente"},
-  "Inganno": {"mod": 0, "comp": "no"},
-  "Intimidire": {"mod": 0, "comp": "no"},
-  "Intrattenere": {"mod": 0, "comp": "no"},
-  "Persuasione": {"mod": 0, "comp": "no"}
+  "Atletica": {
+   "mod": -1,
+   "comp": "no"
+  },
+  "Acrobazia": {
+   "mod": 2,
+   "comp": "no"
+  },
+  "Furtività": {
+   "mod": 2,
+   "comp": "no"
+  },
+  "Rapidità di mano": {
+   "mod": 2,
+   "comp": "no"
+  },
+  "Arcano": {
+   "mod": 4,
+   "comp": "competente"
+  },
+  "Storia": {
+   "mod": 4,
+   "comp": "competente"
+  },
+  "Indagare": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Natura": {
+   "mod": 4,
+   "comp": "competente"
+  },
+  "Religione": {
+   "mod": 1,
+   "comp": "no"
+  },
+  "Addestrare animali": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Intuizione": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Medicina": {
+   "mod": 4,
+   "comp": "no"
+  },
+  "Percezione": {
+   "mod": 10,
+   "comp": "esperto"
+  },
+  "Sopravvivenza": {
+   "mod": 7,
+   "comp": "competente"
+  },
+  "Inganno": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Intimidire": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Intrattenere": {
+   "mod": 0,
+   "comp": "no"
+  },
+  "Persuasione": {
+   "mod": 0,
+   "comp": "no"
+  }
  },
  "competenze": {
   "armature": "Armature leggere, armature medie e scudi (addestramento del Ranger; nel testo estratto della scheda le caselle non sono leggibili)",
@@ -53,94 +132,537 @@
  "resistenze": "Nessuna (nessuna vulnerabilità, nessuna immunità)",
  "condizioni_speciali": "Nessuna immunità a condizioni",
  "risorse": [
-  {"n": "Slot incantesimo di 1° livello", "max": 4, "recupero": "riposo lungo", "note": "Ranger 5"},
-  {"n": "Slot incantesimo di 2° livello", "max": 2, "recupero": "riposo lungo", "note": "Ranger 5"},
-  {"n": "Marchio del cacciatore senza slot (Nemico prescelto)", "max": 3, "recupero": "riposo lungo", "note": "La scheda riporta il testo base («due volte»), che aumenta secondo la colonna Nemico prescelto della tabella del Ranger: al 5° livello sono 3 lanci."},
-  {"n": "Punti Fortuna (Fortunato)", "max": 3, "recupero": "riposo lungo", "note": "Pari al bonus di competenza. 1 punto: vantaggio a una tua Prova d20, oppure svantaggio a un tiro per colpire contro di te."},
-  {"n": "Ispirazione eroica (Intraprendente)", "max": 1, "recupero": "riposo lungo", "note": "La ottieni ogni volta che termini un riposo lungo."},
-  {"n": "Lancio gratuito dell'incantesimo di 1° livello di Iniziato alla magia (Mago)", "max": 1, "recupero": "riposo lungo", "note": "Senza spendere slot; puoi comunque lanciarlo anche con gli slot."},
-  {"n": "Passo velato gratuito (Toccato dai Folletti)", "max": 1, "recupero": "riposo lungo", "note": "Senza spendere slot."},
-  {"n": "Incantesimo di 1° livello gratuito di Toccato dai Folletti", "max": 1, "recupero": "riposo lungo", "note": "Divinazione o Ammaliamento; la scheda non indica esplicitamente quale sia (probabilmente Risata incontenibile di Tasha o Parlare con gli animali)."},
-  {"n": "Cariche degli Stivali alati", "max": 4, "recupero": "1d4 cariche all'alba", "note": "1 carica (azione Magia): velocità di volo 9 m per 1 ora."},
-  {"n": "Dadi Vita", "max": 5, "recupero": "riposo lungo", "note": "5d10"}
+  {
+   "n": "Slot incantesimo di 1° livello",
+   "max": 4,
+   "recupero": "riposo lungo",
+   "note": "Ranger 5"
+  },
+  {
+   "n": "Slot incantesimo di 2° livello",
+   "max": 2,
+   "recupero": "riposo lungo",
+   "note": "Ranger 5"
+  },
+  {
+   "n": "Marchio del cacciatore senza slot (Nemico prescelto)",
+   "max": 3,
+   "recupero": "riposo lungo",
+   "note": "La scheda riporta il testo base («due volte»), che aumenta secondo la colonna Nemico prescelto della tabella del Ranger: al 5° livello sono 3 lanci."
+  },
+  {
+   "n": "Punti Fortuna (Fortunato)",
+   "max": 3,
+   "recupero": "riposo lungo",
+   "note": "Pari al bonus di competenza. 1 punto: vantaggio a una tua Prova d20, oppure svantaggio a un tiro per colpire contro di te."
+  },
+  {
+   "n": "Ispirazione eroica (Intraprendente)",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "La ottieni ogni volta che termini un riposo lungo."
+  },
+  {
+   "n": "Lancio gratuito dell'incantesimo di 1° livello di Iniziato alla magia (Mago)",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Senza spendere slot; puoi comunque lanciarlo anche con gli slot."
+  },
+  {
+   "n": "Passo velato gratuito (Toccato dai Folletti)",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Senza spendere slot."
+  },
+  {
+   "n": "Incantesimo di 1° livello gratuito di Toccato dai Folletti",
+   "max": 1,
+   "recupero": "riposo lungo",
+   "note": "Divinazione o Ammaliamento; la scheda non indica esplicitamente quale sia (probabilmente Risata incontenibile di Tasha o Parlare con gli animali)."
+  },
+  {
+   "n": "Cariche degli Stivali alati",
+   "max": 4,
+   "recupero": "1d4 cariche all'alba",
+   "note": "1 carica (azione Magia): velocità di volo 9 m per 1 ora."
+  },
+  {
+   "n": "Dadi Vita",
+   "max": 5,
+   "recupero": "riposo lungo",
+   "note": "5d10"
+  }
  ],
  "privilegi": [
-  {"n": "Esploratore abile (Deft Explorer)", "fonte": "Ranger 2", "d": "Grazie ai tuoi viaggi ottieni questi benefici. Maestria: scegli una delle tue competenze nelle abilità in cui non hai già Maestria; ottieni Maestria in quell'abilità (per Luigis: Percezione, +10). Lingue: conosci due lingue a tua scelta.", "usi": ""},
-  {"n": "Nemico prescelto (Favored Enemy)", "fonte": "Ranger 1", "d": "Hai sempre preparato l'incantesimo Marchio del cacciatore. Puoi lanciarlo senza spendere uno slot incantesimo un certo numero di volte (3 al 5° livello, secondo la colonna Nemico prescelto della tabella del Ranger) e recuperi tutti gli usi spesi quando termini un riposo lungo. Marchio del cacciatore: azione bonus, gittata 27 m, concentrazione fino a 1 ora; infliggi 1d6 danni da forza extra al bersaglio ogni volta che lo colpisci con un tiro per colpire e hai vantaggio alle prove di Saggezza (Percezione o Sopravvivenza) per trovarlo; se il bersaglio scende a 0 PF puoi spostare il marchio con un'azione bonus.", "usi": "3 / riposo lungo"},
-  {"n": "Stile di combattimento (Fighting Style)", "fonte": "Ranger 2", "d": "Ottieni un talento Stile di combattimento a tua scelta. Luigis ha scelto Tiro (Archery): +2 ai tiri per colpire con le armi a distanza.", "usi": ""},
-  {"n": "Incantesimi (Spellcasting)", "fonte": "Ranger 1", "d": "Lanci incantesimi da Ranger usando la Saggezza (CD dei TS 15, bonus di attacco +7). Slot al 5° livello: quattro di 1° e due di 2°; recuperi tutti gli slot con un riposo lungo. Incantesimi preparati: al 5° livello puoi preparare sei incantesimi da Ranger di 1° o 2° livello; quelli sempre preparati concessi da altri privilegi (Marchio del cacciatore) non contano nel limite. Quando termini un riposo lungo puoi sostituire un incantesimo della lista con un altro incantesimo da Ranger per cui hai slot. Focus: puoi usare un focus druidico (Luigis: rametto di vischio) come focus da incantatore.", "usi": ""},
-  {"n": "Maestria nelle armi (Weapon Mastery)", "fonte": "Ranger 1", "d": "Puoi usare le proprietà di maestria di due tipi di armi in cui hai competenza. Quando termini un riposo lungo puoi cambiare i tipi scelti. Scelte attuali sulla scheda: Arco lungo — Rallentare (Slow): se colpisci una creatura e le infliggi danni, puoi ridurne la velocità di 3 m fino all'inizio del tuo prossimo turno (la riduzione non supera 3 m anche se viene colpita più volte). Scimitarra — Nick: quando effettui l'attacco extra della proprietà Leggera, puoi farlo come parte dell'azione di Attacco invece che con un'azione bonus (una sola volta per turno).", "usi": ""},
-  {"n": "Aumento dei punteggi di caratteristica (Ability Score Improvement)", "fonte": "Ranger 4", "d": "Ottieni il talento Aumento dei punteggi di caratteristica o un altro talento per cui hai i requisiti. Luigis ha scelto Toccato dai Folletti. Si ottiene di nuovo ai livelli 8, 12 e 16 del Ranger.", "usi": ""},
-  {"n": "Attacco Extra (Extra Attack)", "fonte": "Ranger 5", "d": "Quando effettui l'azione di Attacco nel tuo turno puoi attaccare due volte invece di una. Puoi sacrificare uno di questi attacchi per ordinare alla bestia primeva di usare Colpo della bestia.", "usi": ""},
-  {"n": "Compagno primevo (Primal Companion)", "fonte": "Signore delle Bestie 3", "d": "Evochi magicamente una bestia primeva che trae forza dal tuo legame con la natura. Scegli il blocco statistiche (Bestia della Terra, del Mare o del Cielo) e il tipo di animale; porta segni primevi che ne indicano l'origine soprannaturale. È Amichevole verso di te e i tuoi alleati e obbedisce ai tuoi comandi; svanisce se muori. In combattimento: agisce durante il tuo turno; può muoversi e usare la sua Reazione da sola, ma l'unica azione che compie è Schivare, a meno che tu non usi un'azione bonus per ordinarle di compiere un'azione del suo blocco statistiche o un'altra azione. Puoi anche sacrificare uno dei tuoi attacchi dell'azione di Attacco per ordinarle di usare Colpo della bestia. Se hai la condizione Incapacitato la bestia agisce da sola e non è limitata a Schivare. Ripristinare la bestia: se è morta nell'ultima ora, puoi usare un'azione Magia per toccarla e spendere uno slot incantesimo; torna in vita dopo 1 minuto con tutti i PF. Sostituirla: quando termini un riposo lungo puoi evocare una bestia primeva diversa, che appare in uno spazio libero entro 1,5 m; se ne hai già una, la vecchia svanisce.", "usi": "Comandare: azione bonus o un attacco sacrificato · Ripristinare: azione Magia + 1 slot"},
-  {"n": "Zenith — Bestia della Terra (statistiche)", "fonte": "Signore delle Bestie 3 (Compagno primevo)", "d": "Blocco statistiche della Bestia della Terra (Manuale del Giocatore 2024) calcolato per Ranger 5 con Sag +4 e competenza +3; la scheda Roll20 non contiene il blocco della bestia. Bestia Media, neutrale. CA 17 (13 + mod. Sag di Luigis). PF 30 (5 + cinque volte il livello da Ranger; 5d8 Dadi Vita). Velocità 12 m, scalare 12 m. Caratteristiche: For 14 (+2), Des 14 (+2), Cos 15 (+2), Int 8 (−1), Sag 14 (+2), Car 11 (+0). Legame primevo: aggiunge il bonus di competenza di Luigis (+3) a ogni prova di caratteristica e tiro salvezza, quindi TS For +5, Des +5, Cos +5, Int +2, Sag +5, Car +3; Atletica +5, Percezione +5, Furtività +5 (ogni prova). Sensi: scurovisione 18 m, Percezione passiva 12 nel blocco (15 applicando il Legame primevo). Lingue: comprende le lingue che conosce Luigis. Carica: se la bestia si muove di almeno 6 m in linea retta verso un bersaglio e poi lo colpisce con Colpo della bestia nello stesso turno, il bersaglio subisce 1d6 danni extra dello stesso tipo; se è una creatura deve superare un TS di Forza CD 15 (CD degli incantesimi di Luigis) o cadere Prono. Colpo della bestia: tiro per colpire in mischia +7 (bonus di attacco degli incantesimi di Luigis), portata 1,5 m; a segno: 1d8 + 6 (2 + mod. Sag) danni contundenti, perforanti o taglienti, a scelta quando la bestia viene evocata.", "usi": "Colpo della bestia: azione bonus di comando o un attacco sacrificato"}
+  {
+   "n": "Esploratore abile (Deft Explorer)",
+   "fonte": "Ranger 2",
+   "d": "Grazie ai tuoi viaggi ottieni questi benefici. Maestria: scegli una delle tue competenze nelle abilità in cui non hai già Maestria; ottieni Maestria in quell'abilità (per Luigis: Percezione, +10). Lingue: conosci due lingue a tua scelta.",
+   "usi": ""
+  },
+  {
+   "n": "Nemico prescelto (Favored Enemy)",
+   "fonte": "Ranger 1",
+   "d": "Hai sempre preparato l'incantesimo Marchio del cacciatore. Puoi lanciarlo senza spendere uno slot incantesimo un certo numero di volte (3 al 5° livello, secondo la colonna Nemico prescelto della tabella del Ranger) e recuperi tutti gli usi spesi quando termini un riposo lungo. Marchio del cacciatore: azione bonus, gittata 27 m, concentrazione fino a 1 ora; infliggi 1d6 danni da forza extra al bersaglio ogni volta che lo colpisci con un tiro per colpire e hai vantaggio alle prove di Saggezza (Percezione o Sopravvivenza) per trovarlo; se il bersaglio scende a 0 PF puoi spostare il marchio con un'azione bonus.",
+   "usi": "3 / riposo lungo"
+  },
+  {
+   "n": "Stile di combattimento (Fighting Style)",
+   "fonte": "Ranger 2",
+   "d": "Ottieni un talento Stile di combattimento a tua scelta. Luigis ha scelto Tiro (Archery): +2 ai tiri per colpire con le armi a distanza.",
+   "usi": ""
+  },
+  {
+   "n": "Incantesimi (Spellcasting)",
+   "fonte": "Ranger 1",
+   "d": "Lanci incantesimi da Ranger usando la Saggezza (CD dei TS 15, bonus di attacco +7). Slot al 5° livello: quattro di 1° e due di 2°; recuperi tutti gli slot con un riposo lungo. Incantesimi preparati: al 5° livello puoi preparare sei incantesimi da Ranger di 1° o 2° livello; quelli sempre preparati concessi da altri privilegi (Marchio del cacciatore) non contano nel limite. Quando termini un riposo lungo puoi sostituire un incantesimo della lista con un altro incantesimo da Ranger per cui hai slot. Focus: puoi usare un focus druidico (Luigis: rametto di vischio) come focus da incantatore.",
+   "usi": ""
+  },
+  {
+   "n": "Maestria nelle armi (Weapon Mastery)",
+   "fonte": "Ranger 1",
+   "d": "Puoi usare le proprietà di maestria di due tipi di armi in cui hai competenza. Quando termini un riposo lungo puoi cambiare i tipi scelti. Scelte attuali sulla scheda: Arco lungo — Rallentare (Slow): se colpisci una creatura e le infliggi danni, puoi ridurne la velocità di 3 m fino all'inizio del tuo prossimo turno (la riduzione non supera 3 m anche se viene colpita più volte). Scimitarra — Nick: quando effettui l'attacco extra della proprietà Leggera, puoi farlo come parte dell'azione di Attacco invece che con un'azione bonus (una sola volta per turno).",
+   "usi": ""
+  },
+  {
+   "n": "Aumento dei punteggi di caratteristica (Ability Score Improvement)",
+   "fonte": "Ranger 4",
+   "d": "Ottieni il talento Aumento dei punteggi di caratteristica o un altro talento per cui hai i requisiti. Luigis ha scelto Toccato dai Folletti. Si ottiene di nuovo ai livelli 8, 12 e 16 del Ranger.",
+   "usi": ""
+  },
+  {
+   "n": "Attacco Extra (Extra Attack)",
+   "fonte": "Ranger 5",
+   "d": "Quando effettui l'azione di Attacco nel tuo turno puoi attaccare due volte invece di una. Puoi sacrificare uno di questi attacchi per ordinare alla bestia primeva di usare Colpo della bestia.",
+   "usi": ""
+  },
+  {
+   "n": "Compagno primevo (Primal Companion)",
+   "fonte": "Signore delle Bestie 3",
+   "d": "Evochi magicamente una bestia primeva che trae forza dal tuo legame con la natura. Scegli il blocco statistiche (Bestia della Terra, del Mare o del Cielo) e il tipo di animale; porta segni primevi che ne indicano l'origine soprannaturale. È Amichevole verso di te e i tuoi alleati e obbedisce ai tuoi comandi; svanisce se muori. In combattimento: agisce durante il tuo turno; può muoversi e usare la sua Reazione da sola, ma l'unica azione che compie è Schivare, a meno che tu non usi un'azione bonus per ordinarle di compiere un'azione del suo blocco statistiche o un'altra azione. Puoi anche sacrificare uno dei tuoi attacchi dell'azione di Attacco per ordinarle di usare Colpo della bestia. Se hai la condizione Incapacitato la bestia agisce da sola e non è limitata a Schivare. Ripristinare la bestia: se è morta nell'ultima ora, puoi usare un'azione Magia per toccarla e spendere uno slot incantesimo; torna in vita dopo 1 minuto con tutti i PF. Sostituirla: quando termini un riposo lungo puoi evocare una bestia primeva diversa, che appare in uno spazio libero entro 1,5 m; se ne hai già una, la vecchia svanisce.",
+   "usi": "Comandare: azione bonus o un attacco sacrificato · Ripristinare: azione Magia + 1 slot"
+  },
+  {
+   "n": "Zenith — Bestia della Terra (statistiche)",
+   "fonte": "Signore delle Bestie 3 (Compagno primevo)",
+   "d": "Blocco statistiche della Bestia della Terra (Manuale del Giocatore 2024) calcolato per Ranger 5 con Sag +4 e competenza +3; la scheda Roll20 non contiene il blocco della bestia. Bestia Media, neutrale. CA 17 (13 + mod. Sag di Luigis). PF 30 (5 + cinque volte il livello da Ranger; 5d8 Dadi Vita). Velocità 12 m, scalare 12 m. Caratteristiche: For 14 (+2), Des 14 (+2), Cos 15 (+2), Int 8 (−1), Sag 14 (+2), Car 11 (+0). Legame primevo: aggiunge il bonus di competenza di Luigis (+3) a ogni prova di caratteristica e tiro salvezza, quindi TS For +5, Des +5, Cos +5, Int +2, Sag +5, Car +3; Atletica +5, Percezione +5, Furtività +5 (ogni prova). Sensi: scurovisione 18 m, Percezione passiva 12 nel blocco (15 applicando il Legame primevo). Lingue: comprende le lingue che conosce Luigis. Carica: se la bestia si muove di almeno 6 m in linea retta verso un bersaglio e poi lo colpisce con Colpo della bestia nello stesso turno, il bersaglio subisce 1d6 danni extra dello stesso tipo; se è una creatura deve superare un TS di Forza CD 15 (CD degli incantesimi di Luigis) o cadere Prono. Colpo della bestia: tiro per colpire in mischia +7 (bonus di attacco degli incantesimi di Luigis), portata 1,5 m; a segno: 1d8 + 6 (2 + mod. Sag) danni contundenti, perforanti o taglienti, a scelta quando la bestia viene evocata.",
+   "usi": "Colpo della bestia: azione bonus di comando o un attacco sacrificato"
+  }
  ],
  "tratti_specie": [
-  {"n": "Taglia Media", "d": "Occupi uno spazio di 1,5 × 1,5 m."},
-  {"n": "Intraprendente (Resourceful)", "d": "Ottieni Ispirazione eroica ogni volta che termini un riposo lungo."},
-  {"n": "Abile (Skillful)", "d": "Ottieni competenza in un'abilità a tua scelta."},
-  {"n": "Versatile", "d": "Ottieni un talento delle origini a tua scelta: Luigis ha scelto Fortunato."}
+  {
+   "n": "Taglia Media",
+   "d": "Occupi uno spazio di 1,5 × 1,5 m."
+  },
+  {
+   "n": "Intraprendente (Resourceful)",
+   "d": "Ottieni Ispirazione eroica ogni volta che termini un riposo lungo."
+  },
+  {
+   "n": "Abile (Skillful)",
+   "d": "Ottieni competenza in un'abilità a tua scelta."
+  },
+  {
+   "n": "Versatile",
+   "d": "Ottieni un talento delle origini a tua scelta: Luigis ha scelto Fortunato."
+  }
  ],
  "talenti": [
-  {"n": "Fortunato (Lucky)", "fonte": "Origine (Umano: Versatile)", "d": "Hai un numero di Punti Fortuna pari al tuo bonus di competenza (3) e li recuperi tutti quando termini un riposo lungo. Vantaggio: quando tiri un d20 per una Prova d20, puoi spendere 1 Punto Fortuna per avere vantaggio al tiro. Svantaggio: quando una creatura tira un d20 per un tiro per colpire contro di te, puoi spendere 1 Punto Fortuna per imporle svantaggio."},
-  {"n": "Tiro (Archery)", "fonte": "Stile di combattimento (Ranger 2)", "d": "Ottieni +2 ai tiri per colpire effettuati con armi a distanza."},
-  {"n": "Iniziato alla magia — Mago (Magic Initiate — Wizard)", "fonte": "Origine (background Sapiente)", "d": "Due trucchetti: impari due trucchetti dalla lista del Mago (Tocco folgorante e Mano magica); la caratteristica da incantatore scelta è la Saggezza. Incantesimo di 1° livello: scegli un incantesimo di 1° livello dalla stessa lista; lo hai sempre preparato, puoi lanciarlo una volta senza slot e recuperi questa possibilità con un riposo lungo; puoi lanciarlo anche con gli slot. Cambio: ogni volta che sali di livello puoi sostituire uno degli incantesimi scelti con un altro dello stesso livello della stessa lista. Ripetibile con liste diverse."},
-  {"n": "Toccato dai Folletti (Fey-Touched)", "fonte": "Livello 4", "d": "Aumento di caratteristica: +1 a Intelligenza, Saggezza o Carisma (massimo 20). Magia fatata: scegli un incantesimo di 1° livello della scuola di Divinazione o Ammaliamento; hai sempre preparati quell'incantesimo e Passo velato. Puoi lanciare ciascuno dei due senza spendere slot una volta, recuperando l'uso con un riposo lungo; puoi lanciarli anche con gli slot del livello adatto. La caratteristica da incantatore è quella aumentata dal talento (Saggezza)."}
+  {
+   "n": "Fortunato (Lucky)",
+   "fonte": "Origine (Umano: Versatile)",
+   "d": "Hai un numero di Punti Fortuna pari al tuo bonus di competenza (3) e li recuperi tutti quando termini un riposo lungo. Vantaggio: quando tiri un d20 per una Prova d20, puoi spendere 1 Punto Fortuna per avere vantaggio al tiro. Svantaggio: quando una creatura tira un d20 per un tiro per colpire contro di te, puoi spendere 1 Punto Fortuna per imporle svantaggio."
+  },
+  {
+   "n": "Tiro (Archery)",
+   "fonte": "Stile di combattimento (Ranger 2)",
+   "d": "Ottieni +2 ai tiri per colpire effettuati con armi a distanza."
+  },
+  {
+   "n": "Iniziato alla magia — Mago (Magic Initiate — Wizard)",
+   "fonte": "Origine (background Sapiente)",
+   "d": "Due trucchetti: impari due trucchetti dalla lista del Mago (Tocco folgorante e Mano magica); la caratteristica da incantatore scelta è la Saggezza. Incantesimo di 1° livello: scegli un incantesimo di 1° livello dalla stessa lista; lo hai sempre preparato, puoi lanciarlo una volta senza slot e recuperi questa possibilità con un riposo lungo; puoi lanciarlo anche con gli slot. Cambio: ogni volta che sali di livello puoi sostituire uno degli incantesimi scelti con un altro dello stesso livello della stessa lista. Ripetibile con liste diverse."
+  },
+  {
+   "n": "Toccato dai Folletti (Fey-Touched)",
+   "fonte": "Livello 4",
+   "d": "Aumento di caratteristica: +1 a Intelligenza, Saggezza o Carisma (massimo 20). Magia fatata: scegli un incantesimo di 1° livello della scuola di Divinazione o Ammaliamento; hai sempre preparati quell'incantesimo e Passo velato. Puoi lanciare ciascuno dei due senza spendere slot una volta, recuperando l'uso con un riposo lungo; puoi lanciarli anche con gli slot del livello adatto. La caratteristica da incantatore è quella aumentata dal talento (Saggezza)."
+  }
  ],
  "attacchi": [
-  {"n": "Arco lungo", "atk": 7, "dmg": "1d8+2", "tipo": "perforanti", "proprieta": "Munizioni (gittata 45/180 m, frecce), Pesante, Due mani", "maestria": "Rallentare", "note": "Include +2 di Tiro. Con Attacco Extra: due attacchi per azione di Attacco. Con Marchio del cacciatore: +1d6 forza."},
-  {"n": "Tocco folgorante (trucchetto)", "atk": 7, "dmg": "2d8", "tipo": "fulmine", "proprieta": "Contatto, attacco con incantesimo in mischia", "maestria": "", "note": "A segno il bersaglio non può effettuare attacchi di opportunità fino all'inizio del suo prossimo turno."},
-  {"n": "Olio (creatura od oggetto)", "atk": null, "dmg": "5", "tipo": "fuoco", "proprieta": "Lancio, gittata 6 m", "maestria": "", "note": "Sostituisce un attacco dell'azione di Attacco. TS Destrezza CD 13 o il bersaglio è coperto d'olio; se subisce danni da fuoco prima che l'olio si asciughi (1 minuto) subisce 5 danni da fuoco extra."},
-  {"n": "Colpo senz'armi", "atk": 2, "dmg": "0", "tipo": "contundenti", "proprieta": "Portata 1,5 m", "maestria": "", "note": "Danni pari a 1 + mod. For (−1) = 0."},
-  {"n": "Intralciare", "atk": null, "dmg": "", "tipo": "", "proprieta": "Gittata 27 m, quadrato di 6 m", "maestria": "", "note": "TS Forza CD 15 o Trattenuto; concentrazione."},
-  {"n": "Risata incontenibile di Tasha", "atk": null, "dmg": "", "tipo": "", "proprieta": "Gittata 9 m", "maestria": "", "note": "TS Saggezza CD 15 o Prono e Incapacitato; concentrazione."},
-  {"n": "Colpo intrappolante", "atk": null, "dmg": "1d6", "tipo": "perforanti", "proprieta": "Azione bonus dopo aver colpito con un'arma", "maestria": "", "note": "TS Forza CD 15 (creature Grandi o più: vantaggio) o Trattenuto; 1d6 perforanti all'inizio di ogni suo turno; concentrazione."},
-  {"n": "Cura ferite", "atk": null, "dmg": "2d8+4", "tipo": "guarigione", "proprieta": "Contatto", "maestria": "", "note": "Slot di 1°: recupera 2d8+4 PF."}
+  {
+   "n": "Arco lungo",
+   "atk": 7,
+   "dmg": "1d8+2",
+   "tipo": "perforanti",
+   "proprieta": "Munizioni (gittata 45/180 m, frecce), Pesante, Due mani",
+   "maestria": "Rallentare",
+   "note": "Include +2 di Tiro. Con Attacco Extra: due attacchi per azione di Attacco. Con Marchio del cacciatore: +1d6 forza."
+  },
+  {
+   "n": "Tocco folgorante (trucchetto)",
+   "atk": 7,
+   "dmg": "2d8",
+   "tipo": "fulmine",
+   "proprieta": "Contatto, attacco con incantesimo in mischia",
+   "maestria": "",
+   "note": "A segno il bersaglio non può effettuare attacchi di opportunità fino all'inizio del suo prossimo turno."
+  },
+  {
+   "n": "Olio (creatura od oggetto)",
+   "atk": null,
+   "dmg": "5",
+   "tipo": "fuoco",
+   "proprieta": "Lancio, gittata 6 m",
+   "maestria": "",
+   "note": "Sostituisce un attacco dell'azione di Attacco. TS Destrezza CD 13 o il bersaglio è coperto d'olio; se subisce danni da fuoco prima che l'olio si asciughi (1 minuto) subisce 5 danni da fuoco extra."
+  },
+  {
+   "n": "Colpo senz'armi",
+   "atk": 2,
+   "dmg": "0",
+   "tipo": "contundenti",
+   "proprieta": "Portata 1,5 m",
+   "maestria": "",
+   "note": "Danni pari a 1 + mod. For (−1) = 0."
+  },
+  {
+   "n": "Intralciare",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "Gittata 27 m, quadrato di 6 m",
+   "maestria": "",
+   "note": "TS Forza CD 15 o Trattenuto; concentrazione."
+  },
+  {
+   "n": "Risata incontenibile di Tasha",
+   "atk": null,
+   "dmg": "",
+   "tipo": "",
+   "proprieta": "Gittata 9 m",
+   "maestria": "",
+   "note": "TS Saggezza CD 15 o Prono e Incapacitato; concentrazione."
+  },
+  {
+   "n": "Colpo intrappolante",
+   "atk": null,
+   "dmg": "1d6",
+   "tipo": "perforanti",
+   "proprieta": "Azione bonus dopo aver colpito con un'arma",
+   "maestria": "",
+   "note": "TS Forza CD 15 (creature Grandi o più: vantaggio) o Trattenuto; 1d6 perforanti all'inizio di ogni suo turno; concentrazione."
+  },
+  {
+   "n": "Cura ferite",
+   "atk": null,
+   "dmg": "2d8+4",
+   "tipo": "guarigione",
+   "proprieta": "Contatto",
+   "maestria": "",
+   "note": "Slot di 1°: recupera 2d8+4 PF."
+  }
  ],
  "incantesimi": {
   "caratteristica": "Sag",
   "cd": 15,
   "attacco": 7,
-  "slot": {"1": 4, "2": 2},
+  "slot": {
+   "1": 4,
+   "2": 2
+  },
   "punti_stregoneria": null,
   "lista": [
-   {"en": "Shocking Grasp", "it": "Tocco folgorante", "l": 0, "preparato": true, "sempre": true, "fonte": "Iniziato alla magia (Mago)"},
-   {"en": "Mage Hand", "it": "Mano magica", "l": 0, "preparato": true, "sempre": true, "fonte": "Iniziato alla magia (Mago)"},
-   {"en": "Hunter's Mark", "it": "Marchio del cacciatore", "l": 1, "preparato": true, "sempre": true, "fonte": "Ranger (Nemico prescelto)"},
-   {"en": "Speak with Animals", "it": "Parlare con gli animali", "l": 1, "preparato": true, "sempre": false, "fonte": "Ranger (rituale)"},
-   {"en": "Entangle", "it": "Intralciare", "l": 1, "preparato": true, "sempre": false, "fonte": "Ranger"},
-   {"en": "Tasha's Hideous Laughter", "it": "Risata incontenibile di Tasha", "l": 1, "preparato": true, "sempre": true, "fonte": "Talento (Iniziato alla magia o Toccato dai Folletti: la scheda non specifica)"},
-   {"en": "Ensnaring Strike", "it": "Colpo intrappolante", "l": 1, "preparato": true, "sempre": false, "fonte": "Ranger"},
-   {"en": "Longstrider", "it": "Passo veloce", "l": 1, "preparato": true, "sempre": false, "fonte": "Ranger"},
-   {"en": "Jump", "it": "Salto", "l": 1, "preparato": true, "sempre": false, "fonte": "Ranger"},
-   {"en": "Cure Wounds", "it": "Cura ferite", "l": 1, "preparato": true, "sempre": false, "fonte": "Ranger"},
-   {"en": "Pass without Trace", "it": "Passare senza tracce", "l": 2, "preparato": true, "sempre": false, "fonte": "Ranger"},
-   {"en": "Misty Step", "it": "Passo velato", "l": 2, "preparato": true, "sempre": true, "fonte": "Toccato dai Folletti"}
+   {
+    "en": "Shocking Grasp",
+    "it": "Tocco folgorante",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Iniziato alla magia (Mago)"
+   },
+   {
+    "en": "Mage Hand",
+    "it": "Mano magica",
+    "l": 0,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Iniziato alla magia (Mago)"
+   },
+   {
+    "en": "Hunter's Mark",
+    "it": "Marchio del cacciatore",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Ranger (Nemico prescelto)"
+   },
+   {
+    "en": "Speak with Animals",
+    "it": "Parlare con gli animali",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Ranger (rituale)"
+   },
+   {
+    "en": "Entangle",
+    "it": "Intralciare",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Ranger"
+   },
+   {
+    "en": "Tasha's Hideous Laughter",
+    "it": "Risata incontenibile di Tasha",
+    "l": 1,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Talento (Iniziato alla magia o Toccato dai Folletti: la scheda non specifica)"
+   },
+   {
+    "en": "Ensnaring Strike",
+    "it": "Colpo intrappolante",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Ranger"
+   },
+   {
+    "en": "Longstrider",
+    "it": "Passo veloce",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Ranger"
+   },
+   {
+    "en": "Jump",
+    "it": "Salto",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Ranger"
+   },
+   {
+    "en": "Cure Wounds",
+    "it": "Cura ferite",
+    "l": 1,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Ranger"
+   },
+   {
+    "en": "Pass without Trace",
+    "it": "Passare senza tracce",
+    "l": 2,
+    "preparato": true,
+    "sempre": false,
+    "fonte": "Ranger"
+   },
+   {
+    "en": "Misty Step",
+    "it": "Passo velato",
+    "l": 2,
+    "preparato": true,
+    "sempre": true,
+    "fonte": "Toccato dai Folletti"
+   }
   ]
  },
  "incantesimi_nuovi": {},
  "inventario": [
-  {"n": "Arco lungo", "q": 1, "cat": "Armi", "peso": "2 lb", "valore": "50 mo", "stats": "1d8 perforanti · Munizioni (gittata 45/180 m, frecce), Pesante, Due mani · Maestria: Rallentare", "desc": "Arma da guerra a distanza. Ogni attacco consuma una freccia; dopo lo scontro puoi spendere 1 minuto per recuperare metà delle frecce usate."},
-  {"n": "Scimitarra", "q": 1, "cat": "Armi", "peso": "3 lb", "valore": "25 mo", "stats": "1d6 taglienti · Accurata, Leggera · Maestria: Nick", "desc": "Arma da guerra da mischia."},
-  {"n": "Spada corta", "q": 1, "cat": "Armi", "peso": "2 lb", "valore": "10 mo", "stats": "1d6 perforanti · Accurata, Leggera · Maestria: Irritare (Vex), non tra quelle scelte da Luigis", "desc": "Arma da guerra da mischia."},
-  {"n": "Armatura di cuoio borchiato", "q": 1, "cat": "Armature", "peso": "13 lb", "valore": "45 mo", "stats": "CA 12 + mod. Des (CA 14)", "desc": "Armatura leggera."},
-  {"n": "Torcia", "q": 10, "cat": "Equipaggiamento", "peso": "10 lb (1 lb ciascuna)", "valore": "1 mr ciascuna", "stats": "Luce intensa 6 m + fioca 6 m per 1 ora · come arma semplice da mischia: 1 danno da fuoco", "desc": "Si accende con un'azione bonus usando l'acciarino."},
-  {"n": "Bastone chiodato", "q": 1, "cat": "Armi", "peso": "0 lb", "valore": "", "stats": "Bastone ferrato (Quarterstaff) · Versatile · 1d6 contundenti (1d8 a due mani)", "desc": "Arma semplice da mischia."},
-  {"n": "Stivali alati", "q": 1, "cat": "Oggetti magici", "peso": "0 lb", "valore": "", "stats": "4 cariche · recupera 1d4 cariche all'alba · azione Magia, 1 carica: velocità di volo 9 m per 1 ora", "desc": "Se sei in volo quando l'effetto termina, scendi di 9 m per round fino ad atterrare. (Roll20 lo registra come «scudo +0 CA».)", "sintonia": "Sì"},
-  {"n": "Zaino", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "2 mo", "stats": "Contiene fino a 30 lb in 1 piede cubo", "desc": "Può fare anche da bisaccia."},
-  {"n": "Focus druidico (rametto di vischio)", "q": 1, "cat": "Focus", "peso": "0 lb", "valore": "1 mo", "stats": "Focus da incantatore per gli incantesimi da Ranger", "desc": ""},
-  {"n": "Ampolla d'olio", "q": 2, "cat": "Consumabili", "peso": "2 lb (1 lb ciascuna)", "valore": "1 ma ciascuna", "stats": "Lancio 6 m al posto di un attacco: TS Des CD 13 o coperto d'olio; +5 fuoco se subisce fuoco entro 1 minuto", "desc": "Cospargere uno spazio: azione Utilizzare, un quadrato di 1,5 m entro 1,5 m; se acceso brucia per 2 round e infligge 5 danni da fuoco a chi entra o termina il turno nell'area (una volta per turno). Combustibile: brucia 6 ore in una lampada o lanterna."},
-  {"n": "Pozione di guarigione", "q": 1, "cat": "Consumabili", "peso": "0 lb", "valore": "50 mo", "stats": "Recupera 2d4+2 PF", "desc": "Il liquido rosso luccica quando viene agitato. Sulla scheda berla è un'azione bonus."},
-  {"n": "Razioni", "q": 10, "cat": "Consumabili", "peso": "20 lb (2 lb ciascuna)", "valore": "5 ma ciascuna", "stats": "1 giorno di cibo per razione", "desc": "Carne secca, frutta secca, gallette e noci."},
-  {"n": "Frecce", "q": 20, "cat": "Equipaggiamento", "peso": "1 lb", "valore": "1 mo (20)", "stats": "Munizioni per arco · 0,05 lb ciascuna", "desc": "Riposte nella faretra."},
-  {"n": "Acciarino", "q": 1, "cat": "Equipaggiamento", "peso": "1 lb", "valore": "5 ma", "stats": "Accende candela, lampada, lanterna o torcia con un'azione bonus; altri fuochi in 1 minuto", "desc": "Pietra focaia, acciarino ed esca."},
-  {"n": "Faretra", "q": 1, "cat": "Equipaggiamento", "peso": "1 lb", "valore": "1 mo", "stats": "Contiene fino a 20 frecce", "desc": ""},
-  {"n": "Arco corto elfico", "q": 1, "cat": "Armi", "peso": "0 lb", "valore": "", "stats": "La scheda non ne riporta le statistiche", "desc": "Arco di fattura elfica."},
-  {"n": "Frecce +1", "q": 12, "cat": "Munizioni magiche", "peso": "0,6 lb", "valore": "", "stats": "+1 ai tiri per colpire e ai danni", "desc": "Munizioni magiche."},
-  {"n": "Otre", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "2 ma", "stats": "Contiene fino a 4 pinte (circa 2 litri)", "desc": "Senza acqua sufficiente rischi la disidratazione."},
-  {"n": "Giaciglio", "q": 1, "cat": "Equipaggiamento", "peso": "7 lb", "valore": "1 mo", "stats": "Per una creatura Piccola o Media · successo automatico ai TS contro il freddo estremo mentre ci si dorme", "desc": ""},
-  {"n": "Corda", "q": 1, "cat": "Equipaggiamento", "peso": "5 lb", "valore": "1 mo", "stats": "Nodo: azione Utilizzare + Rapidità di mano CD 10 · spezzarla: Atletica CD 20", "desc": "Puoi legare una creatura solo se è Afferrata, Incapacitata o Trattenuta; se le gambe sono legate è Trattenuta finché non supera Acrobazia CD 15 (azione)."},
-  {"n": "Pacco dell'esploratore", "q": 1, "cat": "Equipaggiamento", "peso": "0 lb", "valore": "10 mo", "stats": "Contiene zaino, giaciglio, 2 ampolle d'olio, 10 razioni, corda, acciarino, 10 torce e otre", "desc": "I contenuti sono già elencati separatamente sulla scheda (peso 0 per non contarli due volte)."}
+  {
+   "n": "Arco lungo",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "2 lb",
+   "valore": "50 mo",
+   "stats": "1d8 perforanti · Munizioni (gittata 45/180 m, frecce), Pesante, Due mani · Maestria: Rallentare",
+   "desc": "Arma da guerra a distanza. Ogni attacco consuma una freccia; dopo lo scontro puoi spendere 1 minuto per recuperare metà delle frecce usate."
+  },
+  {
+   "n": "Scimitarra",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "3 lb",
+   "valore": "25 mo",
+   "stats": "1d6 taglienti · Accurata, Leggera · Maestria: Nick",
+   "desc": "Arma da guerra da mischia."
+  },
+  {
+   "n": "Spada corta",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "2 lb",
+   "valore": "10 mo",
+   "stats": "1d6 perforanti · Accurata, Leggera · Maestria: Irritare (Vex), non tra quelle scelte da Luigis",
+   "desc": "Arma da guerra da mischia."
+  },
+  {
+   "n": "Armatura di cuoio borchiato",
+   "q": 1,
+   "cat": "Armature",
+   "peso": "13 lb",
+   "valore": "45 mo",
+   "stats": "CA 12 + mod. Des (CA 14)",
+   "desc": "Armatura leggera."
+  },
+  {
+   "n": "Torcia",
+   "q": 10,
+   "cat": "Equipaggiamento",
+   "peso": "10 lb (1 lb ciascuna)",
+   "valore": "1 mr ciascuna",
+   "stats": "Luce intensa 6 m + fioca 6 m per 1 ora · come arma semplice da mischia: 1 danno da fuoco",
+   "desc": "Si accende con un'azione bonus usando l'acciarino."
+  },
+  {
+   "n": "Bastone chiodato",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "Bastone ferrato (Quarterstaff) · Versatile · 1d6 contundenti (1d8 a due mani)",
+   "desc": "Arma semplice da mischia."
+  },
+  {
+   "n": "Stivali alati",
+   "q": 1,
+   "cat": "Oggetti magici",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "4 cariche · recupera 1d4 cariche all'alba · azione Magia, 1 carica: velocità di volo 9 m per 1 ora",
+   "desc": "Se sei in volo quando l'effetto termina, scendi di 9 m per round fino ad atterrare. (Roll20 lo registra come «scudo +0 CA».)",
+   "sintonia": "Sì"
+  },
+  {
+   "n": "Zaino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "2 mo",
+   "stats": "Contiene fino a 30 lb in 1 piede cubo",
+   "desc": "Può fare anche da bisaccia."
+  },
+  {
+   "n": "Focus druidico (rametto di vischio)",
+   "q": 1,
+   "cat": "Focus",
+   "peso": "0 lb",
+   "valore": "1 mo",
+   "stats": "Focus da incantatore per gli incantesimi da Ranger",
+   "desc": ""
+  },
+  {
+   "n": "Ampolla d'olio",
+   "q": 2,
+   "cat": "Consumabili",
+   "peso": "2 lb (1 lb ciascuna)",
+   "valore": "1 ma ciascuna",
+   "stats": "Lancio 6 m al posto di un attacco: TS Des CD 13 o coperto d'olio; +5 fuoco se subisce fuoco entro 1 minuto",
+   "desc": "Cospargere uno spazio: azione Utilizzare, un quadrato di 1,5 m entro 1,5 m; se acceso brucia per 2 round e infligge 5 danni da fuoco a chi entra o termina il turno nell'area (una volta per turno). Combustibile: brucia 6 ore in una lampada o lanterna."
+  },
+  {
+   "n": "Pozione di guarigione",
+   "q": 1,
+   "cat": "Consumabili",
+   "peso": "0 lb",
+   "valore": "50 mo",
+   "stats": "Recupera 2d4+2 PF",
+   "desc": "Il liquido rosso luccica quando viene agitato. Sulla scheda berla è un'azione bonus."
+  },
+  {
+   "n": "Razioni",
+   "q": 10,
+   "cat": "Consumabili",
+   "peso": "20 lb (2 lb ciascuna)",
+   "valore": "5 ma ciascuna",
+   "stats": "1 giorno di cibo per razione",
+   "desc": "Carne secca, frutta secca, gallette e noci."
+  },
+  {
+   "n": "Frecce",
+   "q": 20,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "1 mo (20)",
+   "stats": "Munizioni per arco · 0,05 lb ciascuna",
+   "desc": "Riposte nella faretra."
+  },
+  {
+   "n": "Acciarino",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "5 ma",
+   "stats": "Accende candela, lampada, lanterna o torcia con un'azione bonus; altri fuochi in 1 minuto",
+   "desc": "Pietra focaia, acciarino ed esca."
+  },
+  {
+   "n": "Faretra",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "1 lb",
+   "valore": "1 mo",
+   "stats": "Contiene fino a 20 frecce",
+   "desc": ""
+  },
+  {
+   "n": "Arco corto elfico",
+   "q": 1,
+   "cat": "Armi",
+   "peso": "0 lb",
+   "valore": "",
+   "stats": "La scheda non ne riporta le statistiche",
+   "desc": "Arco di fattura elfica."
+  },
+  {
+   "n": "Frecce +1",
+   "q": 12,
+   "cat": "Munizioni magiche",
+   "peso": "0,6 lb",
+   "valore": "",
+   "stats": "+1 ai tiri per colpire e ai danni",
+   "desc": "Munizioni magiche."
+  },
+  {
+   "n": "Otre",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "2 ma",
+   "stats": "Contiene fino a 4 pinte (circa 2 litri)",
+   "desc": "Senza acqua sufficiente rischi la disidratazione."
+  },
+  {
+   "n": "Giaciglio",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "7 lb",
+   "valore": "1 mo",
+   "stats": "Per una creatura Piccola o Media · successo automatico ai TS contro il freddo estremo mentre ci si dorme",
+   "desc": ""
+  },
+  {
+   "n": "Corda",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "5 lb",
+   "valore": "1 mo",
+   "stats": "Nodo: azione Utilizzare + Rapidità di mano CD 10 · spezzarla: Atletica CD 20",
+   "desc": "Puoi legare una creatura solo se è Afferrata, Incapacitata o Trattenuta; se le gambe sono legate è Trattenuta finché non supera Acrobazia CD 15 (azione)."
+  },
+  {
+   "n": "Pacco dell'esploratore",
+   "q": 1,
+   "cat": "Equipaggiamento",
+   "peso": "0 lb",
+   "valore": "10 mo",
+   "stats": "Contiene zaino, giaciglio, 2 ampolle d'olio, 10 razioni, corda, acciarino, 10 torce e otre",
+   "desc": "I contenuti sono già elencati separatamente sulla scheda (peso 0 per non contarli due volte)."
+  }
  ],
  "carico": "89,06 lb",
  "capacita": "120 lb",
@@ -168,5 +690,82 @@
   "Fonti degli incantesimi: il sito non le distingue. Dalla scheda: Tocco folgorante e Mano magica da Iniziato alla magia (Mago), Passo velato da Toccato dai Folletti, Marchio del cacciatore da Nemico prescelto; la scheda non dice quale incantesimo di 1° livello venga da Iniziato alla magia e quale da Toccato dai Folletti (sulla lista ci sono 7 incantesimi da Ranger più Tasha, mentre un Ranger 5 ne prepara 6).",
   "Inventario: la pozione di guarigione nel sito pesa 0,5 lb, sulla scheda 0 lb; le frecce +1 pesano 0,6 lb in tutto. Il Pacco dell'esploratore nel sito ha categoria «Contenitori» (non in elenco). Tutti gli oggetti della scheda sono presenti nel sito.",
   "PE: sia la scheda sia il sito riportano 465 / 14.000, poco coerente con il livello 5 (servono 6.500 PE). Da verificare con Giuseppe."
- ]
+ ],
+ "competenze_fonti": {
+  "classe": {
+   "nome": "Ranger",
+   "ts": [
+    "For",
+    "Des"
+   ],
+   "armature": "Leggere, medie, scudi",
+   "armi": "Semplici, da guerra",
+   "strumenti": "Nessuno",
+   "abilita": [
+    "Addestrare animali",
+    "Percezione",
+    "Sopravvivenza"
+   ],
+   "note": "Il Ranger sceglie 3 abilità fra Addestrare animali, Atletica, Furtività, Indagare, Intuizione, Natura, Percezione, Sopravvivenza. Esploratore abile (Ranger 2): Maestria in un'abilità già competente + 2 lingue a scelta. Attribuzione ricostruita: 5 abilità competenti della lista (Addestrare animali, Intuizione, Natura, Percezione, Sopravvivenza) per 4 posti (classe 3 + Abile 1)."
+  },
+  "sottoclasse": {
+   "nome": "Signore delle Bestie",
+   "concede": ""
+  },
+  "specie": {
+   "nome": "Umano",
+   "concede": "Abile (Skillful): 1 abilità a scelta — Intuizione o Natura (l'altra resta senza fonte); Versatile: talento di origine — Fortunato (Lucky); Intraprendente: Ispirazione eroica. Nessuna lingua dalla specie nel 2024",
+   "abilita": [
+    "Intuizione"
+   ]
+  },
+  "background": {
+   "nome": "Sapiente",
+   "abilita": [
+    "Arcano",
+    "Storia"
+   ],
+   "strumenti": "Strumenti da calligrafo",
+   "talento": "Iniziato alla magia (Mago)",
+   "lingue": "Nessuna dal background (Comune + 2 lingue standard alla creazione)",
+   "caratteristiche": "Costituzione, Intelligenza, Saggezza"
+  },
+  "talenti": [
+   {
+    "nome": "Fortunato (Lucky)",
+    "concede": "Nessuna competenza (Umano, Versatile)"
+   },
+   {
+    "nome": "Iniziato alla magia (Mago)",
+    "concede": "Nessuna competenza (Sapiente)"
+   },
+   {
+    "nome": "Tiro (Archery)",
+    "concede": "Nessuna competenza (Stile di combattimento, Ranger 2)"
+   },
+   {
+    "nome": "Toccato dai Folletti (Fey-Touched)",
+    "concede": "Nessuna competenza (livello 4)"
+   }
+  ],
+  "maestrie": {
+   "abilita": [
+    "Percezione"
+   ],
+   "fonte": "Esploratore abile (Deft Explorer), Ranger 2"
+  },
+  "lingue": [
+   "Comune",
+   "Lingua dei Segni Comune",
+   "Elfico",
+   "Druidico",
+   "Sottocomune"
+  ],
+  "verifica": [
+   "Abilità: 7 competenti ma le fonti 2024 ne danno 6 (Ranger 3 + Sapiente 2 + Abile 1): una fra Addestrare animali, Intuizione, Natura, Percezione, Sopravvivenza è in più e senza fonte (Signore delle Bestie, Esploratore abile e i talenti non danno abilità).",
+   "Maestria in Percezione (+10) torna con Esploratore abile.",
+   "TS (For, Des), armature, armi e Strumenti da calligrafo (Sapiente) tornano.",
+   "Lingue: tornano — Comune + 2 standard (Lingua dei Segni Comune, Elfico) + 2 a scelta da Esploratore abile (Druidico, Sottocomune: lì le lingue rare sono ammesse)."
+  ]
+ }
 }
