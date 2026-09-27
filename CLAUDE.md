@@ -281,3 +281,19 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - **Grafica** (blocco «STILE DEFINITIVO» in fondo al CSS): fondo quasi nero liscio, un filo ottone sottile, titoli Mr Eaves maiuscoletto oro con ✦ (il glifo va disegnato con un font di sistema), testo Scaly Sans, pergamena solo nella Guida (a tutta colonna) e nella carta dell'oggetto; personaggi come elenco senza cornici. Giuseppe ha bocciato: pergamena ovunque, cornici ornate SVG, riga irregolare, sfondi nuvolati, cornici generate con Higgsfield. Draconis tolto.
 - Nuovi campi di stato (in `SHAPE_OBJ`, `merge`, `toRemote`): `poiRoll`, `poiSeen`, `poiSpot`, `poiMiss`. Verificato: dallo stesso stato reale v102 e v103 riscrivono identici token, posizioni, nebbia, porte, iniziativa.
 - `prova-tavolo.js`: lo zaino è ora una tabella (`[data-invi]` + `.invcard`); la prova clicca ogni oggetto.
+
+## v104 (27/09/2026) — scheda del personaggio a sette sezioni
+
+- `renderSheet`: Panoramica · Inventario · Attacchi · Incantesimi (solo incantatori: Maximus non l'ha) · Capacità e Talenti · Background · Diario. Vecchi nomi accettati da `openSheet`: `car`→pan, `eq`→inv, `sto`→bg.
+- **Attacchi** (`sheetAttacksHtml`): le azioni del PG con colpire o danno (non le cure), divise per Azione / Azione bonus / Reazione; «Attacca» chiude la scheda e chiama `doAction` (scelta del bersaglio, danno automatico). Con la Forma selvatica attiva mostra gli attacchi della forma. I trucchetti stanno già nelle azioni del PG (con i bonus degli oggetti, es. Bastone di Vicarus +11): non ripeterli dalla lista incantesimi.
+- **Capacità e Talenti** (`sheetFeaturesHtml`): privilegi di classe, azioni senza tiro («Usa»), talenti, lingue / Percezione passiva / dadi vita.
+- **Background** (`sheetBackgroundHtml`): ritratto, origine, legami e la storia di `CHAR_STORIES` (mai `sh.lore`: contiene segreti).
+- **Diario** (`sheetDiaryHtml`): pagine personali in `S.diari[pgId][pNNN]={t,tit,txt,by}` (nuovo campo di stato: in `SHAPE_OBJ`, `merge`, `toRemote`). Lo vedono e scrivono solo il PG e il master; «Elimina» chiede conferma con un secondo clic.
+
+## v104 (27/09/2026) — Sotto Bëllindë al canone, Guida della scena completa
+
+- Canone dei PDI in `CANONE-PDI.md` (scena, punto, moduli, prove, scoperta, regole di scrittura). Tutti i 16 PDI di `sotto.json` sono v3; i 15 oltre al Pozzo sono stati completati con aggiunte segnate `bozza` (breve, parte, seme, innesco, dopo, rilancio, daqui) e le istruzioni per il master sono state tolte dai campi mostrabili. Nessun testo originale perso (verificato riga per riga).
+- Ogni PDI ha `nota.cd` (Percezione passiva, mostrata al master); `nota.auto:false` = mai scoperto da solo (Ultimo Custode, stesso punto del Sigillo).
+- Scena: `citta` (menu Scena raggruppato per città, luoghi rientrati sotto la mappa, «16. Sotto Bëllindë»), `intro` = {leggi, note, ingressi[{da, primo, poi, note}], bozza}. «Mostra ai giocatori» registra `S.poiSeen['_intro__<scena>__leggi']`: l'introduzione resta nella Guida dei giocatori.
+- Guida della scena: menu Scena dentro la pergamena (`placeSceneSel`), handout del luogo dentro la Guida (`LUOGO_GM`), testi del luogo per i giocatori nella loro Guida (il pannello `.lv-text` sulla mappa è nascosto), immagine piccola di ogni PDI.
+- Salvataggio automatico dello «spot» solo dopo `FB_LOADED` (evita di scrivere lo stato iniziale su Firebase).
