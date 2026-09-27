@@ -452,3 +452,9 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - La resistenza vale anche per i danni tolti a mano dal master (−10, −5, −1, Togli): il Registro scrive quanti ne ha subiti davvero.
 - **Non fatto**: +1 al tiro salvezza contro la morte; controllo degli anelli di platino; durata di 1 ora (finisce con un riposo o a mano).
 - Prova dedicata `legame-test.js` (scratchpad): 34 controlli. `multi-test.js` 21. `prova-tavolo.js` verde nei due ruoli.
+
+## v124 (27/09/2026) — condizioni sui token più piccole
+
+- Richiesta di Giuseppe: i segnali delle condizioni sotto i token erano enormi (carattere 15 contro gli 8 del nome: ogni sigla era più grande del token, e si impilavano in colonna).
+- Blocco CSS «CONDIZIONI SUI TOKEN (v124)» in fondo allo stile: `.tok .condrow .cond` a 7 px, in riga sotto il nome (a capo oltre 66 px); con il mouse sopra o col token selezionato salgono a 9 px, come fa il nome. Colonna dei personaggi, Selezione e scheda non cambiano.
+- È una riduzione chiesta da lui: la regola «caratteri grandi, prima di ridurre chiedere» resta valida per tutto il resto.

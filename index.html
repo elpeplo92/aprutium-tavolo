@@ -1211,12 +1211,21 @@ button.chip>svg.uico{margin-right:.3em;width:1em;height:1em}
 /* ===== LEGAME DI INTERDIZIONE (v123) ===== */
 .bondwhat{margin:0 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--radius);font-family:var(--sans);color:var(--ink)} .bondwhat b{color:var(--gold)}
 .tgt input:disabled+.tn{opacity:.55}
+/* ===== CONDIZIONI SUI TOKEN (v124) =====
+   I segnali delle condizioni sotto i token erano più grandi del token (carattere 15 contro gli 8 del nome).
+   Ora hanno la misura del nome del token; passando col mouse o selezionando il token crescono come fa il nome.
+   Nella colonna dei personaggi e nella scheda restano come prima. */
+.tok .condrow{margin-top:12px;gap:1px;flex-wrap:wrap;white-space:normal;width:max-content;max-width:66px;pointer-events:none;z-index:5}
+.tok .condrow .cond{font:700 7px/1.25 var(--sans);letter-spacing:.02em;padding:0 2px;border-radius:2px}
+.tok .condrow .cond i{margin-left:1px}
+.tok:hover .condrow,.tok.selected .condrow{max-width:96px;z-index:7}
+.tok:hover .condrow .cond,.tok.selected .condrow .cond{font-size:9px}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v123</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v124</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
