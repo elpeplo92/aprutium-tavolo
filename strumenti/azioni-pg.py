@@ -1,0 +1,141 @@
+import json,re
+import os
+P=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),'src','tavolo.html'); s=open(P,encoding='utf-8').read()
+def A(n,tipo,eco,atk=None,dmg=None,note=None):
+    d={'n':n,'tipo':tipo,'eco':eco}
+    if atk is not None: d['atk']=atk
+    if dmg: d['dmg']=dmg
+    if note: d['note']=note
+    return d
+M,D,I,C,S='mischia','distanza','incantesimo','cura','speciale'
+AZ,BO,RE='azione','bonus','reazione'
+ACT={
+ 'alessandros':[
+  A('Spada lunga (1 mano)',M,AZ,7,'1d8+3','Duellare: +2 danni · Maestria Sap: il bersaglio ha svantaggio al prossimo attacco · Maestro delle armature pesanti: −2 ai danni da armi subiti'),
+  A('Spada lunga (2 mani)',M,AZ,7,'1d10+3','Maestria Sap'),
+  A('Giavellotto (lancio)',D,AZ,5,'1d6+3','gittata 9/36 m · Maestria Slow: −3 m di velocità al bersaglio'),
+  A('Acqua santa (lancio)',D,AZ,None,'2d8','TS Des CD 11 · solo immondi e non morti'),
+  A('Cura ferite',C,AZ,None,'2d8+2','slot 1° · contatto'),
+  A('Benedizione',I,AZ,None,None,'slot 1° · concentrazione 1 min · +1d4 a attacchi e TS di 3 alleati'),
+  A('Protezione dal bene e dal male',I,AZ,None,None,'slot 1° · concentrazione 10 min'),
+  A('Percezione del divino',S,BO,None,None,'Incanalare divinità · 10 min: senti celestiali, immondi e non morti entro 18 m'),
+  A('Punizione divina',I,BO,None,'2d8','slot 1°, dopo un colpo · +1d8 contro immondi e non morti · 3d8 con slot 2°'),
+  A('Punizione tonante',I,BO,None,'2d6','slot 1°, dopo un colpo · TS For CD 12 o spinto 3 m e prono'),
+  A('Imposizione delle mani',C,BO,None,None,'20 PF al giorno, li scegli tu · 5 PF: rimuove un veleno'),
+  A('Scudo della fede',I,BO,None,None,'slot 1° · concentrazione 10 min · +2 CA a un alleato'),
+  A('Favore divino',I,BO,None,None,'slot 1° · 1 min · +1d4 radioso ai colpi d’arma'),
+  A('Duello obbligato',I,BO,None,None,'slot 1° · TS Sag CD 12 · il nemico deve attaccare te'),
+  A('Arma sacra',S,BO,None,None,'Incanalare divinità · 10 min · +2 (Car) ai tiri per colpire, arma magica, luce'),
+  A('Attacco di opportunità (Spada lunga)',M,RE,7,'1d8+3','quando un nemico esce dalla tua portata'),
+ ],
+ 'vicarus':[
+  A('Dardo di fuoco',I,AZ,8,'1d10','trucchetto · 36 m · Adepto elementale: i danni da fuoco ignorano la resistenza, gli 1 contano 2'),
+  A('Tocco folgorante',I,AZ,8,'1d8','trucchetto · contatto · niente reazioni per il bersaglio'),
+  A('Esplosione stregonesca',I,AZ,8,'1d8','trucchetto · 36 m · scegli il tipo di danno; con un 8 tira ancora'),
+  A('Mani brucianti',I,AZ,None,'3d6','slot 1° · cono 4,5 m · TS Des CD 16, metà se supera'),
+  A('Raggio rovente',I,AZ,8,'2d6','slot 2° · tre raggi, un tiro ciascuno'),
+  A('Sfera cromatica',I,AZ,8,'3d8','slot 1° · 27 m · tipo di danno a scelta'),
+  A('Onda di tuono',I,AZ,None,'2d8','slot 1° · cubo 4,5 m · TS Cos CD 16, spinto 3 m'),
+  A('Frantumare',I,AZ,None,'3d8','slot 2° · sfera 3 m · TS Cos CD 16 · i Forgiati sono vulnerabili al tuono'),
+  A('Dardo incantato',I,AZ,None,'3d4+3','slot 1° · tre dardi, colpiscono sempre (1d4+1 ciascuno)'),
+  A('Comando',I,AZ,None,None,'slot 1° · TS Sag CD 16 · una parola: Avvicinati, Lascia, Fuggi, Prono, Fermo'),
+  A('Immagine speculare',I,AZ,None,None,'slot 2° · 1 min · tre copie'),
+  A('Alterare se stesso',I,AZ,None,None,'slot 2° · concentrazione 1 ora'),
+  A('Individuazione del magico',I,AZ,None,None,'slot 1° · concentrazione 10 min · anche come rituale'),
+  A('Mano magica · Illusione minore',I,AZ,None,None,'trucchetti'),
+  A('Bastone di Lyaras (colpo)',M,AZ,3,'1d8+1','a due mani'),
+  A('Soffio del drago',I,BO,None,'3d6','slot 2° · concentrazione 1 min · il bersaglio soffia un cono 4,5 m, TS Des CD 16'),
+  A('Incantesimo rapido',S,BO,None,None,'Metamagia · 2 punti stregoneria: lancia un incantesimo ad azione come azione bonus'),
+  A('Stregoneria innata',S,BO,None,None,'2/riposo lungo · 1 min: CD +1 e vantaggio ai tiri per colpire degli incantesimi'),
+  A('Incantesimo accresciuto',S,BO,None,None,'Metamagia · 2 punti: un bersaglio ha svantaggio al TS (si aggiunge al lancio, non costa azione)'),
+  A('Scudo',I,RE,None,None,'slot 1° · quando vieni colpito: +5 CA fino al tuo prossimo turno, blocca Dardo incantato'),
+  A('Attacco di opportunità (Bastone)',M,RE,3,'1d8+1','quando un nemico esce dalla tua portata'),
+ ],
+ 'adamus':[
+  A('Bastone (1 mano)',M,AZ,1,'1d6-1','Maestria Topple: prono se fallisce TS Cos CD 11'),
+  A('Bastone (2 mani)',M,AZ,1,'1d8-1','Maestria Topple'),
+  A('Bastone con Shillelagh',M,AZ,5,'1d8+3','usa Sag · dura 1 min dopo il lancio'),
+  A('Falcetto',M,AZ,1,'1d4-1','Maestria Nick'),
+  A('Fuoco fatuo stellare',I,AZ,5,'1d8','trucchetto · 18 m · il bersaglio emette luce, non può nascondersi'),
+  A('Frusta di spine',I,AZ,5,'1d6','trucchetto · 9 m · tira il bersaglio a te di 3 m'),
+  A('Raggio di luna',I,AZ,None,'2d10','slot 2° · concentrazione 1 min · cilindro 1,5 m · TS Cos CD 13, metà se supera'),
+  A('Cura ferite',C,AZ,None,'2d8+3','slot 1° · contatto'),
+  A('Intralciare · Amicizia con gli animali · Parlare con gli animali',I,AZ,None,None,'slot 1° / rituali'),
+  A('Potenziare caratteristica',I,AZ,None,None,'slot 2° · concentrazione 1 ora · vantaggio alle prove di una caratteristica'),
+  A('Passare senza tracce',I,AZ,None,None,'slot 2° · concentrazione 1 ora · +10 Furtività al gruppo'),
+  A('Auspicio',I,AZ,None,None,'slot 2° · rituale · Bene / Male / Entrambi / Niente'),
+  A('Individuazione del magico · Individuazione di veleni',I,AZ,None,None,'slot 1° · rituali'),
+  A('Medico da campo (kit da guaritore)',C,AZ,None,None,'Talento Guaritore · Usare oggetto: il paziente spende un Dado Vita e recupera il tiro + 2'),
+  A('Forma selvatica',S,BO,None,None,'2/riposo lungo · Cerchio della Luna: GS 1 (orso bruno, lupo terribile) · PF temporanei = 3 × livello'),
+  A('Shillelagh (lancio)',I,BO,None,None,'trucchetto · il bastone colpisce con Sag, danno 1d8'),
+  A('Raggio di luna (spostare)',I,BO,None,None,'muovi il raggio di 18 m'),
+  A('Compagno selvatico (Trovare famiglio)',I,BO,None,None,'Ordine primordiale? no — Compagno selvatico: 1 uso di Forma selvatica per un famiglio (bonus)'),
+  A('Attacco di opportunità (Bastone)',M,RE,1,'1d6-1','o un incantesimo a bersaglio singolo (Incantatore da guerra)'),
+ ],
+ 'luigis':[
+  A('Arco lungo',D,AZ,6,'1d8+2','Tiro con l’arco: +2 · Maestria: Lento (−3 m velocità) · gittata 45/180 m'),
+  A('Tocco folgorante',I,AZ,6,'1d8','trucchetto · contatto · niente reazioni per il bersaglio'),
+  A('Colpo esatto (Arco)',D,AZ,8,'1d8+4','trucchetto: attacchi con Sag invece che Des · dal 5° +1d6 radioso'),
+  A('Cura ferite',C,AZ,None,'2d8+4','slot 1° · contatto'),
+  A('Intralciare',I,AZ,None,None,'slot 1° · concentrazione 1 min · quadrato 6 m · TS For CD 14 o trattenuto'),
+  A('Risata incontenibile di Tasha',I,AZ,None,None,'slot 1° · concentrazione 1 min · TS Sag CD 14 o prono e incapacitato'),
+  A('Passo veloce · Parlare con gli animali',I,AZ,None,None,'slot 1° / rituale'),
+  A('Marchio del cacciatore',I,BO,None,'1d6','slot 1° · concentrazione 1 ora · +1d6 ai colpi sul bersaglio · gratis 2/giorno (Nemico prescelto)'),
+  A('Gelsomina: Colpo',M,BO,6,'1d8+6','Signore delle Bestie: comanda Gelsomina (Bestia della terra: 1d8 + 2 + Sag) · Carica: +1d6 e prono (TS For CD 14) se si è mossa 6 m · senza comando fa Schivata'),
+  A('Grandine di spine',I,BO,None,'1d10','slot 1° · dopo un colpo con l’arco · TS Des CD 14 ai vicini'),
+  A('Passo velato',I,BO,None,None,'Toccato dalle fate: 1/giorno gratis · teletrasporto 9 m'),
+  A('Salto',I,BO,None,None,'slot 1° · salti fino a 9 m'),
+  A('Attacco di opportunità (Arco, in mischia)',D,RE,6,'1d8+2','svantaggio se il nemico è adiacente'),
+ ],
+ 'mattheus':[
+  A('Mazza',M,AZ,3,'1d6','Maestria Sap: svantaggio al prossimo attacco del bersaglio'),
+  A('Fiamma sacra',I,AZ,None,'2d8','trucchetto · 18 m · TS Des CD 15, nessun danno se supera'),
+  A('Rintocco di morte',I,AZ,None,'2d8','trucchetto · 18 m · TS Sag CD 15 · 2d12 se il bersaglio è già ferito'),
+  A('Dardo guida',I,AZ,7,'4d6','slot 1° · 36 m · il prossimo attacco contro il bersaglio ha vantaggio'),
+  A('Infliggi ferite',I,AZ,None,'2d10','slot 1° · contatto · TS Cos CD 15, metà se supera'),
+  A('Cura ferite',C,AZ,None,'2d8+7','slot 1° · contatto · Discepolo della vita: +2 + livello dell’incantesimo'),
+  A('Preghiera di guarigione',C,AZ,None,'2d8+8','slot 2° · 10 minuti · fino a 5 creature · Discepolo della vita'),
+  A('Aiuto',C,AZ,None,None,'slot 2° · +5 PF massimi e attuali a 3 creature per 8 ore'),
+  A('Comando',I,AZ,None,None,'slot 1° · TS Sag CD 15 · una parola'),
+  A('Benedizione',I,AZ,None,None,'slot 1° · concentrazione 1 min · +1d4 a 3 alleati'),
+  A('Protezione dal bene e dal male',I,AZ,None,None,'slot 1° · concentrazione 10 min'),
+  A('Spiriti guardiani',I,AZ,None,'3d8','slot 3° · concentrazione 10 min · raggio 4,5 m · TS Sag CD 15, metà se supera'),
+  A('Dissolvi magie',I,AZ,None,None,'slot 3° · prova Sag CD 10 + livello dell’effetto (il Sigillo: CD alta)'),
+  A('Rianimare',C,AZ,None,None,'slot 3° · 300 mo di diamanti · morto da meno di 1 minuto'),
+  A('Scacciare non morti',S,AZ,None,None,'Incanalare divinità (2/riposo) · TS Sag CD 15 · in fuga 1 min · Bruciare i non morti: 4d8 radiosi a chi fallisce'),
+  A('Preservare vita',C,AZ,None,None,'Incanalare divinità · 25 PF da distribuire entro 9 m, fino a metà dei PF massimi'),
+  A('Scintilla divina',I,AZ,None,'1d8+4','Incanalare divinità · 9 m · cura, oppure danno radioso/necrotico con TS Cos CD 15'),
+  A('Luce · Taumaturgia',I,AZ,None,None,'trucchetti'),
+  A('Parola guaritrice',C,BO,None,'2d4+7','slot 1° · 18 m · Discepolo della vita'),
+  A('Arma spirituale',I,BO,None,'1d8+4','slot 2° · 1 min · un attacco (+7) col bonus ogni turno'),
+  A('Santuario',I,BO,None,None,'slot 1° · 1 min · chi vuole attaccare il bersaglio: TS Sag CD 15'),
+  A('Ristorare inferiore',C,BO,None,None,'slot 2° · toglie accecato, assordato, paralizzato, avvelenato'),
+  A('Parola guaritrice di massa',C,BO,None,'2d4+9','slot 3° · 6 creature entro 18 m · Discepolo della vita'),
+  A('Guida',I,RE,None,None,'trucchetto · +1d4 a una prova di un alleato entro 9 m, quando fallisce'),
+  A('Attacco di opportunità (Mazza)',M,RE,3,'1d6','quando un nemico esce dalla tua portata'),
+ ],
+ 'maximus':[
+  A('Spadone +1',M,AZ,7,'2d6+5','Armi possenti: gli 1 e 2 dei dadi danno contano 3 · Maestria Graze: se manchi, 4 danni lo stesso'),
+  A('Maglio',M,AZ,6,'2d6+4','Maestria Topple: prono se fallisce TS Cos CD 14'),
+  A('Mazzafrusto',M,AZ,6,'1d8+4','Maestria Sap'),
+  A('Lancia',M,AZ,6,'1d6+4','1d8+4 a due mani · Maestria Sap'),
+  A('Giavellotto (lancio)',D,AZ,6,'1d6+4','gittata 9/36 m · Maestria Slow'),
+  A('Arco lungo',D,AZ,3,'1d8+1','gittata 45/180 m'),
+  A('Colpo senz’armi: Lotta',M,AZ,None,None,'Lottatore: vantaggio ai colpi contro chi trattieni · Atletica +6, CD 14'),
+  A('Runa del fuoco (Fuoco vivo)',S,AZ,None,'2d6','1/riposo: quando colpisci, catene di fuoco: 2d6 subito e a ogni turno, trattenuto, TS For CD 12 per liberarsi'),
+  A('Recupero energie',C,BO,None,'1d10+4','2/riposo breve (Guerriero 2024)'),
+  A('Possanza del gigante',S,BO,None,None,'2/riposo lungo · 1 min: taglia Grande, +1d6 danno una volta per turno, vantaggio ai TS For e alle prove For'),
+  A('Azione impetuosa',S,BO,None,None,'1/riposo breve · un’azione in più in questo turno (non è un’azione bonus: si dichiara)'),
+  A('Mente tattica',S,BO,None,None,'quando fallisci una prova di caratteristica: spendi un uso di Recupero energie, +1d10 (non è un’azione)'),
+  A('Runa della pietra (Sguardo di pietra)',S,RE,None,None,'1/riposo: quando una creatura entro 9 m finisce il turno: TS Sag CD 12 o affascinata e incapacitata 1 min'),
+  A('Attacco di opportunità (Spadone)',M,RE,7,'2d6+5','quando un nemico esce dalla tua portata'),
+ ],
+}
+# correzione: la voce di Adamus sul Compagno selvatico era scritta male
+ACT['adamus'][-2]=A('Compagno selvatico (Trovare famiglio)',I,AZ,None,None,'1 uso di Forma selvatica invece dello slot · 1 ora')
+
+i=s.index('const DEFAULT_STATE = '); j=s.index(';\n',i)
+d=json.loads(s[i+len('const DEFAULT_STATE = '):j])
+for id,acts in ACT.items(): d['tokens'][id]['actions']=acts
+s=s[:i]+'const DEFAULT_STATE = '+json.dumps(d,ensure_ascii=False)+s[j:]
+open(P,'w',encoding='utf-8').write(s); print('ok', {k:len(v) for k,v in ACT.items()})

@@ -1,0 +1,33 @@
+{
+ "id": "te_arlecchino",
+ "name": "L’Arlecchino delle Grotte",
+ "short": "A",
+ "color": "#B8412E",
+ "hp": 99,
+ "ac": 17,
+ "init": 5,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Sguardo dell’Oblio (TS Sag CD 15 o perde l’ultima ora; svantaggio per chi l’ha attaccato)"
+  },
+  {
+   "n": "Inchino (azione: chi risponde non tira più contro l’Oblio in questa discesa)"
+  },
+  {
+   "n": "Tra un battito e l’altro (quando nessuno lo guarda: si sposta fino a 18 m, solo alla luce)"
+  },
+  {
+   "n": "Telo dipinto: ogni attacco che lo colpisce ha il 50% di non avere effetto"
+  }
+ ],
+ "note": "Creatura unica, senza GS, NON tarata per essere uccisa · Non attacca, non infligge danni · Nessuna aura: Individuazione del Magico e Percezione del divino non trovano niente · Esiste solo alla luce: al buio sparisce · Se scende a 0 PF si sfalda in rombi di colore che diventano polvere di pietra, e alla luce successiva è di nuovo in fondo al corridoio · Non dare PE per averlo «vinto». Canone: chi lo incontra non muore, ma dimentica (08 - Ducato).",
+ "src": "La Città Sepolta",
+ "tac": "In fondo al corridoio, a 18 m. Ogni volta che qualcuno batte le palpebre è più vicino: 9 m, 3 m, accanto. Fa un inchino. Se qualcuno lo attacca, si china su di lui e lo guarda.",
+ "lines": [
+  "(Un inchino lungo, da teatro.)",
+  "(Una risata senza fiato, da una stanza vicina.)",
+  "(Il dito guantato sulla bocca della maschera.)"
+ ],
+ "img": "PNG — L’Arlecchino delle Grotte.jpg"
+}

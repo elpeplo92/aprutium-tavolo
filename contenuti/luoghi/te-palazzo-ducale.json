@@ -1,0 +1,109 @@
+{
+ "id": "te-palazzo-ducale",
+ "tipo": "luogo",
+ "titolo": "1. Palazzo Ducale",
+ "sottotitolo": "sede del Consiglio Reggente — il trono vuoto",
+ "citta": "teramum",
+ "gruppo": "1. San Giorgio",
+ "livello": "luogo",
+ "parent": "te-rione-san-giorgio",
+ "img": "Luogo — 1. Palazzo Ducale.jpg",
+ "stato": "segreto",
+ "atti": [],
+ "compendio": true,
+ "scheda": {
+  "Tipo": "palazzo di governo, sede del Consiglio Reggente Permanente",
+  "Rione": "1. San Giorgio",
+  "Chi lo tiene": "Casa Mazzarellus (Reggente Enricus Mazzarellus)",
+  "Guardia": "Guardia Ducale di Casa Grazianus",
+  "Orari": "anticamere aperte dal mattino; il Consiglio siede quando vuole",
+  "Regola": "cinque voti su otto per decidere"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Un blocco quadrato di pietra bianca, alto tre piani, con una torre d’angolo più alta di tutte le torri del colle. La facciata è nuova; ai fianchi, nei vicoli, si vedono le mura vecchie in pietra grigia che il palazzo si è mangiato.\nSul portale lo stemma ducale. Due guardie per battente, immobili."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Un cortile con un pozzo e un porticato, e sotto il porticato la coda: contadini, mercanti, vedove, un prete, tutti con un foglio. Gli uscieri chiamano i nomi in Aureo Antico, e chi non capisce perde il turno.\nUno scalone porta al piano nobile. Si sente odore di cera, di inchiostro, di gente che aspetta da troppo."
+  },
+  {
+   "t": "La Sala del Consiglio",
+   "txt": "Una sala lunga, soffitto a cassettoni dipinto d’oro e di blu. Un tavolo di noce con otto seggi, ciascuno con lo stemma di una Casata intagliato nello schienale.\nIn fondo, su tre gradini, un nono seggio più alto: il trono ducale. È vuoto. Qualcuno lo spolvera ogni mattina."
+  },
+  {
+   "t": "Cosa si vede subito",
+   "txt": "• Otto seggi, un trono vuoto.\n• Ogni Casata ha i suoi uomini nelle anticamere, e ognuno finge di non vedere quelli degli altri.\n• La Guardia qui dentro porta i colori di Grazianus, non quelli del Reggente.\n• Gli scrivani timbrano, ritimbrano, rimandano. Niente esce da qui con meno di cinque sigilli."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Il Consiglio siede sulla notizia della Crociata. Tre ore di discussione, nessun voto: servirebbero cinque sigilli, e non ce ne sono più di tre d’accordo su nulla.\n• Il Reggente vuole chiudere le porte della città. Grazianus vuole uscire con la Guardia. Clavax dice che nessuna delle due cose è legale senza un decreto. Savinellus calcola quanto costano entrambe.\n• Nelle anticamere si aspetta qualcuno che non è ancora arrivato: si parla di una signora da Julia Nova che vuole essere ricevuta."
+  },
+  {
+   "t": "Persone presenti",
+   "txt": "Reggente Enricus Mazzarellus — sessantacinque anni, cauto fino alla viltà. Occupa il palazzo, non il trono.\nQui e ora: suda sotto la pelliccia. Ha paura della Crociata, di Grazianus, dell’Arcimandrita e di chiunque entri senza essere annunciato. Tiene la mano sul petto, dove porta qualcosa che non lascia mai.\nBattuta: «Nessuno ha detto no. Abbiamo detto: non ancora.»\n\nStratega Lucius Grazianus — capo di Casa Grazianus, comandante della Guardia Ducale, padre di Maximus.\nQui e ora: in piedi, mai seduto. Ascolta il Consiglio come si ascolta la pioggia. Se vede Maximus, niente abbracci: un cenno, e poi «Dopo. Da soli.»\nBattuta: «Otto seggi, un trono vuoto. Qualcuno dovrà pur sedersi.»\n\nSommo Giudice Giannix Clavax — la Legge. Rigido, lento, parla per articoli.\nQui e ora: blocca ogni proposta con un cavillo, tranne quelle che vengono da Grazianus.\nBattuta: «La legge è un chiodo, non un cuscino. Ed è piantato dove dico io.»\n\nDecano Beltramo Savinellus — l’Oro. Misura tutto in monete.\nQui e ora: ha già un prezzo per la Crociata, e uno diverso per ciascuno di voi.\nBattuta: «Un eroe costa. Un eroe morto costa meno.»\n\nGli altri seggi (Impalox, de Spina, Mellitius, Tancredus) sono occupati o vuoti a seconda della scena: Serafinus Impalox arriva tardi e se ne va prima, per far vedere che la Fiamma non aspetta.\n\nLe schede complete dei Consiglieri, dell’usciere e del Protonotario stanno fra i PNG di Teramum (gruppi «Consiglio Reggente» e «Palazzo Ducale»)."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Il Reggente dorme con il Sigillo Ducale sotto il cuscino.\n2. Grazianus ha già scelto gli uomini per prendere il palazzo. Aspetta solo una scusa.\n3. Uno dei Consiglieri va e viene di notte da una porta di servizio, incappucciato.\n4. Il trono vuoto scricchiola quando entra qualcuno che ha sangue ducale.\n5. Clavax ha scritto un decreto di legge marziale. Manca solo la data.\n6. Gli archivi ducali sono stati «riordinati» dai Mazzarellus: mancano interi anni."
+  },
+  {
+   "t": "Segreti",
+   "txt": "• Il Sigillo Ducale è l’arma di Casa Mazzarellus ed è l’unico che può chiamare la Grande Convocazione all’Aquila Aurea. Senza di esso il piano di Silvanus non parte: «prima di salvare il Ducato bisogna prenderne la testa».\n• I Mazzarellus sanno che la linea ducale diretta non è estinta (Silvanus è vivo) e stanno insabbiando le prove. Iuvenza lo sa e li ricatta.\n• Grazianus prepara un colpo di stato militare con l’appoggio di Clavax, che gli passa informazioni. Il pretesto che cerca è la legge marziale.\n• Il Cristallo di Memoria (Atto XI): Iuvenza e un incappucciato con accento aristocratico di Teramum passano in rassegna il Consiglio. «Mazzarellus è cieco, Savinellus si compra, De Spina si distrae.» Il vero bersaglio è Lucius Grazianus.\n• Il falco di Maximus: «Non venire per la Via Bianca. Aspetta mio segnale. — Grazianus.» Il segnale non è mai arrivato."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "• Dove si custodisce il Sigillo Ducale. Proposta: il Reggente lo porta addosso, appeso al collo sotto la veste; di notte in una cassa nella camera, con due chiavi, una sua e una di Clavax.\n• Chi è l’incappucciato del Consiglio. Il canone non lo dice. Proposta nella scena del tavolo: l’Archivista Ponzio Tancredus, ricattato da Iuvenza per il segreto di Casa Tancredus; alternativa: il Dominus Flaminio Mellitius. Esclusi quelli che il Cristallo nomina come bersagli (Mazzarellus, Savinellus, de Spina) e Grazianus.\n• Regola di voto in conflitto: «cinque voti su otto» (borgo-teramum, Manuale §4.1.3 e §4.4) contro «il sigillo di almeno tre Casate» (08 - Ducato, §IV). Non scelto.\n• Padre di Maximus in conflitto (CC-02): Lucius Grazianus secondo il Manuale e l’Atto XI; famiglia di bottegai vicino al mercato secondo i file PG. Qui ho seguito il filone degli Atti, ma va confermato.\n• PNG minore: l’usciere capo Ciriaco «Lu Timbre» (ora ha la sua scheda), che decide l’ordine della coda e si fa pagare per cambiarlo.\n• Scena del tavolo «Palazzo Ducale» (te_palazzo): 7 punti — cortile, Cancelleria dei Sigilli, anticamere, Sala del Consiglio, torre della Guardia, appartamenti del Reggente, porta di servizio.\n• Proclama contro la Crociata (atto quattrocentododici): registrato di notte, con tre sigilli veri, senza quello di Grazianus. Proposta: Mazzarellus, Impalox, Savinellus.\n• La mozione contro Lucius in Consiglio («per conflitto di sangue», con la copia del messaggio del falco) è la mia proposta per il primo colpo del piano «Isolatelo».\n• Un Sigillo Ducale rubato vale per la Convocazione? Proposta: vale l’oggetto (contiene una parola pretuziana che nessuna copia ripete), ma chi lo usa rubato ha contro Guardia, Clavax e mezze Casate.\n• La vedova Mariuccia e la pattuglia di dodici uomini sparita sulla Via Bianca (proposta per legare il falco di Lucius alla strada).\n• PNG nuovo: il Protonotario Gaudentius Sciarra, custode della Cancelleria dei Sigilli e della lampada azzurra dell’autenticazione (lo stesso segno arcano trovato da Vicarus sul proclama, Atto XV).\n• Nomi in conflitto: Decano Beltramo Savinellus / Dominus Publius Savinellus; Matriarca Tarsilla de Spina / Marchesa Eleonora de Spina. La scena usa i nomi del lore del Ducato."
+  },
+  {
+   "t": "Il luogo nel corso della giornata",
+   "txt": "Mattina: anticamere piene, suppliche, timbri.\nMezzogiorno: il Consiglio si chiude in sala. Le porte si riaprono quando qualcuno esce sbattendole.\nPomeriggio: il colle è in ombra; nelle anticamere si tratta a bassa voce.\nNotte: solo la Guardia, e la porta di servizio sul vicolo."
+  }
+ ],
+ "prove": [
+  {
+   "t": "Ottenere udienza",
+   "skill": "Persuasione",
+   "dc": 15,
+   "ok": "l’usciere vi mette in cima alla coda: sarete ricevuti oggi, davanti ad almeno tre Consiglieri.",
+   "ko": "il vostro nome finisce in fondo al registro. «Tornate fra tre giorni. O fra tre settimane.»"
+  },
+  {
+   "t": "Leggere il Consiglio",
+   "skill": "Intuizione",
+   "dc": 13,
+   "ok": "Clavax non si oppone mai a Grazianus; Savinellus guarda sempre il Reggente prima di parlare; il Reggente tocca il petto ogni volta che si nomina la Crociata.",
+   "ko": "otto persone che si odiano in modo uguale."
+  },
+  {
+   "t": "Il registro delle sedute",
+   "skill": "Indagare",
+   "dc": 16,
+   "ok": "nei verbali degli ultimi due anni, ogni volta che si nomina la linea ducale, la pagina è stata riscritta con un inchiostro più fresco.",
+   "ko": "verbali noiosi, votazioni fallite, timbri."
+  },
+  {
+   "t": "La porta di servizio",
+   "skill": "Furtività",
+   "dc": 14,
+   "ok": "dal vicolo si entra nelle cucine e da lì alla scala di servizio che porta agli appartamenti del Reggente, senza incrociare la Guardia.",
+   "ko": "un cane in cortile abbaia; una pattuglia viene a guardare."
+  }
+ ],
+ "links": [
+  "png-beltramo-savinellus",
+  "png-ciriaco-lu-timbre",
+  "png-enricus-mazzarellus",
+  "png-flaminio-mellitius",
+  "png-gaudentius-sciarra",
+  "png-giannix-clavax",
+  "png-lucius-grazianus",
+  "png-ponzio-tancredus",
+  "png-serafinus-impalox",
+  "png-tarsilla-de-spina"
+ ],
+ "tavolo": "te_palazzo"
+}

@@ -1,0 +1,1010 @@
+{
+ "id": "te_biblioteca",
+ "nome": "Biblioteca Incompiuta dei Tancredus",
+ "menu": "Biblioteca Incompiuta",
+ "citta": "Teramum",
+ "ordine": 14,
+ "mappa": {
+  "img": "Battlemap — Biblioteca Incompiuta.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Il viale dei Tigli profuma di fiori, e i passi fanno meno rumore.\n\nA metà del viale, fra due palazzi con le torri, uno che non è mai stato finito. La facciata si ferma a metà del secondo piano. Sopra, impalcature grigie e nidi di cicogna. Un’ala intera senza tetto, e dalle finestre vuote si vede il cielo.\n\nSul portale, scolpito: «Ricordiamo le Radici».\n\nGente con i libri sotto il braccio entra ed esce senza parlare.",
+  "note": "La Biblioteca Incompiuta di Casa Tancredus, sede del Circolo dei Glossatori; nei piani sotterranei, gli archivi del Collegio Arcano e lo studio del Magister Caelinus Tancredus.\nLa mappa mostra il pianterreno a sinistra e il livello tre piani sotto la strada a destra.\nIl nodo della scena è Caelinus: la verità sul Canto, l’armatura di Alessandros, le iscrizioni della cripta. Ma per arrivarci bisogna passare Ermellina, Ponzio, il cancello e i sigilli, con un inquisitore che aspetta in anticamera e prima o poi scende.\nScontro possibile: l’ispezione dell’inquisitore, se la Crociata è di sotto quando la pazienza finisce.",
+  "ingressi": [
+   {
+    "da": "Dal portale",
+    "primo": "te_biblioteca_banco",
+    "poi": "te_biblioteca_sala",
+    "note": "L’ordine normale della lista."
+   },
+   {
+    "da": "Chiamati dal Magister",
+    "primo": "te_biblioteca_cancello",
+    "poi": "te_biblioteca_sigilli",
+    "note": "Se Caelinus ha saputo dell’armatura di Alessandros, Ponzio li va a prendere al banco e li porta dritti al cancello."
+   },
+   {
+    "da": "Dal buco dell’ala senza tetto, dalla Città Sepolta",
+    "primo": "te_biblioteca_ala",
+    "poi": "te_biblioteca_sala",
+    "note": "Chi risale dalla strada sepolta sbuca nell’ala senza tetto, dietro la transenna. I Glossatori non la prendono bene."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_banco",
+   "kind": "persona",
+   "title": "Il portale e il banco",
+   "image": "Luogo — 4. Biblioteca Incompiuta dei Tancredus.jpg",
+   "legacyPosition": {
+    "x": 230,
+    "y": 930
+   },
+   "text": "Un palazzo enorme che nessuno ha finito. La facciata si ferma a metà del secondo piano. Sopra, le impalcature di legno sono diventate grigie, e ci hanno fatto il nido le cicogne.\n\nSul portale, scolpito, il motto della Casata: «Ricordiamo le Radici».\n\nDentro, odore di pergamena, di polvere, di colla di pesce.\n\nAll’ingresso, un banco lungo di legno scuro. Dietro il banco, una donna anziana con gli occhiali legati a un nastro e le dita macchiate d’inchiostro. Ha davanti un registro aperto e non alza la testa.\n\n«Nome. Lettera. Motivo.»\n\nSopra il banco, un cartello di legno inciso: niente incantesimi senza autorizzazione scritta.",
+   "breve": "L’ingresso della Biblioteca Incompiuta. Donna Ermellina, la custode del banco, glossatrice anziana che non dimentica un nome, decide chi entra nelle sale di lettura. Senza lettera di presentazione si resta fuori, a meno di convincerla.",
+   "gm": "Donna Ermellina (vedi scheda) ha registrato ogni lettore da quarant’anni. Si ricorda di Alessandros e Vicarus da ragazzi, quando studiavano nelle scuole della città e venivano qui a leggere (da decidere: proposta di aggancio). Si ricorda anche di un ragazzo che rubava le candele: Vicarus.\nLa regola del cartello è la licenza imperiale del Collegio Arcano: niente magia in pubblico senza autorizzazione scritta (Manuale). Chi lancia un incantesimo nelle sale di lettura viene accompagnato fuori da due Glossatori, e il nome finisce in un registro che l’Arcimandrita vorrebbe leggere.\nDa decidere: Biblioteca Incompiuta e Collegio Arcano sono lo stesso edificio? Proposta (della voce della Biblioteca): la Biblioteca è dei Tancredus e il Collegio Arcano ne occupa i piani sotterranei per licenza imperiale.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "ermellina",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Donna Ermellina",
+     "parte": "evento",
+     "innesco": "Qualcuno si presenta al banco.",
+     "leggi": "Scrive la data. Poi alza gli occhi, e si ferma su una faccia. «Cerullius. Il piccolo. Quello delle candele.»",
+     "note": "CHI SIETE? — «Ermellina Vallesi. Glossatrice, un tempo. Adesso custode del banco. Qui passano tutti, e io li scrivo tutti.»\n\nVI RICORDATE DI NOI? — Ad Alessandros: «Leggevate diritto e storia. Piano. Sottolineavate con l’unghia.» A Vicarus: «Voi rubavate le candele. E leggevate i libri che non vi davo.» Se Maximus è con loro: «E voi aspettavate fuori.»\n\nSERVE UNA LETTERA? — «Una lettera di presentazione di un maestro, di una Casata, o del Collegio. Senza, la sala grande. Solo quella.»\n\nIL MAGISTER CAELINUS? — Un attimo di silenzio. «Il Magister non riceve. Non sale da mesi.» Se insistono: «Lo decide l’Archivista. Non io.»\n\nL’INQUISITORE? — Guarda verso l’anticamera. «Aspetta dall’alba. Ha una carta con un sigillo solo. Qui, per entrare, ne servono tre.» Lo dice con una punta di piacere.\n\nCHI È PASSATO DI RECENTE? — Non apre il registro ai forestieri. Con Persuasione CD 14, o se Alessandros le ricorda chi è: «Troppa gente dei Tigli. Uomini che non leggono e chiedono delle genealogie. E una signora che ha chiesto del Magister per nome, tre giorni fa. Profumava di fiori. L’ho mandata via.»\n\nSE LA MINACCIANO — Scrive il vostro nome, sottolinea, e alza la mano: due Glossatori si alzano dai tavoli. «Uscite da soli, o vi fanno uscire con una parola.»\n\nBattute pronte:\n• «Nome. Lettera. Motivo.»\n• «Qui dentro non si dimentica niente. Nemmeno voi.»\n• «Le candele, piccolo Cerullius. Me le dovete ancora.»",
+     "dopo": "Sanno che il Magister non riceve senza l’Archivista, che l’inquisitore ha un mandato con un solo sigillo, e che una signora profumata ha chiesto di Caelinus per nome.",
+     "rilancio": "Donna Ermellina intinge la penna. Che cosa fate?",
+     "daqui": [
+      "lettera"
+     ]
+    },
+    {
+     "id": "lettera",
+     "tipo": "dettaglio",
+     "titolo": "Entrare senza lettera",
+     "parte": "evento",
+     "innesco": "I PG non hanno una lettera di presentazione e vogliono andare oltre la sala grande.",
+     "leggi": "Donna Ermellina posa la penna. «Allora ditemi perché dovrei.»",
+     "prove": [
+      {
+       "id": "lettera",
+       "abilita": [
+        "Persuasione",
+        "Storia"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "«La sala grande è aperta. Il resto no.» Un Glossatore vi accompagna, e vi resta dietro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Vi scrive nel registro come «ospiti di Casa Tancredus in attesa». Potete girare le sale di lettura e chiedere dell’Archivista."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Vi scrive come ospiti e manda un ragazzo giù a chiamare l’Archivista Ponzio: «Digli che ci sono i Cerullius. E che l’inquisitore li ha visti entrare.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 13 o più hanno accesso alle sale di lettura e la strada verso l’Archivista.",
+     "rilancio": "Il Glossatore vi fa strada verso la sala grande. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 150
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano il banco.",
+     "dopo": "Avanti: la sala di lettura. A destra: l’anticamera dell’inquisitore. In fondo: l’ala senza tetto.",
+     "rilancio": "La sala grande si apre davanti a voi. Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_sala",
+      "te_biblioteca_inquisitore",
+      "te_biblioteca_ala"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_sala",
+   "kind": "stanza",
+   "title": "La sala di lettura",
+   "image": "PDI — Biblioteca Incompiuta — La sala di lettura.jpg",
+   "legacyPosition": {
+    "x": 470,
+    "y": 560
+   },
+   "text": "Una sala alta come una chiesa, piena di scaffali fino al soffitto. Scale a pioli. Lettori chini che non alzano la testa.\n\nSi sente il fruscio delle pagine e, ogni tanto, un colpo di tosse.\n\nA un tavolo, un vecchio con le dita nere d’inchiostro mormora una parola in una lingua che non è Aureo e non è dialetto. La candela sul suo tavolo cresce di un dito, e resta così.\n\nSu un leggio in fondo alla sala, aperto, un albero genealogico enorme, dipinto: rami, stemmi, nomi. In cima, l’aquila dei Duchi.",
+   "breve": "Le sale di lettura del Circolo dei Glossatori. La parola pretuziana che la realtà prende come un ordine; l’albero dei Duchi Pretutia con un ramo raschiato e riscritto dalla cancelleria dei Mazzarellus. Qui arriva l’Archivista Ponzio Tancredus.",
+   "gm": "I Glossatori pronunciano parole in Pretuziano Antico e la realtà obbedisce: non è magia arcana, niente gesti né componenti (Manuale).\nL’albero genealogico sul leggio è la copia «ufficiale», già corretta: il ramo che scendeva dall’ultimo Duca verso un erede diretto è stato raschiato e riscritto con l’inchiostro della cancelleria dei Mazzarellus. L’originale non corretto sta nella gabbia dei testi proibiti.\nPonzio Tancredus arriva qui quando Ermellina lo manda a chiamare: gira con un mazzo di chiavi e l’aria di chi ha appena nascosto qualcosa.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "parola",
+     "tipo": "dettaglio",
+     "titolo": "La parola del Glossatore",
+     "parte": "indizio",
+     "seme": "La candela sul suo tavolo cresce di un dito, e resta così.",
+     "innesco": "Qualcuno osserva il vecchio Glossatore o gli chiede cosa ha fatto.",
+     "leggi": "Il vecchio alza la testa, vi guarda come si guarda una mosca, e torna a leggere. La fiamma della sua candela è più ferma delle altre. Non trema quando passate.",
+     "prove": [
+      {
+       "id": "parola",
+       "abilita": [
+        "Arcano"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Un trucco di candele. Stoppino buono."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Non è un incantesimo: niente gesti, niente componenti. È Pretuziano Antico, e la realtà lo prende come un ordine."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "E non ha consumato niente: nessuno slot, nessuno sforzo. Ha solo detto alla candela come doveva essere. Vicarus sente la differenza nella pelle, come un prurito: la sua magia strappa, questa chiede."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "La parola era «resta». La stessa parola, detta al contrario, sta incisa sui blocchi sotto la Basilica."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che i Glossatori comandano con le parole, e che la cosa funziona in modo diverso dalla magia che conoscono.",
+     "rilancio": "Il vecchio gira pagina. Che cosa fate?",
+     "daqui": [
+      "genealogie",
+      "ponzio"
+     ]
+    },
+    {
+     "id": "genealogie",
+     "tipo": "dettaglio",
+     "titolo": "L’albero dei Duchi",
+     "parte": "indizio",
+     "seme": "un albero genealogico enorme, dipinto",
+     "innesco": "Qualcuno studia l’albero genealogico.",
+     "leggi": "Rami dorati, rami d’inchiostro, stemmi piccoli come unghie. Pretutia, Pretutia, Pretutia, per secoli. In basso a destra, l’ultimo Duca. Sotto di lui, niente. Accanto, un ramo laterale che scende fino ai Mazzarellus.",
+     "prove": [
+      {
+       "id": "genealogie",
+       "abilita": [
+        "Storia",
+        "Indagare"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Alberi genealogici infiniti. Troppi Pretutia, tutti uguali."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Sotto l’ultimo Duca la pergamena è stata raschiata e ridipinta. La mano è recente, l’inchiostro è quello della cancelleria dei Mazzarellus. Il ramo dei Mazzarellus, invece, è stato allungato verso l’alto."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Sotto la raschiatura, controluce, si intravede l’inizio di un ramo che scendeva: due lettere, «Ar». Il resto non c’è più, qui."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Ai margini dell’albero, piccolissima, una nota di un’altra mano: «L’originale è sotto. — C.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che l’albero ufficiale è stato corretto dai Mazzarellus; con 20 che il ramo raschiato cominciava con «Ar»; col 20 naturale che l’originale è nei piani di sotto.",
+     "rilancio": "Dietro di voi, un mazzo di chiavi tintinna. Che cosa fate?",
+     "daqui": [
+      "ponzio"
+     ]
+    },
+    {
+     "id": "ponzio",
+     "tipo": "dialogo",
+     "titolo": "L’Archivista Ponzio Tancredus",
+     "parte": "evento",
+     "innesco": "Ponzio arriva (chiamato da Ermellina, o perché ha visto la Crociata guardare l’albero).",
+     "leggi": "Un uomo magro, sulla sessantina, vestito di nero buono, con un mazzo di chiavi alla cintura e le dita macchiate d’inchiostro. Si pulisce le dita col fazzoletto mentre vi parla, una per una.\n\n«Qui si ricorda. Ricordare non è parlare.» Un sorriso che non arriva agli occhi. «Cosa volete ricordare, voi?»",
+     "note": "CHI SIETE? — «Ponzio Tancredus. Archivista di Casa Tancredus, e seggio nel Consiglio Reggente, per mia sfortuna.»\n\nL’ALBERO RASCHIATO? — Si irrigidisce. «I Mazzarellus hanno chiesto di correggere un errore di copista.» Mente (Intuizione CD 13). Se lo incalzano: «Non qui. Le sale hanno orecchie, e alcune orecchie hanno un mandato.» Indica l’anticamera dell’inquisitore.\n\nSILVANUS? — Il fazzoletto si ferma. «Non conosco questo nome.» Lo conosce. È il segreto della sua Casa: sanno che i Mazzarellus sono un ramo cadetto e che il vero erede è vivo, e tacciono per terrore. Se i PG gli fanno capire che lo sanno già (il sangue a Julia Nova, i verbali, l’albero), crolla: «Allora non sono io a dirlo. Ricordatevelo: non sono io.»\n\nIL MAGISTER CAELINUS? — «Mio zio. Il più grande studioso di Ea, e l’uomo più pericoloso che conosca. Per sé stesso.» Decide lui chi scende. Vedi il cancello.\n\nL’INQUISITORE? — «Vuole i piani di sotto. Ha un sigillo solo, quello di Impalox. Io lo tengo in anticamera finché la carta non ne ha tre.» Ha paura che arrivino gli altri due.\n\nIL CONSIGLIO / IL VOSTRO VOTO? — «Io mi astengo. Sempre. Chi si astiene non sbaglia mai.» Si può girare solo in privato, facendogli capire che la Crociata non esporrà la sua Casa.\n\nLA SIGNORA DA JULIA NOVA? — Si pulisce le dita più forte. «Non la conosco.» Intuizione CD 15: ne ha il terrore. Iuvenza lo ricatta (lore: sa ciò che sanno i Tancredus e lo usa). Se è lui l’incappucciato (proposta, vedi il Palazzo), questo è il momento in cui è più vicino a confessare: «Voi non sapete cosa vuol dire avere una Casa da salvare e un solo modo per farlo.»\n\nSE LO MINACCIANO — Chiama i Glossatori con un cenno. Una parola, e il cancello della scala non si apre più per nessuno.\n\nSE GLI MENTONO — Intuizione passiva 14. Non lo dice: vi manda giù lo stesso, ma avvisa lo zio.\n\nBattute pronte:\n• «Qui si ricorda. Ricordare non è parlare.»\n• «Io non vi ho mai visti.»\n• «Ogni pagina che si legge è una pagina che qualcuno vuole bruciare.»",
+     "dopo": "Sanno che Ponzio conosce il segreto della linea ducale e ha paura di Iuvenza e dell’inquisitore. Decide lui se scendono dal Magister.",
+     "rilancio": "Ponzio infila il fazzoletto nella manica. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano la sala.",
+     "dopo": "Il cancello della scala è in fondo alla sala. L’ala senza tetto si apre sul lato nord. L’inquisitore aspetta in anticamera.",
+     "rilancio": "La candela del Glossatore non trema. Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_cancello",
+      "te_biblioteca_ala",
+      "te_biblioteca_inquisitore"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_ala",
+   "kind": "dettaglio",
+   "title": "L’ala senza tetto",
+   "image": "PDI — Biblioteca Incompiuta — L’ala senza tetto.jpg",
+   "legacyPosition": {
+    "x": 250,
+    "y": 170
+   },
+   "text": "Una porta alta, e dietro il cielo.\n\nUn’ala intera del palazzo non ha il tetto. Le finestre sono vuote. Sul pavimento a mosaico cresce l’erba, e nelle pozze si specchiano le impalcature.\n\nSulle pareti, affreschi mezzo lavati dalla pioggia: montagne, un gigante che dorme su un fianco con la testa fra le nuvole, due lune in cielo. E un sole senza volto.\n\nIn un angolo il pavimento non c’è più. Si è aperto un buco largo come un carro. Sul bordo, una transenna di legno e un cartello con una sola parola: «No».",
+   "breve": "L’ala mai finita della Biblioteca. Gli affreschi sono più vecchi della lancia e dello scudo; il buco nel pavimento mostra, sei metri sotto, una strada lastricata della Città Sepolta: è per questo che il cantiere si è fermato.",
+   "gm": "Da decidere: perché la Biblioteca è «incompiuta». Il canone non lo dice. Proposta (della voce della Biblioteca): il cantiere si fermò quando gli scavi delle fondamenta toccarono la Città Sepolta — qui il pavimento ha ceduto e si vede una strada di Interamnia Pretutiana.\nIl buco è un accesso alla Città Sepolta (scena a parte). Scendere: 6 m di corda. I Tancredus lo tengono chiuso con la transenna e con una parola dei Glossatori che fa scivolare le corde (Atletica CD 15 per scendere comunque).\nGli affreschi mostrano la cosmologia vera (Segreti del DM): il Gigante, due lune, un sole senza forma umana.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "affreschi",
+     "tipo": "dettaglio",
+     "titolo": "Il gigante e le due lune",
+     "parte": "indizio",
+     "seme": "E un sole senza volto.",
+     "innesco": "Qualcuno studia gli affreschi.",
+     "leggi": "Il gigante dorme su un fianco, le mani sotto la guancia come un bambino. Sopra di lui tre cerchi in fila: un sole in mezzo, senza occhi né bocca, solo raggi; ai lati due lune, una d’argento e una scura. Nessuno dei tre è più grande degli altri.",
+     "prove": [
+      {
+       "id": "affreschi",
+       "abilita": [
+        "Religione",
+        "Storia"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Vecchie pitture rovinate dalla pioggia."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Il gigante che dorme, le due lune, e un sole che non ha volto: un’immagine più vecchia della lancia e dello scudo, di prima del Concilio del 1247."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "I tre cerchi hanno la stessa grandezza. Nessuno sopra gli altri. È la stessa disposizione del trono ducale scalpellato, dei mosaici vecchi della Basilica, dell’armatura di Alessandros."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Sotto il gigante, sbiadita, una riga in Pretuziano. Donna Ermellina, se gliela ricopiate, la legge senza pensarci: «Tre voci nel cielo, nessuna più alta delle altre.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che l’immagine antica mette sole e lune alla pari. Con il 20 naturale hanno il verso del Cantico del Gigante Dormiente.",
+     "rilancio": "Una cicogna si alza dall’impalcatura. Che cosa fate?",
+     "daqui": [
+      "buco"
+     ]
+    },
+    {
+     "id": "buco",
+     "tipo": "dettaglio",
+     "titolo": "Il buco nel pavimento",
+     "parte": "indizio",
+     "seme": "un cartello con una sola parola: «No»",
+     "innesco": "Qualcuno si affaccia al buco.",
+     "leggi": "Sei metri sotto, nella penombra, una strada lastricata di pietre grigie, con il solco dei carri. Un gradino. La base di una colonna. Un’acqua scura che scorre in una canaletta.",
+     "prove": [
+      {
+       "id": "buco",
+       "abilita": [
+        "Percezione",
+        "Storia"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Una cantina crollata. Acqua e sassi."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Non è una cantina: è una strada. Una strada intera, sotto la città. La Città Sepolta, Interamnia Pretutiana. Il cantiere si è fermato qui."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Sulla strada, nel fango, orme fresche e il segno di una lanterna posata. Qualcuno passa di lì sotto, e ha guardato su."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che sotto la Biblioteca corre una strada della Città Sepolta, e che qualcuno la usa. È un accesso alla Città Sepolta.",
+     "rilancio": "Dal buco sale odore d’acqua e di ferro. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano l’ala.",
+     "dopo": "Si torna alla sala di lettura. Il buco porta alla Città Sepolta (altra scena).",
+     "rilancio": "Il cielo, sopra, comincia a scurire. Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_sala",
+      "te_biblioteca_cancello"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_inquisitore",
+   "kind": "scena",
+   "title": "L’inquisitore in anticamera",
+   "image": "PDI — Biblioteca Incompiuta — L’inquisitore in anticamera.jpg",
+   "legacyPosition": {
+    "x": 720,
+    "y": 930
+   },
+   "text": "Una stanza stretta, con una panca sola.\n\nSulla panca è seduto un uomo magro vestito di nero e oro, la schiena dritta come un palo. Tiene sulle ginocchia una pergamena arrotolata, con un sigillo rosso che mostra una fiamma.\n\nDietro di lui, in piedi, quattro uomini armati con la sopravveste nera e il sole d’oro sul petto. Non si appoggiano al muro. Non parlano.\n\nL’uomo magro vi guarda entrare. Non si alza.\n\n«Aspetto dall’alba», dice. «Posso aspettare anche voi.»",
+   "breve": "L’Inquisitore Bonifatius Caldora, con un mandato dell’Arcimandrita, vuole ispezionare gli archivi sotterranei. I Tancredus lo tengono in anticamera perché il mandato ha un sigillo solo. Se la Crociata è sotto quando la pazienza finisce, l’ispezione diventa uno scontro.",
+   "gm": "Bonifatius Caldora (vedi scheda) è il braccio di Impalox per le «ispezioni». Il mandato ha solo il sigillo di Casa Impalox: per entrare in un archivio di una Casata ne servono tre (proposta, come per gli atti della Cancelleria). Aspetta che arrivino gli altri due: se ne ottiene due (Clavax no; Mazzarellus o Mellitius forse), entra.\nVuole: il manoscritto delle annotazioni di Caelinus al Canto (il segreto più pericoloso di Caelinus), e qualunque prova di eresia contro il Magister. Se vede la Crociata, aggiunge i loro nomi.\nDa decidere: quando l’ispezione scatta (proposta: il secondo giorno di Crociata in città, oppure subito se la Crociata va in Basilica e Impalox li sa qui).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con l’Inquisitore",
+     "parte": "evento",
+     "innesco": "Qualcuno gli rivolge la parola.",
+     "leggi": "«Bonifatius Caldora. Inquisitore della Basilica Aurea.» Tocca la pergamena. «Ho un mandato. Loro hanno una porta. Vediamo chi si stanca prima.»",
+     "note": "COSA CERCATE? — «Libri. Libri che non dovrebbero esistere, scritti da un uomo che non dovrebbe scriverli.» Non dice il nome: lo sanno tutti.\n\nIL MANDATO È VALIDO? — «È firmato dall’Arcimandrita.» Se gli fanno notare che serve il sigillo di tre Casate: le labbra si stringono. «Arriveranno.»\n\nVOI CHI SIETE PER NOI? — «Nessuno. Per ora.» Se hanno nomi nel libretto della Basilica: «Ah. Voi siete già qualcuno.»\n\nIL MAGISTER? — «Un vecchio che scrive note a margine della parola di Valerus. Un uomo che corregge il Canto corregge il Sole.» È un fanatico, non come Impalox: ci crede.\n\nL’ARCIMANDRITA? — «Mi ha mandato. Basta.» Se gli dicono che Impalox è un cinico che usa la fede: si irrigidisce, e per un istante ci pensa. Non lo ammetterà mai.\n\nSE LO CORROMPONO — Offesa mortale. Scrive il nome e la cifra offerta.\n\nSE LO MINACCIANO — I quattro militi fanno un passo avanti. «Alzare la mano su un inquisitore in un archivio di eretici. Scrivetelo voi, per favore: io ho le mani occupate.»\n\nBattute pronte:\n• «Aspetto dall’alba.»\n• «Il dubbio uccide. Io sono qui per risparmiarvi la morte.»\n• «Ogni libro ha un fuoco che lo aspetta.»",
+     "dopo": "Sanno che l’inquisitore aspetta altri due sigilli per entrare e che vuole il manoscritto di Caelinus.",
+     "rilancio": "Bonifatius torna a guardare la porta. Che cosa fate?",
+     "daqui": [
+      "mandato",
+      "ispezione"
+     ]
+    },
+    {
+     "id": "mandato",
+     "tipo": "dettaglio",
+     "titolo": "Il mandato con un sigillo",
+     "parte": "indizio",
+     "seme": "con un sigillo rosso che mostra una fiamma",
+     "innesco": "Qualcuno chiede di vedere il mandato, o lo legge di sfuggita.",
+     "leggi": "La pergamena è scritta bene, con le formule giuste. In fondo, un sigillo solo, rosso, con la fiamma. Accanto, due spazi vuoti.",
+     "prove": [
+      {
+       "id": "mandato",
+       "abilita": [
+        "Indagare",
+        "Storia"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Un mandato della Chiesa. Sembra in regola."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Per un archivio di Casata ci vogliono tre sigilli. Con uno solo, entrare è un abuso, e i Tancredus possono tenerlo fuori finché vogliono."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "E manca una cosa: la lampada azzurra. Il sigillo non ha il segno d’autenticità della Cancelleria. Questo mandato non è mai passato dal Palazzo: vale quanto un biglietto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il mandato non basta. Possono dirlo a Ponzio (che si rinfranca) o all’inquisitore (che se la lega al dito).",
+     "rilancio": "Bonifatius riavvolge la pergamena. Che cosa fate?",
+     "daqui": [
+      "ispezione"
+     ]
+    },
+    {
+     "id": "ispezione",
+     "tipo": "scontro",
+     "titolo": "Scontro — l’ispezione",
+     "parte": "evento",
+     "innesco": "L’inquisitore perde la pazienza (o arrivano gli altri sigilli) mentre i PG sono nei piani di sotto; oppure i PG lo attaccano.",
+     "leggi": "Un colpo sordo, sopra. Poi un altro. Poi la voce di Ponzio, alta, spezzata: «Non potete!»\n\nPassi di ferro sulla scala a chiocciola. Una luce che scende.\n\n«In nome della Fiamma e dell’Arcimandrita!» La voce di Bonifatius rimbomba nel corridoio dei sigilli. «Nessuno tocchi un foglio!»",
+     "note": "Dal Bestiario: 1 «Inquisitore della Basilica» (Bonifatius) e 5 «Milite della Fiamma» (Guerriero Veterano). Difficoltà moderata per 6 PG di livello 5 (3.950 PE).\nDove: nel corridoio dei sigilli (vedi trappola: le torce dei militi si spengono al primo round; chi non ha scurovisione combatte al buio, salvo luce magica). I militi portano lanterne schermate: si spengono comunque.\nAlternative allo scontro: i Glossatori pronunciano una parola e il cancello si chiude alle spalle dei militi (se Ponzio o Caelinus lo chiedono); la Crociata convince Bonifatius che il mandato non vale (se hanno il modulo «mandato»: Persuasione CD 15, e i militi esitano); Caelinus gli parla (vedi lo studio). Uccidere un inquisitore è la guerra con Impalox.\nTattica: Bonifatius vuole il manoscritto, non i PG. I militi fanno muro; lui va verso lo studio.",
+     "dopo": "Se lo fermano senza ucciderlo, Impalox ha un motivo in più per odiarli e i Tancredus un debito con la Crociata. Se lo uccidono, la Crociata è eretica per la Basilica.",
+     "rilancio": "Le lanterne dei militi si spengono una dopo l’altra nel corridoio. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 3950
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano l’anticamera.",
+     "dopo": "Il cancello della scala è in fondo alla sala di lettura.",
+     "rilancio": "Dietro di voi, l’inquisitore riprende ad aspettare. Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_cancello",
+      "te_biblioteca_sala"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_cancello",
+   "kind": "porta",
+   "title": "Il cancello della scala",
+   "image": "PDI — Biblioteca Incompiuta — Il cancello della scala.jpg",
+   "legacyPosition": {
+    "x": 760,
+    "y": 520
+   },
+   "text": "In fondo alla sala di lettura, un cancello di ferro battuto a volute chiude una scala a chiocciola che scende.\n\nDalla scala sale aria secca. Per niente umida, per niente fredda: l’aria di una soffitta d’estate, sotto terra.\n\nDavanti al cancello, due Glossatori. Non sono armati. Uno dei due tiene le labbra socchiuse, come chi ha una parola pronta.\n\nIl cancello non ha serratura.",
+   "breve": "Il cancello dei piani sotterranei (gli archivi del Collegio Arcano). Non ha serratura: lo apre e lo chiude una parola dei Glossatori. Decide Ponzio, o il Magister stesso se sa chi c’è di sopra.",
+   "gm": "Il cancello obbedisce al Pretuziano Antico: «apri» e «resta chiuso». Forzarlo è inutile (Atletica CD 25; e si richiude). Dissolvi magie non funziona: non è un incantesimo.\nCome si passa: Ponzio li accompagna (Persuasione CD 16, dalla voce della Biblioteca; vantaggio se hanno mostrato di sapere già il segreto della linea ducale, o se chiedono di Caelinus per conto di Silvanus, o se dicono che l’inquisitore sta per avere i sigilli); Caelinus li fa chiamare (se Ermellina gli manda a dire che c’è un Cerullius con un’armatura strana: proposta).\nDa decidere: che Caelinus sappia già dell’armatura di Alessandros (voci da Julia Nova) e voglia vederla.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "ammissione",
+     "tipo": "dettaglio",
+     "titolo": "Farsi ammettere di sotto",
+     "parte": "evento",
+     "innesco": "I PG chiedono di scendere.",
+     "leggi": "Ponzio guarda il cancello, poi voi, poi di nuovo il cancello. «Là sotto c’è mio zio. E c’è tutto quello che questa città vorrebbe dimenticare.» Gira le chiavi fra le dita, anche se il cancello non ne ha bisogno. «Perché dovrei farvi scendere?»",
+     "prove": [
+      {
+       "id": "ammissione",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 16,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 15,
+         "leggi": "«Non oggi.» Ponzio fa un cenno, e il Glossatore dice la parola. Il cancello fa un suono di campana, bassa. Chiuso."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 20,
+         "leggi": "Ponzio vi accompagna di persona fino al primo pianerottolo, e vi lascia con una frase: «Lui vi riceverà. Io non vi ho mai visti.»"
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 21,
+         "leggi": "Ponzio vi accompagna e, sul primo pianerottolo, vi dà una tessera d’ottone forata. «Tenetela in mano nel corridoio. I sigilli vi lasceranno passare.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Dal basso della scala sale una voce vecchia, secca, senza fretta: «Ponzio. Falli scendere. Ho sentito l’armatura.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 16 o più scendono; con 21 hanno la tessera che li protegge dai sigilli.",
+     "rilancio": "Il Glossatore dice la parola. Il cancello si apre senza toccarlo. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 300,
+     "bottino": [
+      {
+       "n": "Tessera di passo d’ottone",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0,
+       "valore": "—",
+       "stats": "Missione",
+       "desc": "Una tessera forata con un segno pretuziano: chi la tiene in mano passa il corridoio dei sigilli senza danno. Va restituita all’Archivista.",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando scendono.",
+     "leggi": "Tre giri di scala. Poi altri tre. Poi altri tre. L’aria si asciuga a ogni gradino: le labbra si seccano, la pelle tira.\n\nIn fondo, un corridoio. Sulle pareti, cerchi scolpiti che brillano appena, color miele.",
+     "dopo": "Si arriva al corridoio dei sigilli.",
+     "rilancio": "Le torce, qui sotto, cominciano a farsi piccole. Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_sigilli"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_sigilli",
+   "kind": "trappola",
+   "title": "Il corridoio dei sigilli",
+   "image": "PDI — Biblioteca Incompiuta — Il corridoio dei sigilli.jpg",
+   "legacyPosition": {
+    "x": 1060,
+    "y": 320
+   },
+   "text": "Un corridoio lungo, a volta, perfettamente asciutto. Non c’è un filo di muffa, non una goccia. La polvere sta ferma nell’aria, come appesa.\n\nSulle due pareti, a intervalli regolari, cerchi di pietra scolpiti, larghi come scudi. Dentro ogni cerchio un intreccio di segni. Brillano appena, color miele.\n\nLe fiamme delle torce si abbassano. Si fanno piccole. Si piegano verso i cerchi.\n\nNelle nicchie fra un cerchio e l’altro, astucci di cuoio sigillati, a centinaia.\n\nLa gola vi si secca in pochi passi.",
+   "breve": "I sigilli di preservazione che tengono l’umidità lontana dai documenti degli archivi. Bevono l’acqua da tutto: dall’aria, dalle torce, dagli otri, dai corpi. Chi passa senza la parola dei Glossatori o una tessera si prosciuga.",
+   "gm": "I sigilli di preservazione (Segreti del DM: le stanze di Caelinus sono protette da sigilli di preservazione che tengono l’umidità lontana dai documenti). Qui sono stati fatti forti apposta: sono anche la difesa degli archivi.\nEffetti (proposta di regola): le fiamme libere si spengono in 1 round (luce magica e scurovisione funzionano). Gli otri perdono metà dell’acqua. Chi resta nel corridoio o negli archivi senza la tessera d’ottone o la parola di un Glossatore fa un TS Costituzione CD 12 ogni 10 minuti: se fallisce, 1 livello di Indebolimento, che se ne va bevendo e con un riposo breve fuori da qui. Chi lancia un incantesimo di fuoco qui dentro: i cerchi si accendono e l’incantesimo esce con metà del danno (i sigilli si bevono anche il fuoco).\nCaelinus vive qui sotto da mesi: beve continuamente da una brocca, e i sigilli per lui sono tarati. Per questo non sale.",
+   "nota": {
+    "cd": 12
+   },
+   "moduli": [
+    {
+     "id": "sigilli",
+     "tipo": "dettaglio",
+     "titolo": "I cerchi color miele",
+     "parte": "indizio",
+     "seme": "Brillano appena, color miele.",
+     "innesco": "Qualcuno esamina i cerchi, o si accorge che la torcia si sta spegnendo.",
+     "leggi": "Da vicino, i segni nei cerchi non sono lettere: sono gocce, disegnate una dentro l’altra, sempre più piccole, fino a un punto. Quando ci passate accanto, il cerchio si illumina un poco di più. Come chi beve.",
+     "prove": [
+      {
+       "id": "sigilli",
+       "abilita": [
+        "Arcano"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Decorazioni. Un po’ di magia di luce, forse."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Sono sigilli di preservazione: tolgono l’umidità a tutto quello che hanno intorno, per proteggere la carta. Tutto. Anche voi."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Sono tarati per la carta, non per la carne: chi ha una tessera dei Glossatori o sente la parola giusta viene lasciato stare. Chi non ce l’ha, viene bevuto piano."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Non sono arcani: sono parole pretuziane scolpite invece che dette. Una parola sola, ripetuta cento volte: «resta». Detta a voce alta da chi la conosce, i cerchi vi riconoscono."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno cosa fanno i sigilli e come si passa: la tessera, un Glossatore, o in fretta.",
+     "rilancio": "La vostra torcia è ridotta a una brace. Che cosa fate?",
+     "daqui": [
+      "passare"
+     ]
+    },
+    {
+     "id": "passare",
+     "tipo": "dettaglio",
+     "titolo": "Attraversare il corridoio",
+     "parte": "evento",
+     "innesco": "I PG attraversano il corridoio o restano negli archivi senza protezione.",
+     "leggi": "Ogni passo, la pelle tira di più. Le labbra si spaccano. Gli occhi bruciano. Qualcuno tossisce, e la tosse non ha saliva.",
+     "note": "Senza protezione: TS Costituzione CD 12 per ciascuno ogni 10 minuti negli archivi (il corridoio si attraversa in un minuto: un TS solo). Fallimento: 1 livello di Indebolimento. Con la tessera d’ottone o con un Glossatore o Caelinus accanto: nessun TS.\nNessun modo sicuro di spegnere i sigilli: distruggerne uno (CA 17, 30 PF) fa marcire in una notte gli astucci più vicini, e Caelinus non lo perdonerà.",
+     "prove": [
+      {
+       "id": "passare",
+       "abilita": [
+        "Costituzione"
+       ],
+       "cd": 12,
+       "gruppo": "tutti",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 6,
+         "leggi": "La pelle delle mani vi si spacca fino a sanguinare, e il sangue secca prima di cadere. Un livello di Indebolimento, e svantaggio sulla Rapidità di mano fino al prossimo riposo lungo."
+        },
+        {
+         "fascia": "failure",
+         "min": 7,
+         "max": 11,
+         "leggi": "Un livello di Indebolimento. La testa gira, le mani tremano: vi serve acqua e un riposo fuori di qui."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Arrivate in fondo con la gola che brucia, ma in piedi."
+        }
+       ]
+      }
+     ],
+     "dopo": "Chi ha fallito ha un livello di Indebolimento. Da qui: la gabbia dei testi proibiti a nord, lo studio del Magister a sud.",
+     "rilancio": "In fondo al corridoio, due porte e una luce d’olio. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 200
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando escono dal corridoio.",
+     "dopo": "A nord la gabbia dei testi proibiti, a sud lo studio del Magister (da cui viene la luce).",
+     "rilancio": "Da sud, una voce vecchia: «Chiudete la bocca quando respirate. Qui sotto l’aria si beve.» Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_studio",
+      "te_biblioteca_proibiti"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_proibiti",
+   "kind": "stanza",
+   "title": "La gabbia dei testi proibiti",
+   "image": "PDI — Biblioteca Incompiuta — La gabbia dei testi proibiti.jpg",
+   "legacyPosition": {
+    "x": 1300,
+    "y": 160
+   },
+   "text": "Una stanza chiusa da una gabbia di ferro, dal pavimento alla volta. Dentro, libri incatenati ai leggii, come cani.\n\nSotto campane di vetro, frammenti di pergamena così vecchi che sembrano foglie secche. Uno è bruciato ai bordi.\n\nDalla volta pende un rotolo enorme, srotolato fino a terra: un altro albero genealogico. Questo non è stato raschiato.\n\nSulla porta della gabbia, un lucchetto grande come un pugno. E un cartiglio inchiodato, scritto a mano: «Qui si legge in piedi».",
+   "breve": "La prigione dei testi che la Chiesa vorrebbe bruciare: i frammenti di Solaria Prima sulla vera forma di Valerus, il Canto integrale, il Cantico del Gigante Dormiente, e l’albero dei Duchi originale, non corretto, con il ramo che scende fino a un erede vivo.",
+   "gm": "La chiave del lucchetto l’ha Caelinus (al collo) e una Ponzio. Scassinare: Strumenti da scasso CD 17; ma i libri sono incatenati, e portarne fuori uno è un furto alla Casa più potente sugli archivi.\nCosa c’è: (1) i frammenti di Solaria Prima che chiamano Valerus «la Nota», «il Calore», «il Primo Respiro» (Segreti del DM); (2) il Canto della Fiamma Eterna nell’edizione di Solaria Vetus, con la profezia finale (Segreti del DM, cronologia delle alterazioni); (3) il Cantico del Gigante Dormiente in Pretuziano («tre voci nel cielo, nessuna più alta delle altre»); (4) l’albero genealogico originale dei Duchi Pretutia: il ramo che i Mazzarellus hanno raschiato altrove qui scende intatto fino al nome «Ardentus». È la prova del segreto dei Tancredus.\nISTRUZIONE DEL MASTER (Segreti del DM): la profezia finale del Canto descrive letteralmente il climax della campagna. Se la leggono, lasciala leggere; non collegarla mai per loro, nemmeno se ci arrivano a metà.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "frammenti",
+     "tipo": "dettaglio",
+     "titolo": "I frammenti sotto il vetro",
+     "parte": "indizio",
+     "seme": "Uno è bruciato ai bordi.",
+     "innesco": "Qualcuno legge i frammenti sotto le campane di vetro (servono Caelinus, o la chiave, o l’Aureo Antico e molta pazienza).",
+     "leggi": "Aureo antichissimo, lettere senza spazi. Un inno. Parla del Sole, ma non dice mai «re», né «lancia», né «scudo». Dice altre parole.",
+     "prove": [
+      {
+       "id": "frammenti",
+       "abilita": [
+        "Religione",
+        "Storia"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Un inno al Sole. Vecchio. Difficile."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Il Sole ha tre nomi, e nessuno è un nome di persona: «la Nota», «il Calore», «il Primo Respiro». Non ha forma umana. Il re guerriero è venuto dopo."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Accanto ai tre nomi del Sole, in un frammento più piccolo, altri due nomi, uguali per grandezza e per onore: la Luna che nutre e la Luna che trasforma."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno dai testi antichi che Valerus non aveva forma umana, e che le due Lune stavano alla pari con lui.",
+     "rilancio": "Il vetro si appanna del vostro fiato secco. Che cosa fate?",
+     "daqui": [
+      "albero",
+      "canto"
+     ]
+    },
+    {
+     "id": "albero",
+     "tipo": "dettaglio",
+     "titolo": "L’albero che non è stato raschiato",
+     "parte": "indizio",
+     "seme": "Questo non è stato raschiato.",
+     "innesco": "Qualcuno studia il grande rotolo genealogico.",
+     "leggi": "Lo stesso albero della sala di sopra, ramo per ramo, stemma per stemma. Ma qui, sotto l’ultimo Duca, il ramo continua. Scende in un angolo, fra nomi che non conoscete, e si ferma su un nome scritto più piccolo degli altri, con un inchiostro più nuovo.",
+     "prove": [
+      {
+       "id": "albero",
+       "abilita": [
+        "Storia",
+        "Indagare"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Nomi, nomi, nomi. Il ramo si perde fra le pieghe del rotolo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Il ramo che i Mazzarellus hanno raschiato di sopra qui è intatto: la linea diretta dei Duchi non si è estinta. E i Mazzarellus, qui, sono un ramo cadetto, laterale, lontano."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "L’ultimo nome del ramo è «Ardentus». Accanto, a margine, una nota di mano vecchia: «Vivo. Non scrivere dove.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Sotto la nota, altre due parole, cancellate e poi riscritte, come chi ha avuto paura e poi si è vergognato della paura: «Sangue d’oro.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Hanno visto la prova che la linea ducale diretta non si è estinta e che scende fino ad «Ardentus»: il nome di Silvanus. È il segreto dei Tancredus e il ricatto di Iuvenza.",
+     "rilancio": "Il rotolo ondeggia appena, senza vento. Che cosa fate?",
+     "daqui": [
+      "canto"
+     ],
+     "pe": 600
+    },
+    {
+     "id": "canto",
+     "tipo": "dettaglio",
+     "titolo": "Il Canto intero",
+     "parte": "nascosto",
+     "innesco": "Qualcuno cerca, fra i libri incatenati, il Canto della Fiamma Eterna.",
+     "leggi": "Un volume grosso, rilegato in cuoio rosso, con la catena più corta di tutte. Sul dorso: «Edizione di Solaria Vetus». L’ultima pagina è segnata con un nastro nero.",
+     "note": "È il Canto con la profezia finale (la versione trascritta nei Segreti del DM). Fai leggere il testo così com’è, senza commenti. NON collegare mai la profezia alla campagna per loro (istruzione fondamentale dei Segreti del DM). Se chiedono a Caelinus cosa significa, lui chiude l’occhio buono e dice: «Significa quello che dice. È il problema dei testi sacri.»",
+     "dopo": "Hanno letto la profezia nella versione non tagliata. Nessuna spiegazione.",
+     "rilancio": "Il nastro nero vi resta fra le dita. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano la gabbia.",
+     "dopo": "Lo studio del Magister è in fondo al corridoio, a sud.",
+     "rilancio": "Dal corridoio, la luce d’olio dello studio. Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_studio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_biblioteca_studio",
+   "kind": "persona",
+   "title": "Lo studio del Magister",
+   "image": "PDI — Biblioteca Incompiuta — Lo studio del Magister.jpg",
+   "legacyPosition": {
+    "x": 1160,
+    "y": 820
+   },
+   "text": "Una stanza bassa, piena fino al soffitto. Pergamene in pile, codici aperti uno sull’altro, calamai, penne spezzate. Una branda stretta, sfatta. Una lucerna d’olio sola, e una brocca d’acqua grande come un secchio.\n\nAlle pareti, nicchie sigillate, e in ogni nicchia un rotolo.\n\nSeduto al tavolo, un vecchio. Barba bianca di qualche giorno, un occhio chiuso da una cicatrice lucida che gli prende mezza guancia sinistra. L’altro occhio è grigio, e vi guarda tutti, uno per uno, senza fretta.\n\nHa un bastone di noce appoggiato alla gamba, con delle rune che non sono Aureo intagliate lungo tutto il legno.\n\nBeve un sorso d’acqua. Posa la tazza.\n\n«Siete in ritardo di duecento anni», dice. «Sedete dove trovate. Se trovate.»",
+   "breve": "Il Magister Caelinus Tancredus, settantotto anni, il più brillante studioso di Ea: stanco, amaro, parla per citazioni. Sa la verità sul Canto, su Valerus e sulle Lune; sa del segreto della sua Casa. Davanti all’armatura di Alessandros con le Due Lune potrebbe piangere. Qui si parla, si legge, e si esce con un alleato o un nemico di Impalox in più.",
+   "gm": "Caelinus (vedi scheda, e Segreti del DM, capitolo 1): vive tre piani sotto la strada negli archivi del Collegio Arcano, fra i sigilli di preservazione. Puzza d’inchiostro e di pergamena. Non sale da mesi. Impalox lo odia e ha provato tre volte a farlo espellere; Virellius ha un dossier di cento pagine su di lui ma non può toccarlo finché non pubblica.\nLe annotazioni al Canto: tre copie manoscritte — una qui, una negli archivi nanici di Magnafort, e una terza. Da decidere: la terza copia è l’handout che i PG hanno già («questa che avete tra le mani», dicono i Segreti del DM)? Se sì, Caelinus la riconosce subito dalla sua scrittura, e capisce che la sua eresia è in viaggio.\nCosa non deve fare mai: spiegare la profezia (istruzione dei Segreti del DM). Cosa può fare: leggere il Pretuziano (le iscrizioni della cripta), riconoscere l’armatura come pre-Concilio, confermare che il Sole e le Lune erano pari.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il Magister Caelinus",
+     "parte": "evento",
+     "innesco": "I PG gli parlano. Risponde piano, con citazioni, senza mai alzare la voce. Quando qualcuno dice una sciocchezza chiude l’occhio buono e aspetta che finisca.",
+     "leggi": "Caelinus appoggia le mani sul bastone. «Fate le domande una alla volta. Sono vecchio, ma non abbastanza da rispondere a due insieme.»",
+     "note": "CHI SIETE? — «Caelinus Tancredus. Magister, per il Collegio. Eretico, per la Basilica. Zio, per mio nipote Ponzio, che se ne vergogna.» Beve. «Un vecchio che legge, per tutti gli altri.»\n\nL’OCCHIO? — «Un esperimento, da giovane. Volevo vedere dentro una cosa.» Tocca la cicatrice. «Lei ha guardato dentro me. Pari.»\n\nPERCHÉ VIVETE QUAGGIÙ? — «Perché la carta ha bisogno di secco e io ho bisogno della carta. E perché a tre piani sotto la strada l’Arcimandrita deve scendere le scale per bruciarmi. Non gli piace fare le scale.»\n\nCHI ERA DAVVERO VALERUS? — «I frammenti di Solaria Prima lo chiamano la Nota, il Calore, il Primo Respiro. Nessuna faccia. Nessuna lancia.» Un sorriso secco. «Il re con lo scudo l’ha dipinto il Concilio di Solaria Vetus, nel 1247. Durante una guerra. Le guerre hanno bisogno di re, non di note.»\n\nE MAIA? — «Non la Grazia del Sole. Non un attributo. Una sovrana, co-creatrice, pari a lui.» Cita: «“Tre voci nel cielo, nessuna più alta delle altre.” Il Cantico del Gigante Dormiente. I Pretuziani lo cantavano quando qui c’erano ancora i lupi.»\n\nNOXTUA E I CELAMANTI? — Chiude l’occhio buono. «Il capitolo che mi costerà il rogo.» Lo riapre. «I Celamanti non sono nati malvagi. L’Impero ha chiuso i loro templi, ha bandito la loro magia, ha riso delle loro lune. Loro hanno risposto con la cosa più folle che si potesse fare. Due arroganze, figlioli. Non una luce e un’ombra: due arroganze.»\n\nPERCHÉ VALERUS TACE? — «I vecchi di montagna dicono: il Sole è tramortito. Ha perso una delle sue compagne, e brucia senza misura, come chi urla per non piangere.» Poi, piano: «Io non lo scrivo. Lo dicono loro.»\n\nI SIGILLI LUNARI? — «Sette. Pezzi di una dea morta, forgiati in armi durante la Guerra.» Guarda Mattheus. «Si possono spezzare. Io non lo farei. Un pezzo di dea spezzato è un pezzo di dea che nessuno potrà più rimettere a posto.» Non dice «purificare»: se i PG lo dicono loro, alza il sopracciglio buono. «Ah. Allora sapete più di quanto credete.»\n\nCOSA C’È SOTTO LA BASILICA? — Se gli portano le iscrizioni della cripta, le legge senza esitare: «“Qui il Gigante sogna col fianco. Chi apre il sonno, lo apra cantando.”» Poi: «Le cronache del vecchio duomo dicono che i difensori, nella Guerra, scesero sotto Santa Maria con qualcosa che brillava, e tornarono in pochi. Poi colarono il piombo. Poi costruirono l’oro sopra. La Chiesa lo chiama un monumento ai Martiri. Io lo chiamo un coperchio.»\n\nIL FILATTERIO / LA FORGIA DI ANNULLAMENTO — Conflitto di canone, non scelto: l’Atto IX dice «la forgia di annullamento sotto la Cattedrale Ducale di Teramum», ma non dice quale edificio sia. Se Giuseppe sceglie la vecchia Santa Maria (quindi sotto la Basilica): «Cattedrale Ducale era il titolo di Santa Maria, prima che la Basilica le rubasse anche quello.» Se sceglie un altro luogo: «Cattedrale Ducale? Ne ho contate tre, in quattro secoli. Portatemi l’anno in cui è stata scritta la vostra frase, e vi dico quale.» In ogni caso, al Filatterio: «Non apritelo. Chi ve l’ha affidato aveva ragione, chiunque fosse.»\n\nL’ARMATURA DI ALESSANDROS — Vedi il modulo dell’armatura.\n\nSILVANUS / LA LINEA DUCALE — Il segreto della sua Casa. Tace a lungo. «Ponzio vi ha detto di no.» Se i PG hanno visto l’albero nella gabbia, o se parlano per conto di Silvanus: «Sì. La linea non si è estinta. L’ho trovata io, sei anni fa, fra carte che nessuno leggeva. Ho scritto un nome e poi non ho scritto dove.» E, duro: «Mio nipote ha paura. Ha ragione ad averne. C’è qualcuno che lo sa, oltre a noi, e sa usarlo.» Non sa che Ponzio è ricattato (o se è l’incappucciato); lo sospetta, e non vuole saperlo.\n\nL’ARCIMANDRITA IMPALOX — «Serafinus non legge. Firma.» Una pausa. «Tre volte ha chiesto al Collegio di buttarmi fuori. Tre volte la mia Casa ha detto di no. Non per amore. Perché quello che so vale più di quello che costo.»\n\nVIRELLIUS — «Il Cardinale ha un dossier su di me di cento pagine. Me l’ha fatto sapere lui, con una lettera molto cortese.» Quasi sorride. «Lui almeno legge. È per questo che è più pericoloso.»\n\nLE ANNOTAZIONI / LE TRE COPIE — «Tre copie. Una qui.» Batte la mano su una pila. «Una a Magnafort, sotto la montagna dei nani, affidata a un amico che non sa leggere l’Aureo: così non la legge. La terza…» Se i PG ce l’hanno, la riconosce: «…la terza è quella. Vedo che viaggia.»\n\nPERCHÉ NON PUBBLICATE? — «Un libro pubblicato è un rogo con la data.» Poi: «E perché non ho finito. Non si finisce mai di avere torto.»\n\nLA PROFEZIA DEL CANTO — Qualunque domanda sulla profezia, e su cosa significhi per loro: chiude l’occhio buono. «Significa quello che dice. È il problema dei testi sacri.» Cambia argomento. Non spiegarla mai (istruzione dei Segreti del DM).\n\nCOSA VOLETE DA NOI? — «Che restiate vivi abbastanza da tornare a raccontarmi cosa avete visto. E che l’inquisitore di sopra non scenda. In quest’ordine, se possibile.»\n\nSE LO MINACCIANO — Non si muove. «Ho settantotto anni, un occhio e un bastone. Fatelo in fretta: ho da leggere.» Se lo toccano, i sigilli si accendono tutti insieme (vedi il corridoio): i PG fanno subito un TS Costituzione CD 14.\n\nSE LO CORROMPONO — «Con cosa? Io voglio solo tempo. Voi ne avete da vendere?» Accetta libri. Solo libri.\n\nSE GLI MENTONO — Chiude l’occhio buono e aspetta. Quando lo riapre: «Riprovate. Questa volta con la cosa vera.»\n\nBattute pronte:\n• «La Chiesa brucia i libri perché non sa leggerli.»\n• «Siete in ritardo di duecento anni.»\n• «Un libro pubblicato è un rogo con la data.»\n• «Non si finisce mai di avere torto.»\n• «Chiudete la bocca quando respirate. Qui sotto l’aria si beve.»",
+     "dopo": "Dopo la conversazione sanno la verità sul Valerus senza forma, su Maia pari al Sole, sui Celamanti come reazione all’Impero, sul coperchio sotto la Basilica e, se se lo sono guadagnato, sul segreto della linea ducale.",
+     "rilancio": "Caelinus beve un sorso d’acqua e aspetta la domanda successiva. Che cosa fate?",
+     "daqui": [
+      "armatura",
+      "iscrizioni",
+      "annotazioni"
+     ]
+    },
+    {
+     "id": "armatura",
+     "tipo": "dettaglio",
+     "titolo": "L’armatura delle Due Lune",
+     "parte": "evento",
+     "innesco": "Alessandros mostra l’armatura, o Caelinus la chiede («Ho sentito l’armatura»).",
+     "leggi": "Caelinus si alza, piano, appoggiato al bastone. Si avvicina all’armatura e la guarda con l’occhio buono, da vicino, come si guarda un volto che non si vedeva da anni.\n\nPassa le dita sul sole inciso sul petto. Poi ai lati del sole, dove la luce della lucerna non arriva.\n\nNon dice niente per molto tempo.\n\nPoi vi accorgete che sta piangendo. Senza rumore. Solo dall’occhio che vede.",
+     "note": "Se l’armatura non mostra le lune (qui sotto non c’è luce lunare), Caelinus le trova lo stesso al tatto: le effigi sono sotto il sole, incise più fini. Arcano o Religione CD 13 per capire cosa dice lui dopo.\nCosa dice: «Pre-Concilio. Prima del 1247. Chi l’ha forgiata metteva il Sole fra le sue compagne, e non sopra.» Poi: «Non ne avevo mai vista una intera. Solo frammenti, disegni, una fibbia a Magnafort. Pensavo di morire senza.» Ad Alessandros: «Voi la portate e non sapete cosa portate. È giusto così. Chi lo sa, di solito, la toglie.»\nNon conferma legami con i Custodi del Ciclo o con ordini precisi: specula («chi l’ha forgiata non aveva paura della notte») e basta.\nSe Alessandros racconta del flashback della Guerra (Atto II): «Allora non è l’armatura che ricorda. Siete voi che siete stato ricordato.»",
+     "prove": [
+      {
+       "id": "armatura",
+       "abilita": [
+        "Religione",
+        "Arcano"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un vecchio che piange davanti a un’armatura. Non capite perché, ma sapete che è importante."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "È un’armatura di prima del Concilio del 1247, quando il Sole stava alla pari con le Lune. Quello che vi ha mostrato alla luce della luna non è un difetto: è ciò che era."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Caelinus la ricopia su un foglio, segno per segno, con la mano che trema. «Se mi bruciano, qualcuno deve averla vista.» Poi vi dà il foglio."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che l’armatura di Alessandros è pre-Concilio, fatta da chi metteva il Sole fra le Lune. Caelinus è, da questo momento, dalla loro parte.",
+     "rilancio": "Caelinus si asciuga la faccia con la manica, senza vergogna. Che cosa fate?",
+     "daqui": [
+      "lettera"
+     ],
+     "pe": 900
+    },
+    {
+     "id": "iscrizioni",
+     "tipo": "dettaglio",
+     "titolo": "Leggere le iscrizioni della cripta",
+     "parte": "evento",
+     "innesco": "I PG portano a Caelinus le iscrizioni ricopiate dai blocchi sotto la Basilica (o gliele descrivono).",
+     "leggi": "Caelinus prende il foglio, lo avvicina all’occhio buono, e lo legge ad alta voce, piano, come si legge una ricetta di famiglia.\n\n«Qui il Gigante sogna col fianco. Chi apre il sonno, lo apra cantando.»\n\nPosa il foglio. «Chi l’ha ricopiato prima di voi? Il gesso è fresco.»",
+     "note": "Se i PG gli dicono che qualcuno scava dall’altra parte della porta con la luna, Caelinus si fa grigio. «Allora qualcuno vuole aprire il sonno. E non canta.» Può dar loro la parola pretuziana per «resta» (vedi i sigilli): non chiude il Sigillo, ma con i Glossatori potrebbe rinforzare il tappo. Da decidere: se e come la Crociata può rinforzare o purificare il Sigillo sotto la Basilica.",
+     "dopo": "Sanno cosa dicono le iscrizioni. Caelinus teme gli scavi sotto la Basilica più dell’inquisitore.",
+     "rilancio": "Il vecchio fissa la lucerna. Che cosa fate?",
+     "daqui": [
+      "lettera"
+     ]
+    },
+    {
+     "id": "annotazioni",
+     "tipo": "dettaglio",
+     "titolo": "Le annotazioni al Canto",
+     "parte": "indizio",
+     "seme": "Pergamene in pile, codici aperti uno sull’altro",
+     "innesco": "Qualcuno guarda cosa sta scrivendo il Magister, o chiede delle annotazioni.",
+     "leggi": "Sul tavolo, sotto la lucerna, un fascio di fogli legati con lo spago, fitti di una scrittura minuta, con le note a margine che salgono sui bordi e girano intorno alle pagine come edera. Il titolo, in alto, cancellato e riscritto tre volte.",
+     "note": "È la copia di Caelinus delle annotazioni al Canto. Non la dà via. Se l’inquisitore scende, è la prima cosa che cerca. Se i PG si offrono di metterla al sicuro, Caelinus rifiuta: «Se la porto via di qui, diventa una prova. Qui è solo il delirio di un vecchio.»\nDa decidere: la terza copia (vedi le note del punto).",
+     "dopo": "Sanno dove sta l’eresia che Impalox e Virellius cercano.",
+     "rilancio": "Caelinus mette una mano sul fascio, senza pensarci. Che cosa fate?",
+     "daqui": [
+      "lettera"
+     ]
+    },
+    {
+     "id": "lettera",
+     "tipo": "bottino",
+     "titolo": "Quello che il Magister vi affida",
+     "parte": "evento",
+     "innesco": "Alla fine dell’incontro, se Caelinus si fida di loro (armatura mostrata, o segreto rispettato).",
+     "leggi": "Caelinus scrive qualcosa su un foglio, lo piega, lo sigilla con la cera e ci preme sopra il pollice, non un anello. «Per la Sibilla Amarantha, di Casa Argentus, all’Aquila Aurea. Se ci arrivate. Lei sa quello che so io, e qualcosa di più.» Poi vi dà un secondo foglio. «E questo per voi. Non leggetelo in una chiesa.»",
+     "note": "La lettera per Amarantha (Segreti del DM: Amarantha di Casa Argentus conosce la cosmologia reale) è una chiave per la Convocazione all’Aquila Aurea. Il secondo foglio: il disegno dell’armatura (se c’è stato il modulo) o una copia della riga del Cantico del Gigante Dormiente.\nDa decidere: la lettera ad Amarantha è una proposta di aggancio.",
+     "dopo": "Hanno un alleato negli archivi di Teramum e una lettera per l’Aquila Aurea.",
+     "rilancio": "«Adesso andate. Il secco fa male ai giovani.» Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "bottino": [
+      {
+       "n": "Lettera del Magister per la Sibilla Amarantha",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0,
+       "valore": "—",
+       "stats": "Missione",
+       "desc": "Sigillata col pollice di Caelinus Tancredus. Per Amarantha di Casa Argentus, all’Aquila Aurea.",
+       "a": "alessandros"
+      },
+      {
+       "n": "Foglio del Magister",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0,
+       "valore": "—",
+       "stats": "Missione",
+       "desc": "Il disegno dell’armatura delle Due Lune, oppure la riga del Cantico: «Tre voci nel cielo, nessuna più alta delle altre.» Non leggerlo in una chiesa.",
+       "a": "alessandros"
+      }
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano lo studio.",
+     "leggi": "Mentre uscite, Caelinus ha già riaperto il codice. Senza alzare gli occhi: «Salutatemi l’Arcimandrita. Ditegli che scendo le scale meglio di lui.»",
+     "dopo": "Si risale dal corridoio dei sigilli e dal cancello. Se l’ispezione dell’inquisitore è in corso, lo incontrano sulla scala.",
+     "rilancio": "Il corridoio dei sigilli vi aspetta. Che cosa fate?",
+     "daqui": [
+      "te_biblioteca_sigilli"
+     ]
+    }
+   ]
+  }
+ ]
+}

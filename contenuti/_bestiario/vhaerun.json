@@ -1,0 +1,39 @@
+{
+ "id": "vhaerun",
+ "name": "Vhaerun",
+ "short": "Vh",
+ "color": "#5E7050",
+ "hp": 110,
+ "ac": 16,
+ "init": 1,
+ "size": 2,
+ "actions": [
+  {
+   "n": "Multiattacco (due colpi)"
+  },
+  {
+   "n": "Ascia bipenne / catene ai polsi",
+   "atk": 8,
+   "dmg": "1d12+5"
+  },
+  {
+   "n": "Carica: dopo 3 m in linea retta, il primo colpo +2d8",
+   "dmg": "2d8"
+  },
+  {
+   "n": "Urlo di comando (1/giorno): TS Saggezza CD 14 o Spaventato 1 minuto"
+  },
+  {
+   "n": "Spinta o Presa: Atletica +8"
+  }
+ ],
+ "note": "GS 5 · 1.800 PE · velocità 9 m · For +5, Cos +4 · TS For +8, Sag +3 · Grande · adattato da Guerriero Veterano / Ogre del Manuale dei Mostri 2024 alle statistiche giocate in Sotto Bëllindë. Alleato, se ha seguito i PG: non attacca per primo, non prende ordini.",
+ "src": "bellinde_dopo",
+ "tac": "Se combatte al fianco dei PG: carica il nemico più grosso, si mette fra i nemici e chi non ha armatura. Non insegue chi fugge. Se qualcuno gli grida un ordine in battaglia, si ferma un istante (perde la Carica di quel turno), poi fa quello che aveva deciso lui.",
+ "lines": [
+  "Non sono io che decido. Non più. Sono io che scelgo.",
+  "Guardate verso gli alberi.",
+  "Un’altra voce. Bene. Almeno questa ha una faccia."
+ ],
+ "img": "PNG — Vhaerun.jpg"
+}

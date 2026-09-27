@@ -1,0 +1,27 @@
+{
+ "id": "te_guardia_basilica",
+ "name": "Guardia della Basilica",
+ "short": "G",
+ "color": "#B08A3C",
+ "hp": 11,
+ "ac": 16,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Alabarda (lancia)",
+   "atk": 3,
+   "dmg": "1d6+1"
+  },
+  {
+   "n": "Mazza per sfondare (contro porte e mattoni)"
+  }
+ ],
+ "note": "Guardia (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD), GS 1/8 · 25 PE · Vel 9 m · Armigeri con i colori della Basilica. Deboli apposta: la retata è una fuga, non una battaglia. Ogni guardia uccisa è un nome sul verbale della Crociata.",
+ "src": "Il tempio sigillato di Mortus",
+ "tac": "Quattro sfondano la porta murata (tre round), due aspettano nel vicolo davanti alla cantina con l’altro inquisitore. Gridano, fanno luce, chiamano rinforzi.",
+ "lines": [
+  "«Aprite, in nome della Fiamma!»"
+ ],
+ "img": "Mostro — Guardia della Basilica.jpg"
+}

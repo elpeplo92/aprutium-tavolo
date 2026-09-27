@@ -1,0 +1,39 @@
+{
+ "id": "te_scavatore_cieco",
+ "name": "Scavatore cieco",
+ "short": "U",
+ "color": "#2E2A24",
+ "hp": 93,
+ "ac": 18,
+ "init": 1,
+ "size": 2,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Artiglio + Mandibole"
+  },
+  {
+   "n": "Artiglio",
+   "atk": 8,
+   "dmg": "1d8+5"
+  },
+  {
+   "n": "Mandibole",
+   "atk": 8,
+   "dmg": "2d8+5"
+  },
+  {
+   "n": "Sguardo che confonde (inizio turno di chi lo vede entro 9 m: TS Sag CD 15 o niente reazioni e 1d8: 1-4 fermo, 5-6 si muove a caso, 7-8 attacca il più vicino)"
+  },
+  {
+   "n": "Scavare (6 m nella roccia, lascia un tunnel)"
+  }
+ ],
+ "note": "Umber hulk (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD), GS 5 · 1.800 PE · Vel 9 m, scavare 6 m · Grande · Scurovisione 36 m, percezione tellurica 18 m · Chi distoglie lo sguardo non tira il TS ma ha svantaggio agli attacchi contro di lui fino al suo turno successivo. Risalito dalla spaccatura calda sotto l’Arena, attirato dai picconi di Casa de Spina.",
+ "src": "La Città Sepolta",
+ "tac": "Uno sbuca dalla parete vicino al gruppo, l’altro alle spalle, dal buco più vicino alla corda: taglia la ritirata. Primo round: lo sguardo su chi ha la luce più forte. Poi artigli sui confusi. Scava per sbucare accanto ai lanciatori di incantesimi. Fugge scavando sotto metà PF se l’altro è già caduto.",
+ "lines": [
+  "La parete si apre.",
+  "(Quattro occhi neri, e la testa che gira come dopo tre bicchieri di troppo.)"
+ ],
+ "img": "Mostro — Scavatore cieco.jpg"
+}

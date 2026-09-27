@@ -1,0 +1,36 @@
+{
+ "id": "te_guardia_ducale",
+ "name": "Guardia Ducale",
+ "short": "G",
+ "color": "#6E7480",
+ "hp": 11,
+ "ac": 16,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Lancia",
+   "atk": 3,
+   "dmg": "1d6+1"
+  },
+  {
+   "n": "Lancia a due mani",
+   "atk": 3,
+   "dmg": "1d8+1"
+  },
+  {
+   "n": "Balestra leggera (24/96 m)",
+   "atk": 3,
+   "dmg": "1d8+1"
+  }
+ ],
+ "note": "Guardia (MM 2024) · GS 1/8 · 25 PE · velocità 9 m · Percezione +2 · tabarro grigio con la torre e il lupo di Casa Grazianus, cotta di maglia, scudo.",
+ "src": "Teramum — la città / Arrivo a Teramum",
+ "tac": "In coppia o in ronda da quattro con un sergente. Non attacca per prima: circonda, intima, fischia (un fischio lungo, due corti: in tre minuti arrivano altre due ronde). Contro chi usa la magia, la balestra.",
+ "lines": [
+  "Lanterna, nome, motivo.",
+  "Fermi, in nome del Consiglio!",
+  "Mettete giù il ferro. Piano."
+ ],
+ "img": "Ritratto — Teramum — Guardia Ducale.jpg"
+}

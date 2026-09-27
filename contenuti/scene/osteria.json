@@ -1,0 +1,1110 @@
+{
+ "id": "osteria",
+ "nome": "L’osteria de lu Passe",
+ "menu": "L’osteria de lu Passe",
+ "citta": "La strada per Teramum",
+ "ordine": 5,
+ "mappa": {
+  "img": "BATTLEMAP — L’osteria de lu Passe.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Oltre il guado la strada corre dritta lungo il fiume, fra campi mietuti e file di pioppi. Sulle colline a mezzogiorno, borghi appollaiati sui crinali. Campanili. Mura.\n\nIl caldo pesa. I muli tengono la testa bassa.\n\nQuando il sole tocca le colline, la valle si stringe. Sulla strada, un’insegna di legno col disegno di una sbarra.\n\nL’osteria de lu Passe.",
+  "note": "Scena di presagio, non di battaglia: si può chiudere senza tirare un’arma. Tre fili: il convoglio di Iuvenza (casse, lillà, loto raschiato, anime nel ferro), la rete che conta la Crociata (Ansaldo, Nicola comprato, il cavaliere di Nutaròschë), il terremoto e il colpo da occidente.\nSulla mappa: strada in alto; osteria in alto a sinistra, pergolato davanti; stalla in alto a destra; cortile in basso, pozzo al centro; i quattro carri del convoglio sul lato destro del cortile; lo spazio in basso a sinistra per i carri della Crociata; la collina con la quercia in alto a destra oltre la strada.\nOrdine dei punti: cortile (arrivo) → sala (cena, Nicola, Ansaldo) → pergolato (Tanush, Kostandìn) → stalla → carri chiusi (di giorno e di notte) → la notte del terremoto → la collina.\nPNG: Nicola «Lu Passe», Messer Ansaldo Morigi, Tanush Dushmàni (schede nel Compendio, città «strada»). Bestiario: «Sergente mercenario», «Mercenario vesperiano», «Armatura del Loto».",
+  "ingressi": [
+   {
+    "da": "Dalla strada di valle, al tramonto",
+    "primo": "osteria_cortile",
+    "poi": "osteria_sala",
+    "note": "L’ordine normale della lista."
+   },
+   {
+    "da": "Se la colonna si accampa fuori, sul prato oltre la strada",
+    "primo": "osteria_collina",
+    "poi": "osteria_notte",
+    "note": "Niente cena all’osteria: Nicola non parla e Ansaldo va lui al campo, a contare, con la scusa di vendere vino. Il cavaliere sulla collina è a cento passi dal campo e si nota con CD 12 invece di 15."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "osteria_cortile",
+   "kind": "scena",
+   "title": "Il cortile de lu Passe",
+   "image": "PDI — Osteria — Il cortile.jpg",
+   "legacyPosition": {
+    "x": 620,
+    "y": 830
+   },
+   "text": "L’osteria sta dove la valle si stringe: un lungo edificio basso di sasso, il tetto di coppi, un pergolato di vite davanti. Accanto, una stalla grande quanto la casa.\n\nIl sole è già dietro le colline. L’aria sa di fieno, di fumo, di pane. E di maiale sullo spiedo.\n\nL’oste vi aspetta sulla porta, col grembiule di cuoio e le braccia incrociate. Ha già contato i carri. Lo vedete muovere le labbra.\n\nNel cortile ci sono già altri carri. Quattro, chiusi, coperti da teloni neri incerati, cerchiati di ferro. I buoi staccati ruminano accanto. Intorno, uomini armati che non portano insegne.\n\nIl fango secco del cortile è segnato da solchi profondi. Ruote pesanti. Più pesanti delle vostre.",
+   "breve": "Arrivo al tramonto del primo giorno. Nicola «Lu Passe» ha già contato i carri; nel cortile c’è un convoglio chiuso con dodici armati senza insegne. Si contratta l’alloggio, si leggono i solchi, si guarda la scorta.",
+   "gm": "L’osteria de lu Passe è a due leghe da Bëllindë (tavoletta della Porta di Levante), sulla strada di valle, in terra del Barone Pietramala di Cashtalladdë. Qui arriva la notizia del Bando: il castaldo è passato tre giorni fa a leggerlo.\nIl convoglio: quattro carri chiusi, arrivati ieri al tramonto dalla strada di Nutaròschë (da mezzogiorno), fermi un giorno per una ruota rotta. Ripartono domattina prima dell’alba. Portano a Teramum le armature nuove di Veneranda Iuvenza (vedi «I carri chiusi»). Li accompagna Messer Ansaldo Morigi, agente di Iuvenza che si fa passare per mercante di vini, con una scorta di dodici vesperiani comandata da Tanush Dushmàni.\nSulla mappa: strada in alto, osteria in alto a sinistra col pergolato davanti, stalla in alto a destra, cortile in basso col pozzo al centro; i carri del convoglio in fila sul lato destro del cortile; lo spazio in basso a sinistra è per i cinque carri della Crociata.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "solchi",
+     "tipo": "dettaglio",
+     "titolo": "I solchi nel fango",
+     "parte": "indizio",
+     "seme": "Ruote pesanti. Più pesanti delle vostre.",
+     "innesco": "Qualcuno guarda i solchi, i carri del convoglio o le ruote.",
+     "leggi": "I solchi sono fondi un palmo, in un fango che d’agosto è duro come mattone. Quattro carri a quattro ruote. Le impronte dei buoi, larghe, affondate.",
+     "prove": [
+      {
+       "id": "solchi",
+       "abilita": [
+        "Indagare",
+        "Sopravvivenza"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Tanti carri, pesanti. Di qui ne passano sempre."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Quattro carri carichi fin quasi a spaccare gli assi, tirati da buoi. Sono arrivati da sud-est, dalla strada che scende da mezzogiorno, non dalla vostra. Una ruota del quarto carro è nuova: il legno è ancora chiaro."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Carichi fin quasi a spaccare gli assi, arrivati da sud-est. E il peso non è distribuito come quello delle botti: le botti si caricano in basso. Qui il peso è alto, in piedi, come di cose lunghe messe dritte. Il cerchione vecchio della ruota rotta è appoggiato dietro la stalla: si è spaccato di netto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il convoglio viene da Nutaròschë e che il carico non è di botti. Nutaròschë è il borgo di Dama Violante Rosaspina (Storia CD 12: si dice che sia vicina alla signora dai capelli bianchi).",
+     "rilancio": "I buoi del convoglio vi guardano ruminando. Che cosa fate?",
+     "daqui": [
+      "alloggio",
+      "scorta",
+      "osteria_convoglio"
+     ]
+    },
+    {
+     "id": "alloggio",
+     "tipo": "dettaglio",
+     "titolo": "Il prezzo della notte",
+     "parte": "indizio",
+     "seme": "Ha già contato i carri. Lo vedete muovere le labbra.",
+     "innesco": "Qualcuno parla con l’oste per l’alloggio, la stalla e la cena.",
+     "leggi": "«Trentanove anime, cinque carri, ventitré bestie.» Non è una domanda.\n\n«Il castaldo del Barone è passato tre giorni fa col Bando. Il Bando dice di non darvi alloggio.» Si asciuga le mani nel grembiule. «Non dice niente sul vendervelo.\n\nCena, stalla, pagliericci sotto il pergolato e nel fienile: quindici fiorini. Venti, se volete il vino buono e non quello che do ai carrettieri.»",
+     "note": "I soldi escono dalla cassa della Crociata (620 fiorini), non da quella del gruppo: segnalo nel Registro. Nicola accetta anche gofferine d’argento (1 fiorino = 10 gofferine).\nSe qualcuno propone di accamparsi fuori, senza pagare: si può, sul prato oltre la strada. Allora l’oste non parla e la notte si passa lontano dal convoglio (la collina del cavaliere è più vicina).",
+     "prove": [
+      {
+       "id": "prezzo",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "«Quindici. E stanotte non si fanno domande ai miei ospiti.» Indica i carri chiusi con il mento."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "«Dodici. Ma il vino buono ve lo pagate a parte.»"
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "«Dieci, e il vino buono lo offro io a chi comanda.» Abbassa la voce. «Stanotte mi fa piacere avere gente che non ha paura, in cortile.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "La colonna si sistema. Il gruppo può andare nella sala a cena, sotto il pergolato dove mangia la scorta, nella stalla con le bestie.",
+     "rilancio": "La ragazza dell’oste porta la prima brocca. Che cosa fate?",
+     "daqui": [
+      "osteria_sala",
+      "osteria_pergolato",
+      "osteria_stalla"
+     ]
+    },
+    {
+     "id": "scorta",
+     "tipo": "dettaglio",
+     "titolo": "Gli uomini senza insegne",
+     "parte": "indizio",
+     "seme": "Intorno, uomini armati che non portano insegne.",
+     "innesco": "Qualcuno osserva la scorta del convoglio.",
+     "leggi": "Dodici. Cotte di maglia sotto giubbe senza colore, spade corte, balestre. Nessuno stemma, nessun nastro, nessun fazzoletto. Si muovono a coppie. Due stanno sempre seduti sulle stanghe dei carri.",
+     "prove": [
+      {
+       "id": "scorta",
+       "abilita": [
+        "Intuizione",
+        "Percezione"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Guardie di un mercante ricco. Ben pagate, poco socievoli."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 15,
+         "leggi": "Professionisti. Si parlano in una lingua che avete sentito a Mushanè, in bocca ai mercenari del Loto. E Kostandìn, dietro di voi, si è fermato."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 16,
+         "leggi": "Vesperiani, come quelli di Mushanè. Ma c’è una cosa strana: non guardano voi. Guardano i carri. Chi fa la guardia a un carico prezioso guarda chi si avvicina. Loro guardano il carico. Come si guarda un cane che morde."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che la scorta è vesperiana, come i mercenari di Lekë, e (con 16) che ha paura di quello che scorta.",
+     "rilancio": "Kostandìn vi guarda, poi guarda quelli. Che cosa fate?",
+     "daqui": [
+      "osteria_pergolato",
+      "osteria_convoglio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "osteria_sala",
+   "kind": "persona",
+   "title": "La sala de lu Passe",
+   "image": "PDI — Osteria — La sala.jpg",
+   "legacyPosition": {
+    "x": 360,
+    "y": 320
+   },
+   "text": "Dentro è buio e caldo. Un camino grande quanto una porta, sul muro in fondo, con un maiale intero che gira sullo spiedo. Tre tavoloni lunghi, le panche lucide di gomiti.\n\nIl bancone è fatto di botti. Sopra, appesi, prosciutti, trecce d’aglio, un paio di forbici da tosa.\n\nUna ragazza porta le brocche. L’oste versa, conta, versa.\n\nIn un angolo, due vecchi carrettieri giocano a morra, a voce bassa. Una donna col bordone del pellegrino mangia da sola, vicino alla porta.\n\nAl tavolo più vicino al fuoco, da solo, un signore vestito di velluto nero taglia il pane con un coltellino d’argento. Ha davanti una bottiglia chiusa. Non l’ha aperta.\n\nQuando entrate, alza gli occhi. Sorride. Torna al pane.",
+   "breve": "La cena. Nicola l’oste sa molte cose e ne vende qualcuna; ha preso un fiorino dal messere per fare la spia. Ansaldo Morigi, «mercante di vini», è l’agente di Iuvenza: conta la colonna a voce alta e profuma di lillà. Due carrettieri e una pellegrina portano le voci della strada.",
+   "gm": "Chi c’è: Nicola «Lu Passe» (oste), sua figlia Assunta (sedici anni, serve), due carrettieri di Bbashanë (Zi’ Brunone e suo cognato), Ghita la pellegrina (va alla Basilica Aurea per un voto), Messer Ansaldo Morigi (agente di Iuvenza).\nTono: niente scontro qui dentro. Ansaldo è intoccabile finché ha il lasciapassare e la scorta. È un duello di parole: lui conta, loro contano lui.\nIl lillà: il Loto d’Ombra, lillà e cenere, il fiore dei giardini di Velthuria. I PG lo conoscono (Atto VI, Atto XI). Lui lo porta addosso apposta.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "nicola",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Nicola «Lu Passe»",
+     "parte": "indizio",
+     "seme": "L’oste versa, conta, versa.",
+     "innesco": "Qualcuno parla con l’oste, gli offre da bere o gli fa domande mentre serve.",
+     "leggi": "L’oste posa la brocca, si asciuga le mani nel grembiule e vi guarda come si guarda una pesata.\n\n«Domandate. Le domande sono gratis. Le risposte dipendono.»",
+     "note": "CHI SEI, L’OSTERIA — «Nicola. Lu Passe mi chiamano, come l’osteria. E l’osteria come il passo: qui una volta c’era la sbarra del pedaggio fra le terre di Bëllindë e quelle del Barone. La sbarra l’hanno tolta. Io so’ rimasto. Trent’anni, e mio padre prima di me.»\n\nIL BANDO — «Il castaldo del Barone è passato tre giorni fa. Ha letto il foglio sotto il pergolato, a voce alta, e poi s’è bevuto mezzo boccale senza pagare, che è la cosa più ufficiale che ha fatto.» Alza le spalle. «Io do da mangiare. Il Consiglio mi dica chi paga, e io lo servo.» Se insistono: «Il Barone vi conta. Tutti vi contano. Io vi conto pure, ma io almeno vi do la cena.»\n\nIL CONVOGLIO — «Sono arrivati ieri al tramonto, dalla strada di Nutaròschë, quella che scende da mezzogiorno. Una ruota rotta, il quarto carro. Hanno perso un giorno intero a rifarla col fabbro di Bbashanë, che gliel’ho mandato a chiamare io. Ripartono domattina, prima dell’alba. Prima di voi, hanno detto. Ci tenevano che lo sapessi.»\n\nCOSA PORTANO — «Vino, dice il messere. Vino di Nutaròschë per le cantine dei Tigli.» Versa, conta. «Io il vino lo scarico da trent’anni. Il vino fa rumore, messere: sciaborda. Quelle casse no.» Se lo si spinge (una prova di Intuizione riuscita, una moneta, o se gli si dice del guado): «Quando hanno scaricato il quarto carro per la ruota, una cassa è caduta. S’è aperta un palmo. Io stavo lì con la lanterna. Dentro c’era ferro. Un gomito di ferro, un ginocchio.» Si fa il segno della croce. «E il ferro s’è mosso. Piano. Come uno che si sistema per dormire. L’hanno richiusa subito. Il messere m’ha dato un fiorino e m’ha detto che avevo visto una botte.»\n\nIL MESSERE — «Ansaldo Morigi, dice. Mercante di vini rari. Mangia poco, beve acqua, la bottiglia sua non l’apre mai. Paga in oro, subito, senza contare.» Pausa. «Carri pesanti, oro leggero. Quando un forestiero paga senza contare, vuol dire che i conti li fa qualcun altro.»\n\nLA SCORTA — «Gente di là dal mare. Parlano come quello vostro, quello coi baffi.» (Kostandìn.) «Non bevono. Uno sta sempre sveglio. E di notte due vanno a dormire sulle stanghe, vicino ai carri, e non nel fienile con gli altri. Trent’anni che vedo passare soldati, messere. Non ne avevo mai visti che hanno paura di quello che scortano.»\n\nL’ODORE — «Lillà. Sta nella stalla da ieri e non se ne va. Mia figlia dice che le fa venire il mal di testa. A me fa venire in mente i soldi.» Se gli chiedono di dove viene: «Dalle casse. O dal messere. Quello si profuma come una vedova ricca.»\n\nLA VALLE, SANT’ATTO — «Li Chiòde, al guado? Rosa veniva a comprare il sale da me, ogni luna. Il mese scorso non è venuta.» Se gli raccontano del guado, si siede, per la prima volta. «Nella valle sparisce gente, messere. Non muore: sparisce. Poi qualcuno li rivede, fermi in mezzo a un campo, e non ti salutano più. Il castaldo lo sa. Il Barone lo sa. Nessuno viene.» E, piano: «Un mese fa è passato un frate giovane, con una botticella sul mulo. Andava verso i casali. Benediceva i pozzi, gratis. Da me non s’è fermato: non beveva vino. Un frate che non beve, io non me ne fido.»\n\nTERAMUM — «Chiudono le porte al tramonto. E sulla collina di Colleatterato, domani, trovate la Guardia Ducale con la sbarra e il registro. Contano tutto quello che passa: carri, bestie, anime. Il convoglio ci passa con le carte a posto. Voi, non so.»\n\nLA SIGNORA DAI CAPELLI BIANCHI (se la nominano) — «Si dice che ha comprato mezza Teramum e che l’altra metà l’ha ricattata. Si dice pure che il vino di Nutaròschë lo beve lei sola.» Guarda il messere, poi voi. «Io non dico niente. Io verso.»\n\nSE LO MINACCIANO — Non si spaventa, o non lo fa vedere. «Nella casa mia no. Fuori di qua fate quello che volete. Dentro no.» Intimidire CD 13: cede e racconta il suo segreto (vedi sotto). Fallito: si chiude, serve la cena in silenzio, e stanotte racconta tutto al messere, compresa la minaccia.\n\nSE LO CORROMPONO — Un fiorino: dice tutto quello che sa, tranne il segreto. Due fiorini, o la promessa che il suo nome non uscirà dalla loro bocca (con Intuizione riuscita prima): anche il segreto.\n\nSE GLI MENTONO — Ha l’occhio di chi conta (Intuizione +3). «Pellegrini. Con le picche. Va bene, messere: pellegrini con le picche. Io scrivo così.»\n\nIL SEGRETO — Ieri sera Ansaldo gli ha dato un fiorino d’oro per sapere, quando arriva la Crociata, quanti sono, chi comanda e se c’è «un capitano che tiene sempre il cappuccio». Nicola ha preso il fiorino. Se il gruppo lo scopre, ha vergogna e paura: si offre di dire al messere quello che vogliono loro. È un modo per ingannare Iuvenza (vedi modulo «Il fiorino del messere»).",
+     "prove": [
+      {
+       "id": "oste",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un oste chiacchierone che vende parole insieme al vino. Racconta del convoglio, non della cassa caduta."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 15,
+         "leggi": "Ha paura, e non di voi. Ogni volta che parla del convoglio guarda il tavolo vicino al fuoco. Ha preso troppo oro da quella gente per dimenticarla."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 16,
+         "leggi": "Ha paura, e ha vergogna. Ha preso oro dal messere, e non per il vino: per voi. Se gli promettete che il suo nome non uscirà dalla vostra bocca, racconta tutto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno da dove viene il convoglio, cosa l’oste ha visto nella cassa caduta, del frate che benediceva i pozzi, e (con 16 o il segreto) che il messere lo ha pagato per contarli.",
+     "rilancio": "Nicola aspetta la prossima domanda, la brocca in mano. Che cosa fate?",
+     "daqui": [
+      "fiorino",
+      "messere"
+     ],
+     "pe": 300
+    },
+    {
+     "id": "fiorino",
+     "tipo": "dettaglio",
+     "titolo": "Il fiorino del messere",
+     "parte": "nascosto",
+     "innesco": "Il gruppo scopre che Nicola è stato pagato per riferire (Intuizione 16+, Intimidire CD 13, due fiorini, o una promessa di silenzio).",
+     "leggi": "Nicola apre il pugno. Un fiorino d’oro, nuovo, lucido.\n\n«Ieri sera. Per sapere quanti siete, chi comanda, e se c’è un capitano che tiene sempre il cappuccio.» Lo posa sul bancone come se scottasse. «Io non l’ho ancora detto niente. Ditemi voi cosa devo dire.»",
+     "note": "Occasione: Nicola può riferire ad Ansaldo quello che vogliono i PG. Se la bugia è credibile (Inganno CD 14 di chi prepara Nicola; vantaggio se è semplice), Ansaldo la scrive nel suo rapporto e Iuvenza riceve un’informazione falsa (per esempio: il capitano col cappuccio è un malato di febbre, o la Crociata va a Mòrrë e non a Teramum). Fallita, Ansaldo capisce che Nicola è stato scoperto e lo scrive: «l’oste è loro».",
+     "prove": [
+      {
+       "id": "bugia",
+       "abilita": [
+        "Inganno"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Nicola ripete la lezione, ma suda. Il messere lo guarda a lungo, sorride e gli dà un altro fiorino. «Per il disturbo.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Nicola va al tavolo vicino al fuoco, versa l’acqua al messere e parla piano. Il messere annuisce, scrive due righe in un taccuino, e lo ringrazia."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se la bugia regge, il rapporto di Ansaldo a Iuvenza contiene un errore scelto dai PG (annotalo: si vedrà a Teramum). In ogni caso il rapporto parallelo del cavaliere sulla collina arriva comunque.",
+     "rilancio": "Il fiorino è sul bancone, fra voi e l’oste. Che cosa fate?",
+     "pe": 300
+    },
+    {
+     "id": "messere",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Messer Ansaldo Morigi",
+     "parte": "indizio",
+     "seme": "Al tavolo più vicino al fuoco, da solo, un signore vestito di velluto nero taglia il pane con un coltellino d’argento.",
+     "innesco": "Qualcuno si siede al tavolo del signore in velluto nero, o lui invita qualcuno.",
+     "leggi": "Da vicino è più giovane di quanto sembra, e più stanco. Le mani sono bianche, gli anelli troppi. Il velluto ha la polvere della strada nelle pieghe.\n\nE c’è un odore, intorno a lui, dolce e pesante. Lillà. E sotto, cenere.\n\n«Sedete, messeri. Non bevo, ma mi piace guardare chi beve.»",
+     "note": "CHI SEI — «Ansaldo Morigi, mercante. Vini rari, messeri: il rosso delle colline di Nutaròschë, quello che fa diventare onesti i notai e disonesti i vescovi.» Indica la panca di fronte. «Sedete. Non bevo, ma mi piace guardare chi beve.»\n\nIL CARICO — «Quattro carri per le cantine dei Tigli, a Teramum. Botti di ferro, per il viaggio: il vino buono soffre il caldo e le strade.» Intuizione CD 14: mente, e non si sforza molto di nasconderlo. Se gli dicono della cassa caduta: sorride. «Il ferro si assesta, messere. Anche le case si assestano. Anche le chiese. Stanotte, forse, sentirete assestarsi qualcosa di più grande.»\n\nPER CHI LAVORA — «Per chi paga. Una signora di gusti antichi, a Teramum. Io tratto col suo cantiniere, non con lei.» Se nominano Iuvenza o Velthuria: una pausa lunga. «Un nome grande, per un’osteria. Non lo direi così forte. Da qui a Teramum le colline hanno le orecchie. E una buona memoria.» Non conferma mai, non nega mai.\n\nIL LILLÀ — Se qualcuno riconosce l’odore: «Un’essenza che mi regalò una cliente. Vi piace? Cresce in un giardino solo.» Lo dice guardando chi l’ha riconosciuta. Sa benissimo che lo conoscono.\n\nLA CROCIATA — È curioso, e non lo nasconde: fa domande lui. «Trentanove, ho contato bene? Cinque carri. Quattro miliziani di due Casate, dodici vesperiani, qualche civile. E un capitano col cappuccio. Non se lo toglie mai? Nemmeno per mangiare?» Se gli rispondono, ringrazia. Se non gli rispondono, ringrazia lo stesso: «Anche il silenzio si conta.»\n\nLU GRISE (lo tira fuori lui, guardando Maximus, se Maximus è a tavola) — «Avete conosciuto un uomo grigio, a Mushanè. Uno che guardava. Ci ho bevuto insieme, qualche volta: acqua io, vino lui.» Pausa. «Mi hanno detto che è morto con le mani legate.» Taglia il pane. «Io non porto rancore, messere. Io porto vino.»\n\nTERAMUM — «Io entro domattina dalla Porta Meridianë, con tre sigilli sul lasciapassare. Voi entrerete quando la città avrà deciso chi siete. Può volerci molto. Una città decide lentamente, quando ha paura. E Teramum ha molta paura, quest’anno.»\n\nIL TERREMOTO, IL COLPO (dopo, se lo cercano di notte) — Guarda verso occidente. «Avete sentito? Qualcuno ha bussato. Da sotto.» Non dice altro.\n\nSE LO MINACCIANO — Non si alza. «Toccatemi, e domattina il Barone Pietramala avrà una lettera: una compagnia armata senza mandato ha assalito un mercante col sigillo di tre Casate, sulla sua strada. È esattamente quello che il Bando dice di voi. Volete darmi ragione con le vostre mani?» Se la minaccia è seria e fisica, chiama Tanush con un cenno: la scorta si alza sotto il pergolato.\n\nSE PROVANO A CORROMPERLO — Ride, davvero. «Mi offrite oro? Io ne ho di più. La mia signora compra, messere. Non vende.» Poi, a bassa voce: «Ma a volte assume.» È un’offerta vera, e la fa a chi gli sembra il più scontento del gruppo.\n\nSE GLI MENTONO — Lascia fare. Annota. Non smaschera mai: scrive la bugia così com’è, perché anche le bugie sono informazioni.\n\nCOSA VUOLE STANOTTE — Contare la colonna; sapere se il capitano col cappuccio è quello col sangue che brilla; portare a Kostandìn e ai vesperiani della Crociata un’offerta di paga doppia (lo fa fare a Tanush, vedi «Il pergolato»); ripartire all’alba senza guai.",
+     "prove": [
+      {
+       "id": "messere",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Un mercante ricco e annoiato, curioso come tutti i mercanti."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Non è un mercante. Non ha mai parlato di prezzi, di annate, di dazi. Fa domande come le fa un notaio. E ogni tanto tocca, sotto il velluto, all’altezza del cuore, qualcosa di piatto e duro."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Non è un mercante, e non ha paura di voi. Ha paura di una sola cosa: di sbagliare il conto. Quello che tocca sotto il velluto è un sigillo da viaggio, piatto, e dal bordo che si vede un attimo quando si china sul pane è nero, lucido: osso. Come quello di Lu Grise."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno (con 14) che è un agente, non un mercante, e che conta la Crociata. Con 20 naturale, che porta lo stesso sigillo d’osso nero di Lu Grise.",
+     "rilancio": "Il messere taglia un’altra fetta di pane e aspetta. Che cosa fate?",
+     "daqui": [
+      "tasche",
+      "osteria_pergolato"
+     ],
+     "pe": 400
+    },
+    {
+     "id": "tasche",
+     "tipo": "bottino",
+     "titolo": "Le carte del messere",
+     "parte": "nascosto",
+     "innesco": "Qualcuno prova a leggere, rubare o copiare le carte che il messere tiene sotto il velluto (a tavola, o di notte nella sua camera sopra la cucina).",
+     "leggi": "Sotto il velluto, una cartella di cuoio sottile. Dentro: un lasciapassare piegato in tre, un taccuino, e un sigillo da viaggio d’osso nero, levigato, con un fiore inciso.",
+     "note": "Di giorno, a tavola: Rapidità di mano CD 17 (lui è attento). Di notte, nella camera sopra la cucina (dorme vestito, Tanush alla porta fino a mezzanotte): Furtività CD 14 per arrivarci, Rapidità di mano CD 14 per prendere o copiare senza svegliarlo.\nIl lasciapassare: «Quattro carri di vino e botti per le cantine del Quartiere dei Tigli.» Tre sigilli: Savinellus (dazi), Clavax (legge), Mazzarellus (amministrazione) (proposta: sono i tre più comprabili). Prova che il convoglio ha già le carte che alla Crociata mancano.\nIl taccuino: il conto della Crociata già fatto, giusto al numero, e una riga: «capitano col cappuccio — non visto il volto — mangia il doppio». E una seconda: «l’oste è comprato».\nIl sigillo d’osso nero è identico a quello di Lu Grise e a quello di Ottavio Ceruso a Bëllindë: la rete di Iuvenza. Rubarlo è rubare una prova; se se ne accorge all’alba, lo scrive, e Iuvenza lo saprà.",
+     "prove": [
+      {
+       "id": "mani",
+       "abilita": [
+        "Rapidità di mano"
+       ],
+       "cd": 17,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 16,
+         "leggi": "Il messere ti ferma il polso con due dita, senza guardarti. «Il pane è sul tavolo, messere. Non nelle mie tasche.» Lo scriverà."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 17,
+         "leggi": "La cartella è tua per il tempo di un respiro. Abbastanza per leggere, o per prendere."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se prendono il sigillo o il taccuino, hanno la prova che mancava al Registro: chi collega il sigillo «V.» alla rete (ma non ancora al nome).",
+     "rilancio": "La cartella di cuoio è aperta sulle vostre ginocchia. Che cosa fate?",
+     "pe": 400,
+     "bottino": [
+      {
+       "n": "Sigillo da viaggio d’osso nero",
+       "q": 1,
+       "cat": "Missione",
+       "peso": "—",
+       "valore": "—",
+       "stats": "",
+       "desc": "Osso nero levigato con un fiore inciso. Identico a quello di Lu Grise e di Ottavio Ceruso: la rete di Velthuria.",
+       "a": "crociata"
+      },
+      {
+       "n": "Taccuino di Ansaldo Morigi",
+       "q": 1,
+       "cat": "Missione",
+       "peso": "0,5 lb",
+       "valore": "—",
+       "stats": "",
+       "desc": "Il conto della Crociata al numero giusto; «capitano col cappuccio — mangia il doppio»; «l’oste è comprato».",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "avventori",
+     "tipo": "dettaglio",
+     "titolo": "I carrettieri e la pellegrina",
+     "parte": "indizio",
+     "seme": "In un angolo, due vecchi carrettieri giocano a morra, a voce bassa.",
+     "innesco": "Qualcuno si siede coi carrettieri o con la pellegrina, offre da bere, chiede notizie.",
+     "leggi": "I carrettieri smettono di giocare quando vi avvicinate. Poi vedono la brocca che portate, e ricominciano a parlare.",
+     "note": "Zi’ Brunone e suo cognato portano fieno da Bbashanë. Voci (una per domanda):\n• «A Teramum chiudono le porte al tramonto e non le aprono nemmeno per un vescovo.»\n• «Il Barone di Cashtalladdë ha fatto tirare le baliste su un gregge, l’anno scorso. Per provarle. I pastori non se lo sono scordato.»\n• «Una signora dai capelli bianchi ha comprato mezza Teramum. L’altra metà l’ha ricattata.»\n• «La Guardia raddoppia i turni da una settimana. Dicono per i terremoti.»\n• «Nella valle sparisce la gente dei casali. Non muore: sparisce, e poi torna diversa.»\nGhita la pellegrina (da Mòrrë, va alla Basilica Aurea per sciogliere un voto): «L’anno scorso ho dormito sul sagrato della Basilica. Di notte, sotto, suonava. Non le campane: sotto. Il sacrestano dice che sono le campane che si assestano.» Dopo il terremoto di stanotte dirà una cosa sola, a mani giunte: «È la Basilica.»",
+     "dopo": "Sanno le voci della strada. Ghita, stanotte, è quella che dà un nome al colpo.",
+     "rilancio": "Zi’ Brunone butta tre dita. «Sette!» Che cosa fate?",
+     "daqui": [
+      "pellegrina"
+     ]
+    },
+    {
+     "id": "pellegrina",
+     "tipo": "dettaglio",
+     "titolo": "Ghita, che va alla Basilica",
+     "parte": "indizio",
+     "seme": "Una donna col bordone del pellegrino mangia da sola, vicino alla porta.",
+     "innesco": "Qualcuno parla con la pellegrina.",
+     "leggi": "Una donna sui cinquanta, il mantello scuro, una conchiglia cucita sul cappello. Mangia pane e cipolla e tiene il bordone fra le ginocchia, come se qualcuno volesse rubarglielo.\n\n«Vado alla Basilica Aurea. Ho un voto da sciogliere. Mio figlio è tornato dal mare.» Sorride. «Tornato davvero. Non come quelli della valle.»",
+     "note": "Mattheus: Ghita guarda il suo simbolo (se lo porta in vista) e dice: «Pure voi andate a pregare in città? Lassù pregano in tanti. Pochi vengono ascoltati.» Nessun altro significato: è una donna devota.",
+     "dopo": "Ghita resta in colonna fino a Teramum, se glielo offrono: una bocca in più, e una testimone che non chiede niente.",
+     "rilancio": "Ghita vi offre mezza cipolla. Che cosa fate?"
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "osteria_pergolato",
+   "kind": "persona",
+   "title": "Il pergolato",
+   "image": "PDI — Osteria — Il pergolato.jpg",
+   "legacyPosition": {
+    "x": 470,
+    "y": 530
+   },
+   "text": "Fuori, sotto il pergolato, la vite fa un tetto basso di foglie e grappoli ancora duri. Le vespe girano sulle brocche.\n\nAl tavolo lungo mangiano gli uomini della scorta. Dodici. In silenzio, con le armi accanto, le schiene al muro.\n\nParlano poco, e quando parlano non è la vostra lingua. Ha un suono che avete già sentito: a Mushanè, in bocca ai mercenari del Loto.\n\nIn capo al tavolo, un uomo con le trecce grigie e una cicatrice che gli chiude mezzo labbro non mangia. Guarda Kostandìn.\n\nKostandìn si è fermato.",
+   "breve": "La scorta vesperiana del convoglio. Il capo, Tanush Dushmàni, era cugino di Lekë e conosce Kostandìn. Avverte Kostandìn che a Teramum c’è una taglia sui vesperiani passati alla Crociata; porta l’offerta del messere: paga doppia a chi se ne va stanotte.",
+   "gm": "Tanush e i dodici: vesperiani del Loto Nero, pagati da «V.» come a Mushanè. Non sanno chi sia V., sanno che paga. Hanno paura del carico.\nIl punto è la coesione della Crociata: dodici vesperiani in colonna, la loro fedeltà «ancora da consolidare» (Registro). Stanotte qualcuno prova a comprarli. La sepoltura dei vesperiani caduti a Mushanè (proposta del canone: viso verso il mare, moneta nel pugno; non risulta fatta) è la chiave per Tanush e per i vesperiani della Crociata.\nDa decidere: se usi «Paga doppia», può costare tre uomini alla Crociata. Se non vuoi il rischio, tienila come voce: Tanush la dice e Kostandìn ride.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "kostandin",
+     "tipo": "dettaglio",
+     "titolo": "Due Aquile",
+     "parte": "indizio",
+     "seme": "Kostandìn si è fermato.",
+     "innesco": "Il gruppo arriva sotto il pergolato con Kostandìn, o Kostandìn va da solo.",
+     "leggi": "Kostandìn si avvicina al tavolo. L’uomo con le trecce grigie si alza. Si guardano. Poi si prendono l’avambraccio, forte, tutti e due, e restano così a lungo.\n\nParlano piano, nella loro lingua. Una parola torna più volte. Lekë.\n\nQuando Kostandìn torna da voi, ha la faccia di chi ha bevuto aceto.\n\n«Casse da armatura», dice. «Le ho portate anch’io, una volta. Per una donna che pagava bene.»",
+     "prove": [
+      {
+       "id": "kost",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un vecchio compagno ritrovato. Kostandìn è turbato, ma è dei vostri."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Kostandìn non vi ha detto tutto. Qualcosa, in quella conversazione, lo riguardava e lo ha spaventato. Non per sé: guarda i suoi uomini."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Kostandìn ha paura per i suoi, e ha ricevuto un’offerta. Non l’ha rifiutata subito. Non l’ha accettata. Sta aspettando di vedere cosa fate voi."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se glielo chiedono direttamente, Kostandìn racconta tutto: la lista, la paga doppia. Mente solo su una parola («nomi» invece di «teste»).",
+     "rilancio": "Kostandìn aspetta che qualcuno di voi gli faccia la domanda giusta. Che cosa fate?",
+     "daqui": [
+      "tanush",
+      "paga"
+     ]
+    },
+    {
+     "id": "tanush",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Tanush Dushmàni",
+     "parte": "indizio",
+     "seme": "In capo al tavolo, un uomo con le trecce grigie e una cicatrice che gli chiude mezzo labbro non mangia.",
+     "innesco": "Qualcuno si siede al tavolo della scorta o parla col capo.",
+     "leggi": "Da vicino ha gli occhi chiari, quasi bianchi, e mani enormi. Beve acqua. Accanto al piatto, un coltello e una moneta, messa dritta sul taglio.\n\n«Parlate. Io capisco più di quello che dico.»",
+     "note": "(Parla un italiano duro, a pezzi; con Kostandìn parla la sua lingua. Se nessuno traduce, Kostandìn riassume, a modo suo.)\n\nCHI SEI — «Tanush. Dushmàni.» Batte due dita sul petto. «Aquile. Come lui.» Indica Kostandìn col mento.\n\nCHI PAGA — «Paga V. Sempre V. Oro pulito, passato per banchi di mare.» Una smorfia. «Come a Mushanè. Stessa mano, stessa borsa.»\n\nLEKË — «Lekë Muzàka era cugino di mia madre. Lo avete fatto morire davanti a una chiesa.» Nessuna rabbia nella voce. «Lo so. Non è questo che vi chiedo.» Quello che chiede: «I nostri, a Mushanè. Li avete messi in terra col viso verso il mare? Con la moneta nel pugno?» Se sì: abbassa la testa, e da quel momento parla. Se no, o se non lo sanno: «Allora sono ancora lì che aspettano la paga.» E tace.\n\nIL CARICO — Solo se si fida (sepoltura fatta, Kostandìn che glielo chiede, o Persuasione CD 16): «Non è vino. Voi lo sapete, io lo so.» Beve acqua. «Sono dodici casse. Armature. Vuote, dice il messere. Di notte una chiama la madre. Un’altra canta, piano, una canzone da bambini. I miei uomini dormono con le dita nelle orecchie.»\n\nLA NOTTE A MUSHANÈ, LA VIA SALARIA — «Io ero sulla Via Salaria, col Loto. A guardare una strada che nessuno voleva passare. Voi siete passati dal bosco. Bravi. I lupi non pagano pedaggio.»\n\nPERCHÉ LO FAI — «Tre figlie e un tetto che cade. Il mare è largo e la paga è corta.» Pausa. «E un’Aquila che prende l’oro lo porta a destinazione. Poi è libera. Poi.»\n\nKOSTANDÌN — Glielo dice in faccia, nella loro lingua (Kostandìn lo traduce solo se gli si chiede, e cambia una parola): «Tu sei sulla lista, fratello. Quelli che sono rimasti vivi a Mushanè e sono passati dall’altra parte. A Teramum c’è chi paga per le vostre teste. Non entrare in città coi carri.» La parola che Kostandìn cambia: «teste» diventa «nomi».\n\nL’OFFERTA DEL MESSERE — Tanush la porta perché gliel’hanno ordinato, e la porta male: «Il messere dice: V. paga il doppio. A te e a ogni Aquila che viene via stanotte. Io ho detto. Tu fai.» (vedi modulo «Paga doppia»)\n\nTERAMUM — «Portiamo le casse alla Porta Meridianë. Là le prende gente dei Tigli. Poi sono libero. Poi, forse, cerco lavoro.» Guarda voi. «Pagate voi?»\n\nSE LO MINACCIANO — «Siamo dodici. Voi di più. Moriremo in tanti, per un vino che non è vino. Pensateci voi, che siete i signori.»\n\nSE PROVANO A COMPRARLO — «Ho preso l’oro. Porto le casse. Dopo, parliamo.» Non tradisce la consegna: è la sua regola. Dopo la consegna, a Teramum, può passare dalla loro parte con quattro uomini (proposta).\n\nSE GLI MENTONO — Guarda Kostandìn. Se Kostandìn abbassa gli occhi, sa che è una bugia, e non parla più.",
+     "dopo": "Se si fida, Tanush dice cosa c’è nelle casse (armature, dodici, una chiama la madre). Se la sepoltura dei vesperiani di Mushanè è stata fatta, dice anche della lista e della taglia. È un possibile alleato a Teramum, dopo la consegna.",
+     "rilancio": "Tanush fa girare la moneta sul tavolo e la ferma col dito. Che cosa fate?",
+     "daqui": [
+      "paga",
+      "osteria_convoglio"
+     ],
+     "pe": 300
+    },
+    {
+     "id": "paga",
+     "tipo": "dettaglio",
+     "titolo": "Paga doppia",
+     "parte": "evento",
+     "innesco": "A notte fatta, dopo cena, se i vesperiani della Crociata non sono stati rassicurati da qualcuno del gruppo o da Silvanus.",
+     "leggi": "Vicino al fuoco del campo, i vesperiani della Crociata parlano fitto, nella loro lingua. Poi smettono quando vi avvicinate.\n\nUno, il più giovane, ha in mano un fiorino d’oro nuovo. Lo nasconde. Troppo tardi.",
+     "note": "Tanush, su ordine di Ansaldo, ha fatto girare l’offerta: V. paga il doppio a ogni Aquila che lascia la Crociata stanotte, e un fiorino subito come caparra.\nChi parla ai vesperiani (Silvanus, Maximus che ha già quattro vesperiani al suo soldo, o chi ha fatto la sepoltura): Persuasione CD 14, o Intimidire CD 15. Vantaggio se la paga della Crociata è in regola, se si promette la sepoltura dei caduti di Mushanè, o se Kostandìn sta dalla parte del gruppo in pubblico.",
+     "prove": [
+      {
+       "id": "aquile",
+       "abilita": [
+        "Persuasione",
+        "Intimidire"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "max": 7,
+         "leggi": "Le parole sbagliate, nel momento sbagliato. All’alba mancano cinque vesperiani e due balestre. Coesione −1."
+        },
+        {
+         "fascia": "failure",
+         "min": 8,
+         "max": 13,
+         "leggi": "Vi ascoltano, annuiscono. All’alba mancano tre vesperiani, partiti col convoglio. Coesione −1."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Nessuno se ne va. Il giovane restituisce il fiorino a Tanush, davanti a tutti, e Tanush lo prende senza offendersi."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Nessuno se ne va, e Kostandìn dice una frase ai suoi che li fa ridere tutti. Quando il convoglio parte, i vesperiani della Crociata salutano quelli di Tanush col braccio alzato, come si saluta chi va in guerra dalla parte sbagliata. Coesione +1."
+        }
+       ]
+      }
+     ],
+     "dopo": "Aggiorna il Registro: combattenti e coesione. Una promessa fatta stanotte a Kostandìn (paga, sepoltura) va mantenuta a Teramum: se lo è, coesione +1.",
+     "rilancio": "Il fuoco del campo scoppietta. I vesperiani vi guardano. Che cosa fate?",
+     "pe": 300
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "osteria_stalla",
+   "kind": "dettaglio",
+   "title": "La stalla grande",
+   "image": "PDI — Osteria — La stalla.jpg",
+   "legacyPosition": {
+    "x": 1250,
+    "y": 280
+   },
+   "text": "La stalla è lunga e alta, le travi annerite, le poste di legno per trenta bestie. C’è posto per le vostre e per i buoi del convoglio, e ne avanza.\n\nL’odore è quello di ogni stalla: letame, paglia, sudore di bestia.\n\nE sotto, un altro. Dolce. Che non c’entra niente con le bestie.\n\nSa di lillà. E di cenere.\n\nIn fondo, nell’angolo della paglia, un ragazzo di stalla vi guarda da sopra la forca e fa finta di niente.",
+   "breve": "Nella stalla c’è l’odore del Loto d’Ombra, lillà e cenere. Nell’angolo della paglia, un’asse di cassa spezzata col loto inciso e raschiato, graffiata dall’interno. Pasqualino, il ragazzo di stalla, ha visto dentro la cassa caduta.",
+   "gm": "Qui ieri hanno scaricato il quarto carro per cambiare la ruota. Una cassa è caduta e si è aperta un palmo: dentro, un’armatura rannicchiata. L’hanno richiusa, ma un’asse spezzata è rimasta nella paglia.\nL’asse: all’esterno un loto inciso a fuoco e poi raschiato col coltello (il Loto Nero dei Velthuria); all’interno, graffi sottili e fitti, come di dita dentro un guanto di ferro. L’anima nell’armatura si muove, anche se l’armatura dorme.\nPasqualino, dodici anni, figlio di nessuno, dorme nella stalla. Ha visto la cassa aperta, e da ieri non dorme.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "odore",
+     "tipo": "dettaglio",
+     "titolo": "L’odore",
+     "parte": "indizio",
+     "seme": "Sa di lillà. E di cenere.",
+     "innesco": "Qualcuno segue l’odore dentro la stalla.",
+     "leggi": "Lo conoscete. Il Loto d’Ombra dei giardini di Velthuria: ad Altavia, sul molo del Covo della Conchiglia, nella cenere dell’armatura che parlava con la voce di lei.\n\nQui è più forte verso il fondo, dove la paglia è smossa e ci sono i segni di un carro scaricato.",
+     "prove": [
+      {
+       "id": "paglia",
+       "abilita": [
+        "Percezione",
+        "Indagare"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Paglia pestata, segni di ruote, di casse trascinate. L’odore è dappertutto e da nessuna parte."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Nella paglia, dimenticata, un’asse di cassa spezzata. Lunga un braccio. L’odore viene da lì."
+        }
+       ]
+      }
+     ],
+     "dopo": "Trovano l’asse.",
+     "rilancio": "L’asse spunta dalla paglia. Che cosa fate?",
+     "daqui": [
+      "asse",
+      "ragazzo"
+     ]
+    },
+    {
+     "id": "asse",
+     "tipo": "dettaglio",
+     "titolo": "L’asse col loto raschiato",
+     "parte": "nascosto",
+     "innesco": "Qualcuno raccoglie l’asse dalla paglia.",
+     "leggi": "Legno di quercia, spesso due dita, rinforzato di ferro. Sul lato di fuori, bruciato nel legno, c’era un fiore. Qualcuno l’ha raschiato via col coltello, di fretta: è rimasto il contorno. Petali, e un gambo.\n\nGirate l’asse.\n\nSul lato di dentro il legno è segnato da graffi. Tanti. Sottili, paralleli, a gruppi di cinque.\n\nCome di dita.",
+     "immagine": "PDI — Osteria — L’asse col loto raschiato.jpg",
+     "note": "I graffi all’interno: chi ha liberato le anime di Altavia (Berardo, Celestina) riconosce il senso anche senza tiro. Mattheus, se tocca i graffi: per un istante, freddo nelle dita, e la sensazione di una mano che cerca la sua dall’altra parte del legno.",
+     "prove": [
+      {
+       "id": "loto",
+       "abilita": [
+        "Storia",
+        "Religione"
+       ],
+       "cd": 10,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 9,
+         "leggi": "Un fiore raschiato. Un marchio di bottega cancellato."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 10,
+         "leggi": "Il Loto Nero: lo stemma dei Velthuria, il fiore sulla corazza dell’armatura di Altavia, il sigillo da contratto di Mushanè. Qualcuno l’ha tolto perché nessuno lo vedesse sulla strada di Teramum."
+        }
+       ]
+      }
+     ],
+     "dopo": "Hanno una prova materiale: il Loto Nero sul convoglio, raschiato. E sanno che nelle casse qualcosa si muove.",
+     "rilancio": "Le cinque righe sottili vi guardano dal legno. Che cosa fate?",
+     "daqui": [
+      "ragazzo"
+     ],
+     "pe": 200,
+     "bottino": [
+      {
+       "n": "Asse di cassa col Loto Nero raschiato",
+       "q": 1,
+       "cat": "Missione",
+       "peso": "4 lb",
+       "valore": "—",
+       "stats": "",
+       "desc": "Quercia rinforzata di ferro. Fuori, il Loto Nero bruciato e raschiato. Dentro, graffi fitti come di dita.",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "ragazzo",
+     "tipo": "dettaglio",
+     "titolo": "Pasqualino",
+     "parte": "indizio",
+     "seme": "In fondo, nell’angolo della paglia, un ragazzo di stalla vi guarda da sopra la forca e fa finta di niente.",
+     "innesco": "Qualcuno parla col ragazzo di stalla.",
+     "leggi": "Dodici anni, magro, scalzo, la testa rasata per i pidocchi. Stringe la forca come una lancia.\n\n«Io non ho visto niente, messere.» Guarda l’asse, se l’avete in mano. «Niente.»",
+     "note": "Parla con una moneta, un pezzo di pane, o una voce gentile (Persuasione CD 10; vantaggio a chi ha una bestia con sé: Zenith, un cavallo). Quello che ha visto:\n«C’era un cavaliere dentro, messere. Tutto di ferro, nero e d’argento. Rannicchiato come un bambino, con le ginocchia in bocca. E quando l’hanno rimesso dritto… s’è sistemato. Come uno che dorme.»\n«Di notte canta. Una canzone da bambini. Quella della pecorella che non torna.»\n«Il messere è venuto a guardare la cassa rotta, ha messo la mano sopra e ha detto una cosa piano. Poi non ha cantato più, per un po’.»\nChiede una cosa sola: di poter dormire stanotte vicino ai carri della Crociata, «che siete tanti».",
+     "prove": [
+      {
+       "id": "ragazzo",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 10,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 9,
+         "leggi": "«Niente, messere. Paglia.» Ma non stacca gli occhi dal fondo della stalla."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 10,
+         "leggi": "Il ragazzo si siede sulla paglia e racconta tutto, a bassa voce, come si raccontano le cose che fanno paura."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno cosa c’è nelle casse, e che di notte canta. Se lo prendono sotto la loro protezione, Pasqualino chiede di seguire la colonna: un orfano in più (a tua discrezione).",
+     "rilancio": "Pasqualino vi guarda come si guarda l’unica porta aperta. Che cosa fate?",
+     "pe": 150
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "osteria_convoglio",
+   "kind": "scena",
+   "title": "I carri chiusi",
+   "image": "PDI — Osteria — I carri chiusi.jpg",
+   "legacyPosition": {
+    "x": 1170,
+    "y": 800
+   },
+   "text": "Quattro carri a quattro ruote, alti, pesanti, i cerchioni rinforzati di ferro. Teloni neri incerati, legati stretti con corde nuove.\n\nSotto i teloni, casse. Lunghe quanto un uomo. Si vedono gli spigoli.\n\nDue uomini della scorta stanno seduti sulle stanghe, uno per parte, con la balestra sulle ginocchia. Non giocano, non bevono. Guardano.\n\nSul fianco del terzo carro, sul legno, qualcuno ha raschiato via un disegno col coltello. È rimasto il contorno. Petali.\n\nLa ruota posteriore del quarto carro è nuova: il legno è ancora chiaro.",
+   "breve": "Il convoglio di Iuvenza: dodici casse, dodici armature con un’anima dentro. Di giorno si guardano; di notte si può provare ad avvicinarsi, aprirne una, sentire la voce. Liberare un’anima senza svegliare niente è possibile; forzare le casse porta allo scontro con la scorta e con un’Armatura del Loto (4.500 PE) e al Bando che si avvera.",
+   "gm": "Cosa c’è: dodici casse, tre per carro. In ognuna un’Armatura del Loto, d’argento annerito, col Loto Nero sulla corazza, ripiegata su se stessa come un bambino. Dentro ognuna, un’anima vincolata al ferro, come ad Altavia (Berardo, Celestina). «Ne ho altri. Più nuovi. Più forti. Vi aspettano a Teramum»: sono questi.\nDi chi sono le anime: Da decidere. Proposta: gente dei casali della valle, presa prima di essere forgiata, o servitori venduti. Una chiama la madre, una canta la ninna nanna della pecorella, una chiede che ore sono. Se vuoi un filo con il guado: una è la figlia piccola di un vicino dei Chiòdi.\nQuante: dodici è una proposta; il canone dice solo «altri, più nuovi, più forti».\nDormono finché Ansaldo non dà l’ordine, o finché una cassa non viene aperta del tutto e qualcuno le colpisce.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "petali",
+     "tipo": "dettaglio",
+     "titolo": "Il disegno raschiato",
+     "parte": "indizio",
+     "seme": "È rimasto il contorno. Petali.",
+     "innesco": "Qualcuno guarda il fianco del terzo carro.",
+     "leggi": "Il legno è stato raschiato di recente: le schegge sono ancora chiare. Il contorno che resta è quello di un fiore aperto, a cinque petali, col gambo lungo.",
+     "note": "Nessuna prova se hanno già visto il Loto Nero (Mushanè, Altavia): lo riconoscono. Con Storia CD 10 lo riconosce anche chi non c’era.",
+     "dopo": "Sanno che il convoglio è dei Velthuria, e che qualcuno non vuole che si sappia.",
+     "rilancio": "Il fiore raschiato è lì, sotto la lanterna. Che cosa fate?",
+     "daqui": [
+      "guardie",
+      "notte"
+     ]
+    },
+    {
+     "id": "guardie",
+     "tipo": "dettaglio",
+     "titolo": "Le guardie sulle stanghe",
+     "parte": "indizio",
+     "seme": "Due uomini della scorta stanno seduti sulle stanghe, uno per parte, con la balestra sulle ginocchia.",
+     "innesco": "Qualcuno si avvicina ai carri di giorno o in prima serata.",
+     "leggi": "Le balestre si alzano insieme, di un palmo. Non puntano. Avvisano.\n\n«Vino. Del messere.» Uno dei due scuote la testa. «Non si tocca.»",
+     "note": "Si può parlare con loro (Kostandìn traduce), offrire da bere (non bevono), chiedere del carico (non rispondono). Chi insiste va da Tanush, al pergolato.",
+     "dopo": "Di giorno non si passa. Di notte le guardie sono due, poi una sola dopo il terremoto.",
+     "rilancio": "Le balestre tornano giù. Gli occhi no. Che cosa fate?",
+     "daqui": [
+      "notte",
+      "osteria_pergolato"
+     ]
+    },
+    {
+     "id": "notte",
+     "tipo": "dettaglio",
+     "titolo": "Di notte, ai carri",
+     "parte": "evento",
+     "innesco": "Dopo mezzanotte, qualcuno prova ad arrivare alle casse senza farsi vedere.",
+     "leggi": "Il cortile è buio. Il fuoco della scorta è brace. Sulle stanghe, le due sagome col mento sul petto. Una respira forte. L’altra no, l’altra ascolta.\n\nDa sotto i teloni, piano, qualcuno canta.",
+     "note": "Furtività di gruppo (metà del gruppo che si muove deve riuscire) CD 14 contro le due guardie. Una distrazione (Pasqualino che fa scappare un bue, un incantesimo, Kostandìn che porta la grappa di Tanush) dà vantaggio. Dopo il terremoto resta una guardia sola.\nPoi: Arnesi da scasso o Rapidità di mano CD 13 per aprire una cassa di un palmo, senza rumore. Forzarla con le mani: Atletica CD 12, ma fa rumore (le guardie si svegliano).",
+     "prove": [
+      {
+       "id": "furtivi",
+       "abilita": [
+        "Furtività"
+       ],
+       "cd": 14,
+       "gruppo": "meta",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Un sasso rotola. La sagoma che ascoltava si alza con la balestra. «Chi è?» Avete un respiro per inventare qualcosa (Inganno CD 13) o ve ne andate."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Arrivate sotto il telone del terzo carro. Il canto è lì, a una spanna dalla vostra faccia."
+        }
+       ]
+      },
+      {
+       "id": "cassa",
+       "abilita": [
+        "Arnesi da scasso",
+        "Rapidità di mano"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Il chiodo stride. Il canto si ferma. Da dentro, qualcosa si gira."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Il coperchio si solleva di un palmo, senza un suono."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se la cassa è aperta di un palmo, vai a «Dentro la cassa». Se vengono scoperti, Tanush arriva in un minuto: si può parlare (è stanco, non vuole morti) o si arriva alle armi.",
+     "rilancio": "Il canto ricomincia, da sotto il legno. Che cosa fate?",
+     "daqui": [
+      "dentro",
+      "scontro"
+     ]
+    },
+    {
+     "id": "dentro",
+     "tipo": "dettaglio",
+     "titolo": "Dentro la cassa",
+     "parte": "evento",
+     "innesco": "Qualcuno apre una cassa, anche solo di un palmo, e guarda dentro.",
+     "leggi": "Ferro. Argento annerito, lucido come acqua di notte. Un’armatura intera, ripiegata su se stessa: le ginocchia contro la corazza, le braccia intorno alle ginocchia, l’elmo chino.\n\nSulla corazza, sbalzato nel metallo, un fiore a cinque petali.\n\nL’elmo si alza. Piano.\n\nDentro la visiera non c’è niente. Buio.\n\nPoi una voce, da dentro, piccola. Una voce di ragazza.\n\n«Che ore so’? Mamma m’aspetta pe’ la cena.»",
+     "note": "Mattheus sente l’anima come un freddo sotto le costole: è una di quelle che Mortus aspetta e che non è mai arrivata.",
+     "prove": [
+      {
+       "id": "anima",
+       "abilita": [
+        "Religione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Una magia che imita una voce. Un’illusione, forse, per spaventare i ladri."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "È un’anima. Legata al ferro come quelle di Altavia: Berardo, Celestina. Non sa dov’è, non sa da quanto. L’armatura dorme; lei no."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno cosa porta il convoglio a Teramum: armature con dentro gente. Possono richiudere, provare a liberare l’anima, o forzare.",
+     "rilancio": "La voce aspetta che qualcuno le dica che ore sono. Che cosa fate?",
+     "daqui": [
+      "liberare",
+      "scontro"
+     ],
+     "pe": 700
+    },
+    {
+     "id": "liberare",
+     "tipo": "dettaglio",
+     "titolo": "Lasciarla andare",
+     "parte": "evento",
+     "innesco": "Qualcuno prova a liberare l’anima senza distruggere l’armatura (preghiera, rito, magia).",
+     "leggi": "Le parole si dicono piano, con la bocca vicino al legno.",
+     "note": "Proposta: un rito di Mortus (Mattheus), Scacciare Non Morti o Dissolvi Magie dentro la cassa, dieci minuti a voce bassa, liberano l’anima senza svegliare l’armatura. Serve Religione CD 15 per chi guida il rito (vantaggio a Mattheus); intanto un altro fa la guardia (Furtività CD 12 per non farsi scoprire). Dissolvi Magie funziona senza prova ma fa luce per un istante (la guardia si gira: Furtività CD 14).\nSe riesce: l’armatura si affloscia, vuota, e non si sveglierà più. A Teramum ne arriva una in meno. Ansaldo se ne accorge all’alba e non dice niente: lo scrive.",
+     "prove": [
+      {
+       "id": "rito",
+       "abilita": [
+        "Religione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "La voce si agita. «No, no, no, m’aspetta…» L’armatura trema nella cassa. Avete un round per richiudere prima che si svegli."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "La voce smette di chiedere l’ora. Dice un nome, piano, che non capite. Poi un sospiro. L’armatura si affloscia, vuota, e il ferro diventa freddo come ferro."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "La voce dice il suo nome, Lucia, e il nome del suo paese, Sant’Atto. Poi: «Dìteje a mamma…» e se ne va. L’armatura si affloscia, vuota. Nella cassa, dove c’era la voce, un odore di pane."
+        }
+       ]
+      }
+     ],
+     "dopo": "Un’anima liberata, un’armatura in meno per Iuvenza. Si può provare con un’altra cassa (stessa procedura, stesse prove), ma ogni volta il rischio sale: dopo la seconda, le guardie cambiano turno.",
+     "rilancio": "Il ferro è freddo e muto. Il cortile dorme. Che cosa fate?",
+     "pe": 700
+    },
+    {
+     "id": "scontro",
+     "tipo": "scontro",
+     "titolo": "Scontro — la scorta e l’Armatura del Loto",
+     "parte": "evento",
+     "innesco": "I PG forzano le casse, attaccano la scorta, o vengono scoperti e non trattano.",
+     "leggi": "Tanush è in piedi prima di tutti, la spada in mano, e urla una parola sola. Dal pergolato e dal fienile arrivano gli altri, balestre cariche.\n\nDal terzo carro, un suono di legno che si spacca. Il telone si gonfia.\n\nQualcosa si alza. Argento e buio. Un fiore sul petto.",
+     "note": "Se si arriva alle armi (i PG aprono le casse con la forza, attaccano la scorta o Ansaldo):\nForze: Tanush («Sergente mercenario» del Bestiario, GS 3, 700 PE) e 6 «Mercenario vesperiano» (GS 2, 450 PE ciascuno) svegli e armati in 2 round; gli altri sei dormono nel fienile e arrivano al 4° round se lo scontro dura (non contano nei PE se non arrivano). E al 2° round, dalla cassa aperta, una «Armatura del Loto» (nuova, Bestiario; GS 4, 1.100 PE). Totale 4.500 PE: moderata per 6 PG di livello 5.\nAnsaldo non combatte: al primo colpo sale a cavallo e scappa verso Teramum con la cartella (a meno che non gliel’abbiano già presa). Arriverà prima di loro.\nL’Armatura del Loto combatte per il messere e per nessun altro; se Ansaldo è fuggito, attacca chiunque sia più vicino, vesperiani compresi. Chi la distrugge libera l’anima dentro: una voce di donna dice «grazie» e il nome di un paese della valle.\nConseguenze: assalto a un convoglio con tre sigilli sulla strada del Barone Pietramala. È esattamente l’accusa del Bando (aggressione, sedizione). Il castaldo lo saprà all’alba, Teramum entro sera. A Colleatterato il sergente avrà già la notizia (vedi la scena). Il bottino è grosso: le prove sono tante. Il prezzo è politico.\nTanush, a metà PF, si arrende e chiede di parlare con Kostandìn.",
+     "dopo": "Vinto lo scontro: il convoglio è nelle mani della Crociata, con undici casse chiuse e un problema politico enorme. Se Ansaldo è fuggito, Teramum saprà prima di sera che la «colonna armata senza mandato» ha assalito un mercante.",
+     "rilancio": "Il cortile è pieno di fumo e di bestie spaventate. Che cosa fate?",
+     "pe": 4500,
+     "bottino": [
+      {
+       "n": "Borsa di Tanush e della scorta",
+       "monete": {
+        "mo": 64
+       }
+      },
+      {
+       "n": "Lasciapassare con tre sigilli",
+       "q": 1,
+       "cat": "Missione",
+       "peso": "—",
+       "valore": "—",
+       "stats": "Savinellus, Clavax, Mazzarellus",
+       "desc": "«Quattro carri di vino e botti per le cantine del Quartiere dei Tigli.» Se Ansaldo non l’ha portato via.",
+       "a": "crociata"
+      },
+      {
+       "n": "Balestre leggere",
+       "q": 4,
+       "cat": "Armi",
+       "peso": "5 lb ciascuna",
+       "valore": "25 mo ciascuna",
+       "stats": "1d8 perforanti · gittata 24/96 m",
+       "desc": "Della scorta vesperiana.",
+       "a": "crociata"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "osteria_notte",
+   "kind": "scena",
+   "title": "La notte del terremoto",
+   "image": "PDI — Osteria — La notte del terremoto.jpg",
+   "legacyPosition": {
+    "x": 760,
+    "y": 680
+   },
+   "text": "È notte fonda. Il campo dorme. Sotto il pergolato qualcuno russa. Nella stalla un bue batte lo zoccolo.\n\nPoi la brocca sul davanzale trema. Poi il tavolo.\n\nLe bestie nella stalla si alzano tutte insieme. Una trave scricchiola, lunga. Dal tetto cade polvere di coppi.\n\nL’acqua nel pozzo fa un rumore d’onda.\n\nDura il tempo di tre respiri.\n\nPoi finisce.\n\nNel silenzio che resta, da occidente, da dove sta Teramum, vi sembra di sentire un colpo solo. Sordo. Lontanissimo. Come una porta enorme che si chiude sotto terra.\n\nTUM.\n\nE niente più.\n\nDai carri chiusi, nel cortile, un rumore di ferro. Come di qualcuno che si gira nel sonno.",
+   "breve": "Notte fonda: un terremoto di tre respiri, poi da occidente un colpo sordo, lontanissimo. Il presagio. Il Filatterio di Mattheus si fa freddo per un battito; le armature nelle casse si muovono tutte insieme; Ansaldo esce con la lanterna e dice «Non ancora». Chi è di guardia vede il cavaliere sulla collina. All’alba il convoglio è già partito.",
+   "gm": "Canone: il Gigante è inquieto e i terremoti sono sempre più frequenti. Il colpo da occidente è il presagio: sotto la Basilica Aurea di Teramum c’è un Sigillo Lunare, disturbato. I PG non devono saperlo.\nProposta (Da decidere): in città, nello stesso momento, la campana grande della Basilica Aurea ha suonato un colpo da sola. Lo racconta il sergente a Colleatterato.\nChi è sveglio: chiedi al tavolo chi fa la guardia e in che turno. Il terremoto arriva nel terzo turno, quello prima dell’alba.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "filatterio",
+     "tipo": "dettaglio",
+     "titolo": "Un battito",
+     "parte": "nascosto",
+     "innesco": "Nel momento del colpo (Mattheus, sveglio o addormentato).",
+     "leggi": "Nel momento esatto del colpo, la custodia sul tuo petto si fa fredda. Un battito solo. Come quando una mano ti tocca nel buio e poi non c’è più.\n\nPoi torna tiepida.",
+     "note": "Da mostrare solo a Mattheus. Nessuna prova. Il Filatterio ha «sentito» il Sigillo sotto la Basilica. All’ombra delle mura di Teramum si farà più pesante (vedi Arrivo a Teramum).",
+     "dopo": "Mattheus sa che qualcosa, a occidente, ha risposto a ciò che porta.",
+     "rilancio": "Il freddo è passato. La notte no. Che cosa fai?"
+    },
+    {
+     "id": "casse",
+     "tipo": "dettaglio",
+     "titolo": "Il ferro che si gira",
+     "parte": "indizio",
+     "seme": "Come di qualcuno che si gira nel sonno.",
+     "innesco": "Qualcuno guarda verso i carri dopo il terremoto.",
+     "leggi": "Le guardie sulle stanghe sono in piedi, le balestre alzate verso i teloni, non verso di voi. Tanush arriva scalzo, la spada in mano, e bestemmia nella sua lingua.\n\nDalla porta dell’osteria esce il messere. In camicia, con una lanterna. Calmo. Passa fra le guardie, appoggia la mano aperta sul telone del terzo carro, si china, dice qualcosa.\n\nIl ferro sotto il telone si ferma.",
+     "prove": [
+      {
+       "id": "orecchio",
+       "abilita": [
+        "Percezione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Due parole, piano. Il vento se le porta."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Due parole sole, dette come si dicono a un cane o a un bambino.\n\n«Non ancora.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il carico ha risposto al colpo, e che il messere lo comanda.",
+     "rilancio": "Il messere torna dentro senza guardarvi. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "alba",
+      "osteria_collina"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Chi parla, dopo",
+     "parte": "evento",
+     "innesco": "Il campo si sveglia e qualcuno commenta.",
+     "leggi": "Nicola, sulla porta, con la coperta sulle spalle: «Lu Gigante se gratta. Da un anno se gratta sempre più spesso.»\n\nGli chiedete del colpo. Ci pensa.\n\n«Quello no. Quello non l’avevo mai sentito.»\n\nGhita la pellegrina, inginocchiata sulla soglia, a mani giunte, dice una cosa sola.\n\n«È la Basilica.»",
+     "note": "Nessuna prova. Silvanus, se c’è, guarda verso occidente a lungo e poi dice: «Dormite. Domani vediamo la città.» Tocca le Due Lune sotto la tunica.",
+     "dopo": "La notte continua. Chi non era di guardia torna a dormire, male.",
+     "rilancio": "Nessuno parla più. Qualcuno prega. Che cosa fate?",
+     "daqui": [
+      "alba"
+     ]
+    },
+    {
+     "id": "alba",
+     "tipo": "dettaglio",
+     "titolo": "All’alba, il cortile vuoto",
+     "parte": "evento",
+     "innesco": "Al primo chiarore.",
+     "leggi": "Al primo chiarore il lato destro del cortile è vuoto. Quattro solchi nuovi, profondi, verso la strada di occidente. Nessuno li ha sentiti partire.\n\nSul bancone dell’osteria, davanti a Nicola che non ha dormito, una moneta d’oro. E accanto, piegato, un biglietto senza firma.\n\n«Per il disturbo della notte. Ci rivedremo in città. Io vi avrò già contati.»",
+     "note": "Il convoglio passa a Colleatterato un’ora prima di loro e viene registrato dalla Guardia, «in regola, con tre sigilli». Se gli hanno sottratto il lasciapassare, il convoglio aspetta alla sbarra, e la scena di Colleatterato cambia (vedi là).",
+     "dopo": "Si riparte verso Colleatterato. Chi ha seguito il cavaliere sulla collina ha trovato le sue tracce all’alba (vedi «Il cavaliere sulla collina»).",
+     "rilancio": "La strada di occidente sale verso l’ultima collina. Che cosa fate?"
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "osteria_collina",
+   "kind": "persona",
+   "title": "Il cavaliere sulla collina",
+   "image": "PDI — Osteria — Il cavaliere sulla collina.jpg",
+   "legacyPosition": {
+    "x": 1370,
+    "y": 50
+   },
+   "text": "Oltre la strada, sulla collina verso levante, contro il cielo appena più chiaro della terra, c’è un cavaliere.\n\nFermo. Il cavallo non bruca. Lui non si muove. Accanto, la sagoma di una quercia sola.\n\nGuarda il campo.\n\nQuando la terra trema, il cavallo scarta. Lui lo tiene con una mano sola, senza staccare gli occhi da voi.",
+   "breve": "Il cavaliere che segue la colonna da Bëllindë (il finocchio all’edicola di Sant’Atto). È un uomo di Dama Violante Rosaspina di Nutaròschë, la spia di Iuvenza. Se lo si insegue, fugge verso sud-est; le tracce, all’alba, hanno i chiodi dei ferri a forma di rosa.",
+   "gm": "Il rapporto sulla Crociata arriva a Teramum per due vie: quella ufficiale (il Barone, la Guardia di Colleatterato) e quella segreta di Nutaròschë (questo cavaliere, poi Rosaspina, poi Iuvenza). Ansaldo è la terza.\nIl cavaliere si chiama Guelfo (proposta), scudiero di Rosaspina. Non combatte: fugge. Ha un buon cavallo e un vantaggio di cento metri.\nSi vede solo da chi è sveglio e guarda verso levante, o da chi ha scurovisione: nota.cd 15 (buio).",
+   "nota": {
+    "cd": 15
+   },
+   "moduli": [
+    {
+     "id": "inseguire",
+     "tipo": "dettaglio",
+     "titolo": "Andargli incontro",
+     "parte": "evento",
+     "innesco": "Qualcuno sale verso la collina, lo chiama, o manda Zenith.",
+     "leggi": "Appena vi muovete, il cavaliere volta il cavallo. Non corre subito: va al passo, oltre la cresta. Poi il rumore degli zoccoli cambia. Galoppo. Verso sud-est.",
+     "note": "A piedi non lo si prende. A cavallo: tre prove di Addestrare Animali o Atletica (cavalcare) CD 14 in fila, di notte, in campagna; tre successi prima di tre fallimenti per raggiungerlo. Zenith lo segue per un tratto e lo perde nel bosco.\nSe lo prendono: un giovane in tabarro scuro, senza stemma, con una lettera sigillata con cera rossa e una rosa per impronta, indirizzata «a chi sapete, a Teramum». Dentro: il conto della colonna, e «il capitano porta il cappuccio anche di notte».",
+     "prove": [
+      {
+       "id": "caccia",
+       "abilita": [
+        "Addestrare Animali",
+        "Atletica"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Il cavallo inciampa nel buio. Il rumore degli zoccoli si allontana."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Guadagnate terreno. Lo vedete, nero sul nero, a trenta passi."
+        }
+       ]
+      }
+     ],
+     "dopo": "Preso o no, la seconda via del rapporto esiste. Se è preso, la lettera è una prova contro Rosaspina (non ancora contro Iuvenza).",
+     "rilancio": "Il galoppo si spegne verso sud-est. Che cosa fate?",
+     "daqui": [
+      "tracce"
+     ],
+     "pe": 300,
+     "bottino": [
+      {
+       "n": "Lettera col sigillo della rosa",
+       "q": 1,
+       "cat": "Missione",
+       "peso": "—",
+       "valore": "—",
+       "stats": "",
+       "desc": "Cera rossa, impronta di una rosa. «A chi sapete, a Teramum.» Il conto della Crociata e: «il capitano porta il cappuccio anche di notte».",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "tracce",
+     "tipo": "dettaglio",
+     "titolo": "Le tracce della rosa",
+     "parte": "indizio",
+     "seme": "Accanto, la sagoma di una quercia sola.",
+     "innesco": "All’alba qualcuno sale sulla collina a guardare dove stava.",
+     "leggi": "Sotto la quercia l’erba è pestata in un cerchio stretto: è stato lì ore. Una buccia di mela. Poi le orme del cavallo, verso sud-est.",
+     "prove": [
+      {
+       "id": "rosa",
+       "abilita": [
+        "Sopravvivenza",
+        "Indagare"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un cavallo ferrato. Come mille."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Un cavallo ferrato bene, da signore. E i chiodi dei ferri, nella terra molle sotto la quercia, fanno un disegno: sei punte intorno a una. Una rosa. Un fabbro di casa nobile, che firma i suoi ferri."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con Storia CD 12, o chiedendo a Nicola: la rosa è l’insegna di Dama Violante Rosaspina di Nutaròschë. Si dice che sia vicina alla signora dai capelli bianchi.",
+     "rilancio": "Le orme scendono verso Nutaròschë. Che cosa fate?",
+     "pe": 200
+    }
+   ]
+  }
+ ]
+}

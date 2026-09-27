@@ -1,0 +1,32 @@
+{
+ "id": "te_armatura_iuvenza",
+ "name": "Armatura di Iuvenza",
+ "short": "A",
+ "color": "#3A2F4A",
+ "hp": 60,
+ "ac": 20,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: due colpi di spada lunga"
+  },
+  {
+   "n": "Spada lunga",
+   "atk": 6,
+   "dmg": "1d10+4"
+  },
+  {
+   "n": "Dardo del fumo (18 m)",
+   "atk": 6,
+   "dmg": "2d6 necrotici"
+  }
+ ],
+ "note": "Orrore Elmato (Manuale dei Mostri 2024, adattato; statistiche a memoria: verificare nell’SRD) · GS 4 · 1.100 PE · velocità 9 m, volo 9 m (fluttua; qui il soffitto è basso) · immune a veleno, psichico, Affascinato, Spaventato, Paralizzato, Pietrificato · non respira, non dorme · Immunità agli incantesimi: Palla di fuoco, Fulmine, Scaldare il metallo (come l’originale). Armatura smaltata di scuro, vuota: dentro fumo nero che sa di lillà e di marcio. Le «armature nuove» di Iuvenza: «Ne ho altri. Più nuovi. Più forti.»",
+ "src": "Basilica Aurea — La porta con la luna",
+ "tac": "Tengono il corridoio davanti alla porta murata, due davanti e una che copre la fanatica. Non inseguono oltre la cripta. Quando cadono, il fumo esce dagli elmi e per un istante prende la forma di una donna dai capelli bianchi.",
+ "lines": [
+  "(nessuna voce: solo il rumore del metallo e un odore di lillà)"
+ ],
+ "img": "Ritratto — Armatura di Iuvenza.jpg"
+}

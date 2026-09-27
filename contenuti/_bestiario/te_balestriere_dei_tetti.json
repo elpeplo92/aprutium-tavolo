@@ -1,0 +1,33 @@
+{
+ "id": "te_balestriere_dei_tetti",
+ "name": "Balestriere dei tetti",
+ "short": "T",
+ "color": "#5A6B4A",
+ "hp": 16,
+ "ac": 13,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: due attacchi"
+  },
+  {
+   "n": "Spada corta",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Balestra leggera (24/96 m)",
+   "atk": 4,
+   "dmg": "1d8+2"
+  }
+ ],
+ "note": "Esploratore (Scout, MM 2024), adattato · GS 1/2 · 100 PE · velocità 9 m, scalare 9 m sui tetti · Percezione +5, Furtività +6.",
+ "src": "Teramum — la città (Il ponte sulla gola)",
+ "tac": "Sui tetti ai due capi del ponte, copertura dei comignoli (+2 CA). Tirano su chi lancia incantesimi. Spariscono sui tetti appena i bravi scappano.",
+ "lines": [
+  "Quello con le mani che brillano!",
+  "Giù, giù!"
+ ],
+ "img": "Ritratto — Teramum — Balestriere dei tetti.jpg"
+}

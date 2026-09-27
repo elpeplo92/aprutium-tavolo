@@ -1,0 +1,41 @@
+{
+ "id": "te_campione_arena",
+ "name": "Campione dell’Arena",
+ "short": "C",
+ "color": "#6B5B3A",
+ "hp": 112,
+ "ac": 16,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 3 × Lancia"
+  },
+  {
+   "n": "Lancia",
+   "atk": 7,
+   "dmg": "1d6+4"
+  },
+  {
+   "n": "Lancia a due mani",
+   "atk": 7,
+   "dmg": "1d8+4"
+  },
+  {
+   "n": "Colpo di scudo (TS For CD 15 o Prono)",
+   "atk": 7,
+   "dmg": "1d4+4"
+  },
+  {
+   "n": "Parata (reazione: +3 CA contro un attacco in mischia)"
+  }
+ ],
+ "note": "Gladiatore (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD) adattato a non morto, GS 5 · 1.800 PE · Vel 9 m · Immune: veleno; avvelenato, sfinimento · Resistente: necrotici · Non attacca chi tiene il tubo di piombo e parla Pretuziano o fa il segno del lupo · Quando cade si inginocchia e si sbriciola. L’ultimo combattente che teneva la porta dell’ipogeo.",
+ "src": "L’Arena Sprofondata",
+ "tac": "Tiene il passaggio fra la sala delle ossa e la trincea come chi difende una porta: non avanza oltre. Colpisce chi prova a passare, butta a terra con lo scudo chi sta per raggiungere il tubo.",
+ "lines": [
+  "Le ossa scricchiolano. Prende la lancia.",
+  "(Nessuna voce. Solo il bronzo dell’elmo che batte contro la pietra.)"
+ ],
+ "img": "Mostro — Campione dell’Arena.jpg"
+}

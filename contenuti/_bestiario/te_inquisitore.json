@@ -1,0 +1,38 @@
+{
+ "id": "te_inquisitore",
+ "name": "Inquisitore della Basilica",
+ "short": "I",
+ "color": "#C9A24A",
+ "hp": 38,
+ "ac": 13,
+ "init": 0,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Mazza"
+  },
+  {
+   "n": "Mazza (+1d6 radiosi)",
+   "atk": 5,
+   "dmg": "1d6+3"
+  },
+  {
+   "n": "Fiamma sacra (TS Des CD 13, 2d8 radiosi, 18 m)"
+  },
+  {
+   "n": "Blocca persone (TS Sag CD 13, concentrazione)"
+  },
+  {
+   "n": "Cura ferite / Parola guaritrice"
+  }
+ ],
+ "note": "Sacerdote (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD), GS 2 · 450 PE · Vel 9 m · Incantatore della Fiamma: Luce, Fiamma sacra, Cura ferite, Parola guaritrice, Blocca persone, Arma spirituale. Tonaca bianca con il sole d’oro. Uccidere un inquisitore a Teramum è una guerra con l’Arcimandrita.",
+ "src": "Il tempio sigillato di Mortus",
+ "tac": "Non cerca di uccidere: cerca di prendere vivi e di vedere facce. Usa Blocca persone sul primo che scappa, legge ad alta voce la formula, e guarda soprattutto chi fa luce.",
+ "lines": [
+  "«In nome della Fiamma e dell’Arcimandrita del Ducato…»",
+  "«La luce d’argento. Eccola.»",
+  "«Figlioli. Questa strada non porta da nessuna parte.»"
+ ],
+ "img": "Mostro — Inquisitore della Basilica.jpg"
+}

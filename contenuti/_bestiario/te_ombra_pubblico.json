@@ -1,0 +1,27 @@
+{
+ "id": "te_ombra_pubblico",
+ "name": "Ombra del pubblico",
+ "short": "O",
+ "color": "#3A3A44",
+ "hp": 27,
+ "ac": 12,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Tocco che prosciuga (For −1d4 fino a riposo breve)",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Furtività nell’ombra (azione bonus: Nascondersi in luce fioca o buio)"
+  }
+ ],
+ "note": "Ombra (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD), GS 1/2 · 100 PE · Vel 12 m · Vulnerabile: radiosi · Resistente: acido, freddo, fuoco, fulmine, tuono · Immune: necrotici, veleno; affascinato, afferrato, paralizzato, pietrificato, prono, sfinimento, spaventato, trattenuto · Incorporea: attraversa creature e oggetti · Debolezza alla luce del sole: svantaggio a tutto alla luce del sole · Il tocco infligge danni necrotici e riduce la Forza di 1d4; chi arriva a Forza 0 muore e si alza un’Ombra. Gli spettatori dell’ultima notte dell’Arena.",
+ "src": "L’Arena Sprofondata",
+ "tac": "Si staccano dalle ossa sedute e cercano chi ha la luce più debole o è isolato nella trincea. Non seguono nessuno alla luce del giorno. Quando il Campione cade, tornano sulle ossa.",
+ "lines": [
+  "Un fruscio lungo, come una folla che si alza dalle panche."
+ ],
+ "img": "Mostro — Ombra del pubblico.jpg"
+}

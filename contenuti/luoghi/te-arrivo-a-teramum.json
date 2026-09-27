@@ -1,0 +1,159 @@
+{
+ "id": "te-arrivo-a-teramum",
+ "tipo": "luogo",
+ "titolo": "Arrivo a Teramum",
+ "sottotitolo": "la Città Sotto la Montagna vista da fuori: le mura, le sei porte, la Guardia Ducale, i sigilli",
+ "citta": "teramum",
+ "gruppo": "Arrivo",
+ "livello": "luogo",
+ "parent": "borgo-teramum",
+ "img": "Luogo — Arrivo a Teramum.jpg",
+ "stato": "segreto",
+ "atti": [],
+ "compendio": true,
+ "scheda": {
+  "Tipo": "scena d’arrivo: dalla prima vista delle mura all’accampamento",
+  "Quando": "primo pomeriggio del secondo giorno di viaggio (proposta), con la città già nell’ombra del Gigante",
+  "Mura": "esterne di pietra bianca, dodici metri, diciotto torri; interne antiche di pietra grigia, inglobate negli edifici",
+  "Porte": "Realë (ovest, verso la montagna) · Meridianë (sud, verso la costa, la più trafficata) · de lu Solë (est, per le processioni) · de lu Fiumë (nord) · Piccòla (sud-est, contadini e bestiame) · Pustèrla de li Mortë (nord-ovest, solo funerali)",
+  "Chi tiene le porte": "la Guardia Ducale di Casa Grazianus (~600 attivi, ~1.500 di riserva)",
+  "Per entrare armati": "un lasciapassare con i sigilli di almeno tre Casate",
+  "Collegato a": "Teramum · Il Cuore del Ducato · La strada per Teramum · Scena del tavolo «Arrivo a Teramum»",
+  "Porta d’arrivo": "Porta de lu Solë (levante), davanti al ponte sul Tordinum",
+  "Chi li accoglie": "il sergente Iaco Pennacchia, il capitano Guarnerio da Mëndurjë, Ser Eutichio Quattrocchi (Casa Clavax), il Mastro-Pastore Venanzio Collepietra",
+  "Dove si accampa la Crociata": "sul tratturo del Tordinum, col permesso del Mastro-Pastore"
+ },
+ "pub": [
+  {
+   "t": "La prima vista",
+   "txt": "La valle si apre, e Teramum è lì.\nDue fiumi le corrono intorno e si stringono sotto di lei, come due braccia che non vogliono lasciarla andare.\nLe mura sono bianche. Alte quanto sette uomini uno sopra l’altro. Diciotto torri, le contate senza volerlo.\nSopra le mura, la città sale a gradoni. Tetti rossi, fitti. Torri sottili e quadrate, decine, ognuna più alta della vicina, come se facessero a gara.\nIn cima al colle, una cupola che prende l’ultima luce e la rimanda d’oro.\nDietro a tutto, il Gigante. Così vicino che sembra appoggiato alla città.\nIl sole è ancora alto sulle colline alle vostre spalle. Su Teramum, invece, è già sera."
+  },
+  {
+   "t": "Sotto le mura",
+   "txt": "Più vi avvicinate, più le mura cambiano.\nIn basso la pietra è grigia, enorme, squadrata, senza malta. Sopra, la pietra chiara degli architetti dell’Impero, liscia, quasi dorata, appoggiata sulla vecchia come un vestito buono su un corpo più antico.\nL’aria sa di troppe cose insieme. Fumo di forge. Incenso. Pane. Fiume. E sotto, da qualche parte, un odore di cantina che non se ne va.\nDalla strada si staccano sentieri e carrarecce, verso porte diverse.\nSulle torri, piccole sagome vi guardano arrivare."
+  },
+  {
+   "t": "La Guardia Ducale",
+   "txt": "Le guardie portano un tabarro grigio con una torre e un lupo ricamati sul petto.\nNon sono milizia di paese. Si muovono in coppia, le picche tutte alla stessa altezza. Un sergente con una tavoletta cerata vi conta prima ancora che siate a portata di voce.\nNessuno vi punta contro niente.\nNessuno vi sorride."
+  },
+  {
+   "t": "Porta de lu Solë",
+   "txt": "Un arco trionfale più che una porta. Sopra la volta, un sole di bronzo con i raggi consumati dalle intemperie. Il lastricato davanti è largo, pulito, fatto per le processioni.\nI battenti sono chiusi. È aperta solo la porticina di servizio, e davanti c’è un tavolo.\nIl sergente guarda il vostro stendardo. Poi guarda il sole di bronzo sopra la propria testa. Poi di nuovo lo stendardo."
+  },
+  {
+   "t": "Porta Piccòla",
+   "txt": "Una porta bassa, a sud-est, con il selciato sporco di letame e paglia. Pecore, carri di fieno, donne con le ceste sulla testa. Un banco del dazio, un uomo che pesa i formaggi.\nNessuno vi aspetta. Nessuno fa caso a voi, per i primi dieci passi.\nPoi qualcuno vede lo stendardo arrotolato sul carro, e la fila si ferma."
+  },
+  {
+   "t": "Porta de lu Fiumë",
+   "txt": "Per arrivarci si attraversa il fiume su un ponte di pietra. Sotto, i lavatoi, le ruote dei mulini, ragazzi che pescano.\nLa porta sta in fondo al ponte, stretta fra due torri. Chi è sul ponte non può tornare indietro in fretta, e non può uscire dai lati.\nLe guardie lo sanno. Vi lasciano arrivare fino a metà ponte prima di muoversi."
+  },
+  {
+   "t": "Porta Meridianë",
+   "txt": "La porta della costa, e si vede. Carri di sale, di pesce secco, di stoffe. Mercanti con le carte in mano, sensali, mendicanti, un banditore.\nSotto la volta, un bancone lungo con quattro scrivani e quattro timbri. La fila arriva fino al ponte.\nQui vi vedranno tutti. E tutti, entro stasera, sapranno che siete arrivati."
+  },
+  {
+   "t": "Porta Realë",
+   "txt": "Per arrivarci bisogna girare intorno a mezza città, sotto le mura, fin dove la strada comincia a salire verso la montagna.\nÈ la porta più alta e più fredda. Pochi carri, qualche mulattiere, legna, ferro.\nLe guardie qui sono più anziane. Guardano chi scende dalla montagna, non chi arriva dalla valle. Vi guardano come si guarda qualcosa che ha sbagliato strada."
+  },
+  {
+   "t": "Pustèrla de li Mortë",
+   "txt": "Una porta stretta a nord-ovest, un solo battente, niente insegne. Fuori, un campo di cipressi.\nDa qui entrano solo i morti, e chi li accompagna.\nUna guardia sola, seduta. Si alza quando vi vede. Non per fermarvi: per togliersi il cappello, finché non capisce che non portate nessuno."
+  },
+  {
+   "t": "L’attesa",
+   "txt": "«Aspettate qui.»\nIl sergente scompare dentro la porta con la vostra risposta scritta sulla tavoletta.\nPassa un quarto d’ora. Poi un’ora.\nArriva un altro uomo, vestito di nero, con un cofanetto di legno sotto il braccio. Dentro ci sono sigilli. Tanti.\nNe prende uno, lo guarda, lo rimette a posto.\n«Per questo ne servono tre», dice. «Voi quanti ne avete?»"
+  }
+ ],
+ "gm": [
+  {
+   "t": "Note del master",
+   "txt": "• Funzione della scena: far sentire che Teramum è il campo nemico, e che a Teramum si combatte con la carta prima che con la spada. Nessuno scontro: attrito, attesa, occhi.\n• Il Bando è arrivato prima di loro: la colonna è «sotto osservazione». La Guardia sa chi sono, quanti sono (se il picchetto di Colleatterato li ha contati) e da dove vengono. Non li arresta: li ferma, li conta, li fa aspettare.\n• Luce: il Gigante blocca il sole del pomeriggio. Arrivando di primo pomeriggio, la città è già in ombra mentre le colline dietro di loro sono ancora al sole. A Teramum non si vedono i tramonti, solo le albe.\n• Legami: Alessandros e Vicarus hanno studiato qui (e i Cerullius hanno un palazzo in città); Maximus è nato qui; Mattheus viene da Magnacellum, sulle colline vicine, e ha il nome di Frate Davide de li Piccole Vie; Martinella Lezzia, la fidanzata di Maximus, è di Castronia, vicino a Teramum. Ogni PG di città ha diritto a un dettaglio che riconosce: una bottega, una scuola, una torre.\n• Non rivelare nulla di ciò che sta sotto la città (Basilica Aurea, Sigillo Lunare, Città Sepolta). Se Mattheus porta il Filatterio, all’ombra delle mura diventa un po’ più pesante. Niente di più.\n• Al tavolo: scena «Arrivo a Teramum» (teramum_porta), otto punti in ordine di gioco — la discesa, il cippo delle sei porte, il ponte, il dazio, l’arco, il tavolo del sergente, lo scrivano, il tratturo. Dentro le mura: scena «Teramum — la città» (teramum)."
+  },
+  {
+   "t": "Le sei porte — cosa cambia",
+   "txt": "Porta de lu Solë (est): la porta naturale per chi arriva dalla valle del Tordinum. Si apre per le processioni: entrarci con uno stendardo è una dichiarazione. La Guardia non la apre senza ordine; la notizia arriva a Casa Impalox (la Fede) prima di sera: una «Crociata» che entra dalla porta dei santi senza benedizione della Basilica. Massima visibilità, massimo attrito religioso.\nPorta Piccòla (sud-est): la più facile per carri e bestie, la meno sorvegliata. Il dazio è sui beni, non sulle persone. Buona per entrare in pochi e senza stendardo; la colonna intera non passa inosservata. Attrito basso, ma se si scopre che la Crociata è entrata «dalla porta delle pecore», a corte ne rideranno.\nPorta de lu Fiumë (nord): il ponte è una strettoia; la Guardia controlla bene. Utile se si vuole trattare con calma: nessuna folla, nessun testimone.\nPorta Meridianë (sud): la più trafficata, la più burocratica. Quattro scrivani, quattro timbri (proposta: Savinellus per i dazi, Clavax per la legge, Grazianus per le armi, Mazzarellus per l’amministrazione). Tutta la città saprà del loro arrivo entro sera; anche gli agenti di Iuvenza.\nPorta Realë (ovest): bisogna girare intorno alla città, mezza giornata persa. Guardie anziane, abituate ai montanari. È la porta verso Tussëcië e la strada montana pattugliata dal Marchese d’Avalos, uomo di Iuvenza: chi la sceglie viene notato da chi non dovrebbe.\nPustèrla de li Mortë (nord-ovest): solo funerali. Un corteo funebre passa senza lasciapassare d’armi: chi porta un morto non si perquisisce. Per Mattheus è anche la porta più vicina alla sua fede. Entrarci fingendo un funerale è sacrilegio se scoperto."
+  },
+  {
+   "t": "La burocrazia dei sigilli",
+   "txt": "Regola: niente si muove senza il sigillo di almeno tre Casate Reggenti. Un gruppo armato che vuole entrare in città ha bisogno di un lasciapassare d’armi.\nProposta di percorso: Grazianus (le armi: la Guardia è loro), Clavax (la legge: la Camera dei Cavillatori), e una terza a scelta fra Mazzarellus (l’amministrazione), Impalox (se si insiste sulla parola «Crociata»), Tancredus (se si porta un documento storico).\nL’uomo in nero col cofanetto è uno scrivano della Camera dei Cavillatori di Casa Clavax. Non decide niente; sa tutto. Spiega volentieri la procedura, e la procedura è lunga: tre giorni se va bene.\nScorciatoie possibili:\n• Un nome che pesa (un Cerullius, un Grazianus, Silvanus): accorcia l’attesa, non la procedura.\n• Entrare disarmati: le armi restano al campo sotto custodia; i PG entrano come privati. Nessun sigillo richiesto.\n• Le carte giuste: una lettera di Gisulfo, il sigillo dello Stratega che Maximus ha mostrato a Julia Nova (Atto IX): da verificare cosa vale qui.\n• Pagare: funziona con gli scrivani, non con la Guardia.\nCitazione da usare: «A Teramum, pe’ movë ’na pëtra ce volënë ottë fìrmë, novë cavìlli e diecë bicchièri de vinë.»"
+  },
+  {
+   "t": "Dove si accampa la Crociata",
+   "txt": "La colonna (39 persone, 5 carri, 23 bestie, più chi si è unito lungo la strada) non entra: nessuno le dà il lasciapassare in giornata.\nProposta: il prato del tratturo lungo il Tordinum, fuori dalla Porta de lu Solë o dalla Piccòla. I Tratturi sono vie sacre dell’Ordine dei Tratturi: nessun signore osa bloccarli, e la Guardia non può sgomberare chi ci sta con il permesso dei pastori. Serve però il permesso del Mastro-Pastore della stazione, Venanzio Collepietra: non chiede sigilli, chiede rispetto (fuoco solo nei cerchi, bestie a valle dell’ansa, i salici non si tagliano) e un favore politico: che qualcuno porti al Consiglio la protesta contro la gabella dell’erba.\nAlternative: il campo dei pellegrini di una chiesa fuori le mura (serve un prete amico); un casale dei Cerullius nella campagna (serve che Alessandros lo chieda).\nDi notte la Guardia manda una ronda a contare i fuochi. Due volte."
+  },
+  {
+   "t": "Chi li accoglie, chi li fa aspettare",
+   "txt": "Il sergente di porta, Iaco Pennacchia «lu Cuntatùre» — conta, scrive, riferisce. Educato, freddo. Ha l’ordine di non far entrare armati senza lasciapassare, e un secondo ordine, a voce, di mandare subito un messo a Palazzo quando la colonna arriva.\nIl capitano della porta, Guarnerio da Mëndurjë — arriva dopo un’ora. Decide dove possono aspettare, non se possono entrare.\nLo scrivano della Camera dei Cavillatori (Casa Clavax), Ser Eutichio Quattrocchi — il cofanetto, i sigilli, la procedura. Ha già una pratica aperta a nome della «colonna armata priva di mandato».\nUn messo senza insegne — si fa largo tra le guardie, chiede di Maximus per nome, e consegna un biglietto. Chi lo manda: vedi «Da decidere».\nUn ragazzino scalzo (Tittarello, il messaggero di Frate Davide) — per Mattheus. Gli tira la manica e gli dice un nome: «Frate Davide». Poi scappa.\nUn servitore in livrea dei Cerullius (Ottorino, maestro di casa: proposta) — se Alessandros o Vicarus si fanno riconoscere. Porta l’offerta di alloggio a Palazzo Cerullius per i due fratelli, non per gli altri.\nChi osserva — sulle mura o nella folla, un uomo che non guarda le guardie ma i carri. Odore di lillà. È un agente di Iuvenza: non parla, conta.\nLa gabelliera del dazio, Donna Rosalba Pesafino (Lega dei Sensali) — fa pagare il ponte e le merci; le armi dei forestieri in colonna pagano doppio.\nIl Mastro-Pastore Venanzio Collepietra — il tratturo; chiede rispetto, non sigilli."
+  },
+  {
+   "t": "Battute pronte",
+   "txt": "Il sergente di porta: «Nome, provenienza, numero, armi. In quest’ordine, e senza discorsi.»\nIl sergente, sullo stendardo: «Quella la tenete arrotolata. Qui le bandiere le alza il Consiglio.»\nIl sergente, se chiedono della Porta de lu Solë: «Questa porta si apre per i santi. Voi siete santi?»\nIl capitano della porta: «Non siete prigionieri. Non siete ospiti. Siete una pratica. Le pratiche aspettano.»\nLo scrivano di Clavax: «Tre sigilli. Non due e mezzo, non tre domani: tre. Io non decido niente, messeri. Io conto.»\nLo scrivano, se gli offrono denaro: «Questo accorcia l’attesa della mia cena, non della vostra pratica.»\nLa guardia della Pustèrla: «Da qui passano quelli che non hanno più fretta. Voi ne avete troppa.»\nLo scrivano della Porta Meridianë: «Crociata? Scrivo “colonna armata”. Se volete “Crociata”, serve Impalox. E Impalox, per una parola così, vuole sapere chi l’ha benedetta.»\nIl Mastro-Pastore del tratturo: «L’erba è di Valerus, la strada è delle pecore. Voi potete stare in mezzo, se non pestate nessuno dei due.»"
+  },
+  {
+   "t": "Voci e dicerie (alla porta, nella fila, al campo)",
+   "txt": "• «Il Consiglio non si riunisce da un mese. Quando si riunisce, litiga e se ne va.»\n• «Una signora forestiera ha preso casa ai Tigli. Paga tutto in oro, e le Casate le mandano i figli a cena.»\n• «La Guardia raddoppia i turni da una settimana. Dicono per i terremoti. Nessuno ci crede.»\n• «Sotto la Basilica si sente suonare di notte. Il sacrestano dice che sono le campane che si assestano.»\n• «Nelle cripte c’è uno con la maschera di mille colori. Chi lo incontra non muore. Dimentica.»\n• «Hanno murato il tempio di Mortus. Ma i morti, a Teramum, trovano sempre chi li accompagna.»"
+  },
+  {
+   "t": "Segreti",
+   "txt": "• Il secondo ordine del sergente (il messo a Palazzo) viene da Casa Grazianus: qualcuno vuole sapere per primo che la Crociata è arrivata. Cosa ne farà dipende dalla scelta sul padre di Maximus.\n• Lo scrivano di Clavax passa copia di ogni pratica «sensibile» a un uomo incappucciato con accento aristocratico: è la stessa figura del Cristallo di Memoria di Altavia. Non lo sa neanche lui chi sia.\n• L’agente col lillà ha l’ordine di riferire se la colonna porta un «capitano col sangue che brilla» (Silvanus). Iuvenza vuole Silvanus vivo.\n• Il Filatterio: secondo l’Atto IX solo la forgia di annullamento sotto la Cattedrale Ducale di Teramum può spezzarlo. Il canone è in conflitto (CC-04): non usarlo in questa scena."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "• Il padre di Maximus (conflitto CC-02): figlio di commercianti con bottega vicino al mercato (profili PG) o figlio dello Stratega Lucius Grazianus, capo della Guardia Ducale (Manuale, Atti XI-XII, il falco firmato «Grazianus»: «Non venire per la Via Bianca. Aspetta mio segnale»). Da qui dipende chi manda il messo senza insegne e cosa dice il biglietto. Proposta neutra finché non decidi: il biglietto dice solo «Non entrare stasera. — G.»\n• Tre sigilli (lore del Ducato) o cinque su otto (Manuale)? Proposta: tre per un lasciapassare, cinque per una decisione del Consiglio.\n• Le guardie: il tabarro grigio con torre e lupo deriva dal motto di Casa Grazianus («La Torre e il Lupo»). Ratificare colori e insegna.\n• Il ponte davanti alla Porta de lu Fiumë è il «Ponte a Due Archi» delle carte di Pietraluna? Proposta: sì, e i PG lo riconoscono.\n• Iuvenza è già in città? Proposta: sì, ai Tigli, sotto altro nome; le armature del convoglio dell’osteria arrivano a lei.\n• Dove si accampa la Crociata: il tratturo del Tordinum, col permesso di Mastro Venanzio Collepietra (nome proposto).\n• Nomi proposti (da ratificare): sergente Iaco Pennacchia «lu Cuntatùre», capitano Guarnerio da Mëndurjë, Ser Eutichio Quattrocchi, Mastro Venanzio Collepietra, Donna Rosalba Pesafino, Ottorino (maestro di casa dei Cerullius).\n• Popolazione: 55.000 (Manuale e scheda del sito) contro 25.000 (lore); Guardia 600 attivi (Manuale) contro 3.000 (lore). La scheda usa i numeri del Manuale.\n• Martinella Lezzia viene ad accogliere Maximus? Proposta: non alla porta; un suo biglietto arriva al campo la prima sera.\n• La porta d’arrivo: chi viene da levante per la strada di Colleatterato arriva alla Porta de lu Solë (scelta della scena del tavolo).\n• La gabella dell’erba (proposta nuova): il Consiglio fa pagare un tanto a capo alle greggi entro una lega dalle mura, voluta dalla Lega dei Sensali. È il favore che il Mastro-Pastore chiede.\n• Il drappo nero sulla torre del Palazzo (proposta): il Consiglio siede a porte chiuse.\n• L’araldica delle otto Casate nel cofanetto di Ser Eutichio (proposta): torre e lupo Grazianus, bilancia Savinellus, chiave e chiodo Clavax, libro aperto Tancredus, rosa con le spine de Spina, ape Mellitius, fiamma Impalox, corona senza testa Mazzarellus."
+  }
+ ],
+ "prove": [
+  {
+   "t": "Storia CD 12 — le due pietre delle mura",
+   "skill": "Storia",
+   "dc": 12,
+   "ok": "la pietra grigia in basso è pretuziana: le mura di Interamnia, la città che c’era prima. La pietra chiara sopra è dell’Impero, costruita dopo il Patto di Teramum, letteralmente sopra i vinti. Teramum è due città, una sull’altra, e quella di sotto non è mai stata tolta.",
+   "ko": "mura vecchie rifatte, come in ogni città importante."
+  },
+  {
+   "t": "Religione CD 12 — la Porta de lu Solë",
+   "skill": "Religione",
+   "dc": 12,
+   "ok": "per consuetudine questa porta si apre solo per le processioni della Fiamma e per chi porta la benedizione della Basilica Aurea. Entrarci con uno stendardo che non è della Fiamma è un gesto che la Basilica leggerà come sfida, qualunque cosa voi intendiate.",
+   "ko": "una porta monumentale, la più bella delle sei. Sembra fatta apposta per chi arriva in colonna."
+  },
+  {
+   "t": "Percezione CD 14 — chi vi guarda",
+   "skill": "Percezione",
+   "dc": 14,
+   "ok": "nella fila, un uomo vestito da mercante non guarda le guardie né la porta: guarda i carri, uno per uno, e muove le labbra. Quando gli passate vicino, un odore dolce, di lillà. Se vi avvicinate, si volta e sparisce nella folla.",
+   "ko": "gente, carri, guardie. Troppa gente per notare qualcuno in particolare."
+  },
+  {
+   "t": "Intuizione CD 13 — il sergente di porta",
+   "skill": "Intuizione",
+   "dc": 13,
+   "ok": "non ha paura di voi e non vi odia. Ha due ordini, e il secondo gli pesa: appena siete arrivati ha mandato un ragazzo di corsa verso il colle. Qualcuno, lassù, voleva saperlo prima di chiunque altro.",
+   "ko": "un sergente che fa il suo lavoro. Lento, preciso, indifferente."
+  },
+  {
+   "t": "Persuasione CD 15 — il capitano della porta",
+   "skill": "Persuasione",
+   "dc": 15,
+   "ok": "vi concede di entrare in sei, disarmati tranne le armi da fianco, con una scorta di due guardie, fino a sera. La colonna resta fuori. Non è il lasciapassare, ma è la città. CD 13 se un PG si presenta con il nome della sua Casata.",
+   "ko": "«Domani. Forse.» La colonna si accampa fuori, e voi con lei. La pratica è aperta; l’attesa comincia."
+  },
+  {
+   "t": "Indagare CD 13 — la procedura dei sigilli",
+   "skill": "Indagare",
+   "dc": 13,
+   "ok": "dalle domande giuste allo scrivano capite la strada più corta: Grazianus e Clavax sono obbligatori, il terzo sigillo si può scegliere. E la Camera dei Cavillatori tratta le pratiche in ordine di arrivo, tranne quelle che qualcuno fa passare avanti. La vostra, qualcuno l’ha già tirata fuori dal mucchio.",
+   "ko": "tre sigilli, tre uffici, tre giorni. Lo scrivano ve lo ripete due volte, più lentamente."
+  },
+  {
+   "t": "Inganno CD 16 — il corteo alla Pustèrla",
+   "skill": "Inganno",
+   "dc": 16,
+   "ok": "un morto sul carro, le teste chine, qualcuno che piange davvero: la guardia si toglie il cappello e vi fa passare senza guardare sotto il telo. Siete dentro, in pochi, dalla porta dei morti. Nessuno vi ha contati.",
+   "ko": "la guardia solleva il telo. Da quel momento la Crociata ha profanato una porta sacra, e la Basilica lo saprà prima di sera."
+  }
+ ],
+ "links": [],
+ "tavolo": "teramum_porta"
+}

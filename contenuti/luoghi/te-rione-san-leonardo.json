@@ -1,0 +1,77 @@
+{
+ "id": "te-rione-san-leonardo",
+ "tipo": "luogo",
+ "titolo": "2. San Leonardo",
+ "sottotitolo": "« Lu Bòrghe » — il borgo degli artigiani",
+ "citta": "teramum",
+ "gruppo": "2. San Leonardo",
+ "livello": "quartiere",
+ "parent": "borgo-teramum",
+ "img": "Rione — 2. San Leonardo.jpg",
+ "stato": "segreto",
+ "atti": [],
+ "compendio": true,
+ "scheda": {
+  "Zona": "2",
+  "Nome in dialetto": "Lu Bòrghe",
+  "Atmosfera": "fumo di forge, martelli, polvere di pietra",
+  "Gilde": "la Forgia del Gigante («Li Martille de Pietre», Casa Grazianus)",
+  "Festa": "Fiera di San Leonardo, 15 Octobris, tre giorni",
+  "Luoghi": "L’Arena Sprofondata · la Forgia del Gigante · la Rocca dei Grazianus (caserma della Guardia Ducale, proposta)",
+  "Posizione": "la parte orientale della città, di qua dalla gola: dalla Porta de lu Solë alla Rocca dei Grazianus"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Case basse addossate le une alle altre, botteghe aperte sulla strada, insegne di ferro battuto che cigolano. Il fumo delle forge resta basso fra i tetti e fa bruciare gli occhi.\nIl suono è quello dei martelli: decine, cento, mai a tempo fra loro."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Si cammina fra carri di carbone e blocchi di pietra appena cavata. Le botteghe hanno il banco sul marciapiede: coltelli, fibbie, serrature, scalpelli. Un garzone con le braccia nere fino al gomito vi squadra, poi guarda le vostre armi prima delle vostre facce."
+  },
+  {
+   "t": "Cosa si vede subito",
+   "txt": "• Qui la Guardia c’è meno che sul colle, ma i carri che escono dalle forge grandi hanno la scorta.\n• Le armature cerimoniali in vetrina sono smaltate a disegni che ricordano la ceramica di Cashtagnë.\n• La gente parla solo dialetto, e parla forte, per coprire i martelli.\n• Da un lato del rione il terreno sprofonda in una grande conca di archi: l’Arena."
+  },
+  {
+   "t": "Cosa sanno i personaggi",
+   "txt": "Nel libro mastro della Gilda, a Julia Nova, c’erano pagamenti a un «fabbro» di Teramum per armi non contrassegnate. Torvus parlava di metalli che non dovrebbero esistere."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Le forge grandi lavorano anche di notte. I garzoni dicono che è per la Guardia, ma nessuno ha visto le commesse.\n• Si prepara la Fiera di San Leonardo: i banchi si montano, le locande alzano i prezzi."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. Alla Forgia del Gigante c’è un reparto dove i garzoni non entrano.\n2. Un fabbro è morto con la pelle diventata grigia come il ferro. L’hanno seppellito in fretta.\n3. Le armature nuove della Guardia pesano la metà e non arrugginiscono. «Nen è cose bbone.»\n4. Nell’Arena, di notte, si sente scavare da sotto.\n5. Gli spaccapietre di Cullëdarë non portano più pietre: vogliono essere pagati prima.\n6. Chi lascia un Bocconotto sulla soglia della bottega non si trova gli attrezzi spostati la mattina."
+  },
+  {
+   "t": "Segreti",
+   "txt": "• La Forgia del Gigante produce armi per il colpo di stato di Lucius Grazianus (Manuale, Gilde).\n• Le nuove armature di Iuvenza «aspettano a Teramum» (Atto XI): qualcuno in città le fabbrica."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "• Il «fabbro» di Teramum (Atto IX) e la Forgia del Gigante sono la stessa cosa? Proposta: un maestro dentro la Forgia che lavora anche per Iuvenza, all’insaputa di Grazianus. Da nominare.\n• Collocazione dell’Arena Sprofondata in questo rione: è una mia proposta, il canone non dice dove sia.\n• La Fiera di San Leonardo cade il 15 Octobris: la Crociata arriva prima, durante o dopo?\n• Sulla mappa della città: San Leonardo è il rione a est della gola, dove si entra dalla Porta de lu Solë (la Via dei Martiri sale fra le forge). La Rocca dei Grazianus sul colle a nord del rione è una proposta (la mappa mostra un castello turrito).\n• Il carro della Forgia con la cassa spaccata (scena «Teramum — la città»): primo indizio delle armature grigie."
+  }
+ ],
+ "prove": [
+  {
+   "t": "Chi fa le armi della Guardia",
+   "skill": "Indagare",
+   "dc": 15,
+   "ok": "i carri della Forgia del Gigante escono di notte verso le caserme e un magazzino senza insegna; su ogni cassa, un marchio di fabbrica diverso da quello della Forgia.",
+   "ko": "tutti lavorano per la Guardia, nessuno sa di più. Un garzone va a riferire che dei forestieri fanno domande."
+  },
+  {
+   "t": "Il metallo sbagliato",
+   "skill": "Arcano",
+   "dc": 16,
+   "ok": "una fibbia di scarto nella cenere di una forgia è fredda al tatto anche appena uscita dal fuoco, e sotto le dita pulsa appena. È la stessa sensazione delle armature dei Forgiati.",
+   "ko": "ferro di cattiva qualità, molto scarto."
+  }
+ ],
+ "links": [],
+ "tavolo": "teramum"
+}

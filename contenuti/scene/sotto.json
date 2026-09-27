@@ -68,7 +68,7 @@
       {
         "da": "Dalla terza cantina di Mastro Zaccaria",
         "primo": "murata",
-        "note": "Le vie di servizio: i segni di gesso di Cascia (Indagare CD 13) portano al varco del fondaco e all'uscita fuori mura. Chi va dove i segni non vanno arriva alla porta murata (16)."
+        "note": "Le vie di servizio: i segni di gesso di Cascia (Indagare CD 13) portano al varco del fondaco e all'uscita fuori mura. Chi va dove i segni non vanno arriva alla scala a chiocciola e alla porta murata (16)."
       }
     ]
   },
@@ -3203,12 +3203,12 @@
           "tipo": "prosecuzione",
           "titolo": "Prosecuzione — Il ritorno alla luce",
           "parte": "evento",
-          "leggi": "Il cristallo non scandisce più nulla. I piloni sono pietra e rame. Per la prima volta da quando siete scesi, il sotterraneo non aspetta un ordine.\n\nDietro di voi il corridoio conduce al pozzo e alla luce di Bëllindë. Davanti restano le conseguenze di ciò che avete liberato, spento e promesso.\n\n→ S27: Ritorno alla luce",
+          "leggi": "Il cristallo non scandisce più nulla. I piloni sono pietra e rame. Per la prima volta da quando siete scesi, il sotterraneo non aspetta un ordine.\n\nDietro di voi il corridoio conduce al pozzo e alla luce di Bëllindë. Davanti restano le conseguenze di ciò che avete liberato, spento e promesso.",
           "daqui": [
             "murata"
           ],
           "innesco": "Quando decidono di lasciare la stanza.",
-          "dopo": "Il sotterraneo è in silenzio. Si risale verso la luce di Bëllindë; la porta murata resta come uscita alternativa.",
+          "dopo": "Il sotterraneo è in silenzio. Si esce dalla scala a chiocciola (16), oppure si torna indietro fino al pozzo.",
           "rilancio": "Il corridoio vi aspetta, e oltre, la luce. Che cosa fate?"
         }
       ],
@@ -3221,18 +3221,29 @@
       "schemaVersion": 3,
       "id": "murata",
       "kind": "passaggio",
-      "title": "La porta murata",
+      "title": "La scala a chiocciola",
       "legacyPosition": {
         "x": 1275,
         "y": 765
       },
-      "text": "In fondo alla galleria, dove il corridoio dovrebbe continuare, una porta di ferro è stata murata dall’interno. Sulla pietra, graffi. Dall’altra parte.",
-      "gm": "SCENA — La Porta Murata (vedi handout). Uscita alternativa / retroguardia.",
+      "text": "In fondo alla galleria, dove il corridoio dovrebbe continuare, la pietra si apre in un pozzo stretto. Dentro, una scala a chiocciola sale nel buio, gradini consumati al centro.\n\nDa lassù scende aria che si muove. Odora di terra bagnata e d'erba.\n\nAccanto alla scala, una porta di ferro è stata murata dall’interno. Sulla pietra, graffi. Dall’altra parte.",
+      "gm": "Due uscite. La scala a chiocciola porta all'aperto: è la strada normale per tornare in superficie dopo il Sigillo (Compendio: Dopo il Quarto Sigillo). La porta murata porta sotto la chiesa di San Vincenzo: il passaggio sale e finisce contro la parete nord, sotto la calce che Fra' Bonizio ridà ogni anno, dietro l'affresco delle tre lune. Chi ha murato la porta dall'interno, e chi ha graffiato dall'altra parte, non è stabilito: vedi «Da decidere» nella voce del Compendio.",
       "moduli": [
+        {
+          "id": "salire",
+          "tipo": "prosecuzione",
+          "titolo": "Salire la scala a chiocciola",
+          "parte": "evento",
+          "innesco": "Il gruppo sale la scala a chiocciola.",
+          "leggi": "I gradini girano stretti, sempre a destra. Contate i passi senza volerlo, e il ritmo non risponde più.\n\nL'aria si fa fredda, poi umida. Radici entrano fra le pietre della volta.\n\nIn cima, una grata di ferro mangiata dalla ruggine, coperta di rovi. Oltre, il cielo.\n\nLa grata cede alla prima spinta.",
+          "note": "Nessuna prova per salire: sono circa centoventi gradini. Dove sbucano è una proposta (Compendio: Dopo il Quarto Sigillo, «Da decidere»): fuori dalle mura, fra i rovi sopra il Camposanto.",
+          "dopo": "Sono fuori. Si passa alla voce del Compendio «Dopo il Quarto Sigillo» (Bëllindë).",
+          "rilancio": "L'aria della notte vi riempie i polmoni. Che cosa fate?"
+        },
         {
           "id": "prova",
           "tipo": "dettaglio",
-          "titolo": "Indagare",
+          "titolo": "La porta murata",
           "parte": "indizio",
           "prove": [
             {
@@ -3259,11 +3270,26 @@
           "seme": "Sulla pietra, graffi. Dall’altra parte.",
           "innesco": "Qualcuno esamina la porta, la muratura o i graffi.",
           "leggi": "Ferro vecchio, coperto di ruggine. Davanti, pietre grezze murate strette, senza un varco.",
-          "dopo": "Con 13 o più sanno che qualcuno ha cercato di uscire, non di entrare, e che la malta è più recente delle pietre intorno.",
-          "rilancio": "La porta resta chiusa, muta. Che cosa fate?"
+          "dopo": "Con 13 o più sanno che qualcuno ha cercato di uscire, non di entrare, e che la malta è più recente delle pietre intorno. Aprirla non è in dubbio: contano il tempo e il rumore (vedi «Aprire la porta murata»).",
+          "rilancio": "La porta resta chiusa, muta. Che cosa fate?",
+          "daqui": [
+            "aprire_porta",
+            "salire"
+          ]
+        },
+        {
+          "id": "aprire_porta",
+          "tipo": "dettaglio",
+          "titolo": "Aprire la porta murata",
+          "parte": "evento",
+          "innesco": "Qualcuno smura le pietre davanti alla porta di ferro e la forza.",
+          "leggi": "Le pietre vengono via una alla volta. La porta cede con un gemito di ferro.\n\nDietro, un passaggio stretto sale a gradini, a spirale anche lui, per un tratto più breve. Finisce contro un muro sottile di mattoni, intonacato dall'altra parte.\n\nAttraverso il muro arriva odore di cera. Qualcuno, di là, sta pregando sottovoce.",
+          "note": "Nessuna prova per aprirla: contano il tempo (dieci minuti) e il rumore. Il muro in cima è la parete nord della chiesa di San Vincenzo: sfondarlo li fa sbucare in navata, dietro l'affresco coperto di calce. Chi prega di là è Fra' Bonizio, o Don Fulgenzio se è il vespro.",
+          "dopo": "Sbucano dentro la chiesa di San Vincenzo, dietro la parete nord. Don Fulgenzio e Fra' Bonizio vedranno da dove sono usciti: sotto la calce c'era una porta.",
+          "rilancio": "Il muro è sottile. Di là, qualcuno prega. Che cosa fate?"
         }
       ],
-      "breve": "In fondo alla galleria c'è una porta di ferro murata dall'interno, con graffi dall'altra parte. È l'uscita alternativa e la retroguardia; qui si ferma Ruggiero se scende con loro. È anche l'ingresso per chi arriva dalla terza cantina seguendo le vie di servizio.",
+      "breve": "La via d'uscita dopo il Sigillo: una scala a chiocciola sale fino all'aperto, fuori dal borgo. Accanto c'è la porta di ferro murata dall'interno, con graffi dall'altra parte: se la aprono, un passaggio stretto sale fino alla chiesa di San Vincenzo e finisce dietro la parete nord, quella che il sacrestano continua a imbiancare. Qui si ferma Ruggiero se scende con loro. È anche l'arrivo per chi viene dalla terza cantina seguendo le vie di servizio.",
       "nota": {
         "cd": 10
       }

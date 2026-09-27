@@ -1,0 +1,32 @@
+{
+ "id": "te_strisciante_carogna",
+ "name": "Strisciante carogna",
+ "short": "S",
+ "color": "#6E7A3C",
+ "hp": 51,
+ "ac": 13,
+ "init": 1,
+ "size": 2,
+ "actions": [
+  {
+   "n": "Multiattacco: Tentacoli + Morso"
+  },
+  {
+   "n": "Tentacoli (portata 3 m; TS Cos CD 12 o Avvelenato e Paralizzato, ripete il TS a fine turno)",
+   "atk": 8,
+   "dmg": "1d4+2"
+  },
+  {
+   "n": "Morso",
+   "atk": 4,
+   "dmg": "2d4+2"
+  }
+ ],
+ "note": "Strisciante carogna (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD), GS 2 · 450 PE · Vel 9 m, scalare 9 m · Grande · Scurovisione 18 m · Ragno scalatore: cammina sulle pareti · I tentacoli infliggono danni da veleno. Salgono dalle gabbie dell’ipogeo, attirati dal rumore.",
+ "src": "L’Arena Sprofondata",
+ "tac": "Entrano al secondo round dalle aperture tonde in fondo alle gabbie. Puntano chi è a terra o paralizzato e lo trascinano verso le gabbie. Fuggono sotto i 10 PF.",
+ "lines": [
+  "Un rumore bagnato di tante zampe."
+ ],
+ "img": "Mostro — Strisciante carogna.jpg"
+}

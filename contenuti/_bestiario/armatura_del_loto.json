@@ -1,0 +1,37 @@
+{
+ "id": "armatura_del_loto",
+ "name": "Armatura del Loto",
+ "short": "L",
+ "color": "#3A3F52",
+ "hp": 60,
+ "ac": 20,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Spada lunga"
+  },
+  {
+   "n": "Spada lunga",
+   "atk": 6,
+   "dmg": "1d8+4"
+  },
+  {
+   "n": "Spada lunga a due mani",
+   "atk": 6,
+   "dmg": "1d10+4"
+  },
+  {
+   "n": "Voce dal ferro (azione bonus: una creatura entro 9 m che la sente, TS Saggezza CD 12 o Spaventata fino alla fine del suo turno successivo)"
+  }
+ ],
+ "note": "Orrore elmato adattato (Manuale dei Mostri 2024): GS 4 · 1.100 PE · Vel 9 m, volo 9 m (fluttuare) · CA 20 · PF 60 · Immunità: forza, necrotico, veleno; Accecato, Affascinato, Assordato, Avvelenato, Indebolimento, Paralizzato, Pietrificato, Spaventato. Armatura d’argento annerito col Loto Nero sulla corazza, opera di Veneranda Iuvenza come quelle di Altavia ma «più nuova, più forte». Anima vincolata: dentro c’è una persona; a 0 PF l’anima è libera e parla per un respiro. Mentre dorme nella cassa, un rito di Mortus o Scacciare non morti (Religione CD 15, dieci minuti) la libera senza combattere.",
+ "src": "L’osteria de lu Passe",
+ "tac": "Si sveglia solo per ordine del messere o se la cassa viene aperta del tutto e la si colpisce. Difende il messere; se il messere è fuggito, attacca il più vicino, vesperiani compresi. Vola sopra i carri e scende su chi è isolato. Non fugge.",
+ "lines": [
+  "«Che ore so’? Mamma m’aspetta pe’ la cena.»",
+  "(una ninna nanna, piano, da dentro l’elmo)",
+  "«Non ancora… non ancora…»"
+ ],
+ "img": "Bestiario — Armatura del Loto.jpg"
+}

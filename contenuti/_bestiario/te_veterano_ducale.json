@@ -1,0 +1,42 @@
+{
+ "id": "te_veterano_ducale",
+ "name": "Veterano della Guardia Ducale",
+ "short": "V",
+ "color": "#58606E",
+ "hp": 65,
+ "ac": 17,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: due colpi di alabarda o spada lunga"
+  },
+  {
+   "n": "Alabarda",
+   "atk": 5,
+   "dmg": "1d10+3"
+  },
+  {
+   "n": "Spada lunga",
+   "atk": 5,
+   "dmg": "1d8+3"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 3,
+   "dmg": "1d10+1"
+  },
+  {
+   "n": "Parata (reazione): +2 CA contro un attacco in mischia che vede"
+  }
+ ],
+ "note": "Guerriero Veterano (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD) · GS 3 · 700 PE · velocità 9 m · Percezione +2 · mezza armatura, tabarro grigio con la torre e il lupo. La ronda di notte del Palazzo Ducale: uomini di Lucius Grazianus.",
+ "src": "Palazzo Ducale — La porta di servizio",
+ "tac": "Arrivano dai due lati del vicolo. Vogliono arrestare, non uccidere: colpiscono per stordire chi è a terra. Se qualcuno mostra il lasciapassare dello Stratega o Maximus si fa riconoscere, il sergente abbassa la spada.",
+ "lines": [
+  "Guardia Ducale! A terra le armi!",
+  "Lo Stratega vorrà vedervi. Vivi.",
+  "Il vicolo è chiuso da tutti e due i lati."
+ ],
+ "img": "Ritratto — Veterano della Guardia Ducale.jpg"
+}

@@ -1,0 +1,771 @@
+{
+ "id": "te_arena",
+ "nome": "L’Arena Sprofondata — il Ventre Vecchio",
+ "menu": "L’Arena Sprofondata",
+ "citta": "Teramum",
+ "ordine": 15,
+ "mappa": {
+  "img": "Battlemap — L’Arena Sprofondata.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "San Leonardo è fumo e martelli. Le botteghe hanno il banco sulla strada, i garzoni hanno le braccia nere fino al gomito.\n\nPoi, fra due forge, la strada finisce sul vuoto.\n\nIl terreno si apre in una conca ovale, e dentro la conca c’è un paese intero: case negli archi, panni stesi, un forno che fuma. E sul fondo, in mezzo al fango, un recinto di pali storti intorno a una bocca coperta da assi.\n\nLa chiamano l’Arena Sprofondata. Quelli che ci vivono dentro, il fondo lo chiamano lu Ventre Vecchie.",
+  "note": "Scena di Teramum, Rione San Leonardo (voce del Compendio: 3. L’Arena Sprofondata). Si gioca di giorno: la luce conta (le Ombre dell’ipogeo non escono al sole). I punti sono in ordine di gioco dall’ingresso dalla strada; il gruppo può saltare direttamente al cantiere.\nFili che si legano: Casa de Spina scava per l’Atto di Fondazione (Trama 5); il Ventre Vecchio scende alla Città Sepolta; il segno di Frate Davide sulle assi; l’Arlecchino ha già preso il nome di uno scavatore.\nScontro: «Il pubblico si alza», nella trincea dell’ipogeo, 3.300 PE (moderato per 6 PG di livello 5).",
+  "ingressi": [
+   {
+    "da": "Dalla strada di San Leonardo",
+    "primo": "te_arena_anello",
+    "poi": "te_arena_gradinate",
+    "note": "L’ingresso normale: si guarda giù dal bordo e si sceglie la discesa."
+   },
+   {
+    "da": "Al tramonto, per incontrare Ser Guidone",
+    "primo": "te_arena_forno",
+    "poi": "te_arena_cantiere",
+    "note": "Ogni terzo giorno Ser Guidone porta la paga a Zi’ Nunziata."
+   },
+   {
+    "da": "Da sotto, dalla Città Sepolta",
+    "primo": "te_arena_ventre",
+    "poi": "te_arena_cantiere",
+    "note": "Risalendo la corda degli scavatori dalla grotta tiepida."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "te_arena_anello",
+   "kind": "scena",
+   "title": "L’anello delle case",
+   "image": "Luogo — 3. L’Arena Sprofondata.jpg",
+   "legacyPosition": {
+    "x": 724,
+    "y": 115
+   },
+   "text": "In mezzo alle botteghe di San Leonardo il terreno si apre in una conca ovale, larga come una piazza e mezza.\n\nIl bordo è un anello di archi mezzo sepolti. Di molti si vede solo la curva di sopra, come sopracciglia sopra occhi chiusi.\n\nDentro gli archi ci abita la gente. Porte di legno, finestre con i gerani, panni stesi da un arco all’altro. Un forno che fuma. Una capra legata a un pilastro che è più vecchio dell’Impero.\n\nLe case sono nate dentro l’anfiteatro come funghi su un tronco.\n\nIl rumore dei martelli resta di sopra, sulla strada. Qui arriva smorzato, come da un’altra stanza.\n\nUna donna vi guarda da una finestra. Poi chiude le imposte. Poi le riapre di un dito.\n\nSulle pietre degli archi, sotto i panni stesi, ci sono segni incisi che non sono lettere.",
+   "breve": "Il bordo abitato dell’Arena: si guarda giù, si capisce il posto, si decide da dove scendere. Gli abitanti degli archi vedono tutto e non dicono niente, a meno di non essere pagati meglio di Casa de Spina. Da qui: gli archi incisi a ovest, le gradinate a est, il forno di Zi’ Nunziata in basso a sinistra, il cantiere sul fondo.",
+   "gm": "L’Arena Sprofondata sta nel Rione San Leonardo (proposta già scritta nella voce del luogo). È l’accesso al livello più profondo del sottosuolo di Teramum (08 - Ducato, «Il labirinto sotto la città»).\nChi la tiene: nessuno. Il Consiglio non ha mai votato chi ne sia padrone, quindi chi ci abita non paga affitto a nessuno, e chi ci scava non chiede permesso a nessuno.\nGli abitanti degli archi sono stati pagati da Casa de Spina per non guardare il cantiere sul fondo. Quattro soldi a famiglia a settimana. Ci riescono benissimo.\nOra del giorno: di giorno si sentono i colpi sordi dallo scavo; al tramonto gli scavatori salgono; di notte una lanterna scende sotto le assi (Nicola «Lu Talpone», che non riesce a dormire).\nLa Crociata è in città da poco: la gente degli archi ha paura che «quelli con le lune» vengano a fare domande, perché le domande portano le guardie.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "guardare",
+     "tipo": "dettaglio",
+     "titolo": "Guardare giù nella conca",
+     "parte": "evento",
+     "innesco": "Il gruppo si affaccia dal bordo, prima di scendere.",
+     "leggi": "Le gradinate scendono in anelli, ogni gradino più alto di un passo. In basso il fondo è fango e pietre.\n\nIn mezzo, un recinto di pali storti chiude una parte più bassa. Dentro il recinto, assi di legno coprono qualcosa di nero.\n\nPiù in qua, verso di voi, il fondo è stato scavato a trincea: si vedono muri sotto il fango, corridoi, stanzette senza tetto, come le celle di un alveare tagliato a metà.\n\nAccanto al recinto, una baracca di tavole, un argano, due lanterne spente appese a un palo. Uomini con i mantelli da muratore che lavorano senza parlare.",
+     "dopo": "Sanno com’è fatto il posto: il recinto con le assi (il Ventre Vecchio), la trincea sul fondo (l’ipogeo), la baracca del cantiere. Possono scendere dalle gradinate a est o dalla scala di pietra accanto al forno.",
+     "rilancio": "Il fondo è lì sotto, venti metri più giù. Che cosa fate?",
+     "daqui": [
+      "donna",
+      "te_arena_archi",
+      "te_arena_gradinate"
+     ]
+    },
+    {
+     "id": "donna",
+     "tipo": "dialogo",
+     "titolo": "La donna alla finestra",
+     "parte": "indizio",
+     "seme": "Una donna vi guarda da una finestra. Poi chiude le imposte. Poi le riapre di un dito.",
+     "innesco": "Qualcuno bussa alla finestra che si è riaperta di un dito, o chiama la donna.",
+     "leggi": "La finestra si apre un poco di più. Una faccia larga, un fazzoletto nero in testa, le braccia infarinate.\n\n«Nen compre niente e nen vende niente. Se cercate lu forne, è quelle in fonde. Se cercate guaje, pure.»",
+     "note": "È Rosina, la nuora di Zi’ Nunziata la fornaia. Non ha nome nel canone (proposta).\nCHE COS’È QUESTO POSTO? — «L’Arena. Lu Ventre Vecchie, pe’ chi ci sta sotto. I vecchi dicono che qui si combatteva prima dell’Impero, e che il pubblico è sprofondato tutto insieme una notte. Io ci sono nata. Non sono sprofondata.»\nCHI SCAVA LAGGIÙ? — «Muratori. Riparano un pozzo.» Pausa lunga. «È un pozzo grosso assai.»\nCHI LI PAGA? — «Non lo so.» Mente male: guarda il fondo e si tocca la tasca del grembiule, dove tiene i soldi della settimana.\nSE LA SI PAGA MEGLIO (2 mo o più) o PERSUASIONE CD 12 — «Quilli de la rose. I soldi arrivano la sera, li porta un giovane coi guanti, che non si toglie mai. Mia suocera li conta e li divide fra gli archi. Andate da lei, io non ho detto niente.»\nSE LA SI MINACCIA — chiude le imposte e grida «Mamma!». Dal forno esce Zi’ Nunziata con la pala del pane. Tutto l’anello vi guarda. Da qui in poi nessuno degli archi parla più, a nessun prezzo.\nSE LE SI MENTE (dicendo di essere della Guardia o della Basilica) — Intuizione della donna +2: se non ci crede, ride; se ci crede, diventa bianca e dice tutto quello che sa del pagamento, poi corre ad avvisare la suocera.\nBATTUTE PRONTE — «Qua sopra si vive, là sotto si scava. Nen se mischie.» · «I bambini li lascio giocare sulle gradinate. Fino al recinto. Mai oltre.»",
+     "dopo": "Se parla: sanno che gli scavatori sono pagati da «quelli della rosa», che i soldi li porta un giovane coi guanti, e che Zi’ Nunziata li divide. Porta al forno.",
+     "rilancio": "La finestra resta aperta di un palmo. Che cosa fate?",
+     "daqui": [
+      "te_arena_forno",
+      "te_arena_gradinate"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_arena_archi",
+   "kind": "dettaglio",
+   "title": "Gli archi incisi",
+   "image": "PDI — Arena — Gli archi incisi.jpg",
+   "legacyPosition": {
+    "x": 205,
+    "y": 520
+   },
+   "text": "Sul lato di ponente l’anello è più sepolto. Degli archi resta solo la chiave di volta, a filo del fango, e le case qui sono basse, scavate più che costruite.\n\nSulle pietre grandi, sotto l’intonaco scrostato, ci sono segni incisi. Righe corte. Tacche. Una specie di scala disegnata di traverso.\n\nNon sono lettere dell’Aureo. Non sono nemmeno disegni da ragazzi.\n\nUn arco ha la chiave scolpita a forma di testa di lupo. Qualcuno ci ha appeso sopra un ferro di cavallo, a rovescio.\n\nL’aria che esce da sotto la soglia di quest’arco è fredda. D’agosto.",
+   "breve": "Iscrizioni pretuziane sugli archi del lato ovest: indicano la direzione della discesa e dicono una cosa sola: qui sotto c’era qualcosa prima dell’anfiteatro. L’arco col lupo soffia aria fredda: sotto c’è un vuoto. Si torna verso il fondo.",
+   "gm": "L’anfiteatro imperiale fu costruito sopra un luogo pretuziano più antico (08 - Ducato: «la Teramum Imperiale fu costruita letteralmente sopra le rovine della città Pretuziana»). I segni sono Pretuziano Antico: il Circolo dei Glossatori li sa leggere (voce della Città Sepolta).\nLa «scala disegnata di traverso» è una misura, come la fascia di simboli sulla Porta Murata di Bëllindë che Alessandros ha riconosciuto a Pietraluna: quanto è profonda una cosa, e quanto deve restarci. Se Alessandros la vede, può riconoscerla (Storia CD 10 per lui, senza tiro se ha già visto quella di Bëllindë).\nL’aria fredda sotto l’arco del lupo viene dall’ipogeo e da un vuoto più giù: è la stessa aria del Ventre Vecchio.\nDa decidere: chi abita l’arco del lupo. Proposta: nessuno, da tre generazioni. La porta è inchiodata dall’esterno.",
+   "nota": {
+    "cd": 12
+   },
+   "moduli": [
+    {
+     "id": "segni",
+     "tipo": "dettaglio",
+     "titolo": "Leggere i segni",
+     "parte": "indizio",
+     "seme": "Righe corte. Tacche. Una specie di scala disegnata di traverso.",
+     "innesco": "Qualcuno studia le incisioni sotto l’intonaco.",
+     "leggi": "Le tacche sono fatte con uno scalpello buono, ma sono state ripassate dopo, molte volte, da mani diverse. L’ultima volta non tanto tempo fa: dentro i solchi la polvere è poca.",
+     "prove": [
+      {
+       "id": "storia",
+       "abilita": [
+        "Storia"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "Graffi. Marchi di cava, forse, da quando si portavano via le pietre per le chiese."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 13,
+         "leggi": "Una lingua vecchia, più vecchia dell’Aureo. Non sapete leggerla."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Lettere pretuziane. L’anfiteatro è stato costruito sopra qualcosa che c’era già: questi segni indicano la direzione della discesa, verso il centro della conca e poi verso il colle."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "max": 22,
+         "leggi": "La «scala di traverso» non è una parola: è una misura. Dice quanto era profonda una cosa, e quanto doveva restarci. Il numero è grande. Più grande dell’arena."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Una riga si legge intera: «Qui si scende a guardare chi dorme. Non si scende a svegliarlo.» Qualcuno, di recente, ha ripassato solo la prima metà."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 14 o più sanno che l’arena copre un luogo pretuziano e che i segni indicano la discesa al centro e poi verso il colle (la Basilica). Con 18 o più sanno che è una misura di profondità, come quella di Bëllindë.",
+     "rilancio": "Il ferro di cavallo dondola sopra la testa di lupo. Che cosa fate?",
+     "daqui": [
+      "lupo",
+      "te_arena_ventre"
+     ]
+    },
+    {
+     "id": "lupo",
+     "tipo": "dettaglio",
+     "titolo": "L’arco del lupo",
+     "parte": "indizio",
+     "seme": "L’aria che esce da sotto la soglia di quest’arco è fredda. D’agosto.",
+     "innesco": "Qualcuno si avvicina all’arco con la testa di lupo o mette la mano sotto la soglia.",
+     "leggi": "La porta è di castagno, grigia di anni, inchiodata dall’esterno con chiodi da carro. Sotto la soglia, un dito di buio da cui esce un soffio freddo e umido. Sa di pietra bagnata e di qualcosa di dolce, come fiori lasciati troppo in un vaso.",
+     "note": "Se schiodano la porta (Atletica CD 12, rumore: Zi’ Nunziata se ne accorge): dietro, tre gradini e una parete di fango crollato. Il vuoto c’è, ma da qui non si passa senza un giorno di pala. È la stessa aria del Ventre Vecchio.",
+     "prove": [
+      {
+       "id": "sopr",
+       "abilita": [
+        "Sopravvivenza",
+        "Natura"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Una cantina fredda. Ce ne sono in tutte le case vecchie."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Il soffio va e viene, lento, come un respiro. È aria che sale da molto in basso, e che cambia quando cambia la pressione. Sotto questa porta non c’è una cantina: c’è un vuoto grande."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che sotto l’anello c’è un vuoto enorme e che respira. Non è una via: la via è il Ventre Vecchio.",
+     "rilancio": "Il soffio freddo vi passa sulle caviglie. Che cosa fate?",
+     "daqui": [
+      "te_arena_ventre"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_arena_gradinate",
+   "kind": "dettaglio",
+   "title": "Le gradinate e i bambini",
+   "image": "PDI — Arena — Le gradinate.jpg",
+   "legacyPosition": {
+    "x": 1210,
+    "y": 470
+   },
+   "text": "Sul lato di levante le gradinate sono ancora intere. Si scende per scale ricavate nella pietra: ogni gradino è più alto di un passo e più vecchio di chiunque sappia il perché.\n\nCi giocano i bambini. Cinque, sei. Saltano da un gradino all’altro contando ad alta voce, e quando arrivano all’ultimo gradino prima del recinto si fermano, tutti, come se ci fosse un muro.\n\nNessuno li ha sgridati. Si fermano da soli.\n\nSull’ultimo gradino, fra due pietre, un piattino sbeccato. Dentro, una goccia rossa e scura di Ratafià e le briciole di un Bocconotto.",
+   "breve": "La discesa più comoda al fondo. I bambini non scendono oltre il recinto e non sanno dire perché. Il piattino è per i Mazzamarelli: chi lascia qualcosa ha le corde annodate giuste, nello scavo. Si scende al cantiere.",
+   "gm": "I bambini non hanno visto niente: hanno sentito. Di notte, dal recinto, qualcuno canta piano una conta come la loro, ma al contrario. È l’eco dei Mazzamarelli che si prendono gioco degli scavatori, oppure è altro. Da decidere: lasciarlo ambiguo.\nIl piattino l’ha messo Nicola «Lu Talpone», il capomastro, ogni sera: ha imparato che se non lo fa gli attrezzi la mattina sono in cima all’argano e le corde hanno nodi che non si sciolgono.\nI Mazzamarelli (08 - Ducato: folletti delle cantine e dei crocevia, si placano con Ratafià e Bocconotti; la Lega dei Sensali li paga come sabotatori). Qui non sono pagati da nessuno: si divertono.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "bambini",
+     "tipo": "dialogo",
+     "titolo": "Parlare con i bambini",
+     "parte": "indizio",
+     "seme": "Si fermano da soli.",
+     "innesco": "Qualcuno chiede ai bambini perché si fermano.",
+     "leggi": "Si fermano di colpo, tutti, e vi guardano le armi. Il più grande, otto anni, un occhio pesto, si mette davanti agli altri.\n\n«Nen scennème. Mai. Pecché?»",
+     "note": "Il grande si chiama Peppe, gli altri lo seguono. Nessun nome nel canone (proposta).\nPERCHÉ NON SCENDETE? — «Pecché no.» Poi, se insistono con gentilezza: «Pecché la notte laggiù cantano la conta nostra. Ma alla rovescia. Dieci, nove, otto…» Gli altri bambini si guardano i piedi.\nCHI CANTA? — «Li Mazzamarelli. O lu Talpone quanne è ’mbriache.» Ride. Gli altri no.\nI MURATORI? — «Nen so’ muratori. I muratori parlano. Questi no. Uno è salito su e nen se recurdave come se chiamave. L’hanno messo a fa’ la guardia alla baracca, mo’.»\nIL PIATTINO? — «Lo mette lu Talpone. Se ce lo toccate, stanotte vi fanno i nodi alle scarpe.»\nSE GLI DANNO UNA MONETA — Peppe diventa loquace: la sera arriva «uno con i guanti» che dà una borsa alla nonna Nunziata; e il Talpone scende la notte da solo, con la lanterna, e risale all’alba bianco come il pane.\nSE LI SPAVENTANO — scappano su per le gradinate. Rosina e Zi’ Nunziata escono con le pale. Gli archi si chiudono.",
+     "dopo": "Sanno: la conta al contrario di notte, lo scavatore che ha dimenticato il nome (è Lu Scurdate, alla baracca), il Talpone che scende da solo di notte, l’uomo coi guanti che paga.",
+     "rilancio": "I bambini riprendono a saltare, ma adesso vi tengono d’occhio. Che cosa fate?",
+     "daqui": [
+      "piattino",
+      "te_arena_cantiere"
+     ]
+    },
+    {
+     "id": "piattino",
+     "tipo": "dettaglio",
+     "titolo": "Il piattino dei Mazzamarelli",
+     "parte": "indizio",
+     "seme": "Dentro, una goccia rossa e scura di Ratafià e le briciole di un Bocconotto.",
+     "innesco": "Qualcuno guarda il piattino, lo tocca o ci lascia qualcosa.",
+     "leggi": "Il piattino è sbeccato, ma pulito. Le briciole sono di stamattina. Sul bordo, impronte minuscole di dita, come di un bambino di due anni. Ma i bambini qui ne hanno otto.",
+     "note": "EFFETTO AL TAVOLO. Se un PG lascia un’offerta (Ratafià, un dolce, anche un bicchiere di vino e un pezzo di pane: vale): per il resto della giornata, nell’Arena e nell’ipogeo, le corde non si impigliano e la prova per scendere nel Ventre Vecchio ha vantaggio.\nSe qualcuno prende o rovescia il piattino: da quella notte, finché non ripara, i suoi lacci si annodano fra loro (il primo round di ogni scontro è Prono se si alza di scatto: TS Destrezza CD 10), la sua lanterna si spegne una volta a scena e le monete nella borsa si mescolano coi sassi. Nessun danno. Solo dispetto.",
+     "prove": [
+      {
+       "id": "relig",
+       "abilita": [
+        "Religione",
+        "Natura"
+       ],
+       "cd": 11,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 10,
+         "leggi": "Una superstizione di cantina. Ogni nonna del Ducato ne ha una."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 11,
+         "leggi": "Un’offerta ai Mazzamarelli, i folletti delle cantine. Chi lascia Ratafià e Bocconotti non si trova gli attrezzi spostati. Chi li tocca, sì."
+        }
+       ]
+      }
+     ],
+     "dopo": "L’offerta cambia davvero le cose: vantaggio sulla discesa e sull’orientarsi nelle gallerie basse della giornata.",
+     "rilancio": "Il piattino aspetta sull’ultimo gradino. Che cosa fate?",
+     "daqui": [
+      "te_arena_cantiere"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_arena_forno",
+   "kind": "persona",
+   "title": "Il forno di Zi’ Nunziata",
+   "image": "PDI — Arena — Il forno di Zi’ Nunziata.jpg",
+   "legacyPosition": {
+    "x": 330,
+    "y": 865
+   },
+   "text": "In basso a sinistra, dove l’anello tocca quasi il fondo, un arco intero è diventato un forno. La bocca del forno è la bocca dell’arco, chiusa con mattoni e fango. Fuma.\n\nDavanti, su una tavola, le pagnotte a raffreddare e un cesto di taralli.\n\nLa fornaia è vecchia, piccola, larga. Ha le braccia bianche di farina fino ai gomiti e gli occhi piccoli e neri di chi conta tutto.\n\nSul banco, accanto alla pala, una borsa di cuoio chiusa con un nastro rosso. Sul nastro, ricamata, una rosa.",
+   "breve": "Zi’ Nunziata è la sindaca non eletta dell’Arena: riceve da Casa de Spina la paga del silenzio e la divide fra gli archi. Sa chi paga, quando, e chi è il giovane coi guanti. Parla solo se conviene all’Arena, non a lei.",
+   "gm": "Zi’ Nunziata, settant’anni, fornaia dell’Arena da cinquanta. Nessun nome nel canone (proposta). Statistiche: popolana.\nSa: che paga Casa de Spina (lo sa dalla rosa sul nastro e dal fazzoletto di seta perso dal giovane); che la paga arriva al tramonto, ogni tre giorni, portata da un giovane coi guanti che si fa chiamare Ser Guidone; che gli scavatori cercano «una carta vecchia» (li ha sentiti); che uno di loro, Ciccio Pagliaro, è risalito senza nome (Lu Scurdate).\nNon sa: cosa sia la carta (l’Atto di Fondazione); cosa ci sia sotto; chi sia l’Arlecchino, anche se ha una parola per lui: «lu Mascarone».\nVuole: che l’Arena resti un posto dove nessuno comanda. Che i soldi continuino ad arrivare. Che la Guardia non scenda mai.\nDa decidere: Ser Guidone. Proposta: un cugino povero di Casa de Spina, venticinque anni, che fa da tramite perché la Matriarca Tarsilla non scende mai di persona. Si può incontrare qui al tramonto di ogni terzo giorno.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "nunziata",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Zi’ Nunziata",
+     "parte": "evento",
+     "innesco": "Il gruppo si ferma al forno o chiede della borsa.",
+     "leggi": "Non smette di lavorare. Infila la pala nel forno, la tira fuori con tre pagnotte, le posa sulla tavola. Poi vi guarda.\n\n«Nu tarallo costa ’nu soldo. Le domande costano de cchiù.»",
+     "note": "LA BORSA CON LA ROSA — La copre con un panno, senza fretta. «Farina.» Non è farina.\nCHI PAGA GLI SCAVATORI? — «Chi paga, paga. Chi scava, scava. Chi fa il pane…» indica le pagnotte. Con Persuasione CD 14, o 5 mo messe sul banco «per i bambini dell’Arena», o se qualcuno ha già parlato bene con Rosina o con i bambini: «La rosa. Casa de Spina. Nen l’ho ditte ije.»\nCHI È IL GIOVANE COI GUANTI? — «Se fa chiamà Ser Guidone. Porta la borsa ogni tre giorni al tramonto. Nen se leva mai li guanti, manche pe’ magnà ’nu tarallo. Uno che nen se leva li guanti tè qualcosa da nasconde o le mani brutte. Tutte e due, forse.»\nCHE COSA CERCANO? — «Una carta. Una carta vecchia. Li ho sentiti: “quanne truvème la carta, finisce tutto”. Io dico: finisce per chi?»\nCHE C’È SOTTO? — Si fa il segno della croce solare, e poi, più piccolo, un altro segno con due dita. «Lu Ventre Vecchie. Mia nonna diceva che l’Arena nen è sprofondata: è stata mangiata. E che quello che l’ha mangiata dorme.»\nLO SCAVATORE SENZA NOME — «Ciccio Pagliaro. Bravo guaglione, tre figli. È sceso con la lanterna, è risalito senza. Senza lanterna e senza nome. Dice che ha visto i colori. Solo questo: i colori.»\nL’UOMO CON LA MASCHERA — Si ferma con la pala a mezz’aria. «Lu Mascarone. Nen se nomina vicino a lu forne.» E non dice altro, a nessun prezzo.\nSE LA SI MINACCIA — Ride. «Ammazzate ’na vecchia pe’ ’nu nome? Fate pure. Domani mattina tutto l’anello sa la faccia vostra, e dopodomani la sa la Guardia.» Intimidire non funziona: fallisce sempre, e l’Arena si chiude.\nSE LA SI CORROMPE PER TRADIRE DE SPINA — Non tradisce la paga: la sposta. Se i PG offrono di pagare di più per sapere quando arriva Ser Guidone, accetta, e lo dice anche a Ser Guidone, per sicurezza: «Così tutti e due pagate.» Intuizione CD 15 per capirlo.\nSE LE SI MENTE — Intuizione +4. Se se ne accorge, vi dà un tarallo e vi manda via: «Tornate quanne avete imparate a dì la verità.»\nBATTUTE PRONTE — «Qua nen comanda nisciune. Pe’ quesse ce se vive.» · «Lu pane nen se chiede chi l’ha pagate.» · «Scennete, se proprio volete. Ma prima magnate. Laggiù nen se sa quanne se torna.»",
+     "prove": [
+      {
+       "id": "persuadere",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 6,
+         "leggi": "«Farina.» Vi dà le spalle e inforna. La conversazione è finita, e Rosina chiude le imposte."
+        },
+        {
+         "fascia": "failure",
+         "min": 7,
+         "max": 13,
+         "leggi": "«Chi paga, paga.» Vi vende un tarallo e basta."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Abbassa la voce: la rosa è Casa de Spina, la paga arriva ogni tre giorni al tramonto con un giovane coi guanti, Ser Guidone. Cercano «una carta vecchia»."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "max": 22,
+         "leggi": "Tutto quello di sopra, più: lo scavatore che ha dimenticato il nome si chiama Ciccio Pagliaro, e il capomastro, il Talpone, scende da solo la notte e «ha paura de quelle che trova, no de quelle che cerca»."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Vi mette in mano una pagnotta ancora calda. «Pe’ quanne state laggiù.» E vi dice come la chiama sua nonna, la cosa che ha mangiato l’Arena: «Chille che se gire.» Poi non parla più."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 14 o più sanno che paga Casa de Spina tramite Ser Guidone, al tramonto ogni tre giorni, per una «carta vecchia» (l’Atto di Fondazione, ma loro non lo sanno ancora). Possono aspettare Ser Guidone o scendere al cantiere.",
+     "rilancio": "Zi’ Nunziata inforna un’altra pala di pane. Che cosa fate?",
+     "daqui": [
+      "te_arena_cantiere"
+     ],
+     "pe": 200
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_arena_cantiere",
+   "kind": "persona",
+   "title": "Il cantiere del «pozzo»",
+   "image": "PDI — Arena — Il cantiere.jpg",
+   "legacyPosition": {
+    "x": 935,
+    "y": 615
+   },
+   "text": "Sul fondo, accanto al recinto, c’è una baracca di tavole con il tetto di tela incerata. Un argano di legno con la corda nuova, arrotolata stretta. Due lanterne chiuse appese a un palo. Picconi, pale, secchi di fango.\n\nGli uomini sono sei o sette. Hanno i mantelli da muratore e le mani da muratore. Non parlano fra loro. Quando vi vedono arrivare, due di loro si mettono davanti alla baracca.\n\nUno è rimasto seduto su un secchio rovesciato, a guardare il recinto. Non si è girato. Si ripete qualcosa sottovoce, sempre la stessa cosa.\n\nIl capomastro esce dalla baracca asciugandosi le mani. È grosso, collo corto, le spalle curve di chi ha passato la vita nei buchi. Ha gli occhi rossi di chi non dorme.\n\nImpigliato in una scheggia delle assi del recinto, sventola un fazzoletto. Troppo bianco per questo fango.",
+   "breve": "Gli scavatori di Casa de Spina fingono di riparare un pozzo. Il capomastro Nicola «Lu Talpone» è la persona chiave: ha visto cose laggiù, dorme con la lanterna accesa, vuole uscirne ma ha preso i soldi. Lu Scurdate (Ciccio Pagliaro) è l’uomo senza nome. Da qui: il Ventre Vecchio o l’ipogeo.",
+   "gm": "Gli scavatori: sei uomini di Cullëdarë e del Borgo, muratori veri, pagati il triplo del normale per scavare e tacere. Due sono sgherri di Ser Guidone, messi a guardia (usa «Mercenario» del tavolo o Bandito: nessuno vuole combattere, e se si arriva alle mani fuggono verso le gradinate).\nCosa cercano: l’Atto di Fondazione, che proverebbe la linea di sangue superiore dei de Spina e farebbe crollare il Consiglio (08 - Ducato, Trama 5: «scavi segreti sotto il Ventre Vecchio»). Non l’hanno trovato. Hanno trovato l’ipogeo, e hanno aperto qualcosa che era chiuso da fuori: le gabbie piegate verso l’esterno.\nLu Scurdate: Ciccio Pagliaro, scavatore, è sceso sotto le assi fino al secondo ripiano con una lanterna, ed è risalito all’alba senza lanterna e senza nome. Ha incontrato l’Arlecchino delle Grotte. Si ripete i nomi dei figli per non perderli.\nIl fazzoletto: seta fine con una rosa ricamata. È di Ser Guidone, che è sceso una volta a controllare.\nAtteggiamento: il capomastro è stanco e spaventato. Se i PG si presentano come Crociata o come gente che «sa cosa c’è sotto», lui vuole parlarne. Se si presentano come Guardia, nega tutto.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "fazzoletto",
+     "tipo": "dettaglio",
+     "titolo": "Il fazzoletto sulle assi",
+     "parte": "indizio",
+     "seme": "Impigliato in una scheggia delle assi del recinto, sventola un fazzoletto. Troppo bianco per questo fango.",
+     "innesco": "Qualcuno guarda il fazzoletto o lo stacca dalla scheggia.",
+     "leggi": "Seta. Fine, di quella che non si vede al mercato del Sestiere. In un angolo, ricamata in filo rosso scuro, una rosa con le spine ben visibili.\n\nIntorno al recinto, nel fango, impronte di stivali. Non da muratore: suola cucita, tacco basso, piede stretto.",
+     "prove": [
+      {
+       "id": "stemma",
+       "abilita": [
+        "Storia",
+        "Indagare"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un fazzoletto da signore. Qualcuno di ricco è passato di qui."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "La rosa con le spine è Casa de Spina, «Ogni Rosa ha le Sue». L’antico sangue pretuziano: una delle Otto Casate del Consiglio."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Casa de Spina. E si dice in città che la Matriarca Tarsilla non scenda mai di persona da nessuna parte: questo fazzoletto è di qualcuno che la rappresenta. Uno giovane, a giudicare dal passo corto e sicuro delle impronte."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno (con 12+) che dietro lo scavo c’è Casa de Spina. È una prova in mano, se la tengono: il fazzoletto vale qualcosa in Consiglio.",
+     "rilancio": "Due uomini davanti alla baracca vi guardano il fazzoletto in mano. Che cosa fate?",
+     "daqui": [
+      "talpone",
+      "scurdate"
+     ],
+     "bottino": [
+      {
+       "n": "Fazzoletto di seta con la rosa",
+       "q": 1,
+       "cat": "Prove",
+       "peso": "—",
+       "valore": "5 mo (come seta); molto di più come prova",
+       "stats": "Oggetto di trama",
+       "desc": "Seta fine con una rosa dalle spine rosse ricamata in un angolo. È di Ser Guidone, l’uomo di Casa de Spina che paga gli scavatori dell’Arena."
+      }
+     ]
+    },
+    {
+     "id": "talpone",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Nicola «Lu Talpone»",
+     "parte": "indizio",
+     "seme": "Ha gli occhi rossi di chi non dorme.",
+     "innesco": "Qualcuno si rivolge al capomastro.",
+     "leggi": "Si asciuga le mani sui calzoni, piano, come per prendere tempo.\n\n«Riparème ’nu pozze. Pe’ lu Comune. Vulete vedé lu permesse?» Non tira fuori nessun permesso.",
+     "note": "Scheda completa nel Compendio: Nicola «Lu Talpone».\nCHE COSA SCAVATE? — «Lu pozze.» Se gli si fa notare che non è un pozzo: guarda i due sgherri, poi abbassa la voce. «Scavème dove ce dicene. Io so’ muratore. Nen so’ lettore.»\nPER CHI LAVORATE? — Non lo dice davanti agli sgherri. Da solo, o se gli si mostra il fazzoletto: «La rosa. Lo sapete già, se tenete quello in mano.»\nCHE COSA CERCATE? — «Una carta. Una scatola, una cassa, un tubo, non lo sanno manco loro. Ser Guidone dice: “la riconoscerai quando la vedi, perché è più vecchia di tutto”. Qua sotto è tutto più vecchio di tutto.»\nCHE COSA AVETE TROVATO? — Si fa serio. «Muri sotto i muri. Le stanzette in fondo alla trincea: erano gabbie. Le sbarre sono piegate. In fuori. Capito? In fuori. Chi c’era dentro è uscito da solo.» E poi: «E ossa. Tante ossa sedute. Come sulle gradinate, ma sotto.»\nPERCHÉ NON DORMI? — Lungo silenzio. «Pecché quanne chiude l’occhi sento la conta dei bambini. Alla rovescia. E arrivata a uno, qualcosa sotto la terra se gira.» Scende la notte da solo con la lanterna perché «se lo sento girarsi, voglio vederlo prima che mi veda».\nLU SCURDATE — «Ciccio. Ce lo tengo qui perché a casa i figli lo chiamano papà e lui nen sa perché. Ha visto i colori. Solo questo dice: li colori.»\nSE GLI SI OFFRE DI USCIRNE — È quello che vuole. Ha preso l’anticipo da Ser Guidone e ha paura di Casa de Spina. Se i PG promettono di coprirlo (o la Crociata gli offre lavoro: la Crociata ha bisogno di muratori), vi dà la mappa degli scavi a gesso su un’asse, vi porta giù di persona fino al primo ripiano, e vi dice dove si scende davvero.\nSE LO SI MINACCIA — Gli sgherri mettono mano ai coltelli. Il Talpone alza le mani: «Nen fate casino. Laggiù sente.» Intimidire CD 13: parla, ma poi scompare per due giorni e avvisa Ser Guidone.\nSE LO SI CORROMPE — Rifiuta i soldi: «Li soldi me li danno già. È quelle che me fa scende.»\nSE GLI SI MENTE — Non se ne accorge (Intuizione +0): è troppo stanco.\nBATTUTE PRONTE — «Io i buchi li conosco. Questo nen è ’nu buche. È ’na gola.» · «Nen tuccate le corde senza aver lasciato lu Bocconotto.» · «Quando sentite la terra girarsi, correte verso la luce. Nen verso l’uscita: verso la luce.»",
+     "prove": [
+      {
+       "id": "fiducia",
+       "abilita": [
+        "Persuasione",
+        "Intuizione"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "«Lu pozze. Pe’ lu Comune.» Si chiude in baracca. Gli sgherri vi accompagnano alle gradinate."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 12,
+         "leggi": "Parla solo del pozzo e del permesso che non ha. Ma vi guarda come chi vorrebbe dire di più."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Allontana gli sgherri con una scusa. Vi racconta delle gabbie con le sbarre piegate in fuori, delle ossa sedute, della «carta» che cercano."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "max": 21,
+         "leggi": "Tutto quello di sopra, più: vi disegna col gesso su un’asse dove porta la trincea e dove scende il Ventre Vecchio, e vi chiede di tirarlo fuori da questo lavoro."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Vi porta al recinto e solleva un’asse. «Mettete l’orecchio.» Da giù, lontano, un rumore lento e pesante, come una macina che gira una volta sola. Poi silenzio. «Ogni notte un po’ più vicino.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 13+ sanno delle gabbie aperte da dentro, delle ossa, della carta; con 17+ hanno la mappa a gesso e un capomastro che vuole uscirne. Il Talpone può accompagnarli nell’ipogeo.",
+     "rilancio": "Il Talpone guarda il recinto, poi voi. Che cosa fate?",
+     "daqui": [
+      "scurdate",
+      "te_arena_ipogeo",
+      "te_arena_ventre"
+     ],
+     "pe": 300
+    },
+    {
+     "id": "scurdate",
+     "tipo": "dialogo",
+     "titolo": "L’uomo sul secchio",
+     "parte": "indizio",
+     "seme": "Si ripete qualcosa sottovoce, sempre la stessa cosa.",
+     "innesco": "Qualcuno si avvicina all’uomo seduto sul secchio o ascolta cosa ripete.",
+     "leggi": "È giovane, trent’anni. Barba di una settimana. Ripete tre nomi, sempre gli stessi, nello stesso ordine: «Mimì, Tonino, Carmelina. Mimì, Tonino, Carmelina.»\n\nQuando gli parlate si gira, e vi sorride con una gentilezza terribile, come si sorride agli sconosciuti.\n\n«Buongiorno. Lei chi è? Io…» Si ferma. «Io lavoro qui.»",
+     "note": "Ciccio Pagliaro, «Lu Scurdate». Scheda nel Compendio.\nCOME TI CHIAMI? — «Mi chiamano Ciccio. Me l’hanno detto loro.» Tocca la tasca: dentro c’è un foglietto con scritto il suo nome, nella calligrafia di sua moglie.\nCHI SONO MIMÌ, TONINO E CARMELINA? — «Non lo so.» Gli si riempiono gli occhi. «Ma se smetto di dirli, me li porta via.»\nCHE COSA HAI VISTO? — «I colori.» Si illumina, quasi felice. «Tutti i colori. In fondo al corridoio, dove arrivava la lanterna. Mi ha fatto un inchino. Io gli ho fatto un inchino. Poi era mattina.»\nDOVE? — «Giù. Dopo le gabbie, dopo la scala stretta. Dove il fango è caldo.»\nTI HA FATTO MALE? — «No. Non mi ha toccato. Mi ha solo… guardato bene.»\nMEDICINA CD 12 — nessuna ferita, nessuna malattia. Religione o Arcano CD 15 — non è una maledizione che si toglie con Rimuovi maledizione: è una cosa presa, non una cosa messa. Ristorare superiore gli restituisce il nome della moglie (solo quello). Da decidere se qualcosa di più possa restituirgli tutto.\nMATTHEUS — Se Mattheus gli mette le mani sulle spalle e prega: Ciccio si calma e smette di ripetere i nomi per un minuto. «Grazie. Adesso so che non li perdo.» Nessun effetto meccanico. Vale moltissimo per lui.",
+     "dopo": "Sanno che l’uomo della maschera (l’Arlecchino delle Grotte) sta più in basso, «dove il fango è caldo», e che chi lo incontra perde ricordi, non la vita. Ciccio non guarirà da solo.",
+     "rilancio": "«Mimì, Tonino, Carmelina.» Che cosa fate?",
+     "daqui": [
+      "te_arena_ipogeo",
+      "te_arena_ventre"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_arena_ipogeo",
+   "kind": "scontro",
+   "title": "La trincea dell’ipogeo",
+   "image": "PDI — Arena — L’ipogeo.jpg",
+   "legacyPosition": {
+    "x": 720,
+    "y": 855
+   },
+   "text": "Sul fondo, verso di voi, la terra è stata aperta a trincea. Una ferita lunga venti passi, profonda due uomini.\n\nDentro ci sono muri. Corridoi stretti di pietra grigia, stanzette senza tetto, una dopo l’altra, come celle di un alveare tagliato a metà.\n\nSulle porte delle stanzette, sbarre di ferro nero. Piegate.\n\nIn fondo alla trincea, una stanza più grande. Lungo le pareti, su panche di pietra, ci sono ossa. Scheletri interi, seduti in fila, la testa appoggiata al muro, come gente che aspetta.\n\nIn mezzo a loro, uno scheletro più grande è sdraiato su un fianco. Stringe al petto un tubo di piombo lungo un braccio. Ha ancora l’elmo: bronzo verde, un lupo sulla fronte.\n\nIl sole arriva fin qui sotto solo a mezzogiorno. Il resto del giorno, qui, è ombra.",
+   "breve": "L’ipogeo dell’anfiteatro: gabbie aperte dall’interno, e una sala di ossa sedute. Quando qualcuno tocca il tubo di piombo o l’elmo del campione, o quando cala l’ombra, il pubblico si alza: Ombre e il Campione dell’Arena, più due Striscianti carogna che salgono dalle gabbie. Poi il bottino: il tubo di piombo, l’elmo del lupo, la lancia.",
+   "gm": "Cosa sono: gli spettatori dell’ultima notte, quando l’arena «fu mangiata». Le loro ombre sono rimaste sedute ad aspettare la fine dello spettacolo. Il campione è l’ultimo combattente, quello che teneva la porta contro «le cose che venivano da sotto» (voce 1 della voce del luogo). Ha stretto il tubo di piombo morendo.\nQuando: se qualcuno tocca il tubo o l’elmo, o se il gruppo è ancora nella sala quando il sole lascia la trincea (a metà pomeriggio, o subito se ci vengono di sera o di notte).\nForze (6 PG di livello 5, difficoltà moderata, 3.300 PE): 6 Ombre del pubblico (Ombra, GS 1/2, 100 PE l’una) che si staccano dalle ossa sedute; 1 Campione dell’Arena (Gladiatore adattato a non morto, GS 5, 1.800 PE); 2 Striscianti carogna (GS 2, 450 PE l’uno) che salgono dalle gabbie in fondo alla trincea al secondo round, attirati dal rumore. Per alzarla (difficile): +2 Ombre e un terzo Strisciante.\nTerreno: la trincea è larga 3 m: si combatte in fila. Le gabbie danno copertura parziale. Chi sale dalla trincea sulle gradinate (Atletica CD 10, metà movimento) è alla luce: le Ombre non lo seguono se è giorno. Il fango sul fondo è terreno difficile.\nIl Campione non attacca chi tiene in mano il tubo di piombo, se chi lo tiene dice qualcosa in Pretuziano o fa il segno del lupo: lo guarda, abbassa la lancia, e combatte solo gli altri. Nessuno lo sa, ma Alessandros o Adamus potrebbero intuirlo (Intuizione CD 15 vedendo che il Campione protegge il tubo, non se stesso).\nFine: quando il Campione cade si inginocchia e si sbriciola, e le Ombre tornano sulle ossa, sedute, per sempre. Gli Striscianti fuggono nelle gabbie sotto i 10 PF.\nConseguenze: l’Arena sente la battaglia. Zi’ Nunziata sa entro sera che la Crociata ha «svegliato il pubblico». Il Talpone, se è ancora con loro, è convinto: lascia Casa de Spina.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "gabbie",
+     "tipo": "dettaglio",
+     "titolo": "Le sbarre piegate",
+     "parte": "indizio",
+     "seme": "Sulle porte delle stanzette, sbarre di ferro nero. Piegate.",
+     "innesco": "Qualcuno esamina le gabbie lungo la trincea.",
+     "leggi": "Il ferro è spesso due dita. È piegato in fuori, a pancia, come se qualcosa di grosso ci avesse spinto contro da dentro, a lungo. Sul fondo delle gabbie, fango umido. E un’apertura bassa, tonda, che scende.",
+     "prove": [
+      {
+       "id": "gabbie",
+       "abilita": [
+        "Indagare",
+        "Natura"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Qualcuno ha piegato le sbarre. Da fuori o da dentro, non si capisce."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Da dentro. E non da poco: il fango sul fondo delle gabbie è fresco, smosso, con tracce lunghe e strisciate. Qualcosa ci passa ancora."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Le tracce sono di un corpo lungo, segmentato, con tante zampe corte; e c’è un odore acido di carne vecchia. Qualcosa che si nutre di morti. Sta sotto, e sale quando sente rumore."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 13+ non sono sorpresi dagli Striscianti carogna al secondo round.",
+     "rilancio": "Dall’apertura in fondo alla gabbia sale un odore acido. Che cosa fate?",
+     "daqui": [
+      "tubo",
+      "scontro"
+     ]
+    },
+    {
+     "id": "tubo",
+     "tipo": "dettaglio",
+     "titolo": "Il campione e il tubo di piombo",
+     "parte": "indizio",
+     "seme": "Stringe al petto un tubo di piombo lungo un braccio.",
+     "innesco": "Qualcuno si avvicina al grande scheletro sdraiato, all’elmo o al tubo.",
+     "leggi": "Il campione era alto quasi due metri. Le ossa delle braccia hanno i segni di vecchie fratture guarite. Accanto alla mano destra, una lancia col ferro a foglia, nera ma intera.\n\nIl tubo è chiuso ai due capi con piombo colato. Sopra, inciso, un lupo seduto. Lo stringe come si stringe un bambino.\n\nNel silenzio, le teste degli scheletri seduti sembrano girate tutte un po’ di più verso di voi. Non avete visto muoverle.",
+     "note": "Toccare il tubo o l’elmo fa partire lo scontro. Con 14+ lo sanno prima.",
+     "prove": [
+      {
+       "id": "perc",
+       "abilita": [
+        "Percezione",
+        "Religione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Ossa. Tante. Vecchie."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Le ombre degli scheletri seduti non corrispondono alla luce. Sono lunghe verso di voi, anche quelle che dovrebbero cadere dall’altra parte. Se toccate il tubo, qualcosa si sveglia."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se prendono il tubo, parte lo scontro. Se vogliono evitarlo possono tornare a mezzogiorno, con la luce piena: allora solo il Campione si alza, da solo, e gli Striscianti (difficoltà bassa).",
+     "rilancio": "Il campione stringe il tubo. Le ombre sono lunghe. Che cosa fate?",
+     "daqui": [
+      "scontro"
+     ]
+    },
+    {
+     "id": "scontro",
+     "tipo": "scontro",
+     "titolo": "Scontro — il pubblico si alza",
+     "parte": "evento",
+     "innesco": "Qualcuno tocca il tubo o l’elmo, oppure il sole lascia la trincea con il gruppo ancora dentro.",
+     "leggi": "Il rumore arriva prima del movimento. Un fruscio, lungo, come una folla che si alza tutta insieme dalle panche.\n\nLe ombre degli scheletri seduti si staccano dal muro. Non le ossa: le ombre. Si alzano in piedi, sottili, senza faccia, e fanno un passo avanti.\n\nIl campione si mette su un ginocchio. Le ossa scricchiolano. Prende la lancia.\n\nDal fondo della trincea, da dentro una gabbia, un rumore bagnato di tante zampe.",
+     "note": "Dal Bestiario: 6 «Ombra del pubblico», 1 «Campione dell’Arena»; al secondo round 2 «Strisciante carogna» dalle gabbie in fondo. Le Ombre cercano chi ha la luce più debole e chi è isolato; hanno vantaggio a nascondersi nella penombra della trincea. Il Campione tiene il passaggio fra la sala e la trincea: combatte come uno che difende una porta, non avanza oltre. Gli Striscianti puntano chi è a terra.\nIl Campione non attacca chi tiene il tubo e parla Pretuziano o fa il segno del lupo.\nSe qualcuno risale alla luce del giorno, le Ombre non lo seguono.",
+     "dopo": "Il Campione si sbriciola in ginocchio. Le Ombre tornano sulle ossa. Gli Striscianti fuggono nelle gabbie sotto i 10 PF. Il pubblico, da adesso, riposa.",
+     "rilancio": "Il fango della trincea torna fermo. Che cosa fate?",
+     "daqui": [
+      "bottino"
+     ],
+     "pe": 3300
+    },
+    {
+     "id": "bottino",
+     "tipo": "bottino",
+     "titolo": "Quello che resta al campione",
+     "parte": "evento",
+     "innesco": "Dopo lo scontro, qualcuno raccoglie le cose del campione.",
+     "leggi": "La lancia è fredda e leggera, più leggera di quanto dovrebbe. L’elmo col lupo pesa come un’incudine. Il tubo di piombo, scosso, fa un rumore secco: dentro c’è qualcosa di rigido.",
+     "note": "IL TUBO: aprirlo richiede un coltello e dieci minuti, o un fabbro. Dentro: una tavoletta di legno cerato arrotolata in una pelle, con una fila di segni pretuziani e dodici nomi incisi, e un disegno: un lupo seduto sopra una linea ondulata, e sotto la linea, un occhio chiuso.\nLeggerla: Storia CD 17 o il Circolo dei Glossatori (Tancredus). Dice: «I dodici che tennero la porta la notte che si girò. I loro figli terranno la porta.» Fra i dodici nomi, in Pretuziano antico, due si leggono come i nomi di due Casate di oggi.\nDa decidere: quali due Casate. Proposta: de Spina e Cerullius, e NON Mazzarellus. Non è l’Atto di Fondazione, ma per Casa de Spina vale quasi altrettanto: prova che il loro sangue «teneva la porta» prima dell’Impero. Per Alessandros è la prima traccia scritta della sua famiglia sotto Teramum.\nDa decidere: che cosa sia «la notte che si girò». Collegare a Lu Sott’a Terre e al Gigante («Quann’ lu Gigante se ’ngrugne, treme la terre»), senza risolvere.",
+     "dopo": "Il tubo è merce politica: Casa de Spina lo vuole, Tancredus lo vorrebbe leggere, Impalox lo brucerebbe. Chi lo sa, adesso, sono solo loro (e l’Arena, che ha sentito).",
+     "rilancio": "Il sole si è già spostato dalla trincea. Che cosa fate?",
+     "daqui": [
+      "te_arena_ventre"
+     ],
+     "bottino": [
+      {
+       "n": "Lancia del Campione dell’Arena",
+       "q": 1,
+       "cat": "Armi magiche",
+       "peso": "1,5 kg",
+       "valore": "Non stabilito",
+       "stats": "Lancia +1 · 1d6 + 1 perforanti (1d8 + 1 a due mani) · da lancio (6/18 m), versatile · maestria: Indebolire (Sap) · Contro i non morti: +1d4 danni radiosi",
+       "desc": "Ferro a foglia, asta nera e dura come osso. Era del campione che teneva la porta dell’ipogeo. Fredda al tatto anche al sole."
+      },
+      {
+       "n": "Elmo del lupo",
+       "q": 1,
+       "cat": "Oggetti preziosi",
+       "peso": "3 kg",
+       "valore": "100 mo (da un antiquario); inestimabile per una casata pretuziana",
+       "stats": "Non magico",
+       "desc": "Bronzo verde, un lupo seduto sbalzato sulla fronte. Più vecchio dell’Impero."
+      },
+      {
+       "n": "Il tubo di piombo del campione",
+       "q": 1,
+       "cat": "Documenti",
+       "peso": "2 kg",
+       "valore": "Non stabilito",
+       "stats": "Oggetto di trama",
+       "desc": "Un tubo di piombo sigillato, col lupo seduto inciso sopra. Dentro, una tavoletta cerata con segni pretuziani e dodici nomi."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_arena_ventre",
+   "kind": "porta",
+   "title": "Il Ventre Vecchio",
+   "image": "PDI — Arena — Il Ventre Vecchio.jpg",
+   "legacyPosition": {
+    "x": 700,
+    "y": 545
+   },
+   "text": "Il recinto è di pali storti, legati con corda. Dentro, il fondo dell’arena scende ancora, a imbuto, per tre o quattro passi.\n\nIn mezzo all’imbuto, una bocca nera nel terreno, larga come un carro. Coperta da assi grosse, inchiodate a due travi.\n\nDa una fessura fra le assi sale aria. D’inverno, dicono, qui il fango è caldo. Adesso è tiepido.\n\nSulle assi qualcuno ha fatto dei segni col gesso: una croce, un’altra croce, una freccia che punta in giù. E un cerchio con un punto nel mezzo, più piccolo, fatto da un’altra mano.\n\nSe si sta zitti, dal buio sale un rumore d’acqua che cade, lontano.",
+   "breve": "La bocca che scende nella Città Sepolta: una corda, un primo ripiano a dieci metri, poi il corridoio grigio che va verso il colle, poi la scala stretta fino alla grotta tiepida (scena «La Città Sepolta», ingresso dal Ventre Vecchio). Le croci sono degli scavatori, il cerchio col punto è di Frate Davide.",
+   "gm": "È l’accesso al livello più profondo del sottosuolo di Teramum (08 - Ducato). Da qui la corda degli scavatori arriva, dopo il primo ripiano e una scala stretta, nella grotta tiepida della scena «La Città Sepolta» (punto «La grotta tiepida»).\nI segni: le croci sono degli scavatori de Spina; il cerchio con il punto è il segno di Frate Davide de li Piccole Vie (lo stesso delle cantine del Sestiere): Davide passa di qui, di notte, da sotto. Se Mattheus ha già incontrato Davide, riconosce il segno.\nIl calore: l’aria sale da una profondità dove la roccia è tiepida e trema appena. Non è un vulcano. Da decidere che cos’è; tenerlo legato al Gigante, senza dirlo.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "scendere",
+     "tipo": "dettaglio",
+     "titolo": "Scendere sotto le assi",
+     "parte": "evento",
+     "innesco": "Il gruppo schioda o solleva le assi e scende con la corda dell’argano o con una sua.",
+     "leggi": "Sotto le assi, il buio sa di acqua e di ferro. La corda dell’argano scende dritta e sparisce.\n\nDieci metri più giù, la luce della lanterna trova un ripiano di pietra grigia, bagnata, e l’imbocco di un corridoio che va verso il colle.",
+     "note": "Vantaggio se hanno lasciato l’offerta ai Mazzamarelli. Svantaggio se hanno toccato il piattino. Se il Talpone li accompagna, ognuno può ripetere un tiro fallito: lui tiene la corda.\nLa freccia di polvere grigia è polvere d’osso: le stesse frecce che nella Città Sepolta puntano verso la Basilica.",
+     "prove": [
+      {
+       "id": "atletica",
+       "abilita": [
+        "Atletica",
+        "Acrobazia"
+       ],
+       "cd": 13,
+       "gruppo": "tutti",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "La corda gira, la mano scivola sul fango: cadete per gli ultimi tre metri. 2d6 danni contundenti, e il rumore rimbalza giù nel buio, molto lontano."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 12,
+         "leggi": "Scivolate sul fango: 1d6 danni contundenti. Sopra di voi, sulle gradinate, qualcuno apre una finestra."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Con la corda e un buon appiglio arrivate al primo ripiano."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Scendete veloci e in silenzio, e dal ripiano vedete, sulla parete, una freccia tracciata con una polvere più fine del gesso, grigia. Punta verso il colle."
+        }
+       ]
+      }
+     ],
+     "dopo": "Dal primo ripiano: il corridoio grigio, poi la scala stretta, poi la grotta tiepida. Si passa alla scena «La Città Sepolta», ingresso dal Ventre Vecchio.",
+     "rilancio": "Il corridoio va verso il colle. L’acqua cade, lontano. Che cosa fate?",
+     "daqui": [
+      "segni_gesso"
+     ],
+     "pe": 100
+    },
+    {
+     "id": "segni_gesso",
+     "tipo": "dettaglio",
+     "titolo": "I segni sulle assi",
+     "parte": "indizio",
+     "seme": "E un cerchio con un punto nel mezzo, più piccolo, fatto da un’altra mano.",
+     "innesco": "Qualcuno guarda i segni di gesso sulle assi.",
+     "leggi": "Le croci sono grandi, fatte in fretta, da muratori. Il cerchio col punto è piccolo, preciso, fatto con calma. Il gesso del cerchio è più vecchio di quello delle croci: qualcuno è passato di qui prima degli scavatori.",
+     "note": "Se Mattheus ha già incontrato Frate Davide, lo riconosce senza tiro: è il segno di Davide, quello che ha visto sulla porta della cantina del vicolo. Davide conosce questa strada.",
+     "prove": [
+      {
+       "id": "indagare",
+       "abilita": [
+        "Indagare",
+        "Religione"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Segni di chi è passato. Ne passa di gente, di qui."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Il cerchio con il punto è un segno di strada, non di scavo: dice «si passa, e si torna». Chi l’ha fatto viene da sotto, non da sopra."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che qualcuno passa di qui da sotto, e (se Mattheus conosce Davide) chi.",
+     "rilancio": "Il cerchio col punto vi guarda dalle assi. Che cosa fate?",
+     "daqui": [
+      "scendere"
+     ]
+    }
+   ]
+  }
+ ]
+}

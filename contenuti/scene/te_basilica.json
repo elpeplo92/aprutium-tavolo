@@ -1,0 +1,1198 @@
+{
+ "id": "te_basilica",
+ "nome": "Basilica Aurea dei Santi Martiri",
+ "menu": "Basilica Aurea",
+ "citta": "Teramum",
+ "ordine": 13,
+ "mappa": {
+  "img": "Battlemap — Basilica Aurea.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Dall’altra parte della piazza, la Basilica Aurea prende la luce e la rimanda addosso a chi guarda.\n\nOro, dappertutto. Santi in fila. E in mezzo, alto quanto tre case, un re con la lancia e lo scudo.\n\nLe campane battono l’ora. Il selciato vibra sotto i piedi. Per un istante, finito l’ultimo colpo, sembra che una campana continui a suonare da sola, piano, sotto terra.",
+  "note": "La Basilica è la casa di Casa Impalox e il tappo sopra un Sigillo Lunare. Due metà: sopra (sagrato, navata, campanile, sacrestia: la politica della Fede, pericolosa soprattutto per Mattheus) e sotto (altare, cripta, porta con la luna: il Sigillo, il Filatterio, la chiave vera di Iuvenza).\nLa mappa mostra la Basilica a sinistra e la cripta, un piano più in basso, a destra.\nUnico scontro previsto: la squadra di Iuvenza alla porta con la luna. Gli inquisitori non combattono in chiesa: segnano nomi.\nMattheus: avvisa il giocatore, fuori dal gioco, che nella Basilica la sua magia ha luce d’argento e si vede.",
+  "ingressi": [
+   {
+    "da": "Dal sagrato, di giorno",
+    "primo": "te_basilica_sagrato",
+    "poi": "te_basilica_navata",
+    "note": "L’ordine normale della lista."
+   },
+   {
+    "da": "Convocati dall’Arcimandrita",
+    "primo": "te_basilica_sacrestia",
+    "poi": "te_basilica_navata",
+    "note": "Se i loro nomi sono già nel libretto degli inquisitori, un frate li va a prendere al campo e li porta in sacrestia dalla porta laterale."
+   },
+   {
+    "da": "Dal cortiletto dietro l’abside, di notte",
+    "primo": "te_basilica_cripta",
+    "poi": "te_basilica_porta_luna",
+    "note": "La porta della sacrestia vecchia (vista dal campanaro) ha una seconda scala che scende nella cripta senza passare dalla grata."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "te_basilica_sagrato",
+   "kind": "scena",
+   "title": "Il sagrato e la facciata d’oro",
+   "image": "Luogo — 2. Basilica Aurea dei Santi Martiri.jpg",
+   "legacyPosition": {
+    "x": 520,
+    "y": 1010
+   },
+   "text": "La facciata è coperta d’oro. Mosaici a fondo dorato, santi in fila, e in mezzo, alto quanto tre case, Valerus come lo dipinge la Chiesa: un re guerriero con la corona, la lancia e lo scudo.\n\nAl mattino brilla tanto che bisogna socchiudere gli occhi.\n\nSotto l’oro, alla base, corre un basamento di pietra grigia a blocchi enormi, senza malta, consumati. L’oro comincia un metro sopra, come un vestito buono su un corpo più vecchio.\n\nSulla scalinata, pellegrini con la conchiglia sulla bisaccia, mendicanti con la ciotola, venditori di candele.\n\nDavanti al portale, due uomini in nero e oro con un libretto in mano. Guardano le mani di chi entra più delle facce.\n\nLe campane battono l’ora. La pietra vibra sotto i piedi, fino alle ginocchia.",
+   "breve": "La facciata della Basilica: la propaganda della Chiesa in oro sopra una base pretuziana. All’ingresso gli inquisitori dell’Arcimandrita segnano i nomi di chi entra con la Crociata. Da qui si entra nella navata.",
+   "gm": "Gli inquisitori (vedi Inquisitore Bonifatius Caldora) hanno l’ordine di segnare chiunque arrivi con la Crociata: un Erede, un Conte pretuziano e troppi eretici. Ogni sera l’Arcimandrita legge la lista.\nLa base di pietra grigia è il tempio del Gigante dei Pretuziani, su cui la Basilica sorse nell’Era della Pietra Sovrapposta.\nDa decidere: cronologia della Basilica in conflitto. Il lore dice che sorse sul tempio del Gigante al tempo del Patto con l’Impero, ma anche che fu costruita dopo la Guerra delle Due Lune sopra la cripta di Santa Maria Aprutiensis. Proposta: due fasi dello stesso cantiere (la base e il vecchio duomo prima della Guerra, l’oro e la Basilica dei Martiri dopo). Non scelto.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "facciata",
+     "tipo": "dettaglio",
+     "titolo": "Il Valerus d’oro",
+     "parte": "indizio",
+     "seme": "un re guerriero con la corona, la lancia e lo scudo",
+     "innesco": "Qualcuno guarda con attenzione i mosaici della facciata.",
+     "leggi": "Il Valerus del centro è nuovo: le tessere brillano. Più in alto, sotto il timpano, i mosaici sono più scuri, con l’oro spento dal tempo.",
+     "prove": [
+      {
+       "id": "facciata",
+       "abilita": [
+        "Religione",
+        "Storia"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Il Sole e i Santi, come in ogni chiesa del Ducato."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Il Valerus con lancia e scudo è un’immagine della Chiesa del dopoguerra, del Concilio del 1247. Nei mosaici più alti, quelli vecchi, al suo posto c’è solo un disco di luce."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "E ai lati del disco, nei mosaici vecchi, due tondi più piccoli, uno d’argento e uno di tessere nere: coperti a metà dall’oro nuovo, ma ancora lì."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Il disco di luce non ha volto. Guardandolo abbastanza a lungo, sembra pulsare."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 12 o più sanno che il re guerriero è un’immagine recente; con 17 che anche qui, come sul trono ducale, c’erano il sole e due lune.",
+     "rilancio": "Le campane smettono. Nel silenzio si sente il vento sull’oro. Che cosa fate?",
+     "daqui": [
+      "basamento",
+      "inquisitori"
+     ]
+    },
+    {
+     "id": "basamento",
+     "tipo": "dettaglio",
+     "titolo": "La pietra sotto l’oro",
+     "parte": "indizio",
+     "seme": "un basamento di pietra grigia a blocchi enormi, senza malta, consumati",
+     "innesco": "Qualcuno tocca o esamina la base della facciata.",
+     "leggi": "La pietra è fredda anche al sole. I blocchi sono grandi come carri. Su uno, all’altezza del ginocchio, un rilievo consumato: una forma a quattro zampe, col muso alto.",
+     "prove": [
+      {
+       "id": "basamento",
+       "abilita": [
+        "Storia",
+        "Natura"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Pietre vecchie. Come quelle alla base delle mura della città."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "È la pietra pretuziana, la stessa della base delle mura: qui sotto c’era un tempio prima della Basilica. La forma sul blocco è un lupo, il custode del sonno del Gigante."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Il lupo guarda a ovest, verso la montagna. Tutti i lupi pretuziani guardano il Gigante: questo tempio era suo."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che la Basilica poggia su un tempio pretuziano, probabilmente del Gigante.",
+     "rilancio": "Un mendicante vi guarda toccare la pietra e si fa il segno del sole. Che cosa fate?",
+     "daqui": [
+      "inquisitori"
+     ]
+    },
+    {
+     "id": "inquisitori",
+     "tipo": "dettaglio",
+     "titolo": "Gli uomini col libretto",
+     "parte": "indizio",
+     "seme": "Guardano le mani di chi entra più delle facce.",
+     "innesco": "I PG salgono verso il portale.",
+     "leggi": "Uno dei due vi guarda salire. Apre il libretto. Bagna la punta della matita sulla lingua.\n\n«Nomi, figlioli. Solo per la preghiera.»",
+     "note": "Passare inosservati: Inganno o Furtività CD 14 (gruppo, meta). Se falliscono, i nomi finiscono nel libretto e la sera li legge Impalox; da quel momento due inquisitori seguono il gruppo in città, a distanza.\nMattheus: se ha il simbolo di Mortus addosso, anche nascosto, l’inquisitore lo guarda due volte (Rapidità di mano o Inganno CD 13 per non farsi notare). Nessun arresto qui: solo un nome sottolineato.\nDialogo breve dell’Inquisitore: vedi la sua scheda. «La Fiamma guarda tutti. Io guardo quelli che la Fiamma mi indica.»",
+     "prove": [
+      {
+       "id": "inquisitori",
+       "abilita": [
+        "Inganno",
+        "Furtività"
+       ],
+       "cd": 14,
+       "gruppo": "meta",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "L’inquisitore scrive i vostri nomi, uno per uno, e sottolinea due volte quello che gli è piaciuto meno."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Vi prende per pellegrini qualunque. Il libretto resta chiuso."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Vi prende per pellegrini, e vi benedice pure. L’altro inquisitore sbadiglia."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se sono stati segnati, Impalox sa chi sono prima di riceverli, e due inquisitori li seguono in città.",
+     "rilancio": "Il portale è aperto. Dentro, incenso e freddo. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando entrano.",
+     "dopo": "Si entra nella navata. Il campanile è a sinistra del portale, con una porticina a parte.",
+     "rilancio": "L’oro resta fuori. Che cosa fate?",
+     "daqui": [
+      "te_basilica_navata",
+      "te_basilica_campanile"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_basilica_navata",
+   "kind": "scena",
+   "title": "La navata dei Martiri",
+   "image": "PDI — Basilica Aurea — La navata dei Martiri.jpg",
+   "legacyPosition": {
+    "x": 520,
+    "y": 640
+   },
+   "text": "Incenso, e freddo. Un freddo che non viene dalla pietra.\n\nTre navate, colonne rivestite di marmo, e in alto le cupole a mosaico con i Santi Martiri della Guerra delle Due Lune, ognuno con lo strumento del proprio martirio: la ruota, la freccia, la spada, la catena.\n\nLa voce si perde in alto. Il pavimento è di marmo nuovo, ma in qualche punto le lastre sono state rattoppate, e sotto il passo si sente il vuoto.\n\nCandele a centinaia sulle rastrelliere di ferro. Pellegrini in ginocchio. Cassette per le offerte, col lucchetto.\n\nIn fondo, verso l’altare, un gruppo di candele non sta dritto. Le fiamme si piegano tutte dalla stessa parte. Non c’è vento.",
+   "breve": "Il corpo della Basilica. Mosaici dei Martiri, pavimento rattoppato sopra il vuoto, candele che si piegano verso la cripta. Qui Mattheus è in pericolo: se la sua magia si mostra, la luce argentea lo tradisce.",
+   "gm": "Le candele si piegano verso la grata dietro l’altare maggiore: è il Sigillo Lunare, disturbato dalla magia di Lyaras, che tira l’aria verso di sé. I sacrestani hanno smesso di accenderle da quella parte.\nLe lastre rattoppate coprono i punti in cui il pavimento è sprofondato negli ultimi mesi, dopo i terremoti: sotto c’è la cripta vecchia.\nMattheus: qualunque incantesimo di cura lanciato qui, o qualunque manifestazione del suo potere, ha una luce argentea (la magia spezzata del Ciclo; Mortus). Nella Basilica di Impalox è una condanna. Vedi il modulo «luce».",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "martiri",
+     "tipo": "dettaglio",
+     "titolo": "I Santi Martiri",
+     "parte": "indizio",
+     "seme": "ognuno con lo strumento del proprio martirio",
+     "innesco": "Qualcuno guarda i mosaici delle cupole.",
+     "leggi": "I Martiri sono i difensori di Teramum morti nella Guerra. Uno, nella cupola più vicina all’altare, non ha la spada né la ruota. Ha le mani alzate, vuote, e sopra le mani le tessere d’oro sono più lucide, più nuove, come una toppa.",
+     "prove": [
+      {
+       "id": "martiri",
+       "abilita": [
+        "Percezione",
+        "Religione"
+       ],
+       "cd": 15,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Martiri, tanti, tutti uguali. La Chiesa li ama in fila."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Sotto la toppa d’oro, dove le tessere nuove non combaciano, si vede un bordo d’argento curvo. Quel martire teneva in mano una falce di luna."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Il martire con la luna è l’unico con gli occhi aperti verso il basso, verso il pavimento, verso l’altare. Come se guardasse qualcosa sotto la chiesa."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Sotto il mosaico, piccole, le lettere di un nome: non è Aureo. Un nome pretuziano. Qualcuno ha salvato i difensori dalla dimenticanza, ma ha tolto loro le lune."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che uno dei Martiri teneva una luna, coperta dopo la Guerra. Un difensore di Teramum usava la Luna.",
+     "rilancio": "Il martire senza luna guarda in basso. Che cosa fate?",
+     "daqui": [
+      "lastre",
+      "candele"
+     ]
+    },
+    {
+     "id": "lastre",
+     "tipo": "dettaglio",
+     "titolo": "Il vuoto sotto il passo",
+     "parte": "indizio",
+     "seme": "sotto il passo si sente il vuoto",
+     "innesco": "Qualcuno batte il piede o si inginocchia sulle lastre rattoppate.",
+     "leggi": "La lastra suona sorda. Fra le fughe nuove esce un filo d’aria fredda, che sa di muschio e di ferro.",
+     "prove": [
+      {
+       "id": "lastre",
+       "abilita": [
+        "Indagare",
+        "Percezione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Marmo rattoppato. Le chiese vecchie si muovono."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Sotto c’è uno spazio largo, una volta: la cripta vecchia corre sotto mezza navata, molto più grande di quanto si pensi."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Le lastre rattoppate formano quasi un cerchio intorno all’altare. Il pavimento è sprofondato dove qualcosa, sotto, tira verso il centro."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che sotto la navata c’è una cripta grande, e che il pavimento cede intorno all’altare.",
+     "rilancio": "Un sacrestano vi guarda dall’altare e si affretta verso di voi. Che cosa fate?",
+     "daqui": [
+      "candele",
+      "te_basilica_altare"
+     ]
+    },
+    {
+     "id": "candele",
+     "tipo": "dettaglio",
+     "titolo": "Le candele che si piegano",
+     "parte": "indizio",
+     "seme": "Le fiamme si piegano tutte dalla stessa parte. Non c’è vento.",
+     "innesco": "Qualcuno si avvicina alle candele o chiede perché si piegano.",
+     "leggi": "Le fiamme puntano verso l’altare, anzi: dietro l’altare. Quando qualcuno ci passa in mezzo, tornano dritte un istante e poi si piegano di nuovo.",
+     "note": "Il sacrestano Clemente accorre: «Non le toccate. Sono le correnti. Le chiese vecchie hanno le correnti.» Non ci crede nemmeno lui. Vedi la sua scheda.\nIndividuazione del magico: nessuna aura sulle candele; ma sotto il pavimento, oltre i 9 metri di portata, qualcosa di enorme e sordo, come un rumore troppo basso per sentirlo. Chi ci si concentra (Arcano CD 15) lo riconosce: Abiurazione, antica, che trattiene. Ed è inclinata, come un coperchio mal chiuso.",
+     "prove": [
+      {
+       "id": "candele",
+       "abilita": [
+        "Arcano",
+        "Religione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Correnti d’aria. Chiese vecchie."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Non sono correnti. Qualcosa sotto la chiesa tira l’aria verso di sé, piano, di continuo, come un respiro lunghissimo."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "È lo stesso tirare che avete sentito sotto Bëllindë, vicino al Quarto Sigillo. Più debole. O più lontano. O più addormentato."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 15 o più sanno che sotto la Basilica c’è qualcosa che tira; con 20 lo avvicinano al Sigillo di Bëllindë.",
+     "rilancio": "Le fiamme vi indicano l’altare. Che cosa fate?",
+     "daqui": [
+      "luce",
+      "te_basilica_altare"
+     ]
+    },
+    {
+     "id": "luce",
+     "tipo": "dettaglio",
+     "titolo": "La luce che tradisce",
+     "parte": "evento",
+     "innesco": "Mattheus (o chiunque altro con magia lunare o di Mortus) lancia un incantesimo qui dentro, anche di nascosto, o il Filatterio reagisce.",
+     "leggi": "La luce che esce dalle mani non è dorata. È argentea, fredda, e per un istante disegna sul marmo un’ombra in più.\n\nUn pellegrino smette di pregare. Un inquisitore si volta.",
+     "note": "Chi ha visto: tutti nel raggio di 18 m. Coprire: Inganno CD 15 («è la luce della Fiamma, la Fiamma ha tante luci») o Rapidità di mano CD 13 se il lancio era piccolo e già in corso. Se nessuno copre, l’inquisitore si avvicina: non arresta, chiede il nome, e quel nome va nel registro di Fra’ Tobia con una croce. Da quel momento Impalox sa di Mattheus quello che gli serve per ricattare la Crociata.\nNon usare questo modulo per punire: è un pericolo annunciato. Avvisa il giocatore di Mattheus, fuori dal gioco, che nella Basilica la sua magia si vede.",
+     "prove": [
+      {
+       "id": "luce",
+       "abilita": [
+        "Inganno"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "L’inquisitore si avvicina, lento. «Una luce singolare, figliolo. Come vi chiamate?»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "L’inquisitore guarda, esita, e torna al suo posto. Una luce strana in una chiesa piena di candele. Può capitare."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Il pellegrino più vicino si fa il segno del sole e dice ad alta voce: «Miracolo piccolo.» L’inquisitore non ha il coraggio di smentirlo davanti a tutti."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se va male, Impalox ha un’arma contro la Crociata: un chierico che fa luce d’argento. Lo userà in sacrestia.",
+     "rilancio": "Gli occhi della navata sono su di voi. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano la navata.",
+     "dopo": "Davanti: l’altare e la grata. A sinistra: la sacrestia (l’Arcimandrita riceve lì). Dietro: il campanile.",
+     "rilancio": "Il coro attacca un inno. Che cosa fate?",
+     "daqui": [
+      "te_basilica_altare",
+      "te_basilica_sacrestia",
+      "te_basilica_campanile"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_basilica_campanile",
+   "kind": "persona",
+   "title": "Il campanile",
+   "image": "PDI — Basilica Aurea — Il campanile.jpg",
+   "legacyPosition": {
+    "x": 150,
+    "y": 900
+   },
+   "text": "Una porticina di legno a sinistra del portale. Dentro, la base quadrata del campanile: muri spessi, una scala a pioli che sale nel buio, piccioni.\n\nDal buio scendono le corde delle campane, grosse come un polso, lisce di mani.\n\nSu uno sgabello, un vecchio calvo con gli avambracci da fabbro e una fiaschetta in mano. Guarda in su, verso le campane. Non verso di voi.\n\n«Adesso stanno zitte», dice. «Adesso.»",
+   "breve": "Zi’ Pasquale «Lu Battaje», il campanaro. Sa quando le campane hanno suonato da sole (la notte prima del terremoto) e ha visto, dall’alto del campanile, lumi scendere nella cripta di notte. Ha paura a dirlo.",
+   "gm": "Zi’ Pasquale (vedi scheda) è il campanaro da quarant’anni. L’inverno scorso, una notte, le campane hanno suonato da sole: il giorno dopo la terra ha tremato. Da allora gli è stato ordinato di dire che «si assestavano».\nDall’alto del campanile si vede il cortiletto dietro l’abside: ha visto, tre notti su dieci, lumi entrare dalla porta della sacrestia vecchia e scendere. Uomini con le pale. E una volta una signora, avvolta in un mantello, che non aveva bisogno di lume.\nDa decidere: chi scava sotto la Basilica. Proposta: gli uomini di Iuvenza, che cercano «la chiave vera» (il diario di Iuvenza, Atto XI), con il permesso comprato del sacrestano o senza. In alternativa gli scavatori di Casa de Spina, che cercano l’Atto di Fondazione. Le due cose possono convivere.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Zi’ Pasquale",
+     "parte": "evento",
+     "innesco": "Qualcuno gli rivolge la parola.",
+     "leggi": "Beve un sorso. «Voi siete quelli delle Due Lune.» Non è una domanda. «Chiudete la porta. Qui le campane sentono.»",
+     "note": "CHI SEI? — «Pasquale. Lu Battaje, dice la gente. Quarant’anni che le batto. Le conosco per nome, una per una. La grossa si chiama Assunta.»\n\nLE CAMPANE HANNO SUONATO DA SOLE? — Si fa il segno del sole. «L’inverno passato. Notte fonda. Io stavo qua sotto, e le corde si sono mosse. Tutte e tre. Da sole. Ho preso la grossa con le mani, ‘sti bracci qua, e mi ha tirato su da terra.» Beve. «Il giorno dopo la terra ha tremato. Poi l’Arcimandrita mi ha detto che le campane si assestano. E io dico che si assestano.»\n\nHANNO RISUONATO? — «Tre volte da allora. Piano. Solo io le ho sentite. L’ultima…» vi guarda. «L’ultima la notte che siete arrivati alle porte.»\n\nCOSA SI VEDE DA LASSÙ? — «Tutto. I Tigli, il Palazzo, la piazza, il cortile dietro l’abside.» Abbassa la voce. «Di notte, dalla porta della sacrestia vecchia, scendono i lumi. Uomini con le pale e i sacchi. Tre notti su dieci.»\n\nCHI SONO? — «Non guardo le facce. Guardo i lumi.» Con Persuasione CD 13 (o una fiaschetta piena): «Una volta c’era una signora. Col mantello. Non aveva il lume, e vedeva lo stesso. Quando è passata sotto il campanile, la grossa ha fatto un suono. Uno solo. Senza che nessuno la toccasse.»\n\nIL SACRESTANO? — «Clemente. Brava persona. Ha paura di tutto. Ha le chiavi di tutto. Le due cose non vanno d’accordo.»\n\nL’ARCIMANDRITA? — «Quello non viene mai quassù. Le campane non gli piacciono: fanno quello che vogliono.»\n\nSANTA MARIA? — Lo dice piano: «Il vecchio duomo si chiamava Santa Maria. Mia nonna diceva che la Madonna di sotto stava su una luna. In chiesa il nome non si dice più.»\n\nSE LO MINACCIANO — Si attacca alla corda della grossa. «Tiro, e vengono tutti.» Lo fa.\n\nSE LO CORROMPONO — Non vuole soldi. Vuole vino buono e qualcuno che gli creda.\n\nBattute pronte:\n• «Adesso stanno zitte. Adesso.»\n• «Le campane non mentono. Io sì, se me lo ordinano.»\n• «Quanne sone la grosse da sola, nen è Valerus che chiama.»",
+     "dopo": "Sanno che le campane suonano da sole quando sotto qualcosa si muove (anche la notte del loro arrivo), che di notte qualcuno scava sotto la Basilica passando dalla sacrestia vecchia, e che una donna senza lume è scesa laggiù.",
+     "rilancio": "Una corda si muove appena, senza vento. Zi’ Pasquale la guarda. Che cosa fate?",
+     "daqui": [
+      "corde",
+      "prosecuzione"
+     ],
+     "pe": 300
+    },
+    {
+     "id": "corde",
+     "tipo": "dettaglio",
+     "titolo": "Le corde",
+     "parte": "nascosto",
+     "innesco": "Qualcuno tocca le corde, o resta nel campanile in silenzio.",
+     "leggi": "La corda della campana grossa vibra sotto le dita. Non oscilla: vibra, come una corda di liuto pizzicata da molto lontano. Il tremito viene dal basso, dalla pietra, non dall’alto.",
+     "prove": [
+      {
+       "id": "corde",
+       "abilita": [
+        "Percezione",
+        "Arcano"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Una corda vecchia. Tira un po’ d’aria dall’alto."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Il tremito arriva dalla base del campanile, dalla pietra grigia. La torre poggia sullo stesso basamento pretuziano della facciata: sente quello che sente la pietra."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Il tremito ha un ritmo. Lento. Molto più lento del ritmo di Bëllindë, ma è un ritmo."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il campanile sente ciò che si muove sotto la Basilica.",
+     "rilancio": "La corda si ferma. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando escono dal campanile.",
+     "dopo": "Torna alla navata; la porta della sacrestia vecchia (quella dei lumi di notte) si apre dalla sacrestia.",
+     "rilancio": "Zi’ Pasquale torna a guardare in su. Che cosa fate?",
+     "daqui": [
+      "te_basilica_navata",
+      "te_basilica_sacrestia"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_basilica_sacrestia",
+   "kind": "persona",
+   "title": "La sacrestia dell’Arcimandrita",
+   "image": "PDI — Basilica Aurea — La sacrestia dell’Arcimandrita.jpg",
+   "legacyPosition": {
+    "x": 180,
+    "y": 200
+   },
+   "text": "Una stanza alta, calda, che sa di cera d’api e di legno lucidato. Cassapanche di noce piene di paramenti. Sul muro un sole d’oro grande come una ruota di carro.\n\nA un tavolo, un frate giovane con le dita nere d’inchiostro scrive in un registro grosso. Scrive tutto. Anche adesso che siete entrati.\n\nSu una sedia dall’alto schienale, un uomo di sessant’anni in bianco e oro. Anelli a tutte le dita. Una faccia magra, pulita, che non ha mai avuto fame.\n\nNon si alza.\n\n«La Crociata del Sole e delle Due Lune.» Scandisce le parole, come per sentire come suonano. «Venite, figlioli. Sedete. La Fiamma è paziente, e io lo sono quasi quanto lei.»",
+   "breve": "L’Arcimandrita Serafinus Impalox riceve la Crociata. Un politico in vesti sacre, non un fanatico: un cinico che usa la devozione altrui. Vuole controllare Silvanus attraverso la Chiesa, vedere l’armatura di Alessandros, e sapere chi di loro si può comprare e chi va bruciato. Fra’ Tobia scrive tutto.",
+   "gm": "Impalox (vedi scheda): capo di Casa Impalox, membro del Consiglio, Arcimandrita del Ducato. Per lui la fede è uno strumento di governo. Usa la paura dei Forgiati per un’epurazione contro le casate pretuziane dei vecchi riti (Cerullius, de Caelis): Alessandros è un bersaglio naturale. Odia Caelinus Tancredus (ha provato tre volte a farlo espellere dal Collegio). Rivale mortale del Cardinal Virellius, che a Julia Nova ha gridato al miracolo davanti a Silvanus (Atto IX): Impalox non gli perdona di essere arrivato prima.\nNon sa del Sigillo Lunare sotto la sua Basilica (lore del Ducato): per lui candele e campane sono «umidità e assestamenti», e vuole che restino tali.\nDa decidere: titolo e motto variano (Arcimandrita / Alto Chierico / Arciprete; «La Fiamma Pulisce, il Dubbio Uccide» nel lore contro «La Fiamma Non Perdona» nel Manuale). Qui usa il primo, e cita il secondo come una minaccia. Da decidere: se il suo sigillo è sul proclama (proposta: sì, apposto di notte da altri con la seconda chiave; lui lo sa e non lo ha smentito, perché gli fa comodo).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con l’Arcimandrita",
+     "parte": "evento",
+     "innesco": "I PG gli parlano. Fra’ Tobia scrive ogni parola.",
+     "leggi": "Impalox congiunge le mani, gli anelli tintinnano. «Fra’ Tobia scrive. Non fateci caso. Io dimentico tutto: per questo ho lui.»",
+     "note": "CHI SIETE? — «Serafinus Impalox. Arcimandrita del Ducato, per chi mi rispetta. Alto Chierico, per chi mi teme. Arciprete, per chi non sa la differenza.» Sorride. «Voi come mi chiamerete?»\n\nCOSA VOLETE DA NOI? — «Io? Niente. La Fiamma vuole sapere chi siete. Una colonna armata che porta un Erede, un Conte pretuziano, un druido dei Naviganti, uno stregone, e…» guarda Mattheus un istante di troppo «…un chierico. Di chi, figliolo?»\n\nSILVANUS / L’EREDE — «Un giovane col sangue che brilla. Così dicono a Julia Nova.» Freddo. «Il Cardinal Virellius si è inginocchiato e ha gridato al miracolo. Virellius grida spesso.» Quello che vuole: che Silvanus sia benedetto qui, nella Basilica Aurea, dalla sua mano, davanti al Consiglio, prima di qualunque Convocazione. «Un erede che nessuna chiesa ha benedetto è un pretendente. Un pretendente è un ribelle. I ribelli, qui, finiscono in piazza.»\n\nVIRELLIUS — «Il Cardinale crede. È il suo difetto.» Una pausa. «Io governo. È il mio.» Se gli dicono che Virellius ha riconosciuto Silvanus: «Allora Solaria ha già un’opinione. Il Ducato ne avrà una sua.»\n\nLA CONVOCAZIONE ALL’AQUILA AUREA — «Sotto il Gigante. Fra druidi, streghe di Maia e casate che pregano le pietre.» Scuote la testa. «Una Convocazione senza la Fiamma è un sabba con i sigilli.» La accetta solo se è presieduta, o almeno aperta, da una messa sua.\n\nI FORGIATI — «Il male non viene dal mare, figlioli. Viene da dentro. Dalle famiglie vecchie, dai riti vecchi, da chi accende i fuochi sulle colline la Notte delle Due Lune.» Non fa nomi. Guarda Alessandros.\n\nLE CASATE PRETUZIANE / L’EPURAZIONE — «Io non epuro nessuno. Io prego. Se poi le preghiere trovano dei nomi, non è colpa mia.» Ha una lista (vedi il modulo del registro). Cerullius e de Caelis ci sono.\n\nL’ARMATURA DI ALESSANDROS — «Il Conte di Canzanium porta un’armatura molto interessante. Me la farebbe vedere da vicino?» Se gliela mostrano e i simboli delle Due Lune si vedono (luce lunare o qualcuno che li indica), non grida all’eresia: fa scrivere a Fra’ Tobia. «Interessante.» È un’arma che si tiene per dopo.\n\nMATTHEUS / MORTUS — Se sa della luce argentea (dalla navata) o lo sospetta (Intuizione passiva 18): «Voi, figliolo, avete una devozione… discreta. La discrezione è una virtù. Finché resta tale.» È un ricatto, detto con dolcezza. Se Mattheus nega, lo lascia negare: gli basta che sappia di essere visto.\n\nIL TEMPIO DI MORTUS SIGILLATO — «Ho sigillato un tempio, non una fede. Le fedi si sigillano da sole, quando nessuno ci va più.» Su Frate Davide: «Un frate che cammina per le piccole vie. Prima o poi ne troverà una senza uscita.»\n\nLA CRIPTA, LE CANDELE, LE CAMPANE — Un lampo di fastidio, il primo. «Umidità. Correnti. Le chiese vecchie si assestano.» Poi, più duro: «La cripta è chiusa per ordine mio. Chi scende senza il mio permesso scende da eretico.» Non sa cosa c’è sotto; non vuole saperlo.\n\nCAELINUS TANCREDUS — Il sorriso gli si stringe. «Il vecchio Magister. Tre volte ho chiesto al Collegio di liberarsene. Tre volte i Tancredus l’hanno tenuto.» Una pausa. «Un uomo che scrive note a margine del Canto è un uomo che crede di poter correggere Valerus. Ditegli che lo saluto. Lui capirà.»\n\nIL PROCLAMA CONTRO LA CROCIATA — «La Fiamma sigilla molte cose.» Non conferma e non smentisce. Se gli dicono che il suo sigillo è stato usato di notte da altri: «Allora qualcuno ha pensato ciò che io avrei potuto pensare. Non lo punirò per questo.»\n\nLA SIGNORA DA JULIA NOVA — «Una donna devota. Ha rifatto l’oro della cappella di San Rocco.» Non sa chi sia davvero, o finge di non saperlo. Se gli dicono che dietro di lei ci sono i Forgiati, si fa attento per la prima volta: «Portatemi una prova. Una. E la brucio io, prima di voi.» Lui odia chi gli fa concorrenza sulla paura.\n\nCOSA OFFRE — La benedizione della Crociata (lasciapassare morale in tutta la città, gli inquisitori smettono di seguirli) e il suo voto in Consiglio, in cambio della benedizione di Silvanus nella Basilica, fatta da lui. E un nome: «Datemi un eretico, uno solo, uno vero, e vi darò la città.» Vuole Caelinus, o Frate Davide.\n\nSE LO MINACCIANO — Non si scompone. Suona un campanello d’argento: entrano quattro militi della Fiamma. «La Fiamma non perdona. Io, a volte, sì. Riprovate.»\n\nSE LO CORROMPONO — «La Fiamma accetta offerte. Io accetto soltanto la verità.» Poi: «Ma le offerte aiutano la verità a farsi strada.» Una donazione alla Basilica (100 fiorini o più) toglie i nomi dal libretto degli inquisitori. Non compra il voto.\n\nSE GLI MENTONO — Intuizione passiva 18. Lascia finire la bugia, poi dice a Fra’ Tobia: «Scrivi quello che ha detto. Esattamente.» E a voi: «Mi piace sapere cosa la gente crede che io creda.»\n\nBattute pronte:\n• «La Fiamma pulisce. Il dubbio uccide. Voi, figlioli, di che cosa dubitate?»\n• «Il Conte di Canzanium porta un’armatura molto interessante.»\n• «Fra’ Tobia, scrivi.»\n• «Un eretico è un uomo che ha ragione troppo presto.»",
+     "dopo": "Sanno cosa vuole Impalox (Silvanus benedetto da lui, un eretico in cambio della città), che teme e odia Caelinus, che ignora o vuole ignorare cosa c’è sotto la sua cripta, e che ha una lista.",
+     "rilancio": "Fra’ Tobia soffia sull’inchiostro. L’Arcimandrita aspetta. Che cosa fate?",
+     "daqui": [
+      "registro",
+      "accordo"
+     ]
+    },
+    {
+     "id": "registro",
+     "tipo": "dettaglio",
+     "titolo": "Il registro di Fra’ Tobia",
+     "parte": "indizio",
+     "seme": "Scrive tutto. Anche adesso che siete entrati.",
+     "innesco": "Qualcuno cerca di leggere il registro del segretario.",
+     "leggi": "Il registro è aperto sul tavolo, rovesciato verso il frate. La pagina di oggi ha già i vostri nomi in cima. Alcune pagine indietro, una lista con le croci.",
+     "note": "Leggere di nascosto: Rapidità di mano o Percezione CD 16 (chi lo fa) mentre Impalox parla con un altro. Distrarre Fra’ Tobia: Inganno CD 13 (lui è giovane, ingenuo, fedele).\nLa lista con le croci (la «lista» di cui parla la città): Casa Cerullius (Alessandros, Vicarus, il reggente Rodolfo), Casa de Caelis, Magister Caelinus Tancredus, Frate Davide de li Piccole Vie, «la levatrice di San Leonardo» (la ciotola d’argento di Maia), la Gilda degli Speziali d’Argento. Sotto, aggiunto oggi: «il chierico della colonna — luce?».",
+     "prove": [
+      {
+       "id": "registro",
+       "abilita": [
+        "Rapidità di mano",
+        "Percezione"
+       ],
+       "cd": 16,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 10,
+         "leggi": "Impalox si interrompe a metà frase. «Fra’ Tobia, il messere vuole leggere. Leggigli la pagina di oggi.» Il frate legge ad alta voce, e ci siete tutti."
+        },
+        {
+         "fascia": "failure",
+         "min": 11,
+         "max": 15,
+         "leggi": "Fra’ Tobia chiude il registro con la mano, gentile. «Scusate, messere. È per l’Arcimandrita.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 20,
+         "leggi": "Leggete la lista con le croci: Cerullius, de Caelis, Caelinus Tancredus, Frate Davide, una levatrice, gli Speziali d’Argento."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 21,
+         "leggi": "E leggete l’aggiunta di oggi, in fondo: «il chierico della colonna — luce?». Con il punto di domanda."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno chi è nella lista dell’Arcimandrita. Se l’aggiunta su Mattheus c’è, il tempo stringe.",
+     "rilancio": "La penna di Fra’ Tobia riprende a graffiare. Che cosa fate?",
+     "daqui": [
+      "accordo"
+     ]
+    },
+    {
+     "id": "accordo",
+     "tipo": "dettaglio",
+     "titolo": "Il prezzo della Fiamma",
+     "parte": "evento",
+     "innesco": "I PG trattano con Impalox: voto in Consiglio, fine della sorveglianza, permesso per la cripta.",
+     "leggi": "Impalox allarga le mani, i palmi in su, come un prete che mostra l’ostia. «Tutto ha un prezzo, figlioli. Anche il cielo. Soprattutto il cielo.»",
+     "note": "Cosa può dare Impalox: il voto in Consiglio (se Silvanus accetta la benedizione da lui); la fine della sorveglianza degli inquisitori (donazione o promessa); il permesso scritto per scendere nella cripta (solo se gli si dà un motivo che gli convenga: «trovare chi scava sotto la vostra chiesa di notte»; Persuasione CD 16, vantaggio se gli parlano degli scavi notturni visti dal campanaro: non sopporta che qualcuno entri in casa sua).\nCosa non darà mai: la rinuncia all’epurazione, la pace con Caelinus, il perdono per Mattheus se la luce è stata vista (può solo «dimenticarla» finché la Crociata gli è utile).\nSe Silvanus accetta la benedizione: è una vittoria politica per Impalox e una catena per Silvanus. Da decidere con Giuseppe come la vive Silvanus (proposta: accetta solo se è Impalox a inginocchiarsi per primo davanti al sangue, come Virellius; e Impalox non lo farà mai in pubblico).",
+     "prove": [
+      {
+       "id": "accordo",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 16,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 15,
+         "leggi": "«Tornate quando avrete qualcosa da offrirmi. Una verità. O un eretico.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 20,
+         "leggi": "Impalox concede una cosa (a scelta dei PG): gli inquisitori smettono di seguirli, oppure il permesso scritto per la cripta, oppure il voto in Consiglio con la condizione della benedizione."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 21,
+         "leggi": "Ne concede due, e aggiunge: «Se trovate chi scava sotto la mia chiesa, portatemelo vivo. Voglio sapere quante preghiere gli servono.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Per un istante il cinico si incrina. «Le candele,» dice piano, «si piegano anche nella mia cella. Da due mesi.» Poi torna di pietra."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con il permesso scritto la grata dietro l’altare si apre senza scasso e senza eresia. Senza permesso, scendere nella cripta è un crimine religioso.",
+     "rilancio": "L’Arcimandrita si alza: l’udienza è finita. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 900,
+     "bottino": [
+      {
+       "n": "Permesso scritto dell’Arcimandrita per la cripta",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0,
+       "valore": "—",
+       "stats": "Missione",
+       "desc": "Pergamena col sigillo di Casa Impalox: autorizza i latori a scendere nella cripta della Basilica Aurea «per ragioni di custodia». Si ottiene solo se l’Arcimandrita lo concede.",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando escono dalla sacrestia.",
+     "dopo": "Dalla sacrestia: la navata, l’altare e la grata. Dietro le cassapanche c’è la porta della sacrestia vecchia (quella dei lumi di notte, vedi il campanile): dà sul cortiletto dietro l’abside e su una seconda scala verso la cripta.",
+     "rilancio": "Fra’ Tobia vi apre la porta, senza smettere di guardarvi. Che cosa fate?",
+     "daqui": [
+      "te_basilica_altare",
+      "te_basilica_navata"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_basilica_altare",
+   "kind": "porta",
+   "title": "L’altare maggiore e la grata",
+   "image": "PDI — Basilica Aurea — L’altare maggiore e la grata.jpg",
+   "legacyPosition": {
+    "x": 520,
+    "y": 230
+   },
+   "text": "L’altare maggiore sta sotto la cupola più alta, e la cupola è tutta d’oro: guardando in su gira la testa.\n\nDietro l’altare, dove i fedeli non arrivano, una scala stretta scende sotto il pavimento. La chiude una grata di ferro vecchio, con un lucchetto nuovo.\n\nDalla grata sale aria fredda. Fa appannare il fiato, d’agosto.\n\nSa di muschio e di ferro.\n\nLe candele più vicine alla grata sono spente. Qualcuno ha smesso di accenderle.",
+   "breve": "La discesa alla cripta vecchia, chiusa da una grata. Il sacrestano Clemente ha la chiave; l’Arcimandrita può dare il permesso. Qui il Filatterio di Mattheus reagisce: si fa pesante e freddo.",
+   "gm": "La grata chiude la scala verso la cripta di Santa Maria Aprutiensis. Il lucchetto è nuovo: lo ha fatto mettere Impalox due mesi fa, quando le candele hanno cominciato a piegarsi.\nChi ha la chiave: il sacrestano Clemente (vedi scheda), e una copia l’ha venduta, per paura, a «un signore dei Tigli» che gli ha detto di chiamarlo solo «Messere». Gli scavatori notturni però non passano di qui: scendono dalla sacrestia vecchia.\nIl Filatterio di Lyaras (portato da Mattheus, rinforzato dall’Ultimo Custode sotto Bëllindë): vicino alla grata si fa pesante e freddo. Secondo l’Atto IX solo la «forgia di annullamento sotto la Cattedrale Ducale di Teramum» può spezzarlo.\nConflitto di canone, non scelto: il canone non dice se la «Cattedrale Ducale» sia la Basilica Aurea, la vecchia Santa Maria Aprutiensis (la cui cripta sta qui sotto) o un altro edificio; il profilo di Alessandros nomina anche una «Cattedrale Solare di Teramum», dove serviva il suo maestro Ser Audentius Flavian. E il filatterio stesso è in conflitto (CC-04: Pietraluna nell’Atto VII, la scatola di ossidiana nell’Atto IX). Qui il Filatterio reagisce e basta: dove sia la forgia lo decidi tu.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "grata",
+     "tipo": "dettaglio",
+     "titolo": "La scala dietro la grata",
+     "parte": "indizio",
+     "seme": "Sa di muschio e di ferro.",
+     "innesco": "Qualcuno si avvicina alla grata e guarda giù.",
+     "leggi": "La scala gira su se stessa e sparisce. Il primo gradino è coperto di polvere, e sulla polvere nessuna impronta.",
+     "prove": [
+      {
+       "id": "grata",
+       "abilita": [
+        "Percezione"
+       ],
+       "cd": 15,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Una cripta chiusa, come tutte."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Sul primo gradino, sotto la polvere, un segno graffiato nella pietra: una falce di luna, cancellata a colpi di scalpello."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "E più giù, dove arriva appena la luce, sul muro della scala, altre lune scalpellate. Una ogni sette gradini. Qualcuno le ha contate, e le ha tolte tutte."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che la scala è segnata da lune cancellate, e che nessuno la usa da mesi: chi scende, scende da un’altra parte.",
+     "rilancio": "L’aria fredda vi sale sulle mani. Che cosa fate?",
+     "daqui": [
+      "chiave",
+      "filatterio"
+     ]
+    },
+    {
+     "id": "chiave",
+     "tipo": "dettaglio",
+     "titolo": "La chiave del lucchetto",
+     "parte": "evento",
+     "innesco": "I PG vogliono aprire la grata.",
+     "leggi": "Il lucchetto è nuovo, pesante, di fattura buona. Sul ferro, lo stemma con la fiamma di Casa Impalox.",
+     "note": "Modi per aprire: il permesso scritto dell’Arcimandrita (Clemente apre subito); convincere il sacrestano Clemente (Persuasione CD 15, Intimidire CD 12 ma poi corre a dirlo a Fra’ Tobia); Strumenti da scasso CD 15 (di giorno qualcuno guarda: Furtività CD 14 di gruppo per chi copre); la porta della sacrestia vecchia, di notte (vedi campanile). Scendere senza permesso è un crimine religioso: se scoperti, sono eretici per l’Arcimandrita.",
+     "prove": [
+      {
+       "id": "chiave",
+       "abilita": [
+        "Persuasione",
+        "Intimidire"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Clemente scuote la testa, bianco come la cera. «Senza la carta dell’Arcimandrita, no. Mi brucia vivo.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Clemente apre, con le mani che tremano. «Io non vi ho visti. E non accendete candele laggiù: si spengono.»"
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Clemente apre e, piano, confessa: «Una chiave come questa l’ho già data. A un signore dei Tigli. Mi ha detto di chiamarlo Messere. Mi ha pagato in seta.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "La grata è aperta, o la strada è la sacrestia vecchia di notte. Se Clemente ha confessato, c’è un secondo mazzo di chiavi in mano a un «Messere» dei Tigli.",
+     "rilancio": "Il lucchetto scatta. La grata cigola. Che cosa fate?",
+     "daqui": [
+      "te_basilica_cripta"
+     ]
+    },
+    {
+     "id": "filatterio",
+     "tipo": "dettaglio",
+     "titolo": "Il Filatterio si fa pesante",
+     "parte": "evento",
+     "innesco": "Mattheus (con il Filatterio di Lyaras) si avvicina alla grata a meno di 6 m.",
+     "leggi": "Il Filatterio, nella borsa di Mattheus, si fa pesante. Poi freddo, di un freddo che passa la stoffa e morde il fianco.\n\nLe incisioni della custodia, quelle che l’Ultimo Custode ha rinforzato, si accendono un istante. Poi si spengono.\n\nDalla grata, per un battito, l’aria smette di salire. Come se qualcosa, laggiù, avesse trattenuto il respiro.",
+     "note": "Il Filatterio e ciò che dorme sotto la Basilica si riconoscono: sono entrambi magia lunare legata alla Guerra. Arcano CD 15: la custodia regge, ma «sente» qualcosa di simile a sé, molto più grande, più in basso. Nessun danno. Ricordare: l’Ultimo Custode ha detto a Mattheus «Non aprirla».\nConflitto di canone sulla forgia di annullamento: vedi le note del punto. Se Giuseppe decide che la forgia è sotto questa Basilica, questo è il primo segno; se no, è solo il Sigillo Lunare che risponde al Filatterio.",
+     "prove": [
+      {
+       "id": "filatterio",
+       "abilita": [
+        "Arcano"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Il Filatterio è freddo. Solo freddo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "La custodia regge. Ma sente qualcosa di simile a sé, più in basso, molto più grande. Qualcosa che trattiene invece di essere trattenuto."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Quello che c’è laggiù non è una prigione come il Filatterio: è un tappo. E il tappo, adesso, è inclinato."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che sotto la Basilica c’è qualcosa di lunare e antico, che risponde al Filatterio.",
+     "rilancio": "Il freddo nella borsa di Mattheus non passa. Che cosa fate?",
+     "daqui": [
+      "chiave",
+      "te_basilica_cripta"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando scendono, o quando rinunciano.",
+     "dopo": "Scendendo: la cripta di Santa Maria Aprutiensis. Rinunciando: la sacrestia (per il permesso) o il campanile (per la strada di notte).",
+     "rilancio": "La scala gira nel buio. Che cosa fate?",
+     "daqui": [
+      "te_basilica_cripta",
+      "te_basilica_sacrestia"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_basilica_cripta",
+   "kind": "stanza",
+   "title": "La cripta di Santa Maria Aprutiensis",
+   "image": "PDI — Basilica Aurea — La cripta di Santa Maria Aprutiensis.jpg",
+   "legacyPosition": {
+    "x": 1180,
+    "y": 440
+   },
+   "text": "La scala finisce in una cripta bassa. Le volte si toccano con la mano.\n\nColonne tozze, tutte diverse: una di marmo rosa, una di granito, una con un capitello a foglie rovesciato. Pezzi di chiese più vecchie, rimessi in piedi.\n\nLungo i muri, tombe di vescovi con le facce consumate dai baci. Su una parete, un affresco sbiadito: una Madonna in piedi, le mani aperte, e sotto i suoi piedi una falce di luna.\n\nPiù avanti il pavimento cambia. Finiscono i mattoni e cominciano blocchi grigi enormi, gli stessi della base della facciata.\n\nAl centro, incassato nella pietra, un cerchio di piombo largo quanto una stanza. Intorno al cerchio c’è brina.\n\nIl fiato vi esce bianco.",
+   "breve": "La cripta del vecchio duomo di Santa Maria Aprutiensis, sopra il tempio del Gigante. Al centro, il cerchio di piombo: il punto dove i difensori di Teramum attivarono un Sigillo Lunare nella Guerra delle Due Lune. La Basilica ci fu costruita sopra come tappo. Tracce fresche portano verso la porta con la luna.",
+   "gm": "Il cerchio di piombo è il tappo del Sigillo Lunare (lore del Ducato, Segreti del DM): la fede nel Sole per sopprimere il potere della Luna. La magia di Lyaras lo ha disturbato: la brina, le candele, le campane sono i sintomi. Casa Impalox non sa cosa dorme sotto il proprio tempio.\nQuale Sigillo sia (dei sette) non è stabilito. Da decidere. Non va purificato in questa scena: serve una preparazione (come il Quarto Sigillo di Bëllindë). Toccarlo è pericoloso (vedi modulo).\nLa Madonna sulla luna: Maia sopravvissuta come immagine di Santa Maria, prima che il Concilio del 1247 la assorbisse nel Sole.\nLe tracce fresche (modulo «tracce») portano alla porta con la luna: di notte qualcuno scava dall’altra parte.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "affresco",
+     "tipo": "dettaglio",
+     "titolo": "La Madonna sulla luna",
+     "parte": "indizio",
+     "seme": "sotto i suoi piedi una falce di luna",
+     "innesco": "Qualcuno guarda l’affresco.",
+     "leggi": "La Madonna ha il manto azzurro, sbiadito quasi bianco, e la faccia rovinata. Le mani sono aperte verso il basso, come chi versa qualcosa. La luna sotto i piedi è d’argento vero: una foglia sottile, che nessuno ha avuto il coraggio di grattare via.",
+     "prove": [
+      {
+       "id": "affresco",
+       "abilita": [
+        "Religione",
+        "Storia"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Una Madonna vecchia. Le cripte ne sono piene."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "È un’immagine di prima del Concilio del 1247: la Signora sulla luna è Maia, la Luna Argentea, venerata come santa quando ancora si poteva. Santa Maria Aprutiensis era un tempio di Maia travestito da duomo."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Le mani versano verso il pavimento. Verso il cerchio. La Signora guarda il punto dove è stato attivato il Sigillo, come per benedirlo o per tenerlo fermo."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Adamus, o chiunque abbia pregato Maia anche una sola volta, sente per un istante il calore di una mano sulla spalla."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il vecchio duomo era dedicato a Maia sotto altro nome, e che l’affresco guarda il cerchio.",
+     "rilancio": "La Signora sbiadita guarda il cerchio. Che cosa fate?",
+     "daqui": [
+      "iscrizioni",
+      "cerchio"
+     ]
+    },
+    {
+     "id": "iscrizioni",
+     "tipo": "dettaglio",
+     "titolo": "Le lettere sui blocchi",
+     "parte": "nascosto",
+     "innesco": "Qualcuno esamina i blocchi grigi intorno al cerchio.",
+     "leggi": "Sui blocchi, consumate dai secoli e dai piedi, righe di segni che non sono Aureo: tacche, cerchi, un lupo ripetuto. Fra i segni, fresca, una riga di gesso: qualcuno li ha ricopiati di recente.",
+     "note": "Solo un Glossatore o Caelinus Tancredus le legge per intero (rimandare alla Biblioteca). Il gesso fresco: chi scava ha fatto copiare le iscrizioni. La calligrafia del gesso ha le «s» lunghe: la stessa mano del registro della Cancelleria (se la hanno vista).",
+     "prove": [
+      {
+       "id": "iscrizioni",
+       "abilita": [
+        "Storia",
+        "Arcano"
+       ],
+       "cd": 16,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 15,
+         "leggi": "Segni antichi. Pretuziani, forse. Illeggibili senza un Glossatore."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 20,
+         "leggi": "È Pretuziano Antico. Una parola torna tre volte: la stessa che i Glossatori usano per «dormire». Qui si faceva dormire qualcosa, molto prima del Sigillo."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 21,
+         "leggi": "Dice, più o meno: «Qui il Gigante sogna col fianco. Chi apre il sonno, lo apra cantando.» Il Magister Caelinus Tancredus saprebbe leggerlo tutto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che le iscrizioni parlano di un sonno da non aprire senza cantare, e che qualcuno le ha copiate da poco. Portano a Caelinus.",
+     "rilancio": "Il gesso vi resta sulle dita. Che cosa fate?",
+     "daqui": [
+      "cerchio",
+      "tracce"
+     ]
+    },
+    {
+     "id": "cerchio",
+     "tipo": "dettaglio",
+     "titolo": "Il cerchio di piombo",
+     "parte": "indizio",
+     "seme": "Intorno al cerchio c’è brina.",
+     "innesco": "Qualcuno si avvicina al cerchio, lo esamina o lo tocca.",
+     "leggi": "Il piombo è opaco, spesso un palmo, saldato ai blocchi con colate più scure. Sulla superficie, sotto la brina, un sole grande inciso a bulino, con i raggi che toccano il bordo. Uno dei raggi è crepato. Dalla crepa esce un filo d’aria gelida, e un suono che non si sente con le orecchie.",
+     "note": "Arcano o Religione CD 15 per capire; toccare il piombo a mani nude: TS Saggezza CD 14. Fallito: visione di pochi secondi — uomini in armatura di duecento anni fa, in questa cripta, che cantano intorno a un cristallo mentre fuori la città brucia; poi il cristallo scende nel pavimento e loro colano il piombo. 1 livello di Indebolimento (il freddo). Riuscito: la stessa visione, ma si resta in piedi.\nIndividuazione del magico: Abiurazione fortissima (il tappo) sopra qualcosa di non classificabile (il Sigillo). Il tappo è crepato in un raggio.\nNon si purifica qui e ora. Da decidere: quale Sigillo sia e come si purifica.",
+     "prove": [
+      {
+       "id": "cerchio",
+       "abilita": [
+        "Arcano",
+        "Religione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 9,
+         "leggi": "La brina vi prende le dita. Chi ha toccato il piombo non sente più le mani fino al tramonto (svantaggio su Rapidità di mano e sugli attacchi con armi)."
+        },
+        {
+         "fascia": "failure",
+         "min": 10,
+         "max": 14,
+         "leggi": "Un pavimento di piombo, freddo come la neve. Qualche tomba importante, forse."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "È un tappo. La Basilica sopra, il sole inciso, il piombo: tutto serve a tenere giù qualcosa. Sotto c’è un Sigillo Lunare, come quello di Bëllindë."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Il tappo è crepato lungo un raggio. La crepa è fresca, e non è solo il tempo: qualcuno, dall’altra parte, ha cominciato a scavare verso il Sigillo."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che sotto la Basilica c’è un Sigillo Lunare tappato e che il tappo è crepato. Non si tocca senza preparazione.",
+     "rilancio": "Il filo d’aria gelida non smette. Che cosa fate?",
+     "daqui": [
+      "tracce",
+      "te_basilica_porta_luna"
+     ],
+     "pe": 600
+    },
+    {
+     "id": "tracce",
+     "tipo": "dettaglio",
+     "titolo": "Le tracce fresche",
+     "parte": "nascosto",
+     "innesco": "Qualcuno cerca impronte, o segue la brina.",
+     "leggi": "Nella polvere fra le tombe, impronte di stivali. Molte. Vanno e vengono dalla parete in fondo, a destra, dove la cripta si stringe. E due solchi paralleli, come di qualcosa di pesante trascinato.",
+     "prove": [
+      {
+       "id": "tracce",
+       "abilita": [
+        "Sopravvivenza",
+        "Indagare"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Qualcuno è passato di qui. Sacrestani, forse."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Sei, otto uomini, più volte. Arrivano dal fondo della cripta, non dalla scala. Portano pale e sacchi, e tornano indietro pesanti."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Fra le impronte degli uomini ce ne sono di più grandi, ferrate, che non cambiano mai il passo: sempre la stessa distanza, sempre la stessa profondità. Come chi non si stanca mai."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "E un’impronta sola, piccola, di scarpa da signora, vicino al cerchio. La brina intorno è sciolta, come se chi l’ha lasciata fosse caldo. Nell’aria, sotto il muschio, un filo di lillà."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che una squadra scava dal fondo della cripta, con qualcosa di pesante che non si stanca: armature. Con il 20, Iuvenza in persona è stata qui.",
+     "rilancio": "Le impronte vanno verso il fondo, nel buio. Che cosa fate?",
+     "daqui": [
+      "te_basilica_porta_luna"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando vanno verso il fondo della cripta.",
+     "dopo": "In fondo a destra, la porta con la luna.",
+     "rilancio": "In fondo, nel buio, qualcosa di metallo tocca la pietra. Una volta. Che cosa fate?",
+     "daqui": [
+      "te_basilica_porta_luna"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_basilica_porta_luna",
+   "kind": "scontro",
+   "title": "La porta con la luna",
+   "image": "PDI — Basilica Aurea — La porta con la luna.jpg",
+   "legacyPosition": {
+    "x": 1250,
+    "y": 880
+   },
+   "text": "La cripta si stringe in un corridoio basso. In fondo, una porta murata.\n\nSull’architrave, scolpita grande, una falce di luna. Nessuno l’ha scalpellata. Forse nessuno ha osato.\n\nI mattoni del muro sono stati tolti a metà, dall’altra parte. Dietro, buio, e un’aria che sale ancora più fredda.\n\nPer terra, calcinacci, una pala, un piccone, una lanterna schermata. Un sacco pieno.\n\nContro il muro, ai due lati della porta, due armature vuote, smaltate di scuro. Stanno in piedi da sole.\n\nDalle fessure degli elmi esce un fumo nero, sottile, che si arriccia.",
+   "breve": "La porta murata con la luna, in fondo alla cripta: il «passaggio sotto la Basilica Aurea» che il diario di Iuvenza chiama «la chiave vera». Una squadra di Iuvenza scava da dall’altra parte, protetta dalle sue armature nuove. Scontro, poi il passaggio verso la Città Sepolta.",
+   "gm": "Il diario di Iuvenza (Atto XI): un «passaggio sotto la Basilica Aurea», «la chiave vera». Iuvenza a Julia Nova: «Ne ho altri. Più nuovi. Più forti. Vi aspettano a Teramum.» Queste sono le armature nuove: smalto scuro, fumo nero dentro, odore di lillà e di marcio, come il Comandante di ferro di Altavia.\nCosa cercano: la strada verso il Sigillo sotto il cerchio di piombo, dal basso, senza passare dalla Basilica. Iuvenza vuole il Sigillo (i Sigilli Lunari sono la fonte della Forgiatura). «La chiave vera» perché il Sigillo Ducale apre la Convocazione, ma questo apre ciò che sta sotto.\nDa decidere: se la squadra c’è sempre o solo di notte (proposta: di notte, e di giorno se la Crociata scende dopo il secondo giorno in città, quando Iuvenza sa che sono qui). Se non c’è, trovano solo gli attrezzi, il sacco e le due armature immobili, che si svegliano se qualcuno tocca la porta.\nDa decidere: dove porta il passaggio. Proposta: scende nella Città Sepolta (vedi la voce della Città Sepolta) e, in fondo, sotto il cerchio di piombo. Se Giuseppe decide che la forgia di annullamento sta sotto questa Basilica (conflitto dell’Atto IX, vedi l’altare), è laggiù.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "porta",
+     "tipo": "dettaglio",
+     "titolo": "La luna sull’architrave",
+     "parte": "indizio",
+     "seme": "Nessuno l’ha scalpellata. Forse nessuno ha osato.",
+     "innesco": "Qualcuno guarda o tocca la luna scolpita.",
+     "leggi": "La luna è scolpita profonda, liscia come se fosse stata carezzata per secoli. Chi la tocca sente, lontano, qualcuno che canta. Una voce sola, bassa, senza parole.",
+     "prove": [
+      {
+       "id": "porta",
+       "abilita": [
+        "Religione",
+        "Arcano"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Una porta vecchia, murata. Una luna."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "La porta è più vecchia della cripta: pretuziana. La luna non è Noxtua e non è Maia: è la luna com’era prima che fossero due nomi. Chi l’ha murata l’ha fatto con rispetto."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Il canto viene dal basso, e ha la stessa lentezza del tremito nel campanile. Qualcosa, laggiù, canta nel sonno."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che la porta è pretuziana e che da sotto viene un canto. Voce di popolo: chi la tocca sente cantare, e prende la febbre (da decidere se è vero: proposta, no, è solo la paura).",
+     "rilancio": "Il canto si ferma quando togliete la mano. Le armature no. Che cosa fate?",
+     "daqui": [
+      "scontro"
+     ]
+    },
+    {
+     "id": "scontro",
+     "tipo": "scontro",
+     "titolo": "Scontro — la squadra di Iuvenza",
+     "parte": "evento",
+     "innesco": "Qualcuno tocca la porta, le armature, o gli scavatori sbucano dal buio dietro i mattoni.",
+     "leggi": "Il fumo negli elmi si accende di viola. Le due armature staccano la schiena dal muro, insieme, con un rumore di pentole.\n\nDietro i mattoni, nel buio, una voce di donna, giovane, calma: «Ve l’avevano detto, che vi aspettavano a Teramum.»\n\nDal buco escono altre armature. E lei.",
+     "note": "Dal Bestiario: 3 «Armatura di Iuvenza» (Orrore Elmato), 3 «Armatura animata di Iuvenza», 1 «Fanatica di Velthuria» (Fanatico del culto). Difficoltà moderata per 6 PG di livello 5 (4.350 PE).\nTerreno: corridoio basso (2 m di soffitto: niente volo alto), cripta alle spalle dei PG con colonne (copertura parziale), calcinacci (terreno difficile nei 3 m davanti alla porta). Il cerchio di piombo è a 12 m: chi ci finisce sopra deve fare il TS Saggezza CD 14 del cerchio.\nTattica: le armature tengono il corridoio, la fanatica comanda da dietro i mattoni (copertura tre quarti) e prova a Bloccare persone (Hold Person) su chi ha la luce più forte. Se la fanatica cade, le armature combattono fino in fondo ma non inseguono oltre la cripta.\nRumore: lo scontro si sente in Basilica. Dopo 5 round arrivano i sacrestani; dopo 10 due inquisitori. Se i PG hanno il permesso scritto dell’Arcimandrita, sono eroi. Se no, devono spiegare perché erano laggiù.\nLa fanatica: Sorella Nerina, di Casa Velthuria (proposta). Se catturata viva, non parla di Iuvenza («La Signora è una signora») ma parla della chiave vera, per disprezzo: «Voi cercate un sigillo per chiamare dei vecchi. Noi cerchiamo quello che fa tacere il mondo.»",
+     "dopo": "Vinta la squadra, la porta è libera. Sul corpo della fanatica: la mappa della chiave vera, il medaglione, una borsa. Il passaggio scende oltre.",
+     "rilancio": "Il fumo nero esce dagli elmi vuoti e si dissolve. Nell’aria, lillà e marcio. Che cosa fate?",
+     "daqui": [
+      "bottino",
+      "oltre"
+     ],
+     "pe": 4350
+    },
+    {
+     "id": "bottino",
+     "tipo": "bottino",
+     "titolo": "Quello che portavano",
+     "parte": "evento",
+     "innesco": "Dopo lo scontro, qualcuno fruga fra gli attrezzi e sul corpo della fanatica.",
+     "leggi": "Nel sacco, terra e pezzi di piombo grattati. Nella bisaccia della donna, una pergamena piegata in quattro, un sacchetto pesante e un medaglione avvolto in un fazzoletto nero.",
+     "note": "La mappa: disegno a inchiostro della cripta, del corridoio e di un tunnel che scende in tre rami; uno porta sotto il cerchio di piombo, con scritto accanto «qui — la chiave vera», gli altri due verso «l’Arena» e verso «Tigli». Il medaglione ha una scheggia lunare: è uno di quelli della Forgiatura (Segreti del DM). Maneggiarlo a mani nude: TS Saggezza CD 12 o un sussurro che ripete il vostro nome per un’ora.",
+     "dopo": "Con la mappa e il medaglione hanno le prove che Iuvenza scava sotto la Basilica: con l’Arcimandrita valgono oro (lui odia chi gli fa concorrenza sulla paura), e davanti al Consiglio sono la prova dei Forgiati in città.",
+     "rilancio": "Il medaglione sussurra nel fazzoletto. Che cosa fate?",
+     "daqui": [
+      "oltre"
+     ],
+     "bottino": [
+      {
+       "n": "Mappa della chiave vera",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0,
+       "valore": "—",
+       "stats": "Missione",
+       "desc": "Disegno dei tunnel sotto la Basilica: tre rami, verso il cerchio di piombo («qui — la chiave vera»), verso l’Arena e verso i Tigli.",
+       "a": "crociata"
+      },
+      {
+       "n": "Medaglione con scheggia lunare",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0.1,
+       "valore": "—",
+       "stats": "Missione, corrotto",
+       "desc": "Un medaglione della Forgiatura, come quelli di Julia Nova. Freddo, sussurra. Prova che gli uomini di Iuvenza sono qui.",
+       "a": "crociata"
+      },
+      {
+       "n": "Pozione di guarigione",
+       "q": 2,
+       "cat": "Consumabili",
+       "peso": 0.25,
+       "valore": "50 mo",
+       "stats": "2d4+2 PF",
+       "desc": "Dalla bisaccia della fanatica.",
+       "a": "crociata"
+      },
+      {
+       "n": "Borsa della fanatica",
+       "monete": {
+        "mo": 60
+       }
+      }
+     ]
+    },
+    {
+     "id": "oltre",
+     "tipo": "prosecuzione",
+     "titolo": "Oltre la porta",
+     "parte": "evento",
+     "innesco": "I PG passano il buco nei mattoni.",
+     "leggi": "Oltre la porta, una scala stretta scende nella roccia viva. I gradini sono pretuziani: bassi, larghi, consumati al centro da piedi scalzi.\n\nIl canto, qui, si sente con le orecchie.",
+     "dopo": "Da qui si scende nella Città Sepolta (scena a parte). Ricorda: il diario di Iuvenza chiama questo passaggio «la chiave vera», e la mappa lo conferma. Se la forgia di annullamento sta qui sotto è una decisione tua (conflitto dell’Atto IX).",
+     "rilancio": "La scala scende. Il canto sale. Che cosa fate?",
+     "daqui": [
+      "te_basilica_cripta"
+     ]
+    }
+   ]
+  }
+ ]
+}

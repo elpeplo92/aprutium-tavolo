@@ -1,0 +1,1451 @@
+{
+ "id": "teramum",
+ "nome": "Teramum — la città",
+ "menu": "Teramum — la città",
+ "citta": "Teramum",
+ "ordine": 11,
+ "mappa": {
+  "img": "img/6d46937e6df9.jpg",
+  "larghezza": 1705,
+  "altezza": 922,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "gruppo",
+  "strumentiDungeon": false,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Teramum. La Città Sotto la Montagna.\n\nDue fiumi le corrono intorno, e una gola la taglia in due. Da una parte i martelli di San Leonardo e la Rocca con le torri quadrate; dall’altra il Colle, con la piazza d’oro e le torri dei signori, e più in là il viale dei Tigli. Giù, lungo la gola, il mercato del Sestiere del Fiume.\n\nL’aria sa di troppe cose insieme. Fumo di forge. Incenso. Pane. Fiume. E sotto, da qualche parte, un odore di cantina che non se ne va.\n\nIl Gigante blocca il sole del pomeriggio. Qui non si vedono i tramonti. Solo le albe.",
+  "note": "Mappa aerea della città: il token è il gruppo. I punti sono i quattro rioni, le sei porte, gli ingressi ai sei luoghi (ognuno ha la sua scena: Palazzo Ducale, Basilica Aurea, Biblioteca Incompiuta, Arena Sprofondata, Tempio sigillato di Mortus, Città Sepolta), la Rocca dei Grazianus, il ponte sulla gola e la locanda.\n\nCOME SI ENTRA — Di solito dalla Porta de lu Solë, in sei, con la tessera del capitano Guarnerio e due guardie di scorta, fino alla campana della sera. Oppure di nascosto (Porta Piccòla, Pustèrla). La colonna resta al tratturo finché non c’è il lasciapassare con tre sigilli (Clavax e Grazianus obbligatori, il terzo a scelta: vedi San Giorgio, «La corsa ai sigilli»).\n\nIL COPRIFUOCO (proposta) — Alla campana della sera (la grossa della Basilica, quando il cielo sopra la costa diventa viola) le porte si chiudono; di notte si apre solo la Pustèrla, per i morti. Per strada si va con la lanterna e con un motivo. Dalla Rocca escono le ronde: un sergente e quattro guardie per rione; al Colle ogni mezz’ora, a San Leonardo ogni ora, nel Sestiere quando capita, sul ponte della gola sempre. Forestieri armati senza tessera: una notte nelle celle della Rocca e cinque grossi di multa. Disarmati: un grosso e accompagnati alla locanda. Con la tessera dopo la campana: cella, tessera bruciata, il capitano umiliato. Le locande chiudono e sbarrano, ma dentro si continua a servire.\n\nDOVE DORMIRE (da decidere) — Lu Cane Bianche, nel Sestiere, di Za’ Carmela (sorella del Mastro-Pastore): la proposta. I due fratelli Cerullius: il palazzo di famiglia ai Tigli. Il resto: al tratturo, fuori.\n\nINCONTRI DI STRADA (d8, uno ogni volta che attraversano un rione) —\n1. Una processione di penitenti della Fiamma sale al Colle, a piedi nudi, cantando; si ferma davanti a Vicarus e un frate lo benedice due volte, con insistenza. Poi gli sputa sulle scarpe.\n2. Un tagliaborse di dieci anni (Rapidità di mano +5): Percezione CD 14 per accorgersene; se lo prendono, è il cuginetto di Cenzino.\n3. Il banditore legge il Bando della Guardia: la gente si gira a guardarli.\n4. Una scossa, breve. Tegole che cadono. Un bambino sotto un balcone che crolla: Atletica o Acrobazia CD 13 per prenderlo al volo (100 PE). La madre bacia le mani a chi l’ha salvato.\n5. L’araldo dei Mellitius coi biglietti dorati (vedi i Tigli).\n6. Un servitore di Grazianus e uno di Clavax, insieme, che si separano appena vedono i PG.\n7. Un funerale scende verso la Pustèrla. Sulla bara, un mazzetto di lavanda secca.\n8. In fondo a un vicolo, un uomo con una maschera di tutti i colori li guarda. Poi non c’è più. Chi l’ha visto, un’ora dopo, non si ricorda com’era fatta la maschera. Nessun contatto: è l’Arlecchino, ed è di un’altra scena.\n\nDa decidere, in breve: il castello sulla mappa è la Rocca dei Grazianus (proposta); la gola è della Vezzola e il ponte a due archi forse è quello di Pietraluna; coprifuoco e Pustèrla notturna; la locanda; la collocazione dei rioni sulla mappa (San Leonardo a est della gola, Sestiere lungo la gola fino alla Porta Meridianë, San Giorgio sulla piazza grande, Tigli a ovest).",
+  "ingressi": [
+   {
+    "da": "Dalla Porta de lu Solë (levante), con la tessera del capitano",
+    "primo": "teramum_sole",
+    "poi": "teramum_san_leonardo",
+    "note": "L’ingresso normale dalla scena «Arrivo a Teramum». Due guardie di scorta fino alla campana."
+   },
+   {
+    "da": "Dalla Porta Piccòla (sud-est), di nascosto",
+    "primo": "teramum_piccola",
+    "poi": "teramum_sestiere",
+    "note": "Nessuno li ha contati."
+   },
+   {
+    "da": "Dalla Porta Meridianë (sud)",
+    "primo": "teramum_meridiane",
+    "poi": "teramum_sestiere",
+    "note": "Tutti li hanno visti."
+   },
+   {
+    "da": "Dalla Pustèrla de li Mortë (nord-ovest), col corteo",
+    "primo": "teramum_pusterla",
+    "poi": "teramum_tigli",
+    "note": "Solo se l’inganno del corteo è riuscito."
+   },
+   {
+    "da": "Dalla Porta de lu Fiumë (nord)",
+    "primo": "teramum_fiume",
+    "poi": "teramum_ponte_gola",
+    "note": "Poca folla, guardie serie."
+   },
+   {
+    "da": "Dalla Porta Realë (ovest)",
+    "primo": "teramum_reale",
+    "poi": "teramum_tigli",
+    "note": "A sera, dopo mezza giornata di giro."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "teramum_sole",
+   "kind": "porta",
+   "title": "Dentro la Porta de lu Solë",
+   "image": "PDI — Teramum — Dentro la Porta de lu Sole.jpg",
+   "legacyPosition": {
+    "x": 1262,
+    "y": 272
+   },
+   "text": "Si china la testa sotto la porticina, e dall’altra parte il rumore cambia.\n\nDentro l’arco fa freddo, e c’è l’eco. Poi la luce torna, grigia, perché qui il sole non arriva più: è dietro la montagna.\n\nDavanti a voi sale una strada lastricata, larga, con i solchi lasciati dalle ruote dei carri processionali. La chiamano Via dei Martiri: lo dice una lapide murata all’angolo.\n\nA destra e a sinistra, botteghe con il banco sulla strada. Fumo di forge che resta basso fra i tetti. Martelli, tanti, mai a tempo fra loro.\n\nPiù in alto, oltre i tetti, un castello di pietra grigia con le torri quadrate guarda la porta.\n\nUn ragazzo magro, seduto sul bordo della fontana, si alza appena vi vede. Si pulisce le mani sui calzoni. Sorride con tutti i denti che ha.",
+   "breve": "L’ingresso da levante. I PG entrano (in sei, con due guardie di scorta, se hanno la tessera del capitano). Cenzino Mezzalingua si offre come guida. La Via dei Martiri sale verso San Leonardo e la Rocca dei Grazianus.",
+   "gm": "Le due guardie di scorta (se c’è la tessera): Lallo e Mariotto, giovani, annoiati, di San Leonardo. Seguono il gruppo a dieci passi; non impediscono niente di legale; al primo rintocco della campana della sera li riportano alla porta. Si possono seminare (Furtività CD 13 di gruppo), ma la tessera allora è bruciata e il capitano lo saprà.\nCenzino è una guida di strada: si offre a tutti i forestieri. Lavora anche per l’uomo col lillà, per un grosso al giorno: riferisce dove vanno i forestieri. Non sa per chi lavori davvero. Scheda PNG «Cenzino Mezzalingua».\nRegole della città (quelle che la scorta ripete, o che dice Cenzino): armi da fianco sì, armi da guerra no; niente incantesimi in pubblico senza permesso scritto (proposta: vale per i Tigli e per San Giorgio); coprifuoco alla campana della sera.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "via",
+     "tipo": "dettaglio",
+     "titolo": "La Via dei Martiri",
+     "parte": "indizio",
+     "seme": "La chiamano Via dei Martiri: lo dice una lapide murata all’angolo.",
+     "innesco": "Qualcuno legge la lapide o guarda la strada.",
+     "leggi": "La lapide è vecchia e nuova insieme: la pietra è grigia, le lettere dorate di fresco. «PER QUESTA VIA SALIRONO I SANTI MARTIRI ALLA LUCE». Sotto, più piccolo: «Il Consiglio Reggente restaurò».\n\nI solchi nel lastricato sono profondi un dito. Da quanto tempo passano i carri delle processioni, per scavare la pietra così?",
+     "prove": [
+      {
+       "id": "via",
+       "abilita": [
+        "Storia",
+        "Religione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Una strada vecchia, rifatta. Le processioni salgono alla Basilica dall’altra parte della città: la strada attraversa la gola su un ponte."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "La processione dei Santi Martiri entra dalla Porta de lu Solë, sale per questa via, attraversa la gola sul ponte e arriva alla Basilica Aurea, sulla piazza del Colle. Una volta l’anno. I solchi sono di mille anni di carri."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "E i solchi sono più vecchi dei Martiri: la strada c’era già, con gli stessi solchi, al tempo dei Pretuziani. La Chiesa ci ha messo sopra il nome dei suoi santi."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno dove porta la via: San Leonardo, il ponte sulla gola, San Giorgio.",
+     "rilancio": "La strada sale davanti a voi. Che cosa fate?",
+     "daqui": [
+      "cenzino"
+     ]
+    },
+    {
+     "id": "cenzino",
+     "tipo": "dettaglio",
+     "titolo": "Il ragazzo della fontana",
+     "parte": "indizio",
+     "seme": "Sorride con tutti i denti che ha.",
+     "innesco": "Il ragazzo si avvicina, o qualcuno lo guarda.",
+     "leggi": "Quattordici anni, forse. Magro, scalzo, un cappello di feltro troppo grande tenuto su dalle orecchie. Si toglie il cappello e fa un inchino che ha visto fare ai signori, esagerato.\n\n«Cenzino, per servirvi. Guida. La migliore di Teramum.» Rimette il cappello. «Due quattrini a strada, un grosso tutto il giorno. Vi porto dove volete, vi dico chi è chi, vi faccio evitare la Guardia.» Guarda le due guardie di scorta. «Be’. Quasi tutta.»",
+     "dopo": "Se lo prendono come guida, Cenzino li accompagna per tutta la scena: usa il suo dialogo ogni volta che chiedono «dov’è» o «chi è».",
+     "rilancio": "Cenzino tende la mano. Che cosa fate?",
+     "daqui": [
+      "dialogo_cenzino"
+     ]
+    },
+    {
+     "id": "dialogo_cenzino",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Cenzino",
+     "parte": "evento",
+     "innesco": "Qualcuno fa domande a Cenzino.",
+     "note": "CHI SEI? — «Cenzino. Vincenzo, per il prete. Mezzalingua per tutti gli altri.» Perché? «Perché dico metà di quello che so. L’altra metà costa di più.»\n\nDOVE SIAMO? — «San Leonardo. Lu Bòrghe. Qui si martella. Là in alto» indica il castello «è la Rocca: Casa Grazianus e la Guardia. Di là dalla gola c’è il Colle, San Giorgio: il Palazzo, la Basilica, i signori che non decidono. Più in là i Tigli, dove i signori passeggiano. E giù, lungo la gola, il Sestiere del Fiume: il mercato, la roba buona, la roba rubata.»\n\nDOVE SI DORME? — «Dipende quanto pagate. Pavimento di stalla, due quattrini. Dormitorio, cinque. Una stanza per bene: al Cane Bianco, nel Sestiere. Za’ Carmela non vi fa domande e non vi fa pulci.» Pausa. «Poche.»\n\nDOVE SONO GLI UFFICI DEI SIGILLI? — Conta sulle dita. «Grazianus, alla Rocca: la Cancelleria della Spada, porta a sinistra del cortile. Clavax: il Tribunale, sul Colle, accanto al Palazzo. Mazzarellus: dentro il Palazzo, e buona fortuna. Impalox: alla Basilica, la sagrestia grande. Tancredus: alla Biblioteca, ai Tigli. Savinellus: al Fondaco, sul fiume. de Spina e Mellitius: nei loro palazzi, ai Tigli. Ma lì non si entra senza invito.»\n\nIL COPRIFUOCO — «Alla campana della sera. È la grossa della Basilica: la sentite, ve lo giuro, vi entra nei denti. Dopo, per strada ci si va con la lanterna e con una scusa buona. I forestieri armati li portano alla Rocca a dormire.» Sorride. «Io so dove passano le ronde. Quello costa un grosso a parte.»\n\nLA RONDA — «Un sergente e quattro. Ogni rione ha la sua. Al Colle passano ogni mezz’ora. Da noi a San Leonardo ogni ora, e i fabbri gli offrono da bere. Nel Sestiere passano quando gli pare, e sul ponte della gola si fermano sempre: è lì che si prende la gente.»\n\nLA SIGNORA FORESTIERA — «Ai Tigli. Capelli bianchi, bella, paga in oro. Tutti ci vanno a cena.» Si fa serio per un momento. «Io no. Non mi hanno invitato.»\n\nIL TEMPIO MURATO — Se glielo chiede Mattheus, o se vede la lavanda: «Nel Sestiere, in un vicolo. L’hanno murato l’Arcimandrita e i suoi. Ma ci lasciano i fiori lo stesso.» Abbassa la voce. «Di notte ci passa un frate piccolo. Io non l’ho visto.»\n\nL’ARLECCHINO — Il sorriso gli si spegne. «Non si nomina.» Se insistono: «Uno con la maschera di tutti i colori. Sta sotto. Chi lo vede si scorda. Mio cugino l’ha visto, e adesso non si ricorda più come si chiamava sua moglie.» Non ride.\n\nSE LO MINACCIANO — Scappa. È velocissimo, e conosce ogni vicolo. Torna il giorno dopo, come se niente fosse, ma col prezzo raddoppiato.\n\nSE LO PAGANO BENE — Un fiorino (esagerato): gli brillano gli occhi. Da quel momento dice anche l’altra metà: «C’è un signore che profuma di fiori. Mi dà un grosso al giorno se gli dico dove vanno i forestieri. Stasera… stasera gli dico quello che volete voi.» Diventa loro.\n\nSE GLI MENTONO — Lo capisce sempre (Intuizione +4): è un ragazzo di strada. Ride. «Va bene, messere. Anch’io sono un principe.»\n\nBATTUTE PRONTE — «Due quattrini a strada. Un grosso tutto il giorno. Un fiorino e vi dico pure la verità.» · «Mezzalingua: metà la dico, metà la vendo.» · «Di là la Guardia, di qua i ladri. Io passo in mezzo.» · «Alla campana si sparisce. È la regola.»",
+     "dopo": "Cenzino è la guida e il rischio: un ragazzo simpatico che riferisce all’agente di Iuvenza. Se lo pagano bene, cambia parte.",
+     "rilancio": "Cenzino aspetta la destinazione. Che cosa fate?",
+     "daqui": [
+      "teramum_san_leonardo",
+      "teramum_rocca"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_san_leonardo",
+   "kind": "scena",
+   "title": "Rione di San Leonardo",
+   "image": "Rione — 2. San Leonardo.jpg",
+   "legacyPosition": {
+    "x": 1090,
+    "y": 400
+   },
+   "text": "Case basse addossate le une alle altre, botteghe aperte sulla strada, insegne di ferro battuto che cigolano. Il fumo delle forge resta basso fra i tetti e fa bruciare gli occhi.\n\nIl suono è quello dei martelli: decine, cento, mai a tempo fra loro.\n\nSi cammina fra carri di carbone e blocchi di pietra appena cavata. Le botteghe hanno il banco sul marciapiede: coltelli, fibbie, serrature, scalpelli. Un garzone con le braccia nere fino al gomito vi squadra, poi guarda le vostre armi prima delle vostre facce.\n\nIn una vetrina, armature da parata smaltate a disegni azzurri e gialli, come i piatti di Cashtagnë.\n\nDa un lato del rione il terreno sprofonda in una grande conca di archi.\n\nIn fondo alla strada, davanti a un portone grande come una chiesa, un carro della Forgia è fermo di traverso, con la scorta intorno.",
+   "breve": "Il borgo degli artigiani: forge, martelli, la Forgia del Gigante di Casa Grazianus. Le forge lavorano anche di notte. Un carro della Forgia bloccato fa vedere per un istante un’armatura grigia fredda al tatto. Da qui: l’Arena Sprofondata, la Rocca, il ponte della gola.",
+   "gm": "Canone: la Forgia del Gigante («Li Martille de Pietre») è la gilda di Casa Grazianus. Segreto: produce armi per il colpo di stato di Lucius Grazianus (Manuale, Gilde). Le nuove armature di Iuvenza «aspettano a Teramum» (Atto XI): qualcuno in città le fabbrica. Il «fabbro» di Teramum dell’Atto IX (pagamenti della Gilda di Julia Nova per armi non contrassegnate).\nProposta: dentro la Forgia c’è un maestro che lavora anche per Iuvenza, all’insaputa di Grazianus. Da nominare. Le armature grigie fredde al tatto sono le stesse dei Forgiati (Torvus parlava di metalli che non dovrebbero esistere).\nCollocazione sulla mappa: San Leonardo occupa la parte orientale della città, di qua dalla gola, fra la Porta de lu Solë e la Rocca. Proposta mia (il canone non dice dove sta ogni rione).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "oggi",
+     "tipo": "dettaglio",
+     "titolo": "Cosa succede oggi",
+     "parte": "evento",
+     "innesco": "Appena entrano nel rione, o se chiedono in giro.",
+     "leggi": "Si preparano i banchi per la Fiera di San Leonardo, anche se manca ancora tanto: qualcuno pianta pali, qualcuno misura la strada. Le locande hanno già alzato i prezzi.\n\nLe forge grandi non si fermano. Un garzone, a una fontana, si lava la faccia e sbadiglia: «Anche stanotte», dice a un altro. «Tutta la notte. Per la Guardia.»",
+     "note": "Le forge grandi lavorano di notte da due settimane. I garzoni dicono che è per la Guardia, ma nessuno ha visto le commesse.",
+     "rilancio": "I martelli non si fermano. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "carro"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Voci di San Leonardo",
+     "parte": "evento",
+     "innesco": "Parlano con un bottegaio, un garzone, un’ostessa del rione.",
+     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «Alla Forgia del Gigante c’è un reparto dove i garzoni non entrano. Manco i maestri, certi.»\n2. «Un fabbro è morto con la pelle diventata grigia come il ferro. L’hanno seppellito in fretta, di notte, fuori dalla Pustèrla.»\n3. «Le armature nuove della Guardia pesano la metà e non arrugginiscono. Nen è cose bbone.»\n4. «Nell’Arena, di notte, si sente scavare da sotto.»\n5. «Gli spaccapietre di Cullëdarë non portano più pietre: vogliono essere pagati prima. Il Consiglio non paga.»\n6. «Chi lascia un Bocconotto sulla soglia della bottega non si trova gli attrezzi spostati la mattina. Li Mazzamarelli sono dispettosi, ma si comprano.»",
+     "note": "Vere: 1, 2, 3 (la Forgia e il metallo), 5 (Cullëdarë incitabile alla rivolta, lore del Ducato). La 4 è vera a metà (vedi la scena dell’Arena). La 6 è folklore.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "carro",
+      "teramum_arena"
+     ]
+    },
+    {
+     "id": "carro",
+     "tipo": "dettaglio",
+     "titolo": "Il carro della Forgia",
+     "parte": "indizio",
+     "seme": "un carro della Forgia è fermo di traverso, con la scorta intorno",
+     "innesco": "Il gruppo passa vicino al carro, o si ferma a guardare.",
+     "leggi": "Una ruota è uscita dall’asse. Il carro è inclinato, e una delle casse sopra si è spaccata sull’angolo.\n\nDalla fessura si vede un pezzo di metallo grigio. Non lucido: opaco, come la pietra bagnata. La scorta, quattro uomini della Guardia, si mette davanti alla cassa appena vi vede guardare.\n\n«Circolare», dice uno. «Qui non c’è niente da vedere.»",
+     "note": "Se un PG tocca il metallo (serve distrarre la scorta: Inganno o Rapidità di mano CD 14): è freddo come il ghiaccio anche sotto il sole, e sotto le dita pulsa appena. Stessa sensazione delle armature dei Forgiati. Se lo scoprono a toccarlo: la scorta li porta dal sergente di rione, e la cosa arriva alla Rocca.\nIndagare CD 15 (in seguito, chiedendo ai garzoni): i carri della Forgia escono di notte verso le caserme e verso un magazzino senza insegna nel Sestiere del Fiume; su ogni cassa, un marchio diverso da quello della Forgia.",
+     "prove": [
+      {
+       "id": "carro",
+       "abilita": [
+        "Percezione",
+        "Arcano"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Una piastra d’armatura, forse. Ferro grezzo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "È un pezzo di spallaccio. Sul bordo, un marchio che non è quello della Forgia: un cerchio chiuso da una linea sottile. E l’aria, vicino alla cassa, è più fredda."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Lo avete già sentito, questo freddo. A Julia Nova. Sulle armature dei Forgiati."
+        }
+       ]
+      }
+     ],
+     "dopo": "Primo indizio del «fabbro» di Teramum e delle armature di Iuvenza. Non spiegare: lasciare il freddo.",
+     "rilancio": "La scorta vi guarda fisso. Che cosa fate?",
+     "daqui": [
+      "teramum_rocca",
+      "teramum_arena",
+      "teramum_ponte_gola"
+     ],
+     "pe": 200
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_rocca",
+   "kind": "stanza",
+   "title": "La Rocca dei Grazianus",
+   "image": "PDI — Teramum — La Rocca dei Grazianus.jpg",
+   "legacyPosition": {
+    "x": 985,
+    "y": 290
+   },
+   "text": "Il castello sta sul colle a nord, oltre le ultime case di San Leonardo, dentro un recinto di mura suo. Non ha niente di bello. Torri quadrate, feritoie, un cortile dove si sente il rumore dei ferri dei cavalli e degli ordini gridati.\n\nSopra il portone, scolpiti nella pietra, una torre e un lupo.\n\nDavanti al portone, due guardie con il tabarro grigio. Dentro il cortile, un via vai di uomini in tabarro: si cambiano i turni. Nessuno cammina piano.\n\nAccanto al portone, a sinistra, una porta più piccola con una lanterna accesa anche di giorno, e una fila di persone con un foglio in mano.",
+   "breve": "La fortezza di Casa Grazianus e caserma della Guardia Ducale. Qui si chiede il sigillo della Spada (la Cancelleria, porta a sinistra) e da qui partono le ronde della notte. Per Maximus è il posto più carico della città.",
+   "gm": "Da decidere: la mappa della città mostra un castello turrito in alto al centro, oltre la gola. Proposta: è la Rocca dei Grazianus («il loro palazzo è una fortezza», lore del Ducato), caserma della Guardia Ducale, con la Cancelleria della Spada (l’ufficio dei sigilli di Casa Grazianus). Il Palazzo Ducale e la Basilica Aurea stanno invece sulla piazza del Colle, in San Giorgio.\nQui abita lo Stratega Lucius Grazianus: è un membro del Consiglio Reggente, lo fa un altro collega. Non farlo apparire in questo punto se non hai deciso il conflitto CC-02 (padre di Maximus).\nIl sigillo di Grazianus: lo appone il Cancelliere della Spada, su ordine dello Stratega. Senza l’ordine, la fila dura giorni. Con il nome giusto (Maximus, se è il figlio), il foglio passa in cima.\nLe celle della Rocca: i forestieri armati trovati dopo il coprifuoco ci passano la notte.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "fila",
+     "tipo": "dettaglio",
+     "titolo": "La fila della Cancelleria",
+     "parte": "indizio",
+     "seme": "una fila di persone con un foglio in mano",
+     "innesco": "Il gruppo porta l’istanza per il sigillo di Grazianus.",
+     "leggi": "La porta piccola dà in una stanza lunga con un bancone. Dietro il bancone, tre scrivani in tabarro grigio. Davanti, una ventina di persone: mercanti, un prete, due soldati con una lettera, una vedova che piange piano.\n\nSul muro, dipinta, la torre col lupo. Sotto, a lettere nere: LA TORRE E IL LUPO.\n\nUno scrivano vi guarda entrare, guarda le vostre armi, guarda il foglio che avete in mano. Si alza e sparisce da una porta interna.",
+     "note": "CD 12 se è Maximus a presentarla e si chiama Grazianus davanti al Cancelliere (qualunque sia la tua decisione su CC-02, il nome pesa). Svantaggio se hanno spiegato lo stendardo alla Porta de lu Solë. Lo scrivano sparito dalla porta interna è andato ad avvisare qualcuno che la Crociata è alla Rocca.",
+     "prove": [
+      {
+       "id": "cancelleria",
+       "abilita": [
+        "Persuasione",
+        "Storia"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "«In fila, come tutti.» Il sigillo della Spada, forse, fra tre giorni. «Se lo Stratega firma.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Lo scrivano torna con un uomo più anziano, il Cancelliere. Legge l’istanza, la gira, la rilegge. «Lo Stratega la vedrà stasera.» Il foglio passa in cima al mucchio."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Il Cancelliere legge l’istanza e, senza dire niente, prende il sigillo dal cassetto. Lo guarda. Lo rimette nel cassetto. «Domattina», dice. «Ma sarà qui. Parola della Torre.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Il sigillo della Spada, in ogni caso, non arriva oggi: arriva domattina (con 15 o più) o fra tre giorni. Decidi tu se lo Stratega lo usa per trattare.",
+     "rilancio": "Il Cancelliere vi guarda sopra l’istanza. Che cosa fate?",
+     "daqui": [
+      "nome",
+      "campana"
+     ],
+     "pe": 300
+    },
+    {
+     "id": "nome",
+     "tipo": "dettaglio",
+     "titolo": "Maximus alla Rocca",
+     "parte": "evento",
+     "innesco": "Maximus entra nel cortile o si fa riconoscere.",
+     "leggi": "Nel cortile, un vecchio soldato che striglia un cavallo si ferma con la striglia a mezz’aria. Guarda Maximus. Guarda meglio.\n\nPoi riprende a strigliare, più piano.",
+     "note": "Il vecchio soldato è Tobia, stalliere della Rocca (proposta). Due strade, secondo CC-02. Figlio dello Stratega: Tobia lo ha visto crescere, gli dice «Signorino. Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.» Figlio di commercianti: Tobia ha conosciuto il nonno di Maximus, che ferrava i cavalli della Rocca, e gli dice «Voi siete il nipote di Mastro Grazianus del mercato. Qua dentro, quel nome fa paura a chi porta l’altro Grazianus. State attento.»",
+     "dopo": "Legame personale di Maximus con la città. Non risolve niente: apre.",
+     "rilancio": "Il vecchio striglia il cavallo e non vi guarda più. Che cosa fate?",
+     "daqui": [
+      "campana"
+     ]
+    },
+    {
+     "id": "campana",
+     "tipo": "dettaglio",
+     "titolo": "Il cambio della sera",
+     "parte": "evento",
+     "innesco": "Il gruppo è vicino alla Rocca quando viene sera.",
+     "leggi": "Dalla Basilica, di là dalla gola, parte un rintocco lungo, grave. Lo sentite nel petto prima che nelle orecchie.\n\nNel cortile della Rocca si fa silenzio. Poi un ordine, uno solo, e le porte si aprono: escono le ronde. Sei, otto, dieci gruppi di cinque, con le lanterne già accese. Ognuno prende una strada diversa.\n\nIl portone si chiude dietro l’ultimo.",
+     "note": "È la campana della sera: il coprifuoco (vedi le note dell’introduzione). Se i PG hanno la tessera del capitano, le due guardie di scorta li riportano alla Porta de lu Solë adesso.",
+     "dopo": "Da ora in città si gira con la lanterna e con una scusa buona.",
+     "rilancio": "Le lanterne si sparpagliano per la città. Che cosa fate?",
+     "daqui": [
+      "teramum_san_leonardo",
+      "teramum_ponte_gola"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_arena",
+   "kind": "porta",
+   "title": "L’Arena Sprofondata",
+   "image": "Luogo — 3. L’Arena Sprofondata.jpg",
+   "legacyPosition": {
+    "x": 1150,
+    "y": 480
+   },
+   "text": "In mezzo alle botteghe il terreno si apre in una conca ovale. Il bordo è un anello di archi mezzo sepolti: di molti si vede solo la curva di sopra, come sopracciglia.\n\nDentro gli archi ci abita la gente: porte di legno, finestre, panni stesi, un forno.\n\nSul fondo della conca, dove una volta c’era la sabbia, c’è un orto, e un pozzo con una grata sopra.\n\nUna scala di pietra scende dalla strada fino al fondo.",
+   "breve": "L’antico anfiteatro sprofondato nel rione di San Leonardo, abitato dentro gli archi. Ingresso alla scena dedicata.",
+   "gm": "Scena: L’Arena Sprofondata (id «te_arena»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nLa collocazione dell’Arena in San Leonardo è una proposta (voce del rione).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "Una scala di pietra scende dalla strada fino al fondo.",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "Dall’alto, la conca sembra un’enorme scodella piena di vita. Bambini che corrono sugli archi, una donna che cala un secchio nel pozzo e lo tira su vuoto, con una smorfia.\n\nLa grata sul pozzo è nuova, e ha un lucchetto.",
+     "dopo": "Se entrano: Scena: L’Arena Sprofondata.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "entrare"
+     ]
+    },
+    {
+     "id": "entrare",
+     "tipo": "prosecuzione",
+     "titolo": "Entrare",
+     "parte": "evento",
+     "innesco": "Il gruppo decide di entrare.",
+     "note": "Apri la scena «L’Arena Sprofondata» dal menu Scena (Teramum). Quando escono, tornano qui, nel rione di San Leonardo.",
+     "dopo": "Scena: L’Arena Sprofondata.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_san_leonardo"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_ponte_gola",
+   "kind": "scena",
+   "title": "Il ponte sulla gola",
+   "image": "PDI — Teramum — Il ponte sulla gola.jpg",
+   "legacyPosition": {
+    "x": 815,
+    "y": 462
+   },
+   "text": "La città si spacca in due. Fra San Leonardo e il Colle c’è una gola stretta, profonda, con le pareti di roccia grigia e le case appese sull’orlo come rondini. Giù in fondo corre l’acqua, bianca di schiuma. Il rumore sale e riempie tutto.\n\nUn ponte di pietra scavalca la gola con due archi, uno grande e uno piccolo, appoggiati su uno sperone di roccia in mezzo.\n\nA metà ponte, un tabernacolo con una lanterna. Dentro, un santo senza faccia: la pietra si è consumata.\n\nDa una parte, giù per la costa, il Sestiere del Fiume: tetti, fumi, grida di mercato. Dall’altra, in salita, il Colle e le torri.\n\nQui, dicono, la ronda si ferma sempre.",
+   "breve": "Il ponte a due archi sulla gola, fra San Leonardo, il Sestiere del Fiume e San Giorgio. Di giorno è un passaggio; di sera è il posto di blocco della ronda. Se qualcuno vuole screditare la Crociata, è qui che le tende l’agguato: i bravi attaccano all’imbrunire e scappano quando arriva la ronda, lasciando i PG a fare la figura dei rissosi.",
+   "gm": "Da decidere: la mappa mostra una gola che taglia la città in due. Proposta: è la gola della Vezzola, che attraversa Teramum e si getta nel Tordinum a levante, fuori dalla Porta de lu Solë. Il ponte a due archi (proposta alternativa): è il «Ponte a Due Archi» delle carte di Pietraluna (Atto IX), che indicava Teramum. Nella voce di San Giorgio la proposta era un ponte sul Tordinum nel Sestiere del Fiume: scegline uno.\nLa ronda della notte sul ponte: sergente Morico Tavolaccio e quattro guardie (Bestiario «Sergente della Guardia Ducale» e «Guardia Ducale»).\nL’agguato: chi lo manda è da decidere. Proposta: i bravi sono pagati da un Sensale con fiorini limati, per conto di qualcuno che vuole la Crociata in cella la prima sera («la Crociata fa risse dopo la campana»): l’agente col lillà, cioè Iuvenza. Si gioca solo se i PG restano in città all’imbrunire, o se tornano di notte.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "gola",
+     "tipo": "dettaglio",
+     "titolo": "Guardare giù",
+     "parte": "indizio",
+     "seme": "Giù in fondo corre l’acqua, bianca di schiuma.",
+     "innesco": "Qualcuno si sporge dal parapetto.",
+     "leggi": "Le pareti della gola sono fatte di tre cose, una sopra l’altra. In alto, le case: mattoni, legno, panni stesi. Sotto, un muro di blocchi squadrati, chiari, con archi ciechi. Sotto ancora, quasi all’acqua, una pietra grigia enorme, e nella pietra, buchi. Porte. Tre, quattro, murate, nere.\n\nDa una di quelle porte esce un filo d’acqua che non viene dal fiume.",
+     "prove": [
+      {
+       "id": "gola",
+       "abilita": [
+        "Storia",
+        "Indagare"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Case, muri, roccia. Una città vecchia sopra una gola."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Le tre pietre sono tre città: quella di adesso, quella dell’Impero, e sotto quella pretuziana, con le sue porte murate. Qualcuno ha murato dall’esterno. Qualcun altro, dopo, ha tolto un mattone."
+        }
+       ]
+      }
+     ],
+     "dopo": "Seme per la Città Sepolta. Le porte murate si vedono solo da qui.",
+     "rilancio": "L’acqua fa un rumore che copre le parole. Che cosa fate?",
+     "daqui": [
+      "due_archi",
+      "ronda"
+     ]
+    },
+    {
+     "id": "due_archi",
+     "tipo": "dettaglio",
+     "titolo": "Il tabernacolo",
+     "parte": "nascosto",
+     "innesco": "Qualcuno guarda il tabernacolo, o il ponte stesso, da vicino.",
+     "note": "Il segno del sole fra due lune, lo stesso del casale del guado. Qualcuno a Teramum conosce la fede vecchia. Nessuno sa chi l’abbia graffiato.",
+     "prove": [
+      {
+       "id": "tabernacolo",
+       "abilita": [
+        "Percezione",
+        "Religione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un santo consumato, una lanterna, qualche fiore secco."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Il santo non ha faccia, ma ha le mani: ne alza una sola, e nell’altra tiene una cosa tonda. Sotto i piedi, graffiato nella pietra da qualcuno, un segno: un cerchio, e due tondi ai lati."
+        }
+       ]
+      }
+     ],
+     "dopo": "Un collegamento con il guado di Sant’Atto e con il Trittico. Nessuna spiegazione.",
+     "rilancio": "La lanterna del tabernacolo trema nel vento della gola. Che cosa fate?",
+     "daqui": [
+      "ronda"
+     ]
+    },
+    {
+     "id": "ronda",
+     "tipo": "dialogo",
+     "titolo": "La ronda della notte",
+     "parte": "evento",
+     "innesco": "Dopo la campana della sera, chiunque passi sul ponte. Oppure di giorno, se chiedono della ronda al posto di guardia a capo del ponte.",
+     "leggi": "Dal buio del Colle scende una lanterna, poi altre quattro. Si fermano a capo del ponte, in fila.\n\n«Alt.» Un sergente grosso, con la barba nera e un naso rotto più volte. «Lanterna, nome, motivo. In quest’ordine.»",
+     "note": "IL SERGENTE — Morico Tavolaccio (nessuna scheda: è la ronda). Stanco, pratico, non cerca guai. Ha visto la tessera del capitano altre volte.\n\nCON LA TESSERA, PRIMA DELLA CAMPANA — «Siete in ritardo, voi. La porta è di là.» E li accompagna.\nCON LA TESSERA, DOPO LA CAMPANA — «La tessera vale fino alla campana. La campana è suonata.» Li porta alla Rocca. Nessuna violenza: una notte in cella, la tessera bruciata, il capitano Guarnerio umiliato davanti ai suoi (la prossima volta: «Domani. Forse.»).\nSENZA TESSERA, ARMATI — «Forestieri, armati, di notte.» Sospira. «Mi fate fare le carte.» Arresto, cella alla Rocca, multa di cinque grossi a testa la mattina. Persuasione CD 16 (o un nome che pesa, CD 14): li lascia andare verso una locanda, scortati, e scrive «trovati sul ponte, diretti a dormire».\nSENZA TESSERA, DISARMATI — Multa di un grosso a testa, e li accompagna alla locanda più vicina: il Cane Bianco.\n\nCHI COMANDA LA NOTTE? — «La Rocca. Di notte la città è della Guardia. Di giorno è dei signori. Di notte i signori dormono.» Ride. «Quasi tutti.»\nPERCHÉ IL COPRIFUOCO? — «C’è sempre stato. Ma da una settimana lo fanno rispettare. Ordine della Rocca. Dicono per i terremoti.» Sputa nella gola. «I terremoti non girano con la lanterna.»\nCOSA SUCCEDE DI NOTTE? — «Niente. Ed è strano. Prima di notte succedeva di tutto. Adesso i ladri stanno a casa, le puttane stanno a casa, pure i Mazzamarelli stanno a casa.» Pausa. «Come se aspettassero qualcosa.»\nSE LO MINACCIANO — Fischia. Un fischio lungo, due corti. In tre minuti arrivano altre due ronde. Non combatte se non lo attaccano.\nSE LO CORROMPONO — Uno scudo, un grosso: niente. Un fiorino, e nessuno lo vede: «Io non ho visto nessuno. Ma la ronda dopo di me, sì.» Funziona per un’ora.\nBATTUTE PRONTE — «Lanterna, nome, motivo. In quest’ordine.» · «Di notte la città è della Guardia.» · «Mi fate fare le carte, e io odio le carte.»",
+     "dopo": "La ronda è la legge della notte: stanca, onesta a metà, prevedibile. Cenzino sa gli orari.",
+     "rilancio": "Il sergente alza la lanterna verso le vostre facce. Che cosa fate?",
+     "daqui": [
+      "agguato"
+     ]
+    },
+    {
+     "id": "agguato",
+     "tipo": "scontro",
+     "titolo": "Scontro — i bravi del ponte",
+     "parte": "evento",
+     "innesco": "All’imbrunire, poco prima o poco dopo la campana, quando il gruppo attraversa il ponte e la ronda non c’è ancora.",
+     "leggi": "A metà ponte, vicino al tabernacolo, un uomo enorme vi sbarra la strada. Ha una lancia corta e uno scudo tondo, e sorride.\n\n«Crociati», dice forte, perché lo sentano le finestre. «Ce l’avete con la gente di Teramum?»\n\nDietro di voi, altri sei escono dai vicoli ai due capi del ponte. Mazze, coltelli. Sui tetti, due ombre con le balestre.\n\nNessuno di loro ha paura del rumore. Anzi.",
+     "note": "Dal Bestiario: 1 «Capo dei bravi» (Lu Spaccapreta, Gladiatore), 6 «Bravo teramano» (Tough), 2 «Balestriere dei tetti» (Scout). Totale 2.600 PE: scontro basso per 6 PG di livello 5 (per alzarlo a moderato: un secondo capo, +1.800 PE).\nTattica: i bravi non vogliono uccidere, vogliono una rissa lunga e rumorosa. Picchiano, spingono verso il parapetto (chi viene spinto oltre cade nella gola: TS Destrezza CD 13 per aggrapparsi, altrimenti 4d6 contundenti e l’acqua lo porta via per 30 m). Le balestre tirano su chi usa la magia.\nAl 4° round arriva la ronda (fischio lungo). I bravi scappano nei vicoli, tutti insieme: restano i PG, armati, sul ponte, con i feriti. Se c’è un bravo a terra vivo, parla (vedi «Dopo l’agguato»).\nConseguenze: se la ronda li trova da soli sul ponte, dopo la campana → Rocca (vedi «La ronda»). Se hanno un bravo prigioniero, o la ronda arriva mentre i bravi sono ancora lì, il sergente Morico crede a loro.",
+     "dopo": "La prima notte in città finisce in cella o in una locanda, e il nome della Crociata è sulle bocche di tutti: «hanno fatto rissa sul ponte».",
+     "rilancio": "I bravi scappano nei vicoli. Da lontano, un fischio. Che cosa fate?",
+     "daqui": [
+      "dopo_agguato"
+     ],
+     "pe": 2600
+    },
+    {
+     "id": "dopo_agguato",
+     "tipo": "bottino",
+     "titolo": "Dopo l’agguato",
+     "parte": "evento",
+     "innesco": "Dopo lo scontro, se frugano un bravo caduto o ne interrogano uno vivo.",
+     "leggi": "Nella borsa del bravo, una manciata di fiorini nuovi, lucidi. Troppo lucidi. Sul bordo, la limatura si vede anche alla lanterna.",
+     "note": "Gerbino il sensale (proposta, nessuna scheda) nel Sestiere del Fiume: se lo trovano, ammette solo di aver «prestato denaro a gente onesta». Il filo porta all’agente col lillà.",
+     "prove": [
+      {
+       "id": "bravo",
+       "abilita": [
+        "Intimidire",
+        "Persuasione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "«Non lo so! Ci ha pagati uno! Uno col cappello!» Piange. Non sa niente."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "«Ci ha pagati un sensale, al Fondaco. Doveva sembrare una rissa. Solo una rissa! Mica dovevamo ammazzare nessuno.» Il sensale si chiama Gerbino, dice, e ha il banco sotto i portici del mercato."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "«Il sensale diceva che i soldi non erano suoi. Che venivano da uno che profuma come un giardino.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Una prova (i fiorini limati) e un nome (Gerbino). Il resto è della città.",
+     "rilancio": "Il fischio della ronda è sempre più vicino. Che cosa fate?",
+     "daqui": [
+      "teramum_sestiere",
+      "teramum_locanda"
+     ],
+     "bottino": [
+      {
+       "n": "Fiorini limati",
+       "monete": {
+        "mo": 14
+       }
+      },
+      {
+       "n": "Lancia corta di Lu Spaccapreta",
+       "q": 1,
+       "cat": "Armi",
+       "peso": "1,5 kg",
+       "valore": "1 fiorino",
+       "stats": "1d6 perforanti, lancio (6/18 m), versatile (1d8)",
+       "desc": "Asta di frassino segnata da tacche. Una per ogni rissa vinta: sono quarantuno.",
+       "a": "crociata"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_sestiere",
+   "kind": "scena",
+   "title": "Sestiere del Fiume",
+   "image": "Rione — 4. Sestiere del Fiume.jpg",
+   "legacyPosition": {
+    "x": 880,
+    "y": 540
+   },
+   "text": "La città scende lungo la gola e diventa un solo mercato. Portici bassi, banchi sotto tende rattoppate, magazzini con le porte a mezzo piano, e scale che scendono verso l’acqua.\n\nOdore di arrosticini, di pesce salato, di cuoio, di frutta passata. Qualcuno vi mette in mano un assaggio di pecorino prima che possiate dire di no, e poi vi chiede il prezzo.\n\nSi grida in dialetto, si paga in fiorini limati, si conta due volte.\n\nAi crocevia, piattini con un dito di Ratafià e un Bocconotto. Nessuno li tocca.\n\nCambiavalute con la bilancia sul banco pesano ogni moneta, anche la vostra.\n\nIn una viuzza laterale, una chiesa piccola con la porta murata.",
+   "breve": "Il mercato lungo la gola, il Fondaco della Lega dei Sensali, le cantine profonde. Prezzi in salita, sensali ostili ai Naviganti Grigi, offerte ai Mazzamarelli. Da qui si arriva al tempio murato di Mortus, all’ingresso della Città Sepolta e alla locanda Lu Cane Bianche.",
+   "gm": "Canone: Lega dei Sensali («Li Pesa-Aneme», Casa Savinellus), rivali mortali dei Naviganti Grigi di Adamus. Segreti: la Lega ha stretto patti con i Mazzamarelli per sabotare le carovane rivali; Casa Savinellus vuole strangolare Julia Nova.\nIl Fondaco della Lega (proposta): qui, sulla gola, un palazzo con i magazzini sotto. È l’ufficio del sigillo di Savinellus.\nCollocazione sulla mappa (proposta): il Sestiere scende lungo la gola, dal ponte a due archi fino alle mura del sud e alla Porta Meridianë. La voce del rione diceva «sul Tordinum»: il Tordinum passa fuori dalle mura, la gola è della Vezzola (vedi il ponte).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "oggi",
+     "tipo": "dettaglio",
+     "titolo": "Cosa succede oggi",
+     "parte": "evento",
+     "innesco": "Entrano nel mercato.",
+     "leggi": "I prezzi sono scritti col gesso sulle lavagnette, e il gesso è fresco: li hanno cambiati stamattina. Un fornaio discute con una donna. «Ieri tre quattrini, oggi quattro. Domani? Domani, se arriva la Crociata, cinque.»\n\nLa donna vi vede. Il fornaio vi vede. Nessuno dei due finisce la frase.",
+     "note": "La notizia della Crociata ha fatto nascondere il grano. I Sensali hanno chiuso le lettere di cambio verso Julia Nova.",
+     "rilancio": "Il mercato vi guarda. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "contrattare",
+      "sensale"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Voci del Sestiere",
+     "parte": "evento",
+     "innesco": "Parlano con i venditori, le lavandaie, i facchini.",
+     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «I Sensali pagano i Mazzamarelli per rovesciare i carri dei concorrenti. Ve lo giuro sulla testa di mia madre.»\n2. «La zecca dei Savinellus lima l’oro dei fiorini. Pe’ quesse lu fiorine pese poche.»\n3. «Nelle cantine dei magazzini c’è una porta che nessuno apre. E ogni tanto la trovano aperta.»\n4. «Nella chiesa murata qualcuno prega ancora. Si sentono voci, la notte.»\n5. «Un tizio con una maschera colorata girava per il mercato all’alba. Chi l’ha visto non si ricorda la faccia. Nemmeno la sua.»\n6. «Il fiume l’anno scorso è salito di colpo senza pioggia. Lu Gigante s’è ggirate.»",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "contrattare",
+      "teramum_mortus",
+      "teramum_sepolta"
+     ]
+    },
+    {
+     "id": "contrattare",
+     "tipo": "dettaglio",
+     "titolo": "Comprare al mercato",
+     "parte": "evento",
+     "innesco": "Comprano qualcosa, o cambiano monete.",
+     "leggi": "Prezzi del giorno (più alti del solito): pane bianco 4 quattrini, una fetta di formaggio 6, una decina di arrosticini 5, un boccale di vino 3, un Ratafià 4.",
+     "prove": [
+      {
+       "id": "mercato",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Pagate il doppio, con il sorriso del venditore."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Prezzo giusto, e il venditore vi aggiunge una voce: la porta in cantina di un magazzino del fiume «ogni tante se trove aperte»."
+        }
+       ]
+      },
+      {
+       "id": "monete",
+       "abilita": [
+        "Percezione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Monete, resto giusto. Almeno così sembra."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "I fiorini ducali che vi danno di resto pesano meno del dovuto: sono limati sul bordo. Una prova da portare al Consiglio contro Savinellus."
+        }
+       ]
+      }
+     ],
+     "rilancio": "Il venditore conta il resto, due volte. Che cosa fate?",
+     "daqui": [
+      "sensale"
+     ]
+    },
+    {
+     "id": "sensale",
+     "tipo": "dettaglio",
+     "titolo": "Il sensale e i Grigi",
+     "parte": "evento",
+     "innesco": "Un sensale riconosce Adamus (o il segno dei Naviganti Grigi su qualcuno del gruppo), o sente parlare di Julia Nova.",
+     "leggi": "Un uomo grasso, vestito di velluto verde, con una bilancia d’ottone appesa alla cintura come una spada, si mette davanti a voi. Sorride.\n\n«I Grigi, a Teramum.» Lo dice abbastanza forte da farsi sentire da tre banchi. «Che onore. Volete cambiare? Vi cambio io. Per voi, un prezzo speciale.»\n\nIntorno, i cambiavalute smettono di pesare.",
+     "note": "Il sensale è un uomo del Fondaco, nessuna scheda. Vuole far sapere ad Adamus che il Sestiere è territorio della Lega. Non attacca, non minaccia apertamente. Se Adamus risponde bene (con un gettone grigio, con una battuta, con calma), il sensale se ne va con meno sorriso. Se lo umiliano in pubblico, il Fondaco rifiuterà il sigillo di Savinellus alla pratica.",
+     "prove": [
+      {
+       "id": "sensale",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un mercante gentile, con un cambio un po’ caro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Il «prezzo speciale» è un insulto: un fiorino di Julia Nova per mezzo fiorino ducale. E non è un’offerta: è un avviso. I Grigi qui non cambiano. Da nessuna parte."
+        }
+       ]
+      }
+     ],
+     "dopo": "Il Sestiere è della Lega, e la Lega odia i Grigi. Una tensione da portare fino al Consiglio.",
+     "rilancio": "Il sensale aspetta la risposta, con la bilancia in mano. Che cosa fate?",
+     "daqui": [
+      "teramum_locanda",
+      "teramum_mortus"
+     ],
+     "pe": 100
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_mortus",
+   "kind": "porta",
+   "title": "Tempio sigillato di Mortus",
+   "image": "Luogo — 5. Tempio sigillato di Mortus.jpg",
+   "legacyPosition": {
+    "x": 935,
+    "y": 625
+   },
+   "text": "Una chiesa piccola, schiacciata fra due magazzini, in un vicolo che dal mercato scende verso l’acqua. La porta è murata a mattoni nuovi, più chiari del resto.\n\nSopra la porta, il disco del Sole dipinto di fresco, e sotto, i sigilli di cera rossa dell’Inquisizione, tre, con i nastri.\n\nQualcuno ci ha appoggiato un mazzetto di lavanda secca.",
+   "breve": "Il tempio di Mortus murato dall’Arcimandrita Impalox, nel Sestiere del Fiume. Frate Davide de li Piccole Vie. Ingresso alla scena dedicata.",
+   "gm": "Scena: Tempio sigillato di Mortus (id «te_mortus»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nCollegamento: il rametto di lavanda che il ragazzino scalzo dà a Mattheus sul ponte del Tordinum (scena «Arrivo a Teramum»).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "Qualcuno ci ha appoggiato un mazzetto di lavanda secca.",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "La lavanda è legata con un filo nero, fatta a rametti. Non è di oggi, ma nemmeno vecchia.",
+     "note": "Se Mattheus ha ancora il rametto del ragazzino del ponte: è la stessa lavanda, legata con lo stesso filo nero.",
+     "dopo": "Se entrano: Scena: Tempio sigillato di Mortus.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "entrare"
+     ]
+    },
+    {
+     "id": "entrare",
+     "tipo": "prosecuzione",
+     "titolo": "Entrare",
+     "parte": "evento",
+     "innesco": "Il gruppo decide di entrare.",
+     "note": "Apri la scena «Tempio sigillato di Mortus» dal menu Scena (Teramum). Quando escono, tornano qui, nel rione del Sestiere del Fiume.",
+     "dopo": "Scena: Tempio sigillato di Mortus.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_sestiere"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_sepolta",
+   "kind": "porta",
+   "title": "La Città Sepolta",
+   "image": "Luogo — 6. La Città Sepolta.jpg",
+   "legacyPosition": {
+    "x": 880,
+    "y": 395
+   },
+   "text": "Un magazzino di sale sull’orlo della gola. La porta a mezzo piano è aperta: un facchino scarica sacchi da un carro e li butta dentro, uno dopo l’altro, senza guardare.\n\nDentro, botti, sacchi, un odore di salamoia e di pietra bagnata.\n\nIn fondo, dietro le botti, una porta bassa con il chiavistello rotto.",
+   "breve": "L’ingresso ai sotterranei (Città Vecchia e Città Sepolta) da un magazzino del Sestiere. Ingresso alla scena dedicata.",
+   "gm": "Scena: La Città Sepolta (id «te_sepolta»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nIl facchino non sa niente della porta; il padrone del magazzino (un uomo della Lega) dice che «è la cantina vecchia, crollata». Non è vero.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "una porta bassa con il chiavistello rotto",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "Il chiavistello non è rotto: è stato tagliato, di netto, e rimesso al suo posto perché sembri chiuso.\n\nDalla fessura sotto la porta viene un’aria fredda, che sa di cantina e di qualcos’altro. Più vecchio.",
+     "dopo": "Se entrano: Scena: La Città Sepolta.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "entrare"
+     ]
+    },
+    {
+     "id": "entrare",
+     "tipo": "prosecuzione",
+     "titolo": "Entrare",
+     "parte": "evento",
+     "innesco": "Il gruppo decide di entrare.",
+     "note": "Apri la scena «La Città Sepolta» dal menu Scena (Teramum). Quando escono, tornano qui, nel rione del Sestiere del Fiume.",
+     "dopo": "Scena: La Città Sepolta.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_sestiere"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_locanda",
+   "kind": "persona",
+   "title": "Lu Cane Bianche",
+   "image": "PDI — Teramum — La locanda Lu Cane Bianche.jpg",
+   "legacyPosition": {
+    "x": 1000,
+    "y": 545
+   },
+   "text": "Un portone basso, con sopra un’insegna di legno: un cane bianco enorme, dipinto male, con gli occhi d’argento.\n\nDentro, una sala lunga con il soffitto a volta, annerito dal fumo. Tavoli di castagno, panche, un camino dove girano gli spiedi. Profumo di agnello, di rosmarino, di vino.\n\nDietro il banco, una donna di sessant’anni, alta, secca, col fazzoletto bianco in testa e un mestolo in mano come uno scettro. Vi guarda entrare e conta quanti siete.\n\nAppeso sopra il camino, un campanaccio di bronzo.",
+   "breve": "La locanda proposta per dormire in città: Lu Cane Bianche, nel Sestiere del Fiume, di Za’ Carmela Macchiarola, sorella del Mastro-Pastore Venanzio. Stanze oneste, niente domande, e a porte chiuse dopo la campana si continua a servire.",
+   "gm": "Da decidere: la locanda non è nel canone. Proposta: Lu Cane Bianche, nel Sestiere del Fiume, fra il mercato e la gola. Prezzi (Manuale, «a Teramum tutto costa troppo»): pavimento di stalla 2 quattrini, dormitorio 6, stanza modesta 3 grossi, stanza rispettabile 1 fiorino. Cena con agnello e vino: 12 quattrini.\nZa’ Carmela Macchiarola è la sorella di Venanzio Collepietra: se il gruppo ha il campanaccio del Mastro-Pastore, dorme a metà prezzo e mangia gratis la prima sera. Scheda PNG «Carmela Macchiarola».\nDopo la campana della sera la porta si chiude e si sbarra; dentro si continua a servire. La ronda bussa una volta a notte e conta gli avventori.\nAlternativa per i due fratelli: il palazzo Cerullius ai Tigli (Ottorino).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "campanaccio",
+     "tipo": "dettaglio",
+     "titolo": "Il campanaccio sopra il camino",
+     "parte": "indizio",
+     "seme": "Appeso sopra il camino, un campanaccio di bronzo.",
+     "innesco": "Qualcuno guarda il campanaccio, o ne ha uno uguale.",
+     "leggi": "È un campanaccio da pecora, di bronzo, piccolo, col segno inciso di un bastone e di una stella.",
+     "note": "Se il gruppo ha avuto il campanaccio di Venanzio, è lo stesso segno. Za’ Carmela lo nota subito se lo portano alla cintura: «Chi ve l’ha dato?» E quando sente il nome del fratello, il mestolo si abbassa.",
+     "dopo": "Un legame col tratturo: la locanda è una stazione dell’Ordine dentro le mura (proposta).",
+     "rilancio": "Za’ Carmela vi guarda dal banco. Che cosa fate?",
+     "daqui": [
+      "dialogo_assunta",
+      "stanze"
+     ]
+    },
+    {
+     "id": "dialogo_assunta",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Za’ Carmela",
+     "parte": "evento",
+     "innesco": "Qualcuno parla con l’ostessa.",
+     "note": "CHI SEI? — «Carmela. Za’ Carmela per chi mangia qua, Donna Carmela per chi non paga.» Sbatte il mestolo sul banco. «Macchiarola di marito, buonanima. Collepietra di nascita.»\n\nAVETE STANZE? — «Dipende. Siete di quelli che rompono le cose?» Guarda le armi. «Le spade al chiodo, qua dentro. Tutte. Le riprendete quando uscite. Chi tira fuori il ferro nella mia sala, dorme nel fiume.»\n\nQUANTO COSTA? — «Stalla, due quattrini. Dormitorio, sei: è pulito, le pulci sono poche e educate. Stanza, tre grossi. La stanza bella, col letto grande e la finestra sulla gola, un fiorino.» Pausa. «La cena a parte. L’agnello è buono. Il vino è di mio cognato: non è buono, ma è tanto.»\n\nVENANZIO / IL TRATTURO — Se hanno il campanaccio, o nominano il fratello: «Quel vecchio testone. Sta sul prato da quarant’anni e non entra in città da sei.» Si asciuga le mani. «Se vi ha dato il campanaccio, qui siete di casa. Mezzo prezzo, e stasera l’agnello lo offro io. Ma se lo scopro che l’avete rubato…» Guarda il mestolo.\n\nIL COPRIFUOCO — «Alla campana chiudo il portone e metto la sbarra. Dentro si mangia, si beve, si canta piano. Fuori non si esce. La ronda bussa una volta, conta le teste, beve un bicchiere, se ne va.» Pausa. «Se qualcuno vuole uscire di notte, la porta del cortile dà sul vicolo della gola. Io non l’ho detto.»\n\nCHI VIENE QUI? — «Pastori, quando scendono. Carrettieri. Qualche forestiero perbene. Niente sensali: li ho cacciati tutti vent’anni fa, e hanno imparato.»\n\nCOSA SI DICE IN CITTÀ? — «Che il Consiglio è una pentola senza fuoco: bolle il coperchio, ma dentro niente. Che la Guardia fa i turni doppi. Che una signora forestiera compra tutti ai Tigli.» Abbassa la voce. «E che la terra trema. Io ce l’ho qua, la gola, sotto la finestra: di notte sento l’acqua che cambia voce.»\n\nLA GOLA / LE CANTINE — «Non si scende. Mio marito scendeva. Diceva che sotto le cantine ci sono strade. Strade vere, con le pietre.» Silenzio. «Un giorno è sceso e non è più salito.» Non dice altro, e non serve insistere.\n\nLI MAZZAMARELLI — Indica il piattino sul davanzale: un dito di Ratafià e un Bocconotto. «Ogni sera. Chi se ne dimentica, la mattina trova il sale nel vino.» Nessun sorriso: ci crede.\n\nSE LA MINACCIANO — Il mestolo si alza. I tre pastori al tavolo in fondo si alzano anche loro. «Fuori.» E da quel momento il Cane Bianco è chiuso per la Crociata, e il tratturo lo saprà domattina.\n\nSE LA CORROMPONO — «I soldi li pago al macellaio. Voi pagate la stanza e state zitti, e io sto zitta. Siamo pari.»\n\nSE LE MENTONO — «Figlio mio, ho cresciuto quattro figli e un marito. Le bugie le sento prima che le dite.» (Intuizione +5.)\n\nBATTUTE PRONTE — «Le spade al chiodo.» · «Il vino non è buono, ma è tanto.» · «Alla campana, sbarra.» · «Qua dentro siete di casa. Fuori, siete forestieri.»",
+     "dopo": "Za’ Carmela è un porto sicuro: onesta, dura, legata al tratturo. Sa dei sotterranei solo quello che le ha lasciato il marito.",
+     "rilancio": "Za’ Carmela posa il mestolo e aspetta. Che cosa fate?",
+     "daqui": [
+      "stanze",
+      "notte"
+     ]
+    },
+    {
+     "id": "stanze",
+     "tipo": "dettaglio",
+     "titolo": "Prendere una stanza",
+     "parte": "evento",
+     "innesco": "Decidono di dormire qui.",
+     "leggi": "La stanza bella ha un letto grande di legno scuro, una cassapanca, un catino, e una finestra stretta sulla gola. Sotto, l’acqua fa rumore tutta la notte.\n\nSul davanzale, dentro, un piattino con un dito di Ratafià e un Bocconotto.",
+     "note": "Riposo lungo completo. Chi dorme con la finestra aperta, a notte fonda, sente l’acqua della gola «cambiare voce» per un momento (tremore leggero, niente di più).",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "notte"
+     ]
+    },
+    {
+     "id": "notte",
+     "tipo": "dettaglio",
+     "titolo": "A porte chiuse",
+     "parte": "evento",
+     "innesco": "Suona la campana della sera mentre sono al Cane Bianco.",
+     "leggi": "Za’ Carmela chiude il portone, mette la sbarra, e lo fa con un colpo solo, come chi lo fa da trent’anni.\n\nLa sala non si svuota. Si abbassa la voce. Un pastore tira fuori un organetto e suona piano, una cosa lenta. Qualcuno canta, sottovoce.\n\nVerso mezzanotte, tre colpi al portone. La ronda. Za’ Carmela apre lo spioncino, conta, versa un bicchiere, lo passa fuori. Richiude.\n\n«Contati», dice. «Adesso dormite.»",
+     "dopo": "Una notte tranquilla in città. Se qualcuno vuole uscire, c’è la porta del cortile sul vicolo della gola (Za’ Carmela non l’ha detto).",
+     "rilancio": "L’organetto suona piano. Che cosa fate?",
+     "daqui": [
+      "teramum_ponte_gola"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_san_giorgio",
+   "kind": "scena",
+   "title": "Rione di San Giorgio",
+   "image": "Rione — 1. San Giorgio.jpg",
+   "legacyPosition": {
+    "x": 700,
+    "y": 470
+   },
+   "text": "La strada sale e si stringe. Le case di pietra grigia lasciano il posto a palazzi bianchi con le cornici dorate, e sopra i tetti le torri nobiliari gareggiano in altezza come dita alzate per chiedere la parola.\n\nPoi la strada si apre, all’improvviso, in una piazza grande, lastricata di pietra chiara. Da una parte il Palazzo Ducale, squadrato, con una torre d’angolo. Dall’altra, la Basilica Aurea, che prende la luce del mattino e la rimanda in basso come uno specchio.\n\nLe campane qui non si sentono: si portano addosso. Ogni rintocco passa nel selciato e sale per le gambe.\n\nA ogni imbocco di strada c’è un posto di guardia. Elmi lucidi, alabarde, lo sguardo di chi conta i forestieri.\n\nDavanti al Palazzo, una coda di gente con un foglio in mano. Nessuno si muove.\n\nSulla torre del Palazzo, accanto allo stendardo, pende un drappo nero.",
+   "breve": "Il Colle del potere: la piazza con il Palazzo Ducale e la Basilica Aurea, il Tribunale di Clavax, la coda dei supplicanti, i posti di guardia. Il drappo nero sulla torre dice che il Consiglio siede a porte chiuse. Qui si fa la corsa ai sigilli.",
+   "gm": "Collocazione sulla mappa (proposta): la grande piazza con le torri, al centro della parte occidentale della città, è la piazza del Colle (il Forum Ducale), con il Palazzo Ducale e la Basilica Aurea uno di fronte all’altra (così dicono le voci dei due luoghi). La voce del rione diceva «il colle, la sommità della città»: la piazza sta sul punto più alto della cresta fra le due gole.\nOggi: il colle è in allarme per la notizia della Crociata (posti di guardia raddoppiati, borse dei forestieri perquisite); il Consiglio siede e non decide; ogni Casata ha qualcuno ad ascoltare nelle anticamere.\nSegreti: il Forum fu costruito sopra l’antico cerchio rituale dei Pretuziani. Iuvenza vuole farsi nominare Reggente qui («il fumo coprirà la mia ascesa al Colle»). Nel Consiglio c’è un traditore incappucciato con l’accento del Colle (Cristallo di Memoria, Atto XI).\nIl Tribunale di Casa Clavax e la Camera dei Cavillatori (proposta): sul colle, accanto al Palazzo.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "posto",
+     "tipo": "dettaglio",
+     "titolo": "Il posto di guardia",
+     "parte": "evento",
+     "innesco": "Il gruppo sale al Colle.",
+     "leggi": "All’imbocco della piazza, una sbarra e sei guardie. Un sergente con la barba bianca tende la mano. «Borse aperte. Armi al fianco, non in mano. Da dove venite, dove andate.»",
+     "note": "Vantaggio con la tessera del capitano Guarnerio. Con la scorta, la perquisizione è rapida e nessuno scrive niente.",
+     "prove": [
+      {
+       "id": "posto",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Perquisizione completa, nomi scritti su un registro. Entro sera qualcuno a Palazzo sa che siete saliti."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Il sergente vi lascia passare senza perquisire, e vi dice pure che oggi il Consiglio siede: «Ma tante nen decide niente.»"
+        }
+       ]
+      }
+     ],
+     "rilancio": "La sbarra si alza. Che cosa fate?",
+     "daqui": [
+      "drappo",
+      "sigilli",
+      "supplicanti"
+     ]
+    },
+    {
+     "id": "drappo",
+     "tipo": "dettaglio",
+     "titolo": "Il drappo nero",
+     "parte": "indizio",
+     "seme": "Sulla torre del Palazzo, accanto allo stendardo, pende un drappo nero.",
+     "innesco": "Qualcuno chiede cosa significa il drappo.",
+     "leggi": "Un notaio con la penna dietro l’orecchio si ferma, guarda in su, sospira.\n\n«Il Consiglio siede a porte chiuse. Quando c’è il drappo, al Palazzo non sale nessuno e non scende nessuno. Niente udienze, niente sigilli, niente di niente.» Guarda la coda. «E quelli aspettano lo stesso. Da stamattina.»",
+     "note": "Proposta di consuetudine (Da decidere). Finché c’è il drappo, il sigillo di Mazzarellus (il Palazzo) non si può chiedere. Gli altri uffici lavorano.",
+     "dopo": "Il Consiglio sta discutendo. Probabilmente anche di loro.",
+     "rilancio": "Il drappo si muove appena nel vento. Che cosa fate?",
+     "daqui": [
+      "sigilli"
+     ]
+    },
+    {
+     "id": "sigilli",
+     "tipo": "dettaglio",
+     "titolo": "La corsa ai sigilli",
+     "parte": "evento",
+     "innesco": "Il gruppo ha l’istanza di Ser Eutichio e cerca gli uffici.",
+     "leggi": "Il Tribunale di Casa Clavax è il palazzo accanto al Palazzo Ducale, con le finestre strette come feritoie e un chiodo di ferro enorme piantato sopra il portone.\n\nDentro, una sala con dodici scrivani, dodici leggii, e un silenzio che si sente.",
+     "note": "Riepilogo per il master (proposte):\n• CLAVAX — il Tribunale, qui. Serve per primo: Ser Eutichio registra l’istanza. Due giorni, o uno se Ser Eutichio è stato trattato bene. Indagare o Persuasione CD 13.\n• GRAZIANUS — la Cancelleria della Spada, alla Rocca (punto della Rocca).\n• TERZO SIGILLO, a scelta: Mazzarellus (qui, dentro il Palazzo; bloccato finché c’è il drappo); Impalox (la sagrestia grande della Basilica; chiede chi ha benedetto la «Crociata»: Religione CD 16, o la parola «Crociata» tolta dall’istanza); Tancredus (la Biblioteca ai Tigli; serve un documento antico); Savinellus (il Fondaco nel Sestiere; serve non aver umiliato i sensali); de Spina (ai Tigli; solo un Cerullius, di persona, per il Sangue Antico); Mellitius (ai Tigli; firma per chi paga: 20 fiorini, o un invito accettato alla festa).\nOgni sigillo è una piccola scena sociale: 150 PE ciascuno quando lo ottengono (non inclusi qui).",
+     "dopo": "Il lasciapassare completo richiede almeno due o tre giorni di città. È il motore delle giornate a Teramum.",
+     "rilancio": "Dodici penne grattano la carta. Che cosa fate?",
+     "daqui": [
+      "teramum_palazzo",
+      "teramum_basilica"
+     ]
+    },
+    {
+     "id": "supplicanti",
+     "tipo": "dettaglio",
+     "titolo": "La coda dei supplicanti",
+     "parte": "indizio",
+     "seme": "Davanti al Palazzo, una coda di gente con un foglio in mano.",
+     "innesco": "Qualcuno si avvicina alla coda o parla con un supplicante.",
+     "leggi": "Una vedova con un bambino. Un mugnaio. Due fratelli che litigano sottovoce su un campo. Un vecchio con una cassetta di legno sulle ginocchia, seduto sul gradino, che non ha più la forza di stare in piedi.\n\nIl vecchio vi vede. Si alza a fatica. «Voi siete quelli della Crociata?» Vi mostra il foglio. «Sei settimane. Sei settimane che aspetto un sigillo per seppellire mio figlio nella tomba di famiglia. Il Consiglio non decide.»",
+     "note": "Gancio: il figlio del vecchio (Ercole, proposta) è morto in un crollo nelle cantine: uno dei tanti «incidenti» sotto la città. Aiutare il vecchio (portare la sua pratica insieme alla loro, parlarne al Tribunale) vale 100 PE e la gratitudine del quartiere. Per Mattheus: la cappella dei morti fuori dalla Pustèrla.",
+     "prove": [
+      {
+       "id": "supplicanti",
+       "abilita": [
+        "Intuizione",
+        "Medicina"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un vecchio stanco. Ce ne sono tanti."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Dice la verità. Il figlio è morto in un crollo, in una cantina del Sestiere, sei settimane fa. Il corpo è ancora nella cappella dei morti fuori dalla Pustèrla, perché la tomba di famiglia è dentro le mura e ci vuole un sigillo."
+        }
+       ]
+      }
+     ],
+     "dopo": "La città vera, sotto il potere: gente che aspetta.",
+     "rilancio": "Il vecchio vi tende il foglio. Che cosa fate?",
+     "daqui": [
+      "teramum_palazzo",
+      "teramum_basilica",
+      "teramum_tigli"
+     ],
+     "pe": 100
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_palazzo",
+   "kind": "porta",
+   "title": "Palazzo Ducale",
+   "image": "Luogo — 1. Palazzo Ducale.jpg",
+   "legacyPosition": {
+    "x": 615,
+    "y": 520
+   },
+   "text": "Un blocco quadrato di pietra bianca, alto tre piani, con una torre d’angolo più alta di tutte le torri del Colle. La facciata è nuova; ai fianchi, nei vicoli, si vedono le mura vecchie in pietra grigia che il palazzo si è mangiato.\n\nSul portale, lo stemma ducale. Due guardie per battente, immobili.\n\nSulla torre, il drappo nero.",
+   "breve": "Il Palazzo Ducale sulla piazza del Colle: sede del Consiglio Reggente. Ingresso alla scena dedicata.",
+   "gm": "Scena: Palazzo Ducale (id «te_palazzo»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nFinché c’è il drappo nero sulla torre, non si sale (proposta).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "Due guardie per battente, immobili.",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "Le guardie hanno lo sguardo fisso sulla piazza. Non guardano chi entra: guardano chi resta. Ogni tanto il portone si socchiude, esce un servitore, rientra.\n\nDa una finestra alta, per un momento, si sentono voci. Tante. Poi qualcuno chiude.",
+     "dopo": "Se entrano: Scena: Palazzo Ducale.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "entrare"
+     ]
+    },
+    {
+     "id": "entrare",
+     "tipo": "prosecuzione",
+     "titolo": "Entrare",
+     "parte": "evento",
+     "innesco": "Il gruppo decide di entrare.",
+     "note": "Apri la scena «Palazzo Ducale» dal menu Scena (Teramum). Quando escono, tornano qui, nel rione di San Giorgio.",
+     "dopo": "Scena: Palazzo Ducale.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_san_giorgio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_basilica",
+   "kind": "porta",
+   "title": "Basilica Aurea dei Santi Martiri",
+   "image": "Luogo — 2. Basilica Aurea dei Santi Martiri.jpg",
+   "legacyPosition": {
+    "x": 680,
+    "y": 578
+   },
+   "text": "La facciata è coperta d’oro: mosaici di fondo dorato, santi in fila, e al centro Valerus come lo dipinge la Chiesa, un re guerriero con lancia e scudo. Al mattino brilla tanto che bisogna socchiudere gli occhi.\n\nAlla base, sotto l’oro, corre un basamento di pietra grigia a blocchi grossi, consumati. L’oro comincia un metro sopra.\n\nSui gradini, mendicanti e pellegrini. Dentro, canti.",
+   "breve": "La Basilica Aurea, sede di Casa Impalox, sulla piazza del Colle. Ingresso alla scena dedicata.",
+   "gm": "Scena: Basilica Aurea dei Santi Martiri (id «te_basilica»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nNon rivelare nulla di ciò che sta sotto la Basilica. Il peso del Filatterio è l’unico segno.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "L’oro comincia un metro sopra.",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "Il basamento grigio è la stessa pietra delle mura di sotto, quella senza malta. Qualcuno ha provato a coprirla d’intonaco, e l’intonaco è caduto.",
+     "note": "Se Mattheus porta il Filatterio, qui la custodia gli pesa un po’ di più sul petto: diglielo in privato. Niente di più.",
+     "dopo": "Se entrano: Scena: Basilica Aurea dei Santi Martiri.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "entrare"
+     ]
+    },
+    {
+     "id": "entrare",
+     "tipo": "prosecuzione",
+     "titolo": "Entrare",
+     "parte": "evento",
+     "innesco": "Il gruppo decide di entrare.",
+     "note": "Apri la scena «Basilica Aurea dei Santi Martiri» dal menu Scena (Teramum). Quando escono, tornano qui, nel rione di San Giorgio.",
+     "dopo": "Scena: Basilica Aurea dei Santi Martiri.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_san_giorgio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_tigli",
+   "kind": "scena",
+   "title": "Quartiere dei Tigli",
+   "image": "Rione — 3. Quartiere dei Tigli.jpg",
+   "legacyPosition": {
+    "x": 300,
+    "y": 490
+   },
+   "text": "Un viale largo, lastricato, con due file di tigli potati tutti alla stessa altezza. Dietro i tigli, palazzi con i portoni chiusi e le finestre alte. Ogni palazzo ha la sua torre, e ogni torre è stata alzata per superare quella del vicino.\n\nL’odore dei tigli copre tutto, anche il fumo che sale da San Leonardo. Il rumore si abbassa di colpo: niente carri, niente banchi. Si sentono i passi, le gonne, un liuto da un cortile.\n\nLe persone passeggiano piano, a coppie, e si salutano con inchini misurati al dito.\n\nUno dei palazzi non è finito: impalcature di legno, un’ala senza tetto, gente con i libri sotto il braccio che entra ed esce.\n\nPiù avanti, un palazzo con lo stemma azzurro e argento ha le persiane chiuse. Tutte tranne una.",
+   "breve": "Il viale dei signori: le Casate, le loro feste, i loro creditori. Si legge il Consiglio dai saluti; si può ottenere un invito alla festa dei Mellitius. Qui c’è il palazzo Cerullius (Ottorino) e la Biblioteca Incompiuta.",
+   "gm": "Oggi: Casa Mellitius dà una festa (inviti in carta dorata, musici da fuori; la vecchia nobiltà ci va per disprezzarli da vicino). Si parla solo della Crociata. Casa Cerullius ha un palazzo qui (canone): azzurro e argento è una proposta di colori.\nSegreti: la fortuna dei Mellitius viene dal contrabbando di frammenti di Sigilli Lunari, e Iuvenza li ricatta; Casa de Spina finanzia scavi nelle cripte per trovare l’Atto di Fondazione; la Gilda della Presentosa è ricattata da Iuvenza. La «signora forestiera dai capelli bianchi» (proposta): Iuvenza, già in città sotto altro nome.\nCollocazione sulla mappa (proposta): i Tigli occupano la parte occidentale della città, verso la Porta Realë e la Pustèrla.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "passeggio",
+     "tipo": "dettaglio",
+     "titolo": "Leggere il passeggio",
+     "parte": "indizio",
+     "seme": "Le persone passeggiano piano, a coppie, e si salutano con inchini misurati al dito.",
+     "innesco": "Qualcuno si ferma a osservare chi saluta chi.",
+     "prove": [
+      {
+       "id": "passeggio",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Inchini, sorrisi, ventagli. Sembra tutto cordiale."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Chi saluta chi è una mappa del Consiglio. Un giovane vestito d’oro, con un’ape ricamata sul petto, saluta tutti, e nessuno gli risponde. I servitori con la torre e il lupo e quelli con la chiave e il chiodo si fermano insieme, ogni volta che si incrociano, e parlano fitto."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "E tutti, anche quelli che non si salutano fra loro, si inchinano profondamente davanti a un portone: quello di un palazzo appena ridipinto, con le finestre chiuse e un odore dolce che arriva fino alla strada. Lillà."
+        }
+       ]
+      }
+     ],
+     "dopo": "Grazianus e Clavax sono d’accordo (segreto: il colpo di stato). I Mellitius sono disprezzati. Il palazzo col lillà è quello della signora forestiera.",
+     "rilancio": "Il liuto smette. Qualcuno vi ha notati. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "festa",
+      "cerullius"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Voci dei Tigli",
+     "parte": "evento",
+     "innesco": "Parlano con un servitore, un maestro di casa, una dama al caffè.",
+     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «I Mellitius pagano le feste con soldi che puzzano di mare.»\n2. «La Matriarca de Spina non esce più dal palazzo. Dicono che scavi in cantina.»\n3. «La Maestra della Presentosa lavora di notte e non parla con nessuno. Impazzita, dicono.»\n4. «I Tancredus hanno smesso di costruire la Biblioteca cent’anni fa. Perché? Chiedetelo a loro.»\n5. «Lu Reggente e l’Arcimandrite nen se saluta cchiù.»\n6. «C’è un erede. Nessuno dice di chi.»",
+     "note": "Un aperitivo completo ai caffè del viale costa 8 quattrini: il prezzo per stare seduti ad ascoltare.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "festa",
+      "teramum_biblioteca"
+     ]
+    },
+    {
+     "id": "festa",
+     "tipo": "dettaglio",
+     "titolo": "La festa dei Mellitius",
+     "parte": "evento",
+     "innesco": "Chiedono di essere invitati, o incontrano l’araldo dei Mellitius.",
+     "leggi": "Un araldo in livrea d’oro e nero, con un’ape d’oro sul petto, passa di portone in portone con un cestino di biglietti dorati. Vi vede. Si ferma. Vi guarda le scarpe, poi le armi, poi le facce.",
+     "note": "CD 12 se si presentano come «gli eroi di Julia Nova» e c’è un nobile fra loro (i Mellitius cercano legittimità). La festa è una scena possibile: lì c’è mezzo Consiglio, e la signora forestiera. Il sigillo di Mellitius si ottiene lì.",
+     "prove": [
+      {
+       "id": "festa",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "L’araldo vi guarda le scarpe e passa oltre."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "leggi": "Un invito in carta dorata, a nome vostro. «Dominus Flaminio Mellitius sarà felice di vedere da vicino gli eroi di Julia Nova.» Domani sera."
+        }
+       ]
+      }
+     ],
+     "dopo": "Un invito dorato: la porta di servizio per il Consiglio.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "cerullius",
+      "teramum_biblioteca"
+     ],
+     "pe": 150,
+     "bottino": [
+      {
+       "n": "Invito dorato di Casa Mellitius",
+       "q": 1,
+       "cat": "Missione",
+       "peso": "—",
+       "valore": "—",
+       "stats": "",
+       "desc": "Carta pesante, bordo d’oro, un’ape in rilievo. «Dominus Flaminio Mellitius invita gli eroi di Julia Nova a onorare la sua casa.» Profuma di miele.",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "cerullius",
+     "tipo": "dettaglio",
+     "titolo": "Il palazzo Cerullius",
+     "parte": "indizio",
+     "seme": "Più avanti, un palazzo con lo stemma azzurro e argento ha le persiane chiuse. Tutte tranne una.",
+     "innesco": "Alessandros o Vicarus si avvicinano al palazzo di famiglia.",
+     "leggi": "Il portone è di quercia scura, con lo stemma consumato. L’intonaco è scrostato, i vasi sul balcone sono vuoti.\n\nLa persiana aperta si chiude. Poi il portone si apre, prima che bussiate. Ottorino, il vecchio maestro di casa, è lì, con le mani giunte e gli occhi lucidi.\n\n«Signorini.»",
+     "note": "Il palazzo è mezzo vuoto: tre servitori, stanze chiuse, mobili coperti. Ma c’è un fuoco acceso, letti rifatti, e una biblioteca di famiglia. Ottorino ha un messaggio (Da decidere: di Rodolfo Cerullius, il Reggente di Canzañë?). Se ci sono solo i due fratelli: stanze, cena, e le chiavi. Se c’è anche il resto del gruppo, Ottorino apre comunque («Le stanze sono tante»). È un rifugio in città per chi ha la tessera, fino alla campana: dopo, ospiti di una casata nobile, la ronda non li tocca (proposta).",
+     "dopo": "Un posto sicuro ai Tigli. E un pezzo della storia dei fratelli, da giocare.",
+     "rilancio": "Ottorino si fa da parte per farvi entrare. Che cosa fate?",
+     "daqui": [
+      "teramum_biblioteca",
+      "teramum_pusterla"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_biblioteca",
+   "kind": "porta",
+   "title": "Biblioteca Incompiuta dei Tancredus",
+   "image": "Luogo — 4. Biblioteca Incompiuta dei Tancredus.jpg",
+   "legacyPosition": {
+    "x": 445,
+    "y": 455
+   },
+   "text": "Un palazzo enorme che non è mai stato finito. La facciata si ferma a metà del secondo piano; sopra, le impalcature di legno sono diventate grigie, e ci sono nati i nidi. Un’ala intera non ha il tetto: dalle finestre vuote si vede il cielo.\n\nSul portale, scolpito, il motto della Casata: «Ricordiamo le Radici».",
+   "breve": "La Biblioteca di Casa Tancredus ai Tigli. Ingresso alla scena dedicata. Qui si chiede il sigillo di Tancredus.",
+   "gm": "Scena: Biblioteca Incompiuta dei Tancredus (id «te_biblioteca»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nLa collocazione ai Tigli è una proposta (voce del rione).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "«Ricordiamo le Radici»",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "Accanto al portale, un portinaio seduto dietro una grata. Chiede la lettera di presentazione a tutti, anche a un vecchio con la toga che entra ogni giorno da quarant’anni.\n\nSulla grata, un cartello: NIENTE INCANTESIMI SENZA AUTORIZZAZIONE SCRITTA.",
+     "dopo": "Se entrano: Scena: Biblioteca Incompiuta dei Tancredus.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "entrare"
+     ]
+    },
+    {
+     "id": "entrare",
+     "tipo": "prosecuzione",
+     "titolo": "Entrare",
+     "parte": "evento",
+     "innesco": "Il gruppo decide di entrare.",
+     "note": "Apri la scena «Biblioteca Incompiuta dei Tancredus» dal menu Scena (Teramum). Quando escono, tornano qui, nel rione dei Tigli.",
+     "dopo": "Scena: Biblioteca Incompiuta dei Tancredus.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_tigli"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_meridiane",
+   "kind": "porta",
+   "title": "Porta Meridianë",
+   "image": "PDI — Teramum — Porta Meridiane.jpg",
+   "legacyPosition": {
+    "x": 1030,
+    "y": 705
+   },
+   "text": "La porta della costa. Una volta doppia, lunga, con un bancone sotto l’arco e quattro scrivani seduti in fila, ognuno col suo timbro.\n\nCarri di sale, di pesce secco, di stoffe. Mercanti con le carte in mano, sensali, mendicanti, un banditore che legge un foglio ad alta voce, sempre lo stesso, ogni mezz’ora.\n\nFuori, un ponte sulla Vezzola, e la strada che scende verso il mare.",
+   "breve": "La porta più trafficata, a sud: quattro timbri, mezza città che guarda, il banditore che legge il Bando. Di notte è chiusa; all’alba passano i carri del sale.",
+   "gm": "I quattro timbri (proposta): Savinellus (dazi), Clavax (legge), Grazianus (armi), Mazzarellus (amministrazione). Chi esce da qui è visto da tutti. Il banditore legge il Bando della Guardia: «Colonna armata da levante, sotto osservazione del Consiglio».",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "bando",
+     "tipo": "dettaglio",
+     "titolo": "Il banditore",
+     "parte": "indizio",
+     "seme": "un banditore che legge un foglio ad alta voce, sempre lo stesso, ogni mezz’ora",
+     "innesco": "Qualcuno si ferma ad ascoltare il banditore.",
+     "leggi": "«Per ordine del Consiglio Reggente Permanente! Una colonna armata, venuta da levante, con carri e stendardo, si trova sotto le mura della città. Essa è sotto osservazione del Consiglio! Nessun cittadino le presti aiuto, alloggio o armi senza licenza! Chi sa, riferisca alla Guardia!»\n\nLa gente ascolta, annuisce, e torna a contrattare. Qualcuno si gira a guardarvi.",
+     "dopo": "Il Bando è pubblico. Adesso lo sanno tutti. È anche il motivo per cui qualche locandiere dirà di no.",
+     "rilancio": "Il banditore riarrotola il foglio. Che cosa fate?",
+     "daqui": [
+      "teramum_sestiere"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_piccola",
+   "kind": "porta",
+   "title": "Porta Piccòla",
+   "image": "PDI — Teramum — Porta Piccola.jpg",
+   "legacyPosition": {
+    "x": 1205,
+    "y": 600
+   },
+   "text": "Una porta bassa, a sud-est, con il selciato sporco di letame e paglia. Pecore, carri di fieno, donne con le ceste sulla testa. Un banco del dazio, un uomo che pesa i formaggi.\n\nDentro, una piazzetta con un abbeveratoio di pietra, e vicoli che scendono verso il mercato.",
+   "breve": "La porta delle bestie e dei contadini, a sud-est. Poco sorvegliata, ma ha lo stesso registro. Da qui si entra al Sestiere del Fiume.",
+   "gm": "Da qui è entrato senza carte l’uomo col lillà (scena «Arrivo a Teramum»). La guardia della Piccòla prende una moneta da chi la conosce. Se i PG sono entrati da qui travestiti, nessuno li ha contati.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "abbeveratoio",
+     "tipo": "dettaglio",
+     "titolo": "La piazzetta dell’abbeveratoio",
+     "parte": "indizio",
+     "seme": "una piazzetta con un abbeveratoio di pietra",
+     "innesco": "Il gruppo entra dalla Piccòla o ci passa.",
+     "leggi": "Contadini che fanno bere le bestie, un maniscalco sotto una tettoia, bambini che tirano sassi nell’acqua. Nessuno guarda nessuno.\n\nSull’orlo dell’abbeveratoio, qualcuno ha inciso un segno: un bastone e una stella.",
+     "note": "Il segno dell’Ordine dei Tratturi: da qui entrano e escono i pastori. Chi porta il campanaccio di Venanzio è salutato con un cenno da due pastori.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_sestiere"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_fiume",
+   "kind": "porta",
+   "title": "Porta de lu Fiumë",
+   "image": "PDI — Teramum — Porta de lu Fiume.jpg",
+   "legacyPosition": {
+    "x": 862,
+    "y": 318
+   },
+   "text": "In cima alla gola, dove l’acqua entra in città, la porta del nord è stretta fra due torri, in fondo a un ponte di pietra lungo e stretto.\n\nSotto il ponte, i lavatoi, le ruote dei mulini. Donne che battono i panni sulle pietre e cantano.\n\nLe guardie qui sono poche, e le migliori.",
+   "breve": "La porta del nord, sul ponte lungo, dove la gola entra in città. Poca folla, guardie serie. La più vicina alla Città Sepolta e al ponte sulla gola.",
+   "gm": "Da decidere: il «Ponte a Due Archi» delle carte di Pietraluna potrebbe essere questo (proposta della voce d’arrivo) o quello sulla gola (proposta di questa scena). Questo ha più archi: scegli.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "lavatoi",
+     "tipo": "dettaglio",
+     "titolo": "I lavatoi",
+     "parte": "indizio",
+     "seme": "Donne che battono i panni sulle pietre e cantano.",
+     "innesco": "Qualcuno scende ai lavatoi o ascolta le lavandaie.",
+     "leggi": "Cantano una cosa vecchia, lenta, con le parole in dialetto stretto. Parla di una città sotto la città, dove si va a dormire e non si torna. Il ritornello è sempre lo stesso: «e lu sonne je dicette: resta».\n\nUna ragazza vi vede ascoltare e smette. Le altre continuano.",
+     "note": "La canzone è folklore della Città Sepolta. «Resta» è un’eco dell’ordine di Micuccio sotto Bëllindë: nessuno qui lo sa, ma i giocatori potrebbero sentire il brivido. Non spiegare.",
+     "rilancio": "Le lavandaie cantano. Che cosa fate?",
+     "daqui": [
+      "teramum_sepolta",
+      "teramum_ponte_gola"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_reale",
+   "kind": "porta",
+   "title": "Porta Realë",
+   "image": "PDI — Teramum — Porta Reale.jpg",
+   "legacyPosition": {
+    "x": 335,
+    "y": 600
+   },
+   "text": "La porta più alta e più fredda. Da qui la strada esce dalla città e sale verso la montagna, fra i castagni.\n\nPochi carri, qualche mulattiere, legna, ferro. Le guardie sono anziane e parlano poco.\n\nOltre la porta, il Gigante. Così vicino che bisogna alzare la testa.",
+   "breve": "La porta dell’ovest, verso la montagna e Tussëcië. Guardie anziane. Fuori pattugliano gli uomini del Marchese d’Avalos.",
+   "gm": "Chi esce da qui va verso la montagna: Mëndurjë, Tussëcië (il Marchese Rodrigo d’Avalos, uomo di Iuvenza, pattuglia la strada montana), e più su Lésënë e la Convocazione. Il capitano Guarnerio è di Mëndurjë: ha fatto la guardia qui per dieci anni.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "montagna",
+     "tipo": "dettaglio",
+     "titolo": "La strada della montagna",
+     "parte": "indizio",
+     "seme": "Oltre la porta, il Gigante.",
+     "innesco": "Qualcuno guarda fuori dalla porta, verso la montagna.",
+     "leggi": "La montagna occupa tutto il cielo. Le nuvole si fermano a metà, come se non osassero salire.\n\nSulla strada, lontano, tre cavalieri scendono al passo. Hanno i mantelli rossi e un pennacchio giallo sull’elmo. Le guardie della porta li guardano arrivare, e uno sputa per terra.",
+     "note": "I cavalieri sono uomini del Marchese d’Avalos di Tussëcië. Portano posta per i Tigli. Le guardie della Realë non li amano.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "teramum_tigli"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_pusterla",
+   "kind": "porta",
+   "title": "Pustèrla de li Mortë",
+   "image": "PDI — Teramum — Pusterla de li Morte.jpg",
+   "legacyPosition": {
+    "x": 455,
+    "y": 360
+   },
+   "text": "Una porta stretta, un solo battente, niente insegne. Fuori, un campo di cipressi e di croci, e una cappella bassa con la porta aperta.\n\nUna guardia sola, seduta su uno sgabello. Si alza quando passa un morto. Si toglie il cappello.\n\nDi notte, è l’unica porta che si apre.",
+   "breve": "La porta dei morti, a nord-ovest. Solo funerali; di notte è l’unica che si apre. Fuori, il camposanto dei cipressi e la cappella dei morti.",
+   "gm": "Proposta: di notte si apre solo la Pustèrla («Di là i fiumi sono due e le porte sei. Ma di notte ne apre una sola», la vecchia di Colleatterato): i morti non aspettano l’alba. La guardia della notte è un vecchio, Gnazio, che non fa domande a chi porta un morto.\nNella cappella dei morti fuori dalla porta c’è il figlio del vecchio supplicante di San Giorgio (se usi quel gancio). Per Mattheus è un luogo di fede.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "cappella",
+     "tipo": "dettaglio",
+     "titolo": "La cappella dei morti",
+     "parte": "indizio",
+     "seme": "una cappella bassa con la porta aperta",
+     "innesco": "Qualcuno esce dalla Pustèrla e va alla cappella.",
+     "leggi": "Dentro fa fresco. Tre catafalchi, tre corpi coperti da teli bianchi. Candele. Una vecchia che prega sottovoce, con il rosario.\n\nSu uno dei teli, un mazzetto di lavanda secca, legato con un filo nero.",
+     "note": "Il corpo con la lavanda è il figlio del vecchio supplicante (Ercole, proposta): morto in un crollo nelle cantine del Sestiere. Qualcuno del culto di Mortus veglia i morti che la città lascia aspettare. Per Mattheus: Medicina o Religione CD 12, il corpo non ha le ferite di un crollo, ma le mani piene di terra fino ai gomiti, come se avesse scavato. Niente di più.",
+     "rilancio": "La vecchia smette di pregare e vi guarda. Che cosa fate?",
+     "daqui": [
+      "teramum_tigli"
+     ],
+     "pe": 100
+    }
+   ]
+  }
+ ]
+}

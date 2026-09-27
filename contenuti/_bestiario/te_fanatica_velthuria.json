@@ -1,0 +1,40 @@
+{
+ "id": "te_fanatica_velthuria",
+ "name": "Fanatica di Velthuria",
+ "short": "F",
+ "color": "#6A3D6E",
+ "hp": 44,
+ "ac": 13,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: due colpi di lama del patto"
+  },
+  {
+   "n": "Lama del patto (+1d6 necrotici)",
+   "atk": 4,
+   "dmg": "1d8+2"
+  },
+  {
+   "n": "Blocca persone (TS Sag CD 12, concentrazione)"
+  },
+  {
+   "n": "Comando (TS Sag CD 12)"
+  },
+  {
+   "n": "Arma spirituale (azione bonus)",
+   "atk": 4,
+   "dmg": "1d8+2"
+  }
+ ],
+ "note": "Fanatico del culto (Manuale dei Mostri 2024; statistiche a memoria: verificare nell’SRD) · GS 2 · 450 PE · velocità 9 m. Proposta: Sorella Nerina, di Casa Velthuria, capo della squadra che scava la «chiave vera». Giovane, calma, occhi viola chiaro. Porta la mappa dei tunnel e un medaglione con scheggia lunare.",
+ "src": "Basilica Aurea — La porta con la luna",
+ "tac": "Comanda da dietro i mattoni (copertura tre quarti). Blocca persone sul primo che fa luce forte o su Mattheus. Se resta sola, prova a fuggire giù per la scala pretuziana. Catturata, non tradisce Iuvenza.",
+ "lines": [
+  "Ve l’avevano detto, che vi aspettavano a Teramum.",
+  "Voi cercate un sigillo per chiamare dei vecchi. Noi cerchiamo quello che fa tacere il mondo.",
+  "La Signora è una signora."
+ ],
+ "img": "Ritratto — Fanatica di Velthuria.jpg"
+}

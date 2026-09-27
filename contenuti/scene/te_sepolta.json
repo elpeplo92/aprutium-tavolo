@@ -1,0 +1,742 @@
+{
+ "id": "te_sepolta",
+ "nome": "La Città Sepolta — Lu Sott’a Terre",
+ "menu": "La Città Sepolta",
+ "citta": "Teramum",
+ "ordine": 17,
+ "mappa": {
+  "img": "Battlemap — La Città Sepolta.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Teramum è tre città, una sopra l’altra.\n\nLa Città Visibile, con le basiliche e i palazzi. La Città Vecchia, dell’Impero, con le fondamenta di blocchi squadrati. E sotto, la Città Sepolta: quello che resta di Interamnia, la città dei Pretuziani, prima che l’Impero ci costruisse sopra.\n\nIn città la chiamano Lu Sott’a Terre. Dicono che le cantine arrivino fino alle grotte del Gigante. Dicono che ci giri un uomo con una maschera di mille colori, e che chi lo incontra non muore.\n\nDimentica.",
+  "note": "Scena di Teramum, sottosuolo (voce del Compendio: 6. La Città Sepolta). Tutta al buio: le fonti di luce contano. Si può giocare come esplorazione libera dal crocevia.\nRegola dell’Oblio dell’Arlecchino: nelle note del punto «La scala che cambia pietra».\nFili che si legano: il Ventre Vecchio dell’Arena (la corda nella grotta tiepida), le piccole vie di Frate Davide (il buco a nord del crocevia sale alla cripta di Mortus), la via delle cantine verso Tërrëciallë, e la porta con la luna verso la Basilica: collegamento da decidere.\nScontro: gli Scavatori ciechi nella grotta tiepida, 3.600 PE.",
+  "ingressi": [
+   {
+    "da": "Dalla cantina del magazzino, nel Sestiere del Fiume",
+    "primo": "te_sepolta_scala",
+    "poi": "te_sepolta_crocevia",
+    "note": "L’ingresso normale, dalla porta bassa col chiavistello rotto."
+   },
+   {
+    "da": "Dalla cripta del tempio di Mortus, con Frate Davide",
+    "primo": "te_sepolta_crocevia",
+    "poi": "te_sepolta_taglio",
+    "note": "Dal buco basso a nord del crocevia, carponi. Davide conosce le piccole vie e fa da guida fino al crocevia, alle cantine e alla porta con la luna (dove non vuole tornare)."
+   },
+   {
+    "da": "Dal Ventre Vecchio dell’Arena, con la corda",
+    "primo": "te_sepolta_grotta",
+    "poi": "te_sepolta_colori",
+    "note": "Si arriva nel punto più pericoloso per primo: gli Scavatori ciechi sentono chi scende."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "te_sepolta_scala",
+   "kind": "porta",
+   "title": "La scala che cambia pietra",
+   "image": "Luogo — 6. La Città Sepolta.jpg",
+   "legacyPosition": {
+    "x": 185,
+    "y": 150
+   },
+   "text": "Si entra da una cantina di magazzino, sul fiume: botti, sacchi di sale, e in fondo una porta bassa con il chiavistello rotto. Dietro, una scala.\n\nLa scala cambia pietra mentre scende. Prima mattoni rossi, come quelli delle case di sopra. Poi blocchi squadrati, grigi, imperiali, lisci come tavole. Poi pietre enormi, senza calce, ognuna più grande di un uomo. Poi roccia viva.\n\nIl rumore del mercato sparisce al decimo gradino.\n\nResta l’acqua. Gocciola dal soffitto. Corre in una canaletta scavata al centro dei gradini, e sa di fiume e di ferro.\n\nFa freddo. Un freddo pulito, da chiesa.\n\nLa luce della lanterna arriva a dieci passi, e poi si arrende.",
+   "breve": "Tre città una sopra l’altra, in una scala sola: la Città Visibile, la Città Vecchia imperiale, la Città Sepolta pretuziana. La canaletta dell’acqua è il filo per non perdersi: scende sempre verso il fiume. In fondo alla scala, il crocevia.",
+   "gm": "Teramum è costruita su tre livelli: la Città Visibile, la Città Vecchia (fondamenta imperiali) e la Città Sepolta (i resti di Interamnia Pretutiana: tunnel, templi sepolti, camere rituali). Manuale §4.1.3; 08 - Ducato, «Era della Pietra Sovrapposta».\nL’ingresso dal Sestiere del Fiume è una proposta (voce del luogo).\nOrientarsi: Sopravvivenza CD 14 una volta per ogni ora di cammino. Con l’offerta ai Mazzamarelli al crocevia, vantaggio. Chi fallisce perde un’ora e la lanterna consuma il doppio.\nLuce: tutta la scena è al buio. Contano le fonti di luce, perché l’Arlecchino si mostra solo alla luce e gli Scavatori ciechi non ne hanno bisogno.\nL’OBLIO DELL’ARLECCHINO (proposta della voce del luogo, adottata qui). Chi lo vede in faccia fa un tiro salvezza su Saggezza CD 15. Se fallisce, perde il ricordo dell’ultima ora: di tutto quello che ha visto e scoperto laggiù (il giocatore lo sa, il personaggio no: va giocato). Tre fallimenti nella stessa discesa: perde un ricordo importante, a scelta del master (un nome, un volto, una promessa). Nessun danno. Vantaggio al tiro a chi gli guarda i piedi e non la faccia (consiglio di Frate Davide), e a chi è sotto Protezione dal bene e dal male. Chi non ha luce non lo vede, e quindi non tira: l’Arlecchino si mostra solo alla luce.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "strati",
+     "tipo": "dettaglio",
+     "titolo": "Le pietre della scala",
+     "parte": "indizio",
+     "seme": "Poi pietre enormi, senza calce, ognuna più grande di un uomo. Poi roccia viva.",
+     "innesco": "Qualcuno si ferma a guardare come cambia la pietra.",
+     "leggi": "Si vedono le giunture fra un tempo e l’altro. I mattoni rossi sono appoggiati sopra i blocchi imperiali, storti, come uno che si siede sulla sedia di un altro. I blocchi imperiali tagliano le pietre enormi senza calce, e dove le tagliano, le pietre enormi hanno inciso qualcosa che è stato scalpellato via.",
+     "prove": [
+      {
+       "id": "storia",
+       "abilita": [
+        "Storia"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Pietra vecchia sopra pietra più vecchia. Le città fanno così."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Tre città. I mattoni sono di oggi, i blocchi dell’Impero, le pietre enormi dei Pretuziani di Interamnia. Quando l’Impero rifondò la città, costruì sopra, pietra su pietra."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "E dove l’Impero ha tagliato le pietre pretuziane, ha scalpellato via apposta quello che c’era inciso sopra. Non per fare spazio: per cancellare. Qualcuno, dopo, è venuto a ripassare con il gesso un segno che si intravede ancora: un lupo seduto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno dove sono: sotto le fondamenta dell’Impero, nella città dei Pretuziani.",
+     "rilancio": "La canaletta scende, gorgogliando, nel buio. Che cosa fate?",
+     "daqui": [
+      "te_sepolta_crocevia"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_sepolta_crocevia",
+   "kind": "dettaglio",
+   "title": "Il crocevia dei segni",
+   "image": "PDI — Città Sepolta — Il crocevia.jpg",
+   "legacyPosition": {
+    "x": 640,
+    "y": 425
+   },
+   "text": "In fondo alla scala i corridoi si incrociano senza logica. Un tunnel imperiale, dritto, taglia a metà una stanza tonda più vecchia. Una cantina nobile, con gli archi di mattoni, sfonda un muro di pietre senza calce. Sei aperture, sette. Una è solo un buco basso nel muro, a nord, dove passa una persona carponi.\n\nLa canaletta dell’acqua attraversa il crocevia in diagonale e se ne va verso sud-ovest.\n\nSui muri, segni di gesso. Frecce. Croci. E un cerchio con un punto. Non tutti fatti dalla stessa mano.\n\nIn mezzo al crocevia, su una pietra piatta, un piattino. Dentro, un goccio di Ratafià e un Bocconotto. Freschi. Qualcuno li ha portati fin qui stamattina.\n\nMentre guardate il piattino, la fiamma della lanterna si piega. Non c’è vento.",
+   "breve": "Il cuore della scena: da qui si va dappertutto. Tre mani hanno lasciato segni: gli scavatori de Spina (croci, verso l’Arena), Frate Davide (cerchi col punto, verso le cantine e la cripta di Mortus), e qualcuno che segna la strada verso la Basilica con polvere d’osso. I Mazzamarelli spostano i segni e spengono le lanterne: un’offerta li mette dalla parte del gruppo.",
+   "gm": "Direzioni dal crocevia: a nord, il buco basso della piccola via di Davide (sale alla cripta del tempio di Mortus); a nord-est, il tunnel imperiale verso la stanza tagliata e poi verso il colle (la porta con la luna); a ovest, la galleria delle cantine verso Tërrëciallë; a sud, la lunga galleria dei colori; a sud-est, la discesa verso la grotta tiepida (e la corda dell’Arena).\nLe frecce di polvere d’osso: qualcuno le traccia da qualche mese, verso la Basilica. Da decidere chi. Proposta: agenti di Veneranda Iuvenza, che cerca il «passaggio sotto la Basilica Aurea», «la chiave vera» (diario, Atto XI). Alternativa: Casa Umbra, «Le Voci del Profondo», che vive nelle cripte sotto la città (08 - Ducato). Non scegliere al tavolo: lasciare le frecce.\nI Mazzamarelli: folletti delle cantine e dei crocevia (08 - Ducato). Qui sono in casa. Non combattono: fanno dispetti. Il piattino l’ha portato Frate Davide.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "segni",
+     "tipo": "dettaglio",
+     "titolo": "Leggere i segni di gesso",
+     "parte": "indizio",
+     "seme": "Frecce. Croci. E un cerchio con un punto. Non tutti fatti dalla stessa mano.",
+     "innesco": "Qualcuno studia i segni sui muri.",
+     "leggi": "Le croci sono grandi, fatte con un gesso grosso, da cantiere. I cerchi col punto sono piccoli, precisi. E poi ci sono delle frecce più sottili, grigie, di una polvere più fine del gesso, che non si cancella strofinando.",
+     "note": "Se Mattheus conosce Davide, riconosce il cerchio col punto senza tiro.",
+     "prove": [
+      {
+       "id": "indagare",
+       "abilita": [
+        "Indagare"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "Frecce e croci. Seguite le frecce: dopo un’ora vi ritrovate qui. Qualcuno le ha girate."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 12,
+         "leggi": "Frecce e croci. Qualcuno è passato. Più d’uno."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Tre mani diverse. Le croci vengono da sud-est e ci tornano (gli scavatori). I cerchi col punto vanno a nord e a ovest, verso le cantine. Le frecce grigie vanno tutte a nord-est, verso il colle."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "max": 21,
+         "leggi": "Tutto quello di sopra, e la polvere grigia non è gesso: è polvere d’osso macinata. Le frecce puntano verso la Basilica. E alcune croci sono state girate di recente da una mano molto piccola."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Tutto quello di sopra, e sotto una freccia grigia, grattata via, un’impronta di guanto nella polvere d’osso. Guanto fine, da signora. Chi traccia le frecce non si sporca le mani."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 13+ sanno leggere le direzioni: croci verso l’Arena (sud-est), cerchi verso le cantine e la cripta (nord e ovest), frecce di polvere d’osso verso la Basilica (nord-est).",
+     "rilancio": "Sette aperture, tre mani, una fiamma che si piega. Che cosa fate?",
+     "daqui": [
+      "mazzamarelli",
+      "te_sepolta_taglio",
+      "te_sepolta_portocenere",
+      "te_sepolta_colori",
+      "te_sepolta_grotta"
+     ],
+     "pe": 150
+    },
+    {
+     "id": "mazzamarelli",
+     "tipo": "dettaglio",
+     "titolo": "La fiamma che si piega",
+     "parte": "indizio",
+     "seme": "Mentre guardate il piattino, la fiamma della lanterna si piega. Non c’è vento.",
+     "innesco": "La lanterna si piega; qualcuno reagisce, o tocca il piattino, o si mette a sentire.",
+     "leggi": "La fiamma si piega ancora. Poi, dal buio a destra, una risata piccola, acuta, di bambino. Poi un’altra, a sinistra. Una corda arrotolata sulla spalla di qualcuno si srotola da sola, un giro, due, e cade a terra facendo un nodo.\n\nIl Bocconotto nel piattino non c’è più. C’erano briciole. Adesso non ci sono neanche quelle.",
+     "note": "I Mazzamarelli (vedi Bestiario: Mazzamarello, se qualcuno insiste per combattere; sono Minuscoli, invisibili a volontà, e scappano nei muri).\nCON UN’OFFERTA (Ratafià, un dolce, vino e pane, anche un canto): da un buco nel muro esce una manina e rimette una freccia di gesso al suo posto. Per tutta la scena: vantaggio alle prove per orientarsi, e una volta, nel momento peggiore (la grotta, l’Arlecchino, una fuga), una lanterna che si era spenta si riaccende da sola.\nSENZA OFFERTA: una lanterna si spegne ogni ora; le corde fanno nodi; il primo che attraversa il crocevia di corsa inciampa (TS Destrezza CD 12 o Prono).\nSE QUALCUNO LI ATTACCA O PRENDE IL PIATTINO: per tutta la scena, svantaggio alle prove per orientarsi, e le croci degli scavatori vengono girate: seguirle porta alla grotta tiepida, sempre.",
+     "dopo": "Con l’offerta, i Mazzamarelli sono dalla loro parte. Senza, sono un fastidio costante. Contro, sono un pericolo.",
+     "rilancio": "Una risatina, lontana. Che cosa fate?",
+     "daqui": [
+      "te_sepolta_taglio",
+      "te_sepolta_portocenere",
+      "te_sepolta_colori",
+      "te_sepolta_grotta"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_sepolta_taglio",
+   "kind": "stanza",
+   "title": "La stanza tagliata",
+   "image": "PDI — Città Sepolta — La stanza tagliata.jpg",
+   "legacyPosition": {
+    "x": 1050,
+    "y": 300
+   },
+   "text": "A nord-est, il tunnel imperiale entra in una stanza tonda e la taglia in due. Il tunnel ha la volta di mattoni, dritta, perfetta. La stanza è più vecchia: una cupola bassa di pietre enormi, senza calce, che si reggono da sole.\n\nMetà stanza è rimasta di qua dal muro del tunnel, metà di là. Si vede ancora il cerchio del pavimento, spezzato.\n\nLe pareti curve sono coperte di lettere incise. Righe, righe, righe, dal pavimento fino alla cupola. Non sono Aureo.\n\nIn mezzo al pavimento, dove il cerchio è ancora intero, un foro. Tondo, largo quanto un braccio. Ci si sente cadere l’acqua, lontano, molto più giù.",
+   "breve": "Una camera rituale pretuziana tagliata a metà dal tunnel imperiale. Le iscrizioni sono indicazioni per le processioni che scendevano «verso chi dorme», e verso il colle. Qui le frecce di polvere d’osso proseguono lungo il tunnel imperiale verso la porta con la luna.",
+   "gm": "Il Circolo dei Glossatori sa leggere il Pretuziano Antico delle grotte (voce del luogo). Tancredus, se gli portano un calco, ne sarebbe felice.\nLe iscrizioni dicono (Storia CD 16): «Giù, verso chi dorme.» e, più in piccolo, ripetuto in tondo: «Chi scende canta. Chi canta non si perde.» È un’indicazione per le processioni: si scendeva cantando, perché la voce facesse eco e si sapesse sempre dove si era. Il Cantico del Gigante (Manuale, animismo pretuziano) potrebbe essere questo.\nIl foro scende molto in basso, verso le grotte del Gigante (08 - Ducato: «Si dice che le cantine di Teramum siano collegate alle grotte del Gigante»).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "lettere",
+     "tipo": "dettaglio",
+     "titolo": "Le lettere sulla cupola",
+     "parte": "indizio",
+     "seme": "Le pareti curve sono coperte di lettere incise. Righe, righe, righe, dal pavimento fino alla cupola. Non sono Aureo.",
+     "innesco": "Qualcuno studia le iscrizioni.",
+     "leggi": "Le lettere sono profonde, fatte per durare. Seguono la curva del muro, in tondo, e ogni giro è un po’ più in alto del precedente, come una scala a chiocciola scritta.",
+     "note": "EFFETTO AL TAVOLO: se il gruppo, da qui in poi, canta o recita qualcosa ad alta voce mentre cammina, ha vantaggio alle prove per orientarsi e al TS contro l’Oblio dell’Arlecchino. Da decidere se è vero o se è solo coraggio: al tavolo funziona.\nAdamus (druido) o chiunque conosca il Silvano può provare a «sentire» la stanza: Natura CD 14 — la pietra qui vibra piano, a tratti, come una corda toccata lontano.",
+     "prove": [
+      {
+       "id": "storia",
+       "abilita": [
+        "Storia"
+       ],
+       "cd": 16,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 15,
+         "leggi": "Lettere di una lingua che nessuno parla più."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 19,
+         "leggi": "È Pretuziano Antico. Indicazioni per chi scendeva in processione: «Giù, verso chi dorme.» Una freccia incisa punta verso il colle. Un’altra, giù, nel foro."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "«Giù, verso chi dorme.» E, ripetuto in tondo fino alla cupola: «Chi scende canta. Chi canta non si perde.» Le processioni scendevano cantando. Qualcuno, in questo buio, ha paura del silenzio."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che le processioni pretuziane scendevano «verso chi dorme», cantando, e che una via va verso il colle.",
+     "rilancio": "Dal foro sale il rumore dell’acqua, da molto lontano. Che cosa fate?",
+     "daqui": [
+      "calco",
+      "te_sepolta_luna"
+     ],
+     "pe": 150
+    },
+    {
+     "id": "calco",
+     "tipo": "bottino",
+     "titolo": "Un calco delle iscrizioni",
+     "parte": "evento",
+     "innesco": "Qualcuno copia le iscrizioni su carta, stoffa o cera.",
+     "leggi": "Ci vuole un’ora, carta e carbone. La cupola è alta: qualcuno deve salire sulle spalle di un altro.",
+     "note": "Un’ora di tempo: tira una volta sull’incontro con l’Arlecchino (vedi punto «La galleria dei colori»: può comparire in fondo al tunnel).",
+     "dopo": "Il calco si può portare a Tancredus o al Circolo dei Glossatori.",
+     "rilancio": "Il calco è arrotolato. Che cosa fate?",
+     "daqui": [
+      "te_sepolta_luna"
+     ],
+     "bottino": [
+      {
+       "n": "Calco delle iscrizioni pretuziane",
+       "q": 1,
+       "cat": "Documenti",
+       "peso": "—",
+       "valore": "Non stabilito",
+       "stats": "Oggetto di trama",
+       "desc": "Carbone su carta: le righe incise della stanza tonda sotto il Sestiere. «Giù, verso chi dorme.» Casa Tancredus e il Circolo dei Glossatori sanno leggerlo tutto.",
+       "a": "crociata"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_sepolta_luna",
+   "kind": "porta",
+   "title": "La porta con la luna",
+   "image": "PDI — Città Sepolta — La porta con la luna.jpg",
+   "legacyPosition": {
+    "x": 1300,
+    "y": 125
+   },
+   "text": "Il tunnel imperiale sale, piano, verso il colle. Dopo duecento passi la volta si abbassa, e fa freddo. Un freddo diverso: non umido, secco, come a gennaio in montagna. Il fiato fa fumo.\n\nIl tunnel finisce contro un arco murato. Non mattoni: pietre grigie enormi, messe insieme senza calce, così precise che non ci passa una lama.\n\nIn mezzo alla pietra centrale, incisa, una luna. Piena. Intorno, sulla pietra, la brina.\n\nDavanti alla porta, per terra, mozziconi di candela. Tanti. Tutti piegati dalla stessa parte: verso la porta.\n\nL’ultima freccia di polvere d’osso è qui. Sotto la luna. Punta dritta dentro la pietra.",
+   "breve": "La fine della strada verso la Basilica: un arco pretuziano murato, con una luna incisa, e un freddo che non è di questo mondo. Le frecce di polvere d’osso finiscono qui. Da qui non si passa, oggi. Il collegamento con la cripta sotto la Basilica è da decidere.",
+   "gm": "Da decidere, tutto. Il canone dice: sotto la Basilica Aurea c’è un Sigillo Lunare attivato durante la Guerra delle Due Lune (08 - Ducato, Segreti); la Basilica è il tappo spirituale; Iuvenza cerca un «passaggio sotto la Basilica Aurea», «la chiave vera» (Atto XI); l’Arena è l’accesso al livello più profondo; il labirinto porta sia al Sigillo sia alla via segreta verso L’Aquila Aurea. Nella voce della Basilica: sotto la cripta c’è una porta murata con una luna incisa, e chi l’ha vista ha preso la febbre; le candele davanti alla scala della cripta si piegano tutte dalla stessa parte.\nDa decidere: questa porta è la stessa porta con la luna della cripta, vista dall’altro lato? Oppure un’altra porta dello stesso luogo? Proposta: è l’altro lato. Dietro c’è lo spazio del Sigillo, fra la Città Sepolta e la cripta della Basilica; di qua è murata dai Pretuziani, di là dalla Chiesa. Non risolverlo al tavolo.\nDa decidere: la forgia di annullamento sotto la «Cattedrale Ducale» (Atto IX, Meren) sta qui dietro? Non scelto (conflitto già segnalato nella voce della Basilica).\nATTENZIONE: il Filatterio di Lyaras. Se Mattheus porta il Filatterio fin qui, la brina sulla pietra si ritira da lui come acqua da una goccia d’olio, e il Filatterio si fa pesante e caldo. Meren ha detto che Silvanus non deve avvicinarsi al filatterio; non ha detto niente di questa porta. Non dare altro.\nAprire: non si apre. Nessuna prova. Forzarla richiederebbe giorni e strumenti, e la brina brucia (1d6 danni da freddo a chi la tocca a mani nude).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "freddo",
+     "tipo": "dettaglio",
+     "titolo": "Il freddo della porta",
+     "parte": "evento",
+     "innesco": "Il gruppo si avvicina alla porta.",
+     "leggi": "A tre passi dalla porta il freddo morde le dita. A due passi la lanterna si fa piccola, azzurra alla base. A un passo, se si sta zitti, si sente qualcosa.\n\nNon un rumore. Una nota. Tenuta, lontanissima, come qualcuno che canta a bocca chiusa dall’altra parte di una montagna.",
+     "note": "Individuazione del Magico: dietro la pietra, un’aura di Abiurazione fortissima, e sotto, a tratti, qualcosa di Necromanzia che pulsa (la magia di Lyaras che ha disturbato il Sigillo: 08 - Ducato). Vicarus o Mattheus possono riconoscere la somiglianza con il Quarto Sigillo senza tiro.",
+     "prove": [
+      {
+       "id": "arcano",
+       "abilita": [
+        "Arcano",
+        "Religione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Freddo, e una nota nelle orecchie. Forse è il sangue."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 18,
+         "leggi": "Magia. Tanta, dietro la pietra, trattenuta, schiacciata. Qualcosa di chiuso, non di morto. Ricorda quello che avete sentito nella Stanza del Quarto Sigillo, sotto Bëllindë."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "È dello stesso genere del Quarto Sigillo di Bëllindë: una custodia. Ma questa è disturbata: il canto è stonato, a tratti, come una corda che si sta allentando."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che dietro questa porta c’è una custodia simile al Quarto Sigillo, disturbata. Non sanno cos’è, e non possono passare.",
+     "rilancio": "La nota continua, dall’altra parte della pietra. Che cosa fate?",
+     "daqui": [
+      "polvere"
+     ],
+     "pe": 200
+    },
+    {
+     "id": "polvere",
+     "tipo": "dettaglio",
+     "titolo": "L’ultima freccia",
+     "parte": "indizio",
+     "seme": "L’ultima freccia di polvere d’osso è qui. Sotto la luna. Punta dritta dentro la pietra.",
+     "innesco": "Qualcuno esamina la freccia di polvere d’osso o i mozziconi di candela.",
+     "leggi": "La freccia è fresca: la polvere non ha ancora preso l’umido. Accanto, per terra, uno dei mozziconi di candela è diverso dagli altri: cera rossa, profumata, di quelle che si comprano nelle botteghe dei Tigli, non nei banchi del Sestiere.",
+     "note": "Da decidere chi sia (vedi note del crocevia). Proposta: gli agenti di Iuvenza misurano la porta per trovarla dalla cripta della Basilica, da sopra. La candela di cera rossa profumata viene dal Quartiere dei Tigli.",
+     "prove": [
+      {
+       "id": "indagare",
+       "abilita": [
+        "Indagare",
+        "Percezione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Chi traccia le frecce è passato di qui. Non sapete quando."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "È passato di qui da pochi giorni, con una candela di lusso. E ha misurato la porta: sulla pietra, in basso, tre tacche fresche di coltello, a distanze precise."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Tre tacche, e una quarta, lontana, sul muro del tunnel, dieci passi indietro: qualcuno ha preso le misure per sapere dove sta questa porta rispetto a qualcosa di sopra. Chi cerca di sopra, cerca di arrivarci dall’altra parte."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che qualcuno di ricco sta cercando di trovare questa porta da sopra, dalla Basilica.",
+     "rilancio": "Le candele piegate indicano tutte la porta. Che cosa fate?",
+     "daqui": [
+      "te_sepolta_crocevia"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_sepolta_portocenere",
+   "kind": "corridoio",
+   "title": "La via delle cantine",
+   "image": "PDI — Città Sepolta — La via delle cantine.jpg",
+   "legacyPosition": {
+    "x": 205,
+    "y": 720
+   },
+   "text": "A ovest del crocevia comincia una galleria lunga, di mattoni. Non è un tunnel: sono cantine. Una dopo l’altra, cantine di case nobili, con i muri divisori sfondati per farne una strada.\n\nRastrelliere di vino vuote. Una botte grande come una stanza, sfasciata. Un camino murato. Stemmi scalpellati sopra gli archi.\n\nPiù si va a ovest, più i muri sono grigi. Non di sporco: di cenere. Una cenere fine che copre tutto, e che non vola quando ci si passa accanto.\n\nDa ovest, dal fondo, arriva un filo d’aria. Sa di camino spento e di vino vecchio.\n\nSull’ultimo arco prima del buio, qualcuno ha scritto col dito, nella cenere, un nome. Poi l’ha cancellato. Poi l’ha riscritto.",
+   "breve": "Una strada fatta di cantine sfondate che porta fuori dalla città, verso Tërrëciallë, il borgo del Castellano Fantasma dei Portocenere. È la «via segreta» del canone. Oggi il gruppo può seguirla solo per un tratto: è lunga giorni, e la cenere si fa più fitta. Nella cantina più profonda, un bottino dei Portocenere.",
+   "gm": "Canone: «Le cantine di Tërrëciallë (casa dei Portocenere fantasma) sono collegate alle cripte della Capitale» (08 - Ducato, Segreti); Tërrëciallë, «Torricella Sicura», Castellano Fantasma dei Portocenere, «Cantine collegate alle cripte della Capitale. Via segreta.»\nLa cenere: proposta, è la firma dei Portocenere. Non brucia, non si solleva. Più si va verso Tërrëciallë, più è fitta.\nIl nome scritto nella cenere: da decidere. Proposta: «Aurelia». Qualcuno dei Portocenere, o il Castellano stesso, viene fin qui a scriverlo e a cancellarlo. Nessuno sa chi sia Aurelia.\nDistanza fino a Tërrëciallë: da decidere. Proposta: una notte e un giorno di cammino al buio.\nQuesta via non è nel percorso di questa scena: se il gruppo la segue oltre l’ultimo arco, ferma la scena e segnala che Tërrëciallë va preparata.",
+   "nota": {
+    "cd": 12
+   },
+   "moduli": [
+    {
+     "id": "cenere",
+     "tipo": "dettaglio",
+     "titolo": "La cenere che non vola",
+     "parte": "indizio",
+     "seme": "Una cenere fine che copre tutto, e che non vola quando ci si passa accanto.",
+     "innesco": "Qualcuno tocca la cenere o ci soffia sopra.",
+     "leggi": "La cenere è morbida, fredda. Si attacca alle dita come farina. Ci soffiate sopra, e non si muove. Scrivete col dito: la riga resta. Dopo un momento, piano, la cenere torna a coprirla da sola.",
+     "prove": [
+      {
+       "id": "arcano",
+       "abilita": [
+        "Arcano",
+        "Religione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Cenere vecchia. Un incendio, tanto tempo fa."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Non è cenere di incendio. È magia, lenta e vecchia, come un incantesimo che nessuno ha mai finito. Tiene le cose come sono: nasconde, conserva."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "È una custodia anche questa, ma di famiglia, non di guerra. Chi l’ha fatta voleva che queste cantine restassero com’erano il giorno in cui è successo qualcosa. Il nome sull’arco è stato scritto molte volte, ogni volta dalla stessa mano."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che questa è una via antica e custodita, verso ovest, fuori dalla città.",
+     "rilancio": "Il nome nella cenere, cancellato e riscritto. Che cosa fate?",
+     "daqui": [
+      "cantina"
+     ]
+    },
+    {
+     "id": "cantina",
+     "tipo": "bottino",
+     "titolo": "L’ultima cantina",
+     "parte": "evento",
+     "innesco": "Il gruppo arriva all’ultimo arco e guarda nella cantina più profonda.",
+     "leggi": "L’ultima cantina prima del buio ha ancora le bottiglie. Venti, trenta, coricate nella rastrelliera, coperte di cenere. Il vetro è verde scuro, spesso, e ogni tappo è sigillato con cera grigia su cui è impressa una torre piccola dentro un cerchio.\n\nSu una mensola, dentro una nicchia, un anello d’argento annerito. E un bicchiere, uno solo, pulito.",
+     "note": "Le bottiglie: vino dei Portocenere, vecchio di chissà quanto. Chi lo beve (una bottiglia per quattro): per un’ora, sogna a occhi aperti una sala piena di gente che ride; nessun effetto meccanico, ma per quell’ora ha vantaggio ai TS contro l’Oblio dell’Arlecchino («c’è già un ricordo qui, e non è mio»). Da decidere se ha altri effetti.\nL’anello: argento, con la torre nel cerchio. Da decidere cosa succede se qualcuno lo porta a Tërrëciallë. Proposta: il Castellano Fantasma lo riconosce, e chi lo porta è ospite, non intruso.\nIl bicchiere pulito: qualcuno, di recente, è venuto qui a bere un bicchiere da solo. Non ci sono impronte nella cenere.",
+     "dopo": "Il gruppo ha un oggetto che apre una porta a Tërrëciallë (se Giuseppe la prepara).",
+     "rilancio": "Il bicchiere pulito vi guarda dalla nicchia. Che cosa fate?",
+     "daqui": [
+      "te_sepolta_crocevia",
+      "te_sepolta_colori"
+     ],
+     "bottino": [
+      {
+       "n": "Anello della torre nel cerchio",
+       "q": 1,
+       "cat": "Oggetti preziosi",
+       "peso": "—",
+       "valore": "25 mo (argento); il resto da decidere",
+       "stats": "Non magico (forse)",
+       "desc": "Anello d’argento annerito, con una torre piccola dentro un cerchio. Trovato in una nicchia dell’ultima cantina della via dei Portocenere, sotto Teramum."
+      },
+      {
+       "n": "Vino dei Portocenere",
+       "q": 6,
+       "cat": "Provviste",
+       "peso": "1,5 kg l’una",
+       "valore": "10 mo l’una (per un collezionista, molto di più)",
+       "stats": "Una bottiglia per quattro: per un’ora vantaggio ai TS contro l’Oblio dell’Arlecchino",
+       "desc": "Vetro verde scuro, tappo sigillato con cera grigia e la torre nel cerchio. Chi lo beve sogna una sala piena di gente che ride.",
+       "a": "crociata"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_sepolta_colori",
+   "kind": "persona",
+   "title": "La galleria dei colori",
+   "image": "PDI — Città Sepolta — La galleria dei colori.jpg",
+   "legacyPosition": {
+    "x": 700,
+    "y": 770
+   },
+   "text": "A sud del crocevia una galleria corre dritta, lunga, più lunga di quanto la lanterna possa mostrare. È larga, alta, fatta per passarci in tanti: in processione.\n\nSulle pareti, a tratti, sotto la muffa, si vedono pezzi di pittura. Colori che qui sotto non dovrebbero esserci. Un rosso di melograno. Un azzurro. Un giallo come il grano a giugno. Frammenti di figure che ballano, o combattono, non si capisce.\n\nLa canaletta dell’acqua corre sul lato sinistro, e il suo rumore riempie tutto.\n\nPoi smette. L’acqua continua a scorrere, ma senza rumore.\n\nIn fondo alla galleria, dove la vostra luce finisce, c’è un lampo di colori. Rosso, verde, giallo, azzurro, a rombi. Fermo. Alto come un uomo.\n\nVi sta guardando.",
+   "breve": "L’Arlecchino delle Grotte. Si mostra solo alla luce, in fondo al corridoio, poi è a tre passi senza essersi mosso. Non parla; se parla, ride. Non fa male: chi lo guarda in faccia dimentica. È un incontro, non uno scontro. Chi lo sa gestire (guardargli i piedi, cantare, spegnere la luce) passa con i ricordi intatti.",
+   "gm": "Canone: «Nel sottosuolo di Teramum, tra le cripte Pretuziane e i tunnel imperiali, si aggira una figura con una maschera di mille colori. Chi lo incontra non muore, ma dimentica.» (08 - Ducato). Chi o che cosa sia: non stabilito, e resta un mistero (voce del luogo: «Tenerlo un mistero»).\nScheda nel Compendio: L’Arlecchino delle Grotte. Statistiche nel Bestiario solo per il caso in cui qualcuno lo attacchi: non è fatto per essere ucciso.\nL’OBLIO DELL’ARLECCHINO (proposta della voce del luogo, adottata qui). Chi lo vede in faccia fa un tiro salvezza su Saggezza CD 15. Se fallisce, perde il ricordo dell’ultima ora: di tutto quello che ha visto e scoperto laggiù (il giocatore lo sa, il personaggio no: va giocato). Tre fallimenti nella stessa discesa: perde un ricordo importante, a scelta del master (un nome, un volto, una promessa). Nessun danno. Vantaggio al tiro a chi gli guarda i piedi e non la faccia (consiglio di Frate Davide), e a chi è sotto Protezione dal bene e dal male. Chi non ha luce non lo vede, e quindi non tira: l’Arlecchino si mostra solo alla luce.\nCOME SI MUOVE: comincia in fondo al corridoio, a 18 m. Ogni volta che il gruppo guarda altrove, o batte le palpebre (ogni round), è più vicino: 9 m, poi 3 m, poi accanto. Non cammina. Non si vede muoversi.\nCOSA VUOLE: da decidere. Proposte, non da dire: prende i ricordi che la città ha lasciato cadere qui sotto e li tiene, come un custode di una memoria che nessuno vuole; oppure è l’ultimo attore dell’Arena, il giullare della notte in cui l’arena fu mangiata; oppure qualcosa che viene dal sonno del Gigante. Tenerlo aperto.\nFrate Davide lo ha visto almeno sette volte (sette nodi). Ciccio Pagliaro (Lu Scurdate) una. Padre Cassio forse una, tre anni fa.",
+   "nota": {
+    "cd": 18
+   },
+   "moduli": [
+    {
+     "id": "incontro",
+     "tipo": "dettaglio",
+     "titolo": "L’Arlecchino si avvicina",
+     "parte": "evento",
+     "innesco": "Il gruppo ha luce e la galleria davanti. Oppure, in qualunque punto della scena, quando il master lo decide (dopo un’ora persa, dopo il calco, dopo la porta con la luna).",
+     "leggi": "Batte le palpebre, uno di voi. Solo quello.\n\nE adesso è più vicino. A metà galleria. Non l’avete visto camminare.\n\nUn costume di rombi di mille colori, stretto, consumato ai gomiti. Le mani lunghe, in guanti bianchi. I piedi nudi, grigi, puliti, che non lasciano impronte nel fango.\n\nLa faccia è una maschera. Di cuoio nero, lucida, con il naso lungo e gli occhi a mandorla, e dietro gli occhi della maschera non si vede niente.\n\nPiega la testa di lato, come un cane che ascolta.\n\nPoi fa un inchino. Lungo, elegante, da teatro.",
+     "note": "Chi lo guarda in faccia (tutti, a meno che non dicano di no PRIMA di leggere questo testo, o abbiano già il consiglio di Davide): TS Saggezza CD 15, con le regole dell’Oblio.\nLE SCELTE CHE FUNZIONANO: guardargli i piedi (vantaggio al TS); cantare o recitare ad alta voce (vantaggio; la stanza tagliata lo suggerisce); spegnere tutte le luci (sparisce: al buio non c’è); rispondere all’inchino con un inchino (vedi modulo «L’inchino»).\nLE SCELTE CHE NON FUNZIONANO: attaccarlo (vedi modulo «Se lo attaccano»); scappare (è sempre in fondo al corridoio da cui si scappa, finché ci sono luci accese); parlargli (ride).\nINDIVIDUAZIONE DEL MAGICO: niente. Non c’è magia. È questo che fa più paura.\nIndividuazione del bene e del male / Percezione del divino di Alessandros: niente. Non è un immondo, non è un non morto, non è celestiale, non è fatato. Non è niente di quello che avete un nome per dire.",
+     "prove": [
+      {
+       "id": "oblio",
+       "abilita": [
+        "TS Sag"
+       ],
+       "cd": 15,
+       "gruppo": "tutti",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "Batte le palpebre. È mattina? No. Non sapete dove siete, né da quanto. La lanterna è più consumata di come ricordate. Avete perso l’ultima ora, e un nome vi sfugge: quello di qualcuno a cui volete bene. Tornerà, forse."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 14,
+         "leggi": "Batte le palpebre. Il corridoio è vuoto. Ricordate di essere scesi. Non ricordate quello che avete visto nell’ultima ora."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Lo guardate, e lui vi guarda, e per un momento vi sembra che dietro la maschera ci sia una stanza piena di gente che ride. Poi niente. Ricordate tutto."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Lo guardate, e lui si ferma. Piega la testa dall’altra parte, curioso. Per la prima volta sembra sorpreso. Ricordate tutto, e sapete una cosa in più: vi ha riconosciuti. Non voi: qualcosa che portate."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Per un solo battito vedete sotto la maschera. Non una faccia. Una folla. Mille facce di gente seduta su gradinate, che guarda giù. Poi niente. Ricordate tutto. E sapete che l’Arena e quest’uomo sono la stessa storia."
+        }
+       ]
+      }
+     ],
+     "dopo": "Chi fallisce il TS perde l’ultima ora (il giocatore sa, il personaggio no). Il master decide quando l’Arlecchino se ne va: di solito dopo l’inchino, o quando qualcuno fa qualcosa che lo sorprende. Il «vi ha riconosciuti» del 20+: il Filatterio di Mattheus, o l’armatura di Alessandros, o Silvanus se c’è. Da decidere quale; proposta: il Filatterio (è l’unica cosa nel gruppo che rifiuta di dimenticare).",
+     "rilancio": "L’Arlecchino è fermo. Il fango non ha impronte. Che cosa fate?",
+     "daqui": [
+      "inchino",
+      "attacco"
+     ],
+     "pe": 700
+    },
+    {
+     "id": "inchino",
+     "tipo": "dettaglio",
+     "titolo": "L’inchino",
+     "parte": "nascosto",
+     "innesco": "Qualcuno risponde all’inchino dell’Arlecchino con un inchino, o con un gesto da teatro, o con un applauso.",
+     "leggi": "L’Arlecchino si raddrizza. Resta immobile un lungo momento.\n\nPoi ride. Una risata senza fiato, dentro la maschera, come uno che ride in una stanza vicina.\n\nFa un passo indietro. Un altro. Un giro su se stesso, leggero, da ballerino. E per la prima volta si muove davanti ai vostri occhi: si volta, e cammina via, verso il fondo della galleria, verso sud, dove l’aria è tiepida.\n\nSi ferma. Si gira. Vi fa cenno: da questa parte.",
+     "note": "Se lo seguono: li porta alla grotta tiepida, fino al bordo della spaccatura, senza che nessuno debba tirare contro l’Oblio. Poi, sulla soglia della grotta, si gira, si mette un dito sulla bocca della maschera (silenzio), e indica il buio in fondo alla grotta. E sparisce.\nÈ un avvertimento: là dentro c’è qualcosa. Chi lo segue arriva alla grotta senza essere sorpreso dagli Scavatori ciechi.\nChi risponde all’inchino non tira più contro l’Oblio per il resto della discesa. Da decidere se vale per sempre.",
+     "dopo": "L’Arlecchino li ha guidati alla grotta tiepida e li ha avvertiti. Non sorpresi dagli Scavatori ciechi.",
+     "rilancio": "Il lampo di colori sparisce nel buio. Dalla grotta sale aria calda. Che cosa fate?",
+     "daqui": [
+      "te_sepolta_grotta"
+     ],
+     "pe": 300
+    },
+    {
+     "id": "attacco",
+     "tipo": "dettaglio",
+     "titolo": "Se lo attaccano",
+     "parte": "evento",
+     "innesco": "Qualcuno attacca l’Arlecchino.",
+     "leggi": "L’arma lo attraversa come si attraversa un telo dipinto. Dove l’ha colpito, i colori del costume si sfilacciano e tornano a posto.\n\nLui non si difende. Si china piano sul colpevole, vicinissimo, la maschera a un palmo dalla sua faccia.\n\nE lo guarda.",
+     "note": "Bestiario: «L’Arlecchino delle Grotte» (per chi insiste). Ogni attacco che lo colpisce ha il 50% di passarlo senza effetto. Chi lo attacca fa subito un TS Saggezza CD 15 contro l’Oblio con svantaggio. Se in qualche modo scende a 0 PF, si scompone in una pioggia di rombi colorati che cadono a terra e diventano polvere di pietra: e alla luce successiva è di nuovo in fondo al corridoio. Non si uccide. Non dare PE per averlo «vinto».",
+     "dopo": "Chi l’ha attaccato ha quasi certamente perso l’ultima ora. L’Arlecchino se ne va quando nessuno guarda.",
+     "rilancio": "La galleria è vuota. Qualcuno di voi non ricorda perché ha la spada in mano. Che cosa fate?",
+     "daqui": [
+      "te_sepolta_grotta"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_sepolta_grotta",
+   "kind": "scontro",
+   "title": "La grotta tiepida",
+   "image": "PDI — Città Sepolta — La grotta tiepida.jpg",
+   "legacyPosition": {
+    "x": 1150,
+    "y": 865
+   },
+   "text": "La galleria finisce e la pietra lavorata finisce con lei. Da qui è grotta: roccia viva, curva, bagnata, che scende.\n\nL’aria è tiepida. Poi calda. Sa di terra rivoltata, di zolfo leggero, di ferro.\n\nIl soffitto si alza. È una sala grande come una chiesa, naturale, con le colonne fatte dall’acqua. Dall’alto, da un buco nel soffitto, pende una corda. In fondo alla corda, mucchi di terra e pietre scavate, un piccone rotto, una lanterna chiusa, spenta, rovesciata.\n\nIn mezzo alla sala il pavimento si apre in una spaccatura lunga, nera, da cui sale il calore. Il bordo trema. Appena. Come quando passa un carro. Non passa nessun carro.\n\nSul bordo della spaccatura, dall’altra parte, la roccia è stata scavata. Non da picconi. Da qualcosa che ha fatto buchi tondi, lisci, grandi come una porta, dentro la pietra viva.",
+   "breve": "Il fondo raggiungibile: la grotta sotto l’Arena, dove arriva la corda degli scavatori dal Ventre Vecchio. La spaccatura calda scende verso le grotte del Gigante. Dai buchi tondi escono due Scavatori ciechi (Umber hulk), risaliti dal profondo e attirati dai colpi di piccone de Spina. Poi si può risalire all’Arena con la corda.",
+   "gm": "La corda pende dal pozzo del Ventre Vecchio (scena «L’Arena Sprofondata», punto «Il Ventre Vecchio»): dieci metri al primo ripiano, poi corridoio grigio e scala stretta fino al buco nel soffitto della grotta. È «dove il fango è caldo» di Ciccio Pagliaro.\nLa spaccatura: scende verso le grotte del Gigante. Il tremore è il respiro del Gigante («Quann’ lu Gigante se ’ngrugne, treme la terre»). Da decidere quanto sia profonda e dove porti. Proposta: è l’inizio della via verso L’Aquila Aurea sotto le montagne (voce 3 della voce del luogo: tre giorni senza vedere il sole).\nCasa Umbra: «Qualcosa di terribile sta risalendo dalle profondità» (08 - Ducato). Gli Scavatori ciechi sono una parte di questo, non tutto. Da decidere.\nForze (6 PG di livello 5, difficoltà moderata-alta, 3.600 PE): 2 Scavatori ciechi (Umber hulk, MM 2024, GS 5, 1.800 PE l’uno). Escono dai buchi tondi dopo il primo round in cui qualcuno fa rumore nella grotta (o subito, se il gruppo non è stato avvertito dall’Arlecchino, con sorpresa: chi non se ne accorge ha svantaggio all’iniziativa). Per abbassarla: uno solo, e il secondo si sente scavare lontano. Per alzarla: un terzo che sbuca dal soffitto al terzo round.\nTerreno: la spaccatura (larga 3 m, calda: chi ci cade prende 2d6 da fuoco e 3d6 contundenti e rimane aggrappato 6 m più giù, Atletica CD 13 per risalire); il bordo è terreno difficile e trema (all’inizio di ogni round tira 1d6: con 1, chi è entro 1,5 m dal bordo fa TS Destrezza CD 12 o cade prono); le colonne danno copertura; la corda regge due persone alla volta.\nIl loro sguardo confonde: chi può, combatta senza guardarli (svantaggio agli attacchi, ma niente TS), o al buio.\nFine: gli Scavatori non fuggono finché uno dei due è sopra metà PF; poi il ferito si rintana scavando (6 m di scavo per round). Se fugge, la grotta non è più sicura.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "tracce",
+     "tipo": "dettaglio",
+     "titolo": "I buchi tondi",
+     "parte": "indizio",
+     "seme": "Non da picconi. Da qualcosa che ha fatto buchi tondi, lisci, grandi come una porta, dentro la pietra viva.",
+     "innesco": "Qualcuno guarda i buchi lisci nella roccia oltre la spaccatura.",
+     "leggi": "La pietra dei buchi è lucida, come levigata. Intorno, per terra, piccoli frammenti di roccia, e graffi lunghi, a tre a tre, profondi un dito.",
+     "prove": [
+      {
+       "id": "nat",
+       "abilita": [
+        "Natura",
+        "Sopravvivenza"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Buchi. Forse le cave dei Pretuziani, forse l’acqua."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Qualcosa scava la roccia come voi scavereste la neve. Qualcosa di grosso, con artigli. Ed è passato di qui da poco: i frammenti non hanno ancora la patina dell’umido."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "È passato più d’uno. Viene da sotto, dalla spaccatura, e risale. I colpi di piccone degli scavatori, là sopra, gli arrivano come arriva il rumore a un lupo che dorme. E da qualche giorno il rumore non smette."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 14+ non sono sorpresi.",
+     "rilancio": "Il bordo della spaccatura trema. Che cosa fate?",
+     "daqui": [
+      "scontro"
+     ]
+    },
+    {
+     "id": "scontro",
+     "tipo": "scontro",
+     "titolo": "Scontro — gli Scavatori ciechi",
+     "parte": "evento",
+     "innesco": "Qualcuno fa rumore nella grotta (combattimento, un grido, la corda che si scuote, il piccone) o si avvicina ai buchi tondi.",
+     "leggi": "Prima il rumore. Un rumore di pietra che si rompe, dentro la parete. Vicino. Più vicino.\n\nPoi la parete si apre.\n\nÈ grosso come due buoi. Nero, lucido come uno scarafaggio, con le braccia lunghe e le mani fatte di artigli come vanghe. La testa è larga e piatta, e la bocca si apre di lato, in quattro pezzi.\n\nE gli occhi. Quattro occhi, due grandi e due piccoli, neri, senza fondo.\n\nChi li guarda sente la testa che gira come dopo tre bicchieri di troppo.\n\nDall’altra parte della grotta, un secondo pezzo di parete si apre.",
+     "note": "Dal Bestiario: 2 «Scavatore cieco». Tattica: uno esce vicino al gruppo, l’altro alle spalle (dalla parete opposta, o dal buco più vicino alla corda: taglia la ritirata). Usano lo sguardo al primo round su chi ha la luce più forte, poi artigli su chi è confuso. Scavano per spostarsi (6 m) e sbucano accanto ai lanciatori di incantesimi.\nLo sguardo: all’inizio del turno di ogni creatura che può vederli entro 9 m, TS Saggezza CD 15, o per quel turno non può reagire e tira 1d8: 1-4 non fa niente, 5-6 si muove in una direzione a caso, 7-8 attacca la creatura più vicina. Chi distoglie lo sguardo non tira, ma ha svantaggio agli attacchi contro di loro fino al suo turno successivo.\nSe c’è un Mazzamarello amico (l’offerta al crocevia), una volta riaccende la lanterna spenta al momento giusto.",
+     "dopo": "Se gli Scavatori cadono, la grotta tace, ma la spaccatura continua a tremare. Sopra, la corda degli scavatori è lì: si può risalire all’Arena.",
+     "rilancio": "Il bordo della spaccatura trema. Poi smette. Che cosa fate?",
+     "daqui": [
+      "resti",
+      "risalire"
+     ],
+     "pe": 3600
+    },
+    {
+     "id": "resti",
+     "tipo": "bottino",
+     "titolo": "Quello che resta degli scavatori",
+     "parte": "evento",
+     "innesco": "Dopo lo scontro, qualcuno fruga fra la terra di scavo e le cose rovesciate.",
+     "leggi": "La lanterna chiusa è intatta, solo spenta. Il piccone ha il manico rotto di netto. Sotto un mucchio di terra, una borsa di cuoio: dentro, una tavoletta di legno con segnati a coltello dei numeri e delle frecce, e un sacchetto di monete.\n\nPiù in là, contro la parete, una seconda borsa, piccola, di velluto. Dentro, un pugno di polvere grigia, fine, che odora di ossa.",
+     "note": "La tavoletta: la mappa di scavo di Ser Guidone, con le distanze dall’Arena. Mostra che gli scavatori cercavano verso nord, verso il colle, e che qualcuno ha scritto accanto a un segno: «qui NO». Il segno è dove sta la spaccatura.\nLa borsa di velluto con la polvere d’osso: la stessa polvere delle frecce. Qualcuno che traccia le frecce è passato di qui e l’ha persa. Da decidere chi (vedi crocevia). La borsa è di velluto viola, con un filo d’argento: roba da signora.",
+     "dopo": "Hanno la prova che gli scavatori de Spina lavorano verso il colle, e che chi traccia le frecce di polvere d’osso passa anche di qui.",
+     "rilancio": "La grotta è calda e zitta. Che cosa fate?",
+     "daqui": [
+      "risalire"
+     ],
+     "bottino": [
+      {
+       "n": "Paga degli scavatori",
+       "monete": {
+        "mo": 48,
+        "ma": 120
+       }
+      },
+      {
+       "n": "Tavoletta di scavo di Ser Guidone",
+       "q": 1,
+       "cat": "Documenti",
+       "peso": "0,5 kg",
+       "valore": "Non stabilito",
+       "stats": "Oggetto di trama",
+       "desc": "Legno segnato a coltello: numeri, frecce, distanze dall’Arena verso nord. Accanto a un segno, «qui NO»."
+      },
+      {
+       "n": "Borsa di velluto con polvere d’osso",
+       "q": 1,
+       "cat": "Prove",
+       "peso": "—",
+       "valore": "Non stabilito",
+       "stats": "Oggetto di trama",
+       "desc": "Velluto viola, un filo d’argento. Dentro, polvere grigia e fine che odora di ossa: la stessa delle frecce che puntano verso la Basilica."
+      },
+      {
+       "n": "Lanterna chiusa",
+       "q": 1,
+       "cat": "Equipaggiamento",
+       "peso": "1 kg",
+       "valore": "5 mo",
+       "stats": "Lanterna schermata (luce intensa 9 m, fioca altri 9 m; si può schermare)",
+       "desc": "Degli scavatori di Casa de Spina, rimasta rovesciata sul fondo della grotta.",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "risalire",
+     "tipo": "prosecuzione",
+     "titolo": "Risalire all’Arena",
+     "parte": "evento",
+     "innesco": "Il gruppo vuole uscire dalla corda degli scavatori.",
+     "leggi": "La corda è nuova, di canapa buona. Sale dritta nel buco del soffitto, e da lassù, lontanissimo, arriva un filo di luce grigia e un rumore di martelli.\n\nSan Leonardo. La Città Visibile. Il giorno.",
+     "note": "Atletica CD 12 per salire (la corda regge due persone alla volta). Si arriva al primo ripiano del Ventre Vecchio e poi sotto le assi dell’Arena Sprofondata: scena «L’Arena Sprofondata», ingresso «Da sotto, dalla Città Sepolta». Se il Talpone è ancora al cantiere, è lui a tirarli su.",
+     "dopo": "Fine della discesa. Passa alla scena dell’Arena, o torna in città.",
+     "rilancio": "Sopra di voi, la luce. Che cosa fate?"
+    }
+   ]
+  }
+ ]
+}

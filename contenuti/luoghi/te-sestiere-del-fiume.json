@@ -1,0 +1,73 @@
+{
+ "id": "te-sestiere-del-fiume",
+ "tipo": "luogo",
+ "titolo": "4. Sestiere del Fiume",
+ "sottotitolo": "« Lu Mercàtë » — il polmone commerciale, sul fiume",
+ "citta": "teramum",
+ "gruppo": "4. Sestiere del Fiume",
+ "livello": "quartiere",
+ "parent": "borgo-teramum",
+ "img": "Rione — 4. Sestiere del Fiume.jpg",
+ "stato": "segreto",
+ "atti": [],
+ "compendio": true,
+ "scheda": {
+  "Zona": "4",
+  "Nome in dialetto": "Lu Mercàtë",
+  "Atmosfera": "grida, cibo, fango di fiume, monete",
+  "Fiume": "la gola della Vezzola che taglia la città (proposta); il Tordinum passa fuori dalle mura, a levante",
+  "Gilde": "la Lega dei Sensali («Li Pesa-Aneme», Casa Savinellus)",
+  "Luoghi": "Tempio sigillato di Mortus · La Città Sepolta · il Fondaco della Lega dei Sensali · la locanda Lu Cane Bianche (proposta)",
+  "Posizione": "lungo la gola, dal ponte a due archi fino alle mura del sud e alla Porta Meridianë"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "La città scende verso il fiume e diventa un solo mercato. Portici bassi, banchi sotto tende rattoppate, magazzini con le porte a mezzo piano per scaricare dalle barche. Il Tordinum scorre lento e marrone e porta via tutto quello che il mercato butta."
+  },
+  {
+   "t": "Entrando",
+   "txt": "Odore di arrosticini, di pesce salato, di cuoio, di frutta passata. Qualcuno vi mette in mano un assaggio di pecorino prima che possiate dire di no, e poi vi chiede il prezzo.\nSi grida in dialetto, si paga in fiorini limati, si conta due volte."
+  },
+  {
+   "t": "Cosa si vede subito",
+   "txt": "• Ai crocevia, piattini con un dito di Ratafià e un Bocconotto: offerte per i Mazzamarelli. Nessuno le tocca.\n• Cambiavalute della Lega dei Sensali con la bilancia sul banco: pesano ogni moneta, anche la vostra.\n• Scale che scendono nelle cantine dei magazzini. Alcune sono più profonde del fiume.\n• In una viuzza laterale, una chiesa piccola con la porta murata e i sigilli della Fiamma sopra."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• I prezzi salgono di ora in ora: la notizia della Crociata ha fatto nascondere il grano.\n• I Sensali stanno chiudendo le lettere di cambio verso Julia Nova. Chi ha soldi là, qui non li ritira più."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. I Sensali pagano i Mazzamarelli per rovesciare i carri dei concorrenti.\n2. La zecca di Savinellus lima l’oro dei fiorini. «Pe’ quesse lu fiorine pese poche.»\n3. Nelle cantine dei magazzini c’è una porta che nessuno apre, e ogni tanto la trovano aperta.\n4. Nella chiesa murata qualcuno prega ancora. Si sentono voci la notte.\n5. Un tizio con una maschera colorata girava per il mercato all’alba. Chi l’ha visto non si ricorda la faccia.\n6. Il fiume l’anno scorso è salito di colpo senza pioggia. «Lu Gigante s’è ggirate.»"
+  },
+  {
+   "t": "Segreti",
+   "txt": "• La Lega dei Sensali ha stretto patti con i Mazzamarelli per sabotare le carovane rivali.\n• Casa Savinellus vuole strangolare Julia Nova: dazi, briganti, carovane sabotate da incolpare ai Naviganti Grigi."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "• Dove sta il Fondaco della Lega dei Sensali. Proposta: qui, sul fiume.\n• Le sei porte vicine al Sestiere: Porta de lu Fiumë (nord) è la più logica; Porta Meridianë (sud) è la più trafficata. Da fissare sulla mappa.\n• Il Tempio di Mortus e l’ingresso alla Città Sepolta in questo rione sono mie proposte.\n• Conflitto da risolvere: questa voce diceva «sul Tordinum», ma la mappa della città mostra una gola che taglia Teramum in due. Proposta: la gola è della Vezzola, il mercato scende lungo la gola; il Tordinum scorre fuori, sotto la Porta de lu Solë.\n• Dove dormire: la locanda Lu Cane Bianche di Za’ Carmela Macchiarola, sorella del Mastro-Pastore Venanzio (proposta).\n• Il ponte a due archi sulla gola, fra il Sestiere e il Colle: forse è il «Ponte a Due Archi» delle carte di Pietraluna (in alternativa a quello proposto sul Tordinum)."
+  }
+ ],
+ "prove": [
+  {
+   "t": "Contrattare al mercato",
+   "skill": "Persuasione",
+   "dc": 12,
+   "ok": "prezzo giusto, e il venditore vi aggiunge una voce: la porta in cantina di un magazzino del fiume «ogni tante se trove aperte».",
+   "ko": "pagate il doppio, con il sorriso del venditore."
+  },
+  {
+   "t": "Le monete limate",
+   "skill": "Percezione",
+   "dc": 14,
+   "ok": "i fiorini ducali che vi danno di resto pesano meno del dovuto: sono limati sul bordo. Una prova da portare al Consiglio contro Savinellus.",
+   "ko": "monete, resto giusto. Almeno così sembra."
+  }
+ ],
+ "links": [],
+ "tavolo": "teramum"
+}

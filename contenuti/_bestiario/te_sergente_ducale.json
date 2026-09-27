@@ -1,0 +1,34 @@
+{
+ "id": "te_sergente_ducale",
+ "name": "Sergente della Guardia Ducale",
+ "short": "S",
+ "color": "#4A4F5C",
+ "hp": 75,
+ "ac": 18,
+ "init": 4,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: due attacchi (spada lunga o giavellotto)"
+  },
+  {
+   "n": "Spada lunga",
+   "atk": 6,
+   "dmg": "2d8+4"
+  },
+  {
+   "n": "Giavellotto (9/36 m)",
+   "atk": 6,
+   "dmg": "2d6+4"
+  }
+ ],
+ "note": "Capitano della Guardia (MM 2024), adattato · GS 4 · 1.100 PE · velocità 9 m · Percezione +4 · armatura a piastre ridotta, scudo con la torre e il lupo. Vale per il capitano Guarnerio, per il sergente Iaco (con meno PF) e per il sergente della ronda Morico Tavolaccio.",
+ "src": "Teramum — la città / Arrivo a Teramum",
+ "tac": "Comanda, non si getta nella mischia: mette le guardie in cerchio e si prende il più pericoloso. Se la ronda è in svantaggio, ordina la ritirata e fischia per i rinforzi. Non uccide chi si arrende.",
+ "lines": [
+  "Io sono la porta.",
+  "Mi fate fare le carte, e io odio le carte.",
+  "Arrendetevi, e domattina ridiamo tutti."
+ ],
+ "img": "Ritratto — Teramum — Sergente della Guardia Ducale.jpg"
+}

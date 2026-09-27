@@ -1,0 +1,1545 @@
+{
+ "id": "bellinde_dopo",
+ "nome": "Bëllindë — dopo il Quarto Sigillo",
+ "menu": "Bëllindë dopo il Sigillo",
+ "citta": "Bëllindë",
+ "ordine": 4,
+ "mappa": {
+  "img": "img/babb934abed8.jpg",
+  "larghezza": 1600,
+  "altezza": 1200,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "gruppo",
+  "strumentiDungeon": false,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Salite. Giro dopo giro, la scala stretta, la colonna di pietra fredda sotto la mano.\n\nA un certo punto vi accorgete che state salendo ognuno col suo passo. Nessuno vi tiene il tempo.\n\nPoi, dall’alto, arriva un filo d’aria. Sa di erba bagnata e di notte che finisce.",
+  "note": "Il giorno dopo, in ordine di gioco: l’uscita all’ultima ora di notte (la grata sopra il Camposanto), il Camposanto all’alba (Rocco sta per andare nella Fossa), il Borgo Vecchio alla prima luce (Micuccio torna a casa), la Rocca a mezzogiorno (il Conte), San Vincenzo nel pomeriggio (Don Fulgenzio, l’affresco), il Campo la sera e la notte (riposo lungo, Vhaerun), la Porta di Levante a metà mattina del giorno dopo (la partenza).\nNessuno ha fatto un riposo lungo sotto la città. Se il tavolo vuole dormire subito, gioca prima il Campo e sposta tutto di mezza giornata.\nAdatta tutto all’esito reale: ogni scena con Micuccio, Vhaerun o Ruggiero si usa solo se sono con loro. Il tono: niente epica forzata. Bëllindë reagisce come le città vere, con domande, silenzi, e qualcuno che entro sera racconta la storia per conto suo.\nConti aperti dal tavolo (Atto XVI): i PG hanno ignorato il bando in piazza e la città è diffidente; il Fondaco di Ceruso è bruciato, Renzo è in cella, Ceruso è sparito; Vicarus deve le scuse a Mimì; i ragazzini hanno detto che Rocco «l’hanno ucciso» (vedi il Camposanto).\nPE della scena: sepoltura di Rocco 450, Micuccio a casa 600, il Conte 600, la Chiesa 450, Vhaerun 300 (se c’è). Totale fino a 2.400.",
+  "ingressi": [
+   {
+    "da": "Dalla scala a chiocciola (la grata fra i rovi)",
+    "primo": "bellinde_dopo_grata",
+    "poi": "bellinde_dopo_camposanto",
+    "note": "L’uscita normale: fuori dalle mura, sopra il Camposanto, all’ultima ora di notte."
+   },
+   {
+    "da": "Dalla porta murata (dentro San Vincenzo)",
+    "primo": "bellinde_dopo_chiesa",
+    "poi": "bellinde_dopo_borgo",
+    "note": "Sfondano il muro sottile dietro la parete nord durante l’ufficio dell’alba: gioca il modulo «Dal muro». Il resto della chiesa si gioca più tardi; il Camposanto dopo il Borgo."
+   },
+   {
+    "da": "Tornando indietro fino al Pozzo Cieco",
+    "primo": "bellinde_dopo_borgo",
+    "poi": "bellinde_dopo_camposanto",
+    "note": "Risalgono la corda nel pozzo, sullo slargo del Borgo Vecchio: la casa di Micuccio è lì accanto. Salta il modulo della Porta di Ponente."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "bellinde_dopo_grata",
+   "kind": "porta",
+   "title": "La grata fra i rovi",
+   "image": "PDI — Bëllindë — La grata fra i rovi.jpg",
+   "legacyPosition": {
+    "x": 575,
+    "y": 1005
+   },
+   "text": "L’ultima rampa finisce contro una grata di ferro, mangiata dalla ruggine e coperta di rovi. Cede alla prima spinta.\n\nI rovi vi graffiano le mani, le guance, si attaccano ai mantelli. Poi, sopra la testa, non c’è più niente.\n\nCielo. Non ancora luce: il grigio di prima dell’alba, con una sola stella rimasta a levante.\n\nL’aria è fredda e bagnata. Sa di terra, di rosmarino selvatico, di un fumo lontano.\n\nSotto di voi, a una ventina di passi, un muretto a secco, croci di pietra in file storte, quattro cipressi neri contro il cielo. Una cella di pietra addossata al muro. Il camposanto.\n\nPiù in basso, sul prato del tratturo, qualche fuoco quasi spento in un cerchio di carri.\n\nSopra, sullo sperone, Bëllindë dorme. Il campanile. La Rocca. Non una luce.\n\nUn gallo, lontano. Un cane gli risponde.\n\nCi mettete un po’ a capire che cosa manca.\n\nIl battito.\n\nFate un passo. Poi un altro. E i vostri passi sono soltanto passi.",
+   "breve": "Escono dalla scala a chiocciola nell’ultima ora di notte, fra i rovi sopra il Camposanto, fuori le mura. Il ritmo tace. Ruggiero conta chi è tornato; Micuccio vede il cielo; Vhaerun, se li ha seguiti, si ferma nei rovi. Da qui si scende al Camposanto.",
+   "gm": "Dove sbucano: una grata fra i rovi sul pendio sopra il Camposanto, lato di levante, fuori dalle mura (a mezzogiorno della città). Da qui si vedono il Camposanto sotto, il Campo della Crociata in basso a ponente, la città sopra. Per rientrare in città si passa dalla Porta di Ponente, che apre all’alba.\nOra: l’ultima ora di notte. Hanno passato sotto la città tutta la notte (sono scesi nel pomeriggio del giorno del bando e dell’incendio al Fondaco). Nessuno ha fatto un riposo lungo: solo il riposo breve nella Camera delle Memorie. Se il tavolo vuole dormire subito, gioca prima il Campo della Crociata (riposo fino a mezzogiorno) e sposta tutto di mezza giornata: il Conte li riceve a sera, il funerale di Rocco slitta al giorno dopo.\nChi c’è: i sei PG; Ruggiero de’ Santi (è sceso con loro ed è finito sotto il comando della Galleria); Micuccio, se l’hanno liberato (va portato a braccia se nessuno gli ha dato una cura o superato Medicina CD 10); Vhaerun, se li ha seguiti dopo la Sala delle Ordinanze.\nIl silenzio: il ritmo è finito con la purificazione del Sigillo. In superficie lo sentivano solo i predisposti (Titta, il cane dello slargo, le rondini che non nidificavano sul Borgo Vecchio). Oggi il paese se ne accorge senza sapere di accorgersene.\nMattheus: il Filatterio, rinforzato dal sacrificio del Custode, resta freddo e pesante per tutto il giorno; al mattino della partenza è più leggero.\nDa decidere: se al tavolo sono usciti a un’altra ora (sera, notte fonda), adatta le prime righe: il resto regge.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "ruggiero",
+     "tipo": "dialogo",
+     "titolo": "Ruggiero risale",
+     "parte": "evento",
+     "innesco": "Appena Ruggiero esce dalla grata. È l’ultimo: ha voluto chiudere la fila.",
+     "leggi": "Ruggiero esce per ultimo. Si raddrizza, si scuote la terra dal tabarro. Non guarda il cielo. Guarda voi.\n\nVi conta. Con gli occhi, poi con le labbra, uno per uno.\n\n«Quanti?»\n\nAspetta la risposta anche se ha appena contato da solo.\n\n«Bene. Allora il resto può aspettare un’ora.»\n\nSi porta la mano destra sotto il braccio sinistro, come si fa col freddo. Non fa freddo.",
+     "note": "Ruggiero de’ Santi, sergente. Nella Galleria della Schiera è finito allineato su un solco e ha marciato sotto un ordine che non era suo. Non se lo perdona. Da quando è risalito si tocca la cicatrice bianca sul dorso della mano destra.\nLealtà: Bëllindë prima, Casa Melacera subito dopo. Adesso ha visto cosa c’è sotto Bëllindë, e la prima lealtà gli pesa il doppio.\n\nCOSA HAI VISTO LAGGIÙ? — «Abbastanza da non volerlo raccontare in piazza. Un esercito che non c’è più e che ancora marcia. Io sono un soldato, messeri. Lo so riconoscere, un esercito. Anche quando è morto.»\n\nIL COMANDO NELLA GALLERIA (la domanda che non vuole) — Silenzio. Si tocca la cicatrice. «Ho marciato. Non ho deciso io di marciare.» (pausa) «Trent’anni che do ordini a ragazzi di vent’anni. Adesso so che effetto fa, quando non puoi dire di no. Non mi è piaciuto.» Se insistono: «Non ditelo al Conte. Non per vergogna. Perché se il Conte sa che il suo sergente si può muovere come un burattino, domani ne vuole un altro.»\n\nSTAI BENE? — «Ho due gambe e le comando io. Stamattina mi basta.»\n\nCOSA DIRAI AL CONTE? — «Quello che è successo. Tutto. Lui fa i conti meglio di me, ma i conti se li fa coi numeri che gli do io.» Poi: «Voi però ci venite con me. Io racconto, voi spiegate. Io non so spiegare cosa ho visto.»\n\nE LA CITTÀ? — «La città ci ha visti scendere in un pozzo dopo che avevate ignorato il bando in piazza. Adesso ci vede risalire dal camposanto. Pensate un po’ cosa racconteranno stasera.» (mezzo sorriso) «Che siamo morti e siamo tornati. È la volta buona che mi offrono da bere.»\n\nIL RAGAZZO (se Micuccio è con loro) — Lo guarda a lungo. «Tre anni fa l’ho cercato due giorni. Poi ho chiuso. Non sapevo dove cercare.» (pausa) «Era sotto i miei piedi. Tutto il tempo.» Non chiede scusa: non è un uomo che chiede scusa a voce. Se qualcuno gli dice che non poteva saperlo: «Lo so. È per questo che non mi addormento.»\n\nIL BRAK (se Vhaerun li ha seguiti) — La mano va alla spada e ci resta. «Quello non entra in città. Non mi interessa cosa avete visto laggiù. Non entra.» Se gli spiegano che ha combattuto con loro: «Lo credo. E credo anche che se lo vede una madre del Borgo, domani ho venti uomini sulle mura e nessuno alle porte.» Proposta sua, se il tono è giusto: «Il campo è fuori le mura. Al campo comandate voi. Fuori dalle mura non è affar mio.»\n\nIL FONDACO, CERUSO — «Quando sono sceso il fuoco era spento e Renzo in cella. Ceruso sparito. Quello che è successo dopo lo so quanto voi.» (guarda la città) «Fra un’ora lo so meglio.»\n\nCHI CHIUDE IL PASSAGGIO? — «Lo decide il Conte. Io dico: chiuso ma non murato. Una porta che si chiude a chiave la tieni d’occhio. Un muro lo dimentichi. E quello che dimentichi, prima o poi, risale.»\n\nE ADESSO? — «Adesso io vado ad aprire la Porta di Ponente, che è ora. Voi fate quello che dovete. A mezzogiorno il Conte mangia da solo: è l’ora buona. Vi porto io.»\n\nSe lo MINACCIANO o lo prendono in giro per il comando: parla più piano, non più forte. «Ho marciato accanto a voi sotto un ordine che nessuno di noi aveva scelto. Se ve ne ridete, ridete anche di voi.» Chiuso per il resto della giornata.\nSe provano a PAGARLO per tacere qualcosa al Conte: «Rimettetela via. Quello che non dirò al Conte lo decido io, e gratis.»\nSe gli MENTONO su quello che è successo sotto (Inganno CD 15): lui c’era per metà della strada. Se la menzogna tocca la metà che ha visto, se ne accorge senza tiro e smette di fidarsi.\n\nBattute pronte:\n«Quanti?»\n«Bene. Allora il resto può aspettare un’ora.»\n«Io tengo mura, non anime. Ma stanotte ho capito perché qualcuno si occupa delle anime.»\n«Non camminate dove vuole lui. Me l’avete insegnato voi. Adesso non me lo scordo più.»",
+     "dopo": "Ruggiero va ad aprire la Porta di Ponente all’alba e li aspetta a mezzogiorno per portarli dal Conte. Se nessuno gli ha parlato del comando della Galleria, se lo porta dietro fino alla partenza (vedi la Porta di Levante).",
+     "rilancio": "Ruggiero guarda la città sopra di voi, poi voi. Che cosa fate?",
+     "daqui": [
+      "orientarsi",
+      "silenzio",
+      "bellinde_dopo_camposanto"
+     ]
+    },
+    {
+     "id": "micuccio_cielo",
+     "tipo": "dettaglio",
+     "titolo": "Micuccio vede il cielo",
+     "parte": "evento",
+     "innesco": "Se Micuccio è con loro, quando lo portano fuori dalla grata.",
+     "leggi": "Il ragazzo che portate apre gli occhi quando l’aria gli arriva in faccia. Li richiude subito. Li riapre.\n\nGuarda in su. A lungo.\n\n«È… alto.»\n\nLe labbra si muovono, a vuoto. Cercano un numero che non arriva. Si guarda le mani, poi guarda voi.\n\n«Non conta più.» Una pausa. «Chi è che conta, adesso?»",
+     "note": "Micuccio non è abituato alla luce: lacrima per un’ora, e al primo sole vero si copre gli occhi. Non ha paura del cielo: ha paura del silenzio, e di non sapere più cosa fare. La risposta dei PG alla sua domanda conta: tienila a mente per il Borgo Vecchio (lui la ripeterà alla madre).",
+     "dopo": "Micuccio va portato a casa: è il cuore del Borgo Vecchio. Se nessuno lo ha curato va portato a braccia (Medicina CD 10 o qualsiasi cura magica per farlo camminare appoggiato).",
+     "rilancio": "Micuccio aspetta una risposta. Che cosa gli dite?",
+     "daqui": [
+      "silenzio",
+      "bellinde_dopo_camposanto"
+     ]
+    },
+    {
+     "id": "silenzio",
+     "tipo": "dettaglio",
+     "titolo": "Il silenzio",
+     "parte": "indizio",
+     "seme": "Ci mettete un po’ a capire che cosa manca.",
+     "innesco": "Qualcuno si ferma ad ascoltare, o si chiede che cosa è cambiato.",
+     "leggi": "Nessun tre-e-fermo. Nessun passo sotto i passi. Da quando siete scesi nel Pozzo Cieco il ritmo vi ha seguiti, e adesso non c’è.\n\nIl gallo canta quando vuole lui. Il cane abbaia due volte, poi tre, poi smette.",
+     "prove": [
+      {
+       "id": "silenzio",
+       "abilita": [
+        "Percezione",
+        "Intuizione"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un silenzio buono, da campagna. Siete stanchi: la testa vi ronza ancora di quello che c’era sotto."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Non è solo sotto terra: è anche quassù. Vi accorgete che da quando siete arrivati a Bëllindë qualcosa batteva, piano, anche in superficie, e non ci avevate fatto caso. Adesso che manca, lo sentite."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Il camposanto, il pendio, la città sopra: tutto ha un suono suo, irregolare, sbagliato come la vita. Sotto le mura del Borgo Vecchio un cane abbaia, e abbaia da un punto dove nei giorni scorsi i cani non andavano."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Ti accorgi che anche il tuo cuore, per giorni, ha battuto un po’ a tempo. Adesso va per conto suo. Ti viene da ridere, e non sai perché."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il ritmo si sentiva anche in superficie e che ora è finito. Tutta Bëllindë se ne accorgerà oggi senza saperlo dire: il cane dello slargo, le rondini, Titta.",
+     "rilancio": "L’alba schiarisce il pendio. Che cosa fate?",
+     "daqui": [
+      "orientarsi",
+      "bellinde_dopo_camposanto"
+     ]
+    },
+    {
+     "id": "filatterio",
+     "tipo": "dettaglio",
+     "titolo": "Il Filatterio, all’aria",
+     "parte": "evento",
+     "innesco": "Quando Mattheus esce all’aperto, o quando tocca il Filatterio.",
+     "leggi": "La custodia al tuo fianco è fredda. Più fredda della notte. E pesa: più di quando siete scesi, come se dentro ci fosse qualcosa di nuovo che non ha ancora trovato il suo posto.\n\nQuando ci posi sopra la mano, non bussa niente.",
+     "note": "Solo per Mattheus: mostralo a lui solo. Il Filatterio è rinforzato, non risolto. Resta freddo e pesante tutto il giorno; al mattino della partenza è più leggero. Nessun effetto meccanico. Da decidere: la durata del rinforzo (proposta: fino all’arrivo a Teramum e oltre, finché non accade qualcosa che lo metta alla prova).",
+     "dopo": "Mattheus sa che la custodia è cambiata. Nient’altro, per ora.",
+     "rilancio": "Il Filatterio pesa al tuo fianco. Che cosa fai?",
+     "daqui": [
+      "silenzio"
+     ]
+    },
+    {
+     "id": "orientarsi",
+     "tipo": "dettaglio",
+     "titolo": "Dove siamo usciti",
+     "parte": "indizio",
+     "seme": "qualche fuoco quasi spento in un cerchio di carri",
+     "innesco": "Qualcuno cerca la strada per il campo o per la città.",
+     "leggi": "Il pendio è ripido, pieno di rovi e di olivi vecchi. Il camposanto è sotto di voi. Il campo in basso, a ponente. La città sopra, e la porta più vicina è chiusa fino all’alba.",
+     "prove": [
+      {
+       "id": "orientarsi",
+       "abilita": [
+        "Sopravvivenza"
+       ],
+       "cd": 10,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 9,
+         "leggi": "La luce vi confonde, i rovi pure. Girate intorno agli olivi più del dovuto. Quando trovate il sentiero, sul sentiero c’è già qualcuno: una donna con un secchio, ferma, che vi guarda. La notizia arriverà in paese prima di voi."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 10,
+         "leggi": "Il sole che sale, lo sperone, la strada: vi orientate subito. Il sentiero scende al cancello del camposanto e prosegue fra gli olivi fino al campo. Per la città, la Porta di Ponente apre all’alba: fra poco."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con un successo arrivano al camposanto prima che qualcuno li veda uscire dalla terra. Con un fallimento Nunzia Serrafredda li vede sbucare dai rovi: diventa la voce «sono usciti dal camposanto, dalla terra, come i santi».",
+     "rilancio": "Il sentiero scende al cancello del camposanto. Che cosa fate?",
+     "daqui": [
+      "bellinde_dopo_camposanto"
+     ]
+    },
+    {
+     "id": "vhaerun_luce",
+     "tipo": "dettaglio",
+     "titolo": "Vhaerun alla luce",
+     "parte": "evento",
+     "innesco": "Se Vhaerun li ha seguiti, quando esce dalla grata.",
+     "leggi": "Vhaerun esce per ultimo, piegato in due per passare. Si raddrizza, e il cielo gli sta sopra per la prima volta da quando c’era la guerra.\n\nNon dice niente. Si siede fra i rovi, così, dove si trova. Le spine gli entrano nella pelle grigia e non se ne accorge.\n\nGuarda la stella che resta a levante finché non si spegne.\n\n«Me la ricordavo più piccola», dice. Non si capisce se parla della stella o del mondo.",
+     "note": "Un Brak alla luce del giorno sotto le mura di Bëllindë: se una lavandaia lo vede, entro mezzogiorno la città ha chiuso le porte. Vhaerun lo capisce da solo: «Non vengo nella vostra città. Ditemi dove posso stare senza che nessuno debba decidere cosa fare di me.» La risposta più semplice è il Campo della Crociata, al margine, fra gli olivi (vedi Il Campo della Crociata). Ruggiero non lo vuole in città e lo dice.",
+     "dopo": "Se lo portano al campo subito, all’alba, il campo lo vede arrivare mentre dorme ancora: vedi Il Campo della Crociata, «Un Brak al campo». Se lo lasciano nei rovi, ci resta fino a sera senza muoversi.",
+     "rilancio": "Vhaerun siede fra i rovi e aspetta. Che cosa fate?",
+     "daqui": [
+      "bellinde_dopo_campo",
+      "bellinde_dopo_camposanto"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "bellinde_dopo_camposanto",
+   "kind": "persona",
+   "title": "Il Camposanto — Rocco Serrafredda",
+   "image": "PDI — Bëllindë — Il Camposanto all’alba.jpg",
+   "legacyPosition": {
+    "x": 497,
+    "y": 1063
+   },
+   "text": "Il cancello di ferro non ha serratura. Cigola lo stesso.\n\nLe croci sono bagnate di rugiada. Nell’angolo di levante, oltre una fila di pietre bianche interrate, l’erba è alta e non ci sono croci. Lì c’è una buca aperta. La terra ammucchiata accanto è secca: è stata scavata giorni fa.\n\nAddossata al muro di ponente c’è la cella mortuaria: pietra, tetto a una falda, la porta di legno accostata. Davanti alla porta, sull’erba, un mazzo di fiori di campo legato con lo spago. Appassiti.\n\nDalla porta viene odore di calce. E sotto la calce, un altro odore.\n\nAccanto alla cella c’è una barella di legno, pronta. Un uomo color terra sta arrotolando una corda, piano, come chi non ha nessuna voglia di finire.\n\nSul sentiero degli olivi, una donna con le braccia rosse fino al gomito e un mazzo di fiori freschi si è fermata. Guarda la barella. Poi guarda voi.\n\nNon dice niente. Posa i fiori sul muretto.",
+   "breve": "All’alba Menotto sta per portare il corpo di Rocco nella Fossa dei Senza Nome, per ordine del prete; arriva Nunzia coi fiori. Quello che i PG hanno visto sotto cambia tutto: Rocco ha obbedito a un ordine. Si può fermare la sepoltura, portare la verità a Don Fulgenzio (terra consacrata) o far celebrare a Mattheus il rito fuori dal muro.",
+   "gm": "Cosa succede: il corpo di Rocco Serrafredda è nella cella mortuaria da più di una settimana. Don Fulgenzio gli ha negato la terra consacrata e ha ordinato a Menotto di metterlo nella Fossa dei Senza Nome «domattina»: cioè adesso. Menotto ha preso tempo tutta la notte (non gli va: Rocco gli aggiustò il pozzo gratis). Nunzia è venuta coi fiori, come ogni mattina, e trova la barella pronta.\nChe cosa cambia adesso: i PG sanno cosa c’era sotto. Rocco è sceso nel Pozzo Cieco per il Conte, è risalito con un ordine nella testa («M’ha ditte de scì. E i’ so’ sciute»), e da quel momento non era più padrone di sé. Micuccio lo conferma: «la voce» diceva cosa fare. Chi obbedisce a un ordine che non può rifiutare non sceglie; chi non sceglie non pecca. È l’argomento che può aprire la terra consacrata con Don Fulgenzio (vedi San Vincenzo, «Rocco in terra consacrata»).\nLe due strade: (A) terra consacrata, se convincono Fulgenzio; (B) Mattheus celebra il rito dei morti fuori dal muro, con Menotto che mette i sassi bianchi a coppie. Nunzia vuole solo «che qualcuno ce dice na parola sopra»: tutte e due le strade la soddisfano. Nessuna delle due è sbagliata.\nCONFLITTO DI CANONE (non scelto qui): nelle schede di Bëllindë Rocco si è impiccato nella stalla del cognato dopo sei giorni senza dormire; al tavolo (Atto XVI) i ragazzini del Borgo hanno detto ai PG che Rocco «non si è ucciso, l’hanno ucciso», e la scheda del Compendio dice «Trovato nel pozzo. Non si è ucciso.» La corda nel pozzo è tagliata di netto. Il Custode non sa chi l’abbia tagliata. Da decidere: com’è morto Rocco, e chi ha tagliato la corda. Proposta che tiene insieme le due versioni: i ragazzini dicono «l’hanno ucciso» nel senso del Borgo — l’ha ucciso «chelle che conta» — e la frase è rimasta ai PG come un’accusa. L’argomento dell’ordine vale in entrambi i casi, e l’esame del corpo qui sotto non tocca il collo.\nSe al tavolo Rocco è già stato sepolto nella Fossa: la buca è chiusa, senza sassi. Nunzia è lì coi fiori. La scena resta: si può chiedere a Fulgenzio di spostarlo in terra consacrata (Menotto: «Se me lu dice lu prete, lu cave ije. Gratis.»), o Mattheus può dire la parola sopra la terra già chiusa.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "fermare",
+     "tipo": "dettaglio",
+     "titolo": "Fermare la barella",
+     "parte": "evento",
+     "innesco": "Qualcuno dice a Menotto di aspettare, o si mette fra lui e la cella.",
+     "leggi": "Menotto smette di arrotolare la corda. Vi guarda da sotto il cappello, a lungo. Guarda la terra sui vostri stivali: non è terra di strada.\n\n«Lu prete ha ditte stamatina.» Una pausa lunga, come una vangata. «Ma nen ha ditte a che ora.»\n\nSi siede sulla barella. Tira fuori una fiaschetta, beve il giusto. Aspetta.",
+     "note": "Nessun tiro: Menotto non aspettava altro. Aspetta fino a sera, se glielo chiedono. Se qualcuno invece gli ordina di procedere, procede, lento, e Nunzia si mette davanti alla buca.",
+     "dopo": "La sepoltura è ferma. Ora serve decidere come: terra consacrata (serve Don Fulgenzio) o il rito fuori dal muro (serve Mattheus).",
+     "rilancio": "Menotto aspetta, seduto sulla barella. Nunzia vi guarda. Che cosa fate?",
+     "daqui": [
+      "nunzia",
+      "menotto",
+      "corpo"
+     ]
+    },
+    {
+     "id": "nunzia",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Nunzia Serrafredda",
+     "parte": "evento",
+     "innesco": "Nunzia si avvicina lei, dopo aver visto da dove venite. O qualcuno le rivolge la parola.",
+     "leggi": "La donna vi squadra dai piedi alla testa, senza fretta. La terra, la polvere grigia, le facce.\n\n«Vuje site state llà sotte.»\n\nNon è una domanda.\n\n«Pure isse ce steve. Mi’ frate.» Indica la cella col mento, senza guardarla. «Ditemi quello che avete visto. Tutto. Nen me dicete bugie pe’ farme piacere: so’ na sora, nen so’ na criatura.»",
+     "note": "Nunzia Serrafredda, lavandaia, 46 anni, sorella di Rocco. Non piange davanti agli estranei, non chiede per favore, rifiuta i soldi e si offende. Si conquista col rispetto per il morto e col tono. Qui le prove sociali quasi non servono: conta come le si parla.\nCosa vuole: che Rocco vada sotto terra con una parola sopra. E, da stamattina, sapere che suo fratello non era pazzo: perché se era pazzo lo è anche la famiglia, e i suoi figli se lo porteranno addosso.\n\nCHE COSA C’È LAGGIÙ? — Ascolta tutto senza interrompere. Alla fine: «Nu surdate che cumanne. Da duecent’anne.» (strofina le mani sul grembiule, come al lavatoio) «E Rocco ce l’ha sentite. Pe’ sei juorne. Sei.» — Un soldato che comanda da duecento anni, e Rocco l’ha sentito per sei giorni.\n\nALLORA NON ERA PAZZO — Si ferma. Per la prima volta la voce le cede, un istante solo. «Nen ere pazze.» Lo ripete piano, come per imparare la frase. Poi, dura: «Allora ’u dicete vuje. In piazza. Davanti a tutti. Ché a me nen me crede nisciune.» (Chiede che lo dicano in pubblico: è la cosa più grande che possono darle.)\n\nLA FRASE DI ROCCO — «M’ha ditte de scì. E i’ so’ sciute.» Se le spiegano che è stato un ordine, il comando ESCI, lei la ripete con la faccia di chi finalmente capisce una parola di una lingua straniera. «Nen parlave de lu puzze. Parlave de chelle.»\n\nCOM’È MORTO? — Se le chiedono direttamente: vedi il conflitto nelle note del punto. Nunzia non lo racconta a chi non le ha dato niente: «Nen me lu fate dice n’atra vota.» E torna a strofinare le mani sul grembiule.\n\nI RAGAZZINI DICONO CHE L’HANNO UCCISO — Si irrigidisce. «Li guagliune dice tante cose.» (pausa) «Mi’ figlie grosse è lu capobanda. L’ha ditte isse?» Se sì: «Stasera ce parle ije.» Non conferma e non smentisce. Da decidere secondo il canone scelto.\n\nCHI HA TAGLIATO LA CORDA? — «Rocco. Ce l’ha ditte isse: pe’ nen turnà sotte.» (o, se il canone scelto è l’omicidio: «E chi lu sape.» Strofina più forte.) Da decidere.\n\nIL PRETE — «Don Fulgenzie è nu bone prevete. E m’ha ditte no. Ddu cose vere.» Se le dicono che andranno a parlargli con la verità: «Jate. Ma nen ve ’nginocchiate. Isse rispette chi sta ’n piede.»\n\nIL DIO DEI MORTI (a Mattheus) — «Nen sacce chi è. Ma si te fa mette n’ome sotto terra cumme se deve, va bbone.» Se Mattheus le offre il rito fuori dal muro: lo guarda a lungo. «Stamatina?» Se sì: «Vaje a chiamà lu Borge.»\n\nMICUCCIO (se è con loro, o se lo nominano) — Si porta la mano alla bocca. «Lu figlie de Cuncetta.» Poi, subito, pratica: «Portatele a la mamma. Mo’. Prima che lu vede qualcun altre e ci arriva prima la voce che lu figlie.» (È un buon consiglio: seguirlo vale.)\n\nSE LE OFFRONO SOLDI — «Nen so’ na lavannara che se paga. So’ na sora.» Chi l’ha fatto perde la sua fiducia per sempre.\nSE LA MINACCIANO o le mettono fretta — «Aje seppellite mi’ marite, mi’ matre e mo’ frateme. Che me vulite fa’ vuje, de peggio?» E il Borgo intero lo sa entro un’ora.\nSE LE MENTONO (una versione addolcita, «non ha sofferto») — Intuizione non serve a lei: le basta guardarvi. «V’aje ditte: nen so’ na criatura.» Si chiude, ma non se ne va: aspetta la verità.\n\nCosa nasconde: l’ultima notte Rocco le ha dato la sua medaglietta del Sole, quella del battesimo: «Tiénela tu. Addó vaje ije, nen serve.» La consegna solo a chi celebra la sepoltura, dopo, come una confessione (vedi «La sepoltura»).\n\nBattute pronte:\n«Vuje site state llà sotte.» (non è una domanda)\n«Nen ere pazze.»\n«Nen vojje nu miracule. Vojje che qualcune ce dice na parola sopra.»\n«Portatele a la mamma. Mo’.»",
+     "dopo": "Nunzia sa cosa c’era sotto e che Rocco non era pazzo. Se le promettono di dirlo in pubblico e di dargli sepoltura, il Borgo Vecchio è con loro: le porte si aprono senza tiri e stasera c’è pane per il campo.",
+     "rilancio": "Nunzia aspetta, le braccia incrociate, davanti alla cella. Che cosa fate?",
+     "daqui": [
+      "corpo",
+      "sepoltura",
+      "bellinde_dopo_borgo",
+      "bellinde_dopo_chiesa"
+     ]
+    },
+    {
+     "id": "menotto",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Menotto",
+     "parte": "evento",
+     "innesco": "Qualcuno parla col becchino.",
+     "note": "Menotto, becchino. Età indefinibile. Parla poco e mai per primo; ogni frase gli costa una vangata. Quello che dice l’ha pensato. Un solo principio: i morti devono stare dove devono stare, come devono starci.\n\nPERCHÉ NON L’HAI ANCORA SEPOLTO? — «Lu prete ha ditte stamatina.» (vangata) «Stamatina è lunga.»\n\nTI VA DI METTERLO NELLA FOSSA? — «No.» Basta. Se insistono: «Lu Cavatore m’ha accunciate lu puzze de casa, du’ anne fa. Gratis. E ije lu mette fore da lu mure. Gratis pure ije. Nen è nu conte che torne.»\n\nCHE COSA SAI DELLA MORTE DI ROCCO? — «Aje lavate lu muorte. Tenève le mane rotte. L’ogne.» (si guarda le sue) «Cumme une che ha raspate na preta pe’ tante notte.» Non dice di più: non è il suo mestiere capire.\n\nI SASSI BIANCHI NELLA FOSSA — Se qualcuno li nota (a coppie, sulle fosse dei non consacrati): «Lu prete penza a chille dentro a lu mure. Coccune ha da penzà a chille de fore.» (Religione CD 13 per capire: un sasso per luna, l’uso delle Due Lune.)\n\nIL DIO DEI MORTI — Ascolta Mattheus appoggiato alla vanga. Alla fine: «Nu dio che sta cu li muorte.» (vangata) «Ere ora.»\n\nLA FOSSA DEL RAGAZZO SPARITO (Micuccio) — «Nen ce sta. Nen se po’ atterrà chi nen torne.» Se gli dicono che è tornato vivo, Menotto si toglie il cappello. Non se lo rimette per un pezzo.\n\nSE LO PAGANO — Prende la moneta e la mette nella fossa, sotto il primo sasso. «Pe’ lu passagge.» Non era quello che volevano, ma è quello che fa.\nSE LO MINACCIANO — Li guarda con gli occhi di chi ha seppellito gente più grossa di loro. Continua a lavorare.\n\nBattute pronte:\n«Stamatina è lunga.»\n«Li muorte nen tène prescia. So’ li vive.»\n«Ere ora.»",
+     "dopo": "Menotto aspetta fino a sera. Se si fa il rito fuori dal muro, mette lui i sassi bianchi a coppie. Se Don Fulgenzio concede la terra consacrata, scava la nuova fossa in un’ora: «Pe’ chiste, ce metto poche.»",
+     "rilancio": "Menotto beve il giusto e aspetta. Che cosa fate?",
+     "daqui": [
+      "corpo",
+      "sepoltura"
+     ]
+    },
+    {
+     "id": "corpo",
+     "tipo": "dettaglio",
+     "titolo": "Il corpo nella cella",
+     "parte": "indizio",
+     "seme": "Dalla porta viene odore di calce. E sotto la calce, un altro odore.",
+     "innesco": "Qualcuno entra nella cella e scopre il lenzuolo, con il permesso di Nunzia o senza.",
+     "immagine": "PDI — Bëllindë — La cella mortuaria.jpg",
+     "leggi": "Dentro fa fresco. Su un’asse fra due cavalletti c’è un corpo avvolto in un lenzuolo cucito. Calce sparsa sul pavimento. Una candela consumata fino al piattino.\n\nLe mani sono fuori dal lenzuolo, incrociate. Qualcuno le ha lavate con cura. Non è bastato.",
+     "note": "Chiedere il permesso a Nunzia prima di scoprirlo cambia tutto: se non lo chiedono, lei li guarda dalla porta e non dice niente, e la sua fiducia scende di un gradino. L’esame qui non tocca il collo né la causa della morte (vedi il conflitto nelle note del punto): parla solo di ciò che Rocco ha fatto nei sei giorni.",
+     "prove": [
+      {
+       "id": "corpo",
+       "abilita": [
+        "Medicina",
+        "Indagare"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "max": 5,
+         "leggi": "L’odore ti prende alla gola. Esci a respirare, e quando rientri Nunzia è sulla porta e ti guarda."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 12,
+         "leggi": "Un uomo di mezza età, mani da lavoro. Morto da più di una settimana. Le unghie sono spezzate."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Sotto le unghie spezzate c’è polvere grigia, fine, e grani di malta chiara. La stessa polvere che avete sugli stivali: quella dei blocchi squadrati di sotto. Nei giorni prima di morire Rocco ha raspato pietra, a mani nude, per ore."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "max": 19,
+         "leggi": "Le ginocchia sono scorticate, le piante dei piedi indurite come chi ha camminato scalzo sulla pietra. E sui palmi, le bruciature di una corda fatta scorrere troppo in fretta. Rocco è tornato giù. Più di una volta."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Le dita della mano destra sono ancora piegate in un modo strano: tre dita contro il palmo, poi un pollice. Tre, e fermo. Le ha tenute così finché si sono irrigidite."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 13 o più sanno che Rocco nei sei giorni tornava sotto e raspava pietra: la polvere è quella dei blocchi antichi, la malta è chiara come quella dei muri recenti di sotto. Da decidere: quale muro raspava. Proposta: la porta di ferro murata accanto alla scala a chiocciola, «graffi dall’altra parte» (Sotto Bëllindë, punto 16). Un successo qui è un argomento concreto da portare a Don Fulgenzio: Rocco non ha scelto niente.",
+     "rilancio": "Il lenzuolo è di nuovo al suo posto. Nunzia vi aspetta fuori. Che cosa fate?",
+     "daqui": [
+      "nunzia",
+      "sepoltura",
+      "bellinde_dopo_chiesa"
+     ]
+    },
+    {
+     "id": "sepoltura",
+     "tipo": "dettaglio",
+     "titolo": "La sepoltura",
+     "parte": "evento",
+     "innesco": "Quando si decide come seppellire Rocco: in terra consacrata (dopo aver convinto Don Fulgenzio) o col rito di Mattheus fuori dal muro.",
+     "leggi": "Il Borgo Vecchio arriva a gruppi. Prima le donne, poi i vecchi, poi i ragazzini che stanno sul muretto come passeri. Nessuno parla.\n\nMenotto si toglie il cappello per primo.\n\nLa barella è leggera. Rocco era un uomo grosso, e la barella è leggera lo stesso.\n\nNunzia sta dritta accanto alla buca, le braccia lungo i fianchi. Non piange. Aspetta la parola.",
+     "note": "Terra consacrata: se Don Fulgenzio ha concesso (vedi San Vincenzo), Menotto scava la nuova fossa dentro il muro in un’ora. Fulgenzio viene di persona, o manda Fra’ Bonizio con l’aspersorio e resta alla finestra della canonica: dipende da come è andata con lui.\nRito fuori dal muro: Mattheus celebra. Nessun tiro serve per la dignità: conta cosa dice. Menotto mette i sassi bianchi a coppie. Fulgenzio non viene, ma resta alla finestra della canonica per tutta la durata del rito.\nIn entrambi i casi è la prima volta in tre anni che il Borgo si muove insieme: chi guarda la città lo nota.\nSe lo dicono in pubblico («Rocco non era pazzo, obbediva a un ordine»), Nunzia ha quello che voleva. È la scena in cui Mortus mette radici a Bëllindë se è Mattheus a celebrare (Menotto e Nunzia sono i primi due fedeli).\nDopo il rito, Nunzia si avvicina a chi ha detto la parola e gli mette in mano la medaglietta del Sole di Rocco: «Tiénela tu. Isse ha ditte: addó vaje ije, nen serve. Ma addó jate vuje, forse sì.» Poi, quella sera, il Borgo porta pane al campo: pane per quaranta.",
+     "prove": [
+      {
+       "id": "parola",
+       "abilita": [
+        "Religione",
+        "Persuasione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Le parole escono giuste ma piccole. La gente ascolta per rispetto di Nunzia. Rocco va sotto terra con dignità, e il Borgo torna a casa in silenzio."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Quando dici che Rocco ha obbedito a qualcosa più forte di lui, una vecchia annuisce. Poi un’altra. Il Borgo resta finché l’ultima zolla non è giù."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Alla fine nessuno se ne va. Un uomo del Borgo dice «Riposa, Cavatò», il soprannome di Rocco, e lo ripetono in tanti, a voce bassa. Nunzia chiude gli occhi. Stasera in piazza qualcuno racconterà la storia giusta."
+        }
+       ]
+      }
+     ],
+     "dopo": "Rocco è sepolto con una parola sopra. Nunzia dà la medaglietta al celebrante. Il Borgo porta pane per quaranta al campo stasera (+1 giorno di autonomia per la Crociata). Se è stato il rito di Mattheus, Menotto e Nunzia sono i primi fedeli di Mortus a Bëllindë.",
+     "rilancio": "L’ultima zolla è giù. Il Borgo vi guarda. Che cosa fate?",
+     "pe": 450,
+     "bottino": [
+      {
+       "n": "Medaglietta del Sole di Rocco",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": "—",
+       "valore": "Nessuno",
+       "stats": "Non magica",
+       "desc": "Una medaglietta di rame col disco del Sole, consumata dal pollice. Era di Rocco Serrafredda, dal battesimo. L’ultima notte l’ha data alla sorella: «Addó vaje ije, nen serve.» Nunzia la dà a chi ha detto la parola sopra la sua fossa.",
+       "a": "mattheus"
+      },
+      {
+       "n": "Pane del Borgo Vecchio",
+       "q": 40,
+       "cat": "Viveri",
+       "peso": "—",
+       "valore": "—",
+       "stats": "+1 giorno di autonomia sul Registro della Crociata",
+       "desc": "Pane per quaranta, portato al campo dal Borgo Vecchio la sera della sepoltura di Rocco.",
+       "a": "crociata"
+      }
+     ],
+     "daqui": [
+      "bellinde_dopo_borgo"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "bellinde_dopo_borgo",
+   "kind": "persona",
+   "title": "Il Borgo Vecchio — Micuccio torna a casa",
+   "image": "PDI — Bëllindë — Micuccio torna a casa.jpg",
+   "legacyPosition": {
+    "x": 478,
+    "y": 780
+   },
+   "text": "Il Borgo Vecchio è ancora in ombra. Il sole ci arriva per due ore al giorno, e non sono queste.\n\nScendete il vicolo di mezzo. Sulla scala esterna, Za’ Filumena è già seduta, le mani in grembo, come se non si fosse mai alzata.\n\nSullo slargo le imposte sono aperte. Tutte. Un cane attraversa la piazzetta in diagonale, annusando, e non si ferma dove si fermavano tutti.\n\nIl Pozzo Cieco è come l’avete lasciato: le tre assi per terra, la pietra rotolata di lato, la bocca nera aperta sul cielo.\n\nSulla grondaia di una casa bassa, accanto al pozzo, c’è una rondine. Una sola. Si pulisce le penne.\n\nSul davanzale di quella stessa casa c’è un pezzo di pane. È di ieri sera. Nessuno è venuto a prenderlo.\n\nDietro la porta, qualcuno sta già sveglio. Si sente il rumore di una ruota di legno che gira, piano, e si ferma, e riparte.",
+   "breve": "All’apertura della Porta di Ponente riportano Micuccio a casa, sullo slargo del Borgo Vecchio, accanto al Pozzo Cieco. La madre mette il pane sul davanzale da tre anni. Il padre è il funaio del Borgo. Arrivano Titta, che era fuggito senza aspettarlo, e Cecco. È la scena più forte della giornata: lasciala respirare.",
+   "gm": "Chi abita qui: la famiglia di Micuccio (nomi nuovi, vedi le schede dei PNG): Mastro Nicola lu Funare, il funaio del Borgo (la ruota di legno dietro la porta è la sua ruota da corde), sua moglie Cuncetta, la figlia piccola Assuntina (nove anni: ne aveva sei quando il fratello è sparito). La casa è quella bassa accanto al Pozzo Cieco, sullo slargo.\nIl pane: Za’ Filumena lo ha detto ai PG («Se mette pe’ chi téne fame e nen po’ trasì», per chi ha fame e non può entrare). Da tre anni Cuncetta mette il pane sul davanzale ogni sera per il figlio. Nel Borgo lo sanno tutti e nessuno lo dice.\nCosa sanno in casa: che Micuccio è entrato dalla porta bassa per una scommessa con Titta e non è tornato. Ruggiero cercò due giorni. Il corpo non c’è mai stato, e la fossa non esiste. Non sanno che è stato Don Fulgenzio a murare la porta bassa. Se i PG lo dicono, la cosa esplode (vedi i dialoghi).\nSe Micuccio non è con loro (lasciato sotto, o morto): la scena diventa quella di chi porta una notizia. Cuncetta apre la porta, vede le facce, e rientra in casa senza chiudere. Adatta i dialoghi: il padre vorrà scendere a prenderlo, il corpo o il ragazzo.\nMicuccio in salute: vedi il modulo «Micuccio alla luce». Ha diciotto anni e ne dimostra quindici (Da decidere: l’età; proposta coerente con Cecco, diciannove anni, suo amico di allora).\nTempi: la Porta di Ponente apre all’alba; Ruggiero li fa entrare. Se passano dal Borgo prima del Camposanto, è uguale: l’ordine di questi due punti è libero.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "ponente",
+     "tipo": "dettaglio",
+     "titolo": "La Porta di Ponente, all’alba",
+     "parte": "evento",
+     "innesco": "Quando entrano in città dalla Porta di Ponente, con Ruggiero.",
+     "leggi": "Ruggiero apre la porta con la sua chiave, prima ancora che arrivi il turno. Il vecchio Bartolo esce dal corpo di guardia col registro sotto il braccio, la bocca già aperta per la battuta del mattino.\n\nVede Ruggiero. Vede voi, grigi di polvere fino ai capelli.\n\nVede il ragazzo.\n\nIl registro gli scivola di mano. Non lo raccoglie.",
+     "note": "Bartolo conosceva Micuccio: lo faceva giocare col registro quando era piccolo. Non dice niente. Ruggiero gli ordina: «Nessuno. Fino a mezzogiorno, nessuno lo sa da te.» Bartolo annuisce. Entro un’ora lo sa mezza città lo stesso: le lavandaie che escono al lavatoio li hanno visti passare.",
+     "dopo": "Sono dentro le mura. Il Borgo Vecchio è a quattro minuti.",
+     "rilancio": "La città si sveglia intorno a voi. Che cosa fate?",
+     "daqui": [
+      "pane",
+      "casa"
+     ]
+    },
+    {
+     "id": "pane",
+     "tipo": "dettaglio",
+     "titolo": "Il pane sul davanzale",
+     "parte": "indizio",
+     "seme": "Sul davanzale di quella stessa casa c’è un pezzo di pane.",
+     "immagine": "PDI — Bëllindë — Il pane sul davanzale.jpg",
+     "innesco": "Qualcuno guarda il pane, o chiede a Za’ Filumena di chi è la casa.",
+     "leggi": "Un pezzo di pane scuro, di farro, spezzato a mano. È duro. Accanto, sul legno del davanzale, ci sono tanti segni tondi, uno sull’altro: il posto dove da molto tempo qualcuno appoggia qualcosa, ogni sera, nello stesso punto.\n\nDalla scala, Za’ Filumena parla senza alzare la voce.\n\n«Chille è lu pane de Cuncetta. Tre anne. Ogne sera.» Pausa. «Pe’ chi téne fame e nen po’ trasì.»",
+     "note": "Se Micuccio è con loro, lo guarda anche lui. Dice: «Mamma lo mette ancora.» Poi, se nessuno lo ferma, allunga la mano e lo prende. Lo mangia così, duro, davanti alla porta. È la cosa che Cuncetta vede per prima quando apre.",
+     "dopo": "Sanno che la madre ha messo il pane per il figlio ogni sera per tre anni. È il modo più forte di entrare nella scena: lasciare che sia il pane a bussare.",
+     "rilancio": "Il pane è sul davanzale. Dietro la porta la ruota si è fermata. Che cosa fate?",
+     "daqui": [
+      "casa"
+     ]
+    },
+    {
+     "id": "casa",
+     "tipo": "dettaglio",
+     "titolo": "La porta si apre",
+     "parte": "evento",
+     "innesco": "Qualcuno bussa, oppure Micuccio prende il pane dal davanzale.",
+     "leggi": "La porta si apre prima che qualcuno bussi due volte.\n\nUna donna sulla quarantina, i capelli raccolti in fretta, un grembiule pieno di fili di canapa. Ha in mano una ciotola di legno. Guarda voi. Guarda la polvere.\n\nPoi guarda il ragazzo.\n\nLa ciotola cade. Non si rompe: rotola sulla soglia, fa un mezzo giro, si ferma.\n\nLa donna non grida. Si mette le mani sulla bocca e resta così, ferma, come se un rumore qualsiasi potesse farlo sparire.\n\nDietro di lei, dal fondo della bottega, un uomo grosso con le mani piene di corda chiede: «Cuncè? Chi è?»\n\nNessuno gli risponde.\n\nAllora viene a vedere.",
+     "note": "Lascia il silenzio. Non riempirlo. Il primo a muoversi deve essere un giocatore, o Micuccio.\nMicuccio dice: «Mamma.» Poi, piano, come una cosa che ha preparato per tre anni e non gli viene: «Ho fame.»\nCuncetta lo tocca: la faccia, le spalle, le mani. Conta le dita. Se ne accorge che sta contando e si ferma di colpo.\nNicola non lo abbraccia subito. Guarda i PG, uno per uno, poi guarda il figlio, poi di nuovo i PG. Lascia cadere la corda. Poi lo abbraccia così forte che Micuccio si lamenta.\nAssuntina esce da dietro la madre, a piedi nudi, e chiede: «È Micu’? È Micu’ vero?»\nIn un quarto d’ora lo slargo è pieno. Za’ Filumena è scesa dalla scala. Nessuno entra in casa senza essere invitato: il Borgo ha le sue regole.",
+     "dopo": "La famiglia li fa entrare. Da qui i dialoghi con la madre, il padre e Micuccio; e poi l’arrivo di Titta.",
+     "rilancio": "Lo slargo si riempie di gente che non parla. Che cosa fate?",
+     "daqui": [
+      "madre",
+      "padre",
+      "micuccio",
+      "medicina",
+      "titta"
+     ]
+    },
+    {
+     "id": "madre",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Cuncetta, la madre",
+     "parte": "evento",
+     "innesco": "Dentro casa, quando Cuncetta riesce a staccarsi dal figlio. Le domande le fa lei, prima dei PG.",
+     "leggi": "Vi fa sedere su una panca lunga, in mezzo alle matasse di canapa. Mette in tavola quello che c’è: pane, olive, un formaggio duro. Non chiede se avete fame.\n\nMicuccio mangia accanto a lei. Lei non lo guarda mangiare: lo tiene per la manica.\n\n«Addò steve?»\n\nAspetta. Non vi lascia il tempo di scegliere le parole.\n\n«Ditemelo tutto. Pure le cose brutte. Tre anne ho tenute le cose brutte da sola, dentro a la capa. Mo’ le voglio sapé cumme so’.»",
+     "note": "Cuncetta de lu Funare, 41 anni, filatrice di canapa. Tre anni di pane sul davanzale. È la più forte della casa e lo sa: è lei che ha impedito al marito di andare a sfondare la porta bassa con la mazza. Oggi quella forza non le serve più, e non sa dove metterla.\nCosa vuole: sapere tutto; che il figlio non riparta; e, da domani, che qualcuno le spieghi perché nessuno l’ha tirato fuori prima.\n\nDOV’ERA? — Ascolta tutto. Quando sente «tre anni seduto, a contare», si alza e va alla finestra. «Seduto.» Pausa. «E ije facéve lu pane.» (Se le dicono che il pane lo teneva vivo in qualche modo, anche se non è vero, lei lo sa che non è vero, e lo ringrazia lo stesso.)\n\nHA SOFFERTO? — Guarda il figlio. Se i PG dicono la verità (non mangiava, non dormiva, contava, e la voce non lo lasciava andare), lei annuisce piano. Se mentono per consolarla, se ne accorge: «Vuje nen tenete figlie.» Non è un’accusa: è una constatazione.\n\nPERCHÉ NON È CRESCIUTO? — Lo guarda come se lo vedesse per la prima volta. «È… è cumme quanne se n’è jute.» Se le spiegano che là sotto il tempo passava piano: «Allora me l’hanno tenute. Me l’hanno tenute pe’ me.» È il suo modo di sopravvivere alla notizia: lasciaglielo.\n\nCHI È STATO? CHI GLIELO HA FATTO? — La domanda pericolosa. Se i PG spiegano: un soldato morto da duecento anni, un ordine di pietra. Lei non capisce e non vuole capire: vuole un nome. Se il nome che viene fuori è quello di Don Fulgenzio (che ha murato la porta bassa tre anni fa), Cuncetta diventa bianca. Si alza. «Isse. Isse veneve a casa mé. Ogne mese. A dirme de pregà.» Non urla. Prende lo scialle ed esce, verso la pieve. (Vedi «Se la madre va alla pieve».) Solo chi la ferma sulla porta con una ragione vera (Persuasione o Intuizione CD 15, oppure Micuccio che le prende la mano: nessun tiro) la trattiene: «Oggi no. Oggi sta cà lu figlie mé. Lu prete po’ aspettà. Isse sa aspettà.»\n\nE TITTA? — Il nome le passa sulla faccia come un’ombra. «Lu figlie de Pasquale. È turnate. È turnate da sule.» Tre anni ha pensato che Titta l’avesse lasciato lì. Ha ragione. Se i PG le raccontano che Titta è uscito perché un ordine lo ha fatto uscire (ESCI, lo stesso di Rocco), ci mette tempo. Poi: «Pure isse, allora.» Non perdona subito. Ma non chiude la porta quando Titta arriva.\n\nCOSA POSSIAMO FARE PER LEI? — «Gnente.» Poi ci ripensa. «Una cosa. Nen ve lu purtate appresso. Quanne ve ne jate. Isse ve guarderà cumme ve guarda mo’, e vorrà venì. Diteje de no.» (È un seme: Micuccio vorrà seguirli. Vedi la Porta di Levante.)\n\nSE LE OFFRONO DENARO — Lo guarda, lo prende, lo mette sotto la madonnina senza contarlo. «Pe’ la messa de ringraziamento.» Nessuna offesa: qui non è un’elemosina, è un voto.\nSE LE MENTONO sulla parte di Micuccio (che non ha sofferto, che dormiva): lo sa. Lo scrive nella memoria e non si fida più di chi l’ha detto.\nSE QUALCUNO ALZA LA VOCE in casa sua: una sola frase, bassa. «Chesta è la casa de na mamma che ha fatte lu pane tre anne. Abbassate la voce.»\n\nBattute pronte:\n«Addò steve?»\n«Ditemelo tutto. Pure le cose brutte.»\n«Me l’hanno tenute pe’ me.»\n«Nen ve lu purtate appresso.»",
+     "dopo": "Cuncetta sa dove era il figlio. Se ha saputo di Don Fulgenzio, o va alla pieve adesso, o ci va stasera al vespro: in entrambi i casi la scena si sposta a San Vincenzo (vedi lì «Cuncetta alla pieve»).",
+     "rilancio": "Cuncetta tiene il figlio per la manica e vi guarda. Che cosa le dite?",
+     "daqui": [
+      "padre",
+      "micuccio",
+      "titta"
+     ]
+    },
+    {
+     "id": "padre",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Mastro Nicola, il padre",
+     "parte": "evento",
+     "innesco": "Nicola esce sullo slargo dopo il primo abbraccio: non regge la casa piena. O qualcuno lo segue in bottega.",
+     "leggi": "Mastro Nicola esce sullo slargo e si mette davanti al Pozzo Cieco. Ci guarda dentro. Con le mani grosse fa il gesto di chi tira su una corda, e non c’è nessuna corda.\n\n«Vuje ce site state, llà sotte.»\n\nSi gira.\n\n«Io ce vulevo scénne. Tre anne fa. Cu la mazza. M’hanno fermate.» Pausa. «M’hanno fermate tutte quante.»",
+     "note": "Mastro Nicola lu Funare, 45 anni, funaio. Mani enormi, voce piccola. Fa le corde di tutto il Borgo e di mezza Bëllindë: anche quella di Rocco. Tre anni fa voleva scendere a prendere il figlio; lo fermarono la moglie, il prete e il sergente. Da allora gira la ruota.\nCosa vuole: sapere chi. E ripagare i PG, perché un funaio paga i suoi debiti.\n\nCOM’ERA LAGGIÙ? — Vuole i dettagli pratici, da artigiano: quanto è profondo, quanta corda serve, com’è la pietra, quanti passi. Ascolta contando sulle dita. Si ferma quando se ne accorge.\n\nCHI HA MURATO LA PORTA BASSA? — Non lo sa. «Na notte c’ere lu buche, e la matina c’ere lu mure. Nisciune ha viste gnente.» Se i PG gli dicono che è stato Don Fulgenzio: si siede sul bordo del pozzo. Tace a lungo. «Lu prete.» Poi, lento: «Isse l’ha chiuse… e isse me diceve de pregà.» Qui si decide: Nicola vuole andare alla pieve con la mazza. Persuasione CD 15 per fermarlo (vantaggio se si usa l’argomento che Fulgenzio non sapeva che il ragazzo fosse vivo — è vero). Intimidire lo ferma ma lo offende: da quel momento non accetta più niente da loro. Se nessuno lo ferma, va alla pieve (vedi San Vincenzo).\n\nLA CORDA DEL POZZO (se qualcuno gliene parla o gliela porta) — Prende il moncone tagliato, lo gira fra le dita. «Chesta l’aje fatte ije. Canapa de tre capi, torte a destra. Pe’ Rocche.» (tira) «Nen se spezze. Chesta è stata tagliata. Cu na lama bona, da une che sapeve tagliare.» Non sa chi. Da decidere, secondo come è morto Rocco (vedi il Camposanto).\n\nLA CORDA DI MICUCCIO — Se gli riportano il rotolo di corda che Micuccio aveva con sé laggiù, lo riconosce subito: è la sua, sparita dalla bottega la notte della scommessa. «Me l’ha arrubbate. Pe’ la scummessa.» Ride, per la prima volta, e poi piange, tutte e due le cose insieme.\n\nTITTA — «Lu figlie de Pasquale.» Stringe i pugni. «L’aje viste ogne juorne pe’ tre anne. Ogne juorne passave davante a casa mé e nen guardave.» Se gli spiegano l’ordine ESCI: non cambia idea subito. Ci vuole Micuccio.\n\nCOSA VUOI DARCI? — Li porta in bottega. Una matassa di corda nuova, la migliore, fatta nell’inverno per nessuno. «Chesta nen se spezze. Pe’ quanne scennete n’atra vote llà sotte. Ché ce scennete, vuje. Se vede.» (Vedi il bottino nel modulo di chiusura.)\n\nVUOI VENIRE CON NOI? — «No. Io tenghe la casa, e la ruota. Ma se a Teramum ve serve na corda, mannate a dì. Ve la mande pe’ la posta, e nen ve la faccio pagà.»\n\nSE LO MINACCIANO — È grosso e non ha paura; ma non alza le mani su chi gli ha riportato il figlio. Li guarda, e torna alla ruota.\nSE GLI MENTONO — Non se ne accorge. È un uomo semplice. Se la bugia gli viene scoperta dopo, non la perdona: «Nu funare cunosce lu nodo fallate.»\n\nBattute pronte:\n«Io ce vulevo scénne. Cu la mazza.»\n«Chesta nen se spezze. Chesta è stata tagliata.»\n«Nu funare cunosce lu nodo fallate.»",
+     "dopo": "Nicola sa cos’era laggiù. Se ha saputo di Don Fulgenzio e nessuno l’ha fermato, va alla pieve con la mazza: vedi San Vincenzo. Se l’hanno fermato, ci va stasera, disarmato, e resta in fondo alla navata per tutto il vespro.",
+     "rilancio": "Nicola vi guarda con la corda in mano. Che cosa fate?",
+     "daqui": [
+      "micuccio",
+      "titta",
+      "chiusura",
+      "bellinde_dopo_chiesa"
+     ]
+    },
+    {
+     "id": "micuccio",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Micuccio, a casa",
+     "parte": "evento",
+     "innesco": "Quando qualcuno parla con Micuccio, a tavola o sulla soglia.",
+     "note": "Micuccio, diciotto anni, ne dimostra quindici. Tre anni seduto a contare nella stanzetta sotto la città, tenuto fermo dall’ordine RESTA. Adesso è libero, e non sa cosa fare del silenzio. Parla piano, con frasi corte; quando qualcuno parla forte si irrigidisce. Mangia pochissimo e spesso. Si guarda le mani come Rocco.\n\nCOME STAI? — «Bene.» Pausa. «È che… nessuno mi dice niente. Dentro. Non c’è più la voce. È… grande.» Si tocca la testa. «C’è tanto posto.»\n\nTI RICORDI DI QUELLA NOTTE? — «Titta ha detto: portiamo fuori una pietra. Io ho preso la corda di papà. Siamo scesi.» (pausa) «Poi c’era il passo. Tre, e fermo. E poi una voce ha detto RESTA.» Guarda le mani. «E io sono restato. Prima di decidere. Non ho deciso niente, io.»\n\nE TITTA? — «Titta ha corso. La voce gli ha detto ESCI. A lui ha detto ESCI e a me RESTA.» (pausa lunga) «Ha fatto bene. Se restava, eravamo in due.» Lo dice senza rancore. È la frase che serve a Titta per tornare a vivere: se i PG la portano a Titta, o la fanno sentire a Titta, cambia tutto.\n\nCHE COSA SENTIVI, LAGGIÙ? — «Il ritmo. Sempre. E ogni tanto, passi. Non del ritmo. Passi che avevano fretta.» Da decidere se usarlo: «Una volta c’erano due persone. Una donna, credo. Rideva piano. Parlavano di gesso.» (Proposta: la cellula di Ceruso, che usa le vie di servizio sotto il Borgo con i segni di gesso di Cascia. Se lo usi, è un filo per Teramum: la donna rideva di «un ragazzo seduto che conta».)\n\nE QUALCUNO CHE GRATTAVA? — Se glielo chiedono (i graffi sulla porta murata): «Sì. Tante notti. Grattava e piangeva. Lontano. Poi ha smesso.» Da decidere: proposta, era Rocco, nei sei giorni prima di morire. Micuccio non sa chi fosse, e non gli si dice.\n\nCHI CONTA ADESSO? (è la sua domanda, se non l’ha già fatta alla grata) — Qualunque cosa rispondano i PG, lui la ripete alla madre, e la ripeterà per giorni. Se rispondono «Nessuno. Adesso scegli tu», gli viene da piangere e non sa perché.\n\nVUOI VENIRE CON NOI? — Gli si illuminano gli occhi, e subito si spengono. «Posso?» Poi guarda la madre. Aspetta che glielo dica qualcuno: è ancora un ragazzo abituato a ricevere ordini. Vedi la Porta di Levante: la madre ha chiesto di dirgli di no.\n\nCHE COSA FARAI ADESSO? — «Non lo so.» Pausa. «Mangio. Poi… poi vorrei vedere il mare. Titta diceva che dal Balcone si vede il mare, quando è bello.» (Non si vede. Ma nessuno glielo dice.)\n\nHAI PAURA? — «Del silenzio. Di notte. Quando non c’è niente che conta.» Se un PG gli insegna una cosa per le notti — una canzone, una preghiera, un gioco di mani, un nome da ripetere — la userà per anni.\n\nSE QUALCUNO GLI DÀ UN ORDINE (anche gentile: «siediti», «mangia») — obbedisce all’istante, e poi si accorge di aver obbedito, e si spaventa. Chi se ne accorge (Intuizione CD 12) capisce che la cosa da insegnargli è dire di no. Se un PG gli chiede di dire di no a qualcosa, per gioco, e lui ci riesce, ride per la prima volta.\n\nBattute pronte:\n«Mamma lo mette ancora.»\n«Ho fame.»\n«A lui ha detto ESCI e a me RESTA.»\n«C’è tanto posto, dentro.»",
+     "dopo": "Micuccio non accusa nessuno. La sua frase su Titta («Ha fatto bene. Se restava, eravamo in due») è la chiave per liberare Titta. Se un PG gli insegna a dire di no, lo ricorderà per sempre.",
+     "rilancio": "Micuccio vi guarda, aspetta la prossima domanda. Che cosa gli dite?",
+     "daqui": [
+      "titta",
+      "medicina",
+      "chiusura"
+     ]
+    },
+    {
+     "id": "medicina",
+     "tipo": "dettaglio",
+     "titolo": "Micuccio alla luce",
+     "parte": "evento",
+     "innesco": "Qualcuno lo visita, o la madre chiede come sta davvero.",
+     "prove": [
+      {
+       "id": "medicina",
+       "abilita": [
+        "Medicina"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Respira, il cuore batte: sta meglio di quanto dovrebbe. Lo mettete a letto. Si addormenta di colpo, e si sveglia di soprassalto dopo un’ora cercando di contare."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Il polso non segue più nessun tempo: è lento, suo, irregolare come quello di un ragazzo vero. Gli servono acqua a sorsi, brodo, buio, e qualcuno accanto. Fra tre giorni camminerà da solo."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Il pericolo non è il corpo: è svegliarsi in una stanza silenziosa e non sapere più cosa fare. Qualcuno deve parlargli, anche di niente, soprattutto la notte. Lo dite a Cuncetta, e lei annuisce come chi ha ricevuto un ordine che aspettava."
+        }
+       ]
+      }
+     ],
+     "note": "Una cura magica qualsiasi lo rimette in piedi subito (camminerà appoggiato), ma non tocca la paura del silenzio. Il Dottor Albino, se lo portano al Carro IV, dice: «Tre anni senza mangiare e mi arriva col polso di un ragazzo che ha dormito male. Non chiedetemi di scriverlo nel registro.»",
+     "dopo": "Con 13 o più sanno che il corpo guarirà da solo in pochi giorni; con 17 o più sanno che la cosa da curare è il silenzio, e la famiglia lo sa da loro.",
+     "rilancio": "Micuccio si addormenta con la mano della madre sulla fronte. Che cosa fate?",
+     "daqui": [
+      "titta",
+      "chiusura"
+     ]
+    },
+    {
+     "id": "titta",
+     "tipo": "dialogo",
+     "titolo": "Titta arriva",
+     "parte": "evento",
+     "innesco": "Un’ora dopo l’arrivo, quando la notizia ha fatto il giro fino all’orto vicino alla Porta di Levante. O prima, se qualcuno va a chiamarlo.",
+     "leggi": "Lo slargo si apre da solo per lasciarlo passare.\n\nUn ragazzo lungo e magro, le mani sporche di terra fino ai polsi, un filo di canapa da pomodori ancora annodato al dito. Si ferma sul bordo dello slargo, dove un tempo si fermavano tutti.\n\nPoi si accorge che il bordo non c’è più.\n\nFa un passo. Un altro. Senza contarli.\n\nMicuccio è sulla soglia, appoggiato allo stipite. Si guardano.\n\nTitta apre la bocca. Non gli esce niente.",
+     "note": "Titta, il ragazzo tornato, figlio di Pasquale. Tre anni fa uscì da solo: l’ordine gli disse ESCI, e lui obbedì prima di decidere. Per undici giorni ripeté «Sta contando». Da allora evita scale, cantine, marce, rumori ritmici; certe notti si sveglia con le dita che contano da sole. Stamattina, all’orto, le dita si sono fermate da sole, e non sapeva perché.\nRegia: non far parlare Titta per primo. Se un PG riempie il silenzio, Titta scappa. Se nessuno lo riempie, parla Micuccio: «Titta.» E poi: «Hai fatto bene.»\n\nCOSA DICE MICUCCIO — «Hai fatto bene. Se restavi, eravamo in due.» Titta si piega come se l’avessero colpito allo stomaco. Si siede per terra, in mezzo allo slargo, dove per settant’anni nessuno ha giocato. Piange come un bambino, senza vergogna. Nessuno del Borgo si muove.\n\nCOSA DICE TITTA (quando riesce) — «J’aje ditte de move’se. Isse me guardave. E piagnéve.» (a Micuccio) «Te guardave. E so’ jite.» — Ti guardavo. E me ne sono andato.\n\nPERCHÉ SEI SCAPPATO? (se un PG glielo chiede davanti a tutti: attenzione, può fare male) — Se lo chiede con durezza, Titta si alza e se ne va, e il padre esce dalla folla per mettersi in mezzo. Se lo chiede con rispetto: «Nen so’ scappate. M’hanno fatte scì.» Se un PG gli spiega l’ordine ESCI (lo stesso di Rocco): «Pure ésse. Allore nen so’ ije lu sbagliate.» È la sua liberazione.\n\nIL CONTEGGIO, OGGI — «È finite.» Si guarda le mani. «Stamatina, all’orto. S’è fermate. Aje pensate che ere morte isse.» (guarda Micuccio) «E invece…»\n\nLA MAPPA A CARBONE (se il gruppo l’aveva avuta da lui prima della discesa) — «V’ha servite?» Se sì: annuisce, serio, da uomo. È la prima cosa di cui è fiero da tre anni.\n\nTI SENTI IN COLPA? — «Tre anne. Ogne juorne passave davanti a lu pozze e nen guardave. Ogne juorne passave davanti a casa sé.» (pausa) «Mo’ pozze guardà.»\n\nLA FAMIGLIA DI MICUCCIO — Se Nicola o Cuncetta sono lì, Titta non li guarda finché non parla Micuccio. Dopo, si avvicina a Cuncetta e resta davanti a lei con la testa bassa. Lei lo guarda a lungo. Poi gli toglie il filo di canapa dal dito. «Chiste è de lu negozie nostre.» È tutto quello che dice. Basta.\n\nSe i PG lo INTIMIDISCONO o gli mettono fretta: si chiude per sempre, come nelle schede. Se lo prendono in giro: il Borgo non lo dimentica.\n\nBattute pronte:\nMicuccio: «Hai fatto bene. Se restavi, eravamo in due.»\nTitta: «Te guardave. E so’ jite.»\nTitta: «Pure ésse. Allore nen so’ ije lu sbagliate.»\nTitta: «Mo’ pozze guardà.»",
+     "dopo": "Titta è libero dal conteggio e dalla colpa. Il Borgo ha visto tutto: la voce «il ragazzo tornato e il ragazzo morto si sono abbracciati sullo slargo» sarà in piazza prima del vespro. Titta, alla partenza, sarà al suo orto vicino alla Porta di Levante (vedi lì).",
+     "rilancio": "Lo slargo è pieno e nessuno parla. Che cosa fate?",
+     "daqui": [
+      "cecco",
+      "chiusura"
+     ]
+    },
+    {
+     "id": "cecco",
+     "tipo": "dettaglio",
+     "titolo": "Cecco",
+     "parte": "evento",
+     "innesco": "Poco dopo Titta: Cecco era di guardia a Ponente, ha sentito Bartolo, ha lasciato il posto (contro gli ordini) ed è corso giù.",
+     "leggi": "Un giovane con la cotta troppo larga arriva di corsa dal vicolo di mezzo e si ferma di colpo, col fiato rotto. Guarda il ragazzo sulla soglia.\n\n«Micu’?»\n\nBasta quello. Micuccio lo guarda, ci mette un momento.\n\n«Cecco. Hai la cotta.»\n\nCecco si mette a ridere, e ride fino a che non gli viene da piangere, e allora smette e si raddrizza come gli ha insegnato il sergente.",
+     "note": "Cecco, guardia, 19 anni. Era il terzo amico: quella notte il padre l’aveva messo di guardia alle bestie e non andò. Ha lasciato il posto di guardia per venire qui: Ruggiero lo saprà. La sua richiesta di partire con la Crociata arriva alla partenza (vedi la Porta di Levante), ma nasce qui: guarda i PG come si guarda quello che si vorrebbe diventare.",
+     "dopo": "Cecco da oggi ha deciso di chiedere a Ruggiero di partire con la Crociata. Il suo dialogo è alla Porta di Levante.",
+     "rilancio": "Cecco si asciuga la faccia con la manica e vi guarda. Che cosa fate?",
+     "daqui": [
+      "chiusura",
+      "bellinde_dopo_levante"
+     ]
+    },
+    {
+     "id": "chiusura",
+     "tipo": "dettaglio",
+     "titolo": "Micuccio è a casa",
+     "parte": "evento",
+     "innesco": "Quando lasciano la casa della famiglia per andare dal Conte, al campo o alla pieve.",
+     "leggi": "Quando uscite, Mastro Nicola vi aspetta sulla soglia della bottega con una matassa di corda nuova, chiara, avvolta stretta.\n\nNon dice grazie. Ve la mette in mano.\n\n«Chesta nen se spezze.»\n\nDietro di lui, sul davanzale, Cuncetta ha tolto il pane. Al suo posto non ha messo niente.",
+     "note": "PE: riportare Micuccio alla sua famiglia (vivo, e con la verità detta per intero). Se la scena si è chiusa male (Nicola alla pieve con la mazza, Cuncetta sconvolta senza che nessuno l’abbia aiutata), dimezza i PE.",
+     "dopo": "Micuccio è a casa, la famiglia sa, il Borgo sa. Il paese ne parlerà per tutto il giorno. Se Nicola o Cuncetta vanno alla pieve, la scena di San Vincenzo cambia (vedi lì).",
+     "rilancio": "Il Borgo vi guarda andare via. Che cosa fate?",
+     "pe": 600,
+     "bottino": [
+      {
+       "n": "Corda di Mastro Nicola",
+       "q": 1,
+       "cat": "Equipaggiamento",
+       "peso": "5 kg",
+       "valore": "Non si vende",
+       "stats": "Corda di canapa, 15 m. Vantaggio alle prove di Atletica per arrampicarsi o calarsi con questa corda; non si spezza per strappi o pesi normali (solo tagliandola)",
+       "desc": "Canapa di tre capi, torta a destra, fatta nell’inverno «per nessuno» dal funaio del Borgo Vecchio. Data a chi gli ha riportato il figlio: «Pe’ quanne scennete n’atra vote llà sotte.»"
+      }
+     ],
+     "daqui": [
+      "bellinde_dopo_rocca",
+      "bellinde_dopo_chiesa"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "bellinde_dopo_rocca",
+   "kind": "persona",
+   "title": "La Rocca — il Conte Gisulfo",
+   "image": "PDI — Bëllindë — Il Conte e la lettera di Teramum.jpg",
+   "legacyPosition": {
+    "x": 1018,
+    "y": 88
+   },
+   "text": "Il portone della Rocca è aperto. Nel cortile un messo del contado dorme seduto contro la legnaia, la borsa del corriere sulle ginocchia e il cappello sugli occhi.\n\nRuggiero vi precede su per la scala esterna senza farvi annunciare.\n\nNella sala alta il camino è acceso. È agosto. Il Conte è a tavola da solo: una scodella, un pane, una caraffa. Non si alza. Vi guarda entrare uno per uno, come si contano le bestie che rientrano la sera.\n\nSul tavolo, accanto al pane, c’è una lettera aperta. Il sigillo di ceralacca è rosso scuro, spezzato in due.\n\nGisulfo prende i bicchieri dalla credenza e versa il vino da sé. Uno per ciascuno. Poi, dopo un attimo, un altro, per Ruggiero.\n\n«Avete dormito? Io no.»\n\nSi sfrega le mani verso il fuoco.\n\n«Sedete. Raccontatemi che cosa c’è sotto la mia città. Poi vi racconto io che cosa c’è sopra.»",
+   "breve": "A mezzogiorno Ruggiero li porta dal Conte, che mangia da solo. Vuole il resoconto, vuole il passaggio chiuso e una relazione scritta che lo copra con Teramum; intanto gli è arrivata una seconda lettera di Teramum che gli ordina di riferire sulla Crociata e di trattenerla. Dà una borsa, il grano e, se convinto, un salvacondotto e una lettera per il Barone di Cashtalladdë.",
+   "gm": "Chi c’è: il Conte Gisulfo Melacera, «il Girella»; Ruggiero (fa rapporto per primo, asciutto: numeri, non emozioni); Messer Anselmo il castaldo entra più tardi coi conti del grano. Stato di partenza di Gisulfo: cordiale. Al tavolo i PG hanno ignorato il bando in piazza, la città li guarda con diffidenza, e il Fondaco di Ceruso ha preso fuoco mentre scendevano: Gisulfo lo sa e non è contento.\nCosa sa Gisulfo prima che parlino: che sono scesi dal Pozzo Cieco nel pomeriggio del giorno prima, con Ruggiero; che il Fondaco è bruciato e che Ceruso è sparito; che Renzo è in cella; che stamattina il figlio del funaio del Borgo Vecchio, «il ragazzo morto tre anni fa», è tornato a casa. Non sa niente di Sigilli, Custodi, guerre antiche.\nLa lettera (nuova, inventata per questa scena — Da decidere): arrivata ieri sera col corriere di Teramum. È della Cancelleria del Consiglio Reggente: ripete il bando, ordina al Conte di riferire entro tre giorni numero, composizione e movimenti della colonna, e «di trattenere la suddetta colonna entro le vostre terre fino a nuova disposizione». Gisulfo non può e non vuole trattenerli. La soluzione da Girella: chiede loro di partire domattina, così scriverà, senza mentire, che la colonna era già partita quando la lettera è stata letta. La data della sua risposta sarà quella di domani.\nCosa vuole in cambio: (1) il passaggio chiuso e niente racconti in piazza sulla guerra sotto la città; (2) una relazione scritta e firmata da loro, depositata dal notaio Ilderico Panzalonga: la sua assicurazione per quando Teramum farà i conti; (3) che il Sigillo resti dov’è e che Teramum non lo sappia da loro; (4) che partano domattina. Piccolo conto aperto: il suo banditore Mimì aspetta ancora le scuse di Vicarus.\nDa decidere: se una prova della cellula di Velthuria (Renzo che parla, la botola del Fondaco, la borsa di Ceruso) porta Gisulfo allo stato «complice». Verifica cosa è stato narrato davvero prima di muovere Ceruso.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "resoconto",
+     "tipo": "dettaglio",
+     "titolo": "Il resoconto",
+     "parte": "evento",
+     "innesco": "I PG raccontano quello che hanno trovato sotto la città. Ruggiero parla per primo, due frasi, poi guarda loro.",
+     "leggi": "Ruggiero fa rapporto in piedi, come sempre.\n\n«Sotto il Borgo Vecchio non ci sono cisterne, signore. C’è una caserma. Più vecchia della città. E un esercito che marciava ancora.» Una pausa. «Adesso non marcia più.»\n\nPoi si mette di lato e guarda voi.\n\nGisulfo non ha toccato il vino. Aspetta.",
+     "note": "Il Conte ascolta senza interrompere. Quando sente del comando che muoveva i corpi, guarda Ruggiero; Ruggiero guarda il camino. Quando sente di Micuccio seduto tre anni a contare, posa il bicchiere. Quando sente che Rocco è sceso per ordine suo ed è risalito con un ordine nella testa, si alza e va alla finestra.",
+     "prove": [
+      {
+       "id": "conte",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un signore che ascolta una storia incredibile con la faccia di chi fa i conti. Nient’altro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Si sfrega le mani da quando avete cominciato. Non per il freddo. Quando avete detto il nome di Rocco ha smesso di respirare per un momento: l’ha mandato giù lui, e lo sa."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Ha paura, ma non di quello che c’era sotto: di quello che succede quando Teramum lo sa. Guarda la lettera sul tavolo ogni volta che dite una parola grossa. Sta già scrivendo nella testa la risposta."
+        }
+       ]
+      }
+     ],
+     "dopo": "Gisulfo sa tutto. La sua prima frase, quando torna dalla finestra: «Chiudete quel passaggio.» Poi: «E adesso ditemi perché sotto la mia città c’era una guerra, e io sono l’ultimo a saperlo.»",
+     "rilancio": "Il Conte torna a sedersi e si versa da bere. Che cosa fate?",
+     "daqui": [
+      "gisulfo",
+      "lettera",
+      "passaggio"
+     ]
+    },
+    {
+     "id": "gisulfo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il Conte Gisulfo",
+     "parte": "evento",
+     "innesco": "Dopo il resoconto, per tutto il pranzo.",
+     "note": "Il Conte Gisulfo Melacera, «il Girella». Cortese, ironico, chiude quasi ogni frase con una domanda, come se contrattasse sempre. Mani fredde: se le sfrega quando mente o ha paura. Cosa vuole, senza ammetterlo: che qualcuno gli dica che ha fatto bene a firmare. Oggi vuole anche un’altra cosa: che nessuno gli chieda perché ha mandato Rocco nel pozzo.\n\nPERCHÉ HAI MANDATO ROCCO? — «Perché d’estate qui l’acqua è un problema, e le cisterne erano vuote da prima di mio nonno.» Beve. «Ecco: è una risposta vera ed è una risposta sbagliata. Vi basta?» Se insistono (Persuasione CD 13, o anche solo il silenzio giusto): «L’ho mandato giù io. È risalito diverso. Io non ho più mandato nessuno, non ne ho più parlato, e ho sperato che nessuno me lo chiedesse.» (pausa) «Voi me l’avete chiesto. Grazie. Credo.»\n\nCOSA FARAI PER NUNZIA? — Ci pensa, sfregandosi le mani. «Rocco aveva la paga promessa per il lavoro delle cisterne. Venti fiorini. Non l’ha mai presa.» Tira fuori una borsetta. «Portategliela voi. Da me non la prende: da me è elemosina. Da voi è una paga.» (Se è Mattheus a portarla, Nunzia la accetta: è la paga del fratello, non un’offerta.)\n\nIL PASSAGGIO — «Chiudete. Murate. E che nessuno ne parli in piazza.» Se gli propongono di chiudere senza murare: vedi il modulo «Il passaggio».\n\nIL SIGILLO — Lo ascolta con attenzione diversa: da mercante. «Una cosa sotto la mia città che comandava gli uomini. E adesso non comanda più.» (pausa) «E voi volete sapere se la lascio lì.» Si sfrega le mani. «La lascio lì. E non ne so niente. E voi, a Teramum, non ne sapete niente nemmeno voi. Le cose che Teramum sa, Teramum le vuole.» Se un PG gli propone di portarlo via: «Il vostro soldato morto ha detto che non deve lasciare Bëllindë? Allora non lascia Bëllindë. Non discuto coi morti: sono gli unici che non cambiano idea.» (Da decidere, in gioco: il Sigillo resta o viaggia.)\n\nLA LETTERA DI TERAMUM — Vedi il modulo «La lettera». «Mi chiedono di contarvi. E di tenervi qui. Contarvi posso. Tenervi, no: non ho abbastanza uomini, e non ho abbastanza voglia.» Sorride. «Partite domattina? Allora io leggo questa lettera domani a mezzogiorno. Con grande sorpresa.»\n\nIL BANDO, E VOI CHE L’AVETE IGNORATO IN PIAZZA — Qui è freddo. «Siete scesi in piazza con il mio sergente, un banditore vi ha letto in faccia che siete dei ribelli, e voi siete andati a comprare il grano come se piovesse. La piazza ha deciso da sola.» (beve) «A Teramum non fatelo. A Teramum il silenzio lo scrivono a verbale.»\n\nCERUSO E IL FONDACO — «Un mercante che paga in anticipo e offre da bere a tutti mi brucia il fondaco e sparisce la stessa sera in cui voi scendete sotto la città.» Guarda Ruggiero. «Non credo alle coincidenze. Credo ai conti.» Se gli portano una prova della cellula: sbianca. «Nella mia città?» Da quel momento è complice (Da decidere, vedi le note del punto).\n\nSOLDATI, UOMINI PER TERAMUM — «No. Ho firmato un foglio, non una guerra.» Nessuna prova lo sposta. Nello stato complice: presta due uomini fino al guado.\n\nCECCO — «Il ragazzo di guardia? Chiedetelo al sergente. Gli uomini di Ruggiero sono di Ruggiero.» (a Ruggiero, ironico) «Te ne avanza uno, sergente?»\n\nIL BRAK (se gli dicono di Vhaerun, o se lo sa già) — Si irrigidisce. «Un Brak. Sotto le mie mura.» Pausa lunga. «Fuori dalle mura, al vostro campo, non lo vedo. Se lo vedo dentro, lo vedono anche gli altri, e allora devo fare qualcosa. Non costringetemi a fare qualcosa.» Se gli dicono che un tempo era un elfo, la faccia si chiude: «Allora non ditelo a nessuno. Qui gli elfi piacciono ancora meno dei Brak.»\n\nMICUCCIO — Per la prima volta non chiude la frase con una domanda. «Tre anni. Sotto casa mia.» Si alza, prende dalla credenza un sacchetto di sale e una candela di cera buona. «Fatele avere alla madre. Da parte della Rocca. È quello che si porta quando nasce un figlio.»\n\nLA RICOMPENSA — Vedi il modulo «Il prezzo del Conte». «I Melacera non pagano i debiti che non hanno. Ma pagano quelli che hanno. E oggi ne ho uno.»\n\nVICARUS E MIMÌ — Se Vicarus è presente, alla fine, con la stessa cortesia: «Il mio banditore aspetta ancora delle scuse. È un uomo semplice: una frase gli basta. Fatemi la cortesia di dargliela prima di partire. Non per lui: per me. Un Conte che non difende il suo banditore non ha più nessuno che parli per lui in piazza.»\n\nSE LO MINACCIANO — Nessun tiro. «Messeri, mi minacciano da trent’anni persone più pericolose di voi, e sono ancora qui perché non ho orgoglio. Ditemi cosa volete: se costa poco, ve lo do senza questo teatro.» Passa a freddo: niente lettere, prezzi pieni.\nSE PROVANO A COMPRARLO — Ride davvero. «Volete comprare un Girella? Arrivate tardi: mi ha già comprato la mia firma.»\nSE GLI MENTONO sul Sigillo (lo sminuiscono) — Intuizione del Conte +4 contro il loro Inganno: se se ne accorge, non dice niente; ma nella relazione per il notaio vuole scritto tutto, «anche la parte che non mi avete detto».\n\nBattute pronte:\n«Avete dormito? Io no. Stanotte, per una volta, per una buona ragione.»\n«Chiudete quel passaggio.»\n«Le cose che Teramum sa, Teramum le vuole.»\n«Partite domattina? Allora questa lettera la leggo domani. Con grande sorpresa.»\n«Ho firmato un foglio, non una guerra.»",
+     "dopo": "Gisulfo ha il resoconto, sa del Sigillo, ha deciso cosa scrivere a Teramum (se glielo hanno chiesto). Vuole il passaggio chiuso, la relazione dal notaio e la partenza domattina.",
+     "rilancio": "Il Conte aspetta la vostra prossima domanda, il bicchiere in mano. Che cosa fate?",
+     "daqui": [
+      "lettera",
+      "passaggio",
+      "prezzo"
+     ]
+    },
+    {
+     "id": "lettera",
+     "tipo": "dettaglio",
+     "titolo": "La lettera di Teramum",
+     "parte": "indizio",
+     "seme": "Sul tavolo, accanto al pane, c’è una lettera aperta.",
+     "immagine": "PDI — Bëllindë — La lettera di Teramum.jpg",
+     "innesco": "Qualcuno guarda la lettera, o il Conte la fa scivolare sul tavolo verso di loro.",
+     "leggi": "Gisulfo la fa scivolare sul tavolo con due dita, come una carta da gioco.\n\n«Leggete pure. È scritta bene. Le cose scritte bene costano.»\n\nPergamena buona. Una mano di cancelleria, regolare, senza una macchia. In fondo, il sigillo del Consiglio Reggente di Teramum, spezzato.\n\nLe prime righe ripetono il bando che avete sentito in piazza. Poi la lettera cambia tono: al Conte di Bëllindë si ordina di riferire entro tre giorni il numero, la composizione e i movimenti della colonna. E di trattenerla entro le sue terre fino a nuova disposizione.",
+     "prove": [
+      {
+       "id": "lettera",
+       "abilita": [
+        "Indagare",
+        "Storia"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Una lettera di cancelleria come tante. Formule giuste, sigillo giusto. Il tono è quello di chi ha già deciso."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Non è firmata dal Duca né da un consigliere: è firmata «per il Consiglio» da un segretario. Chi l’ha voluta non ha messo il nome. E la mano è la stessa, regolare, perfetta, del bando letto in piazza."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "La lettera è partita da Teramum prima che la vostra colonna arrivasse a Bëllindë: qualcuno sapeva dove sareste stati, e quando. «Trattenerla» non vuol dire fermarla: vuol dire tenerla ferma abbastanza a lungo perché qualcun altro arrivi."
+        }
+       ]
+      }
+     ],
+     "note": "Da decidere: questa seconda lettera è un’invenzione di questa scena, coerente col bando (canone) e con la strada per Teramum (il picchetto di Colleatterato ha l’ordine di contare la colonna). La soluzione di Gisulfo è datare la risposta a dopo la partenza. Se i PG gli chiedono cosa scriverà, vedi il modulo «Il prezzo del Conte».",
+     "dopo": "Sanno che Teramum chiede al Conte di contarli e di trattenerli, e che la lettera viene dalla stessa mano del bando. Con 18 o più sanno che era partita prima del loro arrivo.",
+     "rilancio": "La lettera è sul tavolo, fra voi e il Conte. Che cosa fate?",
+     "daqui": [
+      "prezzo",
+      "gisulfo"
+     ]
+    },
+    {
+     "id": "passaggio",
+     "tipo": "dettaglio",
+     "titolo": "Il passaggio",
+     "parte": "evento",
+     "innesco": "Quando si decide che cosa fare delle entrate: il Pozzo Cieco, la porta bassa murata del Borgo, la grata sopra il Camposanto, la porta dietro la parete nord della pieve.",
+     "leggi": "«Murate tutto», dice Gisulfo. «Il pozzo, la porta, i buchi. Che fra cent’anni qualcuno ci trovi una cantina e basta.»",
+     "prove": [
+      {
+       "id": "passaggio",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "«Chiudete. Murate. E che nessuno ne parli in piazza.» Lo farà murare entro tre giorni. Ruggiero, dietro di lui, non dice niente, ma guarda il pavimento."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Gisulfo ci pensa, sfregandosi le mani. «Una porta con una chiave la tieni d’occhio. Un muro lo dimentichi.» Guarda Ruggiero. «La chiave la tieni tu, sergente. Solo tu.» Ruggiero annuisce una volta."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Il Conte ride. «Mi state convincendo a non fare la cosa che fa la mia famiglia da tre generazioni: murare e dimenticare.» Chiude il pozzo con una grata e un lucchetto, la chiave a Ruggiero, e fa scrivere al notaio dove stanno le entrate. «Così fra cent’anni qualcuno saprà dove guardare. E magari saprà anche perché.»"
+        }
+       ]
+      }
+     ],
+     "note": "CD 12 se Gisulfo è complice. Vantaggio se usano l’argomento di Ruggiero («quello che dimentichi, prima o poi, risale») o se ricordano che la porta bassa del Borgo l’ha murata qualcuno tre anni fa, con un ragazzo vivo dietro. La porta nella parete nord della pieve è affare della Chiesa: Gisulfo non ci mette bocca («Chiedete al prete. Io non entro nelle sue pareti, lui non entra nelle mie cantine.»).",
+     "dopo": "Con un successo il passaggio è chiuso ma sorvegliato e la chiave è di Ruggiero. Con un fallimento viene murato: è la terza volta che a Bëllindë qualcuno mura qualcosa per non guardarlo.",
+     "rilancio": "Il Conte aspetta la vostra risposta. Che cosa fate?",
+     "daqui": [
+      "prezzo"
+     ]
+    },
+    {
+     "id": "prezzo",
+     "tipo": "dettaglio",
+     "titolo": "Il prezzo del Conte",
+     "parte": "evento",
+     "innesco": "Alla fine del pranzo, quando il Conte fa i conti: cosa dà, cosa chiede.",
+     "leggi": "Gisulfo chiama il castaldo. Messer Anselmo entra con un libro sotto il braccio e una piuma dietro l’orecchio, e non vi saluta: saluta il libro.\n\n«Anselmo, quanto grano possiamo dare alla colonna senza morire di fame a febbraio?»\n\n«Dodici some, signore.»\n\n«Allora sono dodici.»\n\nIl Conte tira fuori una borsa dal cassetto e la posa sul tavolo. Non la spinge verso di voi. La lascia lì, in mezzo.\n\n«I Melacera non pagano i debiti che non hanno. Oggi ne ho uno. Ma anch’io ho qualcosa da chiedervi.»",
+     "note": "Cosa dà (sempre): la borsa (150 fiorini), dodici some di grano per la Crociata al prezzo zero, la paga di Rocco per Nunzia (venti fiorini, da portarle), sale e candela per la madre di Micuccio.\nCosa dà se convinto (Persuasione CD 15, CD 12 se complice): un salvacondotto dei Melacera valido fino al guado di Sant’Atto, e una lettera di presentazione per il Barone Ugo Pietramala di Cashtalladdë, signore della strada dopo il guado: «Non vi aprirà la strada. Vi eviterà una freccia di balista. È già qualcosa, no?»\nCosa chiede: (1) il passaggio chiuso, e niente racconti in piazza sulla guerra sotto la città; (2) una relazione firmata da loro, da depositare oggi stesso dal notaio Ilderico Panzalonga: «Voi scrivete quello che avete visto. Io scrivo che ve l’ho chiesto. Quando Teramum farà i conti, avrò un foglio in mano anch’io.»; (3) che il Sigillo resti a Bëllindë e Teramum non lo sappia da loro; (4) che la colonna parta domattina.\nCosa scriverà a Teramum: se i PG glielo chiedono, dipende da loro. Persuasione CD 15 (CD 12 complice): scrive i numeri veri, ma «partiti prima che la lettera mi fosse recapitata», e niente sui sotterranei. Fallimento: scrive i numeri veri e basta, asciutto, e aggiunge che la colonna «ha ignorato il bando in piazza». Inganno per fargli scrivere il falso: rifiuta sempre. «Io non mento per iscritto. Per iscritto ci si impicca.»\nPE: si assegnano quando i PG hanno chiuso con il Conte (resoconto dato, accordo fatto su passaggio, relazione e partenza), qualunque sia l’accordo.",
+     "prove": [
+      {
+       "id": "prezzo",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "«La borsa e il grano. Il resto, messeri, ve lo dovete meritare a Teramum.» Il Conte beve, cortese, e la conversazione è finita."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Il Conte fa un cenno ad Anselmo, che gli porge la cera. Scrive due righe, le rilegge, ci soffia sopra. «Il salvacondotto vale fino al guado: dopo il guado non sono nessuno. E questa è per il Barone di Cashtalladdë.» Si sfrega le mani mentre firma. «Pietramala è un uomo che tira le baliste sulle pecore per provarle. Non fategli perdere tempo.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Il Conte scrive le due lettere, poi ne scrive una terza, più corta, e la sigilla senza farvela leggere. «Questa la date solo se a Teramum vi serve qualcuno che dica che Bëllindë è con voi. Solo allora. Se la date prima, non l’ho mai scritta.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "La Crociata ha il grano (+3 giorni di autonomia sul Registro) e la borsa. Se convinto, il salvacondotto e la lettera per il Barone Pietramala. La relazione va firmata dal notaio oggi. Il Conte vuole la colonna fuori domattina.",
+     "rilancio": "La borsa è sul tavolo, fra voi e il Conte. Che cosa fate?",
+     "pe": 600,
+     "bottino": [
+      {
+       "n": "Borsa del Conte",
+       "monete": {
+        "mo": 150
+       }
+      },
+      {
+       "n": "La paga di Rocco (per Nunzia Serrafredda)",
+       "monete": {
+        "mo": 20
+       }
+      },
+      {
+       "n": "Dodici some di grano dei granai comitali",
+       "q": 12,
+       "cat": "Viveri",
+       "peso": "—",
+       "valore": "Dono del Conte",
+       "stats": "+3 giorni di autonomia sul Registro della Crociata",
+       "desc": "Grano dei granai dei Melacera, contato da Messer Anselmo: «Dodici. Allora sono dodici.»",
+       "a": "crociata"
+      },
+      {
+       "n": "Salvacondotto dei Melacera",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": "—",
+       "valore": "—",
+       "stats": "Vale fino al guado di Sant’Atto (solo se il Conte è stato convinto)",
+       "desc": "Due righe col sigillo dei Melacera: la colonna passa per le terre del Conte di Bëllindë col suo permesso."
+      },
+      {
+       "n": "Lettera per il Barone Ugo Pietramala di Cashtalladdë",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": "—",
+       "valore": "—",
+       "stats": "Lettera di presentazione (solo se il Conte è stato convinto)",
+       "desc": "Cortese, breve, firmata dal Conte Gisulfo Melacera. Non apre la strada: evita una freccia di balista."
+      }
+     ],
+     "daqui": [
+      "bellinde_dopo_chiesa",
+      "bellinde_dopo_campo"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "bellinde_dopo_chiesa",
+   "kind": "persona",
+   "title": "San Vincenzo — la porta nella parete nord",
+   "image": "PDI — Bëllindë — La porta nella parete nord.jpg",
+   "legacyPosition": {
+    "x": 835,
+    "y": 352
+   },
+   "text": "La pieve è quasi vuota. Dentro fa fresco e c’è odore di cera buona. Sotto la cera, un odore nuovo: calce bagnata, polvere di mattone.\n\nUna vecchia prega nel primo banco. Si volta quando entrate, e non si rivolta più.\n\nLungo la parete di settentrione la calce è fresca, a chiazze, a strati. In alto, sotto il bianco, si indovinano tre ombre tonde, una accanto all’altra.\n\nFra’ Bonizio è seduto su uno sgabello davanti alla parete. Il secchio del bianco è ai suoi piedi, il pennello dentro. Non imbianca. Guarda il muro con gli occhi lattiginosi, come si guarda qualcuno che dorme.\n\nLa porta della sacrestia è aperta. Don Fulgenzio è allo scrittoio. Scrive. Finisce la riga prima di alzare gli occhi.\n\nQuando li alza, posa la penna. Con cura.",
+   "breve": "Don Fulgenzio sa che Micuccio è vivo: ha murato la porta bassa con un ragazzo vivo dietro. Si siede. Può concedere la terra consacrata a Rocco (chi obbedisce a un ordine non sceglie). Fra’ Bonizio ha smesso d’imbiancare: sotto la calce c’è il Sole fra le Due Lune, e dietro la parete c’è una porta. Se sono usciti di qui all’alba, la scena è cominciata dal muro.",
+   "gm": "Due modi di arrivarci: (A) sono usciti dalla porta murata accanto alla scala a chiocciola e sono sbucati qui all’alba, sfondando il muro sottile dietro la parete nord (modulo «Dal muro»); (B) ci vengono di giorno, dopo il Borgo o dopo la Rocca. In (A) Fulgenzio e Bonizio li hanno già visti uscire dal muro: il resto della scena si gioca più tardi, quando tornano a parlargli.\nCosa sa la Chiesa: Don Fulgenzio sa tutto della porta bassa del Borgo (l’ha murata lui, di notte, da solo, tre anni fa, dopo che Titta tornò ripetendo «Sta contando»); sa che sotto la calce della parete nord c’è un affresco che riaffiora ogni anno, e che il tondo scuro era raschiato prima ancora della calce. Non sapeva che dietro la parete nord ci fosse una porta. Non sa cosa significhino i tre tondi: non l’ha mai chiesto per paura della risposta.\nCosa nasconde: che da tre anni prega ogni notte per il ragazzo perduto (la dottrina lo vieta); che se la Fiamma non spiega cosa c’era sotto e Mortus sì, la sua fede ha un problema. Oggi si aggiunge la cosa peggiore: il ragazzo era vivo, dietro il suo muro.\nCosa dirà la Chiesa: per dovere Fulgenzio deve scrivere a Campli (la sede da cui dipende): una Crociata col Sole e le Due Lune, un sacerdote di Mortus che predica, una cosa sotto la città che comandava gli uomini, un affresco eretico nella sua pieve. Se scrive tutto, Campli manda un inquisitore. Se tace, mente per omissione, e lui le omissioni le conosce bene. È la decisione della sua notte (vedi «La lettera per Campli» nella chiusura).\nDa decidere: chi ha murato la porta di ferro «dall’interno» e chi ha graffiato «dall’altra parte» (Sotto Bëllindë, punto 16). Proposta: la porta di ferro fu murata dal lato del sotterraneo al tempo della guerra; il muro sottile di mattoni dal lato della chiesa lo fece fare, quarant’anni fa, il parroco di allora, «per l’umidità», e Bonizio, novizio, portava i mattoni. I graffi: Rocco, nelle sei notti (vedi il Camposanto, esame del corpo). È per l’aria che sale da sotto che la calce «non tiene» su quella parete.\nNomi: nel brief l’affresco è chiamato «delle tre lune»; nel canone di Bonizio sono tre tondi, uno d’oro in mezzo, uno bianco e uno scuro ai lati: il Sole fra le Due Lune. Qui si usa il canone.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dal_muro",
+     "tipo": "dettaglio",
+     "titolo": "Dal muro (se sono usciti di qui)",
+     "parte": "evento",
+     "immagine": "PDI — Bëllindë — Dal muro della chiesa.jpg",
+     "innesco": "Solo se sono usciti dalla porta murata accanto alla scala a chiocciola: sfondano il muro sottile in cima al passaggio, all’alba.",
+     "leggi": "Il muro è sottile. Al secondo colpo i mattoni cedono verso l’esterno tutti insieme, e con loro viene giù una lastra di calce grande come una porta.\n\nLuce di candele. Odore di cera. Una navata.\n\nUna vecchia nel primo banco urla, una volta sola, e scappa verso il portale lasciando lo scialle.\n\nUn vecchio frate con gli occhi lattiginosi è in piedi con un moccolo in mano. Il moccolo gli cade. Lui non si muove.\n\nAll’altare, un prete giovane, magro, con la tonaca pulita, si è voltato a metà di una frase in latino. Vi guarda uscire dal muro della sua chiesa, grigi di polvere, uno dopo l’altro.\n\nNon scappa. Non chiama nessuno.\n\nFinisce la frase in latino. Poi dice, piano:\n\n«Il muro nord.» Una pausa. «Naturalmente.»",
+     "note": "È l’ufficio dell’alba: la pieve è quasi vuota. La vecchia che scappa è Assunta la cardatrice: entro un’ora tutta la Via Maggiore sa che «dal muro della chiesa sono usciti i morti». Fra’ Bonizio si avvicina ai mattoni caduti a tentoni, tocca il bordo del buco, e dice soltanto: «Pe’ chesso la calce nen teneve.» — Per questo la calce non teneva.\nDon Fulgenzio non chiede chi sono: lo sa. Chiede solo: «Da dove?» Se gli dicono «da sotto la città», chiude gli occhi. Se Micuccio è con loro, lo vede: si appoggia all’altare. «No.» Poi: «No…» È il momento della confessione, anticipato: vedi il dialogo.\nSe non c’è Micuccio, Fulgenzio li fa uscire dalla porta laterale, non dal portale («Non davanti alla Via Maggiore. Non così.»), e chiede di tornare a parlargli quando avranno dormito. Poi fa appendere un telo sul buco.",
+     "dopo": "Sono in città, alla pieve, all’alba. La voce corre. Il buco nella parete nord resta coperto da un telo: cosa farne lo decide Fulgenzio (vedi la chiusura). Si prosegue verso il Borgo Vecchio o il Camposanto.",
+     "rilancio": "Don Fulgenzio vi guarda dall’altare. Che cosa fate?",
+     "daqui": [
+      "fulgenzio",
+      "bonizio",
+      "bellinde_dopo_borgo",
+      "bellinde_dopo_camposanto"
+     ]
+    },
+    {
+     "id": "fulgenzio",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Don Fulgenzio",
+     "parte": "indizio",
+     "seme": "Finisce la riga prima di alzare gli occhi.",
+     "innesco": "Qualcuno entra in sacrestia o gli rivolge la parola.",
+     "leggi": "Don Fulgenzio non vi fa sedere. Non si siede nemmeno lui: sta in piedi accanto allo scrittoio, una mano appoggiata al legno.\n\n«So che cosa avete riportato su dal Borgo Vecchio, stamattina. La città lo sa. Io l’ho saputo per ultimo, come è giusto.»\n\nGuarda Mattheus. Poi gli altri.\n\n«Chiedete, messeri. Oggi rispondo a tutto. È il minimo.»",
+     "note": "Don Fulgenzio da Chimblë, 31 anni. Educatissimo, tagliente, usa «messere» come un coltello. Non si siede mai davanti a un ospite: se si siede, è successo qualcosa di grosso. Oggi si siede.\nCosa vuole oggi: non essere perdonato. Ha paura del perdono più che della punizione: se lo perdonano, non gli resta niente dietro cui stare in piedi.\n\nMICUCCIO È VIVO — La chiave di tutto. Si siede. Non lo fa mai. «Tre anni fa due ragazzi sono entrati da una porta bassa. Ne è tornato uno, che ripeteva “Sta contando”. Ho murato quella porta con le mie mani, di notte, da solo.» (pausa lunga) «L’ho murata con lui dentro. Vivo. Seduto a contare. Mentre io, qui sopra, pregavo per lui ogni notte, contro la regola.» Non chiede niente. «Ecco. Adesso sapete di me una cosa che non sa il Vescovo.»\n\nPERCHÉ L’HAI MURATA? — «A chi dovevo dirlo? Al Conte, che ci mandava uomini con le torce? A Campli, che mandava un inquisitore? Ho scelto la calce. La calce non fa domande.» (pausa) «Nemmeno io ne ho fatte. È questo il peccato: non la calce. Le domande che non ho fatto.»\n\nNON POTEVI SAPERLO — «No. Non potevo.» Li guarda. «Messere, sapete qual è la differenza fra chi non poteva sapere e chi non ha voluto? Tre anni.» Se insistono per consolarlo: torna formale, subito. «Non ho chiesto assoluzione. Ho risposto a una domanda.»\n\nROCCO IN TERRA CONSACRATA — Vedi il modulo «Rocco in terra consacrata»: la prova sta lì. La sua prima risposta resta quella di prima («La terra consacrata è per chi la vita l’ha ricevuta e restituita, non per chi l’ha buttata»), ma adesso la dice senza guardarli.\n\nIL MURO NORD, LA PORTA — «Non sapevo che ci fosse una porta.» È vero. «Sapevo che la calce non teneva. Credevo fosse l’umidità.» (sorride appena, amaro) «Ho una certa esperienza di muri che non tengono.»\n\nL’AFFRESCO, I TRE TONDI — Il tono si fa attento. «Un affresco rovinato da secoli. La calce è manutenzione, non censura.» Se gli dicono cosa rappresenta (il Sole fra le Due Lune) o se Bonizio lo ha già detto: silenzio. Poi: «Lo so da sette anni. L’ho visto riaffiorare ogni primavera. Ho scelto di non chiedermi cosa volesse dire.» (pausa) «La mia pieve è costruita sopra la vostra bandiera, messeri. E qualcuno, prima di me, ha raschiato una delle due lune prima ancora di coprirla. Non so chi. Non so perché. E oggi, per la prima volta, vorrei saperlo.»\n\nCOSA DIRÀ LA CHIESA? SCRIVERAI A CAMPLI? — «Devo.» Pausa. «Un sacerdote di Mortus che predica nella mia città, una colonna col Sole e le Due Lune, una cosa sotto il Borgo che comandava gli uomini, un affresco che la Chiesa ha coperto due volte. È tutto quello che un inquisitore sogna di trovare in una pieve di provincia.» Vedi la chiusura: la lettera per Campli è la sua decisione della notte, e i PG possono pesarci.\n\nMORTUS, MATTHEUS — Oggi non combatte. «Voi curate. Io ho murato. Non chiedetemi chi dei due ha servito meglio la Fiamma. Stanotte non lo so.» Se Mattheus argomenta con sostanza, oggi basta la metà: Persuasione CD 12 invece di 16. Successo: «Predicate fuori dal muro. Io non verrò. E non lo impedirò. E se qualcuno dei miei viene ad ascoltarvi, non lo scriverò nel registro.»\n\nANDRAI DALLA MADRE? — «Sì.» Senza esitare. «Stasera. Da solo. Se mi apre, mi inginocchio. Se non mi apre, resto sulla soglia finché non fa giorno.» (Se Cuncetta o Nicola sono già venuti alla pieve, vedi quel modulo.)\n\nIL REGISTRO — Se gli chiedono delle due settimane bianche di tre anni fa: «Non c’era una parola giusta da scrivere.» Stanotte la scriverà (vedi la chiusura).\n\nSE LO MINACCIANO — Guarda la mano sulla spada con l’interesse di un naturalista. «Sette anni fa un uomo mi ha tenuto un coltello alla gola per il vino della messa. Il vino gliel’ho dato. Il coltello ce l’ho ancora.» Oggi aggiunge: «Ma oggi, messere, avete ragione voi a essere arrabbiati. Solo, non qui dentro: qui dentro c’è una vecchia che prega.»\nSE PROVANO A COMPRARLO — «Non ho mai preso una moneta. È il mio problema principale: non avendo peccati da farmi perdonare, non ne perdonavo. Oggi ne ho uno. Non è in vendita.»\nSE GLI MENTONO (per esempio, che Micuccio non ha sofferto) — Intuizione del prete +5: se ne accorge quasi sempre. «Vi ringrazio. Ma preferisco la parte brutta. È l’unica che rende credibile il resto.»\n\nBattute pronte:\n«Il muro nord. Naturalmente.»\n«L’ho murata con lui dentro.»\n«Ho una certa esperienza di muri che non tengono.»\n«Voi curate. Io ho murato.»\n«Non ho chiesto assoluzione. Ho risposto a una domanda.»",
+     "dopo": "Fulgenzio ha confessato ai PG la porta bassa e Micuccio. Se lo convincono su Rocco, concede la terra consacrata. Stasera va dalla madre di Micuccio. Stanotte decide se scrivere a Campli.",
+     "rilancio": "Don Fulgenzio è seduto. Aspetta. Che cosa fate?",
+     "daqui": [
+      "consacrata",
+      "cuncetta_pieve",
+      "bonizio",
+      "chiusura"
+     ]
+    },
+    {
+     "id": "consacrata",
+     "tipo": "dettaglio",
+     "titolo": "Rocco in terra consacrata",
+     "parte": "evento",
+     "innesco": "Qualcuno chiede a Don Fulgenzio di dare a Rocco la terra consacrata, portandogli quello che sanno: l’ordine, la voce, Micuccio.",
+     "leggi": "Don Fulgenzio ascolta senza interrompere, le mani intrecciate sul ginocchio. Quando finite, non risponde subito. Guarda la finestra della sacrestia: da lì si vede il camposanto.",
+     "note": "L’argomento giusto è teologico ed è suo: nella Fiamma Solare l’ordine del mondo è il Sole sopra, l’uomo sotto, la Chiesa in mezzo a tradurre; il peccato sta nella scelta. Rocco ha ricevuto un ordine che non poteva rifiutare («M’ha ditte de scì. E i’ so’ sciute»): non ha scelto. Chi non sceglie non pecca.\nVantaggio alla prova se portano almeno una cosa concreta: l’esame del corpo (le unghie, la polvere di sotto), la testimonianza di Micuccio (la voce che diceva RESTA), Titta (ESCI), o se Ruggiero conferma di aver marciato sotto un comando. Vantaggio anche se Nunzia è con loro.\nSe la prova fallisce, Fulgenzio non chiude la porta: «Non oggi.» E dalla finestra della canonica guarderà il rito fuori dal muro, se Mattheus lo celebra.",
+     "prove": [
+      {
+       "id": "consacrata",
+       "abilita": [
+        "Persuasione",
+        "Religione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "«Mi state chiedendo di dire che la regola sbagliava. Non posso dirlo in un pomeriggio.» Una pausa. «Non oggi.» Riprende la penna, ma non scrive."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "«Chi obbedisce a un ordine che non può rifiutare non sceglie. E chi non sceglie non pecca.» Lo dice come una lezione, per convincere se stesso. «Rocco Serrafredda avrà la terra consacrata. Dite a Menotto di scavare dentro il muro.» Poi, più piano: «Non verrò. Non ne ho il diritto, oggi. Manderò Bonizio con l’acqua.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Don Fulgenzio si alza. Prende la stola dal chiodo. «Verrò io.» Alla porta si ferma. «E dirò che mi sbagliavo. Davanti al Borgo. È la prima volta in sette anni. Guardatemi bene: non capiterà spesso.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Con un successo Rocco va in terra consacrata (vedi il Camposanto, «La sepoltura»). Con 20 naturale Fulgenzio viene di persona e ammette l’errore davanti al Borgo: la città lo ricorderà.",
+     "rilancio": "Don Fulgenzio guarda il camposanto dalla finestra. Che cosa fate?",
+     "daqui": [
+      "chiusura",
+      "bellinde_dopo_camposanto"
+     ]
+    },
+    {
+     "id": "cuncetta_pieve",
+     "tipo": "dettaglio",
+     "titolo": "La madre alla pieve",
+     "parte": "evento",
+     "innesco": "Solo se Cuncetta o Mastro Nicola hanno saputo che è stato Don Fulgenzio a murare la porta bassa e nessuno li ha fermati.",
+     "leggi": "Il portale si apre così forte che sbatte contro il muro.\n\nSulla soglia c’è una donna col grembiule pieno di fili di canapa. Dietro di lei, più grosso, un uomo con una mazza da carpentiere in mano.\n\nLa donna attraversa la navata senza fermarsi, senza segnarsi. Si ferma davanti alla sacrestia.\n\nDon Fulgenzio si alza. Non dice niente.\n\nLei lo guarda. Tre anni di pane sul davanzale, nella faccia.",
+     "note": "Cuncetta non colpisce. Parla: «Veneve a casa mé. Ogne mese. A dirme de pregà.» Fulgenzio non si difende: «Sì.»\nNicola, con la mazza, è il pericolo. Se nessuno lo ferma, alza la mazza sul prete (non lo colpisce se un PG si mette in mezzo; se nessuno si muove, colpisce lo scrittoio e lo spacca in due, e poi si mette a piangere).\nFermare Nicola: Persuasione CD 14 (vantaggio con l’argomento vero: il prete non sapeva che il ragazzo fosse vivo), oppure mettersi in mezzo (Atletica contrapposta, Nicola +4). Intimidire lo ferma ma lo umilia davanti alla moglie: il Borgo non lo perdona ai PG.\nFulgenzio si inginocchia davanti a Cuncetta: è la prima volta che lo si vede in ginocchio davanti a qualcuno che non sia l’altare. Lei lo guarda a lungo. Poi: «Alzateve. Nen so’ la Madonna. So’ na mamma che ha fatte lu pane.» E se ne va. Non l’ha perdonato. Non l’ha condannato. Domani lo saluterà per strada, forse.",
+     "prove": [
+      {
+       "id": "nicola",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Nicola non vi sente. La mazza scende sullo scrittoio del prete e lo spacca in due. Poi resta lì, con la mazza in mano, a piangere senza rumore."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Nicola abbassa la mazza. «Non sapeve.» Lo ripete, per crederci. «Non sapeve che ere vive.» La posa per terra, in mezzo alla navata, e non la riprende."
+        }
+       ]
+      }
+     ],
+     "dopo": "Don Fulgenzio ha avuto il suo conto, più duro di qualsiasi inquisitore. Da domani la sua pieve non è più un muro: se ne accorgerà tutta la città.",
+     "rilancio": "La navata è in silenzio. Che cosa fate?",
+     "daqui": [
+      "fulgenzio",
+      "chiusura"
+     ]
+    },
+    {
+     "id": "bonizio",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Fra’ Bonizio",
+     "parte": "indizio",
+     "seme": "Fra’ Bonizio è seduto su uno sgabello davanti alla parete.",
+     "innesco": "Qualcuno si avvicina al vecchio sacrestano. Parla sincero solo se il prete non sente.",
+     "leggi": "Il vecchio non si volta. Vi sente arrivare dal passo.\n\n«Nen tene.» Indica il muro col mento. «Quarant’anne che ce metto lu bianche, e nen tene.»\n\nSi batte la mano sul ginocchio, piano.\n\n«Mo’ sacce pecché.»",
+     "note": "Fra’ Bonizio, sacrestano, 65 anni, mezzo cieco. Bofonchia; sente meglio di quanto veda; con i preti è cerimonioso, con tutti gli altri sincero. È qui da prima di Don Fulgenzio. Oggi ha posato il pennello e non lo riprenderà.\n\nL’AFFRESCO — Se il prete non sente: «Ce stevéne tre tunne. Une ’n mezze e ddu’ a lu late.» E se l’interesse è vero: «Chille ’n mezze ere d’ore. Li dua a lu late… une ere bianche, e une ere scure. E lu scure nen ere pittate: ere rascate. Coccune l’ha rascate via prima ancora che ce mettessere la calce.» (Religione CD 13: il Sole fra le Due Lune; vedi il modulo «L’affresco».)\n\nLA PORTA DIETRO IL MURO — «Quarant’anne fa. Ere nuvizie. Lu prevete de allora, Don Ermete, ha fatte venì du’ muratore da fore. Ha ditte: pe’ l’umidità.» (pausa) «Ije purtave li mattune. Nen sapeve che ce steve dietro. Ha pagate li muratore, e li muratore nen so’ turnate cchiù.» (Da decidere: questa è una proposta. Don Ermete è un nome nuovo.)\n\nL’ARIA — «Da chelu mure veneve lu fridde. Sempre. D’estate pure. La calce se ne cadeve a scaglie. Ije penzave che ere lu muro che nen vuleve.» Ride, senza denti. «Ere l’aria de sotte. Ce steve na casa, sotte. E respirave.»\n\nCHE COSA HA VISTO STAMATTINA (se sono usciti dal muro) — «Gnente. Nen ce vede.» Pausa. «Aje sentite. Passe. Nu sacche de passe. E nisciune ca cunteve.»\n\nDON FULGENZIO — «Lu meje prevete che aje serviite. E lu cchiù ’nfelice. Ddu cose che vanne spesse ’nzieme.» Oggi aggiunge: «Stamatina ha pregate ’n ginocchie pe’ n’ora. Nen l’aje maje viste accussì.»\n\nIL RAGAZZO DI TRE ANNI FA — «Lu funerale che nen s’è fatte.» Oggi, per la prima volta, ne parla: «Isse, lu prevete, è turnate na notte cu le mane bianche de calce. Nen ha ditte gnente. Ije l’aje lavate le mane. Nen aje chieste gnente.» (pausa) «Tutte e dduje nen avemme chieste gnente.»\n\nPOSSIAMO VEDERE L’AFFRESCO? — «Acqua e na spugna.» Indica il secchio. «Io nen ve dice de no. Lu prevete… vedete vuje.» Non ha mai negato niente a nessuno.\n\nSE LO PAGANO — Prende la moneta e la mette nella cassetta delle candele. «Pe’ na cannela a chi nen se po’ accenne da sé.»\nSE LO MINACCIANO — Non vede la minaccia. La sente nella voce, e risponde con la stessa calma: «Tenghe sessantacinque anne. Che me faje, me faje vecchie?»\n\nBattute pronte:\n«Nen tene. Quarant’anne, e nen tene.»\n«Mo’ sacce pecché.»\n«Ere belle. Bastave.»\n«Tutte e dduje nen avemme chieste gnente.»",
+     "dopo": "Sanno cosa c’è sotto la calce e, se chiedono, che la parete fu chiusa quarant’anni fa «per l’umidità». Bonizio non imbiancherà più quel muro.",
+     "rilancio": "Il vecchio guarda il muro e aspetta. Che cosa fate?",
+     "daqui": [
+      "affresco",
+      "porta_nord"
+     ]
+    },
+    {
+     "id": "affresco",
+     "tipo": "dettaglio",
+     "titolo": "L’affresco sotto la calce",
+     "parte": "indizio",
+     "seme": "In alto, sotto il bianco, si indovinano tre ombre tonde, una accanto all’altra.",
+     "immagine": "PDI — Bëllindë — L’affresco sotto la calce.jpg",
+     "innesco": "Qualcuno lava la calce con acqua e spugna, col permesso di Bonizio (e, meglio, di Fulgenzio).",
+     "leggi": "La calce viene via a scaglie, sotto la spugna. È stata data tante volte, e tante volte è caduta.\n\nSotto, il colore.\n\nUn cielo blu scuro, stinto fino al grigio. In mezzo, un disco d’oro, ancora vivo dopo chissà quanto: la foglia d’oro regge dove il resto è morto.\n\nA destra, un disco bianco, pallido come il latte.\n\nA sinistra, un disco. O il posto dove c’era un disco. La pietra è graffiata a colpi corti e fitti, fino al vivo, fino a non lasciare niente. Solo il bordo tondo, un’ombra scura intorno a un vuoto.\n\nSotto i tre dischi, figure in fila, piccole, con le mani alzate. Non pregano verso l’alto. Tengono qualcosa.",
+     "prove": [
+      {
+       "id": "affresco",
+       "abilita": [
+        "Religione",
+        "Storia"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Tre santi, o una Trinità solare. Le pievi vecchie sono piene di affreschi rifatti. Quello a sinistra l’ha rovinato l’umidità."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Un disco d’oro fra un disco bianco e uno scuro: il Sole fra le Due Lune. La stessa immagine della vostra bandiera. La vecchia religione, dipinta nella pieve stessa. E la luna scura è stata cancellata due volte: prima raschiata, poi coperta. La Chiesa non ha nascosto un’eresia: ha nascosto il proprio passato."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "max": 19,
+         "leggi": "Le figure in basso non pregano: sorreggono. Tengono il cielo insieme, tutte, con le mani alzate, a tempo diverso l’una dall’altra: una ha le braccia tese, una piegate, una sta per alzarle. Nessuna uguale. Chi l’ha dipinto voleva gente che teneva il cielo senza marciare."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Nel bordo raschiato della luna scura restano due o tre grani di colore. Non è nero: è un viola profondo, quasi notte, il pigmento più caro che un pittore di pieve potesse comprare. Non era una luna cattiva. Era dipinta con più cura delle altre."
+        }
+       ]
+      }
+     ],
+     "note": "Da decidere: chi raschiò la luna scura e quando. È un seme per Teramum e per la storia della Chiesa: non spiegarlo qui. Se lavano l’affresco senza il permesso di Fulgenzio, Fulgenzio li lascia fare, e dopo resta a guardarlo per un’ora.",
+     "dopo": "Sanno che la pieve di Bëllindë fu costruita sulla vecchia religione del Sole fra le Due Lune, e che la luna scura fu cancellata due volte. Bonizio non ricoprirà l’affresco; Fulgenzio decide nella notte se farlo ricoprire (vedi la chiusura).",
+     "rilancio": "Il disco d’oro vi guarda dal muro. Che cosa fate?",
+     "daqui": [
+      "porta_nord",
+      "chiusura"
+     ]
+    },
+    {
+     "id": "porta_nord",
+     "tipo": "dettaglio",
+     "titolo": "La porta dietro la parete",
+     "parte": "nascosto",
+     "innesco": "Qualcuno batte sul muro, ci mette la mano (è freddo), o guarda perché la calce cade proprio lì. Se sono usciti di qui, il buco è coperto da un telo.",
+     "leggi": "In basso, sotto l’affresco, il muro suona vuoto. E dalle fessure dell’intonaco esce un filo d’aria fredda, che sa di pietra e di chiuso.",
+     "prove": [
+      {
+       "id": "portanord",
+       "abilita": [
+        "Indagare"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un muro umido, vecchio, rifatto male. L’aria viene da qualche cantina."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Sotto l’intonaco c’è un tamponamento di mattoni sottili, messo dentro un arco di pietra più vecchio: una porta, chiusa dal lato della chiesa. Il lavoro è di qualche decennio fa. È da qui che sale l’aria, ed è per questo che la calce non tiene."
+        }
+       ]
+      }
+     ],
+     "note": "Se sono usciti di qui la porta è già aperta (vedi «Dal muro»). La questione è cosa farne: Fulgenzio non vuole un buco nella sua chiesa che porta sotto la città; Gisulfo non mette bocca nelle pareti della Chiesa. Proposta: Fulgenzio la fa rimurare, ma con una porticina di legno e una chiave, e la chiave la tiene lui. Da decidere.",
+     "dopo": "Sanno che dietro la parete nord c’è una porta verso il sotterraneo, chiusa decenni fa dal lato della chiesa.",
+     "rilancio": "L’aria fredda vi passa sulle dita. Che cosa fate?",
+     "daqui": [
+      "chiusura"
+     ]
+    },
+    {
+     "id": "registro",
+     "tipo": "dettaglio",
+     "titolo": "Il registro sul leggio",
+     "parte": "nascosto",
+     "innesco": "Qualcuno sfoglia il registro dei battesimi e delle morti, sul leggio della sacrestia, all’anno di tre anni fa.",
+     "leggi": "Righe fitte, una mano regolare, perfetta. Nascite, matrimoni, morti. Poi due settimane di pagina bianca. Poi la stessa mano, di nuovo, un po’ più piccola.",
+     "prove": [
+      {
+       "id": "registro",
+       "abilita": [
+        "Indagare"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un registro di pieve. Un parroco che si è ammalato per due settimane, o era in viaggio."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Le due settimane bianche cadono nei giorni in cui il ragazzo del Borgo è sparito. La prima riga dopo il bianco è scritta con una mano che trema appena. È una sepoltura qualsiasi. Nessuno scrive di un ragazzo che non è tornato."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che nelle due settimane della sparizione il parroco non ha scritto niente. Stanotte Fulgenzio riempirà quel bianco (vedi la chiusura).",
+     "rilancio": "Il registro è aperto sulla pagina bianca. Che cosa fate?",
+     "daqui": [
+      "fulgenzio",
+      "chiusura"
+     ]
+    },
+    {
+     "id": "chiusura",
+     "tipo": "dettaglio",
+     "titolo": "Che cosa dice la Chiesa",
+     "parte": "evento",
+     "innesco": "Quando i PG lasciano la pieve, dopo aver parlato con Fulgenzio e Bonizio.",
+     "leggi": "Quando uscite, Fra’ Bonizio vi raggiunge sul sagrato, a tentoni, con qualcosa nel pugno.\n\n«Tenete.»\n\nÈ una scaglia d’intonaco grande come un palmo. Da una parte è bianca. Dall’altra c’è un pezzo di cielo blu e un arco d’oro.\n\n«È caduta. Nen l’aje rotta ije.» Sorride. «Nu poco de lu Sole vuoste.»",
+     "note": "La notte di Fulgenzio (per il master, non da leggere): riapre il registro e riempie le due settimane bianche di tre anni fa. Scrive: «Micuccio di Nicola, detto lu Funare, di anni quindici, entrato vivo sotto la città. Murato vivo dal parroco. Ritornato vivo.» Poi, nella riga di oggi: «Rocco Serrafredda, pozzaro», con accanto la parola che ha scelto (in grazia, se ha concesso la terra consacrata; nulla, se no).\nLa lettera per Campli: se i PG non gliene hanno parlato, la scrive completa e la spedisce all’alba col corriere: un inquisitore arriverà, un giorno, e troverà un sacerdote di Mortus nei suoi rapporti. Se gliene hanno parlato con sostanza (Persuasione CD 15; vantaggio se Mattheus ha avuto successo con lui, o se la terra consacrata è stata concessa), la scrive e non la spedisce: la tiene nel cassetto «finché non so cosa ho visto». Con un fallimento la spedisce, ma senza il nome di Mattheus. Da decidere: il peso di questa lettera a Teramum e oltre.\nL’affresco: se i PG lo hanno lavato, Fulgenzio non lo fa ricoprire. Per la prima volta in duecento anni la pieve di Bëllindë ha il Sole e la Luna bianca sulla parete nord, e il posto vuoto della luna scura. La voce arriverà a Teramum.\nPE: si assegnano quando la faccenda con la Chiesa è chiusa (Fulgenzio ha confessato, e hanno ottenuto o perso la terra consacrata, e la lettera per Campli è decisa).",
+     "prove": [
+      {
+       "id": "campli",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "«È il mio dovere, messere. Il dovere non si sceglie: per questo si chiama così.» Scriverà. Ma, vi dice, senza nomi."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "leggi": "Don Fulgenzio guarda a lungo la pagina bianca sullo scrittoio. «La scriverò. È il mio dovere.» Pausa. «Spedirla è un’altra faccenda. Una lettera nel cassetto non ha mai fatto male a nessuno. Chiedetelo al Conte: ne ha una anche lui.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "La Chiesa di Bëllindë ha confessato e non ha deciso tutto: Fulgenzio scrive il registro stanotte e sceglie cosa fare della lettera per Campli. L’affresco resta scoperto se l’hanno lavato.",
+     "rilancio": "Il sole del pomeriggio batte sul sagrato. Che cosa fate?",
+     "pe": 450,
+     "bottino": [
+      {
+       "n": "Scaglia d’affresco col Sole",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": "—",
+       "valore": "Nessuno",
+       "stats": "Non magica",
+       "desc": "Un pezzo d’intonaco grande come un palmo, caduto dalla parete nord della pieve di San Vincenzo: un pezzo di cielo blu e un arco di foglia d’oro. Il Sole fra le Due Lune era dipinto nella chiesa di Bëllindë. Fra’ Bonizio: «Nu poco de lu Sole vuoste.»"
+      }
+     ],
+     "daqui": [
+      "bellinde_dopo_campo"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "bellinde_dopo_campo",
+   "kind": "scena",
+   "title": "Il Campo della Crociata — la notte",
+   "image": "PDI — Bëllindë — La notte al Campo.jpg",
+   "legacyPosition": {
+    "x": 98,
+    "y": 865
+   },
+   "text": "Il sole cala dietro le colline di ponente. Sul prato del tratturo i cinque carri sono in cerchio, le tende in mezzo, le bestie al pascolo sotto gli olivi.\n\nI fuochi sono accesi. Frate Martino dice una preghiera, e metà campo ci va. Mastro Colangelo batte l’ultimo chiodo di un mozzo. Il Dottor Albino ha aperto il Carro IV e vi guarda arrivare come si guarda del lavoro.\n\nKostandìn cammina lungo i carri e assegna i turni della notte a voce bassa, uno per uno, senza ripetere.\n\nIntorno ai fuochi si parla più piano del solito.\n\nDa Bëllindë scendono le campane del vespro. Poi, piano, il rumore di un paese che va a dormire: una porta, un secchio, qualcuno che ride.\n\nOltre l’ultimo carro, dove la luce del fuoco non arriva, gli olivi sono neri.",
+   "breve": "La sera e la notte al campo fuori dalla Porta di Ponente: le voci della colonna, il Dottor Albino, Silvanus che chiede il conto, il riposo lungo coi turni di Kostandìn. Se Vhaerun è salito con loro, qui si decide dove sta e cosa chiede. L’ascia delle Due Lune, alla luce del fuoco.",
+   "gm": "Quando: la sera dello stesso giorno, fino all’alba. Riposo lungo al campo (o alla Locanda Lu Deng’ Rott’, se preferiscono un letto: Peppe Tremonete fa pagare il doppio e chiede tutto). Nessun evento ostile durante la notte. Da decidere: la cellula di Ceruso. Prima di farla muovere stanotte, verifica cosa è stato narrato davvero (Ceruso sparito dalla locanda, Renzo in cella, Cascia vista uscire dal fuoco).\nLa Crociata: 39 persone, 5 carri, 23 bestie. Silvanus comanda; Kostandìn e i dodici vesperiani fanno la guardia; il Dottor Albino tiene l’infermeria sul Carro IV; Frate Martino prega; Mastro Colangelo e Mastro Giustino riparano; Iosephus Pompizius fa la spola con la città. Il Carro V (il seguito Pompizius) resta discosto.\nIl pane: se Rocco è stato sepolto con la parola sopra, stasera il Borgo Vecchio porta pane per quaranta (bottino della sepoltura).\nVhaerun (solo se è salito con loro): la sua presenza è il nodo della serata. I vesperiani vengono dalla compagnia di Lekë e hanno visto Brak solo in guerra. Silvanus decide in fretta e bene se i PG gli danno una ragione.\nL’ascia delle Due Lune: bottino già assegnato nella Stanza del Quarto Sigillo. Qui si scopre cosa resta di lei ora che il Sigillo tace.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Le voci della colonna",
+     "parte": "indizio",
+     "seme": "Intorno ai fuochi si parla più piano del solito.",
+     "innesco": "Qualcuno si siede a un fuoco e ascolta, o gira fra le tende.",
+     "leggi": "«Dicono che siete usciti dalla terra. Dal camposanto. Come i santi.»\n\n«Il ragazzo del funaio. Tre anni. E ha mangiato il pane del davanzale, davanti a tutti.»\n\n«Il sergente ha marciato laggiù. Uno come Ruggiero. Marciava e non voleva.»\n\n«Il prete s’è seduto. Il prete di Bëllindë. Seduto!»\n\n«A Teramum ci aspettano, dice il Conte. Con una lettera.»\n\nUn vesperiano, piano, a un altro, nella sua lingua. Poi, nella vostra: «E la paga?»",
+     "note": "Le voci della colonna sono quelle della città, arrivate col pane e coi curiosi, più le loro. Usale a una a una, non tutte insieme.\nVoci della città, entro sera, in Piazza Grande: «Sono scesi in sette e sono risaliti in venti» (falso: conta Micuccio e poi gonfia); «Sotto la Rocca c’è un esercito di pietra»; «Il prete l’ha murato vivo, il ragazzo» (mezza verità crudele: la città la dirà comunque, se nessuno la racconta meglio); «Il cane dello slargo ha abbaiato: tre anni che non abbaiava sullo slargo»; «Quello che parla coi morti ha parlato con uno morto da duecento anni»; «Il Conte ha freddo alle mani da stamattina» (vero).\nLa paga dei vesperiani (canone del Campo): se nessuno ne parla ancora, la coesione della colonna scende di una tacca prima di Teramum. Basta una parola di Maximus e la cassa della compagnia di Lekë che sta sui carri.",
+     "dopo": "Sanno cosa racconta di loro la città e cosa la colonna non dice ad alta voce: la paga dei vesperiani.",
+     "rilancio": "Il fuoco scoppietta. Qualcuno aspetta che diciate qualcosa. Che cosa fate?",
+     "daqui": [
+      "silvanus",
+      "albino",
+      "riposo"
+     ]
+    },
+    {
+     "id": "silvanus",
+     "tipo": "dettaglio",
+     "titolo": "Silvanus chiede il conto",
+     "parte": "evento",
+     "innesco": "Quando i PG arrivano al campo. Silvanus li aspetta al fuoco del primo carro.",
+     "leggi": "Silvanus non si alza. Vi fa posto accanto al fuoco con un cenno.\n\n«Ho sentito la versione della città. Tre versioni, per la verità.» Vi versa del vino annacquato. «Adesso voglio la vostra. Cosa abbiamo guadagnato. Cosa abbiamo perso. E quanto ci costa.»",
+     "note": "Silvanus comanda la Crociata; al campo parla poco e guarda molto. Gli interessano tre cose: chi è tornato, cosa sa Teramum, quanto tempo hanno. Se gli dicono della lettera che ordina al Conte di trattenerli, annuisce: «Allora partiamo a metà mattina. Né prima, né dopo: prima sembreremmo in fuga, dopo sembreremmo in attesa.»\nSe Vhaerun è con loro, è la prima cosa che chiede, prima di tutto il resto: «E quello?»\nSe il resoconto è sincero, parte brutta compresa, dice solo: «Bene.» Ed è molto.\nBattute pronte: «A Teramum non ci credono sulla parola. Ci credono su una bocca che parla. Quante ne abbiamo, adesso?» — «Siete scesi in un pozzo con la città contro. Siete risaliti con un ragazzo vivo in braccio. È la miglior predica che abbiamo fatto da Mushanè.»",
+     "dopo": "Silvanus fissa la partenza a metà mattina, attraverso la città, dalla Porta di Levante.",
+     "rilancio": "Silvanus aspetta il vostro racconto. Che cosa gli dite?",
+     "daqui": [
+      "vhaerun_campo",
+      "albino",
+      "riposo"
+     ]
+    },
+    {
+     "id": "albino",
+     "tipo": "dettaglio",
+     "titolo": "Il Carro IV",
+     "parte": "evento",
+     "innesco": "Qualcuno va all’infermeria, o il Dottor Albino viene a prenderli per un orecchio.",
+     "leggi": "Il Dottor Albino vi fa sedere sul bordo del carro, uno per uno, e vi guarda nelle orecchie, negli occhi, sotto le unghie.\n\n«Polvere di pietra. Di quella vecchia.» Annusa un dito. «Siete stati sotto un giorno e una notte e avete la faccia di chi c’è stato un mese.»\n\nTira fuori una boccetta, la stappa, la richiude. «No. Questa la teniamo. Voi avete bisogno di dormire, non di me.»",
+     "note": "Cure del Carro IV: chi ha ferite le fa curare (recupero come un riposo lungo, niente di più). Se ha visitato Micuccio in giornata: «Tre anni senza mangiare e mi arriva col polso di un ragazzo che ha dormito male. Non chiedetemi di scriverlo nel registro.» Se Vhaerun è ferito, Albino lo cura senza fare domande: «Una ferita è una ferita. La pelle è un dettaglio.»",
+     "dopo": "Chi è ferito arriva al mattino in piena forma. Il Dottor Albino non chiede niente di quello che c’era sotto.",
+     "rilancio": "Il dottore vi rimanda al fuoco con un gesto. Che cosa fate?",
+     "daqui": [
+      "riposo"
+     ]
+    },
+    {
+     "id": "vhaerun_campo",
+     "tipo": "dettaglio",
+     "titolo": "Un Brak al campo",
+     "parte": "indizio",
+     "seme": "Oltre l’ultimo carro, dove la luce del fuoco non arriva, gli olivi sono neri.",
+     "immagine": "PDI — Bëllindë — Vhaerun fra gli olivi.jpg",
+     "innesco": "Solo se Vhaerun è salito con loro: quando arriva al campo, o quando qualcuno va a cercarlo fra gli olivi dove si è fermato.",
+     "leggi": "Fra gli olivi, lontano dal fuoco, un’ombra grande è seduta per terra con la schiena contro un tronco.\n\nUn vesperiano la vede. Si ferma. La mano va alla spada. Poi un altro. In un momento il campo è in piedi, in silenzio, e le lame sono fuori.\n\nL’ombra non si muove. Tiene le mani aperte sulle ginocchia, bene in vista, come chi ha già visto questa scena dall’altra parte.\n\n«Non vengo più vicino», dice Vhaerun. «Ditelo voi a loro. A me non credono. Hanno ragione.»",
+     "note": "I vesperiani (Kostandìn per primo) vedono un Brak: per loro è guerra. Nessuno attacca finché Silvanus non parla, e Silvanus aspetta i PG.\nCalmare il campo: Persuasione o Intimidire CD 14, gruppo «migliore» (vantaggio se parla Maximus, che l’ha liberato, o se qualcuno racconta che ha combattuto con loro sotto la città). Fallimento: Kostandìn non lo vuole dentro il cerchio dei carri; Vhaerun resta fra gli olivi, e due vesperiani lo guardano tutta la notte con la spada sulle ginocchia. Nessuno lo attacca: Silvanus lo vieta.\nSe qualcuno della città lo vede (i curiosi sui muretti del tratturo), la voce arriva alla Rocca entro un’ora. Il Conte non manda nessuno: «Fuori dalle mura non lo vedo.» Ma domattina, alla porta, lo sanno tutti.",
+     "prove": [
+      {
+       "id": "campo",
+       "abilita": [
+        "Persuasione",
+        "Intimidire"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Le lame tornano nei foderi, lentamente. Ma nessuno si siede. Kostandìn manda due uomini a sedersi fra gli olivi, a dieci passi dal Brak, con la spada sulle ginocchia. Resteranno lì fino all’alba."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Kostandìn rinfodera per primo. Guarda Vhaerun a lungo, poi dice qualcosa nella sua lingua, e i vesperiani ridono, piano. «Dice che se mangia quanto è grosso, la paga ce la mangia lui.» Il campo si rimette seduto."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Un vesperiano vecchio, con una cicatrice che gli taglia la barba, prende una scodella di zuppa dal fuoco, attraversa il campo e la posa per terra davanti al Brak. Senza dire niente. Poi torna al suo posto. Vhaerun guarda la scodella per un tempo lunghissimo."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con un successo Vhaerun può stare al margine del campo per la notte. Con un fallimento resta fra gli olivi, sorvegliato. In entrambi i casi va deciso dove starà domani (vedi il dialogo).",
+     "rilancio": "Il campo vi guarda. Vhaerun vi guarda. Che cosa fate?",
+     "daqui": [
+      "vhaerun",
+      "ascia"
+     ]
+    },
+    {
+     "id": "vhaerun",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Vhaerun",
+     "parte": "evento",
+     "innesco": "Quando qualcuno va a sedersi con lui, lontano dal fuoco. Parla più volentieri con Maximus.",
+     "leggi": "Vhaerun mangia come mangiano i soldati: in fretta, piegato sulla scodella, con un braccio intorno.\n\nPoi alza la testa e guarda il cielo. Le stelle stanno uscendo una alla volta.\n\n«Lassù non c’è nessuno che conta», dice. «Me ne sono accorto stanotte, dai rovi. Le stelle escono quando vogliono.»",
+     "note": "Vhaerun, un Brak. Per i Celamanti era il Primo Strumento della Terza Schiera; prima ancora era un elfo, e se lo ricorda (le orecchie tagliate a metà). Duecento anni incatenato con una sola parola nella testa: PROTEGGI QUESTA PORTA. Liberato da Maximus, ha dato al gruppo l’ascia; nella Sala delle Ordinanze la voce l’ha ripreso ed è stato fermato col suo nome.\nRegola del dialogo: dice soltanto ciò che ha visto e sentito. Non inventa la storia del mondo, non profetizza, non spiega i Celamanti oltre quello che ha vissuto.\nCosa vuole: non ricevere più ordini. E, senza saperlo dire, qualcuno che gli chieda le cose invece di comandargliele.\n\nCHE COSA FARAI, ADESSO? — «Non lo so.» Pausa. «È la prima volta da prima della guerra che non lo so. È… molto spazio.» (come Micuccio: se glielo fanno notare, sorride, con le zanne) «Allora siamo in due.»\n\nVUOI VENIRE CON NOI? — Ci pensa a lungo. «Dove andate?» — «Teramum.» — «Una città di uomini, grande, con le mura e le porte.» (scuote la testa) «Là dentro un Brak è una guerra che comincia. Non la voglio cominciare io.» Proposta sua, se nessuno la fa: «Vi seguo da fuori. Dalle colline. Dove la strada non guarda. Quando vi serve un’ascia, guardate verso gli alberi.» Da decidere: se Vhaerun segue la colonna di nascosto (proposta), resta a Bëllindë, o va a nord.\n\nIL NORD, LE ORDE LIBERE — Se gli dicono che i Brak ci sono ancora, e che al nord ci sono Orde Libere: gli si ferma il respiro. «Libere.» Lo ripete. «Libere da chi?» Se gli parlano delle Orde di Gridraz, che vivono solo di guerra: «Allora hanno solo cambiato padrone. La guerra è un padrone anche lei.» Il nord è una speranza. Ci andrà, un giorno. Non adesso: «Prima voglio vedere come finisce la vostra storia. Ho visto finire male la mia.»\n\nL’ASCIA — «Tenetela.» Senza esitare. «Me l’ha messa in mano un uomo che mi aveva battuto. Voglio che la tenga uno che mi ha liberato.» (guarda Maximus, o chi la porta) «Un’ascia è un ordine col manico. Io, per un po’, di ordini non ne voglio. Neanche col manico.» Se gliela offrono con insistenza: la prende, la soppesa, la rende. «Pesa quanto ricordavo. Io no.»\n\nIL CUSTODE — «È morto?» Se gli dicono come (si è sacrificato per scelta): tace a lungo. «Si è scelto.» Pausa. «Lui mi ha dato la parola. Adesso ha fatto quello che io non ho mai potuto fare. Scegliere.» Non lo odia. Non lo perdona. «Lo ricorderò. È tutto quello che posso fare per un nemico.»\n\nCHI ERI, PRIMA? — «Un fiume. Una donna che cantava. Le mie orecchie, prima che le tagliassero.» (si tocca il bordo tagliato) «Non so il nome del fiume. Non so il nome della donna. Il mio, sì. Me l’avete ridato voi.» Se gli chiedono se era un elfo: «Lo ero. Nessun Brak lo sa. Io lo so perché ho avuto duecento anni per ricordarmelo.» Poi, piano: «Non ditelo agli uomini della città. Odiano gli elfi più dei Brak. Almeno un Brak è un nemico che capiscono.»\n\nI CELAMANTI — Solo quello che ha visto: «Ci davano ordini. Tutto il giorno. Anche nel sonno. Non avevamo nomi: avevamo numeri e posti.» Non sa altro, e lo dice: «Non ho mai visto la faccia di chi comandava. Solo la sua voce, in tutte le bocche.»\n\nCHE COSA TEMI? — «Una voce nuova.» Si tocca la testa. «Il posto è vuoto, adesso. Una cosa vuota, qualcuno la riempie.» Se un PG gli promette che nessuno lo farà, lui non ci crede ma apprezza: «Non potete prometterlo. Ma è bello sentirlo.»\n\nMAXIMUS — Con lui parla di più e più piano. Gli chiede, una volta sola: «Tu. Quando ti danno un ordine, come fai a sapere se è tuo?» Qualunque cosa risponda Maximus, Vhaerun la tiene a mente per sempre.\n\nLA CITTÀ, IL CONTE — «Mi hanno guardato dalle mura tutto il giorno. Una donna ha coperto gli occhi a un bambino.» (alza le spalle) «Faceva bene. Anch’io li coprivo, ai piccoli, quando passava la mia Schiera.»\n\nSE GLI DANNO UN ORDINE — Obbedisce, e poi si ferma, e li guarda. «Un’altra voce. Bene. Almeno questa ha una faccia.» Se si accorgono e lo trasformano in una domanda, sorride.\nSE LO MINACCIANO — Non si muove. «Ho avuto un padrone per duecento anni. Non mi fate paura. Mi fate tristezza.»\nSE GLI MENTONO — Non ha Intuizione da uomo, ma ha duecento anni di ascolto: con una bugia grossa, li guarda e smette di parlare per quella sera.\nSE LO PAGANO — Non capisce la moneta. La rigira, la morde, la rende. «Di questo non ho bisogno. Del cibo sì.»\n\nBattute pronte:\n«Lassù non c’è nessuno che conta.»\n«Un’ascia è un ordine col manico.»\n«Si è scelto.»\n«Quando vi serve un’ascia, guardate verso gli alberi.»\n«Un’altra voce. Bene. Almeno questa ha una faccia.»",
+     "dopo": "Si decide dove sta Vhaerun: al margine del campo per la notte; domani (proposta) segue la colonna a distanza, fuori dalla strada. L’ascia resta ai PG. PE quando la sua sistemazione è decisa e il campo l’ha accettato o almeno tollerato.",
+     "rilancio": "Vhaerun aspetta, la scodella vuota fra le mani. Che cosa gli dite?",
+     "pe": 300,
+     "daqui": [
+      "ascia",
+      "riposo"
+     ]
+    },
+    {
+     "id": "ascia",
+     "tipo": "dettaglio",
+     "titolo": "L’ascia delle Due Lune, al fuoco",
+     "parte": "evento",
+     "innesco": "Qualcuno esamina l’ascia bipenne alla luce del fuoco, ora che il Sigillo tace.",
+     "leggi": "Alla luce del fuoco le due lune incise sul dorso, fra le lame, sembrano più fonde. Il ferro è freddo, pesante, onesto.\n\nSotto l’impugnatura, dove il cuoio è consumato fino al legno, c’è qualcosa inciso a punta. Sotto, un altro segno, più vecchio, quasi cancellato.",
+     "prove": [
+      {
+       "id": "ascia",
+       "abilita": [
+        "Storia",
+        "Arcano"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Un’ascia antica, magica, ben tenuta. I segni sotto il cuoio sono troppo consumati per leggerli."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Il segno più vecchio è lo stesso degli stendardi rossi della Stanza del Sigillo: la Schiera del Custode. L’ascia non è dei Brak: è dell’Alleanza. Il Custode l’ha data al suo nemico perché la custodisse."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Il segno più recente è un taglio a punta, fatto con un’unghia o una scheggia: una piccola onda. Un fiume. Qualcuno, incatenato, nei primi anni, l’ha inciso per non dimenticarsene."
+        }
+       ]
+      }
+     ],
+     "note": "Ora che il Sigillo è purificato la chiave non apre più niente: è un’ascia bipenne +1 (bottino già assegnato nella Stanza del Quarto Sigillo). Il fiume inciso l’ha fatto Vhaerun: se glielo mostrano, lo tocca e dice «Me n’ero dimenticato. Di averlo fatto. Non del fiume.»",
+     "dopo": "Sanno che l’ascia era dell’Alleanza, affidata dal Custode al suo prigioniero; con 18 o più, che Vhaerun ci ha inciso un fiume.",
+     "rilancio": "Il fuoco cala. Che cosa fate?",
+     "daqui": [
+      "riposo",
+      "vhaerun"
+     ]
+    },
+    {
+     "id": "riposo",
+     "tipo": "dettaglio",
+     "titolo": "La notte",
+     "parte": "evento",
+     "innesco": "Quando vanno a dormire. Chi fa un turno di guardia tira.",
+     "leggi": "Il campo si addormenta presto. Il fuoco cala.\n\nChi resta sveglio di guardia se ne accorge: la notte ha un rumore suo, e non conta niente. Un grillo sbaglia il tempo. Un mulo sbuffa. Il vento del Balcone fa schioccare lo stendardo.\n\nDormite. Per la prima volta da giorni, dormite davvero.",
+     "prove": [
+      {
+       "id": "guardia",
+       "abilita": [
+        "Percezione"
+       ],
+       "cd": 13,
+       "gruppo": "tutti",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Una notte tranquilla. Le stelle, il fuoco, i turni. Niente da riferire."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "In città, nella canonica accanto alla pieve, un lume resta acceso fino a tardi. E giù nel Borgo Vecchio, in una casa bassa, una lampada non si spegne mai, tutta la notte."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Prima dell’alba, al camposanto, una figura di donna con un secchio si ferma davanti a una fossa fresca. Posa qualcosa. Resta un momento. Se ne va senza voltarsi."
+        }
+       ]
+      }
+     ],
+     "note": "Riposo lungo completo. Nessun evento ostile (Da decidere: la cellula di Ceruso; verifica il narrato prima di muoverla). Il lume della canonica è Don Fulgenzio che scrive nel registro e decide la lettera per Campli. La lampada nel Borgo è la casa del funaio: Cuncetta tiene acceso perché Micuccio ha paura del buio silenzioso. La donna al camposanto è Nunzia. Per Mattheus: al risveglio il Filatterio è più leggero.",
+     "dopo": "Riposo lungo. Al mattino la colonna si prepara a partire a metà mattina, attraverso la città, dalla Porta di Levante.",
+     "rilancio": "L’alba. Il campo si sveglia. Che cosa fate?",
+     "daqui": [
+      "bellinde_dopo_levante"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "bellinde_dopo_levante",
+   "kind": "scena",
+   "title": "La Porta di Levante — la partenza",
+   "image": "PDI — Bëllindë — La partenza da Levante.jpg",
+   "legacyPosition": {
+    "x": 1262,
+    "y": 494
+   },
+   "text": "La colonna attraversa Bëllindë da una porta all’altra. Cinque carri sulla Via Maggiore, il Sole e le Due Lune sul pennone, le bestie che scivolano sul selciato.\n\nLa gente è sulle porte. Nessuno applaude. Nessuno chiude le imposte.\n\nIn Piazza Grande, Donna Egidia alza la testa dal grano e fa un cenno. Uno solo.\n\nLa Porta di Levante è ancora in ombra: la Rocca, sopra, le tiene il sole lontano fino a metà mattina. Sotto la volta, Ruggiero aspetta col registro aperto sul banco. Accanto a lui due vecchi di guardia su due sedie impagliate, e un ragazzo con la cotta troppo larga, sull’attenti.\n\nSul muro, il bando di Teramum. Accanto, la tavoletta delle distanze: Teramum, IV leghe.\n\nOltre la volta la strada scende fra le vigne, ed è già piena di sole.\n\nLassù, sul Balcone, un uomo solo guarda la strada con le mani dietro la schiena.",
+   "breve": "A metà mattina la colonna attraversa la città ed esce da Levante. Ruggiero li segna in uscita. Cecco chiede di partire con loro. Micuccio arriva alla porta col padre e vorrebbe venire. Le guardie di Levante hanno ancora nel registro il permesso falso della cellula. Il Conte guarda dal Balcone. Poi la strada per Teramum.",
+   "gm": "Quando: la mattina dopo il riposo lungo, a metà mattina (proposta coerente con «La strada per Teramum»: guado a mezzogiorno, osteria de lu Passe al tramonto). Silvanus vuole partire né prima né dopo: prima sembrerebbe una fuga, dopo un’attesa.\nPerché dalla città: il campo è fuori Ponente, la strada di Teramum parte da Levante. Si può girare fuori dalle mura, ma Silvanus sceglie di attraversare la città: «Siamo entrati da ospiti sospetti. Usciamo dalla porta davanti, a testa alta.» Se i PG preferiscono girare fuori, salta la Via Maggiore e Donna Egidia.\nChi c’è alla porta: Ruggiero col registro; le guardie di Levante (Nardo parla, Sante conferma); Cecco, che ha già deciso; Titta al suo orto fuori dalla porta; Micuccio, se sta in piedi, arriva col padre; il Conte guarda dal Balcone.\nIl bando: com’è finita la giornata si vede dal bando inchiodato accanto alla tavoletta (vedi il modulo «Il bando»).\nDa qui si passa alla scena «Il guado di Sant’Atto» (La strada per Teramum).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "registro",
+     "tipo": "dettaglio",
+     "titolo": "Ruggiero vi segna in uscita",
+     "parte": "evento",
+     "innesco": "Quando il primo carro arriva sotto la volta.",
+     "leggi": "Ruggiero intinge la penna. Guarda la colonna, poi voi.\n\n«Vi segno in uscita.» Scrive. Conta a mezza voce, con la penna, i carri, le bestie, le persone.\n\nPoi si ferma. Guarda la riga che ha scritto.\n\n«Cercate di non farmi correggere la riga.»",
+     "note": "Se nei giorni scorsi qualcuno ha parlato con Ruggiero del comando della Galleria, e gli ha detto che non era colpa sua: la riga la scrive con cura, lettera per lettera, e alla fine alza la testa: «A Teramum non vi possono muovere se non volete. Io l’ho imparato tardi. Voi lo sapete già.»\nSe Cecco chiede di venire (vedi il dialogo), la decisione è sua.\nBattute pronte: «Il Conte ha firmato. Io no. Adesso ho firmato anch’io.» (indica il registro) — «Tornate. Non per me. Per il registro: non mi piacciono le righe lasciate a metà.»",
+     "dopo": "La colonna è segnata in uscita. Il registro di Levante sarà la prima cosa che Teramum chiederà al Conte.",
+     "rilancio": "Il ragazzo con la cotta troppo larga fa un passo avanti. Che cosa fate?",
+     "daqui": [
+      "cecco",
+      "permesso",
+      "micuccio_porta"
+     ]
+    },
+    {
+     "id": "cecco",
+     "tipo": "dialogo",
+     "titolo": "Cecco chiede di venire",
+     "parte": "indizio",
+     "seme": "un ragazzo con la cotta troppo larga, sull’attenti",
+     "innesco": "Cecco fa un passo avanti davanti a tutti e parla a Ruggiero, non a loro.",
+     "leggi": "Il ragazzo fa un passo avanti. Si mette davanti a Ruggiero, dritto come un palo.\n\n«Sergente.» La voce gli si incrina, poi tiene. «Chiedo il permesso di andare con loro.»\n\nRuggiero non alza gli occhi dal registro.\n\nSotto la volta, per un momento, non si sente niente. Poi Ruggiero posa la penna e guarda voi. Non Cecco. Voi.",
+     "note": "Cecco, 19 anni, la guardia più giovane di Ruggiero. Tre anni fa era il terzo amico: il padre lo mise di guardia alle bestie quella notte e non andò. Ha portato il nome di Micuccio per tre anni, da solo. Vuole diventare uno di voi.\nRuggiero acconsente solo se un PG glielo chiede davanti a lui (proposta: Da decidere). Se nessuno parla, Ruggiero dice «No.» e riprende la penna, e Cecco resta sull’attenti finché la colonna è passata.\n\nPERCHÉ VUOI VENIRE? — «Perché tre anni fa ero di guardia alle bestie.» Pausa. «Non voglio essere di guardia alle bestie un’altra volta, quando succede qualcosa.»\n\nSAI COMBATTERE? — «So stare di guardia. So tenere una lancia. So obbedire.» Si ferma, arrossisce. «Quello forse è meglio che lo disimpari.» (Se qualcuno ride, ride anche lui.)\n\nTUO PADRE, TUA MADRE? — «Mio padre dice che sono matto. Mia madre mi ha cucito questa.» Tocca un rattoppo sulla cotta, all’altezza del cuore: dentro c’è una medaglietta. «Non mi ha detto di no. È la stessa cosa.»\n\nMICUCCIO — «Ieri ha riso. Io gli ho detto che venivo con voi. Ha detto: allora dopo me lo racconti.» Pausa. «Gliel’ho promesso. Quindi devo tornare. È un buon motivo per non morire, no?»\n\nTERAMUM — Non ci è mai stato. «Ruggiero dice che là ti ammazzano senza entrare nella stanza.» Pausa. «Io entro nella stanza. Così almeno mi vedono.»\n\nHAI PAURA? — «Sì.» Senza esitare. «Il sergente dice che chi non ha paura è inutile. Allora sono utilissimo.»\n\nCOSA SAI FARE PER NOI? — «Conosco tutti i pettegolezzi della guardia di Bëllindë. Non vi servono.» Pensa. «So scrivere. Il sergente mi ha insegnato col registro. Una colonna ha bisogno di uno che scrive quanti siete. Anche per ricordarsi i morti.» (Proposta: Cecco tiene il Registro della Crociata. È un ruolo che nessuno aveva.)\n\nSE LO RIFIUTANO — Obbedisce. «Sì, messere.» Resta sull’attenti. Quando la colonna è lontana, lo si vede sulla volta della porta, piccolo, con la lancia alzata, finché la strada non gira.\nSE LO PRENDONO IN GIRO — Arrossisce e non risponde. Ruggiero sì: «Chi ride di un ragazzo che chiede di venire con voi, non merita che venga.»\nSE GLI DANNO SOLDI (per l’equipaggiamento) — Li guarda, li rende. «Me li date quando me li sono guadagnati.»\n\nBattute pronte:\n«Sergente. Chiedo il permesso di andare con loro.»\n«Non voglio essere di guardia alle bestie un’altra volta.»\n«Allora sono utilissimo.»\nRuggiero, se un PG chiede per lui: guarda Cecco a lungo. «Riportalo.» Lo dice al PG, non al ragazzo. Poi, a Cecco: «Dai la lancia a Nardo. La cotta tienila. È del Conte: gliela ridai quando torni.»",
+     "dopo": "Se un PG chiede per lui, Cecco parte con la Crociata (40 persone). Nel Registro della Crociata va aggiunto: «da Bëllindë, Cecco, guardia, volontario». Proposta: tiene lui il registro della colonna.",
+     "rilancio": "Ruggiero aspetta. Cecco anche. Che cosa fate?",
+     "daqui": [
+      "micuccio_porta",
+      "permesso",
+      "partenza"
+     ]
+    },
+    {
+     "id": "micuccio_porta",
+     "tipo": "dettaglio",
+     "titolo": "Micuccio alla porta",
+     "parte": "evento",
+     "innesco": "Se Micuccio sta in piedi: arriva col padre mentre passano gli ultimi carri.",
+     "leggi": "Dalla Via Maggiore arriva un uomo grosso con le mani piene di calli, e accanto a lui, appoggiato al suo braccio, un ragazzo magro con un mantello troppo grande.\n\nMicuccio si ferma sotto la volta. Guarda i carri. Guarda la strada, piena di sole.\n\nPoi guarda voi.\n\n«Posso?»\n\nSuo padre non dice niente. Gli tiene il braccio.",
+     "note": "La madre ha chiesto ai PG di dirgli di no («Nen ve lu purtate appresso»). Se lo ricordano, possono farlo in due modi.\nSe glielo ORDINANO («No. Resta.»): Micuccio obbedisce subito, e si spaventa di aver obbedito. Il padre se ne accorge. È una piccola crepa: il ragazzo è ancora uno che riceve ordini.\nSe glielo CHIEDONO («Che cosa vuoi fare tu?») o gli ricordano quello che gli hanno insegnato (a dire di no): Micuccio ci pensa a lungo. Poi: «Resto.» Una pausa. «Ma stavolta l’ho deciso io.» Il padre gli stringe il braccio e guarda altrove.\nSe lo PORTANO: la famiglia non lo perdona, e Micuccio, fra una settimana, non sa perché è lì. Da decidere se vuoi aprire questa strada.",
+     "dopo": "Micuccio resta a Bëllindë (proposta), per scelta sua se i PG gliel’hanno lasciata. Sarà un seme per un ritorno futuro.",
+     "rilancio": "Micuccio aspetta la vostra risposta. Che cosa gli dite?",
+     "daqui": [
+      "partenza"
+     ]
+    },
+    {
+     "id": "permesso",
+     "tipo": "dettaglio",
+     "titolo": "Il permesso nel registro",
+     "parte": "indizio",
+     "seme": "Accanto a lui due vecchi di guardia su due sedie impagliate",
+     "innesco": "Qualcuno scambia due parole con le guardie di Levante mentre passano i carri, o chiede chi è uscito di notte nei giorni scorsi.",
+     "leggi": "Il più vecchio dei due, Nardo, vi fa cenno di avvicinarvi, come chi ha una cosa da dire e nessuno a cui dirla.\n\n«Voi che andate a Teramum. L’altra sera è uscito uno, dopo la chiusura. A cavallo. Cu nu permesse cu lu sigille de lu Conte.»\n\nSante, dall’altra sedia: «Regolare.»\n\nNardo: «Teneve lu sigille.» Apre il registro, tira fuori un foglio piegato che fa da segnalibro. Ci sono briciole di pane, sopra. «Se nisciune lu vò, ce ’ncarte la merenna.»",
+     "prove": [
+      {
+       "id": "permesso",
+       "abilita": [
+        "Percezione",
+        "Indagare"
+       ],
+       "cd": 10,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 9,
+         "leggi": "Un permesso del Conte come tanti: due righe, una firma, il sigillo dei Melacera. Qualcuno è uscito di notte con l’autorizzazione giusta."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 10,
+         "max": 15,
+         "leggi": "Il sigillo del Conte è buono all’occhio, ma la ceralacca è stata scaldata due volte: un sigillo vero, staccato da un altro documento e riattaccato qui. Il permesso è falso."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 16,
+         "leggi": "Falso, e scritto con cura. La mano è regolare, perfetta, senza una macchia. L’avete già vista: sul bando letto in piazza, e sulla lettera di Teramum sul tavolo del Conte."
+        }
+       ]
+      }
+     ],
+     "note": "Il quarto uomo della cellula di Ceruso è uscito da qui la sera prima della discesa, con questo permesso falso. È la prima prova materiale contro la cellula, ed è l’ultima occasione per prenderla: dopo, Nardo ci incarta la merenda. Portato al notaio Ilderico Panzalonga, il confronto col bando conferma: stessa mano. Ma la colonna parte: se vogliono usarlo, lo usano a Teramum.",
+     "dopo": "Con 10 o più sanno che è un falso; con 16 o più che la mano è la stessa del bando e della lettera di Teramum. Il permesso è una prova da portare a Teramum.",
+     "rilancio": "Nardo vi tende il foglio con le briciole sopra. Che cosa fate?",
+     "bottino": [
+      {
+       "n": "Permesso falso col sigillo dei Melacera",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": "—",
+       "valore": "—",
+       "stats": "Prova contro la cellula di Velthuria",
+       "desc": "Un permesso d’uscita notturna dalla Porta di Levante, col sigillo vero del Conte staccato da un altro documento e riattaccato. La mano è la stessa del bando di Teramum. Tenuto nel registro di Levante come segnalibro, con le briciole."
+      }
+     ],
+     "daqui": [
+      "partenza"
+     ]
+    },
+    {
+     "id": "bando",
+     "tipo": "dettaglio",
+     "titolo": "Il bando sul muro",
+     "parte": "nascosto",
+     "innesco": "Qualcuno guarda il bando di Teramum inchiodato accanto alla tavoletta, uscendo.",
+     "leggi": "Il bando è lo stesso che Mimì ha letto in piazza: le stesse formule, lo stesso sigillo. Ma stamattina qualcuno ci è passato davanti prima di voi.",
+     "note": "Com’è finita la giornata si legge qui. Scegli una delle due, secondo quello che è successo:\nSe la città ha visto Micuccio tornare, Rocco sepolto con una parola sopra, il prete seduto: in basso sul bando, a carbone, qualcuno ha disegnato tre tondi, uno in mezzo e due ai lati. Il tondo a sinistra è pieno di nero, fatto con cura. Nessuno l’ha cancellato. Nardo fa finta di non averlo visto: «Io nen ce vede bbone, la matina.»\nSe la giornata è andata male (Nicola alla pieve con la mazza, il Brak in città, il Conte freddo): accanto al bando vecchio ne è stata inchiodata una copia nuova, fresca, e sotto, a carbone, una parola sola: «ANDATEVENE.»",
+     "dopo": "Sanno che cosa pensa di loro Bëllindë, stamattina.",
+     "rilancio": "La volta è alle vostre spalle. Che cosa fate?",
+     "daqui": [
+      "partenza"
+     ]
+    },
+    {
+     "id": "partenza",
+     "tipo": "prosecuzione",
+     "titolo": "La strada di levante",
+     "parte": "evento",
+     "innesco": "Quando l’ultimo carro esce dalla volta.",
+     "leggi": "La strada scende fra le vigne. I carri cigolano, le bestie trovano il passo.\n\nFuori dalla porta, in un orto, un ragazzo lungo e magro sta legando i pomodori. Alza la testa. Alza una mano. Poi torna al suo nodo, e lo finisce.\n\nChi si volta vede Bëllindë sul suo sperone, per un lungo tratto. Il campanile. La Rocca. Il Balcone, con un uomo solo sopra, che non saluta e non se ne va.\n\nSembra più piccola.\n\nForse perché adesso sapete quanto è profonda.\n\nPoi la strada gira.\n\nDavanti, oltre le colline, c’è Teramum.",
+     "note": "Il ragazzo nell’orto è Titta: il nodo che finisce è il primo che riesce a finire mentre qualcuno cammina al passo. Il Conte sul Balcone: se i PG l’hanno convinto fino in fondo (20 naturale nel «Prezzo del Conte»), quando la colonna gira, alza il bicchiere. Da qui si passa alla scena «Il guado di Sant’Atto».",
+     "dopo": "Si lascia Bëllindë. Prossima scena: La strada per Teramum → Il guado di Sant’Atto (a mezzogiorno). Aggiorna il Registro della Crociata: «BËLLINDË — aggiornamento» (volontari, grano, pane, prove, lettere, Vhaerun).",
+     "rilancio": "La strada gira. Che cosa fate?"
+    }
+   ]
+  }
+ ]
+}

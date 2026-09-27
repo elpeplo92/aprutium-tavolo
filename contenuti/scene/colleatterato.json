@@ -1,0 +1,679 @@
+{
+ "id": "colleatterato",
+ "nome": "Da Colleatterato",
+ "menu": "Da Colleatterato",
+ "citta": "La strada per Teramum",
+ "ordine": 6,
+ "mappa": {
+  "img": "BATTLEMAP — Da Colleatterato.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Il secondo giorno comincia col fiume e col caldo. La strada di valle, i pioppi, i campi.\n\nNessuno parla molto della notte.\n\nA metà mattina la strada lascia il Tordinum e comincia a salire. Davanti, l’ultima collina. Dietro l’ultima collina, lo sapete tutti, c’è la città.",
+  "note": "Scena d’arrivo, senza scontro: la città appare, e la città conta. Il Bando è arrivato prima di loro; la Guardia Ducale li scrive nel registro; un messo porta a Maximus un biglietto che cambia la sera.\nSulla mappa: la colonna entra in basso a destra, sale i tornanti fra gli ulivi, attraversa il borgo sulla cresta da est a ovest (cappella, case, fontana), arriva al belvedere in cima a sinistra, poi scende lungo il lato sinistro fino alla sbarra; il messo arriva dal basso a sinistra.\nOrdine dei punti: salita → cappella → casa coi panni stesi → fontana → belvedere → sbarra → messo.\nPNG: Liberata de la Fonte, Menica de li Fiòre, sergente Benedetto Arcioni, Vitale lu Messo (schede nel Compendio, città «strada»).",
+  "ingressi": [
+   {
+    "da": "Dalla strada di valle (tutta la colonna)",
+    "primo": "colle_salita",
+    "poi": "colle_cappella",
+    "note": "L’ordine normale della lista."
+   },
+   {
+    "da": "Se hanno assalito il convoglio all’osteria",
+    "primo": "colle_salita",
+    "poi": "colle_picchetto",
+    "note": "Il sergente manda due guardie incontro alla colonna fin dentro il borgo: la sbarra viene da loro. Le porte del borgo restano chiuse. Tutte le prove sociali col picchetto a CD +3."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "colle_salita",
+   "kind": "scena",
+   "title": "La salita fra gli ulivi",
+   "image": "PDI — Colleatterato — La salita fra gli ulivi.jpg",
+   "legacyPosition": {
+    "x": 1150,
+    "y": 850
+   },
+   "text": "La strada lascia il fiume e sale fra gli ulivi. Due tornanti, poi un terzo. Muri a secco, pietre bianche messe una sull’altra senza calce da gente morta da secoli.\n\nCapre sui terrazzi. Un bambino con un bastone le guarda, poi guarda voi, poi scappa su per i sassi.\n\nIn cima, contro il cielo, una cappella bianca col campanile a vela.\n\nColleatterato è una manciata di case sulla cresta, i tetti rossi uno contro l’altro come pecore al freddo.\n\nLe donne smettono di stendere i panni per guardarvi passare. Nessuno saluta.",
+   "breve": "La colonna sale da valle verso l’ultimo borgo prima di Teramum. Il Bando è arrivato prima: nessuno saluta. Chi guarda avanti (Zenith) vede la sbarra della Guardia all’uscita del borgo.",
+   "gm": "Secondo giorno, metà giornata. Da qui alla porta di Teramum è meno di una lega, in discesa, poi il ponte sul Tordinum.\nLa salita di Colleatterato è la seconda strettoia di Ze’ Cristofano: fra i muri a secco un carro non si gira e una colonna non si schiera.\nIl Bando: due giorni fa un banditore della Guardia l’ha letto sulla fontana, e una copia è inchiodata al pilastro (vedi «La fontana»). Il borgo ha paura di essere visto aiutare la Crociata.\nSulla mappa la colonna entra in basso a destra, sale i tornanti, entra nel borgo da est, passa la cappella e la fontana, arriva al belvedere a ovest, poi scende a sinistra verso la sbarra.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "zenith",
+     "tipo": "dettaglio",
+     "titolo": "Da lassù",
+     "parte": "indizio",
+     "seme": "In cima, contro il cielo, una cappella bianca col campanile a vela.",
+     "innesco": "Luigis manda Zenith avanti, o qualcuno sale di corsa prima della colonna.",
+     "leggi": "Dall’alto il borgo è una lisca di pesce: una strada sola sulla cresta, le case ai lati. In fondo, dove la cresta finisce, un terrazzo con un muretto e un cipresso. Oltre, la strada scende, e a metà discesa c’è una sbarra di legno di traverso. Quattro uomini in grigio. Due cavalli legati a un ulivo.\n\nE oltre la sbarra, lontano, in basso, qualcosa di bianco che brilla fra due fiumi.",
+     "note": "Nessun tiro: è tutto su strada aperta. Zenith vede anche, sulla strada in basso verso la città, quattro carri col telone nero che attraversano il ponte, piccoli come formiche (il convoglio dell’osteria, un’ora avanti).",
+     "dopo": "Sanno del picchetto prima di arrivarci. Possono prepararsi: cosa dire, chi parla, se Silvanus si toglie il cappuccio.",
+     "rilancio": "Zenith torna sul pugno di Luigis. Che cosa fate?",
+     "daqui": [
+      "silenzio",
+      "colle_cappella"
+     ]
+    },
+    {
+     "id": "silenzio",
+     "tipo": "dettaglio",
+     "titolo": "Nessuno saluta",
+     "parte": "indizio",
+     "seme": "Le donne smettono di stendere i panni per guardarvi passare. Nessuno saluta.",
+     "innesco": "Qualcuno saluta, chiede acqua, chiede la strada.",
+     "leggi": "Una donna con la cesta dei panni vi guarda, poi guarda la strada in fondo al borgo, verso la sbarra. Poi entra in casa e chiude la porta. Da dietro la porta, la sua voce, piano: «Nun ce sta nisciune.»",
+     "prove": [
+      {
+       "id": "borgo",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 11,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 10,
+         "leggi": "Gente di collina: diffidente coi forestieri, come tutti."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 11,
+         "leggi": "Non è diffidenza. È paura. Guardano la sbarra in fondo alla strada prima di guardare voi: hanno paura di essere visti mentre vi aiutano. Qualcuno ha letto loro il Bando."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il Bando è arrivato. Chi vuole parlare con qualcuno deve andare alla fontana (Liberata non ha paura di niente) o alla casa coi panni stesi.",
+     "rilancio": "Le porte si chiudono una dopo l’altra lungo la strada. Che cosa fate?",
+     "daqui": [
+      "colle_fontana",
+      "colle_case"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "colle_cappella",
+   "kind": "stanza",
+   "title": "La cappella bianca",
+   "image": "PDI — Colleatterato — La cappella bianca.jpg",
+   "legacyPosition": {
+    "x": 950,
+    "y": 270
+   },
+   "text": "La cappella è piccola: dieci passi di lunghezza, calce bianca dentro e fuori. Sopra la porta, il campanile a vela, un muro solo con una campana sola.\n\nDentro è fresco e buio. Odore di cera e di pietra bagnata.\n\nDietro l’altare, dipinto, un gigante di pietra dorme disteso, e sulla sua fronte sta in piedi un santo col bastone.\n\nSulle pareti, ex voto: cuori di latta, gambe di cera, una tavoletta dipinta con una casa che crolla e una famiglia che prega fuori. In mezzo agli ex voto, appesa a un chiodo, una ciotola di legno. Nuova.\n\nSotto la ciotola, graffito nella calce: «PE’ QUILLE CHE S’È ALZATE DA TAVOLA».",
+   "breve": "La cappella di San Berardo (proposta) col Gigante dipinto dietro l’altare. Una ciotola nuova fra gli ex voto: il borgo prega per la gente dei casali «che si è alzata da tavola». Il Dito di San Berardo che porta Alessandros si scalda sotto il dipinto.",
+   "gm": "Dedica: Da decidere. Proposta: San Berardo, il santo più amato d’Aprutium, che «unì le tribù pretuziane»; qui dipinto sulla fronte del Gigante addormentato (la «pietra dove il Gigante sogna» del canone). È un dipinto di campagna, e la Chiesa di Teramum non l’ha mai fatto coprire perché nessuno sale fin qui.\nIl Dito di San Berardo (con Alessandros, consegnato da Virellius): proposta del canone, le reliquie «si raffreddano» o «si scaldano» davanti all’Equilibrio. Qui si scalda: il santo e il Gigante insieme.\nLa campana: suonarla è un segnale che si sente fino alla sbarra. Il sergente manderà un uomo a vedere.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "ciotola",
+     "tipo": "dettaglio",
+     "titolo": "La ciotola nuova",
+     "parte": "indizio",
+     "seme": "In mezzo agli ex voto, appesa a un chiodo, una ciotola di legno. Nuova.",
+     "innesco": "Qualcuno guarda gli ex voto o chiede della ciotola.",
+     "leggi": "Una ciotola da polenta, di faggio, consumata dal cucchiaio. Dentro, qualcuno ha messo quattro sassolini bianchi, di fiume. E un nastro nero.",
+     "prove": [
+      {
+       "id": "voto",
+       "abilita": [
+        "Religione",
+        "Intuizione"
+       ],
+       "cd": 11,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 10,
+         "leggi": "Un voto per qualche disgrazia del borgo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 11,
+         "leggi": "Un ex voto per i morti che non hanno un corpo da seppellire. Quattro sassi di fiume per quattro persone. Sassi del Tordinum: del guado. Qualcuno qui conosceva la famiglia del casale di Sant’Atto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che a Colleatterato qualcuno piange i Chiòdi. È Liberata, alla fontana: Rosa era la sua figlioccia.",
+     "rilancio": "I quattro sassi bianchi vi guardano dal fondo della ciotola. Che cosa fate?",
+     "daqui": [
+      "colle_fontana"
+     ],
+     "pe": 150
+    },
+    {
+     "id": "gigante",
+     "tipo": "dettaglio",
+     "titolo": "Il santo sulla fronte del Gigante",
+     "parte": "indizio",
+     "seme": "Dietro l’altare, dipinto, un gigante di pietra dorme disteso, e sulla sua fronte sta in piedi un santo col bastone.",
+     "innesco": "Qualcuno guarda il dipinto dietro l’altare.",
+     "leggi": "Il gigante è grigio come la montagna, e ha la forma della montagna: la fronte, il naso, il mento, il petto, le ginocchia. Dorme con la bocca chiusa. Il santo sulla sua fronte ha il bastone da pastore, la barba, e la mano alzata verso chi guarda, come a dire: piano.\n\nIntorno al gigante, piccoli, dipinti in fila, cani bianchi.",
+     "prove": [
+      {
+       "id": "dipinto",
+       "abilita": [
+        "Religione",
+        "Storia"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un santo e una montagna. Un dipinto di campagna."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 15,
+         "leggi": "San Berardo, il santo di Teramum, e il Gigante: la montagna che dorme. «Quann’ lu Gigante se ’ngrugne, treme la terre.» Qui qualcuno ha dipinto il santo che lo tiene addormentato. I cani bianchi sono i Mastini dei pastori."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 16,
+         "leggi": "San Berardo che veglia il sonno del Gigante, e i Mastini bianchi intorno. È un’eresia gentile, di quelle che la Chiesa lascia stare in campagna: il santo non combatte il Gigante, lo custodisce. Dopo la notte di ieri, la mano alzata del santo sembra meno tranquilla."
+        }
+       ]
+      }
+     ],
+     "dopo": "Collega la notte del terremoto al Gigante e al santo. Adamus, per il sogno dei tratturi e i Mastini, ci trova qualcosa di suo.",
+     "rilancio": "Il santo vi dice «piano» con la mano. Che cosa fate?",
+     "daqui": [
+      "dito"
+     ]
+    },
+    {
+     "id": "dito",
+     "tipo": "dettaglio",
+     "titolo": "La reliquia calda",
+     "parte": "nascosto",
+     "innesco": "Alessandros entra nella cappella con il Dito di San Berardo addosso (o lo tira fuori sotto il dipinto).",
+     "leggi": "Il reliquiario, nella borsa, contro il fianco, si fa tiepido. Poi caldo, come una pietra lasciata al sole.\n\nQuando esci dalla cappella, torna freddo.",
+     "note": "Da mostrare solo ad Alessandros. Nessuna prova, nessun effetto meccanico. È una risposta: il santo riconosce il posto, o il Gigante, o chi lo porta. Non spiegarlo.",
+     "dopo": "Alessandros sa che la reliquia ha reagito qui. A Teramum può servire (Impalox, Odilon).",
+     "rilancio": "Il calore se ne va piano, come si spegne una brace. Che cosa fai?"
+    },
+    {
+     "id": "campana",
+     "tipo": "dettaglio",
+     "titolo": "La campana",
+     "parte": "evento",
+     "innesco": "Qualcuno tira la corda della campana.",
+     "leggi": "Un colpo solo, chiaro, che rotola giù per la valle.\n\nDalle case, le porte si aprono di un dito. Dalla sbarra, in fondo alla discesa, un uomo in grigio si mette a salire, a passo svelto.",
+     "note": "Una guardia del picchetto arriva in pochi minuti. Il sergente scrive nel registro: «ha suonato la campana». Se la suonano a festa (tre colpi), le vecchie escono a vedere e il borgo, per un momento, smette di avere paura: Liberata ride.",
+     "dopo": "Il picchetto sa che sono arrivati.",
+     "rilancio": "La campana ronza ancora sopra le vostre teste. Che cosa fate?"
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "colle_case",
+   "kind": "persona",
+   "title": "La casa coi panni stesi",
+   "image": "PDI — Colleatterato — La casa coi panni stesi.jpg",
+   "legacyPosition": {
+    "x": 520,
+    "y": 250
+   },
+   "text": "Fra due case, sulla strada, le corde dei panni: camicie, lenzuola, fasce da neonato. Una donna le stava stendendo. Adesso non c’è più.\n\nLa porta della casa di sinistra è socchiusa. Dentro, una culla che dondola, spinta da un piede che non si vede.\n\nSulla soglia, due paia di zoccoletti da bambino e un paio di scarpe da uomo, grandi, pulite, messe in fila.\n\nQualcuno, da dietro la porta, trattiene il fiato.",
+   "breve": "Menica, fuggita da un casale di Sant’Atto coi due figli. Suo marito Sabatino è andato a vedere i Chiòdi ed è tornato «diverso»: forse è uno dei ferali del guado. Racconta del frate giovane con la botticella che benediceva i pozzi, con la luna nuova.",
+   "gm": "Menica è ospite di Liberata. È la testimone che mancava: la Forgiatura dei casali è passata per i pozzi benedetti da un frate giovane venuto «da una chiesa grande di Teramum», con la luna nuova, un mese fa. Chi è il frate: Da decidere (vedi «Il pozzo» al guado).\nSabatino: se il master lo decide, era uno dei ferali del guado (l’uomo alto con l’orecchio sinistro mozzo). È il momento più duro della strada: non forzarlo, lascialo ai giocatori.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "menica",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Menica",
+     "parte": "indizio",
+     "seme": "Sulla soglia, due paia di zoccoletti da bambino e un paio di scarpe da uomo, grandi, pulite, messe in fila.",
+     "innesco": "Qualcuno bussa, parla dalla soglia, o arriva con Liberata.",
+     "leggi": "La porta si apre di un palmo. Una donna giovane, i capelli legati male, un bambino in braccio. Dietro, nella culla, un altro.\n\n«Nun c’è nisciune.» Poi vede le vostre facce, e forse lo stendardo. «Voi venite da giù? Dal fiume?»",
+     "note": "(Menica, trent’anni, di un casale di Sant’Atto, sul Tordinum. Due bambini, uno in culla. Ospite di Liberata da due settimane. Parla solo se non ci sono uomini della Guardia e se chi le parla non ha armi in mano, o se Liberata è presente.)\n\nCHI SEI — «Menica. De li Fiòre, sopra lu guado. Stavamo a un tiro di sasso da li Chiòde.» Stringe il bambino. «Stavamo.»\n\nPERCHÉ SEI QUI — «Due settimane fa mio marito, Sabatino, è andato a vedere perché li Chiòde non si sentivano più. Rosa non era venuta al forno. È tornato la sera. S’è seduto a tavola. Non ha mangiato.» Pausa lunga. «Mi guardava. Non sbatteva gli occhi. Io ho preso i figli e sono uscita dalla finestra. Ho camminato tutta la notte.»\n\nLE SCARPE — «Sono di Sabatino. Le scarpe della festa. Le ho portate via io, la notte che sono scappata. Non so perché.» Le guarda. «Se torna, gliele do.»\n\nIL GUADO — Se il gruppo racconta dei contadini al guado, o se qualcuno lo tace male (Intuizione di Menica: sa leggere le facce): «Uno alto, con l’orecchio mozzo? Il sinistro. Glielo morse un mulo da ragazzo.» Se sì, o se nessuno risponde: non piange. Si alza, prende le scarpe dalla soglia e le mette dentro, sotto la culla.\n\nIL FRATE — «Un mese fa è passato un frate. Giovane, bello, i capelli come la paglia. Aveva una botticella sul mulo. Benediceva i pozzi, gratis. Ha benedetto il nostro, quello de li Chiòde, quello de li Martinelle. Diceva che veniva da Teramum, da una chiesa grande.» Se le chiedono della luna: «Era luna nuova. Me lo ricordo perché era buio pesto e lui camminava senza lanterna.»\n\nLA GUARDIA — «La Guardia la vede tutti i giorni, alla sbarra. Io no. Io non esco. Se sanno che vengo da là, mi riportano là.» (Non è vero, ma lei ci crede.)\n\nCOSA VUOLE — Che qualcuno le dica cosa è successo a suo marito, e che nessuno la riporti al casale.\n\nSE LA MINACCIANO — Si mette davanti alla culla e non parla più. Liberata arriva col bastone.\n\nSE LE OFFRONO AIUTO — Chiede una cosa sola: «Se passate di nuovo al guado, mettete una croce. Per tutti, non solo per lui.»",
+     "prove": [
+      {
+       "id": "menica",
+       "abilita": [
+        "Persuasione",
+        "Intuizione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "«Andate via. Per carità.» La porta si chiude. Ci vuole Liberata."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Vi fa entrare, ma resta fra voi e la culla. Racconta, a voce bassa, guardando le scarpe sulla soglia."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno del frate con la botticella e della luna nuova: il filo della Forgiatura porta a Teramum. E forse sanno chi era uno dei contadini del guado.",
+     "rilancio": "La culla dondola ancora, spinta dal piede di Menica. Che cosa fate?",
+     "daqui": [
+      "colle_fontana"
+     ],
+     "pe": 300
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "colle_fontana",
+   "kind": "persona",
+   "title": "La fontana",
+   "image": "PDI — Colleatterato — La fontana.jpg",
+   "legacyPosition": {
+    "x": 660,
+    "y": 450
+   },
+   "text": "In mezzo al borgo, una piazzetta grande quanto un’aia. Una fontana di pietra con una vasca lunga, per le bestie. L’acqua esce da una bocca di leone consumata, fredda, abbondante.\n\nLe vostre bestie la sentono e tirano.\n\nSul pilastro della fontana, inchiodato con quattro chiodi, un foglio. Il sigillo di cera è ancora attaccato.\n\nSeduta sul bordo della vasca, una vecchia vestita di nero riempie una brocca e non vi guarda.",
+   "breve": "Il Bando di Teramum inchiodato alla fontana e Liberata, la vecchia che non ha paura: dà l’acqua alle bestie contro il Bando, conosce le porte della città, ospita Menica. Rosa del guado era la sua figlioccia.",
+   "gm": "Il Bando (o proclama) di Teramum: lo stesso che i PG hanno già in mano. Il canone lo vuole letto in ogni borgo da un banditore: qui è inchiodato alla fontana. Strapparlo davanti al borgo è un gesto (e il sergente lo scrive). Leggere in piazza la dichiarazione di Gisulfo sopra il Bando è la contromossa del canone: Persuasione con vantaggio.\nLiberata: madrina di Rosa Chiòdi. Protegge Menica. Ha la chiave della cappella.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "bando",
+     "tipo": "dettaglio",
+     "titolo": "Il foglio sul pilastro",
+     "parte": "indizio",
+     "seme": "Sul pilastro della fontana, inchiodato con quattro chiodi, un foglio. Il sigillo di cera è ancora attaccato.",
+     "innesco": "Qualcuno legge il foglio, lo tocca o vuole strapparlo.",
+     "leggi": "Lo conoscete a memoria. «Compagnia armata senza mandato… sospettata di sedizione… aggressione contro autorità ecclesiastiche… reclutamento illecito.» Alle comunità si ordina di non darvi uomini, cavalli, armi, denaro, vettovaglie né ospitalità, e di riferire i vostri movimenti.\n\nIn fondo, scritto a mano da qualcuno del borgo, in piccolo: «Dio ve benedica lo stesso».",
+     "note": "Tre scelte:\n• Lasciarlo: niente cambia.\n• Strapparlo: le donne alle finestre lo vedono. Il sergente lo scrive («hanno strappato il Bando»). Liberata annuisce.\n• Leggere in piazza la dichiarazione sigillata di Gisulfo Melacera, punto per punto, sopra il Bando: Persuasione CD 13 con vantaggio. Riuscita: le porte si riaprono, qualcuno porta pane e fichi, e il sergente, che ha sentito dalla sbarra, scrive «hanno letto una carta del Conte di Bëllindë» (vale per la procedura in città). Coesione +1.",
+     "prove": [
+      {
+       "id": "gisulfo",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Leggete. Vi ascoltano da dietro le imposte. Nessuno esce."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Alla terza riga una porta si apre. Alla quinta, una donna porta una cesta di fichi alla vasca e la lascia lì senza dire niente. Alla fine, un vecchio dice forte: «E allora il Bando è bugiardo.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Il borgo sa chi sono. Se la lettura riesce, il sergente arriva al picchetto già con un’idea diversa della colonna (vantaggio alla prima prova sociale col picchetto).",
+     "rilancio": "Il foglio è lì, fra voi e la fontana. Che cosa fate?",
+     "daqui": [
+      "nunziata"
+     ],
+     "pe": 200
+    },
+    {
+     "id": "nunziata",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Liberata de la Fonte",
+     "parte": "indizio",
+     "seme": "Seduta sul bordo della vasca, una vecchia vestita di nero riempie una brocca e non vi guarda.",
+     "innesco": "Qualcuno le parla, chiede l’acqua, o si siede sulla vasca.",
+     "leggi": "Settant’anni e passa, il nero delle vedove, un bastone di corniolo appoggiato alla vasca. Gli occhi, quando li alza, sono chiarissimi.\n\n«Abbeverate le bestie. L’acqua è di Dio, e Dio il Bando non l’ha firmato.»",
+     "note": "CHI SEI — «Liberata. De la Fonte, dicono, perché sto sempre qua. Settantadue anni. Ho seppellito un marito, due figli e un prete. Di voi non ho paura.»\n\nIL BANDO — Batte il bastone sul pilastro. «L’ha letto un banditore della Guardia, due giorni fa, con la voce di chi legge le tasse. Poi l’ha inchiodato. Dice di non darvi niente: né pane, né acqua, né letto.» Riempie la brocca. «L’acqua della fontana è del Signore e del Comune. Il Bando non ci arriva. Abbeverate le bestie.»\n\nPERCHÉ NESSUNO SALUTA — «Perché la sbarra è là sotto, e il sergente scrive. Scrive tutto. Chi vi ha dato l’acqua, chi vi ha dato la strada. Qua siamo in ventidue famiglie, e ventidue famiglie hanno paura di un registro.»\n\nLA CITTÀ, LE PORTE — «Di là, i fiumi sono due e le porte sei. Ma di notte ne apre una sola.» Se le chiedono quale: «Quella che vi apre chi vi conosce. Voi chi conoscete, a Teramum?» Sa che la Porta de lu Solë si apre per le processioni, che la Piccòla è per le pecore, e che «alla Pustèrla de li Mortë ci passano solo quelli che non hanno più fretta».\n\nROSA, LI CHIÒDE (se le mostrano la fede o le parlano del guado) — Riconosce la fede subito: «R e A. Rosa e Anselmo. Gliel’ho messa io al dito, il giorno che s’è sposata. Era la mia figlioccia.» Non piange davanti ai forestieri. Chiede: «L’avete vista? Com’era?» E, se le dicono la verità: «Allora adesso è morta davvero. Meglio.» Mette la fede nella ciotola della cappella, coi quattro sassi. Se le lasciano i risparmi dei Chiòdi, li porta «al prete, quando ce ne sarà uno».\n\nIL FRATE — «Il frate con la botticella? L’ho visto passare. Qui non s’è fermato: la fontana nostra non ha bisogno di benedizioni, ha il leone. È sceso verso il fiume. Menica ve lo racconta meglio: lei l’ha visto benedire.»\n\nMENICA — «La tengo io. E se qualcuno della Guardia chiede, è mia nipote di Canzañë.» Guarda Alessandros, se c’è un Cerullius: «Canzañë è terra vostra, messere. Avete una nipote in più.»\n\nIL TERREMOTO, IL COLPO — «Anche qua. Ha ballato tutto. E poi quel colpo.» Si fa il segno della croce. «Mio marito diceva che sotto la città c’è un’altra città, e sotto quella un’altra. E che quando il Gigante si gira, quelle di sotto bussano.»\n\nIL SERGENTE — «Benedetto? Un brav’uomo che fa un mestiere brutto. Beve l’acqua mia da un mese e non ha mai scritto il mio nome. Stategli dritti davanti e ditegli la verità: la verità gli dà meno lavoro.»\n\nSE LA MINACCIANO — Ride. «A settantadue anni, figlio mio, le minacce si chiamano compagnia.»\n\nSE LE OFFRONO SOLDI — «Per l’acqua? L’acqua è di Dio.» Per Menica sì: «Dateli a lei. Io ho già tutto quello che mi serve: un bastone e una fontana.»\n\nSE LE MENTONO — Ci vede benissimo (Intuizione +5). «Sì, sì. Pellegrini. Io pure a vent’anni ero una santa.»",
+     "dopo": "Sanno delle porte, del sergente, del frate; se le parlano di Rosa, il borgo ha una ragione per ricordarli.",
+     "rilancio": "Liberata chiude la brocca col palmo e aspetta. Che cosa fate?",
+     "daqui": [
+      "colle_case",
+      "colle_belvedere"
+     ],
+     "pe": 200
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "colle_belvedere",
+   "kind": "scena",
+   "title": "Il belvedere",
+   "image": "PDI — Colleatterato — Il belvedere.jpg",
+   "legacyPosition": {
+    "x": 250,
+    "y": 340
+   },
+   "text": "In fondo al borgo la cresta finisce. Un terrazzo di terra battuta, un muretto a secco all’altezza del ginocchio, una panca di pietra, un cipresso.\n\nLa strada si affaccia sulla valle.\n\nE la vedete.\n\nPrima le mura, bianche. Poi le torri. Poi i tetti, tanti, fitti, fin dove i due fiumi si stringono.\n\nDue fiumi le corrono intorno e si stringono sotto di lei, come due braccia che non vogliono lasciarla andare.\n\nIn cima al colle, una cupola che prende la luce e la rimanda d’oro.\n\nDietro, altissimo, il Gigante. Così vicino che sembra appoggiato alla città.\n\nÈ appena passato mezzogiorno. Eppure sulla città l’ombra della montagna è già scesa.",
+   "breve": "La prima vista di Teramum: le mura bianche, i due fiumi, la cupola d’oro, e il Gigante che le fa ombra a mezzogiorno. Ogni PG di città riconosce qualcosa. Percezione e Storia per leggere la città; il convoglio che entra, piccolo, dalla porta del ponte.",
+   "gm": "Luce: il Gigante blocca il sole del pomeriggio; a Teramum non si vedono i tramonti, solo le albe. Da qui le colline sono al sole e la città è già in ombra.\nLegami (uno per PG, se i giocatori chiedono cosa riconoscono): Maximus è nato qui (la torre-fortezza di Palazzo Grazianus sul colle, e, se la versione è quella dei commercianti, la strada del mercato del Sestiere del Fiume); Alessandros e Vicarus hanno studiato qui (la loggia dello Studium, e la torre di Palazzo Cerullius); Mattheus viene da Magnacellum, sulle colline a mezzogiorno, visibile da qui come una macchia bianca; Martinella Lezzia, la fidanzata di Maximus, è di Castronia, poco lontano; Adamus vede il tratturo lungo il Tordinum, verde, con le greggi; Luigis e Zenith leggono le porte.\nNon rivelare niente di ciò che sta sotto la città (Basilica Aurea, Sigillo, Città Sepolta).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "porte",
+     "tipo": "dettaglio",
+     "titolo": "Leggere la città",
+     "parte": "indizio",
+     "seme": "Poi le torri. Poi i tetti, tanti, fitti, fin dove i due fiumi si stringono.",
+     "innesco": "Qualcuno guarda la città con attenzione.",
+     "leggi": "Dall’alto, Teramum è un disegno. Si vedono le porte: sei. Si vedono le strade che ci arrivano. Si vede un ponte di pietra su due archi davanti alla porta del nord.",
+     "prove": [
+      {
+       "id": "vista",
+       "abilita": [
+        "Percezione"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "La città è troppo lontana, e l’ombra della montagna confonde i contorni."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 16,
+         "leggi": "Delle sei porte, solo due hanno la saracinesca alzata: quella grande a mezzogiorno, piena di carri, e una piccola a sud-est, con le pecore. E sulla torre più alta del colle sventola un drappo nero accanto allo stendardo."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Due porte aperte, il drappo nero. E sul ponte a due archi davanti alla porta del nord, piccoli come formiche, quattro carri coi teloni neri. Passano la porta senza fermarsi. Chi ha le carte giuste, a Teramum, non aspetta."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno quali porte sono aperte e (con 17) che il convoglio di Ansaldo è entrato senza aspettare. Il drappo nero: Da decidere (proposta: lutto di una Casata, o il segno che il Consiglio è sospeso).",
+     "rilancio": "Il convoglio sparisce sotto l’arco. Che cosa fate?",
+     "daqui": [
+      "nomi"
+     ],
+     "pe": 200
+    },
+    {
+     "id": "nomi",
+     "tipo": "dettaglio",
+     "titolo": "Dare un nome a quello che si vede",
+     "parte": "indizio",
+     "seme": "È appena passato mezzogiorno. Eppure sulla città l’ombra della montagna è già scesa.",
+     "innesco": "Qualcuno prova a riconoscere i quartieri, i palazzi, le chiese.",
+     "leggi": "La città sale a gradoni. Ogni gradone ha il suo colore di tetti.",
+     "prove": [
+      {
+       "id": "storia",
+       "abilita": [
+        "Storia"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Una città grande. La più grande che molti di voi abbiano visto."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 15,
+         "leggi": "Il colle di San Giorgio col Palazzo e la Basilica Aurea, la cupola d’oro. San Leonardo degli artigiani, coi fumi delle forge. I Tigli dei signori, verdi di giardini. Il Sestiere del Fiume, dove c’è il mercato. Mura bianche di dodici metri, diciotto torri. Tërëmë. Interamnia, per chi la chiama col nome vecchio."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 16,
+         "leggi": "Tutto questo, e una cosa che si sa sulle mura: in basso la pietra è grigia, enorme, senza calce, pretuziana. Sopra, la pietra chiara dell’Impero. Teramum è due città, una sopra l’altra. E quella di sotto non l’hanno mai tolta."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno leggere la città. Chi è di Teramum aggiunge il suo dettaglio.",
+     "rilancio": "La cupola d’oro brilla nell’ombra. Che cosa fate?"
+    },
+    {
+     "id": "silvanus",
+     "tipo": "dettaglio",
+     "titolo": "Il capitano guarda",
+     "parte": "evento",
+     "innesco": "Silvanus arriva al belvedere con la colonna.",
+     "leggi": "Silvanus scende da cavallo e va al muretto. Resta lì a lungo, col cappuccio alzato. Poi dice, a nessuno in particolare:\n\n«Mio padre la chiamava la città che guarda la montagna. Io la vedo per la prima volta.»\n\nTocca qualcosa sotto la tunica. Poi risale a cavallo.",
+     "note": "Aurelius Lux, fuggito bambino da Solaria: non ha mai visto Teramum. Nessuna prova. Se qualcuno gli parla qui, è un buon momento per chiedergli se si toglierà il cappuccio alla sbarra.",
+     "dopo": "Si scende verso la sbarra.",
+     "rilancio": "La strada scende fra gli ulivi, verso la sbarra. Che cosa fate?",
+     "daqui": [
+      "colle_picchetto"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "colle_picchetto",
+   "kind": "persona",
+   "title": "La sbarra della Guardia Ducale",
+   "image": "PDI — Colleatterato — La sbarra della Guardia.jpg",
+   "legacyPosition": {
+    "x": 200,
+    "y": 620
+   },
+   "text": "A metà discesa, una sbarra di legno di traverso sulla strada, su due cavalletti. Un telo tirato fra due ulivi, per l’ombra. Un tavolo da campo.\n\nQuattro uomini in tabarro grigio, uno con un registro aperto sul tavolo.\n\nSul tabarro, ricamati, una torre e un lupo.\n\nLe picche sono tutte alla stessa altezza.\n\nIl sergente alza gli occhi dal registro. Vi conta. Lo vedete muovere le labbra.\n\n«Fermi la colonna. Quanti siete. Da dove venite. Chi comanda.»",
+   "breve": "Il picchetto della Guardia Ducale (Casa Grazianus): il sergente Benedetto Arcioni conta la colonna e la scrive nel registro, che parte a cavallo per la città. Non ferma: conta. I nomi pesano (Grazianus, Cerullius, il cappuccio di Silvanus). La prova è cosa finisce scritto: «colonna armata» o «colonna di pellegrini».",
+   "gm": "Il Bando è arrivato prima di loro: il picchetto ha l’ordine di contare, non di fermare. Il registro arriva in città prima della colonna ed è ciò che la Guardia alla porta avrà in mano (vedi Arrivo a Teramum).\nIl tabarro grigio con la torre e il lupo viene dal motto di Casa Grazianus, «La Torre e il Lupo» (da ratificare, vedi Arrivo a Teramum).\nIl sergente è onesto e stanco. Ha un secondo ordine, a voce: se passa un Grazianus, mandare subito il cavallo. Chi l’ha dato: Da decidere insieme al padre di Maximus.\nVariante: se all’osteria il gruppo ha preso il lasciapassare di Ansaldo, il convoglio è FERMO qui alla sbarra quando arriva la Crociata: Ansaldo discute col sergente, senza carte, e i due rapporti si incrociano davanti a tutti.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "conta",
+     "tipo": "dialogo",
+     "titolo": "Parlare col sergente Benedetto Arcioni",
+     "parte": "indizio",
+     "seme": "Quattro uomini in tabarro grigio, uno con un registro aperto sul tavolo.",
+     "innesco": "La colonna arriva alla sbarra.",
+     "leggi": "Grigio di capelli, la faccia cotta dal sole, le dita macchiate d’inchiostro. Scrive con la lingua fra i denti.\n\n«Nome, provenienza, numero, armi. In quest’ordine, e senza discorsi.»",
+     "note": "CHI SEI — «Sergente Benedetto Arcioni, Guardia Ducale, terza compagnia della Porta de lu Solë. Ventisei anni di servizio.» Non si alza. «Io scrivo. Voi passate. Quello che succede dopo non è affare mio.»\n\nL’ORDINE — «Ho l’ordine del Capitano della Porta: contare ogni colonna armata che scende da Colleatterato. Numero, carri, bestie, armi, chi comanda. Il registro parte a cavallo appena passate.» Indica un cavallo sellato all’ulivo. «Arriva in città prima di voi.»\n\nIL BANDO — «Il Bando dice di riferire. Io riferisco. Il Bando non dice di fermarvi, e io non vi fermo.» Pausa. «Il Bando dice anche molte altre cose. Io quelle non le scrivo: non sono un notaio.»\n\nIL CONVOGLIO (se chiedono dei carri neri) — Sfoglia indietro. «Un’ora fa. Quattro carri di vino e botti per le cantine dei Tigli, messer Ansaldo Morigi, mercante. Dodici uomini di scorta. Lasciapassare con tre sigilli: Savinellus, Clavax, Mazzarellus. In regola.» Alza gli occhi. «Voi, messeri, quanti sigilli avete?»\n\nSTANOTTE, IL COLPO — «Stanotte ha tremato anche qua. E il cavallo del cambio, stamattina, portava una voce dalla città: che alla Basilica, nel momento del terremoto, la campana grande ha suonato un colpo solo, da sola. Il sacrestano giura che nessuno ha tirato la corda.» Si fa il segno della croce, piccolo. «Io scrivo quello che vedo. Quello che sento no.»\n\nLE PORTE — «La Porta de lu Solë è chiusa: si apre per le processioni e per chi porta la benedizione della Basilica. Aperte oggi: la Meridianë e la Piccòla. Con una colonna come la vostra…» Se la Persuasione riesce: «…io eviterei la Meridianë. Quattro scrivani, quattro timbri, e tutta la città che vi guarda. Alla Piccòla c’è solo il dazio sulle bestie, e il capoposto è mio cognato.»\n\nI NOMI — Scrive i nomi uno per uno. Due lo fanno fermare.\n• CERULLIUS: alza gli occhi su Alessandros e Vicarus. «Cerullius di Julia Nova, o di qui?» Scrive. «La vostra Casa ha un palazzo in città. Qualcuno verrà a cercarvi.»\n• GRAZIANUS: posa la penna. È la Guardia di Casa Grazianus. Da decidere (conflitto del canone sul padre di Maximus):\n  – se Maximus è figlio dello Stratega Lucius Grazianus: il sergente si alza in piedi, lo guarda a lungo, e dice solo: «Il Signore vostro padre sta bene.» Non scrive il nome di Maximus nel registro. Scrive «e un cavaliere». Poi manda subito il cavallo, prima di aver finito di contare.\n  – se Maximus è figlio di commercianti: «Grazianus come la Casa? O Grazianus come i Grazianus del mercato?» Scrive, e aggiunge una nota a margine.\n\nIL CAPITANO COL CAPPUCCIO — «Quello che comanda, lo scrivo col suo nome e con la sua faccia. Messere, il cappuccio.» Se Silvanus lo toglie (occhi d’oro screziati d’argento): il sergente resta con la penna in aria. Scrive, lentamente. Non dice niente. Intuizione CD 12: ha già sentito parlare di un capitano con gli occhi così, e qualcuno gli ha chiesto di riferirlo. Se Silvanus non lo toglie: «Allora scrivo: \"un capitano che non mostra il volto\". A Teramum piace ancora meno.»\n\nCOSA SI SCRIVE — La domanda vera della scena: «colonna armata» o «colonna di pellegrini»? Vedi la prova. Tutto quello che il gruppo dice finisce nel registro, anche le battute.\n\nSE LO MINACCIANO — «Siete in quaranta e noi quattro. Potete passare sopra di me, messere. Il registro parte lo stesso: il ragazzo col cavallo è già in sella.» Indica un ragazzo, venti passi più giù. Da quel momento scrive «minacce alla Guardia», e alla porta lo sanno.\n\nSE PROVANO A PAGARLO — Posa la moneta sul registro, la guarda, la rende. «La Guardia non si paga, messere. Si paga la Clavax.» Scrive: «tentata corruzione». Poi, piano: «Se volete un consiglio gratis: non ditelo a nessun altro.»\n\nSE GLI MENTONO — Scrive la bugia. Parola per parola. «Pellegrini. Con le picche. Lo scrivo così, messere: pellegrini con le picche.»\n\nSE HANNO ASSALITO IL CONVOGLIO ALL’OSTERIA — Ansaldo è passato di qui all’alba, a cavallo, da solo, e ha fatto scrivere una denuncia. Il sergente la rilegge davanti a loro. Tutte le prove sociali col picchetto hanno CD +3, e la colonna viene scritta «armata e sospettata di brigantaggio».",
+     "dopo": "Il registro parte appena la colonna passa la sbarra. Quello che c’è scritto (armata, pellegrini, minacce, il volto del capitano, il nome Grazianus) è ciò che la città sa di loro all’arrivo.",
+     "rilancio": "Il sergente intinge la penna e aspetta. Che cosa dite?",
+     "daqui": [
+      "scrivere",
+      "cappuccio"
+     ]
+    },
+    {
+     "id": "scrivere",
+     "tipo": "dettaglio",
+     "titolo": "Cosa finisce nel registro",
+     "parte": "evento",
+     "innesco": "Il gruppo dà le risposte al sergente. Chi parla per la colonna fa la prova.",
+     "leggi": "La penna graffia la carta. Il sergente legge a voce alta quello che scrive, parola per parola, come fanno i notai.",
+     "note": "Persuasione CD 14 (vantaggio se hanno letto la dichiarazione di Gisulfo in piazza, se Liberata ha parlato per loro o se si presentano col nome di una Casata). Inganno CD 15 per farsi scrivere pellegrini disarmati (con quaranta persone e le picche, difficile). Intimidire: vedi il dialogo, si scrive «minacce».\nSe hanno assalito il convoglio: CD +3.",
+     "prove": [
+      {
+       "id": "registro",
+       "abilita": [
+        "Persuasione",
+        "Inganno"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "max": 7,
+         "leggi": "Il sergente scrive tutto, anche quello che non avete detto: «colonna armata senza mandato, rifiuta di mostrare il volto del comandante, tono sedizioso». Poi guarda il ragazzo col cavallo e dice: «Vai.»"
+        },
+        {
+         "fascia": "failure",
+         "min": 8,
+         "max": 13,
+         "leggi": "Il sergente scrive tutto, parola per parola. «Colonna armata, trentanove anime, cinque carri, dichiara di essere una Crociata.» Il ragazzo parte al galoppo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Il sergente scrive «colonna di pellegrini armati per la loro difesa, con carte del Conte di Bëllindë». Chiude il registro. «La Meridianë è piena di scrivani. Alla Piccòla c’è mio cognato.»"
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Il sergente scrive «colonna di pellegrini», e basta. Poi strappa il foglietto del conto delle armi e lo mette in tasca. «Questo lo porto io, stasera. Al Capitano. A voce.» Alza la sbarra con le sue mani."
+        }
+       ]
+      }
+     ],
+     "dopo": "Annota cosa c’è scritto: all’arrivo a Teramum la Guardia della porta tratta la colonna secondo il registro (con «pellegrini» la prova col capitano della porta è a CD 13 invece di 15).",
+     "rilancio": "La sbarra si alza. Il ragazzo col cavallo parte giù per la discesa. Che cosa fate?",
+     "daqui": [
+      "cappuccio",
+      "colle_messo"
+     ],
+     "pe": 600
+    },
+    {
+     "id": "cappuccio",
+     "tipo": "dettaglio",
+     "titolo": "Il volto del capitano",
+     "parte": "evento",
+     "innesco": "Il sergente chiede a Silvanus di togliere il cappuccio.",
+     "leggi": "«Messere. Il cappuccio.»\n\nLa colonna si ferma a respirare.",
+     "note": "Decisione dei giocatori (e di Silvanus: non è un PG, ma segue il consiglio del gruppo).\n• Lo toglie: gli occhi d’oro screziati d’argento. Il sergente resta con la penna in aria, poi scrive. Intuizione CD 12: qualcuno gli ha chiesto di riferire proprio questo. Il registro dirà «un capitano con gli occhi d’oro». Arriva a Palazzo, e arriva a chi lo aspetta (Iuvenza vuole Silvanus vivo).\n• Non lo toglie: «Un capitano che non mostra il volto.» A Teramum piace ancora meno; ma nessuno, ufficialmente, ha visto niente.\n• Lo toglie solo per il sergente, di spalle alla colonna, con Persuasione CD 15: il sergente scrive «il capitano ha mostrato il volto alla Guardia» e non scrive com’è. È un favore, e lo sa.",
+     "prove": [
+      {
+       "id": "volto",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "«O tutti, o nessuno, messere. Io non ho occhi a metà.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "leggi": "Il sergente si avvicina, guarda, e torna al tavolo. Scrive una riga sola. Non la legge a voce alta."
+        }
+       ]
+      }
+     ],
+     "dopo": "Annota cosa sa la città del volto di Silvanus.",
+     "rilancio": "Il cappuccio è su, o giù. Il sergente scrive. Che cosa fate?",
+     "daqui": [
+      "colle_messo"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "colle_messo",
+   "kind": "persona",
+   "title": "Il messo",
+   "image": "PDI — Colleatterato — Il messo.jpg",
+   "legacyPosition": {
+    "x": 160,
+    "y": 930
+   },
+   "text": "Dalla strada che sale dalla città arriva di corsa un mulo, schiumato, e sopra un ragazzo senza insegne, in camicia, coperto di polvere fino ai capelli.\n\nPassa accanto al ragazzo della Guardia che scende, senza guardarlo.\n\nSi ferma davanti alla colonna. Ansima.\n\nGuarda i cavalieri uno per uno. Poi dice un nome.\n\n«Maximus Grazianus.»",
+   "breve": "Un messo senza insegne sale dalla città e cerca Maximus per nome. Gli consegna un biglietto: «Non entrare stasera. — G.» Chi lo manda è la domanda.",
+   "gm": "Il biglietto: carta buona, piegata in quattro, cera semplice senza impronta. Una riga, scritta di fretta con una mano abituata agli ordini: «Non entrare stasera. — G.»\nChi è G.: Da decidere, e dipende dal conflitto CC-02 (il padre di Maximus). Proposta neutra: un uomo della Guardia Ducale (il grigio sotto il mantello). Se Lucius Grazianus è il padre, è lui o un suo fedele: il «segnale» che il falco prometteva («Aspetta mio segnale. — Grazianus»), arrivato tardi. Se non lo è, G. può essere chiunque nella Guardia sappia chi è Maximus.\nCosa cambia: se la colonna entra stasera, entra nella notte in cui qualcuno sa che è meglio di no (la Guardia raddoppiata dopo il terremoto; il convoglio di Iuvenza appena entrato; il secondo ordine del sergente di porta). Se aspetta, si accampa fuori (vedi Arrivo a Teramum: il tratturo).\nIl messo è arrivato mentre il ragazzo del sergente scendeva col registro: chi guarda bene (Percezione CD 13) vede i due incrociarsi senza salutarsi.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "vitale",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Vitale lu Messo",
+     "parte": "indizio",
+     "seme": "Guarda i cavalieri uno per uno. Poi dice un nome.",
+     "innesco": "Il messo consegna il biglietto e qualcuno lo trattiene per fargli domande.",
+     "leggi": "Il ragazzo tende un foglietto piegato a Maximus. Non lo lascia finché Maximus non lo prende.\n\n«In mano vostra. A nessun altro.»",
+     "note": "CHI SEI — «Vitale. Porto le lettere per chi paga, dalla Porta de lu Fiumë a chi le deve avere.» Diciassette anni, la voce che ancora si spacca.\n\nCHI TI MANDA — «Un uomo. Stamattina, prima dell’alba, al ponte. Mantello scuro.» Ci pensa. «Sotto il mantello c’era il grigio. Il grigio della Guardia. Ma non aveva la torre ricamata, o l’aveva coperta.» Non sa il nome. «Mi ha dato due gofferine e ha detto: al cavaliere Maximus Grazianus, in mano sua, a nessun altro. Se non c’è, brucia il biglietto.»\n\nCOM’ERA — «Vecchio. No: non vecchio. Coi capelli grigi corti, come i soldati. Una mano sola sul mulo, l’altra sotto il mantello. Parlava poco.» Intuizione CD 12 di Maximus: se il master ha deciso che è suo padre (o un uomo di suo padre), Maximus riconosce il modo di stare in sella. Altrimenti, no.\n\nCOSA DICE IL BIGLIETTO — «Non l’ho letto. Non so leggere.» Ed è vero.\n\nC’È UNA RISPOSTA — «Ha detto: non aspettare risposta.» Pausa. «Ha detto pure: se il cavaliere chiede, digli che stasera è stasera, e domani è un altro giorno.»\n\nLA CITTÀ, STANOTTE — «Stanotte ha tremato tutto. Le guardie hanno raddoppiato i fuochi sulle mura. Al ponte c’erano il doppio delle lance.» Se gli chiedono della Basilica: «La campana grande. Un colpo. L’ho sentita pure io, dal fiume.»\n\nSE LO MINACCIANO — Si mette a piangere, subito, e dice tutto quello che sa (che è poco).\n\nSE LO PAGANO — Prende la moneta e aggiunge l’unica cosa che non ha detto: «Al ponte, mentre mi dava il biglietto, è passato un carro coi teloni neri, piccolo, da solo, verso la Porta de lu Fiumë. L’uomo l’ha guardato passare e ha detto una parola brutta.» (Un carro solo: da decidere se è un quinto carro di Iuvenza o un altro affare.)",
+     "dopo": "Sanno poco di chi l’ha mandato: un uomo della Guardia, forse, al ponte, prima dell’alba.",
+     "rilancio": "Il ragazzo aspetta di sapere se può andarsene. Che cosa fate?",
+     "daqui": [
+      "biglietto"
+     ],
+     "pe": 100
+    },
+    {
+     "id": "biglietto",
+     "tipo": "dettaglio",
+     "titolo": "«Non entrare stasera»",
+     "parte": "evento",
+     "innesco": "Maximus apre il biglietto.",
+     "leggi": "Una riga sola, scritta di fretta, la penna premuta forte.\n\n«Non entrare stasera. — G.»",
+     "immagine": "PDI — Colleatterato — Il biglietto.jpg",
+     "note": "Da mostrare a Maximus (o a tutti, se lo mostra lui). Il confronto col messaggio del falco («Non venire per la Via Bianca. Aspetta mio segnale. — Grazianus»): la risposta dipende dal conflitto CC-02. Decidilo prima della sessione.",
+     "prove": [
+      {
+       "id": "mano",
+       "abilita": [
+        "Indagare",
+        "Storia"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Una mano di fretta. Chiunque."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 15,
+         "leggi": "Una mano abituata a scrivere ordini: lettere squadrate, niente svolazzi, la penna premuta forte. Chi l’ha scritta non chiede: dice."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 16,
+         "leggi": "Una mano da ordini. E la G è chiusa con un tratto orizzontale, come la si scrive nei registri della Guardia Ducale. Confrontatela, se volete, con il messaggio del falco."
+        }
+       ]
+      }
+     ],
+     "dopo": "La scelta passa ai giocatori: entrare stasera o accamparsi fuori. È la porta verso Arrivo a Teramum.",
+     "rilancio": "La città è lì sotto, nell’ombra. Che cosa fate?"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,704 @@
+{
+ "id": "te_mortus",
+ "nome": "Il tempio sigillato di Mortus",
+ "menu": "Il tempio di Mortus",
+ "citta": "Teramum",
+ "ordine": 16,
+ "mappa": {
+  "img": "Battlemap — Il tempio sigillato di Mortus.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Il mercato del Sestiere del Fiume è rumore e odore: sale, pesce, cipolle, grida. Le bilance dei Sensali, le monete che battono sul banco.\n\nDal mercato, fra due magazzini, scende un vicolo verso il fiume. È stretto, in ombra anche a mezzogiorno.\n\nNella lista di Padre Cassio, il primo nome è Frate Davide de li Piccole Vie. A Teramum, dicono, c’è un tempio di Mortus murato dall’Inquisizione.\n\nIl vicolo è questo.",
+  "note": "Scena di Teramum, Sestiere del Fiume (voce del Compendio: 5. Tempio sigillato di Mortus). È la scena di Mattheus: trattala con il peso che il Manuale chiede (§2.2.6).\nSi gioca in due tempi: di giorno nel vicolo (il bambino, la porta murata, la finestra, la ronda), di notte sotto (la cantina, la cripta, Davide, il funerale, eventualmente la retata).\nOcchi dell’Inquisizione: un contatore da 0 a 3 (note del punto «Il vicolo dei sigilli»). A 3, la retata.\nMattheus non è obbligato a mostrarsi: la scena funziona anche se resta nascosto, ma Davide lo capirà comunque.",
+  "ingressi": [
+   {
+    "da": "Di giorno, dal mercato",
+    "primo": "te_mortus_vicolo",
+    "poi": "te_mortus_porta",
+    "note": "Il bambino aspetta sul paracarro. La ronda passa a metà mattina e al tramonto."
+   },
+   {
+    "da": "Di notte, con la parola di Tittarello",
+    "primo": "te_mortus_cantina",
+    "poi": "te_mortus_davide",
+    "note": "All’ultima campana la porta si apre da sola."
+   },
+   {
+    "da": "Dal fiume, dalla scala d’acqua",
+    "primo": "te_mortus_fiume",
+    "poi": "te_mortus_davide",
+    "note": "Dalla grata, carponi nel canale fino alla cripta. Nessuno li vede, ma arrivano bagnati e inattesi."
+   },
+   {
+    "da": "Da sotto, dalla Città Sepolta",
+    "primo": "te_mortus_davide",
+    "poi": "te_mortus_navata",
+    "note": "Dalla piccola via di Davide che sale dal crocevia."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "te_mortus_vicolo",
+   "kind": "scena",
+   "title": "Il vicolo dei sigilli",
+   "image": "PDI — Mortus — Il vicolo.jpg",
+   "legacyPosition": {
+    "x": 305,
+    "y": 120
+   },
+   "text": "Dal mercato del Sestiere un vicolo scende verso il fiume. È stretto: due persone ci passano solo di fianco.\n\nA sinistra, case alte e strette con le imposte chiuse, tutte. A destra, il muro cieco di un magazzino del sale, poi una chiesa piccola, schiacciata fra quel magazzino e un altro più giù. Poi il fiume, che si sente e non si vede.\n\nIl vociare del mercato si spegne dopo pochi passi, come se il vicolo lo inghiottisse.\n\nUna donna con una cesta di panni gira all’imbocco, vi vede, e torna indietro per fare il giro largo.\n\nSeduto sul paracarro all’angolo, un bambino scalzo mangia una cipolla cruda come fosse una mela. Vi guarda. Guarda soprattutto uno di voi.",
+   "breve": "Il vicolo dove la gente non passa. Il bambino è Tittarello, il messaggero di Frate Davide: aspetta Mattheus (Davide sa dalla lista di Cassio che arriverà un chierico con la Crociata). Porta la prima metà della preghiera; se Mattheus risponde giusto, quella notte la porta di cantina resta aperta. Da qui: la porta murata, la finestra di fronte.",
+   "gm": "Tittarello, sette anni, orfano del Sestiere, mangia quello che trova e porta le frasi di Frate Davide senza capirne nessuna (proposta della voce del luogo). Davide lo manda al vicolo ogni giorno da quando si sa che la Crociata marcia su Teramum: la lista di Padre Cassio è partita per mano di Mattheus, e Davide ha ricevuto da Julia Nova, mesi fa, due righe di Cassio: «Un chierico. Luce d’argento. Si chiama Mattheus.» Da decidere come sia arrivato il messaggio (proposta: con un barcaiolo della costa).\nGli inquisitori passano nel vicolo due volte al giorno, a metà mattina e al tramonto, e controllano i sigilli.\nOCCHI DELL’INQUISIZIONE (contatore della scena, da 0 a 3). +1 ogni volta che: il gruppo si ferma nel vicolo di giorno più di qualche minuto; qualcuno tocca i sigilli o i mattoni mentre la finestra di fronte è socchiusa; Mattheus usa la sua magia e la luce argentea si vede dalla strada; l’inquisitore di ronda li trova nel vicolo e si ricorda le loro facce; Callisto Fumasi li vede entrare nella cantina. A 3: la notte stessa c’è la retata (punto «La grata sul fiume», modulo «La retata»).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "tittarello",
+     "tipo": "dialogo",
+     "titolo": "Il bambino con la cipolla",
+     "parte": "indizio",
+     "seme": "Guarda soprattutto uno di voi.",
+     "innesco": "Qualcuno si avvicina al bambino, o il gruppo passa davanti al paracarro.",
+     "leggi": "Il bambino finisce la cipolla con calma. Poi si pulisce la bocca col dorso della mano, scende dal paracarro e si mette davanti a Mattheus. Dal basso, serio, recita come una cosa imparata a memoria, con la cadenza di chi non la capisce:\n\n«Mortus, accòjele. Mortus, accompàgnele…»\n\nE aspetta.",
+     "note": "È la preghiera che Mattheus ha mormorato tutta la notte nella Caserma Est (Atto XI): «Mortus, accòjele, Mortus, accompàgnele, Mortus, faje truvà la via…». La parola di riconoscimento è la fine: «…faje truvà la via.» (proposta della voce del luogo).\nSE MATTHEUS RISPONDE GIUSTO — Tittarello annuisce come un adulto. «Stanotte. Quanne sona l’ultima campana. La porta de la cantina, tre case cchiù abbasce, quella co’ lu cerchie. Nen bussate. Se apre da sola.» Poi se ne va di corsa, senza voltarsi.\nSE RISPONDE UN ALTRO — Il bambino guarda gli altri, poi di nuovo Mattheus. Aspetta ancora un momento. Poi: «Nen sete vuje.» E scappa verso il mercato.\nSE NESSUNO RISPONDE O SBAGLIANO — «Allora nen sete vuje.» Torna sul paracarro. Tornerà domani, e dopodomani: Davide non si arrende per una parola sbagliata.\nCHI TI MANDA? — «Lu frate.» Quale frate? «Quello scalzo.» Dove sta? Scrolla le spalle: «Addò serve.»\nSE GLI DANNO UNA MONETA — La morde, la mette in bocca, dice grazie con la bocca piena. Non cambia niente.\nSE LO AFFERRANO O LO MINACCIANO — Si mette a urlare «Ajute! Ajute! Li forestieri!». Dalle case si aprono due imposte. +1 Occhi dell’Inquisizione. Davide non manderà più nessuno per tre giorni.\nBATTUTE PRONTE — «Io porto le parole. Le parole nen pesano.» · «Lu frate dice che le cipolle fanno bene all’anima. Io dico che fanno bene alla fame.»",
+     "dopo": "Se Mattheus completa la preghiera: la notte, all’ultima campana, la porta di cantina con il cerchio resta aperta (punto «La porta di cantina»). Altrimenti possono ancora trovare la strada da soli: i mattoni a secco, il cortile, la grata sul fiume.",
+     "rilancio": "Il vicolo è vuoto, di nuovo. Che cosa fate?",
+     "daqui": [
+      "ronda",
+      "te_mortus_porta"
+     ],
+     "pe": 100
+    },
+    {
+     "id": "ronda",
+     "tipo": "dettaglio",
+     "titolo": "La ronda dell’Inquisizione",
+     "parte": "evento",
+     "innesco": "Il gruppo è nel vicolo a metà mattina o al tramonto.",
+     "leggi": "Passi dall’alto del vicolo. Due uomini: una tonaca bianca con il sole ricamato d’oro sul petto, e dietro un armigero con l’alabarda e i colori della Basilica.\n\nLa tonaca si ferma davanti alla chiesa murata. Guarda i sigilli uno per uno, li tocca col dito. Guarda la calce fra i mattoni. Guarda la lavanda secca sul gradino, la prende e la butta in mezzo al vicolo.\n\nPoi si gira verso di voi.\n\n«Figlioli. Questa strada non porta da nessuna parte. Vi siete persi?»",
+     "note": "L’inquisitore di ronda è un frate giovane, zelante, non cattivo: fa il suo giro. Nome proposto: Fra’ Bonizone. Il suo superiore è l’inquisitore che tiene Callisto Fumasi (vedi «La finestra socchiusa»).\nSE RISPONDONO BENE (Inganno o Persuasione CD 13; vantaggio se hanno una scusa vera: cercare il magazzino del sale, un barcaiolo, il fiume) — «Il fiume è giù. Andate con Dio, e col Sole.» Se ne va.\nSE FALLISCONO, O SE MATTHEUS HA IN VISTA QUALCOSA DI MORTUS — «I vostri nomi? Siete della colonna con le lune, vero?» Scrive i nomi su una tavoletta. +1 Occhi dell’Inquisizione.\nSE LO MINACCIANO O LO TOCCANO — È un crimine contro la Chiesa in pieno giorno. +2 Occhi dell’Inquisizione, e l’Arcimandrita lo saprà entro sera. Da non incoraggiare.",
+     "prove": [
+      {
+       "id": "scusa",
+       "abilita": [
+        "Inganno",
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "«Avete la faccia di chi cerca una cosa che non deve trovare.» Scrive i vostri nomi, e la descrizione di ognuno."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 12,
+         "leggi": "«Siete della colonna con le lune, vero?» Scrive i nomi sulla tavoletta, senza fretta."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "«Il fiume è giù. Andate con Dio, e col Sole.» Se ne va. L’armigero vi guarda ancora un momento."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Il frate si fida, e anzi si lamenta: «Due volte al giorno, per tre sigilli. E intanto gli eretici veri passeggiano nella Basilica.» Vi ha appena detto che è stanco di questo giro."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con meno di 13: +1 Occhi dell’Inquisizione. La lavanda buttata in mezzo al vicolo: domani mattina sarà di nuovo sul gradino.",
+     "rilancio": "I passi della ronda si allontanano verso il mercato. Che cosa fate?",
+     "daqui": [
+      "te_mortus_porta",
+      "te_mortus_finestra"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_mortus_porta",
+   "kind": "porta",
+   "title": "La porta murata",
+   "image": "Luogo — 5. Tempio sigillato di Mortus.jpg",
+   "legacyPosition": {
+    "x": 432,
+    "y": 462
+   },
+   "text": "La chiesa è piccola. Pietra grigia, un tetto di coppi con il muschio, un campaniletto a vela senza campana.\n\nLa porta è murata a mattoni nuovi, più chiari del resto. Sopra la porta, il disco del Sole dipinto di fresco, giallo e oro. Sotto, tre sigilli di cera rossa con i nastri: il sole con la fiamma della Basilica.\n\nSul gradino, un mazzetto di lavanda secca. E fra la polvere, gocce di cera bianca: qualcuno qui accende candele.\n\nSotto la vernice del Sole si indovinano linee più vecchie, come una porta dipinta dentro la porta.\n\nLa calce fra i mattoni in basso a sinistra è stata grattata. Di poco. Di recente.",
+   "breve": "La facciata del tempio di Mortus, murato dall’Arcimandrita Impalox. Il Sole dipinto copre la Soglia, il simbolo di Mortus. I mattoni in basso a sinistra sono a secco: si tolgono in quattro. È una delle vie per entrare, ma è la più esposta: la finestra di fronte guarda proprio qui.",
+   "gm": "Il tempio fu murato dall’Inquisitore Impalox (Manuale §2.2.6). Quando: da decidere. Proposta: sette anni fa, dopo che il tempio aveva fatto «funerali gratis» per i morti di una febbre del Sestiere (voce 3 della voce del luogo).\nI mattoni a secco li ha smontati e rimontati Davide, e li usano i fedeli quando la cantina non è sicura. Dietro i mattoni c’è la navata.\nLa finestra di fronte (casa della madre di Callisto Fumasi) guarda esattamente questa porta. Se toccano i mattoni o i sigilli mentre la finestra è socchiusa: +1 Occhi dell’Inquisizione.\nRompere un sigillo è un reato ecclesiastico: se qualcuno lo fa, la ronda se ne accorge al passaggio successivo e il vicolo viene sorvegliato giorno e notte (+2 Occhi).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Il disegno sotto il Sole",
+     "parte": "indizio",
+     "seme": "Sotto la vernice del Sole si indovinano linee più vecchie, come una porta dipinta dentro la porta.",
+     "innesco": "Qualcuno guarda con attenzione il disco solare dipinto sopra la porta.",
+     "leggi": "Il Sole è stato dipinto in fretta, con un giallo che non copre. Sotto, in nero e grigio, si vedono i contorni di un arco. Un arco aperto, con dentro il buio, e sulla soglia una lucerna accesa.",
+     "note": "Mattheus riconosce la Soglia senza tiro.",
+     "prove": [
+      {
+       "id": "religione",
+       "abilita": [
+        "Religione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un Sole dipinto male sopra un disegno più vecchio. Le chiese ridipinte sono tante."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Sotto il Sole c’è una soglia dipinta: una porta aperta su un buio, con una lucerna. È il simbolo di Mortus, il passaggio. La Chiesa l’ha coperto, non cancellato."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "La Soglia di Mortus. E la lucerna sulla soglia è dipinta con un pigmento che nel buio, sotto il giallo, ha un riflesso d’argento: lo stesso argento della luce di Mattheus. Chi ha dipinto questo, sapeva."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che questa era una chiesa di Mortus, e che il simbolo è ancora lì sotto.",
+     "rilancio": "Il Sole dipinto vi guarda dall’alto. Che cosa fate?",
+     "daqui": [
+      "mattoni"
+     ]
+    },
+    {
+     "id": "mattoni",
+     "tipo": "dettaglio",
+     "titolo": "I mattoni grattati",
+     "parte": "indizio",
+     "seme": "La calce fra i mattoni in basso a sinistra è stata grattata. Di poco. Di recente.",
+     "innesco": "Qualcuno esamina la calce grattata in basso a sinistra.",
+     "leggi": "La calce qui è finta: un velo sottile, spalmato sopra. Sotto, i mattoni sono posati a secco, senza legante. Quattro mattoni, in un quadrato. Il bordo di uno è lucido, come toccato da molte mani.",
+     "note": "Entrare da qui di giorno: +1 Occhi dell’Inquisizione (la finestra vede). Di notte, senza luce e con Furtività CD 13 di gruppo (metà), nessuno se ne accorge.",
+     "prove": [
+      {
+       "id": "percezione",
+       "abilita": [
+        "Percezione",
+        "Indagare"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un muro. Sigilli intatti. La calce grattata sarà stata la pioggia."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "I quattro mattoni in basso a sinistra si tolgono e si rimettono. Dietro c’è un buco dove passa una persona carponi. Qualcuno entra e esce di qui."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Si tolgono in quattro, e dietro, appoggiata al muro dall’interno, c’è una tavola con il cerchio col punto disegnato col gesso: il segno che dice «qui si passa». Ma vi accorgete anche che la finestra di fronte, al secondo piano, è socchiusa di un dito. Da lì si vede esattamente questo punto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che si può entrare nella navata dai mattoni a secco. Con 18+ sanno che la finestra di fronte guarda proprio lì.",
+     "rilancio": "Quattro mattoni, e dietro il buio della chiesa. Che cosa fate?",
+     "daqui": [
+      "te_mortus_navata",
+      "te_mortus_finestra"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_mortus_finestra",
+   "kind": "persona",
+   "title": "La finestra socchiusa",
+   "image": "PDI — Mortus — La finestra socchiusa.jpg",
+   "legacyPosition": {
+    "x": 150,
+    "y": 432
+   },
+   "text": "Di fronte alla chiesa, dall’altra parte del vicolo, una casa alta e stretta. Imposte verdi, scrostate, tutte chiuse.\n\nTutte tranne una, al secondo piano. Quella è socchiusa di un dito. Sempre lo stesso dito, a qualunque ora passiate.\n\nSul davanzale, un vaso di basilico secco che nessuno innaffia.\n\nAl pianterreno, la porta ha un battente d’ottone a forma di mano. Qualcuno lo lucida.",
+   "breve": "Da questa finestra Callisto Fumasi, gabelliere del sale e fedele di Mortus, sorveglia il tempio per conto dell’Inquisizione. Lo tengono per il collo: sanno che ha seppellito la moglie col rito di Mortus. Davide sa che qualcuno guarda da qui, ma non sa che è Callisto. È il nodo più delicato della scena: si può smascherare, ricattare, salvare.",
+   "gm": "Callisto Fumasi (scheda nel Compendio), gabelliere del sale al mercato del Sestiere: uno dei fedeli di Davide (la voce del luogo mette un gabelliere fra i fedeli). Due anni fa ha seppellito la moglie col rito di Mortus; l’inquisitore che segue il Sestiere l’ha saputo e gli ha offerto un patto: la sua testa e quella del figlio (Nicolino, dodici anni) in cambio di occhi sul vicolo. Da allora riferisce chi entra nel vicolo e chi si ferma alla porta.\nNON ha mai dato il nome di Davide né la porta della cantina: dice all’inquisitore che «il frate non si fa vedere». Tiene per sé la cosa più grossa. È la sua sola dignità rimasta.\nL’inquisitore lo lascia fare perché aspetta una preda più grossa: gli eretici che arrivano con la Crociata. Ed è la proposta della voce del luogo: Davide usato come esca. L’inquisitore sa che un chierico di Mortus viaggia con la Crociata? Da decidere. Proposta: non sa il nome, sa che «uno di loro ha la luce d’argento» (il verbale di Mushanë di Virellius potrebbe essere arrivato).\nDa decidere il nome dell’inquisitore. Proposta: Padre Ottone Vessillo, inquisitore della Basilica per il Sestiere del Fiume, cinquant’anni, paziente, uomo di Impalox. È lui l’«inquisitore visto entrare nel vicolo da solo, di notte, senza lanterna» (voce 5): va a sentire Callisto.\nSe il gruppo entra nella cantina mentre Callisto guarda: +1 Occhi dell’Inquisizione, a meno che non l’abbiano già smascherato o convinto.",
+   "nota": {
+    "cd": 14
+   },
+   "moduli": [
+    {
+     "id": "osservare",
+     "tipo": "dettaglio",
+     "titolo": "Chi c’è dietro la finestra",
+     "parte": "indizio",
+     "seme": "Sempre lo stesso dito, a qualunque ora passiate.",
+     "innesco": "Qualcuno tiene d’occhio la finestra socchiusa, o si accorge che è sempre aperta dello stesso dito.",
+     "leggi": "Nel buio dietro la fessura, per un momento, qualcosa si muove. Un riflesso. Una guancia. Poi niente.",
+     "prove": [
+      {
+       "id": "perc",
+       "abilita": [
+        "Percezione",
+        "Intuizione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Una finestra socchiusa. Il basilico è secco. Nessuno."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "C’è qualcuno, seduto lontano dalla finestra per non farsi vedere. Un uomo. Quando passate si sporge appena, e quando vi fermate alla porta della chiesa smette di muoversi del tutto."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Un uomo sui quaranta, calvo davanti, con un colletto da impiegato. Ha una tavoletta sulle ginocchia e ci scrive. Al mercato, stamattina, l’avete visto al banco del dazio del sale."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 14+ sanno che qualcuno sorveglia la chiesa. Con 18+ sanno chi: il gabelliere del sale del mercato.",
+     "rilancio": "Il basilico secco non si muove. Che cosa fate?",
+     "daqui": [
+      "callisto"
+     ]
+    },
+    {
+     "id": "callisto",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Callisto Fumasi",
+     "parte": "evento",
+     "innesco": "Il gruppo lo affronta: bussa alla sua porta, lo aspetta al banco del dazio, o lo trova fra i fedeli la notte.",
+     "leggi": "È un uomo piccolo, pulito, con le mani macchiate d’inchiostro e un colletto lucido di troppe stirature. Quando vi vede impallidisce di colpo, poi si ricompone con uno sforzo che si vede tutto.\n\n«Signori. Il dazio si paga al banco, non a casa. Posso esservi utile?»",
+     "note": "Scheda nel Compendio: Callisto Fumasi.\nCHI SEI? — «Callisto Fumasi, scrivano del dazio del sale. Servo il Ducato.» Vero.\nPERCHÉ GUARDI LA CHIESA? — «Io? Guardo il vicolo. È casa di mia madre. Mia madre è malata.» Mezza verità: la madre è morta l’inverno scorso. Intuizione CD 12 per sentire che mente.\nPER CHI SCRIVI? — Nega. Con una prova (Intimidire CD 14 o Intuizione CD 15 seguita da una domanda giusta sul figlio): crolla. «Per Padre Ottone. Della Basilica. Chi passa, chi si ferma, a che ora.»\nPERCHÉ? — «Mia moglie. L’ho seppellita io, con le parole giuste. Con le parole di Mortus. Lui l’ha saputo. Ha detto: o scrivi, o ti processano, e tuo figlio lo mettono in un convento a Civitax a imparare la Fiamma a bastonate.»\nHAI DATO IL NOME DEL FRATE? — Alza la testa, quasi fiero. «No. Mai. Gli dico che il frate non si fa vedere. Gli dico le facce, i passi, le ore. La porta della cantina no. Il frate no.» È vero (Intuizione lo conferma senza tiro).\nCHE COSA HAI DETTO DI NOI? — Se li ha visti: «Che siete passati. Che siete della colonna con le lune. Che uno di voi…» guarda Mattheus «…si è fermato davanti alla porta come si ferma uno che prega.»\nCHE COSA SA PADRE OTTONE? — «Aspetta. Non ha fretta. Dice che il frate è un’esca, e che l’esca non si mangia finché non arriva il pesce. Il pesce siete voi. Uno di voi.»\nSE LO SI MINACCIA DI MORTE — Piange. «Fatelo. Almeno finisce.» Non è utile: Mattheus può fermare la cosa con una frase.\nSE LO SI CORROMPE — Rifiuta. Non vuole soldi: vuole il figlio al sicuro.\nSE GLI SI OFFRE UNA VIA D’USCITA (portare Nicolino via con la Crociata, nasconderlo presso la Gilda dei Naviganti Grigi a Julia Nova, o simili) — Si aggrappa alle mani di chi l’ha detto. Diventa un doppio: continuerà a scrivere per Padre Ottone quello che i PG gli dicono di scrivere. Vale oro.\nSE GLI SI MENTE — Intuizione +1: ci crede quasi sempre. È troppo stanco per non crederci.\nMATTHEUS — Se Mattheus gli dice che Mortus accoglie tutti, anche i deboli, anche chi ha tradito per paura, Callisto si inginocchia nel vicolo. Mattheus deve decidere se dirlo a Davide (vedi modulo «Dirlo a Davide» nel punto di Davide).\nBATTUTE PRONTE — «Io scrivo. È l’unica cosa che so fare. Scrivo anche quello che non vorrei.» · «Mortus non giudica, dice il frate. Io spero che sia vero. Perché io, se fossi lui, mi giudicherei.»",
+     "prove": [
+      {
+       "id": "crollo",
+       "abilita": [
+        "Intimidire",
+        "Intuizione",
+        "Persuasione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 6,
+         "leggi": "Si chiude la porta alle spalle. Stasera, a Padre Ottone, racconterà che la Crociata gli è venuta a bussare in casa. +1 Occhi dell’Inquisizione."
+        },
+        {
+         "fascia": "failure",
+         "min": 7,
+         "max": 13,
+         "leggi": "«Mia madre è malata. Vi prego di andarvene.» Resta sulla porta finché non ve ne andate."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 17,
+         "leggi": "Crolla. Scrive per Padre Ottone, inquisitore della Basilica, perché sanno che ha seppellito la moglie col rito di Mortus. Non ha mai dato il nome del frate né la porta della cantina."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Tutto quello di sopra, più: Padre Ottone aspetta «il pesce», uno della Crociata con la luce d’argento, e usa il frate come esca. Callisto vi chiede di salvare suo figlio, e in cambio scriverà quello che volete."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se smascherato e convinto: Callisto diventa un doppio, gli Occhi dell’Inquisizione non salgono più per causa sua, e la retata si può evitare o preparare. Se smascherato e abbandonato: al 50% confessa tutto a Padre Ottone per paura (+2 Occhi).",
+     "rilancio": "Callisto aspetta, le mani sporche d’inchiostro strette l’una nell’altra. Che cosa fate?",
+     "daqui": [
+      "te_mortus_cantina"
+     ],
+     "pe": 450
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_mortus_cantina",
+   "kind": "porta",
+   "title": "La porta di cantina",
+   "image": "PDI — Mortus — La porta di cantina.jpg",
+   "legacyPosition": {
+    "x": 330,
+    "y": 805
+   },
+   "text": "Tre case più giù della chiesa, dove il vicolo comincia a sapere di fiume, c’è una porta bassa. Mezza sotto il livello della strada: si scende di due gradini.\n\nÈ la porta della cantina del secondo magazzino. Legno nero, borchie di ferro, un chiavistello arrugginito che sembra non aprirsi da anni.\n\nSull’architrave, piccolo, fatto col gesso, un cerchio con un punto nel mezzo.\n\nDi notte, all’ultima campana, questa porta si apre prima che qualcuno bussi.\n\nDa sotto la porta, anche adesso, esce un filo d’aria che sa di cera.",
+   "breve": "L’ingresso vero del culto: la cantina del magazzino sud, che comunica con la cripta del tempio. Di notte, se Mattheus ha risposto a Tittarello, la porta si apre da sola (la apre un fedele). Altrimenti si può forzare o aspettare i fedeli che portano un morto. Dentro: botti, sale, un passaggio nel muro verso la cripta dove attende Davide.",
+   "gm": "Chi apre: Gennaro «lu Beccamorte», becchino della Pustèrla de li Mortë (proposta; il canone mette un becchino fra i fedeli). Guarda dallo spioncino, apre prima che si bussi.\nLa cantina appartiene al magazzino di un mercante di sale che non sa niente (o finge di non sapere: prende un affitto da Davide in ceri e silenzio). Da decidere il nome.\nLe vie per entrare nel tempio, tutte qui: 1) i mattoni a secco della porta murata (esposta, di giorno pericolosa); 2) questa cantina, di notte, con la parola; 3) il cortiletto sul retro della chiesa, oltre il muro del magazzino nord, con la porta della sacrestia (Atletica CD 14 per scavalcare il muro; porta chiusa con un chiavistello, Destrezza con arnesi da scasso CD 13); 4) la grata sul fiume, da sotto, dalla scala d’acqua (vedi punto «La grata sul fiume»).\nAspettare nel vicolo senza farsi notare: Furtività CD 14 di gruppo (metà). Successo: a mezzanotte due fedeli portano un lenzuolo lungo fino a questa porta, che si apre prima che bussino. Fallimento: la ronda serale li trova (+1 Occhi).",
+   "nota": {
+    "cd": 10
+   },
+   "moduli": [
+    {
+     "id": "notte",
+     "tipo": "dettaglio",
+     "titolo": "All’ultima campana",
+     "parte": "evento",
+     "innesco": "Il gruppo si presenta di notte, all’ultima campana, dopo che Mattheus ha risposto giusto a Tittarello.",
+     "leggi": "L’ultima campana della Basilica scende sul Sestiere e si spegne sul fiume.\n\nIl chiavistello arrugginito scorre senza un rumore: è unto, sotto la ruggine.\n\nLa porta si apre verso l’interno. Un uomo grosso, scuro, con le mani enormi e un grembiule di cuoio, vi guarda dal basso dei gradini. Una candela in mano. Fa un passo indietro per farvi passare, e guarda solo Mattheus.\n\n«Lu frate v’aspetta. Levatevi li stivali. Là sotto se cammina piano.»",
+     "note": "È Gennaro «lu Beccamorte». Parla poco. Se qualcuno non si toglie gli stivali, non dice niente, ma Davide lo nota.\nSe Mattheus NON ha risposto a Tittarello, la porta non si apre: si può forzare (Forza CD 15 o arnesi CD 14; rumore: se la finestra di fronte non è stata sistemata, +1 Occhi) oppure aspettare i fedeli con il morto (Furtività, vedi note del punto) e presentarsi a loro.",
+     "dopo": "Scendono per due rampe nella cantina, fra le botti e i sacchi di sale. In fondo, un’apertura nel muro, alta come un uomo curvo: la cripta.",
+     "rilancio": "La candela di Gennaro scende davanti a voi. Che cosa fate?",
+     "daqui": [
+      "passaggio"
+     ]
+    },
+    {
+     "id": "passaggio",
+     "tipo": "dettaglio",
+     "titolo": "Il buco nel muro",
+     "parte": "evento",
+     "innesco": "Il gruppo attraversa la cantina.",
+     "leggi": "La cantina è lunga, bassa, piena di botti e di sacchi di sale che luccicano alla candela. L’aria è secca, poi, verso il fondo, diventa umida e fredda.\n\nIn fondo, dietro l’ultima fila di botti, il muro di mattoni è aperto. Un buco alto come un uomo curvo, con i bordi consumati da tante spalle.\n\nOltre il buco, pietra più vecchia. E una luce calda, gialla, di molte candele. E un canto a bocca chiusa, basso, di dieci o dodici voci.\n\nSulla pietra dell’arco, graffiato, lo stesso cerchio con il punto. E accanto, più piccolo, una freccia che scende.",
+     "note": "La freccia che scende porta, più avanti nella cripta, a un cunicolo stretto verso la Città Sepolta (la «piccola via» di Davide: scena «La Città Sepolta», ingresso dalla cripta di Mortus). Davide la mostrerà se si fida.",
+     "dopo": "Si entra nella cripta, dove i fedeli vegliano un morto e dove attende Frate Davide.",
+     "rilancio": "Il canto a bocca chiusa si interrompe. Qualcuno di là ha sentito i vostri passi. Che cosa fate?",
+     "daqui": [
+      "te_mortus_davide"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_mortus_davide",
+   "kind": "persona",
+   "title": "Frate Davide de li Piccole Vie",
+   "image": "PDI — Mortus — La cripta dei poveri.jpg",
+   "legacyPosition": {
+    "x": 1000,
+    "y": 540
+   },
+   "text": "Sotto la chiesa c’è una cripta bassa, a volte, con i pilastri tozzi. È più vecchia della chiesa: le pietre dei pilastri sono enormi, e gli archi sono stati rifatti sopra.\n\nCi sono candele dappertutto. Sulle mensole, per terra, dentro le nicchie dove una volta c’erano i morti.\n\nIn mezzo, su due cavalletti, un lenzuolo lungo. Sotto il lenzuolo, una forma. Intorno, dodici persone sedute per terra: un uomo grosso col grembiule di cuoio, una donna con le mani rosse delle lavandaie, una vecchia con la borsa della levatrice, altri. Stanno zitti.\n\nIn piedi accanto al morto c’è un frate. Lungo, curvo, magro come un palo di vigna. Il saio è grigio cenere, rattoppato, e i piedi sono scalzi e neri. Alla vita porta una corda con dei nodi. Non tanti. Alcuni.\n\nVi guarda arrivare senza sorpresa. Poi guarda Mattheus. A lungo.\n\n«Eccote. Te sì fatte aspettà.»",
+   "breve": "Frate Davide de li Piccole Vie, sacerdote di Mortus, contatto di Mattheus a Teramum. Riconosce Mattheus (dalla parola, poi dalla luce d’argento). È il cuore della scena: dialogo lungo, il riconoscimento, e la richiesta di celebrare con lui il funerale di stanotte. Sa le piccole vie della città di sotto. Ha paura, ma non dei PG.",
+   "gm": "Scheda completa nel Compendio: Frate Davide de li Piccole Vie.\nIl morto sotto il lenzuolo: Menica Scarciolla, lavandaia, morta di febbre ieri. La Basilica le ha negato la benedizione perché non aveva di che pagare la messa e perché suo figlio è stato visto al rito di Mortus (proposta). I fedeli la accompagneranno stanotte.\nI fedeli presenti (scheda di gruppo nel Compendio: «I fedeli del vicolo»): Gennaro lu Beccamorte (becchino della Pustèrla de li Mortë), Assunta Scarciolla (lavandaia, sorella della morta), Zi’ Filumena (levatrice), Pasqualino (barcaiolo del Tordinum), e altri otto. Callisto Fumasi c’è, se il gruppo non l’ha ancora affrontato: in fondo, dietro un pilastro.\nLa corda coi nodi: ogni nodo è una cosa che Davide ha dimenticato dopo aver incontrato l’Arlecchino delle Grotte, più volte, negli anni. Non sa più cosa sono. Sa solo quante.\nDavide riconosce Mattheus in tre modi: la parola di Tittarello, la lettera di Cassio, e soprattutto la luce d’argento, se Mattheus usa la sua magia (Padre Cassio lo ha riconosciuto così: la voce del luogo).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Frate Davide",
+     "parte": "evento",
+     "innesco": "Il gruppo è nella cripta e parla con Davide.",
+     "leggi": "Vi fa cenno di sedervi per terra, con gli altri. Lui resta in piedi, appoggiato a un pilastro, come uno che è abituato a stare in piedi tutta la notte.\n\nHa la voce bassa e roca, di chi parla sempre sottovoce. Ogni tanto tocca un nodo della corda, senza accorgersene.\n\n«Domandate. Ma piano. Qua sotto ce sta chi dorme, e chi dorme ha diritto.»",
+     "note": "La voce di Davide: bassa, lenta, ironica a tratti, con il dialetto del Sestiere che affiora quando è stanco o commosso. Non predica mai. Risponde con cose concrete: nomi, strade, morti.\n\nCHI SEI? — «Davide. Frate, una volta. Converso della Basilica, alla Pustèrla de li Mortë: portavo i morti fuori dalle mura. Trent’anni. Poi ho visto che quelli che portavo io nessuno li accompagnava. Li portavo e basta. Allora ho cominciato ad accompagnarli.» Pausa. «Da allora non sono più frate della Basilica. Sono frate e basta.»\n\nPERCHÉ «DE LI PICCOLE VIE»? — «Pecché le vie grandi le guarda la Fiamma. Io cammino sulle piccole. Le cantine, i canali, i buchi fra un muro e l’altro. Teramum è una città sopra un’altra città sopra un’altra città. Io conosco le scale fra l’una e l’altra.»\n\nCHI HA MURATO IL TEMPIO? PERCHÉ? — «L’Arcimandrita. Impalox. Sette inverni fa. C’era stata la febbre nel Sestiere, e noi seppellivamo senza chiedere soldi. La Basilica chiedeva soldi. Hanno detto che era eresia. Era aritmetica.» Sorride appena. «Hanno murato la porta. Non hanno murato la cantina. Non sapevano che c’era.»\n\nCHE COS’È MORTUS PER TE? — «Mortus non giudica. Non condanna. Accoglie tutti alla fine.» Poi, più piano: «Non è un dio che ti salva. È un dio che ti accompagna. La Fiamma promette che non morirai mai. Mortus promette che non morirai da solo. Io so quale promessa si può mantenere.»\n\nPADRE CASSIO — Gli si addolcisce la faccia. «Cassio. È venuto qui tre anni fa. Abbiamo pregato insieme, abbiamo seppellito insieme. Poi siamo scesi insieme.» Tocca un nodo. «Lui è tornato su e se ne è andato a Julia Nova il giorno dopo. Io sono tornato su con un nodo in più. Non so cosa abbiamo visto. Lui sì. Chiedeteglielo, se lo rivedete. A me non l’ha mai detto.» (Canone: Cassio andato a Teramum tre anni fa, tornato cambiato, dorme con la porta barricata. Da decidere che cosa abbiano visto.)\n\nLA CORDA CON I NODI — «Ogni nodo è una cosa che ho perso. Laggiù sotto c’è uno che prende i ricordi. Non la vita, i ricordi. Io faccio un nodo quando torno su e mi manca qualcosa. Non so cosa. So solo che manca.» Ha sette nodi.\n\nL’UOMO CON LA MASCHERA — «Lu Mascarone. L’Arlecchino, dicono in città. L’ho visto sette volte, credo. Forse di più: quelle che ho dimenticato del tutto non le conto.» Ride piano. «Non fa male. Non ti tocca. Ti guarda. Consiglio: quando vedete i colori in fondo al corridoio, non guardategli la faccia. Guardategli i piedi. I piedi non ti portano via niente.» (Effetto al tavolo: chi guarda i piedi ha vantaggio al TS contro l’Oblio.)\n\nLA CITTÀ SEPOLTA — «Le cantine del Sestiere arrivano giù, alla città dei Pretuziani. Da lì, se hai fiato e fortuna, arrivi alle grotte del Gigante. Da lì, dicono, alla montagna. Io non ci sono mai arrivato. Io arrivo fin dove servono i morti.» Può fare da guida nella Città Sepolta, ma solo fino al crocevia e alle vie che conosce.\n\nSOTTO LA BASILICA — Si fa serio, e smette di toccare i nodi. «C’è una porta. Con una luna. Ci sono arrivato una volta, da sotto. Faceva freddo come a gennaio sul Gigante. Le candele si piegavano tutte verso la porta.» Non sa cosa c’è dietro. Non ci tornerà. «Là dietro non ce stanne morti. Ce sta qualcosa che aspetta. E Mortus con quelli che aspettano non c’entra.»\n\nGLI SCAVATORI DELL’ARENA — «Casa de Spina. Scavano per una carta. Rompono muri che stavano chiusi per buone ragioni. Il mese scorso ho trovato due dei loro morti in un corridoio basso. Li ho accompagnati io. Nessuno li ha cercati.»\n\nLE FRECCE DI POLVERE D’OSSO — Se glielo chiedono: «Non sono mie. Io uso il gesso. Qualcuno da qualche mese segna la strada verso la Basilica con polvere d’ossa macinate. Chi usa le ossa dei morti per fare le frecce non ha rispetto né dei morti né delle frecce.» Non sa chi sia. (Da decidere: proposta, agenti di Iuvenza che cercano «il passaggio sotto la Basilica».)\n\nL’INQUISIZIONE — «Passano due volte al giorno a guardare tre sigilli. E qualcuno guarda dalla finestra di fronte, giorno e notte. Lo so. Non so chi. Non voglio saperlo: se lo so, devo fare qualcosa, e io non so fare niente se non seppellire.» Intuizione CD 15: ha paura, ma non dei PG, e guarda sempre verso la parete che dà sul vicolo.\n\nPERCHÉ NON SCAPPI? — «E chi li accompagna, questi?» Indica il lenzuolo.\n\nSE LO SI MINACCIA — Non si difende. Allarga le braccia. «Fate. Io sono pronto da trent’anni. Loro no.» I fedeli si alzano in piedi, tutti. Nessuno attacca. Mattheus deve scegliere da che parte stare, davanti a tutti.\n\nSE LO SI CORROMPE — «Oro? Qua sotto l’oro serve solo a comprare candele. Portate candele.»\n\nSE GLI SI MENTE — Intuizione +5. Non si offende: «Figlio, qua sotto si dicono le bugie ai vivi, non ai morti. Stai parlando davanti a una morta.»\n\nBATTUTE PRONTE — «Le vie grandi le guarda la Fiamma. Io cammino sulle piccole.» · «Mortus non prende. Mortus aspetta.» (è di Cassio: la dice sorridendo, citandolo) · «Qua sotto nessuno è povero. Siamo tutti uguali davanti al buio.» · «Se vedete i colori, guardate i piedi.»",
+     "dopo": "Sanno chi è Davide, perché il tempio è murato, che cosa sono i nodi, come comportarsi con l’Arlecchino (guardare i piedi), che sotto la Basilica c’è una porta con la luna dove fa freddo, che qualcuno segna la strada verso la Basilica con polvere d’osso, e che Davide sa di essere sorvegliato.",
+     "rilancio": "Davide aspetta la prossima domanda, la mano su un nodo. Che cosa fate?",
+     "daqui": [
+      "mattheus",
+      "dire_callisto",
+      "filatterio"
+     ]
+    },
+    {
+     "id": "mattheus",
+     "tipo": "dialogo",
+     "titolo": "Solo per Mattheus: la luce d’argento",
+     "parte": "evento",
+     "innesco": "Mattheus parla con Davide da solo, o usa la sua magia davanti a lui, o Davide lo chiama in disparte.",
+     "leggi": "Davide prende una candela e fa un cenno a Mattheus. Solo a lui. Lo porta dietro l’ultimo pilastro, dove la luce delle altre candele non arriva.\n\n«Fammela vedere.»\n\nNon dice cosa. Non ce n’è bisogno.",
+     "note": "QUESTA È LA SCENA DI MATTHEUS. Lasciala respirare. Il giocatore decide se mostrarsi.\n\nSE MATTHEUS MOSTRA LA LUCE (qualunque incantesimo, anche solo Luce o una preghiera): la luce d’argento riempie l’angolo dietro il pilastro. Davide chiude gli occhi. Poi li riapre, bagnati. «Cassio aveva ragione.» Silenzio. «È trent’anni che la aspetto, questa luce. Pensavo di morire prima.»\n\nCOSA DICE DAVIDE A MATTHEUS (una cosa alla volta, secondo le domande del giocatore):\n• «Tu sì giovane. Tu sì sacerdote vero, io sono un becchino che prega. La gente come me muore e il culto muore con lei. La gente come te no.»\n• «A Teramum non puoi farti vedere. Qui la Fiamma non discute, brucia. Impalox non è Gisulfo. Se ti prendono, prendono la Crociata. Lo sai, questo?»\n• Sulla doppia fede (Mattheus prega anche la Fiamma, per i compagni): «Mortus non è geloso. Accoglie tutti, pure gli altri dèi, alla fine.»\n• Su Mushanë e la cappella di Onofrio, se Mattheus ne parla: Davide ride piano, incredulo, felice. «Una cappella. Con la porta aperta. E cento monete d’oro. Figlio mio.» Poi si fa serio: «Adesso però c’è un verbale, da qualche parte, con il tuo nome sopra.»\n• Su Bëllindë e il permesso di Gisulfo: «Un Conte che non vieta. Sai quanti ne ho visti, in trent’anni? Nessuno.»\n• Su Rocco e Nunzia Serrafredda (se il rito a Bëllindë è stato fatto): «Hai inventato un rito davanti a otto persone? Allora sei già più prete di me.»\n\nLA RICHIESTA: «Stanotte accompagno Menica. Accompagnala tu. Io tengo la candela.» È la richiesta di celebrare il funerale nella navata (punto «La navata murata»). Se Mattheus accetta, i fedeli lo riconoscono come prete.\n\nIL DONO: se Mattheus accetta, prima di salire Davide gli dà la sua lucerna (vedi bottino) e gli insegna il segno del cerchio col punto: «Dove lo trovi, qualcuno dei nostri è passato e tornato. Dove lo lasci, qualcuno saprà che sei passato tu.»\n\nSE MATTHEUS RIFIUTA DI MOSTRARSI — Davide annuisce senza offendersi. «Fai bene. Qua sotto qualcuno guarda anche i preti.» Ma da quel momento lo tratta come un amico, non come un confratello.\n\nSE MATTHEUS CHIEDE DI DAVIDE STESSO (Da dove vieni? Hai paura? Chi ti ha insegnato?) — «Nessuno. Ho imparato dai morti. Stanno zitti, e ti insegnano tutto.» E: «Paura? Sempre. Ma la paura è una candela: fa luce anche lei.»",
+     "prove": [
+      {
+       "id": "rel",
+       "abilita": [
+        "Religione",
+        "Intuizione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Davide è un frate stanco, un uomo buono che ha sepolto troppa gente. Vi guarda come si guarda qualcuno che si è aspettato a lungo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Davide non ha il potere di un sacerdote vero: prega, ma la sua fede non risponde con la luce. Quello che ha tenuto in piedi questo culto per sette anni è solo lui. E lo sa."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Davide è vecchio e malato ai polmoni: l’umido della cripta gli è entrato nel petto. Non glielo sentite dire, ma ve lo dice la tosse che trattiene. Sta cercando qualcuno a cui lasciare le piccole vie."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se Mattheus si mostra, Davide lo tratta come un confratello e un erede, e gli chiede di celebrare il funerale di Menica. Il culto nascosto di Teramum ha un prete. Anche l’Inquisizione, se lo scopre, ha il suo pesce.",
+     "rilancio": "La candela di Davide trema appena. Che cosa fate?",
+     "daqui": [
+      "te_mortus_navata",
+      "filatterio"
+     ],
+     "pe": 500,
+     "bottino": [
+      {
+       "n": "La lucerna del passaggio",
+       "q": 1,
+       "cat": "Oggetti magici",
+       "peso": "0,5 kg",
+       "valore": "Non stabilito",
+       "stats": "Oggetto meraviglioso comune · Accesa, fa luce fioca in un raggio di 6 m e brucia 8 ore senza olio (poi va lasciata spenta fino all’alba) · La sua luce non si vede a più di 18 m di distanza · Se chi la porta sussurra «faje truvà la via», la fiamma si piega per un attimo verso l’uscita più vicina",
+       "desc": "Una lucerna di terracotta nera, consumata dalle mani. Sopra il beccuccio, inciso, un cerchio con un punto. Frate Davide l’ha portata nelle piccole vie per trent’anni.",
+       "a": "mattheus"
+      }
+     ]
+    },
+    {
+     "id": "filatterio",
+     "tipo": "dialogo",
+     "titolo": "Quello che Mattheus porta",
+     "parte": "nascosto",
+     "innesco": "Davide si trova vicino a Mattheus e al Filatterio di Lyaras (in qualunque momento del dialogo, o durante il funerale).",
+     "leggi": "A metà di una frase Davide si ferma. Gira la testa, lentamente, verso la borsa di Mattheus. Come un cane che sente un rumore che gli uomini non sentono.\n\n«Che porti, lì dentro?»\n\nLa candela che tiene in mano si piega. Non verso la porta. Verso la borsa.",
+     "note": "Davide non sa cosa sia un filatterio né chi sia Lyaras. Sente solo quello che un servo di Mortus sente.\n«Tu porti uno che non vuole morire.» Pausa lunga. «È la cosa più lontana da Mortus che c’è al mondo. Tutti passano. Lui no. Lui ha deciso di no.»\nSe Mattheus gli racconta dell’Ultimo Custode che si è sacrificato per rinforzarlo: Davide si fa il segno della Soglia. «Allora quello là dentro è stato chiuso da uno che ha scelto di passare. È giusto così. Mortus rispetta chi sceglie.»\nCOSA CONSIGLIA: «Non odiarlo. Chi odia uno così lo tiene vivo più a lungo. Quando verrà il momento, accompagnalo. Come si accompagna un morto che ha paura.» Non sa di forge di annullamento né di Cattedrali. Se Mattheus gliene parla: «Sotto la Basilica c’è una porta con la luna e un freddo che non è di questo mondo. Non so se è una forgia. So che non ci vorrei portare una cosa così vicino.»\nDa decidere: se il consiglio di Davide («accompagnalo») apre una via rituale di Mortus per distruggere il Filatterio, alternativa alla forgia di Meren. Il Manuale lega Mortus a Noxtua e alla purificazione dei Sigilli (mito-mortus, gm): non risolvere qui.",
+     "dopo": "Mattheus sa che per Mortus il Filatterio è l’eresia opposta (chi rifiuta di passare), e ha un consiglio che non è una soluzione. Resta aperto.",
+     "rilancio": "La candela resta piegata verso la borsa. Che cosa fate?",
+     "daqui": [
+      "te_mortus_navata"
+     ]
+    },
+    {
+     "id": "dire_callisto",
+     "tipo": "dettaglio",
+     "titolo": "Dirlo a Davide",
+     "parte": "evento",
+     "innesco": "Il gruppo ha smascherato Callisto Fumasi e decide se dirlo a Davide.",
+     "leggi": "Davide ascolta senza interrompere. Quando sente il nome, chiude gli occhi.\n\n«Callisto.» Tocca un nodo, poi si ferma, come se avesse paura di perdere anche questo. «Ho seppellito io sua moglie. Gli ho tenuto la mano tutta la notte.»",
+     "note": "Davide non vuole vendetta. «Mortus accoglie tutti. Pure chi ha paura. Soprattutto chi ha paura.» Chiede ai PG di non fargli del male e, se possono, di salvargli il figlio.\nSe Callisto è presente nella cripta: Davide va da lui, davanti a tutti, e gli mette una mano sulla testa. Callisto piange. I fedeli guardano. Nessuno dice niente. Da quella notte Callisto scrive per Padre Ottone quello che Davide e i PG gli dicono di scrivere.\nSe il gruppo NON lo dice a Davide: nessuna conseguenza immediata; ma se Davide lo scopre più avanti da altri, la fiducia verso i PG cala.",
+     "dopo": "Callisto diventa un doppio al servizio del culto (se non lo era già). Il rischio della retata si abbassa: gli Occhi dell’Inquisizione scendono di 1.",
+     "rilancio": "Davide riapre gli occhi. Che cosa fate?",
+     "daqui": [
+      "te_mortus_navata"
+     ],
+     "pe": 200
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_mortus_navata",
+   "kind": "stanza",
+   "title": "La navata murata",
+   "image": "PDI — Mortus — La navata murata.jpg",
+   "legacyPosition": {
+    "x": 700,
+    "y": 462
+   },
+   "text": "Si sale dalla cripta per una scala stretta, dietro l’altare. La chiesa, di dentro, è piccola come sembrava da fuori. Dieci banchi per parte. Polvere spessa su tutto.\n\nLa luce viene da una sola lucerna appesa davanti all’altare, e brucia. Qualcuno la tiene accesa da sette anni.\n\nL’altare è un blocco di pietra grigia, senza tovaglia. Dietro l’altare, sulla parete, dipinta grande, la Soglia: un arco aperto sul buio, e sulla soglia una lucerna accesa. Qui nessuno l’ha coperta.\n\nDi fronte, la porta d’ingresso è un muro di mattoni chiari. Da questa parte, contro i mattoni, sono appoggiate decine di candele consumate, e fiori secchi, e piccoli oggetti. Un pettine. Una scarpa da bambino. Un cucchiaio di legno.\n\nI fedeli portano su il lenzuolo e lo posano sull’altare.",
+   "breve": "La chiesa murata dall’interno: la lucerna sempre accesa, la Soglia dipinta, le offerte dei poveri contro la porta murata. Qui si celebra il funerale di Menica. Se Mattheus lo celebra, i fedeli lo riconoscono come loro prete. Attenzione: la luce della magia di Mattheus, qui, può filtrare dalle fessure del tetto verso il vicolo.",
+   "gm": "Le offerte contro i mattoni sono dei parenti di chi è stato accompagnato: una cosa di ogni morto. Non si toccano.\nIL RISCHIO: il tetto ha fessure fra i coppi. Una luce forte (qualunque incantesimo che faccia luce intensa, o la luce d’argento di Mattheus usata in grande) si vede dal vicolo e dalla finestra di fronte: +1 Occhi dell’Inquisizione, a meno che Callisto non sia già dalla loro parte. Davide lo sa e lo dice: «Piano con la luce. Il tetto ha orecchie e occhi.»\nIL RITO: non esiste una liturgia scritta. Davide segue quella che ha imparato alla Pustèrla, cambiata negli anni. Se Mattheus ha già inventato un rito a Bëllindë (Nunzia Serrafredda, Rocco), può usarlo: i fedeli lo imparano. È la nascita di una liturgia, di nuovo.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "rito",
+     "tipo": "dettaglio",
+     "titolo": "Accompagnare Menica",
+     "parte": "evento",
+     "innesco": "Mattheus accetta di celebrare il funerale (o lo celebra Davide, con il gruppo presente).",
+     "leggi": "I fedeli si mettono intorno all’altare, in cerchio, senza che nessuno lo dica. Assunta, la sorella della morta, scopre il viso di Menica: una donna di cinquant’anni con le mani rovinate dalla lisciva e la bocca un po’ aperta, come se stesse per dire qualcosa.\n\nDavide accende una candela alla lucerna e la mette in mano a Mattheus.\n\nPoi si fa indietro. E aspetta.\n\nNella chiesa murata c’è un silenzio così fondo che si sente il fiume.",
+     "note": "Lascia che il giocatore dica le parole. Non serve che siano belle: servono vere. Se il giocatore è in difficoltà, i fedeli rispondono in coro alla preghiera dell’Atto XI: «Mortus, accòjele. Mortus, accompàgnele. Mortus, faje truvà la via.»\nPROVA (facoltativa, se il giocatore preferisce tirare): Religione o Persuasione CD 13 di Mattheus; gli altri PG possono aiutare portando la candela, cantando, dicendo una parola sulla morta (hanno parlato con la sorella?).\nLA LUCE: se Mattheus usa la sua magia durante il rito (anche solo Taumaturgia, Luce, o una benedizione), la luce d’argento esce da lui e riempie la navata. I fedeli cadono in ginocchio. Occhi dell’Inquisizione +1 se nessuno ha pensato alle fessure del tetto (si possono coprire con i mantelli: un PG lo fa, e basta).",
+     "prove": [
+      {
+       "id": "rito",
+       "abilita": [
+        "Religione",
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "Le parole non vengono. Davide prende la candela dalle mani di Mattheus, piano, e finisce lui. Nessuno giudica. Ma Mattheus sa che stasera non era pronto."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 12,
+         "leggi": "Le parole sono incerte, ma vere. I fedeli rispondono. Menica è accompagnata. Qualcuno piange, ed è un pianto buono."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Quando Mattheus finisce, la fiamma della lucerna sopra l’altare si piega un momento verso la Soglia dipinta, poi torna dritta. Assunta bacia le mani di Mattheus. I fedeli lo chiamano «patre»."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "max": 22,
+         "leggi": "Tutto quello di sopra, e una cosa in più: per un momento, nella Soglia dipinta dietro l’altare, il buio sembra profondo davvero, come una porta aperta. Poi è di nuovo pittura. Davide ha visto anche lui. Non dice niente. Ma si toglie un nodo dalla corda, e lo scioglie."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "La lucerna sopra l’altare, che brucia da sette anni, per la prima volta si spegne da sola, piano, come chi si addormenta. E subito dopo si riaccende. Davide si mette a ridere, a bassa voce, con le lacrime agli occhi. «Ha risposto. Sette anni, e ha risposto a te.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Mattheus è riconosciuto come prete dai fedeli di Teramum: dodici persone che faranno quello che chiede, conoscono le cantine del Sestiere e i morti di tutta la città. È una rete. È anche un verbale in più, se l’Inquisizione scopre il rito.",
+     "rilancio": "Menica è accompagnata. I fedeli vi guardano. Che cosa fate?",
+     "daqui": [
+      "offerte",
+      "te_mortus_fiume"
+     ],
+     "pe": 500
+    },
+    {
+     "id": "offerte",
+     "tipo": "dettaglio",
+     "titolo": "Le offerte contro la porta",
+     "parte": "indizio",
+     "seme": "Un pettine. Una scarpa da bambino. Un cucchiaio di legno.",
+     "innesco": "Qualcuno guarda le cose appoggiate ai mattoni della porta murata.",
+     "leggi": "Sono centinaia. Ognuna è pulita, posata con cura. Accanto a molte, un nome scritto col carbone sul mattone. Alcuni nomi sono stati riscritti più volte, quando il carbone sbiadiva.\n\nIn basso, vicino ai mattoni a secco, c’è una tavoletta di legno appoggiata al muro. Sopra, scritto col gesso, in una calligrafia ordinata da scrivano: «Graziella Fumasi».",
+     "note": "Graziella Fumasi è la moglie di Callisto. La calligrafia è la sua. Se il gruppo non ha ancora capito chi guarda dalla finestra, questo è un indizio: Fumasi, il gabelliere del sale.",
+     "dopo": "Il nome Fumasi porta a Callisto, se non l’hanno ancora trovato.",
+     "rilancio": "Il fiume si sente, di là dal muro. Che cosa fate?",
+     "daqui": [
+      "te_mortus_finestra",
+      "te_mortus_fiume"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_mortus_fiume",
+   "kind": "porta",
+   "title": "La grata sul fiume",
+   "image": "PDI — Mortus — La grata sul fiume.jpg",
+   "legacyPosition": {
+    "x": 905,
+    "y": 975
+   },
+   "text": "In fondo al vicolo il fiume. Il Tordinum corre largo e marrone, e sulla riva c’è una scala d’acqua: gradini di pietra verde che scendono dentro la corrente, e un anello di ferro per legare le barche.\n\nA destra della scala, sotto il muro del magazzino, l’argine ha una grata di ferro, mezza sommersa. Ne esce un filo d’acqua scura.\n\nLa grata è arrugginita. Ma le sbarre di sinistra sono lucide, dove qualcuno le prende in mano.\n\nUna barca da fiume, di quelle piatte, è tirata in secco sotto la scala. Dentro, un remo e una coperta.",
+   "breve": "L’uscita dal fiume: la grata è il canale di scolo della cripta, e si apre da dentro. La barca è di Pasqualino il barcaiolo, uno dei fedeli. È la via di fuga del culto, e la via per la retata: se gli Occhi dell’Inquisizione arrivano a 3, stanotte l’Inquisizione entra dal vicolo, e questa è la sola strada fuori.",
+   "gm": "La grata: le sbarre di sinistra si sfilano dal basso (le ha segate Pasqualino anni fa). Da dentro la cripta, un canale basso, carponi, venti passi nell’acqua fino alle ginocchia. Da fuori, ci si entra dalla scala d’acqua con l’acqua alla cintura (Atletica CD 11; con la piena, CD 15).\nCunicolo verso la Città Sepolta: dalla cripta, oltre al canale verso il fiume, parte la «piccola via» di Davide verso il crocevia della Città Sepolta (scena «La Città Sepolta», ingresso dalla cripta di Mortus).",
+   "nota": {
+    "cd": 11
+   },
+   "moduli": [
+    {
+     "id": "retata",
+     "tipo": "scontro",
+     "titolo": "La retata",
+     "parte": "evento",
+     "innesco": "Gli Occhi dell’Inquisizione arrivano a 3, oppure il gruppo ha fatto troppa luce o troppo rumore. Succede di notte, mentre sono nella cripta o nella navata.",
+     "leggi": "Prima un rumore di passi nel vicolo. Tanti, a tempo. Poi una voce, alta, che non urla: legge.\n\n«In nome della Fiamma e dell’Arcimandrita del Ducato…»\n\nPoi il primo colpo di mazza sui mattoni della porta murata. La polvere cade dalla volta della navata. Nella cripta, qualcuno spegne tutte le candele insieme.\n\nNel buio, la voce di Davide, calmissima:\n\n«Dal fiume. I morti prima.»",
+     "note": "FORZE: 2 Inquisitori della Basilica e 6 Guardie della Basilica (Bestiario). Uno degli inquisitori è Padre Ottone, se il gruppo ne conosce il nome. Entrano da due parti: quattro guardie e un inquisitore sfondano i mattoni della porta (tre round); due guardie e l’altro inquisitore aspettano nel vicolo davanti alla cantina.\nNON È UNO SCONTRO DA VINCERE: è una fuga. Uccidere uomini della Basilica a Teramum significa un processo per tutta la Crociata e la guerra con Impalox. Combattere si può, ma ogni guardia uccisa è un nome sul verbale. Le guardie sono deboli apposta.\nLA FUGA: si esce dal canale della cripta verso la grata (venti passi carponi nell’acqua: terreno difficile). I fedeli vanno per primi con Menica, se il funerale non è finito. Pasqualino prende la barca. Serve che qualcuno tenga il canale o la cripta per 3 round: Davide si offre. Se i PG glielo lasciano fare, Davide viene preso (vedi dopo).\nPROVE DI FUGA: Furtività CD 13 di gruppo (metà) per uscire dalla grata senza che le guardie nel vicolo vedano la barca; Atletica CD 12 per chi porta qualcuno.\nALTERNATIVA: la piccola via verso la Città Sepolta, se Davide l’ha già mostrata. Nessuno li segue lì sotto.\nSE MATTHEUS VIENE VISTO usare la luce d’argento durante la retata: il suo volto e la sua luce sono a verbale. Da decidere le conseguenze con l’Arcimandrita.",
+     "prove": [
+      {
+       "id": "fuga",
+       "abilita": [
+        "Furtività"
+       ],
+       "cd": 13,
+       "gruppo": "meta",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 5,
+         "leggi": "La barca è vista. Le guardie gridano, una lanterna vi illumina in pieno sul fiume. Un inquisitore ha visto delle facce. +1 verbale per ognuno di voi."
+        },
+        {
+         "fascia": "failure",
+         "min": 6,
+         "max": 12,
+         "leggi": "Uscite, ma qualcuno dal vicolo vede la barca allontanarsi. Non le facce: la barca. Domani cercheranno Pasqualino."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "La barca scivola via nel buio con la corrente. Dietro, la porta murata cade sotto la mazza, ma il tempio è vuoto."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Siete via prima che la porta cada. E dal fiume vedete la scena intera: gli inquisitori nella navata vuota, la lucerna ancora accesa sull’altare, e nessuno che osa spegnerla."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se Davide ha tenuto la cripta: è preso. Viene portato alla Basilica. Da decidere: processo, prigione nei sotterranei della Basilica, o scambio politico (Impalox potrebbe usarlo come merce con la Crociata). Mattheus ha un motivo personale per entrare nella Basilica. Se nessuno è preso: il tempio è sventrato, la lucerna è ancora accesa, e il culto si sposta nella Città Sepolta. In ogni caso Callisto (se non è con i PG) viene premiato, e Padre Ottone ha il suo verbale sulla Crociata.",
+     "rilancio": "Il fiume vi porta via nel buio. Dietro di voi, le torce nel vicolo. Che cosa fate?",
+     "daqui": [
+      "barca"
+     ],
+     "pe": 1050
+    },
+    {
+     "id": "barca",
+     "tipo": "dettaglio",
+     "titolo": "La barca di Pasqualino",
+     "parte": "indizio",
+     "seme": "Una barca da fiume, di quelle piatte, è tirata in secco sotto la scala. Dentro, un remo e una coperta.",
+     "innesco": "Qualcuno guarda la barca tirata in secco o la grata.",
+     "leggi": "La barca è vecchia ma asciutta dentro, curata. Sul fondo, sotto la coperta, ci sono due fagotti lunghi come uomini, avvolti in tela e legati. Pesano come pesano i morti.\n\nSulla prua, piccolo, inciso col coltello, un cerchio con un punto.",
+     "note": "Sono i due scavatori di Casa de Spina morti nel corridoio basso, di cui parla Davide. Pasqualino li porterà stanotte fuori dalle mura, alla Pustèrla de li Mortë, per seppellirli. Nessuno li ha cercati. Se i PG li riconoscono per scavatori (Medicina o Indagare CD 12: fango dell’Arena sotto le unghie, calli da piccone), hanno una prova che lo scavo di Casa de Spina uccide, e che de Spina lo nasconde.",
+     "dopo": "Un filo verso l’Arena Sprofondata e verso Casa de Spina.",
+     "rilancio": "L’acqua batte piano contro la barca. Che cosa fate?",
+     "daqui": [
+      "retata"
+     ]
+    }
+   ]
+  }
+ ]
+}

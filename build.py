@@ -118,7 +118,7 @@ def contenuti():
     raw, voci = [], []
     for cat in sorted(os.listdir(CONT)):
         d = os.path.join(CONT, cat)
-        if not os.path.isdir(d) or cat == "scene": continue   # le scene hanno il loro blocco: vedi scene()
+        if not os.path.isdir(d) or cat == "scene" or cat.startswith("_"): continue   # _bestiario ecc.: vedi bestiario()   # le scene hanno il loro blocco: vedi scene()
         for fn in sorted(os.listdir(d)):
             if not fn.endswith(".json") or fn.startswith("_"): continue
             e = json.load(open(os.path.join(d, fn), encoding="utf-8"))
@@ -174,7 +174,8 @@ def scene():
     import json
     html = open(SRC, encoding="utf-8").read()
     d = os.path.join(CONT, "scene")
-    scene, errori, visti = [], [], {}
+    scene, errori, visti, senza_img = [], [], {}, []
+    alias = json.load(open(os.path.join(CONT, "_immagini.json"), encoding="utf-8"))
     for fn in sorted(os.listdir(d)):
         if not fn.endswith(".json") or fn.startswith("_"): continue
         s = json.load(open(os.path.join(d, fn), encoding="utf-8"))
@@ -200,11 +201,22 @@ def scene():
                     errori.append(f"{pid}/{m['id']}: la frase seme «{m['seme']}» non è nel testo del punto (va copiata identica)")
                 for pv in m.get("prove") or []:
                     if "-" in (pv.get("id") or "-"): errori.append(f"{pid}/{m['id']}: ogni prova vuole un id senza «-»")
-                for d in m.get("daqui") or []:
-                    if d not in mids and not any(q.get("id") == d for q in s.get("punti") or []):
-                        errori.append(f"{pid}/{m['id']}: «Da qui» punta a «{d}», che non esiste")
+                for dq in m.get("daqui") or []:
+                    if dq not in mids and not any(q.get("id") == dq for q in s.get("punti") or []):
+                        errori.append(f"{pid}/{m['id']}: «Da qui» punta a «{dq}», che non esiste")
         for h in s.get("guida") or []:
             if f'"id": "{h}"' not in html: errori.append(f"{sid}: la scheda della guida «{h}» non esiste in SCENE_HANDOUTS")
+        # immagini col nome leggibile (chiave di contenuti/_immagini.json) → percorso img/xxx
+        def res(v, who):
+            if not v or v.startswith("img/") or v.startswith("http"): return v
+            if v in alias: return alias[v]
+            senza_img.append(f"{who}: «{v}»"); return None
+        mp = s.get("mappa") or {}
+        if mp.get("img"): mp["img"] = res(mp["img"], sid) or mp["img"]
+        for p in s.get("punti") or []:
+            if p.get("image"): p["image"] = res(p["image"], p.get("id"))
+            for mo in p.get("moduli") or []:
+                if mo.get("immagine"): mo["immagine"] = res(mo["immagine"], f"{p.get('id')}/{mo.get('id')}")
         scene.append(s)
     if errori:
         print("SCENE CON ERRORI:\n  " + "\n  ".join(errori)); sys.exit(1)
@@ -213,11 +225,31 @@ def scene():
     a = html.index(SCENE_START); b = html.index(SCENE_END) + len(SCENE_END)
     html = html[:a] + blocco + html[b:]
     open(SRC, "w", encoding="utf-8").write(html)
+    if senza_img: print("  IMMAGINI DELLE SCENE NON ANCORA GENERATE (" + str(len(senza_img)) + "): " + "; ".join(senza_img[:8]) + (" …" if len(senza_img) > 8 else ""))
     print(f"ok: scene scritte in src/tavolo.html — " + ", ".join(f"{s['id']} ({len(s.get('punti') or [])} punti)" for s in scene))
+
+BEST_START, BEST_END = "/*@BESTIARIO*/", "/*@/BESTIARIO*/"
+def bestiario():
+    """Mostri e PNG da combattimento: un file per creatura in contenuti/_bestiario/<id>.json (forma del BESTIARIO del sorgente)."""
+    import json
+    d = os.path.join(CONT, "_bestiario"); voci = []
+    alias = json.load(open(os.path.join(CONT, "_immagini.json"), encoding="utf-8"))
+    if os.path.isdir(d):
+        for fn in sorted(os.listdir(d)):
+            if not fn.endswith(".json"): continue
+            e = json.load(open(os.path.join(d, fn), encoding="utf-8"))
+            if e.get("img") and not e["img"].startswith(("img/", "http")): e["img"] = alias.get(e["img"], "")
+            e.setdefault("note", ""); e.setdefault("actions", []); voci.append(e)
+    html = open(SRC, encoding="utf-8").read()
+    a = html.index(BEST_START); b = html.index(BEST_END) + len(BEST_END)
+    html = html[:a] + BEST_START + "const BESTIARIO_EXTRA=" + json.dumps(voci, ensure_ascii=False, separators=(",", ":")) + ";" + BEST_END + html[b:]
+    open(SRC, "w", encoding="utf-8").write(html)
+    print(f"ok: bestiario aggiuntivo — {len(voci)} creature")
 
 def build():
     contenuti()
     scene()
+    bestiario()
     shutil.copyfile(SRC, OUT)
     html = open(SRC, encoding="utf-8").read()
     used = set(re.findall(r"img/[0-9a-f]{12}\.[a-z]+", html))

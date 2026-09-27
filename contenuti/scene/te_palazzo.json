@@ -1,0 +1,1404 @@
+{
+ "id": "te_palazzo",
+ "nome": "Palazzo Ducale di Teramum",
+ "menu": "Palazzo Ducale",
+ "citta": "Teramum",
+ "ordine": 12,
+ "mappa": {
+  "img": "Battlemap — Palazzo Ducale.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Il colle di San Giorgio finisce in una piazza lastricata di bianco.\n\nDa una parte l’oro della Basilica. Dall’altra, squadrato, il Palazzo Ducale: tre piani di pietra chiara, una torre d’angolo più alta di tutte le torri del colle, lo stemma ducale sul portale.\n\nDue guardie per battente. Tabarro grigio, la torre e il lupo sul petto.\n\nDal cortile arriva una voce che chiama nomi in Aureo Antico. Nessuno risponde.",
+  "note": "Il Palazzo è il cuore politico di Teramum: qui la Crociata cerca il lasciapassare, la revoca del proclama e il Sigillo Ducale per la Grande Convocazione. Nessuno scontro obbligato: si combatte con la carta. L’unico scontro possibile è con la ronda della Guardia, di notte.\nOrdine consigliato: cortile → anticamere → Sala del Consiglio → torre (Lucius) → appartamenti del Reggente; Cancelleria e porta di servizio quando vogliono capire da dove viene il proclama e chi è l’incappucciato.\nIl Palazzo ha una giornata: mattina suppliche e timbri; mezzogiorno il Consiglio si chiude in sala; pomeriggio il colle è in ombra (il Gigante si mangia il sole) e nelle anticamere si tratta a bassa voce; notte solo la Guardia e la porta di servizio.",
+  "ingressi": [
+   {
+    "da": "Dal portale, di giorno",
+    "primo": "te_palazzo_cortile",
+    "poi": "te_palazzo_anticamere",
+    "note": "L’ordine normale della lista."
+   },
+   {
+    "da": "Chiamati da Lucius",
+    "primo": "te_palazzo_torre",
+    "poi": "te_palazzo_consiglio",
+    "note": "Se Maximus è stato riconosciuto alla porta della città, un sergente lo porta direttamente alla torre dalla scala della Guardia."
+   },
+   {
+    "da": "Dal vicolo, di notte",
+    "primo": "te_palazzo_servizio",
+    "poi": "te_palazzo_cancelleria",
+    "note": "Per l’appostamento all’incappucciato: la scala delle cucine sale alla Cancelleria e agli appartamenti del Reggente."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "te_palazzo_cortile",
+   "kind": "scena",
+   "title": "Il portale e il cortile delle suppliche",
+   "image": "Luogo — 1. Palazzo Ducale.jpg",
+   "legacyPosition": {
+    "x": 724,
+    "y": 905
+   },
+   "text": "Il portale è alto tre uomini. Sopra, lo stemma ducale, scolpito di fresco: la pietra intorno è più bianca del resto.\n\nLe guardie non vi fermano. Vi guardano le mani, poi le armi, poi di nuovo le mani.\n\nDentro, un cortile quadrato con un pozzo in mezzo e un porticato su tre lati. Sotto il porticato, la coda: contadini col cappello in mano, mercanti con le carte arrotolate, un prete, una vedova in nero con un bambino che dorme in piedi appoggiato alla sua gonna. Tutti con un foglio.\n\nAccanto al pozzo, su uno sgabello alto, un uomo piccolo con una catena d’ottone al collo tiene un registro sulle ginocchia. Accanto a lui, su un panchetto, una fila di timbri di legno.\n\n«Vitalis Pennese, da Bbashanë!» chiama in Aureo Antico.\n\nNessuno si muove. L’uomo fa un segno sul registro.\n\n«Il prossimo.»\n\nIn fondo al cortile, uno scalone sale al piano nobile. Sul primo gradino, una guardia conta chi sale.",
+   "breve": "Si entra dal portale. Nel cortile c’è la coda delle suppliche e l’usciere capo, Mastro Ciriaco «Lu Timbre», che decide chi sale e quando. Da qui si ottiene l’udienza (o la si compra), si raccolgono voci, e si va alla Cancelleria, alle anticamere o, se chiamati, su per lo scalone.",
+   "gm": "Mastro Ciriaco «Lu Timbre» (vedi la sua scheda) comanda la coda: chiama in Aureo Antico apposta, così chi non lo capisce perde il turno e paga per riaverlo.\nLa guardia sullo scalone è della Guardia Ducale di Casa Grazianus: ogni volta che sale qualcuno di importante, manda un ragazzino su per la torre. Lucius Grazianus sa chi entra nel Palazzo prima del Reggente.\nSe la Crociata si presenta con Maximus in vista, la voce arriva alla torre in un minuto: entro un’ora un sergente viene a dire a Maximus «Lo Stratega vi aspetta. Dopo il Consiglio. Da solo.»\nDa decidere: la vedova in nero (Mariuccia, madre di una guardia ducale sparita sulla Via Bianca) è una proposta per legare il falco di Lucius alla strada; se non ti serve, è una vedova qualunque.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "usciere",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Mastro Ciriaco «Lu Timbre»",
+     "parte": "indizio",
+     "seme": "un uomo piccolo con una catena d’ottone al collo",
+     "innesco": "Qualcuno si avvicina allo sgabello, chiede udienza o chiede come funziona.",
+     "leggi": "L’usciere non alza gli occhi dal registro. «Nome, provenienza, supplica. In Aureo, se potete. Il dialetto qui dentro non ha il timbro.»",
+     "note": "CHI SIETE? — «Ciriaco de Lisio, usciere capo del Palazzo per grazia del Reggente. Quelli giù al mercato mi chiamano Lu Timbre. Non so perché.» Tocca il timbro più grosso con due dita.\n\nCOME SI OTTIENE UDIENZA? — «Si scrive la supplica. Si paga la carta, un quattrino. Si paga il bollo, un grosso. Si aspetta. Il Consiglio riceve quando riceve. Oggi siede. Domani forse.»\n\nQUANTO SI ASPETTA? — «Dipende dalla supplica. E dal supplicante.» Guarda le vostre armi. «Una colonna armata senza mandato… questa è una supplica lunga. Tre settimane. Se Valerus vuole.»\n\nSI PUÒ FARE PRIMA? — Abbassa la voce. «Le suppliche urgenti hanno il timbro rosso. Il timbro rosso costa. Dieci fiorini, e non li prendo io: li prende la cassetta della Cancelleria.» Mente a metà: metà va nella cassetta, metà nella sua manica.\n\nCHI SIEDE OGGI? — «Il Reggente, lo Stratega, il Sommo Giudice, il Decano, la Matriarca, il Dominus, l’Archivista. L’Arcimandrita arriva quando arriva. Otto seggi, sette culi.» Si morde la lingua: «Questo non l’avete sentito.»\n\nLA SIGNORA DA JULIA NOVA? — Si irrigidisce. «La Signora ha chiesto udienza con la carta buona. Ha già tutti i timbri. Le teniamo la sedia.» Non dice il nome: «La Signora ha detto che il nome lo dice lei.»\n\nMAXIMUS GRAZIANUS? — Se Maximus si presenta col suo nome, Ciriaco si alza dallo sgabello per la prima volta. «Il figlio dello Stratega. Per voi la coda non c’è.» Poi, piano: «Per i vostri amici sì.»\n\nSE LO MINACCIANO — Non si spaventa: alza la mano e la guardia sullo scalone scende due gradini. «Messere, qui dentro chi alza la voce la abbassa in cella. Rifacciamo da capo?»\n\nSE LO CORROMPONO — Accetta sempre, con eleganza. Da 2 fiorini in su vi sposta davanti ai contadini; da 10 davanti ai mercanti; per salire oggi davanti al Consiglio serve il timbro rosso e un nome che pesa.\n\nSE GLI MENTONO — Scrive la bugia sul registro, parola per parola, e la rilegge ad alta voce. «È giusto così?» Chi mente davanti a un registro dopo ci pensa due volte.\n\nBattute pronte:\n• «Il prossimo.»\n• «Senza timbro non esiste. Nemmeno voi.»\n• «A Teramum, pe’ movë ’na pëtra ce volënë ottë fìrmë, novë cavìlli e diecë bicchièri de vinë.»\n• «La pazienza è gratis. Tutto il resto no.»",
+     "dopo": "Sanno come funziona l’udienza, quanto costa accorciarla e che «la Signora da Julia Nova» ha già tutti i timbri e una sedia che la aspetta nelle anticamere.",
+     "rilancio": "Lu Timbre intinge la penna e aspetta il vostro nome. Che cosa fate?",
+     "daqui": [
+      "udienza",
+      "coda"
+     ]
+    },
+    {
+     "id": "udienza",
+     "tipo": "dettaglio",
+     "titolo": "Ottenere udienza oggi",
+     "parte": "evento",
+     "innesco": "I PG vogliono essere ricevuti dal Consiglio oggi, non fra tre settimane.",
+     "leggi": "Lu Timbre sfoglia il registro all’indietro, pagina dopo pagina, fino a un foglio pieno di nomi cancellati. «Vediamo dove vi posso mettere.»",
+     "note": "Modi per salire oggi: Persuasione CD 15 (chi parla); vantaggio se Maximus dice il suo nome o se Alessandros si presenta come Conte di Canzanium con il sigillo di Casa. Il timbro rosso (10 fiorini) toglie 5 alla CD. Intimidire fallisce da solo: la guardia scende. Inganno CD 17 (un falso mandato del Consiglio, un finto messo di una Casata).",
+     "prove": [
+      {
+       "id": "udienza",
+       "abilita": [
+        "Persuasione",
+        "Inganno"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 9,
+         "leggi": "Lu Timbre scrive il vostro nome con l’inchiostro rosso. Più tardi scoprirete che l’inchiostro rosso vuol dire «da tenere d’occhio»: la sera lo sa l’Arcimandrita."
+        },
+        {
+         "fascia": "failure",
+         "min": 10,
+         "max": 14,
+         "leggi": "Il vostro nome finisce in fondo al registro. «Tornate fra tre giorni. O fra tre settimane.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Lu Timbre vi mette in cima alla coda: sarete ricevuti oggi, dopo la seduta del mattino, davanti ad almeno tre Consiglieri."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Sarete ricevuti oggi, e Lu Timbre vi dà un consiglio gratis: «Parlate prima allo Stratega che al Reggente. Il Reggente guarda sempre lo Stratega prima di dire no.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Lu Timbre si alza e vi accompagna di persona allo scalone. «Questi sono attesi.» Non è vero. Adesso sì."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con l’udienza si sale alla Sala del Consiglio. Senza, restano le anticamere, la Cancelleria e la porta di servizio.",
+     "rilancio": "Lo scalone è lì, e la guardia vi guarda salire o restare. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_anticamere",
+      "te_palazzo_consiglio",
+      "te_palazzo_cancelleria"
+     ],
+     "pe": 200
+    },
+    {
+     "id": "coda",
+     "tipo": "dettaglio",
+     "titolo": "Le voci della coda",
+     "parte": "indizio",
+     "seme": "una vedova in nero con un bambino che dorme in piedi appoggiato alla sua gonna",
+     "innesco": "Qualcuno parla con chi aspetta sotto il porticato.",
+     "leggi": "La vedova vi guarda le armi e poi la faccia. «Voi siete della strada?» Stringe il foglio. «Mio figlio è della Guardia. L’hanno mandato sulla Via Bianca con altri undici. Dieci giorni fa. Non è tornato nessuno. Qui mi dicono di aspettare il timbro per sapere se è morto.»",
+     "note": "Mariuccia, vedova Carusi (proposta). Suo figlio Nicola era nella pattuglia che Lucius Grazianus aveva mandato sulla Via Bianca incontro alla Crociata; la pattuglia è sparita. Lucius lo sa, e non lo dice al Consiglio.\nVoci della coda (d6): 1. «Lu Reggente nen dorme cchiù.» 2. Lo Stratega fa portare armi nuove alle caserme, di notte. 3. Uno dei Consiglieri entra e esce di notte dalla porta delle cucine, incappucciato. 4. Il trono vuoto scricchiola quando entra qualcuno di sangue ducale. 5. Il Sommo Giudice ha già scritto la legge marziale: manca solo la data. 6. Gli archivi ducali sono stati riordinati: mancano anni interi.",
+     "prove": [
+      {
+       "id": "coda",
+       "abilita": [
+        "Intuizione",
+        "Persuasione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "La coda vi guarda di traverso: gente armata che salta la fila. Nessuno vi dice niente."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Tre voci utili (tira due volte sulla tabella, più la vedova). La coda comincia a guardarvi come quelli che forse si fanno ricevere."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Tre voci utili e la vedova vi dà il nome del figlio, Nicola Carusi, e del suo sergente. «Se lo trovate, ditegli che la madre ha pagato il bollo.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che una pattuglia della Guardia è sparita sulla Via Bianca dieci giorni fa: la stessa strada da cui Lucius aveva scritto a Maximus di non venire.",
+     "rilancio": "Il bambino si sveglia e vi fissa. Che cosa fate?",
+     "daqui": [
+      "guardie",
+      "te_palazzo_torre"
+     ]
+    },
+    {
+     "id": "guardie",
+     "tipo": "dettaglio",
+     "titolo": "La guardia dello scalone",
+     "parte": "nascosto",
+     "innesco": "Qualcuno osserva le guardie del cortile, o nota che una di loro conta chi sale.",
+     "leggi": "La guardia sul primo gradino ha una tavoletta cerata. Ogni volta che sale qualcuno col mantello buono, fa un segno. Ogni tanto un ragazzino le passa accanto e corre verso la torre d’angolo.",
+     "prove": [
+      {
+       "id": "scalone",
+       "abilita": [
+        "Intuizione",
+        "Percezione"
+       ],
+       "cd": 13,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Guardie. Si somigliano tutte."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "I colori sono quelli di Casa Grazianus, non del Reggente: il grigio con la torre e il lupo. Chi comanda la porta di questo palazzo non è chi ci dorme."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "E il ragazzino porta i nomi su per la torre d’angolo. Qualcuno lassù sa chi entra prima che lo sappia il Reggente."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 13 o più capiscono che la Guardia del Palazzo risponde allo Stratega; con 18 che i nomi salgono alla torre.",
+     "rilancio": "Il ragazzino sparisce su per la scala della torre. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_torre"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano il cortile.",
+     "leggi": "Dietro di voi Lu Timbre chiama un altro nome. Nessuno risponde.",
+     "dopo": "Scalone: anticamere e, con l’udienza, Sala del Consiglio. Porta a sinistra del porticato: Cancelleria dei Sigilli. Dal vicolo sul retro: la porta di servizio.",
+     "rilancio": "Il Palazzo ha tre strade: lo scalone, la Cancelleria, il vicolo. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_anticamere",
+      "te_palazzo_cancelleria",
+      "te_palazzo_servizio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_palazzo_cancelleria",
+   "kind": "stanza",
+   "title": "La Cancelleria dei Sigilli",
+   "image": "PDI — Palazzo Ducale — La Cancelleria dei Sigilli.jpg",
+   "legacyPosition": {
+    "x": 250,
+    "y": 860
+   },
+   "text": "Una sala lunga e bassa, piena di tavoli in fila. A ogni tavolo uno scrivano in nero, chino, con la lingua fra i denti. Si sente solo il graffio delle penne e, ogni tanto, un colpo sordo: un timbro che cade.\n\nIn fondo, dietro una grata di ferro, un armadio di noce con otto cassetti. Ogni cassetto ha uno stemma intagliato e due serrature.\n\nAccanto all’armadio, su un leggio, una lampada di bronzo con una fiamma azzurrina. Uno scrivano ci passa sopra una pergamena appena sigillata, lenta, da un capo all’altro, come si asciuga l’inchiostro. La fiamma non brucia la carta.\n\nSu un tavolo più alto degli altri, un vecchio con gli occhiali sul naso e una catena d’argento controlla tutto. Ha davanti un registro grosso come una porta.\n\nAlle pareti, scaffali di verbali legati in cuoio, uno per anno. Fra quelli di due anni fa, un vuoto.",
+   "breve": "La macchina della burocrazia: il Protonotario Gaudentius Sciarra, gli otto cassetti dei sigilli (tre per un lasciapassare, cinque per una decisione del Consiglio), la lampada che autentica gli atti. Qui si scopre come è nato il proclama contro la Crociata letto a Bëllindë, e che i verbali sulla linea ducale sono stati riscritti.",
+   "gm": "Il Protonotario Gaudentius Sciarra (vedi scheda) è onesto nel modo peggiore: fa esattamente quello che i sigilli gli dicono.\nLa lampada azzurra è la «prova d’autenticità»: ogni atto sigillato ci passa sopra e prende il segno arcano che Vicarus ha trovato sul proclama di Mushanè (Atto XV). Chi falsifica un sigillo non passa la lampada; chi ha le chiavi vere e la lampada, sì.\nIl proclama contro la «colonna armata» è stato registrato di notte, da una mano che non è quella del Protonotario, con tre sigilli veri. Il richiedente è lasciato in bianco.\nDa decidere: quali tre sigilli porta il proclama. Proposta: Mazzarellus (amministrazione), Impalox (fede: «aggressione contro autorità ecclesiastiche») e Savinellus (finanze: «non fornite vettovaglie, cavalli, denaro»). Manca il sigillo di Grazianus: il proclama contro il figlio è stato fatto alle spalle del padre. Il cassetto Mazzarellus lo ha aperto chi ha la seconda chiave, non il Reggente.\nDa decidere: regola dei voti. Il lore del Ducato dice «il sigillo di almeno tre Casate», il Manuale e la voce di Teramum «cinque voti su otto». Proposta (la stessa della voce «Arrivo a Teramum»): tre sigilli per un atto amministrativo o un lasciapassare, cinque voti per una decisione del Consiglio.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "cassetti",
+     "tipo": "dettaglio",
+     "titolo": "Gli otto cassetti",
+     "parte": "indizio",
+     "seme": "Ogni cassetto ha uno stemma intagliato e due serrature.",
+     "innesco": "Qualcuno guarda l’armadio o chiede come si fa un atto valido.",
+     "leggi": "Il Protonotario si toglie gli occhiali. «Otto Casate, otto sigilli. Ogni cassetto ha due chiavi: una la tiene la Casata, una la tengo io. Nessuno apre da solo. Per un lasciapassare servono tre cassetti. Per una decisione del Consiglio, cinque voti e i loro sigilli. Per chiamare le Casate all’Aquila Aurea…» Indica il posto dove l’armadio finisce, vuoto. «…serve un sigillo che qui dentro non c’è.»",
+     "note": "Il Sigillo Ducale non sta nell’armadio: lo porta il Reggente. Gaudentius lo dice senza problemi, è cosa nota.\nIl lasciapassare d’armi per la Crociata richiede Grazianus (armi), Clavax (legge) e un terzo (Mazzarellus, Impalox o Tancredus). Gaudentius lo prepara in bianco se glielo chiedono: poi bisogna farlo girare.",
+     "dopo": "Sanno che ogni sigillo ha due chiavi (Casata e Protonotario) e che il Sigillo Ducale non è qui: lo porta il Reggente.",
+     "rilancio": "Il Protonotario si rimette gli occhiali. Che cosa fate?",
+     "daqui": [
+      "lampada",
+      "proclama"
+     ]
+    },
+    {
+     "id": "lampada",
+     "tipo": "dettaglio",
+     "titolo": "La fiamma azzurra",
+     "parte": "indizio",
+     "seme": "una lampada di bronzo con una fiamma azzurrina",
+     "innesco": "Qualcuno osserva la lampada o chiede a cosa serve.",
+     "leggi": "Da vicino la fiamma non scalda. Sa di pietra bagnata. Quando la pergamena ci passa sopra, la cera del sigillo si illumina un istante dall’interno, come una brace soffiata.",
+     "prove": [
+      {
+       "id": "lampada",
+       "abilita": [
+        "Arcano"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Una lampada con dell’olio strano dentro. Forse per asciugare la cera."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "È una prova d’autenticità: lascia nella cera un segno arcano che solo un sigillo vero può ricevere. È lo stesso segno che Vicarus ha trovato sul proclama letto a Bëllindë."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Il segno non si può falsificare dall’esterno. Chi ha fatto il proclama aveva le chiavi vere dei cassetti e ha usato questa lampada. Di notte, perché di giorno qui dentro c’è sempre il Protonotario."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "La lampada è più vecchia del palazzo: la base è di pietra grigia, pretuziana, con un lupo consumato. Qualcuno ha preso un fuoco antico e lo ha messo a fare il notaio."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 14 o più sanno che il proclama è un atto vero, fatto qui; con 19 che chi l’ha fatto aveva le chiavi e ha lavorato di notte.",
+     "rilancio": "La fiamma azzurra ondeggia appena. Che cosa fate?",
+     "daqui": [
+      "proclama",
+      "notte"
+     ]
+    },
+    {
+     "id": "proclama",
+     "tipo": "dettaglio",
+     "titolo": "Il proclama contro la Crociata",
+     "parte": "evento",
+     "innesco": "I PG mostrano il proclama letto a Mushanè e a Bëllindë, o chiedono chi l’abbia ordinato.",
+     "leggi": "Il Protonotario legge il proclama due volte. Le labbra si muovono sulle formule. Poi apre il registro grosso come una porta e scorre col dito.\n\n«Atto quattrocentododici. Registrato.» Il dito si ferma. «Non da me.»",
+     "note": "Nel registro: data, numero, tre sigilli (vedi Da decidere nelle note del punto), il testo. Il campo del richiedente è in bianco. La calligrafia non è quella di nessuno dei suoi scrivani: Gaudentius ne è turbato davvero.\nSe i PG gli chiedono di annullarlo: «Un atto si annulla con un atto. Tre sigilli contro tre sigilli.» Ci vogliono tre Casate disposte a firmare la revoca: la strada passa dal Consiglio.",
+     "prove": [
+      {
+       "id": "registro",
+       "abilita": [
+        "Indagare"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Il Protonotario chiude il registro. «Atti del Consiglio, messeri. Non letture per forestieri.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Il proclama è registrato con tre sigilli veri, di notte, da una mano che non è della Cancelleria. Il richiedente non c’è. Il sigillo di Grazianus non c’è."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "E la mano è elegante, allenata, con le «s» lunghe all’antica: la scrittura di chi ha imparato a scrivere su testi vecchi, non su contratti."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Nel margine, a secco, senza inchiostro, qualcuno ha premuto l’unghia per contare le righe. Le stesse unghiate ci sono su altre tre pagine: i verbali in cui si parla della linea ducale."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il proclama è vero, fatto di notte alle spalle del Consiglio e dello Stratega. Con 20 o più capiscono che la mano che lo ha scritto è la stessa che mette le mani nei verbali. Porta verso la porta di servizio e verso l’incappucciato.",
+     "rilancio": "Il Protonotario vi guarda come si guarda un buco nel conto. Che cosa fate?",
+     "daqui": [
+      "verbali",
+      "notte",
+      "te_palazzo_servizio"
+     ],
+     "pe": 450
+    },
+    {
+     "id": "verbali",
+     "tipo": "dettaglio",
+     "titolo": "I verbali riscritti",
+     "parte": "indizio",
+     "seme": "Fra quelli di due anni fa, un vuoto.",
+     "innesco": "Qualcuno cerca negli scaffali dei verbali, in particolare quelli della morte dell’ultimo Duca.",
+     "leggi": "Il volume di due anni fa non c’è. Al suo posto, due volumi più sottili, legati di fresco, con la scritta «riordinato» sul dorso.",
+     "prove": [
+      {
+       "id": "verbali",
+       "abilita": [
+        "Indagare",
+        "Storia"
+       ],
+       "cd": 16,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 10,
+         "leggi": "Uno scrivano vi vede e corre dal Protonotario. Da quel momento i verbali sono sotto chiave."
+        },
+        {
+         "fascia": "failure",
+         "min": 11,
+         "max": 15,
+         "leggi": "Verbali noiosi, votazioni fallite, timbri."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 20,
+         "leggi": "Ogni volta che il verbale nomina la linea ducale, la pagina è stata riscritta con un inchiostro più fresco. Sul dorso: «riordinato per ordine del Reggente»."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 21,
+         "leggi": "Nella seduta dopo la morte del Duca una riga è stata raschiata e riscritta: prima diceva «in attesa di verifica dell’erede», ora dice «estinta la linea diretta»."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 16 o più sanno che i Mazzarellus hanno «riordinato» i verbali sulla linea ducale; con 21 che due anni fa il Consiglio attendeva la verifica di un erede.",
+     "rilancio": "Il volume riordinato pesa meno di quanto dovrebbe. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_reggente"
+     ]
+    },
+    {
+     "id": "notte",
+     "tipo": "dettaglio",
+     "titolo": "Chi entra qui di notte",
+     "parte": "evento",
+     "innesco": "I PG chiedono al Protonotario o agli scrivani chi ha accesso alla Cancelleria di notte.",
+     "leggi": "«Di notte la Cancelleria è chiusa. La chiave ce l’ho io.» Una pausa. «E il Reggente. E la Guardia, per le ronde.» Un’altra pausa. «E chi sale dalla scala delle cucine, se la porta di sopra non è sprangata. Non dovrebbe esserlo mai.»",
+     "note": "La scala delle cucine collega la porta di servizio agli appartamenti del Reggente e, al primo piano, alla Cancelleria. È la strada dell’incappucciato.\nSe Gaudentius è convinto che qualcuno usi i sigilli alle sue spalle, diventa un alleato: vuole il colpevole più dei PG. Può lasciarli aspettare nella Cancelleria una notte.",
+     "dopo": "Sanno che di notte si entra in Cancelleria dalla scala delle cucine. Il Protonotario, se l’hanno convinto, li aiuta.",
+     "rilancio": "Dalla porta in fondo sale odore di cucina. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_servizio"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano la Cancelleria.",
+     "dopo": "Verso le anticamere, la Sala del Consiglio (con l’udienza) o la porta di servizio (di notte).",
+     "rilancio": "Le penne ricominciano a graffiare. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_anticamere",
+      "te_palazzo_consiglio",
+      "te_palazzo_servizio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_palazzo_anticamere",
+   "kind": "scena",
+   "title": "Le anticamere delle Casate",
+   "image": "PDI — Palazzo Ducale — Le anticamere delle Casate.jpg",
+   "legacyPosition": {
+    "x": 250,
+    "y": 470
+   },
+   "text": "Tre stanze una dentro l’altra, con le panche lungo i muri e gli affreschi scrostati. Sulle panche, servitori in livree diverse che fingono di non vedersi.\n\nNella prima stanza un uomo grasso vestito di velluto scuro pesa monete su una bilancina d’ottone, una alla volta, e le annota.\n\nNella seconda, una vecchia signora in nero con una rosa rossa appuntata sul petto guarda fuori dalla finestra come se il panorama le appartenesse.\n\nUn paggio in livrea gialla e oro gira fra le panche con un cesto di inviti dorati.\n\nNella terza stanza, contro il muro, c’è una sedia dorata con un cuscino di velluto. È l’unica sedia libera. Nessuno ci si siede.\n\nL’aria sa di cera, di sudore sotto la seta e, vicino alla sedia, di qualcosa di dolce.",
+   "breve": "Qui si aspetta e si tratta. Il Decano Beltramo Savinellus mette un prezzo alla Crociata; la Matriarca Tarsilla de Spina cerca un Cerullius; il paggio di Casa Mellitius porta un invito alla festa; la sedia vuota è tenuta per «la Signora da Julia Nova» e profuma di lillà.",
+   "gm": "Chi c’è: Beltramo Savinellus (prima della seduta), Tarsilla de Spina, servitori di tutte le Casate, un paggio Mellitius. Vedi le schede dei PNG.\nLa sedia è per Veneranda Iuvenza: ha chiesto udienza con tutti i timbri e la avrà «quando il Consiglio avrà deciso sulla colonna armata». Vuole farsi nominare Reggente sul caos (Atto IX). Il profumo di lillà è il suo: un suo agente ha seduto qui stamattina a tenere il posto.\nDa decidere: Iuvenza compare di persona in queste scene? Proposta: non ancora; la sedia vuota è la sua minaccia. Se compare, entra quando il Consiglio discute la mozione contro Lucius.\nDa decidere: nomi di Savinellus e de Spina in conflitto. Il lore del Ducato dice Decano Beltramo Savinellus e Matriarca Tarsilla de Spina; il Manuale dice Dominus Publius Savinellus e Marchesa Eleonora de Spina. Qui si usano i nomi del lore (come nella voce del Palazzo). Non scelto: cambia i nomi se preferisci l’altra versione.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "savinellus",
+     "tipo": "dialogo",
+     "titolo": "Il Decano Beltramo Savinellus",
+     "parte": "indizio",
+     "seme": "pesa monete su una bilancina d’ottone",
+     "innesco": "Qualcuno si avvicina al Decano, o il Decano si avvicina a loro.",
+     "leggi": "Il Decano posa una moneta sul piatto e guarda l’ago. «La Crociata del Sole e delle Due Lune.» Sorride come si sorride a un conto. «Venite, venite. Vi stavo pesando.»",
+     "note": "CHI SIETE? — «Beltramo Savinellus, Decano della Lega dei Sensali. Io tengo i conti del Ducato. Qualcuno deve.»\n\nCOSA VOLETE DA NOI? — «Niente che non abbia un prezzo. La vostra colonna mangia. Beve. Consuma strade che manteniamo noi. Tutto questo si paga, o si ripaga.»\n\nQUANTO COSTIAMO? — Ha già un prezzo diverso per ciascuno. Ad Adamus: «Voi siete dei Naviganti Grigi. Per voi il prezzo è un porto.» (vuole la chiusura delle rotte grigie per un anno). A Luigis: «I Barbas vendono vino. Vendetelo a me, e a nessun altro.» Ad Alessandros: «Canzanium ha debiti. Io ne ho comprato qualcuno.» È vero.\n\nIL VOSTRO VOTO? — «Il mio voto è in vendita come tutto. Ma non a credito.» In cambio di un accordo scritto (il porto, il vino, o una quota sui dazi della Convocazione) vota con la Crociata.\n\nIL PROCLAMA? — «Ah, quello.» Non nega. «Un proclama è un listino dei prezzi: dice quanto vi costa essere voi.» Se gli mostrano che il suo sigillo ci è finito sopra di notte, si fa serio: «Il mio sigillo si usa quando pago io. Chi l’ha usato senza pagare…» e segna un nome sul libro. Non sa chi è stato; vuole saperlo.\n\nLA SIGNORA DA JULIA NOVA? — «Una cliente eccellente. Paga in anticipo.» Non sa di essere nella lista del Cristallo («Savinellus si compra»): se glielo dicono, ride, poi smette: «Chi dice che io mi compro, dovrà comprarmi. E io costo.»\n\nLA VIA BIANCA? — «È la mia strada. Ci passano i miei carri, i miei pedaggi.» Sui briganti: «Ogni strada ha i suoi. I miei almeno pagano le tasse.» Mente con piacere.\n\nSE LO MINACCIANO — «Uccidete me, e domani il grano costa il doppio. Chi ne muore di più, voi o io?»\n\nSE LO CORROMPONO — Accetta, ma alza sempre il prezzo di un terzo. Non si offende mai.\n\nSE GLI MENTONO — Intuizione passiva 16. Pesa la bugia sulla bilancina, letteralmente: una moneta falsa sul piatto. «Questa non pesa giusto.»\n\nBattute pronte:\n• «Un eroe costa. Un eroe morto costa meno.»\n• «L’oro pesa più della spada. Provate a sollevarle entrambe.»\n• «Non ho nemici. Ho debitori.»",
+     "dopo": "Sanno che il voto di Savinellus si compra con un accordo scritto. Se hanno mostrato l’uso notturno del suo sigillo, il Decano vuole il colpevole quanto loro.",
+     "rilancio": "L’ago della bilancina oscilla e si ferma. Che cosa fate?",
+     "daqui": [
+      "despina",
+      "sedia"
+     ]
+    },
+    {
+     "id": "despina",
+     "tipo": "dialogo",
+     "titolo": "La Matriarca Tarsilla de Spina",
+     "parte": "indizio",
+     "seme": "una vecchia signora in nero con una rosa rossa appuntata sul petto",
+     "innesco": "La Matriarca vede Alessandros o Vicarus, o qualcuno le parla.",
+     "leggi": "La vecchia non si volta. «Cerullius.» Lo dice come si dice il nome di un cavallo di razza. «Il sangue di vostro nonno era buono. Vediamo il vostro.»",
+     "note": "CHI SIETE? — «Tarsilla de Spina. La mia casa sedeva sul trono quando i Mazzarellus portavano l’acqua ai cavalli.» È vero solo in parte: i de Spina persero il seggio ducale secoli fa.\n\nCOSA VOLETE? — «Che il trono torni a chi ha il sangue. Il sangue antico, pretuziano. Il vostro. Il mio.» Guarda Alessandros. «Non quello di mercanti con un sigillo al collo.»\n\nL’ATTO DI FONDAZIONE? — Se lo nominano, gli occhi le si accendono. «Esiste. È sotto questa città. I Mazzarellus sono un ramo cadetto, e l’Atto lo prova.» Finanzia scavi sotto il Ventre Vecchio e l’Arena. Chiede alla Crociata di aiutarla a trovarlo.\n\nSILVANUS? — Qui è pericolosa: se capisce che l’erede che la Crociata porta ha sangue più antico del suo, diventa gelida. «Un Aurex. Un imperiale. Un altro che viene a sederci sopra.» Si può girare: se le si fa capire che Silvanus porta anche il sangue pretuziano (sole e due lune), si ammorbidisce. Non conosce la verità: la sospetta.\n\nIL VOSTRO VOTO? — Vota per la Crociata se Alessandros le promette, davanti a testimoni, l’appoggio di Casa Cerullius alla ricerca dell’Atto di Fondazione.\n\nIL CRISTALLO («De Spina si distrae»)? — Se glielo dicono, la rosa le trema sul petto. «Distratta. Io.» Poi, piano: «Mi distrae chi mi finanzia gli scavi, forse.» Iuvenza forse paga i suoi scavi, e lei ha preferito non chiedersi perché.\n\nSE LA MINACCIANO — «Ho sepolto tre mariti e due figli. Voi cosa mi fate?»\n\nBattute pronte:\n• «Ogni rosa ha le sue.»\n• «Il sangue non si compra. Si ricorda.»\n• «Il trono è vuoto perché nessuno di loro ci sta.»",
+     "dopo": "Sanno che de Spina cerca l’Atto di Fondazione sotto la città e che vota con loro in cambio dell’appoggio dei Cerullius. Forse i suoi scavi li paga Iuvenza.",
+     "rilancio": "La Matriarca torna a guardare fuori. Che cosa fate?",
+     "daqui": [
+      "invito",
+      "sedia"
+     ]
+    },
+    {
+     "id": "invito",
+     "tipo": "dettaglio",
+     "titolo": "L’invito dorato",
+     "parte": "indizio",
+     "seme": "Un paggio in livrea gialla e oro gira fra le panche con un cesto di inviti dorati.",
+     "innesco": "Il paggio li vede, o qualcuno lo ferma.",
+     "leggi": "Il paggio si inchina fino a terra e porge un invito di carta dorata, profumato. «Il Dominus Flaminio Mellitius ha l’onore di invitare la Crociata alla festa di stasera, nel palazzo dei Tigli. Musici da Solaria. Vino di tre regni.» Abbassa la voce: «Ha detto di dirvi che ci sarà anche chi vi interessa.»",
+     "note": "La festa di Casa Mellitius è nella voce del Quartiere dei Tigli. «Chi vi interessa»: Mellitius, ricattato da Iuvenza, deve portare la Crociata in un posto dove Iuvenza può guardarli da vicino. Lui non lo dice; il paggio non lo sa.\nRifiutare un invito dei Mellitius è un’offesa pubblica: la vecchia nobiltà ride, ma poi va.",
+     "dopo": "Hanno un invito per la festa Mellitius di stasera. Chi li aspetta lì è una scelta del master (proposta: gli occhi di Iuvenza).",
+     "rilancio": "L’invito profuma di miele e di qualcos’altro. Che cosa fate?",
+     "daqui": [
+      "sedia"
+     ],
+     "bottino": [
+      {
+       "n": "Invito dorato di Casa Mellitius",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0,
+       "valore": "—",
+       "stats": "Missione",
+       "desc": "Carta dorata e profumata: invito alla festa di stasera al palazzo Mellitius, Quartiere dei Tigli.",
+       "a": "crociata"
+      }
+     ]
+    },
+    {
+     "id": "sedia",
+     "tipo": "dettaglio",
+     "titolo": "La sedia che nessuno usa",
+     "parte": "indizio",
+     "seme": "È l’unica sedia libera. Nessuno ci si siede.",
+     "innesco": "Qualcuno si avvicina alla sedia dorata, ci si siede o chiede per chi è.",
+     "leggi": "Il cuscino conserva ancora una forma. Il profumo, qui, è più forte. Dolce. Lillà.\n\nUn servitore in livrea del Reggente si mette subito in mezzo. «Messere. Quella sedia è tenuta.»",
+     "prove": [
+      {
+       "id": "sedia",
+       "abilita": [
+        "Indagare",
+        "Intuizione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "«È tenuta per una signora.» Il servitore non dice altro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "È tenuta per «la Signora da Julia Nova», che ha chiesto udienza con tutti i timbri e sarà ricevuta «quando il Consiglio avrà deciso sulla colonna armata». Stamattina ci ha seduto un uomo senza insegne, fino a mezzogiorno, a tenere il posto."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "L’uomo senza insegne aveva un anello d’argento con una piccola pietra viola e ha parlato a lungo con il paggio dei Mellitius e con un servitore del Reggente."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Sotto il cuscino, dimenticato o lasciato apposta, un biglietto piegato: «Domani. Dopo che avranno votato. — V.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che Iuvenza sta per essere ricevuta dal Consiglio, subito dopo la decisione sulla Crociata. Hanno fretta.",
+     "rilancio": "Il servitore del Reggente resta fra voi e la sedia. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 300
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando il Consiglio li chiama, o quando se ne vanno.",
+     "leggi": "Una porta a due battenti si apre in fondo alla terza stanza. Un usciere batte il bastone per terra. Nelle anticamere smettono tutti di parlare nello stesso momento.",
+     "dopo": "Con l’udienza: Sala del Consiglio. Altrimenti: Cancelleria, torre (se Lucius li manda a chiamare) o porta di servizio.",
+     "rilancio": "Il bastone batte ancora. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_consiglio",
+      "te_palazzo_torre",
+      "te_palazzo_cancelleria"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_palazzo_consiglio",
+   "kind": "scena",
+   "title": "La Sala del Consiglio",
+   "image": "PDI — Palazzo Ducale — La Sala del Consiglio.jpg",
+   "legacyPosition": {
+    "x": 724,
+    "y": 260
+   },
+   "text": "Una sala lunga. Il soffitto a cassettoni è dipinto d’oro e di blu, e l’oro si è scurito sopra i candelabri.\n\nUn tavolo di noce con otto seggi. Ogni schienale ha lo stemma di una Casata, intagliato.\n\nSul seggio più vicino al trono un uomo vecchio e pesante suda sotto una pelliccia, d’agosto, e tiene la mano sul petto.\n\nUno dei seggi è vuoto: lo schienale porta una fiamma.\n\nUn uomo alto, coi capelli grigi e il tabarro della Guardia, non è seduto. Sta in piedi dietro il suo seggio, le mani sullo schienale. Ascolta il Consiglio come si ascolta la pioggia.\n\nIn fondo, su tre gradini, un nono seggio più alto degli altri: il trono ducale. È vuoto. Lo hanno spolverato stamattina: il legno luccica.",
+   "breve": "La seduta del Consiglio. Otto Casate, un trono vuoto. I PG presentano la Crociata; ogni Consigliere vuole qualcosa di diverso. Durante la seduta arriva la mozione per togliere a Lucius Grazianus il comando della Guardia «per conflitto di sangue»: è il piano del Cristallo di Memoria, «Isolatelo».",
+   "gm": "Chi siede (vedi schede): Reggente Enricus Mazzarellus, Stratega Lucius Grazianus (in piedi), Sommo Giudice Giannix Clavax, Decano Beltramo Savinellus, Matriarca Tarsilla de Spina, Dominus Flaminio Mellitius, Archivista Ponzio Tancredus. L’Arcimandrita Serafinus Impalox arriva a metà seduta e se ne va prima.\nCosa vuole la Crociata dal Consiglio (in ordine di difficoltà): il lasciapassare d’armi per entrare in città (tre sigilli), la revoca del proclama (tre sigilli), il riconoscimento della Crociata come scorta legittima di Silvanus (cinque voti), la Convocazione all’Aquila Aurea (serve il Sigillo Ducale: il Consiglio può solo chiederla al Reggente).\nIl Cristallo di Memoria (Atto XI): Iuvenza e un incappucciato con accento aristocratico di Teramum passano in rassegna il Consiglio — «Mazzarellus è cieco, Savinellus si compra, De Spina si distrae» — e si fermano su Lucius Grazianus: «Isolatelo.» Questa seduta è il primo colpo.\nDa decidere: padre di Maximus in conflitto (CC-02). Qui si segue il filone degli Atti (Atto XI e XII: il padre è lo Stratega Lucius Grazianus); i profili dei PG dicono famiglia di bottegai vicino al mercato. Se scegli i profili, Lucius resta lo Stratega ma non è suo padre, e la mozione colpisce un omonimo potente che ha preso a cuore il ragazzo.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "trono",
+     "tipo": "dettaglio",
+     "titolo": "Il trono vuoto",
+     "parte": "indizio",
+     "seme": "È vuoto. Lo hanno spolverato stamattina: il legno luccica.",
+     "innesco": "Qualcuno guarda il trono da vicino, sale i gradini o lo tocca.",
+     "leggi": "Da vicino si vede che il trono è stato ridorato. Sotto l’oro, dove l’oro si è consumato sui braccioli, il legno è nero e vecchio. Sullo schienale, in alto, l’aquila ducale. Più sotto, quasi cancellata dallo scalpello, un’altra forma.",
+     "note": "Voce di popolo: il trono scricchiola quando entra qualcuno di sangue ducale. Da decidere se è vero. Proposta: scricchiola sotto la mano di Silvanus, sempre; sotto quella di un Cerullius o di un de Spina solo col 20 naturale. Il Reggente lo sa e ne ha il terrore.\nSalire i gradini del trono durante la seduta è un’offesa: Clavax chiede che venga messo a verbale.",
+     "prove": [
+      {
+       "id": "trono",
+       "abilita": [
+        "Storia",
+        "Religione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Un trono vecchio ridorato. Un’aquila, come dappertutto."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Sotto l’aquila c’era un lupo: il simbolo pretuziano, prima dell’Impero. E sullo schienale, scalpellati via, tre cerchi in fila: uno grande in mezzo, due più piccoli ai lati."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Tre cerchi: un sole fra due lune. Lo stesso segno del sangue di Silvanus a Julia Nova. Qualcuno, dopo la Guerra, ha scalpellato le lune dal trono dei Duchi."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Quando appoggi la mano sul bracciolo, il legno scricchiola. Tutti i Consiglieri si voltano. Il Reggente si alza a metà e si tocca il petto."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il trono ducale portava un lupo e il sole fra due lune, e che le lune sono state scalpellate.",
+     "rilancio": "Otto teste si sono girate verso di voi. Che cosa fate?",
+     "daqui": [
+      "udienza"
+     ]
+    },
+    {
+     "id": "udienza",
+     "tipo": "dettaglio",
+     "titolo": "La Crociata davanti al Consiglio",
+     "parte": "evento",
+     "innesco": "I PG sono chiamati a parlare davanti al Consiglio.",
+     "leggi": "Il Reggente fa un gesto molle con la mano libera. «Parlate. Brevi. Il Consiglio ha molte cose da non decidere oggi.»\n\nNessuno ride. Lo Stratega non si siede.",
+     "note": "Come si conquistano i voti (servono cinque; il Reggente vota per ultimo e solo se è sicuro di vincere):\n• Grazianus — sì, se Maximus parla per primo; ma vuole prima parlare col figlio da solo.\n• Clavax — segue Grazianus, ma vuole la forma: il mandato del Concilio di Julia Nova (Atto IX) e un precedente di legge. Storia o Indagare CD 14 per citarne uno (la Convocazione è prevista dalla Legge Antica).\n• Savinellus — sì, con un accordo scritto (vedi anticamere).\n• de Spina — sì, con la promessa di Alessandros sull’Atto di Fondazione.\n• Tancredus — si astiene per paura; vota sì solo se qualcuno gli fa capire, in privato, che la Crociata sa (o sa ciò che lui sa) e non lo esporrà.\n• Mellitius — vota come vuole Iuvenza: contro. Si gira solo se i PG sanno del ricatto e glielo fanno capire senza dirlo.\n• Impalox — vota sì solo se Silvanus accetta di essere benedetto nella Basilica dalla sua mano, prima della Convocazione (vedi la Basilica).\n• Mazzarellus — vota con la maggioranza, se c’è; se è quattro a quattro, dice «non ancora».\nDiscorso della Crociata: prova di gruppo, chi parla tira Persuasione CD 15; aiuto di chi porta un argomento vero (Storia, Religione, Intuizione per leggere la sala). Ogni successo sposta un Consigliere indeciso; ogni argomento specifico sopra vale un voto sicuro.",
+     "prove": [
+      {
+       "id": "consiglio",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 9,
+         "leggi": "Il Consiglio si chiude a porte serrate e vi fa aspettare fuori. Quando riaprono, il proclama è stato confermato."
+        },
+        {
+         "fascia": "failure",
+         "min": 10,
+         "max": 14,
+         "leggi": "Il Consiglio discute tre ore e non vota. Il Reggente: «Nessuno ha detto no. Abbiamo detto: non ancora.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Un Consigliere indeciso si sposta dalla vostra parte, e il Sommo Giudice chiede che la richiesta sia messa a verbale: domani si vota davvero."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Due indecisi si spostano. Lo Stratega, per la prima volta, si siede. «Si voti oggi.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Per un istante la sala tace davvero. Poi la Matriarca de Spina batte due volte la mano sul tavolo, all’antica, ed è il segnale: si vota adesso."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con cinque voti: lasciapassare d’armi per la Crociata, revoca del proclama, e il Consiglio chiede formalmente al Reggente di valutare la Convocazione (non la ordina: il Sigillo è suo). Con meno: si rimanda.",
+     "rilancio": "Il Reggente vi guarda senza vedervi e si tocca il petto. Che cosa fate?",
+     "daqui": [
+      "mozione",
+      "leggere",
+      "voci"
+     ],
+     "pe": 1800
+    },
+    {
+     "id": "mozione",
+     "tipo": "dettaglio",
+     "titolo": "La mozione contro lo Stratega",
+     "parte": "evento",
+     "innesco": "A metà seduta, quando l’Arcimandrita è appena arrivato, o subito dopo il discorso della Crociata.",
+     "leggi": "Il Dominus Mellitius si alza con un foglio in mano. Ha la voce di chi ha provato la frase allo specchio.\n\n«Prima di ascoltare la colonna armata, il Consiglio deve chiedersi se chi comanda la Guardia può essere imparziale.» Solleva il foglio. «Copia di un messaggio. Legato alla zampa di un falco della Guardia.» Legge: «Non venire per la Via Bianca. Aspetta mio segnale. — Grazianus.»\n\nLo Stratega non si muove. Solo le nocche, sullo schienale, diventano bianche.",
+     "note": "È il messaggio che Maximus ha ricevuto a Julia Nova (Atto XI). Qualcuno ha copiato i falchi di Lucius: la copia prova che i messaggi dello Stratega vengono letti. La mozione chiede di sospendere Lucius dal comando della Guardia «per conflitto di sangue» finché la Crociata resta alle porte. Mellitius la porta perché è ricattato; il foglio gliel’ha dato l’incappucciato.\nVoti: la mozione ha Mellitius, Impalox (gli fa comodo), e il Reggente se la paura vince; Savinellus e de Spina sono in bilico; Clavax e Tancredus contro (Clavax per lealtà, Tancredus per paura di tutto). Servono cinque: la mozione di solito si ferma a quattro, e Lucius resta al comando, ma isolato. Se passa, la Guardia va a un capitano del Reggente e il colpo di stato di Lucius muore, e con lui la protezione della Crociata.\nCome la fermano i PG: Maximus che parla per il padre (Persuasione CD 14, vantaggio se racconta il messaggio vero e cosa ha fatto); qualcuno che fa notare che se il messaggio è stato copiato allora il Consiglio ha una spia fra i falchi della Guardia (Indagare o Intuizione CD 13: il problema non è Grazianus, è chi legge la sua posta); mostrare che il proclama contro la Crociata è stato fatto di notte senza il sigillo di Grazianus (se l’hanno scoperto in Cancelleria: vale da solo).",
+     "prove": [
+      {
+       "id": "mozione",
+       "abilita": [
+        "Persuasione",
+        "Indagare",
+        "Intuizione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "min": 1,
+         "max": 8,
+         "leggi": "Qualcuno di voi difende Lucius con troppo calore: «la colonna armata» parla per lo Stratega, e questo conferma la mozione. Cinque voti. Lucius posa le insegne sul tavolo senza una parola ed esce."
+        },
+        {
+         "fascia": "failure",
+         "min": 9,
+         "max": 13,
+         "leggi": "La mozione arriva a quattro voti. Non passa, ma il Reggente la rinvia «a quando la colonna se ne sarà andata». Lucius è ancora al comando, e ha capito che nel Consiglio qualcuno lavora per toglierlo di mezzo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "La mozione cade. Savinellus e de Spina votano contro. Mellitius si siede e non guarda più nessuno."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "La mozione cade e la domanda si rovescia: «Chi legge i falchi della Guardia?» Clavax apre un’inchiesta. Mellitius impallidisce e cerca con gli occhi qualcuno, uno solo, dall’altra parte del tavolo."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Mentre Mellitius si siede, lo vedete: prima di sedersi guarda per un istante un solo Consigliere. È quello a cui ha obbedito."
+        }
+       ]
+      }
+     ],
+     "dopo": "Se la mozione cade, Lucius resta al comando e deve qualcosa alla Crociata. Se passa, Lucius è isolato: il piano del Cristallo funziona. Con 19 o più, o col 20 naturale, i PG hanno un sospetto sul nome dell’incappucciato: è chi Mellitius ha guardato prima di sedersi.",
+     "rilancio": "Lo Stratega vi guarda dall’altra parte del tavolo, per la prima volta. Che cosa fate?",
+     "daqui": [
+      "leggere",
+      "te_palazzo_torre"
+     ],
+     "pe": 900
+    },
+    {
+     "id": "leggere",
+     "tipo": "dettaglio",
+     "titolo": "Leggere il Consiglio",
+     "parte": "nascosto",
+     "innesco": "Qualcuno osserva i Consiglieri invece di ascoltarli.",
+     "leggi": "Otto persone che parlano e non si ascoltano. Mani sul tavolo, mani sotto il tavolo. Occhi che vanno sempre negli stessi posti.",
+     "note": "Il Consigliere che guarda sempre Lucius è l’incappucciato. Da decidere chi sia (vedi la porta di servizio). Proposta: l’Archivista Ponzio Tancredus, ricattato da Iuvenza per ciò che sa su Silvanus; l’inchiostro sulle dita è il suo gesto. Alternativa: il Dominus Flaminio Mellitius (ma allora la mozione la porta un altro). In nessun caso Mazzarellus, Savinellus, de Spina: il Cristallo li nomina come bersagli.",
+     "prove": [
+      {
+       "id": "leggere",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Otto persone che si odiano in modo uguale."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Clavax non si oppone mai a Grazianus. Savinellus guarda sempre il Reggente prima di parlare. Il Reggente tocca il petto ogni volta che si nomina la Crociata."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "E un Consigliere non guarda chi parla: guarda Lucius Grazianus. Sempre. Anche quando Lucius tace."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Quel Consigliere, quando si nomina «la Signora da Julia Nova», abbassa gli occhi sul tavolo e si pulisce le dita, piano, una per una."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 13 sanno chi è alleato di chi; con 18 sanno quale Consigliere tiene d’occhio Lucius.",
+     "rilancio": "Il Consigliere che guardavate alza gli occhi e incontra i vostri. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "te_palazzo_servizio"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dialogo",
+     "titolo": "Le voci del Consiglio",
+     "parte": "evento",
+     "innesco": "I PG si rivolgono a un Consigliere in particolare durante o dopo la seduta.",
+     "note": "REGGENTE ENRICUS MAZZARELLUS — vedi i suoi appartamenti per il dialogo lungo. In seduta: «Il Consiglio prende nota.» Se lo incalzano: «Nessuno ha detto no. Abbiamo detto: non ancora.»\n\nSTRATEGA LUCIUS GRAZIANUS — in seduta parla poco. A Maximus: un cenno, e poi «Dopo. Da soli.» Al Consiglio: «Otto seggi, un trono vuoto. Qualcuno dovrà pur sedersi.» Dialogo lungo nella torre.\n\nSOMMO GIUDICE GIANNIX CLAVAX — parla per articoli. «Articolo quarto della Legge Antica: la Convocazione è chiamata col sigillo della Città Ducale. Non col desiderio di una colonna armata.» Se i PG gli portano un precedente vero: «Questo è un argomento. Mettetelo per iscritto.» Blocca tutto, tranne quello che viene da Grazianus. Se gli si fa notare: «La legge è un chiodo, non un cuscino. Ed è piantato dove dico io.»\n\nDECANO BELTRAMO SAVINELLUS — vedi anticamere. In seduta: «Quanto costa?» a ogni proposta.\n\nMATRIARCA TARSILLA DE SPINA — vedi anticamere. In seduta tace finché non si parla di sangue: «Il Consiglio non ha sangue. Ha sigilli.»\n\nDOMINUS FLAMINIO MELLITIUS — troppo vestito, troppo gentile, suda anche lui. Invita tutti a cena. Se gli si parla in privato del ricatto, crolla in un minuto: «Voi non sapete cosa tiene in mano. Non sapete.» Non dice cosa (i frammenti dei Sigilli Lunari contrabbandati).\n\nARCHIVISTA PONZIO TANCREDUS — «Qui si ricorda. Ricordare non è parlare.» Si astiene su tutto. Vedi la Biblioteca.\n\nARCIMANDRITA SERAFINUS IMPALOX — arriva tardi, se ne va prima. Da seduto, senza guardarli: «La Fiamma ascolta. Poi decide.» A Alessandros: «Il Conte di Canzanium porta un’armatura molto interessante. Me la farebbe vedere da vicino?» Il dialogo lungo è nella sacrestia della Basilica.",
+     "dopo": "I PG sanno chi dei Consiglieri è da comprare, da convincere, da temere. I dialoghi lunghi sono nelle schede dei PNG e negli altri punti.",
+     "rilancio": "Il Reggente batte il sigillo di cera sul tavolo: la seduta è chiusa. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando la seduta si chiude.",
+     "leggi": "Gli uscieri aprono i battenti. I Consiglieri escono uno alla volta, ognuno dalla sua porta, perché nessuno esca dietro a un altro.\n\nLo Stratega è l’ultimo. Passando accanto a Maximus non si ferma. Dice solo: «La torre. Fra un’ora.»",
+     "dopo": "Da qui: la torre (Lucius), gli appartamenti del Reggente (se chiedono un’udienza privata), la Basilica (Impalox), la Biblioteca (Ponzio e Caelinus).",
+     "rilancio": "La sala si svuota. Il trono resta. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_torre",
+      "te_palazzo_reggente"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_palazzo_torre",
+   "kind": "persona",
+   "title": "La torre della Guardia",
+   "image": "PDI — Palazzo Ducale — La torre della Guardia.jpg",
+   "legacyPosition": {
+    "x": 1270,
+    "y": 170
+   },
+   "text": "Una scala a chiocciola stretta, gradini consumati al centro. A ogni giro una feritoia, e dalla feritoia la città, sempre più piccola.\n\nIn cima, una stanza quadrata con quattro finestre, una per lato. Da qui si vede tutto: i quattro rioni, i due fiumi, le mura bianche, e il Gigante che si mangia il cielo a ovest.\n\nIn mezzo alla stanza, su un tavolo, un modellino della città in pietra e legno, con le torri, le porte, i ponti. Sopra, decine di soldatini di piombo.\n\nSul trespolo, un falco incappucciato gira la testa verso di voi.\n\nL’uomo coi capelli grigi è alla finestra, di spalle. Non si volta subito.\n\n«Chiudete la porta.»",
+   "breve": "Lo Stratega Lucius Grazianus, padre di Maximus, riceve il figlio e chi il figlio si porta dietro. Qui si parla di padre e figlio, del falco, della Via Bianca, del colpo di stato che Lucius prepara e di cosa vuole dalla Crociata.",
+   "gm": "Lucius (vedi scheda) ha tre cose in testa: il Ducato, il figlio, e il momento. Prepara un colpo di stato militare con l’appoggio di Clavax: gli serve un pretesto per la legge marziale. La Crociata alle porte è il pretesto perfetto — e suo figlio è dentro la Crociata. Il «segnale» che doveva mandare a Maximus era l’ora in cui entrare in città, a colpo di stato fatto: non l’ha mai mandato perché il suo secondo falco non è tornato.\nNon sa di essere il vero bersaglio di Iuvenza e dell’incappucciato; sospetta che qualcuno legga la sua posta (dopo la mozione ne è certo).\nIl modellino mostra il piano: soldatini alle sei porte, al Palazzo, alla Basilica, al Tribunale; un gruppo pronto davanti a un palazzo dei Tigli (la casa dove abita la Signora da Julia Nova) e uno davanti al palazzo Mazzarellus.\nDa decidere: padre di Maximus (CC-02), vedi la Sala del Consiglio. Da decidere: la sorte della pattuglia sparita sulla Via Bianca (proposta: tesa un’imboscata dai briganti pagati da Savinellus su richiesta dell’incappucciato; i corpi sono in un fosso a metà strada).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Lucius Grazianus",
+     "parte": "evento",
+     "innesco": "Lucius si volta. Parla prima a Maximus, poi agli altri.",
+     "leggi": "Si volta. Guarda Maximus da capo a piedi, a lungo, come si passa in rivista un soldato. «Sei più largo.» Una pausa. «Siediti. No. Resta in piedi. Voglio vederti.»",
+     "note": "A MAXIMUS, PRIMA DI TUTTO — Niente abbracci. Gli mette una mano sulla spalla, una sola volta, forte. «Tua madre ha acceso una candela ogni sera. Io no. Io sapevo che tornavi.» Poi toglie la mano.\n\nPERCHÉ «NON VENIRE PER LA VIA BIANCA»? — «Perché la Via Bianca è di Savinellus, e ultimamente sulla Via Bianca succedono incidenti. Ho mandato dodici uomini a prenderti. Nessuno è tornato.» Lo dice come un rapporto. Le mani no.\n\nE IL SEGNALE? — «Te l’ho mandato.» Guarda il falco. «Con un altro falco, sei giorni fa. Diceva un’ora e una porta. Non è tornato né lui né la risposta.» Dopo la mozione capisce: «Qualcuno legge la mia posta. E la ricopia.»\n\nUN’ORA E UNA PORTA PER COSA? — Qui decide se fidarsi. Se Maximus glielo chiede da solo, o se i PG hanno difeso Lucius in Consiglio: «Per entrare in una città che la notte prima avrà cambiato padrone.» È la confessione del colpo di stato. Altrimenti: «Per entrare. Il resto non ti serve.»\n\nIL COLPO DI STATO — Se ne parla, lo chiama con altri nomi: «rimettere ordine», «chiudere il Consiglio». «Otto seggi, un trono vuoto. Qualcuno dovrà pur sedersi. Meglio uno che sa tenere una spada che otto che sanno tenere una penna.» Ha Clavax (la legge) e la Forgia del Gigante (le armi). Gli manca il pretesto: la legge marziale. «Una colonna armata alle porte, un proclama che la chiama sediziosa, un Consiglio che non decide. Il pretesto me lo avete portato voi.»\n\nSILVANUS? — «Un ragazzo con gli occhi d’oro e un nome che non si pronuncia. Ho visto troppi nomi.» Se gli raccontano del sangue a Julia Nova: «Allora deve avere un esercito. L’esercito ce l’ho io.» Accetterebbe Silvanus sul trono se Silvanus accettasse lui come Stratega e Protettore del Ducato fino alla Convocazione. Non si inginocchia a nessuno prima di averlo visto combattere.\n\nIL SIGILLO DUCALE? — «Enricus lo porta al collo. Di notte lo chiude in una cassa con due chiavi: una è sua, l’altra è di Clavax.» Sorride appena. «Clavax è mio amico.»\n\nLA SIGNORA DA JULIA NOVA? — «Una vedova che compra anticamere. Le ho messo due uomini alla porta. Non fa niente. Troppo niente.» Non la considera una minaccia militare: è il suo errore.\n\nIL CRISTALLO («Isolatelo»)? — Se gli raccontano del Cristallo di Memoria di Altavia, tace a lungo. «Un uomo col cappuccio e l’accento dei Tigli.» Poi, a Maximus: «E volevano tenerti distratto. Da cosa?» Da quel momento li considera alleati veri e chiede di trovare l’incappucciato: è l’unica cosa che non può fare da solo senza che si sappia.\n\nSE LO MINACCIANO — Non risponde. Guarda il figlio: «Sono questi i tuoi amici?» Se Maximus li difende, lascia correre. Se no, chiama due guardie.\n\nSE GLI MENTONO — Intuizione passiva 17. Non dice niente sul momento: da quel momento vi tratta come truppe, non come alleati.\n\nSE MAXIMUS GLI DICE DI NO (al colpo di stato) — «Allora dimmi un’altra strada. Hai una settimana.»\n\nBattute pronte:\n• «Dopo. Da soli.»\n• «La Torre e il Lupo. La torre sta ferma. Il lupo no.»\n• «Un Consiglio che non decide è un Consiglio che ha già deciso: di non esserci.»\n• «Non ti ho cresciuto per morire in un fosso sulla Via Bianca.»",
+     "dopo": "Sanno del colpo di stato (se Lucius si è fidato), del secondo falco sparito e della pattuglia persa. Lucius può proteggere la Crociata in città, se la Crociata sta con lui; chiede di trovare chi legge la sua posta.",
+     "rilancio": "Il falco sbatte le ali una volta, sotto il cappuccio. Che cosa fate?",
+     "daqui": [
+      "modellino",
+      "falco",
+      "patto"
+     ]
+    },
+    {
+     "id": "modellino",
+     "tipo": "dettaglio",
+     "titolo": "Il modellino della città",
+     "parte": "indizio",
+     "seme": "un modellino della città in pietra e legno",
+     "innesco": "Qualcuno guarda il modellino o i soldatini.",
+     "leggi": "La città è fatta bene: si riconoscono il Palazzo, la Basilica, i ponti, perfino la Biblioteca con le sue impalcature. I soldatini di piombo non sono sparsi. Sono a gruppi.",
+     "prove": [
+      {
+       "id": "modellino",
+       "abilita": [
+        "Intuizione",
+        "Storia"
+       ],
+       "cd": 15,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "La Guardia alle porte e ai ponti. Come ogni città."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Troppi soldatini per una città in pace: alle sei porte, al Palazzo, alla Basilica, al Tribunale. È un piano per prendere la città in una notte."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "E due gruppi sono fuori posto: uno davanti a un palazzo dei Tigli, uno davanti al palazzo Mazzarellus. Non difendono niente. Aspettano qualcuno."
+        }
+       ]
+      }
+     ],
+     "dopo": "Con 15 o più capiscono che il modellino è il piano di un colpo di stato; con 20 dove Lucius vuole prendere le persone.",
+     "rilancio": "Lucius vi guarda guardare il modellino. Non lo copre. Che cosa fate?",
+     "daqui": [
+      "patto"
+     ]
+    },
+    {
+     "id": "falco",
+     "tipo": "dettaglio",
+     "titolo": "Il falco",
+     "parte": "indizio",
+     "seme": "Sul trespolo, un falco incappucciato gira la testa verso di voi.",
+     "innesco": "Qualcuno guarda il falco, o Maximus lo riconosce.",
+     "leggi": "È lo stesso falco che vi ha portato le due righe a Julia Nova. Alla zampa, l’anello di cuoio per i messaggi è stato cucito di nuovo, con un filo più chiaro.",
+     "prove": [
+      {
+       "id": "falco",
+       "abilita": [
+        "Addestrare Animali",
+        "Indagare"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un falco da messaggi. Ben tenuto."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "max": 17,
+         "leggi": "Il filo nuovo non è quello della Guardia: è filo di seta, da sarto. Qualcuno ha aperto l’anello, ha letto il messaggio e l’ha ricucito con quello che aveva in tasca."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 18,
+         "leggi": "Seta color miele. Quella dei ricami di lusso che si vendono sulla Via Aurea: roba da Casate, non da falconieri."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che i messaggi di Lucius sono stati aperti e ricuciti con seta di lusso. È un indizio sull’incappucciato.",
+     "rilancio": "Il falco torna immobile. Che cosa fate?",
+     "daqui": [
+      "patto",
+      "te_palazzo_servizio"
+     ]
+    },
+    {
+     "id": "patto",
+     "tipo": "dettaglio",
+     "titolo": "Il patto dello Stratega",
+     "parte": "evento",
+     "innesco": "Alla fine del dialogo Lucius fa la sua proposta.",
+     "leggi": "«Vi offro due cose.» Alza due dita, come a una riunione di ufficiali. «La prima: finché siete in questa città, nessuno della Guardia vi tocca. La seconda: quando sarà il momento, entrerete dalla porta che vi dico io, all’ora che vi dico io.» Abbassa la mano. «In cambio, quel giorno la Crociata sta dove la metto io.»",
+     "note": "Se accettano: lasciapassare d’armi con il sigillo Grazianus (vale come uno dei tre) e protezione della Guardia. Se rifiutano: Lucius non diventa un nemico, ma la protezione si ferma alla porta di casa sua. Se rilanciano (la Convocazione prima della spada, Silvanus prima di Lucius): Persuasione CD 17, vantaggio se parla Maximus; con il successo Lucius accetta di aspettare la Convocazione «per una settimana», e di non muovere la Guardia senza avvisare il figlio.",
+     "prove": [
+      {
+       "id": "patto",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 17,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 16,
+         "leggi": "«Ci penserete. Io intanto preparo.» Il patto resta sul tavolo, come il modellino."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 17,
+         "max": 21,
+         "leggi": "Lucius accetta di aspettare la Convocazione una settimana e di non muovere la Guardia senza avvisare Maximus."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 22,
+         "leggi": "Lucius accetta e aggiunge: «Se trovate chi legge la mia posta, ve lo lascio. Voglio solo vederlo in faccia prima.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Comunque vada, la Crociata ha un rapporto con lo Stratega: alleanza, attesa o distanza. Il colpo di stato resta sul tavolo, pronto.",
+     "rilancio": "Lucius si rimette alla finestra. «Andate. Mio figlio resta un momento.» Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 700,
+     "bottino": [
+      {
+       "n": "Lasciapassare d’armi col sigillo Grazianus",
+       "q": 1,
+       "cat": "Oggetti e indizi",
+       "peso": 0,
+       "valore": "—",
+       "stats": "Missione",
+       "desc": "Pergamena con il sigillo della Guardia Ducale: vale come uno dei tre sigilli per far entrare armati in città. Da far girare in Cancelleria.",
+       "a": "maximus"
+      }
+     ]
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano la torre.",
+     "dopo": "Da qui: il Reggente e il Sigillo, la porta di servizio (l’incappucciato), la Basilica, la Biblioteca.",
+     "rilancio": "La scala a chiocciola scende nel buio. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_reggente",
+      "te_palazzo_servizio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_palazzo_reggente",
+   "kind": "persona",
+   "title": "Gli appartamenti del Reggente",
+   "image": "PDI — Palazzo Ducale — Gli appartamenti del Reggente.jpg",
+   "legacyPosition": {
+    "x": 1150,
+    "y": 540
+   },
+   "text": "Fa caldo. Il camino è acceso, d’agosto. L’aria sa di canfora e di brodo di gallina.\n\nUn letto grande con le cortine tirate a metà. Ai piedi del letto una cassa rinforzata di ferro con due serrature diverse, una d’ottone e una di ferro nero.\n\nIn un angolo, un altarino con un sole dorato. Lo specchio sopra il camino è coperto da un drappo.\n\nIl Reggente è seduto sul bordo del letto, in veste da camera, la pelliccia sulle spalle. Suda. Tiene la mano sul petto, sopra qualcosa che pende sotto la stoffa, come chi si tiene il cuore.\n\nFuori dalla porta, due guardie. Dentro, nessuno. Il Reggente non si fida di nessuno abbastanza da farlo restare.",
+   "breve": "Il Reggente Enricus Mazzarellus in privato: un vecchio terrorizzato che firma tutto quello che gli mettono davanti, tranne una cosa. Porta al collo il Sigillo Ducale, l’unico che può chiamare la Grande Convocazione all’Aquila Aurea. Di notte lo chiude nella cassa a due chiavi. Qui si decide come la Crociata prova a ottenere il Sigillo.",
+   "gm": "Enricus (vedi scheda) ha paura di tutti: della Crociata, di Grazianus, dell’Arcimandrita, della Signora da Julia Nova, di chi entra senza essere annunciato. Sa che Silvanus è vivo e che la linea ducale diretta non è estinta: la sua Casa sta insabbiando le prove. Iuvenza lo sa e lo ricatta. Per questo ha fatto preparare la sedia nelle anticamere.\nIl Sigillo Ducale: di giorno al collo, di notte nella cassa. Da decidere (proposta della voce del Palazzo): la cassa ha due chiavi, una del Reggente e una di Clavax; nessuna delle due apre da sola.\nDa decidere: un Sigillo preso con la forza o col furto vale per la Convocazione? La Legge Antica dice «il sigillo della Città Ducale», l’oggetto. Clavax dirà che vale solo se il Reggente lo appone. Proposta: vale l’oggetto (è magico, vedi il modulo), ma chi lo usa rubato si porta dietro la Guardia e metà delle Casate.\nCome si ottiene: convincendolo (sicurezza per sé e per la sua Casa fino alla Convocazione), spaventandolo (la verità su Silvanus: ma se si sente in trappola chiama le guardie e il giorno dopo il Sigillo è da Iuvenza), rubandolo (la cassa, di notte), o con il Consiglio e Clavax insieme.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il Reggente Enricus",
+     "parte": "evento",
+     "innesco": "Il Reggente riceve i PG in privato: dopo la seduta, su richiesta di Lucius o di Clavax, o perché lo hanno spaventato abbastanza.",
+     "leggi": "«Chiudete. No, lasciate aperto. No.» Guarda la porta, poi voi. «Chiudete.» Si asciuga la fronte. «Parlate piano. Queste pareti le ha costruite mio nonno, ma le orecchie ce le hanno messe gli altri.»",
+     "note": "CHI SIETE? — «Enricus Mazzarellus. Reggente. Non Duca.» Lo dice come una scusa. «Il trono è vuoto. Io tengo solo la sedia accanto.»\n\nPERCHÉ IL CONSIGLIO NON DECIDE? — «Perché ogni decisione scontenta cinque persone che hanno un esercito, una chiesa, una banca, un tribunale, un archivio.» Si tocca il petto. «L’indecisione non scontenta nessuno abbastanza da uccidermi.»\n\nLA CONVOCAZIONE ALL’AQUILA AUREA? — Impallidisce. «Chiamare tutte le Casate sotto il Gigante. Davanti a tutti. A rispondere di tutto.» Una lunga pausa. «Voi sapete cosa succede a chi chiama la Convocazione? Deve esserci. In prima fila.»\n\nIL SIGILLO DUCALE? — La mano si stringe sul petto. «Il Sigillo non si presta. Non si vende. Non si…» Non finisce la frase. «È l’unica cosa che ho che nessuno di loro ha.»\n\nSILVANUS? — Mente, e mente male. «Un avventuriero. Un nome rubato.» Intuizione CD 12: sa benissimo chi è. Se lo incalzano con prove (le genealogie raschiate, i verbali riscritti, il sangue a Julia Nova), crolla: «Se è vero, io sono niente. La mia Casa è niente. Due anni di Reggenza, un furto. Capite? Capite cosa mi chiedete?»\n\nLA SIGNORA DA JULIA NOVA? — Si fa piccolo. «Una signora molto informata.» Se gli dicono che è Iuvenza, e cosa ha fatto a Julia Nova: «Lo so.» È la prima cosa vera che dice. «Sa quello che sapete voi. E io le devo una sedia.» Lei lo ricatta con la verità su Silvanus: se la Crociata la sa già, il ricatto perde valore. È la chiave per girarlo.\n\nCOSA VOLETE? — «Morire nel mio letto. Da Reggente, se Valerus vuole. Da vecchio, in ogni caso.»\n\nCOSA CI SERVE PER AVERE IL SIGILLO? — «Garanzie.» Le elenca con la voce di chi le ha pensate molte notti: la vita sua e della sua Casa, le terre, un posto alla Convocazione che non sia quello del colpevole, e che «lo Stratega non entri in questa stanza con le spade». Se Silvanus in persona gliele dà, parola d’erede, cede.\n\nSE LO MINACCIANO — Chiama le guardie con un filo di voce, e le guardie arrivano. Il giorno dopo la cassa ha una terza serratura e il Sigillo va da Iuvenza a farsi «custodire». Minacciarlo è il modo più rapido per perdere il Sigillo.\n\nSE LO CORROMPONO — Non vuole oro: ne ha. Vuole sicurezza. «Il denaro non ferma una lama.»\n\nSE GLI MENTONO — Ci crede quasi sempre (Intuizione passiva 9). È il problema: crede anche a Iuvenza.\n\nBattute pronte:\n• «Nessuno ha detto no. Abbiamo detto: non ancora.»\n• «Prima la pietra, poi il trono. La pietra ce l’ho. Il trono no.»\n• «Parlate piano.»\n• «Non sono un vile. Sono vivo.»",
+     "dopo": "Sanno che il Reggente sa di Silvanus, che Iuvenza lo ricatta, e cosa vuole in cambio del Sigillo: garanzie, non oro.",
+     "rilancio": "Il Reggente si stringe la pelliccia sulle spalle, sudato. Che cosa fate?",
+     "daqui": [
+      "sigillo",
+      "cassa",
+      "ottenere"
+     ]
+    },
+    {
+     "id": "sigillo",
+     "tipo": "dettaglio",
+     "titolo": "Il Sigillo Ducale",
+     "parte": "indizio",
+     "seme": "sopra qualcosa che pende sotto la stoffa",
+     "innesco": "Il Reggente mostra il Sigillo, o qualcuno riesce a vederlo.",
+     "leggi": "Una matrice d’oro grande come il palmo di un bambino, appesa a una catena corta. L’aquila ducale, in rilievo. Sul retro, consumato dalle dita di chi l’ha tenuto prima, un lupo. È caldo, anche fuori dalla veste.",
+     "prove": [
+      {
+       "id": "sigillo",
+       "abilita": [
+        "Arcano",
+        "Storia"
+       ],
+       "cd": 16,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 15,
+         "leggi": "Un sigillo d’oro, antico. L’aquila e un lupo sul retro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 20,
+         "leggi": "Non è solo un timbro: dentro c’è una parola. Quando la matrice tocca la cera, la cera la ripete. È la parola che chiama le Casate: nessun’altra matrice può dirla."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 21,
+         "leggi": "La parola è in Pretuziano Antico, e non è un ordine: è un invito. Il Sigillo non costringe nessuno a venire. Rende impossibile dire di non aver sentito."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Per un istante, nel metallo, sentite il Gigante che respira."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno che il Sigillo contiene una parola antica che nessuna copia può ripetere: non si falsifica.",
+     "rilancio": "Il Reggente rimette il Sigillo sotto la veste in fretta. Che cosa fate?",
+     "daqui": [
+      "ottenere"
+     ]
+    },
+    {
+     "id": "cassa",
+     "tipo": "dettaglio",
+     "titolo": "La cassa a due chiavi",
+     "parte": "indizio",
+     "seme": "una cassa rinforzata di ferro con due serrature diverse",
+     "innesco": "Qualcuno esamina la cassa, o torna di notte.",
+     "leggi": "Due serrature: una d’ottone, lucida, usata ogni giorno; una di ferro nero, più vecchia, quasi mai. Sul coperchio, graffi recenti vicino al ferro nero.",
+     "note": "Di notte il Sigillo sta qui. Serratura d’ottone: chiave del Reggente, al collo accanto al Sigillo… di giorno; di notte sul comodino. Serratura di ferro: chiave di Clavax. Scassinare: Strumenti da scasso CD 18 per ciascuna (CD 15 con la chiave d’ottone già in mano). Le guardie fuori passano ogni dieci minuti.\nI graffi recenti: qualcuno ha già provato la serratura di ferro, senza riuscire. Chi? L’incappucciato. Da decidere se ha anche una copia della chiave d’ottone.",
+     "prove": [
+      {
+       "id": "cassa",
+       "abilita": [
+        "Indagare"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Una cassa. Due serrature. Molto ferro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Qualcuno ha provato la serratura di ferro, di recente, con un attrezzo sottile, e non ce l’ha fatta."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Chi ha provato conosceva la cassa: ha lasciato stare l’ottone. Aveva già la chiave del Reggente, o sapeva dove trovarla."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno dove dorme il Sigillo e che qualcuno ha già provato a prenderlo.",
+     "rilancio": "Fuori dalla porta, i passi delle guardie. Che cosa fate?",
+     "daqui": [
+      "ottenere",
+      "te_palazzo_servizio"
+     ]
+    },
+    {
+     "id": "ottenere",
+     "tipo": "dettaglio",
+     "titolo": "Avere il Sigillo",
+     "parte": "evento",
+     "innesco": "I PG cercano di ottenere il Sigillo, per accordo, per paura o per furto.",
+     "note": "Per accordo: Persuasione CD 18 (Enricus); CD 14 se Silvanus è presente e gli dà la sua parola; CD 12 se la Crociata dimostra di sapere già il segreto con cui Iuvenza lo ricatta (il ricatto non vale più niente). In caso di successo il Reggente non consegna il Sigillo: accetta di apporlo lui alla lettera di Convocazione, in presenza di Clavax, «quando sarà il momento».\nPer paura: Intimidire CD 15 riesce, ma il giorno dopo il Sigillo è nelle mani di Iuvenza («per custodia»). Sconsigliato, ma possibile.\nPer furto: di notte, dalla cassa, con le due chiavi o gli attrezzi. Chi lo prende così ha il Sigillo, e contro la Guardia, Clavax e metà delle Casate.",
+     "prove": [
+      {
+       "id": "ottenere",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 18,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 17,
+         "leggi": "«Non ancora.» Il Reggente si alza: l’udienza è finita."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 18,
+         "max": 22,
+         "leggi": "Il Reggente accetta di sigillare la lettera di Convocazione di sua mano, davanti a Clavax, quando la Crociata gliela porterà. Chiede garanzie scritte."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 23,
+         "leggi": "Accetta, e vi dice perché ha paura: «La Signora sa di Silvanus da prima di voi. Se sigillo, domani dice a tutto il Consiglio che io lo sapevo.»"
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Il Reggente si toglie la catena, la guarda a lungo, e la rimette. «Portatemi la lettera. Stasera. Prima che cambi idea.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Il Sigillo è la chiave della Fase 3 (Manuale): con esso Silvanus può chiamare la Grande Convocazione all’Aquila Aurea. Qualunque strada scelgano, Iuvenza lo saprà entro il giorno dopo.",
+     "rilancio": "Il fuoco scoppietta. Il Reggente aspetta. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 1100
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano gli appartamenti.",
+     "dopo": "La scala di servizio scende alle cucine e alla porta sul vicolo; lo scalone torna alla Sala del Consiglio.",
+     "rilancio": "Le guardie vi guardano uscire e contano. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_servizio"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "te_palazzo_servizio",
+   "kind": "porta",
+   "title": "La porta di servizio",
+   "image": "PDI — Palazzo Ducale — La porta di servizio.jpg",
+   "legacyPosition": {
+    "x": 1270,
+    "y": 905
+   },
+   "text": "Il vicolo dietro il Palazzo è stretto: due persone ci passano solo di fianco. Muri alti, pietra chiara in alto, grigia in basso.\n\nDa una grata esce il vapore delle cucine, e odore di cipolla e di brodo.\n\nUna porta bassa, rinforzata di chiodi, con una lanterna appesa sopra. Oltre la porta, un cortiletto: un pozzo piccolo, ceste di rape, un mastino alla catena che dorme col muso sulle zampe.\n\nDi notte il vicolo è buio, tranne la lanterna. Ogni tanto passa la ronda: si sente prima il ferro, poi i passi.",
+   "breve": "La porta delle cucine, da cui di notte entra un Consigliere incappucciato che sale per la scala di servizio alla Cancelleria e agli appartamenti del Reggente. Qui si fa l’appostamento, si vede l’incappucciato e forse si capisce chi è. Se la ronda li scopre, si combatte o si scappa.",
+   "gm": "L’incappucciato è il traditore del Consiglio (Atto XI, Cristallo di Memoria): accento aristocratico di Teramum, lavora per Iuvenza. Entra da qui, sale in Cancelleria (sigilli e lampada: il proclama), copia i messaggi dei falchi della Guardia (seta color miele), ha provato la cassa del Reggente.\nDa decidere: chi è. Il canone non lo dice. Candidati possibili: chi il Cristallo NON nomina come bersaglio (non Mazzarellus, Savinellus, de Spina; non Grazianus). Proposta: l’Archivista Ponzio Tancredus — Iuvenza lo ricatta per ciò che la sua Casa sa su Silvanus; ha la mano da archivista (le «s» lunghe del registro), le dita macchiate d’inchiostro, e le chiavi di tutti gli archivi. Alternativa: il Dominus Flaminio Mellitius (ricattato per i frammenti dei Sigilli Lunari; la seta color miele è da lui). Gli indizi qui sotto funzionano per entrambi; le varianti sono nel modulo «incappucciato».\nIl mastino non abbaia all’incappucciato: lo conosce.",
+   "nota": {
+    "cd": 14
+   },
+   "moduli": [
+    {
+     "id": "appostamento",
+     "tipo": "dettaglio",
+     "titolo": "L’appostamento",
+     "parte": "evento",
+     "innesco": "I PG aspettano nel vicolo di notte, o dentro le cucine.",
+     "leggi": "Passa la prima ronda. Passa la seconda. Il mastino si gratta, sbadiglia, si rimette giù.\n\nPoco dopo la terza campana, passi leggeri dal fondo del vicolo. Una figura alta, col mantello scuro e il cappuccio calato. Stivali buoni. Non corre e non si guarda intorno: conosce la strada.\n\nLa porta si apre prima che bussi.",
+     "note": "Furtività di gruppo (meta) CD 14 per restare nascosti: se falliscono, l’incappucciato se ne accorge, torna indietro senza fretta e non si fa più vedere per tre notti. Chi è dentro le cucine può seguirlo su per la scala di servizio (Furtività CD 15, chi lo fa).",
+     "prove": [
+      {
+       "id": "appostamento",
+       "abilita": [
+        "Furtività"
+       ],
+       "cd": 14,
+       "gruppo": "meta",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Un passo di troppo sul selciato. Il cappuccio si ferma, si gira appena, e torna da dove è venuto. La porta si richiude."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "L’incappucciato entra. Un servitore gli tiene la porta, a testa bassa. Il mastino alza il muso, lo annusa, e torna a dormire."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 19,
+         "leggi": "Mentre entra, la lanterna gli prende per un istante le mani: guanti di pelle chiara. Uno se lo sfila per aprire il paletto interno, e la mano è bianca, curata, con l’anulare segnato da un anello tolto."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Mentre la porta si richiude, lo sentite dire due parole al servitore, a bassa voce: accento dei Tigli, aristocratico, strascicato. «Solita strada.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "L’hanno visto entrare. Da qui: lo seguono, aspettano che esca, o interrogano il servitore e il cane.",
+     "rilancio": "La porta si è chiusa. Nel cortiletto il mastino dorme. Che cosa fate?",
+     "daqui": [
+      "incappucciato",
+      "cane",
+      "scontro"
+     ]
+    },
+    {
+     "id": "cane",
+     "tipo": "dettaglio",
+     "titolo": "Il cane che non abbaia",
+     "parte": "nascosto",
+     "innesco": "Qualcuno si chiede perché il mastino non abbia abbaiato, o prova ad avvicinarsi.",
+     "leggi": "Il mastino apre un occhio. Vi annusa l’aria. Un ringhio basso, di gola.",
+     "note": "Il servitore della porta (Tonio, garzone delle cucine) prende tre grossi a notte per aprire senza chiedere. Persuasione o Intimidire CD 13: «Non lo so chi è. Non guardo. Paga lui.» Con 18: «Una volta ha perso un guanto. Puzzava di colla. Colla di pesce, quella dei rilegatori.» (Se l’incappucciato è Mellitius: «Puzzava di miele e di porto.»)",
+     "prove": [
+      {
+       "id": "cane",
+       "abilita": [
+        "Addestrare Animali"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Il cane abbaia. Una finestra si accende sopra le cucine."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Il cane si calma sotto la vostra mano. Al collare, legato con un nastrino, c’è un pezzetto di carne secca, fresca: qualcuno gliela porta ogni notte. Per questo non abbaia a lui."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "Il nastrino è di seta color miele, lo stesso filo dell’anello del falco."
+        }
+       ]
+      }
+     ],
+     "dopo": "Il cane non abbaia perché l’incappucciato lo nutre; la seta color miele lega il cane al falco.",
+     "rilancio": "Il mastino vi lecca la mano. Che cosa fate?",
+     "daqui": [
+      "incappucciato"
+     ]
+    },
+    {
+     "id": "incappucciato",
+     "tipo": "dettaglio",
+     "titolo": "Chi è l’incappucciato",
+     "parte": "nascosto",
+     "innesco": "I PG seguono l’incappucciato su per la scala di servizio, lo aspettano all’uscita o mettono insieme gli indizi raccolti nel Palazzo.",
+     "leggi": "Su per la scala delle cucine, al primo piano, la porta della Cancelleria è socchiusa. Dentro, un lume solo. La fiamma azzurra della lampada è accesa.\n\nL’incappucciato è chino sul registro. Scrive. Scrive bene: le «s» lunghe, all’antica.",
+     "note": "Indizi raccolti nel Palazzo: la mano con le «s» lunghe nel registro (Cancelleria); la seta color miele sull’anello del falco e sul collare del cane; il Consigliere che guarda sempre Lucius (Sala del Consiglio); il guanto che puzza di colla di pesce (servitore); le unghiate sui verbali della linea ducale.\nSe è Ponzio Tancredus (proposta): la colla di pesce è quella dei rilegatori della Biblioteca, le «s» lunghe sono la scrittura degli archivisti, le unghiate sui verbali sono il suo gesto di contare le righe, la seta gliela passa Iuvenza con i messaggi. Perché lo fa: Iuvenza sa che Casa Tancredus ha scoperto che Silvanus è vivo e lo ha taciuto; se parla, Impalox brucia la Biblioteca e il vecchio Caelinus con lei. Ponzio crede di proteggere la sua Casa. Smascherato, non combatte: piange.\nSe è Flaminio Mellitius (alternativa): la seta color miele è sua (il motto «Il fiele si vende nel miele»), l’accento aristocratico è imparato e troppo curato, la mozione l’ha portata lui stesso. Le «s» lunghe sono quelle di un maestro di calligrafia che ha pagato caro. Perché lo fa: i frammenti dei Sigilli Lunari.\nAffrontarlo qui: se i PG lo fermano in Cancelleria, chiama la ronda (è un Consigliere, loro sono una colonna armata di notte nel Palazzo). Meglio prenderlo con le prove e portarlo davanti a Lucius o a Clavax.",
+     "prove": [
+      {
+       "id": "incappucciato",
+       "abilita": [
+        "Intuizione",
+        "Indagare"
+       ],
+       "cd": 16,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 15,
+         "leggi": "Il cappuccio si alza. Vi ha sentiti. Soffia sul lume e nel buio sentite solo la porta dall’altra parte che si chiude."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 16,
+         "max": 20,
+         "leggi": "Lo riconoscete dalla mano, dalla scrittura, dalla voce: è un Consigliere. Uno di quelli che oggi era al tavolo."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 21,
+         "leggi": "Lo riconoscete, e avete gli indizi per provarlo davanti al Consiglio: la scrittura del registro, la seta, il servitore, il cane."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Si toglie il cappuccio da solo. «Lo sapevo che eravate voi.» Ha la voce di chi non dorme da mesi. «Chiudete la porta. Vi dico tutto, se mi promettete una cosa.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno chi è l’incappucciato (a scelta del master). Possono smascherarlo in Consiglio, consegnarlo a Lucius, o usarlo contro Iuvenza.",
+     "rilancio": "L’incappucciato vi guarda, la penna ancora in mano. Che cosa fate?",
+     "daqui": [
+      "scontro",
+      "prosecuzione"
+     ],
+     "pe": 1100
+    },
+    {
+     "id": "scontro",
+     "tipo": "scontro",
+     "titolo": "Scontro — la ronda della Guardia",
+     "parte": "evento",
+     "innesco": "I PG vengono scoperti di notte nel Palazzo o nel vicolo e non si arrendono, o attaccano la ronda.",
+     "leggi": "Il ferro, prima dei passi. Poi le lanterne, tutte insieme, dai due lati del vicolo.\n\n«Guardia Ducale! In nome del Consiglio, a terra le armi!»",
+     "note": "Dal Bestiario: 1 «Sergente della Guardia Ducale» (Capitano della Guardia, GS 4) e 4 «Veterano della Guardia Ducale» (Guerriero Veterano, GS 3). Difficoltà moderata per 6 PG di livello 5 (3.900 PE). Il vicolo è largo 1,5 m: due affiancati al massimo. Arrivano dai due lati.\nLa ronda vuole arrestare, non uccidere: colpiscono per stordire se possono (i PG a 0 PF sono stabili e privi di sensi). Se Maximus si fa riconoscere, il capitano esita un round. Se qualcuno mostra il lasciapassare di Lucius, il capitano abbassa la spada: «Questo lo deve vedere lo Stratega.»\nScappare: il vicolo sbuca sui tetti delle cucine (Atletica CD 13 per salire); da lì si scende a San Leonardo.\nConseguenze: uccidere guardie ducali è un crimine che nemmeno Lucius può coprire. Il giorno dopo il proclama sembra avere ragione.",
+     "dopo": "Se combattono e vincono, sono fuorilegge a Teramum finché qualcuno non li copre. Se si arrendono, passano la notte in cella e al mattino li va a prendere Lucius (con uno sguardo per Maximus che vale una frustata).",
+     "rilancio": "Le lanterne si avvicinano dai due lati. Che cosa fate?",
+     "daqui": [
+      "prosecuzione"
+     ],
+     "pe": 3900
+    },
+    {
+     "id": "prosecuzione",
+     "tipo": "prosecuzione",
+     "titolo": "Prosecuzione",
+     "parte": "evento",
+     "innesco": "Quando lasciano il vicolo.",
+     "leggi": "La lanterna sopra la porta si spegne da sola, finito l’olio. Il vicolo torna buio.",
+     "dopo": "Il Palazzo è fatto. Da qui: la Basilica Aurea sull’altro lato della piazza, la Biblioteca Incompiuta ai Tigli, o il campo della Crociata.",
+     "rilancio": "La città dorme, o finge. Che cosa fate?",
+     "daqui": [
+      "te_palazzo_cortile"
+     ]
+    }
+   ]
+  }
+ ]
+}

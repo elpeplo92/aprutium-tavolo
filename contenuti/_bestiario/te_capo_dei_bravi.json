@@ -1,0 +1,37 @@
+{
+ "id": "te_capo_dei_bravi",
+ "name": "Lu Spaccapreta, capo dei bravi",
+ "short": "L",
+ "color": "#8B3A2A",
+ "hp": 112,
+ "ac": 16,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: tre attacchi di lancia"
+  },
+  {
+   "n": "Lancia",
+   "atk": 7,
+   "dmg": "2d6+4"
+  },
+  {
+   "n": "Colpo di scudo (azione bonus: TS Forza CD 15 o prono)",
+   "atk": 7,
+   "dmg": "2d4+4"
+  },
+  {
+   "n": "Parata (reazione: +3 CA contro un attacco in mischia)"
+  }
+ ],
+ "note": "Gladiatore (MM 2024), adattato · GS 5 · 1.800 PE · velocità 9 m · Atletica +10, Intimidire +5 · un omone con una lancia corta dalle quarantuno tacche e uno scudo tondo. Ex lottatore delle fiere di San Leonardo.",
+ "src": "Teramum — la città (Il ponte sulla gola)",
+ "tac": "Sbarra il ponte e parla forte perché le finestre sentano. Spinge il più grosso verso il parapetto (chi viene spinto oltre: TS Destrezza CD 13 o cade nella gola, 4d6 contundenti). Quando arriva il fischio della ronda, butta lo scudo e scappa per primo.",
+ "lines": [
+  "Crociati! Ce l’avete con la gente di Teramum?",
+  "Quarantuno. Ne faccio quarantadue.",
+  "Mica dovevamo ammazzare nessuno!"
+ ],
+ "img": "Ritratto — Teramum — Lu Spaccapreta.jpg"
+}

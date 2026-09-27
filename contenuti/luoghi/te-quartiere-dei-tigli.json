@@ -1,0 +1,72 @@
+{
+ "id": "te-quartiere-dei-tigli",
+ "tipo": "luogo",
+ "titolo": "3. Quartiere dei Tigli",
+ "sottotitolo": "« Lì Signurì » — la passeggiata dei nobili",
+ "citta": "teramum",
+ "gruppo": "3. Quartiere dei Tigli",
+ "livello": "quartiere",
+ "parent": "borgo-teramum",
+ "img": "Rione — 3. Quartiere dei Tigli.jpg",
+ "stato": "segreto",
+ "atti": [],
+ "compendio": true,
+ "scheda": {
+  "Zona": "3",
+  "Nome in dialetto": "Lì Signurì",
+  "Atmosfera": "silenzio, tigli, ventagli, sguardi",
+  "Chi ci vive": "le Casate, le loro corti, i loro creditori",
+  "Luoghi": "Biblioteca Incompiuta dei Tancredus · palazzo Cerullius · palazzi de Spina e Mellitius",
+  "Posizione": "la parte occidentale della città, verso la Porta Realë e la Pustèrla de li Mortë"
+ },
+ "pub": [
+  {
+   "t": "Aspetto esterno",
+   "txt": "Un viale largo, lastricato, con due file di tigli potati tutti alla stessa altezza. Dietro i tigli, palazzi con i portoni chiusi e le finestre alte. Ogni palazzo ha la sua torre, e ogni torre è stata alzata per superare quella del vicino."
+  },
+  {
+   "t": "Entrando",
+   "txt": "L’odore dei tigli copre tutto, anche il fumo che sale da San Leonardo. Il rumore si abbassa di colpo: niente carri, niente banchi. Si sentono i passi, le gonne, un liuto da un cortile.\nLe persone passeggiano piano, a coppie, e si salutano con inchini misurati al dito."
+  },
+  {
+   "t": "Cosa si vede subito",
+   "txt": "• Ogni stemma sul portone è un’affermazione: qui abitano le Casate, e qui si fanno vedere.\n• All’ora dell’aperitivo i caffè all’aperto si riempiono: un aperitivo completo costa otto quattrini, ed è la cosa più cara della giornata di un bracciante.\n• I servitori camminano due passi dietro i padroni e ascoltano tutto.\n• Uno dei palazzi non è finito: impalcature di legno, un’ala senza tetto, gente con i libri sotto il braccio che entra ed esce."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Cosa sta succedendo oggi",
+   "txt": "• Casa Mellitius dà una festa: inviti in carta dorata, musici fatti venire da fuori. La vecchia nobiltà ci andrà per disprezzarli da vicino.\n• Si parla solo della Crociata: chi la teme, chi la aspetta, chi ci ha già scommesso sopra.\n• Casa Cerullius ha un palazzo qui: Alessandros potrebbe trovarci servitori che lo riconoscono."
+  },
+  {
+   "t": "Voci e dicerie (d6)",
+   "txt": "1. I Mellitius pagano le feste con soldi che puzzano di mare.\n2. La Matriarca de Spina non esce più dal palazzo: dicono che scavi in cantina.\n3. La Maestra della Presentosa è impazzita: lavora di notte e non parla con nessuno.\n4. I Tancredus hanno smesso di costruire la Biblioteca cent’anni fa perché hanno trovato qualcosa nelle fondamenta.\n5. «Lu Reggente e l’Arcimandrite nen se saluta cchiù.»\n6. C’è un erede. Nessuno dice di chi."
+  },
+  {
+   "t": "Segreti",
+   "txt": "• Casa Mellitius deve la sua fortuna al contrabbando di frammenti di Sigilli Lunari; Iuvenza li ricatta.\n• Casa de Spina finanzia scavi nelle cripte sotto Teramum per trovare l’Atto di Fondazione che proverebbe i Mazzarellus usurpatori.\n• La Gilda della Presentosa è ricattata da Iuvenza e costretta a fare medaglioni corrotti."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "• Dove sono la Via Aurea (Gilda della Presentosa) e il palazzo Cerullius. Proposta: entrambi qui, la Via Aurea come traversa del viale.\n• La collocazione della Biblioteca Incompiuta in questo rione è una mia proposta.\n• Proposta di voce 4: il perché dell’«incompiuta» non è stabilito dal canone.\n• Sulla mappa della città: i Tigli occupano l’estremità occidentale, oltre la piazza del Colle (proposta).\n• Il palazzo Cerullius: colori azzurro e argento (proposta); il maestro di casa Ottorino tiene acceso il fuoco per i due fratelli.\n• Il palazzo col profumo di lillà davanti al quale tutti si inchinano: la signora forestiera (Iuvenza sotto altro nome, se decidi che è già in città)."
+  }
+ ],
+ "prove": [
+  {
+   "t": "Leggere il passeggio",
+   "skill": "Intuizione",
+   "dc": 14,
+   "ok": "chi saluta chi è una mappa del Consiglio: i Mellitius salutano tutti e nessuno risponde; i servitori di Grazianus e di Clavax si fermano insieme ogni volta che si incrociano.",
+   "ko": "inchini, sorrisi, ventagli. Sembra tutto cordiale."
+  },
+  {
+   "t": "Farsi invitare alla festa Mellitius",
+   "skill": "Persuasione",
+   "dc": 15,
+   "ok": "un invito in carta dorata, a nome vostro. Dominus Flaminio Mellitius vuole vedere da vicino gli eroi di Julia Nova.",
+   "ko": "il maestro di casa vi guarda le scarpe e chiude il portone."
+  }
+ ],
+ "links": [],
+ "tavolo": "teramum"
+}
