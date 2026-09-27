@@ -275,12 +275,26 @@ def incantesimi():
     open(SRC, "w", encoding="utf-8").write(html)
     print(f"ok: incantesimi completi — {len(voci)}")
 
+ICO_START, ICO_END = "/*@ICONE*/", "/*@/ICONE*/"
+def icone():
+    """Immagini degli oggetti e icone delle abilità: contenuti/_icone.json → blocco ICONE_DATA (v117)."""
+    import json
+    f = os.path.join(CONT, "_icone.json")
+    d = json.load(open(f, encoding="utf-8")) if os.path.exists(f) else {}
+    voci = {"oggetti": d.get("oggetti", {}), "abilita": d.get("abilita", {})}
+    html = open(SRC, encoding="utf-8").read()
+    a = html.index(ICO_START); b = html.index(ICO_END) + len(ICO_END)
+    html = html[:a] + ICO_START + "const ICONE_DATA=" + json.dumps(voci, ensure_ascii=False, separators=(",", ":")) + ";" + ICO_END + html[b:]
+    open(SRC, "w", encoding="utf-8").write(html)
+    print(f"ok: immagini di oggetti e abilità — {len(voci['oggetti'])} oggetti, {len(voci['abilita'])} abilità")
+
 def build():
     contenuti()
     scene()
     bestiario()
     pg()
     incantesimi()
+    icone()
     shutil.copyfile(SRC, OUT)
     html = open(SRC, encoding="utf-8").read()
     used = set(re.findall(r"img/[0-9a-f]{12}\.[a-z]+", html))
