@@ -473,3 +473,10 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 ## v126 (27/09/2026) — Duellare sul giavellotto
 
 - Deciso da Giuseppe: Duellare (+2 ai danni) vale anche sul giavellotto lanciato da Alessandros, se in mano non ha altre armi (lo scudo non conta). `PG_AUTO.alessandros.fix.Giavellotto` = +6, 1d6+5. L'Arma sacra sul giavellotto lanciato continua a non valere.
+
+## v127 (28/09/2026) — lo stendardo preso dai giocatori
+
+- Fatto del tavolo (Giuseppe): i giocatori hanno preso UNO dei due stendardi rossi dalla parete in fondo alla Stanza del Quarto Sigillo. Ne resta uno.
+- `contenuti/scene/sotto.json`, PDI `sigillo`, modulo `custode_storia`: aggiunti `note` (il fatto, e che cosa ne sanno i PG secondo la prova di Storia) e `bottino` con «Stendardo rosso color ruggine» (categoria Oggetti e indizi, valore non stabilito). Il master lo dà con «Assegna bottino…» nella Guida.
+- La descrizione dell'oggetto dice solo ciò che i PG hanno visto (rosso, liso, color ruggine, palo di ferro): niente Schiera, niente Sigillo. Peso, valore e proprietà non sono nel canone: non inventati.
+- Da decidere (Giuseppe): che cosa succede se lo mostrano a qualcuno che sa riconoscerlo.
