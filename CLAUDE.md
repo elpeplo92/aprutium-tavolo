@@ -469,3 +469,7 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - **Riposo breve** (`restShortOne`): le risorse «1 uso a/con riposo breve, tutti a riposo lungo» (Incanalare divinità, e le altre tre con lo stesso testo) recuperano UN uso, non tutti; i Punti stregoneria («riposo lungo (in parte con Ripristino stregonesco…)») non tornano più da soli col riposo breve.
 - Agganci nel codice esistente: 6 (`sacra-edits.js` nello scratchpad). Prove: `sacra-test.js` 46 controlli, `legame-test.js` 34, `multi-test.js` 21, `prova-tavolo.js` verde nei due ruoli.
 - **Non fatto / da decidere**: i 10 minuti non sono contati; danni radiosi a scelta li dichiara il giocatore (il tavolo non distingue i tipi di danno); Duellare sul giavellotto lanciato (+2 danni: per le regole vale se non impugna altre armi) non applicato; tra le azioni di Alessandros ci sono doppioni (Cura ferite ×2, Punizione divina ×2, Acqua santa ×2).
+
+## v126 (27/09/2026) — Duellare sul giavellotto
+
+- Deciso da Giuseppe: Duellare (+2 ai danni) vale anche sul giavellotto lanciato da Alessandros, se in mano non ha altre armi (lo scudo non conta). `PG_AUTO.alessandros.fix.Giavellotto` = +6, 1d6+5. L'Arma sacra sul giavellotto lanciato continua a non valere.

@@ -1227,7 +1227,7 @@ button.chip>svg.uico{margin-right:.3em;width:1em;height:1em}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v125</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v126</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1390,7 +1390,7 @@ function pgNorm(s){ return String(s||'').toLowerCase().replace(/\(.*?\)/g,'').re
      volta per turno, vantaggio a prove e TS di Forza), Runa della pietra (vantaggio a Intuizione), Maestro delle armature pesanti
      (−3 ai danni contundenti/perforanti/taglienti delle armi subiti). */
 const PG_AUTO={
-  alessandros:{fix:{'Spada lunga (1 mano)':{atk:6,dmg:'1d8+5'},'Spada lunga (2 mani)':{atk:6,dmg:'1d10+3'},"Colpo senz'armi":{atk:6}},
+  alessandros:{fix:{'Spada lunga (1 mano)':{atk:6,dmg:'1d8+5'},'Spada lunga (2 mani)':{atk:6,dmg:'1d10+3'},"Colpo senz'armi":{atk:6},'Giavellotto':{atk:6,dmg:'1d6+5',note:'Lanciato, gittata 9/36 m. Duellare: +2 ai danni se in mano non ha altre armi (lo scudo non conta).'}},
     toggles:[{id:'armaSacra',n:'Arma sacra',d:'1 uso di Incanalare divinità, 10 minuti: +2 (Carisma) ai tiri per colpire con l’arma da mischia scelta; luce 6 m + 6 m.'},
              {id:'favore',n:'Favore divino',d:'Incantesimo (azione bonus, 1 minuto, senza concentrazione): +1d4 danni radiosi a ogni colpo con un’arma.'}],
     passivi:['savage','ham']},
