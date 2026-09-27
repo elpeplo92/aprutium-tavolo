@@ -56,7 +56,7 @@
   },
   "punti": [
     {
-      "schemaVersion": 2,
+      "schemaVersion": 3,
       "id": "pozzo",
       "kind": "passaggio",
       "title": "Il Pozzo Cieco",
@@ -68,115 +68,178 @@
       "discovery": {
         "enabled": false
       },
+      "nota": {
+        "cd": 0
+      },
       "image": "img/a62faefceae0.jpg",
       "imageSource": "MidJourney — direzione artistica e file originale forniti dal Master",
       "text": "Scendendo, Bëllindë si allontana. Per i primi metri sentite ancora voci, vento, passi sul selciato. Poi niente.\n\nLa luce in alto diventa un cerchio, poi una moneta. L'aria sa di ferro e di acqua vecchia.\n\nA metà discesa la pietra cambia. Finiscono le pietre irregolari del pozzo. Sotto cominciano blocchi enormi, squadrati, accostati senza malta. Non sono stati costruiti insieme al pozzo.\n\nAccanto alla corda, fissato alla pietra, pende un vecchio pezzo di corda. Un moncone. Tagliato di netto.\n\nIn fondo il pozzo non finisce. La parete si apre di lato su un corridoio. Buio. Perfettamente diritto.\n\nE c'è un silenzio sbagliato. Niente carri, niente campane, niente cigolio del pozzo. Come se Bëllindë fosse molto più lontana di quanto dovrebbe.",
+      "breve": "Il gruppo scende nel pozzo. Durante la discesa possono fermarsi sul moncone di corda tagliato e sulle due murature. Sul fondo, ai primi passi nel corridoio, parte il ritmo. Da qui si prosegue verso lo Strano Corridoio.",
+      "breveBozza": true,
       "gm": "I blocchi squadrati sono più antichi di Bëllindë: il pozzo è stato scavato sopra una struttura che esisteva già.\n\nIl moncone è stato tagliato con una lama ed è legato alla morte di Rocco. Da qui non si scopre chi l'ha tagliato.",
-      "modules": [
+      "moduli": [
         {
           "id": "corda",
-          "type": "check",
-          "focus": "Focus 1 — Il moncone di corda",
-          "text": "Che sia tagliato si vede senza tiro.",
-          "skill": "Percezione",
-          "dc": 11,
-          "outcomes": [
+          "tipo": "dettaglio",
+          "titolo": "Il moncone di corda",
+          "parte": "indizio",
+          "bozza": true,
+          "seme": "Un moncone. Tagliato di netto.",
+          "innesco": "Qualcuno guarda o tocca il moncone durante la discesa, o torna a esaminarlo dal fondo.",
+          "leggi": "Il moncone pende a un palmo dalla vostra corda. Canapa vecchia, scurita dall'acqua. L'estremità non è sfilacciata: finisce di netto.",
+          "note": "Che sia tagliato si vede senza tiro.",
+          "prove": [
             {
-              "kind": "criticalFailure",
-              "text": "Tagliato, sì. L'umidità ha gonfiato le fibre, non capite altro.",
-              "min": 1,
-              "max": 4
-            },
-            {
-              "kind": "failure",
-              "text": "Un taglio pulito. Una lama.",
-              "min": 5,
-              "max": 10
-            },
-            {
-              "kind": "baseSuccess",
-              "text": "Le fibre sono recise tutte alla stessa altezza. Non ha ceduto: qualcuno l'ha tagliata.",
-              "min": 11,
-              "max": 14
-            },
-            {
-              "kind": "fullSuccess",
-              "text": "Il taglio attraversa le fibre in una sola direzione, con un colpo solo.",
-              "min": 15,
-              "max": 19
-            },
-            {
-              "kind": "natural20",
-              "text": "Le fibre sono piegate verso il basso: la corda era tesa quando è stata tagliata. Qualcuno ci era appeso, o la stava usando."
+              "id": "corda",
+              "abilita": [
+                "Percezione"
+              ],
+              "cd": 11,
+              "gruppo": "chi",
+              "esiti": [
+                {
+                  "fascia": "criticalFailure",
+                  "min": 1,
+                  "max": 4,
+                  "leggi": "Tagliato, sì. L'umidità ha gonfiato le fibre, non capite altro."
+                },
+                {
+                  "fascia": "failure",
+                  "min": 5,
+                  "max": 10,
+                  "leggi": "Un taglio pulito. Una lama."
+                },
+                {
+                  "fascia": "baseSuccess",
+                  "min": 11,
+                  "max": 14,
+                  "leggi": "Le fibre sono recise tutte alla stessa altezza. Non ha ceduto: qualcuno l'ha tagliata."
+                },
+                {
+                  "fascia": "fullSuccess",
+                  "min": 15,
+                  "max": 19,
+                  "leggi": "Il taglio attraversa le fibre in una sola direzione, con un colpo solo."
+                },
+                {
+                  "fascia": "natural20",
+                  "leggi": "Le fibre sono piegate verso il basso: la corda era tesa quando è stata tagliata. Qualcuno ci era appeso, o la stava usando."
+                }
+              ]
             }
+          ],
+          "dopo": "Qualunque esito: sanno che qualcuno ha tagliato la corda di proposito. Da qui non si scopre chi. È legato alla morte di Rocco: lasciala come domanda aperta.",
+          "rilancio": "Il moncone gira piano nel buio, sopra le vostre teste. Che cosa fate?",
+          "daqui": [
+            "muratura",
+            "prosecuzione"
           ]
         },
         {
           "id": "muratura",
-          "type": "check",
-          "focus": "Focus 2 — Le due murature",
-          "skill": "Percezione",
-          "dc": 12,
-          "outcomes": [
+          "tipo": "dettaglio",
+          "titolo": "Le due murature",
+          "parte": "indizio",
+          "bozza": true,
+          "seme": "Non sono stati costruiti insieme al pozzo.",
+          "innesco": "Qualcuno osserva le pareti mentre scende, o tocca i blocchi sul fondo.",
+          "leggi": "Da vicino la differenza è netta. Sopra, pietre piccole tenute dalla malta. Sotto, blocchi grandi come un uomo, freddi al tocco.",
+          "prove": [
             {
-              "kind": "criticalFailure",
-              "text": "Incrostazioni e umidità. Materiali diversi, niente di più.",
-              "min": 1,
-              "max": 5
-            },
-            {
-              "kind": "failure",
-              "text": "I blocchi di sotto sono lavorati in un altro modo, e non c'è malta.",
-              "min": 6,
-              "max": 11
-            },
-            {
-              "kind": "baseSuccess",
-              "text": "I grandi blocchi combaciano tra loro senza malta. Sono stati tagliati apposta.",
-              "min": 12,
-              "max": 14
-            },
-            {
-              "kind": "fullSuccess",
-              "text": "Le pietre del pozzo poggiano sui blocchi antichi. Prima c'erano i blocchi, poi è venuto il pozzo.",
-              "min": 15,
-              "max": 19
-            },
-            {
-              "kind": "natural20",
-              "text": "Chi ha costruito il pozzo ha tagliato le proprie pietre per adattarle ai blocchi. Non li ha trovati per caso: sapeva che erano lì."
+              "id": "muratura",
+              "abilita": [
+                "Percezione"
+              ],
+              "cd": 12,
+              "gruppo": "chi",
+              "esiti": [
+                {
+                  "fascia": "criticalFailure",
+                  "min": 1,
+                  "max": 5,
+                  "leggi": "Incrostazioni e umidità. Materiali diversi, niente di più."
+                },
+                {
+                  "fascia": "failure",
+                  "min": 6,
+                  "max": 11,
+                  "leggi": "I blocchi di sotto sono lavorati in un altro modo, e non c'è malta."
+                },
+                {
+                  "fascia": "baseSuccess",
+                  "min": 12,
+                  "max": 14,
+                  "leggi": "I grandi blocchi combaciano tra loro senza malta. Sono stati tagliati apposta."
+                },
+                {
+                  "fascia": "fullSuccess",
+                  "min": 15,
+                  "max": 19,
+                  "leggi": "Le pietre del pozzo poggiano sui blocchi antichi. Prima c'erano i blocchi, poi è venuto il pozzo."
+                },
+                {
+                  "fascia": "natural20",
+                  "leggi": "Chi ha costruito il pozzo ha tagliato le proprie pietre per adattarle ai blocchi. Non li ha trovati per caso: sapeva che erano lì."
+                }
+              ]
             }
-          ]
-        },
-        {
-          "id": "ritmo",
-          "type": "check",
-          "focus": "Focus 3 — Il ritmo",
-          "trigger": "Parte da solo appena fanno i primi passi nel corridoio (vedi Prosecuzione). Se cercano di capirlo:",
-          "skill": "Percezione o Indagare",
-          "dc": 14,
-          "requestLabel": "Richiedi",
-          "outcomes": [
-            {
-              "kind": "failure",
-              "label": "Fallimento",
-              "text": "È regolare e risponde ai vostri passi. Non capite cosa lo produce.",
-              "max": 13
-            },
-            {
-              "kind": "baseSuccess",
-              "label": "Successo",
-              "text": "Non è qualcuno che conta. Scandisce il movimento: è il tempo di una marcia, come un comando che tiene il passo di un esercito che non c'è più.",
-              "min": 14
-            }
+          ],
+          "dopo": "La struttura di sotto è più antica di Bëllindë: il pozzo è stato scavato sopra qualcosa che c'era già. Con 15 o più capiscono che chi ha costruito il pozzo sapeva che i blocchi erano lì.",
+          "rilancio": "Il freddo dei blocchi sale dal fondo. Che cosa fate?",
+          "daqui": [
+            "corda",
+            "prosecuzione"
           ]
         },
         {
           "id": "prosecuzione",
-          "type": "continuation",
-          "title": "Prosecuzione",
-          "trigger": "Appena fanno i primi passi nel corridoio:",
-          "text": "Siete in fondo. Davanti a voi il corridoio, e oltre i primi metri solo buio.\n\nFate tre passi. Dal buio risponde qualcosa.\n\nTAC. TAC. TAC.\n\nSilenzio. Altri tre passi.\n\nTAC. TAC. TAC.\n\nVi fermate. E il ritmo si ferma con voi.\n\nChe cosa fate?"
+          "tipo": "prosecuzione",
+          "titolo": "Nel corridoio",
+          "parte": "evento",
+          "bozza": true,
+          "innesco": "Appena fanno i primi passi nel corridoio:",
+          "leggi": "Siete in fondo. Davanti a voi il corridoio, e oltre i primi metri solo buio.\n\nFate tre passi. Dal buio risponde qualcosa.\n\nTAC. TAC. TAC.\n\nSilenzio. Altri tre passi.\n\nTAC. TAC. TAC.\n\nVi fermate. E il ritmo si ferma con voi.\n\nChe cosa fate?",
+          "dopo": "Il ritmo risponde ai loro passi e si ferma quando si fermano. Se cercano di capirlo, apri «Il ritmo». Se avanzano, si va allo Strano Corridoio.",
+          "daqui": [
+            "ritmo",
+            "strano_corridoio"
+          ]
+        },
+        {
+          "id": "ritmo",
+          "tipo": "dettaglio",
+          "titolo": "Il ritmo",
+          "parte": "evento",
+          "bozza": true,
+          "innesco": "Parte da solo appena fanno i primi passi nel corridoio (vedi Prosecuzione). Se cercano di capirlo:",
+          "prove": [
+            {
+              "id": "ritmo",
+              "abilita": [
+                "Percezione",
+                "Indagare"
+              ],
+              "cd": 14,
+              "gruppo": "chi",
+              "esiti": [
+                {
+                  "fascia": "failure",
+                  "max": 13,
+                  "leggi": "È regolare e risponde ai vostri passi. Non capite cosa lo produce."
+                },
+                {
+                  "fascia": "baseSuccess",
+                  "min": 14,
+                  "leggi": "Non è qualcuno che conta. Scandisce il movimento: è il tempo di una marcia, come un comando che tiene il passo di un esercito che non c'è più."
+                }
+              ]
+            }
+          ],
+          "dopo": "Qualunque esito, il ritmo continua a rispondere ai loro passi finché avanzano. Li accompagna verso lo Strano Corridoio.",
+          "rilancio": "TAC. TAC. TAC. Il buio aspetta il vostro prossimo passo. Che cosa fate?",
+          "daqui": [
+            "strano_corridoio"
+          ]
         }
       ]
     },

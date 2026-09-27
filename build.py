@@ -192,6 +192,17 @@ def scene():
             if not pid: errori.append(f"{sid}: un punto senza id"); continue
             if pid in visti: errori.append(f"{sid}: il punto «{pid}» esiste già in {visti[pid]}")
             visti[pid] = sid
+            mids = [m.get("id") for m in p.get("moduli") or []]
+            for m in p.get("moduli") or []:
+                if "__" in (m.get("id") or "__"): errori.append(f"{pid}: ogni modulo vuole un id senza «__»")
+                if m.get("parte") not in ("indizio", "evento", "nascosto"): errori.append(f"{pid}/{m.get('id')}: «parte» deve essere indizio / evento / nascosto")
+                if m.get("parte") == "indizio" and m.get("seme") and m["seme"] not in (p.get("text") or ""):
+                    errori.append(f"{pid}/{m['id']}: la frase seme «{m['seme']}» non è nel testo del punto (va copiata identica)")
+                for pv in m.get("prove") or []:
+                    if "-" in (pv.get("id") or "-"): errori.append(f"{pid}/{m['id']}: ogni prova vuole un id senza «-»")
+                for d in m.get("daqui") or []:
+                    if d not in mids and not any(q.get("id") == d for q in s.get("punti") or []):
+                        errori.append(f"{pid}/{m['id']}: «Da qui» punta a «{d}», che non esiste")
         for h in s.get("guida") or []:
             if f'"id": "{h}"' not in html: errori.append(f"{sid}: la scheda della guida «{h}» non esiste in SCENE_HANDOUTS")
         scene.append(s)

@@ -189,17 +189,21 @@ const file = path.resolve(process.argv[2] || 'index.html');
       provati++;
       try {
         const ids=['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
+        // v103: lo zaino è una tabella (righe [data-invi]) e il dettaglio dell'oggetto scelto sta nella carta .invcard
+        const pick=(row)=>{ row.click(); return document.querySelector('#modal .invcard')?.textContent||''; };
         for(const id of ids){
-          openSheet(id,'eq');
-          const cards=[...document.querySelectorAll('#modal [data-inv-card]')], text=document.querySelector('#modal .sheetbody')?.textContent||'';
-          if(cards.length<12||!text.includes('Valore')||!text.includes('Statistiche / bonus')||!document.getElementById('invSearch')) rotte.push('Zaino '+id+' → inventario incompleto o privo di dettagli e ricerca');
+          sheetInvCat='Tutti'; sheetInvQ=''; sheetInvSel=null; openSheet(id,'eq');
+          const rows=[...document.querySelectorAll('#modal [data-invi]')], card=document.querySelector('#modal .invcard')?.textContent||'';
+          if(rows.length<12||!card.includes('Valore')||!card.includes('Peso')||!document.getElementById('invSearch')) rotte.push('Zaino '+id+' → inventario incompleto o privo di dettagli e ricerca');
+          if(rows.some(r=>{ const c=pick(r); return !c.includes('Valore'); })) rotte.push('Zaino '+id+' → un oggetto non mostra il dettaglio');
         }
-        openSheet('vicarus','eq');
-        const staff=[...document.querySelectorAll('#modal [data-inv-card]')].find(x=>x.textContent.includes('Bastone di Lyaras'));
-        if(!staff||!staff.textContent.includes('Comando — 1 carica')||!staff.textContent.includes('Bastone arcano +2')) rotte.push('Zaino Vicarus → incantesimi, cariche o bonus del Bastone non visibili');
+        sheetInvCat='Tutti'; sheetInvQ=''; sheetInvSel=null; openSheet('vicarus','eq');
+        const staffRow=[...document.querySelectorAll('#modal [data-invi]')].find(x=>x.textContent.includes('Bastone di Lyaras'));
+        const staff=staffRow?pick(staffRow):'';
+        if(!staff.includes('Comando — 1 carica')||!staff.includes('Bastone arcano +2')) rotte.push('Zaino Vicarus → incantesimi, cariche o bonus del Bastone non visibili');
         const search=document.getElementById('invSearch'); search.value='filatterio'; search.dispatchEvent(new Event('input'));
-        openSheet('mattheus','eq');
-        if(![...document.querySelectorAll('#modal [data-inv-card]')].some(x=>x.textContent.includes('Filatterio di Lyaras'))) rotte.push('Zaino Mattheus → manca il Filatterio');
+        sheetInvQ=''; openSheet('mattheus','eq');
+        if(![...document.querySelectorAll('#modal [data-invi]')].some(x=>x.textContent.includes('Filatterio di Lyaras'))) rotte.push('Zaino Mattheus → manca il Filatterio');
         sheetTab='car'; closeModal();
       } catch (e) { rotte.push('Zaini dettagliati dei personaggi → '+e.name+': '+e.message); }
 
