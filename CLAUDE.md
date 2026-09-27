@@ -297,3 +297,7 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Scena: `citta` (menu Scena raggruppato per città, luoghi rientrati sotto la mappa, «16. Sotto Bëllindë»), `intro` = {leggi, note, ingressi[{da, primo, poi, note}], bozza}. «Mostra ai giocatori» registra `S.poiSeen['_intro__<scena>__leggi']`: l'introduzione resta nella Guida dei giocatori.
 - Guida della scena: menu Scena dentro la pergamena (`placeSceneSel`), handout del luogo dentro la Guida (`LUOGO_GM`), testi del luogo per i giocatori nella loro Guida (il pannello `.lv-text` sulla mappa è nascosto), immagine piccola di ogni PDI.
 - Salvataggio automatico dello «spot» solo dopo `FB_LOADED` (evita di scrivere lo stato iniziale su Firebase).
+
+## v105 (27/09/2026) — Registro a destra
+
+- `#secLog` sta in fondo a `#side` per tutti (`applyRole`), ancorato in basso (`position:sticky`), con maniglia in cima (`logResizerInit`) che lo allarga verso l'alto: 120 px – 80% dello schermo, altezza salvata in `localStorage['aprutium.logH']` (per browser). `#railLog` è nascosto.

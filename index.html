@@ -907,12 +907,22 @@ select,input[type=text],input[type=number],textarea,.shpanel .invsearch{backgrou
 #sceneGuide .gingr b{display:block;color:#4A2F10}
 #sceneGuide .gingr p{font-size:15px;margin:4px 0 0}
 #sceneGuide .gt small.gcd{display:block;font-family:"Scaly Sans",sans-serif;font-size:13px;font-weight:400;color:#7A5A30;letter-spacing:0}
+/* Registro a destra, ridimensionabile */
+#side{display:flex;flex-direction:column}
+#side>#secLog{margin-top:auto;flex:0 0 auto;display:flex;flex-direction:column;min-height:120px;overflow:hidden;position:relative;padding-top:14px!important;border:1px solid var(--line)!important;border-radius:var(--radius)!important;background:linear-gradient(180deg,#10141B,#0C0F14)!important}
+#side>#secLog #log{flex:1;min-height:0;overflow-y:auto}
+#side>#secLog .loggrip{position:absolute;left:0;right:0;top:0;height:12px;cursor:ns-resize;touch-action:none}
+#side>#secLog .loggrip::before{content:'';position:absolute;left:50%;top:4px;width:44px;height:4px;margin-left:-22px;border-radius:2px;background:rgba(212,174,92,.55)}
+#side>#secLog .loggrip:hover::before{background:var(--gold)}
+#railLog{display:none!important}
+#rail{flex:1 1 auto;overflow-y:auto}
+#side>#secLog{position:sticky;bottom:0;z-index:3;box-shadow:0 -10px 18px rgba(0,0,0,.6)}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v104</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v105</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -1054,12 +1064,22 @@ const TEST_MODE = params.get('prova') === '1';
 let ROLE = params.get('ruolo') || (()=>{ try{ return localStorage.getItem('aprutium.role')||'master'; }catch(e){ return 'master'; } })();
 let IS_GM = ROLE==='master';
 let me = IS_GM ? null : ROLE;
+/* Registro in fondo alla colonna destra (v105): una maniglia in cima lo allarga verso l'alto; l'altezza è per browser. */
+function logResizerInit(){
+  const lg=document.getElementById('secLog'); if(!lg||lg.querySelector('.loggrip')) return;
+  const grip=document.createElement('div'); grip.className='loggrip'; grip.title='Trascina per allargare o stringere il registro'; lg.prepend(grip);
+  const setH=h=>{ const max=Math.round(window.innerHeight*0.8); h=Math.max(120,Math.min(max,Math.round(h))); lg.style.height=h+'px'; return h; };
+  let saved=null; try{ saved=+localStorage.getItem('aprutium.logH'); }catch(e){} setH(saved||260);
+  grip.addEventListener('pointerdown',e=>{ e.preventDefault(); const y0=e.clientY, h0=lg.getBoundingClientRect().height; grip.setPointerCapture(e.pointerId);
+    const mv=ev=>setH(h0+(y0-ev.clientY)); const up=ev=>{ grip.removeEventListener('pointermove',mv); grip.removeEventListener('pointerup',up); try{ localStorage.setItem('aprutium.logH',String(setH(h0+(y0-ev.clientY)))); }catch(err){} };
+    grip.addEventListener('pointermove',mv); grip.addEventListener('pointerup',up); });
+}
 function applyRole(){
   IS_GM = ROLE==='master'; me = IS_GM?null:ROLE;
   document.querySelectorAll('.gm').forEach(e=>e.classList.toggle('hidden',!IS_GM));
   document.querySelectorAll('.pl').forEach(e=>e.classList.toggle('hidden',IS_GM));
   document.body.classList.toggle('isgm',IS_GM);
-  { const lg=document.getElementById('secLog'); const home=document.getElementById('railLog'); if(lg&&home&&lg.parentElement!==home) home.appendChild(lg); }
+  { const lg=document.getElementById('secLog'); const home=document.getElementById('side'); if(lg&&home&&home.lastElementChild!==lg) home.appendChild(lg); logResizerInit(); }
   try{ localStorage.setItem('aprutium.role',ROLE); }catch(e){}
 }
 applyRole();
