@@ -1287,12 +1287,64 @@ input[type=checkbox],input[type=radio]{accent-color:#D4AE5C}
 .place b{background:radial-gradient(circle at 35% 30%,#FFF1BD,#E3BC5F 50%,#A97B2E);border:2px solid #5E3F17;color:#2A1A0C}
 .place:hover b{background:radial-gradient(circle at 35% 30%,#FFFBE6,#F3D37C 50%,#C9953A)}
 #dock button svg{stroke:var(--uico,url(#uiBronzo) currentColor)}
+/* ===== TESTATA E FASE (v131) =====
+   Richiesta di Giuseppe, guardando insieme la pagina: rifare anche «Atto Terzo», il numero di versione, il selettore Vista,
+   i titoli delle sezioni (Scontro, Selezione, Registro…) e il tasto della fase. Stessa lingua della barra in alto:
+   targa scura, filo d'ottone, oro per ciò che conta. Niente cornici ornate. I caratteri non rimpiccioliscono.
+   In più: barre di scorrimento sottili e scure al posto di quelle bianche del browser, e freccia d'oro nei menu a tendina. */
+/* — marchio — */
+header .brand{gap:14px}
+header .brand .eyebrow:not(#ver){position:relative;padding-left:18px;font-size:17px;letter-spacing:.16em;background:linear-gradient(180deg,#FCE9AE,#DDB863 55%,#A97B2E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+header .brand .eyebrow:not(#ver)::before{content:'';position:absolute;left:2px;top:50%;width:7px;height:7px;transform:translateY(-50%) rotate(45deg);background:linear-gradient(135deg,#FCE9AE,#B98C3C);box-shadow:0 0 5px rgba(212,174,92,.5)}
+#ver{opacity:1!important;padding:1px 9px;border:1px solid rgba(176,140,82,.38);border-radius:999px;background:#0C0F15;color:#C9BC9E;font-family:var(--sans);font-size:15px;letter-spacing:.06em;text-transform:none;font-variant-numeric:tabular-nums}
+/* — selettore Vista — */
+.pill.ctl{height:38px;padding:0 4px 0 12px;gap:8px;border:1px solid rgba(176,140,82,.3);border-radius:6px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 55%),#0C0F15;transition:border-color .15s,box-shadow .2s}
+.pill.ctl:hover,.pill.ctl:focus-within{border-color:rgba(212,174,92,.7);box-shadow:0 0 10px rgba(212,174,92,.16)}
+.pill.ctl>span{display:inline-flex;align-items:center;gap:8px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:17px;letter-spacing:.14em;background:linear-gradient(180deg,#FCE9AE,#DDB863 55%,#A97B2E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.pill.ctl>span::before{content:'';width:18px;height:18px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DDB863' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E") center/contain no-repeat}
+/* — menu a tendina: freccia d'oro al posto di quella del browser — */
+select{-webkit-appearance:none;appearance:none;padding-right:30px!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DDB863' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9.5l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;background-size:15px;cursor:pointer}
+select:hover{border-color:rgba(212,174,92,.65)}
+select option{background:#0C0F15;color:#EFE6D0}
+#guide select,.invcard select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E3F17' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9.5l6 6 6-6'/%3E%3C/svg%3E")}
+#guide select option{background:#E9D6A8;color:#2E2116}
+#roleSel{border:0!important;background-color:transparent!important;color:#EFE6D0;font-size:16px!important;padding:3px 30px 3px 6px!important;height:30px}
+#roleSel:focus-visible{outline:none}
+/* — titoli delle sezioni — */
+.sec h2.collh,.shpanel h2{display:flex;align-items:center;gap:10px;background:linear-gradient(180deg,#FCE9AE,#DDB863 55%,#A97B2E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec h2.collh::before,.shpanel h2::before{content:''!important;flex:none;width:8px!important;height:8px;margin:0 2px 0 3px!important;transform:rotate(45deg)!important;background:linear-gradient(135deg,#FCE9AE,#B98C3C);box-shadow:0 0 6px rgba(212,174,92,.55);font-size:0!important;transition:background .15s,box-shadow .15s}
+.sec h2.collh::after,.shpanel h2::after{content:'';flex:1;min-width:12px;height:1px;background:linear-gradient(90deg,rgba(212,174,92,.55),rgba(212,174,92,0));-webkit-text-fill-color:initial}
+.sec.closed h2.collh{opacity:.78}
+.sec.closed h2.collh::before{background:none;box-shadow:inset 0 0 0 1.5px #C9A24A}
+.sec h2.collh:hover::before{box-shadow:0 0 9px rgba(240,200,110,.9)}
+.sec h2.collh span,.shpanel h2 span,.sec h2.collh small{-webkit-text-fill-color:#E9E1CF}
+.sec h2.collh:has(>span:not(:empty)){flex-wrap:wrap;row-gap:2px}
+.sec h2.collh:has(>span:not(:empty))::after{order:1}
+.sec h2.collh>span:not(:empty){order:2;flex-basis:100%;padding-left:23px}
+.row.split>h2.collh{flex:1;min-width:0}
+/* — tasto della fase — */
+.phasebtn{position:relative;gap:8px!important;padding:10px 10px 10px 9px!important;border-radius:8px!important;transition:box-shadow .2s,border-color .15s}
+.phasebtn>svg{width:34px!important;height:34px!important;padding:7px;border-radius:50%;box-sizing:border-box;stroke-width:1.8}
+.phasebtn span{overflow-wrap:break-word}
+.phasebtn .caret{position:absolute;right:9px;top:12px;font-size:0!important;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);opacity:.75}
+.phasebtn.explore{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 55%),#0C0F15!important;border-color:rgba(176,140,82,.35)!important;color:#EFE6D0}
+.phasebtn.explore>svg{stroke:url(#uiOro) #DDB863;border:1px solid rgba(212,174,92,.5);background:radial-gradient(circle at 35% 30%,#1D2433,#0A0D12)}
+.phasebtn.explore b{background:linear-gradient(180deg,#FCE9AE,#DDB863 55%,#A97B2E)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+.phasebtn.explore.gm-can:hover{border-color:rgba(212,174,92,.7)!important;box-shadow:0 0 12px rgba(212,174,92,.18)!important}
+.phasebtn.stop{background:linear-gradient(180deg,#F0D27F,#C99A43 60%,#A97B2E)!important;border-color:#F3DC9A!important;color:#1A1207;box-shadow:0 0 16px rgba(212,174,92,.35),inset 0 1px 0 rgba(255,250,220,.6)!important}
+.phasebtn.stop>svg{stroke:#2A1A0C;border:1px solid rgba(60,35,8,.45);background:radial-gradient(circle at 35% 30%,#FFF6D2,#D9B055)}
+.phasebtn.fight{background:linear-gradient(180deg,#70201709,#3A0F0B 75%),linear-gradient(180deg,#702017,#3A0F0B)!important;border-color:#C9543F!important;color:#FFE9E2;box-shadow:0 0 16px rgba(200,70,50,.28),inset 0 1px 0 rgba(255,200,180,.2)!important}
+.phasebtn.fight>svg{stroke:#FFD9CF;border:1px solid rgba(255,190,170,.45);background:radial-gradient(circle at 35% 30%,#93301F,#3A0F0B)}
+.phasebtn.fight small{color:#F3C2B8}
+/* — barre di scorrimento — */
+*{scrollbar-width:thin;scrollbar-color:#7E6740 rgba(9,11,16,.6)}
+#guide,#guide *,.invcard,.invcard *{scrollbar-color:#7A5A2E rgba(120,85,40,.18)}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v130</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v131</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>

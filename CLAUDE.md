@@ -507,3 +507,15 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - L'unica informazione che stava solo lì — il movimento rimasto al token selezionato durante lo scontro — ora è nella **Selezione** del master (`#selMovLbl` / `#selMov`, «Movimento 9 / 9 m», visibile solo in scontro). I giocatori il loro movimento lo avevano già in «Il tuo personaggio».
 - Effetto collaterale buono: spariscono dall'HUD i PF dei mostri, che un giocatore vedeva cliccando un nemico (guasto segnalato nell'audit v121).
 - **Da aggiornare**: gli strumenti dell'altro audit in `Revisioni/audit-tavolo-strumenti/` (`sc10-permessi.js`, `verifica29.js`) leggono ancora `hudSel` e su questa versione si fermano con un errore.
+
+## v131 (29/09/2026) — testata, titoli delle sezioni, tasto della fase
+
+- Richiesta di Giuseppe, indicando gli elementi sulla pagina: rifare il look di «Atto Terzo», del numero di versione, del selettore Vista, dei titoli delle sezioni (Scontro, Selezione, Registro…) e del tasto della fase.
+- Blocco CSS «TESTATA E FASE (v131)» in fondo allo stile (solo stile, nessuna riga di JavaScript):
+  - **Marchio**: «Atto Terzo» in oro con un rombo davanti; la versione in una capsula (`#ver`, 15 px, non più al 60% di opacità: Giuseppe la legge per capire se vede la versione nuova).
+  - **Vista** (`.pill.ctl`, `#roleSel`): targa come i tasti della barra, occhio d'oro, menu senza la freccia del browser.
+  - **Menu a tendina** (tutti i `select`): `appearance:none` e freccia d'oro disegnata; marrone scuro sulla pergamena della Guida.
+  - **Titoli delle sezioni** (`.sec h2.collh`, `.shpanel h2`): scritta in oro, rombo al posto del glifo ✦, filo che sfuma a destra. Sezione chiusa = rombo vuoto. Il nome del token selezionato va a capo sotto «Selezione».
+  - **Tasto della fase** (`.phasebtn`): icona in un medaglione; esplorazione = targa scura con scritta oro, Fermi tutti = targa d'oro, scontro = targa rossa con bagliore. La freccetta ▾ è disegnata (angolo in alto a destra). Il testo non si spezza a metà parola (controllato a 1920, 1536, 1366 e 1000 px).
+  - **Barre di scorrimento**: sottili e scure (`scrollbar-width`, `scrollbar-color`), marroni sulla pergamena.
+- Molte regole vecchie su `.collh` e `.phasebtn` hanno `!important`: per questo il blocco lo usa dove serve.
