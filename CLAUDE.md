@@ -519,3 +519,9 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
   - **Tasto della fase** (`.phasebtn`): icona in un medaglione; esplorazione = targa scura con scritta oro, Fermi tutti = targa d'oro, scontro = targa rossa con bagliore. La freccetta ▾ è disegnata (angolo in alto a destra). Il testo non si spezza a metà parola (controllato a 1920, 1536, 1366 e 1000 px).
   - **Barre di scorrimento**: sottili e scure (`scrollbar-width`, `scrollbar-color`), marroni sulla pergamena.
 - Molte regole vecchie su `.collh` e `.phasebtn` hanno `!important`: per questo il blocco lo usa dove serve.
+
+## v132 (29/09/2026) — via l'etichetta col nome della scena
+
+- Richiesta di Giuseppe: tolta dalla mappa l'etichetta `#sceneName` (il nome della scena, in alto a destra, solo per i giocatori). Era l'ultima delle tre tasselle di `#hud` (le altre due tolte nella v130): `#hud` resta nella pagina ma vuoto, perché due controlli dei clic lo nominano ancora.
+- Tolta anche la riga di `applyScene()` che la riscriveva.
+- Ai giocatori il nome della scena resta in cima alla Guida della scena (controllato su Sotto Bëllindë, il borgo, un luogo e il guado); il master ha il menu Scena.
