@@ -1222,12 +1222,31 @@ button.chip>svg.uico{margin-right:.3em;width:1em;height:1em}
 .tok:hover .condrow .cond,.tok.selected .condrow .cond{font-size:9px}
 /* ===== ARMA SACRA (v125) ===== */
 .fxtog.on[data-fx="armaSacra"] b::after{content:' · attiva';font-weight:400;color:var(--gold)}
+/* ===== BARRA IN ALTO (v128) =====
+   Targa scura con un filo d'ottone; accesa si illumina. Emblemi pieni in oro a rilievo (gradienti #navOro / #navBronzo).
+   Il dock (Muovi, Misura, Tira dadi, Ping) prende gli stessi colori: bronzo spento, oro acceso. */
+.navb{position:relative;gap:.5em;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 55%),#0C0F15;border:1px solid rgba(176,140,82,.3);border-radius:6px;color:#B9AC90;transition:color .15s,border-color .15s,box-shadow .2s,background .2s}
+.navb .navart{width:1.5em;height:1.5em;flex:none;fill:url(#navBronzo);stroke:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.85))}
+.navb .navart .navcut{fill:none;stroke:#0B0E13;stroke-width:1.3;stroke-linecap:round}
+.navb .navart .navpin{stroke:#0B0E13;stroke-width:1.2;stroke-linejoin:round;paint-order:stroke}
+.navb:hover{color:#EFE6D0;border-color:rgba(212,174,92,.65);background:linear-gradient(180deg,rgba(227,192,106,.09),rgba(255,255,255,0) 60%),#0E1218}
+.navb:hover .navart,.navb.on .navart{fill:url(#navOro)}
+.navb.on{color:#F0D48A;border-color:#D8B461;background:linear-gradient(180deg,rgba(227,192,106,.22),rgba(185,140,60,.05) 62%),#10131A;box-shadow:0 0 14px rgba(212,174,92,.24),inset 0 1px 0 rgba(255,236,180,.28),inset 0 -2px 0 #C9A24A}
+.navb.on .navart{filter:drop-shadow(0 1px 1px rgba(0,0,0,.85)) drop-shadow(0 0 5px rgba(240,200,110,.35))}
+.navb.on .navlbl{background:linear-gradient(180deg,#FCE9AE,#DDB863 55%,#A97B2E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.navb.on::after{content:'';position:absolute;left:50%;bottom:-5px;width:7px;height:7px;transform:translateX(-50%) rotate(45deg);background:linear-gradient(135deg,#FCE9AE,#B98C3C);box-shadow:0 0 6px rgba(212,174,92,.75)}
+.navb .navlbl{font-family:inherit;font-weight:inherit;letter-spacing:inherit}
+.navb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#dock button svg{stroke:url(#navBronzo)}
+#dock button:hover svg,#dock button.on svg{stroke:url(#navOro)}
+#dock button.on{background:linear-gradient(180deg,rgba(227,192,106,.2),rgba(185,140,60,.05) 62%);border-color:#D8B461;box-shadow:0 0 12px rgba(212,174,92,.2),inset 0 1px 0 rgba(255,236,180,.25)}
+#dock button.on span{color:#F0D48A}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v127</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v128</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -4821,6 +4840,24 @@ resolveCast=function(id,name,...resto){ const r=resolveCastSenzaFx(id,name,...re
 function restShortOne(t,x,i){ const rec=String(x.recupero||''), u=+((t.res||{})[i])||0; if(!u) return;
   if(/^1 uso (a|con) riposo breve/i.test(rec)){ if(u>1) t.res[i]=u-1; else delete t.res[i]; }
   else if(/^(al termine di ogni )?riposo breve/i.test(rec)) delete t.res[i]; }
+/* ===== BARRA IN ALTO (v128) =====
+   Tavolo / Scheda / Compendio ridisegnati (richiesta di Giuseppe: «potevano essere fatti più belli»).
+   Al posto dell'icona a filo, un emblema pieno in oro a rilievo, della stessa pasta del logo: mappa col segnaposto, scudo col busto, libro aperto.
+   Spento = bronzo; col mouse sopra e acceso = oro; acceso ha la targa illuminata, la scritta in oro e un piccolo rombo sotto.
+   NAV_ART: il contenuto dell'<svg> (32×32) di ogni tasto. I colori stanno nei due gradienti #navOro e #navBronzo (navDefs).
+   Non si toccano misura dei caratteri e margini: restano quelli della scala tipografica e dell'adattamento allo schermo. */
+const NAV_ART={
+ navTavolo:'<path d="M4 8.3l7.2-2.7v18.2L4 26.5zM12.8 5.6l6.4 2.5v18.2l-6.4-2.5zM20.8 8.1L28 5.4v18.2l-7.2 2.7z"/><path class="navpin" d="M16 21.2s-5.2-5.4-5.2-9.3a5.2 5.2 0 0110.4 0c0 3.9-5.2 9.3-5.2 9.3zm0-7.4a2 2 0 100-4 2 2 0 000 4z" fill-rule="evenodd"/>',
+ navDiario:'<path fill-rule="evenodd" d="M16 2.8l11 3.6v8.7c0 6.5-4.5 11.5-11 14.1C9.5 26.6 5 21.6 5 15.1V6.4zm0 5.7a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-6.3 14c1.7 1.8 3.8 3.2 6.3 4.2 2.5-1 4.6-2.4 6.3-4.2-.9-3.5-3.3-5.3-6.3-5.3s-5.4 1.8-6.3 5.3z"/>',
+ btnComp:'<path d="M3.5 7.1c4.5-1 8.5-.4 11.7 2v17.5c-3.2-2.3-7.2-2.9-11.7-2zM28.5 7.1c-4.5-1-8.5-.4-11.7 2v17.5c3.2-2.3 7.2-2.9 11.7-2z"/><path class="navcut" d="M6.4 11.4c2.2-.3 4.2 0 6 .9M6.4 15.2c2.2-.3 4.2 0 6 .9M6.4 19c2.2-.3 4.2 0 6 .9M25.6 11.4c-2.2-.3-4.2 0-6 .9M25.6 15.2c-2.2-.3-4.2 0-6 .9M25.6 19c-2.2-.3-4.2 0-6 .9"/>'
+};
+(function(){
+  const fai=()=>{
+    if(!document.getElementById('navDefs')) document.body.insertAdjacentHTML('afterbegin','<svg id="navDefs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="navOro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1BD"/><stop offset=".38" stop-color="#E9C66B"/><stop offset=".72" stop-color="#B98432"/><stop offset="1" stop-color="#7C511D"/></linearGradient><linearGradient id="navBronzo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D3C296"/><stop offset=".5" stop-color="#9C8456"/><stop offset="1" stop-color="#5E492A"/></linearGradient></defs></svg>');
+    for(const [id,art] of Object.entries(NAV_ART)){ const b=document.getElementById(id); if(!b||b.querySelector('.navart')) continue; const lbl=(b.textContent||'').replace(/\s+/g,' ').trim(); b.innerHTML=`<svg class="navart" viewBox="0 0 32 32" aria-hidden="true">${art}</svg><span class="navlbl">${lbl}</span>`; }
+  };
+  if(document.body) fai(); else document.addEventListener('DOMContentLoaded',fai);
+})();
 /* ===== SIMBOLI DEI TASTI (v120) =====
    Ogni tasto ha il suo simbolo, con lo stesso tratto delle icone di Tavolo / Scheda / Compendio e del dock
    (24×24, filo 1.8, colore del testo: oro sui tasti accesi, scuro sui tasti oro, rosso sui tasti di pericolo).

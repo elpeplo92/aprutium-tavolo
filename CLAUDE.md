@@ -480,3 +480,12 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - `contenuti/scene/sotto.json`, PDI `sigillo`, modulo `custode_storia`: aggiunti `note` (il fatto, e che cosa ne sanno i PG secondo la prova di Storia) e `bottino` con «Stendardo rosso color ruggine» (categoria Oggetti e indizi, valore non stabilito). Il master lo dà con «Assegna bottino…» nella Guida.
 - La descrizione dell'oggetto dice solo ciò che i PG hanno visto (rosso, liso, color ruggine, palo di ferro): niente Schiera, niente Sigillo. Peso, valore e proprietà non sono nel canone: non inventati.
 - Da decidere (Giuseppe): che cosa succede se lo mostrano a qualcuno che sa riconoscerlo.
+
+## v128 (29/09/2026) — Tavolo, Scheda e Compendio ridisegnati
+
+- Osservazione di Giuseppe: nell'audit dei tasti (v120) i tre tasti della barra in alto erano stati saltati perché un'icona l'avevano già, «ma potevano essere fatti più belli».
+- Blocco «BARRA IN ALTO (v128)» (CSS in fondo allo stile, JS in fondo allo script): al posto dell'icona a filo, un emblema pieno in oro a rilievo, della stessa pasta del logo — mappa col segnaposto (Tavolo), scudo col busto (Scheda), libro aperto (Compendio). `NAV_ART` = contenuto dell'`<svg>` 32×32 di ogni tasto; i colori sono i due gradienti `#navOro` e `#navBronzo` in `#navDefs` (un `<svg>` invisibile in testa al body). La scritta sta in `<span class="navlbl">` (eredita il carattere del tasto: Mr Eaves).
+- Stati: spento = targa scura, filo d'ottone, emblema bronzo; mouse sopra = oro; acceso = targa illuminata, scritta in oro, rombo sotto.
+- Il dock (Muovi, Misura, Tira dadi, Ping) usa gli stessi due gradienti per il tratto delle icone e la stessa targa accesa.
+- Non cambiano misura dei caratteri e margini: valgono ancora scala tipografica e adattamento allo schermo (controllato a 1920, 1366, 1200, 1000, 800 e 420 px).
+- Bocciati da Giuseppe in passato e NON usati: cornici ornate, pergamena, cornici generate. Gli emblemi stanno anche in `05_Immagini/Icone dei tasti/BARRA - *.svg`.
