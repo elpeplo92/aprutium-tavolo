@@ -499,3 +499,11 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Altri ritocchi: pallini di risorse e slot come gemme d'oro, caselle di spunta oro, casella dei metri delle aree leggibile, schede Panoramica/Collegamenti/Note con il simbolo sopra, segnaposto dei luoghi come medaglioni, `.shskills .sk` a quattro colonne quando c'è il simbolo.
 - Lasciati com'erano: punti d'interesse sulla mappa (il colore dice il tipo), ritratti, quadratini con illustrazione, menu a tendina, collegamenti nel testo.
 - **Attenzione agli script dello scratchpad** (`patch.js` dei simboli): la vecchia versione, rilanciata, toglieva dallo stile tutti i blocchi scritti DOPO quello dei simboli. Corretto: ora ogni blocco finisce dove comincia il successivo («/* ===== ») e torna al suo posto. Chi riscrive un blocco a mano controlli con `grep -c '===== ' src/tavolo.html` prima e dopo.
+
+## v130 (29/09/2026) — via le due tasselle sulla mappa
+
+- Richiesta di Giuseppe (guardando insieme la pagina): tolte dalla mappa, in alto a destra, le tasselle `#hudScale` («1 casella = 1,5 m») e `#hudSel` (nome e PF del token selezionato). `#hud` resta solo per `#sceneName` (il nome della scena, ai giocatori).
+- `#hudScale` era testo fisso, mai aggiornato dal codice. `#hudSel` era scritto da `render()`: le due righe sono state sostituite.
+- L'unica informazione che stava solo lì — il movimento rimasto al token selezionato durante lo scontro — ora è nella **Selezione** del master (`#selMovLbl` / `#selMov`, «Movimento 9 / 9 m», visibile solo in scontro). I giocatori il loro movimento lo avevano già in «Il tuo personaggio».
+- Effetto collaterale buono: spariscono dall'HUD i PF dei mostri, che un giocatore vedeva cliccando un nemico (guasto segnalato nell'audit v121).
+- **Da aggiornare**: gli strumenti dell'altro audit in `Revisioni/audit-tavolo-strumenti/` (`sc10-permessi.js`, `verifica29.js`) leggono ancora `hudSel` e su questa versione si fermano con un errore.
