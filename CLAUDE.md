@@ -525,3 +525,10 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Richiesta di Giuseppe: tolta dalla mappa l'etichetta `#sceneName` (il nome della scena, in alto a destra, solo per i giocatori). Era l'ultima delle tre tasselle di `#hud` (le altre due tolte nella v130): `#hud` resta nella pagina ma vuoto, perché due controlli dei clic lo nominano ancora.
 - Tolta anche la riga di `applyScene()` che la riscriveva.
 - Ai giocatori il nome della scena resta in cima alla Guida della scena (controllato su Sotto Bëllindë, il borgo, un luogo e il guado); il master ha il menu Scena.
+
+## v133 (30/09/2026) — segnali delle condizioni a medaglione
+
+- Richiesta di Giuseppe: rifare le etichette di stato (Benedetto, Prono, Legame…) sotto i token e nella colonna dei personaggi: erano sigle di tre lettere (PRN, BEN, LEG) in rosso.
+- Blocco «SEGNALI DELLE CONDIZIONI (v133)»: `condBadges()` (chiamata da `uiIcoAll`, quindi dopo ogni disegno della pagina) sostituisce il testo di ogni `.condrow .cond` con il simbolo della condizione (`UI_ICO.c_*`) in un medaglione tondo: bordo rosso se nuoce, oro se è buona (`COND_BUONE`: benedetto, concentrazione, legame, invisibile, scatto). I round restanti sono un numerino sull'angolo; il nome completo resta nel suggerimento. Nella scheda (`.shcond`) il simbolo va accanto al nome, con lo stesso colore.
+- Il testo lo scrive ancora `condHtml()` (sigle da `CONDS_ABBR`): non è stato toccato. Una condizione senza simbolo resta com'era (sigla).
+- Misure: sui token 13 px (18 col mouse sopra o selezionato), nella colonna 24 px. I caratteri del resto della pagina non cambiano.

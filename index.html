@@ -1339,12 +1339,36 @@ select option{background:#0C0F15;color:#EFE6D0}
 /* — barre di scorrimento — */
 *{scrollbar-width:thin;scrollbar-color:#7E6740 rgba(9,11,16,.6)}
 #guide,#guide *,.invcard,.invcard *{scrollbar-color:#7A5A2E rgba(120,85,40,.18)}
+/* ===== SEGNALI DELLE CONDIZIONI (v133) =====
+   Medaglione tondo col simbolo della condizione: rosso se nuoce, oro se è buona. Numerino dei round sull'angolo. */
+.condrow{gap:2px}
+.condrow .cond.cico{display:inline-grid;place-items:center;position:relative;padding:0;border-radius:50%;background:#0B0E13;border:1px solid;box-shadow:0 1px 2px rgba(0,0,0,.7);letter-spacing:0}
+.condrow .cond.cico.cattiva{border-color:#C9543F;color:#F3A898}
+.condrow .cond.cico.buona{border-color:#D4AE5C;color:#EDCB73}
+.condrow .cond.cico>svg.uico{margin:0;stroke:currentColor;stroke-width:2.1;vertical-align:0}
+.condrow .cond.cico>i{position:absolute;right:-5px;top:-5px;margin:0;font-style:normal;font-weight:700;font-family:var(--sans);line-height:1;background:#0B0E13;color:#EFE6D0;border:1px solid rgba(176,140,82,.6);border-radius:99px;padding:1px 3px}
+/* sui token: piccoli; crescono col mouse sopra o col token selezionato, come il nome */
+.tok .condrow .cond.cico{width:13px;height:13px;font-size:0}
+.tok .condrow .cond.cico>svg.uico{width:8.5px;height:8.5px}
+.tok .condrow .cond.cico>i{font-size:6px;padding:0 2px;right:-4px;top:-4px}
+.tok:hover .condrow .cond.cico,.tok.selected .condrow .cond.cico{width:18px;height:18px}
+.tok:hover .condrow .cond.cico>svg.uico,.tok.selected .condrow .cond.cico>svg.uico{width:12px;height:12px}
+.tok:hover .condrow .cond.cico>i,.tok.selected .condrow .cond.cico>i{font-size:8px}
+/* nella colonna dei personaggi */
+.med .condrow{gap:4px}
+.med .condrow .cond.cico{width:24px;height:24px;font-size:0}
+.med .condrow .cond.cico>svg.uico{width:15px;height:15px}
+.med .condrow .cond.cico>i{font-size:11px}
+/* nella scheda: simbolo accanto al nome */
+.shcond.cico{display:inline-flex;align-items:center;gap:6px}
+.shcond.cico>svg.uico{width:1em;height:1em;margin:0;stroke:currentColor;stroke-width:2}
+.shcond.cico.cattiva{border-color:#C9543F;color:#F3B2A4} .shcond.cico.buona{border-color:#D4AE5C;color:#EDCB73}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v132</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v133</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -5221,4 +5245,20 @@ function uiIcoAll(root){ try{ const r=root||document; uiIcoSwap(); r.querySelect
   const avvia=()=>{ new MutationObserver(chiama).observe(document.body,{childList:true,subtree:true,characterData:true}); uiIcoAll(document); };
   if(document.body) avvia(); else document.addEventListener('DOMContentLoaded',avvia);
 })();
+/* ===== SEGNALI DELLE CONDIZIONI (v133) =====
+   Richiesta di Giuseppe: via le sigle di tre lettere (PRN, BEN, LEG…) sotto i token e nella colonna dei personaggi.
+   Ogni condizione ha il suo simbolo (UI_ICO c_*, disegnati nel v120) in un medaglione tondo: bordo rosso per le condizioni
+   che nuocciono, oro per quelle buone (COND_BUONE). I round restanti stanno in un numerino sull'angolo. Il nome completo
+   resta nel suggerimento (title). Nella scheda il simbolo va accanto al nome. Il testo dei segnali lo scrive ancora condHtml():
+   condBadges() lo sostituisce dopo ogni disegno della pagina (chiamata da uiIcoAll). */
+const COND_BUONE=new Set(['benedetto','concentrazione','legame','invisibile','scatto']);
+function condKeyDaEtichetta(lbl){ lbl=String(lbl||'').split(' · ')[0].trim(); const c=CONDS.find(x=>x[1]===lbl); return c?c[0]:''; }
+function condBadges(root){ const r=root||document;
+  r.querySelectorAll('.condrow .cond:not(.cico)').forEach(el=>{ const k=condKeyDaEtichetta(el.title), ico=UI_ICO['c_'+k]; if(!ico) return; const i=el.querySelector('i'), round=i?i.textContent:'';
+    el.classList.add('cico',COND_BUONE.has(k)?'buona':'cattiva'); el.setAttribute('aria-label',el.title); el.innerHTML=`<svg class="uico" viewBox="0 0 24 24" aria-hidden="true">${ico}</svg>${round!==''?`<i>${round}</i>`:''}`; });
+  r.querySelectorAll('.shcond:not(.ok):not(.cico)').forEach(el=>{ const k=condKeyDaEtichetta(el.childNodes[0]&&el.childNodes[0].nodeValue), ico=UI_ICO['c_'+k]; el.classList.add('cico'); if(!ico) return;
+    el.classList.add(COND_BUONE.has(k)?'buona':'cattiva'); el.insertAdjacentHTML('afterbegin',`<svg class="uico" viewBox="0 0 24 24" aria-hidden="true">${ico}</svg>`); });
+}
+const uiIcoAllSenzaCond=uiIcoAll;
+uiIcoAll=function(root){ uiIcoAllSenzaCond(root); try{ condBadges(root); }catch(e){ console.warn('segnali delle condizioni',e); } };
 </script>
