@@ -532,3 +532,8 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Blocco «SEGNALI DELLE CONDIZIONI (v133)»: `condBadges()` (chiamata da `uiIcoAll`, quindi dopo ogni disegno della pagina) sostituisce il testo di ogni `.condrow .cond` con il simbolo della condizione (`UI_ICO.c_*`) in un medaglione tondo: bordo rosso se nuoce, oro se è buona (`COND_BUONE`: benedetto, concentrazione, legame, invisibile, scatto). I round restanti sono un numerino sull'angolo; il nome completo resta nel suggerimento. Nella scheda (`.shcond`) il simbolo va accanto al nome, con lo stesso colore.
 - Il testo lo scrive ancora `condHtml()` (sigle da `CONDS_ABBR`): non è stato toccato. Una condizione senza simbolo resta com'era (sigla).
 - Misure: sui token 13 px (18 col mouse sopra o selezionato), nella colonna 24 px. I caratteri del resto della pagina non cambiano.
+
+## v134 (30/09/2026) — simboli anche nelle schede nascoste del browser
+
+- I simboli dei tasti e i segnali delle condizioni si applicavano con `requestAnimationFrame`, che in una scheda del browser non visibile non parte: chi tornava sulla scheda dopo un aggiornamento vedeva per un attimo le sigle vecchie (visto nel browser dell'app). Ora la passata usa `setTimeout(…,0)`.
+- Corretto lo script `patch.js` dello scratchpad (blocco dei simboli) anche sul lato script: prima, rilanciato, cancellava i blocchi scritti dopo il suo (era successo al blocco delle condizioni). Ora ogni blocco finisce dove comincia il successivo e torna al suo posto, e lanciarlo due volte non cambia nulla.
