@@ -581,3 +581,8 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Richiesta di Giuseppe: i giocatori non trovavano il modo di ripristinare punti ferita, slot e capacità. I tasti «Riposo breve» e «Riposo lungo» (gli stessi `#restShort`/`#restLong` di prima, con `restShortOpen`/`restLong`) ora stanno nella testata della scheda, accanto a CA/Iniziativa/Velocità (`div.shrest`, stile `.shrest` dopo `.shstats`), e non più in fondo a «Capacità e talenti». Li vede chi può agire col personaggio (il giocatore sulla propria scheda, il master su tutte).
 - `restCan`: un personaggio **stabile** a 0 PF può riposare — torna a 1 PF (glossario 2024 «Stable»: dopo 1d4 ore) e il riposo comincia, con una riga nel Registro; chi è a 0 PF e non è stabile no (serve una cura o stabilizzarsi), come prima.
 - Correzione incrementale sopra la versione pubblicata (patch set `patches2/` in `Revisioni/audit-tavolo-strumenti/correzioni-v135/`, applicato con `applica2.js`).
+
+## v138 (30/09/2026) — Leader ispiratore di Mattheus
+
+- Richiesta di Giuseppe: «Esibizione rinvigorente (Leader ispiratore)» non faceva niente (scalava l'uso e scriveva la nota nel Registro). Ora `useResource` apre `inspiringLeader(id,i)`: finestra con gli alleati entro 9 m (Mattheus compreso, fino a sei, già spuntati), ognuno ottiene PF temporanei pari a livello + il modificatore più alto fra Saggezza e Carisma (5 + 4 = 9); i PF temporanei non si sommano (resta il valore più alto); l'uso si spende solo con «Ispira». Regola 2024 del talento (SRD 5.2.1, «Inspiring Leader»: alla fine di un riposo breve o lungo).
+- Correzione incrementale (`patches2/elenco-10.json` + `leader.js` in `Revisioni/audit-tavolo-strumenti/correzioni-v135/`); le patch già pubblicate stanno in `patches2-fatti/`.

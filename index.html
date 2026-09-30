@@ -1549,7 +1549,7 @@ select option{background:#0C0F15;color:#EFE6D0}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v137</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v138</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -3884,6 +3884,7 @@ function useResource(id,i,counted){ const t=S.tokens[id], r=((SHEETS[id]||{}).pg
   const spendi=()=>{ if(max) resSet(id,i,u+1); }, rendi=()=>{ if(counted){ resSet(id,i,u); save(); if(sheetOf===id&&document.querySelector('#modal .sheet2wrap')) renderSheet(id); } };
   const resto=max?` (restano ${Math.max(0,max-(u+1))})`:'';
   if(/^imposizione delle mani/i.test(n)){ if(counted) resSet(id,i,u); layOnHands(id,i); return; }
+  if(/esibizione rinvigorente|leader ispiratore/i.test(n)){ if(counted) resSet(id,i,u); inspiringLeader(id,i); return; }
   if(/^recupero energie/i.test(n)){
     if(t.hp>=t.hpMax){ toast(`${t.name} ha già tutti i punti ferita`); rendi(); return; }
     if(isDead(t)){ toast(`${t.name} è morto`); rendi(); return; }
@@ -3903,6 +3904,26 @@ function useResource(id,i,counted){ const t=S.tokens[id], r=((SHEETS[id]||{}).pg
   spendi(); log({kind:'sys',txt:`${t.name} usa ${r.n}${resto}${r.note?' — '+r.note:''}`});
   save(true); }
 /* Imposizione delle mani (Paladino, 2024): azione bonus, a contatto; la riserva è 5 × livello; 5 punti tolgono Avvelenato */
+/* v138 — Leader ispiratore (talento 2024, «Inspiring Leader»): alla fine di un riposo breve o lungo, fino a sei alleati entro 9 m che vedono o
+   sentono il personaggio (lui compreso) ottengono PF temporanei pari al livello + il modificatore di Saggezza o Carisma (il più alto).
+   I PF temporanei non si sommano: resta il valore più alto. Prima il tasto scalava solo l'uso e scriveva la nota nel Registro. */
+function inspiringLeader(id,i){
+  const t=S.tokens[id], sh=SHEETS[id], r=((sh||{}).pg||{}).risorse?.[i]; if(!t||!sh||!r) return;
+  const max=+r.max||0, u=resUsed(id,i); if(max&&u>=max){ toast(`${r.n}: già usata, torna alla fine del prossimo riposo`); return; }
+  const mod=Math.max(modCalc((sh.abil||{}).Sag||10),modCalc((sh.abil||{}).Car||10)), v=(sh.level||1)+mod;
+  const vicini=[{id,t,d:0},...Object.entries(S.tokens).filter(([k,x])=>k!==id&&x.kind!=='nemico'&&x.hp!=null&&!(x.hidden&&!IS_GM)&&(typeof tokInScene!=='function'||tokInScene(k))).map(([k,x])=>({id:k,t:x,d:distM(t,x)}))].filter(o=>IS_GM||o.d<=9).sort((a,b)=>a.d-b.d);
+  const row=(o,n)=>`<label class="tgt"><input type="checkbox" name="ilTgt" value="${o.id}" ${n<6?'checked':''}><span class="tn">${poiText(o.t.name)}${o.id===id?' (tu)':''}</span><span class="note">${o.d?o.d.toLocaleString('it-IT')+' m · ':''}PF ${o.t.hp}/${o.t.hpMax}${o.t.thp?' · '+o.t.thp+' temporanei':''}</span></label>`;
+  openModal(`<div class="eyebrow">${poiText(t.name)} · alla fine del riposo</div><h2 class="big">Esibizione rinvigorente</h2><p class="note" style="margin:0 0 8px">Un discorso, un canto o una danza: fino a <b>sei</b> alleati entro 9 m (tu compreso) ottengono <b>${v} PF temporanei</b> (livello ${sh.level||1} + ${mod}). I PF temporanei non si sommano: resta il valore più alto.</p>
+    <div class="tgtlist">${vicini.map(row).join('')||'<p class="note">Nessun alleato entro 9 m.</p>'}</div>
+    <div class="row" style="margin-top:12px"><button class="primary" id="ilGo">Ispira</button><button id="ilBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal');
+  box.querySelector('#ilBack').onclick=()=>{ if(sheetOf===id&&box.querySelector('.sheet2wrap')) renderSheet(id); else closeModal(); };
+  box.querySelector('#ilGo').onclick=()=>{ const ids=[...box.querySelectorAll('[name=ilTgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un alleato'); return; } if(ids.length>6){ toast('Al massimo sei alleati'); return; }
+    const fatti=[]; for(const k of ids){ const x=S.tokens[k]; if(!x||isDead(x)) continue; x.thp=Math.max(+x.thp||0,v); fatti.push(x.name); }
+    if(max) resSet(id,i,u+1);
+    log({kind:'sys',txt:`${t.name} — Esibizione rinvigorente: ${v} PF temporanei a ${fatti.join(', ')}`}); save(true);
+    if(sheetOf===id&&box.querySelector('.sheet2wrap')) renderSheet(id); else closeModal(); };
+}
 function layOnHands(id,i){
   const t=S.tokens[id], r=((SHEETS[id]||{}).pg||{}).risorse?.[i]; if(!t||!r) return; const max=+r.max||0, left=Math.max(0,max-resUsed(id,i));
   if(left<=0){ toast('Imposizione delle mani: la riserva è finita'); return; }
