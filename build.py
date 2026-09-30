@@ -288,9 +288,36 @@ def icone():
     open(SRC, "w", encoding="utf-8").write(html)
     print(f"ok: immagini di oggetti e abilità — {len(voci['oggetti'])} oggetti, {len(voci['abilita'])} abilità")
 
+CRO_START, CRO_END = "/*@CROCIATA*/", "/*@/CROCIATA*/"
+def crociata():
+    """La Crociata (v136): contenuti/_crociata.json (membri, carri, città e tappe della mappa del Ducato,
+    valori iniziali del Registro) → blocco CROCIATA_DATA. Le tappe devono puntare a scene esistenti."""
+    import json
+    f = os.path.join(CONT, "_crociata.json")
+    d = json.load(open(f, encoding="utf-8")) if os.path.exists(f) else {}
+    d.pop("_fonte", None)
+    scene_ids = {fn[:-5] for fn in os.listdir(os.path.join(CONT, "scene")) if fn.endswith(".json")}
+    errori, ids = [], set()
+    for c in (d.get("citta") or []) + (d.get("tappe") or []):
+        if c.get("id") in ids: errori.append(f"id ripetuto: {c.get('id')}")
+        ids.add(c.get("id"))
+        if not isinstance(c.get("x"), (int, float)) or not isinstance(c.get("y"), (int, float)): errori.append(f"{c.get('id')}: mancano x / y")
+    for t in d.get("tappe") or []:
+        if t.get("scena") and t["scena"] not in scene_ids: errori.append(f"tappa {t['id']}: la scena «{t['scena']}» non esiste")
+    for m in d.get("membri") or []:
+        if m.get("gruppo") not in [g[0] for g in d.get("gruppi") or []]: errori.append(f"membro {m.get('id')}: gruppo sconosciuto")
+    if errori:
+        print("CROCIATA CON ERRORI:\n  " + "\n  ".join(errori)); sys.exit(1)
+    html = open(SRC, encoding="utf-8").read()
+    a = html.index(CRO_START); b = html.index(CRO_END) + len(CRO_END)
+    html = html[:a] + CRO_START + "const CROCIATA_DATA=" + json.dumps(d, ensure_ascii=False, separators=(",", ":")) + ";" + CRO_END + html[b:]
+    open(SRC, "w", encoding="utf-8").write(html)
+    print(f"ok: la Crociata — {len(d.get('membri') or [])} voci di membri, {len(d.get('citta') or [])} città, {len(d.get('tappe') or [])} tappe")
+
 def build():
     contenuti()
     scene()
+    crociata()
     bestiario()
     pg()
     incantesimi()
@@ -307,6 +334,6 @@ def build():
 if __name__ == "__main__":
     a = sys.argv[1:]
     if a[:1] == ["--inline"]: inline()
-    elif a[:1] == ["--contenuti"]: contenuti(); scene()
+    elif a[:1] == ["--contenuti"]: contenuti(); scene(); crociata()
     elif a[:1] == ["--extract"]: extract(a[1])
     else: build()
