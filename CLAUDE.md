@@ -575,3 +575,9 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - **Da decidere con Giuseppe**: il Registro e l'Atto XVI dicono 39 persone, ma l'elenco dà 7 + 20 + 11 = 38 (gli «specialisti e civili» sono detti 12 ma ne sono nominati 11). Effetti dei posti dell'ordine di marcia (per ora solo assegnazione). Sistema Expeditio del Manuale (solo nomi): lasciato fuori.
 - Script rigiocabile: scratchpad della sessione, `patch-cro.js` (+ `cro.js`, `cro.css`) — va applicato su una copia pulita del sorgente.
 - Nella stessa versione: punto «dove_eravamo» di Sotto Bëllindë (dall'altra sessione, `img/51568aca6aae.jpg`).
+
+## v137 (30/09/2026) — i riposi in cima alla scheda
+
+- Richiesta di Giuseppe: i giocatori non trovavano il modo di ripristinare punti ferita, slot e capacità. I tasti «Riposo breve» e «Riposo lungo» (gli stessi `#restShort`/`#restLong` di prima, con `restShortOpen`/`restLong`) ora stanno nella testata della scheda, accanto a CA/Iniziativa/Velocità (`div.shrest`, stile `.shrest` dopo `.shstats`), e non più in fondo a «Capacità e talenti». Li vede chi può agire col personaggio (il giocatore sulla propria scheda, il master su tutte).
+- `restCan`: un personaggio **stabile** a 0 PF può riposare — torna a 1 PF (glossario 2024 «Stable»: dopo 1d4 ore) e il riposo comincia, con una riga nel Registro; chi è a 0 PF e non è stabile no (serve una cura o stabilizzarsi), come prima.
+- Correzione incrementale sopra la versione pubblicata (patch set `patches2/` in `Revisioni/audit-tavolo-strumenti/correzioni-v135/`, applicato con `applica2.js`).

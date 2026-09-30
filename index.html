@@ -685,6 +685,7 @@ body #app,body.isgm #app{grid-template-columns:224px minmax(0,1fr) clamp(300px,2
 .shhp.small{max-width:none;margin:6px 0}
 .shhpn{margin-top:6px;font-size:18px;color:var(--ink-dim)} .shhpn b{font-size:24px;color:var(--ink);margin-right:6px}
 .shstats{display:flex;gap:10px}
+.shrest{display:flex;flex-direction:column;gap:6px;justify-content:center;margin-left:8px}.shrest button{font-size:17px;padding:8px 14px;white-space:nowrap}
 .shstat{min-width:112px;padding:10px 12px;text-align:center;background:linear-gradient(180deg,#151C2A,#0E131D);border:1px solid rgba(201,162,74,.5);box-shadow:inset 0 0 0 3px rgba(8,11,18,.85),inset 0 0 0 4px rgba(201,162,74,.18)}
 .shstat span{display:block;font-size:16px;color:var(--ink-dim)}
 .shstat b{display:flex;align-items:center;justify-content:center;gap:8px;font-size:28px;color:var(--ink)}
@@ -1548,7 +1549,7 @@ select option{background:#0C0F15;color:#EFE6D0}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v136</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v137</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -2998,7 +2999,7 @@ function renderSheet(id){
     body=sheetDiaryHtml(id,t,mine);
   }
   const head=`<div class="shhead sheethead"><div class="shport" style="background-image:url(${t.img||''})"></div><div class="shwho"><h1>${poiText(shownName)}</h1><div class="shcls">${poiText(t.cls||'')}${sh.level?` · Livello ${sh.level}`:''}${(t.size||1)>1?' · Taglia Grande':''}</div><div class="shhp"><i style="width:${hpPct}%"></i></div><div class="shhpn"><b>${t.hp} / ${t.hpMax}</b> Punti ferita${t.thp?` <small>+${t.thp} temporanei</small>`:''}</div></div>
-    <div class="shstats"><div class="shstat"><span>CA</span><b>${svg(ICO.ca)}${shownAc}</b></div><div class="shstat"><span>Iniziativa</span><b>${svg(ICO.ini)}${fmtMod(ini)}</b></div><div class="shstat"><span>Velocità</span><b>${svg(ICO.vel)}${shownSpeed} m</b></div><div class="shstat"><span>Competenza</span><b>${svg(ICO.com)}+${sh.prof}</b></div><div class="shstat" title="Percezione passiva: 10 + Percezione. Serve a notare da soli i punti d’interesse"><span>Perc. passiva</span><b>${svg(ICO.occ)}${spotPassiva(t)}</b></div></div>
+    <div class="shstats"><div class="shstat"><span>CA</span><b>${svg(ICO.ca)}${shownAc}</b></div><div class="shstat"><span>Iniziativa</span><b>${svg(ICO.ini)}${fmtMod(ini)}</b></div><div class="shstat"><span>Velocità</span><b>${svg(ICO.vel)}${shownSpeed} m</b></div><div class="shstat"><span>Competenza</span><b>${svg(ICO.com)}+${sh.prof}</b></div><div class="shstat" title="Percezione passiva: 10 + Percezione. Serve a notare da soli i punti d’interesse"><span>Perc. passiva</span><b>${svg(ICO.occ)}${spotPassiva(t)}</b></div></div>${mine?`<div class="shrest"><button id="restShort" title="1 ora: spendi i Dadi Vita per curarti, tornano le capacità «a riposo breve»">Riposo breve</button><button id="restLong" class="primary" title="8 ore: tornano tutti i punti ferita, gli slot, le capacità e i Dadi Vita">Riposo lungo</button></div>`:''}
     <div class="shconds"><span class="lbl">Condizioni attive</span><div>${conds}</div></div>
     <div class="shback">${switcher}<button id="sheetBack"><span aria-hidden="true">←</span> Torna al Tavolo</button></div></div>
     <nav class="shtabs">${tabs.map(([k,l])=>`<button class="${sheetTab===k?'on':''}" data-tab="${k}">${l}</button>`).join('')}</nav>`;
@@ -3137,7 +3138,7 @@ function sheetFeaturesHtml(id,sh,t,form,mine){
   const item=f=>{ const m=String(f).match(/^([^(:]+?)\s*(?:[(:]\s*(.*?)\)?)?$/); return `<div class="shitem"><b>${poiText(m?m[1]:f)}</b>${m&&m[2]?`<small>${poiText(m[2])}</small>`:''}</div>`; };
   const priv=p&&p.privilegi&&p.privilegi.length?pgDetails(p.privilegi,false,'Privilegio'):`<div class="shlist">${(sh.features||[]).map(item).join('')||'<p class="note">Nessun privilegio registrato.</p>'}</div>`;
   const tal=p&&p.talenti&&p.talenti.length?pgDetails(p.talenti,false,'Talento'):`<div class="shlist">${(sh.feats||[]).map(item).join('')||'<p class="note">Nessun talento registrato.</p>'}</div>`;
-  const left=`<section class="shpanel"><h2>Privilegi di classe</h2><p class="note" style="margin:-4px 0 10px">${poiText(t.cls||'')}${sh.level?' · livello '+sh.level:''}</p>${priv}${pgResourcesHtml(id,t,p,mine)}${mine?`<div class="row" style="margin:10px 0"><button id="restShort">Riposo breve</button><button id="restLong">Riposo lungo (recupera tutto)</button></div>`:''}${other.length?`<h2 style="margin-top:16px">Capacità da usare</h2><div class="shlist">${other.map(({a,i})=>sheetActCard(a,i,mine,'Usa')).join('')}</div>`:''}</section>`;
+  const left=`<section class="shpanel"><h2>Privilegi di classe</h2><p class="note" style="margin:-4px 0 10px">${poiText(t.cls||'')}${sh.level?' · livello '+sh.level:''}</p>${priv}${pgResourcesHtml(id,t,p,mine)}${other.length?`<h2 style="margin-top:16px">Capacità da usare</h2><div class="shlist">${other.map(({a,i})=>sheetActCard(a,i,mine,'Usa')).join('')}</div>`:''}</section>`;
   const right=`<section class="shpanel"><h2>Talenti</h2>${tal}${p&&p.tratti_specie&&p.tratti_specie.length?`<h2 style="margin-top:16px">Tratti di specie${p.specie?' — '+poiText(p.specie):''}</h2>${pgDetails(p.tratti_specie,false,'Tratto')}`:''}${pgCompetenzeHtml(p)}${pgFontiHtml(p)}<h2 style="margin-top:16px">Tratti</h2><div class="kv"><b>Lingue</b><span>${poiText(sh.languages||'—')}</span><b>Percezione passiva</b><span>${sh.passive??'—'}</span><b>Dadi vita</b><span>${poiText(sh.hitDice||'—')}</span></div></section>`;
   return `<div class="shgrid cap">${left}${right}</div>`;
 }
@@ -3822,7 +3823,11 @@ function openMetaPicker(id,k){
    la concentrazione e gli effetti accesi; le cariche degli oggetti tornano come dice l'oggetto («recupera 1d6+4 cariche all'alba»).
    Dadi Vita spesi: t.hd (in LIVE). */
 function hitDie(id){ const m=String((SHEETS[id]||{}).hitDice||'').match(/(\d+)\s*d\s*(\d+)/i); return m?{n:+m[1],f:+m[2]}:{n:(SHEETS[id]||{}).level||1,f:8}; }
-function restCan(id){ const t=S.tokens[id]; if(!t) return false; if(isDead(t)){ toast(`${t.name} è morto`); return false; } if(t.hp<=0){ toast(`${t.name} è a 0 punti ferita: per riposare serve almeno 1 PF`); return false; } return true; }
+function restCan(id){ const t=S.tokens[id]; if(!t) return false; if(isDead(t)){ toast(`${t.name} è morto`); return false; }
+  /* v137 — stabile a 0 PF: dopo 1d4 ore torna a 1 PF (glossario «Stable»), poi può riposare; chi è a 0 PF e non è stabile no */
+  if(t.hp<=0){ if(t.ds&&t.ds.stable){ t.hp=1; delete t.ds; log({kind:'sys',txt:`${t.name} è stabile: dopo 1d4 ore torna a 1 PF e comincia a riposare`}); return true; }
+    toast(`${t.name} è a 0 punti ferita e non è stabile: per riposare serve almeno 1 PF (una cura, o stabilizzarsi)`); return false; }
+  return true; }
 function restShortOpen(id){
   const t=S.tokens[id], sh=SHEETS[id]; if(!t||!sh||!restCan(id)) return;
   const D=hitDie(id), cos=modCalc((sh.abil||{}).Cos||10); const tiri=[];
