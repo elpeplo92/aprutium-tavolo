@@ -168,5 +168,28 @@
     "gm": "A due leghe da Bëllindë, in terra del Barone Pietramala. Seconda sosta: scena «L'osteria de lu Passe»." },
   { "id": "t_colleatterato", "nome": "Colleatterato", "scena": "colleatterato", "x": 1008, "y": 437,
     "gm": "Terza sosta (decisione di Giuseppe, v109: sostituisce Cashtalladdë). Scena «Da Colleatterato»." }
+ ],
+ "_strade": "NUOVO DETTAGLIO PROPOSTO (04-10-2026, da confermare con Giuseppe): rete delle strade del Ducato fra le 43 città e le tre tappe, ricavata dalla posizione dei borghi (vicini più prossimi, senza incroci) più qualche strada maestra aggiunta a mano attorno a Teramum. Ogni voce è [da, a]; la strada Bëllindë–Teramum passa per guado, osteria e Colleatterato.",
+ "strade": [
+  ["alba", "curruppje"], ["alba", "martencecure"], ["alba", "terterate"], ["atre", "licote"],
+  ["atre", "morre"], ["atre", "penete"], ["bbashane", "canzane"], ["bbashane", "culledare"],
+  ["bbashane", "mendurje"], ["bbashane", "teramum"], ["bbashane", "terrecialle"], ["bellinde", "chimble"],
+  ["bellinde", "nnareta"], ["bellinde", "nutarosche"], ["bellinde", "sandemire"], ["bellinde", "t_guado"],
+  ["bisinde", "canzane"], ["bisinde", "cashtagne"], ["bisinde", "cashtijune"], ["bisinde", "cirmignane"],
+  ["bisinde", "licashtille"], ["canzane", "cashtalladde"], ["canzane", "cirmignane"], ["canzane", "teramum"],
+  ["cashtagne", "cashtijune"], ["cashtagne", "licashtille"], ["cashtalladde", "cashtilinde"], ["cashtalladde", "laponne"],
+  ["cashtalladde", "morre"], ["cashtalladde", "nutarosche"], ["cashtalladde", "teramum"], ["cashtijune", "cirmignane"],
+  ["cashtijune", "laponne"], ["cashtijune", "mundesocche"], ["cashtilinde", "celline"], ["cashtilinde", "mundesocche"],
+  ["celline", "laponne"], ["celline", "mundesocche"], ["cevetella", "chimble"], ["cevetella", "lepiana"],
+  ["cevetella", "ngara"], ["chimble", "teramum"], ["chimble", "terrecialle"], ["crognaleto", "curtene"],
+  ["crognaleto", "fano"], ["culennelle", "curruppje"], ["culennelle", "martencecure"], ["culennelle", "nnareta"],
+  ["culledare", "licashtille"], ["culledare", "tussecie"], ["cundrauerre", "ngara"], ["cundrauerre", "nnareta"],
+  ["cundrauerre", "sandiglie"], ["curruppje", "martencecure"], ["curruppje", "nnareta"], ["curruppje", "terterate"],
+  ["curtene", "larocche"], ["curtene", "tussecie"], ["fano", "lesene"], ["julianova", "licote"],
+  ["julianova", "morre"], ["julianova", "mushane"], ["larocche", "lepiana"], ["lesene", "licashtille"],
+  ["lesene", "tussecie"], ["licote", "morre"], ["licote", "penete"], ["mendurje", "terrecialle"],
+  ["mendurje", "tussecie"], ["morre", "nutarosche"], ["mushane", "nutarosche"], ["mushane", "sandemire"],
+  ["mushane", "terterate"], ["ngara", "sandiglie"], ["nnareta", "sandemire"], ["nnareta", "sandiglie"],
+  ["t_colleatterato", "t_osteria"], ["t_colleatterato", "teramum"], ["t_guado", "t_osteria"], ["teramum", "terrecialle"]
  ]
 }
