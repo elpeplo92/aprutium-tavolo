@@ -1,0 +1,28 @@
+{
+ "id": "forgiato_marcio",
+ "name": "Forgiato marcio",
+ "short": "M",
+ "color": "#4A5238",
+ "hp": 36,
+ "ac": 13,
+ "init": 3,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Morso",
+   "atk": 5,
+   "dmg": "1d8+3+2d8"
+  },
+  {
+   "n": "Artiglio (TS Cos CD 10 o Paralizzato fino alla fine del suo turno successivo; non i non morti)",
+   "atk": 5,
+   "dmg": "2d6+3"
+  }
+ ],
+ "note": "Ghast del Manuale dei Mostri 2024 (statistiche a memoria: verificare nell’SRD) · Non morto Medio · GS 2 · 450 PE · velocità 9 m · scurovisione 18 m · resistenza al necrotico; immune a veleno, affascinato, avvelenato, indebolimento. Tanfo: chi inizia il turno entro 1,5 m fa TS Cos CD 10 o è avvelenato fino all’inizio del suo turno successivo (chi supera è immune per 24 ore). Eco: ripete l’ultima parola che sente, con la voce di chi l’ha detta. Richiamo del Filatterio (proposta): non attacca chi porta il Filatterio di Lyaras, gli si stringe intorno e colpisce chi si mette in mezzo.",
+ "src": "Il guado di Sant’Atto",
+ "tac": "Guida gli altri senza parlare: dove va lui, vanno loro. Punta le bestie e chi le tiene, poi chi è a terra.",
+ "lines": [
+  "(ripete l’ultima parola che ha sentito, con la voce di chi l’ha detta)"
+ ]
+}

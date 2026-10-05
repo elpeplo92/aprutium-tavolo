@@ -1,0 +1,24 @@
+{
+ "id": "forgiato_capo",
+ "name": "Capo Forgiato",
+ "short": "C",
+ "color": "#3E4630",
+ "hp": 82,
+ "ac": 16,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: due colpi di martello da guerra"
+  },
+  {
+   "n": "Martello da guerra (un bersaglio Grande o più piccolo viene spinto di 3 m)",
+   "atk": 5,
+   "dmg": "2d8+3"
+  }
+ ],
+ "note": "Bruto capo del Manuale dei Mostri 2024, adattato (statistiche a memoria: verificare nell’SRD) · Non morto Medio · GS 4 · 1.100 PE · velocità 9 m · TS For +5, Cos +5. Tattica del branco: vantaggio a un attacco se un suo alleato non incapacitato è entro 1,5 m dal bersaglio. Richiamo del Filatterio (proposta): come i Forgiati ferali.",
+ "src": "Il guado di Sant’Atto",
+ "tac": "Cammina come chi fa la ronda. Punta chi difende un carro e prova a buttarlo in acqua col martello.",
+ "lines": []
+}

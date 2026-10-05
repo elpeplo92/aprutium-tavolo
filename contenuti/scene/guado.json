@@ -8,7 +8,7 @@
   "luogo": "Il guado di Sant’Atto",
   "nome": "La Crociata passa il fiume",
   "n": 1,
-  "breve": "La Crociata passa il Tordinum. I contadini fermi fra i pioppi sono Forgiati. Si riparte dallo scontro, al round 1."
+  "breve": "La Crociata passa il Tordinum. I contadini fermi fra i pioppi sono Forgiati: attaccano quando i carri sono in mezzo al fiume, e altri arrivano dai campi alle spalle della colonna. Dopo lo scontro, casale, pagliaio e pozzo dicono chi li ha forgiati e chi sapeva. Dalla cappelletta di Sant'Atto la strada riparte verso l'osteria de lu Passe, dove la colonna passa la notte."
  },
  "mappa": {
   "img": "img/d2bc16a03887.jpg",
@@ -24,24 +24,43 @@
   "segnaposto": false
  },
  "intro": {
-  "leggi": "La strada di levante scende fra le vigne, poi fra i campi di grano già mietuto. Le cicale. La polvere dei carri che non si posa mai.\n\nIn fondo alla valle, un filo verde fra due file di pioppi: il Tordinum.\n\nÈ mezzogiorno. Il sole è a picco. Le bestie sentono l’acqua da lontano e allungano il passo.\n\nUna lega da Bëllindë. Il guado di Sant’Atto.",
-  "note": "Scontro della strada per Teramum. La colonna arriva dalla carrareccia in basso a sinistra, attraversa la lingua di ciottoli bianchi al centro e riparte sulla strada a destra, oltre l’edicola.\nMetti dal Bestiario 6 «Forgiato ferale» (4 fra i pioppi della riva opposta a sinistra del sentiero del casale, 2 fra le canne dell’isolotto) e 3 «Forgiato veterano» (2 con la falce dove il guado esce dall’acqua, 1 nel pagliaio).\nIl fiume fuori dalla lingua di ciottoli è terreno difficile. Sotto il guado, a valle, c’è la pozza.\nOrdine dei punti: la riva di qua → la gente fra i pioppi → il guado (scontro) → i carri in mezzo al fiume (durante lo scontro) → il pagliaio → il casale → il pozzo → l’edicola (uscendo).",
+  "leggi": "La strada di levante scende fra le vigne, poi fra i campi di grano già mietuto. Le cicale. La polvere dei carri non si posa mai.\n\nIn fondo alla valle c'è una striscia verde fra due file di pioppi: è il Tordinum.\n\nÈ mezzogiorno, il sole è a picco. Le bestie sentono l'acqua da lontano e allungano il passo.",
+  "note": "LA VERITÀ DELLA SCENA (solo per te)\n\n• Chi sono i nemici. Gente della valle: la famiglia Chiòdi del casale (il vecchio Zi' Anselmo, la nuora Rosa, i figli Berardo e Mèmmo), i vicini dei casali di Sant'Atto e Gerardo Tosti, un soldato del Barone di Cashtalladdë. Sono Forgiati: il corpo è il loro, dentro non c'è più nessuno.\n\n• Perché sono bestie. I Forgiati prendevano la mente dal Primo Forgiato, Lyaras. Lyaras adesso è chiuso nel Filatterio che Mattheus porta in tasca. Senza di lui, i Forgiati nuovi non pensano: aspettano, poi assaltano.\n\n• Cosa significa. Questi sono stati forgiati due settimane fa, quindi dopo la caduta di Lyaras. Qualcuno nella valle continua a forgiare.\n\n• Come è successo. Una sera di luna nuova la famiglia ha bevuto l'acqua del pozzo, dove qualcuno aveva versato la melma nera. Si sono alzati da tavola tutti insieme e sono usciti. Poi a ognuno è stato cucito sotto lo sterno un medaglione di piombo con una scheggia lunare.\n\n• Perché guardano Mattheus. Sentono Lyaras dentro il Filatterio, come un cane sente il padrone. Non attaccano Mattheus: gli si stringono intorno e colpiscono chi si mette in mezzo.\n\n• Cosa possono scoprire qui. Sui corpi: la Forgiatura è recente. Nel pagliaio: il Barone di Cashtalladdë sapeva delle sparizioni e ha taciuto. Nel casale e nel pozzo: la Forgiatura è passata dall'acqua, e l'acqua sa di lillà, il profumo di Casa Velthuria. Alla cappelletta di Sant'Atto: un cavaliere segue la colonna da lontano.\n\n• Come può finire. Di solito muoiono tutti: non scappano e non parlano. Se la colonna torna indietro sulla riva di qua, non la inseguono oltre l'acqua. Se Mattheus si allontana, lo seguono.\n\nIn breve: La Crociata passa il Tordinum. I contadini fermi fra i pioppi sono Forgiati: attaccano quando i carri sono in mezzo al fiume, e altri arrivano dai campi alle spalle della colonna. Dopo lo scontro, casale, pagliaio e pozzo dicono chi li ha forgiati e chi sapeva. Dalla cappelletta di Sant'Atto la strada riparte verso l'osteria de lu Passe, dove la colonna passa la notte.",
   "ingressi": [
    {
-    "da": "Dalla carrareccia di Bëllindë (tutta la colonna)",
+    "da": "Dalla strada di levante, da Bëllindë (tutta la colonna)",
     "primo": "guado_riva",
     "poi": "guado_pioppi",
-    "note": "L’ordine normale della lista."
+    "note": "Prima il viaggio (questa introduzione, con l’immagine del luogo), poi la riva."
    },
    {
-    "da": "Se Luigis e Zenith, o un esploratore, passano il fiume prima dei carri",
-    "primo": "guado_pioppi",
+    "da": "Si riprende la sessione",
+    "primo": "guado_ripresa",
     "poi": "guado_casale",
-    "note": "Chi passa da solo e si avvicina a meno di 3 metri alla gente fra i pioppi fa partire lo scontro senza i carri in acqua: i ferali gli si stringono intorno, e dal greto la colonna ha due round di corsa per arrivare."
+    "note": "«Dove eravamo rimasti», poi lo scontro al punto 3."
    }
   ]
  },
  "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "guado_ripresa",
+   "kind": "scena",
+   "title": "Dove eravamo rimasti",
+   "image": "Luogo — 1. Il guado di Sant’Atto.jpg",
+   "legacyPosition": {
+    "x": 58,
+    "y": 1043
+   },
+   "text": "Bëllindë è alle vostre spalle.\n\nSotto le sue strade avete trovato il Quarto Sigillo e il suo ultimo custode: un prefectus che non lascia il suo posto da duecento anni. Vi ha dato la sua lama, la sua armatura e uno stendardo, e vi ha chiesto una cosa sola. Che un giorno qualcuno torni a dargli il cambio.\n\nMattheus e Alessandros sono usciti da un muro della Pieve di San Vincenzo, portando con sé Micuccio, il ragazzo che tutti credevano morto. Gli altri sono risaliti dal pozzo del Borgo Vecchio con un Brak alle spalle. Si chiama Vhaerun, e adesso cammina con voi.\n\nStamattina Mattheus ha parlato alla Piazza Grande, e la piazza gli ha risposto. Micuccio e i suoi genitori, Cecco, Mimì il banditore: ora sono in coda ai carri. Fra le vigne, un druido di Torricella ha detto ad Adamus che la montagna trema.\n\nPoi la strada. Le vigne, il grano mietuto, i pioppi. Il Tordinum.\n\nE adesso siete in mezzo al guado. Il secondo carro ha l'acqua fino al centro delle ruote. La gente che stava ferma fra i pioppi non è più ferma. Corre in acqua verso di voi, tutta insieme, senza un grido.\n\nTirate tutti per l'iniziativa.",
+   "breve": "Il racconto con cui si riapre la sessione: da Bëllindë fino allo scontro appena cominciato al guado. Poi si tira l’iniziativa (punto 3).",
+   "gm": "Si legge all’inizio della sessione, poi si passa al punto 3, «Lo scontro al guado».",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "moduli": []
+  },
   {
    "schemaVersion": 3,
    "id": "guado_riva",
@@ -49,118 +68,16 @@
    "title": "La riva di qua",
    "image": "PDI — Guado — La riva di qua.jpg",
    "legacyPosition": {
-    "x": 470,
-    "y": 790
+    "x": 232,
+    "y": 717
    },
-   "text": "La carrareccia esce dai campi mietuti e scende al fiume fra due file di pioppi. Le foglie fanno rumore d’acqua anche dove l’acqua non c’è.\n\nIl Tordinum, d’agosto, è basso. Un greto largo quanto una piazza, ciottoli bianchi che accecano sotto il sole di mezzogiorno. In mezzo, un filo d’acqua verde che corre svelto.\n\nIl guado si vede bene: una lingua di sassi chiari che taglia il fiume di traverso, verso la riva opposta.\n\nDi là, oltre un muretto a secco, un casale col tetto sfondato. Un pozzo. Un pagliaio. Nessun fumo dal camino.\n\nA monte, in mezzo alla corrente, un isolotto di sabbia pieno di canne.\n\nLe bestie sentono l’acqua e tirano. I carrettieri le tengono corte.\n\nSilvanus alza la mano. La colonna si ferma.",
-   "breve": "La colonna arriva al Tordinum dalla carrareccia in basso a sinistra e si ferma sul greto. Qui si decide come si passa: chi va avanti, chi tiene le bestie, se Luigis e Zenith guardano prima. Poi si attraversa verso il casale.",
-   "gm": "È mezzogiorno del primo giorno, a una lega da Bëllindë (tavoletta della Porta di Levante). Il guado è la prima delle due strettoie di Ze’ Cristofano.\nSulla mappa la colonna entra dal sentiero in basso a sinistra, scende sulla spiaggia di sabbia e attraversa la lingua di ciottoli bianchi verso il casale in alto a destra; di là la strada riparte verso destra, oltre l’edicola di Sant’Atto, verso Teramum.\nTempo: un carro alla volta, due round per carro dal greto alla riva opposta. Far passare cinque carri e ventitré bestie senza fretta è un’ora.\nChi c’è: nove Forgiati ferali. Quattro Ghoul fra i pioppi e i cespugli della riva opposta, a sinistra del sentiero del casale; due Ghoul accucciati fra le canne dell’isolotto; due Veterani (i figli del casale, con la falce) sul greto opposto, dove il guado esce dall’acqua; un Veterano (un milite di Cashtalladdë) nel pagliaio. Vedi «La gente fra i pioppi» e «Il guado di Sant’Atto».",
+   "text": "La strada sterrata esce dai campi e scende al fiume fra i pioppi.\n\nAd agosto il Tordinum è quasi a secco. Resta un letto di sassi bianchi largo come una piazza, e in mezzo un filo d'acqua verde che corre svelto. Il passaggio si vede bene: una striscia di sassi chiari che taglia il fiume di traverso.\n\nDi là, oltre un muretto, un casale col tetto sfondato, un pozzo, un pagliaio. Nessun fumo dal camino.\n\nSilvanus alza la mano. La colonna si ferma.\n\nLuigis, Zenith ti tira il guanto. Vuole volare. Lo lasci andare?",
+   "breve": "Arrivi da: Dal viaggio. La colonna si ferma sulla spiaggia di sassi, in basso a sinistra.\nPoi: 2 · La gente fra i pioppi, oppure 3 · Lo scontro",
+   "gm": "",
    "nota": {
     "cd": 0
    },
-   "moduli": [
-    {
-     "id": "ricognizione",
-     "tipo": "dettaglio",
-     "titolo": "Luigis e Zenith guardano prima",
-     "parte": "indizio",
-     "seme": "Silvanus alza la mano. La colonna si ferma.",
-     "innesco": "Luigis manda Zenith sopra il fiume, o qualcuno passa avanti a guardare prima dei carri.",
-     "leggi": "Dall’alto il fiume è un nastro verde su un letto bianco. Il guado è largo e sicuro nel mezzo; sotto, a valle, l’acqua si fa scura e gira: una pozza.\n\nIl casale ha il tetto sfondato a metà. Sull’aia niente galline, niente cane. Sui coppi del tetto, corvi. Sull’aia, nessuno.\n\nLa strada, di là, riparte verso levante, passa accanto a un’edicola e sale fra i campi. Vuota.\n\nE sulla riva opposta, fra i pioppi, gente. Ferma.",
-     "note": "Regola della strada: la ricognizione dall’alto risolve ciò che è visibile su strada aperta, senza tiro. Le persone fra i pioppi Zenith le vede: sono in piedi, all’ombra, e non si muovono. Il tiro serve solo per ciò che si nasconde: i due fra le canne dell’isolotto e l’uomo nel pagliaio.",
-     "prove": [
-      {
-       "id": "zenith",
-       "abilita": [
-        "Percezione"
-       ],
-       "cd": 15,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 14,
-         "leggi": "Otto, nove persone fra i pioppi, forse. All’ombra si contano male. Nient’altro si muove."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 15,
-         "max": 18,
-         "leggi": "Fra le canne dell’isolotto, a monte del guado, due schiene curve. Accucciate nell’acqua fino alla vita. Da quanto tempo stanno lì, in quell’acqua fredda?"
-        },
-        {
-         "fascia": "natural20",
-         "leggi": "I due fra le canne. E nel pagliaio, sul lato verso il fiume, un buco nero largo quanto un uomo. Dentro, nel buio, qualcosa di chiaro: una faccia. Guarda il guado."
-        }
-       ]
-      }
-     ],
-     "dopo": "Chi ha visto i due dell’isolotto o l’uomo del pagliaio non è sorpreso quando attaccano. Se la colonna decide di non passare subito, i Forgiati non si muovono: aspettano. Attaccano solo quando qualcuno entra in acqua o si avvicina a meno di dieci metri.",
-     "rilancio": "Zenith torna a girare sopra le vostre teste. Che cosa fate?",
-     "daqui": [
-      "guadare",
-      "guado_pioppi"
-     ]
-    },
-    {
-     "id": "guadare",
-     "tipo": "dettaglio",
-     "titolo": "Leggere il fiume",
-     "parte": "indizio",
-     "seme": "Il guado si vede bene: una lingua di sassi chiari che taglia il fiume di traverso, verso la riva opposta.",
-     "innesco": "Qualcuno studia il guado prima di farci entrare i carri (Adamus, Luigis, un carrettiere).",
-     "leggi": "La lingua di ciottoli è larga quanto due carri. L’acqua lì arriva al ginocchio, veloce ma bassa. Ai lati il fondo scende di colpo.",
-     "prove": [
-      {
-       "id": "fiume",
-       "abilita": [
-        "Natura",
-        "Sopravvivenza"
-       ],
-       "cd": 12,
-       "gruppo": "migliore",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 11,
-         "leggi": "Un guado buono, battuto da generazioni. Basta stare sui sassi bianchi."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 12,
-         "max": 15,
-         "leggi": "Stare sui sassi bianchi, sì. Ma a valle, dove i ciottoli finiscono, c’è una pozza profonda che gira: un carro che scivola di lato ci finisce dentro. Meglio mettere un uomo a valle, in acqua, per ogni carro."
-        },
-        {
-         "fascia": "fullSuccess",
-         "min": 16,
-         "leggi": "La pozza a valle, e un’altra cosa: sulla riva opposta i ciottoli sono smossi, rovesciati, con la parte verde di sotto. Qualcuno è entrato e uscito dall’acqua molte volte, a piedi nudi, nei giorni scorsi. E non per pescare."
-        }
-       ]
-      }
-     ],
-     "dopo": "Con 12 o più il gruppo sa della pozza: se mette qualcuno a valle, il primo carro che scivola nello scontro è tenuto senza prova. Con 16 o più sanno che la riva opposta è frequentata.",
-     "rilancio": "Il primo carrettiere aspetta un vostro cenno. Che cosa fate?",
-     "daqui": [
-      "ordine"
-     ]
-    },
-    {
-     "id": "ordine",
-     "tipo": "dettaglio",
-     "titolo": "L’ordine di passaggio",
-     "parte": "evento",
-     "innesco": "La colonna si prepara a entrare in acqua.",
-     "leggi": "Silvanus si volta verso di voi. «Un carro alla volta. Chi passa per primo, chi resta, chi tiene le bestie?»",
-     "note": "Fate decidere ai giocatori, sulla mappa: chi va avanti a cavallo, chi cammina accanto ai muli, chi resta sul greto con i carri che aspettano. L’ordine dei carri del Registro: I comando, insegne e documenti; II vettovaglie e acqua; III attrezzi; IV medico e feriti; V seguito Pompizius.\nSe nessuno decide, i carri passano nell’ordine del Registro e i PG sono dove i giocatori mettono i token.\nI Forgiati attaccano quando il secondo o il terzo carro è in mezzo al fiume: la colonna è tagliata in tre (chi è passato, chi è in acqua, chi aspetta).",
-     "dopo": "Si va al guado. Se qualcuno vuole prima parlare con la gente fra i pioppi, vai a quel punto.",
-     "rilancio": "Il primo carro scende sul greto. Che cosa fate?",
-     "daqui": [
-      "guado_pioppi",
-      "guado_casale"
-     ]
-    }
-   ]
+   "moduli": []
   },
   {
    "schemaVersion": 3,
@@ -169,86 +86,102 @@
    "title": "La gente fra i pioppi",
    "image": "PDI — Guado — La gente fra i pioppi.jpg",
    "legacyPosition": {
-    "x": 650,
-    "y": 330
+    "x": 449,
+    "y": 293
    },
-   "text": "Sulla riva opposta, fra i pioppi, c’è gente.\n\nContadini. Una donna col fazzoletto in testa. Un vecchio appoggiato a un bastone. Due uomini con la falce in spalla. Più indietro, fra i tronchi, altri. Fermi.\n\nVi guardano passare.\n\nNon salutano. Non chiamano i cani. Non si muovono.\n\nIl vento muove le foglie dei pioppi e le gonne della donna. Lei no.\n\nNon sbattono le palpebre.",
-   "breve": "Sono i Forgiati ferali: la famiglia del casale e i vicini dei casali di Sant’Atto, svuotati. Guardano la colonna senza muoversi. Percezione CD 14 per capire che non respirano ed evitare la sorpresa. Se Mattheus è vicino, girano la testa verso di lui.",
-   "gm": "Chi sono: la famiglia Chiòdi del casale (il vecchio Zi’ Anselmo, la nuora Rosa, i figli Tore e Mèmmo, ex miliziani della valle) e cinque vicini dei casali di Sant’Atto. Il nono, nel pagliaio, è un milite del Barone Pietramala mandato a vedere chi mancava.\nCosa sono: Forgiati. Il corpo è quello, i ricordi forse ci sono ancora; dentro non c’è nessuno. Da quando il Primo Forgiato (Lyaras) è chiuso nel Filatterio, i Forgiati della Valle non hanno più una mente che li riempia: sono ferali, bestie con la faccia di un vicino.\nProposta (Da decidere): questi sono stati forgiati da poco, una o due settimane, quindi DOPO la caduta di Lyaras. Qualcuno continua a forgiare nella valle, e senza il Primo ottiene solo ferali. Chi? Il pozzo del casale lo suggerisce (vedi «Il pozzo»).\nProposta (Da decidere): i ferali sentono il Filatterio che Mattheus porta addosso, come si sente il padrone. Non lo attaccano per primo: gli si girano intorno. Se non vuoi questo legame, togli il modulo «Il freddo sul petto».\nNon parlano. Ripetono l’ultima parola che si dice loro, con la voce di chi l’ha detta.",
+   "text": "Sulla riva opposta, fra i pioppi, c'è gente. Contadini. Una donna col fazzoletto in testa, un vecchio col bastone, due uomini con la falce in spalla. Altri più indietro.\n\nVi guardano passare. Non salutano. Non si muovono.\n\nIl vento muove le foglie e la gonna della donna. Lei no.",
+   "breve": "Arrivi da: Dalla riva di qua, o dal volo di Zenith.\nPoi: 3 · Lo scontro",
+   "gm": "",
    "nota": {
     "cd": 0
    },
    "moduli": [
     {
-     "id": "gente",
-     "tipo": "dettaglio",
-     "titolo": "Guardarli bene",
-     "parte": "indizio",
-     "seme": "Non sbattono le palpebre.",
-     "innesco": "Qualcuno osserva i contadini fra i pioppi prima di entrare in acqua.",
-     "leggi": "Le facce sono quelle di chi lavora la terra: bruciate dal sole, rughe fonde. Ma il petto non si alza. Una mosca cammina sulla guancia della donna, e lei non la scaccia.",
-     "prove": [
-      {
-       "id": "perc",
-       "abilita": [
-        "Percezione"
-       ],
-       "cd": 14,
-       "gruppo": "migliore",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 13,
-         "leggi": "Contadini stanchi, che guardano i forestieri. In ogni borgo è così."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 14,
-         "max": 16,
-         "leggi": "Non respirano. Le mani sono nere di terra fino ai gomiti, come se avessero scavato. Le unghie sono rotte."
-        },
-        {
-         "fascia": "fullSuccess",
-         "min": 17,
-         "leggi": "Non respirano. E non sono quattro: fra i tronchi ne contate otto. Due di loro hanno i vestiti bagnati fino alla vita, e l’acqua non gocciola più: sono stati nel fiume, e sono usciti da ore. O ci sono rientrati adesso."
-        },
-        {
-         "fascia": "natural20",
-         "leggi": "Otto fra i pioppi, due fra le canne dell’isolotto con l’acqua alla cintola. E nel pagliaio, sull’altra riva, una faccia chiara che vi guarda da un buco nel fieno."
-        }
-       ]
-      }
-     ],
-     "dopo": "Con 14 o più nessuno è sorpreso: la colonna può fermarsi prima di entrare in acqua, o mettere le armi fra la riva e le bestie. Con 17 sanno quanti sono e che alcuni vengono dal fiume.",
-     "rilancio": "Il primo carro è già sul greto. Che cosa fate?",
-     "daqui": [
-      "chiamare",
-      "guado_casale"
+     "id": "dlg_ferali",
+     "tipo": "dialogo",
+     "titolo": "I Forgiati ferali: che cosa dice",
+     "parte": "evento",
+     "innesco": "I Forgiati ferali, i contadini fra i pioppi. Quando i giocatori gli parlano (mai durante lo scontro).",
+     "note": "Voce: Non parlano. Ripetono l'ultima parola detta da qualcuno, con la sua voce.\nVuole: Niente. Aspettano qualcuno che passi.\n\n«Se qualcuno li chiama o li saluta» — Il vecchio apre la bocca. Ci mette tanto. Dice l'ultima parola che avete detto voi, con la vostra voce. Poi la ripete la donna, poi gli altri, uno dopo l'altro.\n\n«Se qualcuno chiama «Rosa»» — La donna fa un passo avanti. Solo uno.\n\n«Se qualcuno si avvicina a tre metri» — Allungano le mani tutti insieme. Lo scontro parte."
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "guado_casale",
+   "kind": "scontro",
+   "title": "Lo scontro al guado",
+   "image": "Luogo — 1. Il guado di Sant’Atto.jpg",
+   "legacyPosition": {
+    "x": 796,
+    "y": 608
+   },
+   "text": "Il Carro I è quasi dall'altra parte. Il Carro II ha l'acqua fino al centro delle ruote, e Mastro Colangelo sta facendo scendere il Carro III verso il fiume.\n\nSulla riva opposta Zi' Anselmo, il vecchio col bastone, alza la mano. Nessuno di loro urla.\n\nCorrono in acqua tutti insieme, verso le bestie. L'acqua non li rallenta come dovrebbe.\n\nFra le canne dell'isolotto, alle spalle del Carro II, si alzano altre due schiene bagnate.\n\nTirate tutti per l'iniziativa.",
+   "breve": "Arrivi da: I carri sono entrati in acqua. Il Carro II è in mezzo al fiume. Si riparte da qui.\nPoi: 4 · I corpi sui sassi del fiume",
+   "gm": "",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "nemici",
+     "tipo": "scontro",
+     "titolo": "I nemici, uno per uno",
+     "parte": "evento",
+     "innesco": "Prima di tirare l’iniziativa: metti le pedine sulla mappa.",
+     "note": "F1 · Zi' Anselmo, il vecchio col bastone. Senza denti, il bastone d'ulivo in mano. Puzza di stalla e di carne andata a male: chi gli sta vicino sente lo stomaco girare. — Forgiato marcio\n\nF2 · Rosa, la nuora. Fazzoletto in testa, grembiule, le mani rovinate dal bucato. Se qualcuno la chiama per nome si ferma per un round. — Forgiato ferale\n\nF3 · Panfilo lu pecuraro. Mantello di pelle di pecora, barba lunga. Ha ancora un campanaccio al collo, che suona a ogni passo. — Forgiato ferale\n\nF4 · Emidio, il ragazzo scalzo. Quindici anni, magro, veloce come un gatto. — Forgiato ferale\n\nF5 · Settimio. Grosso, bagnato fino al petto, con le canne impigliate nei capelli. — Forgiato ferale\n\nF6 · Assunta. Vecchia, vestita di nero da vedova, un rosario stretto al polso. — Forgiato ferale\n\nV1 · Berardo Chiòdi. Alto, spalle larghe, una vecchia cicatrice sul mento: era nella milizia della valle. La falce la tiene come una lancia. — Forgiato veterano\n\nV2 · Mèmmo Chiòdi, il fratello minore. Uguale a Berardo ma più magro. Sul manico della falce ha inciso il suo nome. — Forgiato veterano\n\nG · Gerardo Tosti, soldato del Barone di Cashtalladdë. Corpetto di cuoio, berretto con lo stemma d'ottone, martello da guerra. Cammina come chi fa la ronda. — Capo Forgiato\n\nZ · Zi' Pasquale lu mulinaro. Vecchio, coperto di farina: a ogni passo alza una nuvola bianca. Puzza come Zi' Anselmo. — Forgiato marcio\n\nW1, W2, W3, W4, W5, W6, W7, W8 · La gente dei campi: Donato, Lucia, Camillo, Teresa, Gabriele, Maria, Giuvanne, Agnese. Contadini, donne, ragazzi, con le falci da grano e le zappe. Le mani nere di terra fino ai gomiti. — Forgiati ferali\n\nV3 · Cola lu vaccaro, del casale accanto. Grosso, scalzo, la camicia sporca di terra. Una falce. — Forgiato veterano",
+     "pedine": [
+      "inizio",
+      "colonna"
      ]
     },
     {
-     "id": "chiamare",
-     "tipo": "dettaglio",
-     "titolo": "Parlare con loro",
-     "parte": "indizio",
-     "seme": "Non salutano. Non chiamano i cani. Non si muovono.",
-     "innesco": "Qualcuno li chiama, li saluta, chiede la strada o si avvicina a parlare.",
-     "leggi": "Il vecchio apre la bocca. Ci mette tanto, come chi non se lo ricorda più.\n\nDice l’ultima parola che avete detto voi. Con la vostra voce.\n\nPoi la donna la dice anche lei. Poi uno degli uomini con la falce. Uno dopo l’altro, la stessa parola, la stessa voce, fino all’ultimo fra i tronchi.\n\nPoi silenzio.",
-     "note": "Nessuna prova. Se qualcuno chiama un nome, ripetono il nome. Se qualcuno grida, gridano. Se qualcuno dice «Rosa» (il nome della donna, se lo sanno da Colleatterato in un secondo passaggio) la donna fa un passo avanti, e basta.\nChi si avvicina a meno di 3 metri fa partire lo scontro: allungano le mani, tutti insieme.",
-     "dopo": "Sanno che non sono contadini. Lo scontro parte appena qualcuno entra in acqua o si avvicina troppo.",
-     "rilancio": "La parola vi torna indietro dalla riva, nove volte. Che cosa fate?",
-     "daqui": [
-      "guado_casale"
-     ]
+     "id": "difficolta",
+     "tipo": "scontro",
+     "titolo": "Quanto è difficile",
+     "parte": "evento",
+     "note": "Alta. 19 Forgiati per 6.700 PE. Per 6 personaggi di 5° livello più Vhaerun il limite alto è 7.700 PE. I soldati della colonna non tirano i dadi uno per uno: combattono sui tre fronti qui sotto, con un tiro a fronte a fine round."
     },
     {
-     "id": "freddo",
-     "tipo": "dettaglio",
-     "titolo": "Il freddo sul petto",
-     "parte": "nascosto",
-     "innesco": "Mattheus arriva a meno di trenta metri dalla riva opposta (o entra in acqua).",
-     "leggi": "La custodia del Filatterio, sotto la tunica, si fa fredda contro il petto. Non di colpo: piano, come una mano che si posa.\n\nSulla riva, una per una, le teste si girano. Non verso la colonna.\n\nVerso di te.",
-     "note": "Da mostrare solo a Mattheus. Nessuna prova. Nello scontro i ferali non attaccano Mattheus per primo: gli si stringono intorno a due metri, a bocca aperta, e colpiscono chi si mette in mezzo. Se Mattheus si allontana, lo seguono.\nReligione CD 15, se Mattheus vuole capire: vedi prova.",
+     "id": "fronte_a",
+     "tipo": "scontro",
+     "titolo": "Fronte A · L'avanguardia, sulla riva di là",
+     "parte": "evento",
+     "innesco": "Alla fine di ogni round in cui su questo fronte ci sono ancora nemici.",
+     "note": "Silvanus, Kostandìn, Vasco e i suoi tre tengono l'uscita del guado contro i fratelli Chiòdi, e poi contro Gerardo e Cola. Tiberius resta sul Carro I.\n\nContro: V1, V2, G, V3.\n\n1-2 · La falce di Berardo passa bassa, all'altezza delle ginocchia. Uno dei tre di Vasco va giù con un urlo, la gamba aperta fino all'osso. Kostandìn lo trascina via per il collo della cotta mentre Silvanus si mette in mezzo con lo scudo.\n   → Togli un soldato dell'avanguardia.\n\n3-4 · Spade contro falci, sulla riva bagnata. Silvanus para, Kostandìn grida i colpi in vesperiano, i quattro di Vasco tengono la fila. Nessuno avanza di un passo.\n   → Non cambia niente.\n\n5-6 · Kostandìn entra sotto la falce, afferra il manico e tira. Il Forgiato perde l'equilibrio, e tre spade lo colpiscono insieme prima che si rialzi.\n   → Il veterano più ferito di questo fronte perde 20 PF.\n\nRegola dei fronti: Alla fine di ogni round tira 1d6 per ogni fronte dove ci sono ancora nemici. Se un personaggio o Vhaerun combatte su quel fronte, aggiungi +1. I nemici di un fronte combattono i soldati finché un personaggio non li attacca: da lì li muovi tu, con la loro scheda. Se su un fronte cadono tre soldati, la fila si rompe e i nemici rimasti vanno sui civili."
+    },
+    {
+     "id": "fronte_b",
+     "tipo": "scontro",
+     "titolo": "Fronte B · I carri, in mezzo al fiume",
+     "parte": "evento",
+     "innesco": "Alla fine di ogni round in cui su questo fronte ci sono ancora nemici.",
+     "note": "Quattro vesperiani si muovono fra i carri con le lance basse per difendere muli e carrettieri. Mastro Colangelo e il civile del Carro II tengono le bestie.\n\nContro: F1, F2, F3, F4, F5, F6.\n\n1-2 · Un Forgiato salta sul cassone del Carro II e trascina in acqua il civile che lo guida. Un mulo crolla in ginocchio nel fiume, con due bocche attaccate al collo. Il carro si pianta.\n   → Segna una bestia persa nel Registro della Crociata. Il Carro II è fermo finché qualcuno non taglia le cinghie (un'azione).\n\n3-4 · I vesperiani fanno muro fra i Forgiati e i muli. I Forgiati mordono le aste delle lance, si arrampicano sulle ruote, ricadono in acqua. Non passano.\n   → Non cambia niente.\n\n5-6 · Due lance entrano insieme nel petto di un Forgiato e lo inchiodano sui sassi. Per un attimo ha la faccia di un contadino stanco.\n   → Togli un Forgiato ferale di questo fronte (mai Zi' Anselmo)."
+    },
+    {
+     "id": "fronte_c",
+     "tipo": "scontro",
+     "titolo": "Fronte C · La retroguardia, sulla strada",
+     "parte": "evento",
+     "innesco": "Alla fine di ogni round in cui su questo fronte ci sono ancora nemici.",
+     "note": "Dal round 3. Brizio, Pippo, quattro miliziani, quattro vesperiani e Iosephus Pompizius si chiudono davanti al Carro V e ai civili.\n\nContro: Z, W1, W2, W3, W4, W5, W6, W7, W8.\n\n1-2 · Pippo «Lu Scudo» alza lo scudo un attimo troppo tardi. Una donna scalza gli salta addosso e lo butta giù fra le stoppie. Nella fila si apre un buco, e un ragazzo con la zappa ci passa in mezzo, dritto verso il Carro V e i civili.\n   → Togli un soldato. Un Forgiato di questo fronte va verso i civili: al prossimo round attacca chi trova.\n\n3-4 · Brizio grida «Fila! Fila!» e i miliziani si stringono spalla a spalla davanti al Carro V. I Forgiati ci sbattono contro come l'acqua contro gli scogli. Dietro, le donne pregano ad alta voce.\n   → Non cambia niente.\n\n5-6 · Brizio «Lu Spada Secca» fa onore al suo nome: un colpo solo, di traverso, e un Forgiato cade fra le stoppie senza un suono.\n   → Togli un Forgiato ferale di questo fronte."
+    },
+    {
+     "id": "piano",
+     "tipo": "scontro",
+     "titolo": "Chi attacca chi, round per round",
+     "parte": "evento",
+     "innesco": "Clicca un token sulla mappa per la scheda. Gli eventi accadono all'inizio del round, prima di chiunque.",
+     "note": "ROUND 1\n• F1 Zi' Anselmo, F2 Rosa: Corrono verso i muli del Carro I. Zi' Anselmo si attacca al collo del primo mulo coi denti e non lascia; Rosa gli graffia le zampe finché la bestia cade in ginocchio nell'acqua.\n• F3 Panfilo lu pecuraro, F4 Emidio: Vanno su Tiberius Aurentius, sulla cassetta del Carro I. Emidio salta sulla ruota e gli afferra la caviglia; Panfilo lo morde al braccio, col campanaccio che suona.\n• F5 Settimio, F6 Assunta: Escono dalle canne alle spalle del Carro II e saltano sul civile Pompizius che lo guida. Settimio lo tira giù per la camicia, Assunta graffia i muli.\n• V1 Berardo Chiòdi, V2 Mèmmo Chiòdi: Restano dove il guado esce dall'acqua e falciano chiunque arrivi a terra. La falce gira bassa, come si taglia il grano.\n• Silvanus, Kostandìn, Vasco: Silvanus grida di serrare. Kostandìn e i quattro di Vasco si mettono fra i fratelli Chiòdi e il Carro I. Fronte A.\n• Vesperiano, Mastro Colangelo, Civile Pompizius: I vesperiani fra i carri abbassano le lance verso i Forgiati che arrivano dall'acqua. Colangelo tiene fermi i muli del Carro III. Fronte B.\n• Brizio «Lu Spada Secca», Pippo «Lu Scudo», Miliziano Aurentius–Serventius: La retroguardia è ferma in fondo alla colonna e guarda il fiume. Brizio manda due uomini avanti; Pippo lo trattiene: «Il posto nostro è qua.» Non tirano.\n• Dottor Albino, Frate Martino, Micuccio, Cecco: Il Dottor Albino tira dentro il telone i feriti del Carro IV. Frate Martino prega a voce alta. Micuccio, i suoi genitori, Cecco e Mimì si stringono dietro il Carro V.\n• Vhaerun: Alla fine del round, dopo l'ultimo in iniziativa: Vhaerun esce dai pioppi ed entra nel fiume (vedi l'evento). Da qui gioca subito prima di Maximus.\n\nROUND 2\n• G Gerardo Tosti: Evento: esce dal pagliaio. Cammina verso il guado e punta il personaggio più vicino che difende un carro. Lo colpisce col martello per buttarlo in acqua.\n• F1 Zi' Anselmo, F2 Rosa: Se il mulo è caduto, passano ai muli del Carro II. Se Mattheus ha sentito il freddo nella tasca, gli si stringono intorno.\n• F3 Panfilo lu pecuraro, F4 Emidio: Se Tiberius è a terra, salgono sul Carro I e strappano le insegne e i documenti della Crociata. Se Tiberius regge ancora, continuano su di lui.\n• F5 Settimio, F6 Assunta: Se il Carro II è fermo, vanno su Mastro Colangelo e il Carro III.\n• V1 Berardo Chiòdi, V2 Mèmmo Chiòdi: Uno resta sulla riva contro l'avanguardia. L'altro scende in acqua verso il personaggio più vicino.\n• Silvanus, Kostandìn, Vasco: L'avanguardia tiene la riva. Fronte A.\n• Mastro Giustino, Dottor Albino: Evento: il Carro IV scivola. Mastro Giustino cade in acqua; il Dottor Albino grida dal telone.\n• Vesperiano, Mastro Colangelo, Civile Pompizius: I vesperiani fra i carri. Fronte B.\n• Brizio «Lu Spada Secca», Pippo «Lu Scudo», Miliziano Aurentius–Serventius: Zenith o un grido dai campi: Brizio fa voltare la retroguardia verso la strada. Non tirano ancora.\n• Micuccio, Cecco: I civili restano dietro il Carro V. Cecco vuole correre ad aiutare, sua madre lo tiene per la camicia.\n\nROUND 3\n• Z Zi' Pasquale lu mulinaro, W1 Donato, W2 Lucia, W3 Camillo, W4 Teresa, W5 Gabriele, W6 Maria, W7 Giuvanne, W8 Agnese: Evento: escono dai campi alle spalle della colonna. Zi' Pasquale guida, gli altri gli vanno dietro senza correre. Attaccano la retroguardia. Fronte C.\n• F1 Zi' Anselmo: Ripete la parola che sente dalla riva di qua e si gira verso Micuccio (vedi l'evento).\n• F2 Rosa, F3 Panfilo lu pecuraro, F4 Emidio, F5 Settimio, F6 Assunta: Continuano sui muli e sui carrettieri del loro carro. Quelli senza bersaglio vanno verso Mattheus.\n• G Gerardo Tosti, V1 Berardo Chiòdi, V2 Mèmmo Chiòdi: Gerardo e i fratelli cercano il personaggio più ferito. Gerardo prova a buttarlo nella pozza col martello.\n• Silvanus, Kostandìn, Vasco: Fronte A.\n• Vesperiano, Mastro Colangelo, Civile Pompizius: Fronte B.\n• Brizio «Lu Spada Secca», Pippo «Lu Scudo», Miliziano Aurentius–Serventius, Iosephus Pompizius: La retroguardia si chiude davanti al Carro V. Fronte C.\n• Micuccio, La madre di Micuccio: Evento: Micuccio entra in acqua.\n\nDAL ROUND 4\n• V3 Cola lu vaccaro: Evento all'inizio del round 4: Cola esce dal casale e va sul personaggio più ferito.\n• F1 Zi' Anselmo, F2 Rosa, F3 Panfilo lu pecuraro, F4 Emidio, F5 Settimio, F6 Assunta, G Gerardo Tosti, V1 Berardo Chiòdi, V2 Mèmmo Chiòdi: Non scappano e non si arrendono. Vanno su chi è a terra, su chi è ferito, su chi tiene un mulo. L'ultimo rimasto va sempre da Mattheus.\n• Z Zi' Pasquale lu mulinaro, W1 Donato, W2 Lucia, W3 Camillo, W4 Teresa, W5 Gabriele, W6 Maria, W7 Giuvanne, W8 Agnese: Fronte C finché la fila tiene. Se si rompe, corrono sui civili del Carro V.\n• Mastro Giustino: Se nessuno l'ha fermato, alla fine del round 4 il Carro IV entra nella pozza e si rovescia.\n• Silvanus, Vesperiano, Brizio «Lu Spada Secca»: Tutti i fronti continuano col loro tiro finché hanno nemici davanti. Quando un fronte è libero, i suoi soldati vanno ad aiutare il fronte più vicino: +1 a quel tiro."
+    },
+    {
+     "id": "turno1",
+     "tipo": "scontro",
+     "titolo": "Round 1: il momento di ciascuno",
+     "parte": "evento",
+     "innesco": "Al primo turno di ogni personaggio, nell'ordine di iniziativa, leggi il suo momento. Poi il giocatore agisce. Dal round 2 non ci sono più momenti personali: comandano gli eventi del round.",
+     "leggi": "Turno di Maximus.\nMaximus, alle tue spalle senti un ringhio basso che conosci. Vhaerun ha lasciato i pioppi e guarda il fiume. Non si muove. Guarda te. Aspetta un cenno, non un ordine.\n\nTurno di Mattheus.\nMattheus, l'acqua ti arriva alle ginocchia. Nella tua tasca la custodia del Filatterio si fa fredda. Poi si muove: un colpo solo, come un cuore. Sulla riva, una dopo l'altra, le teste si girano. Non guardano più i carri. Guardano te.\n\nTurno di Vicarus.\nVicarus, il Bastone di Lyaras ti scalda la mano. La voce gentile che senti da settimane dice piano: «Sono miei. Erano miei.»\n\nTurno di Luigis.\nLuigis, da sopra il fiume Zenith grida. Dall'alto vede quello che voi non vedete: due schiene nelle canne dell'isolotto, già fuori dall'acqua, dietro il Carro II. E più lontano, nei campi alle vostre spalle, altra gente che cammina verso la strada.\n\nTurno di Adamus.\nAdamus, intorno alle gambe dei Forgiati l'acqua è ferma. I pesciolini scappano, le rane tacciono. È un'acqua che non sa più di niente, come se qualcosa le avesse tolto la vita.\n\nTurno di Alessandros.\nAlessandros, Berardo, quello con la falce, si ferma davanti a te. Guarda il Sole fra le Due Lune sulla tua armatura. Per un attimo abbassa la falce, come se lo riconoscesse. Poi la rialza.",
+     "note": "Mattheus: Da qui i Forgiati non attaccano Mattheus. Gli si stringono intorno a due metri, a bocca aperta, e colpiscono chi si mette in mezzo. Se lui si sposta, lo seguono.",
      "prove": [
       {
        "id": "filatterio",
@@ -261,218 +194,143 @@
        "esiti": [
         {
          "fascia": "failure",
-         "max": 14,
-         "leggi": "Il freddo passa quando ti allontani. Loro guardano ancora."
+         "leggi": "Il freddo resta. Loro guardano ancora. Non sai perché.",
+         "max": 14
         },
         {
          "fascia": "baseSuccess",
-         "min": 15,
-         "leggi": "Ti ricordi le parole del Tomo del Ricordo Spezzato: i Forgiati non hanno un «io», hanno un «noi», l’eco di un Primo. Il Primo era Lyaras. E Lyaras è lì, chiuso nella custodia che porti al collo. Non ti stanno guardando. Stanno guardando lui."
-        }
-       ]
-      }
-     ],
-     "dopo": "Mattheus sa, o sospetta, che il Filatterio richiama i Forgiati. È un fatto che può tenere per sé.",
-     "rilancio": "Il freddo resta lì, contro lo sterno. Che cosa fai?",
-     "daqui": [
-      "guado_casale"
-     ]
-    }
-   ]
-  },
-  {
-   "schemaVersion": 3,
-   "id": "guado_casale",
-   "kind": "scontro",
-   "title": "Il guado di Sant’Atto",
-   "image": "img/ce600f277731.jpg",
-   "legacyPosition": {
-    "x": 790,
-    "y": 610
-   },
-   "text": "Il primo carro entra in acqua. Le ruote slittano sui ciottoli, poi fanno presa.\n\nL’acqua arriva ai mozzi. Fredda, anche d’agosto: viene dal Gigante. I muli sbuffano e alzano il muso.\n\nIl secondo carro scende dalla riva. Il terzo aspetta, le stanghe già bagnate.\n\nIn mezzo al greto, il rumore del fiume copre tutto: le voci, gli zoccoli, il cigolio del legno.\n\nSulla riva opposta, fra i pioppi, la gente è ancora lì.\n\nUno dei due uomini posa la falce a terra. Poi la riprende con tutte e due le mani.",
-   "breve": "I carri entrano in acqua uno alla volta. Quando il secondo o il terzo è in mezzo al fiume, i Forgiati ferali attaccano le bestie: 6 Ghoul e 3 Guerrieri Veterani, 3.300 PE. Poi i corpi, i medaglioni, e cosa farne.",
-   "gm": "Il fatto: la minaccia annunciata a Julia Nova, «i Forgiati ferali nella Valle» (Atto IX). La Crociata aveva evitato la via più veloce per non incontrarli: la valle del Tordinum li porta comunque sulla sua strada.\nDopo lo scontro, sui corpi: un disco di piombo cucito sotto la pelle dello sterno con una scheggia di pietra chiara, il medaglione della Forgiatura (Magia e Fede IV.II: si applica con la luna nuova). Ogni PG che ha visto Pietraluna o Colleventoso riconosce il lavoro.\nCoesione della Crociata: se un civile o un carrettiere muore, −1. Se i morti del guado (i contadini) vengono sepolti con un rito, nessun punto (non sono «loro»), ma i Pompizius e i vesperiani lo notano e ne parlano la sera all’osteria.\nIl crociato che parla, dopo: «Erano gente. Ieri erano gente.»",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": [
-    {
-     "id": "scontro",
-     "tipo": "scontro",
-     "titolo": "Scontro — i Forgiati ferali",
-     "parte": "evento",
-     "innesco": "Quando il secondo o il terzo carro è in mezzo al fiume, o se qualcuno si avvicina a meno di 3 metri, o se qualcuno li attacca.",
-     "leggi": "Il vecchio alza il bastone. Non urla. Nessuno di loro urla.\n\nCorrono in acqua tutti insieme, verso le bestie, e l’acqua non li rallenta come dovrebbe.\n\nFra le canne dell’isolotto si alzano altre due schiene, bagnate fino alla vita.\n\nDal pagliaio, sull’altra riva, esce un uomo con un giaco di cuoio e una spada corta. Cammina. Non ha fretta.",
-     "note": "Dal Bestiario: 6 «Forgiato ferale» (Ghoul, GS 1, 200 PE) e 3 «Forgiato veterano» (Guerriero Veterano, GS 3, 700 PE). Totale 3.300 PE.\nBudget 2024 per 6 PG di livello 5: bassa 3.000, moderata 4.500. Sulla carta è una bassa-moderata; il fiume, la sorpresa possibile e le bestie da proteggere la portano a moderata. Per alzarla: la donna diventa un Ghast (GS 2, +450 PE) e dal casale esce un settimo ferale.\nPosizioni: 4 ferali fra i pioppi della riva opposta (a sinistra del sentiero del casale), 2 fra le canne dell’isolotto a monte (escono alle spalle dei carri in acqua), i 2 Veterani con la falce dove il guado esce dall’acqua, il terzo Veterano nel pagliaio (esce al 2° round e cammina verso il guado).\nTattica: vogliono la colonna ferma e divisa. Attaccano prima le bestie e i carrettieri (mulo e cavallo da tiro: CA 10, PF 11-15), poi chi li difende. Se due bestie di un carro cadono, il carro resta fermo in mezzo al fiume. Non fuggono. Non parlano. Non urlano.\nStatistiche in breve: Ghoul CA 12, PF 22, vel. 9 m; Morso +2 (1d6+2 perforanti); Artiglio +4 (1d4+2 taglienti; TS Costituzione CD 10 o Paralizzato fino alla fine del suo turno successivo). Guerriero Veterano CA 17, PF 65, vel. 9 m; Multiattacco due colpi di falce +5 (1d8+3, 1d10+3 a due mani); Parata come reazione.\nTerreno: il fiume fuori dalla lingua di ciottoli è terreno difficile; la lingua no. Chi esce dalla lingua verso valle: Atletica CD 10 o prono e trascinato 3 m (vedi «I carri in mezzo al fiume»). I carri in acqua danno copertura parziale. Le canne dell’isolotto danno copertura parziale e nascondono.\nDescrivili sempre come gente di campagna, mai come mostri: la falce, il fazzoletto, le mani nere di terra, le unghie rotte. Quando uno cade, per un istante il viso torna quello di un contadino stanco.",
-     "dopo": "Quando l’ultimo cade il fiume torna a scorrere piano. Si contano le bestie, i feriti, i carri. Poi i corpi.",
-     "rilancio": "Il fiume torna a scorrere piano. Che cosa fate?",
-     "daqui": [
-      "guado_corrente",
-      "corpi"
-     ],
-     "pe": 3300
-    },
-    {
-     "id": "corpi",
-     "tipo": "dettaglio",
-     "titolo": "I corpi sul greto",
-     "parte": "evento",
-     "innesco": "Dopo lo scontro, qualcuno si china sui morti, li gira, li spoglia o li prepara per la sepoltura.",
-     "leggi": "Da vicino sono solo contadini. Una donna sui quarant’anni, le mani rovinate dal bucato. Un vecchio senza denti. Due fratelli, si vede dalla mascella.\n\nSotto la camicia, sullo sterno, ognuno ha una cicatrice fresca, cucita male. Sotto la cicatrice, la pelle si alza su qualcosa di duro e rotondo, grande quanto una moneta.",
-     "prove": [
-      {
-       "id": "medaglione",
-       "abilita": [
-        "Medicina",
-        "Religione",
-        "Arcano"
-       ],
-       "cd": 13,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 12,
-         "leggi": "Una cucitura rozza, come quelle che si fanno alle bestie. Sotto, qualcosa di duro. Tagliare?"
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 13,
-         "max": 16,
-         "leggi": "Un disco di piombo, cucito sotto la pelle. Nel mezzo, incastonata, una scheggia di pietra chiara che al sole sembra bagnata. L’avete già vista: a Pietraluna e a Colleventoso. Il medaglione della Forgiatura."
-        },
-        {
-         "fascia": "fullSuccess",
-         "min": 17,
-         "leggi": "Il medaglione della Forgiatura. La cucitura ha una settimana, due al massimo: il filo è ancora bianco. E su ogni disco, graffiato sul retro, un segno piccolo: una falce di luna rovesciata. Chi li ha fatti li ha firmati."
+         "leggi": "Ti torna in mente il Tomo del Ricordo Spezzato: i Forgiati non hanno un «io», hanno un «noi», l'eco del Primo. Il Primo era Lyaras. E Lyaras è chiuso nella custodia che hai in tasca. Non guardano te. Guardano lui.",
+         "min": 15
         },
         {
          "fascia": "natural20",
-         "leggi": "Il medaglione, la falce rovesciata sul retro. E un’ultima cosa: le schegge non sono tutte uguali. Sei sono chiare. Tre, quelle dei due fratelli e del milite, sono più scure, quasi nere. Chi ha fatto questi lavori ha usato due pietre diverse, o due mani diverse."
+         "leggi": "E capisci un'altra cosa: se la custodia si aprisse adesso, questi corpi avrebbero di nuovo una mente. La sua."
         }
        ]
-      }
-     ],
-     "dopo": "Con 13 o più sanno che sono stati forgiati, e da poco: dopo Pietraluna, dopo Lyaras. Qualcuno sta ancora forgiando. Le schegge lunari valgono denaro per chi traffica in frammenti di Sigilli (i Mellitius, secondo il canone): da decidere se qualcuno lo sa.",
-     "rilancio": "Nove corpi sul greto bianco, e il sole a picco. Che cosa fate?",
-     "daqui": [
-      "sepoltura",
-      "guado_pagliaio",
-      "guado_casa"
-     ],
-     "bottino": [
-      {
-       "n": "Medaglioni della Forgiatura",
-       "q": 9,
-       "cat": "Missione",
-       "peso": "0,5 lb",
-       "valore": "Da decidere",
-       "stats": "Dischi di piombo con una scheggia lunare; falce rovesciata graffiata sul retro",
-       "desc": "Prova della Forgiatura dopo la caduta di Lyaras. Non toccarli a pelle nuda per troppo tempo: sono freddi anche al sole.",
-       "a": "crociata"
       }
      ]
     },
     {
-     "id": "sepoltura",
-     "tipo": "dettaglio",
-     "titolo": "Cosa farne",
+     "id": "vhaerun_entra_nello_scontro",
+     "tipo": "scontro",
+     "titolo": "Vhaerun entra nello scontro",
      "parte": "evento",
-     "innesco": "Il gruppo decide cosa fare dei corpi.",
-     "leggi": "I crociati aspettano. Qualcuno ha già preso una pala dal Carro III. Qualcun altro guarda il fuoco del campo di ieri e poi i corpi.\n\n«Erano gente», dice uno dei miliziani Aurentius. «Ieri erano gente.»",
-     "note": "Nessuna prova obbligatoria. Tre strade, tutte legittime:\n• Seppellirli (un’ora di lavoro): la colonna arriva all’osteria col buio.\n• Bruciarli: è ciò che la Chiesa chiede per i posseduti (Religione CD 12 per saperlo). Il fumo si vede da tutta la valle.\n• Lasciarli: la colonna passa in fretta. Qualcuno lo ricorderà.\nMattheus: il rito di Mortus per chi è morto due volte esiste, ed è breve. Farlo davanti a tutti è un rischio (Don Fulgenzio, Impalox, la voce che corre). Farlo in disparte richiede che qualcuno copra (Inganno o Furtività CD 12). Se lo fa, per un istante sente qualcosa andare via, leggero, verso l’alto: il sollievo di chi era rimasto intrappolato.",
-     "dopo": "Sepolti o bruciati, la strada riprende. Sull’aia del casale restano il pozzo e il pagliaio.",
-     "rilancio": "La pala aspetta. Che cosa fate?",
-     "daqui": [
-      "guado_casa",
-      "guado_pozzo",
-      "guado_edicola"
-     ]
-    }
-   ]
-  },
-  {
-   "schemaVersion": 3,
-   "id": "guado_corrente",
-   "kind": "trappola",
-   "title": "I carri in mezzo al fiume",
-   "image": "PDI — Guado — La corrente sotto il guado.jpg",
-   "legacyPosition": {
-    "x": 1000,
-    "y": 790
-   },
-   "text": "Sotto il guado, dove i ciottoli finiscono, il fiume cambia colore. Verde scuro.\n\nUna pozza lunga, l’acqua che gira su se stessa, lenta, lucida.\n\nLa corrente lì non si vede. Si sente: tira le gambe come una mano.\n\nUn carro con le ruote in quell’acqua non torna indietro da solo.",
-   "breve": "Durante lo scontro un mulo del Carro IV (il medico e i feriti) si spaventa e trascina il carro verso la pozza a valle. Tre round per fermarlo, poi il carro si rovescia. Chi cade nella pozza deve uscirne.",
-   "gm": "Il Carro IV porta il Dottor Albino e i feriti (secondo la proposta del Registro anche Giustino). È il carro che più fa male perdere: le medicine della Crociata sono lì.\nSe il gruppo ha messo un uomo a valle («Leggere il fiume» con 12 o più), il primo carro che scivola è tenuto senza prova.\nSe il carro si rovescia: i feriti in acqua (salvarli è un’azione per ferito, Atletica CD 10), la cassa delle medicine va a valle (vedi modulo «La cassa nelle canne»).",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": [
+     "innesco": "Round 1, alla fine, dopo l'ultimo in iniziativa.",
+     "leggi": "Dai pioppi della riva di qua, dove camminava lontano dai carri per non spaventare nessuno, esce Vhaerun.\n\nScende di corsa sui sassi. I carrettieri lo vedono e gridano: per loro è un'altra bestia.\n\nVhaerun entra nel fiume come se l'acqua non ci fosse e ringhia una parola che nessuno di voi conosce. Berardo e Mèmmo si voltano verso di lui. Per la prima volta, i Forgiati esitano.",
+     "note": "Dal round 2 Vhaerun gioca subito prima di Maximus. Usa l'Urlo di comando una volta: i Forgiati entro 9 metri fanno TS Saggezza CD 14 o sono spaventati fino alla fine del loro turno successivo. Combatte col randello +1 che gli ha dato Maximus (+8, 1d12+5).",
+     "immagine": "PNG — Vhaerun.jpg"
+    },
     {
-     "id": "mulo",
-     "tipo": "dettaglio",
-     "titolo": "Il mulo spaventato",
+     "id": "il_terzo_esce_dal_pagliaio",
+     "tipo": "scontro",
+     "titolo": "Il terzo esce dal pagliaio",
      "parte": "evento",
-     "innesco": "Al 2° round dello scontro, o quando un ferale ferisce una bestia del Carro IV.",
-     "leggi": "Il mulo del Carro IV si impenna. Il carrettiere vola in acqua. Il carro gira di traverso sulla lingua di sassi, poi comincia a scivolare. Piano. Verso la pozza.\n\nDal telone, la voce del Dottor Albino: «Ferma! Ferma la bestia! Ho i feriti qua dietro!»",
-     "note": "Il carro scivola di 3 m per round verso la pozza; dopo tre round ci entra e si rovescia. Per fermarlo: un’azione e Addestrare animali o Atletica CD 12 a contatto col mulo o con le stanghe. Due successi in due round diversi, o un successo con 17 o più, lo riportano sulla lingua di sassi.\nI ferali vedono chi tiene il mulo e ci vanno sopra.",
+     "innesco": "All'inizio del round 2, prima di chiunque.",
+     "leggi": "Sull'altra riva il pagliaio si muove. Dal buco che guarda il fiume esce un uomo con un corpetto di cuoio e un martello da guerra. Sul berretto, uno stemma d'ottone luccica al sole.\n\nNon corre. Cammina verso il guado, dritto, come chi fa la ronda.",
+     "immagine": "PDI — Guado — Il pagliaio.jpg",
+     "pedine": [
+      "round2"
+     ]
+    },
+    {
+     "id": "il_carro_iv_scivola",
+     "tipo": "scontro",
+     "titolo": "Il Carro IV scivola",
+     "parte": "evento",
+     "innesco": "All'inizio del round 2, subito dopo Gerardo.",
+     "leggi": "Si combatte da poco, e l'acqua intorno alla striscia di sassi è già rossa. L'odore del sangue arriva fino alla riva di qua.\n\nIl Carro IV, quello del Dottor Albino, è fermo a metà della discesa verso l'acqua. Mastro Giustino tiene le redini corte. Ma i muli sentono il sangue.\n\nIl primo mulo si impenna. Giustino vola giù dalla cassetta e finisce in acqua. Il carro gira di traverso sulla striscia di sassi e comincia a scivolare, piano, verso la pozza scura a valle.\n\nDal telone, la voce del Dottor Albino: «Ferma la bestia! Ho i feriti qua dietro!»",
+     "note": "Il carro scivola di 3 metri a round. Alla fine del round 4 entra nella pozza e si rovescia: i feriti finiscono in acqua e la cassa delle medicine va a valle. Per fermarlo serve un'azione a contatto col mulo: due successi in due round, oppure un successo con 17 o più.\n\nPoi: Se il carro si rovescia: chi cade nella pozza fa Atletica CD 13 per uscire, altrimenti la corrente lo trascina 3 metri e resta sott'acqua fino al suo turno. Dopo lo scontro la cassa delle medicine si recupera fra le canne con Percezione CD 10.",
+     "immagine": "PDI — Guado — La corrente sotto il guado.jpg",
      "prove": [
       {
-       "id": "mulo",
+       "id": "prova",
        "abilita": [
-        "Addestrare animali",
+        "Atletica",
+        "Addestrare animali"
+       ],
+       "cd": 12,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "criticalFailure",
+         "leggi": "Il mulo ti colpisce col muso e scarta. Cadi in acqua, prono. Il carro fa un altro metro.",
+         "max": 6
+        },
+        {
+         "fascia": "failure",
+         "leggi": "Tiri, e il mulo tira più forte. Il carro scivola ancora.",
+         "min": 7,
+         "max": 11
+        },
+        {
+         "fascia": "baseSuccess",
+         "leggi": "La bestia sente la tua mano sul muso e si ferma, tremando. Ancora uno sforzo e il carro torna sui sassi.",
+         "min": 12,
+         "max": 16
+        },
+        {
+         "fascia": "fullSuccess",
+         "leggi": "Prendi il mulo per la corda corta, gli parli piano, e si calma di colpo. Il carro torna sulla striscia di sassi.",
+         "min": 17
+        }
+       ]
+      }
+     ],
+     "bottino": [
+      {
+       "n": "Due pozioni di guarigione",
+       "cat": "Pozione",
+       "desc": "Le regala il Dottor Albino a chi gli ha salvato il carro. 2d4+2 punti ferita ciascuna.",
+       "prompt": "two small medieval glass vials with red liquid, wax-sealed corks, on a wet wooden wagon board, river light"
+      }
+     ]
+    },
+    {
+     "id": "dai_campi_alle_spalle",
+     "tipo": "scontro",
+     "titolo": "Dai campi, alle spalle",
+     "parte": "evento",
+     "innesco": "All'inizio del round 3, prima di chiunque.",
+     "leggi": "Da dietro, dalla strada che avete appena fatto, arriva un grido. È Pippo «Lu Scudo», in fondo alla colonna.\n\nDai campi di grano mietuto, fra le stoppie, cammina altra gente. Un vecchio coperto di farina, donne, ragazzi con le zappe. Una decina. Nessuno corre, nessuno parla.\n\nBrizio sguaina la spada e grida ai suoi di chiudersi davanti al Carro V. Dietro di loro ci sono i civili.",
+     "note": "Metti sulla mappa Zi' Pasquale e la gente dei campi dal bordo in basso a sinistra. Da qui la retroguardia combatte sul fronte C.",
+     "pedine": [
+      "round3"
+     ]
+    },
+    {
+     "id": "micuccio_entra_in_acqua",
+     "tipo": "scontro",
+     "titolo": "Micuccio entra in acqua",
+     "parte": "evento",
+     "innesco": "All'inizio del round 3, subito dopo l'arrivo dai campi.",
+     "leggi": "Dietro il Carro V i civili si stringono, spaventati dalle grida della retroguardia. La madre di Micuccio lo tira per il braccio verso le ruote: «Vieni qua, Micuccio. Vieni.»\n\nNel fiume, Zi' Anselmo si gira verso di loro. Apre la bocca e ripete l'ultima parola che ha sentito. Con la voce della madre.\n\n«Vieni.»\n\nMicuccio si stacca dalla mano di sua madre. Scende sui sassi. Entra in acqua e cammina verso il vecchio, con il fiume che gli sale alla cintura. Dietro di lui sua madre urla il suo nome.",
+     "note": "Micuccio obbedisce a qualunque ordine, anche gentile, prima di rendersene conto. Raggiunge Zi' Anselmo alla fine del round 4. Si ferma in due modi: afferrandolo, o facendogli dire di no da solo.\n\nPoi: Se dice di no da solo, il personaggio che glielo ha insegnato riceve Ispirazione.",
+     "immagine": "PNG — Micuccio.jpg",
+     "prove": [
+      {
+       "id": "afferrare",
+       "abilita": [
         "Atletica"
        ],
        "cd": 12,
        "gruppo": "chi",
        "esiti": [
         {
-         "fascia": "criticalFailure",
-         "max": 6,
-         "leggi": "Il mulo ti colpisce col muso e scarta. Cadi in acqua, prono, e il carro fa un altro metro."
-        },
-        {
          "fascia": "failure",
-         "min": 7,
          "max": 11,
-         "leggi": "Tiri, e il mulo tira più forte. Il carro scivola ancora."
+         "leggi": "Micuccio non ti sente. Cammina."
         },
         {
          "fascia": "baseSuccess",
          "min": 12,
-         "max": 16,
-         "leggi": "La bestia sente la tua mano sul muso e si ferma un momento, tremando. Il carro si ferma con lei. Ancora uno sforzo e lo riportate sui sassi."
-        },
-        {
-         "fascia": "fullSuccess",
-         "min": 17,
-         "leggi": "Prendi la cavezza corta, parli piano, e il mulo si calma di colpo come se ti conoscesse. Il carro torna sulla lingua di sassi."
+         "leggi": "Lo prendi per la camicia e lo tiri indietro. Si gira, ti guarda e dice: «Mi ha chiamato.»"
         }
        ]
-      }
-     ],
-     "dopo": "Salvo il carro, salve le medicine e i feriti. Se il carro si rovescia, vedi «Nella pozza».",
-     "rilancio": "Il carro è fermo sull’orlo dell’acqua scura. Che cosa fate?",
-     "daqui": [
-      "pozza",
-      "cassa"
-     ],
-     "pe": 300
-    },
-    {
-     "id": "pozza",
-     "tipo": "dettaglio",
-     "titolo": "Nella pozza",
-     "parte": "evento",
-     "innesco": "Qualcuno cade nella pozza, o il Carro IV si rovescia.",
-     "leggi": "L’acqua è gelata. Il fondo non c’è. La corrente ti gira come un mestolo e ti porta verso le canne.",
-     "note": "Chi è nella pozza: Atletica CD 13 per uscirne con il proprio movimento; fallito, è trascinato 3 m a valle e resta sott’acqua fino al suo turno successivo (trattenere il fiato: regole normali). Con armatura pesante svantaggio. Chi aiuta dalla riva con una corda o un bastone dà vantaggio.",
-     "prove": [
+      },
       {
-       "id": "pozza",
+       "id": "direno",
        "abilita": [
-        "Atletica"
+        "Persuasione"
        ],
        "cd": 13,
        "gruppo": "chi",
@@ -480,54 +338,173 @@
         {
          "fascia": "failure",
          "max": 12,
-         "leggi": "La corrente ti tira giù e ti porta tre metri più in là. Riemergi tossendo, fra le canne."
+         "leggi": "Micuccio non ti sente. Cammina."
         },
         {
          "fascia": "baseSuccess",
          "min": 13,
-         "leggi": "Trovi il fondo con un piede, poi un sasso, poi la riva. Sei fuori."
+         "leggi": "«Micuccio. Puoi dire di no.» Si ferma con l'acqua alla cintura. Trema. Poi, piano: «…No.» Torna indietro da solo."
         }
        ]
       }
-     ],
-     "dopo": "Chi esce è bagnato fino alle ossa, e stasera all’osteria avrà bisogno del fuoco.",
-     "rilancio": "L’acqua gira ancora, scura, sotto il guado. Che cosa fate?",
-     "daqui": [
-      "cassa"
      ]
     },
     {
-     "id": "cassa",
+     "id": "esce_cola_dal_casale",
+     "tipo": "scontro",
+     "titolo": "Esce Cola dal casale",
+     "parte": "evento",
+     "innesco": "All'inizio del round 4, prima di chiunque.",
+     "leggi": "Sull'aia del casale la porta sbatte. Esce un uomo grosso, scalzo, con la falce in mano e la camicia sporca di terra fino ai gomiti: Cola lu vaccaro, del casale accanto.\n\nScavalca il muretto e scende verso il fiume.",
+     "immagine": "PDI — Guado — Il casale.jpg",
+     "pedine": [
+      "round4"
+     ]
+    },
+    {
+     "id": "l_ultimo_cade",
+     "tipo": "scontro",
+     "titolo": "L'ultimo cade",
+     "parte": "evento",
+     "innesco": "Quando cade l'ultimo Forgiato.",
+     "leggi": "L'ultimo cade. Per un istante la sua faccia torna quella di un contadino stanco.\n\nPoi il fiume torna a scorrere piano. Si sentono di nuovo le cicale, e i muli che sbuffano.",
+     "pe": 6700
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "guado_corrente",
+   "kind": "dettaglio",
+   "title": "I corpi sui sassi del fiume",
+   "image": "Luogo — 1. Il guado di Sant’Atto.jpg",
+   "legacyPosition": {
+    "x": 1028,
+    "y": 565
+   },
+   "text": "Le cicale ricominciano a cantare, come se niente fosse successo. Kostandìn conta i suoi a voce alta, poi va in fondo alla colonna a vedere la retroguardia. Il Dottor Albino scende dal Carro IV con le bende già in mano.\n\nPoi vi voltate verso i sassi bianchi.\n\nDiciannove corpi, fra l'acqua e i campi, e il sole a picco. Da vicino sono solo contadini. Una donna sui quarant'anni con le mani rovinate dal bucato. Un vecchio senza denti. Due fratelli: si vede dalla mascella. Un ragazzo scalzo che non avrà avuto quindici anni.\n\nSotto la camicia, sullo sterno, ognuno ha una cicatrice fresca, cucita male. Sotto la cicatrice la pelle si alza su qualcosa di duro e rotondo, grande come una moneta.\n\nSilvanus guarda il sole. «Un'ora. Poi si riparte. Stanotte voglio un tetto.»",
+   "breve": "Arrivi da: Dalla fine dello scontro.\nPoi: 5 · Il pagliaio, 6 · Il casale, 7 · Il pozzo (in qualsiasi ordine), poi 8 · La cappelletta di Sant'Atto",
+   "gm": "La frase di Silvanus è la spinta: hanno un'ora per casale, pagliaio e pozzo. Se si perdono, Silvanus manda un vesperiano a chiamarli.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "il_medaglione_sotto_la_pelle",
      "tipo": "dettaglio",
-     "titolo": "La cassa nelle canne",
-     "parte": "nascosto",
-     "innesco": "Dopo lo scontro, se il Carro IV si è rovesciato o ha perso roba, qualcuno cerca a valle.",
-     "leggi": "Dieci passi più giù, incastrata fra le canne, una cassa di legno galleggia storta. Il coperchio è saltato. Dentro, bende bagnate, vasetti di coccio, una borsa di cuoio.",
+     "titolo": "Il medaglione sotto la pelle",
+     "parte": "evento",
+     "innesco": "Qualcuno taglia la cucitura o tocca il rigonfiamento.",
+     "leggi": "La lama apre la cucitura senza fatica: il filo è nuovo. Sotto la pelle c'è un disco di piombo. In mezzo, incastrata, una scheggia di pietra chiara che al sole sembra bagnata. È fredda anche adesso, a mezzogiorno d'agosto.",
+     "note": "Poi: Con 13 o più sanno che qualcuno forgia ancora, dopo Lyaras.",
      "prove": [
       {
-       "id": "canne",
+       "id": "prova",
        "abilita": [
-        "Percezione",
-        "Atletica"
+        "Medicina",
+        "Religione",
+        "Arcano"
        ],
-       "cd": 10,
+       "cd": 13,
        "gruppo": "migliore",
        "esiti": [
         {
          "fascia": "failure",
-         "max": 9,
-         "leggi": "La cassa gira su se stessa e se ne va con la corrente, verso levante."
+         "leggi": "Una cucitura rozza, come quelle che si fanno alle bestie. Sotto, un disco di piombo.",
+         "max": 12
         },
         {
          "fascia": "baseSuccess",
-         "min": 10,
-         "leggi": "La tirate a riva. Metà dei vasetti si è salvata."
+         "leggi": "Il medaglione della Forgiatura. L'avete già visto a Pietraluna e a Colleventoso.",
+         "min": 13,
+         "max": 16
+        },
+        {
+         "fascia": "fullSuccess",
+         "leggi": "La cucitura ha una o due settimane: il filo è ancora bianco. E su ogni disco, graffiato sul retro, c'è un segno piccolo: una falce di luna rovesciata. Chi li ha fatti li ha firmati.",
+         "min": 17
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Le schegge non sono tutte uguali. Quasi tutte sono chiare. Quattro, quelle dei fratelli, di Gerardo e di Cola, sono quasi nere. Due pietre diverse, o due mani diverse."
         }
        ]
       }
      ],
-     "dopo": "Se la cassa è recuperata, la Crociata non perde le medicine. Se va persa: il Dottor Albino ha la metà degli unguenti fino a Teramum (le cure fuori combattimento costano di più: a tua discrezione).",
-     "rilancio": "Il Dottor Albino conta i vasetti a voce alta. Che cosa fate?"
+     "bottino": [
+      {
+       "n": "Medaglioni della Forgiatura",
+       "cat": "Missione",
+       "desc": "Prova che la Forgiatura continua dopo Lyaras. Freddi anche al sole.",
+       "prompt": "lead disc medallion with a pale wet-looking moon stone shard set in the center, crude stitches, on white river pebbles, harsh noon sun",
+       "q": 19
+      }
+     ]
+    },
+    {
+     "id": "le_armi_dei_fratelli",
+     "tipo": "dettaglio",
+     "titolo": "Le armi dei fratelli",
+     "parte": "evento",
+     "innesco": "Qualcuno raccoglie le falci di Berardo e Mèmmo.",
+     "leggi": "Le due falci sono rimaste nell'acqua bassa, dove i fratelli sono caduti. I manici sono consumati da anni di mietitura. Su uno, inciso col coltello, c'è un nome: MÈMMO.",
+     "bottino": [
+      {
+       "n": "Falce da guerra di Berardo",
+       "cat": "Arma da guerra",
+       "desc": "1d10 taglienti · pesante, portata, a due mani.",
+       "prompt": "long peasant war scythe with worn wooden shaft, blade wet with river water, lying on white pebbles"
+      },
+      {
+       "n": "Falce da guerra di Mèmmo",
+       "cat": "Arma da guerra",
+       "desc": "1d10 taglienti · pesante, portata, a due mani. Sul manico, il nome MÈMMO.",
+       "prompt": "peasant war scythe with the name MEMMO carved into the wooden shaft, close-up, river stones"
+      }
+     ]
+    },
+    {
+     "id": "cosa_farne",
+     "tipo": "dettaglio",
+     "titolo": "Cosa farne",
+     "parte": "evento",
+     "innesco": "Il gruppo decide cosa fare dei corpi.",
+     "leggi": "I crociati aspettano. Mastro Colangelo ha già preso una pala dal Carro III.\n\nUno dei miliziani Aurentius si toglie il cappello: «Erano gente. Ieri erano gente.»",
+     "note": "Tre strade, tutte valide.\n• Seppellirli: un'ora di lavoro, all'osteria si arriva col buio.\n• Bruciarli: è quello che chiede la Chiesa per i posseduti (Religione CD 12 per saperlo). Il fumo si vede da tutta la valle.\n• Lasciarli: si riparte subito. I carrettieri se lo ricorderanno.\nMattheus può dire il rito di Mortus per chi è morto due volte. Se lo fa, sente qualcosa andare via, leggero, verso l'alto."
+    },
+    {
+     "id": "dlg_silvanus",
+     "tipo": "dialogo",
+     "titolo": "Silvanus: che cosa dice",
+     "parte": "evento",
+     "innesco": "Silvanus, comanda la colonna della Crociata. Quando i giocatori gli parlano (mai durante lo scontro).",
+     "note": "Voce: Parla poco, fa i conti. Vuole sapere cosa si è guadagnato, cosa si è perso e quanto costa.\nVuole: Arrivare all'osteria prima di notte, con tutti i carri.\n\n«Chi erano questi contadini?» — «Gente dei casali di Sant'Atto. A Teramum si diceva da settimane che la valle si stava svuotando. Nessuno è venuto a vedere.»\n   → Porta a: «Chi doveva venire?»\n\n«Chi doveva venire a vedere?» — «Queste sono terre del Barone di Cashtalladdë. Se qui sparisce gente, lui lo sa per primo. Chiedetevi perché non ha fatto niente.»\n   → Porta al pagliaio: il berretto di Gerardo Tosti.\n\n«Quanto tempo abbiamo?» — «Un'ora. Poi si riparte, con voi o senza. Stanotte voglio un tetto: l'osteria de lu Passe.»\n\n«Del Brak» — «Se lo vede un vescovo, la Crociata finisce qui. Che cammini dietro, fra gli alberi.»\n   → Porta a Vhaerun: cosa ne pensa lui?\n\n«Se fanno i cazzoni» — «Ridete pure. Ma ridete camminando.»"
+    },
+    {
+     "id": "dlg_vhaerun",
+     "tipo": "dialogo",
+     "titolo": "Vhaerun: che cosa dice",
+     "parte": "evento",
+     "innesco": "Vhaerun, un Brak, liberato sotto Bëllindë da Maximus. Quando i giocatori gli parlano (mai durante lo scontro).",
+     "note": "Voce: Bassa, con un accento che nessuno ha mai sentito. Frasi corte, da soldato. Ogni tanto una frase più leggera: la voce di prima.\nVuole: Non ricevere più ordini. Che gli chiedano le cose invece di comandargliele.\n\n«Dei Forgiati» — «Vuoti. In guerra li mandavano avanti. Non scappano, non urlano.» Guarda i corpi. «Ma quelli avevano qualcuno dentro che li guidava. Questi no.»\n   → Porta a: «Chi li guidava?»\n\n«Chi li guidava?» — «Una voce. Come la mia, laggiù sotto la città. Solo che la loro cantava.»\n   → Aggancio alla Forgiatura: chi canta, oggi?\n\n«Del medaglione» — «Non tenetelo in mano a lungo. Il freddo entra.»\n\n«Del fiume» — «Duecento anni senza acqua che corre.» Si inginocchia. «Lasciatemi un momento.»\n\n«Con Maximus, una volta sola» — «Tu. Quando ti danno un ordine, come fai a sapere se è tuo?»\n\n«Se fanno i cazzoni» — «Ridi. Laggiù nessuno rideva.» Poi, quasi sorpreso, ride anche lui.",
+     "immagine": "PNG — Vhaerun.jpg"
+    },
+    {
+     "id": "dlg_albino",
+     "tipo": "dialogo",
+     "titolo": "Dottor Albino: che cosa dice",
+     "parte": "evento",
+     "innesco": "Dottor Albino, il medico della Crociata, sul Carro IV. Quando i giocatori gli parlano (mai durante lo scontro).",
+     "note": "Voce: Veloce, nervoso, conta tutto a voce alta.\nVuole: I suoi feriti vivi e le sue medicine asciutte.\n\n«Se gli hanno salvato il carro» — «Avete salvato le mie medicine, e i miei feriti.» Vi mette in mano due fiale. «Non ditelo a Silvanus. Sono contate.»\n   → Bottino: 2 pozioni di guarigione (2d4+2), usabili da chiunque.\n\n«Se il carro si è rovesciato» — «Metà degli unguenti è nel fiume. Fino a Teramum, chi si fa male si arrangia.»\n   → Le cure fuori combattimento costano di più fino a Teramum.\n\n«Dei corpi» — «Ho visto morti di febbre, di guerra, di fame. Questi sono morti due volte.»\n\n«Se fanno i cazzoni» — «Fate pure gli spiritosi. Poi venite da me col braccio rotto.»"
+    },
+    {
+     "id": "dlg_micuccio",
+     "tipo": "dialogo",
+     "titolo": "Micuccio: che cosa dice",
+     "parte": "evento",
+     "innesco": "Micuccio, il ragazzo del Borgo Vecchio, ora in coda alla Crociata. Quando i giocatori gli parlano (mai durante lo scontro).",
+     "note": "Voce: Piano, frasi corte, pause lunghe. Quando qualcuno alza la voce si irrigidisce.\nVuole: Imparare a dire di no.\n\n«Perché è entrato in acqua?» — «Mi ha chiamato con la voce di mamma. E io sono andato. Sono sempre andato.»\n   → Porta a: «Chi ti chiamava, laggiù?»\n\n«Chi lo chiamava sotto la città?» — «La voce. Quella che conta.» Si guarda le mani. «Questi la sentivano anche loro? Sembrava.»\n\n«Se ha detto no da solo» — «Ho detto no.» Lo ripete piano, come una parola nuova. «L'ho detto io.»\n   → Il PG che glielo ha insegnato diventa la persona di cui si fida.\n\n«Se fanno i cazzoni» — Non capisce lo scherzo e risponde sul serio. Poi, dopo un po', sorride: «Era una battuta?»",
+     "immagine": "PNG — Micuccio.jpg"
     }
    ]
   },
@@ -538,72 +515,26 @@
    "title": "Il pagliaio",
    "image": "PDI — Guado — Il pagliaio.jpg",
    "legacyPosition": {
-    "x": 1265,
-    "y": 150
+    "x": 1260,
+    "y": 152
    },
-   "text": "Un pagliaio alto, a cupola, col palo che esce in cima. Il fieno è di quest’anno, ancora giallo.\n\nSul lato verso il fiume c’è un buco largo quanto un uomo.\n\nDentro, il fieno è schiacciato in piedi, come un nido fatto da qualcuno che non si sdraia mai.\n\nPer terra, davanti al buco, una scodella di legno rovesciata.\n\nE un berretto di feltro col fregio di ottone.",
-   "breve": "Qui stava in piedi, da giorni, il terzo Veterano: un milite di Cashtalladdë. Il berretto porta l’ordine del castaldo del Barone: andare a vedere chi mancava nei casali. Sotto il fieno, i risparmi della famiglia.",
-   "gm": "Il milite si chiamava Gerardo Tosti, milizia del Barone Ugo Pietramala «Mano di Ferro» di Cashtalladdë. Lo hanno mandato a controllare i casali di Sant’Atto due settimane fa; non è tornato; nessuno è venuto a cercarlo. Il Barone sapeva che nella valle sparisce gente, e ha taciuto (o ha riferito a Teramum, e Teramum ha taciuto).\nIl fregio: un pugno di ferro sopra un castello, le armi di Cashtalladdë (proposta: il canone dà il soprannome «Mano di Ferro», non lo stemma).\nI risparmi dei Chiòdi: a chi vanno? La famiglia è morta. Portarli alla cappella di Colleatterato, lasciarli a Sant’Atto o darli a Liberata (la madrina di Rosa, vedi «Da Colleatterato») sono scelte che la colonna vede.",
+   "text": "Mentre i crociati discutono dei corpi, Zenith si posa sul palo in cima al pagliaio e comincia a gridare.\n\nIl pagliaio è alto, a cupola. Sul lato verso il fiume c'è il buco da cui è uscito Gerardo durante lo scontro.\n\nDentro, il fieno è schiacciato in piedi, a forma di persona. Come se qualcuno ci fosse stato dritto per giorni, senza mai sedersi.\n\nPer terra, davanti al buco, una scodella rovesciata. E un foglio piegato in quattro, caduto dal berretto di Gerardo.",
+   "breve": "Arrivi da: Dai corpi sul greto.\nPoi: 6 · Il casale o 7 · Il pozzo",
+   "gm": "",
    "nota": {
     "cd": 0
    },
    "moduli": [
     {
-     "id": "nido",
+     "id": "il_foglio_del_milite",
      "tipo": "dettaglio",
-     "titolo": "Il nido nel fieno",
-     "parte": "indizio",
-     "seme": "Dentro, il fieno è schiacciato in piedi, come un nido fatto da qualcuno che non si sdraia mai.",
-     "innesco": "Qualcuno guarda dentro il buco del pagliaio.",
-     "leggi": "Il fieno è schiacciato in una forma sola: un uomo in piedi, le braccia lungo i fianchi. Davanti al buco, all’altezza degli occhi, il fieno è strappato: una finestrella verso il guado.",
+     "titolo": "Il foglio del milite",
+     "parte": "evento",
+     "innesco": "Qualcuno raccoglie il foglio, o fruga il corpo di Gerardo Tosti.",
+     "leggi": "La carta è umida, la scrittura storta.\n\n«Al milite Gerardo Tosti. Va' ai casali de Sant'Atto e vedi chi ci sta e chi manca. Riferisci a me solo. Il fattore del Barone.»\n\nC'è una data: sedici giorni fa. Nessun sigillo.",
      "prove": [
       {
-       "id": "nido",
-       "abilita": [
-        "Indagare",
-        "Sopravvivenza"
-       ],
-       "cd": 12,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 11,
-         "leggi": "Qualcuno ci si è nascosto. Un vagabondo, forse."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 12,
-         "max": 15,
-         "leggi": "Giorni. Non ore: giorni. È stato in piedi lì dentro a guardare il guado, e non si è mai seduto, mai sdraiato. Nessun resto di cibo, nessun segno di bisogni. Ha solo aspettato."
-        },
-        {
-         "fascia": "fullSuccess",
-         "min": 16,
-         "leggi": "Giorni, in piedi, a guardare il guado. E dalla finestrella nel fieno si vede una cosa sola: il punto esatto dove i carri escono dall’acqua. Qualcuno, prima di diventare quello, sapeva fare la guardia."
-        }
-       ]
-      }
-     ],
-     "dopo": "Sanno che i ferali stavano aspettando qualcuno che passasse il guado. Non loro in particolare: chiunque.",
-     "rilancio": "Il buco nel fieno guarda il fiume. Che cosa fate?",
-     "daqui": [
-      "berretto",
-      "pignatta"
-     ]
-    },
-    {
-     "id": "berretto",
-     "tipo": "dettaglio",
-     "titolo": "Il berretto col fregio",
-     "parte": "indizio",
-     "seme": "E un berretto di feltro col fregio di ottone.",
-     "innesco": "Qualcuno raccoglie il berretto.",
-     "leggi": "Feltro grigio, sformato dalla pioggia. Il fregio di ottone: un pugno chiuso, di ferro, sopra un castello a tre torri. Nella fodera, piegato in quattro, un foglio.",
-     "note": "Il foglio (da mostrare): «Al milite Gerardo Tosti. Va’ ai casali de Sant’Atto e vedi chi ci sta e chi manca. Riferisci a me solo. Il castaldo.» Una data di sedici giorni fa. Nessun sigillo.",
-     "prove": [
-      {
-       "id": "fregio",
+       "id": "prova",
        "abilita": [
         "Storia"
        ],
@@ -612,46 +543,49 @@
        "esiti": [
         {
          "fascia": "failure",
-         "max": 11,
-         "leggi": "Una milizia di qualche signore della valle."
+         "leggi": "La milizia di qualche signore della valle.",
+         "max": 11
         },
         {
          "fascia": "baseSuccess",
-         "min": 12,
-         "leggi": "Il pugno di ferro: Cashtalladdë, il Barone Ugo Pietramala, quello che chiamano «Mano di Ferro». Leale a Teramum. Le sue terre cominciano qui, al guado. Le sue baliste guardano la valle dall’alto."
+         "leggi": "Il pugno di ferro sopra un castello è lo stemma di Cashtalladdë, del Barone Ugo Pietramala, quello che chiamano «Mano di Ferro». Le sue terre cominciano qui, al guado. Sapeva che nei casali spariva gente, e ha mandato un uomo solo.",
+         "min": 12
         }
        ]
       }
      ],
-     "dopo": "Sanno che il Barone di Cashtalladdë sapeva delle sparizioni e ha mandato un uomo solo. È una prova da portare a Teramum, e una leva col Barone.",
-     "rilancio": "Il foglio è umido, la scrittura storta. Che cosa fate?",
-     "daqui": [
-      "pignatta"
-     ],
      "bottino": [
       {
-       "n": "Berretto e ordine del castaldo di Cashtalladdë",
-       "q": 1,
+       "n": "Berretto e ordine del castaldo",
        "cat": "Missione",
-       "peso": "—",
-       "valore": "—",
-       "stats": "",
-       "desc": "Ordine a Gerardo Tosti, milite del Barone Pietramala, di controllare i casali di Sant’Atto. Sedici giorni fa. Il Barone sapeva.",
-       "a": "crociata"
+       "desc": "Il Barone di Cashtalladdë sapeva. Una leva con lui, una prova a Teramum.",
+       "prompt": "grey felt cap with brass badge of an iron fist over a three-towered castle, folded damp letter beside it"
+      },
+      {
+       "n": "Martello da guerra di Gerardo Tosti",
+       "cat": "Arma da guerra",
+       "desc": "1d8 contundenti · versatile (1d10). Sul manico, il pugno di ferro di Cashtalladdë.",
+       "prompt": "medieval war hammer with an iron fist emblem on the shaft, lying on straw"
+      },
+      {
+       "n": "Giaco di cuoio della milizia",
+       "cat": "Armatura leggera",
+       "desc": "CA 11 + Destrezza. Con lo stemma di Cashtalladdë sul petto: aprirà qualche porta, e ne chiuderà altre.",
+       "prompt": "medieval leather jerkin with a brass iron-fist badge sewn on the chest, hanging on a hay bale"
       }
      ]
     },
     {
-     "id": "pignatta",
-     "tipo": "bottino",
+     "id": "sotto_il_fieno",
+     "tipo": "dettaglio",
      "titolo": "Sotto il fieno",
-     "parte": "nascosto",
-     "innesco": "Qualcuno smuove il fieno alla base del pagliaio, dal lato del casale.",
-     "leggi": "Sotto, nella terra, una pignatta di coccio col coperchio legato con lo spago. Dentro, avvolto in un fazzoletto ricamato: qualche fiorino, un mucchio di gofferine d’argento, una fede nuziale sottile.",
-     "note": "Sono i risparmi di una vita dei Chiòdi. La fede è di Rosa: dentro, incise, le lettere R e A (Rosa e Anselmo figlio, il marito morto anni fa).",
+     "parte": "evento",
+     "innesco": "Qualcuno smuove il fieno alla base, dal lato del casale.",
+     "leggi": "Il fieno alla base è più fitto, rimesso a posto a mano. Sotto, nella terra smossa, c'è una pignatta di coccio col coperchio legato con lo spago. Dentro, in un fazzoletto ricamato: qualche fiorino, un mucchio di monete d'argento, una fede nuziale sottile.",
+     "note": "Poi: Sono i risparmi di una vita dei Chiòdi. Cosa farne è una scelta, e la colonna guarda.",
      "prove": [
       {
-       "id": "fieno",
+       "id": "prova",
        "abilita": [
         "Indagare",
         "Percezione"
@@ -661,35 +595,32 @@
        "esiti": [
         {
          "fascia": "failure",
-         "max": 12,
-         "leggi": "Fieno, e sotto terra battuta."
+         "leggi": "Fieno, e sotto terra battuta.",
+         "max": 12
         },
         {
          "fascia": "baseSuccess",
-         "min": 13,
-         "leggi": "Il fieno alla base è stato rimesso a posto a mano, più fitto. Sotto, la terra è smossa."
+         "leggi": "Il fieno alla base è stato rimesso a mano. Sotto, la terra è smossa. C'è la pignatta.",
+         "min": 13
         }
        ]
       }
      ],
-     "dopo": "Cosa farne è una scelta morale, e la colonna guarda. Liberata di Colleatterato riconoscerà la fede.",
-     "rilancio": "Il fazzoletto ricamato è aperto sulla vostra mano. Che cosa fate?",
      "bottino": [
       {
        "n": "Risparmi dei Chiòdi",
+       "cat": "Monete",
+       "desc": "7 mo in fiorini e monete d'argento.",
+       "prompt": "small terracotta pot tied with string, embroidered handkerchief open with silver and gold coins",
        "monete": {
         "mo": 7
        }
       },
       {
-       "n": "Fede nuziale d’argento",
-       "q": 1,
-       "cat": "Oggetti",
-       "peso": "—",
-       "valore": "2 mo",
-       "stats": "",
-       "desc": "Sottile, consumata. Dentro, incise, una R e una A.",
-       "a": "crociata"
+       "n": "Fede nuziale d'argento",
+       "cat": "Oggetto",
+       "desc": "2 mo. Dentro, incise, una R e una A.",
+       "prompt": "thin worn silver wedding ring with engraved letters R and A inside, on an embroidered cloth"
       }
      ]
     }
@@ -702,103 +633,96 @@
    "title": "Il casale col tetto sfondato",
    "image": "PDI — Guado — Il casale.jpg",
    "legacyPosition": {
-    "x": 1040,
-    "y": 125
+    "x": 1043,
+    "y": 130
    },
-   "text": "Il muretto a secco, il cancello di stanghe aperto. L’aia di terra battuta: le galline non ci sono più, solo piume.\n\nSulla porta, all’esterno, qualcuno ha inciso una falce di luna rovesciata.\n\nDentro, la luce entra dal tetto sfondato e cade a colonne nella polvere.\n\nUn tavolo. Quattro scodelle, apparecchiate. Quattro cucchiai. Dentro, la polenta verde di muffa. Una brocca d’acqua, rovesciata.\n\nLe sedie sono spinte indietro, tutte e quattro, come se qualcuno si fosse alzato insieme agli altri.\n\nSul muro, sopra la porta, dall’interno, inciso col coltello, un cerchio con due tondi ai lati.\n\nNel camino la cenere è fredda. Appesa al muro, una culla vuota, piena di cipolle.",
-   "breve": "La casa dei Chiòdi: la cena lasciata a metà, quattro sedie spinte indietro insieme. Fuori, la falce di luna rovesciata dei forgiatori; dentro, il Sole fra le Due Lune inciso dalla famiglia per proteggersi. La brocca porta al pozzo.",
-   "gm": "Cosa è successo: una sera di luna nuova, due settimane fa, i Chiòdi hanno bevuto l’acqua del loro pozzo a cena. Si sono alzati tutti e quattro insieme, a metà del piatto, e sono usciti. Non sono più rientrati.\nI due segni: la falce di luna rovesciata all’esterno è il segno che i PG hanno visto sulle porte di Colleventoso (Atto III): chi forgia segna le case. Il cerchio fra due tondi all’interno è il Sole fra le Due Lune della fede vecchia: la famiglia sapeva, o temeva, e ha provato a proteggersi. Non è bastato.\nDa decidere: il vecchio testo del sito diceva che il cerchio era «lo stesso segno dei Forgiati di Julia Nova». Qui lo tratto come protezione della fede vecchia (versione del Compendio): se preferisci l’altra lettura, cambia l’esito della prova «I due segni».",
+   "text": "Dal pagliaio si vede l'aia. Il cancello del casale è aperto, e la porta sbatte piano col vento. Sul legno, da fuori, qualcuno ha inciso una falce di luna con le punte in giù.\n\nSull'aia non ci sono galline, solo piume.\n\nDentro, la luce entra dal tetto rotto. C'è un tavolo con quattro scodelle di polenta, mangiate a metà e coperte di muffa. Le quattro sedie sono spinte indietro, tutte insieme, come se si fossero alzati nello stesso momento.\n\nSopra la porta, all'interno, è inciso un cerchio con due tondi ai lati.",
+   "breve": "Arrivi da: Dai corpi o dal pagliaio.\nPoi: 7 · Il pozzo",
+   "gm": "",
    "nota": {
     "cd": 0
    },
    "moduli": [
     {
-     "id": "tavola",
+     "id": "la_tavola_apparecchiata",
      "tipo": "dettaglio",
      "titolo": "La tavola apparecchiata",
-     "parte": "indizio",
-     "seme": "Le sedie sono spinte indietro, tutte e quattro, come se qualcuno si fosse alzato insieme agli altri.",
-     "innesco": "Qualcuno guarda la tavola, le sedie, la brocca.",
-     "leggi": "Le scodelle sono mangiate a metà. Nessuna sedia è caduta. Nessun piatto rotto. Sul pavimento, sotto la brocca rovesciata, una macchia scura, secca, lucida.",
+     "parte": "evento",
+     "innesco": "Qualcuno guarda la tavola, le sedie o la brocca rovesciata.",
+     "leggi": "Nessuna sedia caduta. Nessun piatto rotto. Sotto la brocca rovesciata c'è una macchia scura, secca e lucida.",
      "prove": [
       {
-       "id": "tavola",
+       "id": "prova",
        "abilita": [
         "Indagare"
        ],
        "cd": 12,
-       "gruppo": "chi",
+       "gruppo": "migliore",
        "esiti": [
         {
          "fascia": "failure",
-         "max": 11,
-         "leggi": "Se ne sono andati in fretta. Forse una disgrazia, una chiamata."
+         "leggi": "Se ne sono andati di corsa. Una disgrazia, forse.",
+         "max": 11
         },
         {
          "fascia": "baseSuccess",
+         "leggi": "Nessuna lotta. Si sono alzati tutti e quattro insieme, a metà boccone, e sono usciti. Come se qualcuno li avesse chiamati con una voce che sentivano solo loro.",
          "min": 12,
-         "max": 15,
-         "leggi": "Nessuna lotta. Si sono alzati insieme, tutti e quattro nello stesso momento, a metà boccone, e sono usciti. Come se qualcuno li avesse chiamati con una voce che sentivano solo loro."
+         "max": 15
         },
         {
          "fascia": "fullSuccess",
-         "min": 16,
-         "leggi": "Si sono alzati insieme, a metà boccone. E la macchia sotto la brocca non è vino né polenta: è una crosta nera e lucida, la stessa che avete visto nelle pozze di Pietraluna. Era nell’acqua. L’acqua della brocca viene dal pozzo dell’aia."
+         "leggi": "La macchia sotto la brocca è una crosta nera, la stessa delle pozze di Pietraluna. Era nell'acqua. E l'acqua della brocca viene dal pozzo dell'aia.",
+         "min": 16
         }
        ]
       }
-     ],
-     "dopo": "Con 16 o più sanno che la Forgiatura è passata dall’acqua, come a Colleventoso. Il pozzo è la prossima domanda.",
-     "rilancio": "Le quattro sedie guardano la porta. Che cosa fate?",
-     "daqui": [
-      "segni",
-      "guado_pozzo"
      ]
     },
     {
-     "id": "segni",
+     "id": "i_due_segni",
      "tipo": "dettaglio",
      "titolo": "I due segni",
-     "parte": "indizio",
-     "seme": "Sul muro, sopra la porta, dall’interno, inciso col coltello, un cerchio con due tondi ai lati.",
-     "innesco": "Qualcuno guarda il segno sopra la porta, dentro, o quello sulla porta, fuori.",
-     "leggi": "Dentro, sopra la porta: un cerchio, e ai lati due tondi più piccoli, incisi di fretta col coltello, la punta che ha scivolato due volte.\n\nFuori, sul legno della porta: una falce di luna, a punte in giù. Incisa con calma. Pulita.",
+     "parte": "evento",
+     "innesco": "Qualcuno guarda il segno dentro o quello fuori.",
+     "leggi": "Dentro: un cerchio con due tondi ai lati, inciso di fretta. La punta del coltello è scivolata due volte.\n\nFuori: una falce di luna rovesciata. Incisa con calma. Pulita.\n\nDietro la porta, appeso a un chiodo, c'è un tondo di legno con lo stesso cerchio.",
      "prove": [
       {
-       "id": "segno",
+       "id": "prova",
        "abilita": [
         "Religione",
         "Storia"
        ],
        "cd": 13,
-       "gruppo": "chi",
+       "gruppo": "migliore",
        "esiti": [
         {
          "fascia": "failure",
-         "max": 12,
-         "leggi": "Un segno di contadini, un voto, una scaramanzia. E una luna."
+         "leggi": "Una scaramanzia di contadini. E una luna.",
+         "max": 12
         },
         {
          "fascia": "baseSuccess",
+         "leggi": "Il cerchio fra due tondi è il Sole fra le Due Lune, il segno della fede vecchia, lo stesso del vostro stendardo. La famiglia l'ha inciso per proteggersi. La falce rovesciata fuori l'avete vista a Colleventoso: chi forgia segna le porte.",
          "min": 13,
-         "max": 16,
-         "leggi": "Il cerchio fra due tondi è il Sole fra le Due Lune, il segno della fede vecchia che la Chiesa cancella dovunque: lo stesso del vostro stendardo. Chi viveva qui l’ha inciso per proteggere la casa. La falce rovesciata, fuori, la conoscete: Colleventoso. Chi forgia segna le porte."
+         "max": 16
         },
         {
          "fascia": "fullSuccess",
-         "min": 17,
-         "leggi": "Il Sole fra le Due Lune, inciso da una mano che tremava, e dopo: la polvere nei solchi è più chiara di quella della falce. La falce c’era prima. La famiglia l’ha vista sulla propria porta, ha capito, e ha provato a difendersi con quello che sapeva. Hanno avuto paura per giorni, prima."
+         "leggi": "La polvere nel cerchio è più chiara di quella nella falce. La falce c'era prima. La famiglia l'ha vista sulla propria porta, ha capito, e per giorni ha provato a difendersi con quello che sapeva.",
+         "min": 17
         }
        ]
       }
      ],
-     "dopo": "Sanno che la casa è stata segnata come quelle di Colleventoso, e che la famiglia ha cercato protezione nella fede vecchia. Alessandros (armatura) e Silvanus (sotto la tunica) portano lo stesso segno.",
-     "rilancio": "Due segni sulla stessa porta, uno dentro e uno fuori. Che cosa fate?",
-     "daqui": [
-      "guado_pozzo",
-      "guado_edicola"
-     ],
-     "pe": 300
+     "bottino": [
+      {
+       "n": "Il Sole di legno dei Chiòdi",
+       "cat": "Talismano",
+       "desc": "Chi lo porta ha vantaggio ai tiri salvezza contro l'essere spaventato.",
+       "prompt": "round carved wooden amulet with a sun between two small moons, hanging on a nail behind a farmhouse door, dusty light"
+      }
+     ]
     }
    ]
   },
@@ -809,140 +733,90 @@
    "title": "Il pozzo",
    "image": "PDI — Guado — Il pozzo.jpg",
    "legacyPosition": {
-    "x": 965,
-    "y": 245
+    "x": 970,
+    "y": 250
    },
-   "text": "Il pozzo dell’aia: una vera di pietra, due pali, la carrucola. Il secchio è su, appoggiato sull’orlo, pieno a metà.\n\nL’acqua nel secchio è limpida. Troppo. Non ci sono foglie, non ci sono insetti annegati.\n\nLe mosche, che sono dappertutto, qui non si posano.\n\nSulla pietra della vera, all’altezza della mano, una macchia scura, lucida, come pece.",
-   "breve": "Il pozzo dei Chiòdi: l’acqua che li ha forgiati. Dentro la vera, la melma nera; sul fondo, una fiaschetta rotta con un sigillo di cera raschiato. Un filo che porta all’osteria (lillà) e a Colleatterato (il frate che benediceva i pozzi).",
-   "gm": "Il meccanismo (canone, Magia e Fede IV.II): Carburante (la melma nera), Turbine (chi canta), Fabbro (chi applica il medaglione con la luna nuova). A Colleventoso passava per l’acqua «benedetta» del pozzo portata da Padre Elvirius, «venuto da Teramum». Qui è lo stesso schema.\nChi l’ha fatto qui: Da decidere. Proposta: un «frate giovane con una botticella sul mulo» che un mese fa ha benedetto gratis i pozzi dei casali di Sant’Atto (lo racconta Liberata a Colleatterato). Padre Elvirius è prigioniero a Julia Nova dall’Atto III: questo è un altro, della stessa mano.\nL’odore di lillà nell’acqua (solo con 17+) lega il pozzo a Casa Velthuria: coerente col canone (Iuvenza conduce un colpo di stato con la Forgiatura), ma è una prova indiziaria, non una firma.\nChi beve l’acqua del secchio: TS Costituzione CD 13. Fallito: stanotte, all’osteria, sogna di stare a tavola con quattro sconosciuti e di alzarsi con loro, tutti insieme. Nessun altro effetto, per ora (senza medaglione e senza luna nuova la Forgiatura non si compie).",
+   "text": "La brocca del casale veniva riempita qui, a dieci passi dalla porta.\n\nIl pozzo ha un bordo di pietra, due pali e la carrucola. Il secchio è appoggiato sull'orlo, pieno a metà.\n\nL'acqua è limpida. Troppo: non c'è una foglia, non c'è un insetto.\n\nLe mosche sono dappertutto, ma qui non si posano.\n\nSulla pietra, all'altezza della mano, c'è una macchia nera e lucida, come pece.",
+   "breve": "Arrivi da: Dal casale (la brocca porta qui) o dall'aia.\nPoi: 8 · La cappelletta di Sant'Atto",
+   "gm": "",
    "nota": {
     "cd": 0
    },
    "moduli": [
     {
-     "id": "secchio",
+     "id": "l_acqua_del_secchio",
      "tipo": "dettaglio",
-     "titolo": "L’acqua del secchio",
-     "parte": "indizio",
-     "seme": "Le mosche, che sono dappertutto, qui non si posano.",
-     "innesco": "Qualcuno guarda l’acqua, la annusa, ci mette la mano o vuole abbeverare le bestie.",
-     "leggi": "Fredda. Limpida. Senza odore, a prima vista. Le bestie della colonna, portate vicino, alzano il muso e rifiutano di bere.",
+     "titolo": "L'acqua del secchio",
+     "parte": "evento",
+     "innesco": "Qualcuno annusa l'acqua, la tocca o vuole far bere le bestie.",
+     "leggi": "Un carrettiere porta i muli del Carro II ad abbeverarsi. Le bestie arrivano al secchio, alzano il muso e non bevono. Tirano indietro.",
+     "note": "Poi: Chi beve: TS Costituzione CD 13. Se fallisce, stanotte sogna di essere a tavola con quattro sconosciuti e di alzarsi insieme a loro. Per ora nient'altro.",
      "prove": [
       {
-       "id": "acqua",
+       "id": "prova",
        "abilita": [
-        "Natura",
-        "Medicina"
+        "Medicina",
+        "Natura"
        ],
        "cd": 13,
        "gruppo": "migliore",
        "esiti": [
         {
          "fascia": "failure",
-         "max": 12,
-         "leggi": "Acqua di pozzo. Forse un po’ ferma."
+         "leggi": "Acqua di pozzo, un po' ferma.",
+         "max": 12
         },
         {
          "fascia": "baseSuccess",
+         "leggi": "È un'acqua morta: niente ci vive, niente ci si avvicina. Non fatela bere a nessuno.",
          "min": 13,
-         "max": 16,
-         "leggi": "È un’acqua morta: niente vive dentro, niente ci si avvicina. Non è veleno che si conosca. Non fatela bere a nessuno."
+         "max": 16
         },
         {
          "fascia": "fullSuccess",
-         "min": 17,
-         "leggi": "Un’acqua morta. E portandola al naso, sotto il freddo, c’è un odore che conoscete. Dolce. Lillà e cenere. Il Loto d’Ombra dei giardini di Velthuria. Poco, pochissimo. Ma c’è."
+         "leggi": "Sotto il freddo c'è un odore che conoscete. Dolce. Lillà e cenere: il Loto d'Ombra dei giardini di Velthuria.",
+         "min": 17
         }
        ]
       }
-     ],
-     "dopo": "Sanno che l’acqua è stata trattata. Con 17 o più, che c’è l’odore di Velthuria.",
-     "rilancio": "Il secchio è lì, pieno a metà. Che cosa fate?",
-     "daqui": [
-      "pece",
-      "fondo"
      ]
     },
     {
-     "id": "pece",
+     "id": "sul_fondo",
      "tipo": "dettaglio",
-     "titolo": "La macchia sulla vera",
-     "parte": "indizio",
-     "seme": "Sulla pietra della vera, all’altezza della mano, una macchia scura, lucida, come pece.",
-     "innesco": "Qualcuno tocca o esamina la macchia scura sulla pietra.",
-     "leggi": "Non è pece: la pece al sole si scioglie, questa no. È fredda. Sotto il dito ha una consistenza di grasso, e lascia un segno nero che non va via con lo sputo.",
-     "prove": [
-      {
-       "id": "melma",
-       "abilita": [
-        "Arcano",
-        "Religione"
-       ],
-       "cd": 14,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 13,
-         "leggi": "Una sporcizia. Unto di carrucola, forse."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 14,
-         "leggi": "La melma nera. L’avete vista a Pietraluna, nelle anfore e nelle pozze dove lavoravano i Forgiati, e nella gola delle guardie di Julia Nova. Il Carburante della Forgiatura. Qualcuno l’ha versata qui, e ha appoggiato la mano sporca sulla vera per farlo."
-        }
-       ]
-      }
-     ],
-     "dopo": "Sanno che la Forgiatura è passata dal pozzo, e che chi l’ha fatto è stato qui di persona.",
-     "rilancio": "Il dito resta nero. Che cosa fate?",
-     "daqui": [
-      "fondo"
-     ],
-     "pe": 200
-    },
-    {
-     "id": "fondo",
-     "tipo": "bottino",
      "titolo": "Sul fondo",
-     "parte": "nascosto",
-     "innesco": "Qualcuno scende nel pozzo con una corda, o raschia il fondo col secchio e un rampino.",
-     "leggi": "Sei metri di corda. L’acqua sul fondo arriva al petto, gelida. Col piede, fra i sassi, trovate qualcosa di liscio: il collo di una fiaschetta di coccio, rotta. Il tappo è ancora attaccato, sigillato con cera nera.\n\nSulla cera c’era un’impronta. Qualcuno l’ha raschiata col coltello. È rimasto solo l’orlo: una corona di petali.",
+     "parte": "evento",
+     "innesco": "Qualcuno scende con una corda.",
+     "leggi": "Sei metri di corda. Sul fondo l'acqua arriva al petto, gelata. Col piede trovate il collo di una fiaschetta di coccio rotta, col tappo sigillato di cera nera.\n\nSulla cera c'era un'impronta. Qualcuno l'ha raschiata col coltello. Resta solo l'orlo: una corona di petali.",
+     "note": "Poi: La corona di petali: la rivedranno stasera, sul carro del convoglio all'osteria.",
      "prove": [
       {
-       "id": "scendere",
+       "id": "prova",
        "abilita": [
         "Atletica"
        ],
        "cd": 12,
-       "gruppo": "chi",
+       "gruppo": "migliore",
        "esiti": [
         {
          "fascia": "failure",
-         "max": 11,
-         "leggi": "Le pareti sono viscide. Scivoli, bevi, risali tossendo senza niente in mano (TS Costituzione CD 13, vedi le note del punto)."
+         "leggi": "Le pareti sono viscide. Scivoli, bevi, risali tossendo e a mani vuote (TS Costituzione CD 13).",
+         "max": 11
         },
         {
          "fascia": "baseSuccess",
-         "min": 12,
-         "leggi": "Scendi, trovi il fondo, e con le mani intirizzite la fiaschetta rotta."
+         "leggi": "Scendi, trovi il fondo e, con le mani intirizzite, la fiaschetta.",
+         "min": 12
         }
        ]
       }
      ],
-     "dopo": "Sanno che la melma è arrivata in una fiaschetta sigillata, e che il sigillo è stato raschiato apposta. Petali: lo stesso disegno raschiato che vedranno stasera sul carro del convoglio all’osteria.",
-     "rilancio": "Risalite con un pezzo di coccio e un sigillo senza faccia. Che cosa fate?",
-     "pe": 300,
      "bottino": [
       {
-       "n": "Fiaschetta rotta col sigillo raschiato",
-       "q": 1,
+       "n": "Fiaschetta col sigillo raschiato",
        "cat": "Missione",
-       "peso": "0,5 lb",
-       "valore": "—",
-       "stats": "",
-       "desc": "Coccio, collo e tappo sigillato con cera nera. L’impronta è stata raschiata: resta l’orlo, una corona di petali. Dentro, un velo di melma nera.",
-       "a": "crociata"
+       "desc": "La melma è arrivata qui in una fiaschetta sigillata. Il sigillo è stato raschiato apposta.",
+       "prompt": "broken terracotta flask neck with black wax seal scraped off, only a ring of petals left on the rim, wet"
       }
      ]
     }
@@ -952,30 +826,29 @@
    "schemaVersion": 3,
    "id": "guado_edicola",
    "kind": "dettaglio",
-   "title": "L’edicola di Sant’Atto",
+   "title": "La cappelletta di Sant'Atto",
    "image": "PDI — Guado — L’edicola di Sant’Atto.jpg",
    "legacyPosition": {
     "x": 1245,
-    "y": 395
+    "y": 391
    },
-   "text": "Dove la strada lascia il fiume e riprende a salire verso levante, un’edicola di pietra alta quanto un uomo, col tettuccio di coppi.\n\nDentro, dipinto sull’intonaco scrostato, un santo vecchio con la barba bianca attraversa un fiume con l’acqua alla cintura. Sulle spalle porta un uomo più giovane, che dorme.\n\nIntorno alla testa del santo, l’aureola. Qualcuno, un tempo, ci aveva dipinto accanto qualcos’altro: due macchie tonde, una chiara e una scura. Poi le hanno coperte di calce.\n\nSul gradino, fiori secchi. Monetine di rame, verdi. Un pezzo di pane vecchio.\n\nE un mazzetto di finocchio selvatico, fresco. Di stamattina.",
-   "breve": "L’edicola del santo del guado, sulla strada che riparte verso Teramum. Il santo porta sulle spalle un uomo che dorme; accanto all’aureola, le Due Lune coperte di calce. Il finocchio fresco: qualcuno a cavallo si è fermato qui all’alba.",
-   "gm": "Sant’Atto (tutto proposta, Da decidere): un eremita che per quarant’anni ha portato i pellegrini da una riva all’altra del Tordinum sulle spalle, «anche chi non pagava, anche chi non credeva». Patrono dei guadi e dei viandanti della valle. La leggenda dice che una notte portò sulle spalle un giovane che dormiva e che, arrivato di là, si svegliò e disse di essere il Sole: da allora il guado non ha mai preso nessuno che avesse lasciato una moneta. Nella versione vecchia, quella dipinta, il santo porta il Sole fra le Due Lune: la Chiesa ha coperto le lune.\nIl finocchio fresco: l’ha lasciato all’alba il cavaliere che segue la colonna da lontano, uomo di Dama Violante Rosaspina di Nutaròschë (lo si rivede stanotte sulla collina dell’osteria). Si è fermato qui, ha aspettato, ha visto la colonna partire da Bëllindë col cannocchiale, ed è andato avanti.\nUsanza: si lascia una moneta e si dice «Sant’Atto, portame de là». Proposta di effetto: chi lo fa ha vantaggio al primo tiro salvezza della giornata. Chi prende le monete dal gradino (qualcuno ci proverà) è visto dai carrettieri: coesione −1 se nessuno rimedia.",
+   "text": "Kostandìn suona il corno: si riparte. I carri risalgono la riva e prendono la strada di levante, fra i campi.\n\nAl primo tornante, dove la strada lascia il fiume, c'è una cappelletta votiva di pietra, alta quanto un uomo.\n\nDentro, dipinto sull'intonaco, un santo vecchio con la barba bianca attraversa un fiume con l'acqua alla cintura. Sulle spalle porta un ragazzo che dorme.\n\nSul gradino: fiori secchi, monetine verdi, un pezzo di pane vecchio. E un mazzetto di finocchio selvatico. Fresco. Di stamattina.",
+   "breve": "Arrivi da: Dalla strada che riparte, quando Silvanus dà l'ordine.\nPoi: Scena successiva: l'osteria de lu Passe",
+   "gm": "",
    "nota": {
     "cd": 0
    },
    "moduli": [
     {
-     "id": "santatto",
+     "id": "il_santo_del_guado",
      "tipo": "dettaglio",
      "titolo": "Il santo del guado",
-     "parte": "indizio",
-     "seme": "un santo vecchio con la barba bianca attraversa un fiume con l’acqua alla cintura",
-     "innesco": "Qualcuno guarda l’affresco o chiede chi è il santo.",
-     "leggi": "Sotto il dipinto, graffiato nell’intonaco da cento mani diverse: croci, iniziali, una barca, un piede. E una scritta vecchia, quasi andata: «S. ATTO».",
+     "parte": "evento",
+     "innesco": "Qualcuno chiede chi è il santo.",
+     "leggi": "Sotto il dipinto, graffiati da cento mani: croci, iniziali, una barca. E una scritta quasi cancellata: «S. ATTO».",
      "prove": [
       {
-       "id": "santo",
+       "id": "prova",
        "abilita": [
         "Religione",
         "Storia"
@@ -985,123 +858,593 @@
        "esiti": [
         {
          "fascia": "failure",
-         "max": 10,
-         "leggi": "Un santo locale. Ogni valle ne ha uno."
+         "leggi": "Un santo del posto. Ogni valle ne ha uno.",
+         "max": 10
         },
         {
          "fascia": "baseSuccess",
+         "leggi": "Sant'Atto portava i pellegrini da una riva all'altra sulle spalle, senza chiedere chi fossero. Chi passa lascia una moneta e dice: «Sant'Atto, portame de là».",
          "min": 11,
-         "max": 15,
-         "leggi": "Sant’Atto, l’eremita del guado: portava i pellegrini da una riva all’altra sulle spalle, e non chiedeva a nessuno chi fosse. La gente della valle lascia una moneta e dice «Sant’Atto, portame de là». Chi non lo fa, si dice, il fiume se lo ricorda."
+         "max": 15
         },
         {
          "fascia": "fullSuccess",
-         "min": 16,
-         "leggi": "Sant’Atto, e la leggenda intera: una notte portò sulle spalle un giovane che dormiva, e dall’altra parte il giovane si svegliò e disse di essere il Sole. Per questo il guado non prende chi paga il passaggio. Una storia che la Chiesa racconta a metà."
+         "leggi": "La leggenda intera: una notte il ragazzo che dormiva sulle sue spalle si svegliò dall'altra parte e disse di essere il Sole. Per questo il guado non prende chi paga il passaggio.",
+         "min": 16
         }
        ]
       }
-     ],
-     "dopo": "Sanno chi è Sant’Atto e l’usanza della moneta.",
-     "rilancio": "Il santo vi guarda da sotto l’acqua dipinta. Che cosa fate?",
-     "daqui": [
-      "macchie",
-      "offerta"
      ]
     },
     {
-     "id": "macchie",
-     "tipo": "dettaglio",
-     "titolo": "Le lune sotto la calce",
-     "parte": "indizio",
-     "seme": "Poi le hanno coperte di calce.",
-     "innesco": "Qualcuno guarda da vicino l’aureola, o gratta la calce.",
-     "leggi": "Sotto la calce, grattata con l’unghia, viene fuori il colore: a destra dell’aureola un tondo d’argento, a sinistra un tondo nero. L’aureola, nel mezzo, ha i raggi.",
-     "note": "Se Alessandros o Silvanus sono presenti, è un momento: il simbolo che portano è su un’edicola di strada, sotto un dito di calce. Nessuna conseguenza meccanica. Grattare via tutta la calce davanti ai carrettieri è un gesto che la colonna ricorda (coesione: a tua discrezione, +1 fra chi porta l’anello col sigillo, −1 fra i più devoti alla Chiesa).",
-     "prove": [
-      {
-       "id": "lune",
-       "abilita": [
-        "Religione"
-       ],
-       "cd": 13,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 12,
-         "leggi": "Un vecchio decoro coperto quando hanno rifatto l’edicola."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 13,
-         "leggi": "Il Sole fra le Due Lune. Qui, sulla testa di un santo della Chiesa, dipinto quando nessuno lo chiamava eresia. Il giovane che dorme sulle spalle di Sant’Atto è il Sole. La Chiesa ha lasciato il santo e ha coperto le lune."
-        }
-       ]
-      }
-     ],
-     "dopo": "Sanno che la fede vecchia era qui, in bella vista, prima che la coprissero.",
-     "rilancio": "L’argento e il nero sono lì, sotto la calce. Che cosa fate?",
-     "daqui": [
-      "offerta",
-      "finocchio"
-     ],
-     "pe": 150
-    },
-    {
-     "id": "finocchio",
+     "id": "il_finocchio_di_stamattina",
      "tipo": "dettaglio",
      "titolo": "Il finocchio di stamattina",
-     "parte": "indizio",
-     "seme": "E un mazzetto di finocchio selvatico, fresco. Di stamattina.",
-     "innesco": "Qualcuno nota che il mazzetto è fresco, o cerca tracce intorno all’edicola.",
-     "leggi": "Il finocchio è tagliato col coltello, non strappato. Le foglie sono ancora dritte. Sulla polvere della strada, davanti all’edicola, zoccoli: un cavallo solo.",
+     "parte": "evento",
+     "innesco": "Qualcuno nota che il mazzetto è fresco, o cerca tracce.",
+     "leggi": "Il finocchio è tagliato col coltello. Nella polvere, davanti alla cappelletta, ci sono zoccoli: un cavallo solo.",
+     "note": "Poi: Lo rivedranno stanotte, sulla collina dell'osteria.",
      "prove": [
       {
-       "id": "tracce",
+       "id": "prova",
        "abilita": [
         "Sopravvivenza"
        ],
        "cd": 13,
-       "gruppo": "chi",
+       "gruppo": "migliore",
        "esiti": [
         {
          "fascia": "failure",
-         "max": 12,
-         "leggi": "Un contadino di passaggio, un devoto. La strada è di tutti."
+         "leggi": "Un devoto di passaggio.",
+         "max": 12
         },
         {
          "fascia": "baseSuccess",
+         "leggi": "Un cavallo ferrato, fermo qui a lungo all'alba. Il cavaliere è sceso, ha lasciato il finocchio, ed è ripartito verso levante. Sulla vostra strada.",
          "min": 13,
-         "max": 16,
-         "leggi": "Un cavallo ferrato, uno solo, all’alba. Si è fermato qui a lungo: ha girato su se stesso, ha pestato, ha brucato l’erba del fosso. Il cavaliere è sceso, ha lasciato il finocchio, è risalito. Poi è andato verso levante, al passo, sulla vostra strada."
+         "max": 16
         },
         {
          "fascia": "fullSuccess",
-         "min": 17,
-         "leggi": "Un cavallo ferrato, fermo qui a lungo, all’alba. E sul sasso più alto dietro l’edicola, da cui si vede tutta la valle fino a Bëllindë, l’erba è schiacciata come da un uomo seduto. Vi ha guardati partire. Poi vi ha preceduti."
+         "leggi": "Sul sasso più alto dietro la cappelletta, da dove si vede la valle fino a Bëllindë, l'erba è schiacciata da un uomo seduto. Vi ha guardati partire. Poi vi ha preceduti.",
+         "min": 17
         }
        ]
       }
-     ],
-     "dopo": "Sanno che qualcuno a cavallo li precede e li osserva. Lo ritroveranno stanotte, sulla collina dell’osteria.",
-     "rilancio": "Le tracce vanno verso levante, dove andate voi. Che cosa fate?",
-     "daqui": [
-      "offerta"
      ]
     },
     {
-     "id": "offerta",
-     "tipo": "dettaglio",
-     "titolo": "La moneta per il santo",
+     "id": "uscita",
+     "tipo": "prosecuzione",
+     "titolo": "Dove si va da qui",
      "parte": "evento",
-     "innesco": "Qualcuno lascia una moneta, prega, o prende qualcosa dal gradino.",
-     "leggi": "La moneta tintinna sulle altre. I carrettieri, dietro, si tolgono il cappello uno per uno, senza che nessuno lo dica.",
-     "note": "Chi lascia una moneta e dice le parole: vantaggio al primo tiro salvezza della giornata (proposta). Se qualcuno lascia qui i risparmi dei Chiòdi, i carrettieri lo raccontano stasera: coesione +1.",
-     "dopo": "La colonna riprende la strada di valle verso l’osteria de lu Passe.",
-     "rilancio": "La strada sale fra i campi, verso levante. Che cosa fate?"
+     "note": "Strada di levante: Dopo la cappelletta la strada sale fra i campi verso l'osteria de lu Passe, dove la colonna passa la notte. Se hanno seppellito i corpi, ci arrivano col buio."
     }
    ]
+  }
+ ],
+ "pedine": [
+  {
+   "id": "g_f1",
+   "nome": "Zi' Anselmo, il vecchio col bastone",
+   "short": "F1",
+   "best": "forgiato_marcio",
+   "x": 652,
+   "y": 304,
+   "gruppo": "inizio",
+   "tac": "Comanda gli altri senza parlare: dove va lui, vanno loro. Ripete le parole che sente."
+  },
+  {
+   "id": "g_f2",
+   "nome": "Rosa, la nuora",
+   "short": "F2",
+   "best": "forgiato_ferale",
+   "x": 710,
+   "y": 326,
+   "gruppo": "inizio",
+   "tac": "Se qualcuno la chiama per nome, si ferma per un round."
+  },
+  {
+   "id": "g_f3",
+   "nome": "Panfilo lu pecuraro",
+   "short": "F3",
+   "best": "forgiato_ferale",
+   "x": 608,
+   "y": 348,
+   "gruppo": "inizio"
+  },
+  {
+   "id": "g_f4",
+   "nome": "Emidio, il ragazzo scalzo",
+   "short": "F4",
+   "best": "forgiato_ferale",
+   "x": 681,
+   "y": 272,
+   "gruppo": "inizio"
+  },
+  {
+   "id": "g_f5",
+   "nome": "Settimio, nelle canne",
+   "short": "F5",
+   "best": "forgiato_ferale",
+   "x": 521,
+   "y": 445,
+   "gruppo": "inizio"
+  },
+  {
+   "id": "g_f6",
+   "nome": "Assunta, nelle canne",
+   "short": "F6",
+   "best": "forgiato_ferale",
+   "x": 550,
+   "y": 478,
+   "gruppo": "inizio"
+  },
+  {
+   "id": "g_v1",
+   "nome": "Berardo Chiòdi, con la falce",
+   "short": "V1",
+   "best": "forgiato_veterano",
+   "x": 912,
+   "y": 445,
+   "gruppo": "inizio"
+  },
+  {
+   "id": "g_v2",
+   "nome": "Mèmmo Chiòdi, con la falce",
+   "short": "V2",
+   "best": "forgiato_veterano",
+   "x": 956,
+   "y": 467,
+   "gruppo": "inizio"
+  },
+  {
+   "id": "g_g",
+   "nome": "Gerardo Tosti, soldato di Cashtalladdë",
+   "short": "G",
+   "best": "forgiato_capo",
+   "x": 1202,
+   "y": 217,
+   "gruppo": "round2"
+  },
+  {
+   "id": "g_v3",
+   "nome": "Cola lu vaccaro, del casale accanto",
+   "short": "V3",
+   "best": "forgiato_veterano",
+   "x": 1072,
+   "y": 98,
+   "gruppo": "round4"
+  },
+  {
+   "id": "g_z",
+   "nome": "Zi' Pasquale lu mulinaro",
+   "short": "Z",
+   "best": "forgiato_marcio",
+   "x": 72,
+   "y": 825,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w1",
+   "nome": "Donato",
+   "short": "W1",
+   "best": "forgiato_ferale",
+   "x": 58,
+   "y": 891,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w2",
+   "nome": "Lucia",
+   "short": "W2",
+   "best": "forgiato_ferale",
+   "x": 87,
+   "y": 967,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w3",
+   "nome": "Camillo",
+   "short": "W3",
+   "best": "forgiato_ferale",
+   "x": 43,
+   "y": 1021,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w4",
+   "nome": "Teresa",
+   "short": "W4",
+   "best": "forgiato_ferale",
+   "x": 116,
+   "y": 1043,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w5",
+   "nome": "Gabriele",
+   "short": "W5",
+   "best": "forgiato_ferale",
+   "x": 174,
+   "y": 1053,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w6",
+   "nome": "Maria",
+   "short": "W6",
+   "best": "forgiato_ferale",
+   "x": 43,
+   "y": 760,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w7",
+   "nome": "Giuvanne",
+   "short": "W7",
+   "best": "forgiato_ferale",
+   "x": 101,
+   "y": 782,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_w8",
+   "nome": "Agnese",
+   "short": "W8",
+   "best": "forgiato_ferale",
+   "x": 232,
+   "y": 1053,
+   "gruppo": "round3"
+  },
+  {
+   "id": "g_c0",
+   "nome": "Silvanus",
+   "short": "Sil",
+   "kind": "alleato",
+   "x": 898,
+   "y": 456,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c1",
+   "nome": "Kostandìn, sergente vesperiano",
+   "short": "Kos",
+   "kind": "alleato",
+   "x": 927,
+   "y": 510,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c2",
+   "nome": "Tiberius Aurentius (guida il Carro I)",
+   "short": "Tib",
+   "kind": "alleato",
+   "x": 854,
+   "y": 532,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c3",
+   "nome": "Vasco",
+   "short": "Vas",
+   "kind": "alleato",
+   "x": 811,
+   "y": 543,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c4",
+   "nome": "Uno dei tre di Vasco",
+   "short": "V",
+   "kind": "alleato",
+   "x": 782,
+   "y": 565,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c5",
+   "nome": "Uno dei tre di Vasco",
+   "short": "V",
+   "kind": "alleato",
+   "x": 796,
+   "y": 510,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c6",
+   "nome": "Uno dei tre di Vasco",
+   "short": "V",
+   "kind": "alleato",
+   "x": 956,
+   "y": 478,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c7",
+   "nome": "Civile Pompizius (guida il Carro II)",
+   "short": "Po",
+   "kind": "alleato",
+   "x": 724,
+   "y": 652,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c8",
+   "nome": "Vesperiano",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 767,
+   "y": 652,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c9",
+   "nome": "Vesperiano",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 710,
+   "y": 586,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c10",
+   "nome": "Mastro Colangelo (guida il Carro III)",
+   "short": "Col",
+   "kind": "alleato",
+   "x": 608,
+   "y": 728,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c11",
+   "nome": "Vesperiano",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 652,
+   "y": 738,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c12",
+   "nome": "Vesperiano",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 594,
+   "y": 662,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c13",
+   "nome": "Mastro Giustino (guida il Carro IV)",
+   "short": "Giu",
+   "kind": "alleato",
+   "x": 492,
+   "y": 804,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c14",
+   "nome": "Dottor Albino",
+   "short": "Alb",
+   "kind": "alleato",
+   "x": 536,
+   "y": 804,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c15",
+   "nome": "Frate Martino",
+   "short": "Mar",
+   "kind": "alleato",
+   "x": 449,
+   "y": 793,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c16",
+   "nome": "Iosephus Pompizius",
+   "short": "Ios",
+   "kind": "alleato",
+   "x": 391,
+   "y": 869,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c17",
+   "nome": "Brizio «Lu Spada Secca» (retroguardia)",
+   "short": "Bri",
+   "kind": "alleato",
+   "x": 290,
+   "y": 912,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c18",
+   "nome": "Pippo «Lu Scudo» (retroguardia)",
+   "short": "Pip",
+   "kind": "alleato",
+   "x": 319,
+   "y": 956,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c19",
+   "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+   "short": "Mi",
+   "kind": "alleato",
+   "x": 246,
+   "y": 891,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c20",
+   "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+   "short": "Mi",
+   "kind": "alleato",
+   "x": 261,
+   "y": 956,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c21",
+   "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+   "short": "Mi",
+   "kind": "alleato",
+   "x": 217,
+   "y": 923,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c22",
+   "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+   "short": "Mi",
+   "kind": "alleato",
+   "x": 304,
+   "y": 999,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c23",
+   "nome": "Vesperiano (retroguardia)",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 188,
+   "y": 869,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c24",
+   "nome": "Vesperiano (retroguardia)",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 203,
+   "y": 977,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c25",
+   "nome": "Vesperiano (retroguardia)",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 348,
+   "y": 999,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c26",
+   "nome": "Vesperiano (retroguardia)",
+   "short": "Ve",
+   "kind": "alleato",
+   "x": 159,
+   "y": 934,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c27",
+   "nome": "Micuccio",
+   "short": "Mic",
+   "kind": "alleato",
+   "x": 420,
+   "y": 934,
+   "gruppo": "colonna",
+   "img": "PNG — Micuccio.jpg"
+  },
+  {
+   "id": "g_c28",
+   "nome": "La madre di Micuccio",
+   "short": "Ma",
+   "kind": "alleato",
+   "x": 449,
+   "y": 956,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c29",
+   "nome": "Il padre di Micuccio, il funaio",
+   "short": "Pa",
+   "kind": "alleato",
+   "x": 391,
+   "y": 977,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c30",
+   "nome": "Cecco",
+   "short": "Cec",
+   "kind": "alleato",
+   "x": 478,
+   "y": 923,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c31",
+   "nome": "Mimì lu Bannitòre",
+   "short": "Mim",
+   "kind": "alleato",
+   "x": 376,
+   "y": 1010,
+   "gruppo": "colonna"
+  },
+  {
+   "id": "g_c32",
+   "nome": "Vhaerun (fra i pioppi della riva di qua, fuori dalla colonna)",
+   "short": "Vh",
+   "kind": "alleato",
+   "x": 174,
+   "y": 673,
+   "gruppo": "colonna",
+   "img": "PNG — Vhaerun.jpg"
+  },
+  {
+   "id": "g_carroI",
+   "nome": "Carro I · comando e insegne · lo guida Tiberius Aurentius",
+   "short": "I",
+   "kind": "alleato",
+   "x": 869,
+   "y": 500,
+   "gruppo": "colonna",
+   "carro": true
+  },
+  {
+   "id": "g_carroII",
+   "nome": "Carro II · vettovaglie e acqua · lo guida un civile Pompizius",
+   "short": "II",
+   "kind": "alleato",
+   "x": 738,
+   "y": 619,
+   "gruppo": "colonna",
+   "carro": true
+  },
+  {
+   "id": "g_carroIII",
+   "nome": "Carro III · attrezzi · lo guida Mastro Colangelo",
+   "short": "III",
+   "kind": "alleato",
+   "x": 623,
+   "y": 695,
+   "gruppo": "colonna",
+   "carro": true
+  },
+  {
+   "id": "g_carroIV",
+   "nome": "Carro IV · il Dottor Albino e i feriti · lo guida Mastro Giustino",
+   "short": "IV",
+   "kind": "alleato",
+   "x": 507,
+   "y": 771,
+   "gruppo": "colonna",
+   "carro": true
+  },
+  {
+   "id": "g_carroV",
+   "nome": "Carro V · seguito Pompizius e civili",
+   "short": "V",
+   "kind": "alleato",
+   "x": 405,
+   "y": 847,
+   "gruppo": "colonna",
+   "carro": true
   }
  ]
 }
