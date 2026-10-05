@@ -651,3 +651,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - **Sul sito**: `PG_TOKENS` punta ai sei token nuovi dei PG (256 px, `img/<md5>.png`, chiavi `TOKEN — <nome>.png` in `_immagini.json`). PNG e mostri sulla mappa sono ancora cerchi con le iniziali: per usare i loro token bisogna collegarli a Bestiario e pedine (`tokimg`), da fare.
 - Mancano i ritratti (quindi i token) di Vasco, Iosephus, Brizio, Pippo, Dottor Albino, Colangelo, Giustino, Tiberius.
 
+
+## v147 (05/10/2026) — Diario: Atti XVII e XVIII, correzioni degli Atti
+
+- Il Diario del sito si fermava all'Atto XVI. Nuova cartella `contenuti/diario/` (una voce, un file; forma del tavolo: `cat:"diario"`, `riga`, `data`, `eventi`, `pub` in testo semplice con i titoletti in maiuscolo): `atto-17` «L'Ultimo Custode» e `atto-18` «La risalita e la strada», scritti dagli Appunti dettati da Giuseppe e dal recap della sessione del 30-09 (Consegna §7). Sono bozze: le domande aperte stanno in `7_Aprutium/02_Diario/Da chiarire - Atti XVII e XVIII.md`.
+- Stesse correzioni fatte oggi agli Atti in `02_Diario/Atti` portate sul sito sovrascrivendo le voci vecchie per id: `atto-12` e `atto-13` (Onofrio = frate delle vigne, poi Abate; Onorino = frate grasso della porta), `atto-15` (giorno/notte, «due giorni», tolta la nota di redazione), `atto-16` («proclama», due frasi).
+- Gli Atti in `02_Diario/Atti` sono ora tutti `.md` puliti (niente HTML né collegamenti Roll20); il testo delle voci del sito si rigenera da lì.
