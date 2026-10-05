@@ -26,7 +26,7 @@ blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/`
 | `img/` | Immagini del tavolo (mappe, ritratti), nome = md5 del contenuto. Per aggiungerne una: metti il file in `img/` e riferiscilo come `img/nome.jpg` nel sorgente. |
 | `build.py` | `python3 build.py` copia il sorgente in `index.html` e controlla che le immagini esistano. `--inline` produce `dist/tavolo-unico.html` (tutto in un file, solo per l'artifact claude.ai). `--extract FILE` fa il contrario. |
 | `index.html` | **GENERATO** da build.py. Non modificarlo a mano. |
-| `src/ext*_ui.js`, `src/poi_imgs.js` | Storico dei moduli già integrati in tavolo.html (ext6 = Gobbo, ext7 = Compendio v2). Solo riferimento. |
+| (archiviati) | I vecchi moduli `src/ext*_ui.js` e `src/poi_imgs.js`, già dentro tavolo.html, sono in `7_Aprutium/_ARCHIVIO_2026-10-05/` dal 05/10/2026. |
 | `contenuti/mondo/*.json` | **FONTE UNICA della sezione "Il Mondo di Ea"** (v45; chiavi in forma tavolo, non ancora tradotte allo schema italiano): un file per voce — atlante, 28 nazioni + Terre Neutrali, 10 province, Ducato, 8 contee, 43 borghi. Schema: `id` (= nome file), `cat:"mondo"`, `livello` (atlante/nazione/provincia/ducato/contea/borgo), `parent`, `group`, `title`, `sub`, `img` e `mappa` (NOME LEGGIBILE dell'immagine, es. `Mappa di Teramum.jpg`), `colore` (tinta della scheda senza immagine), `scheda` (coppie chiave/valore), `state`, `pub`, `gm`, `atti`, `links`, `tag`, `tavolo` (scena da aprire). **Si modificano QUESTI file, non il blocco nel sorgente.** |
 | `contenuti/luoghi/*.json` | **FONTE UNICA dei Luoghi** (v49, riordinati v52-53): 98 file — Julia Nova 61 (15 quartieri + 46 luoghi), Mushanè 22, Bëllindë 15. Schema del doc "Formato dei contenuti" (chiavi italiane): `id`, `tipo:"luogo"`, `titolo`, `sottotitolo`, `citta`, `gruppo`, `livello` (quartiere/luogo), `parent` (id del quartiere o del borgo del Mondo: `borgo-giglie`, `borgo-mushane`, `borgo-bellinde`), `img` (nome leggibile `Luogo — <titolo>.jpg`), `mappa` (immagine della mappa, solo i 15 quartieri), `stato`, `atti`, `scheda`, `pub` e `gm` (ELENCHI di blocchi `{t,txt}`), `prove` (`{t,skill,dc,ok,ko}`), `links`, `tavolo`, `segnaposto` (`{scena:"bellinde",id:"l1",num,x,y}` — solo i 15 di Bëllindë). `build.py` li traduce nella forma del tavolo (`_runtime`) e dai 15 con segnaposto genera anche l'array `LUOGHI` (handout a doppia sezione sulla mappa): **una cosa, un file**. |
 | `contenuti/scene/*.json` | **FONTE UNICA delle scene-mappa** (v102): un file per scena (`sotto`, `bellinde`). `id` (= nome file = `S.scene`), `nome`, `menu` (voce del menu Scena), `ordine`, `mappa` {`img`, `larghezza`, `altezza`, `griglia`, `muri` (maschera: una stringa per riga di caselle da 30px, `1` = calpestabile)}, `regole` {`nebbia`, `muri`, `token`: tutti/gruppo/nessuno, `strumentiDungeon`, `segnaposto` (i segnaposto dei Luoghi)}, `punti` (i PDI **già in ordine di gioco**: l'ordine del file è l'ordine della Guida), `guida` (id di `SCENE_HANDOUTS`). `build.py` li controlla e li scrive nel blocco `/*@SCENE*/const SCENE_DATA=…/*@/SCENE*/`; `SCENES`, `POIS`, `POI_ORDER`, `SCENE_GUIDE`, `MASK` sono derivati da lì. **Mai cambiare gli `id` di scene e punti**: sono le chiavi di `S.scene`, `S.poiPos`, `S.poiRev` su Firebase. |
@@ -36,7 +36,7 @@ blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/`
 | `stato/stato_fb.json` | Snapshot dello stato di gioco caricato in Firebase `partita/stato` (token, log, override). |
 | `sessioni/` | Diario dell'ultimo Atto (XVI) e log della sessione. La copia "ufficiale" è nel Progetto. |
 | `strumenti/prova-tavolo.js` | **La prova da lanciare prima di ogni pubblicazione.** `node strumenti/prova-tavolo.js` (oppure su `src/tavolo.html`). Preme tutti i bottoni nei due ruoli dopo aver simulato il giro dei dati su Firebase. |
-| `strumenti/PUBBLICA-TAVOLO.bat` | Pubblicazione manuale dal PC di Giuseppe (piano B, vedi sotto). |
+| (archiviato) | Il vecchio `PUBBLICA-TAVOLO.bat` e i pacchetti tgz sono in `7_Aprutium/_ARCHIVIO_2026-10-05/`: si pubblica solo con `git push`. |
 | `.nojekyll` | Obbligatorio per GitHub Pages (serve i file così come sono). |
 
 ## Come si struttura un luogo (regola di Giuseppe, 12/09/2026)
@@ -74,11 +74,7 @@ Silenzio, Trabocco della Luna, Botola della Necropoli, Magazzino Neròn; Laborat
 5. `git add -A && git commit -m "v46: cosa è cambiato" && git push origin main`.
 6. Dopo ~1 minuto è online. Dì a Giuseppe il numero di versione e cosa è cambiato, in due righe.
 
-Piano B se il push da qui non funziona: crea `aprutium-tavolo-site-vNN.tgz` con `index.html`,
-`img/`, `.nojekyll`, `src/`, `build.py`, `CLAUDE.md`, `comp/`, `stato/`, `sessioni/`, `strumenti/`;
-consegnalo nella cartella `7_Aprutium/_tavolo_tmp/` sul PC di Giuseppe (SEMPRE con nome nuovo:
-sovrascrivere un file esistente lì fallisce in silenzio) e lui fa doppio click su
-`7_Aprutium/Sito/PUBBLICA-TAVOLO.bat` (prende il tgz più recente, scompatta, `git push --force`).
+Non c'è più un piano B col .bat e i pacchetti tgz (archiviati il 05/10/2026): se il push non funziona, lo si dice a Giuseppe.
 
 ## Firebase (stato condiviso live)
 
@@ -269,7 +265,7 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - `strumenti/prova-tavolo.js` gira anche su Windows: indirizzo del file con `pathToFileURL`, accetta `playwright-core`. Esempio: `CHROMIUM="C:/Program Files/Google/Chrome/Application/chrome.exe" node strumenti/prova-tavolo.js`.
 - Ancora nel codice, non nella scena: porte e muri dipinti (`S.doors`, `S.walls`: stato della partita) e i token di partenza (`DEFAULT_STATE.tokens`).
 - Scoperto, NON introdotto in v102: `SCENE_GUIDE` (le schede narrative della scena) non è letto da nessuna funzione; la Guida mostra solo i PDI. Il dato `guida` resta nei file in attesa di una decisione di Giuseppe.
-- `AVVENTURA.md`, `MODELLO-DATI.md`, `CONFINI-E-CONSEGNA.md`, `INTERFACCIA.md` descrivono la v74: la parte «la scena come unità dati» è superata da questa versione.
+- `AVVENTURA.md`, `MODELLO-DATI.md`, `CONFINI-E-CONSEGNA.md`, `INTERFACCIA.md` (archiviati il 05/10/2026 in `7_Aprutium/_ARCHIVIO_2026-10-05/`) descrivevano la v74: la parte «la scena come unità dati» è superata da questa versione.
 
 ## v103 (27/09/2026) — moduli dei PDI, scoperta, fase, scheda, grafica
 
@@ -423,7 +419,8 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Dock solo simboli quando la mappa è stretta (1201-1400, 901-1170, ≤680 px di larghezza); white-space:nowrap sui nomi.
 - ≤1200 px: Guida e colonna destra una sopra l'altra nella terza colonna (mappa 534 px a 1024). ≤900 px (tablet verticale, telefoni): tutto in colonna, mappa al 72% dello schermo, la pagina scorre; intestazione su due righe (logo + Vista, poi Tavolo/Scheda/Compendio), #modal parte a 120 px; Compendio a una colonna.
 - Corretto: sotto i 1100 px il dettaglio del Compendio (.c3det) copriva sempre l'elenco anche senza scheda aperta (la classe hidden non veniva mai messa): ora c3RenderDetail la mette.
-- Misure (scratchpad es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; nessuno scorrimento orizzontale.
+- Misure (scratchpad 
+es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; nessuno scorrimento orizzontale.
 ## v121 (27/09/2026) — incantesimi di druido e chierico, Mattheus Saggio, Maximus
 
 - **Regola del tavolo** (Giuseppe, 27/09): niente preparazione degli incantesimi. Chi nel 2024 prepara dalla lista intera (Druido, Chierico) conosce tutta la lista della classe per i livelli di slot che ha e lancia spendendo uno slot. Stregone (Vicarus), Ranger (Luigis) e Paladino (Alessandros) restano con la loro lista fissa. Luigis ha 7 incantesimi da ranger su 6 (Marchio del cacciatore escluso): deve dire quale togliere.
@@ -633,3 +630,9 @@ numero di versione, cosa è cambiato, cosa deve controllare lui. Basta.
 - Contraddizioni con le voci già presenti, da decidere con Giuseppe: forma di Valerus (sfera di energia in `mito-due-lune-e-sole` / sagoma di luce nella Genesi); Mortus (il «Reietto» in `mito-mortus` / figlio di Noxtua nel Pantheon); chi c'è dietro la Frattura (Tessitori dell'Abisso nelle note vecchie / l'Oblio nella voce nuova); Celamanti nelle «foreste d'occidente» / Sylva Noctis continente oltre il Mare di Vespero (voce del Mondo); Lyria «figlia» ma «un giovane»; Pantheon rimanda a «Popoli» (la voce è «La nascita dei popoli»).
 - Contiene la v142 dell'altra sessione (guado), non ancora pubblicata al 05/10 sera.
 - Prova: `prova-tavolo.js` verde nei due ruoli (66 e 38 comandi).
+
+## v144 (05/10/2026) — bonifica dei file superati
+
+- Richiesta di Giuseppe: togliere i file che non servono più e confondono. Spostati (non cancellati) in `7_Aprutium/_ARCHIVIO_2026-10-05/`, con `registro.csv` e `py sposta.py --annulla` per rimettere tutto com'era: i .bat di pubblicazione (`PUBBLICA-TAVOLO.bat`, `PUBBLICA.bat`, `strumenti/PUBBLICA-TAVOLO.bat`), i documenti della v74 (`AVVENTURA.md`, `MODELLO-DATI.md`, `CONFINI-E-CONSEGNA.md`, `INTERFACCIA.md`), i moduli storici `src/ext*_ui.js`, `src/ext_data.js`, `src/poi_imgs.js`; fuori dal sito `_tavolo_tmp` e quattro audit chiusi di `Revisioni/`.
+- Nessun codice li usava (controllato su build.py, tavolo.html, strumenti, launch.json). La pagina non cambia: solo il numero di versione.
+- Le istruzioni generali del progetto stanno ora in `7_Aprutium/CLAUDE.md`, letto all'inizio di ogni conversazione.
