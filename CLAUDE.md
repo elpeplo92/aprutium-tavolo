@@ -642,3 +642,12 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Provato: sei pagine aperte da master e da giocatore, nessun errore; `prova-tavolo.js` verde.
 - **Server delle prove**: `strumenti/server-prova.js` (prima stava in `_prova_menu`); `.claude/launch.json` ha `sito`, `sito-2`, `sito-3` (porte 8766-8768) perché più conversazioni lo usano insieme. Indirizzo: `index.html?prova=1&ruolo=master` (o `ruolo=<pg>`).
 - **Archiviati** in `7_Aprutium/_ARCHIVIO_2026-10-05/` (registro e `sposta.py --annulla`): la copia `_prova_menu` (senza il collegamento `img`, tolto perché puntava a `Sito/img`), `SCARICA-IMMAGINI-*.bat` e `immagini-*.txt` (tutte le immagini sono già in `img/`, nessun URL esterno in `_immagini.json`), `sessioni/` (doppione degli Atti in `02_Diario`), `stato/stato_fb.json` (fotografia del 10/09), i font Draconis (non usati dalla v103).
+
+## v146 (05/10/2026) — token nuovi
+
+- Richiesta di Giuseppe: rifare tutti i token con una cornice e un colore per categoria, partendo dai ritratti. Cornice approvata da lui (prova del 05/10): anello metallico con luce dall'alto a sinistra, filo di luce, rombo in basso; **oro = eroi (PG), argento = PNG, verde = alleati (Crociata), rosso = nemici**.
+- **Generatore**: `strumenti/token/genera.py` (+ `fai_token.py`): `py Sito/strumenti/token/genera.py` rifà tutti i token dai ritratti di `03_Compendio/**/Ritratti` e li scrive in una cartella `Token` accanto a ogni `Ritratti` (`TOKEN — <nome>.png`, 512 px, trasparenti). Viso trovato con OpenCV (`opencv-python-headless<5`: la 5 non ha più i classificatori Haar), inquadrature a mano in `MANO`, categorie da `ALLEATI` / `NEMICI` / cartella (`Personaggi giocanti` = eroi, `09 Creature` = nemici). Il foglio di controllo va nella cartella temporanea, non nel progetto.
+- 05/10: 115 token (6 eroi, 9 alleati, 22 nemici con Iuvenza, Umbrax, Impalox e Ceruso spostati fra i nemici da Giuseppe, 78 PNG). I 91 token vecchi di Roll20 sono in `7_Aprutium/_ARCHIVIO_2026-10-05/Token vecchi (Roll20)`.
+- **Sul sito**: `PG_TOKENS` punta ai sei token nuovi dei PG (256 px, `img/<md5>.png`, chiavi `TOKEN — <nome>.png` in `_immagini.json`). PNG e mostri sulla mappa sono ancora cerchi con le iniziali: per usare i loro token bisogna collegarli a Bestiario e pedine (`tokimg`), da fare.
+- Mancano i ritratti (quindi i token) di Vasco, Iosephus, Brizio, Pippo, Dottor Albino, Colangelo, Giustino, Tiberius.
+
