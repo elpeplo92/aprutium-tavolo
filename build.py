@@ -127,6 +127,13 @@ def contenuti():
             r = dict(_runtime(e))
             for k in ("img", "mappa"):
                 if isinstance(r.get(k), str): r[k] = img_of(r[k], e["id"], k)
+            # v143: immagini dentro i blocchi (tavole, simboli degli dèi) delle voci scritte a blocchi
+            for sez in ("pub", "gm"):
+                for b in (r.get(sez) if isinstance(r.get(sez), list) else []):
+                    for k in ("img", "simbolo"):
+                        if isinstance(b.get(k), str): b[k] = img_of(b[k], e["id"], k)
+                    for x in b.get("simboli") or []:
+                        if isinstance(x.get("img"), str): x["img"] = img_of(x["img"], e["id"], "simboli")
             r.pop("segnaposto", None)
             voci.append(r)
     ordine = {"atlante":0,"nazione":1,"provincia":2,"ducato":3,"contea":4,"borgo":5,"quartiere":6,"luogo":7}
