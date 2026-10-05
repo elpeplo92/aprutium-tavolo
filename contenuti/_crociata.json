@@ -191,5 +191,475 @@
   ["mendurje", "tussecie"], ["morre", "nutarosche"], ["mushane", "nutarosche"], ["mushane", "sandemire"],
   ["mushane", "terterate"], ["ngara", "sandiglie"], ["nnareta", "sandemire"], ["nnareta", "sandiglie"],
   ["t_colleatterato", "t_osteria"], ["t_colleatterato", "teramum"], ["t_guado", "t_osteria"], ["teramum", "terrecialle"]
- ]
+ ],
+ "compagnia": {
+  "_nota": "NUOVO DETTAGLIO PROPOSTO (04-10-2026, da confermare con Giuseppe): schede della compagnia per il Registro. «tipo» = eroi / compagni / reparti / specialisti / seguito. «stat» = [Addestramento, Equipaggiamento, Fedeltà] da 1 a 5. «funzione» = che cosa fa per la Crociata, con un effetto da tavolo. I nuovi da Bëllindë si sono uniti il 30-09 (Atto della sessione del 30 settembre).",
+  "tipi": [
+   [
+    "eroi",
+    "Gli eroi"
+   ],
+   [
+    "compagni",
+    "Compagni d'arme"
+   ],
+   [
+    "reparti",
+    "I reparti"
+   ],
+   [
+    "specialisti",
+    "Specialisti"
+   ],
+   [
+    "seguito",
+    "Il seguito"
+   ]
+  ],
+  "nuovi": [
+   {
+    "id": "vhaerun",
+    "nome": "Vhaerun",
+    "ruolo": "Brak, liberato sotto Bëllindë da Maximus",
+    "gruppo": "combattenti",
+    "dal": "Bëllindë"
+   },
+   {
+    "id": "micuccio",
+    "nome": "Micuccio",
+    "ruolo": "il ragazzo tornato da sotto la città",
+    "gruppo": "specialisti",
+    "dal": "Bëllindë"
+   },
+   {
+    "id": "cuncetta",
+    "nome": "Cuncetta de lu Funare",
+    "ruolo": "filatrice, madre di Micuccio",
+    "gruppo": "specialisti",
+    "dal": "Bëllindë"
+   },
+   {
+    "id": "nicola",
+    "nome": "Mastro Nicola lu Funare",
+    "ruolo": "funaio, padre di Micuccio",
+    "gruppo": "specialisti",
+    "dal": "Bëllindë"
+   },
+   {
+    "id": "cecco",
+    "nome": "Cecco",
+    "ruolo": "guardia, la più giovane della compagnia di Ruggiero de’ Santi",
+    "gruppo": "combattenti",
+    "dal": "Bëllindë"
+   },
+   {
+    "id": "mimi",
+    "nome": "Mimì lu Bannitòre",
+    "ruolo": "il banditore di Bëllindë",
+    "gruppo": "specialisti",
+    "dal": "Bëllindë"
+   }
+  ],
+  "schede": {
+   "alessandros": {
+    "tipo": "eroi"
+   },
+   "vicarus": {
+    "tipo": "eroi"
+   },
+   "adamus": {
+    "tipo": "eroi"
+   },
+   "maximus": {
+    "tipo": "eroi"
+   },
+   "mattheus": {
+    "tipo": "eroi"
+   },
+   "luigis": {
+    "tipo": "eroi"
+   },
+   "iosephus": {
+    "tipo": "compagni",
+    "comp": "mu-iosephus-pompizius",
+    "funzione": {
+     "n": "Voce di Casa Pompizius",
+     "e": "Nelle trattative con nobili e mercanti, la Crociata ha vantaggio alla prova di chi parla."
+    }
+   },
+   "vhaerun": {
+    "tipo": "compagni",
+    "comp": "png-vhaerun",
+    "stat": [
+     5,
+     3,
+     3
+    ],
+    "funzione": {
+     "n": "Brak della Schiera",
+     "e": "Combatte come un alleato forte (GS 5): in uno scontro conta come un personaggio sul suo fronte (+1). Spaventa chi non lo conosce."
+    }
+   },
+   "silvanus": {
+    "tipo": "compagni",
+    "comp": "jn-silvanus",
+    "stat": [
+     4,
+     4,
+     5
+    ],
+    "funzione": {
+     "n": "Comandante",
+     "e": "Una volta per scontro, un fronte dove combatte la Crociata ritira il suo d6."
+    }
+   },
+   "kostandin": {
+    "tipo": "reparti",
+    "comp": "mu-sergente-kostandin",
+    "stat": [
+     4,
+     3,
+     3
+    ],
+    "funzione": {
+     "n": "Sergente in seconda",
+     "e": "Il fronte dove combatte ha +1. Tiene in riga i Vesperiani: finché è in marcia la disciplina non scende sotto «incerta»."
+    }
+   },
+   "vasco": {
+    "tipo": "reparti",
+    "stat": [
+     3,
+     3,
+     3
+    ],
+    "funzione": {
+     "n": "Lame al soldo di Maximus",
+     "e": "Obbediscono a Maximus prima che a Silvanus. Se la paga salta, se ne vanno per primi."
+    }
+   },
+   "vesperiani": {
+    "tipo": "reparti",
+    "stat": [
+     3,
+     3,
+     2
+    ],
+    "funzione": {
+     "n": "Lancieri mercenari",
+     "e": "Il nerbo della colonna: tengono un fronte da soli. Fedeltà bassa finché non vedono la paga."
+    }
+   },
+   "milizie": {
+    "tipo": "reparti",
+    "stat": [
+     2,
+     2,
+     4
+    ],
+    "funzione": {
+     "n": "Miliziani delle casate",
+     "e": "Meno addestrati, ma non scappano: se la fila si rompe, la loro regge un round in più."
+    }
+   },
+   "brizio": {
+    "tipo": "reparti",
+    "comp": "jn-brizio",
+    "stat": [
+     3,
+     2,
+     4
+    ],
+    "funzione": {
+     "n": "Lu Spada Secca",
+     "e": "In retroguardia: un colpo solo e un Forgiato cade. Sul suo fronte, con 6 si toglie un nemico in più."
+    }
+   },
+   "pippo": {
+    "tipo": "reparti",
+    "comp": "jn-pippo",
+    "stat": [
+     2,
+     3,
+     4
+    ],
+    "funzione": {
+     "n": "Lu Scudo",
+     "e": "Protegge i civili: finché è in piedi, un nemico che sfonda la fila non raggiunge il carro V nello stesso round."
+    }
+   },
+   "colangelo": {
+    "tipo": "specialisti",
+    "stat": [
+     1,
+     2,
+     4
+    ],
+    "funzione": {
+     "n": "Artigiano",
+     "e": "Ogni notte di sosta ripara un carro o un'arma rotta."
+    }
+   },
+   "giustino": {
+    "tipo": "specialisti",
+    "stat": [
+     1,
+     1,
+     4
+    ],
+    "funzione": {
+     "n": "Carrettiere",
+     "e": "Guida il carro IV. Con lui alle redini i carri non si piantano: niente prova per guadi e salite."
+    }
+   },
+   "albino": {
+    "tipo": "specialisti",
+    "stat": [
+     1,
+     1,
+     4
+    ],
+    "funzione": {
+     "n": "Medico",
+     "e": "Ogni notte un ferito grave diventa leggero; i feriti leggeri guariscono con un riposo lungo. Senza le sue medicine, nessuno dei due."
+    }
+   },
+   "tiberius": {
+    "tipo": "specialisti",
+    "stat": [
+     2,
+     2,
+     4
+    ],
+    "funzione": {
+     "n": "Intendente",
+     "e": "Guida il carro I con insegne e documenti. Tiene i conti: i rifornimenti costano un decimo in meno."
+    }
+   },
+   "pompizius": {
+    "tipo": "seguito",
+    "stat": [
+     1,
+     1,
+     4
+    ],
+    "funzione": {
+     "n": "Seguito civile",
+     "e": "Credito e contatti di Casa Pompizius. In città, la Crociata trova da comprare anche quando i mercati sono chiusi."
+    }
+   },
+   "ignoto": {
+    "tipo": "seguito"
+   },
+   "micuccio": {
+    "tipo": "seguito",
+    "comp": "png-micuccio",
+    "funzione": {
+     "n": "Il ragazzo tornato",
+     "e": "Obbedisce a qualunque ordine prima di rendersene conto. Chi gli insegna a dire di no diventa la persona di cui si fida."
+    }
+   },
+   "cuncetta": {
+    "tipo": "seguito",
+    "comp": "png-cuncetta",
+    "funzione": {
+     "n": "Filatrice",
+     "e": "Rammenda vele, teloni e vestiti: i civili non soffrono il freddo delle notti in montagna."
+    }
+   },
+   "nicola": {
+    "tipo": "seguito",
+    "comp": "png-mastro-nicola-lu-funare",
+    "funzione": {
+     "n": "Funaio",
+     "e": "Corde nuove per carri e guadi: una corda tesa in tempo salva un carro dalla corrente."
+    }
+   },
+   "cecco": {
+    "tipo": "reparti",
+    "comp": "be-cecco",
+    "stat": [
+     2,
+     2,
+     4
+    ],
+    "funzione": {
+     "n": "Giovane guardia",
+     "e": "Il primo a dare l’allarme: con lui di guardia notturna, la colonna non viene sorpresa nel sonno."
+    }
+   },
+   "mimi": {
+    "tipo": "seguito",
+    "comp": "be-mimi-lu-bannitore",
+    "funzione": {
+     "n": "Banditore",
+     "e": "Entrando in un borgo, legge il bando della Crociata: chi ascolta sa chi siete prima che parliate. +1 a reclutare volontari."
+    }
+   }
+  },
+  "stemmi": {
+   "mushane": {
+    "c1": "#2F5D8A",
+    "c2": "#E9E1CF",
+    "sim": "croce"
+   },
+   "pompizius": {
+    "c1": "#7A1F1F",
+    "c2": "#E3BC5F",
+    "sim": "torre"
+   },
+   "bellinde": {
+    "c1": "#2E5E3A",
+    "c2": "#E3BC5F",
+    "sim": "leone"
+   },
+   "julianova": {
+    "c1": "#1F4F6B",
+    "c2": "#E9E1CF",
+    "sim": "giglio"
+   },
+   "teramum": {
+    "c1": "#4A3A12",
+    "c2": "#E3BC5F",
+    "sim": "aquila"
+   }
+  },
+  "regole": {
+   "_nota": "Consumi al giorno come nelle regole 2024 per le persone (1 razione di cibo, 1 gallone d'acqua); bestie, carri e velocità: NUOVO DETTAGLIO PROPOSTO approvato in linea di massima da Giuseppe il 04-10.",
+   "persona": {
+    "viveri": 1,
+    "acqua": 1
+   },
+   "bestia": {
+    "acqua": 4,
+    "foraggio": 1
+   },
+   "caldoAcqua": 2,
+   "botti": 320,
+   "carico": {
+    "carro": 20,
+    "mulo": 2,
+    "viveri": 20,
+    "acqua": 10,
+    "foraggio": 5,
+    "fisso": 12
+   },
+   "tiroPerCarro": 2,
+   "feritiPerCarro": 6,
+   "velocita": {
+    "base": 4,
+    "senzaCarri": 5,
+    "cavalleria": 7,
+    "min": 2,
+    "forzata": 1
+   }
+  },
+  "posti": {
+   "esploratori": {
+    "si": "La colonna non viene sorpresa e vede la tappa mezza giornata prima.",
+    "no": "Le imboscate partono con la sorpresa."
+   },
+   "avanguardia": {
+    "si": "Primo fronte negli scontri: +1 se c'è un reparto con Addestramento 4 o più.",
+    "no": "Il primo fronte sono i carri."
+   },
+   "comando": {
+    "si": "Gli ordini arrivano: la Disciplina non scende sotto 2.",
+    "no": "Nessuno comanda la colonna: Disciplina −1 a ogni tappa."
+   },
+   "fiancoS": {
+    "si": "I nemici arrivano ai carri solo dal round 3.",
+    "no": "Dal fianco sinistro i nemici arrivano ai carri dal round 1."
+   },
+   "fiancoD": {
+    "si": "I nemici arrivano ai carri solo dal round 3.",
+    "no": "Dal fianco destro i nemici arrivano ai carri dal round 1."
+   },
+   "carri": {
+    "si": "Niente carico perso a guadi e salite.",
+    "no": "A ogni guado si tira 1d6: con 1-2 si perde un carico."
+   },
+   "retroguardia": {
+    "si": "Civili e ritardatari protetti.",
+    "no": "A ogni tappa lunga un civile resta indietro."
+   },
+   "notte": {
+    "si": "Il campo non viene sorpreso di notte.",
+    "no": "Gli attacchi notturni partono con la sorpresa."
+   }
+  },
+  "campo": [
+   {
+    "id": "guaritore",
+    "n": "Guaritore",
+    "chi": "Mattheus, Dottor Albino",
+    "e": "Un ferito grave diventa leggero e i feriti leggeri guariscono. Con Medicina 12 o più, 1d4 feriti in più.",
+    "prova": "Medicina",
+    "cd": 12
+   },
+   {
+    "id": "carraio",
+    "n": "Carraio e fabbro",
+    "chi": "Mastro Colangelo, Maximus",
+    "e": "Ripara un carro o un'arma rotta."
+   },
+   {
+    "id": "foraggiere",
+    "n": "Foraggiere e cacciatore",
+    "chi": "Luigis, Adamus",
+    "e": "Sopravvivenza 13 o più: 2d6 razioni di viveri e 1d6 di foraggio. Con 15 o più, il doppio.",
+    "prova": "Sopravvivenza",
+    "cd": 13
+   },
+   {
+    "id": "esploratore",
+    "n": "Esploratore",
+    "chi": "Luigis e Zenith, Vhaerun",
+    "e": "Esplora la tappa di domani: il master dice cosa c'è prima che la colonna arrivi."
+   },
+   {
+    "id": "intendente",
+    "n": "Intendente",
+    "chi": "Tiberius Aurentius",
+    "e": "Il giorno dopo i viveri calano del 10% in meno."
+   },
+   {
+    "id": "cappellano",
+    "n": "Cappellano o cantastorie",
+    "chi": "Mattheus, Iosephus",
+    "e": "Religione o Intrattenere 12 o più: Morale +1 (una volta per tappa).",
+    "prova": "Religione o Intrattenere",
+    "cd": 12
+   },
+   {
+    "id": "sentinella",
+    "n": "Sentinella",
+    "chi": "chiunque, a turni",
+    "e": "Copre la guardia notturna: il campo non viene sorpreso."
+   },
+   {
+    "id": "diplomatico",
+    "n": "Diplomatico (in città)",
+    "chi": "Alessandros, Iosephus, Mimì",
+    "e": "Persuasione 14 o più: un alleato sale di un livello (una volta per città).",
+    "prova": "Persuasione",
+    "cd": 14
+   }
+  ],
+  "alleatiLivelli": [
+   "Contro di voi: porte chiuse, proclami, spie",
+   "Sa chi siete",
+   "Vi lascia passare e vi vende al prezzo pieno",
+   "Vi rifornisce: sconto o viveri gratis a ogni passaggio",
+   "Vi dà credito o uomini",
+   "Combatte con voi o garantisce per voi all'Aquila Aurea"
+  ],
+  "alleatiBenefici": {
+   "mushane": "Ospitalità e 3 giorni di viveri gratis quando la colonna passa; testimonianza del giudizio.",
+   "pompizius": "Credito su viveri e personale civile (fino a 200 mo per tappa); legittimità davanti ai nobili.",
+   "bellinde": "Libero passaggio, mercato del borgo, dichiarazione sigillata.",
+   "julianova": "Rapporti personali, nessun impegno formale.",
+   "teramum": "Proclami ostili contro la Crociata."
+  }
+ }
 }
