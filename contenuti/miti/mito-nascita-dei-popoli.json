@@ -2,7 +2,9 @@
  "id": "mito-nascita-dei-popoli",
  "cat": "mito",
  "city": null,
- "group": "Miti e Leggende",
+ "sez": "storia",
+ "group": "",
+ "ordine": 1,
  "title": "La nascita dei popoli",
  "sub": "Come nacquero le razze di Ea e come vivevano prima della Frattura",
  "img": null,
@@ -21,6 +23,7 @@
  "pub": [
   {
    "t": "",
+   "capo": true,
    "txt": "Quando gli dèi salirono in cielo, Ea restò vuota. Aveva monti, fiumi e mari, ma nessuno che li chiamasse per nome. Dall’alto, però, le luci continuavano a guardare, e la loro luce cadeva sulla terra come pioggia su un campo arato. Dove cadeva, qualcosa si svegliava."
   },
   {
@@ -29,57 +32,65 @@
   },
   {
    "t": "II. Gli Aelvarri, nati dal riflesso di Maia",
-   "txt": "Gli elfi nacquero nelle selve antiche, la prima notte in cui la luce di Maia filtrò tra le foglie e toccò la rugiada. Dove cadeva una goccia, sbocciava un elfo.\n\nSono creature di luce filtrata, non diretta: più sottili degli umani, più pazienti, capaci di guardare lontano. Vivono oltre mille anni e non muoiono di vecchiaia come gli uomini. Si stancano, piano, finché un giorno non si svegliano più. Lo chiamano il [[Lungo Crepuscolo]].\n\nErano un popolo solo, custode delle foreste e dei laghi, e di un sapere più antico della scrittura."
+   "txt": "Gli elfi nacquero nelle selve antiche, la prima notte in cui la luce di Maia filtrò tra le foglie e toccò la rugiada. Dove cadeva una goccia, sbocciava un elfo.\n\nSono creature di luce filtrata, non diretta: più sottili degli umani, più pazienti, capaci di guardare lontano. Vivono oltre mille anni e non muoiono di vecchiaia come gli uomini. Si stancano, piano, finché un giorno non si svegliano più. Lo chiamano il [[Lungo Crepuscolo]].\n\nErano custodi delle foreste e dei laghi, e di un sapere più antico della scrittura. Non erano soli: Maia aveva una sorella, e anche la sorella ebbe figli."
   },
   {
-   "t": "III. I Roccaferrea, battuti nella pietra",
+   "t": "III. I Drukarri, nati dall’ombra di Noxtua",
+   "txt": "Se Maia diede la vita agli Aelvarri, sua sorella non volle restare senza figli. Nelle stesse selve d’occidente, nell’ora in cui il giorno finisce e la notte non è ancora cominciata, l’ombra di Noxtua si posò sui laghi. Dall’acqua scura, quella sera, uscirono i [[Drukarri]].\n\nSomigliano agli Aelvarri come un fratello somiglia a una sorella: stessi tratti sottili, stessa vita lunghissima. Ma la loro pelle è scura come il crepuscolo e i loro occhi vedono nel buio come di giorno. Noxtua diede loro i suoi doni: i sogni veri, i segreti, la conoscenza di ciò che finisce. Per secoli furono i custodi della notte, i guaritori che accompagnavano i morenti, gli interpreti dei sogni.\n\nAelvarri e Drukarri vissero vicini e in pace, figli di due sorelle che si volevano bene. Si sposavano tra loro, studiavano insieme, cantavano le stesse canzoni con parole diverse. Nessuno, allora, avrebbe immaginato come sarebbe finita."
+  },
+  {
+   "t": "IV. I Silvarri, figli di due lune",
+   "txt": "Aelvarri e Drukarri vivevano vicini, e si sposavano tra loro. I figli di quelle unioni non avevano né la pelle d’argento dei figli di Maia né quella di crepuscolo dei figli di Noxtua, ma il colore della corteccia e delle foglie. Non si sentivano figli né dell’una né dell’altra luna: si sentivano figli della foresta in cui erano nati. Si chiamarono [[Silvarri]]. Gli umani, più semplicemente, li chiamano Silvani.\n\n[[Come sono.]] Più bassi e più robusti degli Aelvarri, con la pelle che va dal bruno del legno al verde scuro del muschio e i capelli del colore delle foglie in autunno. I loro occhi, dicono, hanno un cerchio d’argento e uno di viola intorno alla pupilla: l’eredità delle due madri. Vivono a lungo quanto i cugini, ma invecchiano come gli alberi: piano, e diventando più forti.\n\n[[Come vivono.]] Non costruiscono città di pietra né torri. Vivono tra i rami e le radici, in villaggi che dall’esterno sembrano solo bosco. Parlano con gli alberi e seguono le stagioni più dei calendari. Non hanno re: decidono gli anziani, sotto l’albero più vecchio, e decidono lentamente. Diffidano dei consigli, delle leggi scritte e di chiunque abbia fretta.\n\n[[Come vedono i cugini.]] Per gli Aelvarri sono parenti un po’ selvatici, da proteggere. Per i Drukarri sono parenti un po’ ingenui, da compatire. Ai Silvarri non importa né l’una né l’altra cosa. Amano entrambe le madri, e non hanno mai capito perché qualcuno dovesse sceglierne una."
+  },
+  {
+   "t": "V. I Roccaferrea, battuti nella pietra",
    "txt": "I nani dicono di non essere nati affatto. I loro Canti della Roccia, che giurano più antichi del Canto della Chiesa, raccontano che furono [[forgiati]] dalla stabilità di Valerus nelle viscere dei monti, battuti colpo dopo colpo come il ferro sull’incudine, finché non ebbero la forma giusta.\n\nPer questo un nano non si dice «nato» ma «fatto». Ciò che nasce può essere sbagliato. Ciò che è forgiato ha uno scopo, e ogni nano passa la vita a cercare il suo."
   },
   {
-   "t": "IV. Gli gnomi, nati da una domanda",
+   "t": "VI. Gli gnomi, nati da una domanda",
    "txt": "Dove la luce di Maia toccò la terra con il suo lato più giocoso, nelle regioni di nord-ovest, non crebbero erba né fiori. Crebbero domande. Dalle domande, dicono gli gnomi, nacquero loro: piccoli, svelti, curiosi di tutto.\n\nSe i nani furono forgiati e gli elfi riflessi, gli gnomi furono inventati, e da allora non hanno mai smesso di inventare."
   },
   {
-   "t": "V. Gli halfling, figli del sentiero",
-   "txt": "Quando viveva su Ea, Maia attraversò a piedi nudi le colline d’occidente. Le sue orme restarono nell’erba anche dopo che lei salì in cielo, e la terra non le dimenticò. Una mattina, da ogni orma si alzò un piccolo popolo con i piedi buoni e il passo leggero.\n\nPer questo il loro nome antico è [[Figli del Sentiero]], e per questo, dicono, non hanno mai fretta.\n\n«Non serve correre quando sai dove mettere i piedi.»\n— Proverbio halfling di Secernium"
+   "t": "VII. Gli halfling, figli del sentiero",
+   "txt": "Quando viveva su Ea, Maia attraversò a piedi nudi le colline d’occidente. Le sue orme restarono nell’erba anche dopo che lei salì in cielo, e la terra non le dimenticò. Una mattina, da ogni orma si alzò un piccolo popolo con i piedi buoni e il passo leggero.\n\nPer questo il loro nome antico è [[Figli del Sentiero]], e per questo, dicono, non hanno mai fretta.\n\n» «Non serve correre quando sai dove mettere i piedi.»\n— Proverbio halfling di Secernium"
   },
   {
-   "t": "VI. I Giganti, figli della pietra antica",
+   "t": "VIII. I Giganti, figli della pietra antica",
    "txt": "Non tutto ciò che è grande dormì con i Titani. Sulle montagne del nord vivono i Giganti, che si dicono figli minori dei Titani, rimasti svegli quando i padri si addormentarono. Sono alti come torri di guardia, lenti a parlare e lenti ad arrabbiarsi. Ricordano molto e raccontano poco. Non scendono a valle se non hanno un motivo, e quando scendono, i villaggi se ne ricordano per generazioni."
   },
   {
-   "t": "VII. Gli Ogri, i cugini minori",
+   "t": "IX. Gli Ogri, i cugini minori",
    "txt": "Gli Ogri sono parenti lontani dei Giganti, della stessa stirpe primordiale: più piccoli, più numerosi, alti circa tre metri, massicci, con la testa piccola e un’espressione di fame perenne. Non sono stupidi, come si crede: sono semplici. Vedono il mondo in termini di cibo, territorio e minacce, e agiscono di conseguenza. Vivono soli o in piccole famiglie sulle colline selvagge."
   },
   {
-   "t": "VIII. I Goblin, il caos in branco",
+   "t": "X. I Goblin, il caos in branco",
    "txt": "I Goblinoidi nacquero nelle steppe orientali dall’ira di Noxtua che trasforma le cose: non progettati, ma accidentali, i residui di un lavoro più fine. Forse per questo sono i più adattabili e i più imprevedibili di Ea. I Goblin sono i più piccoli: verdi, frenetici, codardi da soli e pericolosi in massa. Usano trappole, veleni e imboscate con una fantasia crudele quasi ammirevole."
   },
   {
-   "t": "IX. Gli Hobgoblin, il metodo",
+   "t": "XI. Gli Hobgoblin, il metodo",
    "txt": "Gli Hobgoblin sono i cugini disciplinati dei Goblin: più grandi, più forti, con un senso dell’ordine militare che li rende nemici temibili. Dove i Goblin sono caos, gli Hobgoblin sono metodo: eserciti con gradi, tattiche e rifornimenti."
   },
   {
-   "t": "X. Gli Gnoll, la fame",
+   "t": "XII. Gli Gnoll, la fame",
    "txt": "Gli Gnoll sono predatori puri: alti, magri, con tratti da iena, spinti da una fame che non è solo del corpo. Cacciano in branco, non prendono prigionieri e lasciano dietro di sé solo ossa."
   },
   {
-   "t": "XI. I Troll, quelli che non muoiono",
+   "t": "XIII. I Troll, quelli che non muoiono",
    "txt": "I Troll nacquero dal caos rimasto della creazione, nelle terre più umide e più buie di Ea. Sono alti tre o quattro metri, dinoccolati, con la pelle gommosa grigio-verde e un volto che sembra disegnato da un bambino spaventato. Guariscono da qualunque ferita in pochi istanti: gli arti ricrescono, le ossa si risaldano. Solo il fuoco e l’acido li fermano, e chi va a caccia di troll lo impara la prima volta o mai più."
   },
   {
-   "t": "XII. I Lucertoloidi, il popolo delle maree",
-   "txt": "Nelle paludi del sud e lungo la Costa Squamosa si svegliarono i Lucertoloidi, che dicono di essere nati dalle maree di Maia e contano il tempo con l’acqua, non con il Sole. Scrivono le loro storie su pergamene marine che nessun altro sa leggere fino in fondo. Pochi stranieri si spingevano nelle loro paludi, e chi tornava raccontava di un popolo con una memoria più lunga di quella degli uomini."
+   "t": "XIV. I Lucertoloidi, il popolo delle maree",
+   "txt": "A sud, dove la terra si fa sabbia e le coste si fanno palude, si svegliarono i Lucertoloidi. Dicono di essere nati dalle maree di Maia: la prima volta che il mare si ritirò, sulla sabbia bagnata restarono delle uova, e dalle uova uscirono loro. Per questo contano il tempo con l’acqua, non con il Sole, e per questo nel deserto l’acqua è per loro più sacra del sangue.\n\nVivono in clan tra le dune, le oasi e la Costa Squamosa, e scrivono le loro storie su pergamene marine che nessun altro sa leggere fino in fondo. Pochi stranieri si spingevano nelle loro terre, e chi tornava raccontava di un popolo con una memoria più lunga di quella degli uomini. Il loro nome per sé stessi è [[Saladax]]."
   },
   {
-   "t": "XIII. I Mezzelfi, figli di due mondi",
-   "txt": "Dove umani ed elfi vivevano vicini, nacquero figli di entrambi. I mezzelfi non hanno un mito delle origini, e questa assenza dice tutto: non li ha seminati nessuna luce, li ha voluti qualcuno. Più alti e slanciati degli umani, più robusti degli elfi, vivono tre o quattro secoli: abbastanza per veder morire ogni amico umano, non abbastanza per essere accettati come pari dagli elfi. La loro forza è fare da ponte tra due mondi.\n\nContinua nella voce [[La Frattura]]."
+   "t": "XV. I Mezzelfi, figli di due mondi",
+   "txt": "Dove umani ed elfi vivevano vicini, nacquero figli di entrambi. I mezzelfi non hanno un mito delle origini, e questa assenza dice tutto: non li ha seminati nessuna luce, li ha voluti qualcuno. Più alti e slanciati degli umani, più robusti degli elfi, vivono tre o quattro secoli: abbastanza per veder morire ogni amico umano, non abbastanza per essere accettati come pari dagli elfi. La loro forza è fare da ponte tra due mondi.\n\n↪ Continua nella voce [[La Frattura]]."
   }
  ],
  "gm": [
   {
    "t": "I segreti delle origini",
-   "txt": "· [[Gli umani non furono scelti.]] I Canti della Roccia dicono che gli umani non furono seminati da Valerus: «caddero», come scintille da una fucina. Figli non voluti, ma inevitabili.\n· [[I Giganti sanno.]] Sono gli unici a ricordare che i Titani furono schiavi degli dèi, e che non sono morti. Non lo dicono a nessuno.\n· [[Da dove viene l’ira di Noxtua.]] Le steppe orientali furono uno dei campi della guerra dei Titani. I Goblinoidi sono nati da ciò che restò di quella battaglia: la furia di Noxtua contro i ribelli, rimasta nella terra."
+   "txt": "· [[I figli che uccisero la madre.]] I Drukarri sono i figli di Noxtua, e furono loro a distruggerla. Gli umani li chiamano Celamanti, «i Nascosti»; loro, dopo la caduta, si diedero il nome di Aelvar’quen, «il Popolo Perfetto».\n· [[Gli umani non furono scelti.]] I Canti della Roccia dicono che gli umani non furono seminati da Valerus: «caddero», come scintille da una fucina. Figli non voluti, ma inevitabili.\n· [[I Giganti sanno.]] Sono gli unici a ricordare che i Titani furono schiavi degli dèi, e che non sono morti. Non lo dicono a nessuno.\n· [[Da dove viene l’ira di Noxtua.]] Le steppe orientali furono uno dei campi della guerra dei Titani. I Goblinoidi sono nati da ciò che restò di quella battaglia: la furia di Noxtua contro i ribelli, rimasta nella terra."
   },
   {
    "t": "Agganci per il tavolo",
@@ -92,8 +103,6 @@
  ],
  "atti": [],
  "links": [
-  "mito-pantheon",
-  "mito-la-frattura",
-  "mito-gigante-dormiente"
+  "mito-la-frattura"
  ]
 }

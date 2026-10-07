@@ -130,7 +130,7 @@ def contenuti():
             # v143: immagini dentro i blocchi (tavole, simboli degli dèi) delle voci scritte a blocchi
             for sez in ("pub", "gm"):
                 for b in (r.get(sez) if isinstance(r.get(sez), list) else []):
-                    for k in ("img", "simbolo"):
+                    for k in ("img", "simbolo", "ritratto"):   # v148: ritratti degli dèi nei blocchi
                         if isinstance(b.get(k), str): b[k] = img_of(b[k], e["id"], k)
                     for x in b.get("simboli") or []:
                         if isinstance(x.get("img"), str): x["img"] = img_of(x["img"], e["id"], "simboli")

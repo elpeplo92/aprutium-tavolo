@@ -2,9 +2,11 @@
  "id": "mito-la-frattura",
  "cat": "mito",
  "city": null,
- "group": "Miti e Leggende",
+ "sez": "storia",
+ "group": "",
+ "ordine": 2,
  "title": "La Frattura",
- "sub": "Come i Celamanti distrussero Noxtua, e cosa accadde al mondo",
+ "sub": "Come i Drukarri distrussero Noxtua, e cosa accadde al mondo",
  "img": null,
  "state": "noto",
  "status": null,
@@ -14,14 +16,16 @@
  },
  "scheda": {
   "Che cos’è": "La distruzione della Luna d’Ombra e la fine dell’equilibrio delle tre luci",
-  "Chi la causò": "I Celamanti di Sylva Noctis, con un rituale a Velathrys",
+  "Quando": "Intorno al 1240 C.F.; per i nani, l’anno 847 dell’Ottava Era",
+  "Chi la causò": "I Drukarri, che gli umani chiamano Celamanti, con un rituale a Velathrys",
   "Le fonti": "Diari delle Forge Profonde di Magnafort; documenti elfici di Artefracta; lettere intercettate a Laguras",
   "Viene prima": "La voce La nascita dei popoli",
-  "Viene dopo": "La voce La Guerra delle Due Lune"
+  "Viene dopo": "La voce I Sigilli Lunari"
  },
  "pub": [
   {
    "t": "",
+   "capo": true,
    "txt": "Ogni popolo di Ea ricorda la Frattura, e ogni popolo la ricorda allo stesso modo: un grido, una luna che si spezza, un cielo rimasto mutilato. È il giorno che divide la storia del mondo in due. Prima c’era il Ciclo, con le sue tre luci in equilibrio. Dopo c’è il mondo che conosciamo: una luna sola, una magia che non obbedisce più alle sue leggi e un Sole che ha smesso di rispondere."
   },
   {
@@ -30,19 +34,19 @@
   },
   {
    "t": "II. La domanda proibita",
-   "txt": "La rovina cominciò con una domanda che in sé non era malvagia: [[perché accettare la morte?]]\n\nOgni creatura se la pone almeno una volta. Quasi tutte, con un sospiro o una preghiera, tornano alla propria vita. Una parte degli elfi no. Le loro vite durano millenni, e avevano il tempo di cercare risposte che i popoli più brevi non possono permettersi.\n\nSi avvicinarono a Noxtua, la signora della fine. Non come fedeli: come chirurghi davanti a un corpo da aprire. Se Noxtua governava la fine, capirla voleva dire capire la morte, e forse dominarla. Generazione dopo generazione la domanda cambiò forma. Da «perché accettare la morte?» divenne «perché accettare il Ciclo?», e poi «perché non comandarlo?». E chi non era d’accordo, pensavano, doveva obbedire o farsi da parte.\n\nGenerazione dopo generazione, quella parte degli elfi crebbe in potere e in sicurezza di sé. E gli altri cominciarono ad avere paura."
+   "txt": "La rovina cominciò con una domanda che in sé non era malvagia: [[perché accettare la morte?]]\n\nOgni creatura se la pone almeno una volta. Quasi tutte, con un sospiro o una preghiera, tornano alla propria vita. I Drukarri no. Erano i figli di Noxtua: conoscevano la fine meglio di chiunque, accompagnavano i morenti, leggevano i sogni. E avevano vite lunghe millenni, abbastanza per cercare risposte che i popoli più brevi non possono permettersi.\n\nFu allora che tra loro cominciò a girare una voce nuova. Un maestro venuto da nessuna parte, un nome che nessuno sapeva da dove arrivasse, parole che sembravano la risposta a ogni dubbio. Diceva che la fine non era un dono, ma una catena. Che Noxtua non li aveva fatti custodi della morte, ma suoi prigionieri. Che un popolo perfetto non deve morire.\n\nGenerazione dopo generazione la domanda cambiò forma. Da «perché accettare la morte?» divenne «perché accettare il Ciclo?», e poi «perché non comandarlo?». I Drukarri smisero di accompagnare i morenti e cominciarono a studiarli. Si avvicinarono alla loro stessa madre non più come figli, ma come chirurghi davanti a un corpo da aprire."
   },
   {
    "t": "III. Lo Scisma Elfico",
-   "txt": "Per secoli le due anime degli elfi vissero sotto lo stesso cielo. La fazione che studiava Noxtua guadagnava seguaci tra gli aristocratici, tra gli studiosi, tra i capitani. Non alzava la voce: convinceva. E chi non si lasciava convincere, col tempo, smetteva di essere ascoltato.\n\nCi furono voci di allarme. Saggi che ammonivano nei consigli. Sacerdotesse di Maia che piangevano profezie di rovina e venivano zittite con gentilezza, poi con meno gentilezza. Guerrieri che dicevano di sentire l’ombra avvicinarsi, e che venivano mandati lontano, ai confini.\n\nGli Aelvarri non raccontano volentieri il giorno della separazione. Dicono solo che non ci fu una battaglia, ma un addio. Che una notte le famiglie si divisero sulla soglia di casa: un fratello restò, una sorella partì. Che chi partiva non portò via niente, se non i libri. E che, prima di andare, molti spensero le lanterne delle loro case, perché nessuno potesse seguirli con la luce.\n\nLa storia lo chiama [[lo Scisma Elfico]]: per gli Aelvarri, il momento più eroico e più doloroso della loro storia. Quelli che se ne andarono non erano più un gruppo di ribelli: erano una civiltà, con città nelle foreste d’occidente, leggi proprie, una religione propria e un esercito. Si chiamavano già con il nome che portano ancora: [[i Nascosti]], i Celamanti. E ciò che nascondevano, il mondo lo avrebbe scoperto troppo tardi."
+   "txt": "Per secoli i due popoli fratelli continuarono a vivere sotto lo stesso cielo. Ma qualcosa si era rotto. I Drukarri che seguivano la nuova dottrina guadagnavano potere tra i loro nobili, i loro studiosi, i loro capitani. Non alzavano la voce: convincevano. E chi non si lasciava convincere, col tempo, smetteva di essere ascoltato.\n\nGli Aelvarri videro il cambiamento e ne ebbero paura. Le sacerdotesse di Maia piangevano profezie di rovina. Alcuni Drukarri rimasti fedeli alla madre chiesero aiuto ai cugini, e molti di loro sparirono senza lasciare traccia.\n\nGli Aelvarri non raccontano volentieri il giorno della separazione. Dicono solo che non ci fu una battaglia, ma un addio. Che le famiglie miste si divisero sulla soglia di casa: un marito restò, una moglie partì. Che chi partiva non portò via niente, se non i libri. E che, prima di andare, i Drukarri spensero le lanterne delle loro case, perché nessuno potesse seguirli con la luce.\n\nLa storia lo chiama [[lo Scisma Elfico]]. I Drukarri si ritirarono nelle foreste d’occidente, con leggi proprie, una religione propria e un esercito. Gli umani, che li vedevano sempre meno, cominciarono a chiamarli [[Celamanti]], i Nascosti. E ciò che nascondevano, il mondo lo avrebbe scoperto troppo tardi."
   },
   {
    "t": "IV. I laboratori del dolore",
-   "txt": "Per secoli, prima del rituale, i Celamanti usarono l’ombra che studiavano. Nei laboratori sotto Sylva Noctis, così profondi che la luce del Sole non ci arrivava mai, cominciarono a piegare la carne viva.\n\nPrendevano prigionieri dalle terre di confine, nelle notti senza luna: umani, nani, gnomi, halfling, e anche elfi della loro stessa stirpe. Li chiamavano «materia prima». Con rituali intrisi di dolore li resero più grandi, più forti, insensibili al male. E in cambio tolsero loro quasi tutto: la memoria, il nome, la volontà. Le creature che uscirono da quei laboratori furono chiamate [[Brak]], che nella lingua dei Celamanti vuol dire «Strumento».\n\nAnni dopo, sul campo di battaglia, i soldati riconobbero nei volti deformati delle orde lineamenti umani, nanici, elfici. Fu forse la ferita più profonda di tutta la guerra.\n\n«La prima volta che ne ho ucciso uno, gli ho tolto l’elmo. Sotto c’era un viso che avrebbe potuto essere il mio. Da quel giorno non tolgo più gli elmi.»\n— Veterano nanico della Guardia di Magnafort"
+   "txt": "Per secoli, prima del rituale, i Drukarri usarono l’ombra che studiavano. Nei laboratori sotto Sylva Noctis, così profondi che la luce del Sole non ci arrivava mai, cominciarono a piegare la carne viva.\n\nPrendevano prigionieri dalle terre di confine, nelle notti senza luna: umani, nani, gnomi, halfling, e anche Aelvarri, i loro stessi cugini. Li chiamavano «materia prima». Con rituali intrisi di dolore li resero più grandi, più forti, insensibili al male. E in cambio tolsero loro quasi tutto: la memoria, il nome, la volontà. Le creature che uscirono da quei laboratori furono chiamate [[Brak]], che nella lingua dei Drukarri vuol dire «Strumento».\n\nAnni dopo, sul campo di battaglia, i soldati riconobbero nei volti deformati delle orde lineamenti umani, nanici, elfici. Fu forse la ferita più profonda di tutta la guerra.\n\n» «La prima volta che ne ho ucciso uno, gli ho tolto l’elmo. Sotto c’era un viso che avrebbe potuto essere il mio. Da quel giorno non tolgo più gli elmi.»\n— Veterano nanico della Guardia di Magnafort"
   },
   {
    "t": "V. La notte senza ombra",
-   "txt": "Il rituale non fu un esperimento sfuggito di mano. Fu un piano preparato per decenni ed eseguito come un’operazione di guerra. L’obiettivo era semplice e smisurato: togliere la fine dal mondo. Niente più morte, niente più decadenza, niente più lutto. Un mondo eterno e immobile, governato da chi lo aveva «liberato».\n\nLa notte fu scelta con cura: Maia era nel punto più lontano dalla sorella, perché la Luna d’Argento non venisse colpita. Mille maghi celamanti, i più potenti della loro gente, formarono un cerchio grande quanto Velathrys, la loro capitale sotterranea. Mille altari bruciarono sacrifici. Mille catene di magia si tesero verso il cielo come arpioni verso una balena.\n\nE la Luna d’Ombra [[gridò]]. Non è un modo di dire: fu un suono, e lo sentì ogni creatura viva di Ea. Non passava per le orecchie, attraversava la carne e si piantava nella mente come un chiodo. Le maree si ritirarono come cani spaventati. I vulcani eruttarono. La terra tremò.\n\nPoi Noxtua si spezzò.\n\nI suoi frammenti piovvero su Ea come cenere e fuoco: un fuoco freddo e viola, che non bruciava la carne ma la mente, che non consumava il legno ma la memoria. Dove toccarono terra, il mondo si contorse. Foreste diventarono incubi, fiumi cambiarono strada e si avvelenarono, e dalle crepe uscirono creature che non sarebbero mai dovute esistere.\n\n«Ora terza della notte. La montagna ha tremato. Il cielo sopra la bocca della miniera mostra un vuoto dove prima c’era una luna. Venti morti.»\n— Diari delle Forge Profonde di Magnafort, anno 847 dell’Ottava Era"
+   "txt": "Il rituale non fu un esperimento sfuggito di mano. Fu un piano preparato per decenni ed eseguito come un’operazione di guerra. L’obiettivo era semplice e smisurato: togliere la fine dal mondo. Niente più morte, niente più decadenza, niente più lutto. Un mondo eterno e immobile, governato da chi lo aveva «liberato».\n\nLa notte fu scelta con cura: Maia era nel punto più lontano dalla sorella, perché la Luna d’Argento non venisse colpita. Mille maghi drukarri, i più potenti della loro gente, formarono un cerchio grande quanto Velathrys, la loro capitale sotterranea. Mille altari bruciarono sacrifici. Mille catene di magia si tesero verso il cielo come arpioni verso una balena.\n\nE la Luna d’Ombra [[gridò]]. Non è un modo di dire: fu un suono, e lo sentì ogni creatura viva di Ea. Non passava per le orecchie, attraversava la carne e si piantava nella mente come un chiodo. Le maree si ritirarono come cani spaventati. I vulcani eruttarono. La terra tremò.\n\nPoi Noxtua si spezzò.\n\nI suoi frammenti piovvero su Ea come cenere e fuoco: un fuoco freddo e viola, che non bruciava la carne ma la mente, che non consumava il legno ma la memoria. Dove toccarono terra, il mondo si contorse. Foreste diventarono incubi, fiumi cambiarono strada e si avvelenarono, e dalle crepe uscirono creature che non sarebbero mai dovute esistere.\n\n» «Ora terza della notte. La montagna ha tremato. Il cielo sopra la bocca della miniera mostra un vuoto dove prima c’era una luna. Venti morti.»\n— Diari delle Forge Profonde di Magnafort, anno 847 dell’Ottava Era"
   },
   {
    "t": "VI. Il silenzio del Sole",
@@ -50,21 +54,21 @@
   },
   {
    "t": "VII. Il mondo spezzato",
-   "txt": "Nei mesi che seguirono, il mondo cadde nel caos. Le terre colpite dai frammenti divennero le [[Terre dell’Ombra]], dove la realtà è instabile e le creature non obbediscono a nessuna legge. La magia impazzì: incantesimi sicuri fallivano o esplodevano, guaritori che avevano curato per decenni portavano malattie invece della salute. Le nascite divennero più difficili, i sogni si mescolarono agli incubi, le maree impazzirono e cancellarono intere città della costa.\n\nI frammenti più grandi della luna restarono caldi per mesi, pulsando di un freddo viola nelle crepe del terreno. Chi provò a toccarli non tornò mai del tutto in sé. Eppure, nelle notti dopo la Frattura, dalle terre colpite arrivarono voci strane: figure con mantelli scuri che si muovevano tra le rovine e raccoglievano i frammenti, uno per uno, con grande cura. Nessuno capì perché. Lo si capì in guerra.\n\nVedi la voce [[I Sigilli Lunari]].\n\nEra come un arco con tre chiavi di volta a cui ne avessero strappata una: poteva reggere ancora per un po’, ma ogni giorno le crepe si allargavano.\n\nE in mezzo a quel caos, le armate di Sylva Noctis si misero in marcia.\n\nContinua nella voce [[La Guerra delle Due Lune]]."
+   "txt": "Nei mesi che seguirono, il mondo cadde nel caos. Le terre colpite dai frammenti divennero le [[Terre dell’Ombra]], dove la realtà è instabile e le creature non obbediscono a nessuna legge. La magia impazzì: incantesimi sicuri fallivano o esplodevano, guaritori che avevano curato per decenni portavano malattie invece della salute. Le nascite divennero più difficili, i sogni si mescolarono agli incubi, le maree impazzirono e cancellarono intere città della costa.\n\nI frammenti più grandi della luna restarono caldi per mesi, pulsando di un freddo viola nelle crepe del terreno. Chi provò a toccarli non tornò mai del tutto in sé. Eppure, nelle notti dopo la Frattura, dalle terre colpite arrivarono voci strane: figure con mantelli scuri che si muovevano tra le rovine e raccoglievano i frammenti, uno per uno, con grande cura. Nessuno capì perché. Lo si capì in guerra.\n\nEra come un arco con tre chiavi di volta a cui ne avessero strappata una: poteva reggere ancora per un po’, ma ogni giorno le crepe si allargavano.\n\nE in mezzo a quel caos, le armate di Sylva Noctis si misero in marcia.\n\n↪ Continua nella voce [[I Sigilli Lunari]]."
   },
   {
    "t": "Quello che avete scoperto",
-   "txt": "Che i frammenti della luna morta non sono solo leggenda: il « ferro lunare » dei Forgiati che Elara ha battuto nel crogiolo era « dolore solidificato », e il Pendente di Adamus è una pietra lunare risvegliata a Lunaria. Che la Frattura è rimasta nel cielo sopra Mushanè « dov'è sempre », mentre Maia saliva sulle colline. E che Silvanus sente dentro di sé « il vuoto di Noxtua che urla »: quando gli elfi spaccarono Noxtua fecero impazzire Valerus, e da allora il cielo stesso è squilibrato. « Forse possiamo smettere di bruciare e iniziare a guarire. »"
+   "txt": "Che i frammenti della luna morta non sono solo leggenda: il « ferro lunare » dei Forgiati che Elara ha battuto nel crogiolo era « dolore solidificato ». Che la Frattura è rimasta nel cielo sopra Mushanè « dov'è sempre », mentre Maia saliva sulle colline. E che Silvanus sente dentro di sé « il vuoto di Noxtua che urla »: quando gli elfi spaccarono Noxtua fecero impazzire Valerus, e da allora il cielo stesso è squilibrato. « Forse possiamo smettere di bruciare e iniziare a guarire. »\n\nSono reali, sono qui, e hanno un volto. Aeryn Vel'hael che si dissolve in cenere d'argento sussurrando « Non volevo… dimenticare… ». Therxil, la Lama dei Sussurri. Lyraeth e Kaelen sulla spiaggia del covo. Sariel, la finta disertrice, che parla di una guerra civile tra gli elfi oscuri — Lyaras, « il profeta pazzo », sacrificava migliaia dei suoi per il rituale. Lord Lyaras Vel'Quoril, il Lich, che copiava i vostri volti e i vostri poteri. E la voce dell'Alto Celomante da uno specchio d'ossidiana. La Forgiatura è la loro arte: rituale elfico, sangue distillato, e un « Primo Forgiato » di cui tutti gli altri sono l'eco. Sapete anche che Sylva Noctis non è un blocco unico — Sariel lo ha detto e Lyaras lo ha confermato morendo: l'Alto Celomante ha usato voi per eliminare un tenente impazzito."
   }
  ],
  "gm": [
   {
-   "t": "Chi sussurrò ai Celamanti",
-   "txt": "Dietro la Frattura c’è [[l’Oblio]], il gemello senza nome di Valerus (vedi Il Pantheon). Come con i Titani, non mentì del tutto: offrì ai Celamanti la via per sfuggire alla fine, e li portò a distruggere Noxtua. Il loro sogno di un mondo «eterno e immobile» è lo stesso che l’Oblio aveva venduto ai Titani.\n\nC’è un indizio già nel canone. Il proclama che i Celamanti mandarono a ogni corte dopo la Frattura dice: «Noxtua è libera. Il Ciclo è spezzato. [[L’era del Silenzio è cominciata.]]» Il Silenzio è l’Oblio. I Celamanti credevano di parlare per sé stessi: parlavano per lui."
+   "t": "Chi sussurrò ai Drukarri",
+   "txt": "Dietro la Frattura c’è [[Oblius]], il gemello senza nome di Valerus (vedi Il Pantheon). Il «maestro venuto da nessuna parte» era il suo emissario. Come con i Titani, non mentì del tutto: offrì ai Drukarri la via per sfuggire alla fine, e li portò a spezzare la propria madre, cioè metà della prigione in cui Oblius era incatenato.\n\nC’è un indizio già nel canone. Il proclama che i Drukarri mandarono a ogni corte dopo la Frattura dice: «Noxtua è libera. Il Ciclo è spezzato. [[L’era del Silenzio è cominciata.]]» Il Silenzio è l’Oblio. I Drukarri credevano di parlare per sé stessi: parlavano per lui."
   },
   {
-   "t": "I segreti dei Nascosti",
-   "txt": "· [[Celamanti e Aelvarri sono lo stesso popolo.]] Nacquero dalla stessa luce di Maia. A dividerli non fu la nascita, ma una domanda.\n· [[I Brak furono un tempo elfi.]] I primi prigionieri dei laboratori furono elfi, fratelli dei Celamanti stessi; solo dopo presero esseri di ogni razza. Pochi umani lo sanno, e quasi nessuno lo vuole sapere."
+   "t": "I segreti dei Drukarri",
+   "txt": "· [[Hanno ucciso la propria madre.]] I Drukarri sono figli di Noxtua. Pochissimi di loro ricordano la Frattura per quello che fu: un matricidio.\n· [[I Brak furono un tempo elfi.]] I primi prigionieri dei laboratori furono elfi, cugini dei Drukarri; solo dopo presero esseri di ogni razza. Pochi umani lo sanno, e quasi nessuno lo vuole sapere."
   },
   {
    "t": "Perché Valerus tacque",
@@ -72,7 +76,7 @@
   },
   {
    "t": "Chi conosce la verità",
-   "txt": "· [[Magister Caelinus Tancredus]] del Collegio Arcano di Teramum. Una sua frase circola tra gli studiosi: «Il silenzio di Valerus non è il problema. Il problema è che ci abbiamo costruito sopra una religione che pretende di avere le risposte.»\n· [[Gli Aelvarri di Artefracta]], che custodiscono i documenti dello Scisma e ne mostrano pochissimi.\n· [[I Celamanti]], che hanno l’unico racconto di prima mano del rituale e non lo condivideranno mai."
+   "txt": "· [[Magister Caelinus Tancredus]] del Collegio Arcano di Teramum. Una sua frase circola tra gli studiosi: «Il silenzio di Valerus non è il problema. Il problema è che ci abbiamo costruito sopra una religione che pretende di avere le risposte.»\n· [[Gli Aelvarri di Artefracta]], che custodiscono i documenti dello Scisma e ne mostrano pochissimi.\n· [[I Drukarri]], che hanno l’unico racconto di prima mano del rituale e non lo condivideranno mai."
   },
   {
    "t": "Agganci per il tavolo",
@@ -80,20 +84,21 @@
   },
   {
    "t": "Da decidere",
-   "txt": "· In che anno del calendario imperiale (C.F.) cade la Frattura. Il canone dà solo l’anno dei nani: 847 dell’Ottava Era.\n· Che fine fecero i mille maghi del cerchio."
-  },
-  {
-   "t": "Dalla voce precedente del Compendio",
-   "txt": "Segreti §4 e §6: il Ciclo funzionava con tre sorgenti — Luce di Valerus (creazione), Grazia di Maia (crescita), Ombra di Noxtua (trasformazione/fine). Senza Noxtua manca un terzo dell'equilibrio: la magia « tira » verso il solare o verso il caos lunare come un tavolo a tre gambe con una in meno. Chi usa magia lunare/d'ombra beve dai frammenti di Noxtua — sorgente avvelenata dal dolore della luna morente. In gioco: effetti secondari occasionali (una cura che lascia una cicatrice argentea, un fuoco con sfumature viola, una divinazione che mostra la luna spezzata) — promemoria, non punizione. Il Silenzio di Valerus è dolore: un « Sole tramortito » che brilla a metà e senza contrappeso. I laghi di Sylwarin sono crateri di frammenti. I Sigilli sono frammenti « di una coscienza divina spezzata »: ogni frammento porta un aspetto del dominio (memoria, trasformazione, fine, segreti, sogni, follia). Segreto terribile di Sylva Noctis: dentro Noxtua c'era qualcosa d'altro, antico e affamato, che la Frattura ha liberato (i Tessitori dell'Abisso)."
+   "txt": "· Che fine fecero i mille maghi del cerchio."
   }
  ],
- "atti": [],
+ "atti": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  7,
+  9,
+  10,
+  15
+ ],
  "links": [
-  "mito-nascita-dei-popoli",
-  "mito-celamanti",
-  "mito-sigilli-lunari",
-  "mito-guerra-due-lune",
-  "mito-forgiati",
-  "mito-canto-fiamma-eterna"
+  "mito-sigilli-lunari"
  ]
 }
