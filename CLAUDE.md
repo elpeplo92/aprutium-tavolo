@@ -757,3 +757,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v159 (07/10/2026) — immagini Midjourney: altri dieci borghi
 
 - Curruppjë, Curtënë, Cëllinë, Cëvëtëlla, Fano e La Pròtë, La Pònnë, La Ròcchë, Li Cashtillë, Li Côtë, Lésënë (con `mj/scarica.py scelte-gruppo4.json`). Il Ducato d'Aprutium da rifare (nessuna delle quattro piaciuta).
+
+## v160 (08/10/2026) — immagini Midjourney: altri dieci borghi
+
+- Lë Piana, Martëncëcurë, Mundësòcchë, Mushanë, Mëndurjë, Mòrrë, Ngarà e Tërà, Nnaréta, Nutaròschë, Pënëtë e Silvë (`mj/scarica.py scelte-gruppo5.json`). Il Ducato d'Aprutium ancora da rifare: «troppi calanchi, deve somigliare alla provincia di Teramo».
