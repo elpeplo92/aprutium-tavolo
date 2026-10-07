@@ -686,3 +686,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Giuseppe: nel Bastone di Lyaras parla **Lyaras**, non la Fata Oscura (né Oblius, come scritto nella v149). Corretti Atto IX («sussurra con la voce di Lyaras», «un condotto della volontà di Lyaras»), Diario, oggetto, quest; tolte dalle pagine Noxtua e Sigilli le frasi della v149 su Oblius e il Bastone, e dal blocco «scoperto» del Pantheon la frase di Elara (non riguarda gli dèi). Noxtua non ha mai parlato: resta.
 - Il matricidio dei Drukarri resta visibile ai giocatori (Frattura, Nascita dei popoli). Tolte le note master che lo trattavano da segreto: «Hanno ucciso la propria madre» (Frattura) e «I figli che uccisero la madre» (Nascita, ora «I nomi dei Drukarri»: Celamanti, Aelvar’quen).
 - Stessa procedura: terza passata di `correzioni-0710.py`, poi `converti.py` e `build.py`. `prova-tavolo.js` verde.
+
+## v151 (07/10/2026) — immagini già esistenti collegate a 51 voci del Compendio
+
+- Richiesta di Giuseppe: un'immagine per ogni voce del Compendio che non ce l'ha. Prima parte: 51 immagini che stavano già in `03_Compendio` ma non erano collegate (15 ritratti di PNG di Julia Nova, 36 luoghi e quartieri di Julia Nova), approvate da Giuseppe sul foglio di controllo.
+- Script in `Revisioni/Compendio - immagini v149/`: `comune.py` (`voci_senza`, `registra`, `assegna`), `abbina.py` (solo lettura → `abbinamenti.json`). Le voci di `contenuti/` prendono il nome leggibile (risolto da `_immagini.json`); le voci vecchie di `COMPENDIO_DATA` (e `comp/out`) non passano da `build.py` e prendono direttamente `img/xxx.jpg`.
+- Restano 293 voci senza immagine: elenco in `Revisioni/Compendio - immagini v149/Voci senza immagine.md`. Da generare con Higgsfield in stile illustrazione pittorica da manuale D&D (come i ritratti degli dèi), non fotografico.
+- I quartieri 8, 9, 11-15 di Julia Nova hanno ancora `img: null` nei file di `contenuti/luoghi` mentre le vecchie immagini «Quartiere N Julianova.jpg» sono in `COMP_IMG`: da decidere con Giuseppe.
