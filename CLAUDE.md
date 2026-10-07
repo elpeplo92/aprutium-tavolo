@@ -741,3 +741,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Copertine dei miti dalla sessione «Immagini compendio stile D&D» (blocco «v156: copertina da Midjourney» in `converti.py`): Pantheon, Nascita dei popoli, Frattura, Sigilli, Guerra, Stirpe; ritratti nuovi di Valerus e del Senza Nome, I popoli di Ea, I Brak.
 - Rapporti: `voci vecchie e contraddizioni (consegna 5 - impero).md`, `immagini da rifare (consegna 5 - impero).md` (nessuna contraria al canone; senza immagine Impero e Aprutium; dubbie Luminor Settentrionale per la scritta «BANING HUE HOUSE», Laguras Solis, Latium).
 - Prova: sezione 4 da giocatore (ordine, 4 tabelle, nessuna parte master, il tasto porta al Ducato); `prova-tavolo.js` verde.
+
+## v157 (07/10/2026) — immagini Midjourney: popoli, Impero, primi borghi
+
+- Immagini fatte con Midjourney (account di Giuseppe, a gruppi di 11, scelte da lui una per una), scaricate da cdn.midjourney.com negli originali di `03_Compendio`. Prompt e scelte in `Revisioni/Compendio - immagini v149/mj/` (`tutti-i-prompt.json`, `scelte.json`; i borghi con `borghi_reali.py`: ogni borgo somiglia al paese reale della provincia di Teramo indicato in «Corrisponde a»).
+- Popoli (I Duergar, I mezzorchi) entrano da `converti.py` (cartella `01 Il Mondo/I Popoli/<titolo>.png`); in v156 è entrato l'aggancio «copertina da Midjourney» per i miti (`01 Il Mondo/Miti/<titolo>.png`).
+- Impero Aureo e borghi (Atrë, Bbacucchë, Bbashanë, Canzañë, Cashtagnë): `img` = «Mondo — <titolo>.jpg» in `contenuti/mondo/`, originali in `03_Compendio/01 Il Mondo/Borghi/`. `riscrivi()` di converti.py non tocca `img`.
+- Da rifare su richiesta di Giuseppe: Provincia di Aprutium (più Abruzzo/Teramo), Bisindë, Cashtalladdë; Mortus resta il ritratto di Giuseppe.
