@@ -716,3 +716,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Nessuna voce vecchia sulle razze nel Compendio: niente da archiviare. Corretto un dato concreto nella pagina degli umani (master): «Tutti e sette i personaggi giocanti» → «sei».
 - **Contraddizioni con le voci delle nazioni** (per la consegna delle nazioni): `Revisioni/Compendio - voci nuove v148/contraddizioni-nazioni (consegna 3).md`. Le principali: Saladax elfi (sono Lucertoloidi), Elverio umana (è la patria degli Aelvarri), Thilmanor «elfi silvani» (Silvarri), Artefracta «gli ultimi» Aelvarri, Ducato «in cambio della Fede Solare», Sylva Noctis «non mandano più flotte» e Tessitori, Serarion prega Valerus (Maia), Oralin = Vallecava (Vallecava è gnoma, in Ovestalia), Tepotlanco segreta e Prima Incudine.
 - Prova: 19 voci aperte da giocatore (nessuna parte master, 3 tabelle, 138 collegamenti) e da master (4 tabelle); `prova-tavolo.js` verde.
+
+## v154 (07/10/2026) — ritratti dei popoli
+
+- Giuseppe: usare i ritratti di `03_Compendio/01 Il Mondo/I Popoli/N. <popolo>.png` anche nelle schede dei popoli (la consegna 3 diceva di non aggiungere immagini: superato). `converti.py` li abbina per nome, articolo a parte (`img` = `Popolo — <popolo>.jpg`, gli stessi della Nascita dei popoli); il riquadro «in breve» mostra il ritratto a sinistra come per gli dèi, senza copertina grande (`!e.riquadro`). 15 su 18: mancano Duergar, Brak, mezzorchi (e la voce di apertura non ne ha).
+- Modifiche al codice registrate in `popoli.py`. `prova-tavolo.js` verde.
