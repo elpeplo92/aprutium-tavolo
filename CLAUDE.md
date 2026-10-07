@@ -761,3 +761,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v160 (08/10/2026) — immagini Midjourney: altri dieci borghi
 
 - Lë Piana, Martëncëcurë, Mundësòcchë, Mushanë, Mëndurjë, Mòrrë, Ngarà e Tërà, Nnaréta, Nutaròschë, Pënëtë e Silvë (`mj/scarica.py scelte-gruppo5.json`). Il Ducato d'Aprutium ancora da rifare: «troppi calanchi, deve somigliare alla provincia di Teramo».
+
+## v161 (08/10/2026) — immagini Midjourney: Ducato e ultimi borghi
+
+- Il Ducato d'Aprutium (campagna teramana col Gran Sasso, senza calanchi), Sandiglië, Sandémirë, Teramum, Tussëcië, Tërrëciallë. Tutti i borghi hanno ora la loro immagine. I luoghi di Julia Nova sono rimandati da Giuseppe (`mj/rimandate.json`).
