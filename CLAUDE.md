@@ -680,3 +680,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - **Campi d’Argento** (storia nuova, chiesta da Giuseppe, a puntini nella sua pagina): i tre Sigilli non si frantumano; Aelwen li rivolge contro l’Occhio di Velathrys, il cristallo del comando nemico, e lo spezza; i Sigilli tornano «freddi e muti»; la polvere d’argento è delle schegge dell’Occhio.
 - Restano come sono, per scelta di Giuseppe: i nomi dei sette Sigilli nella parte giocatori; l’Atto IX («il Bastone… un condotto della Fata Oscura»: è ciò che credevano). Le voci vecchie da riallineare le riscrive lui e arriveranno come pagine nuove.
 - Prova: `prova-tavolo.js` verde (66 e 38 comandi); voci nuove controllate da giocatore.
+
+## v150 (07/10/2026) — la voce del Bastone è Lyaras; il matricidio resta pubblico
+
+- Giuseppe: nel Bastone di Lyaras parla **Lyaras**, non la Fata Oscura (né Oblius, come scritto nella v149). Corretti Atto IX («sussurra con la voce di Lyaras», «un condotto della volontà di Lyaras»), Diario, oggetto, quest; tolte dalle pagine Noxtua e Sigilli le frasi della v149 su Oblius e il Bastone, e dal blocco «scoperto» del Pantheon la frase di Elara (non riguarda gli dèi). Noxtua non ha mai parlato: resta.
+- Il matricidio dei Drukarri resta visibile ai giocatori (Frattura, Nascita dei popoli). Tolte le note master che lo trattavano da segreto: «Hanno ucciso la propria madre» (Frattura) e «I figli che uccisero la madre» (Nascita, ora «I nomi dei Drukarri»: Celamanti, Aelvar’quen).
+- Stessa procedura: terza passata di `correzioni-0710.py`, poi `converti.py` e `build.py`. `prova-tavolo.js` verde.
