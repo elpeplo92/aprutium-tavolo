@@ -748,3 +748,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Popoli (I Duergar, I mezzorchi) entrano da `converti.py` (cartella `01 Il Mondo/I Popoli/<titolo>.png`); in v156 è entrato l'aggancio «copertina da Midjourney» per i miti (`01 Il Mondo/Miti/<titolo>.png`).
 - Impero Aureo e borghi (Atrë, Bbacucchë, Bbashanë, Canzañë, Cashtagnë): `img` = «Mondo — <titolo>.jpg» in `contenuti/mondo/`, originali in `03_Compendio/01 Il Mondo/Borghi/`. `riscrivi()` di converti.py non tocca `img`.
 - Da rifare su richiesta di Giuseppe: Provincia di Aprutium (più Abruzzo/Teramo), Bisindë, Cashtalladdë; Mortus resta il ritratto di Giuseppe.
+
+## v158 (07/10/2026) — immagini Midjourney: Provincia di Aprutium e dieci borghi
+
+- Provincia di Aprutium (rifatta più abruzzese) e borghi Bisindë, Cashtalladdë (rifatti), Cashtijunë, Cashtilindë, Chimblë, Cirmignanë, Crognaleto, Cullëdarë, Culënnëllë, Cundraüerrë. Ogni borgo somiglia al paese reale di «Corrisponde a».
+- Script per i gruppi successivi: `Revisioni/Compendio - immagini v149/mj/scarica.py scelte-gruppoN.json` (scarica da cdn.midjourney.com, registra e collega le voci di `contenuti/mondo`; miti e popoli invece entrano con converti.py).
