@@ -753,3 +753,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 - Provincia di Aprutium (rifatta più abruzzese) e borghi Bisindë, Cashtalladdë (rifatti), Cashtijunë, Cashtilindë, Chimblë, Cirmignanë, Crognaleto, Cullëdarë, Culënnëllë, Cundraüerrë. Ogni borgo somiglia al paese reale di «Corrisponde a».
 - Script per i gruppi successivi: `Revisioni/Compendio - immagini v149/mj/scarica.py scelte-gruppoN.json` (scarica da cdn.midjourney.com, registra e collega le voci di `contenuti/mondo`; miti e popoli invece entrano con converti.py).
+
+## v159 (07/10/2026) — immagini Midjourney: altri dieci borghi
+
+- Curruppjë, Curtënë, Cëllinë, Cëvëtëlla, Fano e La Pròtë, La Pònnë, La Ròcchë, Li Cashtillë, Li Côtë, Lésënë (con `mj/scarica.py scelte-gruppo4.json`). Il Ducato d'Aprutium da rifare (nessuna delle quattro piaciuta).
