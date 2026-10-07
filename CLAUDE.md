@@ -700,3 +700,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Le pagine nuove sono salvate in `03_Compendio/<Titolo> — Compendio di Aprutium.html` (27 in tutto). `converti.py`: tutti gli dèi in `VOCI` nell'ordine della pagina del Pantheon (`ordine` 3-22, `parent: mito-pantheon`, id `mito-<nome>`, `mito-il-senza-nome`); `DEI_CON_SCHEDA` ricavato da lì, quindi nel Pantheon ogni dio ha «Apri la scheda». Il menu mostra il gruppo «Il Pantheon» con 21 schede.
 - **Ritratti dei popoli** (`03_Compendio/01 Il Mondo/I Popoli/N. <popolo>.png`): nella Nascita dei popoli ogni capitolo con il suo ritratto (`Popolo — <popolo>.jpg`, campo `ritratto` del blocco), abbinato per nome. Manca il 4 (I Silvarri). Senza ritratto fra gli dèi: Valerus, Mortus, Il Senza Nome.
 - Prova: 27 voci aperte da giocatore (niente Oblius, niente parte master, nessuna immagine rotta); `prova-tavolo.js` verde.
+
+## v152 (07/10/2026) — via le leggende vecchie
+
+- Giuseppe: togliere per ora le 11 voci vecchie di «Miti e leggende» (alcune mai dette né giocate; vanno riscritte da capo). Uscite da `comp/out/miti.json`, `compendio_all.json` e `COMPENDIO_DATA` con `Revisioni/Compendio - voci nuove v148/archivia-miti.py`; salvate intere in `_ARCHIVIO_2026-10-07/Miti e leggende vecchi (v152)/voci-vecchie.json` (registro). Erano: Canto della Fiamma Eterna, Il Sole fra le Due Lune, La Forgiatura e i Forgiati, Il Gigante Dormiente, La profezia delle Sei Ombre, La Vecchia Madre e la Fata Argentea, I lupàre e la stella a otto punte, Il sole rovesciato, San Berardo, Il Pozzo dell'Addio, Altre leggende del Ducato.
+- La sezione «Divinità, miti e leggende» ha ora Le origini (Genesi) e Il Pantheon (21 schede). I collegamenti di altre voci verso le leggende tolte spariscono da soli (il sito mostra solo voci esistenti). Dentro c'erano anche fatti giocati (profezia delle Sei Ombre, Forgiatura, sole rovesciato): da recuperare quando Giuseppe le riscrive.
+- `prova-tavolo.js` verde.
