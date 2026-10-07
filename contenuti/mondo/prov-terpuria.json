@@ -7,28 +7,52 @@
   "prov-latium",
   "prov-aprutium"
  ],
- "tag": [
-  "Impero Aureo",
-  "Provincia"
- ],
  "img": "Mondo — La Terpuria Centrale.png",
  "mappa": null,
  "colore": "#B08A3E",
  "scheda": {
-  "Governo": "Oligarchia agraria — Siniscalco Imperiale Aldren Veranthi",
-  "Popolazione": "~3 milioni",
-  "Economia": "Grano, orzo, bestiame, olio su scala industriale",
-  "Casata dominante": "Casa Veranthi, i Tessitori di Grano",
-  "Dialetto": "Contadino, semplice, pieno di proverbi",
-  "Corrisponde a": "Toscana e Umbria",
-  "Nome imperiale antico": "Kelvandor"
+  "Chi comanda": "Il Siniscalco Imperiale Aldren Veranthi",
+  "Popolazione": "Circa tre milioni",
+  "Casata": "Veranthi, i Tessitori di Grano",
+  "Vive di": "Grano, orzo, bestiame e olio, in quantità enormi",
+  "Esercito": "Le Sentinelle del Grano, una milizia di campagna",
+  "Dialetto": "Contadino, semplice, pieno di proverbi"
  },
- "gm": "Il Siniscalco è nominalmente un funzionario di Solaria; in realtà è il patriarca Veranthi, e il titolo è comodo. La Faida: embargo non dichiarato contro Aprutium e Laguras, trattenendo le scorte per alzare i prezzi con la scusa dei «briganti». Minacce: brigantaggio vero, carestia possibile, e gli spiriti della terra risvegliati dallo sfruttamento — i contadini li chiamano «i Figli della Vecchia Madre». Le Sentinelle del Grano bloccano il commercio quanto proteggono i raccolti.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· L’embargo contro Aprutium e Laguras è voluto: Casa Veranthi trattiene le scorte per alzare i prezzi e per punire le province che non votano come vuole.\n· Lo sfruttamento della terra sta svegliando gli spiriti dei campi, che i contadini chiamano «i Figli della Vecchia Madre». Vedi Sementia.\n· Per la Crociata: il prezzo del grano nel Registro può salire se la Terpuria stringe l’embargo."
+  }
+ ],
  "parent": "impero-aureo",
- "group": "Le dieci province dell'Impero",
+ "group": "Le dieci province",
  "livello": "provincia",
  "id": "prov-terpuria",
  "title": "La Terpuria Centrale",
- "sub": "Il Granaio dell'Impero",
- "pub": "«Chi ha fame non fa la rivoluzione. Chi ha troppa fame sì.» Le grandi pianure a est del Latium: distese di grano fino all'orizzonte, strade imperiali dritte come lame, ville padronali che sembrano fortezze. Qui si sfamano ventotto milioni di persone. La Gilda del Grano e del Sale controlla tutto, dalla semina alla distribuzione: i contadini lavorano terre che non possiedono, per padroni che non vedono mai. Gente conservatrice e diffidente, che non crede ai senatori né ai preti, ma alla terra e al prezzo del grano. Nelle campagne si prega il Sole in pubblico e la Vecchia Madre in segreto."
+ "sub": "Il granaio dell’Impero",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "A nord del Latium si aprono pianure di grano fino all’orizzonte, attraversate da strade dritte come lame e punteggiate di ville padronali che sembrano fortezze. È la Terpuria, e sfama l’Impero. Qui Aurax travolse i signori del raccolto nella Carica delle Steppe Dorate e promise ai contadini che nessuno avrebbe più patito la fame. Fu la sua promessa più amata, e la più tradita dopo di lui."
+  },
+  {
+   "t": "I. Chi comanda",
+   "txt": "Ufficialmente comanda il [[Siniscalco Imperiale]], un funzionario di Solaria. In realtà il Siniscalco è [[Aldren Veranthi]], il capo di Casa Veranthi, e il titolo gli serve solo a fare i suoi interessi con il timbro dell’Impero. La [[Gilda del Grano e del Sale]] controlla tutto, dalla semina al pane. I contadini lavorano terre che non sono loro, per padroni che non vedono mai."
+  },
+  {
+   "t": "II. Come si vive",
+   "txt": "La gente della Terpuria non crede ai senatori né ai preti: crede alla terra e al prezzo del grano. Nelle campagne si prega il Sole in pubblico, e la Vecchia Madre e Sementia in segreto."
+  },
+  {
+   "t": "III. Il grano come arma",
+   "txt": "Da qualche anno il grano arriva tardi e caro ad Aprutium e a Laguras. La Terpuria dice che è colpa dei briganti sulle strade. Ad Aprutium nessuno ci crede."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Chi ha fame non fa la rivoluzione. Chi ha troppa fame sì.»",
+  "cite": "Detto della Terpuria"
+ },
+ "ordine": 6,
+ "blocchi": true
 }

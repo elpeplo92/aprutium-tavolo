@@ -26,31 +26,292 @@
   "eptarchia-sylva-noctis",
   "regno-nanico"
  ],
- "tag": [
-  "Impero",
-  "Umani",
-  "Fiamma Solare"
- ],
  "img": "Mondo — L'Impero Aureo.png",
  "mappa": null,
  "colore": "#C9A24A",
  "scheda": {
-  "Governo": "Impero elettivo — Trono Solare vacante da dodici anni",
-  "Capitale": "Solaria, nel Latium",
-  "Popolazione": "~28 milioni nelle dieci province",
-  "Cultura": "Umani (65%), Nani imperiali, Halfling, Gnomi, Aelvarri, Mezzelfi",
-  "Religione": "Chiesa della Fiamma Solare (Valerus)",
-  "Moneta": "Soldo d'Oro · Luna d'Argento · Scudo di Rame (1 = 20 = 400)",
-  "Lingua": "Aureo Comune; ogni provincia il suo dialetto",
-  "Stemma": "Aquila bicipite d'oro su campo cremisi, fiamma solare tra le teste, spada e scettro negli artigli",
+  "Governo": "Un Imperatore eletto; il Trono Solare è vuoto dal 1425 del Calare della Fiamma",
+  "Capitale": "Solaria, sui sette colli, nel Latium",
+  "Popolazione": "Circa venticinque milioni nelle dieci province",
+  "Popoli": "Umani per due terzi; nani, halfling, gnomi, Aelvarri, mezzelfi",
+  "Fede": "La Chiesa della Fiamma Solare, che riconosce solo Valerus",
+  "Moneta": "Soldo d’Oro, Luna d’Argento, Scudo di Rame (1 soldo = 20 lune = 400 scudi)",
+  "Lingua": "L’Aureo Comune; l’Aureo Antico nelle leggi e nella liturgia; ogni provincia il suo dialetto",
+  "Stemma": "Aquila d’oro a due teste su campo cremisi, con una fiamma tra le teste, una spada e uno scettro negli artigli",
   "Motto": "La Fiamma che Non Muore"
  },
- "gm": "Il documento «L'Impero Aureo — Struttura e Potere» usa nomi diversi per nove province su dieci (Solanthis, Gorvathun, Velyndris, Sylwarin, Kelvandor, Sancthara, Eldamere, Thyrsenn, Ashkarn). Decisione dell'11/09/2026: al tavolo valgono i nomi di «Geografia» e del Manuale; i contenuti ricchi di quel documento sono stati riferiti ai nomi giusti. Corrispondenza: Solanthis→Latium · Kelvandor→Terpuria Centrale · Gorvathun→Laguras Solis · Sylwarin→Artefracta · Velyndris→Luminor Settentrionale · Sancthara→Luminor Meridionale · Eldamere→Campus Aurum · Thyrsenn→Vesperia · Ashkarn→Insulae Auree.\n\nSei Grandi Casate imperiali (Solvirax a Campus Aurum, Valdûr a Laguras, Thalvorn a Luminor Sett., Orivex a Luminor Merid., Drakon a Vesperia, Veranthi a Terpuria) e cinque Gilde Maggiori con seggio al Concilio (Bilancia d'Oro, Grano e Sale, Sole e Incudine, Pergamena e Sigillo, Vela e Stella). Servono 12 voti su 18 per eleggere: in dodici anni nessuno ha superato i 9.\n\nSegreti (nessun PG li conosce): l'Interregnum è stato ingegnerizzato — almeno tre Reggenti sono sotto influenza celamante o dei Tessitori; il figlio di Tiberion III sopravvisse all'incendio del palazzo (è Silvanus); sette Sigilli Lunari sono nascosti, due dall'Impero (uno sotto Teramum, uno nella Fortezza di Glacius a Laguras); la Chiesa adora un dio ferito — il Culto del Sole Tramortito è la verità.",
+ "gm": [
+  {
+   "t": "Il vero erede",
+   "txt": "Aurelius Lux Aurax non morì senza eredi. Suo figlio Aurelius, che oggi si fa chiamare Silvanus, scampò all’incendio di Solaria del 1417, in cui morì sua madre Lunavel. Il matrimonio era stato tenuto nascosto, perché una Silvarri imperatrice era un’eresia vivente per la Chiesa: per questo a corte si dice che l’imperatore sia morto «senza eredi riconosciuti». Vedi La stirpe di Aurax."
+  },
+  {
+   "t": "Chi tiene il trono vuoto",
+   "txt": "L’Interregnum non è un incidente. Almeno tre membri del Concilio dei Reggenti sono comprati, ricattati o manovrati dalla Casata della Ragnatela di Sylva Noctis. Ogni volta che un candidato credibile si avvicina ai dodici voti, viene screditato, comprato o eliminato."
+  },
+  {
+   "t": "Il sangue d’oro di Casa Valdûr",
+   "txt": "Casa Valdûr nacque dal matrimonio tra una principessa Aurex e un condottiero del nord. Nel loro sangue c’è una goccia di quello di Aurax. Se Silvanus si fa avanti, il Margravio Korven Valdûr è l’unico che può rivendicare lo stesso sangue: un rivale, oppure il primo alleato che conta."
+  },
+  {
+   "t": "I Sigilli nell’Impero",
+   "txt": "· Il [[Sigillo della Carne]] si trova, secondo la proposta della voce I Sigilli Lunari, sotto la Basilica Aurea di Teramum. Nella guerra, dicono le leggende, i difensori di Teramum lo usarono per salvare la città.\n· Il [[Sigillo della Fine]] giace nelle profondità della Fortezza di Glacius, a Laguras Solis, sotto la guardia della Legio Fulminata. Vedi la voce di Laguras Solis."
+  },
+  {
+   "t": "Il dio ferito",
+   "txt": "La Chiesa adora un dio tramortito. Dalla Frattura la luce di Valerus si è fatta opaca, perché la fede della sua Chiesa è corrotta da dentro: un paladino corrotto non brilla, uno fedele e coraggioso brilla e riceve Ispirazione Eroica. Vedi Valerus."
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· La notizia della Crociata di Silvanus arriva a Solaria. Chi la riceve per primo, e che cosa fa?\n· Un emissario del Margravio Valdûr si presenta alla Crociata con una lettera sigillata.\n· Il Cardinale Virellius, a Julia Nova, è anche uno dei tre Cardinali Supremi: il suo voto al Concilio vale quanto quello di un governatore."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi salvò Silvanus dall’incendio, e chi lo appiccò.\n· Dove sia oggi la spada di Aurax, Solvex la Radiosa.\n· Chi sono i tre Reggenti manovrati da Sylva Noctis."
+  }
+ ],
  "id": "impero-aureo",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le grandi potenze",
+ "group": "L’Impero Aureo",
  "title": "L'Impero Aureo",
- "sub": "L'Aquila Dorata · il Gigante Malato",
- "pub": "L'Impero Aureo è la vostra patria, la struttura politica più vasta e più fragile di Ea. Lo fondò Aurax, l'Eroe Solare, unificando le tribù della Grande Penisola sotto una fiamma sola; per sei secoli fu la meraviglia del mondo, poi venne il Patto Fatale coi Celamanti e la Guerra delle Due Lune, e da allora l'Impero è un gigante ferito che non è mai guarito.\n\nOggi il Trono Solare a Solaria è vuoto da dodici anni. L'Imperatore Tiberion III Aurex morì senza eredi riconosciuti e il Concilio dei Reggenti — i dieci governatori, i tre Cardinali Supremi, i cinque Maestri delle Gilde Maggiori — non è mai riuscito a eleggerne uno. Le province hanno smesso di pagare le tasse, ogni confine ha i suoi dazi, le Falangi Solari sono ridotte a sei e rispondono ai governatori, non a Solaria. Tiene tutto insieme la moneta comune, le Strade Solari, e la paura condivisa di Sylva Noctis.\n\nDieci province: Latium col cuore vuoto della capitale, Aprutium che è casa vostra, Terpuria che sfama tutti, Laguras Solis che fa la guardia al nord, Artefracta degli elfi, i due Luminor — quello dei banchieri e quello dei preti —, Campus Aurum della vecchia nobiltà, Vesperia della flotta, e le Insulae Auree dei pirati. Ogni provincia è un mondo a sé; in questo atlante ognuna ha la sua scheda."
+ "sub": "La vostra patria: come si governa, chi comanda e perché il Trono Solare è vuoto",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "L’Impero Aureo è la vostra patria, e la potenza più grande di Ea. Occupa la Grande Penisola, protesa verso sud come una lama d’oro, e per quasi millequattrocento anni l’ha governato una sola stirpe, quella di Aurax. Oggi quella stirpe non c’è più, il Trono Solare è vuoto da dodici anni e l’Impero è un gigante malato: enorme, ricco, e incapace di decidere qualunque cosa. I suoi nemici lo chiamano proprio così, il Gigante Malato. I suoi sudditi, l’Aquila Dorata."
+  },
+  {
+   "t": "I. In breve, la sua storia",
+   "txt": "L’Impero nacque nell’anno zero del Calare della Fiamma, quando Aurum Aurax scese dal cielo su una cometa e unì le dieci province con la spada e con i patti. Seguirono secoli d’oro, poi il Patto Fatale con i Drukarri, intorno al 1060, e due secoli dopo la Frattura e la Guerra delle Due Lune, che l’Impero vinse e da cui non guarì mai. Nel 1425 morì l’ultimo imperatore, Aurelius Lux Aurax, e il trono restò vuoto.\n\nTutta questa storia è raccontata nelle voci La stirpe di Aurax e La Guerra delle Due Lune."
+  },
+  {
+   "t": "II. Come si governa"
+  },
+  {
+   "t": "Il Trono Solare",
+   "liv": 3,
+   "txt": "L’Imperatore non eredita il trono: lo elegge il Concilio dei Reggenti. In teoria chiunque sia di sangue nobile può essere eletto. In pratica, per quasi millequattrocento anni il trono è sempre andato a un Aurex. L’Imperatore ha tre poteri:\n\n· [[Il Pugno del Comando]]: il comando delle Falangi e della flotta.\n· [[La Voce del Sole]]: l’ultima parola sulle nomine della Chiesa.\n· [[Il Giudizio Dorato]]: la decisione finale nelle liti tra province, Casate e Gilde.\n\nSenza un Imperatore, questi tre poteri non sono di nessuno, e tutti provano a prenderseli."
+  },
+  {
+   "t": "Il Concilio dei Reggenti",
+   "liv": 3,
+   "txt": "Dovrebbe eleggere il nuovo Imperatore e governare finché non c’è. Ha diciotto voti: i [[dieci governatori]] delle province, i [[tre Cardinali Supremi]] della Chiesa e i [[cinque Maestri delle Gilde Maggiori]]. Per eleggere un Imperatore servono dodici voti. Si riunisce a Solaria due volte l’anno, e in dodici anni nessun candidato ha mai superato i nove."
+  },
+  {
+   "t": "Le Grandi Casate",
+   "liv": 3,
+   "txt": "Sopra la nobiltà di ogni provincia ci sono sei famiglie il cui potere attraversa tutto l’Impero.",
+   "tabella": {
+    "head": [
+     "Casata",
+     "Dove",
+     "Che cosa vuole"
+    ],
+    "rows": [
+     [
+      "Solvirax, i Figli del Sole",
+      "Campus Aurum",
+      "Il trono, per diritto di sangue: dicono di discendere dai compagni di Aurax"
+     ],
+     [
+      "Valdûr, i Signori del Ferro",
+      "Laguras Solis",
+      "Un Imperatore guerriero"
+     ],
+     [
+      "Thalvorn, i Mercanti di Specchi",
+      "Luminor Settentrionale",
+      "Decidere chi siede sul trono, senza sedercisi"
+     ],
+     [
+      "Orivex, le Fiamme Sacre",
+      "Luminor Meridionale",
+      "Un Impero governato dalla Chiesa"
+     ],
+     [
+      "Vespri, i Signori del Tramonto",
+      "Vesperia",
+      "Andarsene dall’Impero, o fondarne uno sul mare"
+     ],
+     [
+      "Veranthi, i Tessitori di Grano",
+      "Terpuria Centrale",
+      "Il potere di chi tiene il pane"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "Le Gilde Maggiori",
+   "liv": 3,
+   "txt": "Nell’Impero le gilde non sono solo corporazioni: battono moneta, arruolano milizie, fanno giustizia al loro interno, e cinque di loro hanno un voto al Concilio.",
+   "tabella": {
+    "head": [
+     "Gilda",
+     "Che cosa fa",
+     "Dove"
+    ],
+    "rows": [
+     [
+      "La Bilancia d’Oro",
+      "Banche e cambi: tiene il debito dell’Impero",
+      "Luminor Settentrionale"
+     ],
+     [
+      "Il Grano e il Sale",
+      "Il cibo: può affamare una provincia",
+      "Terpuria Centrale"
+     ],
+     [
+      "Il Sole e l’Incudine",
+      "Armi, armature, macchine d’assedio",
+      "Laguras Solis"
+     ],
+     [
+      "La Pergamena e il Sigillo",
+      "Notai, scrivani, leggi: niente è legale senza il loro timbro",
+      "Solaria"
+     ],
+     [
+      "La Vela e la Stella",
+      "Rotte, porti e carte di navigazione",
+      "Vesperia"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "La Chiesa",
+   "liv": 3,
+   "txt": "La Chiesa della Fiamma Solare è la fede dello Stato e il potere più forte dopo il Trono. A Solaria siede l’[[Alto Custode della Fiamma]], il capo della Chiesa; sotto di lui i tre [[Cardinali Supremi]]: della Dottrina, dell’Inquisizione e delle Missioni. In ogni provincia comanda un [[Arcimandrita]], in ogni tempio e monastero un [[Priore]]. La Chiesa è divisa in tre anime: i [[moderati]], che a corte chiamano Restauratori; i [[Purificatori]], sempre più forti; i [[contemplativi]], che pregano e tacciono. Vedi la voce Valerus."
+  },
+  {
+   "t": "III. Le dieci province",
+   "tabella": {
+    "head": [
+     "Provincia",
+     "Chi comanda",
+     "Per che cosa è famosa"
+    ],
+    "rows": [
+     [
+      "Il Latium",
+      "Un Custode Reggente",
+      "La capitale vuota: produce leggi e debiti"
+     ],
+     [
+      "Laguras Solis",
+      "Un Margravio",
+      "Il muro del nord, la Legio Fulminata"
+     ],
+     [
+      "Il Luminor Settentrionale",
+      "Un Doge",
+      "I canali, le banche, le maschere"
+     ],
+     [
+      "Artefracta",
+      "Un’Arconte elfa",
+      "Gli elfi dell’Impero, l’Accademia della Luce"
+     ],
+     [
+      "La Terpuria Centrale",
+      "Un Siniscalco",
+      "Il granaio dell’Impero"
+     ],
+     [
+      "Aprutium",
+      "Un Duca, oggi assente",
+      "Casa vostra"
+     ],
+     [
+      "Il Luminor Meridionale",
+      "Un Legato Cardinale",
+      "La provincia della Chiesa e dell’Inquisizione"
+     ],
+     [
+      "Campus Aurum",
+      "Un Primo Senatore",
+      "La vecchia nobiltà, il lusso"
+     ],
+     [
+      "Vesperia",
+      "Un Re giurato",
+      "La flotta, i vulcani, i mercenari"
+     ],
+     [
+      "Le Insulae Auree",
+      "Un Governatore che non conta niente",
+      "Le isole dei pirati"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito",
+   "txt": "Prima della Guerra delle Due Lune l’Impero aveva venti [[Falangi Solari]], le armate più temute di Ea. Oggi ne restano sei, e solo due obbediscono ancora a Solaria. Le altre rispondono al governatore della provincia dove stanno.\n\nIl resto lo fanno le milizie delle province, le compagnie di mercenari e gli ordini militari della Chiesa. La flotta imperiale, distrutta in guerra, non è mai stata ricostruita: oggi le sole flotte vere sono quella di Vesperia e quella dei mercanti di Luminor.",
+   "tabella": {
+    "head": [
+     "Falange",
+     "Dove",
+     "Uomini",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "Prima del Fulmine, la Legio Fulminata",
+      "Laguras Solis",
+      "circa 8.000",
+      "Il Margravio"
+     ],
+     [
+      "Terza degli Scudi d’Oro",
+      "Solaria",
+      "circa 5.000",
+      "Il Concilio dei Reggenti"
+     ],
+     [
+      "Quinta del Drago",
+      "Vesperia",
+      "circa 6.000",
+      "Il Re di Vesperia"
+     ],
+     [
+      "Settima della Fiamma",
+      "Luminor Meridionale",
+      "circa 4.000",
+      "La Chiesa"
+     ],
+     [
+      "Nona dei Lupi di Mare",
+      "Luminor Settentrionale",
+      "circa 3.000",
+      "Il Doge"
+     ],
+     [
+      "Dodicesima del Trono",
+      "Solaria",
+      "circa 2.000",
+      "Fa la guardia a un palazzo vuoto"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Le strade e il denaro",
+   "txt": "Cinque grandi [[Strade Solari]], costruite nei secoli d’oro, portano tutte a Solaria: la [[Via Aurea]] verso Luminor, la [[Via del Ferro]] verso Laguras, la [[Via Sacra]] verso il Luminor Meridionale, la [[Via del Grano]] verso la Terpuria, la [[Via del Tramonto]] verso Vesperia. Sono ancora la spina dorsale dell’Impero.\n\nLa moneta ha tre metalli. Il [[Soldo d’Oro]] si conia solo a Solaria. La [[Luna d’Argento]] porta ancora il nome di prima della guerra, e la Chiesa vorrebbe cambiarlo ma non ci riesce. Lo [[Scudo di Rame]] è la moneta dei poveri e delle osterie. Il cambio ufficiale è uno a venti a quattrocento; quello vero cambia da provincia a provincia."
+  },
+  {
+   "t": "VI. I mali dell’Impero oggi",
+   "txt": "· [[Il trono vuoto.]] Nessun candidato arriva ai dodici voti.\n· [[Il debito.]] Solaria deve alla Bilancia d’Oro una somma enorme, e il debito si usa come arma.\n· [[Il grano.]] La Terpuria rallenta le consegne alle province che considera ribelli, Aprutium e Laguras, e dà la colpa ai briganti.\n· [[I dazi.]] Ogni provincia ha messo i suoi, e il commercio tra province soffoca.\n· [[Le tasse.]] Le province hanno smesso di pagarle a Solaria.\n· [[Sylva Noctis.]] Non manda più eserciti: manda spie, ambasciatori e mercanti, e aspetta.\n\nTiene tutto insieme poco: la moneta comune, le Strade Solari, e la paura condivisa delle Navi Rosse."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Un leone vecchio resta un leone. Ma i suoi figli si mordono tra loro per decidere chi ruggirà per ultimo.»",
+  "cite": "Proverbio del Latium"
+ },
+ "ordine": 1,
+ "blocchi": true
 }

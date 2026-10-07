@@ -7,29 +7,56 @@
   "prov-aprutium",
   "prov-latium"
  ],
- "tag": [
-  "Impero Aureo",
-  "Provincia"
- ],
  "img": "Mondo — Il Luminor Meridionale.png",
  "mappa": null,
  "colore": "#9E3A2A",
  "scheda": {
-  "Governo": "Protettorato ecclesiastico — Legato Cardinale Tharion Morvex",
-  "Popolazione": "~2 milioni, quasi solo umani",
-  "Economia": "Pellegrinaggi, reliquie, olio dei templi, vino sacramentale, cera",
-  "Forza": "L'Ordine della Fiamma Purificatrice (~2.000 templari) e la Settima Falange della Fiamma (~4.000)",
-  "Casata dominante": "Casa Orivex, le Fiamme Sacre",
-  "Dialetto": "Sacrale Volgare",
-  "Corrisponde a": "Le Marche",
-  "Nome imperiale antico": "Sancthara"
+  "Chi comanda": "Il Legato Cardinale Tharion Morvex, Cardinale dell’Inquisizione",
+  "Popolazione": "Circa due milioni, quasi solo umani",
+  "Casata": "Orivex, le Fiamme Sacre",
+  "Vive di": "Pellegrinaggi, reliquie, olio dei templi, vino da messa, cera",
+  "Esercito": "L’Ordine della Fiamma Purificatrice (circa 2.000 templari) e la Settima Falange della Fiamma (circa 4.000)",
+  "Dialetto": "Il Sacrale volgare, pieno di parole di chiesa"
  },
- "gm": "I Purificatori hanno qui il quartier generale e la scuola degli inquisitori. La Faida: odiano Aprutium e stanno finanziando in segreto Casa Impalox a Teramum per instaurare una teocrazia anche nel Ducato; odiano Artefracta per la magia; considerano il Latium «troppo morbido». La paranoia è forza e debolezza: gli agenti celamanti si infiltrano facilmente tra chi denuncia eretici per tornaconto. Segreto: i Purificatori più estremi perseguono senza saperlo la «Perfezione Statica» dei Tessitori. Mito del Miracolo della Luce: un Arcimandrita che incenerì un'orda Brak «con la sola fede» — probabilmente un artefatto solare dimenticato.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· I [[Purificatori]] hanno qui il quartier generale e la scuola degli inquisitori. Casa Orivex dà alla Chiesa l’Alto Custode e almeno due dei tre Cardinali Supremi.\n· Finanziano in segreto Casa Impalox a Teramum, per fare del Ducato una teocrazia.\n· La loro paranoia è la loro debolezza: gli agenti della Ragnatela entrano facilmente tra chi denuncia eretici per interesse.\n· I Purificatori più estremi vogliono un mondo immobile e silenzioso, senza peccato e senza cambiamento. Senza saperlo, vogliono la stessa cosa del Senza Nome.\n· Il mito del [[Miracolo della Luce]]: un Arcimandrita che nella guerra bruciò un’orda Brak «con la sola fede». Probabilmente un oggetto solare dimenticato, forse ancora in qualche monastero."
+  },
+  {
+   "t": "Correzione",
+   "txt": "Nei vecchi documenti questa provincia stava «a sud del Latium» e la voce La stirpe di Aurax parlava di «colline aride del sud». Secondo la voce del Ducato, a nord di Aprutium ci sono le Marche Picenorum: il Luminor Meridionale sta lì, tra la Terpuria, il Luminor Settentrionale e Aprutium. Corretta anche La stirpe di Aurax."
+  }
+ ],
  "parent": "impero-aureo",
- "group": "Le dieci province dell'Impero",
+ "group": "Le dieci province",
  "livello": "provincia",
  "id": "prov-luminor-meridionale",
  "title": "Il Luminor Meridionale",
- "sub": "La Provincia Sacra · la teocrazia",
- "pub": "«La fiamma purifica. Sempre.» Colline aride a sud del Latium, uliveti e vigneti sacri, monasteri e santuari su ogni altura, strade sorvegliate dai templari. Qui la Chiesa della Fiamma Solare ha il cuore dogmatico: cinque preghiere al giorno obbligatorie, libri non approvati bruciati, teatro proibito, forestieri guardati con sospetto. Governa il Legato Cardinale Tharion Morvex, che è anche il Cardinale dell'Inquisizione: un uomo magro e pallido che non grida mai, perché non ne ha bisogno. È la provincia da cui parte la caccia ai maghi, e da cui viene guardata con odio la tolleranza di Aprutium per i culti antichi."
+ "sub": "La provincia della Chiesa, appena a nord di Aprutium",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Appena oltre il fiume Truntum, a nord di Aprutium, cominciano le colline del Luminor Meridionale: uliveti e vigneti sacri, un monastero o un santuario su ogni altura, strade sorvegliate dai templari. Le colline più vicine al Ducato si chiamano Marche Picenorum. Qui la Chiesa della Fiamma Solare ha il suo cuore più duro."
+  },
+  {
+   "t": "I. La fede più antica e più dura",
+   "txt": "Su queste colline vivevano eremiti e veggenti che pregavano il Sole da prima della cometa. Quando Aurax arrivò, videro in lui la risposta alle loro preghiere e furono i primi a predicarlo come mandato dal cielo. Qui sorsero i primi templi della Fiamma. I loro eredi sono diventati la Chiesa più dura dell’Impero."
+  },
+  {
+   "t": "II. Come si vive",
+   "txt": "Cinque preghiere al giorno, obbligatorie. I libri non approvati si bruciano. Il teatro è proibito, la musica è solo sacra, i forestieri sono guardati con sospetto. Governa il [[Legato Cardinale Tharion Morvex]], che è anche Cardinale dell’Inquisizione: un uomo magro e pallido che non grida mai, perché non ne ha bisogno."
+  },
+  {
+   "t": "III. Vicini e nemici",
+   "txt": "Da qui parte la caccia ai maghi e agli eretici di tutto l’Impero. Il Luminor Meridionale odia Aprutium per i suoi culti antichi, odia Artefracta per la sua magia, e considera Solaria troppo morbida."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La fiamma purifica. Sempre.»",
+  "cite": "Motto dei Purificatori"
+ },
+ "ordine": 8,
+ "blocchi": true
 }

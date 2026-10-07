@@ -7,28 +7,56 @@
   "prov-terpuria",
   "prov-luminor-settentrionale"
  ],
- "tag": [
-  "Impero Aureo",
-  "Provincia"
- ],
  "img": "Mondo — Il Latium.png",
  "mappa": null,
  "colore": "#C9A24A",
  "scheda": {
-  "Capitale": "Solaria (Solaria Vetus), ~400.000 anime, sui sette colli",
-  "Governo": "Burocrazia senatoria — Custode Reggente Varen Senviron",
-  "Popolazione": "~5 milioni",
-  "Economia": "Burocrazia, finanza, tassazione: produce leggi e debiti",
-  "Dialetto": "Solanthino classico, arcaico e pieno di formule legali",
-  "Corrisponde a": "Roma e il Lazio",
-  "Nome imperiale antico": "Solanthis"
+  "Capitale": "Solaria, sui sette colli: circa quattrocentomila abitanti",
+  "Chi comanda": "Il Custode Reggente Varen Senviron, con il Senato Urbano",
+  "Popolazione": "Circa cinque milioni",
+  "Vive di": "Burocrazia, tasse, finanza: produce leggi e debiti",
+  "Esercito": "La Terza Falange degli Scudi d’Oro e la Dodicesima del Trono",
+  "Dialetto": "Il Solanthino classico, pieno di formule di legge"
  },
- "gm": "Il Custode Reggente Varen Senviron non vuole il Trono: vuole essere indispensabile a chiunque lo occupi. Il Senato Urbano si considera superiore a tutti. Gilda della Pergamena e del Sigillo: nulla è legale senza il loro timbro. Minacce: corruzione, assassinio politico come carriera, sette eretiche nei sotterranei, spie celamanti travestite da diplomatici e artisti, e il debito schiacciante verso le banche di Luminor che prima o poi farà crollare tutto.\n\nMito: la spada Solvex la Radiosa di Aurax sarebbe in una cripta sotto il Palazzo Imperiale e brillerà solo quando un vero Imperatore la impugnerà. Per la campagna avanzata: il viaggio a Solaria per reclamare il Trono.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· [[Varen Senviron]] non vuole il trono: vuole essere indispensabile a chiunque ci si sieda.\n· Pericoli: corruzione, l’assassinio come modo di fare carriera, sette nei sotterranei, spie della Ragnatela travestite da diplomatici e artisti, e il debito che prima o poi farà crollare tutto.\n· Si dice che la spada di Aurax, [[Solvex la Radiosa]], sia in una cripta sotto il Palazzo Imperiale, e che brillerà solo nelle mani di un vero Imperatore."
+  },
+  {
+   "t": "Per la campagna",
+   "txt": "Il viaggio a Solaria, per reclamare il trono, è l’arco finale naturale della storia di Silvanus."
+  }
+ ],
  "parent": "impero-aureo",
- "group": "Le dieci province dell'Impero",
+ "group": "Le dieci province",
  "livello": "provincia",
  "id": "prov-latium",
  "title": "Il Latium",
- "sub": "Il Cuore Vuoto · la provincia della capitale",
- "pub": "«Tutte le strade portano a Solaria — e ognuna ha un pedaggio.» Il cuore geografico e politico dell'Impero: colline morbide, pianure fertili, il grande fiume Aurivena navigabile fino alla capitale sui sette colli sacri. Solaria fu la città più grande e magnifica del continente; oggi conta un terzo degli abitanti di un tempo, le sue strade di marmo sono screpolate, gli acquedotti perdono, i senatori si aggirano come fantasmi in palazzi troppo grandi per loro.\n\nIl Latium non produce nulla di fisico. Produce leggi, editti, tasse e debiti: tutto il denaro dell'Impero passa per Solaria e Solaria trattiene la sua parte, ma la parte non basta più. È la sede dell'Alto Custode della Fiamma, del Trono Solare vuoto e del Concilio dei Reggenti che non elegge nessuno da dodici anni. Paradossalmente, proprio qui la fede è più tiepida: a Solaria la religione è politica, non devozione."
+ "sub": "La provincia della capitale, il cuore vuoto dell’Impero",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il Latium è il cuore dell’Impero: colline morbide, pianure fertili e il grande fiume Aurivena, navigabile fino alla capitale. Qui cadde la cometa di Aurax, e sui sette colli intorno al cratere sorse Solaria. Un tempo era la città più grande di Ea, con un milione di abitanti. Oggi ne ha meno della metà, le sue strade di marmo sono screpolate, gli acquedotti perdono, e i senatori camminano come fantasmi in palazzi troppo grandi per loro."
+  },
+  {
+   "t": "I. Che cosa produce",
+   "txt": "Niente che si possa toccare. Il Latium produce leggi, editti, tasse e debiti. Tutto il denaro dell’Impero passa per Solaria, e Solaria ne trattiene una parte; ma la parte non basta più, e la capitale deve alle banche di Luminor una somma che nessuno osa dire ad alta voce."
+  },
+  {
+   "t": "II. Chi comanda",
+   "txt": "Amministra la provincia il [[Custode Reggente Varen Senviron]], un funzionario grigio e paziente. La città la governa il [[Senato Urbano]], un’assemblea di patrizi convinti di essere superiori a tutti. A Solaria siedono anche l’Alto Custode della Fiamma, il Concilio dei Reggenti e la Gilda della Pergamena e del Sigillo. E c’è il Trono Solare, vuoto."
+  },
+  {
+   "t": "III. La città",
+   "txt": "Solaria è piena di ambasciate, di spie e di adulatori. La vita gira intorno a banchetti, intrighi e matrimoni combinati. L’arte è raffinata e senza vita, la letteratura è propaganda, il teatro è politica in costume. E, cosa strana, proprio qui la fede è più tiepida: a Solaria la religione è un mestiere.\n\nUn’ala del Palazzo Imperiale è ancora annerita dall’incendio di vent’anni fa. Non l’ha mai ricostruita nessuno."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Tutte le strade portano a Solaria. E ognuna ha un pedaggio.»",
+  "cite": "Detto dei mercanti"
+ },
+ "ordine": 2,
+ "blocchi": true
 }

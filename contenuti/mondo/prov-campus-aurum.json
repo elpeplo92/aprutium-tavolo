@@ -7,28 +7,51 @@
   "prov-vesperia",
   "prov-luminor-meridionale"
  ],
- "tag": [
-  "Impero Aureo",
-  "Provincia"
- ],
  "img": "Mondo — Campus Aurum.png",
  "mappa": null,
  "colore": "#7B4F8E",
  "scheda": {
-  "Governo": "Senato ereditario — Primo Senatore Lorendis Solvirax III",
-  "Popolazione": "~3 milioni",
-  "Economia": "Lusso: cavalli, profumi, vino, olio, opere d'arte, «educazione» dei figli dei nobili",
-  "Casata dominante": "Casa Solvirax, i Figli del Sole",
-  "Dialetto": "Senatorio, elegante e prolisso; parlarlo male è un insulto",
-  "Corrisponde a": "Campania e Napoli",
-  "Nome imperiale antico": "Eldamere"
+  "Chi comanda": "Il Primo Senatore Lorendis Solvirax III, con il Senato ereditario",
+  "Popolazione": "Circa tre milioni",
+  "Casata": "Solvirax, i Figli del Sole",
+  "Vive di": "Lusso: cavalli, profumi, vino, olio, arte; e l’educazione dei figli dei nobili",
+  "Dialetto": "Il Senatorio, elegante e lunghissimo: parlarlo male è un insulto"
  },
- "gm": "Lorendis Solvirax III, settant'anni, sempre in bianco e viola, colto e spietato sotto la gentilezza, convinto del proprio diritto divino al Trono. I Restauratori della Chiesa li appoggiano. Parassiti, e tutti lo sanno: ma detengono gli ostaggi diplomatici. Bersaglio perfetto per la sovversione celamante, che entra come artisti, tutori, consorti e consiglieri.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· I Solvirax appoggiano i moderati della Chiesa, i «Restauratori».\n· Tutti sanno che sono parassiti, ma tengono gli ostaggi, e questo li rende intoccabili.\n· Sono il bersaglio perfetto per Sylva Noctis, che non entra qui con i soldati ma come artisti, maestri, mogli e consiglieri.\n· Se Silvanus si rivela, Lorendis è il primo a perdere tutto: il sangue di Aurax batte qualunque discendenza dai suoi capitani."
+  }
+ ],
  "parent": "impero-aureo",
- "group": "Le dieci province dell'Impero",
+ "group": "Le dieci province",
  "livello": "provincia",
  "id": "prov-campus-aurum",
  "title": "Campus Aurum",
- "sub": "Il Giardino dei Piaceri · la vecchia nobiltà",
- "pub": "«Noi eravamo civili quando voi mangiavate ghiande.» La fertile pianura meridionale affacciata sul golfo più grande dell'Impero: agrumeti, frutteti, allevamenti di cavalli pregiati, città che sono gioielli costruiti su rovine dell'Età dei Miti. L'arte è sublime, la cucina la migliore dell'Impero, e tutto è permeato di arroganza: qui si considera barbarica ogni altra provincia. Casa Solvirax, discendente — dice — dai compagni di Aurax, produce ogni generazione un candidato al Trono che ogni generazione viene sconfitto. I figli delle famiglie nobili di tutto l'Impero vengono mandati qui a studiare: ed è anche un modo per tenerli in ostaggio."
+ "sub": "La provincia della vecchia nobiltà e del lusso",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "A sud del Latium, una pianura fertile si affaccia sul golfo più grande dell’Impero: agrumeti, frutteti, allevamenti di cavalli, città che sono gioielli costruiti sulle rovine dell’Età dei Miti. L’arte è sublime e la cucina la migliore dell’Impero. E tutto è impregnato di arroganza: qui ogni altra provincia è barbara."
+  },
+  {
+   "t": "I. Il banchetto di Aurax",
+   "txt": "Campus Aurum era già ricca e colta quando arrivò Aurax, e non aveva voglia di inchinarsi a un uomo venuto dal cielo. Aurax la conquistò con un banchetto: sposò i suoi capitani più fedeli alle figlie delle grandi famiglie, e le famiglie entrarono nell’Impero dalla porta principale. Da quei capitani dice di discendere [[Casa Solvirax]]."
+  },
+  {
+   "t": "II. Chi comanda",
+   "txt": "Il [[Primo Senatore Lorendis Solvirax III]], settant’anni, sempre vestito di bianco e viola, colto, affascinante e spietato. Casa Solvirax ha un candidato al trono a ogni generazione, e a ogni generazione perde. Lorendis è convinto che il trono spetti alla sua famiglia per diritto divino."
+  },
+  {
+   "t": "III. Gli ostaggi",
+   "txt": "I figli delle famiglie nobili di tutto l’Impero vengono mandati a Campus Aurum a studiare. È un onore. Ed è anche un modo per tenerli in ostaggio."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Noi eravamo civili quando voi mangiavate ghiande.»",
+  "cite": "Detto di Campus Aurum"
+ },
+ "ordine": 9,
+ "blocchi": true
 }

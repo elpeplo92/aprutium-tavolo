@@ -7,27 +7,55 @@
   "prov-vesperia",
   "repubblica-sidepondia"
  ],
- "tag": [
-  "Impero Aureo",
-  "Provincia"
- ],
  "img": "Mondo — Le Insulae Auree.png",
  "mappa": null,
  "colore": "#2E6E5E",
  "scheda": {
-  "Governo": "Protettorato remoto — Governatore Imperiale Aldric Nerion (nominale); di fatto il Consiglio dei Capitani",
-  "Popolazione": "~1,5 milioni, un crogiolo di ogni razza",
-  "Economia": "Ufficialmente miniere, perle, porpora; realmente pirateria e contrabbando",
-  "Dialetto": "Ashkari, un miscuglio di tutte le lingue con parole marine uniche",
-  "Corrisponde a": "La Sardegna",
-  "Nome imperiale antico": "Isole di Ashkarn"
+  "Chi comanda": "Sulla carta un Governatore Imperiale; davvero, il Consiglio dei Capitani",
+  "Popolazione": "Circa un milione e mezzo, di ogni popolo",
+  "Vive di": "Ufficialmente miniere, perle e porpora; in pratica pirateria e contrabbando",
+  "Fede": "Nerio e il mare; la Fiamma quasi non c’è",
+  "Dialetto": "L’Ashkari, un miscuglio di tutte le lingue, con parole di mare tutte sue"
  },
- "gm": "I Naviganti Grigi di Julia Nova hanno avamposti sicuri qui. Minacce: conflitti tra i Signori del Mare, mostri abissali, e la posizione perfetta per uno sbarco segreto. Miti di civiltà pre-imperiali dalle torri ciclopiche; i frammenti di Noxtua caddero qui con violenza, e le grotte marine sono «infestate» dagli echi della luna morta.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· I Naviganti Grigi hanno qui porti sicuri.\n· Pericoli: guerre tra Signori del Mare, mostri degli abissi, e la posizione perfetta per uno sbarco segreto di Sylva Noctis.\n· Rovine di torri di pietre giganti, più vecchie dell’Impero. I frammenti di Noxtua caddero qui con violenza, e le grotte marine sono piene degli echi della luna morta.\n· Nei vecchi documenti il Governatore si chiamava Aldric Nerion: il nome è stato cambiato, perché Aldric è il principe della guerra. Ora è Ademaro Nerion."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se le coste tolte ai Saladax erano quelle delle Insulae Auree o di Vesperia."
+  }
+ ],
  "parent": "impero-aureo",
- "group": "Le dieci province dell'Impero",
+ "group": "Le dieci province",
  "livello": "provincia",
  "id": "prov-insulae-auree",
  "title": "Le Insulae Auree",
- "sub": "L'Arcipelago Ribelle · i Signori del Mare",
- "pub": "«L'Impero dice che le isole sono sue. Le isole non sono d'accordo.» Due grandi isole e un arcipelago al largo delle coste meridionali e occidentali: montagne aspre, coste frastagliate, grotte marine, miniere nascoste. Il Governatore Imperiale firma documenti che nessuno legge nel suo palazzo dorato; il potere vero è del Consiglio dei Capitani, i Signori del Mare che tengono una pace armata tra i clan pirata. Esiliati imperiali, nativi dalla pelle bronzea, mezzelfi reietti, nani fuggitivi: qui il rispetto si guadagna con la forza e l'astuzia, non col lignaggio. La Fiamma Solare è quasi assente; i marinai pregano il mare."
+ "sub": "Le isole dei Signori del Mare, mai davvero conquistate",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Due grandi isole e un arcipelago al largo delle coste di sud-ovest: montagne aspre, coste frastagliate, grotte marine, miniere nascoste. Aurax mandò due flotte a conquistarle. La prima affondò nelle tempeste, la seconda trovò porti vuoti e clan spariti nelle grotte. Alla fine si accontentò di un forziere d’oro all’anno. L’Impero dice che le isole sono sue da allora."
+  },
+  {
+   "t": "I. Chi comanda",
+   "txt": "Il [[Governatore Imperiale]] firma documenti che nessuno legge, chiuso nel suo palazzo dorato. Il potere vero è del [[Consiglio dei Capitani]], i Signori del Mare, che tengono una pace armata tra i clan di pirati. Ogni anno un capitano porta ancora a Solaria il forziere d’oro. Ogni anno è un po’ più piccolo."
+  },
+  {
+   "t": "II. Chi ci vive",
+   "txt": "Esuli dell’Impero, isolani dalla pelle bronzea, mezzelfi cacciati da altrove, nani in fuga, halfling in cerca di avventura. Qui il rispetto si guadagna con la forza e con l’astuzia, non con il sangue."
+  },
+  {
+   "t": "III. Vicini e nemici",
+   "txt": "Con Vesperia, una lotta per le rotte. Con Sidepondia, odio giurato. Con i Naviganti Grigi di Julia Nova, ottimi affari."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«L’Impero dice che le isole sono sue. Le isole non sono d’accordo.»",
+  "cite": "Detto delle isole"
+ },
+ "ordine": 11,
+ "blocchi": true
 }

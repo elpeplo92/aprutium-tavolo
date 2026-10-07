@@ -6,26 +6,61 @@
   "impero-aureo",
   "ducato-aprutium"
  ],
- "tag": [
-  "Impero Aureo",
-  "Provincia"
- ],
  "img": "Mondo — Aprutium.png",
  "mappa": null,
  "colore": "#8A7A6A",
  "scheda": {
-  "Capitale": "Teramum",
-  "Governo": "Ducato — Duca vacante, Consiglio Reggente delle Otto Casate",
-  "Economia": "La Pietra, la Pecora e il Sale",
-  "Dialetto": "Pretuziano Volgare, aspro e musicale",
-  "Corrisponde a": "L'Abruzzo teramano"
+  "Capitale": "Teramum, circa cinquantacinquemila abitanti",
+  "Chi comanda": "Un Duca, ma il seggio è vuoto da due anni: governa il Consiglio Reggente delle Otto Casate",
+  "Popolazione": "Circa un milione e mezzo",
+  "Vive di": "La Pietra, la Pecora e il Sale: montagne, colline e mare",
+  "Confini": "A nord il fiume Truntum e le Marche Picenorum; a sud i Calanchi; a est il Mare Adriaticum; a ovest il Gigante Dormiente",
+  "Dialetto": "Il Pretuziano volgare, aspro e musicale"
  },
- "gm": "Scheda di raccordo: il dettaglio sta in «Il Ducato d'Aprutium» e nelle contee. Nel contesto imperiale: l'epicentro della crisi — infiltrazione celamante, Forgiati, conflitto tra Fiamma e culti della terra. Terpuria sta attuando un embargo del grano non dichiarato contro Aprutium e Laguras.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Aprutium è il centro della crisi dell’Impero: infiltrazione dei Drukarri, Forgiati, scontro tra la Fiamma e i culti della terra e delle lune. Nella Guerra delle Due Lune fu la sede principale dei Custodi del Ciclo, e per questo custodiva quattro Sigilli.\n\nIl Luminor Meridionale finanzia in segreto Casa Impalox a Teramum, per fare anche del Ducato una provincia della Chiesa."
+  },
+  {
+   "t": "Due versioni del patto",
+   "txt": "La voce La stirpe di Aurax parla di un patto «ai piedi del Gigante Dormiente» con una condizione sola, la libertà di culto; la voce del Ducato parla del «Patto di Teramum», con le stirpi riconosciute in cambio della Fede Solare. Qui le due versioni sono unite in un solo patto. Va tenuto uguale anche nella sezione del Ducato."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Quanti abitanti ha il Ducato."
+  }
+ ],
  "parent": "impero-aureo",
- "group": "Le dieci province dell'Impero",
+ "group": "Le dieci province",
  "livello": "provincia",
  "id": "prov-aprutium",
  "title": "Aprutium",
- "sub": "Il Gigante Solitario · casa vostra",
- "pub": "«La montagna è dura, ma la testa di un aprutiano è più dura.» Sulla costa orientale, stretto tra le Vette Eterne e il Mare d'Oriente. Un territorio aspro e fiero dove le montagne precipitano verso una costa frastagliata, dominato dal massiccio del Gigante Dormiente. È la vostra terra. Per il Ducato — le contee, le città, le Casate, le Gilde — c'è la sezione dedicata di questo atlante."
+ "sub": "Il Ducato, casa vostra, visto dal resto dell’Impero",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Sulla costa orientale dell’Impero, stretto tra il Gigante Dormiente e il Mare Adriaticum, c’è un ducato più antico dell’Impero stesso. Prima si chiamava Pretutia, la terra dei Pretuziani: pastori, guerrieri e sciamani che veneravano il Gigante e portavano il lupo come simbolo. È casa vostra. Questa voce dice che cosa è Aprutium per il resto dell’Impero; il Ducato, le contee, le città e le Casate hanno la loro sezione."
+  },
+  {
+   "t": "I. Il patto con Aurax",
+   "txt": "L’Impero non vinse i Pretuziani: li fece entrare con un patto. Aurax salì a piedi sulle Vette Eterne, e ai piedi del Gigante Dormiente strinse con le tribù il [[Patto di Teramum]]. L’Impero riconobbe le loro stirpi e promise che nessun re sarebbe mai sceso a dire loro chi pregare; i Pretuziani accettarono il Trono Solare, e nelle città la Fiamma. Per questo nello stemma del Ducato il lupo guarda in alto e l’aquila guarda in basso: un patto, non una sottomissione. Per questo in Aprutium i culti antichi sono sopravvissuti. E per questo la Chiesa non ha mai amato il Ducato."
+  },
+  {
+   "t": "II. Aprutium nell’Impero",
+   "txt": "Per Solaria, Aprutium è una provincia lontana, testarda e povera di grano, a settimane di strada dalla capitale. Ma da qualche anno è diventata il posto dove succede tutto:\n\n· il Duca è morto e le Otto Casate di Teramum non ne hanno eletto un altro;\n· a Julia Nova siede il [[Cardinale Virellius Sanctorus]], Inquisitore Straordinario, uno dei tre Cardinali Supremi dell’Impero;\n· il grano della Terpuria arriva tardi e caro;\n· la Chiesa del Luminor Meridionale, appena oltre il confine nord, guarda con odio la tolleranza del Ducato per i culti antichi;\n· e da Julia Nova è partita una Crociata che marcia verso Teramum."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La montagna è dura, ma la testa di un aprutiano è più dura.»",
+  "cite": "Detto dell’Impero"
+ },
+ "ordine": 7,
+ "blocchi": true,
+ "raccordo": {
+  "sez": "ducato",
+  "id": "ducato-aprutium",
+  "testo": "Il Ducato d’Aprutium e le sue Contee"
+ }
 }

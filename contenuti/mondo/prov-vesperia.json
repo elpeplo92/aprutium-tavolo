@@ -9,30 +9,56 @@
   "prov-aprutium",
   "repubblica-sidepondia"
  ],
- "tag": [
-  "Impero Aureo",
-  "Provincia"
- ],
  "img": "Mondo — Vesperia.png",
  "mappa": null,
  "colore": "#B5392C",
  "scheda": {
-  "Governo": "Regno Giurato — Re Thessan IV Drakon, monarchia semi-indipendente",
-  "Popolazione": "~2,5 milioni",
-  "Economia": "Commercio marittimo con sud e ovest, olio, agrumi, spezie; esplorazione",
-  "Forza": "La Flotta Reale (40+ navi) e la Quinta Falange del Drago (~6.000)",
-  "Casata dominante": "Casa Drakon, i Signori delle Tempeste",
-  "Istituzione": "La Gilda della Vela e della Stella",
-  "Dialetto": "Tirsenno melodico, cantato",
-  "Corrisponde a": "Puglia e Sicilia",
-  "Nome imperiale antico": "Thyrsenn"
+  "Chi comanda": "Il Re giurato Thessan IV, di Casa Vespri",
+  "Popolazione": "Circa due milioni e mezzo",
+  "Casata": "Vespri, i Signori del Tramonto",
+  "Vive di": "Commercio per mare verso il sud e l’ovest, olio, agrumi, spezie, esplorazione",
+  "Esercito": "La Flotta Reale (più di quaranta navi) e la Quinta Falange del Drago (circa 6.000)",
+  "Dialetto": "Il Tirsenno, melodioso e cantato"
  },
- "gm": "Thessan IV, 45 anni, bello come una statua e pericoloso come una tempesta. Le navi di Vesperia hanno raggiunto terre che il resto dell'Impero non sa esistano. Faida con le Insulae Auree per le rotte e con Luminor per il commercio. I vulcani sono considerati manifestazioni divine. Si dice che nel sud assoluto la magia sia più selvaggia, un'eco di Noxtua mai spenta. Miti di città sommerse; i tramonti più belli di Ea, dove Valerus scende a dormire.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· [[Thessan IV]]: quarantacinque anni, bello come una statua, pericoloso come una tempesta.\n· Si dice che nel profondo sud la magia sia più selvaggia: un’eco di Noxtua mai spenta. Vespera è figlia di Noxtua, e Vesperia è la provincia dove la Luna d’Ombra si ricorda meglio.\n· Miti di città sommerse, e la credenza che sia qui che Valerus scende a dormire: per questo i tramonti di Vesperia sono i più belli di Ea.\n· Nei vecchi documenti la casata si chiamava Drakon: ora è Casa Vespri. Il Maestro della Vela e della Stella è Elia Vespri."
+  }
+ ],
  "parent": "impero-aureo",
- "group": "Le dieci province dell'Impero",
+ "group": "Le dieci province",
  "livello": "provincia",
  "id": "prov-vesperia",
  "title": "Vesperia",
- "sub": "Il Regno del Tramonto · la flotta",
- "pub": "«Dove il Sole va a dormire, i Drakon vegliano.» La punta estrema della penisola sullo Stretto di Fuoco: coste rocciose, due vulcani attivi, campagne assolate, vento che porta cenere e sale. Casa Drakon regna qui da prima dell'Impero e il suo giuramento di fedeltà è poco più di una formalità: la Flotta Reale è la forza navale più potente rimasta, e il Re Thessan IV parla apertamente di secessione. Gente passionale, orgogliosa, vendicativa: le faide tra casate durano generazioni, la musica è intensa, l'amore è una guerra. Per il Ducato d'Aprutium, Vesperia è il vicino a sud, oltre i Calanchi: terra di masserie fortificate e porti rivali."
+ "sub": "Il regno giurato del sud: la flotta, i vulcani, i mercenari",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Vesperia è la punta della penisola, affacciata sullo Stretto di Fuoco: coste di roccia, due vulcani accesi, campagne bruciate dal sole, un vento che porta cenere e sale. Prende il nome da Vespera, la stella della sera, e la sua gente si vanta di discendere da lei. Casa Vespri regnava qui da prima dell’Impero, e regna ancora."
+  },
+  {
+   "t": "I. Il giuramento dei Vespri",
+   "txt": "Aurax e il re dei Vespri si affrontarono sulle rive dello Stretto di Fuoco, ma nessuno dei due voleva perdere la propria gente. Si accordarono: i Vespri avrebbero giurato fedeltà al Trono Solare e tenuto la loro corona. Quel giuramento vale ancora. Ma ogni re di Vesperia lo pronuncia un po’ più piano, e il re di oggi, [[Thessan IV]], parla apertamente di andarsene."
+  },
+  {
+   "t": "II. La flotta e i mercenari",
+   "txt": "La [[Flotta Reale]] è la più forte rimasta all’Impero, e risponde al re, non a Solaria. Le sue navi hanno raggiunto terre che il resto dell’Impero non sa nemmeno che esistono. Qui ha sede la [[Gilda della Vela e della Stella]], che custodisce le carte di navigazione. E da Vesperia vengono i mercenari più famosi della costa: i [[Vesperiani]], compagnie di soldati duri che combattono per chi paga, come quella di Lekë Muzàka."
+  },
+  {
+   "t": "III. Come si vive",
+   "txt": "Gente passionale, orgogliosa e vendicativa. Le faide tra famiglie durano generazioni, la musica è intensa, l’amore è una guerra. Per i vesperiani la gente del nord è fredda e paurosa. I vulcani sono considerati segni degli dèi."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con le Insulae Auree, una lotta per le rotte. Con Luminor, una guerra commerciale. Con Sidepondia, un’alleanza contro i pirati."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Dove il Sole va a dormire, i Vespri vegliano.»",
+  "cite": "Motto di Casa Vespri"
+ },
+ "ordine": 10,
+ "blocchi": true
 }
