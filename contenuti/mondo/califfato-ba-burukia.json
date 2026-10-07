@@ -7,30 +7,58 @@
   "emirato-neminia",
   "tribu-saladax"
  ],
- "tag": [
-  "Umani",
-  "Deserto",
-  "Mercanti"
- ],
  "img": "Mondo — Il Califfato di Ba-Burukia.png",
  "mappa": null,
  "colore": "#C8A96A",
  "scheda": {
-  "Governo": "Califfato — teocrazia mercantile",
-  "Capitale": "Qal'Buruk",
-  "Popolazione": "~2.890.000",
-  "Cultura": "Umani",
-  "Religione": "Culto della Fiamma del Deserto (variante solare)",
-  "Moneta": "Dinar d'Oro",
-  "Colore araldico": "Oro e bianco su campo sabbia",
-  "Allineamento": "Legale Neutrale"
+  "Governo": "Califfato: un sovrano che è anche capo della fede",
+  "Capitale": "Qal’Buruk",
+  "Popolazione": "Circa due milioni e novecentomila",
+  "Popolo": "Umani",
+  "Fede": "La Fiamma del Deserto, una fede del Sole; Vespera, la Signora delle Carovane",
+  "Moneta": "Il Dinar d’Oro",
+  "Colori": "Oro e bianco su campo sabbia",
+  "Nella guerra": "Con l’Alleanza. Entrò per ultimo, a pagamento"
  },
- "gm": "Il mondo arabo-fantasy di Ea: bazar, intrighi, i Mamelucchi (schiavi-guerrieri addestrati dalla nascita), cavalleria leggera velocissima. L'Emirato di Neminia è un suo vassallo ribelle; i Saladax razziano i confini.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Bazar, intrighi di corte, oggetti proibiti.\n\nEntrò nella guerra solo quando Sylva Noctis sembrava sul punto di vincere, e si fece pagare caro: l’Impero ha ancora debiti con Qal’Buruk, e il Califfo lo ricorda a ogni nuovo Reggente."
+  }
+ ],
  "id": "califfato-ba-burukia",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Califfato di Ba-Burukia",
- "sub": "Il crocevia delle spezie",
- "pub": "Un impero commerciale mascherato da teocrazia, nelle terre aride e calde del sud. Il Califfo è capo religioso e politico, ma il potere vero è nelle grandi famiglie mercantili che controllano le rotte di spezie, seta e metalli preziosi. Ba-Burukia è il crocevia tra l'occidente e le terre sconosciute a est; i bazar di Qal'Buruk sono i più grandi di Ea. Con l'Impero è un partner commerciale distante."
+ "sub": "Il crocevia delle spezie, oltre il mare del sud",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Oltre il mare, a sud-est, si stendono i deserti del Califfato. Ba-Burukia è un impero di mercanti travestito da regno della fede: il Califfo è capo religioso e politico, ma il potere vero sta nelle grandi famiglie che controllano le rotte delle spezie, della seta e dei metalli preziosi. I bazar di Qal’Buruk sono i più grandi di Ea."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Il Califfo, oggi [[Harun al-Buruk III]], regna da Qal’Buruk. Accanto a lui siedono i capi delle grandi famiglie mercantili, e nessun Califfo ha mai governato contro di loro per più di una stagione."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "È il crocevia tra l’occidente di Ea e terre lontane che nessun imperiale ha mai visto. Spezie, seta, gemme, profumi e sapere alchemico passano tutti per i suoi porti. Ogni mercante lascia una moneta al primo pozzo della pista, per la Signora delle Carovane."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Cavalleria leggera velocissima, arcieri a cavallo, e i [[Mamelucchi]], soldati schiavi addestrati alle armi fin da bambini."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero, un buon cliente lontano. L’Emirato di Neminia, a est, è formalmente suo vassallo e di fatto indipendente. Con i Ribelli di Ghostfalia, oltre il mare a nord, nessun rapporto ufficiale e molti contrabbandieri."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La fede muove le montagne. L’oro le compra.»",
+  "cite": "Il Califfo Harun al-Buruk III"
+ },
+ "ordine": 114,
+ "blocchi": true
 }

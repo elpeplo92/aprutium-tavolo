@@ -8,30 +8,50 @@
   "dominio-zord",
   "khanato-uruth"
  ],
- "tag": [
-  "Orchi",
-  "Brak",
-  "Antagonisti"
- ],
  "img": "Mondo — Le Orde Unite di Gridraz.png",
  "mappa": null,
  "colore": "#6E1010",
  "scheda": {
-  "Governo": "Orde Unite — tirannia del più forte",
-  "Capitale": "Ugrakh, un accampamento permanente",
-  "Popolazione": "~450.000",
-  "Cultura": "Orchi Brak",
-  "Religione": "Nessuna: culto della violenza",
-  "Moneta": "Nessuna: razzia",
-  "Colore araldico": "Rosso e nero",
-  "Allineamento": "Caotico Malvagio"
+  "Governo": "Comanda il più forte",
+  "Capitale": "Ugrakh, un accampamento che non si sposta mai",
+  "Popolazione": "Circa mezzo milione",
+  "Popolo": "Brak",
+  "Fede": "Nessuna: la violenza",
+  "Moneta": "Nessuna: la razzia",
+  "Colori": "Rosso e nero",
+  "Nella guerra": "Nate dalla guerra: sono gli eserciti Brak rimasti"
  },
- "gm": "Le orde classiche di D&D. Fanteria di massa senza disciplina, Berserker, troll e giganti mercenari. Sylva Noctis le manipola come ariete. Minaccia di confine o tragedia vivente: un popolo creato per morire che non sa fare altro.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Minaccia di confine o tragedia vivente: un popolo creato per morire, che non sa fare altro. Sylva Noctis le manipola come ariete. Con loro combattono troll e giganti mercenari."
+  }
+ ],
  "id": "orde-gridraz",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le orde e i popoli della guerra",
+ "group": "Le nazioni · Nate dalla guerra",
  "title": "Le Orde Unite di Gridraz",
- "sub": "Ciò che resta degli eserciti Brak",
- "pub": "Le Orde sono ciò che resta degli eserciti Brak della Guerra delle Due Lune: orchi puri, discendenti degli Strumenti forgiati dai Celamanti, ancora legati alla violenza per cui furono creati. Non hanno cultura, economia, futuro. Hanno la guerra. Quando un capo carismatico raduna un'orda, intere regioni bruciano. L'Impero le teme ai confini; Krodan le disprezza."
+ "sub": "Ciò che resta degli eserciti Brak, a nord dell’Impero",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Le Orde Unite sono ciò che resta degli eserciti Brak della Guerra delle Due Lune: orchi discendenti degli Strumenti dei Drukarri, ancora legati alla violenza per cui furono creati. Vivono in una fascia di terre a nord dell’Impero, tra Numun e i Saladax. Non hanno città, economia, leggi. Hanno la guerra."
+  },
+  {
+   "t": "I. Come vivono",
+   "txt": "Ogni tanto un capo più forte e più furbo degli altri raduna le tribù, e allora intere regioni bruciano. Poi il capo muore, le tribù si dividono, e si ricomincia."
+  },
+  {
+   "t": "II. Vicini e nemici",
+   "txt": "L’Impero le teme ai confini del nord. Numun ha costruito le sue mura per loro. I Saladax le combattono sulle rive delle paludi. Krodan le disprezza."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Quando i fuochi delle orde si vedono dalle mura, nessuno a Numun dorme.»",
+  "cite": "Detto delle valli di Numun"
+ },
+ "ordine": 125,
+ "blocchi": true
 }

@@ -7,30 +7,50 @@
   "khanato-krodan",
   "orde-gridraz"
  ],
- "tag": [
-  "Mezzorchi",
-  "Steppe",
-  "Antagonisti"
- ],
  "img": "Mondo — Il Khanato di Uruth.png",
  "mappa": null,
  "colore": "#B0561E",
  "scheda": {
-  "Governo": "Khanato — dittatura militare; il Khan si impone uccidendo il predecessore",
+  "Governo": "Dittatura militare: il Khan si impone uccidendo il precedente",
   "Capitale": "Kragri",
-  "Popolazione": "~2.790.000",
-  "Cultura": "Mezzorchi",
-  "Religione": "Culto della Forza Pura",
+  "Popolazione": "Circa due milioni e ottocentomila",
+  "Popolo": "Mezzorchi",
+  "Fede": "La Forza Pura",
   "Moneta": "Zanne e ferro",
-  "Colore araldico": "Arancione su campo marrone",
-  "Allineamento": "Caotico Malvagio"
+  "Colori": "Arancione su campo marrone",
+  "Nella guerra": "Nato dalla guerra, dai Brak sbandati dell’ovest"
  },
- "gm": "I Berserker di Uruth, potenziati da rituali alchemici che li rendono immuni al dolore. Con Krodan rivalità mortale, guerra prossima. Sylva Noctis tenta di manipolarli come ariete contro l'Impero, con successo variabile. Dilemma morale per PG mezzorchi.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Sylva Noctis prova a usare Uruth come ariete contro chiunque le serva, con successo variabile: i mezzorchi di Uruth non obbediscono a nessuno, nemmeno a chi li paga. Un buon dilemma per un personaggio mezzorco."
+  }
+ ],
  "id": "khanato-uruth",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le orde e i popoli della guerra",
+ "group": "Le nazioni · Nate dalla guerra",
  "title": "Il Khanato di Uruth",
- "sub": "Il cugino oscuro di Krodan",
- "pub": "Quel che accade quando i mezzorchi scelgono la violenza pura invece della costruzione. Più piccolo, più aggressivo e più brutale di Krodan: qui il Khan non viene eletto, si impone uccidendo il predecessore, e le tribù rifiutano le leggi di Mugrath per un solo precetto — il più forte comanda. Vivono di razzia e di tributi strappati ai villaggi di confine dell'Impero e di Krodan."
+ "sub": "I mezzorchi dell’ovest, che hanno scelto la violenza",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "All’altro capo di Ea rispetto a Krodan, a ovest, proprio sopra Sylva Noctis, vivono altri mezzorchi. Sono nati dagli stessi Brak, ma hanno scelto un’altra strada. A Uruth il Khan non si elegge: si impone uccidendo quello di prima. Le tribù rifiutano ogni legge, tranne una: il più forte comanda."
+  },
+  {
+   "t": "I. Di che cosa vive",
+   "txt": "Di razzie e di tributi strappati ai villaggi di confine. L’esercito è una massa di guerrieri furiosi senza vera disciplina, con in testa i [[Berserker di Uruth]], resi insensibili al dolore da intrugli alchemici."
+  },
+  {
+   "t": "II. Vicini e nemici",
+   "txt": "Confina con Sylva Noctis, la Satrapia Farzak e il Dominio di Zord. Con Krodan, lontanissimo, c’è un disprezzo reciproco: per Krodan, Uruth è una vergogna; per Uruth, Krodan è un popolo che si è fatto mettere il guinzaglio dalle leggi."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Il sangue chiama il sangue. E il nostro sangue non ha mai smesso di urlare.»",
+  "cite": "Il signore della guerra Grash’Nak di Kragri"
+ },
+ "ordine": 123,
+ "blocchi": true
 }

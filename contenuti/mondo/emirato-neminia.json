@@ -7,30 +7,46 @@
   "califfato-ba-burukia",
   "tribu-saladax"
  ],
- "tag": [
-  "Umani",
-  "Gemme",
-  "Città-stato"
- ],
  "img": "Mondo — L'Emirato di Neminia.png",
  "mappa": null,
  "colore": "#6FA3C7",
  "scheda": {
   "Governo": "Emirato",
   "Capitale": "Dar al-Sild",
-  "Popolazione": "~560.000",
-  "Cultura": "Umani",
-  "Religione": "Culto della Luna di Diamante (variante di Maia)",
-  "Moneta": "Il Diamante Piccolo (frammenti di gemma)",
-  "Colore araldico": "Azzurro e bianco",
-  "Allineamento": "Neutrale"
+  "Popolazione": "Circa mezzo milione",
+  "Popolo": "Umani",
+  "Fede": "La Luna di Diamante, una forma di Maia",
+  "Moneta": "Il Diamante Piccolo, schegge di gemma",
+  "Colori": "Azzurro e bianco",
+  "Nella guerra": "Con Sylva Noctis, in segreto: vendette i diamanti per i rituali dei Sigilli"
  },
- "gm": "Lusso, spie, mercanti senza scrupoli: furti, contrabbando, diplomazia esotica. Tutti vogliono i diamanti, nessuno vuole pagare il prezzo di una conquista.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Lusso, spie, mercanti senza scrupoli: furti, contrabbando, diplomazia lontana.\n\nSe servono diamanti per forgiare i Sigilli, potrebbero servire anche per purificarli. Neminia potrebbe avere, senza saperlo, una delle chiavi del ritorno di Noxtua."
+  }
+ ],
  "id": "emirato-neminia",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con Sylva Noctis",
  "title": "L'Emirato di Neminia",
- "sub": "La città dei diamanti",
- "pub": "Un piccolo gioiello costiero: una città-stato che deve la sua ricchezza ai diamanti estratti da miniere segrete nell'entroterra desertico. L'Emiro governa con eleganza e spietatezza, e mantiene la neutralità corrompendo chiunque potrebbe aggredirlo. Formalmente sottomesso a Ba-Burukia, di fatto indipendente."
+ "sub": "La città dei diamanti, all’estremo sud-est",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Neminia è un piccolo gioiello sul mare, all’estremo sud-est di Ea, accanto al Califfato. Deve tutta la sua ricchezza ai diamanti, che escono da miniere nascoste nel deserto. L’Emiro governa con eleganza e senza pietà, e resta neutrale comprando chiunque potrebbe attaccarlo."
+  },
+  {
+   "t": "I. Vicini e nemici",
+   "txt": "Formalmente è vassallo del Califfato di Ba-Burukia; di fatto fa quello che vuole. Con l’Impero, un cliente lontano. Tutti vogliono i diamanti di Neminia, nessuno vuole pagare il prezzo di conquistarla.\n\nDurante la guerra si scoprì che Neminia aveva venduto in segreto a Sylva Noctis i diamanti che servivano ai rituali dei Sigilli. L’Emiro di allora negò tutto. Quello di oggi non ne parla."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Il diamante è carbone che ha avuto pazienza.»",
+  "cite": "Proverbio di Neminia"
+ },
+ "ordine": 121,
+ "blocchi": true
 }

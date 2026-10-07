@@ -9,27 +9,219 @@
   "khanato-krodan",
   "regno-silentia"
  ],
- "tag": [
-  "Ea",
-  "Atlante",
-  "Politica"
- ],
  "img": "Nazioni del Mondo di Ea.jpg",
  "mappa": "Mappa politica delle nazioni di Ea.jpg",
  "colore": "#8A6E2E",
  "scheda": {
-  "Tipo": "mappa politica",
-  "Nazioni": "28",
-  "Popolazione stimata": "~90 milioni di anime in tutto il continente",
-  "La più grande": "Impero Aureo",
-  "La più temuta": "Eptarchia di Sylva Noctis"
+  "Che cos’è": "La mappa politica di Ea oggi, nel 1437 del Calare della Fiamma",
+  "Quante sono": "Ventotto nazioni, più le Terre Neutrali che non sono di nessuno",
+  "Le schede": "Ogni nazione ha la sua voce in questa sezione. L’Impero Aureo ha una sezione tutta sua"
  },
- "gm": "Le nazioni sono raggruppate per come le percepisce un imperiale: le potenze, i vicini dell'Impero, i regni lontani, le nazioni non umane. Lo stato «noto» vale per tutte tranne la Fratellanza Tepotlanco (il mondo non sa che esiste) e il Bellicato di Kinarg (si sa che i Duergar esistono, non dove sono). Se un PG con Storia o Religione chiede di una nazione lontana, dagli la scheda pubblica e basta: i dettagli sono nella parte master.",
+ "gm": [
+  {
+   "t": "La mappa vince",
+   "txt": "La mappa politica è l’export di Azgaar e non si cambia. Dove i vecchi documenti mettevano una nazione in un posto diverso da quello della mappa, queste voci sono state corrette sulla mappa: per esempio Silentia sta a nord e non a est, i Tetrarchi Kharadun sono all’estremo nord e non confinano con Krodan, il Khanato di Uruth sta a ovest, lontanissimo da Krodan."
+  },
+  {
+   "t": "Che cosa sanno i personaggi",
+   "txt": "Tutte le nazioni sono note per nome e per fama, tranne la Fratellanza Tepotlanco, di cui quasi nessuno sa l’esistenza, e il Bellicato di Kinarg, di cui si sa che esiste ma non dove si apra. Se un personaggio con Storia chiede di una nazione lontana, mostra la parte pubblica della sua voce."
+  }
+ ],
  "id": "nazioni-ea",
  "livello": "atlante",
  "parent": "mondo-ea",
- "group": "Atlante",
+ "group": "Le nazioni",
  "title": "Le Nazioni di Ea",
- "sub": "Mappa politica: ventotto nazioni e le Terre Neutrali",
- "pub": "Ventotto nazioni si dividono Ea, più le Terre Neutrali che non appartengono a nessuno. Le grandi potenze sono quattro: l'Impero Aureo, il gigante malato che occupa la penisola; l'Eptarchia di Sylva Noctis, il regno dei Celamanti che scatenò la Guerra delle Due Lune; il Regno degli Zar di Silentia, la potenza fredda dell'est; e il Khanato di Krodan, la nazione dei mezzorchi delle steppe.\n\nAttorno, un mosaico: repubbliche di mercanti, regni di cavalieri, nani sotto le montagne, elfi nelle foreste e nel deserto, orde orchesche, un califfato, una diarchia di halfling. Ogni nazione ha una sua scheda in questo atlante. Quelle che un aprutiano conosce davvero si contano sulle dita di una mano; delle altre sa il nome, la fama e poco più."
+ "sub": "Le ventotto nazioni del mondo, le Terre Neutrali e da che parte stettero nella guerra",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Ventotto nazioni si dividono Ea. Al centro, la Grande Penisola dell’Impero Aureo, protesa verso sud come una lama d’oro. A sud-ovest, oltre il Mare di Vespero, la terra nera di Sylva Noctis. A nord, le terre fredde di Silentia e degli elfi di Elverio; a est, le foreste di Thilmanor, i mercanti di Storestia, l’arco di montagne dei nani e le steppe sconfinate di Krodan. A sud-est, oltre il mare, i deserti del Califfato. Un aprutiano conosce davvero tre o quattro di questi nomi. Degli altri sa la fama, e poco più.\n\nQuasi tutte le nazioni di oggi furono segnate dalla Guerra delle Due Lune, due secoli fa. Alcune combatterono con l’Alleanza del Sole Spezzato, altre con Sylva Noctis. Altre ancora allora non esistevano: le ha fatte nascere la guerra stessa."
+  },
+  {
+   "t": "Con l’Alleanza del Sole Spezzato",
+   "tabella": {
+    "head": [
+     "Nazione",
+     "Dove",
+     "Popolo"
+    ],
+    "rows": [
+     [
+      "Impero Aureo",
+      "La Grande Penisola, al centro",
+      "Umani e molti altri"
+     ],
+     [
+      "Grande Regno Nanico del Martello d’Oro",
+      "L’arco di montagne dell’est",
+      "Roccaferrea"
+     ],
+     [
+      "Vicereame Elverio",
+      "Le foreste del nord",
+      "Aelvarri"
+     ],
+     [
+      "Protettorato Thilmanor",
+      "La grande foresta dell’est",
+      "Silvarri"
+     ],
+     [
+      "Regno degli Zar di Silentia",
+      "Le pianure gelate del nord",
+      "Umani"
+     ],
+     [
+      "Confederazione di Storestia",
+      "Le terre dei mercanti, a est",
+      "Umani"
+     ],
+     [
+      "Principato di Numun",
+      "Le valli a nord dell’Impero",
+      "Umani"
+     ],
+     [
+      "Gran Ducato di Altalon",
+      "Le colline dell’est, sotto Thilmanor",
+      "Umani"
+     ],
+     [
+      "Lega di Ovestalia",
+      "Le terre dell’estremo ovest",
+      "Umani"
+     ],
+     [
+      "Repubblica di Sidepondia",
+      "La costa a est dell’Impero",
+      "Umani"
+     ],
+     [
+      "Diarchia Serarion",
+      "Le Colline Verdi, sulla costa",
+      "Halfling"
+     ],
+     [
+      "Concilio Oralin",
+      "Una piccola terra accanto all’Impero",
+      "Mezzelfi"
+     ],
+     [
+      "Tetrarchi Kharadun",
+      "Le montagne dell’estremo nord",
+      "Nani"
+     ],
+     [
+      "Fratellanza Tepotlanco",
+      "Nessuno sa con certezza",
+      "Nani"
+     ],
+     [
+      "Califfato di Ba-Burukia",
+      "I deserti del sud-est, oltre il mare",
+      "Umani"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "Con Sylva Noctis",
+   "tabella": {
+    "head": [
+     "Nazione",
+     "Dove",
+     "Popolo"
+    ],
+    "rows": [
+     [
+      "Eptarchia di Sylva Noctis",
+      "Oltre il Mare di Vespero, a sud-ovest",
+      "Drukarri"
+     ],
+     [
+      "Tribù di Saladax",
+      "Le paludi salate del nord",
+      "Lucertoloidi"
+     ],
+     [
+      "Khaganate di Mog",
+      "Ai piedi dei monti dei nani, a est",
+      "Goblin"
+     ],
+     [
+      "Satrapia Farzak",
+      "L’ovest, sopra Sylva Noctis",
+      "Hobgoblin"
+     ],
+     [
+      "Uruk di Gugh",
+      "Il nord-est",
+      "Ogri"
+     ],
+     [
+      "Bellicato di Kinarg",
+      "Sotto le montagne dell’estremo est",
+      "Duergar"
+     ],
+     [
+      "Emirato di Neminia",
+      "L’estremo sud-est",
+      "Umani"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "Nate dalla guerra",
+   "tabella": {
+    "head": [
+     "Nazione",
+     "Dove",
+     "Popolo"
+    ],
+    "rows": [
+     [
+      "Khanato di Krodan",
+      "Le steppe dell’est",
+      "Mezzorchi"
+     ],
+     [
+      "Khanato di Uruth",
+      "L’ovest, sopra Sylva Noctis",
+      "Mezzorchi"
+     ],
+     [
+      "Dominio di Zord",
+      "Il nord-ovest",
+      "Brak"
+     ],
+     [
+      "Orde Unite di Gridraz",
+      "Il nord, sopra l’Impero",
+      "Brak"
+     ],
+     [
+      "Cittadella di Drukux",
+      "Tra i monti dei nani, a est",
+      "Reietti di ogni popolo"
+     ],
+     [
+      "Ribelli di Ghostfalia",
+      "Il sud-est",
+      "Umani"
+     ],
+     [
+      "Terre Neutrali",
+      "Gli spazi tra le nazioni",
+      "Chiunque"
+     ]
+    ]
+   }
+  }
+ ],
+ "ordine": 100,
+ "blocchi": true,
+ "mappaInVista": true
 }

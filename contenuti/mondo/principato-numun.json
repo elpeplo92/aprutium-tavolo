@@ -7,30 +7,58 @@
   "confederazione-storestia",
   "granducato-altalon"
  ],
- "tag": [
-  "Umani",
-  "Città",
-  "Artigiani"
- ],
  "img": "Mondo — Il Principato di Numun.png",
  "mappa": null,
  "colore": "#2E4E8E",
  "scheda": {
-  "Governo": "Principato ereditario",
+  "Governo": "Principato per nascita",
   "Capitale": "Lupifauces",
-  "Popolazione": "~5.760.000",
-  "Cultura": "Umani",
-  "Religione": "Sincretismo: culti locali e Valerus",
-  "Moneta": "Fiorino di Numun",
-  "Colore araldico": "Giallo su campo blu",
-  "Allineamento": "Neutrale"
+  "Popolazione": "Circa cinque milioni e ottocentomila",
+  "Popolo": "Umani",
+  "Fede": "Valerus e i culti locali, mescolati",
+  "Moneta": "Il Fiorino di Numun",
+  "Colori": "Giallo su campo blu",
+  "Nella guerra": "Con l’Alleanza. Le sue fucine e il suo grano sfamarono l’esercito"
  },
- "gm": "La Svizzera-Firenze di Ea: gilde artigiane, mercati, complotti mercantili. Perfetto per avventure urbane lontane dal Ducato.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Buono per avventure di città, gilde di artigiani e complotti di mercanti, lontano dal Ducato."
+  }
+ ],
  "id": "principato-numun",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Principato di Numun",
- "sub": "Il formicaio delle valli",
- "pub": "La nazione più densamente popolata fuori dall'Impero: quasi sei milioni di anime in valli strette, colline e città murate. Numun è un formicaio umano, industrioso e ambizioso, perennemente a corto di spazio. Tessuti, oreficeria, vino e una tradizione bancaria che rivaleggia con Storestia. Commercia con tutti, si allea con nessuno: neutralità armata, con una fanteria cittadina disciplinata e ottimi balestrieri. Confina con l'Impero, Storestia e Altalon."
+ "sub": "Il formicaio delle valli, a nord dell’Impero",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Numun è la nazione più affollata fuori dall’Impero: quasi sei milioni di persone in valli strette, colline e città murate, a nord della penisola. È un formicaio umano, industrioso, ambizioso e sempre a corto di spazio."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Un Principe, oggi [[Aldaran]], regna da Lupifauces, la città costruita nella gola dove una volta passavano i lupi. Ma le città murate del Principato hanno le loro gilde, i loro consigli e i loro conti, e un principe che le scontenta non dura."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Tessuti e sete, oreficeria, vino, e una tradizione di banchieri che fa concorrenza a Storestia. Gli artigiani di Numun sono famosi in tutta Ea."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Una fanteria cittadina disciplinata e ottimi balestrieri. Numun commercia con tutti, non si allea con nessuno, e difende la sua neutralità con le armi in mano."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Confina con l’Impero a sud, con Thilmanor a est, con i Saladax e con le orde di Gridraz a nord e a ovest. Le orde sono il suo incubo: ogni città di Numun ha mura alte proprio per loro."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Piccolo è il nostro territorio, ma grande è la nostra ambizione.»",
+  "cite": "Il Principe Aldaran di Lupifauces"
+ },
+ "ordine": 106,
+ "blocchi": true
 }

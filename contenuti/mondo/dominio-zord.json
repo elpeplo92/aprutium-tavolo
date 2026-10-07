@@ -7,30 +7,50 @@
   "orde-gridraz",
   "eptarchia-sylva-noctis"
  ],
- "tag": [
-  "Orchi",
-  "Schiavismo",
-  "Antagonisti"
- ],
  "img": "Mondo — Il Dominio di Zord.png",
  "mappa": null,
  "colore": "#8B1A1A",
  "scheda": {
-  "Governo": "Dominio — dittatura tribale ereditaria",
-  "Capitale": "Uzdol",
-  "Popolazione": "~1.370.000",
-  "Cultura": "Orchi",
-  "Religione": "Culto del fondatore Zord",
+  "Governo": "Dittatura ereditaria dei discendenti di Zord",
+  "Capitale": "Uzdol, una fortezza",
+  "Popolazione": "Circa un milione e quattrocentomila",
+  "Popolo": "Brak",
+  "Fede": "Il culto di Zord, il fondatore",
   "Moneta": "Ferro e schiavi",
-  "Colore araldico": "Rosso su campo nero",
-  "Allineamento": "Legale Malvagio"
+  "Colori": "Rosso su campo nero",
+  "Nella guerra": "Nato dalla guerra, dai Brak rimasti senza padroni"
  },
- "gm": "L'Isengard orchesco: più pericoloso di Gridraz perché organizzato, quindi imprevedibile. Vende schiavi in segreto anche a Sylva Noctis. Krodan lo rispetta a malincuore come nemico degno.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Più pericoloso delle orde di Gridraz proprio perché è organizzato. Vende schiavi anche a Sylva Noctis, in segreto: materia prima per la Forgiatura."
+  }
+ ],
  "id": "dominio-zord",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le orde e i popoli della guerra",
+ "group": "Le nazioni · Nate dalla guerra",
  "title": "Il Dominio di Zord",
- "sub": "Un'orda con un cervello",
- "pub": "L'unica nazione orchesca che somigli a uno stato. La fondò Zord il Nero, un Brak di intelligenza eccezionale che impose la disciplina militare alle orde; i suoi discendenti hanno creato una gerarchia rigida su un vasto territorio di terre desolate che nessun altro vuole. È il fornitore di schiavi della regione: vende prigionieri a chiunque paghi."
+ "sub": "Un’orda di Brak con un cervello",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il Dominio di Zord è l’unica nazione di Brak che somigli a uno stato. La fondò [[Zord il Nero]], un Brak di intelligenza eccezionale che riuscì a imporre la disciplina alle orde rimaste senza padroni dopo i Campi d’Argento. I suoi discendenti hanno costruito una gerarchia rigida su una lunga fascia di terre desolate, a nord-ovest, che nessun altro vuole."
+  },
+  {
+   "t": "I. Di che cosa vive",
+   "txt": "Miniere povere, razzie organizzate e schiavi: Zord è il mercato di schiavi della regione, e vende prigionieri a chiunque paghi."
+  },
+  {
+   "t": "II. Vicini e nemici",
+   "txt": "Confina con Silentia, con i Tetrarchi Kharadun, con Uruth e con Farzak, ed è in guerra con quasi tutti. L’Impero lo considera una minaccia da contenere. Krodan lo rispetta a malincuore, come un nemico degno."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La terra è nostra. L’abbiamo presa. Non la restituiremo.»",
+  "cite": "Zord il Nero, signore della guerra"
+ },
+ "ordine": 124,
+ "blocchi": true
 }

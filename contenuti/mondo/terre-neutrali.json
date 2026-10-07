@@ -6,27 +6,39 @@
   "nazioni-ea",
   "mondo-ea"
  ],
- "tag": [
-  "Wilderness",
-  "Rovine",
-  "Terre dell'Ombra"
- ],
  "img": "Mondo — Le Terre Neutrali.png",
  "mappa": null,
  "colore": "#7A6A55",
  "scheda": {
-  "Governo": "Nessuno: autogoverno locale",
-  "Popolazione": "~8.760.000",
-  "Insediamenti": "29 borghi e villaggi sparsi",
-  "Superficie": "~442.000 km²",
-  "Allineamento": "Vario"
+  "Governo": "Nessuno: ogni villaggio fa da sé",
+  "Popolazione": "Quasi nove milioni, sparsi",
+  "Insediamenti": "Ventinove borghi e villaggi conosciuti, e chissà quanti altri",
+  "Popolo": "Chiunque",
+  "Nella guerra": "Sono i campi di battaglia rimasti vuoti"
  },
- "gm": "La sandbox definitiva: wilderness, dungeon crawl, incontri casuali. Le Terre dell'Ombra sono per lo più qui: frammenti lunari, aberrazioni, magia instabile.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Terre selvagge, rovine, sotterranei, incontri casuali. Nelle Terre dell’Ombra valgono le regole della magia instabile; vicino a un Sigillo corrotto, tutto peggiora."
+  }
+ ],
  "id": "terre-neutrali",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le terre di nessuno",
+ "group": "Le nazioni · Le Terre Neutrali",
  "title": "Le Terre Neutrali",
- "sub": "Gli spazi vuoti tra le nazioni",
- "pub": "Tra le nazioni esistono gli spazi vuoti, e gli spazi vuoti non sono mai davvero vuoti. Terre di confine, zone contese, regioni devastate dalla Guerra, deserti inabitabili, foreste inesplorate: quasi nove milioni di anime vivono in comunità autonome, villaggi isolati, bande di briganti, tribù nomadi. Nessuna legge, nessuna protezione. Le rovine della Guerra delle Due Lune punteggiano il paesaggio, e si dice che qui stiano le Terre dell'Ombra, dove i frammenti di Noxtua hanno corrotto la realtà stessa."
+ "sub": "Gli spazi tra le nazioni, che non sono di nessuno",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Tra le nazioni restano gli spazi vuoti: terre di confine, zone contese, regioni distrutte dalla guerra, deserti, foreste mai esplorate. Ci vivono quasi nove milioni di persone, in villaggi che si governano da soli, bande di briganti, tribù che non si fermano mai. Nessuna legge, nessuna protezione.\n\nLe rovine della Guerra delle Due Lune sono dappertutto. E qui stanno, quasi tutte, le [[Terre dell’Ombra]]: i luoghi dove caddero i frammenti di Noxtua, e dove la realtà non obbedisce più alle sue leggi. Le foreste sono incubi, i fiumi cambiano strada, i morti non restano morti."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Tra le nazioni esistono gli spazi vuoti. Ma gli spazi vuoti non sono mai veramente vuoti.»",
+  "cite": "Un cartografo senza nome"
+ },
+ "ordine": 128,
+ "blocchi": true
 }

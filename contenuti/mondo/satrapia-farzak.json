@@ -7,30 +7,54 @@
   "khaganate-mog",
   "eptarchia-sylva-noctis"
  ],
- "tag": [
-  "Hobgoblin",
-  "Militare",
-  "Antagonisti"
- ],
  "img": "Mondo — La Satrapia Farzak.png",
  "mappa": null,
  "colore": "#5C1414",
  "scheda": {
-  "Governo": "Satrapia — dittatura militare hobgoblin",
-  "Capitale": "Ulmzois",
-  "Popolazione": "~460.000",
-  "Cultura": "Hobgoblin",
-  "Religione": "Culto della Disciplina Perfetta",
-  "Moneta": "Standard di ferro",
-  "Colore araldico": "Rosso scuro e nero",
-  "Allineamento": "Legale Malvagio"
+  "Governo": "Dittatura militare: il Satrapo",
+  "Capitale": "Ulmzois, una fortezza",
+  "Popolazione": "Circa mezzo milione",
+  "Popolo": "Hobgoblin",
+  "Fede": "La Disciplina Perfetta",
+  "Moneta": "Barre di ferro",
+  "Colori": "Rosso scuro e nero",
+  "Nella guerra": "Con Sylva Noctis, come mercenari"
  },
- "gm": "Nemici formidabili perché pensano prima di colpire. Clienti di Sylva Noctis per i servizi mercenari. Rivali tattici perfetti per i giocatori.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Nemici che pensano prima di colpire: i rivali tattici perfetti per i giocatori."
+  }
+ ],
  "id": "satrapia-farzak",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le orde e i popoli della guerra",
+ "group": "Le nazioni · Con Sylva Noctis",
  "title": "La Satrapia Farzak",
- "sub": "La disciplina è l'unica magia · gli Hobgoblin",
- "pub": "Il contrario delle orde: un'organizzazione militare perfetta governata dagli Hobgoblin, i cugini disciplinati dei Goblin. Dove i Goblin sono caos, gli Hobgoblin sono metodo: gerarchie, tattiche, una logistica che farebbe invidia alle Falangi. Vivono di industria bellica — armi, addestramento, servizi militari a pagamento. L'Impero è un nemico da rispettare, e un giorno da conquistare."
+ "sub": "La nazione degli hobgoblin, dove la disciplina è l’unica fede",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "A ovest, sopra Sylva Noctis, tra il Dominio di Zord e il Khanato di Uruth, sta la Satrapia Farzak: il contrario di un’orda. Gli hobgoblin hanno costruito uno stato che è un esercito, con gradi, tattiche e rifornimenti che farebbero invidia alle legioni imperiali."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Comanda il [[Satrapo]], oggi Gorkhul Pugno di Ferro, da una sola grande fortezza. Ogni hobgoblin ha un grado, e ogni grado ha i suoi doveri."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Di guerra: armi, addestramento e reggimenti da affittare a chi paga in ferro."
+  },
+  {
+   "t": "III. Vicini e nemici",
+   "txt": "Con Sylva Noctis, un buon cliente. Con Zord e Uruth, vicini da tenere a bada. Con l’Impero, un nemico da rispettare, e un giorno da conquistare."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La disciplina è l’unica magia di cui abbiamo bisogno.»",
+  "cite": "Il Satrapo Gorkhul Pugno di Ferro"
+ },
+ "ordine": 118,
+ "blocchi": true
 }

@@ -7,30 +7,58 @@
   "granducato-altalon",
   "impero-aureo"
  ],
- "tag": [
-  "Halfling",
-  "Colline",
-  "Pace"
- ],
  "img": "Mondo — La Diarchia Serarion.png",
  "mappa": null,
  "colore": "#6E8C3A",
  "scheda": {
-  "Governo": "Diarchia — due Re coequali, uno per gli interni e uno per gli esteri",
+  "Governo": "Diarchia: due re con gli stessi poteri",
   "Capitale": "Mathyr",
-  "Popolazione": "~1.560.000",
-  "Cultura": "Halfling",
-  "Religione": "Culto della Terra Generosa (aspetto di Valerus)",
+  "Popolazione": "Circa un milione e mezzo",
+  "Popolo": "Halfling",
+  "Fede": "La Terra Generosa: Maia, la Buona Madre, e Sementia",
   "Moneta": "Il Penny Tondo",
-  "Colore araldico": "Verde e marrone",
-  "Allineamento": "Neutrale Buono"
+  "Colori": "Verde e marrone",
+  "Nella guerra": "Con l’Alleanza, come Clan delle Colline Verdi: esploratori e sabotatori"
  },
- "gm": "La Contea. Sotto la superficie una resistenza passiva letale: l'ultimo invasore fu avvelenato lentamente dal cibo, eccellente ma sottilmente mortale. Rifugio, punto di partenza, o promemoria di cosa si difende.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Un rifugio, un punto di partenza, o un modo per ricordare ai giocatori che cosa stanno difendendo. Sotto la superficie, una resistenza silenziosa e letale."
+  }
+ ],
  "id": "diarchia-serarion",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli delle foreste e del deserto",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "La Diarchia Serarion",
- "sub": "I Clan Halfling delle Colline Verdi",
- "pub": "Colline verdi, fattorie prospere, fiumi placidi, una pace che dura da generazioni. Due Re halfling — uno per gli affari interni, uno per gli esteri — tengono un equilibrio che nessuno capisce tranne loro. Esportano cibo, birra leggendaria, formaggi, pipe e tabacco, e importano storie. Con l'Impero, amicizia cordiale. Nessuno li invade: non c'è nulla da conquistare e tutto da perdere."
+ "sub": "La terra degli halfling, sulle Colline Verdi",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Colline verdi, fattorie prospere, fiumi tranquilli e una pace che dura da generazioni. La Diarchia Serarion sta sulla costa a est dell’Impero, tra il Concilio Oralin e Sidepondia, ed è la patria degli halfling. Nessuno la invade: non c’è niente da conquistare, e tutto da perdere."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Due re halfling governano insieme: uno si occupa delle faccende di casa, l’altro di quelle di fuori. Come facciano ad andare d’accordo, lo sanno solo loro."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Cibo, prima di tutto: formaggi, birra, vino, tabacco e pipe. Gli halfling esportano cibo e importano storie."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Non ce l’hanno. Hanno occhi e orecchie dappertutto, e una pazienza infinita. L’ultimo signore che provò a invadere le Colline Verdi trovò il cibo eccellente, e morì lentamente, senza capire perché."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero, un’amicizia cordiale. Con Altalon, vicini che proteggono volentieri i confini. Con Storestia, buoni affari."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Abbiamo due re, sette pasti al giorno e nessuna fretta. Il mondo può aspettare.»",
+  "cite": "Proverbio halfling"
+ },
+ "ordine": 110,
+ "blocchi": true
 }

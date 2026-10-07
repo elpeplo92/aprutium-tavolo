@@ -8,30 +8,62 @@
   "califfato-ba-burukia",
   "emirato-neminia"
  ],
- "tag": [
-  "Elfi",
-  "Deserto",
-  "Nomadi"
- ],
  "img": "Mondo — Le Tribù di Saladax.png",
  "mappa": null,
  "colore": "#C2793D",
  "scheda": {
-  "Governo": "Federazione tribale",
+  "Governo": "Federazione di clan",
   "Capitale": "Orahora",
-  "Popolazione": "~2.860.000",
-  "Cultura": "Elfi del Deserto",
-  "Religione": "Culto di Maia nella forma di Vento e Sabbia",
-  "Moneta": "Sale e spezie (baratto)",
-  "Colore araldico": "Rosso e sabbia",
-  "Allineamento": "Caotico Neutrale"
+  "Popolazione": "Circa due milioni e novecentomila",
+  "Popolo": "Lucertoloidi, che si chiamano Saladax",
+  "Fede": "Maia, che muove le maree; l’acqua",
+  "Moneta": "Il sale",
+  "Colori": "Rosso e sabbia",
+  "Nella guerra": "Con Sylva Noctis. I Drukarri promisero loro le coste che l’Impero gli aveva tolto"
  },
- "gm": "Carovane, oasi nascoste, rovine sotto la sabbia. Con Ba-Burukia alternano commercio e guerra; con Neminia rivalità per le rotte. Legami di sangue con Thilmanor.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Nei vecchi documenti i Saladax erano «elfi del deserto» del sud. Ora sono i Lucertoloidi, e sulla mappa stanno a nord: per questo la loro storia è quella di un popolo cacciato dalle coste del sud.\n\nLe pergamene marine dei clan raccontano come l’Impero prese le coste del sud, e non coincide con le cronache imperiali. Il Collegio Arcano di Teramum ne conserva alcune."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Quali coste dell’Impero erano dei Saladax: quelle di Vesperia, delle Insulae Auree, o altre."
+  }
+ ],
  "id": "tribu-saladax",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli delle foreste e del deserto",
+ "group": "Le nazioni · Con Sylva Noctis",
  "title": "Le Tribù di Saladax",
- "sub": "Gli elfi del deserto",
- "pub": "Gli elfi che il mondo ha dimenticato: nomadi del deserto e delle savane meridionali, pelle bronzea, tatuaggi rituali che raccontano la storia del clan. Una quarta via elfica, adattata a un ambiente dove la sopravvivenza è l'unica legge. Controllano le oasi e le piste carovaniere: chi vuole attraversare il deserto paga i Saladax o muore di sete. Guerrieri su dromedari, arcieri letali, maestri dell'imboscata."
+ "sub": "La terra dei Lucertoloidi, nelle paludi salate del nord",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "A nord di Numun, tra le terre degli elfi e le orde di Gridraz, si apre una distesa di paludi salmastre, lagune interne e piane di sale che d’estate abbagliano come la neve. È la terra dei Saladax, il popolo che gli altri chiamano lucertoloidi. Non è la terra dove nacquero: è quella dove furono spinti."
+  },
+  {
+   "t": "I. Una terra presa in prestito",
+   "txt": "I Saladax nacquero sulle coste del sud, dove il primo mare di Maia lasciò le loro uova sulla sabbia. Quando l’Impero crebbe, quelle coste diventarono imperiali, e i clan furono spinti sempre più lontano, fino alle paludi del nord. Per questo nella Guerra delle Due Lune si schierarono con Sylva Noctis: i Drukarri promisero di restituire loro il mare del sud. Persero, e il mare non l’hanno mai riavuto."
+  },
+  {
+   "t": "II. Come si governa",
+   "txt": "Ogni clan ha il suo pozzo, la sua laguna e la sua memoria. I capi clan si riuniscono a [[Orahora]], una città di canne e di pietra sull’acqua, solo per le cose che riguardano tutti. L’acqua offerta a uno straniero è un patto, e rifiutarla è un’offesa."
+  },
+  {
+   "t": "III. Di che cosa vive",
+   "txt": "Sale, prima di tutto: è la loro moneta e la loro ricchezza. Poi pesce essiccato, perle di laguna, erbe di palude. Scrivono le loro storie su lunghe pergamene di alghe e conchiglie, che nessun altro sa leggere fino in fondo."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero, una vecchia ferita mai chiusa. Con Numun, scambi di sale e diffidenza. Con gli elfi di Elverio, a nord, una vicinanza antica e fredda. Con le orde di Gridraz, una guerra senza fine sulle rive delle paludi."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La sabbia ricorda ogni passo. Il vento cancella solo quelli indegni.»",
+  "cite": "Canto delle tribù di Saladax"
+ },
+ "ordine": 116,
+ "blocchi": true
 }

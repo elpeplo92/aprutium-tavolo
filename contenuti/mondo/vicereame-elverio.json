@@ -6,30 +6,62 @@
   "nazioni-ea",
   "protettorato-thilmanor"
  ],
- "tag": [
-  "Umani",
-  "Mezzelfi",
-  "Confine"
- ],
  "img": "Mondo — Il Vicereame Elverio.png",
  "mappa": null,
  "colore": "#6B7F5E",
  "scheda": {
-  "Governo": "Viceregno — un Viceré per un re che non viene mai",
+  "Governo": "Viceregno: un Viceré in nome dell’Alto Re",
   "Capitale": "Rupeventum",
-  "Popolazione": "~1.380.000",
-  "Cultura": "Umani, mezzelfi, elfi silvani di passaggio",
-  "Religione": "Mista: Valerus e culti naturali",
-  "Moneta": "Accetta tutte le valute",
-  "Colore araldico": "Verde e grigio",
-  "Allineamento": "Neutrale"
+  "Popolazione": "Circa un milione e quattrocentomila, tra elfi, umani e mezzelfi",
+  "Popolo": "Aelvarri; umani e mezzelfi nelle terre di confine",
+  "Fede": "Maia, la madre degli Aelvarri",
+  "Moneta": "Accetta tutte le valute; tra elfi, debiti e parola data",
+  "Colori": "Verde e grigio",
+  "Nella guerra": "Con l’Alleanza. Diede il grosso dell’esercito elfico"
  },
- "gm": "Punto di partenza naturale per avventure nella foresta di Thilmanor. Il Viceré Thalion: «Governiamo in nome di un re che non viene mai. È l'arrangiamento perfetto».",
+ "gm": [
+  {
+   "t": "Il re che non viene mai",
+   "txt": "L’Alto Re, segnato dalla guerra contro i propri cugini, si ritirò dopo i Campi d’Argento. Conobbe Aldric Aurex e combatté al suo fianco. Se Silvanus si fa riconoscere come erede di Aurax, l’Alto Re potrebbe uscire dalla foresta per la prima volta in duecento anni, per vedere se il sangue è lo stesso."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome dell’Alto Re, e se è ancora vivo."
+  }
+ ],
  "id": "vicereame-elverio",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Vicereame Elverio",
- "sub": "La terra di mezzo tra uomini ed elfi",
- "pub": "Un anacronismo: un territorio governato da un Viceré in nome di un sovrano straniero che non esercita alcun potere. In pratica una terra di confine semi-autonoma tra l'Impero e le foreste elfiche, un cuscinetto dove umani ed elfi convivono in una pace fragile. Legname, erbe, prodotti silvani: Elverio è l'intermediario tra il Protettorato Thilmanor e il mondo umano."
+ "sub": "La patria degli Aelvarri, governata in nome di un re che non viene mai",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "A nord, tra le terre gelate di Silentia e le paludi dei Saladax, si stendono le foreste antiche dove gli Aelvarri nacquero dalla luce di Maia. È la loro patria, e il regno più strano di Ea: un regno senza re. Dopo i Campi d’Argento l’Alto Re di Elverio si ritirò nel cuore della foresta, e non ne è più uscito. Da allora governa un Viceré, «in nome di un re che non viene mai»."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Il Viceré [[Thalion]] governa da Rupeventum, una città di torri bianche aggrappate a una rupe sopra la foresta. Decide tutto, ma ogni decisione è firmata in nome dell’Alto Re, e ogni anno, nel giorno della sua incoronazione, si apparecchia un posto vuoto a capotavola. Nessuno sa se l’Alto Re sia vivo, morto o entrato nel Lungo Crepuscolo. A Elverio nessuno lo chiede ad alta voce."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Legni che non marciscono, erbe rarissime, oggetti di magia elfica, e conoscenza: gli Aelvarri vendono consigli, traduzioni e perfino profezie, a prezzi che farebbero piangere un banchiere. Ai margini della foresta vivono umani e mezzelfi che fanno da tramite con il mondo, e senza i quali Elverio non commercerebbe con nessuno."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Piccolo e terribile. Pochi elfi, ma ognuno addestrato per secoli: spadaccini velocissimi, arcieri che non sbagliano, e maghi che possono cambiare l’esito di una battaglia da soli."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con gli elfi di Artefracta, il ramo degli Aelvarri che vive nell’Impero, c’è affetto e un po’ di sufficienza. Con Silentia, a ovest, un rispetto distante. Con i Saladax, a sud, una vecchia diffidenza. Con Sylva Noctis, l’odio che si riserva ai fratelli."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Governiamo in nome di un re che non viene mai. È l’arrangiamento perfetto.»",
+  "cite": "Il Viceré Thalion di Rupeventum"
+ },
+ "ordine": 102,
+ "blocchi": true
 }

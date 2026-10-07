@@ -18,31 +18,105 @@
   "orde-gridraz",
   "dominio-zord"
  ],
- "tag": [
-  "Celamanti",
-  "Drow",
-  "Noxtua",
-  "Antagonisti"
- ],
  "img": "Mondo — L'Eptarchia di Sylva Noctis.png",
  "mappa": null,
  "colore": "#5B2C83",
  "scheda": {
-  "Governo": "Eptarchia teocratica — sette Casate",
-  "Capitale": "Velathrys",
-  "Popolazione": "~7.950.000",
-  "Cultura": "Drow (Celamanti)",
-  "Religione": "Culto di Noxtua, la Luna Morta",
-  "Moneta": "Sigillo d'Ombra",
-  "Colore araldico": "Viola su campo nero",
-  "Allineamento": "Legale Malvagio"
+  "Governo": "Sette Grandi Casate sotto l’Alto Celamante",
+  "Capitale": "Velathrys, sotto terra",
+  "Popolazione": "Circa otto milioni, schiavi compresi",
+  "Popolo": "Drukarri; Brak e schiavi di ogni popolo",
+  "Fede": "Noxtua, pregata come una martire",
+  "Moneta": "Il Sigillo d’Ombra",
+  "Colori": "Viola su campo nero",
+  "Nella guerra": "Il cuore del nemico"
  },
- "gm": "Le Sette Casate: del Silenzio (assassini), della Luna Morta (sacerdozio, necromanzia), della Ragnatela (diplomazia e commercio proibito — la rete di agenti), del Veleno (alchimia e Forgiatura Lunare — i laboratori dei Forgiati), della Lama (esercito), del Cristallo (Sigilli Lunari, artefatti), delle Radici (schiavismo, infrastrutture). Lord Lyaras non è un folle: è un visionario con una visione orribile. Non tutti i Celamanti sono uguali: le Casate offrono fazioni diverse, e alcune non sanno di essere strumenti.\n\nL'esercito di campo fu decimato ai Campi d'Argento. L'arma vera è la Forgiatura Lunare: infiltrati perfetti, svuotati dell'identità, già in mezzo a noi. Vassalli e pedine: il Bellicato di Kinarg (Duergar), il Khaganate di Mog (mercenari goblin), le Orde di Gridraz e il Dominio di Zord.\n\nSegreto profondo: dietro i Celamanti operano i Tessitori dell'Abisso, che sussurrarono l'idea di distruggere Noxtua. Vedi il documento dell'Eptarchia per il dettaglio delle Casate.",
+ "gm": [
+  {
+   "t": "Le Sette Casate",
+   "tabella": {
+    "head": [
+     "Casata",
+     "Che cosa fa"
+    ],
+    "rows": [
+     [
+      "del Silenzio",
+      "Assassinio e spionaggio"
+     ],
+     [
+      "della Luna Morta",
+      "Sacerdozio e necromanzia"
+     ],
+     [
+      "della Ragnatela",
+      "Diplomazia e commercio proibito: la rete di agenti in tutto il continente"
+     ],
+     [
+      "del Veleno",
+      "Alchimia e Forgiatura: i laboratori dei Forgiati"
+     ],
+     [
+      "della Lama",
+      "L’esercito"
+     ],
+     [
+      "del Cristallo",
+      "Magia, artefatti e Sigilli Lunari"
+     ],
+     [
+      "delle Radici",
+      "Schiavi e opere"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "Chi c’è dietro",
+   "txt": "Dietro i Drukarri c’è Oblius, il Senza Nome: la sua voce passa dalla parte rotta della prigione e i Drukarri la chiamano la «Voce». Non tutte le Casate la ascoltano, e alcune non sanno di essere strumenti. Vedi Il Senza Nome."
+  },
+  {
+   "t": "Vassalli e pedine",
+   "txt": "Il Bellicato di Kinarg (Duergar) è un vassallo, collegato da vie sotterranee; il Khaganate di Mog fornisce mercenari; le orde di Gridraz, il Dominio di Zord e il Khanato di Uruth sono pedine da usare."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi è oggi l’Alto Celamante. Nei vecchi documenti è Lord Lyaras, «un visionario con una visione orribile»: da confermare."
+  }
+ ],
  "id": "eptarchia-sylva-noctis",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le grandi potenze",
+ "group": "Le nazioni · Con Sylva Noctis",
  "title": "L'Eptarchia di Sylva Noctis",
- "sub": "Le Marche Alemanne · il regno dei Celamanti",
- "pub": "La nazione che tutti temono. Oltre il Mare di Vespero, a occidente, un continente di foreste eterne dove la luce non entra e città scolpite nella roccia brillano di cristalli lunari. I Celamanti — gli elfi oscuri, i Drow — sono colti, raffinati e convinti che la sofferenza degli altri sia un prezzo ragionevole per il loro ordine perfetto. Furono loro, due secoli fa, a distruggere Noxtua e a scatenare la Guerra delle Due Lune; furono loro a forgiare gli Orchi Brak e a bruciare la costa di Aprutium.\n\nL'Impero li ha respinti oltre il mare, ma non li ha distrutti. Oggi non mandano più flotte: mandano spie, diplomatici, mercanti. Ogni aprutiano cresce sapendo che le Navi Rosse si sono solo allontanate, e che a Martëncëcurë, sul confine costiero, passa chi non dovrebbe passare. Nessuna nazione umana ha rapporti ufficiali con l'Eptarchia. In pratica, la sua Casata della Ragnatela ha agenti dappertutto."
+ "sub": "Il regno dei Drukarri, che gli imperiali chiamano Marche Alemanne",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "È la nazione che tutti temono. Oltre il Mare di Vespero, a sud-ovest dell’Impero, si stende una terra di foreste eterne dove la luce non entra e di città scolpite nella roccia che brillano di cristalli lunari. È Sylva Noctis, il regno dei Drukarri. Furono loro, due secoli fa, a distruggere Noxtua, a scatenare la Guerra delle Due Lune, a riempire il mondo di Brak e a bruciare la costa di Aprutium."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Sette Grandi Casate si dividono il potere, ciascuna con il suo territorio e il suo mestiere, e si combattono tra loro con intrighi, veleni e matrimoni. Sopra tutte c’è l’[[Alto Celamante]], che tiene insieme il potere della fede, della magia e del governo. Davanti al mondo, l’Eptarchia è una sola."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Alchimia, veleni, schiavi, necromanzia, e i frammenti della luna spezzata, che i Drukarri estraggono e raffinano. I loro veleni, i loro artefatti e le loro conoscenze proibite si vendono in segreto in tutto il continente."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "L’esercito di campo fu decimato ai Campi d’Argento, ma ciò che resta fa ancora paura: i [[Guerrieri Oscuri]] in armatura nera, le [[Sacerdotesse di Noxtua]], gli assassini della [[Casata del Silenzio]], e le [[Navi Rosse]] che escono dalla nebbia. E oggi c’è un’arma nuova: la [[Forgiatura]], che svuota una persona e ne fa un servo obbediente."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Nessuna nazione ha rapporti ufficiali con l’Eptarchia. L’Impero l’ha respinta oltre il mare, ma non l’ha distrutta. Oggi Sylva Noctis non manda più flotte: manda spie, ambasciatori e mercanti. Ogni aprutiano cresce sapendo che le Navi Rosse si sono solo allontanate, e che a [[Martëncëcurë]], sul confine della costa, passa chi non dovrebbe passare."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Non li chiamare malvagi. I malvagi non credono di avere ragione. I Celamanti credono di essere gli unici ad avere ragione.»",
+  "cite": "Magister Caelinus Tancredus, Collegio Arcano di Teramum"
+ },
+ "ordine": 115,
+ "blocchi": true
 }

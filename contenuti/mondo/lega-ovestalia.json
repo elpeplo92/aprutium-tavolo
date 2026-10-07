@@ -7,30 +7,62 @@
   "granducato-altalon",
   "impero-aureo"
  ],
- "tag": [
-  "Umani",
-  "Cavalieri",
-  "Valerus"
- ],
  "img": "Mondo — La Lega di Ovestalia.png",
  "mappa": null,
  "colore": "#3F7A4F",
  "scheda": {
-  "Governo": "Lega cavalleresca — Gran Maestro eletto",
+  "Governo": "Lega di ordini cavallereschi, con un Gran Maestro eletto",
   "Capitale": "Contelum",
-  "Popolazione": "~2.870.000",
-  "Cultura": "Umani",
-  "Religione": "Culto di Valerus, variante cavalleresca",
-  "Moneta": "Lo Scudo",
-  "Colore araldico": "Verde e bianco con croce dorata",
-  "Allineamento": "Legale Buono"
+  "Popolazione": "Circa due milioni e novecentomila",
+  "Popolo": "Umani; gnomi nelle valli di Vallecava",
+  "Fede": "Valerus, nella forma dei cavalieri",
+  "Moneta": "La Croce, d’argento",
+  "Colori": "Verde e bianco con croce dorata",
+  "Nella guerra": "Con l’Alleanza, come Milizie di Bretania"
  },
- "gm": "La Bretonia di Ea: cavalleria pesante devastante in carica, ma senza fanteria né flessibilità. Il morale è la loro forza. Rivalità fraterna col Gran Ducato di Altalon. I mercanti di Storestia li trovano «insopportabilmente onesti». Buoni per scorte, tornei, e per mostrare che l'onore è forza e debolezza insieme.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Buona per scorte, tornei, e per mostrare che l’onore può essere forza e debolezza insieme."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se Vallecava sta davvero dentro la Lega (proposta della voce Gli gnomi)."
+  }
+ ],
  "id": "lega-ovestalia",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "La Lega di Ovestalia",
- "sub": "Le Milizie di Bretania · la lega dei cavalieri",
- "pub": "Ciò che resta di un sogno cavalleresco: una confederazione di ordini militari che governano terre fertili e collinari a ovest dell'Impero. Ogni ordine governa il suo territorio, il Gran Maestro coordina difesa e politica estera. I cavalieri proteggono i contadini, i contadini sfamano i cavalieri, tutti pregano Valerus. Sono famosi per devozione, coraggio e una testardaggine nell'onore che li rende ammirevoli e, ogni tanto, suicidi. Combatterono la Guerra al fianco dell'Impero."
+ "sub": "La lega degli ordini cavallereschi, le Milizie di Bretania",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "All’estremo ovest di Ea, oltre il mare e lontano da tutto, c’è ciò che resta di un sogno cavalleresco. La Lega di Ovestalia è una confederazione di ordini di cavalieri che governano terre fertili e colline. I suoi cavalieri sono famosi per la fede, il coraggio e una testardaggine nell’onore che li rende ammirevoli e, ogni tanto, suicidi."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Ogni ordine governa il suo territorio. Il [[Gran Maestro]], eletto tra i capi degli ordini, si occupa della difesa comune e dei rapporti con gli altri regni. I cavalieri proteggono i contadini, i contadini sfamano i cavalieri, e tutti pregano Valerus."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Grano, olio, vino e allevamento. Nelle valli di nord-ovest della Lega c’è [[Vallecava]], la terra d’origine degli gnomi: le loro città-bottega si governano da sole, sotto la protezione dei cavalieri, e riempiono la Lega di serrature, orologi e macchine improbabili."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Quasi solo cavalleria pesante: devastante alla carica, senza fanteria né flessibilità. La sua forza è il morale: i cavalieri della Lega combattono come se morire fosse un onore."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Oltre lo stretto, a est, ha il Dominio di Zord e la Satrapia Farzak; più a sud, oltre il mare, Sylva Noctis: per questo i suoi cavalieri non hanno mai smesso di stare in sella. Con l’Impero, un’alleanza antica. Con il Gran Ducato di Altalon, una rivalità fraterna. I mercanti di Storestia trovano i cavalieri «insopportabilmente onesti»."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«L’onore si trova nel servizio. La gloria nel sacrificio. Il riposo nella tomba.»",
+  "cite": "Giuramento dei cavalieri della Lega"
+ },
+ "ordine": 108,
+ "blocchi": true
 }

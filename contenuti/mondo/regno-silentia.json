@@ -7,29 +7,62 @@
   "confederazione-storestia",
   "impero-aureo"
  ],
- "tag": [
-  "Umani",
-  "Inverno"
- ],
  "img": "Mondo — Il Regno degli Zar di Silentia.png",
  "mappa": null,
  "colore": "#3E6E9E",
  "scheda": {
-  "Governo": "Zarismo — autocrazia ereditaria",
+  "Governo": "Lo Zar, con potere assoluto e per nascita",
   "Capitale": "Lalere",
-  "Popolazione": "~7.140.000",
-  "Cultura": "Umani",
-  "Religione": "Culto degli Antenati e del Gelo Eterno",
-  "Moneta": "Rublo d'Argento",
-  "Colore araldico": "Bianco e argento su campo azzurro",
-  "Allineamento": "Legale Neutrale"
+  "Popolazione": "Circa sette milioni",
+  "Popolo": "Umani",
+  "Fede": "Gli Antenati e il Gelo Eterno",
+  "Moneta": "Il Rublo d’Argento",
+  "Colori": "Bianco e argento su campo azzurro",
+  "Nella guerra": "Con l’Alleanza, tardi e con poche truppe"
  },
- "gm": "La Russia fantasy di Ea. La corte di Lalere è un nido di intrighi; il Patriarca della Fede benedice lo Zar. Esercito: fanteria pesante in pellicce, cavalleria cosacca, gli Orsi di Guerra (élite che combatte con orsi bruni addestrati). Strategia: lasciare entrare il nemico e strangolarlo con l'inverno. I Celamanti tentarono di infiltrarsi a Lalere: lo Zar decapitò i sospetti senza processo. Può essere alleato pragmatico contro Sylva Noctis o minaccia orientale.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Silentia può essere un alleato pragmatico contro Sylva Noctis, o una minaccia per l’Impero se lo Zar decide che il trono vuoto di Solaria è un’occasione."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome dello Zar di oggi."
+  }
+ ],
  "id": "regno-silentia",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le grandi potenze",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Regno degli Zar di Silentia",
- "sub": "La potenza fredda dell'est",
- "pub": "Il più vasto regno umano fuori dall'Impero. A oriente, pianure di foreste boreali e fiumi ghiacciati, inverni di otto mesi. Lo Zar governa da Lalere, città di palazzi di ghiaccio e cattedrali di pietra bianca, con potere assoluto e una nobiltà terriera — i Boyar — che amministra in suo nome. Il popolo è duro, fatalista, devotissimo.\n\nSilentia non combatté la Guerra delle Due Lune se non con un contingente simbolico, e con l'Impero i rapporti sono gelidi come il clima: lo Zar si considera pari dell'Imperatore, non inferiore. Il commercio — pellicce, legname, ambra, ferro — passa tutto per Storestia, che ci guadagna sopra."
+ "sub": "La potenza fredda del nord",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Silentia è il regno umano più grande fuori dall’Impero. Si stende a nord-ovest della penisola, oltre il Dominio di Zord, in pianure di foreste boreali e fiumi ghiacciati dove l’inverno dura otto mesi. Il suo popolo è duro, fatalista e devotissimo. Il suo Zar si considera pari dell’Imperatore, e lo dice."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Lo Zar comanda su tutto da [[Lalere]], una città di palazzi che d’inverno sembrano di ghiaccio e di chiese di pietra bianca. Le province le amministrano i [[boiardi]], i grandi nobili della terra, in suo nome. Il Patriarca della fede lo incorona e lo benedice. La corte è un nido di intrighi, dove ogni sorriso nasconde un pugnale."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Pellicce, le più belle di Ea; legname; ambra; ferro delle montagne. L’estate è troppo corta per il grano, e il grano dell’Impero è per Silentia una necessità."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Vasto e resistente: fanteria pesante coperta di pellicce, cavalleria leggera feroce, e gli [[Orsi di Guerra]], soldati scelti che combattono insieme a orsi bruni addestrati. La loro strategia preferita è lasciare entrare il nemico nelle pianure e poi farlo morire d’inverno."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero, una rivalità fredda come il clima. Con i nani di Kharadun e con gli elfi di Elverio, rispetto e scambi. Con il Dominio di Zord e le orde di Gridraz, un confine in guerra continua. Quando i Drukarri provarono a infiltrarsi a Lalere, lo Zar fece decapitare tutti i sospetti, senza processo."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«L’inverno non è una stagione. È una lezione. Chi non la impara, muore.»",
+  "cite": "Proverbio di Silentia"
+ },
+ "ordine": 104,
+ "blocchi": true
 }

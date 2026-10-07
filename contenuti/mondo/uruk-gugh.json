@@ -6,29 +6,50 @@
   "nazioni-ea",
   "satrapia-farzak"
  ],
- "tag": [
-  "Ogri",
-  "Montagne"
- ],
  "img": "Mondo — L'Uruk di Gugh.png",
  "mappa": null,
  "colore": "#7A4B2A",
  "scheda": {
-  "Governo": "Ulus — confederazione tribale ogra",
+  "Governo": "Confederazione di tribù ogre",
   "Capitale": "Chezegh",
-  "Popolazione": "~2.070.000",
-  "Cultura": "Ogri",
-  "Religione": "Animismo primitivo",
+  "Popolazione": "Circa due milioni",
+  "Popolo": "Ogri",
+  "Fede": "Spiriti degli animali e delle pietre",
   "Moneta": "Cibo e ossa",
-  "Colore araldico": "Marrone e rosso",
-  "Allineamento": "Caotico Neutrale"
+  "Colori": "Marrone e rosso",
+  "Nella guerra": "Con Sylva Noctis, comprati con il cibo"
  },
- "gm": "Forza bruta comica e terrificante. Mercenari reclutabili con la promessa di cibo abbondante. Un clan ogro che blocca una strada è un'avventura intera. «Piccolo mangiare. Grande mangiare. Tutto mangiare.»",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Forza bruta, comica e terribile. Un clan di ogri che blocca una strada è un’avventura intera."
+  }
+ ],
  "id": "uruk-gugh",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le orde e i popoli della guerra",
+ "group": "Le nazioni · Con Sylva Noctis",
  "title": "L'Uruk di Gugh",
- "sub": "La terra degli Ogri",
- "pub": "La terra degli Ogri: giganti stupidi, affamati e devastanti. Non sono malvagi nel senso comune, sono semplici: vedono il mondo in termini di cibo, territorio e minacce. I clan vagano per montagne e colline selvagge cacciando tutto ciò che si muove. I vicini li evitano; l'Impero li considera fauna pericolosa più che una nazione."
+ "sub": "La terra degli Ogri, nel nord-est",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Nel nord-est di Ea, sopra la foresta di Thilmanor e accanto alle steppe di Krodan, vivono gli Ogri. Non sono stupidi, come si dice: sono semplici. Vedono il mondo in termini di cibo, territorio e minacce, e i loro clan vagano per montagne e colline cacciando tutto quello che si muove."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Le tribù si riuniscono a [[Chezegh]] solo quando qualcuno riesce a sfamarle tutte. Chi ci riesce, comanda. Finché dura il cibo."
+  },
+  {
+   "t": "II. Vicini e nemici",
+   "txt": "Con Krodan, scaramucce di confine e qualche affare: i mezzorchi assoldano ogri come arieti viventi. L’Impero li considera bestie pericolose più che una nazione."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Piccolo mangiare. Grande mangiare. Tutto mangiare.»",
+  "cite": "Il pensiero degli ogri, riassunto"
+ },
+ "ordine": 119,
+ "blocchi": true
 }

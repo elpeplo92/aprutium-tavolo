@@ -7,29 +7,58 @@
   "lega-ovestalia",
   "principato-numun"
  ],
- "tag": [
-  "Umani",
-  "Cavalieri"
- ],
  "img": "Mondo — Il Gran Ducato di Altalon.png",
  "mappa": null,
  "colore": "#3E9C8B",
  "scheda": {
-  "Governo": "Gran Ducato ereditario",
+  "Governo": "Gran Ducato, per nascita",
   "Capitale": "Altaripa",
-  "Popolazione": "~3.150.000",
-  "Cultura": "Umani",
-  "Religione": "Culto di Valerus con tradizioni cavalleresche",
-  "Moneta": "Ducato d'Altalon",
-  "Colore araldico": "Verde acqua su campo bianco",
-  "Allineamento": "Legale Neutrale"
+  "Popolazione": "Circa tre milioni",
+  "Popolo": "Umani",
+  "Fede": "Valerus, con usanze di cavalleria",
+  "Moneta": "Il Ducato d’Altalon",
+  "Colori": "Verde acqua su campo bianco",
+  "Nella guerra": "Con l’Alleanza. La sua cavalleria pesante teneva i fianchi"
  },
- "gm": "Avventure cortesi, sfide d'onore, intrighi nobiliari classici. Il Duca Ferrante III di Altaripa: «La spada è il prolungamento del braccio».",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Avventure di corte, sfide d’onore, intrighi nobiliari classici. Un torneo ad Altaripa è un ottimo modo per far arrivare notizie da lontano."
+  }
+ ],
  "id": "granducato-altalon",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Gran Ducato di Altalon",
  "sub": "Il ducato dei tornei",
- "pub": "Una nazione cavalleresca indipendente che si considera erede delle tradizioni guerriere di prima dell'Impero. Terre fertili e collinari, guerrieri orgogliosi, vino eccellente e una nobiltà che vive per i tornei, che attirano cavalieri da tutto il continente. La sua cavalleria pesante vale quella della Lega di Ovestalia, e i due si detestano cordialmente. Con l'Impero è indipendente ma amichevole."
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Altalon si considera erede delle tradizioni guerriere di prima dell’Impero. Le sue colline fertili, a est, tra la foresta di Thilmanor e la costa, danno vino eccellente, cavalli da guerra e una nobiltà che vive per i tornei. Ogni primavera i cavalieri di mezza Ea vengono ad Altaripa a rompersi le lance, e qualche volta le ossa."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Un Gran Duca, oggi [[Ferrante III]], governa con le grandi famiglie dei cavalieri. L’onore conta più della legge, e un insulto si lava in torneo prima che in tribunale."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Agricoltura, vino, cavalli da guerra, e i tornei, che portano a Altaripa oro e visitatori da tutto il continente."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Cavalleria pesante, tra le migliori di Ea. La sua unica rivale è quella della Lega di Ovestalia, e i due paesi si detestano cordialmente."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero, indipendente ma amichevole. Con gli halfling di Serarion, vicini che Altalon protegge volentieri. Con i mercanti di Storestia, buoni affari e poca stima reciproca."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La spada è il prolungamento del braccio. Il braccio è il prolungamento della volontà.»",
+  "cite": "Il Duca Ferrante III di Altaripa"
+ },
+ "ordine": 107,
+ "blocchi": true
 }

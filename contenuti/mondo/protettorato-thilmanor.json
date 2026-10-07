@@ -8,31 +8,62 @@
   "tribu-saladax",
   "vicereame-elverio"
  ],
- "tag": [
-  "Elfi",
-  "Silvani",
-  "Foresta",
-  "Druidi"
- ],
  "img": "Mondo — Il Protettorato Thilmanor.png",
  "mappa": null,
  "colore": "#5C4A2E",
  "scheda": {
-  "Governo": "Protettorato druidico",
+  "Governo": "Protettorato dei druidi, guidato dall’Archidruidessa",
   "Capitale": "Gafranthalin",
-  "Popolazione": "~4.030.000",
-  "Cultura": "Elfi Silvani",
-  "Religione": "Culto di Maia e degli Spiriti della Foresta",
-  "Moneta": "Foglie d'Ambra (baratto rituale)",
-  "Colore araldico": "Verde e argento su campo marrone",
-  "Allineamento": "Neutrale Buono"
+  "Popolazione": "Circa quattro milioni",
+  "Popolo": "Silvarri",
+  "Fede": "Maia, Noxtua e gli spiriti della foresta",
+  "Moneta": "Foglie d’Ambra, resina solidificata, per il baratto",
+  "Colori": "Verde e argento su campo marrone",
+  "Nella guerra": "Con l’Alleanza, da alleati diffidenti"
  },
- "gm": "Athel Loren: bellissima e mortale. I Guardiani degli Alberi (treant) si svegliano solo per minacce esistenziali. Legami di sangue antico coi Saladax, gli unici elfi che accolgono. Con Sylva Noctis: la ferita ancestrale. Entrare senza invito è quasi sempre fatale.",
+ "gm": [
+  {
+   "t": "La famiglia di Silvanus",
+   "txt": "Lunavel, la madre di Silvanus, era figlia dell’Archidruidessa Silvariel. Silvanus ha sangue di Thilmanor, e forse una nonna viva a Gafranthalin."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se l’Archidruidessa di oggi è ancora Silvariel.\n· Che cosa sa Thilmanor della morte di Lunavel nell’incendio di Solaria."
+  }
+ ],
  "id": "protettorato-thilmanor",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli delle foreste e del deserto",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Protettorato Thilmanor",
- "sub": "L'ultima grande foresta · gli elfi silvani",
- "pub": "L'ultima grande foresta incontaminata di Ea, un mare di alberi millenari tra le steppe e le montagne. Gli elfi silvani non sono né gli Aelvarri luminosi di Artefracta né i Celamanti: durante lo Scisma rifiutarono entrambe le fazioni e si ritirarono nella foresta, scegliendo la terra invece del dominio. Non hanno esercito: hanno la Foresta. Chi entra senza invito si perde, viene avvelenato, disorientato da illusioni. I loro arcieri colpiscono a trecento passi e scompaiono tra le fronde. Con l'Impero: tollerato ai confini, vietato nel cuore del bosco."
+ "sub": "L’ultima grande foresta di Ea, terra dei Silvarri",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "A est dell’Impero, oltre le valli di Numun, comincia un mare di alberi millenari che non finisce più. È Thilmanor, l’ultima grande foresta di Ea, dove il tempo scorre più lento e la magia della natura è ancora viva. I Silvarri, gli elfi figli di tutte e due le lune, la abitano da prima che esistessero i regni."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Non c’è un re. Governa un consiglio di druidi, e lo guida l’[[Archidruidessa]], da Gafranthalin, una città che è un bosco e un bosco che è una città. Le decisioni si prendono sotto l’albero più vecchio, lentamente. Il Protettorato non protegge un popolo: protegge la foresta. Il popolo viene dopo, e lo sa."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Poco legno, e solo quello degli alberi che la foresta «cede»; erbe medicinali rarissime; un miele che chiude le ferite. I Silvarri non accettano monete di metallo: barattano, con le Foglie d’Ambra."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Non hanno un esercito. Hanno la foresta. Chi entra senza invito si perde, viene avvelenato dalle piante, attaccato dagli animali, ingannato dalle illusioni dei druidi. Gli arcieri dei Silvarri colpiscono a trecento passi e scompaiono tra le fronde. E quando la minaccia è davvero grande, si dice che si sveglino i [[Guardiani degli Alberi]]."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero, tollerati ai confini e respinti nel cuore del bosco. Con gli Aelvarri, parenti che vorrebbero proteggerli. Con i mercanti di Storestia, che vogliono il loro legno, una pazienza molto corta. Con Sylva Noctis, la ferita di famiglia. Thilmanor è l’unica terra di Ea dove pregare Noxtua non è una vergogna."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Non siamo i custodi del mondo. Siamo i custodi di ciò che il mondo ha dimenticato di proteggere.»",
+  "cite": "L’Archidruidessa Silvariel di Gafranthalin"
+ },
+ "ordine": 103,
+ "blocchi": true
 }

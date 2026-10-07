@@ -7,30 +7,58 @@
   "eptarchia-sylva-noctis",
   "satrapia-farzak"
  ],
- "tag": [
-  "Goblin",
-  "Sotterraneo",
-  "Antagonisti"
- ],
  "img": "Mondo — Il Khaganate di Mog.png",
  "mappa": null,
  "colore": "#4F7A3E",
  "scheda": {
-  "Governo": "Khaganato — teocrazia sciamanica",
+  "Governo": "Teocrazia di sciamani, sotto la Grande Madre Mog",
   "Capitale": "Mogghel",
-  "Popolazione": "~3.000.000",
-  "Cultura": "Goblin",
-  "Religione": "Culto dei Funghi e della Grande Madre Mog",
+  "Popolazione": "Circa tre milioni",
+  "Popolo": "Goblin",
+  "Fede": "La Grande Madre Mog e i funghi",
   "Moneta": "Funghi, veleni, metalli rubati",
-  "Colore araldico": "Verde e viola",
-  "Allineamento": "Caotico Malvagio"
+  "Colori": "Verde e viola",
+  "Nella guerra": "Con Sylva Noctis, in cerca di bottino"
  },
- "gm": "Il dungeon vivente: tunnel, trappole, funghi, goblin ovunque. La Grande Madre Mog è un mistero da esplorare. La Satrapia Farzak (Hobgoblin) li considera cugini inferiori.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Un sotterraneo vivo: gallerie, trappole, funghi, goblin dappertutto."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Che cos’è davvero la Grande Madre Mog."
+  }
+ ],
  "id": "khaganate-mog",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le orde e i popoli della guerra",
+ "group": "Le nazioni · Con Sylva Noctis",
  "title": "Il Khaganate di Mog",
- "sub": "Tre milioni di goblin",
- "pub": "L'incubo di ogni cartografo: una nazione sotterranea e di superficie che cambia confini ogni stagione, governata da una sciamana immortale — la Grande Madre Mog — che nessuno ha mai visto e di cui tutti hanno paura. Tre milioni di goblin in un territorio piccolo. Vendono funghi allucinogeni, veleni e trappole al miglior offerente, e mercenari a Sylva Noctis in cambio di armi. Tutti li considerano parassiti."
+ "sub": "Tre milioni di goblin ai piedi dei monti dei nani",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il Khaganate di Mog è l’incubo di ogni cartografo. Sta a est, ai piedi dell’arco di montagne dei nani, sopra e sotto terra, e cambia confini a ogni stagione. Tre milioni di goblin vivono ammassati in un territorio piccolo, in gallerie, grotte e villaggi di fango, sotto il governo di una sciamana che nessuno ha mai visto."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Comanda la [[Grande Madre Mog]], che i goblin dicono immortale, attraverso i suoi sciamani. Nessuno straniero l’ha mai vista. Tutti ne hanno paura, goblin compresi."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Funghi, compresi quelli che fanno vedere cose che non ci sono; veleni; trappole; e tutto quello che si può rubare. Vendono mercenari a chi paga, soprattutto a Sylva Noctis, in cambio di armi."
+  },
+  {
+   "t": "III. Vicini e nemici",
+   "txt": "Con i nani del Martello d’Oro, una guerra di frontiera continua. Con la Cittadella di Drukux, affari. Con gli hobgoblin di Farzak, lontani a ovest, un disprezzo reciproco: gli hobgoblin li considerano cugini inferiori. Tutti gli altri li considerano parassiti."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La Madre ti vede. La Madre ti ha già visto.»",
+  "cite": "Saluto dei goblin di Mog"
+ },
+ "ordine": 117,
+ "blocchi": true
 }

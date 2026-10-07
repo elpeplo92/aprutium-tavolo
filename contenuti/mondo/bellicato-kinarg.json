@@ -7,30 +7,50 @@
   "eptarchia-sylva-noctis",
   "regno-nanico"
  ],
- "tag": [
-  "Duergar",
-  "Sotterraneo",
-  "Antagonisti"
- ],
  "img": "Mondo — Il Bellicato di Kinarg.png",
  "mappa": null,
  "colore": "#5A4E4E",
  "scheda": {
-  "Governo": "Teocrazia industriale",
-  "Capitale": "Nulbinarg",
-  "Popolazione": "~273.000",
-  "Cultura": "Duergar, i Nani Grigi",
-  "Religione": "Culto dell'entità delle profondità (nome proibito)",
+  "Governo": "Teocrazia delle fonderie: i Signori delle Fornaci",
+  "Capitale": "Nulbinarg, sotto terra",
+  "Popolazione": "Circa trecentomila",
+  "Popolo": "Duergar; schiavi di ogni popolo",
+  "Fede": "Un’entità delle profondità, il cui nome è proibito",
   "Moneta": "Metallo nero e schiavi",
-  "Colore araldico": "Grigio cenere e rosso",
-  "Allineamento": "Legale Malvagio"
+  "Colori": "Grigio cenere e rosso",
+  "Nella guerra": "Con Sylva Noctis. Nacque dal patto nei tunnel"
  },
- "gm": "Il dungeon definitivo: fonderie infernali, schiavi, nani corrotti, «necromanzia meccanica», e il mistero dell'entità delle profondità. I Viali Sotterranei portano qui. Vassallo di fatto dell'Eptarchia.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il sotterraneo definitivo: fonderie, schiavi, nani corrotti, «necromanzia meccanica», e il mistero dell’entità delle profondità. È il braccio industriale di Sylva Noctis, collegato a lei dalle vecchie vie sotterranee dei nani, che attraversano tutto il continente sotto terra."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi è l’entità delle profondità (forse un Sidar Caduto minore di Oblius)."
+  }
+ ],
  "id": "bellicato-kinarg",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli della montagna",
+ "group": "Le nazioni · Con Sylva Noctis",
  "title": "Il Bellicato di Kinarg",
- "sub": "L'incubo sotto la montagna · i Duergar",
- "pub": "I nani traditori. Durante la Guerra delle Due Lune i Duergar accettarono un patto oscuro, e da allora vivono in un complesso industriale sotterraneo le cui fonderie non si spengono mai, alimentate da schiavi. Producono armi di metallo nero e armature con rune corrotte. Sono il braccio industriale di Sylva Noctis. Nessuno sa esattamente dove si aprano i loro tunnel; tutti sanno che esistono. Nel Libro dei Rancori di Magnafort la loro voce è la più lunga."
+ "sub": "Il regno dei Duergar, sotto le montagne",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Si sa che il Bellicato esiste. Non si sa dove si apra. Da qualche parte sotto l’estremo est del grande arco di montagne, i Duergar, i nani che accettarono un patto oscuro durante la guerra, hanno costruito un regno di fonderie che non si spengono mai. Lì si forgiano armi di metallo nero e armature con rune corrotte, con il lavoro degli schiavi."
+  },
+  {
+   "t": "I. Vicini e nemici",
+   "txt": "Per i nani di Magnafort, il nemico più odiato: la voce più lunga del Libro dei Rancori. Per tutti gli altri, una leggenda che nessuno vuole verificare."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La luce è una malattia. L’oscurità è la cura.»",
+  "cite": "Un Signore delle Fornaci di Nulbinarg"
+ },
+ "ordine": 120,
+ "blocchi": true
 }

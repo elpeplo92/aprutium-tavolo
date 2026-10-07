@@ -7,30 +7,58 @@
   "impero-aureo",
   "confederazione-storestia"
  ],
- "tag": [
-  "Umani",
-  "Rivolta",
-  "Fuorilegge"
- ],
  "img": "Mondo — I Ribelli di Ghostfalia.png",
  "mappa": null,
  "colore": "#8E1C1C",
  "scheda": {
-  "Governo": "Orde Unite — repubblica insurrezionale senza governo stabile",
+  "Governo": "Nessun governo stabile: consigli di rivolta e signori della guerra",
   "Capitale": "Novamensala",
-  "Popolazione": "~3.290.000",
-  "Cultura": "Umani",
-  "Religione": "Ateismo militante, culti eterogenei",
-  "Moneta": "Tutto ciò che ha valore",
-  "Colore araldico": "Rosso e nero",
-  "Allineamento": "Caotico Neutrale"
+  "Popolazione": "Circa tre milioni e trecentomila",
+  "Popolo": "Umani; fuggiaschi di ogni popolo",
+  "Fede": "Nessuna, per principio; e mille culti diversi",
+  "Moneta": "Tutto quello che ha valore",
+  "Colori": "Rosso e nero",
+  "Nella guerra": "Nata dalla guerra, dai disertori delle due parti"
  },
- "gm": "Tortuga più la Comune di Parigi. Storestia ci commercia in segreto; Sylva Noctis la alimenta per destabilizzare l'Impero. Buona per PG con un passato da dimenticare.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Sylva Noctis la alimenta per tenere l’Impero sotto pressione. Buona per personaggi con un passato da dimenticare."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se a Ghostfalia, «il buco nero di Ea», qualcuno prega il Senza Nome."
+  }
+ ],
  "id": "ribelli-ghostfalia",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Nate dalla guerra",
  "title": "I Ribelli di Ghostfalia",
- "sub": "Il buco nero di Ea",
- "pub": "Un territorio in rivolta permanente, governato da ex schiavi, disertori, eretici e rivoluzionari che hanno abbattuto il vecchio ordine senza costruirne uno nuovo. Consigli rivoluzionari nascono e si sciolgono, signori della guerra tengono una città per settimane. L'unica costante è il rifiuto di ogni autorità esterna: impero, chiesa, gilda, monarchia — tutto è nemico. È il rifugio di ogni criminale, eretico e fuggitivo del continente. L'Impero lo considera un cancro da estirpare."
+ "sub": "Una terra in rivolta permanente, nel sud-est",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Nel sud-est di Ea, tra Storestia, i goblin di Mog e il mare, c’è una terra che non ha padroni da due secoli. La fondarono i disertori della Guerra delle Due Lune, di tutte e due le parti, e poi ci arrivarono schiavi fuggiti, eretici, ribelli e banditi. Hanno abbattuto ogni ordine vecchio senza mai riuscire a costruirne uno nuovo. La chiamano «il buco nero di Ea»."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Non si governa. Consigli di rivolta nascono e si sciolgono, signori della guerra tengono una città per qualche settimana. L’unica cosa che non cambia è il rifiuto di ogni autorità esterna: imperi, chiese, gilde, re. Tutto è nemico."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Di saccheggio, contrabbando e campi coltivati per sopravvivere. È il rifugio di ogni criminale, eretico e fuggiasco del continente."
+  },
+  {
+   "t": "III. Vicini e nemici",
+   "txt": "L’Impero la considera un cancro da estirpare. Storestia ci commercia in segreto. Il Califfato, oltre il mare, ne compra il contrabbando."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Ci hanno chiamati ribelli. Ci hanno chiamati banditi. Non ci hanno mai chiamati liberi. Eppure lo siamo.»",
+  "cite": "Scritto sui muri di Novamensala"
+ },
+ "ordine": 127,
+ "blocchi": true
 }

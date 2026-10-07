@@ -7,30 +7,54 @@
   "regno-nanico",
   "tetrarchi-kharadun"
  ],
- "tag": [
-  "Nani",
-  "Monaci",
-  "Segreti"
- ],
  "img": "Mondo — La Fratellanza Tepotlanco.png",
  "mappa": null,
  "colore": "#7D7D7D",
  "scheda": {
-  "Governo": "Fratellanza — ordine monastico-militare",
-  "Capitale": "Kinzaddun",
-  "Popolazione": "~158.000",
-  "Cultura": "Nani",
-  "Religione": "Culto della Pietra Viva",
-  "Moneta": "Non commerciano",
-  "Colore araldico": "Grigio e bianco",
-  "Allineamento": "Legale Buono"
+  "Governo": "Ordine di monaci guerrieri",
+  "Capitale": "Kinzaddun, un monastero fortezza",
+  "Popolazione": "Circa centocinquantamila",
+  "Popolo": "Nani",
+  "Fede": "La Pietra Viva",
+  "Moneta": "Nessuna: non commerciano",
+  "Colori": "Grigio e bianco",
+  "Nella guerra": "Con l’Alleanza. Sigillò i tunnel sotto le montagne contro le creature delle profondità"
  },
- "gm": "Stato «segreto»: i PG non sanno che esistono finché qualcuno non gliene parla. Custodi perfetti: un Sigillo Lunare, la Prima Incudine, una profezia. Si dice custodiscano qualcosa nelle profondità. Una missione per raggiungere Kinzaddun è un'avventura intera.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Sulla mappa la Fratellanza è la striscia stretta tra Silentia, Elverio e i Saladax. I personaggi non sanno che esiste finché qualcuno non gliene parla."
+  },
+  {
+   "t": "Che cosa custodiscono",
+   "txt": "Si dice che custodiscano qualcosa nelle profondità: un Sigillo Lunare, un passaggio verso le vecchie vie dei nani, una profezia. Raggiungere Kinzaddun è un’avventura intera."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Che cosa custodisce davvero la Fratellanza."
+  }
+ ],
  "id": "fratellanza-tepotlanco",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli della montagna",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "La Fratellanza Tepotlanco",
- "sub": "Non un regno, non un clan: un giuramento",
- "pub": "Un ordine monastico nanico che ha rinunciato a ricchezza, commercio e politica per dedicarsi alla contemplazione della pietra e alla protezione di un segreto antico. Pochi, silenziosi, formidabili: ogni fratello è monaco e guerriero, addestrato a combattere nel buio e a meditare nella luce. Magnafort li considera i più puri tra i nani. Il resto del mondo li ignora, o non sa che esistano."
+ "sub": "Un ordine di monaci guerrieri nani, che custodisce un segreto",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Pochi sanno che la Fratellanza esiste, e quasi nessuno sa dove sia. Si dice che sia un ordine di nani che ha rinunciato a ricchezza, commercio e politica per contemplare la pietra e custodire qualcosa di antico. Ogni fratello è monaco e guerriero insieme: addestrato a combattere nel buio e a meditare nella luce."
+  },
+  {
+   "t": "I. Che cosa si sa",
+   "txt": "Nella Guerra delle Due Lune i fratelli scesero nei tunnel sotto le montagne e li chiusero contro le creature delle profondità. Non tutti risalirono. Da allora fanno la guardia. Magnafort li considera i più puri tra i nani. Il resto del mondo li ignora."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Non siamo un regno. Non siamo un clan. Siamo un giuramento.»",
+  "cite": "Un Maestro della Fratellanza"
+ },
+ "ordine": 113,
+ "blocchi": true
 }

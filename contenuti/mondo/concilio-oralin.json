@@ -7,29 +7,58 @@
   "prov-artefracta",
   "protettorato-thilmanor"
  ],
- "tag": [
-  "Mezzelfi",
-  "Diplomazia"
- ],
  "img": "Mondo — Il Concilio Oralin.png",
  "mappa": null,
  "colore": "#5F8A3F",
  "scheda": {
-  "Governo": "Consiglio democratico eletto da tutti i cittadini",
+  "Governo": "Consiglio eletto da tutti i cittadini",
   "Capitale": "Velmetharion",
-  "Popolazione": "~1.027.000",
-  "Cultura": "Mezzelfi",
-  "Religione": "Ecumenismo: tutte le fedi rispettate",
-  "Moneta": "La Mezza Luna (argento)",
-  "Colore araldico": "Verde e oro",
-  "Allineamento": "Neutrale Buono"
+  "Popolazione": "Circa un milione",
+  "Popolo": "Mezzelfi",
+  "Fede": "Tutte rispettate",
+  "Moneta": "La Mezza Luna, d’argento",
+  "Colori": "Verde e oro",
+  "Nella guerra": "Con l’Alleanza. I mezzelfi facevano da messaggeri tra umani ed elfi"
  },
- "gm": "Corrisponde alle «Leghe Gnomiche di Vallecava» della Guerra, con demografia cambiata nei secoli. Per PG mezzelfi e missioni diplomatiche. Artefracta li accetta con condiscendenza.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il posto della diplomazia e dell’identità a metà. Buono per missioni diplomatiche e per i Naviganti Grigi di Julia Nova, che qui hanno parenti e affari."
+  }
+ ],
  "id": "concilio-oralin",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli delle foreste e del deserto",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Concilio Oralin",
- "sub": "La patria dei mezzelfi · l'unica democrazia di Ea",
- "pub": "Un piccolo territorio dove chi non appartiene né al mondo umano né a quello elfico ha costruito una società propria. Il Consiglio è eletto da tutti i cittadini: l'unica vera democrazia di Ea. I mezzelfi sono i migliori mediatori e traduttori del continente, e producono artefatti ibridi di magia elfica e ingegneria umana. Tutti li usano come intermediari; nessuno li rispetta abbastanza."
+ "sub": "La patria dei mezzelfi, l’unica democrazia di Ea",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il Concilio Oralin è un piccolo paese appoggiato al confine orientale dell’Impero, tra la penisola e le Colline Verdi. Qui chi non appartiene del tutto né al mondo degli uomini né a quello degli elfi ha costruito un mondo suo."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Il Consiglio lo eleggono tutti i cittadini, uomini e donne, ricchi e poveri. È l’unica vera democrazia di Ea, e tutti gli altri regni la guardano come si guarda un esperimento che prima o poi esploderà."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Di diplomazia, traduzioni e mediazioni: i mezzelfi sono i migliori intermediari del continente. Fanno anche oggetti che mescolano la magia elfica e l’ingegno umano."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Una milizia cittadina, e la protezione di chi ha bisogno di loro. Nessuno attacca il Concilio: tutti, prima o poi, ci devono mandare un ambasciatore."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero, rapporti cordiali. Con gli elfi di Artefracta, una condiscendenza educata. Con Thilmanor, tolleranza. Tutti usano i mezzelfi come intermediari; nessuno li rispetta abbastanza."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Siamo il ponte tra due mondi. Peccato che entrambi vogliano bruciarlo.»",
+  "cite": "Il consigliere Aeris di Velmetharion"
+ },
+ "ordine": 111,
+ "blocchi": true
 }

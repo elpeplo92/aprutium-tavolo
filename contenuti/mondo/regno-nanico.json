@@ -9,30 +9,62 @@
   "tetrarchi-kharadun",
   "fratellanza-tepotlanco"
  ],
- "tag": [
-  "Nani",
-  "Montagna",
-  "Alleati"
- ],
  "img": "Mondo — Il Grande Regno Nanico del Martello d'Oro.png",
  "mappa": null,
  "colore": "#2F4B7C",
  "scheda": {
-  "Governo": "Monarchia clanica — il Re sotto la Montagna",
+  "Governo": "Monarchia dei clan: il Re sotto la Montagna e il Consiglio dei Clan",
   "Capitale": "Magnafort",
-  "Popolazione": "~1.750.000",
-  "Cultura": "Nani Roccaferrea",
-  "Religione": "Culto del Fabbro Ardente (aspetto di Valerus)",
-  "Moneta": "L'Incudine (lingotti di ferro e argento)",
-  "Colore araldico": "Oro e argento su campo blu montagna",
-  "Allineamento": "Legale Neutrale"
+  "Popolazione": "Circa un milione e settecentocinquantamila",
+  "Popolo": "Roccaferrea",
+  "Fede": "Il Fabbro Ardente; gli antenati dei clan",
+  "Moneta": "L’Incudine, lingotti di ferro e d’argento",
+  "Colori": "Oro e argento su campo blu montagna",
+  "Nella guerra": "Con l’Alleanza. Il centro della linea ai Campi d’Argento"
  },
- "gm": "La Moria che non è caduta. Fanteria pesante migliore del continente; i Martellatori (guardia del Re), gli Ammazzanemici (nani disonorati che cercano la morte gloriosa). Alleati affidabili ma esigenti: ogni favore ricordato, ogni torto registrato. Re Torin Forgiatuono V. Misteri dei Viali Sotterranei, tensioni coi Duergar di Kinarg.",
+ "gm": [
+  {
+   "t": "Segreti",
+   "txt": "· Nel cuore di Magnafort c’è la [[Prima Incudine]]. Gli artefici che nella guerra riconvertirono i Sigilli catturati lavorarono lì: se qualcuno sa come si lavora un Sigillo, è un Runoscriba di Magnafort.\n· Le vecchie vie sotterranee che collegavano le fortezze naniche portano fino a Kinarg. Nessun nano ci scende più."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se nel Libro dei Rancori c’è un debito dell’Impero che riguarda Aprutium."
+  }
+ ],
  "id": "regno-nanico",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli della montagna",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "Il Grande Regno Nanico del Martello d'Oro",
- "sub": "Magnafort, la fortezza che non è mai caduta",
- "pub": "Magnafort: la più antica e inespugnabile fortezza di Ea, scavata nelle viscere delle Vette Eterne. I nani Roccaferrea sono i migliori artigiani, i più testardi guerrieri e i più implacabili portatori di rancore del continente: il loro Libro dei Rancori registra ogni torto subito dalla loro razza dalla notte dei tempi. Una spada di Magnafort vale quanto un piccolo feudo.\n\nFurono tra i fondatori dell'Alleanza del Sole Spezzato e ai Campi d'Argento persero un terzo dei loro guerrieri. Con l'Impero hanno il rapporto più solido di Ea: alleanza commerciale e militare. Coi Duergar, l'odio più grande scritto nel Libro."
+ "sub": "Il regno dei Roccaferrea, con la fortezza di Magnafort",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il Grande Regno Nanico è Magnafort, e Magnafort è la fortezza che non è mai caduta. È scavata nel cuore del lungo arco di montagne che chiude l’est di Ea, e i nani dicono che sia più vecchia dell’Impero, più vecchia degli elfi, più vecchia perfino dei nomi delle montagne. Una spada di Magnafort vale quanto un piccolo feudo."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Regna il [[Re sotto la Montagna]], un titolo che passa di padre in figlio nel Clan Reale. Ma il Re governa con il Consiglio dei Clan, che si riunisce nella Sala del Giuramento, e nessun re ha mai fatto una guerra senza il voto dei clan. Oggi siede sul trono [[Torin Forgiatuono V]], discendente del re che guidò i nani nella Guerra delle Due Lune."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Ferro, argento, gemme e pochissimo mithril, estratti dalle montagne; armi e armature, le migliori di Ea; birra, la migliore di Ea anche quella. I nani importano grano, legname e notizie, di cui hanno sempre bisogno, perché da soli non uscirebbero mai."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "La migliore fanteria pesante del continente: guerrieri in armatura completa, scudi che non si spostano, asce e martelli. I [[Martellatori]] sono la guardia del Re e hanno giurato di morire prima di cedere un passo. I [[Senzabarba]] sono nani caduti in disgrazia che si tagliano la barba e partono in cerca del nemico più grande che possano trovare, per morire in un modo che meriti un canto."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Ai Campi d’Argento il regno perse un terzo dei suoi guerrieri, e la ferita non si è mai chiusa. Con l’Impero Aureo ha il rapporto più solido di Ea, commerciale e militare. Con gli elfi c’è un rispetto freddo. Con i Tetrarchi Kharadun, cugini separati da un vecchio rancore, si collabora quando serve. Con i Duergar di Kinarg, che vivono sotto le stesse montagne più a est, c’è solo l’odio più grande scritto nel Libro dei Rancori. Ai piedi delle montagne vivono i goblin di Mog, che i nani schiacciano ogni volta che salgono troppo."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Non dimentichiamo. Non perdoniamo. Ma un giorno, quando ogni torto sarà vendicato, chiuderemo il Libro. Quel giorno non è oggi.»",
+  "cite": "Re Torin Forgiatuono V di Magnafort"
+ },
+ "ordine": 101,
+ "blocchi": true
 }

@@ -7,29 +7,58 @@
   "regno-nanico",
   "fratellanza-tepotlanco"
  ],
- "tag": [
-  "Nani",
-  "Montagna"
- ],
  "img": "Mondo — I Tetrarchi Kharadun.png",
  "mappa": null,
  "colore": "#5F7FA0",
  "scheda": {
-  "Governo": "Tetrarchia — quattro Signori della Montagna all'unanimità",
+  "Governo": "Quattro Signori della Montagna, che decidono all’unanimità",
   "Capitale": "Nulanuraz",
-  "Popolazione": "~1.240.000",
-  "Cultura": "Nani",
-  "Religione": "Culto del Fabbro Ardente, variante locale",
+  "Popolazione": "Circa un milione e duecentomila",
+  "Popolo": "Nani",
+  "Fede": "Il Fabbro Ardente, a modo loro",
   "Moneta": "Lingotti di ferro",
-  "Colore araldico": "Azzurro e argento",
-  "Allineamento": "Legale Neutrale"
+  "Colori": "Azzurro e argento",
+  "Nella guerra": "Con l’Alleanza: i loro clan combatterono con Magnafort, prima della separazione"
  },
- "gm": "Nani diversi da quelli di Magnafort: più indipendenti, più testardi. Diplomazia nanica e tesori montani. Confine montano con Krodan, tensioni occasionali.",
+ "gm": [
+  {
+   "t": "Da decidere",
+   "txt": "· Qual è la lite del Libro dei Rancori che separò i quattro clan da Magnafort."
+  }
+ ],
  "id": "tetrarchi-kharadun",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I popoli della montagna",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "I Tetrarchi Kharadun",
- "sub": "Quattro pilastri reggono la montagna",
- "pub": "Una nazione nanica indipendente da Magnafort: quattro clan che si separarono dal Grande Regno generazioni fa per una disputa nel Libro dei Rancori. Governano le montagne orientali con quattro Signori coequali che devono essere unanimi su ogni decisione — politica lentissima, decisioni irrevocabili. Con Magnafort, rancore antico ma cooperazione pratica; con l'Impero, commercio sporadico."
+ "sub": "I nani delle montagne del nord, con quattro signori",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "All’estremo nord di Ea, sopra Silentia, quattro clan di nani governano montagne che d’inverno nessuno può raggiungere. Un tempo erano parte del Grande Regno di Magnafort. Poi venne una lite scritta nel Libro dei Rancori, e se ne andarono."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Quattro [[Signori della Montagna]], uno per clan, con gli stessi poteri. Ogni decisione deve essere presa all’unanimità. La politica è lentissima, ma una decisione presa non si cambia più."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Ferro, argento e pietre delle montagne del nord, scambiati con il grano e le pellicce di Silentia."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Fanteria pesante come quella di Magnafort, abituata al freddo e alla montagna."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con Magnafort, rancore antico e collaborazione pratica. Con la Fratellanza Tepotlanco, un rapporto migliore. Con Silentia, scambi regolari. Con il Dominio di Zord, a sud, una guerra di confine che non finisce mai."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Quattro pilastri reggono la montagna. Togli uno e tutto crolla.»",
+  "cite": "Iscrizione sopra la porta di Nulanuraz"
+ },
+ "ordine": 112,
+ "blocchi": true
 }

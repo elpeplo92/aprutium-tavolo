@@ -7,30 +7,58 @@
   "prov-vesperia",
   "prov-insulae-auree"
  ],
- "tag": [
-  "Umani",
-  "Mare",
-  "Repubblica"
- ],
  "img": "Mondo — La Repubblica di Sidepondia.png",
  "mappa": null,
  "colore": "#3F86B5",
  "scheda": {
-  "Governo": "Repubblica Serenissima — Doge eletto tra i capitani",
+  "Governo": "Repubblica: un Doge eletto tra i capitani",
   "Capitale": "Albopons",
-  "Popolazione": "~865.000",
-  "Cultura": "Umani",
-  "Religione": "Valerus, culto marinaro",
-  "Moneta": "Tallero di Sidepondia",
-  "Colore araldico": "Giallo e azzurro",
-  "Allineamento": "Neutrale"
+  "Popolazione": "Circa novecentomila",
+  "Popolo": "Umani",
+  "Fede": "Nerio, che qui è un serpente di mare dagli occhi di perla; Valerus nelle chiese",
+  "Moneta": "Il Tallero di Sidepondia",
+  "Colori": "Giallo e azzurro",
+  "Nella guerra": "Con l’Alleanza. Le sue galere tennero il fronte del mare contro le Navi Rosse"
  },
- "gm": "La Dubrovnik di Ea. Rivale navale di Luminor Settentrionale, alleata di convenienza con Vesperia contro la pirateria. Avventure navali e intrighi di palazzo.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Avventure di mare, pirati, commercio e intrighi di palazzo in una repubblica di mercanti. Da Julia Nova, Sidepondia è il porto straniero più vicino."
+  }
+ ],
  "id": "repubblica-sidepondia",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "La Repubblica di Sidepondia",
  "sub": "La Serenissima del mare",
- "pub": "Una piccola potenza navale, città-stato costiera che vive del mare e per il mare. Navigatori audaci, cantieri che producono le galere più veloci del continente, un Doge eletto tra i capitani più ricchi. Piccola, orgogliosa, ostinatamente indipendente. Con l'Impero commercia, ma è gelosa della propria libertà; con le Insulae Auree è nemica giurata."
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Sidepondia è piccola, orgogliosa e ostinatamente libera. È una città sul mare, con un pugno di porti lungo la costa a est dell’Impero, e vive del mare e per il mare. I suoi cantieri fanno le galere più veloci di Ea, e i suoi marinai sono i più audaci."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Il [[Doge]], oggi Seranno, è eletto tra i capitani più ricchi, e governa con il loro consiglio. Nessun Doge ha mai regnato più di dieci anni: i capitani non lo permetterebbero."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Commercio per mare, costruzione di navi, noli. Ogni famiglia importante ha almeno una galera, e ogni galera ha un debito con qualcuno."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Una flotta piccola e temibile. Nella Guerra delle Due Lune le galere di Sidepondia furono le sole capaci di inseguire le Navi Rosse nella nebbia."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con l’Impero commercia, ma è gelosa della sua libertà. Con le città di Luminor è rivale sul mare. Con Vesperia è alleata quando si tratta di dare la caccia ai pirati. Con le Insulae Auree, nemica giurata."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Il mare non ha padroni. Ma ha debitori.»",
+  "cite": "Il Doge Seranno di Albopons"
+ },
+ "ordine": 109,
+ "blocchi": true
 }

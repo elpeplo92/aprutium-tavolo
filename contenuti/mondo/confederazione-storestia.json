@@ -7,29 +7,58 @@
   "regno-silentia",
   "impero-aureo"
  ],
- "tag": [
-  "Umani",
-  "Mercanti"
- ],
  "img": "Mondo — La Confederazione di Storestia.png",
  "mappa": null,
  "colore": "#4E7A3A",
  "scheda": {
-  "Governo": "Confederazione mercantile — Consiglio dei Guildmaster",
+  "Governo": "Consiglio dei Maestri delle Gilde, uno per città",
   "Capitale": "Frigidivigilia",
-  "Popolazione": "~5.640.000",
-  "Cultura": "Umani",
-  "Religione": "Pragmatismo commerciale; tutte le fedi tollerate",
-  "Moneta": "Corona di Storestia",
-  "Colore araldico": "Giallo e bianco su campo verde",
-  "Allineamento": "Neutrale"
+  "Popolazione": "Circa cinque milioni e seicentomila",
+  "Popolo": "Umani",
+  "Fede": "Tutte tollerate; in pratica, Vespera e Sortia",
+  "Moneta": "La Corona di Storestia, la più stabile dopo quella imperiale",
+  "Colori": "Giallo e bianco su campo verde",
+  "Nella guerra": "Con l’Alleanza, controvoglia: più denaro che soldati"
  },
- "gm": "La Lega Anseatica di Ea. Missioni di spionaggio commerciale, contrabbando, intrighi finanziari: i suoi mercanti sanno tutto e vendono tutto, informazioni comprese. Sylva Noctis è boicottata ufficialmente, ma la Casata della Ragnatela ha agenti nelle banche storestiane. Commercia con Ghostfalia in segreto.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· La Casata della Ragnatela di Sylva Noctis ha agenti nelle banche di Storestia.\n· Storestia commercia in segreto con i Ribelli di Ghostfalia, che le stanno a sud.\n· I suoi mercanti sanno tutto e vendono tutto, notizie comprese: buoni per missioni di spionaggio e contrabbando."
+  }
+ ],
  "id": "confederazione-storestia",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "I regni umani",
+ "group": "Le nazioni · Con l’Alleanza del Sole Spezzato",
  "title": "La Confederazione di Storestia",
- "sub": "Le Repubbliche Mercantili del Nord",
- "pub": "Quel che succede quando i mercanti decidono che i re sono un costo superfluo. Tra l'Impero, Silentia e le steppe, Storestia controlla le rotte che legano l'occidente all'oriente di Ea: le sue città sono empori dove si sentono tutte le lingue del continente. Governa un Consiglio di Guildmaster, un rappresentante per città, quasi sempre il mercante più ricco, con voti pesati sulla ricchezza. La corruzione non è un difetto del sistema: è il sistema.\n\nNon ha esercito: ha mercenari, molti. Alla Guerra delle Due Lune partecipò con riluttanza, più con finanziamenti che con soldati. Le sue banche fanno concorrenza a quelle di Luminor."
+ "sub": "Le Repubbliche Mercantili, dove i mercanti hanno fatto a meno dei re",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Storestia è quello che succede quando i mercanti decidono che i re sono una spesa inutile. Sta a est, tra la foresta di Thilmanor, l’arco di montagne dei nani e le steppe di Krodan, e tutto quello che passa da una parte all’altra di Ea passa dalle sue dogane, e paga."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "Ogni città della Confederazione manda al Consiglio un [[Maestro di gilda]], quasi sempre il mercante più ricco. Ogni voto pesa quanto la ricchezza della città che rappresenta. La corruzione non è un difetto del sistema: è il sistema."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Di commercio. Armi e metalli dei nani, cavalli di Krodan, legno di Thilmanor, merci dell’Impero: tutto passa per Storestia, che prende la sua parte. Le sue banche fanno concorrenza a quelle di Luminor."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Non ce l’ha. Ha mercenari, molti, ben pagati e ben armati, fedeli finché dura il contratto. Perché morire per la patria quando si può pagare qualcun altro?"
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Commercia con tutti e non si fida di nessuno. L’Impero è il suo cliente più grande e il suo rivale. Con i cavalieri di Altalon i rapporti sono cordiali, anche se i mercanti li trovano «affascinanti ma poco pratici». Ufficialmente Sylva Noctis è boicottata."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Il denaro non ha patria, né lealtà, né coscienza. Per questo è lo strumento perfetto.»",
+  "cite": "Maestro di gilda Orsolo di Frigidivigilia"
+ },
+ "ordine": 105,
+ "blocchi": true
 }

@@ -7,29 +7,62 @@
   "khanato-uruth",
   "impero-aureo"
  ],
- "tag": [
-  "Mezzorchi",
-  "Steppe"
- ],
  "img": "Mondo — Il Khanato di Krodan.png",
  "mappa": null,
  "colore": "#7A1F1F",
  "scheda": {
-  "Governo": "Khanato — monarchia militare elettiva (il Kurultai)",
-  "Capitale": "Ghar'Kul",
-  "Popolazione": "~5.800.000",
-  "Cultura": "Mezzorchi",
-  "Religione": "Sciamanesimo tribale, culto degli Antenati Spezzati",
-  "Moneta": "Il Dente (zanne d'avorio; baratto)",
-  "Colore araldico": "Rosso sangue su campo nero",
-  "Allineamento": "Caotico Neutrale"
+  "Governo": "Un Khan eletto dal Kurultai, il consiglio dei capi clan",
+  "Capitale": "Ghar’Kul",
+  "Popolazione": "Circa cinque milioni e ottocentomila",
+  "Popolo": "Mezzorchi",
+  "Fede": "Gli Antenati Spezzati; Bellator, il Lupo Grigio",
+  "Moneta": "Il Dente, zanne d’avorio; il ferro vale più di tutto",
+  "Colori": "Rosso sangue su campo nero",
+  "Nella guerra": "Nato dalla guerra, dai Brak liberi e dalla gente delle steppe"
  },
- "gm": "Politica tribale, onore brutale, il fantasma della schiavitù. La rivalità con il Khanato di Uruth è una guerra futura. La leggenda del Sangue che Ricorda — l'eco della Forgiatura nel sangue dei mezzorchi — li terrorizza più di qualunque nemico. Esercito: Cavalieri del Sangue (arcieri a cavallo), Spezzalinee, Sciamani di Guerra, Cacciatori di Worg. Il ferro è scarso ed è la valuta più preziosa.",
+ "gm": [
+  {
+   "t": "Il Sangue che Ricorda",
+   "txt": "I mezzorchi temono più di ogni nemico una leggenda: che nel loro sangue resti un’eco della Forgiatura, e che un giorno qualcuno possa risvegliarla. Hanno ragione a temerlo: la Casata del Veleno ci sta lavorando."
+  },
+  {
+   "t": "Uruth",
+   "txt": "Il Khanato di Uruth, all’altro capo del continente, è nato dagli stessi Brak ma ha scelto la strada opposta. Per Krodan è la prova di quello che potrebbe diventare."
+  }
+ ],
  "id": "khanato-krodan",
  "livello": "nazione",
  "parent": "nazioni-ea",
- "group": "Le grandi potenze",
+ "group": "Le nazioni · Nate dalla guerra",
  "title": "Il Khanato di Krodan",
- "sub": "La nazione dei mezzorchi delle steppe",
- "pub": "Le steppe a nord dell'Impero, oltre le Vette Eterne: pianure d'erba e orizzonti senza fine. Qui vive la più grande nazione mezzorchesca di Ea, discendente dai Brak fuggiti e dai popoli umani delle steppe. La fondò Mugrath Spezzacatene, che unì le tribù col pugno e poi, cosa che nessuno si aspettava, con le leggi.\n\nIl Khan è eletto dal Kurultai, il consiglio dei capi-clan; sotto di lui i Khar, signori della guerra. Allevano i migliori cavalli di Ea e vendono la spada: le Compagnie del Sangue sono mercenari temuti in tutto il continente. Con l'Impero c'è diffidenza temperata dal commercio di cavalli. Con Sylva Noctis, odio senza rimedio."
+ "sub": "La nazione dei mezzorchi, nelle steppe dell’est",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "A est, oltre l’arco di montagne dei nani, si aprono steppe d’erba senza fine. Lì vive la nazione più grande dei mezzorchi, e una delle grandi potenze di Ea. Krodan non esisteva prima della guerra: la fondarono i figli dei Brak liberi e della gente delle steppe, e la tenne insieme un capo che nessuno si aspettava."
+  },
+  {
+   "t": "I. Come si governa",
+   "txt": "[[Mugrath Spezzacatene]], il primo Khan, unì le tribù con il pugno, e poi, cosa che nessuno si aspettava, con le leggi. Da allora il Khan lo elegge il [[Kurultai]], il grande consiglio dei capi clan. Sotto di lui ci sono i [[Khar]], signori della guerra: chi non è capace viene sfidato e sostituito."
+  },
+  {
+   "t": "II. Di che cosa vive",
+   "txt": "Mandrie, cavalli, i migliori di Ea, e spade in affitto: le [[Compagnie del Sangue]] sono mercenari temuti in tutto il continente. Il ferro è raro, e vale più dell’oro."
+  },
+  {
+   "t": "III. L’esercito",
+   "txt": "Ogni mezzorco è un guerriero. Arcieri a cavallo, fanteria pesante, sciamani che con un canto comune rendono un reggimento immune alla paura, esploratori su lupi giganti."
+  },
+  {
+   "t": "IV. Vicini e nemici",
+   "txt": "Con i nani del Martello d’Oro e con l’Uruk di Gugh, confini difficili. Con Storestia, il commercio dei cavalli. Con l’Impero, diffidenza temperata dagli affari. Con le orde di Gridraz, disprezzo per gli orchi che non hanno voluto diventare un popolo. Con Sylva Noctis, un odio che non ha rimedio."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Siamo figli di nessuno. Ma un’arma che impara a pensare non è più un’arma. È un popolo.»",
+  "cite": "Mugrath Spezzacatene, primo Khan"
+ },
+ "ordine": 122,
+ "blocchi": true
 }
