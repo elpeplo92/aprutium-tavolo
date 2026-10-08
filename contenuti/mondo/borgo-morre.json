@@ -14,16 +14,38 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Gilda dei Tessitori",
-  "Fedeltà": "Neutrale",
-  "Corrisponde a": "Morro d'Oro"
+  "Paese vero": "Morro d’Oro",
+  "In dialetto": "Mòrrë",
+  "Dove": "Fra il Tordinum e il Vomanum, nella campagna bassa a mezza giornata dal mare",
+  "Chi comanda": "⟦I Fonteviva, tramite Nutaròschë, da cui il borgo dipende⟧",
+  "Fedeltà": "⟦Atrë⟧"
  },
- "gm": "Neutrale e comprabile. Buon posto per trattative discrete, rifornimenti, informazioni a pagamento.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "⟦[[Dove passano le notizie.]] I pellegrini di Propezzano vengono da ogni parte e parlano. Il chiostro dell’abbazia è il posto giusto per sapere quello che succede lontano, e per far arrivare un messaggio a qualcuno senza farsi vedere.⟧\n\n⟦[[La Porta Santa.]] Chi la attraversa il giorno giusto riceve un perdono. Nel gioco il «perdono» può essere vero: una benedizione, o la fine di una maledizione. Il Bastone di Lyaras, per esempio.⟧\n\n⟦[[Le fosse del grano.]] Sono il posto dove la Confraternita del Grano Duro può nascondere quello che ammassa.⟧"
+  },
+  {
+   "t": "Corretto rispetto al vecchio canone",
+   "txt": "· Mòrrë non è più una «città libera della Gilda dei Tessitori»: nella realtà Morro era un piccolo castello agricolo, prima dell’abbazia di Montecassino e poi degli Acquaviva, e dipendeva da Notaresco. Di tessitura non c’è traccia. Il suo luogo vero è Propezzano."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre di Mezzo",
  "id": "borgo-morre",
  "parent": "contea-terre-di-mezzo",
  "title": "Mòrrë",
- "sub": "Neutrale",
- "pub": "Una città libera mercantile, governata dalla Gilda dei Tessitori. Qui il denaro compra il silenzio e il silenzio è la merce più venduta. Nessuna casata, nessun signore: contratti."
+ "sub": "La campagna dell’oro e la Porta Santa di Propezzano",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Un piccolo castello in mezzo alla campagna più grassa delle Terre di Mezzo. Grano, ortaggi, frutteti, vigne: «d’oro» la chiamano per questo. Sotto la chiesa ci sono fosse scavate nella terra dove il borgo tiene il suo grano.\n\nFuori dal paese, in mezzo ai campi, c’è l’abbazia di [[Santa Maria di Propezzano]]. Si racconta che tre pellegrini, di ritorno da molto lontano, legarono i cavalli a un albero e appesero le borse con le loro reliquie. L’albero crebbe e le portò in alto, dove nessuno poteva prenderle. In sogno la Madonna chiese una chiesa. Quando l’altare fu pronto, l’albero si abbassò.\n\nL’abbazia ha una [[Porta Santa]] di pietra che si apre un solo giorno l’anno, a maggio. Quel giorno arrivano pellegrini da tutto il Ducato, e da fuori.\n\nNei campi vicini, l’aratro tira su ancora cocci e pietre squadrate: la chiamano la Piana dei Cesari, e c’era una grande fattoria quando l’Impero era giovane."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«La Porta Santa s’apre ’na vote l’anne. Chi passe, passe.»",
+  "cite": "Detto dei pellegrini"
+ },
+ "blocchi": true
 }

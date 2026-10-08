@@ -14,16 +14,38 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Dama Violante Rosaspina",
-  "Fedeltà": "Iuvenza",
-  "Corrisponde a": "Notaresco"
+  "Paese vero": "Notaresco",
+  "In dialetto": "Nutaròschë; negli atti antichi Lotarescum",
+  "Dove": "Su un colle tondo sopra la valle del Vomanum, a poche ore dal mare",
+  "Chi comanda": "Dama Violante Rosaspina, ⟦castellana per conto dei Fonteviva⟧",
+  "Fedeltà": "⟦Atrë, sulla carta⟧"
  },
- "gm": "Spia di Iuvenza. Chi passa viene visto e riferito. Possibile trappola per la Crociata.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Dama Violante Rosaspina è una spia di Iuvenza. Chi passa viene visto e riferito: per la Crociata è una trappola possibile.\n\n⟦[[Una spia in casa d’altri.]] Il palazzo è dei Fonteviva, e Giosia odia Iuvenza. Violante tiene il borgo per Atrë e passa tutto alla Signora del Loto. Se la Crociata lo scopre e lo porta a Giosia, si guadagna il Duca. Se Violante capisce di essere scoperta, scappa a Teramum con quello che sa.⟧\n\n⟦[[San Clemente.]] La principessa che si fermò sul fiume e il baldacchino «del sud» possono diventare un luogo dei Custodi del Ciclo: il Vomanum era un confine, e i confini si custodiscono.⟧"
+  },
+  {
+   "t": "Corretto rispetto al vecchio canone",
+   "txt": "· Nella storia vera Notaresco era degli Acquaviva fino al Settecento: ora il borgo è dei Fonteviva, e Violante ne è la castellana."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre di Mezzo",
  "id": "borgo-nutarosche",
  "parent": "contea-terre-di-mezzo",
  "title": "Nutaròschë",
- "sub": "Iuvenza",
- "pub": "Un borgo elegante sulle colline, governato da Dama Violante Rosaspina, che riceve bene e ricorda tutto. Si dice che attraversare le sue terre sia pericoloso per chi ha nemici a Teramum."
+ "sub": "La casa di città dei Fonteviva sul Vomanum",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Un borgo tondo stretto intorno alla sua altura, con mura spesse e finestre alte e strette. In cima c’è il palazzo dei Fonteviva, la loro casa quando scendono dalla costa. Si dice che il borgo sia nato intorno al castello di un principe antico, Lotario, nipote di un imperatore.\n\nGiù nella piana del Vomanum la valle è piena di botteghe, di forni e di magazzini. Gente di Nutaròschë dice che lì si lavora più che in tutto il resto del Ducato messo insieme.\n\nLungo il fiume c’è [[San Clemente al Vomano]], una delle chiese più antiche e più belle del Ducato. La volle una principessa imperiale, Ermengarda, figlia e madre di imperatori, che si fermò qui sul fiume quando il Vomanum era il confine fra due contadi. Dentro, sopra l’altare, c’è un baldacchino di terracotta scolpito con disegni che vengono da molto lontano, oltre il mare del sud.\n\nIl piatto del borgo sono le mazzarelle: interiora d’agnello avvolte nella lattuga, per la Pasqua."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«A Nutaròschë si riceve bene. E si ricorda tutto.»",
+  "cite": "Detto della valle"
+ },
+ "blocchi": true
 }

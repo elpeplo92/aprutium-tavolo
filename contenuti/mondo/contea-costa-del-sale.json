@@ -19,16 +19,51 @@
  "mappa": null,
  "colore": "#3E6E9E",
  "scheda": {
-  "Nome in dialetto": "Li Côtè",
-  "Numero": "1",
-  "Borghi": "6"
+  "In dialetto": "Li Côtë",
+  "Contea": "La prima",
+  "Dove": "La striscia di costa, dalla foce del Truntum fino ai colli di Atrë",
+  "Paesaggio": "Spiagge lunghe di sabbia, pinete, torri di vedetta in mattone, colline basse alle spalle",
+  "Borghi": "Julia Nova, Alba e Tërtëratë, Martëncëcurë, Li Côtë, Pënëtë e Silvë, Atrë",
+  "Chi comanda": "Nessuno da solo: Gilde, case mercantili e signori, ognuno nel suo porto"
  },
- "gm": "La contea più esposta e più cosmopolita. Punto d'ingresso delle spie celamanti: Martëncëcurë. I Naviganti Grigi di Adamus dominano il mare da Julia Nova; Casa Cavatassus la flotta del nord da Tortoscuro. Atrë (Atrax Aurea) è la rivale di Teramum: il Duca Giosia d'Acquaviva odia Iuvenza e potrebbe essere un alleato potente, a un prezzo alto.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "La contea più esposta e più mescolata del Ducato. Martëncëcurë è la porta delle spie dei Drukarri: il doganiere Volpone sa più di quanto dice. I Naviganti Grigi di Adamus tengono il mare da Julia Nova, Casa Cavatassus quello del nord da Tortoscuro, e i Cavatassus hanno ancora contatti con i pirati dell’Adriaticum.\n\nAtrë è la rivale di Teramum. Casa Fonteviva tiene castelli e borghi in quasi tutte le contee basse: la costa, le Terre di Mezzo (Nutaròschë, Mòrrë, il Castello Basso di Cashtalladdë), la Val Vibrata. Giosia di Fonteviva odia Iuvenza: può essere un alleato forte contro di lei, a un prezzo alto. Cëllinë, nei Calanchi, è sua vassalla.\n\nI Barbus di Pënëtë sono isolati dal blocco di Iuvenza. La Confraternita del Grano Duro, legata a loro, ammassa grano per far crollare il prezzo delle terre dei nobili in rovina, Cerullius compresi: è un filo aperto per Luigis."
+  },
+  {
+   "t": "Corretto rispetto al vecchio canone",
+   "txt": "· Tolti i trabocchi: sulla costa di Teramo non ci sono, stanno più a sud. Nessun Atto li nomina. Restano da togliere anche dalle voci di Julia Nova e di Alba (il «Trabocco Maledetto»): si fa con i borghi.\n· Tolta la frase «le Navi Rosse si sono solo allontanate»: sono tornate, Atti I e VII.\n· Atrë non sta sul mare: sta su tre colli a una decina di miglia dalla costa."
+  }
+ ],
  "id": "contea-costa-del-sale",
  "livello": "contea",
  "parent": "ducato-aprutium",
  "group": "Le otto contee",
  "title": "La Costa del Sale",
- "sub": "Li Côtè · contea 1 — La fascia costiera orientale: il volto commerciale, marittimo e vulnerabile del Ducato.",
- "pub": "Una striscia stretta di terra fertile tra le colline e il Mare Adriaticum, punteggiata di porti, trabocchi e torri di vedetta. Qui stanno Julia Nova, Tortoscuro, Alba Argentea, Rosetum, Atrax Aurea: il commercio, la pesca, il contrabbando, la ricchezza del Ducato e la sua ferita aperta. Da questa costa arrivarono le flotte dei Celamanti e le orde Brak nella Guerra delle Due Lune: Julia Nova fu rasa al suolo e ricostruita, Tortoscuro divenne una roccaforte nemica. Ogni aprutiano sa che le Navi Rosse si sono solo allontanate."
+ "sub": "Li Côtë · prima contea: il volto ricco, aperto e ferito del Ducato",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Una striscia stretta di terra fertile tra le colline e il Mare Adriaticum. La spiaggia è lunga e bassa, le pinete arrivano fino alla sabbia, e ogni tanto una torre di mattone guarda il mare. Qui passano il commercio, la pesca, il contrabbando e quasi tutta la ricchezza del Ducato. E qui arriva il pericolo, perché tutto quello che viene dal mare arriva prima qui."
+  },
+  {
+   "t": "I borghi",
+   "txt": "· [[Julia Nova]], in dialetto Gigliè: il porto maggiore, città libera governata dalle Gilde. Casa vostra.\n· [[Alba e Tërtëratë]], Alba Argentea e Tortoscuro: due porti gemelli a nord di Julia Nova. Il primo vive di bische e prestiti, il secondo della flotta settentrionale di Casa Cavatassus.\n· [[Martëncëcurë]]: la dogana alla foce del Truntum, sull’ultimo angolo del Ducato.\n· [[Li Côtë]], Rosetum: la costa del lusso, dei profumi e del Giardino d’Argento.\n· [[Pënëtë e Silvë]], l’antica Secernium: la terra dei Barbus, la casata di Luigis, con la torre sulla spiaggia e la pineta.\n· [[Atrë]], Atrax Aurea: la città più antica del Ducato, sui suoi tre colli a poche miglia dal mare. È la città di [[Casa Fonteviva]], la grande casata della costa, signora di mezzo Ducato fuori da Teramum. Il suo Duca, Giosia di Fonteviva, non ama la capitale."
+  },
+  {
+   "t": "La ferita",
+   "txt": "Nella Guerra delle Due Lune le flotte dei Drukarri sbarcarono su questa costa, e dietro di loro le orde Brak. Julia Nova fu rasa al suolo e ricostruita; Tortoscuro divenne per anni una roccaforte nemica. Per due secoli la costa si è raccontata che le flotte non sarebbero tornate. Le Navi Rosse rapivano ancora qualche pescatore nella nebbia, ma le flotte no.\n\nSi sbagliava."
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Le Navi Rosse sono tornate: tre all’assalto della spiaggia di Julia Nova, la notte del compleanno di Mattheus (Atto I), e poi una flotta intera che ha chiuso il porto e bruciato la città (Atto VII).\n· Colleventoso, villaggio della costa, svuotato e forgiato sotto l’Abbazia di Biancosale (Atti II e III).\n· Le Scogliere del Silenzio, a nord di Julia Nova, dove di notte si scaricava «pesce guasto» che non era pesce (Atti V e VIII).\n· L’isola di Pietraluna, dove avete strappato Silvanus all’altare (Atto VII).\n· La Tenuta di Altavia, sulla collina sopra Julia Nova: la residenza estiva degli Aurex, che i Velthuria avevano preso e voi avete ripreso (Atto XI).\n· Adamus è diventato capo dei Naviganti Grigi, e il loro covo si chiama ora il Covo della Conchiglia (Atto V)."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Lu mare te dà da magnà. E quànne vò, te magne isse.»",
+  "cite": "Detto dei pescatori di Julia Nova"
+ },
+ "blocchi": true
 }

@@ -19,16 +19,47 @@
  "mappa": null,
  "colore": "#6E8C3A",
  "scheda": {
-  "Nome in dialetto": "Lu Corre",
-  "Numero": "4",
-  "Borghi": "6"
+  "In dialetto": "Lu Corre",
+  "Contea": "La quarta",
+  "Dove": "Il mare di colline tra la costa e Teramum, tra il Salinellum, il Tordinum e il Vomanum",
+  "Paesaggio": "Ulivi, vigne, grano, borghi di mattone sulle alture, torri di vedetta, i Tratturi",
+  "Borghi": "Mushanë, Bëllindë, Canzañë, Cashtalladdë, Nutaròschë, Mòrrë",
+  "Chi comanda": "Un abate, un conte, i Cerullius, un barone, una dama, una gilda"
  },
- "gm": "Il campo di gioco degli Atti XIII–XVI. Bëllindë è LO snodo. Nutaròschë è di Iuvenza (Dama Violante Rosaspina, spia): attraversarla è pericoloso. Cashtalladdë è Teramum in armi (Barone Pietramala, baliste sul Tordino). Mòrrë città libera dove il denaro compra il silenzio. Rodolfo Cerullius a Canzañë è debole e consigliato male.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il campo di gioco degli Atti XII–XVIII. Bëllindë è il nodo: chi la tiene tiene la strada per Teramum, e sotto ha il Quarto Sigillo.\n\nNutaròschë è dei Fonteviva, ma Dama Violante è una spia di Iuvenza: chi passa viene visto e riferito. Il castello alto di Cashtalladdë è Teramum in armi e non si compra; il Castello Basso è di Atrë. A Propezzano, vicino a Mòrrë, passano i pellegrini e con loro le notizie.\n\nA Canzañë Rodolfo Cerullius è debole e consigliato male, e la Lega dei Sensali di Savinellus ha comprato parte dei debiti della casata. Il motto dei Cerullius è «Equilibrio nella Tempesta». Se Alessandros deve arrivare alla Convocazione come candidato, prima o poi deve rimettere in piedi la sua casa."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi manovra Rodolfo Cerullius.\n· Che cosa resta di Mushanè dopo la Crociata: Onofrio regge, ma i Frati Armati di Corrado sono ridotti e il borgo è vuoto di potere."
+  }
+ ],
  "id": "contea-terre-di-mezzo",
  "livello": "contea",
  "parent": "ducato-aprutium",
  "group": "Le otto contee",
  "title": "Le Terre di Mezzo",
- "sub": "Lu Corre · contea 4 — Il cuore collinare tra Julia Nova e Teramum: lo snodo per raggiungere la capitale.",
- "pub": "Il cuore del Ducato, il mare di colline tra Julia Nova e Teramum. Vigne, ulivi, grano duro, borghi fortificati sulle alture, torri di vedetta, i Tratturi che passano. È la strada che la Crociata ha percorso e percorre: Mushanë, il feudo dell'Abate; Bëllindë, il Balcone da cui si vede tutto il Ducato; Canzañë, la terra dei Cerullius. Chi vuole arrivare a Teramum passa di qui, e chi tiene queste colline tiene la strada."
+ "sub": "Lu Corre · quarta contea: le colline tra Julia Nova e Teramum",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il cuore collinare del Ducato: colline di ulivi e di vigne tra Julia Nova e Teramum, borghi di mattone in cima alle alture, torri di vedetta, e i Tratturi che passano. Chi vuole arrivare alla capitale dalla costa passa di qui. E chi tiene queste colline tiene la strada."
+  },
+  {
+   "t": "I borghi",
+   "txt": "· [[Mushanë]]: il paese delle torri, feudo dell’abbazia di San Pietro.\n· [[Bëllindë]]: il Balcone d’Aprutium, da cui si vede tutto il Ducato. Lo tiene il Conte Gisulfo Melacera, detto il Girella.\n· [[Canzañë]], Canzanium: la terra dei Cerullius, la casata di Alessandros e Vicarus, tra il Tordinum e il Vomanum. Oggi la regge Rodolfo Cerullius.\n· [[Cashtalladdë]]: due castelli sullo stesso colle. In alto il Barone Ugo Pietramala, Mano di Ferro, fedele a Teramum; in basso, sul Vomanum, il Castello Basso dei Fonteviva.\n· [[Nutaròschë]]: un borgo tondo sopra il Vomanum, con il palazzo dei Fonteviva e, giù sul fiume, San Clemente. Dama Violante Rosaspina riceve bene e ricorda tutto.\n· [[Mòrrë]]: un piccolo castello nella campagna più grassa della contea, e l’abbazia di Propezzano con la sua Porta Santa, meta di pellegrini."
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· La marcia della Crociata da Julia Nova a Mushanè: il Ponte dei Frati, i lupi a Lu Vallòne, i Tratturi chiusi, la Collina del Pastore dove Ndònie ha riconosciuto Mattheus come toccato della Vecchia Madre (Atto XII).\n· Mushanè liberata: l’Abate Gofferio in catene, poi la sua confessione e la sua morte; Lekë Muzàka e la compagnia di Vesperia spezzati; Onofrio nuovo Abate; la cappella di Mortus promessa a Mattheus (Atti XIII–XV).\n· Bëllindë: il Girella che mette il suo sigillo sopra il proclama di Teramum e apre le porte alla Crociata (Atto XV); il pozzo cieco, la galleria della Schiera, il Custode del Quarto Sigillo (Atti XVI–XVII); Micuccio riportato a casa, il Brak Vhaerun uscito dal pozzo del Borgo Vecchio, il discorso di Mattheus in Piazza Grande (Atto XVIII).\n· Il druido di Torricella, tra le vigne di Bëllindë, ha detto ad Adamus che la montagna trema, che nelle campagne si sono visti altri Brak, e che nel Ducato si muove anche qualcos’altro (Atto XVIII)."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Chi tè ’ste culline, tè la strade. E chi tè la strade, tè Tërëmë.»",
+  "cite": "Detto dei carrettieri"
+ },
+ "blocchi": true
 }

@@ -14,18 +14,40 @@
  "mappa": "img/babb934abed8.jpg",
  "colore": "#8A6E2E",
  "scheda": {
-  "Governatore": "Conte Gisulfo Melacera «Il Girella»",
-  "Fedeltà": "Opportunista",
-  "Corrisponde a": "Bellante",
-  "Popolazione": "~3.000"
+  "Paese vero": "Bellante",
+  "In dialetto": "Bëllindë",
+  "Dove": "Su un crinale fra il Tordinum e il Salinellum; giù nella valle passa la strada per Teramum",
+  "Abitanti": "Circa tremila",
+  "Chi comanda": "Il Conte Gisulfo Melacera, detto il Girella, dalla Rocca dei Melacera",
+  "Fedeltà": "Ha messo il suo sigillo per la Crociata"
  },
- "gm": "Sessione XVI. I 15 luoghi con la doppia sezione e i 31 PNG stanno nella mappa di Bëllindë. Sotto il borgo: la Porta Murata, Micuccio, il Quarto Sigillo (i giocatori non lo sanno ancora: NON in pub).",
+ "gm": [
+  {
+   "t": "",
+   "txt": "I 15 luoghi e i PNG stanno nella sezione Luoghi. Sotto Bëllindë c’è il Quarto Sigillo con il suo Custode; la scala a chiocciola e quello che viene dopo non sono stati esplorati.\n\nIl Girella si è esposto: se la Crociata cade a Teramum, cade anche lui. È il momento in cui è più fedele, perché non ha più scelta.\n\n⟦[[La pietra con la scritta.]] È vera: il Cippo di Bellante, una stele italica. Nel gioco può essere una pietra dei Pretuziani, scritta nella lingua dei Glossatori di Teramum. Il Magister Caelinus saprebbe leggerla.⟧"
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre di Mezzo",
  "id": "borgo-bellinde",
  "parent": "contea-terre-di-mezzo",
  "title": "Bëllindë",
- "sub": "Opportunista",
- "pub": "Lo snodo cruciale, ~3.000 anime: il borgo sul Balcone da cui si vede tutto il Ducato, la strada obbligata verso Teramum. Il Conte Gisulfo Melacera, detto Il Girella, si vende al miglior offerente: odia gli elfi e ama l'oro. Voi ci siete adesso, o ci siete appena stati.",
- "tavolo": "bellinde"
+ "sub": "Il Balcone d’Aprutium",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il borgo sul crinale da cui si vede tutto: il mare a est, il Gigante a ovest, le valli del Tordinum e del Salinellum ai lati. Sulla torre civica gira una banderuola con la scritta antica Universitas Bellanti. La strada per Teramum passa sotto, nel fondovalle: chi tiene Bëllindë la guarda dall’alto.\n\nÈ il paese delle lumache: in umido, fritte, col farro. E della Madonna della Misericordia, che esce in processione una volta ogni venticinque anni. Quel giorno le donne le appendono addosso i loro gioielli d’oro. Si dice che il Bambino che tiene in braccio non sia l’originale: quello lo rubarono i briganti, tanto tempo fa.\n\nNei campi vicino al borgo hanno trovato una pietra con una scritta che nessuno sa leggere. È più vecchia dell’Impero."
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Il Girella vi ha ricevuti alla Rocca dei Melacera. Anche lui aveva il proclama di Teramum. Alla fine ha messo il suo sigillo sopra l’ordine della capitale: viveri, servizi, protezione per chi vi aiuta (Atto XV).\n· Il pozzo di Rocco nel Borgo Vecchio porta sotto la città: la galleria della Schiera, il ritmo che comanda ALLINEATI e AVANTI. Intanto, sopra, bruciava il Fondaco delle Lane (Atto XVI).\n· Laggiù avete trovato il Custode e gli avete promesso il cambio. Vi ha affidato armatura, lama d’ordinanza e stendardo (Atto XVII).\n· Siete risaliti in due gruppi: chi dalla Pieve di San Vincenzo, dove Don Fulgenzio ha confessato di aver murato Micuccio; chi dal pozzo del Borgo Vecchio, con il Brak Vhaerun, che la gente ha scambiato per una bestia (Atto XVIII).\n· Il discorso di Mattheus in Piazza Grande lo ha sentito tutta la città. Si sono uniti alla Crociata Micuccio con i suoi genitori, Cecco della Porta di Levante e Mimì (Atto XVIII)."
+  }
+ ],
+ "tavolo": "bellinde",
+ "epigrafe": {
+  "txt": "«Perché dovrei credere che a Teramum non verrete schiacciati?»",
+  "cite": "Il Conte Gisulfo Melacera"
+ },
+ "blocchi": true
 }

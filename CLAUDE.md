@@ -765,3 +765,12 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v161 (08/10/2026) — immagini Midjourney: Ducato e ultimi borghi
 
 - Il Ducato d'Aprutium (campagna teramana col Gran Sasso, senza calanchi), Sandiglië, Sandémirë, Teramum, Tussëcië, Tërrëciallë. Tutti i borghi hanno ora la loro immagine. I luoghi di Julia Nova sono rimandati da Giuseppe (`mj/rimandate.json`).
+
+## v162 (08/10/2026) — consegna 7: i borghi delle Terre di Mezzo e cinque contee
+
+- Giuseppe: zip `Consegna 7 - borghi delle Terre di Mezzo.zip` (in `_ARCHIVIO_2026-10-07/Consegne (zip)/`). Pagine in `03_Compendio/01 Il Mondo/Borghi/` (Mushanë, Bëllindë, Canzañë, Cashtalladdë, Nutaròschë, Mòrrë) e `Ducato e contee/` (Costa del Sale, Terre del Nord, Terre di Mezzo, Calanchi, Montagna del Gigante, che sostituiscono la consegna 6). **La consegna 6 non è mai arrivata qui**: le altre contee e il Ducato restano come prima.
+- `converti.py` (liste `BOR`, `CON`; `riscrivi(..., tieni_gruppo=True, segna=True)`): riscrive `sub`, `scheda` (`Paese vero`, `Chi comanda`, `Fedeltà`), `epigrafe`, `pub`, `gm`; restano `id`, `title`, `img`, `mappa`, `colore`, `parent`, `links`, `tag`, `livello`, `state`, `atti`, `group`. Luoghi e PNG di Mushanë e Bëllindë non toccati.
+- **Proposte a puntini** (richiesta di Giuseppe, solo per questa consegna; le consegne 1-5 restano senza segni): nel testo `⟦…⟧` (da `span.nuovo`, `p.nuovo`, `div.nuovo-blocco`). `proposte.py`, blocco «PROPOSTE A PUNTINI (v162)» in `c2Text` e `c2Paras`: il master vede `.c2prop` (sottolineato a puntini) e `.c2prop-blocco` (filo a puntini); il giocatore vede il testo senza segni.
+- Canone: Casa Fonteviva (Atrë, Duca Giosia di Fonteviva) al posto degli Acquaviva; «Acquaviva» resta nelle pagine solo come storia vera («Nella storia vera… gli Acquaviva di Atri»). Castelli (ceramica) = Li Cashtillë, Castel Castagna = Cashtagnë: id e file NON cambiati (oggi `borgo-cashtagne` ha la ceramica e `borgo-li-cashtille` i castagni: vanno scambiati con la Montagna del Gigante). `borgo-ngara-tera` non toccato.
+- Rapporti: `mestieri vecchi (consegna 7 - borghi).md` (dove restano i mestieri tolti, l'elenco «borgo → mestiere vecchio» dei 38 borghi ancora da riscrivere) e `immagini da rifare (consegna 7 - borghi).md`.
+- Prova: da giocatore nessun blocco master e nessun segno di proposta nelle 11 voci; da master proposte segnate; `prova-tavolo.js` verde.

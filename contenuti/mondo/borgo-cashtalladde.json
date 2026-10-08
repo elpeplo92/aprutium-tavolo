@@ -14,16 +14,38 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Barone Ugo Pietramala «Mano di Ferro»",
-  "Fedeltà": "Teramum",
-  "Corrisponde a": "Castellalto"
+  "Paese vero": "Castellalto, con Castelbasso",
+  "In dialetto": "Cashtalladdë",
+  "Dove": "In cima al crinale fra il Tordinum e il Vomanum; più in basso, sul lato del Vomanum, il Castello Basso",
+  "Chi comanda": "In alto il Barone Ugo Pietramala, «Mano di Ferro»; ⟦in basso un castellano dei Fonteviva⟧",
+  "Fedeltà": "In alto Teramum; ⟦in basso Atrë⟧"
  },
- "gm": "Il braccio armato dell'oligarchia sulla strada per la capitale. Ostacolo militare per la Crociata; non si compra.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il Barone Pietramala è il braccio armato dell’oligarchia di Teramum sulla strada per la capitale: ha baliste puntate sulla valle e non si compra.\n\n⟦[[Un colle, due padroni.]] Nella storia vera il Castello Basso fu degli Acquaviva di Atri per due secoli prima del castello alto. Nel gioco i due castelli sono divisi: in alto Teramum, in basso Fonteviva. Si guardano da trecento passi e si odiano. La Crociata può passare da uno dei due, mai da tutti e due.⟧\n\n⟦[[L’eroe nel fiume.]] Nel Tordinum hanno trovato una statuetta di bronzo antica: un eroe con una pelle di leone, un’offerta dei Pretuziani. Si può usare come oggetto per i Glossatori o per Casa de Spina.⟧"
+  },
+  {
+   "t": "Corretto rispetto al vecchio canone",
+   "txt": "· Il vecchio testo dava a Cashtalladdë un solo castello «sulla valle del Tordino». La fortezza di strada vera è il Castello Basso, e sta sul Vomano."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre di Mezzo",
  "id": "borgo-cashtalladde",
  "parent": "contea-terre-di-mezzo",
  "title": "Cashtalladdë",
- "sub": "Teramum",
- "pub": "Un castello sulla valle del Tordino con baliste puntate sulla strada. Il Barone Ugo Pietramala, Mano di Ferro, è un guerrafondaio leale all'oligarchia di Teramum: chi passa sotto le sue mura lo fa col suo permesso."
+ "sub": "Due castelli: uno guarda il Tordinum, l’altro tiene il Vomanum",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Due castelli sullo stesso colle. Cashtalladdë sta in cima, alto come dice il nome, e da lassù si vedono il Gigante e il mare. Più giù, verso il Vomanum, c’è il Castello Basso: mura a forma di goccia fatte di mattoni e sassi di fiume, una porta merlata, e sopra un’altra porta una scritta latina: «Questa porta sia aperta al mondo, ma quella in alto a noi».\n\nIl castello in alto guarda la valle del Tordinum, quello basso tiene la strada del Vomanum. Chi vuole passare da una valle all’altra passa sotto tutti e due.\n\nOggi a valle ci sono le botteghe e i magazzini più grandi della zona. In estate il Castello Basso si riempie di pittori e di gente venuta a guardarli."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Hec pateat mundo porta, sed alta nobis.»",
+  "cite": "Sopra la porta del Castello Basso"
+ },
+ "blocchi": true
 }

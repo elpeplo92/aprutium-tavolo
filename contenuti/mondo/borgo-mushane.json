@@ -14,16 +14,42 @@
  "mappa": null,
  "colore": "#9E3A2A",
  "scheda": {
-  "Governatore": "Abate Gofferio — ora prigioniero",
-  "Fedeltà": "Virellius / neutrale",
-  "Corrisponde a": "Mosciano Sant'Angelo"
+  "Paese vero": "Mosciano Sant’Angelo",
+  "In dialetto": "Mushanë, o Mëscià",
+  "Dove": "Sulle colline tra il Salinellum e il Tordinum, a metà strada fra Julia Nova e Bëllindë",
+  "Chi comanda": "L’Abate di San Pietro: oggi Onofrio, dopo la caduta di Gofferio",
+  "Fedeltà": "Incerta: un feudo della Chiesa rimasto senza guida"
  },
- "gm": "Vedi la sezione Luoghi: 25 luoghi e 38 PNG di Mushanë. Stato al presente: Gofferio prigioniero, Lekë morto, Lu Grise prigioniero, i Frati Armati di Corrado ridotti. Il vuoto di potere è un filo aperto.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il borgo è nella sezione Luoghi: 25 luoghi e 38 PNG. Oggi Mushanë è un vuoto di potere. Onofrio regge, ma è un frate delle vigne. I Frati Armati di Corrado sono ridotti, e Corrado ha deposto l’arma da solo.\n\n⟦[[Chi si prende Mushanë.]] Nella storia vera, quando il monastero perse forza, Mosciano passò ai signori di Atri. È la mossa naturale di Casa Fonteviva adesso: un amministratore mandato da Atrë per «proteggere» l’abbazia. Onofrio dovrà scegliere fra la Crociata e il Duca Giosia.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Il monastero vero di Mosciano era dedicato a San Michele, e Mosciano non ha mai avuto un vescovo. Nel gioco restano la Cattedrale e l’Abbazia di San Pietro, già giocate: non si cambiano."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre di Mezzo",
  "id": "borgo-mushane",
  "parent": "contea-terre-di-mezzo",
  "title": "Mushanë",
- "sub": "Virellius / neutrale",
- "pub": "Un feudo ecclesiastico sulle colline, con torri di vedetta e l'Abbazia di San Pietro. Per ventotto anni l'ha governato l'Abate Gofferio, avido e potente, che commerciava benedizioni. Voi ci siete passati: la battaglia davanti alla Cattedrale, il processo dell'Abate, i frati rimasti senza guida, il vuoto di potere che avete lasciato."
+ "sub": "Il paese delle torri, feudo di San Pietro",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Un borgo di torri cresciuto attorno a un’abbazia. Da lontano si contano le torri prima delle case: la più alta, di mattone, porta l’orologio e un San Michele scolpito. Intorno, colline di ulivi; giù nella valle, le botteghe dei falegnami e dei mobilieri, che lavorano il legno per mezzo Ducato.\n\nPer secoli Mushanë è stata della sua abbazia: la gente pagava le decime, i frati tenevano i registri, l’Abate teneva le chiavi. I frati armati facevano da milizia."
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· La Crociata è arrivata a Mushanë dopo quattro giorni di marcia. Frate Onofrio, al Varco Est, ha mandato a chiedere l’udienza; Corrado «Lu Mazzòle», il gigante che comanda i Frati Armati, l’ha portata all’Abate (Atto XIII).\n· L’Abate Gofferio ha rifiutato il Dito di San Berardo davanti ai frati e alla navata piena. Maximus ha suonato le campane, e la Crociata ha liberato il borgo: Lekë Muzàka, capo della compagnia di Vesperia, decapitato; Lu Grise preso; Gofferio in catene (Atto XIV).\n· Gofferio ha confessato e ha scelto la morte come espiazione. Onofrio è il nuovo Abate. Mattheus ha ottenuto una piccola cappella di Mortus, separata da San Pietro, con cento monete d’oro sue (Atto XV).\n· All’alba è arrivato da Teramum il proclama contro la Crociata (Atto XV)."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«L’Abate non si chiede: si ottiene.»",
+  "cite": "Frate Onofrio, al Varco Est"
+ },
+ "blocchi": true
 }

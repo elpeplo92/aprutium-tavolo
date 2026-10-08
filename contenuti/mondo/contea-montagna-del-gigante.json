@@ -18,16 +18,39 @@
  "mappa": null,
  "colore": "#4F5F6E",
  "scheda": {
-  "Nome in dialetto": "Lu Muntè",
-  "Numero": "7",
-  "Borghi": "5"
+  "In dialetto": "Lu Muntë",
+  "Contea": "La settima",
+  "Dove": "L’ovest del Ducato: le valli sotto il Gigante Dormiente",
+  "Paesaggio": "Pareti di roccia, nevai che non si sciolgono, borghi di pietra viva, castagneti e pascoli alti",
+  "Borghi": "Lésënë, Li Cashtillë, Crognaleto, Fano e La Pròtë, Cashtagnë",
+  "Chi comanda": "I Custodi del Santuario, la Gilda dei Ceramisti, i Mastri-Pastori, i clan dei montanari, gli anziani"
  },
- "gm": "Lésënë è il luogo mistico della Grande Convocazione; le Casate delle Vette (de Caelis, Argentus, Fiandrani, Umbra) ne sono i guardiani. Fiandrani addestra in segreto cavalcatori di grifoni. I ceramisti di Cashtagnë fanno golem e sono alleati di Torvus e del Martello Bianco. Crognaleto è il centro dell'Ordine dei Tratturi. I montanari di Fano/La Pròtë venerano il Sangue Solare: se Silvanus si mostra, scendono. La magia di Casa Argentus (Maia) è praticata apertamente solo qui.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Lésënë è il luogo del finale della parte del Ducato. Le Casate delle Vette ne sono i guardiani:\n\n· [[de Caelis]], i Custodi del Gigante: sanno che il Titano è inquieto. Sono nella lista di Impalox insieme ai Cerullius.\n· [[Argentus]]: praticano apertamente la magia di Maia, l’unico posto del Ducato dove si può. Cercano di riparare la Frattura.\n· [[Fiandrani]]: addestrano in segreto cavalcatori di grifoni, pronti all’indipendenza se Teramum dovesse imporre un Duca che non sia pretuziano. Con Alessandros candidato, sono dalla sua parte.\n· [[Umbra]]: quasi estinti. Sentono che sotto la terra qualcosa risale.\n\nA Li Cashtillë le ceramiche vivono: i golem di maiolica si muovono quando nessuno guarda, e le rune incise hanno potere vero. La gilda è alleata di Mastro Torvus e del Martello Bianco di Julia Nova.\n\n⟦Nel vecchio canone i nomi erano scambiati: «Li Castìllë» è il nome in dialetto di Castelli, il borgo della ceramica. Castel Castagna diventa Cashtagnë.⟧\n\nL’Ordine dei Tratturi è un potere enorme e senza politica: chi lo ha con sé muove il Ducato. I montanari di Fano e La Pròtë scendono se Silvanus si mostra: è l’unico posto dove il suo nome vale già."
+  }
+ ],
  "id": "contea-montagna-del-gigante",
  "livello": "contea",
  "parent": "ducato-aprutium",
  "group": "Le otto contee",
  "title": "La Montagna del Gigante",
- "sub": "Lu Muntè · contea 7 — Le pendici e le valli del Gigante Dormiente: terra sacra, mistica e isolata.",
- "pub": "L'ovest del Ducato, dove il massiccio del Gigante Dormiente domina l'orizzonte con le cime innevate. Non è una montagna qualunque: per i Pretuziani è un Titano addormentato, e il suo respiro fa tremare la terra. Qui nascono i fiumi, qui si forgia il ferro e si taglia il legno, qui i ceramisti di Cashtagnë incidono rune sui loro vasi. E qui, ai piedi del Titano, sta Lésënë — L'Aquila Aurea — il luogo sacro dove le Casate si radunano quando il Ducato è in pericolo: terra neutrale, nessun esercito armato."
+ "sub": "Lu Muntë · settima contea: la terra sacra sotto il Titano",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "L’ovest del Ducato, dove il Gigante Dormiente chiude l’orizzonte con le sue cime innevate. Per i Pretuziani non è una montagna: è un Titano che dorme, e quando la terra trema è lui che si gira nel sonno. Da qui scendono i fiumi, qui si taglia il legno e si lavora il ferro, qui si parla il dialetto più vecchio del Ducato."
+  },
+  {
+   "t": "I borghi",
+   "txt": "· [[Lésënë]], l’Aquila Aurea: il luogo sacro dei Pretuziani, nella valle sotto la parete più grande del Gigante. Qui si riunisce la Grande Convocazione. È terra neutrale: nessun esercito ci entra armato.\n· [[Li Cashtillë]]: il borgo della ceramica, sotto la parete del Gigante. Bianco, blu cobalto, giallo e verde: le sue maioliche si vendono in tutto l’Impero.\n· [[Crognaleto]]: il cuore dei Tratturi e la sede dell’Ordine dei Tratturi, «Li Re de la Pécora».\n· [[Fano e La Pròtë]]: villaggi di pietra arrampicati sotto le cime. I clan dei montanari scendono di rado, e aspettano da generazioni il ritorno del Sangue Solare degli antichi imperatori.\n· [[Cashtagnë]]: un borgo tondo tra i castagni, governato dagli anziani, dove le tradizioni pretuziane sono ancora vive."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Quànne lu Gigante se gire, la terre trème. Quànne s’arrizze, nen ce sta cchiù terre.»",
+  "cite": "Detto dei montanari"
+ },
+ "blocchi": true
 }

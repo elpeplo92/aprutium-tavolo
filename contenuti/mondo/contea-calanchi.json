@@ -20,16 +20,43 @@
  "mappa": null,
  "colore": "#B0561E",
  "scheda": {
-  "Nome in dialetto": "Li Calanghè",
-  "Numero": "6",
-  "Borghi": "7"
+  "In dialetto": "Li Calanghë",
+  "Contea": "La sesta",
+  "Dove": "Il sud del Ducato, tra il Vomanum e il Fino, ai piedi del Gigante",
+  "Paesaggio": "Creste e gole di argilla grigia, quasi senza alberi; borghi di mattone sulle alture, uliveti, la parete del Gigante a ovest",
+  "Borghi": "Bisindë, Cëllinë, Cirmignanë, Cashtilindë, Mundësòcchë, Cashtijunë, Bbacucchë",
+  "Chi comanda": "Una strega, druidi, un podestà eletto, una gilda, un eremita, una famiglia antica, un barone"
  },
- "gm": "Iuvenza evita Bisindë: la magia lì è troppo forte e imprevedibile. Cëllinë è vassalla di Atrë. Mundësòcchë: il Signore dei Calanchi Azzurravena conosce i tunnel verso Teramum. Cashtijunë: i De Sterlich sono lealisti degli Aurex — l'anello imperiale apre le porte. Bbacucchë rispetta la magia di Adamus. Cashtilindë fa armature di cuoio per le legioni.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "· Iuvenza evita Bisindë: la magia lì è troppo forte e imprevedibile. La Strega del Fiume è potente e neutrale, legata alla terra e forse a Maia.\n· Azzurravena conosce i cunicoli che portano a Teramum: un’altra via verso la capitale. Va convinto, non comprato.\n· I De Sterlich sono fedeli alla memoria degli Aurex. A Silvanus danno asilo, se si fa riconoscere.\n· A Bbacucchë la magia di Adamus è rispettata, e sanno che il Gigante è inquieto.\n· Cirmignanë è popolo, non signori: qui la Crociata può trovare consenso vero. I mastini bianchi dei pastori sono creature spirituali, dono del Gigante.\n· Cëllinë segue Atrë: chi ha Giosia di Fonteviva ha Cëllinë.\n· Bisindë non sta sul Salinellum, come diceva il vecchio testo, ma sul Fino."
+  },
+  {
+   "t": "Corretto rispetto al vecchio canone",
+   "txt": "· Il vecchio testo diceva che a Bbacucchë si venera «il Gran Sasso». Nel mondo di Ea la montagna è il Gigante Dormiente.\n· Il confine sud non è più «verso Vesperia»: vedi Da decidere nella voce del Ducato."
+  }
+ ],
  "id": "contea-calanchi",
  "livello": "contea",
  "parent": "ducato-aprutium",
  "group": "Le otto contee",
  "title": "La Terra dei Calanchi",
- "sub": "Li Calanghè · contea 6 — Il sud profondo: terre aride, magiche, piene di burroni e strade nascoste.",
- "pub": "Il sud del Ducato, verso il Vomanum e il confine con Vesperia. Gole d'argilla grigia, i Calanchi, un labirinto naturale che i contrabbandieri conoscono meglio dei signori. Terra arida, antica, dove la Fiamma Solare è arrivata tardi e in punta di piedi: a Bisindë vive la Strega del Fiume, a Bbacucchë i druidi del Lupo venerano il Gran Sasso, a Cirmignanë i pastori si governano da soli. È anche la terra della transumanza, dove passano le greggi coi loro Mastini bianchi."
+ "sub": "Li Calanghë · sesta contea: il sud antico, arido e magico",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il sud del Ducato. Gole di argilla grigia, creste sottili come lame, piramidi di terra alte più di una casa: i Calanchi, un labirinto naturale che i contrabbandieri conoscono meglio dei signori. Terra arida e antica, dove la Fiamma è arrivata tardi e in punta di piedi. È anche terra di transumanza: qui passano le greggi con i loro mastini bianchi."
+  },
+  {
+   "t": "I borghi",
+   "txt": "· [[Bisindë]]: sul Fino, fra tre rioni e una torre quadrata. Nelle sue acque, dicono, vive una strega antica quanto la terra.\n· [[Cëllinë]]: un borgo murato, vassallo di Atrë. Le sue difese stanno nei burroni attorno.\n· [[Cirmignanë]]: una piccola repubblica di pastori con un Podestà eletto, e una torre a tre lati che non c’è da nessun’altra parte.\n· [[Cashtilindë]]: la Gilda dei Conciatori. Si sente prima di vederla.\n· [[Mundësòcchë]]: un borgo a gradoni sullo strapiombo, del Signore dei Calanchi Azzurravena, che non riceve quasi nessuno.\n· [[Cashtijunë]]: la casa dei De Sterlich, famiglia antica e discreta, con i ritratti di imperatori che nessuno ricorda più.\n· [[Bbacucchë]]: un borgo sotto la parete del Gigante, governato dagli sciamani del Lupo, che venerano il Gigante come Titano."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Li calanghë nen tè padrune. Tè sole chi ce sa camminà.»",
+  "cite": "Detto dei contrabbandieri"
+ },
+ "blocchi": true
 }

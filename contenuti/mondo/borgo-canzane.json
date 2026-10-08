@@ -14,17 +14,42 @@
  "mappa": null,
  "colore": "#C9A24A",
  "scheda": {
-  "Governatore": "Rodolfo Cerullius, Reggente",
-  "Fedeltà": "Incerta",
-  "Corrisponde a": "Canzano",
-  "Altri nomi": "Canzanium"
+  "Paese vero": "Canzano",
+  "In dialetto": "Canzañë; negli atti antichi Cansanum",
+  "Dove": "Sul crinale tra il Tordinum e il Vomanum, a poche miglia da Teramum",
+  "Chi comanda": "Casa Cerullius; oggi la regge Rodolfo Cerullius",
+  "Fedeltà": "Incerta, come chi la regge"
  },
- "gm": "Filo personale per Alessandros e Vicarus. Rodolfo è manipolabile: da chi? La Confraternita del Grano (legata ai Barbus) sta lavorando contro i Cerullius con la carestia artificiale. Motto Cerullius: «Equilibrio nella Tempesta».",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il filo personale di Alessandros e Vicarus. Rodolfo è debole e consigliato male. La Lega dei Sensali di Savinellus ha comprato una parte dei debiti della casata. La Confraternita del Grano Duro, legata ai Barbus, ammassa grano per far crollare il prezzo delle terre dei nobili in rovina, Cerullius compresi.\n\nSe Alessandros deve arrivare alla Grande Convocazione come candidato Duca, deve rimettere in piedi la sua casa.\n\n⟦[[La vecchia lite con i Fonteviva.]] Nella storia vera, più di un secolo prima, i signori di Canzano e gli Acquaviva di Atri litigarono per il borgo, e decise il re. I signori di Canzano persero potere. Nel gioco: un’antica sentenza dell’Imperatore tolse ai Cerullius metà dei loro diritti a favore dei Fonteviva. Il Duca Giosia la tiene ancora in un cassetto. Chi ritrova l’originale può rovesciarla.⟧\n\n⟦[[Le grotte.]] Sono vere. Nel gioco possono toccare Lu Sott’a Terre: una via verso Teramum che la famiglia conosce e non usa da generazioni.⟧\n\n⟦[[Gli Spinozzi.]] Nella realtà la tenuta di vino dei Cerulli a Canzano nasce dall’unione con gli Spinozzi, famiglia feudale del borgo. Nel gioco: una famiglia vassalla e fedele, l’unica che a Canzañë ancora non si vende.⟧"
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Che cosa è Rodolfo per i due fratelli: uno zio? Il vecchio canone parla di una «faida con gli zii».\n· Chi manovra Rodolfo."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre di Mezzo",
  "id": "borgo-canzane",
  "parent": "contea-terre-di-mezzo",
  "title": "Canzañë",
- "sub": "Canzanium · Incerta",
- "pub": "La terra natale di Alessandros e Vicarus Cerullius, la contea della loro Casata: l'antica dimora tra le vigne, la sede della Confraternita del Grano Duro. Oggi la regge Rodolfo Cerullius, un uomo debole e consigliato male, e la fedeltà del borgo è incerta come lui."
+ "sub": "Canzanium, la terra dei Cerullius",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Un borgo a triangolo in cima al crinale, chiuso dentro mura antiche: Porta Nuova in alto, Porta Madonna in basso, in mezzo vicoli così stretti che in uno si passa di fianco. Sotto le case c’è una rete di grotte scavate nella roccia, per l’acqua piovana e per le provviste. È la casa di Alessandros e Vicarus.\n\nTutto il Ducato conosce Canzañë per il suo tacchino: cotto per una notte intera e servito freddo, nella sua gelatina. Le donne del borgo fanno merletti che si vendono fino a Teramum. Lo stemma del borgo è una testa di moro con un turbante verde.\n\nFuori dalle mura c’è il santuario della Madonna dell’Alno. Si racconta che la Madonna apparve a un contadino sopra un albero. Nessuno gli credette, finché un cavallo che nessuno riusciva a domare girò tre volte intorno all’albero e si inginocchiò. Lì costruirono la chiesa."
+  },
+  {
+   "t": "La casata",
+   "txt": "I Cerullius sono una delle casate più antiche del Ducato. Hanno un palazzo anche a Teramum, nel Quartiere dei Tigli, mezzo vuoto da anni. Da quando la reggenza è passata a Rodolfo, la casa ha perso forza, soldi e amici."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Equilibrio nella Tempesta.»",
+  "cite": "Motto di Casa Cerullius"
+ },
+ "blocchi": true
 }
