@@ -787,3 +787,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - **Impero Aureo** (aquila bicipite d'oro su cremisi, dalla scheda) e **9 province** (figure proposte dalle loro casate: Valdûr, Orivex, Thalvorn, Solvirax, Veranthi, Vespri…): entrano da converti.py come le nazioni (stemma = copertina, illustrazione = tavola nel testo). **Aprutium** usa lo stemma del Ducato.
 - **Il Ducato d'Aprutium** (lupo d'argento e aquila d'oro, dalla scheda): non passa da converti.py; `img` = stemma, `illustrazione` = vecchia copertina, `pub` (era testo unico) diventa un blocco con la tavola e `blocchi: true`.
 - Prompt e scelte: `Revisioni/Compendio - immagini v149/mj/casate.json`, `province.json`, `casate-scelte.json`; foglio delle varianti `Stemmi - casate e province.jpg`. Prossimo: stemmi dei borghi.
+
+## v165 (08/10/2026) — stemmi dei borghi del Ducato
+
+- 40 stemmi nuovi (Midjourney, varianti scelte in `mj/borghi-scelti.json`, fogli `Stemmi borghi - foglio 1-3.jpg`), figure NUOVO DETTAGLIO PROPOSTO ricavate da governatore, casata, mestieri e soprannomi della scheda (elenco con le figure in `mj/stemmi_borghi.py`). Canzañë usa lo stemma di Casa Cerullius e Pënëtë e Silvë quello di Casa Barbus; Julia Nova tiene lo Stemma di Gigliè. Originali in `03_Compendio/06 Fazioni/Stemmi e araldica/Stemma — <titolo>.png`.
+- Come per le nazioni: stemma = copertina (`img`), la veduta di prima resta in `illustrazione` e va come tavola nel primo blocco; le voci a testo unico diventano un blocco con `blocchi: true`. I 6 borghi rigenerati dalle pagine di Giuseppe passano da converti.py; gli altri sono stati aggiornati direttamente nei file.
+- converti.py: `illustrazione` prende qualsiasi `img` precedente che non sia già uno stemma (prima solo «Mondo — …», e Bëllindë perdeva la veduta).
