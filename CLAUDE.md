@@ -816,3 +816,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Borghi doppi: stemma del primo comune (Alba Adriatica, Fano Adriano, Ancarano, Pineto). Canzañë e Pënëtë e Silvë non usano più gli stemmi di Casa Cerullius e Casa Barbus ma quelli di Canzano e Pineto.
 - Restano inventati (stemma vero non trovato): Mòrrë (Morro d'Oro) e Sandémirë (Sant'Omero). Julia Nova e Teramum erano già sui modelli veri (v166).
 - **Cashtagnë / Li Cashtillë**: nella v166 i file erano stati rinominati ma le chiavi dentro le voci no (`borgo-cashtagne` = Li Cashtillë puntava a «Stemma — Cashtagnë.jpg» e «Mondo — Cashtagnë.jpg»). Ora ogni voce punta alle chiavi col suo titolo e i valori delle due vedute in `_immagini.json` sono stati scambiati: Li Cashtillë = Castelli (ceramica), Cashtagnë = Castel Castagna.
+
+## v169 (09/10/2026) — gli stemmi dei borghi sulla mappa del Ducato
+
+- Richiesta di Giuseppe: gli stemmi delle città sulla mappa della scena `ducato` (la Crociata), piccoli per non coprire la mappa.
+- **Dati**: campo `stemma` (`img/xxx.png`) in ogni città di `contenuti/_crociata.json`: stemmi ritagliati (GrabCut come nella v167, 128 px, trasparenti, chiavi «Stemma ritagliato — <titolo>.png») dagli originali `03_Compendio/06 Fazioni/Stemmi e araldica/Stemma — <titolo del borgo>.png`. Script rigiocabile `Revisioni/Mappa del Ducato con gli stemmi (v169)/stemmi.py`: tocca solo il campo `stemma` di ogni riga (il file è impaginato a mano). Rilanciarlo quando cambia uno stemma.
+- **Codice**: in `croBuildLayer` ogni `.cropin.citta` ha `<i class="crost">` prima del rombo. CSS dopo `.cropin:hover`: lo stemma sta sopra il nome dipinto sulla mappa (sollevato di 12 px della mappa, così non copre le lettere); misura 34 px della mappa, sullo schermo tra 12 e 22 px (`clamp` con `--croInv`), quindi piccolo a mappa rimpicciolita; col mouse ×2,6, la città dove sta la colonna ×1,4. Il clic resta quello della città (scheda con Compendio e marcia).
+- Prova: 43 stemmi, nessuna immagine mancante; controllato a 35%, 57%, 111%, 139%; `prova-tavolo.js` verde.
