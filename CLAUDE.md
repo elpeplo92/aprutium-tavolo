@@ -864,3 +864,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 - Segnalato da Giuseppe: nelle schede del Compendio che passano da `renderC2Entry` (personaggi, fazioni, oggetti…) il ritratto era un quadratino di 120 px che non si apriva. Ora è 160×200 (inquadrato in alto, `background-position:center 20%`) e, come l'immagine grande `img.poiimg`, al clic si apre in `#c3zoom` (aggiunto nel wrapper di `renderC2Entry` dopo le tavole `.c2v-tav`: cursore zoom-in e titolo «Ingrandisci»).
 - Prova: da giocatore, scheda di Virellius → clic sul ritratto → finestra grande; `prova-tavolo.js` verde.
+
+## v177 (10/10/2026) — via dieci PNG di Julia Nova mai giocati
+
+- Giuseppe: tolti perché mai giocati Mastro Evaristo, Klevin, Tonio e Marco, Giacomì 'Lu Ventaròle', Rafèle 'Lu Rematore', Ariellia Ragaiola, Donato «Lu Serpe» (con Laurenzia e Nonna Bartolda), Titta il Fornaio, Zio Nando, Lu Grise. Usciti da COMPENDIO_DATA, `comp/out/julianova.json` e `compendio_all.json` con `Revisioni/Compendio - voci nuove v148/archivia-voci.py`; salvati interi in `_ARCHIVIO_2026-10-07/PNG di Julia Nova mai giocati (v177)/voci-vecchie.json` (registro).
+- Regola di Giuseppe per i ritratti: contano i personaggi che vede un giocatore (vista di Vicarus con lo stato vero, `?prova=1&statovero=1&ruolo=vicarus`). Oggi a Julia Nova ne vede 31: 16 con ritratto (tutti dipinti), 15 senza (Sergente Marco, Sergente Nardìne, Brizio, Pippo, Sorella Peppa, Gabrielus Forcinum, Anacleto, Achilluc, Ciccillo, Lu Biondo e Storto, Mastro Biagio, Mastro Gerolamo, Tonino «La Botte», Berardo de Còlle Lungo, Celestina Colabello).
