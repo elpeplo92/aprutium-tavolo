@@ -1383,8 +1383,8 @@ select option{background:#0C0F15;color:#EFE6D0}
 .crostop{fill:rgba(209,72,54,.25);stroke:#D14836;stroke-width:3;animation:croPulse 1.6s ease-in-out infinite}
 /* v141 — strade del Ducato: tratteggio color pergamena su un'ombra scura; il percorso in anteprima segue le strade */
 .crostr-b,.crostr,path.croprev{fill:none;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
-.crostr-b{stroke:rgba(10,8,5,.55);stroke-width:5}
-.crostr{stroke:#EBD9A4;stroke-width:2.2;stroke-dasharray:7 6;opacity:.9}
+.crostr-b{stroke:rgba(10,8,5,.45);stroke-width:3}
+.crostr{stroke:#EBD9A4;stroke-width:1.2;stroke-dasharray:4 4;opacity:.75}
 /* v141 — il rombo della città sta esattamente sul puntino bianco: il nome non conta più nel centraggio */
 .cropin span{position:absolute;top:100%;left:50%;transform:translateX(-50%)}
 .cropin.citta b{width:13px;height:13px}
@@ -1399,10 +1399,11 @@ select option{background:#0C0F15;color:#EFE6D0}
 .cropin span{margin-top:6px;font:700 19px var(--caps);letter-spacing:.04em;color:#F3E6C4;background:rgba(7,9,13,.82);border:1px solid rgba(201,162,74,.55);padding:1px 9px;border-radius:4px;white-space:nowrap;opacity:0;transition:opacity .15s;text-shadow:0 1px 2px #000}
 .cropin:hover span,.cropin.here span,.cropin.tappa.vista span{opacity:1}
 .cropin:hover{z-index:5}
-/* v169 — stemma del borgo sopra il rombo: 34 px della mappa, sullo schermo tra 12 e 22 px (piccolo quando la mappa è rimpicciolita); col mouse si ingrandisce */
-.cropin .crost{position:absolute;bottom:calc(100% + max(1px, 12px / var(--croInv,1)));left:50%;--stw:clamp(12px,calc(34px / var(--croInv,1)),22px);width:var(--stw);height:calc(var(--stw) * 1.2);transform:translateX(-50%);transform-origin:50% 100%;background:center bottom/contain no-repeat;filter:drop-shadow(0 1px 2px rgba(0,0,0,.9));transition:transform .15s;pointer-events:auto}
-.cropin:hover .crost,.cropin.here .crost{transform:translateX(-50%) scale(2.6)}
-.cropin.here:not(:hover) .crost{transform:translateX(-50%) scale(1.4)}
+/* v170 — lo stemma del borgo PRENDE IL POSTO del rombo, centrato sul puntino della mappa: 34 px della mappa, sullo schermo tra 12 e 22 px; col mouse ×2,6, la città dove sta la colonna ×1,4 con un alone d'oro */
+.cropin .crost{display:block;--stw:clamp(12px,calc(34px / var(--croInv,1)),22px);width:var(--stw);height:calc(var(--stw) * 1.2);background:center/contain no-repeat;filter:drop-shadow(0 1px 2px rgba(0,0,0,.9));transition:transform .15s;transform-origin:50% 50%}
+.cropin:hover .crost{transform:scale(2.6)}
+.cropin.here:not(:hover) .crost{transform:scale(1.4);filter:drop-shadow(0 0 4px rgba(243,217,138,.95)) drop-shadow(0 1px 2px rgba(0,0,0,.9))}
+.cropin.citta.scena .crost{filter:drop-shadow(0 0 3px rgba(227,188,95,.7)) drop-shadow(0 1px 2px rgba(0,0,0,.9))}
 .cropin.tappa b{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#3A1A14,#140A08);border:2px solid #E3BC5F;color:#F3D98A;box-shadow:0 0 0 3px rgba(209,72,54,.45),0 0 16px rgba(209,72,54,.55),0 3px 10px rgba(0,0,0,.8)}
 .cropin.tappa b svg{width:22px;height:22px}
 .cropin.tappa.ignota b{border-style:dashed;opacity:.55;box-shadow:none}
@@ -1628,7 +1629,7 @@ select option{background:#0C0F15;color:#EFE6D0}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v169</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v170</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -6371,7 +6372,7 @@ function croBuildLayer(layer,M){
     if(p.tipo==='tappa'){ const st=M.tappe[p.id]||{}; if(!IS_GM&&!st.vista) continue;
       html+=`<div class="cropin tappa${st.vista?' vista':' ignota'}${M.dove===p.id?' here':''}${croEditPos?' edit':''}" data-cp="${p.id}" style="left:${p.x}px;top:${p.y}px"><b>${CRO_ICO.tappa}</b><span>${croEsc(p.nome)}${IS_GM&&!st.vista?' · nascosta':''}</span></div>`; }
     else { const scn=croScenesOf(p).length;
-      html+=`<div class="cropin citta${M.dove===p.id?' here':''}${scn?' scena':''}${M.visti[p.id]?' vista':''}${croEditPos?' edit':''}" data-cp="${p.id}" style="left:${p.x}px;top:${p.y}px">${p.stemma?`<i class="crost" style="background-image:url('${p.stemma}')"></i>`:''}<b></b><span>${croEsc(p.nome)}</span></div>`; }
+      html+=`<div class="cropin citta${M.dove===p.id?' here':''}${scn?' scena':''}${M.visti[p.id]?' vista':''}${croEditPos?' edit':''}" data-cp="${p.id}" style="left:${p.x}px;top:${p.y}px">${p.stemma?`<i class="crost" style="background-image:url('${p.stemma}')"></i>`:'<b></b>'}<span>${croEsc(p.nome)}</span></div>`; }
   }
   html+=`<div id="croCamp" class="crocamp"></div><div id="croBanner" class="crobanner" title="La Crociata — ${croEsc(CRO.nome||'')}">${CRO_BANNER}</div>`;
   layer.innerHTML=html;

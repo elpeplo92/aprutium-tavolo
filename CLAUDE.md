@@ -823,3 +823,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - **Dati**: campo `stemma` (`img/xxx.png`) in ogni città di `contenuti/_crociata.json`: stemmi ritagliati (GrabCut come nella v167, 128 px, trasparenti, chiavi «Stemma ritagliato — <titolo>.png») dagli originali `03_Compendio/06 Fazioni/Stemmi e araldica/Stemma — <titolo del borgo>.png`. Script rigiocabile `Revisioni/Mappa del Ducato con gli stemmi (v169)/stemmi.py`: tocca solo il campo `stemma` di ogni riga (il file è impaginato a mano). Rilanciarlo quando cambia uno stemma.
 - **Codice**: in `croBuildLayer` ogni `.cropin.citta` ha `<i class="crost">` prima del rombo. CSS dopo `.cropin:hover`: lo stemma sta sopra il nome dipinto sulla mappa (sollevato di 12 px della mappa, così non copre le lettere); misura 34 px della mappa, sullo schermo tra 12 e 22 px (`clamp` con `--croInv`), quindi piccolo a mappa rimpicciolita; col mouse ×2,6, la città dove sta la colonna ×1,4. Il clic resta quello della città (scheda con Compendio e marcia).
 - Prova: 43 stemmi, nessuna immagine mancante; controllato a 35%, 57%, 111%, 139%; `prova-tavolo.js` verde.
+
+## v170 (09/10/2026) — sulla mappa del Ducato lo stemma al posto del rombo, strade più sottili
+
+- Richiesta di Giuseppe: il rombo giallo delle città non serve più. Le città con `stemma` disegnano solo lo stemma (`<i class="crost">` al posto di `<b>`), centrato sul puntino della mappa; senza stemma resta il rombo. CSS «v170» dopo `.cropin:hover` (sostituisce quello della v169): 34 px della mappa, 12-22 px sullo schermo, ×2,6 col mouse, ×1,4 con alone d'oro dove sta la colonna, alone leggero per le città con una scena.
+- Strade: tratteggio 1,2 px (era 2,2), trattini 4/4 (erano 7/6), opacità .75; ombra 3 px (era 5).
