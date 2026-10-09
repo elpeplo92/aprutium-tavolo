@@ -14,30 +14,260 @@
  "mappa": "Mappa di Teramum.jpg",
  "colore": "#C9A24A",
  "scheda": {
-  "Governatore": "Il Consiglio Reggente degli Otto",
-  "Fedeltà": "Diviso",
-  "Corrisponde a": "Teramo",
-  "Altri nomi": "Tërëmë (in dialetto) · Interamnia Pretutiana (l'antica città pretuziana)",
-  "Popolazione": "~55.000",
-  "Rioni": "San Giorgio · San Leonardo · Quartiere dei Tigli · Sestiere del Fiume",
-  "Porte": "Realë · Meridianë · de lu Solë · de lu Fiumë · Piccòla · Pustèrla de li Mortë",
-  "Guardia": "~600 attivi, ~1.500 di riserva (Casa Grazianus)"
+  "Paese vero": "Teramo",
+  "Altri nomi": "Tërëmë in dialetto; Interamnia, «fra i fiumi», la città antica dei Pretuziani",
+  "Abitanti": "Circa cinquantacinquemila",
+  "Chi comanda": "Il Consiglio Reggente delle Otto Casate",
+  "Dentro le mura": "Il Corso, Sant’Anna, Porta Romana, Santa Maria a Bitetto, Piazza Garibaldi e i Tigli",
+  "Fuori le mura": "Madonna delle Grazie, la Stazione, la Gammarana, Colleatterrato, Colleparco, la Cona, Piano della Lenta e gli altri borghi",
+  "Porte": "Porta Reale (Porta Madonna), Porta Melatina, Porta Romana, Porta San Giorgio, Porta Carrese, Porta delle Recluse, Porta Due di Coppe",
+  "Guardia": "La Guardia Ducale di Casa Grazianus: circa seicento in servizio, millecinquecento di riserva",
+  "Santo": "San Berardo, che si festeggia il 19 dicembre"
  },
- "gm": "Il campo nemico. Per ogni decisione del Consiglio servono cinque voti su otto: quasi nulla viene deciso. Luoghi da preparare: Palazzo Ducale, Basilica Aurea (sopra il Sigillo), Biblioteca Incompiuta dei Tancredus, tempio sigillato di Mortus con Frate Davide de li Piccole Vie, i tunnel della Città Sepolta e l'Arena Sprofondata. L'Arlecchino delle Grotte: chi lo incontra non muore, dimentica. Il Sigillo Ducale di Teramum è l'unico che può chiamare la Convocazione: prima di salvare il Ducato bisogna prenderne la testa.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il campo nemico. Iuvenza vuole farsi nominare Reggente; il Consiglio non decide quasi nulla; il Sigillo Ducale è l’unico che può chiamare la Grande Convocazione. Prima di salvare il Ducato bisogna prenderne la testa."
+  },
+  {
+   "t": "Le scene già preparate, sui luoghi veri",
+   "tabella": {
+    "head": [
+     "Scena preparata",
+     "Dove sta adesso",
+     "Cosa cambia"
+    ],
+    "rows": [
+     [
+      "Arrivo a Teramum (Porta de lu Solë)",
+      "⟦Porta Reale, «Porta Madonna»⟧",
+      "Cambia il nome della porta. Il ponte sul Tordinum, il dazio e la discesa dalle colline restano."
+     ],
+     [
+      "Basilica Aurea",
+      "⟦Il Duomo⟧",
+      "«Basilica Aurea» resta come nome delle Casate. Il re con la lancia sulla facciata diventa l’angelo e la Vergine del portale."
+     ],
+     [
+      "Palazzo Ducale",
+      "⟦Piazza del Mercato, davanti alla facciata del Duomo⟧",
+      "Dove oggi c’è il Comune. Interni invariati."
+     ],
+     [
+      "Arena Sprofondata",
+      "⟦L’arena antica di Santo Spirito⟧",
+      "Si sposta da San Leonardo a Porta Romana, accanto al teatro antico. Dentro resta tutto: gli archi abitati, il forno, l’ipogeo."
+     ],
+     [
+      "Città Sepolta",
+      "⟦Sotto la Torre Bruciata e i palazzi antichi⟧",
+      "Le domus coi mosaici, a tre-sei braccia sotto le case."
+     ],
+     [
+      "Biblioteca Incompiuta",
+      "⟦Via Delfico, nella Terranova⟧",
+      "I Tigli restano, come viale del passeggio vicino a Piazza Garibaldi, non come rione."
+     ],
+     [
+      "Tempio di Mortus",
+      "⟦Santa Maria a Bitetto⟧",
+      "Il mercato è in Piazza del Mercato. Il vicolo scende dal rione dei poveri verso il fiume."
+     ]
+    ]
+   }
+  },
+  {
+   "t": "Sotto il Duomo",
+   "txt": "Il Sigillo Lunare sta sotto il Duomo, e fa da tappo. Nella storia vera, dalla cripta di San Berardo parte un cunicolo verso la piazza, ritrovato da poco: è la strada del master. La forgia di annullamento che può spezzare il filatterio di Lyaras sta lì sotto (Atto IX). Il campanaro, Zi’ Pasquale «Lu Battaje», sente la campana che suona da sola, sotto terra."
+  },
+  {
+   "t": "Mazzaclocchi e Spennati",
+   "txt": "⟦Le due fazioni vere della Teramo medievale. I [[Mazzaclocchi]], «quelli delle mazze», stanno con Casa Mazzarellus. Gli [[Spennati]] stanno con Casa Mellitius, eredi dei Melatini, che hanno ancora la casa con le finestre a serpente in San Leonardo e danno il nome a Porta Melatina. Per strada ci si riconosce dal nastro. Si picchiano per niente.⟧\n\n⟦Su una lapide della città c’è scritto «A lo parlare agi mesura». Si riferisce a un fatto vero: un Acquaviva fece impiccare tredici Melatini sulla strada di Teramo. Nel gioco fu un Fonteviva. Gli Spennati non l’hanno dimenticato, e Giosia di Fonteviva non può entrare in città senza scorta.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Sor Paolo]] è un modo per far circolare voci, accuse e indizi: ogni mattina c’è un biglietto nuovo. Anche i giocatori possono usarlo.\n· [[La calata del sabato]] sul Corso è la scena per vedere tutte le Casate insieme in un colpo solo.\n· [[Lu Lupe Bianche]] è la taverna dei giocatori: le serate alla Paura e delirio partono da qui.\n· [[La Compagnia dei Diavoli e il Palio tolto.]] Chi ha comprato quella gara? Si può legare alla Lega dei Sensali di Savinellus, che compra tutto.\n· [[Il Monte della Città fallito.]] I risparmi di mezza città sono spariti. Dove sono finiti? Un buon movente per una Casata, o per Iuvenza.\n· [[La Casa dei Folli.]] Dove le Casate fanno sparire chi dà fastidio. Qualcuno che sa troppo, lì dentro, c’è.\n· [[La Specola di Collurania.]] Sul colle a sud-est c’è una vecchia torre per guardare le stelle, dei Cerullius. Da lassù si vede tutta la città e il cielo con la Frattura."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Il vecchio canone aveva una «gola» che taglia la città in due, il Sestiere del Fiume e porte inventate. La Teramo vera non ha gole: è un promontorio fra due fiumi. Ora le porte, le piazze e i quartieri sono quelli veri, e i quartieri di oggi sono diventati i borghi fuori le mura.\n· Le figure della Teramo dei giocatori (il barbiere che sa tutto, l’edicolante ironico, il vigile che non si ricorda niente) diventano PNG con nomi inventati. Si scrivono nella voce dei luoghi."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Da quale porta entra la Crociata. Proposta: arriva dalla strada della costa, passa davanti al camposanto di Cartecchio e sotto Colleatterrato, ed entra da Porta Reale. Così la scena già scritta «Da Colleatterato» resta buona.\n· Che stagione è quando arriva la Crociata, e se c’è una festa in corso: il Palio, la calata del sabato, il mercato."
+  }
+ ],
  "livello": "borgo",
  "group": "Il Cuore del Ducato",
  "id": "borgo-teramum",
  "parent": "contea-cuore-del-ducato",
  "title": "Teramum",
- "sub": "Tërëmë · Interamnia Pretutiana · Diviso",
+ "sub": "Tërëmë, la Città fra i Due Fiumi",
  "pub": [
   {
    "t": "",
-   "txt": "La Città Sotto la Montagna, ~55.000 anime, la capitale del Ducato, abbracciata dai due fiumi Tordinum e Vezzola. Costruita su tre livelli: la Città Visibile dei palazzi e delle basiliche, la Città Vecchia delle fondamenta imperiali, la Città Sepolta dei resti di Interamnia Pretutiana. Quattro rioni — San Giorgio il colle del potere, San Leonardo il borgo degli artigiani, il Quartiere dei Tigli dei signori, il Sestiere del Fiume del mercato — e sei porte. Mura bianche di dodici metri con diciotto torri; la Guardia Ducale di Casa Grazianus. Qui siedono le Otto Casate, qui la Basilica Aurea dei Santi Martiri, qui Veneranda Iuvenza ha i suoi agenti. È la destinazione della Crociata.",
+   "capo": true,
+   "txt": "Teramum sta su una lingua di terra alta fra due fiumi, il Tordinum e la Vezzola, che si uniscono sotto la sua punta orientale. Per questo gli antichi la chiamarono Interamnia, la città fra i fiumi. Alle sue spalle, a sud-ovest, il Gigante Dormiente riempie mezzo cielo: d’inverno la neve sembra arrivare fino ai tetti, e d’estate il sole cala dietro la montagna prima che altrove. A Teramum non si vedono i tramonti, solo le albe.\n\nÈ una città di travertino chiaro e di mattone, stretta dentro le sue mura, con le torri dei nobili e il campanile del Duomo sopra tutto. Ed è tre città una sopra l’altra. Sopra c’è la città di oggi. Sotto le case ci sono le fondamenta dell’Impero, a tre o quattro braccia di profondità: chi scava una cantina trova un pavimento a mosaico. E più giù ancora c’è quello che resta di Interamnia, la città dei Pretuziani."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "La punta orientale, verso la confluenza, è la città vecchia: vicoli stretti, la Torre Bruciata, le case dei nobili più antichi. Verso ovest la città si allarga nella Terranova, il rione nuovo, con il Corso dritto e i palazzi. Intorno corrono le mura, rifatte dopo il grande incendio, e sotto le mura, dai due lati, le ripe scendono ripide ai fiumi.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "Porta Reale",
+      "A est",
+      "La porta grande, da cui arriva la strada della costa. Tutti la chiamano [[Porta Madonna]], per il santuario della Madonna delle Grazie che sta appena fuori."
+     ],
+     [
+      "Porta Melatina",
+      "A nord",
+      "La porta dei Melatini, sul Tordinum. A Sant’Antonio Abate qui si benedicono le bestie."
+     ],
+     [
+      "Porta Romana",
+      "A sud",
+      "Sopra la Vezzola, nel rione dei teatri antichi."
+     ],
+     [
+      "Porta San Giorgio",
+      "A ovest",
+      "In fondo al Corso, verso i campi e la strada della montagna."
+     ],
+     [
+      "Porta Carrese",
+      "A sud-est",
+      "La porta dei carri."
+     ],
+     [
+      "Porta delle Recluse",
+      "Sotto la Casa dei Folli",
+      "Si chiama così per le donne rinchiuse lassù."
+     ],
+     [
+      "Porta Due di Coppe",
+      "Sulle mura",
+      "Nessuno sa più perché si chiami così. Tutti hanno una versione."
+     ]
+    ]
+   },
    "img": "Mondo — Teramum.jpg",
    "didascalia": "Teramum"
+  },
+  {
+   "t": "II. Dentro le mura",
+   "txt": "Il centro è piccolo e si gira a piedi. I vecchi lo dividono ancora in quattro rioni (San Giorgio, San Leonardo, Santo Spirito e Santa Maria a Bitetto), ma la gente si orienta con le piazze e le strade.\n\n· [[Il Corso]], nella Terranova. La strada dritta dei palazzi e delle botteghe, dalla Piazza Grande a Piazza Garibaldi.\n· [[Sant’Anna e la Torre Bruciata]], verso la punta orientale. Il cuore più vecchio: vicoli, la casa dei Melatini con le finestre a serpente, i portici.\n· [[Porta Romana]], a sud. Il rione dei teatri antichi: tra le case affiorano le gradinate di un teatro dell’Impero e, poco più in là, la conca di un’arena. Ci stanno la scuola dei Delfico, il convento di San Domenico e Sor Paolo.\n· [[Santa Maria a Bitetto]]. Il rione più piccolo e più povero, sopra il fiume. Case addossate, panni stesi, vicoli che scendono all’acqua. Chi non ha niente sta qui.\n· [[Piazza Garibaldi]], all’ingresso ovest. La piazza della fiera, con la Rocca di Casa Grazianus e Porta Due di Coppe. Da qui partono i Tigli.\n· [[I Tigli]]. Il viale alberato del passeggio, con i busti dei teramani illustri, i banchetti e i tavoli delle osterie all’ombra."
+  },
+  {
+   "t": "III. Fuori le mura",
+   "txt": "Teramum è cresciuta fuori dalle sue mura, lungo le strade e sulle colline intorno. Ogni borgo fuori porta ha il suo nome e la sua fama.",
+   "tabella": {
+    "head": [
+     "Borgo",
+     "Dove",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "Madonna delle Grazie e Campo Fiera",
+      "Subito fuori Porta Reale",
+      "Il santuario più amato della città, il campo della fiera, il mercato."
+     ],
+     [
+      "La Stazione",
+      "In piano, a est",
+      "La stazione di posta dove finiscono i carri e le diligenze della costa. Più in là la strada non va."
+     ],
+     [
+      "San Berardo",
+      "Accanto alla Stazione",
+      "Un borgo nuovo, nato intorno a una chiesa dedicata al santo."
+     ],
+     [
+      "La Gammarana",
+      "Dietro la Stazione",
+      "⟦Le fornaci e le officine: ceramiche, mattoni, ferro. Fumo, case fitte, gente stanca. In città la chiamano «il dormitorio».⟧"
+     ],
+     [
+      "Villa Mosca",
+      "Sulla collina a est",
+      "⟦L’ospedale dei Frati e, nella pineta, il vecchio lazzaretto chiuso.⟧"
+     ],
+     [
+      "Colleatterrato e San Benedetto",
+      "A est, sulla strada della costa",
+      "Case povere costruite in fretta, e le più colpite quando la terra trema. San Benedetto è la parte nuova, e la peggiore."
+     ],
+     [
+      "Cartecchio",
+      "Alle porte, verso Julia Nova",
+      "Il camposanto della città e la chiesa di Santa Maria, con la leggenda della quercia, «lu cerquone»."
+     ],
+     [
+      "Villa Pavone",
+      "All’estremo est",
+      "Botteghe di artigiani, lontane da tutto."
+     ],
+     [
+      "Piano d’Accio",
+      "A est, verso la valle",
+      "⟦Il Campo del Palio, e il Gran Fondaco del Gigante: il mercato coperto che ha svuotato le botteghe del Corso.⟧"
+     ],
+     [
+      "Colleparco",
+      "Il colle più alto, a sud",
+      "⟦Lo Studio di Teramum: maestri, studenti forestieri, stanze in affitto, osterie. La collina frana un po’ ogni inverno.⟧"
+     ],
+     [
+      "Il Castello",
+      "Sul colle di San Venanzio, a ovest",
+      "Un castello sopra la città, e intorno le case dei signori."
+     ],
+     [
+      "La Cona",
+      "A ovest, sulla strada della montagna",
+      "Il borgo delle scuole, e una necropoli antica venuta fuori scavando."
+     ],
+     [
+      "Piano della Lenta",
+      "A nord, sulla strada per le Marche",
+      "Il borgo più tranquillo. Non succede mai niente, e chi ci vive è contento così."
+     ],
+     [
+      "San Nicolò a Tordino",
+      "Giù nella valle del Tordinum",
+      "Il grande borgo della strada e del fiume: carri, magazzini, locande."
+     ],
+     [
+      "Sant’Atto",
+      "Più giù, sul Tordinum",
+      "Il paesino del guado."
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. Le piazze e i luoghi",
+   "txt": "· [[Il Duomo.]] La cattedrale di Santa Maria e di San Berardo, costruita con le pietre dei teatri antichi dopo il grande incendio. Davanti ha un portale con un angelo e una Vergine scolpiti, in cima i merli. Il campanile è alto cinquanta braccia, e la campana più grande si chiama [[l’Aprutina]]. Dentro, sull’altare, c’è un paliotto d’argento e d’oro con trentacinque storie sbalzate: per questo le Casate lo chiamano la [[Basilica Aurea]].\n· [[La Piazza del Mercato.]] Davanti alla facciata del Duomo. Da un lato il [[Palazzo Ducale]], dall’altro il Vescovado, e in mezzo una fontana con due leoni che sputano due getti d’acqua: sono i due fiumi.\n· [[La Piazza Grande.]] Sul fianco del Duomo, dove finisce il Corso. Un arco, l’Arco di Monsignore, unisce il Duomo al palazzo dell’Arcimandrita. Di sera le scalinate del Duomo si riempiono di ragazzi.\n· [[Il Corso.]] La strada dritta della Terranova, dalla Piazza Grande a Piazza Garibaldi. Il sabato pomeriggio tutta Teramum fa la [[calata]]: su e giù, a vedere e a farsi vedere.\n· [[La Torre Bruciata.]] Il campanile della cattedrale vecchia, ancora nero del fuoco di quando i cavalieri del nord bruciarono la città. Sotto, dal pavimento, si vedono i mosaici delle case antiche.\n· [[Sor Paolo.]] A Porta Romana c’è una statua antica senza naso, che tutti chiamano Sor Paolo. Di notte la gente gli infila in mano biglietti: satire, insulti, accuse. La mattina mezza città va a leggere cosa ha «detto» Sor Paolo.\n· [[Il giardino del Duca.]] Accanto a Piazza Garibaldi. Alberi, un laghetto con i cigni, un ponticello e una gabbia con una belva venuta da lontano. Ci vanno gli innamorati, e i ragazzi che [[fanno cùppe]]: quelli che saltano la scuola dei frati.\n· [[La Fonte della Noce.]] Fuori dalle mura, giù per la ripa. Ci lavano le lavandaie. Chi ne beve, dicono, non se ne va più.\n· [[Il Ponte degli Impiccati.]] Un arco di pietra sulla Vezzola. C’era la forca, e il nome è rimasto.\n· [[La Casa dei Folli.]] L’ospizio di Sant’Antonio Abate, sopra le mura, dove si chiudono i matti e chi è scomodo.\n· [[La Madonna delle Grazie.]] Il santuario fuori Porta Reale, con il chiostro delle monache. È la chiesa più amata dai teramani. Nel campo davanti si fa la fiera, e nei giorni di mercato non si passa."
+  },
+  {
+   "t": "V. La gente e le usanze",
+   "txt": "I teramani dicono Terme per dire la loro città. Si chiamano per soprannome, e il soprannome dura più del nome. Considerano gente di mare, e quindi «pisciarule», tutti quelli di Julia Nova.\n\n· [[La Compagnia dei Diavoli.]] I giovani del Palio di Teramum portano il diavolo rosso sul petto. Due estati fa vinsero il Palio delle Contrade, e la vittoria gli fu tolta per una gara comprata. La città non l’ha mai digerito.\n· [[San Berardo.]] Il 19 dicembre il Reggente offre il cero, e il vescovo benedice la città con il busto e il braccio d’argento del santo. Durante un assedio, dicono, San Berardo in rosso e la Madonna in bianco apparvero sulle mura, e l’assedio finì.\n· [[Le Virtù.]] Il primo maggio ogni casa cuoce la minestra delle sette cose: sette legumi, sette verdure, sette paste. Se ne manda una scodella ai vicini. Chi se ne dimentica, perde l’amicizia.\n· [[La ruota di Santa Caterina.]] Le ragazze girano col dito una ruota scolpita in una chiesa, per trovare marito.\n· [[Le scrippelle ’mbusse.]] Crespelle bagnate nel brodo. Si racconta che le inventò un garzone di cucina, facendo cadere le crespelle nella pentola alla tavola dei capitani.\n· [[Lu Lupe Bianche.]] La taverna di via Delfico, dove si fa notte e si finisce sempre a parlare troppo."
+  },
+  {
+   "t": "VI. I guai di oggi",
+   "txt": "· [[La terra trema.]] Da qualche anno il Gigante si gira più spesso. Ci sono chiese puntellate con travi, e un palazzo di via Delfico ha la facciata tenuta da catene di ferro.\n· [[Il Banco è caduto.]] Il Monte della Città, dove mezza Teramum teneva i risparmi, è fallito. Le Casate dicono che è colpa dei tempi.\n· [[Il Corso si svuota.]] Le botteghe chiudono una dopo l’altra. I bottegai di San Giorgio si sono incatenati ai banchi davanti al Palazzo Ducale, per protesta contro i dazi.\n· [[Il ponte che non finisce.]] Il ponte nuovo sulla Vezzola si inaugura ogni anno. Non è mai finito.\n· [[Le acque.]] Dicono che l’acqua che scende dal Gigante non sia più buona. Nessuno sa chi l’ha detto per primo."
   }
  ],
  "illustrazione": "Mondo — Teramum.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Ha bbevute a la Fonde de la Noce.»",
+  "cite": "Si dice del forestiero che a Teramum ci resta"
+ }
 }
