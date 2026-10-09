@@ -855,3 +855,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Script e dati in `Revisioni/Compendio - immagini v149/mj/`: `ritratti_jn.py`, `ritratti_jn2.py` (prompt), `ritratti-jn*-job.json`, `ritratti-jn-scelte1.json`, fogli `Ritratti Julia Nova - foglio 1/2.jpg`; `scarica_ritratti_jn.py <scelte.json>` scarica in `03_Compendio/03 Personaggi/Julia Nova/Ritratti/<nome>.png`, registra «Ritratto — <nome>.jpg» (900 px) e collega la voce (COMPENDIO_DATA + comp/out, percorso `img/`). I ritratti sostituiti sono in `_ARCHIVIO_2026-10-09/Ritratti sostituiti (Julia Nova)/` con `registro.csv`.
 - Canone (Giuseppe): **Torvus non è un nano**. Tolto «Nano,» dal sottotitolo (COMPENDIO_DATA, `comp/out/julianova.json`, `compendio_all.json`), «Torvus Halderan, il Nano,» (`luoghi/jn-mantelli-bianchi-nord.json`, julianova) e «il nano Torvus» (`fazioni.json`). I Naviganti Grigi sono mezzelfi grigiastri (metà Drukarri, metà umani).
 - Prova: i sei ritratti si caricano; `prova-tavolo.js` verde.
+
+## v175 (09/10/2026) — ritratto nuovo di Silvanus
+
+- Terzo giro (`ritratti-jn3-job.json`, foglio `Ritratti Julia Nova - Silvanus 3.jpg`): occhi naturali con solo un riflesso d'oro e d'argento (Giuseppe: «un riflesso, qualcosa di leggero»). Scelta di Giuseppe: variante 1 (`ritratti-jn-scelte2.json`). Il ritratto vecchio è in `_ARCHIVIO_2026-10-09/Ritratti sostituiti (Julia Nova)/`.
