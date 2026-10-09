@@ -878,3 +878,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v179 (10/10/2026) — ritratti di Sergente Marco, Brizio e Pippo
 
 - Rifatti da `Ritratti Julia Nova - foglio 5.jpg` (job in `ritratti-jn5-job.json`): facce abruzzesi/pretuziane, guardie di Julia Nova in rosso e oro (i colori dello stemma della città: NUOVO DETTAGLIO PROPOSTO), ritratti buffi per i soprannomi buffi. Scelte di Giuseppe: Marco 3, Brizio 4, Pippo 4 (`ritratti-jn-scelte4.json`).
+
+## v180 (10/10/2026) — Ciccillo nella Crociata; ritratti di Lu Biondo e Storto, Berardo, Celestina
+
+- Giuseppe: Ciccillo «Lu Sorce» sta nella Crociata, non a Julia Nova. Nuovo gruppo «La Crociata» fra i personaggi: `C2_CITY.crociata` e `C2_CITY_ORDER` (primo della lista); Ciccillo ha `city:"crociata"`, `group:"La compagnia"` (COMPENDIO_DATA, `comp/out/julianova.json`, `compendio_all.json`).
+- Ritratti scelti da me su delega di Giuseppe (foglio 4): Lu Biondo e Storto 4, Berardo de Còlle Lungo 4, Celestina Colabello 2 (`ritratti-jn-scelte5.json`).
+- In corso: Nardìne e Fenix rifatti coi colori di Julia Nova (rosso e oro); Ciccillo, Mastro Biagio, Mastro Gerolamo, Tonino «La Botte» rifatti buffi.
