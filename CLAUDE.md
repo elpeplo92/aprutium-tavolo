@@ -859,3 +859,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v175 (09/10/2026) — ritratto nuovo di Silvanus
 
 - Terzo giro (`ritratti-jn3-job.json`, foglio `Ritratti Julia Nova - Silvanus 3.jpg`): occhi naturali con solo un riflesso d'oro e d'argento (Giuseppe: «un riflesso, qualcosa di leggero»). Scelta di Giuseppe: variante 1 (`ritratti-jn-scelte2.json`). Il ritratto vecchio è in `_ARCHIVIO_2026-10-09/Ritratti sostituiti (Julia Nova)/`.
+
+## v176 (10/10/2026) — ritratto dei personaggi ingrandibile
+
+- Segnalato da Giuseppe: nelle schede del Compendio che passano da `renderC2Entry` (personaggi, fazioni, oggetti…) il ritratto era un quadratino di 120 px che non si apriva. Ora è 160×200 (inquadrato in alto, `background-position:center 20%`) e, come l'immagine grande `img.poiimg`, al clic si apre in `#c3zoom` (aggiunto nel wrapper di `renderC2Entry` dopo le tavole `.c2v-tav`: cursore zoom-in e titolo «Ingrandisci»).
+- Prova: da giocatore, scheda di Virellius → clic sul ritratto → finestra grande; `prova-tavolo.js` verde.
