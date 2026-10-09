@@ -869,3 +869,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 - Giuseppe: tolti perché mai giocati Mastro Evaristo, Klevin, Tonio e Marco, Giacomì 'Lu Ventaròle', Rafèle 'Lu Rematore', Ariellia Ragaiola, Donato «Lu Serpe» (con Laurenzia e Nonna Bartolda), Titta il Fornaio, Zio Nando, Lu Grise. Usciti da COMPENDIO_DATA, `comp/out/julianova.json` e `compendio_all.json` con `Revisioni/Compendio - voci nuove v148/archivia-voci.py`; salvati interi in `_ARCHIVIO_2026-10-07/PNG di Julia Nova mai giocati (v177)/voci-vecchie.json` (registro).
 - Regola di Giuseppe per i ritratti: contano i personaggi che vede un giocatore (vista di Vicarus con lo stato vero, `?prova=1&statovero=1&ruolo=vicarus`). Oggi a Julia Nova ne vede 31: 16 con ritratto (tutti dipinti), 15 senza (Sergente Marco, Sergente Nardìne, Brizio, Pippo, Sorella Peppa, Gabrielus Forcinum, Anacleto, Achilluc, Ciccillo, Lu Biondo e Storto, Mastro Biagio, Mastro Gerolamo, Tonino «La Botte», Berardo de Còlle Lungo, Celestina Colabello).
+
+## v178 (10/10/2026) — quattro ritratti nuovi a Julia Nova
+
+- Dai fogli `Ritratti Julia Nova - foglio 3/4.jpg` (prompt in `ritratti_jn4.py`, job in `ritratti-jn4-job.json`), scelte di Giuseppe: Sergente Nardìne 4, Sorella Peppa 2, Anacleto 3, Achilluc 4 (`ritratti-jn-scelte3.json`, `scarica_ritratti_jn.py`).
+- Da rifare (Giuseppe): Sergente Marco e Pippo (soprannome buffo = ritratto buffo), Brizio (soldato di Julia Nova, abruzzese/pretuziano). Gabrielus Forcinum: Giuseppe darà una foto di riferimento. Il foglio 4 (Ciccillo, Lu Biondo e Storto, Mastro Biagio, Mastro Gerolamo, Tonino, Berardo, Celestina) aspetta le sue scelte.
