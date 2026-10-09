@@ -874,3 +874,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 - Dai fogli `Ritratti Julia Nova - foglio 3/4.jpg` (prompt in `ritratti_jn4.py`, job in `ritratti-jn4-job.json`), scelte di Giuseppe: Sergente Nardìne 4, Sorella Peppa 2, Anacleto 3, Achilluc 4 (`ritratti-jn-scelte3.json`, `scarica_ritratti_jn.py`).
 - Da rifare (Giuseppe): Sergente Marco e Pippo (soprannome buffo = ritratto buffo), Brizio (soldato di Julia Nova, abruzzese/pretuziano). Gabrielus Forcinum: Giuseppe darà una foto di riferimento. Il foglio 4 (Ciccillo, Lu Biondo e Storto, Mastro Biagio, Mastro Gerolamo, Tonino, Berardo, Celestina) aspetta le sue scelte.
+
+## v179 (10/10/2026) — ritratti di Sergente Marco, Brizio e Pippo
+
+- Rifatti da `Ritratti Julia Nova - foglio 5.jpg` (job in `ritratti-jn5-job.json`): facce abruzzesi/pretuziane, guardie di Julia Nova in rosso e oro (i colori dello stemma della città: NUOVO DETTAGLIO PROPOSTO), ritratti buffi per i soprannomi buffi. Scelte di Giuseppe: Marco 3, Brizio 4, Pippo 4 (`ritratti-jn-scelte4.json`).
