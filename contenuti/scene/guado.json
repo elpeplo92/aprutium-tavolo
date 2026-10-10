@@ -140,7 +140,7 @@
      "tipo": "scontro",
      "titolo": "Quanto è difficile",
      "parte": "evento",
-     "note": "Alta. 19 Forgiati per 6.700 PE. Per 6 personaggi di 5° livello più Vhaerun il limite alto è 7.700 PE. I soldati della colonna non tirano i dadi uno per uno: combattono sui tre fronti qui sotto, con un tiro a fronte a fine round."
+     "note": "Alta sulla carta, Moderata nei fatti.\n\nSulla carta: 19 Forgiati = 6.700 PE (2 marci 900, 13 ferali 2.600, 3 veterani 2.100, Gerardo 1.100). Con le regole 2024 il limite Alta per 6 personaggi di 5° livello è 6.600 PE (1.100 a testa; Moderata 4.500, Bassa 3.000): lo scontro è appena sopra Alta.\n\nNei fatti i personaggi non li affrontano tutti insieme. Arrivano a ondate (8 al round 1, Gerardo al 2, dieci al 3, Cola al 4) e i soldati della colonna ne tengono buona parte sui fronti. Quelli che arrivano davvero addosso ai personaggi sono i sei del fiume, i due fratelli Chiòdi, Gerardo e Cola: circa 4.650 PE, cioè Moderata. In più c'è Vhaerun (GS 5) dal round 2: vale quasi un settimo personaggio.\n\nSe va troppo liscio: la fila del fronte C si rompe (tre soldati caduti) e la gente dei campi corre sui civili del Carro V. Se va male: tieni i Forgiati del fiume sul fronte B, contro i vesperiani, e non contro i personaggi.\n\nPE: 6.700 in tutto. Vhaerun ha aiutato molto, quindi con le regole 2024 conta come un membro del gruppo nella divisione: 6.700 ÷ 7 = 957 PE a testa (se non entra nello scontro, 6.700 ÷ 6 = 1.116)."
     },
     {
      "id": "fronte_a",
@@ -218,7 +218,10 @@
      "innesco": "Round 1, alla fine, dopo l'ultimo in iniziativa.",
      "leggi": "Dai pioppi della riva di qua, dove camminava lontano dai carri per non spaventare nessuno, esce Vhaerun.\n\nScende di corsa sui sassi. I carrettieri lo vedono e gridano: per loro è un'altra bestia.\n\nVhaerun entra nel fiume come se l'acqua non ci fosse e ringhia una parola che nessuno di voi conosce. Berardo e Mèmmo si voltano verso di lui. Per la prima volta, i Forgiati esitano.",
      "note": "Dal round 2 Vhaerun gioca subito prima di Maximus. Usa l'Urlo di comando una volta: i Forgiati entro 9 metri fanno TS Saggezza CD 14 o sono spaventati fino alla fine del loro turno successivo. Combatte col randello +1 che gli ha dato Maximus (+8, 1d12+5).",
-     "immagine": "PNG — Vhaerun.jpg"
+     "immagine": "PNG — Vhaerun.jpg",
+     "pedine": [
+      "vhaerun"
+     ]
     },
     {
      "id": "il_terzo_esce_dal_pagliaio",
@@ -932,7 +935,9 @@
    "x": 652,
    "y": 304,
    "gruppo": "inizio",
-   "tac": "Comanda gli altri senza parlare: dove va lui, vanno loro. Ripete le parole che sente."
+   "tac": "Comanda gli altri senza parlare: dove va lui, vanno loro. Ripete le parole che sente.",
+   "fronte": "B",
+   "img": "TOKEN — Forgiato — Zi' Anselmo.png"
   },
   {
    "id": "g_f2",
@@ -942,7 +947,9 @@
    "x": 710,
    "y": 326,
    "gruppo": "inizio",
-   "tac": "Se qualcuno la chiama per nome, si ferma per un round."
+   "tac": "Se qualcuno la chiama per nome, si ferma per un round.",
+   "fronte": "B",
+   "img": "TOKEN — Forgiato — Rosa.png"
   },
   {
    "id": "g_f3",
@@ -951,7 +958,9 @@
    "best": "forgiato_ferale",
    "x": 608,
    "y": 348,
-   "gruppo": "inizio"
+   "gruppo": "inizio",
+   "fronte": "B",
+   "img": "TOKEN — Forgiato — Panfilo.png"
   },
   {
    "id": "g_f4",
@@ -960,7 +969,9 @@
    "best": "forgiato_ferale",
    "x": 681,
    "y": 272,
-   "gruppo": "inizio"
+   "gruppo": "inizio",
+   "fronte": "B",
+   "img": "TOKEN — Forgiato — Emidio.png"
   },
   {
    "id": "g_f5",
@@ -969,7 +980,9 @@
    "best": "forgiato_ferale",
    "x": 521,
    "y": 445,
-   "gruppo": "inizio"
+   "gruppo": "inizio",
+   "fronte": "B",
+   "img": "TOKEN — Forgiato — Settimio.png"
   },
   {
    "id": "g_f6",
@@ -978,7 +991,9 @@
    "best": "forgiato_ferale",
    "x": 550,
    "y": 478,
-   "gruppo": "inizio"
+   "gruppo": "inizio",
+   "fronte": "B",
+   "img": "TOKEN — Forgiato — Assunta.png"
   },
   {
    "id": "g_v1",
@@ -987,7 +1002,9 @@
    "best": "forgiato_veterano",
    "x": 912,
    "y": 445,
-   "gruppo": "inizio"
+   "gruppo": "inizio",
+   "fronte": "A",
+   "img": "TOKEN — Forgiato — fratelli Chiòdi.png"
   },
   {
    "id": "g_v2",
@@ -996,7 +1013,9 @@
    "best": "forgiato_veterano",
    "x": 956,
    "y": 467,
-   "gruppo": "inizio"
+   "gruppo": "inizio",
+   "fronte": "A",
+   "img": "TOKEN — Forgiato — fratelli Chiòdi 2.png"
   },
   {
    "id": "g_g",
@@ -1005,7 +1024,10 @@
    "best": "forgiato_capo",
    "x": 1202,
    "y": 217,
-   "gruppo": "round2"
+   "gruppo": "round2",
+   "fronte": "A",
+   "contro": true,
+   "img": "TOKEN — Forgiato — Gerardo Tosti.png"
   },
   {
    "id": "g_v3",
@@ -1014,7 +1036,10 @@
    "best": "forgiato_veterano",
    "x": 1072,
    "y": 98,
-   "gruppo": "round4"
+   "gruppo": "round4",
+   "fronte": "A",
+   "contro": true,
+   "img": "TOKEN — Forgiato — Cola lu vaccaro.png"
   },
   {
    "id": "g_z",
@@ -1023,7 +1048,9 @@
    "best": "forgiato_marcio",
    "x": 72,
    "y": 825,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Zi' Pasquale.png"
   },
   {
    "id": "g_w1",
@@ -1032,7 +1059,9 @@
    "best": "forgiato_ferale",
    "x": 58,
    "y": 891,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Panfilo 2.png"
   },
   {
    "id": "g_w2",
@@ -1041,7 +1070,9 @@
    "best": "forgiato_ferale",
    "x": 87,
    "y": 967,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Rosa 2.png"
   },
   {
    "id": "g_w3",
@@ -1050,7 +1081,9 @@
    "best": "forgiato_ferale",
    "x": 43,
    "y": 1021,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Settimio 2.png"
   },
   {
    "id": "g_w4",
@@ -1059,7 +1092,9 @@
    "best": "forgiato_ferale",
    "x": 116,
    "y": 1043,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Rosa 3.png"
   },
   {
    "id": "g_w5",
@@ -1068,7 +1103,9 @@
    "best": "forgiato_ferale",
    "x": 174,
    "y": 1053,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Emidio 2.png"
   },
   {
    "id": "g_w6",
@@ -1077,7 +1114,9 @@
    "best": "forgiato_ferale",
    "x": 43,
    "y": 760,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Assunta 2.png"
   },
   {
    "id": "g_w7",
@@ -1086,7 +1125,9 @@
    "best": "forgiato_ferale",
    "x": 101,
    "y": 782,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Emidio 3.png"
   },
   {
    "id": "g_w8",
@@ -1095,7 +1136,9 @@
    "best": "forgiato_ferale",
    "x": 232,
    "y": 1053,
-   "gruppo": "round3"
+   "gruppo": "round3",
+   "fronte": "C",
+   "img": "TOKEN — Forgiato — Assunta 3.png"
   },
   {
    "id": "g_c0",
@@ -1104,7 +1147,9 @@
    "kind": "alleato",
    "x": 898,
    "y": 456,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "A",
+   "img": "TOKEN — Capitan Silvanus Ardentus.png"
   },
   {
    "id": "g_c1",
@@ -1113,7 +1158,9 @@
    "kind": "alleato",
    "x": 927,
    "y": 510,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "A",
+   "img": "TOKEN — Sergente Kostandìn.png"
   },
   {
    "id": "g_c2",
@@ -1122,7 +1169,8 @@
    "kind": "alleato",
    "x": 854,
    "y": 532,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Tiberius Aurentius.png"
   },
   {
    "id": "g_c3",
@@ -1131,7 +1179,9 @@
    "kind": "alleato",
    "x": 811,
    "y": 543,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "A",
+   "img": "TOKEN — Vasco.png"
   },
   {
    "id": "g_c4",
@@ -1140,7 +1190,9 @@
    "kind": "alleato",
    "x": 782,
    "y": 565,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "A",
+   "img": "TOKEN — Vesperiano.png"
   },
   {
    "id": "g_c5",
@@ -1149,7 +1201,9 @@
    "kind": "alleato",
    "x": 796,
    "y": 510,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "A",
+   "img": "TOKEN — Vesperiano 2.png"
   },
   {
    "id": "g_c6",
@@ -1158,7 +1212,9 @@
    "kind": "alleato",
    "x": 956,
    "y": 478,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "A",
+   "img": "TOKEN — Vesperiano 3.png"
   },
   {
    "id": "g_c7",
@@ -1167,7 +1223,9 @@
    "kind": "alleato",
    "x": 724,
    "y": 652,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "B",
+   "img": "TOKEN — Civile Pompizius.png"
   },
   {
    "id": "g_c8",
@@ -1176,7 +1234,9 @@
    "kind": "alleato",
    "x": 767,
    "y": 652,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "B",
+   "img": "TOKEN — Vesperiano 4.png"
   },
   {
    "id": "g_c9",
@@ -1185,7 +1245,9 @@
    "kind": "alleato",
    "x": 710,
    "y": 586,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "B",
+   "img": "TOKEN — Vesperiano.png"
   },
   {
    "id": "g_c10",
@@ -1194,7 +1256,9 @@
    "kind": "alleato",
    "x": 608,
    "y": 728,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "B",
+   "img": "TOKEN — Mastro Colangelo.png"
   },
   {
    "id": "g_c11",
@@ -1203,7 +1267,9 @@
    "kind": "alleato",
    "x": 652,
    "y": 738,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "B",
+   "img": "TOKEN — Vesperiano 2.png"
   },
   {
    "id": "g_c12",
@@ -1212,7 +1278,9 @@
    "kind": "alleato",
    "x": 594,
    "y": 662,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "B",
+   "img": "TOKEN — Vesperiano 3.png"
   },
   {
    "id": "g_c13",
@@ -1221,7 +1289,8 @@
    "kind": "alleato",
    "x": 492,
    "y": 804,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Mastro Giustino.png"
   },
   {
    "id": "g_c14",
@@ -1230,7 +1299,8 @@
    "kind": "alleato",
    "x": 536,
    "y": 804,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Dottor Albino.png"
   },
   {
    "id": "g_c15",
@@ -1239,7 +1309,8 @@
    "kind": "alleato",
    "x": 449,
    "y": 793,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Frate Martino.png"
   },
   {
    "id": "g_c16",
@@ -1248,7 +1319,9 @@
    "kind": "alleato",
    "x": 391,
    "y": 869,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Iosephus Pompizius.png"
   },
   {
    "id": "g_c17",
@@ -1257,7 +1330,9 @@
    "kind": "alleato",
    "x": 290,
    "y": 912,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Brizio «Lu Spada Secca».png"
   },
   {
    "id": "g_c18",
@@ -1266,7 +1341,9 @@
    "kind": "alleato",
    "x": 319,
    "y": 956,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Pippo «Lu Scudo».png"
   },
   {
    "id": "g_c19",
@@ -1275,7 +1352,9 @@
    "kind": "alleato",
    "x": 246,
    "y": 891,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Miliziano.png"
   },
   {
    "id": "g_c20",
@@ -1284,7 +1363,9 @@
    "kind": "alleato",
    "x": 261,
    "y": 956,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Miliziano 2.png"
   },
   {
    "id": "g_c21",
@@ -1293,7 +1374,9 @@
    "kind": "alleato",
    "x": 217,
    "y": 923,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Miliziano 3.png"
   },
   {
    "id": "g_c22",
@@ -1302,7 +1385,9 @@
    "kind": "alleato",
    "x": 304,
    "y": 999,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Miliziano 4.png"
   },
   {
    "id": "g_c23",
@@ -1311,7 +1396,9 @@
    "kind": "alleato",
    "x": 188,
    "y": 869,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Vesperiano 4.png"
   },
   {
    "id": "g_c24",
@@ -1320,7 +1407,9 @@
    "kind": "alleato",
    "x": 203,
    "y": 977,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Vesperiano.png"
   },
   {
    "id": "g_c25",
@@ -1329,7 +1418,9 @@
    "kind": "alleato",
    "x": 348,
    "y": 999,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Vesperiano 2.png"
   },
   {
    "id": "g_c26",
@@ -1338,7 +1429,9 @@
    "kind": "alleato",
    "x": 159,
    "y": 934,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "fronte": "C",
+   "img": "TOKEN — Vesperiano 3.png"
   },
   {
    "id": "g_c27",
@@ -1348,7 +1441,7 @@
    "x": 420,
    "y": 934,
    "gruppo": "colonna",
-   "img": "PNG — Micuccio.jpg"
+   "img": "TOKEN — Micuccio.png"
   },
   {
    "id": "g_c28",
@@ -1357,7 +1450,8 @@
    "kind": "alleato",
    "x": 449,
    "y": 956,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Cuncetta de lu Funare.png"
   },
   {
    "id": "g_c29",
@@ -1366,7 +1460,8 @@
    "kind": "alleato",
    "x": 391,
    "y": 977,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Mastro Nicola lu Funare.png"
   },
   {
    "id": "g_c30",
@@ -1375,7 +1470,8 @@
    "kind": "alleato",
    "x": 478,
    "y": 923,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Cecco.png"
   },
   {
    "id": "g_c31",
@@ -1384,7 +1480,8 @@
    "kind": "alleato",
    "x": 376,
    "y": 1010,
-   "gruppo": "colonna"
+   "gruppo": "colonna",
+   "img": "TOKEN — Mimì lu Bannitòre.png"
   },
   {
    "id": "g_c32",
@@ -1393,8 +1490,9 @@
    "kind": "alleato",
    "x": 174,
    "y": 673,
-   "gruppo": "colonna",
-   "img": "PNG — Vhaerun.jpg"
+   "gruppo": "vhaerun",
+   "img": "TOKEN — Vhaerun.png",
+   "best": "vhaerun"
   },
   {
    "id": "g_carroI",
@@ -1446,5 +1544,161 @@
    "gruppo": "colonna",
    "carro": true
   }
- ]
+ ],
+ "scontro": {
+  "punto": "guado_casale",
+  "fronti": [
+   {
+    "id": "A",
+    "nome": "Fronte A · l'avanguardia, sulla riva di là",
+    "modulo": "fronte_a",
+    "cadono": [
+     "g_c4",
+     "g_c5",
+     "g_c6",
+     "g_c3",
+     "g_c1",
+     "g_c0"
+    ],
+    "esiti": [
+     {
+      "da": 1,
+      "a": 2,
+      "breve": "La falce di Berardo: uno dei tre di Vasco va giù.",
+      "effetto": "soldato"
+     },
+     {
+      "da": 3,
+      "a": 4,
+      "breve": "Spade contro falci: nessuno avanza.",
+      "effetto": ""
+     },
+     {
+      "da": 5,
+      "a": 9,
+      "breve": "Kostandìn tira la falce: tre spade insieme.",
+      "effetto": "veterano20"
+     }
+    ]
+   },
+   {
+    "id": "B",
+    "nome": "Fronte B · i carri, in mezzo al fiume",
+    "modulo": "fronte_b",
+    "esiti": [
+     {
+      "da": 1,
+      "a": 2,
+      "breve": "Un mulo crolla, il civile del Carro II va in acqua: il Carro II è fermo.",
+      "effetto": "bestia"
+     },
+     {
+      "da": 3,
+      "a": 4,
+      "breve": "I vesperiani fanno muro: non passano.",
+      "effetto": ""
+     },
+     {
+      "da": 5,
+      "a": 9,
+      "breve": "Due lance insieme: un Forgiato inchiodato sui sassi.",
+      "effetto": "ferale"
+     }
+    ]
+   },
+   {
+    "id": "C",
+    "nome": "Fronte C · la retroguardia, sulla strada",
+    "modulo": "fronte_c",
+    "cadono": [
+     "g_c18",
+     "g_c19",
+     "g_c20",
+     "g_c21",
+     "g_c22",
+     "g_c23",
+     "g_c24",
+     "g_c25",
+     "g_c26",
+     "g_c16",
+     "g_c17"
+    ],
+    "esiti": [
+     {
+      "da": 1,
+      "a": 2,
+      "breve": "Pippo va giù: un Forgiato passa e al prossimo round attacca i civili.",
+      "effetto": "soldato"
+     },
+     {
+      "da": 3,
+      "a": 4,
+      "breve": "«Fila! Fila!»: la retroguardia tiene.",
+      "effetto": ""
+     },
+     {
+      "da": 5,
+      "a": 9,
+      "breve": "Brizio, un colpo solo: un Forgiato cade fra le stoppie.",
+      "effetto": "ferale"
+     }
+    ]
+   }
+  ],
+  "eventi": [
+   {
+    "round": 1,
+    "quando": "fine",
+    "modulo": "vhaerun_entra_nello_scontro",
+    "titolo": "Vhaerun esce dai pioppi",
+    "pedine": "vhaerun"
+   },
+   {
+    "round": 2,
+    "quando": "inizio",
+    "modulo": "il_terzo_esce_dal_pagliaio",
+    "titolo": "Gerardo esce dal pagliaio",
+    "pedine": "round2"
+   },
+   {
+    "round": 2,
+    "quando": "inizio",
+    "modulo": "il_carro_iv_scivola",
+    "titolo": "Il Carro IV comincia a scivolare"
+   },
+   {
+    "round": 3,
+    "quando": "inizio",
+    "modulo": "dai_campi_alle_spalle",
+    "titolo": "La gente dei campi, alle spalle",
+    "pedine": "round3"
+   },
+   {
+    "round": 3,
+    "quando": "inizio",
+    "modulo": "micuccio_entra_in_acqua",
+    "titolo": "Micuccio entra in acqua"
+   },
+   {
+    "round": 4,
+    "quando": "inizio",
+    "modulo": "esce_cola_dal_casale",
+    "titolo": "Cola esce dal casale",
+    "pedine": "round4"
+   },
+   {
+    "round": 4,
+    "quando": "fine",
+    "modulo": "il_carro_iv_scivola",
+    "titolo": "Il Carro IV entra nella pozza e si rovescia, se nessuno l'ha fermato",
+    "carro": true
+   }
+  ],
+  "carro": {
+   "pedina": "g_carroIV",
+   "da": 2,
+   "metri": 3,
+   "rovescia": 4
+  }
+ }
 }
