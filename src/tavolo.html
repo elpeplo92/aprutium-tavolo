@@ -2242,13 +2242,19 @@ html body #zoomctl input#aoeSize::-webkit-inner-spin-button, #zoomctl #aoeSize::
 #modal .sch3 .s3-foglio .s3-tira[data-diadel]{color:#3b2714;background:rgba(255,255,255,.35);border-color:rgba(110,80,40,.5)}
 .sch3 .s3-props-inc b{width:100%;font:400 13px 'Mr Eaves Small Caps',Georgia,serif;color:#7a2a12;letter-spacing:.08em}
 .sch3 .s3-props-inc span{border-color:rgba(90,60,170,.4);color:#3a2a6a}
+/* immagini non tagliate (v198) */
+#modal .sch3 .s3-lettura .s3-la{height:220px!important;background-size:cover!important;background-position:center 30%!important;-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent)!important;mask-image:linear-gradient(180deg,#000 82%,transparent)!important}
+#modal .sch3 .s3-lettura .s3-la.s3-ogg{background-size:contain!important;background-repeat:no-repeat!important;background-position:center!important;margin:14px 14px 0;height:200px!important;-webkit-mask-image:none!important;mask-image:none!important}
+#modal .sch3 .s3-ca-art{height:160px!important;background-position:center 35%!important}
+#modal .sch3 .s3-ca-art.s3-ogg{background-image:var(--a),radial-gradient(circle at 50% 45%,#4a3d28,#141210 75%)!important;background-size:auto 88%,cover!important;background-repeat:no-repeat!important;background-position:center!important}
+#modal .sch3 .s3-art.s3-ogg{background-size:contain,cover!important;background-repeat:no-repeat!important;background-position:center!important}
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v197</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v198</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -8115,7 +8121,9 @@ function s3Comandi(box,id,t,mine){
   const big=p=>p?(p[1]||p[0]):'';
   let sch3Sel=null;   /* la voce aperta nel pannello di lettura, per personaggio */
 
-  function lettura(box,html){ const l=box.querySelector('.s3-let'); if(l) l.innerHTML=html; }
+  /* gli oggetti (PNG trasparenti) si mostrano interi, le illustrazioni riempiono il riquadro */
+  function marcaOgg(root){ root.querySelectorAll('.s3-la,.s3-ca-art,.s3-art').forEach(e=>{ const v=(e.getAttribute('style')||''); e.classList.toggle('s3-ogg',/\.png/i.test(v)); }); }
+  function lettura(box,html){ const l=box.querySelector('.s3-let'); if(l){ l.innerHTML=html; marcaOgg(l); } }
   function leggi(box,k,LET){ const d=LET[k]; if(!d) return; sch3Sel=k;
     lettura(box,(d.i?`<div class="s3-la" style="background-image:url('${d.i}')"></div>`:'')+`<div class="s3-lt"><small>${d.s||''}</small><h2>${d.t}</h2>${d.h||`<p>${d.x||''}</p>`}${d.b||''}</div>`);
     box.querySelectorAll('[data-k]').forEach(e=>e.classList.toggle('sel',e.dataset.k===k));
@@ -8213,7 +8221,7 @@ function s3Comandi(box,id,t,mine){
       const fx=oldBody.querySelector('.fxpanel'); if(fx&&c2){ const w=document.createElement('div'); w.className='s3-fx'; w.innerHTML='<h3 class="s3-h3b">Effetti e tiri <small>vantaggio, svantaggio, effetti accesi</small></h3>'; fx.querySelector('h2')?.remove(); w.append(fx); c2.append(w); }
     } else if(S3P[sheetTab]){ dove.innerHTML=S3P[sheetTab](id,t,sh,mine,LET); }
     else dove.append(oldBody);   /* le altre pagine: il contenuto di sempre, con i suoi tasti */
-    wrap.replaceWith(nuovo);
+    wrap.replaceWith(nuovo); marcaOgg(nuovo);
     /* ---------- comandi ---------- */
     nuovo.querySelectorAll('[data-s3tab]').forEach(a=>a.onclick=()=>{ sheetTab=a.dataset.s3tab; renderSheet(id); });
     nuovo.querySelector('[data-s3back]').onclick=()=>closeModal();
