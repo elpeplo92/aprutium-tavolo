@@ -1007,3 +1007,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v198 (10/10/2026) — immagini della scheda non più tagliate
 
 - Segnalato da Giuseppe: illustrazioni delle carte degli attacchi e del pannello di lettura tagliate. `marcaOgg` (sch3.js) segna con `.s3-ogg` i riquadri con un PNG (gli oggetti, sfondo trasparente): si mostrano interi (`contain`); le illustrazioni JPG riempiono un riquadro più alto (carte 160 px, lettura 220 px). `prova-tavolo.js` verde.
+
+## v199 (10/10/2026) — il Compendio nuovo
+
+- Prototipo approvato da Giuseppe («bellissimo»); fonte `Revisioni/Compendio nuovo (10-10-2026)/` (`comp4.js`, `comp4.css`, `py applica.py`, foto del prototipo). Blocchi «COMPENDIO NUOVO (v199)»; `renderCompendio` è avvolta da `c4()`, che riveste ciò che disegna (stessi dati, stessi clic).
+- Frontespizio (`window.c4Home`, all'apertura): titolo «Compendio di Aprutium», ricerca su tutto il Compendio (Invio → `c2Q`), i capitoli come tavole illustrate numerate (immagine da `PREF` o dalla prima voce con immagine; Atti = Campo della Crociata). Indice a sinistra con miniature e «Frontespizio». Ogni sezione ha una testata illustrata (`.c4hero`: numero del capitolo, voci, titolo in oro, descrizione `DESCR`); per i Personaggi di una città il titolo è la città; per la ricerca «Risultati per…». Voci come tavole verticali a tutta carta, gruppi col rombo d'oro, città dei Personaggi come grandi tavole, diario degli Atti su pergamena col sigillo rosso. La finestra della voce (v184) prende cornice e caratteri della scheda (Mr Eaves, Bookinsanity). Stessa scala in proporzione della scheda (`--z`).
+- Attenzione: nel sito c'è una regola generica su `header`: nei blocchi nuovi usare `div`, non `header`.
+- `prova-tavolo.js` verde; provati giocatore e master, 1920 e 1366, voce aperta, città, ricerca.

@@ -2249,12 +2249,119 @@ html body #zoomctl input#aoeSize::-webkit-inner-spin-button, #zoomctl #aoeSize::
 #modal .sch3 .s3-ca-art.s3-ogg{background-image:var(--a),radial-gradient(circle at 50% 45%,#4a3d28,#141210 75%)!important;background-size:auto 88%,cover!important;background-repeat:no-repeat!important;background-position:center!important}
 #modal .sch3 .s3-art.s3-ogg{background-size:contain,cover!important;background-repeat:no-repeat!important;background-position:center!important}
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
+/* ===== COMPENDIO NUOVO (v199) ===== */
+/* Compendio nuovo (v199): stesso linguaggio della scheda (oro e ottone, Mr Eaves, Bookinsanity, tavole illustrate) */
+#modal .box.comp.c4box{--o1:#F6E3A8;--o2:#D9B15C;--o3:#9A7330;--o4:#5E4318;--ink:#ECE4D2;--dim:#A69C88;--sp:#6F675A;
+  zoom:var(--z,1);width:calc((100vw - 32px)/var(--z,1))!important;max-width:none!important;height:calc((100vh - 92px)/var(--z,1))!important;max-height:none!important;padding:0!important;overflow:hidden!important;
+  border-radius:14px!important;border:1px solid rgba(217,177,92,.45)!important;background:linear-gradient(180deg,#121318,#0a0b0e)!important;box-shadow:0 0 0 1px #000,0 40px 100px rgba(0,0,0,.8)!important}
+#modal .c4box .c3{height:100%!important;grid-template-columns:300px minmax(0,1fr)!important;gap:0!important}
+/* ---------- indice ---------- */
+#modal .c4box .c3nav{padding:22px 16px!important;background:linear-gradient(180deg,rgba(217,177,92,.05),transparent 30%)!important;border-right:1px solid rgba(217,177,92,.3)!important;display:flex;flex-direction:column;gap:6px;overflow:auto}
+#modal .c4box .c3nav .eyebrow{font:400 24px/1.05 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.02em!important;text-transform:none!important;color:var(--o1)!important;margin:0 4px 10px!important;padding-bottom:10px;border-bottom:1px solid rgba(217,177,92,.3)}
+#modal .c4box .c3nav .eyebrow:not(:first-child){font-size:17px!important;color:var(--o3)!important;margin-top:14px!important}
+#modal .c4box .c3nav button{position:relative;display:flex!important;align-items:center;gap:12px;min-height:58px;padding:6px 10px 6px 76px!important;border-radius:10px!important;border:1px solid rgba(217,177,92,.14)!important;
+  background:linear-gradient(90deg,rgba(255,255,255,.02),transparent)!important;box-shadow:none!important;text-align:left;color:#D9CFB8!important;font:400 18px/1.15 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.02em!important;text-transform:none!important}
+#modal .c4box .c3nav button::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:58px;border-radius:7px;background:var(--m,radial-gradient(circle,#3a3020,#14110c)) center/cover;box-shadow:inset 0 0 0 1px rgba(217,177,92,.45)}
+#modal .c4box .c3nav button[data-c4home]::before{background:radial-gradient(circle at 50% 40%,#3a2f18,#100d08);content:'✦';display:grid;place-items:center;color:var(--o2);font-size:22px}
+#modal .c4box .c3nav button[data-racc]::before{background:radial-gradient(circle at 50% 40%,#2a2418,#100d08)}
+#modal .c4box .c3nav button svg{display:none!important}
+#modal .c4box .c3nav button small{margin-left:auto;font:14px 'Mr Eaves Small Caps',Georgia,serif!important;color:var(--sp)!important;background:none!important}
+#modal .c4box .c3nav button:hover{border-color:rgba(246,227,168,.55)!important;color:#FFF3D6!important}
+#modal .c4box .c3nav button.on{border-color:var(--o1)!important;color:var(--o1)!important;background:linear-gradient(90deg,rgba(217,177,92,.16),rgba(217,177,92,.02))!important;box-shadow:0 0 18px rgba(217,177,92,.18)!important}
+/* ---------- corpo ---------- */
+#modal .c4box .c3main{padding:0 30px 40px!important;overflow:auto!important;scrollbar-width:thin;scrollbar-color:#4a3e26 transparent}
+/* frontespizio */
+#modal .c4box .c4front{text-align:center;padding:40px 0 26px}
+#modal .c4box .c4front small{font:16px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.3em;color:var(--o3)}
+#modal .c4box .c4front h1{margin:6px 0 10px;font:400 64px/1 'Mr Eaves Small Caps',Georgia,serif;background:linear-gradient(180deg,#fff4cf,var(--o1) 35%,var(--o2) 70%,var(--o3));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 rgba(0,0,0,.9))}
+#modal .c4box .c4front p{font:italic 19px/1.5 'Bookinsanity',Georgia,serif;color:#CFC5AE;max-width:720px;margin:0 auto 22px}
+.c4cerca{display:flex;align-items:center;gap:10px;max-width:640px;height:52px;margin:0 auto;padding:0 18px;border-radius:26px;background:rgba(0,0,0,.45);border:1px solid rgba(217,177,92,.45);box-shadow:inset 0 2px 6px rgba(0,0,0,.5)}
+.c4cerca svg{width:20px;height:20px;fill:none;stroke:#D9B15C;stroke-width:2;flex:none}
+.c4cerca input{flex:1;background:none!important;border:0!important;outline:0;color:#ECE4D2!important;font:italic 18px 'Bookinsanity',Georgia,serif!important;box-shadow:none!important}
+#modal .c4box .c4capitoli{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.c4cap{position:relative;height:250px;border-radius:12px;overflow:hidden;border:1px solid rgba(217,177,92,.35)!important;background:var(--m) center 35%/cover #14110c!important;box-shadow:0 12px 28px rgba(0,0,0,.55)!important;padding:0!important;text-align:left;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s}
+.c4cap.grande{grid-column:span 2;height:320px}
+.c4cap::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,14,0) 30%,rgba(10,11,14,.82) 70%,rgba(10,11,14,.97))}
+.c4cap>div{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;z-index:1}
+.c4cap b{display:block;font:400 28px/1.05 'Mr Eaves Small Caps',Georgia,serif;color:#F6EBD0;text-shadow:0 2px 8px #000}
+.c4cap.grande b{font-size:36px}
+.c4cap p{font:italic 15px/1.4 'Bookinsanity',Georgia,serif;color:#CFC5AE;margin:6px 0 4px}
+.c4cap small{font:14px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o2);letter-spacing:.06em}
+.c4num{position:absolute;top:12px;left:12px;z-index:1;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:18px 'Mr Eaves Small Caps',Georgia,serif;color:#2a1c08;background:radial-gradient(circle at 35% 30%,#F6E3A8,#D9B15C 55%,#9A7330);box-shadow:0 2px 8px rgba(0,0,0,.6)}
+.c4cap:hover{transform:translateY(-4px);border-color:#F6E3A8!important;box-shadow:0 0 0 1px rgba(217,177,92,.3),0 18px 36px rgba(0,0,0,.6)!important}
+/* testata della sezione */
+#modal .c4box .c4hero{position:relative;margin:0 -30px 18px;height:260px;background:var(--m) center 35%/cover;display:flex;align-items:flex-end}
+#modal .c4box .c4hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,14,.1),rgba(10,11,14,.55) 55%,#0d0e12 100%),linear-gradient(90deg,rgba(10,11,14,.75),transparent 60%)}
+#modal .c4box .c4hero>div{position:relative;z-index:1;padding:0 34px 22px}
+#modal .c4box .c4hero small{font:15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.14em;color:var(--o2)}
+#modal .c4box .c4hero h1{margin:4px 0 6px;font:400 54px/1 'Mr Eaves Small Caps',Georgia,serif;background:linear-gradient(180deg,#fff4cf,var(--o1) 35%,var(--o2) 70%,var(--o3));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 rgba(0,0,0,.9))}
+#modal .c4box .c4hero p{font:italic 18px/1.4 'Bookinsanity',Georgia,serif;color:#E3D9C2;max-width:760px}
+/* strumenti e filtri */
+#modal .c4box .c3tools{gap:10px!important;margin:0 0 14px!important}
+#modal .c4box #compQ{height:44px;border-radius:22px!important;padding:0 18px!important;background:rgba(0,0,0,.45)!important;border:1px solid rgba(217,177,92,.4)!important;font:italic 17px 'Bookinsanity',Georgia,serif!important;color:var(--ink)!important}
+#modal .c4box .c3tools button,#modal .c4box .c3tools select{height:44px;border-radius:8px!important;border:1px solid rgba(217,177,92,.3)!important;background:linear-gradient(180deg,#191a20,#0d0e12)!important;color:#E8D7AE!important;font:16px 'Mr Eaves Small Caps',Georgia,serif!important}
+#modal .c4box .c3tools button.on{border-color:var(--o1)!important;color:var(--o1)!important}
+#modal .c4box .c3chips{display:flex;flex-wrap:wrap;gap:8px!important;margin:0 0 18px!important}
+#modal .c4box .c3chips button{height:38px;padding:0 16px!important;border-radius:19px!important;border:1px solid rgba(217,177,92,.3)!important;background:transparent!important;box-shadow:none!important;color:var(--dim)!important;font:17px 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.03em!important;text-transform:none!important}
+#modal .c4box .c3chips button svg{display:none!important}
+#modal .c4box .c3chips button.on{border-color:var(--o1)!important;color:var(--o1)!important;background:rgba(217,177,92,.1)!important}
+/* gruppi e tavole */
+#modal .c4box .c3group{display:flex;align-items:center;gap:12px;font:400 28px 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.02em!important;text-transform:none!important;color:var(--o1)!important;margin:26px 0 14px!important;padding:0 0 8px!important;border-bottom:1px solid rgba(217,177,92,.3)!important}
+#modal .c4box .c3group::before{content:'';width:9px;height:9px;transform:rotate(45deg);background:radial-gradient(circle at 35% 30%,#F6E3A8,#D9B15C 55%,#9A7330);flex:none;box-shadow:0 0 8px rgba(217,177,92,.6)}
+#modal .c4box .c3grid.grid{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))!important;gap:16px!important}
+#modal .c4box .c3card{position:relative;display:block!important;aspect-ratio:3/4;height:auto!important;padding:0!important;overflow:hidden;border-radius:12px!important;border:1px solid rgba(217,177,92,.25)!important;background:#14110c!important;box-shadow:0 10px 24px rgba(0,0,0,.5)!important;transition:transform .2s,border-color .2s,box-shadow .2s}
+#modal .c4box .c3card .cim{position:absolute!important;inset:0!important;width:auto!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;border:0!important;border-radius:0!important;background-size:cover!important;background-position:center 25%!important;display:grid;place-items:center;font:96px 'Mr Eaves Small Caps',Georgia,serif;color:rgba(246,235,208,.8);transition:transform .5s}
+#modal .c4box .c3card:hover .cim{transform:scale(1.05)}
+#modal .c4box .c3card .ct{position:absolute!important;left:0;right:0;bottom:0;padding:70px 16px 16px!important;background:linear-gradient(180deg,transparent,rgba(10,11,14,.85) 45%,rgba(10,11,14,.97))!important}
+#modal .c4box .c3card .ct b{display:block;font:400 24px/1.05 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.01em;color:#F6EBD0!important;text-shadow:0 2px 8px #000}
+#modal .c4box .c3card .ct small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:6px;font:italic 14px/1.35 'Bookinsanity',Georgia,serif!important;color:#CFC5AE!important}
+#modal .c4box .c3card:hover{transform:translateY(-4px);border-color:var(--o1)!important;box-shadow:0 0 0 1px rgba(217,177,92,.3),0 18px 34px rgba(0,0,0,.6)!important}
+#modal .c4box .c3card .star{z-index:2;top:10px!important;right:10px!important;width:32px;height:32px;border-radius:50%!important;background:rgba(10,11,14,.6)!important;border:1px solid rgba(217,177,92,.4)!important;display:grid!important;place-items:center}
+/* città dei personaggi */
+#modal .c4box .c2cities{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
+#modal .c4box .c2city{position:relative;height:220px;padding:0!important;overflow:hidden;border-radius:12px!important;border:1px solid rgba(217,177,92,.35)!important;background:#14110c!important;cursor:pointer;display:block!important}
+#modal .c4box .c2city .cc{position:absolute!important;inset:0!important;width:auto!important;height:auto!important;border-radius:0!important;background-size:cover!important;background-position:center 25%!important}
+#modal .c4box .c2city>div:last-child{position:absolute;left:0;right:0;bottom:0;padding:50px 20px 18px;background:linear-gradient(180deg,transparent,rgba(10,11,14,.95))}
+#modal .c4box .c2city b{display:block;font:400 34px 'Mr Eaves Small Caps',Georgia,serif!important;color:#F6EBD0!important}
+#modal .c4box .c2city small{font:16px 'Mr Eaves Small Caps',Georgia,serif!important;color:var(--o2)!important}
+#modal .c4box .c2city:hover{border-color:var(--o1)!important}
+/* diario: capitoli come nella Storia della scheda */
+#modal .c4box .c2timeline{display:grid;gap:12px}
+#modal .c4box .c2tl{display:flex!important;gap:18px;padding:16px 20px!important;border-radius:10px!important;cursor:pointer;background:linear-gradient(180deg,#efe3c6,#ddc9a1)!important;border:1px solid rgba(217,177,92,.4)!important;color:#2b1f14!important}
+#modal .c4box .c2tl .n{flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:20px 'Mr Eaves Small Caps',Georgia,serif!important;color:#f6e3a8!important;background:radial-gradient(circle at 35% 30%,#a8402a,#6e1d12)!important;border:0!important}
+#modal .c4box .c2tl b{font:400 24px 'Mr Eaves Small Caps',Georgia,serif!important;color:#7a2a12!important}
+#modal .c4box .c2tl small{font:14px 'Mr Eaves Small Caps',Georgia,serif!important;color:#8a5a2a!important;display:block}
+#modal .c4box .c2tl p{font:16px/1.5 'Bookinsanity',Georgia,serif!important;color:#2b1f14!important;margin-top:4px}
+#modal .c4box .c2tl:hover{box-shadow:0 0 0 2px var(--o2)}
+#modal .c4box .c3main>h2.big{font:400 34px 'Mr Eaves Small Caps',Georgia,serif!important;color:var(--o1)!important;text-transform:none!important;margin:18px 0 12px!important}
+/* scheda della voce, in finestra: la stessa cornice d'oro */
+#modal .c4box .c3det{border:1px solid rgba(217,177,92,.5)!important;border-radius:14px!important;background:linear-gradient(180deg,#121318,#0a0b0e)!important}
+#modal .c4box .c3main.c4home{display:block!important}
+#modal .c4box .c3main{display:block!important}
+#modal .c4box .c4front{display:block!important}
+#modal .c4box .c3nav button span{font:400 18px/1.15 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.02em}
+#modal .c4box .c4hero>button{position:absolute;right:24px;bottom:22px;z-index:2}
+/* il nome della città come titolo, con la freccia per tornare */
+#modal .c4box .c4hero h1 button,#modal .c4box .c4hero>button{background:rgba(10,11,14,.6)!important;border:1px solid rgba(217,177,92,.5)!important;color:var(--o1)!important;border-radius:8px!important;padding:6px 12px!important;font:16px 'Mr Eaves Small Caps',Georgia,serif!important;-webkit-text-fill-color:var(--o1)!important}
+#modal .c4box .c4hero>button{top:22px;bottom:auto!important;left:34px;right:auto!important}
+/* finestra della voce: stessa cornice e stessi caratteri della scheda */
+#modal .c4box .c3det .pv-titolo h2.big{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-weight:400!important;background:linear-gradient(180deg,#fff4cf,var(--o1) 35%,var(--o2) 70%,var(--o3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent!important;filter:drop-shadow(0 3px 0 rgba(0,0,0,.9))}
+#modal .c4box .c3det .pv-nomi .meta span{font:15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.1em;color:var(--o2)}
+#modal .c4box .c3det .c3tabs button{font:18px 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.03em!important;text-transform:none!important}
+#modal .c4box .c3det .c3tabs button svg{display:none!important}
+#modal .c4box .c3det .lore p,#modal .c4box .c3det .c2v-ul li{font-family:'Bookinsanity',Georgia,serif!important;font-size:18px!important;line-height:1.65!important}
+#modal .c4box .c3det .pv-breve h3{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-weight:400!important}
+#modal .c4box .c3det h4.c3bt{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-weight:400!important;font-size:34px!important}
+#modal .c4box .c3det .pv-breve .kv2 b{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-weight:400!important;font-size:17px!important}
+#modal .c4box .c3det .pv-breve .kv2 span{font-family:'Bookinsanity',Georgia,serif!important;font-size:15px!important}
+#modal .c4box .c3det #c3close{font:15px 'Mr Eaves Small Caps',Georgia,serif!important}
+/* ===== FINE COMPENDIO NUOVO (v199) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v198</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v199</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -8252,4 +8359,52 @@ function s3Comandi(box,id,t,mine){
   const _r=renderSheet; renderSheet=function(id){ _r.apply(this,arguments); try{ sch3(id); scala(); }catch(e){ console.warn('scheda nuova',e); } };
 })();
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
+/* ===== COMPENDIO NUOVO (v199) ===== */
+/* Compendio nuovo (v199, prototipo approvato da Giuseppe il 10-10-2026).
+   Cornice come la scheda: frontespizio con i capitoli illustrati, indice a sinistra con le miniature, testata illustrata per ogni sezione. */
+(function(){
+  const PREF={miti:['mito-pantheon','mito-genesi'],storia:['mito-la-frattura','mito-guerra-due-lune'],popoli:['popoli-di-ea','nazioni-ea'],impero:['prov-aprutium','impero-aureo'],
+    ducato:['contea-cuore-del-ducato','borgo-teramum'],fazioni:['faz-crociata-due-lune'],persone:[],atti:[],appendici:['ogg-stendardo-aldric-aurex','ogg-scimitarra-piu-1'],bestiario:[]};
+  const DESCR={miti:'Gli dèi, la creazione del mondo e le leggende che si raccontano davanti al fuoco.',storia:'Le ere di Ea, dalla Frattura alla Guerra delle Due Lune.',popoli:'Chi abita il mondo e le nazioni in cui vive.',
+    impero:'L’Impero Aureo, le sue dieci province e la stirpe che lo governa.',ducato:'La vostra terra: il Ducato, le otto contee, i borghi e i luoghi delle città.',fazioni:'Chiese, gilde, casate e ordini: chi tira i fili.',
+    persone:'Le persone che avete incontrato, città per città.',atti:'Il diario della campagna, le imprese aperte e la Crociata.',appendici:'Oggetti, reliquie e documenti.',bestiario:'Le creature affrontate.'};
+  window.c4Home=window.c4Home??true;
+  const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+  function imgSez(s){ const all=c2All().filter(e=>c2Visible(e)&&c2SecOf(e)===s);
+    for(const id of PREF[s]||[]){ const e=all.find(x=>x.id===id); if(e&&c2Img(e)) return c2Img(e); }
+    if(s==='atti') return 'img/93cb1cd3ef80.jpg';
+    if(s==='persone'){ const e=all.find(x=>x.city==='julianova'&&c2Img(x)); if(e) return c2Img(e); }
+    const e=all.find(x=>c2Img(x)); return e?c2Img(e):''; }
+  function conta(s){ return c2All().filter(e=>c2Visible(e)&&c2SecOf(e)===s).length; }
+  function c4(){
+    const box=document.querySelector('#modal .box.comp'); if(!box) return; box.classList.add('c4box');
+    const z=Math.max(.7,Math.min(1,innerWidth/1920,(innerHeight-60)/1020)); box.style.setProperty('--z',z);
+    const nav=box.querySelector('.c3nav'), main=box.querySelector('#compBody'); if(!nav||!main) return;
+    /* indice: miniature e frontespizio */
+    if(!nav.querySelector('[data-c4home]')){ const h=document.createElement('button'); h.dataset.c4home='1'; h.className=window.c4Home?'on':''; h.innerHTML='<span>Frontespizio</span>'; h.onclick=()=>{ window.c4Home=true; c2Open=null; renderCompendio(); }; nav.querySelector('.eyebrow').after(h); }
+    nav.querySelectorAll('[data-sec]').forEach(b=>{ const s=b.dataset.sec; b.style.setProperty('--m',`url('${imgSez(s)}')`); b.classList.add('c4sec'); if(window.c4Home) b.classList.remove('on');
+      const o=b.onclick; b.onclick=e=>{ window.c4Home=false; o&&o.call(b,e); }; });
+    nav.querySelector('.eyebrow').textContent='Compendio di Aprutium';
+    if(window.c4Home){ main.classList.add('c4home');
+      const sez=C2_SECTIONS.filter(([s])=>conta(s));
+      main.innerHTML=`<div class="c4front"><small>Atto Terzo</small><h1>Compendio di Aprutium</h1><p>Tutto ciò che i vostri personaggi sanno del mondo di Ea: dèi, popoli, terre, persone e la storia della Crociata.</p>
+        <label class="c4cerca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="c4q" placeholder="Cerca nel Compendio: un dio, un borgo, una persona…"></label></div>
+        <div class="c4capitoli">${sez.map(([s,n],i)=>`<button class="c4cap ${i<2?'grande':''}" data-c4go="${s}" style="--m:url('${imgSez(s)}')"><span class="c4num">${['I','II','III','IV','V','VI','VII','VIII','IX','X'][i]}</span><div><b>${esc(n)}</b><p>${esc(DESCR[s]||'')}</p><small>${conta(s)} voci</small></div></button>`).join('')}</div>`;
+      main.querySelectorAll('[data-c4go]').forEach(b=>b.onclick=()=>{ window.c4Home=false; c2Sec=b.dataset.c4go; c3Liv=''; c2Open=null; renderCompendio(); });
+      const q=main.querySelector('#c4q'); q.onkeydown=e=>{ if(e.key==='Enter'&&q.value.trim()){ window.c4Home=false; c2Q=q.value.trim(); renderCompendio(); } };
+    } else { main.classList.remove('c4home');
+      /* testata illustrata della sezione */
+      const h2=main.querySelector('h2.big'), sub=main.querySelector('p.sub'); const citta=(c2Sec==='persone'&&c2City)?c2City:null;
+      if(h2&&!main.querySelector('.c4hero')){ const s=c2Sec, hero=document.createElement('div'); hero.className='c4hero'; let im=imgSez(s); if(citta){ const e=c2All().find(x=>c2Visible(x)&&x.city===citta&&c2Img(x)); if(e) im=c2Img(e); } hero.style.setProperty('--m',`url('${im}')`);
+        const tit=h2.textContent.replace(/^[\s‹<←]+/,'').trim();
+        if(/^Risultati/i.test(tit)){ const nr=main.querySelectorAll('.c3card').length; hero.style.setProperty('--m',"url('img/a3dc3a98a695.jpg')");
+          hero.innerHTML=`<div><small>Ricerca in tutto il Compendio · ${nr} voci</small><h1>${esc(tit)}</h1><p>Le voci che parlano di quello che cerchi, in ogni capitolo.</p></div>`; }
+        else hero.innerHTML=`<div><small>${['I','II','III','IV','V','VI','VII','VIII','IX','X'][C2_SECTIONS.findIndex(x=>x[0]===s)]||''} · ${conta(s)} voci</small><h1>${esc(tit)}</h1><p>${esc((sub&&sub.textContent&&!/^\d+ voci/.test(sub.textContent))?sub.textContent:(DESCR[s]||''))}</p></div>`;
+        const row=h2.closest('.row'); (row&&row.parentNode===main?row:h2).replaceWith(hero); if(row&&row!==hero){ const btn=row.querySelector('button'); if(btn) hero.append(btn); } if(sub) sub.remove(); }
+    }
+  }
+  const _r=renderCompendio; renderCompendio=function(){ _r.apply(this,arguments); try{ c4(); }catch(e){ console.warn('c4',e); } };
+  if(document.querySelector('#modal .box.comp')) renderCompendio();
+})();
+/* ===== FINE COMPENDIO NUOVO (v199) ===== */
 </script>
