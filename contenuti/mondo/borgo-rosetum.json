@@ -14,27 +14,129 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Casa d'Altaria",
-  "Fedeltà": "Neutrale",
-  "Corrisponde a": "Roseto degli Abruzzi",
-  "Altri nomi": "Rosetum · il Giardino d'Argento",
-  "Popolazione": "~5.000"
+  "Paese vero": "Roseto degli Abruzzi, con Montepagano e Cologna",
+  "Altri nomi": "Li Côtë in dialetto, da «le Quote»; Rosetum nelle carte dei nobili. Quelli della riva sono i «cotaroli»; quelli di Montepagano si chiamano da soli «li paga-n-sc»",
+  "Abitanti": "Circa cinquemila, contando Montepagano e le contrade",
+  "Chi comanda": "Casa d’Altaria. Casa Fiore tiene i frutteti e le terre basse",
+  "Nel paese": "Il Giardino d’Argento, la Villa d’Altaria, la Via dei Profumieri, la Lunaria della riva, le Quote; in alto Montepagano con la Porta da Borea, il campanile del Lucente Antimo e le cantine",
+  "Nei dintorni": "Colleventoso e l’Abbazia di Biancosale, il Borsacchio e le paludi, Casal Thaulero, le contrade",
+  "Strade": "La Strada della Costa, a nord verso il Tordinum e Julia Nova, a sud verso il Vomanum e Pënëtë; la strada di Montepagano",
+  "Guardia": "⟦Una quarantina di guardie degli d’Altaria in livrea grigia e rosa, più belle che utili⟧",
+  "Lucente": "Sulla riva la Vecchia Madre, a mezzo agosto; a Montepagano il Lucente Antimo, l’11 maggio",
+  "Distanze": "⟦Julia Nova, tre ore a nord oltre il Tordinum; il guado del Vomanum, due ore a sud; Montepagano, un’ora di salita; Colleventoso, mezza giornata per i sentieri vecchi⟧"
  },
- "gm": "La ricchezza dei d'Altaria viene dal commercio segreto dei Fiori di Luna Pallida, che crescono solo in luoghi corrotti dalla Frattura: narcotici. Neutrali per convenienza.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il borgo neutrale della costa, e il primo campo di battaglia della campagna (Atti II e III). Gli d’Altaria non si schierano perché non possono permetterselo: la loro ricchezza viene da una cosa che non deve venire alla luce."
+  },
+  {
+   "t": "I fiori di Luna Pallida",
+   "txt": "La ricchezza degli d’Altaria viene dal commercio segreto dei Fiori di Luna Pallida: un narcotico che cresce solo nei luoghi corrotti dalla Frattura. Neutrali per convenienza.\n\n· ⟦I fiori crescono nelle paludi del Borsacchio, sull’acqua ferma, in un tratto che la Frattura ha toccato: per questo le paludi non sono mai state bonificate del tutto. Gli d’Altaria tengono la gente lontana con le febbri e con le storie. Il Giardino d’Argento è la facciata: le rose coprono l’odore.⟧\n· ⟦Il profumo che i PG hanno sentito nella cripta di Pietraluna, «Fiori di Luna», è parente stretto di questi. Chi ha naso per i profumi (Natura o Medicina CD 15) li riconosce. È un filo che lega gli d’Altaria all’isola, e forse ai Celomanti.⟧\n· ⟦Le essenze della Via dei Profumieri sono il modo per far viaggiare il narcotico: in una bottiglietta di rosa su dieci c’è altro.⟧"
+  },
+  {
+   "t": "Montepagano e la Fiamma",
+   "txt": "⟦Montepagano non obbedisce agli d’Altaria: da secoli è un paese della Fiamma, e risponde a un flamine, non ai signori della riva. Per questo i due paesi si guardano storto. Se la Questura della Fiamma vuole un occhio sulla costa, lo ha già lassù, e il vecchio del belvedere non guarda solo le vele.⟧"
+  },
+  {
+   "t": "Colleventoso, dopo",
+   "txt": "· Padre Elvirius era venuto da Teramum un anno prima. Chi lo ha mandato è un filo aperto dall’Atto III.\n· ⟦Il Sindaco Berardo è grato ai PG e testimone di tutto. Ha capito che Elvirius aveva un protettore a Teramum, e ha paura di parlare.⟧\n· ⟦Le catacombe di Biancosale sono state ripulite, ma la parte più antica, oltre il grande arco di pietra, non è stata esplorata fino in fondo.⟧\n· ⟦Qualcuno della gente di Colleventoso non è tornato del tutto. Di notte canta, piano, la stessa nenia dell’abbazia.⟧"
+  },
+  {
+   "t": "Le altre casate",
+   "txt": "· Casa Fiore (nel vecchio canone Florius) è alleata di Casa Barbas nel controllo del mercato agricolo: ⟦compra il grano dei fattori di Rosetum per la Confraternita del Grano Duro.⟧\n· ⟦I Thaulero di Teramum comprano terra sulla costa. Ottone Thaulero, il Dominus, si prepara un posto dove stare se Teramum brucia, o una base per prendere la costa se vince.⟧\n· Il vecchio canone dava ai Barbas possedimenti «fino alle pianure di Rosetum»."
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Un invito al Giardino.]] ⟦Il modo più semplice per entrare dagli d’Altaria è la festa d’estate. Il più difficile è dalla spiaggia, di notte, oltre il muro.⟧\n· [[Il belvedere di Montepagano.]] ⟦Zi’ Ndonie vede tutto quello che arriva di notte sulla spiaggia, anche le barche che non accendono le lanterne.⟧\n· [[Il Sindaco Berardo.]] Un amico a Rosetum. Sa chi va e chi viene per i sentieri delle colline."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Roseto vera ha il paese alto di Montepagano, prima sede del comune, con la Porta da Borea, il campanile di Sant’Antimo (patrono, 11 maggio), la Santissima Annunziata, il vino e la mostra dei vini di agosto, la leggenda del Liberatore che acceca i Turchi; la riva nata sulle «Quote», le dodici parti di terra fra Vomano e Borsacchio, bonificate da poco (gli abitanti si dicono «cotaroli»; quelli di Montepagano «li paga-n-sc»); il nome Rosburgo dalle rose; l’Assunta con il campanile a cono; le paludi della costa; la sciabica dei pescatori di Roseto; le frazioni Cologna, Casal Thaulero, Santa Lucia, San Giovanni, Voltarrosto, Bonaduce, Campo a Mare. Quello che non è segnato come proposta viene da lì. Il nome dialettale Li Côtë si legge come «le Quote».\n· Fonti nuove di Giuseppe (sera del 10-10): con il Lessico di Ea la chiesa dell’Assunta e l’Annunziata diventano lunarie della Vecchia Madre, Sant’Antimo il Lucente Antimo, Gesù Liberatore Valerus Liberatore. Con lo Studio: Montepagano paese del vino e forse fedele alla Chiesa (qui alla Fiamma), le paludi come posto dei Fiori di Luna Pallida, le Quote come terre divise di recente. Lo Studio nota che profumi e lusso non hanno appigli veri: sono tenuti perché sono canone. Con il Folklore: la sciabica. Con i Dialetti: «fare cùppe», la «i» della costa centrale. Casa Florius diventa Casa Fiore (niente nomi latini).\n· Colleventoso è Cologna: lo dice l’Atto III.\n· Il vecchio canone dava a Rosetum circa cinquemila abitanti, Casa d’Altaria («La Bellezza Soggioga»), Casa Florius («Il Frutto Paga») e i Fiori di Luna Pallida: tenuti.\n· Casal Thaulero è una frazione vera di Roseto: il nome coincide con Casa Thaulero di Teramum. La proposta ne approfitta."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi guida Casa d’Altaria oggi.\n· Se gli d’Altaria vendono i Fiori di Luna Pallida ai Celomanti, o solo ai ricchi del Ducato.\n· Chi ha mandato Padre Elvirius, e che fine ha fatto.\n· Se i Thaulero comprano terra sulla costa, e se Montepagano risponde alla Fiamma, come propone questa voce.\n· Se va bene Casa Fiore al posto di Florius."
+  }
+ ],
  "livello": "borgo",
  "group": "La Costa del Sale",
  "id": "borgo-rosetum",
  "parent": "contea-costa-del-sale",
  "title": "Li Côtë",
- "sub": "Rosetum · il Giardino d'Argento · Neutrale",
+ "sub": "Rosetum, il Giardino d’Argento",
  "pub": [
   {
    "t": "",
-   "txt": "La costa del lusso, ~5.000 anime: agricoltura costiera pregiata, profumi, arte, una nobiltà mercantile decadente e bellissima. Casa d'Altaria — «La Bellezza Soggioga» — e Casa Florius, alleata dei Barbus nel mercato agricolo. Il Giardino d'Argento è famoso in tutto il Ducato.",
+   "capo": true,
+   "txt": "Rosetum sta sulla costa fra due fiumi, il Tordinum a nord e il Vomanum a sud. È la riva delle rose: giardini, profumi, ville dei signori, un giardino che tutto il Ducato conosce di nome e pochi hanno visto da dentro. La gente della riva la chiama Li Côtë, e i nobili la chiamano Rosetum, per le rose.\n\nSopra la riva, sul primo colle, c’è il paese vecchio, Montepagano, il paese del vino, da dove si vede tutta la spiaggia fino a Julia Nova. Prima che si potesse vivere sulla sabbia, Rosetum era quella. E più in là, per i sentieri delle colline, c’è Colleventoso: un villaggio di Rosetum che quest’anno tutta la costa ha imparato a nominare."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Rosetum ha due paesi, uno in alto e uno in basso.\n\n· [[Montepagano.]] Il paese vecchio, su un colle a un’ora dal mare: mura, una porta ad arco a punta, la [[Porta da Borea]], due campanili e i vicoli dei contadini e dei vignaioli. Era il borgo vero quando la riva era una palude.\n· [[La riva.]] Fino a non molto tempo fa la costa era tutta acquitrini. Poi i signori la bonificarono e la divisero in dodici parti uguali, le [[Quote]], fra il Vomanum e il torrente Borsacchio. Sulle Quote sono nati i giardini, le ville, le botteghe e le case basse dei «cotaroli». Oggi la riva è più grande e più ricca del paese alto, e Montepagano non lo ha mai perdonato.\n\nRosetum non ha mura in basso: quando arrivano le vele, la gente sale a Montepagano.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La Strada della Costa, verso nord",
+      "Al guado del Tordinum e a Julia Nova",
+      "⟦Tre ore a piedi⟧"
+     ],
+     [
+      "La Strada della Costa, verso sud",
+      "Al guado del Vomanum, a Pënëtë e ad Atrë",
+      "⟦Due ore al guado⟧"
+     ],
+     [
+      "La strada di Montepagano",
+      "Dalla riva al paese alto",
+      "Un’ora di salita"
+     ],
+     [
+      "I sentieri vecchi",
+      "Per le colline, a Colleventoso e verso Mòrrë",
+      "⟦Mezza giornata a Colleventoso⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Li Côtë.jpg",
    "didascalia": "Li Côtë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il Giardino d’Argento.]] Il giardino degli d’Altaria, chiuso da un muro alto fra la villa e il mare: rose di ogni colore, siepi tagliate, fontane, viali di ghiaia bianca. Si chiama d’Argento perché di notte, con la luna, le rose bianche sembrano di metallo. Si entra solo su invito, e gli inviti si contano.\n· ⟦[[2. La Villa d’Altaria.]] La casa della famiglia, accanto al giardino. Dentro c’è una galleria di quadri, la più ricca della costa, dove gli d’Altaria ricevono mercanti, nobili e artisti. Ogni estate ci danno una festa, e chi non è invitato fa finta di non saperlo.⟧\n· ⟦[[3. La Via dei Profumieri.]] La strada delle botteghe dove si distillano le rose e i fiori della costa. Si sente prima di vederla. Le essenze di Rosetum si vendono a Teramum, ad Atrë e oltre il mare, in bottigliette piccole e care.⟧\n· [[4. La Lunaria della riva.]] La lunaria della Vecchia Madre sulla riva, con il campanile a punta di cono, come quelli di Atrë e di Teramum. A mezzo agosto la Madre esce in processione fino al mare.\n· [[5. Le Quote.]] Le dodici parti di terra fra il Vomanum e il Borsacchio, ognuna con il suo padrone e il suo nome. Le più vicine al mare sono giardini e ville, le più lontane orti e frutteti.\n· ⟦[[6. La Casa dei Fiore.]] Una villa fra i frutteti, sulla strada della costa, con i magazzini della frutta dietro. I Fiore vendono pesche, pere e uva su tutta la costa, e comprano tutto quello che si può rivendere. Sulla porta: «Il Frutto Paga».⟧\n· ⟦[[7. La Locanda della Rosa.]] Sulla strada della costa, per chi passa: stanze pulite, brodetto, e acqua di rose per lavarsi le mani. Costa il doppio di un’osteria di Julia Nova, e lo sa.⟧\n· [[8. La spiaggia della sciabica.]] All’alba i cotaroli calano la rete a semicerchio sotto riva, e due squadre di uomini la tirano a mano sulla sabbia. Il pesce si vende lì, e le cuoche delle ville scelgono per prime.\n· [[9. Montepagano e la Porta da Borea.]] Il paese alto, chiuso dalle mura. Si entra dalla Porta da Borea, con l’arco a punta, e appena dentro c’è il campanile del [[Lucente Antimo]], alto quaranta braccia, con la punta a cono: del suo solario non resta altro.\n· [[10. La Lunaria dell’Annuncio.]] La lunaria madre del paese alto, con la cupola e le are sui lati. È più vecchia di qualsiasi casa della riva.\n· [[11. Le cantine di Montepagano.]] Sotto le case del paese alto: botti, tini, e il vino migliore della costa dopo quello di Secernium. In agosto le cantine si aprono a tutti per la festa del vino.\n· ⟦[[12. Il belvedere di Montepagano.]] Il muretto in cima al paese da cui si vede la costa da Julia Nova al Cerrano. Ci sta sempre un vecchio a guardare il mare, Zi’ Ndonie «Lu Cannocchiale», e quando vede una vela sconosciuta suona la campana.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[13. Colleventoso.]] Un villaggio delle colline di Rosetum, che i suoi chiamano Culognè, a mezza giornata dalla riva per i sentieri vecchi. Case di mattone, un pozzo, campi intorno. Quest’anno tutta la sua gente è stata «svuotata» e poi è tornata in sé. Il Sindaco è Berardo.\n· [[14. L’Abbazia di Biancosale.]] L’edificio più grande di Colleventoso. Sotto ha catacombe scavate nella roccia. La gente del posto ora ci entra poco.\n· [[15. Il Borsacchio.]] Il torrente che chiude le Quote a nord, fra dune, canneti e quello che resta delle paludi. Ci si caccia l’anatra e ci si prendono le febbri. ⟦La sera, sull’acqua ferma, galleggiano fiori bianchi che nessuno ha piantato.⟧\n· ⟦[[16. Casal Thaulero.]] Una grande tenuta nelle colline, comprata da poco dai Thaulero di Teramum, i nuovi ricchi della capitale. Hanno rifatto la casa, recintato i campi e chiuso un sentiero che la gente usava da sempre.⟧\n· [[17. Le contrade.]] Santa Lucia, San Giovanni, Voltarrosto, Bonaduce, Campo a Mare: casali fra i campi e i frutteti. Lavorano per gli d’Altaria, per i Fiore, e alcuni per i Barbas, che hanno terre fino a qui."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "A Rosetum ci sono due popoli. In alto, a Montepagano, i vignaioli e le famiglie vecchie, «li paga-n-sc», che guardano la riva dall’alto e la chiamano «la palude». In basso i cotaroli, che vivono di pesca, di giardini e di servizio nelle ville, e che a Montepagano salgono solo quando suona la campana. I signori stanno in mezzo, fra le rose. Sulla riva si parla come a Julia Nova, con la «i» al posto della «u»; i ragazzi che saltano la scuola dei votati «fanno cùppe».\n\n· [[Le rose.]] Ogni casa ne ha una, anche la più povera. ⟦Una rosa sulla porta vuol dire che in casa c’è una ragazza da maritare.⟧\n· [[I profumi.]] I profumieri di Rosetum distillano rose, gigli di mare e fiori di campo. Una bottiglietta di essenza d’Altaria vale quanto un mese di paga di un pescatore.\n· [[La Madre di mezzo agosto.]] La Vecchia Madre scende fino alla riva, e la sera le barche escono con le lanterne.\n· [[Il Lucente Antimo.]] L’11 maggio Montepagano porta il suo lucente per le vie. Si racconta che una notte i predoni salirono dal mare per prendere il paese, e una luce scese dal cielo e li accecò: andarono a sbattere contro le mura e tornarono alle barche a tentoni. Il paese dice che fu Valerus, che i montepaganesi chiamano il Liberatore.\n· [[La festa del vino.]] In agosto Montepagano apre le cantine, e la riva sale per una volta senza che suoni la campana.\n· [[I nobili di Rosetum.]] Gli d’Altaria sono una casata di mercanti diventati nobili: belli, eleganti, colti, e da qualche generazione stanchi. Non si schierano mai con nessuno. I Fiore sono il contrario: pratici, alleati dei Barbas, contano tutto."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Colleventoso.]] Il villaggio è tornato a vivere, ma la gente ha i ricordi confusi e il sonno cattivo. Molti non bevono più l’acqua del pozzo. I sentieri per Culognè, di notte, non li fa nessuno.\n· [[Le vele rosse.]] Dopo Julia Nova la riva ha paura. Le ville hanno messo guardie sulla spiaggia, e i cotaroli dormono vestiti.\n· ⟦[[Neutrali.]] Gli d’Altaria non hanno detto niente sulla Crociata, né a favore né contro. Il proclama di Teramum è arrivato anche qui: l’hanno letto, l’hanno ripiegato e l’hanno messo in un cassetto.⟧\n· ⟦[[I Thaulero.]] Da quando i Thaulero hanno comprato la tenuta nelle colline, a Rosetum arrivano uomini di Teramum a comprare terra. Pagano bene e subito, e nessuno sa con quali soldi.⟧"
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Colleventoso, svuotato: le case intatte e deserte, le tavole apparecchiate, la falce lunare rovesciata sulle porte, e tutta la gente in piedi nell’Abbazia di Biancosale, forgiata, a cantare per un Sacerdote Lunare (Atto II).\n· Sotto l’abbazia, le catacombe: le guardie del villaggio diventate Guardiani Forgiati, Luigis e Vicarus prigionieri, la Sala della Forgia dell’Identità. Avete fermato Aeryn Vel’hael un istante prima che forgiasse Berardo, il Sindaco. Fra i suoi resti, il Tomo del Ricordo Spezzato con un solo nome chiaro: «Ardentus» (Atto III).\n· Padre Elvirius, il sacerdote venuto da Teramum, aveva convinto i paesani a bere l’acqua «benedetta» e avvelenato i pozzi per i Celomanti. Lo avete preso prigioniero. Mattheus e Vicarus, con il rituale inverso, hanno restituito la memoria alla gente di Colleventoso (Atto III)."
   }
  ],
  "illustrazione": "Mondo — Li Côtë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«La Bellezza Soggioga.»",
+  "cite": "Motto di Casa d’Altaria"
+ }
 }

@@ -14,25 +14,116 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Il Signore dei Calanchi Azzurravena",
-  "Fedeltà": "Indipendente",
-  "Corrisponde a": "Montefino"
+  "Paese vero": "Montefino, che una volta si chiamava Montesecco",
+  "Altri nomi": "Mundësòcchë in dialetto; Mons Siccus negli atti antichi",
+  "Abitanti": "⟦Circa ottocento, con i casali⟧",
+  "Chi comanda": "Il Signore dei Calanchi, Azzurravena, che governa poco e osserva molto",
+  "Nel paese": "Il Castello di Corte con la torre tonda, il solario del Lucente Giacomo, la Lunaria del Carmine, le cisterne, le case a gradoni",
+  "Nei dintorni": "I burroni, gli uliveti, Villa Bozza degli Schiavoni, Brecciata, Floriano, Marciano, Muraglie",
+  "Strade": "Il sentiero del crinale verso Cëllinë; le strade per Cashtilindë e per Cashtijunë",
+  "Guardia": "⟦Non si vede nessuno. Ma chi arriva sa che qualcuno lo guarda dai burroni⟧",
+  "Lucente": "Il Lucente Giacomo, il 25 luglio; e la Vecchia Madre del Carmine, il 16 luglio",
+  "Distanze": "⟦Cëllinë, un’ora e mezza a nord; Cashtilindë, due ore a est; Cashtijunë, mezza giornata a ovest; Atrë, una giornata a est⟧"
  },
- "gm": "Conosce i tunnel sotterranei verso Teramum: un'altra via d'accesso alla capitale. Indipendente: va convinto, non comprato.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Azzurravena conosce i cunicoli sotterranei che portano a Teramum: un’altra via d’accesso alla capitale, da fuori le mura (vedi la Città Sepolta). È indipendente: va convinto, non comprato. Per la Crociata è la chiave per entrare a Teramum dal sotto, e il miglior osservatore della contea."
+  },
+  {
+   "t": "Azzurravena",
+   "txt": "⟦Nessuno sa quanti anni ha. È alto, magro, vestito di grigio e d’azzurro, con gli occhi chiari di chi guarda lontano. Era un nobile di Teramum: ha lasciato la capitale una generazione fa, dopo una cosa che non racconta, e si è chiuso qui. Il suo nome vero è sugli alberi delle casate della Biblioteca, sotto un’altra famiglia.⟧\n\n⟦Non vuole denaro, non vuole terre. Vuole sapere. Riceve solo chi gli porta una cosa che non sa: un nome, un segreto, una notizia vera. Se la Crociata gliene porta una buona, la ascolta. Se gli porta una prova di quello che Iuvenza fa a Teramum, la guida lui sotto la città.⟧"
+  },
+  {
+   "t": "I cunicoli e l’acqua",
+   "txt": "⟦Il monte secco ha un segreto: una cisterna più vecchia del castello, scavata dai Pretuziani, che non si svuota mai. L’acqua ci arriva da un cunicolo che scende sotto i burroni. Da lì comincia la strada sotterranea.⟧\n\n⟦Le grotte troppo regolari dei burroni sono l’altro ingresso. Un cunicolo antico, pretuziano, corre sotto i calanchi verso Cëllinë e Atrë, e da lì, più profondo, sotto il Vomanum fino a Lu Sott’a Terre di Teramum: tre giorni di cammino al buio, con passaggi allagati e tratti franati. Azzurravena lo ha percorso tutto una volta sola. Lo conoscono anche i Malavolta, che scavano dall’altra parte: la gente che scava verso Cëllinë è loro.⟧"
+  },
+  {
+   "t": "Gli Schiavoni di Villa Bozza",
+   "txt": "⟦Nella storia vera a Villa Bozza arrivarono famiglie albanesi nel Quattrocento, in fuga dagli Ottomani, con un patto con Atri. Nel gioco gli Schiavoni sono Genti dell’Aquila, venuti da Vesperia generazioni fa. Parlano la lingua di Kostandìn e dei vesperiani della Crociata. Un vesperiano della Crociata che arriva a Villa Bozza trova parenti lontani, e una porta aperta. E gli Schiavoni sanno se qualche compagnia dell’Aquila è passata di qui di recente.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Arrivare da Azzurravena.]] Non si bussa al Castello: si aspetta che lui mandi qualcuno. ⟦Un PG che si ferma al belvedere e guarda i calanchi per un’ora viene chiamato prima di sera.⟧\n· ⟦[[Le guide.]] Una guida con il fazzoletto azzurro porta la Crociata per i calanchi senza farla vedere: un giorno risparmiato, nessuna sorpresa, ma solo se Azzurravena ha detto di sì.⟧\n· ⟦[[L’acqua.]] D’estate la Crociata ha sete quanto il borgo. Chi porta acqua, o trova la cisterna antica, si fa amico mezzo paese.⟧\n· ⟦[[Il messo perso.]] Il messo di Teramum ha visto qualcosa nei burroni, e ha avuto paura. È a Teramum, e si può trovare.⟧\n· [[Il belvedere.]] Da lì si vede chi cammina nelle gole: Percezione CD 13 per contare una pattuglia, o una squadra che scava."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Montefino vera si chiamava Montesecco (Mons Siccus, «monte secco», perché non aveva sorgenti) fino al 1862: da lì Mundësòcchë. Ha il Castello di Corte con la torre tonda e gli archetti, che fu della contea di Penne, degli Angioini, degli Acquaviva di Atri dal 1454 (rifecero mura e castello) e dei vescovi di Teramo dal 1506; San Giacomo con otto altari, le colonne di marmo e il portale preso da un’abbazia abbandonata; la Madonna del Carmine con il rilievo dell’angelo; l’olio (Città dell’Olio, festa a luglio); i casali di Villa Bozza, Brecciata, Floriano, Marciano, Muraglie; i profughi albanesi di Villa Bozza e il patto con Atri; lo stemma con cinque monti azzurri e le lettere M e S; la siepe di Castiglione contro l’orologio. Tradotto con il Lessico di Ea. Quello che non è segnato come proposta viene da lì.\n· Il patrono: lo studio dei paesi veri dice San Giacomo (25 luglio), Wikipedia la Madonna del Carmine (16 luglio). La voce tiene tutte e due le feste.\n· Stride col paese vero, ma resta il canone del sito: il borgo «sui burroni» e «del Signore dei Calanchi» (le fonti non parlano di calanchi a Montefino), l’«indipendenza» (Montefino fu sempre di qualcuno) e i cunicoli «verso Teramum» (Montefino guarda ad Atri, con il Vomano in mezzo). La voce li fa passare per Cëllinë e Atrë, e solo più in profondità verso Teramum."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi è Azzurravena, e da quale casata viene.\n· Dove arrivano i cunicoli: verso Atrë, verso Teramum, o tutte e due.\n· Se gli Schiavoni sono Genti dell’Aquila.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Terra dei Calanchi",
  "id": "borgo-mundesocche",
  "parent": "contea-calanchi",
  "title": "Mundësòcchë",
- "sub": "Indipendente",
+ "sub": "Il monte secco del Signore dei Calanchi",
  "pub": [
   {
    "t": "",
-   "txt": "Un nobile eremita, Azzurravena, che governa poco e osserva molto da un castello sui burroni. Non riceve quasi nessuno. Chi lo conosce dice che sa le strade che non stanno sulle mappe.",
+   "capo": true,
+   "txt": "Mundësòcchë sta in cima a un colle sopra la valle del Fino, dalla parte di Atrë. Il colle finisce a strapiombo sui burroni, e le case scendono a gradoni, una sopra l’altra, fino all’orlo. In cima c’è il castello con una torre tonda. Intorno, uliveti a perdita d’occhio: l’olio di Mundësòcchë è il migliore della valle.\n\nIl nome antico è Mons Siccus, il monte secco, perché il colle non ha sorgenti: l’acqua bisogna tenerla nelle cisterne, o portarla su dal fiume. Il borgo è di Azzurravena, il Signore dei Calanchi: un nobile eremita che governa poco e osserva molto, e non riceve quasi nessuno. Chi lo conosce dice che sa le strade che non stanno sulle mappe."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo vecchio è piccolo: le case del castello, strette attorno alla torre, e sotto le file di case a gradoni che seguono il colle. Una sola strada sale a zig-zag dal basso. Il borgo non ha mura nuove: i Fonteviva, quando era loro, rifecero quelle del castello, e il resto lo fanno i burroni.\n\nIntorno, sui colli che tengono, gli uliveti e i casali. Il più grande è Villa Bozza, dove vivono gli Schiavoni.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La strada del crinale",
+      "A nord, verso Cëllinë",
+      "⟦Un’ora e mezza⟧"
+     ],
+     [
+      "La strada dei calanchi",
+      "A est, verso Cashtilindë e Atrë",
+      "⟦Due ore fino a Cashtilindë⟧"
+     ],
+     [
+      "La strada del Fino",
+      "A ovest, risalendo il fiume verso Cashtijunë",
+      "⟦Mezza giornata⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Mundësòcchë.jpg",
    "didascalia": "Mundësòcchë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il Castello di Corte.]] Il castello di Azzurravena, in cima al colle: un gruppo di case di pietra cresciute attorno a una torre tonda, con gli archetti in cima e il tetto di coppi. Ha cambiato padrone molte volte: i conti di prima, i re, i Fonteviva di Atrë, i flamini di Teramum. Ora è suo. La porta è quasi sempre chiusa.\n· [[2. Il solario del Lucente Giacomo.]] Il solario del borgo, a una navata, con otto altari, colonne di marmo e capitelli dorati: troppo ricco per un borgo così piccolo. Il portale lo portarono via da un’abbazia abbandonata lì vicino. Sopra l’altare grande c’è un quadro del Lucente Giacomo viandante.\n· [[3. La Lunaria del Carmine.]] Il tempio più vecchio, con il campanile e un portale semplice. In un muro, dalla parte antica, è murata una pietra con un angelo scolpito, più antica di tutto il resto.\n· ⟦[[4. Le cisterne.]] Sotto le case del castello ci sono grandi cisterne scavate nella roccia, dove si raccoglie la pioggia di tutto l’inverno. Chi tiene le cisterne tiene il borgo, d’estate.⟧\n· ⟦[[5. Le case a gradoni.]] Le case del borgo, una sopra l’altra: il tetto di una è la terrazza dell’altra. Si passa da una casa all’altra senza scendere in strada, e i bambini lo fanno sempre.⟧\n· ⟦[[6. L’osteria de lu Strapiombe.]] Una stanza con quattro tavoli, sull’orlo del burrone, e una finestra che guarda il vuoto. Pane con l’olio nuovo, pecorino, salsicce secche, vino rosso. Due letti in una stanza sopra. La tiene Peppe lu Mute, che parla poco e guarda molto, come il suo signore.⟧\n· ⟦[[7. Il frantoio.]] In fondo al borgo, la macina di pietra tirata da un mulo. A novembre lavora giorno e notte, e tutto il borgo sa di olio.⟧\n· ⟦[[8. Il belvedere.]] Uno spiazzo in fondo al borgo, con un muretto e un palo di ferro con il sole in cima. Da qui si vedono i calanchi fino ad Atrë, e chi cammina nelle gole.⟧\n· ⟦[[9. La casa delle guide.]] Una casa bassa dove abitano gli uomini che portano i forestieri per i calanchi. Non si chiedono: si aspetta che vengano loro.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[10. I burroni.]] Gole di argilla grigia sotto il borgo, profonde come torri, che cambiano forma a ogni temporale. ⟦Ci sono grotte scavate nell’argilla, e qualcuna è troppo regolare per averla scavata l’acqua.⟧\n· [[11. Gli uliveti.]] Su tutti i colli intorno, fino al Fino: ulivi vecchi, contorti, che la gente conosce uno per uno.\n· [[12. Villa Bozza.]] Il casale degli Schiavoni: famiglie venute dall’altra parte del mare tanto tempo fa, scappando da una guerra, che parlano ancora la loro lingua tra loro. Hanno un patto con Atrë, rinnovato più volte, e lavorano la terra per lei.\n· [[13. Brecciata e Floriano.]] Due casali sui colli: grano, ulivi, qualche vigna.\n· [[14. Marciano e Muraglie.]] Due casali vecchi, sulle alture. ⟦A Muraglie si vedono ancora i muri di qualcosa di grande, di prima del castello.⟧\n· [[15. Il Fino.]] Giù nella valle, il fiume e la strada che lo segue, fra Cashtijunë e il mare. D’estate i ragazzi ci scendono con i muli a prendere l’acqua."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "La gente di Mundësòcchë è come il suo signore: guarda, ascolta, aspetta. Non chiede ai forestieri da dove vengono, perché di solito lo sa già. Ha un’abitudine strana per un borgo così piccolo: non fa pettegolezzi. ⟦Si dice che Azzurravena venga a sapere tutto, e che a nessuno piaccia essere quello che glielo ha detto.⟧\n\n· [[Il Lucente Giacomo e la Vecchia Madre.]] A luglio il borgo fa festa due volte: il 16 per la Vecchia Madre del Carmine, il 25 per il Lucente Giacomo. ⟦Quel giorno la porta del Castello resta aperta. Azzurravena non scende, ma manda il vino.⟧\n· [[L’olio.]] A luglio c’è anche la festa dell’olio, e a novembre la raccolta. Le famiglie misurano la ricchezza in giare.\n· [[L’orologio.]] Quelli di Cashtijunë raccontano di aver alzato una siepe davanti al loro campanile, perché a Mundësòcchë non sentissero l’ora senza pagare. A Mundësòcchë rispondono che l’ora la sanno dal sole, e che la siepe la piantarono i matti.\n· [[Lo stemma.]] Cinque monti azzurri su campo d’argento, e due lettere sopra, quelle del monte secco.\n· [[Gli Schiavoni.]] A Villa Bozza le feste sono diverse: altre canzoni, altri vestiti, altro pane. Gli Schiavoni si sposano fra loro, e al borgo li trattano con rispetto e un po’ di distanza.\n· ⟦[[Le guide.]] I ragazzi del borgo imparano i calanchi prima di imparare a leggere. Chi diventa guida porta un fazzoletto azzurro al collo.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[L’estate secca.]] Quest’anno ha piovuto poco, e le cisterne sono a metà. Azzurravena ha fatto chiudere quella del Castello con un lucchetto.⟧\n· ⟦[[Il proclama di Teramum.]] Il bando contro la Crociata non è mai arrivato in piazza. Il messo che lo portava si è perso nei calanchi, dicono, ed è tornato a Teramum due giorni dopo, a piedi, senza cavallo e senza bando.⟧\n· ⟦[[Forestieri nelle gole.]] Da qualche settimana gli uomini delle guide vedono gente che scava nei burroni verso Cëllinë. Azzurravena lo sa. Non ha fatto niente, per ora.⟧\n· ⟦[[La terra frana.]] Un pezzo del colle è caduto nel burrone in primavera, con una casa. Gli abitanti dicono che il borgo si accorcia ogni anno.⟧"
   }
  ],
  "illustrazione": "Mondo — Mundësòcchë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Azzurravena ti vede. Tu a lui, no.»",
+  "cite": "⟦Detto di Mundësòcchë⟧"
+ }
 }

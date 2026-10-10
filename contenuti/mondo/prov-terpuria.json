@@ -11,17 +11,46 @@
  "mappa": null,
  "colore": "#B08A3E",
  "scheda": {
-  "Chi comanda": "Il Siniscalco Imperiale Aldren Veranthi",
+  "Governo": "Un Siniscalcato: la amministra un funzionario di Solaria, che è anche il padrone del grano",
+  "Chi comanda": "Il Siniscalco Imperiale Aldren Veranthi, capo di Casa Veranthi",
+  "Capitale": "⟦Una città di mercato in mezzo alla pianura, con i granai più grandi dell’Impero: il nome è da decidere⟧",
   "Popolazione": "Circa tre milioni",
+  "Popoli": "Umani quasi tutti; halfling sulle colline; gnomi nei mulini e alle macchine per l’acqua",
   "Casata": "Veranthi, i Tessitori di Grano",
+  "Fede": "Il Sole in città e in pubblico; Sementia e la Vecchia Madre nei campi",
   "Vive di": "Grano, orzo, bestiame e olio, in quantità enormi",
   "Esercito": "Le Sentinelle del Grano, una milizia di campagna",
-  "Dialetto": "Contadino, semplice, pieno di proverbi"
+  "Dialetto": "Contadino, semplice, pieno di proverbi",
+  "Motto": "⟦«Il pane prima del ferro», il motto di Casa Veranthi⟧"
  },
  "gm": [
   {
-   "t": "",
-   "txt": "· L’embargo contro Aprutium e Laguras è voluto: Casa Veranthi trattiene le scorte per alzare i prezzi e per punire le province che non votano come vuole.\n· Lo sfruttamento della terra sta svegliando gli spiriti dei campi, che i contadini chiamano «i Figli della Vecchia Madre». Vedi Sementia.\n· Per la Crociata: il prezzo del grano nel Registro può salire se la Terpuria stringe l’embargo."
+   "t": "L’embargo",
+   "txt": "L’embargo contro Aprutium e Laguras è voluto: Casa Veranthi trattiene le scorte per alzare i prezzi e per punire le province che non votano come vuole. È speculazione pura.\n\nPer la Crociata: il prezzo del grano nel Registro può salire se la Terpuria stringe l’embargo."
+  },
+  {
+   "t": "I Figli della Vecchia Madre",
+   "txt": "Lo sfruttamento della terra sta svegliando gli spiriti dei campi: elementali e creature della terra che i contadini chiamano «i Figli della Vecchia Madre». La Vecchia Madre è Maia, e la terra è di Sementia: vedi le loro voci. ⟦I primi sono comparsi nelle ville più grandi dei Veranthi. Le Sentinelle li danno per briganti, e così le cose tornano.⟧"
+  },
+  {
+   "t": "Veranthi e il nuovo Duca",
+   "txt": "⟦Se la Crociata vince a Teramum, Aldren Veranthi sarà tra i primi a scrivere al nuovo Duca: grano a buon prezzo, subito, in cambio del voto di Aprutium nel Concilio. Se il Duca rifiuta, l’embargo diventa un assedio senza soldati.⟧"
+  },
+  {
+   "t": "Laguras",
+   "txt": "⟦Il Margravio ha risposto all’embargo alzando il prezzo delle armi che vanno in Terpuria, e facendo sapere a Casa Veranthi che la Via del Ferro passa anche per i suoi granai. Per ora sono parole. Una provincia affamata con ottomila soldati è il problema più grande che i Veranthi possano avere, e lo sanno.⟧"
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· Un carico di grano della Terpuria arriva a un borgo del Ducato a un prezzo troppo basso: chi lo manda, e che cosa vuole in cambio?\n· ⟦Una villa padronale vuota in mezzo alla pianura, con i granai pieni e i contadini spariti: i Figli della Vecchia Madre, o qualcos’altro?⟧\n· Il viaggio verso Solaria passa per la Terpuria: con il suo embargo, è la prima provincia ostile."
+  },
+  {
+   "t": "Da allineare",
+   "txt": "· I testi di lore mettevano il granaio «a est di Solanthis, fino alla costa» e lo chiamavano Kelvandor. Valgono il nome di oggi e la voce La stirpe di Aurax: la Terpuria sta a nord del Latium.\n· Nei testi di lore la «Vecchia Madre» è un aspetto di Maia: lo conferma la voce di Maia («la Vecchia Madre»). La vecchia voce diceva «Vedi Sementia» per gli spiriti dei campi: qui sono rimandati a tutte e due.\n· Silentia che ha bisogno del grano dell’Impero viene dalla voce di Silentia; i nani che importano grano dalla voce del Regno Nanico."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome della capitale della Terpuria.\n· Chi è il Maestro della Gilda del Grano e del Sale (un Veranthi?).\n· Se il motto di Casa Veranthi va bene."
   }
  ],
  "parent": "impero-aureo",
@@ -34,21 +63,108 @@
   {
    "t": "",
    "capo": true,
-   "txt": "A nord del Latium si aprono pianure di grano fino all’orizzonte, attraversate da strade dritte come lame e punteggiate di ville padronali che sembrano fortezze. È la Terpuria, e sfama l’Impero. Qui Aurax travolse i signori del raccolto nella Carica delle Steppe Dorate e promise ai contadini che nessuno avrebbe più patito la fame. Fu la sua promessa più amata, e la più tradita dopo di lui."
+   "txt": "A nord del Latium si aprono pianure di grano fino all’orizzonte, attraversate da strade dritte come lame e punteggiate di ville padronali che sembrano fortezze. È la Terpuria, e sfama l’Impero: venticinque milioni di bocche, più quelle di mezzo continente.\n\nChi tiene il grano tiene la fame, e chi tiene la fame tiene tutto. In Aprutium lo sapete bene: da qualche anno il grano della Terpuria arriva tardi e caro."
   },
   {
-   "t": "I. Chi comanda",
-   "txt": "Ufficialmente comanda il [[Siniscalco Imperiale]], un funzionario di Solaria. In realtà il Siniscalco è [[Aldren Veranthi]], il capo di Casa Veranthi, e il titolo gli serve solo a fare i suoi interessi con il timbro dell’Impero. La [[Gilda del Grano e del Sale]] controlla tutto, dalla semina al pane. I contadini lavorano terre che non sono loro, per padroni che non vedono mai.",
+   "t": "I. In breve, la sua storia",
+   "txt": "Prima di Aurax queste pianure erano in mano a signori del raccolto che affamavano i vicini per arricchirsi. Aurax li sfidò in campo aperto, e la sua cavalleria li travolse tra le spighe mature nella [[Carica delle Steppe Dorate]]. Poi divise la terra e promise ai contadini che nessuno avrebbe più patito la fame. Fu la sua promessa più amata, e la più tradita dopo di lui.\n\nI signori del grano sono tornati, con un altro nome. ⟦Nella Guerra delle Due Lune la Terpuria sfamò le Falangi per dieci anni, e Casa Veranthi si fece pagare in terre. Alla fine della guerra metà della pianura era sua.⟧ Oggi i contadini lavorano terre che non sono loro, per padroni che non vedono mai.",
    "img": "Mondo — La Terpuria Centrale.png",
    "didascalia": "La Terpuria Centrale"
   },
   {
-   "t": "II. Come si vive",
-   "txt": "La gente della Terpuria non crede ai senatori né ai preti: crede alla terra e al prezzo del grano. Nelle campagne si prega il Sole in pubblico, e la Vecchia Madre e Sementia in segreto."
+   "t": "II. Come si governa",
+   "txt": ""
   },
   {
-   "t": "III. Il grano come arma",
-   "txt": "Da qualche anno il grano arriva tardi e caro ad Aprutium e a Laguras. La Terpuria dice che è colpa dei briganti sulle strade. Ad Aprutium nessuno ci crede."
+   "t": "Il Siniscalco",
+   "liv": 3,
+   "txt": "Ufficialmente comanda il [[Siniscalco Imperiale]], un funzionario mandato da Solaria per garantire che il grano arrivi dove deve. In realtà il Siniscalco è [[Aldren Veranthi]], il capo di Casa Veranthi, e il titolo gli serve solo a fare i suoi interessi con il timbro dell’Impero. Ha il voto della Terpuria nel Concilio dei Reggenti."
+  },
+  {
+   "t": "La Gilda del Grano e del Sale",
+   "liv": 3,
+   "txt": "La [[Gilda del Grano e del Sale]] è una delle cinque Gilde Maggiori, e controlla tutto, dalla semina al pane: chi compra, chi vende, a che prezzo, e dove va il grano. Può affamare una provincia. Anche lei è in mano a Casa Veranthi, e anche lei vota nel Concilio: così i Veranthi hanno due voti, e il pane di tutti."
+  },
+  {
+   "t": "Le ville e i contadini",
+   "liv": 3,
+   "txt": "Nella pianura comandano le ville padronali: case grandi come borghi, con le mura, i granai, le torri e i magazzini. I padroni vivono in città, o a Solaria, e mandano i fattori. I contadini lavorano a mezzadria, a condizioni che non possono rifiutare. Non credono ai senatori né ai sacerdoti: credono alla terra, al raccolto e al prezzo del grano."
+  },
+  {
+   "t": "La fede",
+   "liv": 3,
+   "txt": "Nelle città si prega il Sole, in pubblico. Nei campi si prega [[Sementia]], più di Valerus: ai bordi dei campi ci sono ancora altari di pietra coperti di spighe intrecciate. Chi semina getta la prima manciata alle sue spalle, senza voltarsi, e quella è per lei. Il primo pane del grano nuovo si spezza sopra il focolare. E in segreto, di notte, si prega la [[Vecchia Madre]], la luna.\n\nI Purificatori in qualche villaggio hanno strappato le spighe dalle porte e le hanno bruciate in piazza. In quei villaggi, si racconta, l’anno dopo il grano non è venuto. I contadini sanno a chi dare la colpa."
+  },
+  {
+   "t": "Come si vive",
+   "liv": 3,
+   "txt": "Una vita fatta di stagioni: la semina, la mietitura, la trebbiatura, le feste del raccolto, i racconti intorno al fuoco d’inverno. La gente è conservatrice, pratica e diffidente, e parla per proverbi. ⟦Un forestiero è uno che compra, uno che ruba, o uno che porta notizie: prima di capire quale dei tre, non gli si offre da bere.⟧"
+  },
+  {
+   "t": "III. Le terre",
+   "tabella": {
+    "head": [
+     "Terra",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "La pianura del grano",
+      "Campi di grano e d’orzo fino all’orizzonte, piatti e uguali. D’estate il caldo è feroce, e la polvere della trebbiatura si vede da lontano."
+     ],
+     [
+      "Le strade dritte",
+      "Strade imperiali tirate a filo, senza una curva per giorni. La più grande è la Via del Grano, verso Solaria."
+     ],
+     [
+      "I fiumi lenti e i canali",
+      "Fiumi pigri e canali d’irrigazione, con i mulini. Gli gnomi ci tengono le macchine per alzare l’acqua."
+     ],
+     [
+      "Le ville padronali",
+      "Le case dei padroni: mura, torri, granai. Da lontano sembrano fortezze, e un po’ lo sono."
+     ],
+     [
+      "Le colline basse",
+      "Qualche collina, con ulivi, pascoli e piccole comunità di halfling."
+     ],
+     [
+      "⟦I granai del Siniscalco⟧",
+      "⟦Granai fortificati lungo le strade, sorvegliati dalle Sentinelle. Sono pieni anche quando ad Aprutium il pane manca.⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito",
+   "txt": "La Terpuria non ha una Falange. Non le serve: chi tiene il grano non ha bisogno di eserciti, perché gli eserciti mangiano.",
+   "tabella": {
+    "head": [
+     "Forza",
+     "Quanti",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "Le Sentinelle del Grano",
+      "⟦Qualche migliaio, sparse sulle strade e nei granai⟧",
+      "Il Siniscalco, cioè Casa Veranthi: proteggono i raccolti, e bloccano il commercio"
+     ],
+     [
+      "⟦Le guardie delle ville⟧",
+      "⟦Poche decine per villa⟧",
+      "⟦Al padrone della villa⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Il grano e il denaro",
+   "txt": "La Terpuria sfama l’Impero. Il suo grano risale la Via del Grano fino a Solaria, va nelle città di ogni provincia, e oltre il confine: a Silentia, dove l’estate è troppo corta per il grano, quello dell’Impero è una necessità; i nani lo comprano con il ferro. Ogni provincia ha anche i suoi campi, ma nessuna ne ha abbastanza.\n\nIl prezzo del grano lo fa la Gilda del Grano e del Sale. Quando sale, sale per tutti; quando la Gilda decide di mandarne meno in una provincia, quella provincia lo paga il doppio, e nessuno può farci niente."
+  },
+  {
+   "t": "VI. I mali della Terpuria oggi",
+   "txt": "· [[Il grano come arma.]] Da qualche anno il grano arriva tardi e caro ad Aprutium e a Laguras, le due province che a Solaria chiamano ribelli. La Terpuria dice che è colpa dei briganti sulle strade. Ad Aprutium nessuno ci crede, e a Laguras nemmeno.\n· [[I briganti.]] Ci sono davvero, e la scusa li rende comodi a tutti.\n· [[La terra stanca.]] I campi danno meno di una volta, e i padroni chiedono di più. Nelle campagne si racconta che la terra si stia svegliando, e che non sia contenta.\n· [[I contadini senza terra.]] La promessa di Aurax era che nessuno avrebbe patito la fame. Chi semina il grano dell’Impero, oggi, ne mangia poco.\n· [[La carestia.]] Non c’è ancora. Ma basterebbe un anno di grandine."
   }
  ],
  "epigrafe": {

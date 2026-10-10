@@ -14,25 +14,111 @@
  "mappa": null,
  "colore": "#4F7F8A",
  "scheda": {
-  "Governatore": "La Strega del Fiume",
-  "Fedeltà": "Mistero",
-  "Corrisponde a": "Bisenti"
+  "Paese vero": "Bisenti",
+  "Altri nomi": "Bisindë in dialetto; Bisemptum negli atti antichi",
+  "Abitanti": "⟦Circa milleottocento, contando Troiano e i casali⟧",
+  "Chi comanda": "Nessun signore. ⟦Gli anziani dei tre rioni si riuniscono alla Casa della Badia, e i registri li tengono i Biancone⟧; ma la gente dice che a Bisindë comanda la Strega del Fiume",
+  "Dentro le mura": "I tre rioni di Codacchio, Rampigno e Supporto, la Casa della Badia, la Lunaria degli Angeli, la Torre della Regina, la casa di Ponzio",
+  "Fuori le mura": "La Fonte Vecchia, l’ara della Benedizione delle Bestie sul Fino, il solario del colle, la riva della Vecchia Madre, Troiano, Colle Marmo",
+  "Porte": "Porta da Capo, in alto; Porta da Piedi, verso il fiume",
+  "Guardia": "⟦Nessuna guardia fissa. Gli uomini dei rioni fanno la ronda a turno, e di notte nessuno scende al fiume⟧",
+  "Lucente": "Il Lucente Pasquale, il 17 maggio, e la Vecchia Madre degli Angeli, il 2 agosto",
+  "Distanze": "⟦Cirmignanë, due ore a nord-est; Bbacucchë, due ore a ovest risalendo il Fino; Cashtijunë, mezza giornata a sud-est; Teramum, una giornata a nord⟧"
  },
- "gm": "Iuvenza evita Bisindë: la magia qui è troppo forte e imprevedibile. La Strega del Fiume è un PNG potente e neutrale, legata alla terra e forse a Maia. Luogo di potere alle sorgenti.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il borgo più magico del Ducato, e un rifugio che Iuvenza non tocca: la magia qui è troppo forte e imprevedibile. La Strega del Fiume è un PNG potente e neutrale, legata alla terra e forse a Maia. Il luogo di potere sta nelle acque. Bisindë non si conquista e non si compra: si chiede permesso."
+  },
+  {
+   "t": "La Strega del Fiume",
+   "txt": "⟦Non è una donna e non è un mostro: è vecchia quanto la valle, e la valle è la sua casa. Non si fa vedere a chi la cerca, solo a chi ha bisogno. Prende la forma di una vecchia lavandaia sul greto, o di un airone, o di una voce nell’acqua della Fonte Vecchia. Non ama la Fiamma e non ama Iuvenza. Non ama nemmeno la Crociata: ama il fiume.⟧\n\n⟦Chi le chiede un favore lo paga con una cosa vera: un ricordo, un nome, un anno di vita, una promessa da mantenere. Mai con il denaro.⟧\n\n⟦La Vecchia Madre di legno trovata sulla riva l’ha lasciata lei, molto tempo fa: è la sua immagine, e Maia è la sua signora. Il borgo prega la Strega senza saperlo. Lo sa forse solo Za’ Assunta.⟧"
+  },
+  {
+   "t": "Le acque e i cunicoli",
+   "txt": "⟦I cunicoli della Fonte Vecchia non li scavò Ponzio: li scavarono i Pretuziani, per portare dentro il colle l’acqua di una vena sacra. In fondo, dove nessuno va più, c’è una vasca di pietra con un cerchio inciso, come quelli che ronzano sotto Mushanë. È il luogo di potere. Lì la Strega parla chiaro.⟧\n\n⟦Sotto i campi di Campo di Pizzo e di Troiano c’è Berethra, la città antica che i libri ricordano e nessuno ha mai trovato: i cunicoli ci arrivano.⟧\n\n⟦Iuvenza lo sa: ha mandato un uomo, una volta. È tornato senza voce, e non ha mai detto che cosa ha visto.⟧"
+  },
+  {
+   "t": "Ponzio",
+   "txt": "Nella tradizione vera di Bisenti nasce lì Ponzio Pilato, figlio di esuli, che avrebbe portato dalla Giudea la tecnica dei cunicoli d’acqua.\n\n⟦Nel gioco: Ponzio fu un pretore dell’Impero, nato a Bisindë da una famiglia esiliata, che lontano fece giustiziare un uomo innocente per non dispiacere a chi comandava. Tornò vecchio, chiese perdono al fiume e ci morì. La gente ne è orgogliosa e se ne vergogna. È una storia da raccontare a Maximus, o a chiunque debba decidere fra la legge e la giustizia.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Iuvenza non viene qui.]] Un posto sicuro per fermarsi, curare i feriti, nascondere qualcuno. Gli uomini col fiore nero non passano il ponte.\n· ⟦[[Parlare con la Strega.]] Lasciare un dono sulla riva (non denaro) e aspettare la notte. Natura o Religione CD 15 per sapere che cosa lasciare; Adamus, Mattheus e chiunque senta la terra o la Vecchia Madre hanno vantaggio. Un favore della Strega vale una scena: una piena che chiude un guado ai nemici, una nebbia sul Fino, un segreto sulla montagna.⟧\n· ⟦[[Za’ Assunta.]] L’erborista sa come si parla al fiume e non lo dice a nessuno, tranne a chi le guarisce un nipote o le porta un’erba di montagna che non ha.⟧\n· ⟦[[Donato Biancone.]] Il notaio della Badia sa chi compra terra nella valle e chi ha debiti. Non ama i forestieri, ama i documenti in ordine.⟧\n· [[La festa del 2 agosto.]] Tutta la valle è a Bisindë: pastori, contadini, gente di Cirmignanë e di Bbacucchë. Il momento per farsi vedere, o per incontrare qualcuno senza dare nell’occhio."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Bisenti vera ha i tre rioni Codacchio, Rampigno e Supporto e i rioni scomparsi, la Porta da Capo e la Porta da Piedi, la torre quadrata restaurata dalla regina Giovanna (erano tre), la Casa della Badia dei Celestini con il portico e l’orologio, Santa Maria degli Angeli con la statua quattrocentesca della Madonna «apparsa sulla riva del Fino», San Pietro, Sant’Antonio Abate alla confluenza del Fossato, la Fonte Vecchia con il qanat, la casa di Ponzio Pilato con le cisterne, la leggenda di Pilato, Troiano e le contrade, le tombe di Campo di Pizzo, Colle Marmo, le feste (San Pasquale, Madonna degli Angeli con il ballo della pupa, Sant’Antonio, Pasquetta a San Pietro, il Montonico) e i piatti. Dal dialetto: Fène, forastìre, candinère, li spère, Mundòneche, «li mìtte di Castiùne». Quello che non è segnato come proposta viene da lì, tradotto con il Lessico di Ea.\n· Berethra: lo storico locale De Carolis identifica Bisenti con la Berethra di Plinio (ipotesi contestata).\n· Il vecchio testo metteva Bisindë sul Salinellum: sta sul Fino.\n· Il vecchio testo metteva il luogo di potere «alle sorgenti»: le sorgenti del Fino sono verso Bbacucchë. Qui il luogo di potere è la vena sotto la Fonte Vecchia.\n· Nel vecchio canone la Strega «governava» il borgo. Qui il borgo non ha signore: la Strega comanda perché nessuno osa fare il contrario. I Biancone sono la famiglia del borgo (nomi decisi il 10-10).\n· Nella storia vera Bisenti fu terra di Montecassino e dei Celestini: per questo la voce dice che la Fiamma ci ha avuto votati e badie, ma non radici."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Che cos’è la Strega del Fiume, e se la Vecchia Madre di legno è la sua immagine.\n· Chi siede alla Casa della Badia: gli anziani dei rioni con i Biancone, come propone questa voce, o un altro.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Terra dei Calanchi",
  "id": "borgo-bisinde",
  "parent": "contea-calanchi",
  "title": "Bisindë",
- "sub": "Mistero",
+ "sub": "Il borgo della Strega, sul Fino",
  "pub": [
   {
    "t": "",
-   "txt": "Sul Salinellum, il fiume sacro, un borgo di sangue pagano dove la Fiamma Solare non ha mai messo davvero radici. Nelle acque — dicono — vive una strega antica quanto la terra, e nessuno con la testa sulle spalle la disturba.",
+   "capo": true,
+   "txt": "Bisindë sta nell’alta valle del Fino, che qui chiamano lu Fène, dove il fiume esce dalle gole del Gigante e comincia ad allargarsi. È un borgo di fondovalle, su un colle basso sopra l’acqua, con una torre quadrata che si vede da tutta la valle. Intorno, le creste grigie dei calanchi; sopra, la parete del Gigante.\n\nÈ il borgo che conta nella Terra dei Calanchi, anche se non ha un signore: qui si fa il mercato della valle, e da qui passa chi scende dalla montagna. La Fiamma ci ha avuto votati e badie per secoli, ma non ha mai messo davvero radici. Nelle acque del Fino, dicono, vive una strega antica quanto la terra, e nessuno con la testa sulle spalle la disturba."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo è diviso in tre rioni: [[Codacchio]], [[Rampigno]] e [[Supporto]]. I vecchi ne contano di più, con i nomi di una volta: il rione della Torre, del Forno, del Macello e il Piano di Polzo. Le mura del vecchio castello sono crollate quasi tutte, e le case ci sono cresciute sopra. Restano le due porte, una in alto e una in basso, e la torre.\n\nFuori dalle porte, le case scendono verso il fiume e salgono verso i colli. Il territorio di Bisindë è fatto di casali sparsi: il più grande è Troiano, che è quasi un secondo borgo.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "Porta da Capo",
+      "In alto, verso Rampigno",
+      "La porta della strada di Cirmignanë e di Teramum. Accanto ci sono i mozziconi di due torri più piccole, cadute da tempo."
+     ],
+     [
+      "Porta da Piedi",
+      "In basso, verso il fiume",
+      "La porta della valle: da qui si scende al Fino, alla Fonte Vecchia e alla strada per Bbacucchë e per Cashtijunë."
+     ]
+    ]
+   },
    "img": "Mondo — Bisindë.jpg",
    "didascalia": "Bisindë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. La Casa della Badia.]] Il palazzo più vecchio del borgo, sulla piazza: un portico di archi a punta e sopra una torretta con l’orologio. Era la casa dei votati che tenevano le terre. Oggi ci si riuniscono gli anziani, ci si leggono i bandi e ci si tengono i registri. ⟦Il registro grande lo tiene Donato Biancone, notaio, della famiglia più ricca del borgo.⟧\n· [[2. La Lunaria degli Angeli.]] Il tempio grande del borgo: una navata sola, grande e chiara. Dentro c’è una Vecchia Madre di legno, vecchia di secoli, che la gente dice comparsa da sola sulla riva del Fino.\n· [[3. La Torre della Regina.]] La torre quadrata, con la base a scarpa. Erano tre, una volta: questa è la più grande, e anche lei è stata accorciata. Si dice che la fece rialzare una regina, e nessuno sa più quale.\n· [[4. La casa di Ponzio.]] Una casa vecchia in un vicolo del rione basso, con le cisterne sotto il cortile. Qui, dicono, nacque Ponzio, il figlio di due esuli, che andò lontano a servire l’Impero e diventò famoso. La gente ne parla con orgoglio e con un po’ di imbarazzo.\n· ⟦[[5. L’osteria del Supporto.]] Un’osteria sotto il rione basso, con tre tavoli e una stanza sopra. Maccheroni alla molinara, pecora al guazzetto, e il Mundòneche, il bianco della valle. Il candinère, come qui chiamano l’oste, è Pìtre lu Rusce: se gli chiedi della strega ti versa un altro bicchiere invece di rispondere.⟧\n· ⟦[[6. Il forno del rione del Forno.]] Il forno comune, dove si cuociono il pane e, per la Notte Lunga, i dolci. Le donne in fila sanno tutto prima degli anziani.⟧\n· ⟦[[7. La bottega di Za’ Assunta.]] L’erborista del borgo: erbe del fiume, unguenti, decotti per il fegato, il corallo per i neonati. Molti credono che sappia parlare con la Strega. Lei dice di no.⟧\n· ⟦[[8. Il mercato della valle.]] Il giovedì, sulla piazza della Badia: i pastori di Bbacucchë con il formaggio, i contadini di Troiano con il grano e l’olio, i mercanti che salgono da Cashtijunë.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[9. La Fonte Vecchia.]] Sotto il borgo, verso il fiume: una fontana di pietra con le vasche dove l’acqua si posa. L’acqua ci arriva da cunicoli scavati nella roccia del colle, stretti e lunghi, dove un uomo passa solo piegato. La leggenda dice che li fece scavare Ponzio, che aveva imparato il modo in una terra lontana. I vecchi dicono che sono molto più vecchi di lui.\n· [[10. L’ara della Benedizione.]] Un’ara piccola in basso, dove il Fossato si getta nel Fino. Il 17 gennaio ci si portano le bestie a benedire.\n· [[11. Il solario del colle.]] Un solario a una navata sul colle di fronte, che i vecchi chiamano Sande Pìtre. Da lassù si vede tutta la valle, fino alla parete del Gigante.\n· [[12. La riva della Vecchia Madre.]] Un tratto di greto sul Fino, sotto i salici, dove la Vecchia Madre di legno fu trovata. Ci si portano fiori e candele. ⟦Più su, dove il fiume fa una pozza profonda e scura, non ci va nessuno.⟧\n· [[13. Troiano.]] Il casale più grande, quasi un borgo: case di mattone, un pozzo, un’aia comune. Ci vivono le famiglie che lavorano le terre migliori della valle.\n· [[14. Colle Marmo.]] Il colle più alto di Bisindë. Dalla cima si vedono il Gigante, i Monti della Laga e, nei giorni chiari, la montagna della Vecchia Madre lontano a sud.\n· [[15. I casali e le tombe.]] San Martino, San Nicola, San Savino, Piano del Moro, Rufiano, Acquadosso, Piedifinati, Campo di Pizzo: grano, ulivi, vigne e pecore, sparsi sui colli fra un burrone e l’altro. Arando, a Campo di Pizzo escono tombe più vecchie dell’Impero."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I bisentini sono gente chiusa con i forestieri, che qui si chiamano forastìre, e allegra fra loro. Sono orgogliosi di due cose: della loro acqua e del loro Ponzio. Della Strega non parlano. Se un forestiero insiste, cambiano discorso, offrono da bere o si ricordano di avere da fare. Quelli di Cashtijunë, per loro, sono «li mìtte di Castiùne», i matti.\n\n· [[Il Lucente Pasquale.]] Il 17 maggio il lucente esce in processione per i tre rioni.\n· [[La Vecchia Madre degli Angeli.]] La festa grande: tre sere di canti, poi il 2 agosto la processione, la banda e li spère, i fuochi d’artificio, sopra il fiume. ⟦La statua scende fino alla riva e ci si ferma un momento, in silenzio, prima di risalire.⟧\n· [[La Benedizione delle Bestie.]] Il 17 gennaio i ragazzi girano per le case a chiedere salsicce e vino, e la sera si balla la pupa: un fantoccio di donna, con i fuochi d’artificio attaccati addosso, che balla finché brucia.\n· [[Il giorno dopo il Sole Nuovo.]] Il giorno dopo la Festa del Sole Nuovo tutto il borgo sale al solario del colle: rito, processione, e brace accesa fino a sera.\n· [[La vendemmia.]] A ottobre si fa festa per l’uva del Mundòneche, con i carri addobbati.\n· [[La tavola.]] I maccheroni alla chitarra e alla molinara, le taccunelle, la fracchiata, le Virtù del primo maggio, le scrippelle ’mbusse a Carnevale, la pecora al guazzetto. Per la Notte Lunga il tatù, i calcionetti e le sfogliatelle bisentine."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[La strega è arrabbiata.]] Da qualche mese il Fino fa cose strane: una piena senza pioggia, una notte in cui l’acqua della Fonte Vecchia è uscita calda. Le donne lasciano più fiori sulla riva.⟧\n· ⟦[[La terra trema.]] Anche qui. Un pezzo della Torre della Regina è caduto in piazza, e per un pelo nessuno si è fatto male.⟧\n· ⟦[[Il bando di Teramum.]] È arrivato anche a Bisindë, inchiodato alla Casa della Badia. Gli anziani lo hanno letto, ci hanno pensato una notte, e lo hanno lasciato lì senza dire niente.⟧\n· ⟦[[I forestieri che non arrivano.]] Gli uomini col fiore nero si sono visti a Cirmignanë e a Cashtijunë. A Bisindë no: arrivano fino al ponte, guardano il fiume e tornano indietro.⟧"
   }
  ],
  "illustrazione": "Mondo — Bisindë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«A lu Fène, di notte, non ci va nisciune.»",
+  "cite": "⟦Detto di Bisindë⟧"
+ }
 }

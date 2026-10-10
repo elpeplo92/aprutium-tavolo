@@ -20,16 +20,184 @@
  "mappa": null,
  "colore": "#C9A24A",
  "scheda": {
-  "Nome in dialetto": "Tërëmë",
-  "Numero": "5",
-  "Borghi": "7"
+  "Nome": "Il Cuore del Ducato; in dialetto, Tërëmë, come la città",
+  "Contea": "La quinta delle otto",
+  "Il borgo che conta": "Teramum, la capitale, circa cinquantacinquemila abitanti",
+  "Chi comanda": "Il Consiglio Reggente delle Otto Casate, da Teramum. Fuori dalle mura ogni borgo ha il suo signore: un Signore del Ponte, un Guardiano della Valle, un Marchese, un Mastro Costruttore, un castellano che nessuno vede, e a La Pònnë nessuno",
+  "Borghi": "Teramum, Mëndurjë, Bbashanë, Tërrëciallë, Tussëcië, Cullëdarë, La Pònnë",
+  "Confini": "A nord-est le Terre di Mezzo, oltre la valle del Tordinum; a nord le Terre del Nord; a ovest le Terre Selvagge della Laga; a sud-ovest la Montagna del Gigante; a sud, oltre il Vomanum, la Terra dei Calanchi",
+  "Fiumi": "Il Tordinum e la Vezzola, che si uniscono sotto Teramum; il Vomanum, a sud; il Mavone, che scende dal Gigante nella valle di Tussëcië",
+  "Paesaggio": "Colline coltivate attorno alla capitale; a ponente i boschi che salgono alla Laga; a sud-ovest la valle del Vomanum e la valle del Mavone, sotto la parete del Gigante",
+  "Vive di": "Il governo e i commerci della capitale, il grano, l’olio e il vino delle colline, il prosciutto e il montonico di Bbashanë, i mastri muratori di Cullëdarë, il rame di Tussëcië, il legname e le greggi delle valli alte, i pedaggi",
+  "Fedeltà": "A Teramum, quasi tutta. Tussëcië guarda alla dama di Velthuria salita al Colle; La Pònnë non guarda a nessuno; di Tërrëciallë non si sa"
  },
- "gm": "Il territorio dell'Atto Terzo vero e proprio. Tussëcië è di Iuvenza (Marchese d'Avalos) e pattuglia la strada montana. La Pònnë è un covo di ribelli che rifiutano Iuvenza — il Leame di Sangue. Le cantine di Tërrëciallë sono la via segreta verso le cripte di Teramum e il Sigillo. Gli spaccapietre di Cullëdarë sono incitabili alla rivolta.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "La contea dove la Crociata sta per arrivare, e il campo nemico. Teramum è la testa: il Consiglio, il Sigillo Ducale, Iuvenza al Colle, Lucius Grazianus con la sua Guardia. Ma la capitale vive dei borghi intorno, e ogni borgo è una leva: la strada e il ponte (Mëndurjë), le carte (Bbashanë), i cantieri (Cullëdarë), la strada per la Convocazione (Tussëcië), la rabbia (La Pònnë), la via di sotto (Tërrëciallë).\n\nChi vuole la Grande Convocazione deve prendere il Sigillo a Teramum e poi arrivare vivo a Lésënë. Le due cose passano entrambe per questa contea."
+  },
+  {
+   "t": "Le trame della contea",
+   "txt": "Le trame di Teramum (vedi la voce del Ducato e quella della città) arrivano fino ai borghi.\n\n· [[Iuvenza e la strada di Lésënë.]] Il Marchese d’Avalos tiene Tussëcië per Iuvenza e pattuglia la valle del Mavone. Se la Convocazione viene chiamata, chi deve salire a Lésënë passa sotto i suoi uomini. ⟦Iuvenza non ha bisogno di vincere il voto: le basta che metà delle Casate non arrivi.⟧\n· [[Il colpo di Grazianus.]] Lucius prepara la legge marziale con Casa Chiodi; manca il pretesto. Mëndurjë e Bbashanë sono di Teramum, cioè di chi comanda la Guardia il giorno in cui serve. ⟦Valerio Ferrastro serve lo Stratega più del Consiglio: il capitano Guarnerio, alla porta di Teramum, è di Mëndurjë e lo conosce da sempre. Se Ferrastro chiude il ponte, la strada per Lésënë è chiusa anche dal lato della capitale.⟧\n· [[I Malavolta sotto la città.]] Gli scavi sotto l’Arena li fanno uomini di Cullëdarë, come Nicola «Lu Talpone», pagati da Ser Guidone. Se Lunargento lo viene a sapere, o se i suoi uomini continuano a sparire laggiù, la Gilda chiede conto.\n· [[Melatino e i cantieri.]] ⟦La Lega dei Sensali appalta i cantieri di Teramum e paga i mastri di Cullëdarë a giornata fissa: con il terremoto e i solari puntellati il lavoro vale oro, e i muratori non vedono niente. È la ragione della loro rabbia.⟧\n· [[Il Leame di Sangue.]] I ribelli di La Pònnë odiano Iuvenza e sanno dove vanno i suoi uomini. Sono gli alleati naturali della Crociata, ma attirano la repressione: se la Crociata li usa, il Consiglio ha il pretesto per chiamarla brigantaggio.\n· [[La forgiatura nella valle.]] I Forgiati del guado di Sant’Atto sono stati fatti dopo la caduta di Lyaras, con la melma nera versata in un pozzo; l’acqua sapeva di lillà, il profumo di Casa Velthuria (scena del guado). Qualcuno nella valle continua a forgiare, e nessuno sa ancora dove.\n· [[Il convoglio di Iuvenza.]] All’osteria de lu Passe la Crociata incontra il convoglio con le armature del Loto e le anime nel ferro (scena dell’osteria). Va verso Teramum."
+  },
+  {
+   "t": "Sotto la contea",
+   "txt": "· Sotto la Basilica Aurea di Teramum c’è il Sigillo Lunare, e lì sotto la forgia di annullamento che può spezzare il filatterio di Lyaras (Atto IX).\n· Sotto la città c’è la Città Sepolta. Dal suo crocevia una galleria fatta di cantine sfondate va verso ovest, fino a Tërrëciallë: la via dei Portocenere, coperta di una cenere che non vola (scena della Città Sepolta). I giocatori non lo sanno.\n· Nella storia vera di Torricella, dal castello scomparso partiva una galleria sotterranea verso la campagna, e sotto il colle c’è una grotta con un tesoro guardato da un serpente. ⟦Nel gioco la galleria è l’ultimo tratto della via dei Portocenere.⟧\n· Il Gigante si gira nel sonno. ⟦Tërrëciallë è il punto della contea dove la terra trema per prima: per questo i druidi stanno lì.⟧\n· ⟦Il passaggio verso il Sottosuolo profondo, che il vecchio canone metteva nelle miniere di Atrë, può stare sotto il Gigante, in fondo alla valle del Mavone, oltre Tussëcië.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Le strade.]] Ogni arrivo a Teramum passa per un borgo: dalla costa, il guado di Sant’Atto e Porta Reale; da sud, la sbarra di Bbashanë; dalla montagna, il ponte di Mëndurjë. Chi entra dalle cantine arriva da Tërrëciallë.\n· [[La Convocazione.]] Quando la Crociata avrà il Sigillo, il viaggio verso Lésënë è una marcia nella valle del Mavone, sotto gli uomini del Marchese. ⟦I muratori di Cullëdarë e i ribelli di La Pònnë conoscono i sentieri sopra la strada.⟧\n· [[Le leve.]] Fermare i cantieri (Cullëdarë), chiudere il ponte (Mëndurjë), falsificare un timbro (Bbashanë: i falsari di Nnaréta): tre modi per mettere pressione su Teramum senza combattere.\n· [[Le notizie.]] I carrettieri di Bbashanë, che portano il fieno, sanno tutto quello che succede sulla strada del Vomanum."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· La voce prima era quasi vuota. I dati dei borghi vengono dal Manuale e dal testo di lore sul Ducato, rifatti sullo Studio dei paesi veri (10-10) e confrontati con le scene di Teramum e con la voce di Teramum, che vale.\n· Le cantine di Tërrëciallë sotto Teramum erano nel testo per i giocatori: per decisione del 10-10 stanno solo qui.\n· Bbashanë nel vecchio canone era l’«accesso est» alla capitale. Basciano vera sta a sud di Teramo, sulla valle del Vomano: qui la sbarra tiene la strada del Vomanum, da sud. Da est arriva la strada della costa, a Porta Reale (voce di Teramum).\n· Mëndurjë nel vecchio canone «controllava l’acqua che scende verso la capitale». Montorio sta sul Vomano, che non è il fiume di Teramo: la leva vera è la strada per la montagna (lo Studio). L’acqua qui non c’è più.\n· Cullëdarë nel vecchio canone era il paese delle cave. Colledara vera non ha cave: è famosa per la porchetta. Seguendo la decisione dell’8-10 (i mestieri si rifanno dai paesi veri) è diventata il paese dei mastri muratori, che tiene insieme Lunargento e Nicola «Lu Talpone».\n· Tërrëciallë nel vecchio canone stava «sulla strada che sale al Gigante». Torricella vera sta a nord-ovest di Teramo e sale verso la Laga: corretto.\n· La scena dell’arrivo a Teramum mette Porta Reale a ovest, verso Tussëcië. Vale la voce di Teramum: Porta Reale è a est, e la strada della montagna esce da Porta del Lucente Giorgio.\n· Il druido dell’Atto XVIII è «di Torricella» negli Atti: Torricella Sicura è il paese vero di Tërrëciallë.\n· Lessico di Ea (10-10): niente chiese, santi e vescovi; solari, lucenti, flamini. I nomi dei casali e dei villaggi (Sant’Atto, San Rustico) restano come nomi di luogo."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Quanti abitanti ha la contea. ⟦Circa centomila, metà nella capitale.⟧\n· Se Valerio Ferrastro sta con il Consiglio o con lo Stratega quando arriverà il momento.\n· Chi forgia nella valle.\n· Da che parte la Crociata entra in città: la voce di Teramum propone Porta Reale, dalla strada della costa."
+  }
+ ],
  "id": "contea-cuore-del-ducato",
  "livello": "contea",
  "parent": "ducato-aprutium",
  "group": "Le otto contee",
  "title": "Il Cuore del Ducato",
- "sub": "Tërëmë · contea 5 — La capitale e le terre attorno, salendo verso il Gigante.",
- "pub": "Teramum e ciò che la circonda: la Città Sotto la Montagna, coi suoi due fiumi, e i borghi che ne controllano gli accessi — la porta della montagna a Mëndurjë, il pedaggio di Bbashanë, le cave di Cullëdarë che tagliano la pietra delle mura. Salendo verso il Gigante l'aria si fa più fredda e la legge di Teramum più sottile, fino a Tërrëciallë, il borgo antico le cui cantine — dicono — arrivano fin sotto la capitale."
+ "sub": "Tërëmë · quinta contea: la capitale e le valli che salgono al Gigante",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Il Cuore del Ducato è la contea della capitale. In mezzo sta Teramum, sulla sua lingua di terra fra due fiumi. Intorno ci sono le colline che le danno il pane. A ponente i boschi salgono verso la Laga; a sud-ovest la valle del Vomanum si stringe e porta fin sotto il Gigante Dormiente. Qui hanno sede il Consiglio, la Basilica Aurea, la Guardia Ducale e le Otto Casate. Qui finiscono quasi tutte le strade del Ducato.\n\nQuesta voce racconta la contea intera. Teramum e gli altri sei borghi hanno le loro voci."
+  },
+  {
+   "t": "I. La terra fra i fiumi",
+   "txt": "Prima dell’Impero, sulla punta fra il Tordinum e la Vezzola c’era Interamnia, la città dei Pretuziani. Era il loro luogo di mercato e di consiglio, a un giorno di cammino dal Gigante che veneravano. Nei campi intorno la terra restituisce ancora le loro tracce: le stele con gli occhi del Monte Giove, vicino a La Pònnë; le tombe di Tussëcië; la base di un tempio sulla strada di Mëndurjë; l’altare di Tërrëciallë dedicato a un dio senza nome. Il Vomanum, dicono i vecchi, era il confine: di qua i Pretuziani, di là altri popoli.\n\nAi piedi del Gigante Aurax strinse con le tribù il [[Patto di Teramum]]. L’Impero non scese a conquistare: salì a patteggiare. Fece di Interamnia una città con il teatro, l’arena e le terme, e lasciò alle valli i loro capi e i loro dèi. Per questo, appena fuori dalle mura della capitale, la vecchia fede è ancora viva.\n\nPoi vennero i secoli dei castelli. I cavalieri del nord bruciarono Teramum, e la città rinacque con la Basilica Aurea e le mura nuove. Sulle alture intorno ogni signore alzò la sua torre. La capitale, una dopo l’altra, se le comprò, se le prese o se le fece giurare: Mëndurjë la comprò con il denaro, Tërrëciallë la tenne il suo flamine per secoli. Oggi la contea non ha un conte: il suo padrone è Teramum.",
+   "img": "Mondo — Il Cuore del Ducato.jpg",
+   "didascalia": "Il Cuore del Ducato"
+  },
+  {
+   "t": "II. Le colline e le valli",
+   "txt": "La contea ha due facce.\n\n· [[Le colline della capitale.]] Attorno a Teramum, fino al Tordinum e al Vomanum: grano, ulivi, vigne, casali e borghi fuori porta. È la terra più ricca e più sorvegliata del Ducato. Ogni strada ha un dazio e ogni ponte una guardia.\n· [[Le valli alte.]] A nord-ovest, oltre Tërrëciallë, cominciano i boschi della Laga. A sud-ovest la valle del Vomanum esce dalla montagna sotto Mëndurjë; più in là si apre la valle del Mavone, fra Cullëdarë e Tussëcië, che sale fino ai piedi del Gigante e a [[Lésënë]]. Qui la pietra affiora dappertutto, i paesi sono di sasso e la legge di Teramum arriva più piano.\n\nI fiumi scendono tutti dalla montagna.\n\n· [[Il Tordinum]] e [[la Vezzola]] abbracciano Teramum e si uniscono sotto la sua punta. Lungo il Tordinum passa la strada della costa, con il guado di Sant’Atto.\n· [[Il Vomanum]], il fiume grande del Ducato, segna il sud della contea. A Mëndurjë ha il ponte più importante della montagna.\n· [[Il Mavone]] scende dalla parete del Gigante e si getta nel Vomanum nella piana sotto Bbashanë. La sua valle è la strada per Lésënë.\n\nNelle giornate chiare, da qualunque punto della contea, il Gigante riempie il cielo a sud-ovest. D’inverno la neve sembra arrivare fino ai tetti di Teramum."
+  },
+  {
+   "t": "III. I borghi",
+   "tabella": {
+    "head": [
+     "Borgo",
+     "Dove",
+     "Chi lo tiene",
+     "Per che cosa è noto"
+    ],
+    "rows": [
+     [
+      "[[Teramum]]",
+      "Al centro, fra il Tordinum e la Vezzola",
+      "Il Consiglio Reggente delle Otto Casate",
+      "La capitale: la Basilica Aurea, il Palazzo Ducale, le Casate, la calata del sabato"
+     ],
+     [
+      "[[Mëndurjë]]",
+      "A sud-ovest, sul Vomanum, dove la valle esce dalla montagna",
+      "Valerio Ferrastro, il Signore del Ponte",
+      "La porta della montagna: il ponte, il forte contro i briganti, la strada per Lésënë"
+     ],
+     [
+      "[[Bbashanë]]",
+      "A sud, su un colle sopra il Vomanum",
+      "Il Guardiano della Valle, detto Chiodofermo",
+      "La sbarra sotto Porta Penta. Il prosciutto e il montonico"
+     ],
+     [
+      "[[Tërrëciallë]]",
+      "A nord-ovest, sul colle fra il Tordinum e la Vezzola, verso la Laga",
+      "Il castellano dei Portocenere, che nessuno vede",
+      "Un borgo mezzo vuoto, le cantine, l’infiorata, il minestrone, i druidi"
+     ],
+     [
+      "[[Tussëcië]]",
+      "Nella valle del Mavone, sotto il Gigante",
+      "Il Marchese Rodrigo d’Avalos",
+      "Il palazzo marchesale, i ramai, i portali scolpiti, la guardia sulla strada di Lésënë"
+     ],
+     [
+      "[[Cullëdarë]]",
+      "Nella valle del Mavone, fra villaggi sparsi",
+      "Mastro Costruttore Pietranto Lunargento",
+      "I mastri muratori che costruiscono Teramum. La porchetta di Collecastino"
+     ],
+     [
+      "[[La Pònnë]]",
+      "A sud, su un colle sopra il Vomanum",
+      "Nessuno: ci sta il Leame di Sangue",
+      "Il borgo dei ribelli, le stele del Monte Giove, il ballo del Laccio d’Amore"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. Chi comanda",
+   "txt": "Nella contea non c’è un conte, perché non serve: c’è Teramum. Il Consiglio Reggente governa la capitale e, dalla capitale, le valli. I signori dei borghi rispondono a lui, o fingono di farlo. Ma più ci si allontana dalle mura, più la fedeltà si fa sottile. Sulla strada della montagna c’è un Marchese che guarda a qualcun altro. Su un colle sopra il Vomanum c’è un borgo che non guarda a nessuno.",
+   "tabella": {
+    "head": [
+     "Signore",
+     "Che cosa tiene",
+     "Guarda a"
+    ],
+    "rows": [
+     [
+      "Il Consiglio Reggente delle Otto Casate",
+      "Teramum, i suoi borghi fuori porta, le terre della capitale",
+      "A sé stesso. Il trono del Duca è vuoto da due anni"
+     ],
+     [
+      "Valerio Ferrastro, il Signore del Ponte",
+      "Mëndurjë, il ponte sul Vomanum e il forte",
+      "A Teramum"
+     ],
+     [
+      "Il Guardiano della Valle Chiodofermo",
+      "Bbashanë e la sbarra della strada del Vomanum",
+      "A Teramum e alle sue carte"
+     ],
+     [
+      "Il Marchese Rodrigo d’Avalos",
+      "Tussëcië, la valle del Mavone e la strada di Lésënë",
+      "Alla dama di Velthuria salita al Colle, dicono"
+     ],
+     [
+      "Mastro Pietranto Lunargento",
+      "Cullëdarë e la Gilda dei mastri muratori",
+      "A chi paga i cantieri"
+     ],
+     [
+      "Il castellano dei Portocenere",
+      "Il castello di Tërrëciallë",
+      "Nessuno lo sa"
+     ],
+     [
+      "Il Leame di Sangue",
+      "La Pònnë",
+      "A nessuno. Non riconosce chi viene da Teramum"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Le porte della capitale",
+   "txt": "Chi vuole Teramum deve prima passare dal Cuore del Ducato. Ogni borgo della contea tiene una delle sue porte, anche se sta a mezza giornata dalle mura.\n\n· [[La strada della costa]] arriva lungo il Tordinum, passa il guado di Sant’Atto ed entra da Porta Reale. È la strada dei carri, dei viandanti e degli eserciti.\n· [[La strada del Vomanum]] sale da sud, dai Calanchi e dalla valle del fiume grande. A Bbashanë c’è la sbarra: lì si paga, si mostra il timbro, si aspetta.\n· [[La strada della montagna]] esce da Porta del Lucente Giorgio e scende a sud-ovest fino a Mëndurjë. Passato il ponte sul Vomanum, risale la valle del Mavone fino a Tussëcië e a [[Lésënë]], l’Aquila Aurea, dove si riunisce la [[Grande Convocazione]]. Chi vuole andare dalla capitale alla Convocazione deve passare di qui.\n· [[La strada della Laga]] esce verso ponente per La Cona e sale a Tërrëciallë. Oltre ci sono solo i boschi.\n\nPer questo il Consiglio tiene la contea più stretta di tutte le altre. Ed è a Teramum che il proclama contro la Crociata è stato scritto e sigillato."
+  },
+  {
+   "t": "VI. La gente",
+   "txt": "Due popoli diversi, a mezza giornata di distanza. Quelli delle colline guardano alla capitale: ci vanno a vendere, ci mandano i figli a servire, sanno i nomi delle Casate e i pettegolezzi della calata. Quelli delle valli alte sono gente di sasso e di bosco: muratori, ramai, pastori, carbonai, boscaioli. Di Teramum conoscono le tasse e i soldati, e poco altro.\n\nIn tutta la contea si venera il [[Lucente Berardo]], il protettore del Ducato, che nacque in un castello della valle del Mavone. Ma ogni borgo ha anche il suo: il Lucente Rocco a Mëndurjë e a La Pònnë, il Lucente Flaviano a Bbashanë, il Lucente Paolo a Tërrëciallë, la Lucente Sinforosa a Tussëcië, la Vecchia Madre d’Oriente a Cullëdarë. E sotto i lucenti c’è il Gigante. Quando la terra trema, i vecchi delle valli non pregano la Fiamma. Dicono che lui si è girato nel sonno.\n\nLe notizie scendono con i mastri muratori che tornano a casa, con i pastori dei tratturi e con i carrettieri che portano il fieno al mercato. Quelle che salgono da Teramum le porta la Guardia, inchiodate sulle porte."
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Prima della Crociata, a Mushanë e poi a Bëllindë, vi ha preceduto un proclama di Teramum: chiama la Crociata sediziosa e vieta di darvi uomini, cavalli, viveri e ospitalità. È autentico, sigillato con le procedure arcane della capitale (Atto XV).\n· Il falco di Lucius Grazianus ha portato a Maximus due righe: «Non venire per la Via Bianca. Aspetta mio segnale.» (Atto XI).\n· Fra le vigne di Bëllindë, Adamus ha incontrato uno dei druidi di Tërrëciallë, che gli Atti chiamano di Torricella. Gli ha detto che la montagna trema, che nelle campagne si vedono altri Brak, e che nel Ducato si muove anche qualcos’altro. Poi è volato via in forma di corvo (Atto XVIII).\n· Sulla strada per Teramum la Crociata è arrivata al guado di Sant’Atto, sul Tordinum. Lì è cominciato lo scontro (Atto XVIII)."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Chi si lu fije?»",
+  "cite": "La prima domanda che si fa a un forestiero, da Teramum alle valli: prima di chi sei figlio, poi come ti chiami"
+ },
+ "blocchi": true
 }

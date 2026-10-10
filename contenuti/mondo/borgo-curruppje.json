@@ -14,25 +14,107 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Duca Orsilio Pergameno di Montagnola",
-  "Fedeltà": "Iuvenza",
-  "Corrisponde a": "Corropoli"
+  "Paese vero": "Corropoli",
+  "Altri nomi": "Currùppië in dialetto; Collis Ruppuli, il colle di Ripoli, negli atti antichi",
+  "Abitanti": "⟦Circa duemila, contando i casali⟧",
+  "Chi comanda": "Orsilio Pergameno, signore di Curruppjë. La famiglia vecchia del borgo sono i Melarangelo",
+  "Dentro le mura": "Piazza Piè di Corte, il solario della Lucente Agnese e il campanile, il Palazzo Pergameno, la casa dei Melarangelo, la Casa degli Ospiti, il solario che non finisce",
+  "Fuori le mura": "L’abbazia di Mejulano, la Montagnola, il monastero di Gabbiano, gli scavi di Ripoli, la fonte di Scolastica, i casali",
+  "Porte": "⟦Porta di Corte, a ovest, verso Nnaréta; Porta del Mare, a est, verso Alba⟧",
+  "Guardia": "⟦Una trentina di armigeri del signore. Agli scavi fanno la guardia uomini forestieri, che non parlano con nessuno⟧",
+  "Lucente": "La Lucente Agnese, che si festeggia il 21 gennaio",
+  "Distanze": "⟦Nnaréta, tre ore a ovest per la strada maestra; Alba, tre ore e mezza a est, giù fino al mare; Culënnëllë, due ore e mezza a nord; Sandémirë, quattro ore a sud per il tratturo; Mushanë, mezza giornata⟧"
  },
- "gm": "Gli archeologi sono di Iuvenza e cercano sigilli. Orsilio è suo. Un buon posto per trovare tracce della Forgiatura o un frammento lunare.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Gli archeologi sono di Iuvenza e cercano sigilli. Orsilio è suo. Un buon posto per trovare tracce della Forgiatura o un frammento lunare. Curruppjë è il pezzo di Iuvenza dentro la Val Vibrata, a mezza giornata dalla costa e dalle sue barche."
+  },
+  {
+   "t": "Orsilio Pergameno e i Melarangelo",
+   "txt": "⟦Orsilio è un nobile minore senza terra, entrato nella rete di Iuvenza per debiti. Iuvenza gli ha dato l’oro per comprare Curruppjë dai Fonteviva, e lui le ha dato le tombe. Non è un fanatico: è un uomo ambizioso che ha paura di lei. Ha in mente di tenersi un pezzo di quello che trovano, e di venderlo a chi paga di più se Iuvenza cade.⟧\n\n⟦I Melarangelo erano i castellani dei Fonteviva, e hanno perso tutto con la vendita. Sono la porta d’ingresso naturale della Crociata nel borgo: conoscono ogni famiglia, sanno chi lavora a Ripoli e odiano Orsilio. Se Atrë si riprende Curruppjë, vogliono tornare castellani.⟧"
+  },
+  {
+   "t": "Che cosa cercano",
+   "txt": "⟦Quelli di prima non c’entrano con i Sigilli: sono solo i morti più vecchi della valle. Ma dopo la Guerra delle Due Lune i Custodi del Ciclo, che avevano la loro sede principale nel Ducato, scelsero le tombe di Ripoli per nascondere una cosa: sotto la tomba grande, nel vuoto che è franato, c’è una camera murata con le insegne dei Custodi. Il fossato di quelli di prima ne nasconde l’ingresso. Dentro c’è una pietra incisa con la costa e i colli del Ducato e quattro segni: Canzanium, Pietraluna, Bëllindë e Teramum. Accanto a ogni segno, la strada per arrivarci.⟧\n\n⟦Due di quei Sigilli sono già purificati, il terzo l’ha trovato la Crociata. A Iuvenza interessa il quarto: la pietra dice da dove si scende sotto Teramum fino al Sigillo della Carne. Gli studiosi la stanno ricopiando, e la copia parte per mare da Alba. La pietra resta lì, troppo pesante per essere portata via, finché qualcuno non la spezza.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Entrare a Ripoli.]] ⟦Di giorno, travestiti da braccianti: Inganno CD 13. Di notte, scavalcando la palizzata: Furtività CD 14 contro le guardie. Le guardie sono sei, e almeno due sono Forgiati che non parlano.⟧\n· [[I braccianti.]] ⟦Uno dei due che si sono licenziati, Berard lu Zoppe, ha visto la camera. Con un po’ di vino e Persuasione CD 12 racconta tutto, e chiede di non tornarci.⟧\n· ⟦[[Le insegne.]] La porta della camera porta lo stesso segno dell’armatura e dello stendardo che il prefectus ha dato ai personaggi sotto Bëllindë. Chi indossa l’armatura sente la pietra «chiamare»; Religione o Storia CD 15 per riconoscere le insegne dei Custodi.⟧\n· [[La Casa degli Ospiti.]] ⟦Dentro ci sono i disegni degli scavi e le lettere: una è chiusa con un sigillo «V.», lo stesso che la Crociata non riesce a collegare a un nome.⟧\n· [[I carri di notte.]] Seguirli porta ad Alba, e da lì a una barca. ⟦Prenderli è una scena di strada fra gli ulivi.⟧\n· [[Il palio delle botti.]] Se la Crociata passa d’estate, il palio è una scena pronta: spingere una botte con la contrada dei Melarangelo è il modo più veloce per farsi amico il borgo.\n· [[I Fonteviva.]] Atrë ha venduto Curruppjë e se ne pente. Portare a Giosia la prova che il borgo è finito a Iuvenza è un buon modo per farsi ascoltare ad Atrë."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Corropoli vera (Studio dei paesi veri): il nome da Collis Ruppuli, il colle basso sopra la Vibrata, Piazza Piè di Corte dove stava il castello degli Acquaviva (signori dal 1393 al 1760), le mura, Sant’Agnese con la Madonna Mejulana e il campanile di Antonio da Lodi (uno dei quattro campanili «fratelli» con Teramo, Atri e Campli), San Giuseppe mai finita, la Badia di Mejulano (già nel 1018, poi dei Celestini, chiostro romanico), la Montagnola, Gabiano, il villaggio neolitico di Ripoli (capanne, fossato di 7 metri, sepolture al centro, la «donna con il cane»), scoperto dal medico condotto Concezio Rosa e portato al museo di Roma, Centurati, il palio delle botti, la fonte di Santa Scolastica per il latte, la trippa alla corropolese, i fagioli con le cotiche, Sant’Agnese patrona il 21 gennaio, lo stemma con il castello a tre torri. Dialetto: Currùppië, vocali chiuse.\n· Lessico di Ea applicato: Sant’Agnese → solario della Lucente Agnese; santuario della Madonna del Sabato Santo → Lunaria della Vigilia; Madonna Mejulana → Vecchia Madre di Mejulano; frati, Celestini, Benedettini → votati.\n· Melarangelo è il nome fissato per la famiglia di Curruppjë (Nomi delle casate). Orsilio Pergameno resta il signore (decisione 34); i Melarangelo sono la famiglia vecchia del borgo.\n· Orsilio non è «Duca» né «di Montagnola» (decisione del 10-10), anche se lo Studio nota che Corropoli era davvero ducato degli Acquaviva.\n· «Necropoli italiche» non risultano: è un villaggio neolitico con le tombe al centro, più vecchio dei Pretuziani.\n· Il vecchio sottotitolo «Iuvenza» e la fedeltà «Iuvenza» nella scheda erano visibili ai giocatori: sono andati nella parte master."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Che cosa trovano davvero gli scavi: la camera dei Custodi del Ciclo con la strada per il Sigillo sotto Teramum, come propone questa voce, o altro.\n· Come Orsilio ha avuto il borgo: comprato dai Fonteviva, come propone questa voce, o in altro modo.\n· Se Orsilio deve diventare lui stesso un Melarangelo.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Val Vibrata",
  "id": "borgo-curruppje",
  "parent": "contea-val-vibrata",
  "title": "Curruppjë",
- "sub": "Iuvenza",
+ "sub": "Il borgo del campanile, sopra le tombe di quelli di prima",
  "pub": [
   {
    "t": "",
-   "txt": "Un borgo sulle colline della Val Vibrata costruito sopra necropoli antichissime, italiche, di prima ancora dei Pretuziani. Il Duca Orsilio Pergameno di Montagnola ha aperto le tombe agli «archeologi» — studiosi venuti da fuori che scavano senza sosta.",
+   "capo": true,
+   "txt": "Curruppjë sta su un colle basso della Val Vibrata, sopra il torrente, dove la valle comincia a scendere verso il mare. Chi viene da Teramum la riconosce da lontano per il suo campanile, uno dei quattro campanili fratelli del Ducato. È un borgo tranquillo, di grano, di vigne e di ulivi, con un’abbazia antica in campagna e una festa d’estate in cui le contrade spingono le botti in salita.\n\nMa è costruito sopra il villaggio più vecchio della valle, più vecchio dei Pretuziani. Da sempre l’aratro tira su vasi dipinti e ossa. Da qualche anno il signore del borgo, Orsilio Pergameno, ha aperto le tombe agli «archeologi»: studiosi venuti da fuori, che scavano senza sosta."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo vecchio è piccolo, stretto intorno alla piazza e al campanile. Le mura le alzarono i Fonteviva, quando Curruppjë era loro, insieme a un castello. Il castello non c’è più: è stato buttato giù, e con le sue pietre hanno fatto le case. Dove c’era il palazzo dei Fonteviva oggi c’è la piazza, con la sua fontana.\n\nIl nome viene dal colle di Ripoli, dove c’era il villaggio di quelli di prima. Intorno al borgo la campagna è piena di case di votati: qui i votati sono arrivati prima dei signori. Verso est le colline si abbassano e si vede il mare. Verso sud, a Ripoli, ci sono i campi degli scavi, chiusi da una palizzata.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "⟦Porta di Corte⟧",
+      "A ovest",
+      "⟦Dà sulla piazza. Da qui parte la strada maestra per Nnaréta.⟧"
+     ],
+     [
+      "⟦Porta del Mare⟧",
+      "A est",
+      "⟦La strada scende fra gli ulivi fino ad Alba e alla costa. Ci passano i carri degli scavi.⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Curruppjë.jpg",
    "didascalia": "Curruppjë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. Piazza Piè di Corte.]] La piazza del borgo, costruita sulle rovine del palazzo dei Fonteviva. In mezzo c’è una fontana di pietra. Qui si fa il mercato, qui si leggono i bandi del signore.\n· [[2. Il solario della Lucente Agnese.]] Il tempio del borgo. Ci sta la Vecchia Madre di Mejulano, un altorilievo dorato portato dall’abbazia, e per lei tutti lo chiamano anche la Lunaria della Vigilia. Il campanile è il vanto del paese: alto, di mattoni, con le bifore e la cuspide. Lo fece un maestro venuto dal nord, che ne costruì altri tre uguali, a Teramum, ad Atrë e a Chimblë: i quattro campanili fratelli.\n· [[3. Il Palazzo Pergameno.]] Sulla piazza, nuovo e grande, più grande del borgo. Orsilio lo ha fatto costruire pochi anni fa. ⟦In paese si chiedono con quali soldi.⟧\n· ⟦[[4. La casa dei Melarangelo.]] Una casa vecchia e larga dietro la piazza, con lo stemma di un albero di melarance sul portone. I Melarangelo sono la famiglia più antica del borgo: tenevano Curruppjë per i Fonteviva, come castellani, e quando i Fonteviva vendettero, restarono senza niente in mano. Contano ancora, e Orsilio lo sa.⟧\n· [[5. Il solario che non finisce.]] Un tempio alto e appuntito, nello stile dei paesi del nord. Lo cominciarono e non lo finirono mai. Dentro crescono le erbacce, e i frichì ci giocano.\n· ⟦[[6. La Casa degli Ospiti.]] Una casa con il portone sempre chiuso, dietro il palazzo. Ci dormono gli studiosi forestieri. Dalle finestre di notte si vede la luce delle candele fino all’alba. Le casse arrivano piene dagli scavi e partono chiuse verso il mare.⟧\n· ⟦[[7. L’osteria del Campanile.]] Sotto il campanile, l’unica del borgo. La trippa alla corropolese, i fagioli con le cotiche, la polenta sulla spianatoia, il vino delle colline. Ha tre stanze; due sono prese dagli uomini degli scavi.⟧\n· ⟦[[8. Il forno di Piè di Corte.]] Il forno comune, dove le donne cuociono il pane e dove si sa chi è stato visto entrare nella Casa degli Ospiti.⟧\n· [[9. Le pietre del castello.]] Il castello dei Fonteviva non c’è più, ma le sue pietre sono dappertutto: negli stipiti, nei muri degli orti, nei gradini. ⟦Su qualcuna c’è ancora lo stemma della fonte.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[10. L’abbazia di Mejulano.]] In campagna, che tutti chiamano «la Badia»: un tempio antico e un chiostro con le colonne. È più vecchia di qualsiasi carta del borgo. La tennero per secoli i votati eremiti venuti dalla montagna. Oggi i votati sono pochi e vecchi, e il chiostro è pieno di rose.\n· [[11. La Montagnola.]] Sulla collina. Era la casa di campagna dei Fonteviva; poi la diedero ai votati, che ne hanno fatto la loro casa.\n· [[12. Il monastero di Gabbiano.]] Il più vecchio del territorio, nato con i votati neri. Le sue carte sono più antiche di quelle del borgo.\n· [[13. Ripoli.]] Un terrazzo sopra la Vibrata, dove c’era il villaggio di quelli di prima: decine di capanne, un fossato largo come una strada e profondo come due uomini, di cui nessuno sa lo scopo, e i morti sepolti in mezzo alle case. La più famosa è una donna sepolta rannicchiata con il suo cane. Lo scoprì un medico di campagna. Lo presero per matto, e poi i dotti della capitale si portarono via tutto quello che aveva trovato. ⟦Oggi Ripoli è chiusa da una palizzata e da guardie forestiere. Ci lavorano venti braccianti del borgo, pagati bene e zitti.⟧\n· [[14. La fonte di Scolastica.]] Una sorgente in campagna. Il 10 febbraio, per la Lucente Scolastica, le donne che aspettano un figlio vengono a bere, per avere latte.\n· [[15. Centurati.]] Un casale nella piana, dove i campi sono ancora divisi a quadri, come li tracciarono gli agrimensori dell’Impero. Quando si ara si trovano anfore e ciotole di terracotta.\n· [[16. I casali.]] Accattapane, Colle Mejulano, Pianagallo, Ravigliano, Vibrata: grano, ulivi, case di terra.\n· ⟦[[17. Il guado dell’Ubrata.]] Sotto il borgo, dove la strada per Nnaréta passa il torrente. D’estate si passa coi piedi asciutti; in autunno si aspetta.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "Quelli di Curruppjë sono contadini tranquilli, che non amano i forestieri e amano ancora meno i morti disturbati. Ogni famiglia ha in casa un coccio dipinto trovato nel campo, e lo tiene sulla mensola come un portafortuna. Parlano con le vocali strette, come la gente della costa d’oltre Truntum.\n\n· [[Il palio delle botti.]] D’estate le contrade del borgo si sfidano a spingere in salita, per le strade, una botte piena di sassi pesante come un uomo e mezzo. Chi arriva prima in piazza vince il palio, e chi perde paga il vino.\n· [[La Lucente Agnese.]] Il 21 gennaio, festa della patrona. ⟦Si portano gli agnelli al solario a farli benedire, e con la loro lana si fanno le coperte per i neonati del borgo.⟧\n· [[La Vigilia del Sole Nuovo.]] La festa grande. La Vecchia Madre di Mejulano esce in processione, e la gente la accompagna fino alla Badia e indietro. ⟦Chi trova un coccio di quelli di prima in quel giorno lo porta alla Madre, e non lo tiene.⟧\n· [[Lo stemma.]] Un castello d’oro a tre torri su campo azzurro, sopra un prato verde. Il castello non c’è più, lo stemma sì.\n· [[Quelli di prima.]] I vecchi dicono che i morti di Ripoli dormono rannicchiati perché aspettano. Nessuno sa che cosa."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Gli scavi.]] Gli studiosi di Orsilio scavano da anni, giorno e notte. Nessuno in paese sa che cosa cercano, e chi lavora a Ripoli non lo dice.\n· ⟦[[I morti disturbati.]] Da quando hanno aperto le tombe grandi, a Ripoli i cani non vogliono passare. Due braccianti si sono licenziati senza dire perché. Le vecchie dicono che di notte si sente bussare dentro la terra, come fa lu mazzemarille quando c’è un tesoro.⟧\n· ⟦[[Il signore nuovo.]] Orsilio non è nato qui. Ha comprato il borgo, ha fatto un palazzo e ha aperto le tombe. Paga bene, e la gente non sa se esserne contenta. I Melarangelo non lo salutano in piazza.⟧\n· ⟦[[I carri di notte.]] Le casse degli scavi scendono al mare, verso Alba, sempre di notte e sempre scortate.⟧\n· ⟦[[La terra trema.]] Due volte quest’anno. Il campanile ha tenuto. A Ripoli un pezzo di scavo è franato, e sotto c’era un vuoto.⟧"
   }
  ],
  "illustrazione": "Mondo — Curruppjë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Chi scava in terra trova li morti. E li morti non si contentano.»",
+  "cite": "Detto dei contadini di Ripoli"
+ }
 }

@@ -11,21 +11,50 @@
  "mappa": null,
  "colore": "#9E3A2A",
  "scheda": {
-  "Chi comanda": "Il Legato Cardinale Tharion Morvex, Cardinale dell’Inquisizione",
+  "Governo": "Un Legato Gran Flamine: la Fiamma governa la provincia direttamente",
+  "Chi comanda": "Il Legato Gran Flamine Tharion Morvex, Gran Flamine della Questura",
+  "Capitale": "⟦Sancthara, la Città Santa⟧",
   "Popolazione": "Circa due milioni, quasi solo umani",
+  "Popoli": "Umani meridionali, di pelle olivastra; gli altri popoli sono «scoraggiati» dal restare",
   "Casata": "Orivex, le Fiamme Sacre",
-  "Vive di": "Pellegrinaggi, reliquie, olio dei templi, vino da messa, cera",
+  "Fede": "La Fiamma Solare e nient’altro: ogni altro culto è eresia",
+  "Vive di": "Il Viaggio Sacro, reliquie, olio dei templi, vino dei riti, cera",
   "Esercito": "L’Ordine della Fiamma Purificatrice (circa 2.000 templari) e la Settima Falange della Fiamma (circa 4.000)",
-  "Dialetto": "Il Sacrale volgare, pieno di parole di chiesa"
+  "Dialetto": "Il Sacrale volgare, pieno di parole sacre",
+  "Motto": "«La fiamma purifica. Sempre.»"
  },
  "gm": [
   {
-   "t": "",
-   "txt": "· I [[Purificatori]] hanno qui il quartier generale e la scuola degli inquisitori. Casa Orivex dà alla Chiesa l’Alto Custode e almeno due dei tre Cardinali Supremi.\n· Finanziano in segreto Casa Impalox a Teramum, per fare del Ducato una teocrazia.\n· La loro paranoia è la loro debolezza: gli agenti della Ragnatela entrano facilmente tra chi denuncia eretici per interesse.\n· I Purificatori più estremi vogliono un mondo immobile e silenzioso, senza peccato e senza cambiamento. Senza saperlo, vogliono la stessa cosa del Senza Nome.\n· Il mito del [[Miracolo della Luce]]: un Arcimandrita che nella guerra bruciò un’orda Brak «con la sola fede». Probabilmente un oggetto solare dimenticato, forse ancora in qualche monastero."
+   "t": "Una casata dentro la Fiamma",
+   "txt": "Casa Orivex dà alla Fiamma l’Alto Custode e almeno due dei tre Gran Flamini Supremi. I testi di lore li nominano: l’Alto Custode Lucianus III Orivex, vecchio e malato, una figura da cerimonia controllata dalla sua casata; la Gran Flamine della Dottrina Severina Orivex, sua nipote, a Solaria; il Gran Flamine della Questura Tharion Morvex, a Sancthara; il Gran Flamine delle Missioni Virellius Sanctorus, mandato a Julia Nova come Questore Straordinario.\n\n⟦Morvex è un Orivex per parte di madre: porta il nome del padre, ma è cresciuto in casa Orivex. Così i gran flamini della casata sono due su tre, e Virellius è l’unico che non è loro.⟧"
   },
   {
-   "t": "Correzione",
-   "txt": "Nei vecchi documenti questa provincia stava «a sud del Latium» e la voce La stirpe di Aurax parlava di «colline aride del sud». Secondo la voce del Ducato, a nord di Aprutium ci sono le Marche Picenorum: il Luminor Meridionale sta lì, tra la Terpuria, il Luminor Settentrionale e Aprutium. Corretta anche La stirpe di Aurax."
+   "t": "Il denaro per Impaloni",
+   "txt": "I Purificatori finanziano in segreto Casa Impaloni a Teramum, per fare del Ducato una teocrazia. L’Ordine d’Acciaio di Cëvëtëlla è il braccio armato degli Impaloni.\n\n⟦Morvex sa che Serafino Impaloni non è un fanatico ma un cinico, e lo paga lo stesso: un cinico si compra, un fanatico no. Impaloni prende il denaro di Sancthara e fa i suoi interessi. La sua lista delle casate pretuziane (Cerullius, de Caelis, il Magister Celino Savini, il votato Davide de li Piccole Vie) è il prezzo che paga per quel denaro.⟧\n\n⟦Il denaro passa il Truntum nelle casse di cera e d’olio dirette alla Basilica Aurea. Chimblë, la città della Scala Santa, con il suo Flamine-Principe Orsini Solardente, è la tappa naturale.⟧"
+  },
+  {
+   "t": "Virellius e il miracolo",
+   "txt": "⟦Virellius è un Gran Flamine delle Missioni che fa il mestiere della Questura: l’ha mandato in Aprutium l’Alto Custode, sopra la testa di Morvex, e Morvex non l’ha mai perdonato.⟧\n\nA Julia Nova Virellius si è inginocchiato davanti al sangue di Silvanus, che disegnava il Sole e le Due Lune (Atto IX), e nella cripta ha pregato con Alessandros parole di equilibrio e di cicli (Atto X). Per i Purificatori, che insegnano che Noxtua era il male, un sangue che disegna le Due Lune non è un miracolo: è la prova di un’eresia, e un Gran Flamine che grida al miracolo è un Gran Flamine da processare. ⟦Quando la notizia arriva a Sancthara, Morvex ha in mano Virellius, l’Erede e un pretesto per mettere piede nel Ducato.⟧"
+  },
+  {
+   "t": "La paranoia e la Ragnatela",
+   "txt": "La paranoia del Luminor Meridionale è la sua forza, perché nessuno osa sfidare la Fiamma, e la sua debolezza: gli agenti della Ragnatela entrano facilmente tra chi denuncia eretici per interesse.\n\nI Purificatori più estremi vogliono un mondo immobile e silenzioso, senza peccato e senza cambiamento. Senza saperlo, vogliono la stessa cosa del Senza Nome."
+  },
+  {
+   "t": "Il Miracolo della Luce",
+   "txt": "L’Arciflamine che nella guerra bruciò un’orda Brak «con la sola fede» usò probabilmente un oggetto solare dimenticato. Gli storici lo sospettano, la Fiamma lo nega. Forse è ancora in qualche abbazia della provincia."
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· ⟦Un questore di Sancthara raggiunge la Crociata con una domanda sola: di che colore è il sangue dell’Erede.⟧\n· ⟦Un carico di cera per la Basilica Aurea passa il Truntum. Sotto la cera ci sono soldi d’oro: è la prova del denaro di Sancthara a Impaloni, da portare in Consiglio.⟧\n· L’Ordine d’Acciaio aspetta un «Eroe del Sole» da seguire (voce di Valerus). Se Silvanus si presenta, Purificatori e Ordine d’Acciaio possono dividersi su di lui.\n· ⟦La grotta della Sibilla: un luogo della fede antica che la Fiamma non è riuscita a chiudere. Per chi cerca la fede antica del Sole e delle Due Lune, una pista.⟧"
+  },
+  {
+   "t": "Da allineare",
+   "txt": "· Nei vecchi documenti questa provincia stava «a sud del Latium» e la voce La stirpe di Aurax parlava di «colline aride del sud». Secondo la voce del Ducato, a nord di Aprutium ci sono le Marche Picenorum: il Luminor Meridionale sta lì, tra la Terpuria, il Luminor Settentrionale e Aprutium. Corretta anche La stirpe di Aurax.\n· I testi di lore chiamano la provincia Sancthara. Qui Sancthara è proposta come nome della capitale.\n· «Due dei tre Gran Flamini Supremi» sono Orivex, ma nei testi di lore solo Severina porta quel nome: per questo la proposta su Morvex.\n· La casata dell’Arciflamine del Ducato è Impaloni; la vecchia parte master diceva Casa Impalox.\n· Il Manuale dà alla provincia un dialetto marchigiano; il sito dice Sacrale volgare. Vale il sito."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome della capitale (proposta: Sancthara).\n· Se Morvex ha due voti nel Concilio dei Reggenti, come governatore e come Gran Flamine (così anche la tabella dei diciotto voti nella voce del Latium).\n· Chi ha mandato Virellius in Aprutium."
   }
  ],
  "parent": "impero-aureo",
@@ -33,26 +62,118 @@
  "livello": "provincia",
  "id": "prov-luminor-meridionale",
  "title": "Il Luminor Meridionale",
- "sub": "La provincia della Chiesa, appena a nord di Aprutium",
+ "sub": "La provincia della Fiamma, appena a nord di Aprutium",
  "pub": [
   {
    "t": "",
    "capo": true,
-   "txt": "Appena oltre il fiume Truntum, a nord di Aprutium, cominciano le colline del Luminor Meridionale: uliveti e vigneti sacri, un monastero o un santuario su ogni altura, strade sorvegliate dai templari. Le colline più vicine al Ducato si chiamano Marche Picenorum. Qui la Chiesa della Fiamma Solare ha il suo cuore più duro."
+   "txt": "Appena oltre il fiume Truntum, a nord di Aprutium, cominciano le colline del Luminor Meridionale: uliveti e vigneti sacri, un’abbazia o un solario su ogni altura, strade sorvegliate dai templari. Le colline più vicine al Ducato si chiamano Marche Picenorum. Qui la Fiamma Solare ha il suo cuore più duro.\n\nPer chi viene da Aprutium è il vicino più vicino e il più scomodo. Da qui partirono i primi predicatori della Fiamma, e da qui parte ancora oggi la caccia ai maghi e agli eretici di tutto l’Impero."
   },
   {
-   "t": "I. La fede più antica e più dura",
-   "txt": "Su queste colline vivevano eremiti e veggenti che pregavano il Sole da prima della cometa. Quando Aurax arrivò, videro in lui la risposta alle loro preghiere e furono i primi a predicarlo come mandato dal cielo. Qui sorsero i primi templi della Fiamma. I loro eredi sono diventati la Chiesa più dura dell’Impero.",
+   "t": "I. In breve, la sua storia",
+   "txt": "Su queste colline, tra il mare e la Terpuria, vivevano eremiti e veggenti che pregavano il Sole da prima della cometa. Quando Aurax arrivò, videro in lui la risposta alle loro preghiere e furono i primi a predicarlo come mandato dal cielo. Qui sorsero i primi templi della Fiamma, e da qui partì la fede che Aurax volle per tenere uniti popoli diversi. I loro eredi sono diventati la Fiamma più dura dell’Impero.\n\nNella Guerra delle Due Lune la provincia diede alla Fiamma i suoi martiri e la sua leggenda più amata: il [[Miracolo della Luce]]. Un Arciflamine, si racconta, bruciò un’intera orda di orchi Brak «con la sola fede».\n\n⟦Dopo la guerra, quando il Sole tacque e la paura crebbe, la Fiamma chiese di governare la provincia da sé. Solaria, che aveva bisogno di preghiere e di soldati, gliela diede. Da allora al posto del governatore c’è un Legato Gran Flamine.⟧",
    "img": "Mondo — Il Luminor Meridionale.png",
    "didascalia": "Il Luminor Meridionale"
   },
   {
-   "t": "II. Come si vive",
-   "txt": "Cinque preghiere al giorno, obbligatorie. I libri non approvati si bruciano. Il teatro è proibito, la musica è solo sacra, i forestieri sono guardati con sospetto. Governa il [[Legato Cardinale Tharion Morvex]], che è anche Cardinale dell’Inquisizione: un uomo magro e pallido che non grida mai, perché non ne ha bisogno."
+   "t": "II. Come si governa",
+   "txt": ""
   },
   {
-   "t": "III. Vicini e nemici",
-   "txt": "Da qui parte la caccia ai maghi e agli eretici di tutto l’Impero. Il Luminor Meridionale odia Aprutium per i suoi culti antichi, odia Artefracta per la sua magia, e considera Solaria troppo morbida."
+   "t": "Il Legato Gran Flamine",
+   "liv": 3,
+   "txt": "Governa il [[Legato Gran Flamine Tharion Morvex]], che è anche Gran Flamine della Questura, uno dei tre Gran Flamini Supremi della Fiamma. È un uomo magro e pallido, con gli occhi grigi, che non grida mai, perché non ne ha bisogno. Governa la provincia come una casa della Fiamma, e risponde solo all’Alto Custode della Fiamma, a Solaria.\n\n⟦Nel Concilio dei Reggenti Morvex siede due volte: come governatore della provincia e come Gran Flamine Supremo. Solo il Doge di Luminor, che è anche Maestro della Bilancia d’Oro, siede due volte come lui.⟧"
+  },
+  {
+   "t": "Casa Orivex",
+   "liv": 3,
+   "txt": "Le [[Fiamme Sacre]] sono la casata dei sacerdoti. Non hanno i cavalli dei Solvirax né le banche dei Thalvorn: hanno la Fiamma. Vogliono un Impero governato dalla Fiamma, e a Solaria lo dicono apertamente. ⟦Ogni figlio cadetto degli Orivex fa voto alla Fiamma; ogni figlia sposa chi la Fiamma le indica.⟧"
+  },
+  {
+   "t": "I Purificatori e la Questura",
+   "liv": 3,
+   "txt": "Delle tre anime della Fiamma, qui comanda la più dura: i [[Purificatori]], che vogliono bruciare l’eresia e la magia e sono sempre più potenti. Qui hanno la loro casa e la scuola dei questori, e il loro braccio armato, l’[[Ordine della Fiamma Purificatrice]]: templari che bruciano eretici e cacciano streghe.\n\nIn Aprutium la Questura della Fiamma è nelle mani di Casa Impaloni, a Teramum; a Julia Nova siede un Questore Straordinario, il Gran Flamine Virellius Sanctorus. Da qui li guardano tutti e due."
+  },
+  {
+   "t": "Come si vive",
+   "liv": 3,
+   "txt": "Cinque preghiere al giorno, obbligatorie. I libri non approvati si bruciano. Il teatro è proibito, la musica è solo sacra, le donne vanno a capo coperto, i forestieri sono guardati con sospetto. Nani e gnomi ci vivono ai margini, tollerati e mai accettati.\n\n⟦Al ponte sul Truntum i templari chiedono a chi passa il nome, il borgo e il lucente. Chi non sa dire il lucente aspetta, a volte giorni.⟧"
+  },
+  {
+   "t": "Le abbazie",
+   "liv": 3,
+   "txt": "Ogni altura ha la sua abbazia, ogni abbazia il suo Priore e la sua reliquia. ⟦Il luogo più sacro è la [[Casa Santa]], sulla costa: una casupola di pietra che, dicono, i messaggeri del Sole portarono in volo oltre il mare perché non cadesse in mano agli infedeli. L’ultimo miglio i pellegrini lo fanno in ginocchio.⟧"
+  },
+  {
+   "t": "III. Le terre",
+   "tabella": {
+    "head": [
+     "Terra",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "Le Marche Picenorum",
+      "Le colline più vicine al Ducato, oltre il Truntum: vigne, uliveti, borghi murati, flamini che guardano a sud. Ngarà, un borgo di Aprutium sul confine, obbedisce ancora a un flamine d’oltre Truntum."
+     ],
+     [
+      "Le colline sacre",
+      "Uliveti e vigneti sacri, un’abbazia su ogni altura. L’olio finisce nelle lampade dei templi, il vino nei calici, la cera sugli altari di mezzo Impero."
+     ],
+     [
+      "⟦Sancthara⟧",
+      "⟦La Città Santa: mura bianche, cento campanili, il palazzo del Legato e la scuola dei questori. La sera non si canta, e le osterie chiudono al tramonto.⟧"
+     ],
+     [
+      "⟦La costa⟧",
+      "⟦Porti piccoli e un porto grande, dove sbarcano i pellegrini venuti dal mare e partono le casse di cera e di reliquie. Sulla costa sta la Casa Santa.⟧"
+     ],
+     [
+      "⟦I Monti della Sibilla⟧",
+      "⟦Montagne alte a ovest, verso la Terpuria. In una grotta, dicono i pastori, abita una profetessa più vecchia della Fiamma. La Fiamma ha murato l’ingresso due volte; due volte qualcuno l’ha riaperto.⟧"
+     ],
+     [
+      "La Via Sacra",
+      "La Strada Solare che porta a Solaria: la più sorvegliata dalla Fiamma. ⟦Un posto di guardia dei templari a ogni giornata di cammino.⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito",
+   "txt": "La Fiamma non deve chiedere soldati a nessuno: in questa provincia li ha suoi. La [[Settima Falange della Fiamma]] è una delle sei Falangi Solari rimaste, e obbedisce alla Fiamma: è di fatto il suo esercito. L’Ordine della Fiamma Purificatrice è il braccio armato dei Purificatori.",
+   "tabella": {
+    "head": [
+     "Forza",
+     "Quanti",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "L’Ordine della Fiamma Purificatrice",
+      "Circa 2.000 templari",
+      "I Purificatori, e il Legato"
+     ],
+     [
+      "La Settima Falange della Fiamma",
+      "Circa 4.000",
+      "La Fiamma"
+     ],
+     [
+      "⟦Le guardie delle abbazie⟧",
+      "⟦Poche lance per ogni abbazia⟧",
+      "⟦Al Priore⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. La fede e il denaro",
+   "txt": "Il Luminor Meridionale vive della fede, e della paura che la fede porta con sé. Il Viaggio Sacro, reliquie, pergamene sacre, olio per le lampade dei templi, vino dei riti, cera per le candele: quasi tutto quello che serve a un solario dell’Impero è passato di qui. ⟦Ogni reliquia vera porta il sigillo di Sancthara. Anche ogni reliquia falsa, ma costa meno.⟧\n\nLa Via Sacra lega la provincia a Solaria. Con Aprutium i commerci sono pochi e sorvegliati: olio e cera passano il Truntum verso sud, lana e sale verso nord. ⟦I libri invece no: al ponte i templari li aprono tutti, e quelli che non piacciono restano di là.⟧"
+  },
+  {
+   "t": "VI. I mali del Luminor Meridionale oggi",
+   "txt": "· [[La paura.]] Qui tutti possono denunciare tutti: un vicino scomodo, un debitore, un rivale. La Questura ascolta chiunque.\n· [[Il Sole che tace.]] Anche qui, dalla Frattura, la luce di Valerus si è fatta debole. Più si fa debole, più i Purificatori gridano.\n· [[I vicini.]] Il Luminor Meridionale odia Aprutium per i suoi culti antichi, odia Artefracta per la sua magia, e considera Solaria troppo morbida.\n· [[Il trono vuoto.]] Senza Imperatore la Voce del Sole, l’ultima parola sulle nomine della Fiamma, non è di nessuno. ⟦Il Legato fa come se fosse sua.⟧\n· ⟦[[I pellegrini poveri.]] Negli anni magri arrivano a migliaia a chiedere un miracolo e un pezzo di pane. Il miracolo è gratis, il pane no.⟧"
   }
  ],
  "epigrafe": {

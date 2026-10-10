@@ -14,25 +14,107 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Priore Fiordiluna dell'Ordine Ospitaliero",
-  "Fedeltà": "Chiesa",
-  "Corrisponde a": "Sant'Omero"
+  "Paese vero": "Sant’Omero",
+  "Altri nomi": "Sandémirë in dialetto; Santo Mero nei registri dei vecchi signori",
+  "Abitanti": "⟦Circa milleottocento, contando i casali; e ogni giorno un centinaio di malati e di viandanti⟧",
+  "Chi comanda": "Il Priore Fiordiluna dell’Ordine Ospitaliero",
+  "Dentro le mura": "L’Ospedale nel castello, il solario grande, la spezieria, la foresteria, l’ara dei morti, il guerriero di pietra",
+  "Fuori le mura": "La Lunaria a Vico, la villa dei Fonteviva, Garrufo, Poggio Morello, le Grotte dei Predoni, i mulini di Villa Ricci, la Via delle Pinciare",
+  "Porte": "⟦Porta dei Malati, a nord, verso la Vibrata; Porta del Salinellum, a sud⟧",
+  "Guardia": "⟦I votati armati dell’Ordine, una quarantina, e i conversi. Nessun soldato forestiero entra armato⟧",
+  "Lucente": "Il Lucente Omero, il flamine venuto dal nord che morì cieco, protettore di chi ha male agli occhi: si festeggia il 3 giugno",
+  "Distanze": "⟦Nnaréta, tre ore a nord; Bëllindë, quattro ore a sud oltre il Salinellum; Mushanë, quattro ore a sud-est; Curruppjë, quattro ore a nord-est per il tratturo⟧"
  },
- "gm": "Fedeli a Virellius, odiano la politica: possono curare i PG e nascondere qualcuno, ma non si schierano. Il Priore sa molto di ciò che passa sulle strade del nord.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Gli Ospitalieri sono fedeli a Virellius e odiano la politica: possono curare i PG e nascondere qualcuno, ma non si schierano. Il Priore sa molto di ciò che passa sulle strade del nord, perché tutto quello che si fa male sulle strade del nord, prima o poi, arriva al suo Ospedale.\n\nPer la Crociata Sandémirë è un rifugio a mezza giornata da Bëllindë: un posto dove lasciare i feriti, curarsi, e far sparire qualcuno per un po’."
+  },
+  {
+   "t": "Il Priore Fiordiluna",
+   "txt": "⟦Un uomo sui sessant’anni, medico prima che votato, con le mani sempre rosse di sapone. Non crede nella politica, crede nei letti. Deve tutto a Virellius, che lo ha difeso dalla Basilica di Teramum, e per questo l’Arciflamine Impaloni lo detesta. Sa che Virellius e Impaloni sono rivali mortali, e sta con Virellius senza dirlo.⟧\n\n⟦Una lettera di Virellius apre le porte di Sandémirë. Una lettera di Impaloni le chiude. Una lettera dei questori del Luminor Meridionale le fa sbarrare.⟧"
+  },
+  {
+   "t": "Quello che passa per l’Ospedale",
+   "txt": "· ⟦[[I feriti senza nome.]] Fra i ricoverati c’è un uomo ferito di spada, con l’accento della costa, che delira nel sonno di «casse da Ripoli» e di una barca ad Alba. È uno degli uomini degli scavi di Curruppjë, abbandonato dai suoi.⟧\n· ⟦[[La febbre che fa vedere doppio.]] Viene dai casali vicini alla Vibrata, a valle di Ripoli. Un votato attento potrebbe collegarla agli scavi: i morti aperti avvelenano l’acqua, o qualcosa di peggio.⟧\n· ⟦[[La luce nella villa.]] Uomini dei Fonteviva usano la villa chiusa per incontrarsi con qualcuno della valle senza passare da Atrë. Sono qui per capire se Curruppjë si può riprendere.⟧\n· ⟦[[Le Grotte dei Predoni.]] Due disertori della Guardia Ducale ci vivono da un mese. L’Ordine lo sa e porta loro da mangiare.⟧\n· [[Le guide della Laga.]] L’Ordine Ospitaliero è uno dei contatti giusti per farsi guidare dagli Eremiti Guerrieri di La Ròcchë, nelle Terre Selvagge."
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Curarsi.]] ⟦Cura completa per una settimana di riposo: un’offerta di due grossi a persona, o niente per chi non ha soldi. Un votato guaritore può lanciare Cura ferite e Ristorare inferiore; Ristorare superiore solo il Priore, e solo per chi ne ha davvero bisogno.⟧\n· [[Nascondere qualcuno.]] ⟦Dentro le mura un ricercato è al sicuro finché resta malato. Il Priore accetta se gli si dice la verità: Inganno contro la sua Intuizione, CD 15, per mentirgli; se scopre la bugia, mette fuori dalla porta.⟧\n· [[Sapere le strade.]] ⟦Il Priore sa chi è passato sulle strade del nord nell’ultimo mese. Lo dice a chi ha portato un ferito o ha fatto un servizio all’Ospedale.⟧\n· [[La Lunaria a Vico.]] ⟦La pietra con l’iscrizione: Storia CD 14 per capire che il tempio era dell’Impero, CD 18 per notare che la pietra è murata a rovescio e che sotto c’è un nome più vecchio.⟧\n· [[Il 3 giugno.]] La festa dei ciechi: viandanti da tutto il nord, una folla dove passare inosservati."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Sant’Omero vera (Studio dei paesi veri): il colle fra la Vibrata e il Salinello, il santo Audomaro (vescovo franco morto cieco), Santa Maria a Vico (X secolo, tre navate, affreschi, l’Agnus Dei sul portale, l’iscrizione di un tempio di Ercole, detta da Francesco Savini «la più antica d’Abruzzo»), il castello, gli Acquaviva signori dal 1382 al 1639 e il paese che li fa venire da una sua frazione, i quattro cavalieri dovuti dal primo feudatario, i marchesi spagnoli e il Monte dei maritaggi di don Alvaro de Mendoza, la statua del guerriero in corazza, le Grotte dei Saraceni (cisterne romane), Garrufo dal Castrum Rufi e la festa dello stinco, Poggio Morello e il monastero di San Lorenzo, i mulini di Villa Ricci, il miliario di Vallorina, le pinciaie, il merletto al tombolo, l’olio, il baccalà, l’Ospedale Val Vibrata di oggi. Dialetto: quasi teramano; «cécchə» per il diavolo e «mamà» per l’uomo nero (Folklore).\n· Lessico di Ea applicato: Santa Maria a Vico → la Lunaria a Vico; Sant’Antonio Abate → il solario grande e la Benedizione delle Bestie; l’Annunziata → l’ara dei morti; frati → votati; santo patrono → Lucente Omero; Cardinal Virellius → gran flamine; Saraceni → predoni venuti dal mare.\n· Lo Studio dice che un ospedale medievale a Sant’Omero non risulta: l’ospedale è quello di oggi, e il canone l’ha portato indietro. Si tiene, perché è il primo strato che i giocatori riconoscono: Sant’Omero è il paese dell’ospedale. L’ospedale nel castello è una proposta.\n· Il vecchio canone (Manuale e voce del sito): ospedale fortificato, Priore Fiordiluna, fedeli a Virellius, odiano la politica, curano e nascondono, non si schierano. Tutto tenuto."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Come l’Ordine ha avuto il castello: per lascito della sua ultima signora, come propone questa voce, o altro.\n· Che cosa è l’Ordine Ospitaliero fuori dal Ducato, e se ha altre case.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Val Vibrata",
  "id": "borgo-sandemire",
  "parent": "contea-val-vibrata",
  "title": "Sandémirë",
- "sub": "Chiesa",
+ "sub": "L’ospedale della valle, sul colle fra la Vibrata e il Salinellum",
  "pub": [
   {
    "t": "",
-   "txt": "Un ospedale fortificato dell'Ordine Ospitaliero: mura, infermerie, un priore — Fiordiluna — che cura chiunque arrivi e non fa domande sulla politica. Fedeli al Cardinal Virellius, detestano le Casate di Teramum.",
+   "capo": true,
+   "txt": "Sandémirë sta in cima a un colle fra due acque: a nord la Vibrata, a sud il Salinellum. In tutta la valle è il paese dell’ospedale: chi si fa male nella Val Vibrata, prima o poi, ci finisce. Da lontano sembra una fortezza, e lo è: mura, torri, un castello. Ma dentro il castello non ci sono soldati. Ci sono letti.\n\nÈ un ospedale fortificato dell’Ordine Ospitaliero: mura, infermerie, e un Priore, Fiordiluna, che cura chiunque arrivi e non fa domande sulla politica. I votati sono fedeli al gran flamine Virellius e detestano le Casate di Teramum. Nella campagna sotto il borgo c’è la Lunaria a Vico, che dicono sia il tempio più antico d’Aprutium. E il suo olio è fra i migliori della valle."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo è stretto intorno al castello, che occupa la cima del colle. Il castello lo alzarono i signori della valle, che dovevano quattro cavalieri al loro conte, e per più di due secoli fu dei Fonteviva, che ci tenevano la loro casa. Dopo di loro vennero dei marchesi forestieri, e uno di loro, che era un uomo della Fiamma, lasciò i suoi soldi per dare la dote alle ragazze povere. ⟦L’ultima signora del castello, una vedova senza figli, lo lasciò all’Ordine per la salvezza della sua anima, con tutte le terre intorno.⟧ Da allora il castello è l’Ospedale, e il borgo vive dell’Ospedale: ci sono famiglie che da tre generazioni lavano lenzuola, cuociono pane per i malati o portano l’acqua.\n\nLe case sono di mattone dentro le mura e di terra cruda fuori. Dal colle si vedono le due valli e, nei giorni chiari, le torri di Mushanë e il crinale di Bëllindë.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "⟦Porta dei Malati⟧",
+      "A nord",
+      "⟦La porta grande, verso la Vibrata e Nnaréta. Ha una campanella: chi porta un malato la suona, e la porta si apre a qualsiasi ora.⟧"
+     ],
+     [
+      "⟦Porta del Salinellum⟧",
+      "A sud",
+      "⟦Una porta stretta, verso il fiume e le Terre di Mezzo. Di notte resta chiusa, e la tiene un votato con la chiave al collo.⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Sandémirë.jpg",
    "didascalia": "Sandémirë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· ⟦[[1. L’Ospedale.]] Il castello, con il cortile in mezzo e le infermerie lungo le mura. Una corsia per i feriti, una per i febbricitanti, una per le donne, e la corsia dei ciechi, perché il lucente del borgo è il loro. I letti sono sessanta, e d’inverno non bastano.⟧\n· [[2. Il solario grande.]] Il tempio del borgo, sotto il castello, pieno di stucchi e di dorature. Ci si dice il rito per i malati. Il 17 gennaio, sul sagrato, si fa la Benedizione delle Bestie: buoi, muli, cani e galline, tutti in fila.\n· [[3. Il guerriero di pietra.]] Una statua di un uomo in corazza, antica, che stava nel palazzo dei signori ed è stata messa sotto il portico della piazza. Nessuno sa chi sia. I frichì gli toccano la spada per avere coraggio.\n· ⟦[[4. La spezieria.]] Una bottega sotto il castello, che sa di erbe secche e di aceto. Ci lavora un votato speziale con due ragazzi. Vende a chi ha soldi e dà a chi non ne ha.⟧\n· ⟦[[5. La foresteria.]] Accanto alla porta grande. I viandanti ci dormono una notte gratis, su un pagliericcio, con una scodella di minestra. La seconda notte si paga, o si lavora.⟧\n· ⟦[[6. Il chiostro dei votati.]] Dentro il castello, chiuso agli estranei. Ci si riunisce il capitolo dell’Ordine. Il Priore riceve qui, sotto un pergolato.⟧\n· [[7. L’ara dei morti.]] Una piccola ara in fondo al borgo, dove si portano i morti dell’Ospedale prima della sepoltura.\n· ⟦[[8. Il campo dei senza nome.]] Il piccolo cimitero dietro l’ara. Chi muore all’Ospedale senza che nessuno venga a cercarlo è sepolto qui, con un paletto e la data. I paletti sono tanti.⟧\n· ⟦[[9. L’osteria della Fonte.]] L’unica osteria del borgo, sotto le mura. La tiene la vedova di un mulattiere, Za’ ’Ndonie. Baccalà, olio nuovo sul pane, minestra; ci mangiano i parenti dei malati, che aspettano notizie. Quattro stanze, quasi sempre piene.⟧\n· ⟦[[10. Il pozzo della piazza.]] La piazzetta davanti al castello, con il pozzo. Il giovedì c’è un piccolo mercato: uova, formaggio, olio, merletti, galline per i brodi dei malati.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[11. La Lunaria a Vico.]] In campagna, sotto il borgo. Un tempio di pietra a tre navate, scuro e basso, con le pareti dipinte e sopra la porta un agnello scolpito. È più vecchio di qualsiasi altro nella valle. I Savini di Teramum, che tengono la memoria del Ducato, dicono che è il tempio più antico d’Aprutium. Nel muro c’è murata una pietra dell’Impero con un’iscrizione: parla di un tempio che stava lì prima, dedicato a un dio della forza.\n· [[12. La villa dei Fonteviva.]] Una grande casa di campagna fuori dal borgo, con un giardino murato. Oggi è chiusa, il giardino è inselvatichito, e le finestre sono sbarrate. ⟦Atrë non l’ha mai venduta.⟧\n· [[13. Garrufo.]] Un casale grande sulla strada, dove al tempo dell’Impero c’era la villa fortificata di un nobile, il Castrum Rufi. Ne restano i muri di fondazione nei campi. Dicono che i Fonteviva vengano da qui. D’estate ci si fa una festa con lo stinco di maiale arrosto. ⟦Sotto Garrufo c’è una fonte che non secca mai: per i vecchi è la fonte dello stemma dei Fonteviva.⟧\n· [[14. Poggio Morello.]] Un poggio con un piccolo castello, che fu venduto insieme a Sandémirë più di una volta. Accanto ci sono i ruderi di una casa di votati neri. ⟦Oggi ci abitano i fittavoli dell’Ordine.⟧\n· [[15. Le Grotte dei Predoni.]] Fra i campi, delle cisterne dell’Impero scavate sotto terra. La gente dice che ci si nascondevano i predoni venuti dal mare, ai tempi delle scorrerie. ⟦Oggi ci si nasconde chi non vuole farsi trovare dall’Ordine.⟧\n· [[16. I mulini di Villa Ricci.]] Giù sul torrente, i mulini ad acqua dove si macina il grano e si frangono le olive per l’olio.\n· [[17. La Via delle Pinciare.]] La strada di campagna verso la Vibrata, fiancheggiata dalle case di terra cruda: basse, color paglia, con i tetti di coppi.\n· [[18. La pietra miliare.]] Lungo la vecchia strada, a Vallorina, c’è una colonna dell’Impero che conta le miglia dalla capitale antica. I carrettieri la toccano per buona fortuna.\n· ⟦[[19. La Fontana Vecchia.]] Una fonte di pietra fra i campi. Il 3 giugno, per il Lucente Omero, chi ha male agli occhi viene a bagnarseli qui, prima di salire al rito.⟧\n· [[20. I casali.]] Case Alte, Casette, Mediana, Pignotto, Villa Gatti, Barracche: grano, olivi, ortaggi per l’Ospedale, case di terra."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "A Sandémirë tutti hanno a che fare con l’Ospedale, e tutti sanno un po’ di medicina. Le donne sanno fasciare, i frichì sanno che erba serve per la febbre. Gli abitanti sono gentili, abituati agli estranei, e non fanno domande: chi arriva qui ha già abbastanza guai. Parlano quasi come a Teramum, ma quando si arrabbiano dicono «Cecche!» invece di nominare il diavolo, e ai bambini fanno paura con «lu Mamà».\n\n· [[Il Lucente Omero.]] Il lucente del borgo era un flamine di terre lontane che, da vecchio, diventò cieco. Per questo protegge chi ha male agli occhi. Il 3 giugno vengono viandanti da tutto il nord del Ducato.\n· [[Il merletto.]] Le donne lavorano al tombolo davanti alle porte, come a Canzañë, ma qui fanno i pizzi per le tovaglie delle are. I votati li comprano e li mandano fino a Julia Nova.\n· [[Le pinciare.]] Quando una coppia si sposa, i vicini la aiutano a tirare su la casa di terra: si impasta tutti insieme, con i buoi, si fanno i massulli e si alza il muro mezzo braccio al giorno. ⟦Si canta, e chi non viene a pestare la terra non è invitato al pranzo.⟧\n· [[La dote delle povere.]] Da quando un signore del castello lasciò i suoi soldi a questo scopo, ogni anno l’Ospedale dà la dote a due ragazze povere del borgo. ⟦Le sceglie il Priore, e tutti fanno finta di non sapere come.⟧\n· ⟦[[La regola dell’Ordine.]] Dentro le mura non si combatte, non si arresta nessuno e non si chiede a un malato chi è. Chi rompe la regola viene messo fuori dalla porta, ferito o no.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[I letti non bastano.]] Dalla primavera arrivano feriti dalla costa e dalle colline: gente delle navi bruciate di Julia Nova, contadini aggrediti dai lupi, uomini che non dicono dove si sono fatti male. Si dorme anche nei corridoi.⟧\n· ⟦[[Teramum chiede la decima.]] Il Consiglio di Teramum vuole che l’Ospedale paghi le tasse come un feudo qualsiasi. Il Priore ha risposto che l’Ospedale paga già: in letti.⟧\n· ⟦[[Il proclama.]] Il bando contro la Crociata è arrivato anche qui. Il Priore non l’ha inchiodato. Ha detto che alla porta di un ospedale si inchiodano solo le ore dei riti.⟧\n· ⟦[[Le febbri.]] Quest’estate, nei casali della Vibrata, c’è stata una febbre che fa vedere doppio. Nessuno è morto, ma i votati la stanno studiando.⟧\n· ⟦[[La villa chiusa.]] Qualcuno, di notte, ha visto la luce nella villa dei Fonteviva.⟧"
   }
  ],
  "illustrazione": "Mondo — Sandémirë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«A Sandémirë ci entri malato e n’esci sano. O n’esci votato.»",
+  "cite": "Detto della valle"
+ }
 }

@@ -18,17 +18,37 @@
  "mappa": null,
  "colore": "#4F5F6E",
  "scheda": {
-  "In dialetto": "Lu Muntë",
-  "Contea": "La settima",
-  "Dove": "L’ovest del Ducato: le valli sotto il Gigante Dormiente",
-  "Paesaggio": "Pareti di roccia, nevai che non si sciolgono, borghi di pietra viva, castagneti e pascoli alti",
-  "Borghi": "Lésënë, Li Cashtillë, Crognaleto, Fano e La Pròtë, Cashtagnë",
-  "Chi comanda": "I Custodi del Santuario, la Gilda dei Ceramisti, i Mastri-Pastori, i clan dei montanari, gli anziani"
+  "Nome": "La Montagna del Gigante; in dialetto, Lu Muntë",
+  "Contea": "La settima delle otto",
+  "Il borgo che conta": "Lésënë, l’Aquila Aurea, dove si riunisce la Grande Convocazione",
+  "Chi comanda": "Nessun conte. A Lésënë i Custodi del Santuario; a Li Cashtillë la Gilda dei Ceramisti; a Crognaleto i Mastri-Pastori dell’Ordine dei Tratturi; a Fano e La Pròtë i clan dei montanari; a Cashtagnë gli anziani",
+  "Borghi": "Lésënë, Li Cashtillë, Cashtagnë, Fano e La Pròtë, Crognaleto",
+  "Confini": "A ovest le cime del Gigante e, oltre, il Latium; a nord i boschi della Laga e le Terre Selvagge; a est il Cuore del Ducato, con Mëndurjë, Tussëcië e Cullëdarë; a sud-est i Calanchi",
+  "Fiumi": "L’alto Vomanum, che nasce sotto la Laga; il Mavone e il Ruzzo, che si uniscono a Lésënë; il Rio Arno sotto La Pròtë",
+  "Paesaggio": "Pareti di roccia, nevai che non si sciolgono, borghi di pietra viva, faggete, castagneti e pascoli alti",
+  "Vive di": "Pecore, lana e pecorino; la pietra degli scalpellini; le maioliche di Li Cashtillë; castagne e legname; le profezie e le pozioni dell’Aquila Aurea; i viandanti",
+  "Fedeltà": "A nessuno in pianura. Lésënë è terra neutrale, e i borghi intorno guardano a lei prima che a Teramum"
  },
  "gm": [
   {
    "t": "",
-   "txt": "Lésënë è il luogo del finale della parte del Ducato. Le Casate delle Vette ne sono i guardiani:\n\n· [[de Caelis]], i Custodi del Gigante: sanno che il Titano è inquieto. Sono nella lista di Impaloni insieme ai Cerullius.\n· [[Argentus]]: praticano apertamente la magia di Maia, l’unico posto del Ducato dove si può. Cercano di riparare la Frattura.\n· [[Fiandrani]]: addestrano in segreto cavalcatori di grifoni, pronti all’indipendenza se Teramum dovesse imporre un Duca che non sia pretuziano. Con Alessandros candidato, sono dalla sua parte.\n· [[Umbra]]: quasi estinti. Sentono che sotto la terra qualcosa risale.\n\nA Li Cashtillë le ceramiche vivono: i golem di maiolica si muovono quando nessuno guarda, e le rune incise hanno potere vero. La gilda è alleata di Mastro Torvus e del Martello Bianco di Julia Nova.\n\n⟦Nel vecchio canone i nomi erano scambiati: «Li Castìllë» è il nome in dialetto di Castelli, il borgo della ceramica. Castel Castagna diventa Cashtagnë.⟧\n\nL’Ordine dei Tratturi è un potere enorme e senza politica: chi lo ha con sé muove il Ducato. I montanari di Fano e La Pròtë scendono se Silvanus si mostra: è l’unico posto dove il suo nome vale già."
+   "txt": "Lésënë è il luogo del finale della parte del Ducato: la Grande Convocazione. Tutto quello che la Crociata fa prima, a Teramum e lungo la strada, serve ad arrivare qui con il Sigillo, con i testimoni e con le Casate dalla sua parte. La contea è il pubblico di quel finale: le Casate delle Vette ne sono i guardiani, l’Ordine dei Tratturi la strada, i montanari la forza."
+  },
+  {
+   "t": "Le trame della montagna",
+   "txt": "· [[Le Casate delle Vette.]] Sono i guardiani di Lésënë, ognuna a modo suo.\n· [[de Caelis]], i Custodi del Gigante: sanno che il Titano è inquieto. Sono nella lista di Impaloni insieme ai Cerullius.\n· [[Argentus]]: praticano apertamente la magia di Maia, l’unico posto del Ducato dove si può. Cercano di riparare la Frattura.\n· [[Fiandrani]]: addestrano in segreto cavalcatori di grifoni, pronti all’indipendenza se Teramum dovesse imporre un Duca che non sia pretuziano. Con Alessandros candidato, sono dalla sua parte.\n· [[Umbra]]: quasi estinti. Sentono che sotto la terra qualcosa risale.\n\n· [[La strada di Tussëcië.]] Il Marchese Rodrigo d’Avalos, uomo di Iuvenza, pattuglia la strada maestra verso Lésënë. Chi vuole arrivare alla Convocazione senza passare da lui deve usare i Tratturi o i sentieri dei montanari.\n· [[L’Ordine dei Tratturi.]] Un potere enorme e senza politica: chi lo ha con sé muove il Ducato. Il permesso di marciare sui Tratturi porta la Crociata a Lésënë senza passare dai signori.\n· [[I montanari.]] Quelli di Fano e La Pròtë scendono se Silvanus si mostra: è l’unico posto dove il suo nome vale già.\n· [[La ceramica vivente.]] A Li Cashtillë i golem di maiolica si muovono quando nessuno guarda, e le rune incise hanno potere vero. La gilda è alleata di Mastro Torvus e del Martello Bianco di Julia Nova.\n· ⟦[[La Valle e il Marchese.]] Nella storia vera la Valle Siciliana (Isola, Castelli, Fano, Pietracamela, Tossicia) fu data nel 1526 a un capitano spagnolo, Alarcón, come marchesato, e il palazzo del governatore stava a Tossicia. Nel gioco: i d’Avalos di Tussëcië, venuti da fuori, hanno ripreso il vecchio titolo di «Marchesi della Valle» e pretendono pedaggi fino a Lésënë. Iuvenza ha promesso di farglielo riconoscere dal Consiglio. Lésënë, per la sua legge, non lo riconosce.⟧"
+  },
+  {
+   "t": "Sotto la montagna",
+   "txt": "· Il Gigante Dormiente è un Titano vero. I rituali dei Drukarri ne disturbano il sonno, e la montagna trema (Atto XVIII).\n· Dalle cripte di Teramum, dicono le voci della città, una via sotterranea arriva fino all’Aquila Aurea: tre giorni senza vedere il sole. È una proposta delle scene di Teramum, non ancora decisa.\n· Le antiche casate (Cerullius, de Caelis, il sangue de Spina) portano nel sangue la magia del Gigante.\n· ⟦Le rune di Li Cashtillë sono le stesse che il Gigante ha lasciato nella pietra: Maximus, cavaliere delle rune, le sa leggere senza averle mai studiate.⟧\n· La caccia agli ultimi tre Sigilli Lunari, fuori dal Ducato, comincia quando Silvanus avrà l’appoggio dell’Aquila Aurea (voce I Sigilli Lunari)."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Applicate le fonti nuove di Giuseppe (Lessico di Ea, Studio dei paesi veri, Folklore, Dialetti, Nomi delle casate): niente parole cristiane (il Lucente Berardo, i votati delle abbazie), la leggenda vera di Maia e del figlio gigante, la Valle Siciliana con il governatore a Tossicia, la transumanza vera (anche verso il Latium), i cardatori di La Pròtë, gli scalpellini di Crognaleto.\n· Lo Studio nota che Isola, Castelli e Castel Castagna stanno a sud del Vomano, probabilmente fuori dal territorio dei Pretuzi veri (là c’erano i Vestini). Nel gioco la montagna resta pretuziana: è canone.\n· Lo Studio nota anche che «Crognaleto cuore dei Tratturi» e «Li Re de la Pécora» non hanno riscontro vero: sono invenzioni del gioco, e restano.\n· I nomi erano scambiati nel vecchio canone e nel Manuale: Castelli, il borgo della ceramica, è [[Li Cashtillë]]; Castel Castagna è [[Cashtagnë]] (v166). Gli id dei file restano incrociati: `borgo-cashtagne` è Li Cashtillë, `borgo-li-cashtille` è Cashtagnë.\n· Il nome è Grande Convocazione (Atto IX), non «Convocazione Straordinaria».\n· Il Manuale chiama questa contea «Il Ventre del Gigante (La Pànze)»: non vale più, è Lu Muntë.\n· «Fedeltà: Silvanus» di Fano e La Pròtë è stata tolta dal testo per i giocatori (decisione del 10-10): i giocatori sanno solo che i montanari aspettano il Sangue Solare.\n· Il Manuale mette Casa Umbra «nelle cripte sotto la città», a Teramum; il testo sulle Casate delle Vette la mette fra i guardiani di Lésënë. Qui resta fra le Casate delle Vette, quasi estinta, senza una casa precisa.\n· Il Canto della Fiamma Eterna nomina un «druido Maximus Grazianus di L’Aquila Aurea». Il Maximus del tavolo è un guerriero, cavaliere delle rune, figlio di Lucius: la riga non vale."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· La distanza fra Teramum e Lésënë. Il Manuale dice circa 50 km in linea d’aria; la mappa del Ducato ne fa circa due giorni a piedi.\n· Se Casa Umbra ha una casa a Lésënë o vive sotto Teramum.\n· Se il Patto di Teramum fu stretto a Lésënë, come crede la montagna.\n· Quanti abitanti ha la contea."
   }
  ],
  "id": "contea-montagna-del-gigante",
@@ -41,11 +61,110 @@
   {
    "t": "",
    "capo": true,
-   "txt": "L’ovest del Ducato, dove il Gigante Dormiente chiude l’orizzonte con le sue cime innevate. Per i Pretuziani non è una montagna: è un Titano che dorme, e quando la terra trema è lui che si gira nel sonno. Da qui scendono i fiumi, qui si taglia il legno e si lavora il ferro, qui si parla il dialetto più vecchio del Ducato."
+   "txt": "La Montagna del Gigante è l’ovest del Ducato, dove il Gigante Dormiente chiude l’orizzonte con le sue cime innevate. Per i Pretuziani non è una montagna: è un Titano che dorme, e quando la terra trema è lui che si gira nel sonno. Da qui scendono i fiumi, qui si taglia il legno e si lavora il ferro, qui si parla il dialetto più vecchio del Ducato.\n\nÈ anche la terra più sacra di Aprutium. Ai piedi della parete più grande c’è Lésënë, l’Aquila Aurea, dove si riunisce la Grande Convocazione di tutte le Casate. Questa voce racconta la contea intera. I cinque borghi hanno le loro voci."
   },
   {
-   "t": "I borghi",
-   "txt": "· [[Lésënë]], l’Aquila Aurea: il luogo sacro dei Pretuziani, nella valle sotto la parete più grande del Gigante. Qui si riunisce la Grande Convocazione. È terra neutrale: nessun esercito ci entra armato.\n· [[Li Cashtillë]]: il borgo della ceramica, sotto la parete del Gigante. Bianco, blu cobalto, giallo e verde: le sue maioliche si vendono in tutto l’Impero.\n· [[Crognaleto]]: il cuore dei Tratturi e la sede dell’Ordine dei Tratturi, «Li Re de la Pécora».\n· [[Fano e La Pròtë]]: villaggi di pietra arrampicati sotto le cime. I clan dei montanari scendono di rado, e aspettano da generazioni il ritorno del Sangue Solare degli antichi imperatori.\n· [[Cashtagnë]]: un borgo tondo tra i castagni, governato dagli anziani, dove le tradizioni pretuziane sono ancora vive."
+   "t": "I. La montagna dei Pretuziani",
+   "txt": "La montagna è stata pretuziana prima di ogni altra cosa, e lo è ancora. Lassù i clan del lupo pregavano il Gigante quando in pianura non c’era ancora nessuna città. Quando Aurax salì a piedi a stringere il [[Patto di Teramum]], lo strinse ai piedi del Gigante: in montagna nessuno ha dubbi su dove.\n\nSotto la parete, sul colle della [[Pagliara]], nacque [[il Lucente Berardo]], il lucente del Ducato, e con lui sua sorella [[Colomba]], che visse da eremita in una grotta sopra Lésënë. Oggi lassù ci sono le pietre di un castello e un piccolo eremo, ma la gente della valle chiama ancora Berardo «il nostro lucente».\n\nL’Impero in montagna salì poco. Ci salirono invece i votati delle abbazie: quella sopra Li Cashtillë, oggi scomparsa, che insegnò alla valle a lavorare l’argilla, e l’[[abbazia di Ronzano]] sotto Cashtagnë, con le pareti dipinte. Dopo i votati vennero i signori: i conti della Pagliara, poi casate venute da fuori. Fecero di Lésënë, Li Cashtillë, Fano, La Pròtë e Tussëcië una signoria sola, [[la Valle]], con il palazzo del governatore a Tussëcië. La tennero a lungo e la amarono poco. La gente si chiuse nei «castelli», i villaggi fortificati da cui prende il nome Li Cashtillë.\n\nAttraverso tutti questi padroni sono rimaste tre cose: le Casate delle Vette a Lésënë, i pastori dei Tratturi e i clan dei montanari. Sono più vecchie di ogni signore, e lo sanno.",
+   "img": "Mondo — La Montagna del Gigante.jpg",
+   "didascalia": "La Montagna del Gigante"
+  },
+  {
+   "t": "II. La parete, i pascoli e i torrenti",
+   "txt": "Da ogni borgo della contea, alzando gli occhi, si vede la parete del Gigante: un muro di roccia chiara che d’estate tiene ancora la neve nei canaloni. In cima ci sono i due [[Corni]], il Grande e il Piccolo, e verso sud il [[Monte Camicia]] sopra Li Cashtillë. A nord la montagna diventa la [[Laga]], scura di boschi, fino alle Terre Selvagge.\n\n· [[I pascoli alti.]] Sopra i boschi si aprono i prati d’erba corta, come i [[Prati di Tivo]] sotto La Pròtë. D’estate ci salgono le greggi, d’inverno ci resta solo il vento.\n· [[I boschi.]] Faggi in alto, castagni in basso. I castagneti di Cashtagnë sfamano mezza valle in autunno.\n· [[I torrenti.]] L’alto [[Vomanum]] nasce sotto la Laga e scende fra Crognaleto e Fano verso Mëndurjë. Il [[Rio Arno]] corre sotto La Pròtë. Il [[Mavone]] e il [[Ruzzo]] si uniscono a Lésënë, e per questo i vecchi la chiamano anche l’Isola.\n\nI borghi sono di pietra viva, stretti, con le case alte e le scale al posto delle strade. Fra un borgo e l’altro passano i sentieri dei montanari e i [[Tratturi]], le vie d’erba delle greggi. D’inverno molte strade chiudono, e la contea si fa più piccola."
+  },
+  {
+   "t": "III. I borghi",
+   "tabella": {
+    "head": [
+     "Borgo",
+     "Dove",
+     "Chi lo tiene",
+     "Per che cosa è noto"
+    ],
+    "rows": [
+     [
+      "[[Lésënë]]",
+      "Nella valle sotto la parete più grande, dove il Mavone incontra il Ruzzo",
+      "I Custodi del Santuario: le Casate delle Vette",
+      "L’Aquila Aurea. La Grande Convocazione, la Pietra della Fronte, il culto aperto di Maia, gli Speziali d’Argento"
+     ],
+     [
+      "[[Li Cashtillë]]",
+      "Sotto il Monte Camicia, a sud-est di Lésënë",
+      "La Gilda dei Ceramisti",
+      "Le maioliche bianche, blu, gialle e verdi dei Grue, dei Gentili e dei Pompei, che si vendono in tutto l’Impero"
+     ],
+     [
+      "[[Cashtagnë]]",
+      "Su un colle sopra il Mavone, fra i castagni, a est di Lésënë",
+      "Gli anziani del villaggio",
+      "Il borgo tondo, le castagne, le tradizioni pretuziane, l’abbazia di Ronzano"
+     ],
+     [
+      "[[Fano e La Pròtë]]",
+      "Nell’alta valle del Vomanum e sotto i due Corni",
+      "I clan dei montanari",
+      "Villaggi di pietra arrampicati sotto le cime. Pastori transumanti a Fano, cardatori di lana girovaghi a La Pròtë. I clan aspettano il Sangue Solare"
+     ],
+     [
+      "[[Crognaleto]]",
+      "Sui due versanti dell’alto Vomanum, sotto la Laga",
+      "I Mastri-Pastori dell’Ordine dei Tratturi",
+      "Il cuore dei Tratturi, «Li Re de la Pécora», i mastini bianchi, il Fuoco della Notte Lunga a Nerito"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. Cinque modi di comandare",
+   "txt": "Nella Montagna del Gigante non c’è un conte, e non c’è mai stato davvero. Ogni borgo si governa a modo suo, e nessuno dei cinque prende ordini dagli altri. Quello che li tiene insieme è la montagna, la lingua e Lésënë.",
+   "tabella": {
+    "head": [
+     "Signore",
+     "Che cosa tiene",
+     "Guarda a"
+    ],
+    "rows": [
+     [
+      "I Custodi del Santuario (Casa de Caelis, Casa Argentus, Casa Fiandrani)",
+      "Lésënë e il santuario della Pietra della Fronte",
+      "Al Gigante. Alla Legge Antica, che fa di Lésënë terra neutrale"
+     ],
+     [
+      "La Gilda dei Ceramisti",
+      "Li Cashtillë, le botteghe e le fornaci",
+      "Ai mercanti di tutto l’Impero; è amica del Martello Bianco di Julia Nova"
+     ],
+     [
+      "L’Ordine dei Tratturi",
+      "Crognaleto e le vie d’erba di tutto il Ducato; fra i Mastri-Pastori conta di più la famiglia Mazzaferri",
+      "A nessuno: alle pecore e alla terra"
+     ],
+     [
+      "I clan dei montanari",
+      "Fano, La Pròtë e i pascoli alti; il clan più grande è quello dei Ferramonte",
+      "Ai loro capi, e al Sangue Solare degli antichi imperatori"
+     ],
+     [
+      "Gli anziani",
+      "Cashtagnë e i suoi casali",
+      "Alle usanze dei vecchi"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. La Grande Convocazione",
+   "txt": "La cosa che conta, in questa contea, è una legge. La Legge Antica del Ducato dice che sopra il Consiglio di Teramum c’è la [[Grande Convocazione]], il Concilio Pretuziano, e che si riunisce a Lésënë, sotto il Gigante. Quando è chiamata devono presentarsi tutte le Casate e tutte le Città Libere. Lì nessun esercito entra armato, e quello che si decide all’ombra del Titano non si disfa.\n\nSolo il sigillo di Teramum può chiamarla. Per questo da generazioni nessuno la chiama, e per questo la montagna ha l’aria di un posto che aspetta.\n\nPer salire a Lésënë dalla capitale c’è una strada maestra sola: risale il Vomanum fino a Mëndurjë, piega per Tussëcië ed entra nella valle del Mavone. Chi tiene quella strada tiene la porta della Convocazione. Le altre vie sono i Tratturi e i sentieri dei montanari: più lenti, ma non sono di nessun signore."
+  },
+  {
+   "t": "VI. La gente",
+   "txt": "Gente di montagna: parla poco, cammina tanto, non si fida dei forestieri e non dimentica un favore. Ma non è gente chiusa: d’inverno mezza montagna è in viaggio, con le greggi o con gli attrezzi da cardatore, e torna a primavera con le notizie del mondo. Si dicono pretuziani prima che imperiali, e in molte case si prega il Gigante con la stessa voce con cui si prega la Fiamma. A Lésënë la Vecchia Madre, la Luna Maia, si prega alla luce del giorno, l’unico posto del Ducato dove si può.\n\nI pastori raccontano che il Gigante è figlio della Vecchia Madre. Era un giovane gigante ferito in battaglia, e lei lo portò fin qui dal mare a cercare un’erba che lo guarisse. Lui morì, e lei lo distese sulla vetta, più vicino alle stelle: da allora la montagna ha il profilo di un uomo che dorme. La Madre vagò per i monti piangendo, e le sue lacrime sono la rugiada dei pascoli. Per questo, dicono, il Gigante non è morto: dorme, e aspetta che sua madre torni a svegliarlo.\n\nOgni borgo ha il suo mestiere: a Li Cashtillë la maiolica, a Crognaleto le pecore e la pietra, a Cashtagnë le castagne, a Fano le greggi, a La Pròtë la lana, che i cardatori lavorano in giro per mezzo Impero, a Lésënë le profezie, le pozioni e i viandanti. Lassù i quattrini di rame di Teramum valgono poco: una forma di pecorino stagionato si accetta come moneta in tutta la contea.\n\nLe notizie salgono e scendono con le greggi. A settembre i pastori scendono per i Tratturi, chi verso il mare e i Calanchi, chi oltre i monti nelle pianure del Latium; a giugno risalgono e portano su quello che è successo in pianura. Si dice: «Quando la mundagne si mette il cappello, vendi le capre e compra il mantello.»"
+  },
+  {
+   "t": "Quello che sapete",
+   "txt": "· A Julia Nova Silvanus vi ha detto il suo piano: non una guerra, ma la Grande Convocazione a L’Aquila Aurea, per chiamare a rispondere davanti a tutti chi ha tradito il Ducato. Solo il sigillo di Teramum può convocarla: per questo la Crociata marcia sulla capitale (Atto IX).\n· Sulla Strada dei Pastori, Narduccio lu pecuràre vi ha mostrato un tratturo chiuso con la catena dall’Abate Gofferio. Per i pastori i Tratturi non hanno confini (Atto XII).\n· Il druido di Torricella ha detto ad Adamus che la montagna trema (Atto XVIII)."
   }
  ],
  "epigrafe": {

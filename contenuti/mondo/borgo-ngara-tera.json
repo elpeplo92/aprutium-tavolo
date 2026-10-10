@@ -14,25 +14,117 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Consorzio dei Vignaioli (famiglia Grappoloverde)",
-  "Fedeltà": "Neutrale",
-  "Corrisponde a": "Ancarano e Torano"
+  "Paese vero": "Ancarano e Torano Nuovo: due paesi a un’ora l’uno dall’altro",
+  "Altri nomi": "Ngarà, o Angarà, in dialetto; Ancaria negli atti antichi. Tërà, per Torano",
+  "Abitanti": "⟦Ngarà circa ottocento; Tërà circa seicento; a vendemmia il doppio, con i braccianti⟧",
+  "Chi comanda": "Ngarà: un flamine d’oltre Truntum, che ci tiene un vicario. Tërà e le vigne: il Consorzio dei Vignaioli, guidato dai Grappoloverde",
+  "Dentro le mura": "A Ngarà: la Porta da Monte con la sua torre, la Porta da Mare, la Lunaria della Misericordia, il campanile senza solario, il palazzo del Flamine",
+  "Fuori le mura": "Tërà con il suo castello rifatto e le cantine, i solari di campagna, le vigne, la Fonte di Monsignore, i guadi del Truntum",
+  "Porte": "Ngarà: Porta da Monte a ovest, Porta da Mare a est, Porta Nuova sulla piazza. Tërà: le mura del castello, rifatte basse",
+  "Guardia": "⟦A Ngarà dieci armigeri del Flamine. A Tërà nessuna: le guardie le paga il Consorzio a vendemmia⟧",
+  "Lucente": "Ngarà: il Lucente Simplicio, il 29 luglio. Tërà: il Lucente Flaviano, il 24 novembre",
+  "Distanze": "⟦Fra Ngarà e Tërà, un’ora a piedi; Sandiglië, mezza giornata abbondante; Cëvëtëlla, una giornata di tratturi verso sud; Cundraüerrë, una giornata verso est⟧"
  },
- "gm": "Infiltrate dagli agenti elfici: tra i braccianti stagionali ci sono Forgiati o spie. I Grappoloverde non lo sanno, o fingono.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Due posti tranquilli in apparenza, e due porte aperte sul Ducato. Ngarà è un pezzo di Luminor Meridionale dentro i confini: un borgo del Ducato che risponde a un signore straniero, la sponda perfetta per spie e agenti. Tërà è infiltrata dagli agenti elfici: tra i braccianti stagionali ci sono Forgiati o spie dei Drukarri. I Grappoloverde non lo sanno, o fingono."
+  },
+  {
+   "t": "Ngarà, il borgo del Flamine",
+   "txt": "Nella storia vera Ancarano fu per secoli feudo del vescovo di Ascoli, oltre il confine, e sua residenza d’estate; nel 1557 la mezza distrusse il campo spagnolo-napoletano, cioè la sua stessa parte. Nel gioco il suo signore è un flamine delle Marche Picenorum, e i templari ci passano senza chiedere permesso.\n\n⟦Il Luminor Meridionale finanzia in segreto Impaloni: il denaro passa da qui, nella cantina del vicario, nascosto fra le botti del vino senza dazio. Chi trova i registri del vicario ha la prova che la Fiamma d’oltre confine paga una Casata del Consiglio.⟧"
+  },
+  {
+   "t": "Tërà e i braccianti",
+   "txt": "· Tra i braccianti delle vigne ci sono spie dei Drukarri, o Forgiati. ⟦Sono i braccianti rimasti dopo la vendemmia, nei casali vuoti. Le monete buone vengono dalla cantina del vicario di Ngarà: il Luminor e i Drukarri usano lo stesso canale senza saperlo, o lo sanno.⟧\n· ⟦I Grappoloverde lo sanno. Non sono traditori: hanno paura. Il vino che vendono oltre il fiume lo comprano mercanti che pagano troppo bene, e la famiglia ha capito tardi per chi lavorano. Se qualcuno le offre protezione, parla.⟧\n· ⟦Il Consorzio lo tiene Donna Costanza Grappoloverde, vedova, da quando il marito è morto cadendo in una botte. Nessuno a Tërà crede che sia caduto.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Il guado della Pace.]] Il passaggio senza torre: chi vuole uscire dal Ducato, o entrarci, senza farsi vedere, passa di qui.\n· [[La vendemmia e la festa d’agosto.]] I momenti in cui chiunque può entrare a Tërà, con una zappa o con un bicchiere in mano.\n· [[L’osteria della Porta da Mare.]] Zi’ Ilië parla due dialetti e vende notizie in tutti e due.\n· ⟦[[Una spia fra le vigne.]] Intuizione CD 14 per notare che un bracciante non ha i calli dove li ha chi zappa. Uno dei Forgiati, se scoperto, non scappa: si ferma, e aspetta ordini che non arrivano.⟧\n· ⟦[[Il vino che cura.]] Il vino vecchio delle cantine di Tërà, strofinato sulle piaghe delle bestie, le guarisce davvero: è un vino della Vecchia Madre. Per la Crociata, con i suoi cavalli e i suoi muli, vale più dell’oro.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Ancarano vera: collina fra Tronto e Vibrata, a pochi chilometri da Ascoli; borgo murato con la Porta del Monte (detta della Terra) con la torre merlata e il ponte levatoio, la Porta dal Mare gotica con gli stemmi vescovili, la Porta Nuova sulla piazza; la Madonna della Misericordia ottagonale con la cupola ellittica, voluta da un vescovo; la Madonna della Pace con la statua del Quattrocento e la processione d’ottobre con li tailì unti; la Madonna della Carità con le Canestrelle del 14 maggio; San Rocco della peste; la torre campanaria rimasta dell’Assunta demolita per il terreno; la Fonte di Monsignore, romana; il feudo e la villeggiatura del vescovo di Ascoli; la pace di Torano del 1490; la metà nord distrutta nel 1557 e mai ricostruita; San Simplicio il 29 luglio; la dea Ancaria e la leggenda dell’ancora; la sagra del coniglio; in dialetto «’Ngarà», parlata quasi ascolana.\n· Torano Nuovo vero: castello di confine del Regno, possesso di un monastero, raso al suolo dalle truppe di Carlo VIII nel 1496 e ricostruito dagli abitanti; San Massimo a Varano col portico, San Martino a Villa Torri con gli affreschi, la Madonna delle Grazie; San Flaviano il 24 novembre con il braccio-reliquiario; il nome dalla dea Turan; «capitale del Montepulciano»; il vino che curò i cavalli di Annibale; la sagra di agosto del vino, della salsiccia, dei maccheroni e del formaggio fritto.\n· Lessico di Ea: vescovo → flamine, chiese → solari, cappelle → are, santi → lucenti, santuari della Madonna → lunarie.\n· La vecchia voce diceva che il Consorzio dei Vignaioli governa tutte e due e che le terre sono «indifese»; la pagina di Giuseppe sulla contea dice che Ngarà obbedisce a un flamine d’oltre Truntum. Ora Ngarà è del Flamine, Tërà e le vigne del Consorzio. Lo Studio: Ancarano aveva mura e porte, Torano era un castello; il Consorzio non ha basi storiche, ma è canone e resta per Tërà.\n· «Agenti elfici» vuol dire spie dei Drukarri o Forgiati, come nella voce della contea."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se Ngarà e Tërà diventano due voci separate, come vuole lo Studio dei paesi veri: stavano ai lati opposti del confine. Questa voce le descrive già come due paesi.\n· Il nome del Flamine d’oltre Truntum e della sua città.\n· Se Donna Costanza Grappoloverde va bene come capo del Consorzio.\n· Che cosa vogliono le spie fra le vigne: il vino non c’entra.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre del Nord",
  "id": "borgo-ngara-tera",
  "parent": "contea-terre-del-nord",
  "title": "Ngarà e Tërà",
- "sub": "Neutrale",
+ "sub": "Il borgo del flamine straniero e il paese del vino",
  "pub": [
   {
    "t": "",
-   "txt": "Vigne a perdita d'occhio sulle colline del confine, terre ricche e indifese governate da un consorzio di vignaioli guidato dai Grappoloverde. Il vino è ottimo e la guardia è poca.",
+   "capo": true,
+   "txt": "All’estremo nord del Ducato, dove le colline scendono al Truntum, ci sono due paesi a un’ora l’uno dall’altro e una distesa di vigne in mezzo. Sono vicini, ma stanno dalle due parti di un confine che non si vede.\n\n[[Ngarà]] è un borgo murato su una collina fra il Truntum e la Vibrata, con una porta che guarda i monti e una che guarda il mare. Dalle mura si vede tutta la valle del fiume, e la città del suo signore è a poche ore. Perché Ngarà non obbedisce a Teramum: da secoli è del flamine d’oltre Truntum, che ci viene d’estate.\n\n[[Tërà]] sta più a est, su un’altra collina, sopra la Vibrata. È un castello del Ducato, raso al suolo una volta da un esercito di passaggio e ricostruito dalla sua gente. Oggi è il paese del vino: il rosso migliore del Ducato, che qui chiamano il re delle colline. Lo governa un consorzio di vignaioli, guidato dalla famiglia dei [[Grappoloverde]]."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Ngarà è un borgo raccolto su una collina tonda, chiuso dentro le sue mura, con tre porte. Il paese è fatto di vicoli che girano attorno alla cima, e sopra tutto sta la torre del campanile. In mezzo c’è la piazza, con il palazzo del Flamine e la lunaria tonda. La parte nord del paese non c’è più: in una guerra l’hanno distrutta i soldati che dovevano difenderla, e nessuno l’ha mai ricostruita. Al suo posto ci sono orti e muri bassi.\n\nTërà è più piccola: il vecchio castello di confine sulla collina, con le mura rifatte basse dopo la distruzione, una piazzetta, il solario, e sotto le case le cantine scavate nella collina. Intorno, fino alla Vibrata, le vigne e i casali.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "Porta da Monte",
+      "A Ngarà, a ovest, verso i monti",
+      "La porta vecchia, che chiamano anche della Terra. Ha una torre di guardia con i merli e i beccatelli, e una volta il ponte levatoio. Da qui parte il tratturo per Cëvëtëlla."
+     ],
+     [
+      "Porta da Mare",
+      "A Ngarà, a est, verso il mare",
+      "Un arco a punta con gli stemmi dei flamini, attaccato a un palazzo. Da qui si scende a Tërà e alla Val Vibrata."
+     ],
+     [
+      "Porta Nuova",
+      "A Ngarà, sulla piazza",
+      "La porta più recente, aperta nelle mura per i carri del vino."
+     ],
+     [
+      "La porta del castello",
+      "A Tërà",
+      "Un arco nel muro basso. Di notte si chiude con una sbarra, e basta."
+     ]
+    ]
+   },
    "img": "Mondo — Ngarà e Tërà.jpg",
    "didascalia": "Ngarà e Tërà"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. La Porta da Monte.]] La torre merlata sopra la porta ovest. Da lassù si vede la valle del Truntum fino ai monti delle Marche. La tiene il vicario del Flamine.\n· [[2. La piazza.]] Piccola, in pendenza, con il pozzo in mezzo. Qui si fa il mercato del vino, una volta la settimana, e d’estate le feste del Flamine.\n· [[3. Il palazzo del Flamine.]] Sulla piazza. La residenza d’estate del Flamine d’oltre Truntum: stanze affrescate, un’ara privata, una cantina piena. Per dieci mesi all’anno ci abita solo il suo vicario.\n· [[4. La Lunaria della Misericordia.]] Una lunaria tonda, a otto lati, con una cupola a forma d’uovo. L’ha pagata un flamine d’oltre fiume, e il suo stemma è sopra la porta. Che un flamine abbia costruito una casa alla Vecchia Madre, a Ngarà, non lo trova strano nessuno.\n· [[5. Il campanile senza solario.]] Tutto quello che resta del solario vecchio, crollato perché il terreno sotto scivola. Il campanile è rimasto in piedi da solo, e suona ancora. È il segno di Ngarà: si vede da tutta la valle.\n· ⟦[[6. La cantina del vicario.]] Sotto il palazzo. Il vicario vende il vino del Flamine senza dazio, a chi viene da oltre il fiume e a chi va oltre.⟧\n· ⟦[[7. L’osteria della Porta da Mare.]] Nel palazzo attaccato alla porta. Ci si fermano i carrettieri del vino e i viaggiatori che aspettano il guado. La tiene Zi’ Ilië, che parla il dialetto di qua e quello di là. Tagliolini in brodo di gallina, coniglio, tre letti e una tavola lunga.⟧\n· ⟦[[8. La casa del notaio.]] Vicino alla piazza. A Ngarà si fanno gli atti per due padroni, il Flamine e il Ducato, e il notaio sa quale carta mostrare a chi.⟧\n· [[9. Tërà, il castello.]] La collina del paese del vino: la piazzetta, il solario della Vecchia Madre delle Grazie, le case del Consorzio. Le cantine sotto le case comunicano fra loro, e d’autunno odorano di mosto fino in piazza."
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[10. L’ara del Lucente Rocco.]] Accanto al camposanto di Ngarà, costruita in un anno di peste. Ci si va a pregare quando c’è una febbre in paese.\n· [[11. La Lunaria della Pace.]] Fuori le mura di Ngarà, con una statua della Vecchia Madre in legno, vecchia di più di duecento anni. Dicono che la fecero fare per la pace firmata a Tërà, quella che chiuse una guerra fra i signori del confine. A ottobre la portano in processione, e si mangiano i tagliolini unti.\n· [[12. La Lunaria della Carità.]] Una piccola lunaria nella campagna. Il 14 maggio ci si portano le canestrelle, cesti di pane e di fiori, e alla fine della vendemmia i braccianti ci fanno festa.\n· [[13. La Fonte di Monsignore.]] Sotto Ngarà, una fonte dell’Impero, con l’acqua più fresca della collina. Ci vanno le donne a lavare e i carrettieri ad abbeverare.\n· [[14. I solari di campagna di Tërà.]] Il solario del Lucente Massimo a Varano, vecchissimo, con un portico ad archi, solo in mezzo ai campi; e quello del Lucente Martino a Villa Torri, con le pareti dipinte.\n· ⟦[[15. La casa dei Grappoloverde.]] Il casale più grande fra le vigne, sotto Tërà, con il torchio comune e la sala del Consorzio. Qui si decidono i prezzi del vino, chi vendemmia e chi no, e quanti braccianti prendere.⟧\n· [[16. Le vigne.]] Su tutti i colli fra Ngarà, Tërà e il Truntum. Rosso scuro, forte, che invecchia bene. Si vende fino a Teramum e, di nascosto, oltre il confine. I vignaioli giurano che cura anche le bestie: un condottiero antico, dicono, ci guarì i suoi cavalli malati.\n· ⟦[[17. Il guado della Pace.]] Il passaggio sul Truntum sotto Ngarà, l’unico che non ha una torre del Ducato. Ngarà non ne ha bisogno: di là è casa sua.⟧\n· [[18. Le ville.]] Petrella, Villa Bizzarri, Casette, Collina: casali di vignaioli e di braccianti."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "Gente di vigna: lavora tutto l’anno per tre settimane d’autunno. Non ama i soldati, non ama le tasse, e non ama chi chiede di chi è la terra.\n\nFra i due paesi c’è affetto e c’è sospetto. A Ngarà si parla quasi come di là dal fiume, molte famiglie hanno parenti oltre il Truntum, e si sposano da una riva all’altra. A Tërà si sentono del Ducato, e il loro castello lo dimostra: è stato raso al suolo e lo hanno rifatto. Ngarà, dicono a Tërà, l’hanno distrutta i suoi stessi soldati.\n\n· [[La vendemmia.]] A fine settembre arrivano i braccianti da tutto il Ducato e da oltre il fiume. Si dorme nei fienili, si canta, si beve, e chi viene da fuori se ne va con la paga e con qualche cuore spezzato.\n· [[La festa di Tërà.]] A metà agosto il paese apre tutte le cantine: vino, salsicce, maccheroni e formaggio fritto, e gente da tutta la contea.\n· [[Il Lucente Simplicio.]] Il 29 luglio, a Ngarà, con la processione per le mura e il vino nuovo dell’anno prima che si apre in piazza.\n· [[Il Lucente Flaviano.]] Il 24 novembre, a Tërà, quando il vino nuovo è nelle botti. Nel solario si espone il braccio d’argento del lucente.\n· [[I nomi delle dee.]] Tutti e due i paesi, dicono, hanno il nome di una dea più vecchia della Fiamma: Ngarà di Ancaria, che aveva qui il suo tempio; Tërà di Turan, la dea che fa crescere le cose. Il vino non smentisce nessuna delle due. A Ngarà c’è anche chi giura che il nome viene da un’àncora trovata sotto le mura, così lontano dal mare.\n· ⟦[[Il primo bicchiere.]] Il primo vino della vendemmia non si beve: si versa sulla terra, in mezzo alla vigna. I sacerdoti dicono che è per il Sole. I vecchi non dicono per chi.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Poca guardia.]] Ngarà ha dieci armigeri e Tërà nessuno. Le vigne sono la ricchezza più facile del Ducato da prendere, e lo sanno tutti: i briganti, Ventonero, e chi sta oltre il fiume.\n· ⟦[[I templari di passaggio.]] Gli uomini della Fiamma d’oltre Truntum passano per Ngarà senza chiedere permesso a nessuno, e il vicario apre loro la porta. A Tërà non piace.⟧\n· ⟦[[Troppi braccianti.]] Quest’anno ne sono arrivati più del solito, e alcuni non se ne sono andati dopo la vendemmia. Dormono nei casali vuoti, parlano poco, e pagano in moneta buona.⟧\n· ⟦[[Il prezzo del vino.]] Teramum ha messo un dazio nuovo sul vino che entra in città. Il Consorzio ha risposto vendendo oltre il fiume, attraverso la cantina del vicario. Il Consiglio non l’ha presa bene.⟧"
   }
  ],
  "illustrazione": "Mondo — Ngarà e Tërà.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«A Ngarà la porta da mare è nostra, e la chiave è di là.»",
+  "cite": "⟦Detto di Tërà⟧"
+ }
 }

@@ -14,25 +14,121 @@
  "mappa": null,
  "colore": "#3E6E9E",
  "scheda": {
-  "Governatore": "Gilda dei Ceramisti",
-  "Fedeltà": "Martello Bianco",
-  "Corrisponde a": "Castelli"
+  "Paese vero": "Castelli",
+  "Altri nomi": "Li Cashtillë in dialetto, perché un tempo la gente della valle viveva chiusa nei «castelli»",
+  "Abitanti": "⟦Circa novecento, con le contrade⟧",
+  "Chi comanda": "La Gilda dei Ceramisti, dove contano tre famiglie: i Grue, i Pompei e i Gentili. ⟦La guida un Console, scelto ogni anno fra i capi bottega⟧",
+  "Nel paese": "Il solario del Lucente Giovanni, la Loggia della Gilda, le botteghe dei Grue, dei Pompei e dei Gentili, le fornaci, la scuola nella casa dei votati",
+  "Nei dintorni": "L’ara del Lucente Donato con il cielo di maiolica, il solario del Lucente Rocco, le rovine dell’abbazia, la Leomogna, le cave d’argilla, il Monte Camicia, le contrade",
+  "Strade": "Per Lésënë, per Cashtagnë, per Bisindë e Cashtijunë, per Cullëdarë e Bbashanë",
+  "Guardia": "⟦Nessuna guardia di mestiere. I garzoni delle botteghe, quando serve, e le porte chiuse di notte⟧",
+  "Lucente": "Il Lucente Eusanio, che si festeggia l’8 maggio",
+  "Distanze": "⟦Lésënë, mezza giornata a ovest; Cashtagnë, mezza mattina a nord; Bisindë, una giornata verso est; Teramum, due giorni con i carri⟧"
  },
- "gm": "La Ceramica Vivente: i golem di ceramica si muovono quando nessuno guarda, le rune incise hanno potere reale. Alleati di Torvus: fornitura di rune e costrutti. Le armature cerimoniali della Forgia del Gigante ne copiano i disegni.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il borgo della Ceramica Vivente: i golem di maiolica si muovono quando nessuno guarda, e le rune incise hanno potere vero. La Gilda è alleata di Torvus, a cui fornisce rune e costrutti, e le armature cerimoniali della Forgia del Gigante dei Grazianus ne copiano i disegni. Per la Crociata Li Cashtillë è un fornitore e un alleato possibile sulla strada di Lésënë, a mezza giornata dall’Aquila Aurea."
+  },
+  {
+   "t": "La Ceramica Vivente",
+   "txt": "· I golem di ceramica si muovono quando nessuno guarda, e le rune incise hanno potere reale (Manuale e vecchia voce).\n· ⟦Come funziona. Le rune sono quelle del Gigante: i votati dell’abbazia le copiarono dalla pietra della montagna e le insegnarono ai primi vasai insieme al mestiere. I Pompei hanno i disegni originali, i Grue sanno usarli, i Gentili lo sospettano e lo chiamano stregoneria. Gli animali contro il malocchio del soffitto del Lucente Donato sono rune vere: di notte, nell’ara, si sentono zampe sul soffitto.⟧\n· ⟦I golem. Nella bottega dei Grue ci sono due cani di maiolica alti come un uomo, ai lati della porta. Di notte cambiano posto. Statistiche: Armature animate del Manuale dei Mostri, con resistenza ai danni da fuoco e vulnerabilità ai danni contundenti.⟧\n· ⟦Maximus è un cavaliere delle rune: le rune dei piatti le riconosce come la lingua dei giganti. Un Grue che lo scopre gli offre di incidere una runa nuova sulla sua armatura, in cambio di un favore.⟧"
+  },
+  {
+   "t": "Torvus e la Forgia",
+   "txt": "· La Gilda fornisce a Torvus e al Martello Bianco di Julia Nova rune e costrutti.\n· La Forgia del Gigante di Casa Grazianus, a Teramum, copia i disegni di Li Cashtillë sulle armature da parata. Nelle scene di Teramum si vedono in una vetrina del rione delle forge. ⟦Non solo i disegni: Lucius Grazianus ha comprato in segreto tre rune dai Gentili, e le sue armature cerimoniali reggono più di quanto dovrebbero. I Grue lo sanno e non lo perdonano.⟧"
+  },
+  {
+   "t": "I Grue e i Fonteviva",
+   "txt": "Nella storia vera Castelli fu dei conti di Pagliara, poi degli Orsini, per un tempo legata al Ducato di Atri degli Acquaviva (lo stemma in un affresco di San Rocco), poi degli Alarcón; i Grue lavoravano per gli Acquaviva. ⟦Nel gioco: i Grue sono i vasai di fiducia dei Fonteviva di Atrë, e Giosia di Fonteviva tiene ancora un vecchio privilegio sulle cave d’argilla. Chi vuole arrivare a Giosia senza passare dalla porta può passare dai Grue: un piatto con un messaggio dipinto sotto lo smalto arriva sulla tavola del Duca.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Le botteghe.]] Un posto dove comprare e far fare oggetti: maiolica di lusso come dono per una Casata, albarelli per gli Speziali di Lésënë, ⟦un’armatura con una runa incisa⟧.\n· [[Le copie di Teramum.]] ⟦Il falsario lavora nella Gammarana, fra le fornaci di Teramum, per la Lega dei Sensali. L’uomo della Gilda che non è tornato è nella Casa dei Folli.⟧\n· [[La strada per Lésënë.]] Li Cashtillë sta su un percorso che evita Tussëcië: dalla costa per Bisindë, poi su per le falde. Con i carri della Gilda la Crociata passa come una carovana di vasai.\n· [[Il dono per la Convocazione.]] ⟦Un piatto dei Grue con lo stemma di una Casata è il dono giusto per presentarsi a quella Casata a Lésënë.⟧\n· [[La festa del piatto.]] Una scena pronta per l’estate: tutto il paese al torrente, i mercanti, la fiera. Buon momento per incontrare chi viene da fuori."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Castelli vera: falde sud-orientali del Gran Sasso sotto il Monte Camicia, fra il Rio e la Leomogna; il nome dai «castelli» fortificati in cui si raccolse la gente della valle; l’abbazia benedettina di San Salvatore, oggi scomparsa, i cui monaci per tradizione insegnarono a lavorare l’argilla; la maiolica, «compendiaria» e «istoriata», con le famiglie Pompei (le più ricche), Grue e Gentili; San Donato con il soffitto di circa mille mattonelle (1615-1617, attribuito ai Pompei); la pala in maiolica del 1647 dei Grue in San Giovanni Battista; San Rocco con la Madonna lignea, l’ambone da San Salvatore e l’affresco con il legame ad Atri; il convento francescano oggi scuola e museo, con i ventiquattro tondi nel chiostro; il Lancio del piatto del 15 agosto e la mostra mercato; le tacconelle con le voliche; lu jabbècco; Sant’Eusanio patrono l’8 maggio; le frazioni. Quello che non è segnato come proposta viene da lì o dalle fonti di Giuseppe (Studio dei paesi veri, Folklore, Dialetti).\n· Con il Lessico di Ea le chiese sono solari, San Donato un’ara, i frati votati, i santi lucenti, la Madonna la Vecchia Madre.\n· L’id del file è `borgo-cashtagne`, ma la voce è Li Cashtillë (Castelli): nel vecchio canone, nel Manuale e nei titoli dello Studio i nomi erano scambiati; vale la decisione di Giuseppe dell’8-10 (v166).\n· La famiglia del borgo è Grue (Nomi delle casate). Pompei e Gentili sono famiglie vere di Castelli.\n· Lo Studio nota che la fama «in tutto l’Impero» è un anacronismo leggero: la maiolica di Castelli fiorisce dal Cinquecento. Qui si dice «in tutto il Ducato» e oltre.\n· Torvus è «Mastro Torvus», come nella voce della contea."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se i golem e le rune sono un segreto della Gilda o una cosa che in paese tutti sanno.\n· Chi compra le rune dalla Gilda oltre a Torvus.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Montagna del Gigante",
  "id": "borgo-cashtagne",
  "parent": "contea-montagna-del-gigante",
  "title": "Li Cashtillë",
- "sub": "Martello Bianco",
+ "sub": "Il borgo della maiolica, sotto il Monte Camicia",
  "pub": [
   {
    "t": "",
-   "txt": "Il borgo della ceramica, famoso in tutto l'Impero: piatti, vasi e maioliche con smalti che nessun altro sa fare. La Gilda dei Ceramisti è alleata del Maestro Torvus e del Martello Bianco di Julia Nova.",
+   "capo": true,
+   "txt": "Li Cashtillë sta aggrappata alle falde del Gigante, sotto il Monte Camicia, la cui parete sale dietro le case come un muro grigio alto più di mille passi. È un paese piccolo, su uno sperone fra due torrenti, la Leomogna e il Rio, con il fumo delle fornaci che sale dritto nelle mattine senza vento.\n\nIn tutto il Ducato il suo nome vuol dire una cosa sola: la maiolica. Piatti, vasi, mattonelle, albarelli da speziale, smaltati di bianco e dipinti di blu cobalto, giallo, verde e bruno. Ci sono piatti di Li Cashtillë nelle case dei mercanti di Julia Nova, nei palazzi di Teramum e, dicono, oltre i confini dell’Impero. Qui non si coltiva quasi niente: si scava l’argilla, si taglia il faggio per i forni e si dipinge."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il paese è una sola strada che sale lungo lo sperone, con le case di pietra e le botteghe una dopo l’altra. Le botteghe hanno il banco sulla strada, e i pezzi messi ad asciugare sui davanzali. Dietro le case, sul lato del torrente, stanno le fornaci, basse e nere. In cima c’è il solario del Lucente Giovanni; più in basso, appena fuori dal borgo vecchio, la piazza del Lucente Rocco.\n\nLi Cashtillë non ha mura. Quando cadde il primo Impero, la gente della valle salì a chiudersi in piccoli villaggi fortificati, i «castelli», ed è da lì che viene il nome. Poi per secoli il paese fu delle terre di un’abbazia, e furono i votati, dicono, a insegnare alla valle a lavorare l’argilla. Dell’abbazia oggi restano pochi muri. Le difese di Li Cashtillë sono la montagna e i valloni. Intorno al paese ci sono le contrade, sparse fra i boschi e le cave.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La strada di Lésënë",
+      "A ovest, lungo le falde, fino all’Aquila Aurea",
+      "⟦Mezza giornata⟧"
+     ],
+     [
+      "La strada del Mavone",
+      "A nord, giù nella valle e su fino a Cashtagnë",
+      "⟦Mezza mattina⟧"
+     ],
+     [
+      "La via dei carri",
+      "A est, verso Bisindë e Cashtijunë, e da lì alla costa",
+      "⟦Una giornata fino a Bisindë⟧"
+     ],
+     [
+      "Il tratturo",
+      "A nord-est, verso Cullëdarë e Bbashanë, e da lì a Teramum",
+      "⟦Due giorni fino a Teramum, con i carri carichi⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Li Cashtillë.jpg",
    "didascalia": "Li Cashtillë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il solario del Lucente Giovanni.]] Il solario in cima al paese. Sull’altare c’è una grande pala tutta di maiolica, fatta da un Grue: è il pezzo di cui il paese va più fiero.\n· ⟦[[2. La Loggia della Gilda.]] Un portico sulla strada, davanti al solario, con le pareti coperte di mattonelle: ogni bottega ne ha messa una con il suo segno. Qui siede il Console, qui si fissano i prezzi e qui si giudicano le liti fra vasai. Chi vuole comprare in grande tratta qui, non nelle botteghe.⟧\n· [[3. La bottega dei Grue.]] La famiglia più famosa del paese. I Grue dipingono storie, nel modo che qui chiamano «istoriato»: dèi antichi, cacce, cavalieri armati, paesaggi con le rovine. Hanno vecchi legami con i Fonteviva di Atrë, che comprano da loro i servizi da tavola. ⟦Il vecchio Grue non vende a chi non sa dire cosa c’è dipinto sul piatto.⟧\n· [[4. La bottega dei Pompei.]] La famiglia più ricca e più antica, quella che fece il cielo dell’ara del Lucente Donato. Fra Pompei e Grue la rivalità dura da generazioni. ⟦I Pompei hanno ancora i disegni vecchi, quelli dei tempi dell’abbazia, e non li mostrano a nessuno.⟧\n· [[5. La bottega dei Gentili.]] La terza grande famiglia. ⟦I Gentili dipingono fiori e lucenti, in fretta e con pochi colori, alla maniera «compendiaria», e vendono più di tutti. Dicono che i Grue dipingono «roba da pagani».⟧\n· [[6. Le fornaci.]] Dietro le case, sul torrente. Forni bassi di mattone, che bruciano faggio notte e giorno quando c’è una cotta. ⟦Durante la cotta nessuno ci parla vicino: si dice che una parola cattiva spacchi i pezzi.⟧\n· [[7. La scuola nella casa dei votati.]] La vecchia casa dei votati è diventata la scuola della Gilda. I ragazzi imparano a tornire, a smaltare e a dipingere, e nel chiostro ci sono ventiquattro tondi di maiolica, uno per ogni maestro famoso.\n· ⟦[[8. La macina dei colori.]] Una casa con una mola di pietra che gira a mano. Qui si pestano le terre e le pietre per i colori: il blu, che viene da lontano e costa come l’argento, il giallo, il verde, il bruno. La tiene una donna sola, Ggiuwanna la Cobalta, con le mani blu fino al polso.⟧\n· ⟦[[9. L’osteria del Coccio.]] L’unica osteria del paese: si mangia nei piatti scartati, quelli con un difetto, e ogni piatto è diverso. Tacconelle con le voliche, la pasta all’uovo con il sugo di maiale e le erbe del bosco; pecora alla brace; il vino che sale da Bisindë. Due stanze per i mercanti.⟧\n· ⟦[[10. Il magazzino dei mercanti.]] Una casa lunga in fondo al paese, dove si impaglia la maiolica nelle casse e si caricano i muli. Ci passano le casse per Julia Nova, per Teramum e per il mare.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[11. L’ara del Lucente Donato.]] Un’ara di campagna appena fuori dal paese. Dentro, il soffitto è fatto di circa mille mattonelle di maiolica, messe in opera dalle botteghe del paese: stemmi, animali contro il malocchio, fiori, scritte di preghiera, disegni geometrici. ⟦La chiamano «l’ara con il cielo di coccio». Ognuno sa trovare le mattonelle del nonno.⟧\n· [[12. Il solario del Lucente Rocco.]] Sulla piazza, appena fuori dal borgo vecchio, dove si radunano i carri e i muli. Dentro c’è una Vecchia Madre di legno molto antica, e un pulpito di pietra portato via dall’abbazia. Su una parete un pittore venuto da Atrë ha dipinto lo stemma dei Fonteviva.\n· [[13. Le rovine dell’abbazia.]] Qui c’era l’abbazia dei votati che per secoli tenne tutte queste terre e insegnò il mestiere. Oggi restano pochi muri fra i rovi, e il nome a una contrada.\n· [[14. La Leomogna.]] Il torrente sotto il paese. ⟦A metà agosto, nella festa del piatto, ognuno butta dal ponte un piatto difettoso nella Leomogna, e chi lo sente spaccarsi più forte avrà un anno buono.⟧\n· ⟦[[15. Le cave d’argilla.]] Nei valloni sotto il paese. L’argilla buona è grigia e grassa, e ogni famiglia ha la sua cava. Le liti per le cave sono le uniche liti serie del paese.⟧\n· ⟦[[16. Lu Cimitere de li Cocci.]] Il fosso dove da secoli si buttano i pezzi rotti. È alto come una casa, e luccica al sole. I bambini ci cercano i frammenti più belli.⟧\n· [[17. Il Monte Camicia.]] La parete sopra il paese: più di mille passi di roccia dritta, e sotto un bosco fitto di faggi. Dall’alto, verso ovest, si passa ai pascoli del Gigante.\n· [[18. Le contrade.]] Villa Rossi, Casette, San Donato, San Salvatore, Colledoro, Palombara, Befaro: case di boscaioli, carbonai e cavatori, che portano al paese legna e argilla."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I castellani hanno le mani sempre sporche di terra e gli occhi abituati ai colori. Sono orgogliosi e litigiosi: fra una bottega e l’altra ci sono rivalità che durano da generazioni. Ma davanti ai forestieri il paese è uno solo, e chi offende un vasaio offende la Gilda. Parlano con la «a» che diventa «è»: qui si dice magnè, non magnà.\n\n· [[Il segno.]] Ogni bottega ha il suo segno, dipinto sotto il piede del pezzo. Chi copia il segno di un’altra bottega è cacciato dalla Gilda.\n· [[Il Lucente Eusanio.]] L’8 maggio, la festa del patrono. ⟦Ogni bottega dipinge un piatto per il lucente, e i piatti si appendono lungo la strada. Il più bello resta nel solario per un anno.⟧\n· [[La festa del piatto.]] A metà agosto il paese scende alla Leomogna e lancia i piatti nel torrente. Lo stesso mese si apre la fiera, e i mercanti salgono da tutto il Ducato.\n· ⟦[[La prima cotta.]] Quando un garzone diventa maestro, cuoce il suo primo pezzo da solo. Se esce intero, lo regala alla madre; se si spacca, lo regala alla montagna, buttandolo nel Cimitere de li Cocci.⟧\n· [[Lu jabbècco.]] Ai bambini che non dormono si dice che viene lu jabbècco, l’uomo nero di Li Cashtillë.\n· [[Gli amici di Julia Nova.]] La Gilda è alleata di Mastro Torvus e del Martello Bianco.\n· ⟦[[Pagare in pecorino.]] Come in tutta la montagna, una forma di pecorino buono vale come moneta. Un piatto dei Grue costa tre forme, o un mese di lavoro di un garzone.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[La terra trema.]] Una scossa d’estate ha fatto crollare un forno e spaccato una cotta intera. I vecchi ricordano un terremoto antico che buttò giù mezzo paese, e guardano la parete.⟧\n· ⟦[[I dazi.]] Le casse di maiolica che scendono a Teramum pagano dazio a ogni ponte. Da quando il Consiglio ha alzato le tariffe, conviene mandarle a Julia Nova per i Tratturi, ma ci vuole il doppio.⟧\n· ⟦[[Le copie.]] A Teramum si vendono piatti con il segno dei Grue che i Grue non hanno mai fatto. La Gilda ha mandato un uomo a scoprire chi li fa. Non è tornato.⟧\n· ⟦[[Il blu.]] Il blu cobalto arriva dal mare, e dal mare, dopo l’assedio di Julia Nova, arriva poco. La Cobalta lo dà a once, e le botteghe litigano per ogni oncia.⟧"
   }
  ],
  "illustrazione": "Mondo — Li Cashtillë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "⟦«La crete è terra, lu foche è il Gigante, il colore è della Madre.»⟧",
+  "cite": "Detto dei vasai"
+ }
 }

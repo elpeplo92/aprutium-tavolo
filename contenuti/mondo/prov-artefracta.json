@@ -12,22 +12,50 @@
  "mappa": null,
  "colore": "#4F7F8A",
  "scheda": {
-  "Capitale": "Alviria, una città tra gli alberi",
+  "Governo": "Si governa da sola: all’Impero dà maghi e oggetti magici, non tasse né soldati",
   "Chi comanda": "L’Arconte Aelindra Sylvaris, con il Consiglio dei Sapienti",
+  "Capitale": "Alviria, una città tra gli alberi",
   "Popolazione": "Circa un milione e mezzo, di cui duecentomila Aelvarri",
-  "Vive di": "Sapere, oggetti magici, legni pregiati, gemme dei laghi",
-  "Esercito": "I Guardiani della Foresta e pochi maghi da battaglia",
-  "Fede": "La Fede del Ciclo: l’unica provincia dove la Fiamma non comanda",
-  "Lingua": "L’Aelvarim, la lingua degli Aelvarri"
+  "Popoli": "Umani nelle città di pianura e nelle fattorie; Aelvarri nei boschi; molti gnomi; pochi nani",
+  "Casata": "Nessuna Grande Casata: le antiche casate elfiche, più vecchie dell’Impero",
+  "Fede": "La Fede del Ciclo: l’unica provincia dove la fede ufficiale non è la Fiamma",
+  "Vive di": "Sapere, oggetti magici, legni pregiati, erbe, gemme dei laghi",
+  "Esercito": "I Guardiani della Foresta, le Sentinelle dei Laghi e pochi maghi da battaglia",
+  "Lingua": "L’Aelvarim tra gli elfi; gli umani parlano un dialetto cantato, pieno di parole elfiche",
+  "Motto": "Sopra le porte dell’Accademia: «Non abbiamo scelto la luce. Abbiamo scelto di non spegnere quella degli altri»"
  },
  "gm": [
   {
-   "t": "",
-   "txt": "· Gli Aelvarri di Artefracta sono malinconici e perseguitati dalla vergogna dello Scisma: non se ne pentono, ma il dolore non passa.\n· Qui vive ancora la [[Principessa Aelwen Stellantica]], che nella guerra inventò il modo di catturare i Sigilli. Se qualcuno sa come purificarli, è lei.\n· I contemplativi della Chiesa, quelli che credono che Valerus sia ferito, hanno qui la loro base."
+   "t": "La vergogna dello Scisma",
+   "txt": "Gli Aelvarri di Artefracta sono perseguitati dalla vergogna dello Scisma: non se ne pentono, ma il dolore non passa. Molti avevano una moglie, un fratello o un maestro tra i Drukarri, e lo ricordano come se fosse ieri. Nei loro canti notturni c’è un dolore che nessun umano capisce davvero."
+  },
+  {
+   "t": "Aelwen",
+   "txt": "Qui vive ancora la [[Principessa Aelwen Stellantica]], che nella guerra inventò il modo di catturare i Sigilli. Se qualcuno sa come purificarli, è lei. Ha visto Aldric Aurex fermarsi per lei sui Campi d’Argento, e non tornare. Riconoscerebbe a prima vista lo stendardo di Aldric, d’oro con le lettere A.A. (vedi La Guerra delle Due Lune).\n\nAelwen riportò indietro dai Campi d’Argento tre Sigilli riconvertiti, «freddi e muti». ⟦Dove siano finiti quei tre, lo sanno lei e i Custodi del Ciclo: è uno dei pochi segreti che ad Alviria non conosce nemmeno l’Arconte.⟧"
+  },
+  {
+   "t": "I contemplativi",
+   "txt": "I contemplativi della Fiamma, quelli che credono che la distruzione di Noxtua abbia ferito anche Valerus, hanno qui la loro base. Hanno ragione (vedi La Frattura e Valerus). ⟦All’Accademia c’è chi ha letto le stesse fonti della Biblioteca Incompiuta di Teramum: i Frammenti di Solaria Prima, il Canto integrale.⟧"
+  },
+  {
+   "t": "Artefracta e Silvanus",
+   "txt": "⟦Gli Aelvarri riconobbero in Aurax «qualcosa che non era del tutto umano». In Silvanus, figlio di un Aurex e di una Silvarri, sentirebbero lo stesso, e di più: le tre luci insieme. L’Accademia vorrà studiarlo. Aelwen vorrà vederlo. L’Arconte vorrà capire se è la fine del Ciclo spezzato o l’inizio di un’altra guerra.⟧"
+  },
+  {
+   "t": "La faida con Laguras",
+   "txt": "Un’invasione di Laguras contro Artefracta è uno scenario possibile e terribile (vedi Laguras Solis). Sylva Noctis lo sa, e un incidente costruito ad arte potrebbe bastare."
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· Un mago dell’Accademia della Luce arriva nel Ducato per studiare il Sigillo sotto Bëllindë, o chi lo ha trovato.\n· La notte del Pianto di Maia: l’acqua raccolta ha davvero piccole virtù di guarigione.\n· ⟦Un oggetto di Artefracta trovato su un Forgiato: chi lo ha venduto, e a chi?⟧"
+  },
+  {
+   "t": "Da allineare",
+   "txt": "· I testi di lore descrivono Artefracta come una «Confederazione Libera Elfica» senza un sovrano, che decide per consenso. Il sito ha l’Arconte: qui le due cose stanno insieme, l’Arconte presiede e il Consiglio decide per consenso.\n· «L’unica provincia dove la Fiamma non comanda» (vecchia scheda) e «la Fiamma quasi non c’è» (Insulae Auree) sembravano in contrasto: qui è «l’unica dove la fede ufficiale non è la Fiamma». Nelle Insulae la Fiamma è ancora la fede ufficiale, anche se nessuno ci va.\n· Il Pianto di Maia, la moneta fatta di debiti, la forza dei guerrieri elfici e le Torri di Artefracta vengono dai testi di lore e dal Manuale.\n· I testi di lore chiamavano la provincia Sylwarin. Nei testi di lore c’è anche una profetessa elfica, Ailindra, con un nome quasi uguale a quello dell’Arconte: non usata, per non confonderle."
   },
   {
    "t": "Da decidere",
-   "txt": "· Che rapporto c’è tra l’Arconte Aelindra e la Principessa Aelwen."
+   "txt": "· Che rapporto c’è tra l’Arconte Aelindra e la Principessa Aelwen.\n· Dove sono i tre Sigilli che Aelwen riportò dai Campi d’Argento, e se sono tra i quattro del Ducato.\n· Quanti sono gli Aelvarri di Artefracta (la voce degli Aelvarri lo lascia aperto; qui restano duecentomila)."
   }
  ],
  "parent": "impero-aureo",
@@ -40,25 +68,104 @@
   {
    "t": "",
    "capo": true,
-   "txt": "Foreste antiche, laghi profondi avvolti nella nebbia, colline coperte di muschio. I boschi di Artefracta sono i più vecchi dell’Impero, e tra i loro rami vive il ramo degli Aelvarri che scelse di stare con gli uomini. Aurax entrò in questi boschi disarmato, e ne uscì con il loro rispetto. Da allora Artefracta fa parte dell’Impero senza aver mai smesso di governarsi da sola."
+   "txt": "Foreste antiche, laghi profondi avvolti nella nebbia, colline coperte di muschio. I boschi di Artefracta sono i più vecchi dell’Impero: si dice che le radici dei loro alberi tocchino le ossa della terra. Tra i loro rami vive il ramo degli Aelvarri che scelse di stare con gli uomini.\n\nArtefracta fa parte dell’Impero senza aver mai smesso di governarsi da sola. Gli elfi non pagano le tasse imperiali e non servono nelle Falangi; in cambio danno all’Impero maghi e oggetti magici, e l’Impero li protegge da Sylva Noctis. Entrambi fingono che sia un rapporto tra sovrano e sudditi, ed entrambi sanno che non lo è."
   },
   {
-   "t": "I. Chi comanda",
-   "txt": "Governa l’[[Arconte Aelindra Sylvaris]], un’elfa di oltre ottocento anni, con un Consiglio dei Sapienti di elfi e di umani. La sua parola è legge, non per forza ma per rispetto. Gli Aelvarri non pagano le tasse imperiali e non servono nelle Falangi; in cambio danno all’Impero maghi e oggetti magici, e l’Impero li protegge da Sylva Noctis. Entrambi fingono che sia un rapporto tra sovrano e sudditi.",
+   "t": "I. In breve, la sua storia",
+   "txt": "Gli Aelvarri nacquero dalla luce di Maia, e la loro patria è il Vicereame Elverio, a nord. Ma un ramo di loro viveva già in questi boschi quando arrivò Aurax. Gli elfi non avevano bisogno di lui, e lui lo sapeva. Non chiese obbedienza, ma alleanza: entrò nei loro boschi disarmato, e ne uscì con il loro rispetto. Gli Aelvarri dicono che riconobbero in lui qualcosa che non era del tutto umano.\n\nPoi venne la Frattura, e furono i cugini degli Aelvarri, i Drukarri, a guidare le orde. Gli elfi di Artefracta restarono paralizzati dalla vergogna, finché scelsero: rinnegarono il loro stesso sangue e si unirono all’Alleanza del Sole Spezzato. È lo [[Scisma]], e il detto che apre questa voce. Li guidò la [[Principessa Aelwen Stellantica]], la più giovane dei comandanti dell’Alleanza: fu lei a inventare il modo di catturare i Sigilli Lunari, e la terza notte dei Campi d’Argento fu lei a spezzare l’Occhio di Velathrys.\n\nDa allora Sylva Noctis considera gli elfi di Artefracta dei traditori, e li vuole distrutti.",
    "img": "Mondo — Artefracta.png",
    "didascalia": "Artefracta"
   },
   {
-   "t": "II. L’Accademia della Luce",
-   "txt": "Ad Alviria c’è l’[[Accademia della Luce]], la scuola di magia più famosa di Ea e l’unica che la Chiesa tolleri. Sopra le sue porte c’è scritto: «Non abbiamo scelto la luce. Abbiamo scelto di non spegnere quella degli altri.»"
+   "t": "II. Come si governa",
+   "txt": ""
   },
   {
-   "t": "III. I laghi",
-   "txt": "I laghi di Artefracta sono belli e inquietanti. Molti sono crateri lasciati dai frammenti di Noxtua, e le loro acque fanno cose strane. Ogni tanto, da qualcuno, esce qualcosa che non dovrebbe esistere, e le Sentinelle dei Laghi lo ricacciano indietro."
+   "t": "L’Arconte e il Consiglio dei Sapienti",
+   "liv": 3,
+   "txt": "Governa l’[[Arconte Aelindra Sylvaris]], un’elfa di oltre ottocento anni, la più anziana degli Aelvarri di Artefracta. Il suo volto non mostra l’età; i suoi occhi sì. Accanto a lei siede il [[Consiglio dei Sapienti]], di elfi e di umani. La sua parola è legge, non per forza ma per rispetto. Il Consiglio decide per consenso, e un consenso elfico può richiedere una stagione intera. L’Arconte ha il voto di Artefracta nel Concilio dei Reggenti, e lo usa di rado."
   },
   {
-   "t": "IV. Vicini e nemici",
-   "txt": "Laguras li odia, il Luminor Meridionale li considera eretici, tutti li temono per la loro magia. Sylva Noctis li considera traditori e li vuole distrutti. Con gli Aelvarri di Elverio, la loro patria antica, c’è affetto e un po’ di sufficienza."
+   "t": "L’Accademia della Luce",
+   "liv": 3,
+   "txt": "Ad Alviria c’è l’[[Accademia della Luce]], la scuola di magia più famosa di Ea e l’unica che la Fiamma tolleri. Forma i pochi maghi che l’Impero accetta, e attira studiosi da ogni provincia. Sopra le sue porte c’è scritto: «Non abbiamo scelto la luce. Abbiamo scelto di non spegnere quella degli altri.» Nelle sue sale si prega [[Memora]], con un nome elfico tutto suo, come la più saggia delle stelle."
+  },
+  {
+   "t": "Gli elfi e gli uomini",
+   "liv": 3,
+   "txt": "Gli Aelvarri sono pochi e vivono a lungo. Ricordano tutto: un elfo che oggi cammina per Alviria potrebbe aver visto la Frattura con i suoi occhi. Sono saggi, malinconici, e guardano gli altri popoli con una gentilezza che sa di sufficienza. Gli umani di Artefracta sono la maggioranza: vivono nelle città di pianura e nelle fattorie, sono più colti e più aperti di quelli delle altre province, e vivono all’ombra della grandezza elfica. Molti gnomi lavorano nelle botteghe; i nani sono pochi, e i rapporti con loro freddi.\n\nTra gli elfi non girano monete. Ognuno sa che cosa deve a chi, e un debito può passare di padre in figlio per generazioni."
+  },
+  {
+   "t": "La fede",
+   "liv": 3,
+   "txt": "Artefracta è l’unica provincia dove la fede ufficiale non è la Fiamma. Gli Aelvarri seguono la [[Fede del Ciclo]]: venerano l’equilibrio tra Valerus, Maia e un tempo Noxtua. La Fiamma li tollera a fatica, e i Purificatori vorrebbero «convertirli» con la forza.\n\nUna notte all’anno, in una data che nessuno sa prevedere, nelle valli di Artefracta cade il [[Pianto di Maia]]: una pioggia d’argento, il lutto della luna per la sorella perduta. Per gli elfi è la festa più sacra dell’anno."
+  },
+  {
+   "t": "III. Le terre",
+   "tabella": {
+    "head": [
+     "Terra",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "Alviria",
+      "La capitale, una città tra gli alberi: case e sale sui rami e intorno ai tronchi, ponti sospesi, l’Accademia della Luce."
+     ],
+     [
+      "Le foreste antiche",
+      "Alberi millenari, i più vecchi dell’Impero. Qui vivono gli Aelvarri. ⟦Chi entra senza invito viene accompagnato fuori, con gentilezza.⟧"
+     ],
+     [
+      "I laghi",
+      "Laghi profondi, nella nebbia. Molti sono crateri lasciati dai frammenti di Noxtua, e le loro acque fanno cose strane. Dai fondali vengono le gemme dei laghi."
+     ],
+     [
+      "Le colline di muschio",
+      "Colline dolci, pascoli, villaggi umani, erbe che crescono solo qui."
+     ],
+     [
+      "Le città di pianura",
+      "Città di umani e di gnomi, con botteghe di artefici, scuole e mercati di libri. ⟦Le più grandi hanno una torre di studio legata all’Accademia: le chiamano le Torri di Artefracta.⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito",
+   "txt": "Artefracta non ha una Falange, e non la vuole. Ha pochi soldati, ma tutti lo sanno: un guerriero elfico vale cinque soldati umani, e un mago elfico ne vale cinquanta.",
+   "tabella": {
+    "head": [
+     "Forza",
+     "Quanti",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "I Guardiani della Foresta",
+      "⟦Qualche migliaio⟧",
+      "L’Arconte: arcieri elfici e ranger umani che tengono i confini"
+     ],
+     [
+      "Le Sentinelle dei Laghi",
+      "Poche",
+      "L’Arconte: pattugliano i laghi e ricacciano indietro quello che ne esce"
+     ],
+     [
+      "I maghi da battaglia",
+      "Pochi, e restii a combattere",
+      "L’Accademia della Luce"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Il sapere e il commercio",
+   "txt": "Artefracta vende quello che sa. Il suo nome viene dagli artefatti: armi, gioielli e strumenti incantati, di una bellezza che nessuna bottega umana raggiunge, ricercati in tutto il continente. Dai boschi vengono legni pregiati ed erbe arcane, dai laghi le gemme. Gli oggetti di Artefracta escono dall’Impero soprattutto per le dogane di Storestia, che ci prende la sua parte.\n\nL’Accademia porta studiosi, e gli studiosi portano denaro. ⟦Un anno ad Alviria costa quanto una casa a Teramum. Chi può permetterselo torna diverso, e qualcuno non torna.⟧"
+  },
+  {
+   "t": "VI. I mali di Artefracta oggi",
+   "txt": "· [[Laguras.]] I laguresi chiamano gli elfi «fratelli di sangue dei Celomanti», anche se furono proprio loro a tradire i cugini. Tra le due province non c’è guerra, ma ogni inverno la parola gira più forte.\n· [[La Fiamma.]] Il Luminor Meridionale li considera eretici, per la loro fede e per la loro magia. I Purificatori sono sempre più forti.\n· [[Sylva Noctis.]] I Drukarri non hanno mai perdonato lo Scisma.\n· [[I laghi.]] Ogni tanto, da qualcuno, esce qualcosa che non dovrebbe esistere, e le Sentinelle lo ricacciano indietro. Non sempre in tempo.\n· [[La paura degli altri.]] Tutti temono la magia di Artefracta, anche chi ne compra gli oggetti. Con gli Aelvarri di Elverio, la loro patria antica, c’è affetto e un po’ di sufficienza; con i mezzelfi di Oralin, una condiscendenza educata."
   }
  ],
  "epigrafe": {

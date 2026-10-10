@@ -14,25 +14,117 @@
  "mappa": null,
  "colore": "#3E5A3A",
  "scheda": {
-  "Governatore": "Il Clan dei Boscaioli",
-  "Fedeltà": "Indipendente",
-  "Corrisponde a": "Valle Castellana"
+  "Paese vero": "Valle Castellana",
+  "Altri nomi": "Lë Piana, o I Piana, in dialetto; i suoi uomini sono i pianaroli. A Teramum li chiamano i Briganti della Laga, o i boscaioli",
+  "Abitanti": "⟦Circa ottocento, in più di trenta ville; molte sono vuote⟧",
+  "Chi comanda": "Il clan della Piana, con a capo i Corvanera. Una parte delle ville paga anche ai signori d’oltre confine",
+  "Nel paese": "Il colle della Piana, il solario dell’Annunziata, la casa dei Corvanera, le caciare",
+  "Nei dintorni": "Castel Manfrino sopra il Salinellum, il priorato del Monte Nero, i solari antichi delle ville, la Montagna dei Fiori, le ville vuote, il Castellano",
+  "Strade": "La mulattiera di Castel Manfrino verso Cëvëtëlla; i sentieri per La Ròcchë; i passaggi del Castellano verso le Marche",
+  "Guardia": "⟦Nessuna guardia: ogni uomo del clan ha un’ascia o una balestra, e una trentina sanno usarle come si deve⟧",
+  "Lucente": "La Vecchia Madre dell’Annunziata, che si festeggia il 25 marzo",
+  "Distanze": "⟦Cëvëtëlla, una giornata e mezza di montagna; La Ròcchë, una giornata di sentieri; il confine delle Marche, mezza giornata⟧"
  },
- "gm": "Indipendenti e comprabili. Forza d'urto irregolare se ben pagata; conoscono la Laga come nessuno.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Indipendenti e comprabili. Se ben pagati, una forza d’urto irregolare; conoscono la Laga come nessuno. Per la Crociata, i pianaroli sono guide e braccia a pagamento, e un passaggio di confine che può essere aperto o chiuso. Sono anche il punto in cui il Luminor Meridionale tocca la Laga: chi vuole far entrare uomini nel Ducato senza passare dal Truntum, passa di qui."
+  },
+  {
+   "t": "Il clan e chi lo paga",
+   "txt": "· ⟦[[Lu Ceppë.]] Il vecchio Corvanera, capo del clan: sessant’anni, grande, lento a parlare. Non ha mai visto Teramum e non vuole vederla. Decide il consiglio, ma il consiglio fa quello che dice lui, quasi sempre.⟧\n· ⟦[[La Lega dei Sensali.]] L’uomo di città era un agente dei Melatino. La Lega paga i briganti sulla Via Bianca e sui passi: ora anche qui. Il clan ha chiuso il passo ai carri della Val Vibrata, cioè anche al grano che i Naviganti Grigi di Adamus potrebbero far arrivare a Teramum da nord. Chi paga di più lo riapre.⟧\n· ⟦[[Il figlio di Lu Ceppë.]] Non era d’accordo, ed è andato a Sandiglië con Ventonero. Riportarlo a casa, o portare un suo messaggio, vale l’amicizia del clan.⟧\n· ⟦[[I templari d’oltre confine.]] Il tributo raddoppiato è una scusa: i templari del Luminor cercano un passaggio sicuro per portare uomini nel Ducato, verso Cëvëtëlla e l’Ordine d’Acciaio. Se il clan glielo vende, la Crociata a Teramum trova più lame del previsto.⟧"
+  },
+  {
+   "t": "Il tesoro di Castel Manfrino",
+   "txt": "Nelle Gole del Salinellum, vicino a Castel Manfrino, vive il mazzemarille: un folletto piccolo, con il berretto rosso, che bussa sui muri e sulle rocce quando c’è un tesoro vicino. A chi gli piace, dice dove cercare. Il tesoro del re lo custodisce una fata vestita di bianco, e ha una regola: il rame si prende subito, l’argento dopo tre anni, l’oro dopo altri tre. Chi prende tutto insieme resta chiuso dentro per incantesimo, e muore. Le anime dei cercatori morti vagano ancora sul sentiero.\n\n⟦Chi ruba il berretto rosso al mazzemarille lo tiene in pugno: per riaverlo, il folletto porta al tesoro. La fata non si inganna. Per la Crociata è una scena di montagna pronta, e un’occasione di oro, a patto di tornare tre anni dopo.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Comprare il clan.]] ⟦Trenta uomini con l’ascia o la balestra, che conoscono ogni sentiero. Non combattono in campo aperto; tendono agguati, tagliano alberi sulle strade, guidano. Chiedono denaro, sale e ferro, non promesse.⟧\n· [[La cantina di Zi’ Cerbone.]] Dove si comincia a trattare.\n· [[Le ville vuote.]] Un nascondiglio pronto, o un incontro che va male.\n· [[Castel Manfrino.]] ⟦Le rovine guardano la mulattiera: chi ci mette tre arcieri chiude la valle a un esercito.⟧\n· [[Gli orsi-gufo.]] Un incontro di montagna, per chi passa la valle senza guida."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Valle Castellana vera: la valle del torrente Castellano; in dialetto «I Piana», gli abitanti «pianaroli»; confina con Ascoli e con le Marche, e il crinale della Montagna dei Fiori e poi il Castellano segnavano il confine con lo Stato del Papa; dipende ancora dalla diocesi e dal tribunale di Ascoli; più di trenta frazioni, molte abbandonate (Laturo, Lepora, Valle Pezzata, Valloni, Collegrato, Vallecchia); villaggi che nel 1285 chiesero la cittadinanza di Ascoli; Castel Manfrino sopra il Salinello, su resti romani, attribuito a Manfredi di Svevia, con le caldaie per l’olio bollente e il castellano angioino ucciso in un assalto ascolano; le leggende del tesoro di Manfredi, della fata bianca e del mazzemarille delle Gole del Salinello; il Castellano identificato col fiume Verde di Dante, dove furono gettate le ossa di Manfredi; San Vito con il ricovero dei pellegrini; Santa Rufina; l’Annunziata; Sant’Antonio Abate; San Cerbone a Santa Maria de monte Nigro; le caciare dei pastori; il brigantaggio di confine, Sisto V e i seicento banditi graziati per combattere i Turchi; i superstiti di Ascoli nei boschi; i marroni e i porcini, la festa della castagna di Leofara; pecora alla callara e ravioli dolci di castagne; l’Annunziata patrona il 25 marzo (da verificare); il diavolo detto ciabbécchë; le parole u, a, dumà, rann’la.\n· Lo Studio: il nome «Lë Piana» stride (è una valle stretta) ma è confermato dal dialetto «I Piana»; i briganti c’erano per il confine, non per il bosco; il mestiere vero era castagne, funghi e pastori, non legname. Per questo il clan ora vive di castagne, pecore e confine, e «boscaioli» resta solo come il nome che gli danno a Teramum. Il castello neogotico dei Bonifaci a Vallenquina è troppo recente: non è nel gioco.\n· Lessico di Ea: chiese → solari, santi → lucenti, Annunziata → la Vecchia Madre, Sant’Antonio Abate → la Benedizione delle Bestie, monaci → votati, Papa → Gran Flamine.\n· La famiglia del borgo è quella decisa da Giuseppe: i Corvanera."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se Lu Ceppë va bene come capo dei Corvanera.\n· Se il passo chiuso dalla Lega dei Sensali e i templari del tributo servono alla storia.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre Selvagge",
  "id": "borgo-le-piana",
  "parent": "contea-terre-selvagge",
  "title": "Lë Piana",
- "sub": "Indipendente",
+ "sub": "La valle del confine e dei castagni",
  "pub": [
   {
    "t": "",
-   "txt": "La valle dei boscaioli — i Briganti della Laga, li chiamano a Teramum. Un clan che taglia legna, ferma i carri e non si occupa di politica: si paga, e si passa.",
+   "capo": true,
+   "txt": "Lë Piana è la valle del torrente Castellano, fra la Montagna dei Fiori e la Laga, all’estremo nord delle Terre Selvagge. È l’ultimo pezzo del Ducato: di là dal torrente e dalla montagna cominciano le terre della Fiamma d’oltre Truntum. Castagneti, faggi, qualche abete bianco, più di trenta villaggi sparsi, e un colle in mezzo dove il clan tiene il mercato e il consiglio.\n\nCi vivono i pianaroli, che a Teramum chiamano i [[Briganti della Laga]]. Raccolgono le castagne e i funghi, portano le pecore sulla montagna, fermano i carri e non si occupano di politica: si paga, e si passa. Da sempre vivono anche del confine, di quello che passa da una parte all’altra senza dazio. Sopra la valle, su uno sperone di roccia, ci sono le rovine di [[Castel Manfrino]], dove si dice che sia sepolto il tesoro di un re."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "La valle scende da ovest a est, verso la Montagna dei Fiori. In fondo il torrente, stretto fra le rocce. Sui fianchi le ville, una sopra l’altra, ognuna con il suo solario. Il colle della Piana sta in mezzo: poche case, il solario grande, la casa del clan. Il nome del paese, dicono i vecchi, viene dal prato che c’è sopra il colle, l’unico posto in piano per mezza giornata di cammino.\n\nMolte ville sono vuote. La gente è scesa a valle, o è morta, o se n’è andata oltre il confine. Le case restano, con i tetti che cadono, e qualcuno ci dorme quando non vuole farsi trovare.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La mulattiera di Castel Manfrino",
+      "Sotto il castello e lungo il Salinellum, fino a Cëvëtëlla",
+      "⟦Una giornata e mezza⟧"
+     ],
+     [
+      "I passaggi del Castellano",
+      "Oltre il confine, nelle Marche",
+      "⟦Mezza giornata⟧"
+     ],
+     [
+      "Il sentiero del Ceppo",
+      "A La Ròcchë, nel cuore della Laga",
+      "⟦Una giornata⟧"
+     ],
+     [
+      "Il sentiero della Montagna dei Fiori",
+      "Ai pascoli alti e giù verso Cëvëtëlla",
+      "⟦Una giornata, d’estate⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Lë Piana.jpg",
    "didascalia": "Lë Piana"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il prato della Piana.]] Il prato in cima al colle. Il mercato d’autunno, le feste, e il consiglio del clan, che si fa all’aperto, in cerchio, sotto un castagno vecchio.\n· [[2. Il solario dell’Annunziata.]] Il solario della valle, il più vecchio, rifatto più volte, dedicato alla Vecchia Madre. Il 25 marzo ci vengono tutti, anche quelli che durante l’anno non scendono.\n· ⟦[[3. La casa dei Corvanera.]] Una casa lunga di pietra e legno sul colle: la stanza del consiglio, il magazzino, e la cassa comune. I Corvanera sono la famiglia che guida il clan da quando nessuno ricorda. Il capofamiglia, il vecchio Corvanera, lo chiamano tutti Lu Ceppë.⟧\n· [[4. Le caciare.]] Capanne di pietra a secco sui pascoli sopra il colle, dove i pastori fanno e tengono il pecorino. D’inverno ci dormono i viandanti sorpresi dalla neve.\n· ⟦[[5. Il seccatoio delle castagne.]] Una casupola col fuoco sempre acceso sotto un graticcio, dove le castagne si seccano per l’inverno. D’autunno ci si trova tutta la valle, a chiacchierare nel fumo.⟧\n· ⟦[[6. La cantina di Zi’ Cerbone.]] Nella villa sopra il solario. Vino aspro, castagne arrosto, pecora alla callara, una stanza col pagliericcio. Il posto dove si tratta con il clan senza essere ancora nel clan.⟧\n· [[7. Il solario del Lucente Antonio.]] Un solario di villa, vecchio di due secoli, dove a gennaio si fa la Benedizione delle Bestie."
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[8. Castel Manfrino.]] Le rovine di un castello su uno sperone di roccia sopra il Salinellum, costruito sopra un forte dell’Impero. Insieme a Cëvëtëlla guardava le uniche strade fra le Marche e Teramum. Il nome viene da un re che lo tenne e poi morì in battaglia. Nel torrente sotto hanno trovato due caldaie grandi: servivano per l’olio bollente. Un castellano del Ducato fu ucciso qui, in un assalto venuto da oltre confine. E si dice che sotto le rovine sia sepolto il tesoro del re.\n· [[9. Il priorato del Monte Nero.]] In alto, a più di mille braccia, un piccolo priorato dove visse il Lucente Cerbone, priore ed eremita. Ci si sale in un giorno, e dicono che chi ci dorme sogna la strada giusta.\n· [[10. I solari antichi.]] Il solario del Lucente Vito, vecchio di trecento anni, che era una casa di votati e un ricovero per viandanti; oggi ci vive un solo votato, e il resto è dei pipistrelli. E quello della Lucente Rufina, della stessa età, in una villa quasi vuota.\n· [[11. Il Castellano.]] Il torrente del confine. Di qua il Ducato, di là la Fiamma d’oltre Truntum. I vecchi dicono che è il Fiume Verde delle storie: quello in cui, tanto tempo fa, furono gettate le ossa di un re che la Fiamma aveva scacciato.\n· [[12. La Montagna dei Fiori.]] Sopra la valle, a nord-est. I pascoli alti, e la via d’estate per le Terre del Nord.\n· [[13. Le ville vuote.]] Laturo, Lepora, Valle Pezzata, Valloni, Collegrato, Vallecchia: case senza nessuno. A Valle Pezzata, una volta, gli abitanti si batterono contro i briganti, e persero. Ci si nasconde, ci si incontra, e qualche volta ci si trova qualcuno che non dovrebbe esserci.\n· [[14. Le ville abitate.]] Basto, Leofara, Morrice, Pietralta, Stivigliano, Vallenquina, Macchia da Sole e le altre: castagne, porcini, pecore. Vallenquina, dicono, vuol dire la valle che fa paura."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I pianaroli sono un clan più che un paese: ogni famiglia è parente di un’altra, e tutte rispondono al consiglio dei Corvanera. Lavorano duro, bevono forte, e non si fidano di chi viene dalla città. Ai forestieri non chiedono chi sono: chiedono che cosa portano e quanto pagano. Parlano già come quelli di là dal fiume: dicono «u» e «a» per il e la, e «dumà» per domani.\n\nI vecchi raccontano che i loro nonni erano gente di una città distrutta, oltre il confine, che si rifugiò in questi boschi e non ne uscì più. E che un Gran Flamine, una volta, mandò migliaia di soldati contro i briganti della Laga, e poi graziò seicento di loro, purché andassero a combattere sul mare.\n\n· [[Il pedaggio.]] Chi passa per la valle con un carro paga. Chi passa a piedi, di solito no. Chi passa con soldati paga il doppio, o non passa.\n· [[Le castagne e i porcini.]] I marroni della Piana si raccolgono da secoli e si vendono fino al mare; i porcini dei faggi pure. D’autunno tutta la valle è nel bosco, e a fine ottobre si fa la festa della castagna, a Leofara.\n· [[L’Annunziata.]] Il 25 marzo, con il rito, il mercato del bestiame e il consiglio grande, dove si decide chi raccoglie in quale castagneto.\n· [[Il diavolo.]] Qui lo chiamano ciabbécchë. Quando la grandine, la rann’la, rovina i castagni, è colpa sua.\n· ⟦[[L’ascia sulla porta.]] In ogni casa del clan c’è un’ascia appesa sopra la porta. Se è girata con la lama in fuori, in quella casa c’è un lutto o una vendetta da fare, e non si bussa.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[La valle si svuota.]] I giovani scendono a Teramum o vanno con Ventonero a Sandiglië, dove la paga è sicura. Il clan ha meno braccia ogni anno.⟧\n· ⟦[[Il denaro dei Sensali.]] Quest’estate un uomo di città ha pagato il clan per chiudere il passo ai carri che vengono dalla Val Vibrata. Il consiglio ha preso il denaro. Non tutti erano d’accordo.⟧\n· ⟦[[Due padroni.]] Le ville di là dal Castellano pagano un tributo anche ai signori d’oltre confine. Quest’anno ne hanno chiesto il doppio, e hanno mandato templari a riscuoterlo.⟧\n· ⟦[[Lupi e orsi-gufo.]] Scendono più in basso del solito. Due ville hanno perso le pecore in una notte, e in una c’erano segni sui tronchi alti come un uomo a cavallo.⟧"
   }
  ],
  "illustrazione": "Mondo — Lë Piana.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Il passo è gratis. È il ritorno che si paga.»",
+  "cite": "⟦Detto degli uomini della Piana⟧"
+ }
 }

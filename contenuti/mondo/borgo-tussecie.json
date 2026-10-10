@@ -14,25 +14,116 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Marchese Rodrigo d'Avalos",
-  "Fedeltà": "Iuvenza",
-  "Corrisponde a": "Tossicia"
+  "Paese vero": "Tossicia",
+  "Altri nomi": "Tussëcië in dialetto; Toxicia nelle carte, che i vecchi leggono «il borgo del veleno», per le serpi delle gole",
+  "Abitanti": "⟦Circa novecento, con i casali⟧",
+  "Chi comanda": "Il Marchese Rodrigo d’Avalos, signore della valle del Mavone",
+  "Nel paese": "Il Palazzo Marchesale, il solario della Lucente Sinforosa, il solario del Lucente Antonio con il portale dei musici, le case dell’orso, le botteghe dei ramai",
+  "Nei dintorni": "La Lunaria della Neve, Azzinano e le tombe antiche, le gole del Chiarino, la strada di Lésënë, i casali",
+  "Strade": "Giù per il Mavone verso Cullëdarë, Mëndurjë e Teramum; su verso Lésënë e il Gigante",
+  "Guardia": "La guardia personale del Marchese, che pattuglia la strada della montagna. ⟦Una sessantina di uomini, molti venuti da fuori⟧",
+  "Lucente": "La Lucente Sinforosa, che si festeggia il 18 luglio",
+  "Distanze": "⟦Lésënë, due ore di salita; Cullëdarë, un’ora giù per la valle; Mëndurjë, mezza giornata; Teramum, una giornata⟧"
  },
- "gm": "Di Iuvenza. Pattuglia la strada montana verso L'Aquila Aurea: ostacolo per chi vuole raggiungere Lésënë. Vanitoso: si può manipolare con l'orgoglio.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Tussëcië è il tappo della strada per Lésënë, e il Marchese è di Iuvenza. Se la Crociata ottiene la Grande Convocazione, deve salire all’Aquila Aurea passando di qui. Iuvenza non ha bisogno di vincere la Convocazione: le basta decidere chi ci arriva. Il Marchese è vanitoso: si può manipolare con l’orgoglio."
+  },
+  {
+   "t": "Rodrigo d’Avalos",
+   "txt": "Nobile spagnoleggiante, vanitoso e crudele, di quelle casate di antica immigrazione occidentale che sono sparse anche a Vesperia e oltre confine (testo di lore su Vesperia).\n\nNella storia vera, dopo una grande battaglia, un imperatore tolse la valle ai signori dell’orso (gli Orsini), che avevano preso la parte sbagliata, e la diede in premio a un condottiero spagnolo fatto marchese; la sua famiglia la tenne per quasi tre secoli. ⟦Nel gioco: il marchesato della valle fu un premio dell’Imperatore a un capitano venuto da occidente. Il ramo si spense; Rodrigo è un cugino lontano, arrivato pieno di debiti a reclamare il titolo. Iuvenza gli ha pagato i debiti e gli ha fatto riconoscere il marchesato dal Consiglio. Lui le deve tutto, e lo sa; ma non sopporta di saperlo.⟧"
+  },
+  {
+   "t": "Gli uomini del Marchese e il Loto",
+   "txt": "⟦I forestieri con le armature pesanti sono mercenari vesperiani, gli stessi del Loto Nero che hanno chiuso la Via Salaria e la Via Bianca (Atti X–XII). Il Marchese li paga con l’oro di Iuvenza, e parla la loro lingua. Se la Crociata mostra di sapere chi sono, il Marchese diventa nervoso: in Ducato un nobile che arma mercenari stranieri può essere processato dalla Camera dei Cavillatori.⟧\n\n⟦Gli impiccati «briganti» erano del Leame di Sangue. Il Marchese caccia i ribelli di La Pònnë, e loro aspettano l’occasione per restituire.⟧"
+  },
+  {
+   "t": "I signori dell’orso e la famiglia del Lucente Berardo",
+   "txt": "Nella storia vera a Tossicia comandavano i conti di Pagliara, la famiglia di San Berardo e di Santa Colomba, e poi gli Orsini, spodestati dal marchese spagnolo.\n\n⟦Nel gioco: la valle era della famiglia del Lucente Berardo, una casata pretuziana, poi dei signori dell’orso. I signori dell’orso non sono spariti: vivono poveri nei casali, con il rancore di chi è stato cacciato. E nel loro sangue c’è quello dei lucenti. Per la Grande Convocazione, che sceglie il Duca fra le casate di sangue pretuziano, un erede della famiglia del Lucente Berardo è un voto che pesa, e un uomo che il Marchese preferisce tenere sotto gli occhi.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Il posto di guardia.]] Una scena di strada: sei uomini, la sbarra, il cappello da togliere. Contro la vanità del Marchese funzionano l’adulazione (Persuasione con vantaggio se si usano i suoi titoli), la sfida d’onore e la promessa di gloria. ⟦Le guardie: veterani; i mercenari vesperiani con l’armatura del Loto, come all’osteria de lu Passe.⟧\n· [[Il Marchese in persona.]] ⟦Accetta un duello se lo sfida un nobile davanti a testimoni. Maximus, figlio dello Stratega, o Alessandros, conte, sono sfidanti che non può rifiutare senza perdere la faccia.⟧\n· [[I sentieri del Chiarino.]] Per salire a Lésënë senza passare dalla sbarra. ⟦Li conoscono i pastori e il Leame di Sangue. Sopravvivenza CD 15 senza guida; le serpi delle gole sono vere (serpenti velenosi).⟧\n· [[I falò di gennaio.]] Una notte in cui tutto il borgo è in piazza e il palazzo è mezzo vuoto.\n· [[I ramai.]] ⟦Il dazio sul rame li ha messi contro il Marchese. Un ramaio può far entrare qualcuno nel palazzo: le cucine del Marchese sono piene di paioli da stagnare.⟧\n· [[La Lunaria della Neve.]] Una mattina, prima di un passaggio importante, nell’erba ci sono le orme. Un buon presagio da usare."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Dal paese vero (Studio dei paesi veri, Wikipedia, Dialetti, Folklore): Tossicia sullo sperone fra il torrente della Valle e il Chiarino, sul versante nord del Gran Sasso, capoluogo della Valle Siciliana; il nome forse da *toxicum*, «veleno», per i serpenti; Sant’Antonio Abate con il portale di Andrea Lombardo (1471), coi putti musicanti, i volti degli antichi abitanti e i maialini nascosti; Santa Sinforosa (18 luglio) con i portali di Mecolo da Penne, gli altari barocchi e la Madonna «sdraiata», rubata e ritrovata a Londra; la Madonna della Neve a Vicenne e la statua che tornava di notte; le case con le insegne Orsini; il Palazzo Marchesale; i conti di Pagliara, famiglia di San Berardo e di Santa Colomba; gli Orsini; il marchese spagnolo Alarcón messo da Carlo V dopo Pavia; San Francesco paciere fra i baroni; le tombe neolitiche e la lavanda di Azzinano; i falò di Sant’Antonio il 17 gennaio; i fagioli con le cotiche; il gergo dei ramai.\n· Dal vecchio canone: il Marchese Rodrigo d’Avalos, di Iuvenza, spagnoleggiante, vanitoso, crudele, con la guardia che pattuglia la strada montana. Il casato vero era Alarcón y Mendoza: il nome d’Avalos resta (Nomi delle casate, 10-10). Nelle scene di Teramum gli uomini del Marchese stanno anche sotto Porta Reale: con la voce di Teramum (Porta Reale a est) questo non torna, e la loro strada è questa.\n· Lessico di Ea: chiese → solari, cappella → ara, santi → lucenti, Madonna → la Vecchia Madre, Sant’Antonio Abate → la Benedizione delle Bestie, frate → votato."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Come il Marchese ha avuto la valle (proposta: Iuvenza gli ha pagato i debiti).\n· Se i mercenari del Marchese sono del Loto Nero.\n· Se c’è un erede della famiglia del Lucente Berardo, e se va alla Convocazione.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "Il Cuore del Ducato",
  "id": "borgo-tussecie",
  "parent": "contea-cuore-del-ducato",
  "title": "Tussëcië",
- "sub": "Iuvenza",
+ "sub": "Il borgo del Marchese, sulla strada di Lésënë",
  "pub": [
   {
    "t": "",
-   "txt": "Il borgo di un nobile venuto da fuori, il Marchese Rodrigo d'Avalos: spagnoleggiante, vanitoso, crudele, con una guardia personale che pattuglia la strada di montagna e ferma chi non le piace.",
+   "capo": true,
+   "txt": "Tussëcië sta nella valle del Mavone, dove la strada comincia a salire sul serio verso il Gigante. Il borgo si allunga sulla cima di uno sperone di roccia, fra due torrenti che scendono dalla montagna: il torrente della Valle da una parte, il Chiarino dall’altra. Sopra, la parete del Gigante chiude il cielo.\n\nÈ il capoluogo della valle, e lo è da sempre: qui stava il palazzo dei signori, e qui sta oggi il Marchese Rodrigo d’Avalos, un nobile venuto da fuori, vanitoso e crudele. Chi va a Lésënë, l’Aquila Aurea, da Teramum passa di qui: non c’è un’altra strada buona. E chi passa di qui incontra la guardia del Marchese, che ferma chi non le piace.\n\nIl resto del Ducato conosce Tussëcië per il rame: le sue caldaie e i suoi paioli si trovano in ogni cucina della montagna."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "È un borgo lungo e stretto, come lo sperone su cui sta: una strada principale sulla cresta, e ai lati i vicoli che finiscono sul vuoto. Le case sono di pietra, alte, con le finestre a due archi e gli architravi scolpiti. Su molte c’è ancora lo stemma dei signori di prima, un orso. Sulla piazza c’è il solario della Lucente Sinforosa. In cima allo sperone c’è il Palazzo Marchesale.\n\nNon ci sono mura: i due torrenti e la roccia bastano. ⟦In basso, dove la strada attraversa il torrente, c’è il posto di guardia.⟧",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La strada della valle",
+      "Giù per il Mavone, verso Cullëdarë, il ponte di Mëndurjë e Teramum",
+      "⟦Un’ora fino a Cullëdarë, una giornata fino a Teramum⟧"
+     ],
+     [
+      "La strada di Lésënë",
+      "Su verso il Gigante, fino all’Aquila Aurea",
+      "⟦Due ore di salita⟧"
+     ],
+     [
+      "I sentieri del Chiarino",
+      "Su per la gola, verso i pascoli alti",
+      "⟦Mezza giornata, solo a piedi⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Tussëcië.jpg",
    "didascalia": "Tussëcië"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il Palazzo Marchesale.]] In cima allo sperone, la casa del Marchese. Era il palazzo dei signori della valle, da cui si governavano tutti i villaggi del Mavone. ⟦Il Marchese ci ha fatto mettere vetri colorati, arazzi, un cortile con le statue e il suo stemma sopra il portone, più grande di quello vecchio. Ci tiene la sua guardia, la sua corte e una sala dove si entra solo inchinandosi.⟧\n· [[2. Il solario della Lucente Sinforosa.]] Il solario grande, sulla piazza del Lucente Emidio. Ha i portali di pietra scolpiti da un maestro di un paese vicino e altari di legno dorato. Dentro c’è la Vecchia Madre «sdraiata», una statua di legno distesa. Una volta l’hanno rubata, e l’hanno ritrovata dopo anni, lontanissimo. In paese dicono che è tornata da sola.\n· [[3. Il solario del Lucente Antonio.]] Un solario con l’ospizio accanto, da più di cent’anni, dove dormono i viandanti che salgono a Lésënë e i pastori che scendono dai pascoli. Il portale è la cosa più bella della valle: tre archi, otto bambini che suonano, otto facce di vecchi abitanti del borgo e, nascosti negli angoli, dei maialini. I ragazzi fanno a gara a trovarli tutti.\n· [[4. Le case dell’orso.]] Le case vecchie della strada principale, con le finestre a due archi e lo stemma dell’orso: erano dei signori che tenevano la valle prima dei marchesi. ⟦Il Marchese ne ha fatti scalpellare alcuni. La gente ha smesso di dire «la casa dell’orso» ad alta voce.⟧\n· [[5. Le botteghe dei ramai.]] Lungo la strada principale, sotto i portici: il martello che batte il rame dalla mattina alla sera, i paioli appesi fuori, il nero del carbone sulle mani. I ramai di Tussëcië hanno un gergo loro, che gli altri non capiscono: chi è stupido, per loro, è un *bèffo*.\n· ⟦[[6. Il quartiere della guardia.]] Un vecchio granaio sotto il palazzo, trasformato in caserma. Ci stanno gli uomini del Marchese: casacche nere, sciarpe rosse, alabarde. Parlano fra loro una lingua che in valle non capiscono bene.⟧\n· ⟦[[7. L’osteria della Piazza.]] Davanti al solario. Fagioli con le cotiche e timballo. Ci mangiano i viandanti e ci bevono le guardie, ai tavoli separati. L’ostessa, Donna Peppa, ha imparato a non sentire niente.⟧\n· ⟦[[8. L’ara della Lucente Colomba.]] Un’ara piccola in fondo al paese, per la lucente della valle. Le donne ci portano fiori di campo.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[9. La Lunaria della Neve.]] A Vicenne, con le statue fatte da un maestro della montagna. Si racconta che una volta portarono la statua della Vecchia Madre in paese, e la mattina dopo era tornata nella sua nicchia: nell’erba c’erano le orme dei suoi piedi.\n· [[10. Azzinano.]] Un casale più in alto, dove nei campi ci sono tombe più vecchie dei Pretuziani, di gente che non aveva ancora il ferro. D’estate i campi sono viola di lavanda.\n· [[11. Le gole del Chiarino.]] Il torrente scende dal Gigante in un canalone di roccia. Ci sono mulini, una cascata, le serpi al sole, e un sentiero che sale ai pascoli.\n· ⟦[[12. Il posto di guardia della strada.]] Dove la strada di Lésënë passa il torrente, sotto il borgo: una torretta, una sbarra e sei uomini del Marchese. Si mostrano le mani, si dice il proprio nome e dove si va, e ci si toglie il cappello.⟧\n· [[13. I casali.]] Aquilano, Chiarino, Petrignano, Flamignano, Paduli, Palozza, Cerquone e gli altri: pastori, carbonai, castagne, formaggi."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "Gente di montagna, dura e chiusa, che ha visto passare tanti signori e ne aspetta altri. Il Marchese lo temono e lo prendono in giro sottovoce. ⟦Lo chiamano «lu Pavone».⟧ Sono legati alla valle, ai pascoli e ai loro lucenti più che a chiunque stia nel palazzo.\n\n· [[La Lucente Sinforosa.]] Il 18 luglio. Si porta in processione la lucente con i suoi sette figli, morti con lei per la fede.\n· [[I fuochi della Benedizione delle Bestie.]] A metà gennaio, la sera, si accendono grandi falò in piazza e nei casali. La mattina dopo si spande la cenere calda sui campi, e la Vecchia Madre benedice le bestie. Da qui comincia il Carnevale.\n· [[La Lucente Colomba.]] La lucente della valle, sorella del [[Lucente Berardo]]. Qui la venerano più che altrove: la famiglia dei due lucenti teneva queste terre, da un castello poco più su.\n· [[Il votato della pace.]] Si racconta che un votato santo, scalzo, venne nella valle quando i signori si facevano la guerra fra loro, e li mise d’accordo in un giorno solo. In piazza c’è una pietra dove dicono che si sedette.\n· [[Le orme della Vecchia Madre.]] Chi trova un’impronta strana nell’erba la mattina presto non la calpesta.\n· ⟦[[L’inchino.]] Il Marchese ha voluto che chiunque lo incontri per strada si fermi, si tolga il cappello e si inchini. I pastori hanno cominciato a uscire senza cappello.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[La strada pattugliata.]] La guardia del Marchese ferma chi non le piace sulla strada della montagna, e chi non le piace lo decide lei.\n· ⟦[[Il pedaggio dei viandanti.]] Chi sale a Lésënë ora paga un «dono per la strada». Prima non lo pagava nessuno.⟧\n· ⟦[[Le forche.]] Sulla strada, sotto il borgo, ci sono due uomini impiccati con un cartello: «briganti». In valle dicono che erano due ragazzi di La Pònnë.⟧\n· ⟦[[Forestieri armati.]] Il Marchese ha preso altri uomini, venuti da fuori, con armature pesanti. Non sono della valle e non vanno al rito.⟧\n· ⟦[[Il rame non si vende.]] Il Marchese ha messo un dazio sul rame che esce dalla valle. I ramai lavorano la metà, e bevono il doppio.⟧\n· ⟦[[La terra trema.]] Dalla parete del Gigante sono cadute pietre sulla strada di Lésënë. Il Marchese ha detto che la riaprirà quando vorrà lui.⟧"
   }
  ],
  "illustrazione": "Mondo — Tussëcië.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«A Tussëcië si passa a capo scoperto.»",
+  "cite": "Si dice nella valle del Mavone"
+ }
 }

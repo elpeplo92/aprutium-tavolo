@@ -14,25 +14,127 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Capitano Vento Ventonero",
-  "Fedeltà": "Mercenario",
-  "Corrisponde a": "Sant'Egidio alla Vibrata"
+  "Paese vero": "Sant’Egidio alla Vibrata, con il castello di Faraone",
+  "Altri nomi": "Sandiglië, o Sant’Ilië, in dialetto",
+  "Abitanti": "⟦Circa novecento, senza contare chi c’è oggi e domani non c’è più⟧",
+  "Chi comanda": "Il Capitano Vento Ventonero e la sua compagnia di ventura. Una volta era terra del Castellano di Cëvëtëlla",
+  "Nel paese": "Il solario vecchio, la piazza del mercato, le osterie, il quartiere della compagnia, le case di terra",
+  "Nei dintorni": "Faraone, il castello sulla rupe sopra le gole, mezzo abbandonato; il Passo del Mulino; la Via Metella; le ville della piana",
+  "Strade": "La strada maestra per Cëvëtëlla e per Nnaréta; i tratturi per Chimblë, per Ngarà, per Cundraüerrë e per Bëllindë; la Via Metella verso il Truntum",
+  "Guardia": "⟦La compagnia di Ventonero: una sessantina di uomini, disertori, briganti pentiti e no, soldati senza bandiera⟧",
+  "Lucente": "Il Lucente Egidio, l’abate, che si festeggia il 1° settembre",
+  "Distanze": "⟦Cundraüerrë e Nnaréta, mezza giornata; Ngarà, mezza giornata abbondante; Cëvëtëlla, una giornata di strada maestra; Bëllindë e Chimblë, una giornata di tratturi; Faraone, due ore di salita⟧"
  },
- "gm": "Ventonero è comprabile. Rifugio per disertori della Guardia Ducale, informazioni sui movimenti al confine.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Ventonero è comprabile. Il paese è un rifugio per i disertori della Guardia Ducale e un mercato di informazioni sui movimenti al confine. Per la Crociata può essere tre cose: una compagnia da comprare, un posto dove nascondere qualcuno, o una spina nel fianco se la compra prima qualcun altro."
+  },
+  {
+   "t": "Il Capitano Vento Ventonero",
+   "txt": "⟦Ex sergente della Guardia Ducale, quarant’anni, alto, la barba grigia tagliata corta. Ha disertato dopo una battaglia che i capitani di Teramum hanno perso per avarizia, e da allora non serve nessuno che non paghi in anticipo. Non è crudele senza motivo, e mantiene la parola data, ma solo quella data per denaro.⟧\n\n⟦Ventonero conosce i disertori della Guardia Ducale uno per uno. Sa chi ha lasciato la Guardia, quando, e perché: è la miglior fonte del Ducato sulla Guardia di Lucius Grazianus. Maximus, figlio di Lucius, lo interessa moltissimo: o come cliente, o come merce.⟧\n\n⟦Perché il Castellano lo tollera: Ventonero gli tiene la Via Metella e il guado, gli manda a dire chi passa, e non tocca le terre della fortezza. Ferroalto lo disprezza e se ne serve. Se Ferroalto si schiera con Silvanus, Ventonero lo segue, per denaro o per paura dei cannoni.⟧"
+  },
+  {
+   "t": "Chi paga Ventonero",
+   "txt": "· ⟦La Lega dei Sensali dei Melatino paga i briganti sulla Via Bianca e sui passi. Ha mandato un uomo anche qui. Ventonero ha preso il denaro e non ha ancora fatto niente: aspetta di vedere chi offre di più. I Melatino, poi, su Faraone hanno una vecchia pretesa: un loro antenato ne occupò mezzo castello, secoli fa, e fu processato.⟧\n· ⟦Dalla Val Vibrata arrivano a Sandiglië gli uomini di Iuvenza che cercano braccia per gli scavi nelle necropoli. Ventonero li manda alle osterie, e conta quanti sono.⟧\n· Il confine: chi passa il Truntum senza dazio paga a Ventonero il pedaggio, e Ventonero sa chi passa e quando."
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Comprare la compagnia.]] ⟦Sessanta uomini, armati alla meglio. Ventonero chiede un fiorino per uomo per settimana, e la paga di un mese in anticipo. Persuasione CD 15 per uno sconto; con Maximus presente, vantaggio o svantaggio, a seconda di come si presenta.⟧\n· [[Nascondere qualcuno.]] A Sandiglië si nasconde chiunque, a prezzo giusto. Ma Ventonero vende anche i nascondigli.\n· [[Il Carnevale.]] Il giorno buono per passare inosservati.\n· [[Faraone.]] ⟦Un dungeon pronto: un castello mezzo vuoto su una rupe che frana, la casa caduta con le casse del Capitano sotto le macerie. Chi le trova, ha in mano Ventonero. Di notte, nelle case vuote, qualcosa bussa sui muri: è il mazzemarille delle gole, e dove bussa, dicono, c’è un tesoro.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Sant’Egidio alla Vibrata vera: paese di pianura a tre chilometri dal Tronto, nato attorno a un convento di Sant’Egidio, priorato di Monte Santo (la stessa abbazia di Civitella), con il campanile del 1555; città regia insieme a Civitella fino al 1642, quindi l’opposto di una terra senza legge; il castello di Faraone, una «fara» longobarda su un’altura fra fossati sopra il Salinello, a guardia della via Metella, passato di mano fra imperatori, papi e Ascoli, occupato dai papali nel 1556, con un Melatino processato nel 1276 per averne occupato una parte, abbandonato dopo i terremoti del 1950-51 e la frana, con la porta sud e la torre merlata, il palazzo baronale, Santa Maria della Misericordia sul dirupo e l’epigrafe del 1467; le contrade; Sant’Egidio Abate il 1° settembre; il Carnevale con i carri; le case di terra cruda (pinciare) della Val Vibrata; il dialetto «Sant’Ilië», quasi ascolano; il diavolo detto dëjàvëlië.\n· Lo Studio dice che la terra senza legge stride con la città regia e che il covo giusto è Faraone: ora Sandiglië era terra del Castellano, e Ventonero vive a Faraone.\n· Lessico di Ea: chiese → solari, santi → lucenti, monaci → votati, Madonna → Vecchia Madre (Lunaria della Misericordia, Lunaria delle Grazie), messa → rito.\n· Il Barone Barbaspina di Cundraüerrë è nella voce della Val Vibrata (Testi di lore: «Compagnie di Ventura»)."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi è Ventonero prima di Sandiglië.\n· Perché il Castellano lo tollera, e se Sandiglië è ancora sua sulla carta.\n· Quanto costa la compagnia, e se la Crociata la vuole.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre del Nord",
  "id": "borgo-sandiglie",
  "parent": "contea-terre-del-nord",
  "title": "Sandiglië",
- "sub": "Mercenario",
+ "sub": "Il paese che non chiede da dove vieni",
  "pub": [
   {
    "t": "",
-   "txt": "Terra di confine senza legge, un covo di briganti e disertori sotto un capitano di ventura, Vento Ventonero, che non chiede da dove vieni. Chi deve sparire per un po' passa di qui.",
+   "capo": true,
+   "txt": "Sandiglië sta in basso, nella piana della Vibrata, a un’ora dal Truntum, dove le Terre del Nord scendono verso la Val Vibrata. È un paese di passaggio: ci si arriva da tutte le strade e ci si riparte per tutte. Non ha mura e non ha un castello. Ha un solario vecchio, un mercato, troppe osterie per un paese così piccolo, e un capitano di ventura.\n\nUna volta era terra del Castellano di Cëvëtëlla, libera dalle tasse dei signori. Oggi è terra senza legge, un covo di briganti e di disertori sotto il Capitano [[Vento Ventonero]], che non chiede da dove vieni. Chi deve sparire per un po’ passa di qui. Sopra la piana, su una rupe fra due gole, c’è il castello di [[Faraone]], con le mura in piedi e le case vuote: è da lì che Ventonero guarda la valle."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il paese è nato in piano, attorno a una casa di votati dedicata al Lucente Egidio, e poi si è allargato lungo le strade, senza un disegno. Case basse, molte di terra cruda impastata con la paglia, che qui chiamano pinciare; cortili, stalle, una piazza larga per il mercato del bestiame. Le contrade portano il nome di quello che c’era: il Mulino, il Ponte, la Marchesa.\n\nFaraone sta in alto, a due ore di salita, su una rupe fra fossati profondi, sopra la gola del Salinellum. È più antico del paese: un castello di soldati, nato per guardare la vecchia strada che passa sotto. Ha cambiato padrone più volte di quante se ne ricordino, e gli uomini d’oltre Truntum lo hanno tenuto anche loro. Poi la terra sotto ha cominciato a franare, ci sono stati terremoti, e la gente è scesa a valle. Le mura sono rimaste, con la porta a sud e la sua torre merlata, il palazzo del barone e una lunaria sul ciglio del dirupo.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La strada maestra di ponente",
+      "A Cëvëtëlla, salendo verso la Montagna dei Fiori",
+      "⟦Una giornata⟧"
+     ],
+     [
+      "La strada maestra di levante",
+      "A Nnaréta e alla Val Vibrata",
+      "⟦Mezza giornata⟧"
+     ],
+     [
+      "La Via Metella",
+      "Sotto Faraone, e a nord fino al guado del Truntum",
+      "⟦Un’ora al fiume; da lì, le Marche⟧"
+     ],
+     [
+      "Il tratturo del nord",
+      "A Ngarà e Tërà",
+      "⟦Mezza giornata abbondante⟧"
+     ],
+     [
+      "Il tratturo di Cundraüerrë",
+      "Al castello del Barone Barbaspina",
+      "⟦Mezza giornata⟧"
+     ],
+     [
+      "I tratturi del sud",
+      "A Chimblë e a Bëllindë",
+      "⟦Una giornata⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Sandiglië.jpg",
    "didascalia": "Sandiglië"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il solario del Lucente Egidio.]] Il solario vecchio, di pietra, nato come priorato dei votati di Montesanto. Il campanile è più nuovo, alzato un secolo fa. Il sacerdote che lo tiene oggi fa i riti per chi viene, e non fa domande neanche lui.\n· ⟦[[2. La piazza del mercato.]] Larga e polverosa. Il martedì si vende bestiame; gli altri giorni si vende tutto il resto, anche quello che non si potrebbe: armi della Guardia Ducale, cavalli con il marchio raschiato, sale senza bollo.⟧\n· ⟦[[3. Il Quartiere della compagnia.]] Un vecchio granaio dei votati con le stalle intorno, dove vivono gli uomini di Ventonero. Di giorno giocano a dadi nel cortile. Chi vuole arruolarsi viene qui.⟧\n· ⟦[[4. L’Osteria del Vento.]] La più grande. La tiene Za’ Rosa la Vivandiera, che è stata con la Guardia Ducale e serve il vino ai disertori come se fossero ancora suoi soldati. Stanze per chi paga, e una porta sul retro per chi deve uscire in fretta. Quando qualcosa va storto, Za’ Rosa non dice «diavolo»: dice «dëjàvëlië!», e tutti capiscono che è ora di andarsene.⟧\n· ⟦[[5. La Mezza Luna.]] Un’osteria più piccola, verso il Mulino. Ci bevono i contrabbandieri del confine, e ci si gioca a carte forte.⟧\n· ⟦[[6. La bottega del maniscalco.]] Ferra i cavalli, e cambia i marchi. Lo chiamano Cola Ferracavalle: il più onesto del paese, dicono, perché non mente mai su quello che fa.⟧\n· ⟦[[7. La casa del Capitano.]] Una casa normale sulla piazza, con un portico e due uomini seduti fuori. Ventonero ci riceve chi gli porta affari. Vive a Faraone; qui fa udienza.⟧\n· [[8. Le pinciare.]] Le case di terra cruda della contrada bassa: muri grossi, finestre piccole, pavimento di terra battuta. Fresche d’estate e calde d’inverno. I vecchi dicono che la tecnica l’hanno portata gli stranieri venuti dal mare, tanto tempo fa."
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[9. Faraone.]] Il castello sulla rupe, con le mura intere, la porta a sud con la torre merlata, il palazzo del barone e la Lunaria della Misericordia sul ciglio del dirupo. Una pietra sopra la porta porta una data e lo stemma di una famiglia che non c’è più. È mezzo vuoto da quando la terra ha cominciato a scivolare. ⟦Ventonero ci tiene le cose che contano: le armi, i prigionieri, il denaro. Dalle mura si vede tutta la piana, fino al Truntum.⟧\n· [[10. La Via Metella.]] La vecchia strada dell’Impero, che sale dalla piana sotto Faraone e va verso il Truntum e le Marche. Le pietre ci sono ancora, a tratti. Oggi la usano i contrabbandieri.\n· [[11. Il Passo del Mulino.]] Un mulino sulla Vibrata, con il ponte di legno. Chi controlla il ponte controlla chi passa.\n· [[12. Le ville della piana.]] Paolantonio, Villa Mattoni, Villa Marchetti, la Marchesa, la Lunaria delle Grazie: casali e campi. I contadini pagano a Ventonero quello che una volta pagavano al Castellano, e dicono che costa meno.\n· ⟦[[13. Il bosco dei disertori.]] Una macchia di querce lungo la Vibrata, dove dormono quelli che non si fidano neanche di Sandiglië. Ci sono capanne, fuochi spenti, e un palo con un nome cancellato.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "A Sandiglië la gente si divide in due: quelli che ci sono nati e quelli che ci sono arrivati. I primi coltivano la piana e tengono le osterie. I secondi sono disertori, briganti, debitori, mariti in fuga, contrabbandieri, e qualcuno che dice di essere tutte queste cose per non dire quello che è. Si va d’accordo perché conviene. Si parla come a Ngarà, quasi come di là dal fiume, e un bambino è un frichì.\n\n· [[La regola del Capitano.]] Una sola: dentro il paese non si ammazza nessuno. Fuori, ognuno fa quello che vuole. Chi rompe la regola finisce appeso alla porta di Faraone.\n· [[Il Lucente Egidio.]] Il 1° settembre, con la processione e il mercato grande. È l’unico giorno in cui gli uomini della compagnia vanno al rito, tutti.\n· [[Il Carnevale.]] Il più rumoroso della Val Vibrata: carri, maschere, e gente travestita che quel giorno può girare per il paese senza che nessuno la riconosca. Chi deve passare inosservato, aspetta il Carnevale.\n· ⟦[[I nomi.]] A Sandiglië nessuno usa il nome vero. Ognuno ha un soprannome, e se non ce l’ha glielo danno la prima sera all’osteria.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Troppi disertori.]] Da quando il Ducato non ha un Duca, la Guardia Ducale perde uomini, e molti arrivano qui. Ventonero li prende, li arma e li paga. La sua compagnia cresce, e Teramum se ne è accorta.\n· [[Il Castellano.]] Sandiglië era terra sua, e il Castellano di Cëvëtëlla non ha mai detto di averla ceduta. Per ora lascia fare.\n· ⟦[[Il Barone di Cundraüerrë.]] A mezza giornata c’è un altro capitano di ventura, il Barone Barbaspina, che vende la spada al miglior offerente come Ventonero. Si rubano gli uomini a vicenda.⟧\n· ⟦[[La terra scivola.]] Faraone perde un pezzo di rupe a ogni pioggia forte. L’ultima volta è caduta una casa intera, con dentro le casse del Capitano.⟧\n· ⟦[[Il bando di Teramum.]] Anche qui è arrivato il proclama contro la Crociata. Ventonero l’ha letto in piazza, ha riso, e ha chiesto quanto pagano per non rispettarlo.⟧"
   }
  ],
  "illustrazione": "Mondo — Sandiglië.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«A Sandiglië nisciune ti chiede il nome. Ti chiede quanto paghi.»",
+  "cite": "⟦Detto della Val Vibrata⟧"
+ }
 }

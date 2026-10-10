@@ -11,26 +11,46 @@
  "mappa": null,
  "colore": "#4E5A6E",
  "scheda": {
-  "Capitale": "La Fortezza di Glacius, scavata nella montagna",
+  "Governo": "Una marca di confine: il Margravio ha i poteri di un generale in guerra, e qui la guerra non finisce mai",
   "Chi comanda": "Il Margravio Korven Valdûr",
+  "Capitale": "La Fortezza di Glacius, scavata nella montagna",
   "Popolazione": "Circa due milioni",
+  "Popoli": "Umani del nord, alti, pallidi e di poche parole; molti nani nelle miniere e nelle fortezze; pochi halfling e gnomi",
   "Casata": "Valdûr, i Signori del Ferro",
+  "Fede": "La Fiamma Solare, rispettata ma senza fanatismi; Bellator è il dio di tutti",
   "Vive di": "Miniere di ferro, argento e carbone; armi; mercenari",
   "Esercito": "La Legio Fulminata, la Prima Falange del Fulmine: circa 8.000",
-  "Dialetto": "Il Gorvathino, duro e pieno di parole naniche"
+  "Dialetto": "Il Gorvathino, duro e pieno di parole naniche",
+  "Motto": "«Noi combattiamo perché voi possiate dormire»"
  },
  "gm": [
   {
    "t": "Il segreto di Glacius",
-   "txt": "Nelle profondità della Fortezza di Glacius, chiuso da sigilli nanici, giace il [[Sigillo della Fine]], il settimo e il più pericoloso. Il Margravio lo sa: la sua ossessione per il confine non è patriottismo, è terrore. Si dice che nei passi più alti i fantasmi dei soldati caduti combattano ancora ogni notte: è il Sigillo che non lascia riposare i morti.\n\nNei vecchi documenti a Glacius c’era il Sigillo del Comando. È stato spostato qui il Sigillo della Fine, perché il Comando è quello trovato sotto Bëllindë."
+   "txt": "Nelle profondità della Fortezza di Glacius, chiuso da sigilli nanici, giace il [[Sigillo della Fine]], il settimo e il più pericoloso. Il Margravio lo sa: la sua ossessione per il confine non è patriottismo, è terrore. I fantasmi che combattono ogni notte nei passi più alti sono veri: è il Sigillo che non lascia riposare i morti.\n\nNei vecchi documenti a Glacius c’era il Sigillo del Comando. È stato spostato qui il Sigillo della Fine, perché il Comando è quello trovato sotto Bëllindë.\n\n⟦A guardia del Sigillo ci sono i Vigilanti del Confine: è il vero compito dell’ordine, e lo sanno solo i loro priori. La Legio Fulminata non è mai entrata nei piani più bassi.⟧"
   },
   {
    "t": "Il sangue d’oro",
-   "txt": "Casa Valdûr discende da una principessa Aurex. Il Margravio ha nel sangue una goccia di Aurax, e lo sa."
+   "txt": "Casa Valdûr nacque dal matrimonio tra una principessa Aurex e un condottiero del nord. Il Margravio ha nel sangue una goccia di Aurax, e lo sa. Se Silvanus si fa avanti, Korven è l’unico che può rivendicare lo stesso sangue: un rivale, oppure il primo alleato che conta. ⟦Korven non vuole il trono per sé: vuole un Imperatore che sappia tenere una spada. Se Silvanus gli dimostra di essere un soldato, e non un pretendente di corte, il Margravio può diventare il suo braccio. Se lo vede circondato da sacerdoti e mercanti, lo considererà un altro Solvirax.⟧"
   },
   {
    "t": "La faida",
-   "txt": "Un’invasione di Laguras contro Artefracta è uno scenario possibile e terribile."
+   "txt": "Un’invasione di Laguras contro Artefracta è uno scenario possibile e terribile. ⟦Basterebbe un incidente: un mago di Alviria trovato con un oggetto drukarr, una pattuglia di Vigilanti sparita vicino ai laghi. Il Margravio non lo cerca, ma non lo eviterebbe.⟧"
+  },
+  {
+   "t": "Il grano e il ferro",
+   "txt": "⟦Il Margravio ha risposto all’embargo della Terpuria alzando il prezzo delle armi che vanno nelle pianure del grano, e facendo sapere a Casa Veranthi che la Via del Ferro passa anche per i suoi granai. Per ora sono parole. Una provincia affamata con ottomila soldati è il problema più grande che la Terpuria possa avere.⟧"
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· Un emissario del Margravio si presenta alla Crociata con una lettera sigillata (vedi la voce dell’Impero Aureo). ⟦Korven non chiede chi è Silvanus: chiede quanti soldati ha, e come ha vinto i suoi scontri.⟧\n· Le lettere celamanti intercettate a Laguras, che il capitano Varius Torquatus conservava nel suo granaio (vedi La Frattura).\n· Un pugno di polvere d’argento dei Campi Maleditti, che brilla nelle notti di luna.\n· ⟦Una Compagnia del Passo in cerca di contratto arriva nel Ducato. Costa il triplo dei vesperiani, e non ha mai rotto un contratto in cento anni.⟧"
+  },
+  {
+   "t": "Da allineare",
+   "txt": "· La vecchia voce diceva che dal nord scendono anche «incursori di Sylva Noctis»: Sylva Noctis sta a sud-ovest, oltre il mare. Qui gli incursori arrivano dal mare, sulle coste di ponente, come nella guerra (La Guerra delle Due Lune: il Fronte Occidentale «sulle coste e nelle valli di Laguras»).\n· «Inverni lunghi otto mesi» era scritto uguale anche per Silentia: qui è diventato «più di metà dell’anno».\n· I Campi d’Argento sono a Laguras (voce della guerra), ma la vecchia voce della provincia non li nominava: ora ci sono.\n· Nella voce dei Sigilli Lunari il Sigillo della Fine è «fuori dal Ducato, sconosciuto»; per il master è a Glacius (questa voce e quella dell’Impero). Va bene così: i giocatori non lo sanno.\n· «Celomanti» con la o, come da decisione di Giuseppe. I testi di lore chiamavano la provincia Gorvathun.\n· Le armi di Laguras comprate da Vesperia vengono dal testo di lore sul Regno di Vesperia."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se le coste di ponente di Laguras vanno bene (le richiede la voce della guerra).\n· Chi è il Maestro della Gilda del Sole e dell’Incudine.\n· I nomi delle casate minori sotto i Valdûr."
   }
  ],
  "parent": "impero-aureo",
@@ -43,25 +63,118 @@
   {
    "t": "",
    "capo": true,
-   "txt": "Laguras Solis è la provincia più a nord: montagne altissime, valli strette, passi fortificati, laghi di ghiaccio e inverni lunghi otto mesi. La sua gente è alta, pallida e di poche parole. I bambini imparano a combattere prima di leggere, e le donne combattono accanto agli uomini. Qui la Guerra delle Due Lune non è mai davvero finita."
+   "txt": "Laguras Solis è la provincia più a nord: montagne altissime, valli strette, passi fortificati, laghi di ghiaccio, e inverni che chiudono i passi per più di metà dell’anno. La sua gente è alta, pallida e di poche parole. I bambini imparano a combattere prima di leggere, e le donne combattono accanto agli uomini.\n\nQui la Guerra delle Due Lune non è mai davvero finita. Ogni inverno qualcuno scende dal nord, e ogni primavera qualcuno non torna. I laguresi lo raccontano senza lamentarsi: è il prezzo del loro mestiere, che è tenere in piedi il muro dell’Impero."
   },
   {
-   "t": "I. La guerra che non finisce",
-   "txt": "Quando Aurax arrivò, i clan di queste valli non si piegavano a nessuno. Li vinse d’inverno, nella Battaglia delle Ombre Eterne, e invece di umiliarli diede loro il compito di difendere il confine per tutto l’Impero. Da allora lo fanno. Nella Guerra delle Due Lune le fortezze di Laguras resistettero per anni sul fronte più sanguinoso, e i laguresi contano ancora la loro gente in generazioni perdute. Oggi, ogni inverno, dal nord scendono le orde Brak di Gridraz, e a volte troll, giganti e incursori di Sylva Noctis.",
+   "t": "I. In breve, la sua storia",
+   "txt": "Quando Aurax arrivò, i clan di queste valli non si piegavano a nessuno. Li affrontò d’inverno, nelle valli strette dove il sole non arriva per mesi, e la battaglia durò tanto che la chiamarono [[delle Ombre Eterne]]. Vinse, ma non li umiliò: diede ai loro capi il compito di difendere il confine per tutto l’Impero. Da sconfitti diventarono i guardiani più fedeli, e lo sono ancora.\n\nNella Guerra delle Due Lune Laguras fu il [[Fronte Occidentale]]: sulle sue coste e nelle sue valli sbarcavano gli eserciti venuti da oltre il mare. Fu il fronte più sanguinoso, una guerra di logoramento di ogni giorno. Le fortezze scavate nelle montagne resistettero per anni, e i laguresi contano ancora la loro gente in generazioni perdute. La guerra finì qui, sulla pianura che i contadini chiamavano i Campi del Confine: tre giorni e due notti, la più grande battaglia della storia di Ea. Oggi sono i [[Campi d’Argento]]. Brillano ancora di notte, e nessuno ci semina né ci cammina dopo il tramonto.\n\nDa allora, ogni inverno, dal nord scendono le orde Brak di Gridraz, e con loro troll e giganti. E dal mare, ogni tanto, sbarca chi non dovrebbe.",
    "img": "Mondo — Laguras Solis.png",
    "didascalia": "Laguras Solis"
   },
   {
-   "t": "II. Chi comanda",
-   "txt": "Il [[Margravio Korven Valdûr]], sessant’anni, coperto di cicatrici, governa da Glacius e non ha mai messo piede a Solaria. Disprezza i politici e venera i soldati. Considera il trono vuoto una debolezza mortale, e vuole un Imperatore guerriero."
+   "t": "II. Come si governa",
+   "txt": ""
   },
   {
-   "t": "III. La Legio Fulminata",
-   "txt": "La Prima Falange del Fulmine è l’unica armata dell’Impero all’altezza delle legioni antiche: ottomila soldati temprati da due secoli di guerra. Accanto a lei combattono i [[Vigilanti del Confine]], un ordine di monaci guerrieri che pattuglia i passi, e le [[Compagnie del Passo]], i mercenari migliori e più cari del continente."
+   "t": "Il Margravio",
+   "liv": 3,
+   "txt": "Il [[Margravio Korven Valdûr]], sessant’anni, coperto di cicatrici, governa da Glacius e non ha mai messo piede a Solaria. Non intende farlo. Disprezza i politici e venera i soldati. Considera il trono vuoto una debolezza mortale che i nemici sfrutteranno, e vuole un Imperatore guerriero. Ha il voto di Laguras nel Concilio dei Reggenti, e la Legio Fulminata, che è la ragione per cui il confine del nord tiene ancora."
   },
   {
-   "t": "IV. Vicini e nemici",
-   "txt": "I laguresi disprezzano gli elfi di Artefracta, che chiamano «fratelli di sangue dei Celamanti», anche se furono proprio loro a tradire i cugini. Hanno buoni rapporti con i nani. E non si fidano di nessuno che non abbia mai passato un inverno sul confine."
+   "t": "Le casate del ferro",
+   "liv": 3,
+   "txt": "Casa Valdûr comanda su tutto. Sotto di lei ci sono casate guerriere minori, che vivono per la battaglia e si misurano in cicatrici e in figli caduti. Qui ha sede la [[Gilda del Sole e dell’Incudine]], una delle cinque Gilde Maggiori: fa le armi, le armature e le macchine d’assedio delle Falangi, e i suoi fabbri-mastri sono tra i pochi artigiani dell’Impero ad avere un rango da nobili."
+  },
+  {
+   "t": "I nani",
+   "liv": 3,
+   "txt": "Con i nani Laguras ha buoni rapporti, i migliori dell’Impero. Molti vivono qui, nelle miniere e nelle fortezze sotto la montagna, e il Gorvathino è pieno di parole naniche. Un lagurese e un nano si capiscono al primo sguardo: tutti e due sanno che cosa costa tenere una porta."
+  },
+  {
+   "t": "La fede",
+   "liv": 3,
+   "txt": "La Fiamma Solare qui è rispettata ma pratica. I soldati pregano prima della battaglia, ma non sopportano i fanatici, e un sacerdote al campo è rispettato solo se sa anche tenere una spada. Il dio di tutti, a Laguras, è [[Bellator]]. Sulla tomba di un soldato si pianta la sua spada, con l’elsa verso il pianeta rosso. La sera prima di una battaglia nessuno beve vino: si beve acqua, e l’ultimo sorso si versa per terra, per chi non ci sarà domani."
+  },
+  {
+   "t": "Come si vive",
+   "liv": 3,
+   "txt": "Una vita spartana. Le parole sono poche e il rispetto si guadagna con le azioni. L’arte serve a qualcosa: canzoni di guerra, poemi lunghi, statue di guerrieri caduti. I nonni raccontano la Guerra delle Due Lune come una storia di famiglia, perché per loro lo è. E nessuno si fida di chi non ha mai passato un inverno sul confine."
+  },
+  {
+   "t": "III. Le terre",
+   "tabella": {
+    "head": [
+     "Terra",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "Glacius",
+      "La capitale, una cittadella scavata nella montagna. Da fuori si vedono solo le porte e le feritoie."
+     ],
+     [
+      "I passi fortificati",
+      "Le Vette Eterne qui sono più alte che in ogni altro posto. Ogni passo ha la sua torre e i suoi guardiani, e d’inverno si chiude."
+     ],
+     [
+      "Le valli strette",
+      "Villaggi di pietra, miniere, fucine. In fondo alle valli più strette il sole non arriva per mesi."
+     ],
+     [
+      "I laghi di ghiaccio",
+      "Laghi glaciali, gelati per gran parte dell’anno. Ci si passa sopra con le slitte."
+     ],
+     [
+      "Le coste di ponente",
+      "Nella guerra ci sbarcavano gli eserciti di Sylva Noctis. ⟦Oggi una fila di torri di guardia accende fuochi quando vede vele sconosciute.⟧"
+     ],
+     [
+      "I Campi d’Argento",
+      "La pianura dell’ultima battaglia, coperta di polvere d’argento vetrificata. I contadini la chiamano li Campi Maleditti."
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito",
+   "txt": "La Prima Falange del Fulmine è l’unica armata dell’Impero all’altezza delle legioni antiche: ottomila soldati temprati da due secoli di guerra. Obbedisce al Margravio, non a Solaria, e il Margravio la considera sua.",
+   "tabella": {
+    "head": [
+     "Forza",
+     "Quanti",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "La Legio Fulminata, la Prima Falange del Fulmine",
+      "Circa 8.000",
+      "Il Margravio"
+     ],
+     [
+      "I Vigilanti del Confine",
+      "⟦Qualche centinaio⟧",
+      "Il loro ordine: votati guerrieri che pattugliano i passi"
+     ],
+     [
+      "Le Compagnie del Passo",
+      "Migliaia di veterani",
+      "A chi le paga: sono i mercenari migliori e più cari del continente"
+     ],
+     [
+      "⟦Le milizie delle valli⟧",
+      "⟦Ogni uomo e ogni donna che sa tenere un’arma⟧",
+      "⟦Al signore della valle⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Il ferro e il denaro",
+   "txt": "Laguras vive di quello che c’è sotto la montagna: ferro, argento, carbone. La Gilda del Sole e dell’Incudine lo forgia, e le armi di Laguras armano mezzo Impero; ne compra anche Vesperia, per le sue compagnie. Qui il ferro grezzo si accetta più volentieri dell’oro. La [[Via del Ferro]], una delle cinque Strade Solari, lega Laguras a Solaria: è la più pericolosa di tutte.\n\nL’altra cosa che Laguras vende sono i soldati. Le [[Compagnie del Passo]] costano più di tutte le altre, e valgono quello che costano.\n\nQuello che manca è il grano. In montagna non cresce, e da qualche anno la Terpuria lo manda tardi e caro, come ad Aprutium. Dice che è colpa dei briganti. A Glacius non ci crede nessuno."
+  },
+  {
+   "t": "VI. I mali di Laguras oggi",
+   "txt": "· [[Le orde.]] Ogni inverno le orde di Gridraz scendono dal nord, con troll e giganti. Ogni inverno il confine tiene, e ogni inverno costa.\n· [[Il grano.]] La Terpuria stringe, e una provincia di soldati non può mangiare il ferro.\n· [[Le generazioni perdute.]] Due secoli di guerra hanno lasciato valli con più tombe che case.\n· [[I morti dei passi.]] Si dice che nei passi più alti i fantasmi dei soldati caduti combattano ancora, ogni notte. I pastori non portano le pecore lassù.\n· [[Gli elfi.]] I laguresi disprezzano gli elfi di Artefracta, che chiamano «fratelli di sangue dei Celomanti», anche se furono proprio loro a tradire i cugini. Tra Laguras e Artefracta non c’è guerra, ma non c’è nemmeno pace."
   }
  ],
  "epigrafe": {

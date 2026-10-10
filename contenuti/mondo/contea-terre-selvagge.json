@@ -16,16 +16,142 @@
  "mappa": null,
  "colore": "#3E5A3A",
  "scheda": {
-  "Nome in dialetto": "L'Abbandône",
-  "Numero": "8",
-  "Borghi": "3"
+  "Nome": "Le Terre Selvagge; in dialetto, L’Abbandônë",
+  "Contea": "L’ottava e ultima",
+  "Il borgo che conta": "Nessuno: lì non comanda nessuno",
+  "Chi comanda": "Nessun signore. Gli eremiti guerrieri a La Ròcchë, il clan della Piana a Lë Piana, i lupi e gli orsi-gufo a Curtënë",
+  "Borghi": "La Ròcchë, Lë Piana, Curtënë: tre nomi per tre manciate di villaggi sparsi",
+  "Confini": "A nord il confine con le Marche e il Luminor Meridionale; a est la Montagna dei Fiori e le Terre del Nord; a sud la Montagna del Gigante e il Cuore del Ducato; a ovest la cresta della Laga",
+  "Fiumi": "Qui nascono il Tordinum e la Vezzola che scendono a Teramum; il Castellano, che fa da confine; e cento torrenti con le cascate",
+  "Paesaggio": "Boschi di faggi, di castagni e di abeti bianchi, gole, cascate, villaggi di pietra di dieci case, pascoli d’estate",
+  "Vive di": "Castagne, porcini, pecore e pecorino, un po’ di legna, e il pedaggio che si chiede a chi passa il confine",
+  "Fedeltà": "A nessuno. Sulla carta, La Ròcchë è del flamine di Teramum e Curtënë dei Fonteviva; metà delle ville della Piana pagano anche di là dal confine"
  },
- "gm": "I Ranger del Bosco di La Ròcchë sono guide invisibili per chi ha i contatti giusti. Curtënë è invisibile ai radar magici: buon nascondiglio. I Briganti della Laga si comprano e non fanno domande.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "La contea dove si scompare. Le Terre Selvagge non hanno un ruolo nella marcia su Teramum, ma sono il retro della capitale: la Vezzola e il Tordinum scendono di qui fino alle sue mura, e i sentieri della Laga aggirano ogni strada del Consiglio. Sono il posto dove nascondere qualcuno, far passare qualcosa, o fuggire. E a nord, a Lë Piana, toccano il Luminor Meridionale."
+  },
+  {
+   "t": "Le trame della Laga",
+   "txt": "· [[I Ranger del Bosco.]] Gli eremiti guerrieri di La Ròcchë sono guide invisibili per chi ha i contatti giusti: l’Ordine Ospitaliero, i Custodi, o un druido. Sacri, non politici. ⟦Adamus, druido, è il contatto giusto: il suo ordine conosce gli eremiti, e il druido di Torricella può fargli da garante.⟧\n· [[Curtënë.]] Gli scrutamenti magici non la vedono: è il nascondiglio perfetto per chi deve sparire, anche da Iuvenza.\n· [[I Briganti della Laga.]] Il clan della Piana si compra e non fa domande. Se ben pagati, sono una forza d’urto irregolare; conoscono la Laga come nessuno.\n· ⟦[[La Lega dei Sensali.]] Melatino paga i briganti sui passi. Gli uomini della Piana hanno preso il suo denaro per chiudere il passo del Castellano ai carri che vengono dalla Val Vibrata. Pagano due volte chi chiede di passare.⟧\n· ⟦[[I Malandra.]] La casata decaduta di Curtënë, che un tempo teneva le ville per i Fonteviva. Oggi sono briganti, e un loro uomo è il più ricercato della Laga.⟧"
+  },
+  {
+   "t": "Sotto la Laga",
+   "txt": "· ⟦Perché Curtënë sfugge agli scrutamenti: l’abetaia del Monte Bilanciere cresce sopra una vena del Gigante, come le radici di un albero sopra una sorgente. Chi guarda da lontano con la magia, lì vede solo alberi. Lo sanno i druidi, non la Fiamma.⟧\n· ⟦Il tempio antico di Pagliaroli non era della Fiamma: era un tempio del cielo, dei Pretuziani e poi dell’Impero. Sotto il pavimento c’è una stanza con tre nicchie: Sole, Luna bianca, Luna scura. Come a Bëllindë.⟧\n· Il tesoro di Castel Manfrino lo custodisce una fata vestita di bianco, e ha una regola: il rame si prende subito, l’argento dopo tre anni, l’oro dopo altri tre. Chi prende tutto insieme resta chiuso dentro.\n· Il Gigante si gira nel sonno: anche qui la terra trema, e i Brak usciti dalla guerra girano per le campagne. Nella Laga nessuno li conta."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· La vecchia voce era di poche righe: è stata tenuta tutta, nell’apertura e nelle trame.\n· «Invisibile ai radar magici» diventa «gli scrutamenti magici non la vedono».\n· Il nome in dialetto segue la tabella del Ducato: L’Abbandônë.\n· Il vecchio Manuale metteva La Ròcchë e Curtënë in una contea «delle Montagne della Laga» con Cëvëtëlla: non vale più.\n· Le famiglie dei borghi sono quelle decise da Giuseppe: Ammazzalorso a La Ròcchë, Corvanera a Lë Piana, Malandra a Curtënë (casata decaduta, briganti).\n· Lo Studio dei paesi veri: Cortino fu per tre secoli degli Acquaviva (nel gioco: Fonteviva), dentro la Montagna di Roseto; Rocca Santa Maria era feudo del vescovo di Teramo (nel gioco: del flamine) e patria di Marco Sciarra; Valle Castellana stava sul confine con lo Stato del Papa e con Ascoli, e il mestiere vero era castagne, funghi e pastori, non il legname. Per questo i «boscaioli» della Piana ora sono soprattutto castagnari, pastori e uomini del confine; il nome «Briganti della Laga» resta.\n· Folklore vero usato: le streghe della Laga che rubano il fiato e il sale sulla soglia; la fata bianca e il tesoro di re Manfredi a Castel Manfrino; Marco Sciarra «flagello di Dio» e «re della campagna» (nel gioco: Flagello della Fiamma).\n· Lessico di Ea: chiese → solari, santi → lucenti, monaci → votati, vescovo → flamine."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Perché Curtënë sfugge agli scrutamenti: la proposta della vena del Gigante va bene?\n· Se la Crociata ha bisogno della Laga, e per che cosa.\n· Quanti abitanti ha la contea."
+  }
+ ],
  "id": "contea-terre-selvagge",
  "livello": "contea",
  "parent": "ducato-aprutium",
  "group": "Le otto contee",
  "title": "Le Terre Selvagge",
- "sub": "L'Abbandône · contea 8 — L'estremo nord-ovest: foreste fitte, montagne impervie, assenza di legge.",
- "pub": "Le foreste della Laga, a nord-ovest: abeti bianchi, lupi, orsi-gufo, sentieri che solo chi ci è nato conosce. Non c'è signore, non c'è legge, non c'è Chiesa se non gli eremiti guerrieri della Ròcchë. I boscaioli della Piana — i Briganti della Laga — non si occupano di politica: si pagano. Chi entra qui senza una guida non è detto che esca."
+ "sub": "L’Abbandônë · ottava contea: i boschi della Laga",
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Le foreste della Laga, a nord-ovest del Ducato: abeti bianchi, faggi, castagni, lupi, orsi-gufo, sentieri che solo chi ci è nato conosce. Non c’è signore, non c’è legge, non c’è Fiamma se non gli eremiti guerrieri della Ròcchë. Gli uomini della Piana, che a Teramum chiamano i Briganti della Laga, non si occupano di politica: si pagano. Chi entra qui senza una guida non è detto che esca.\n\nÈ l’ottava contea solo sulle carte di Teramum. Per chi ci vive, è il bosco. Questa voce racconta la contea intera. I tre borghi hanno le loro voci."
+  },
+  {
+   "t": "I. Le terre che nessuno ha voluto tenere",
+   "txt": "Prima dell’Impero, sulla Laga salivano i Pretuziani per pregare in cima ai monti. A Curtënë, in mezzo alle case, ci sono ancora le pietre di un tempio, più vecchio della Fiamma.\n\nL’Impero non ci venne mai davvero. Costruì un forte sulla strada per il nord, dove oggi ci sono le rovine di Castel Manfrino, e lasciò il resto ai boschi. Vennero i votati, e alzarono solari e priorati nelle valli. Vennero gli eremiti, che cercavano la solitudine e la trovarono.\n\nPoi vennero i signori, a parole. Il flamine di Teramum ebbe La Ròcchë e le sue ville. I [[Fonteviva]] di Atrë ebbero la Montagna di Roseto, con Curtënë, e la tennero per secoli. A nord, le ville della Piana stavano sul confine, e qualcuna chiese di passare dall’altra parte. Ma nessuno ci mise mai un castellano che restasse.\n\nE quando il confine con le Marche diventò caldo, nella Laga arrivarono i briganti. Il più famoso, [[Marco Sciarra]], era nato in una villa della Ròcchë: un pastore povero che arrivò a guidare mille uomini, si chiamava da solo il Flagello della Fiamma mandato contro gli usurai, e i contadini lo chiamavano il re della campagna. Lo uccise un suo compagno, per avere il perdono.",
+   "img": "Mondo — Le Terre Selvagge.jpg",
+   "didascalia": "Le Terre Selvagge"
+  },
+  {
+   "t": "II. La Laga e le sue acque",
+   "txt": "I monti della Laga non sono di pietra chiara come il Gigante. Sono di arenaria scura, a strati, e l’acqua ci scende dappertutto: cento torrenti, gole strette, cascate alte come torri. D’inverno la neve chiude le valli per settimane. D’estate i pastori salgono ai prati in cima, e d’autunno le greggi scendono verso le pianure lontane del sud.\n\n· [[Il Tordinum]] nasce qui, sotto Curtënë, e scende a Teramum. Dalla villa di Pagliaroli se ne vedono le sorgenti.\n· [[La Vezzola]] nasce sotto La Ròcchë, e arriva sotto le mura della capitale, dall’altra parte.\n· [[Il Castellano]], a nord, scende fra le ville della Piana. Per secoli ha fatto da confine con le terre della Fiamma d’oltre Truntum.\n\nI boschi cambiano salendo. In basso castagni e querce: i marroni della Piana li conoscono fino al mare. Più su i faggi, fitti e scuri, piegati dalla neve. In certi valloni, gli abeti bianchi: alti, dritti, e così fitti che a mezzogiorno sembra sera. Ci vivono i lupi, i cinghiali, i rapaci, e di rado un orso. E poi gli orsi-gufo. ⟦Nelle altre contee sono una favola per i bambini; qui sono un motivo per non uscire di notte.⟧"
+  },
+  {
+   "t": "III. I borghi",
+   "tabella": {
+    "head": [
+     "Borgo",
+     "Dove",
+     "Chi lo tiene",
+     "Per che cosa è noto"
+    ],
+    "rows": [
+     [
+      "[[La Ròcchë]]",
+      "Nel cuore della Laga, sopra le sorgenti della Vezzola",
+      "Gli eremiti guerrieri, i Ranger del Bosco; le famiglie come gli Ammazzalorso",
+      "Le guide che non si vedono; il Bosco Martese; i porcini; Marco Sciarra"
+     ],
+     [
+      "[[Lë Piana]]",
+      "A nord, nella valle del Castellano, sotto la Montagna dei Fiori",
+      "Il clan della Piana, con i Corvanera",
+      "Il confine e il pedaggio; i marroni; Castel Manfrino e il tesoro del re"
+     ],
+     [
+      "[[Curtënë]]",
+      "A sud, sotto il Monte Bilanciere, alle sorgenti del Tordinum",
+      "Nessuno: i lupi e gli orsi-gufo. Sulla carta, i Fonteviva",
+      "L’abetaia, le ville più alte del Ducato, la fiera dei pastori, i Malandra"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. Chi comanda",
+   "txt": "Nessuno, e questo è il punto. Le carte di Teramum dicono che le Terre Selvagge sono una contea del Ducato; i montanari dicono che il Ducato finisce dove finisce la strada dei carri. In mezzo ci sono poteri che non si somigliano e che non si danno fastidio.",
+   "tabella": {
+    "head": [
+     "Chi",
+     "Che cosa tiene",
+     "Guarda a"
+    ],
+    "rows": [
+     [
+      "Gli eremiti guerrieri",
+      "La Ròcchë e i sentieri della Laga",
+      "Al bosco e al cielo. Non alla politica"
+     ],
+     [
+      "Il clan della Piana",
+      "Lë Piana, la valle del Castellano e i passaggi del confine",
+      "A chi paga, da tutte e due le parti"
+     ],
+     [
+      "Nessuno",
+      "Curtënë e le sue ville",
+      "I villaggi si arrangiano da soli"
+     ],
+     [
+      "Il flamine di Teramum",
+      "Sulla carta, La Ròcchë e le sue ville",
+      "Non ci manda nessuno da anni"
+     ],
+     [
+      "Casa Fonteviva",
+      "Sulla carta, la Montagna di Roseto e Curtënë",
+      "Ad Atrë: non riscuote niente"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Entrare nella Laga",
+   "txt": "Nelle Terre Selvagge non ci sono strade maestre. Ci sono i tratturi dei pastori, le mulattiere dei castagnari e i sentieri. Da Cëvëtëlla si arriva a Lë Piana; da Lë Piana a La Ròcchë; da La Ròcchë a Curtënë; da Curtënë si scende verso Crognaleto e Tussëcië, sotto il Gigante. Ogni tratto è una giornata di cammino, a volte di più.\n\nChi conosce i sentieri passa dove vuole, e nessun posto di blocco lo vede. Chi non li conosce si perde. Per questo nella Laga contano le guide: i Ranger della Ròcchë, che guidano solo chi ha i contatti giusti, e gli uomini della Piana, che guidano chiunque paghi. Il prezzo non è lo stesso, e neanche il rischio.\n\nE poi ci sono le cose che si dicono. Che di notte le streghe della Laga cavalcano i venti ed entrano dal buco della serratura a rubare il fiato a chi dorme: per questo sulle soglie si lascia il sale, che devono contare fino all’alba. Che a Castel Manfrino una donna vestita di bianco custodisce il tesoro di un re. ⟦Che nella Laga ci si perde anche con la guida, se il bosco non vuole.⟧"
+  },
+  {
+   "t": "VI. La gente",
+   "txt": "Pochi, e sparsi. Villaggi di dieci case di pietra, con il forno, il solario e la stalla. Pastori, castagnari, cercatori di funghi, qualche boscaiolo. La moneta qui vale meno di un pezzo di pecorino stagionato o di un buon coltello. Non amano i forestieri, ma non li cacciano: li guardano, li pesano, e poi decidono. E prima di tutto chiedono: «Chi si’ lu fije?», di chi sei figlio.\n\nOgni villaggio ha il suo lucente e il suo solario, e accanto al solario, spesso, una pietra più vecchia a cui nessun sacerdote ha il coraggio di dire niente. D’autunno si fanno le castagne e i funghi, d’inverno si sta dentro, d’estate si sale ai pascoli. A giugno, a Curtënë, si fa la fiera dei pastori, e scendono tutti. Le notizie arrivano tardi, con i pastori, e se ne vanno presto."
+  }
+ ],
+ "epigrafe": {
+  "txt": "«Dove non arriva la strada dei carri, non arriva nemmeno lu Duche.»",
+  "cite": "⟦Detto dei montanari della Laga⟧"
+ },
+ "blocchi": true
 }

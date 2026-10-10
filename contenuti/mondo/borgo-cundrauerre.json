@@ -14,25 +14,107 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Barone Orso Barbaspina «Spaccatesta»",
-  "Fedeltà": "Mercenario",
-  "Corrisponde a": "Controguerra"
+  "Paese vero": "Controguerra",
+  "Altri nomi": "Cundrauè o Cundraüerrë in dialetto; Contraguerra negli atti antichi",
+  "Abitanti": "⟦Circa milleduecento, contando i casali; più la compagnia, quando è a casa⟧",
+  "Chi comanda": "Il Barone Orso Barbaspina, che tutti chiamano Spaccatesta",
+  "Dentro le mura": "Il Torrione, il Palazzo dei Fonteviva, Piazza del Commercio, il solario di Benedetto, l’ara dell’Icona, il cortile degli ingaggi",
+  "Fuori le mura": "La Lunaria delle Grazie, l’ara di Rocco, il Colle della Forca, la Commenda, il guado del Truntum, le vigne, i casali",
+  "Porte": "Porta Maggiore, sulla piazza; ⟦Porta del Fiume, a nord, verso il Truntum⟧",
+  "Guardia": "⟦La compagnia di ventura: centocinquanta uomini quando c’è tutta, di solito la metà. Le vedette del Torrione giorno e notte⟧",
+  "Lucente": "Il Lucente Benedetto Abate, che si festeggia il 21 marzo, quando cominciano i lavori nelle vigne",
+  "Distanze": "⟦Sandiglië, tre ore a ovest; Nnaréta, quattro ore a sud-est per il tratturo; Culënnëllë, cinque ore a est; Ngarà, mezza giornata a ovest; il guado del Truntum, un’ora⟧"
  },
- "gm": "Compagnia di ventura reclutabile — o comprabile dal nemico. Barbaspina rispetta la forza e il denaro, in quest'ordine.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Una compagnia di ventura reclutabile, o comprabile dal nemico. Barbaspina rispetta la forza e il denaro, in quest’ordine. Combattere i suoi uomini significa farselo nemico, o farselo alleato: rispetta solo la forza.\n\nPer la Crociata, Cundraüerrë è un esercito già pronto a mezza giornata dal fianco nord. Per i nemici della Crociata, è lo stesso esercito."
+  },
+  {
+   "t": "Orso Barbaspina, Spaccatesta",
+   "txt": "⟦Un omone sui cinquant’anni, con la barba grigia a spazzola e una cicatrice che gli taglia il sopracciglio. Il titolo di Barone glielo diede un signore che non poteva pagarlo in oro. Ha preso il palazzo dei Fonteviva in pagamento di un contratto che Atrë non saldò mai, e da allora i Fonteviva lo considerano un ladro e lui li considera debitori.⟧\n\n⟦Non è crudele per piacere: è un uomo d’affari che fa la guerra. Mantiene la parola data e pretende che la si mantenga con lui. Chi lo inganna, lui lo trova.⟧"
+  },
+  {
+   "t": "Chi lo vuole comprare",
+   "txt": "· ⟦[[Iuvenza.]] Gli uomini con l’accento del sud sono del Loto Nero: vogliono la compagnia per chiudere la Val Vibrata alla Crociata e per proteggere gli scavi di Curruppjë. Offrono molto, e pagano metà subito. Nei documenti che portano c’è il sigillo «V.».⟧\n· ⟦[[Teramum.]] Il Barone Pietramala ha mandato un uomo per conto del Consiglio Reggente: la compagnia come guardia della strada nord, contro la Crociata. Il Consiglio paga poco e tardi, come sempre.⟧\n· ⟦[[Il Luminor.]] Un questore d’oltre Truntum vorrebbe la compagnia per scortare i templari dentro il Ducato. Spaccatesta non ama i sacerdoti armati, ma ama il loro oro.⟧\n· ⟦[[Atrë.]] Giosia di Fonteviva offrirebbe di saldare il vecchio debito in cambio del palazzo. Spaccatesta non vuole cedere il palazzo.⟧\n· ⟦[[La Crociata.]] Ha poco oro. Può offrire altro: il rispetto, se lo batte; una promessa scritta di un titolo vero quando ci sarà un Duca; o il palazzo, riconosciuto da chi verrà eletto.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Il duello.]] ⟦Spaccatesta ascolta solo chi lo ha battuto o chi ha battuto i suoi. Un duello al primo sangue in cortile davanti alla compagnia: tre prove di Atletica contrapposte, o un vero combattimento fino a metà dei punti ferita. Chi vince, siede alla sua tavola.⟧\n· [[Il prezzo.]] ⟦Cento uomini per un mese: duecento fiorini, metà prima. Cinquanta uomini come scorta fino a Teramum: ottanta fiorini. Per il solo «non combattere contro la Crociata»: trenta fiorini, e una botte di vino buono.⟧\n· [[Il pagatore.]] ⟦Tiene i libri dei conti: chi ha pagato la compagnia negli ultimi cinque anni. Indagare CD 15 per leggerli di nascosto, e ci sono nomi di Teramum.⟧\n· [[I disertori.]] ⟦Fra loro c’è un sergente della Guardia Ducale che ha servito sotto Lucius Grazianus e sa che a Teramum è pronto un decreto di legge marziale senza data. Maximus lo può riconoscere.⟧\n· [[La rissa della festa.]] Se la Crociata passa a luglio, la festa del vino è una scena pronta: conquistarsi il borgo in una rissa, senza armi."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Controguerra vera (Studio dei paesi veri): il paese del vino (Controguerra DOC, Città del Vino e dell’Olio), il centro a goccia dopo le mura del 1460 fatte fare dal viceré Matteo di Capua, il Colle della Forca, il Torrione sull’altura che domina la valle del Tronto, il Palazzo Ducale degli Acquaviva accanto, la Piazza del Commercio con Porta Maggiore, San Benedetto Abate (patrono, 21 marzo; del paese distrutto nella guerra gotica restarono solo i muri della chiesa madre), la chiesa dell’Icona, Santa Maria delle Grazie (2 luglio, nata dalla predica di San Giacomo della Marca), San Rocco, la villa rurale fra le vigne, le capanne neolitiche e la lapide romana, i quattro soldati dovuti al conte di Aprutio, il paese conteso fra Ascoli e gli Acquaviva (Giosia lo prende la notte del 26 dicembre 1459, Ascoli lo riprende in quattro giorni), l’assedio di Ettore Fieramosca, la festa del vino a luglio, le ipotesi sul nome, lo stemma con i due armigeri a cavallo. Dialetto: Cundrauè.\n· Lessico di Ea applicato: San Benedetto → solario di Benedetto, Lucente Benedetto Abate; chiesa dell’Icona → ara dell’Icona; Madonna delle Grazie → Lunaria delle Grazie; San Rocco → ara di Rocco; il frate predicatore → un votato viandante.\n· Lo Studio dice che nella realtà il paese non aveva un barone proprio né un capitano di ventura: passava fra Ascoli e gli Acquaviva. Il canone tiene Barbaspina; il vino, che il vecchio canone ignorava, è tornato al primo posto.\n· Il vecchio canone (Manuale e voce del sito): confine militare, castello, Barbaspina «Spaccatesta» che vende la spada, compagnia reclutabile o comprabile, rispetta forza e denaro. Tutto tenuto.\n· I mercenari armati alla maniera di Vesperia con il Loto Nero sono negli Atti X e XII."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi paga oggi la compagnia, se qualcuno la paga.\n· Quanti uomini ha davvero Spaccatesta.\n· Se la compagnia può entrare nel Registro della Crociata, e a che prezzo.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Val Vibrata",
  "id": "borgo-cundrauerre",
  "parent": "contea-val-vibrata",
  "title": "Cundraüerrë",
- "sub": "Mercenario",
+ "sub": "Il borgo del vino e del Torrione, sopra la valle del Truntum",
  "pub": [
   {
    "t": "",
-   "txt": "Un confine militare, un castello, un barone che vende la spada al miglior offerente. Orso Barbaspina, detto Spaccatesta, comanda una compagnia di ventura che ha combattuto per chiunque abbia pagato, e non se ne vergogna.",
+   "capo": true,
+   "txt": "Cundraüerrë sta su un colle sopra la valle del Truntum, e in tutto il Ducato è il paese del vino: rosso forte, bianco fresco, vino dolce di uve appassite, e un olio che non ha niente da invidiare. Le vigne coprono le colline da ogni lato. Dall’altra parte del fiume ci sono le Marche Picenorum.\n\nÈ anche un confine militare: un castello, una torre, un barone che vende la spada al miglior offerente. Il Barone è Orso Barbaspina, detto Spaccatesta. Comanda una compagnia di ventura che ha combattuto per chiunque abbia pagato, e non se ne vergogna. Nessuno lo chiama Barone: per tutti è Spaccatesta, e lui ci tiene."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo ha la forma di una goccia: largo dalla parte della piazza, stretto dalla parte del Torrione, che sta sulla punta. La forma gliela diedero le mura, quando un governatore del Ducato, dopo l’ennesima guerra, ordinò di fortificarlo tutto. Dentro le mura le strade scendono dalla torre alla piazza come l’acqua. Più su del borgo c’è solo il Colle della Forca.\n\nIl nome, dicono, viene dalla guerra. Alcuni giurano che il borgo si chiamava come il signore che lo fondò, un Cacciaguerra; altri dicono «di fronte alla guerra», perché sta davanti al confine. In paese la spiegazione è più semplice: qui la guerra c’è sempre stata, e qualcuno ci deve stare contro.\n\nPer due secoli Cundraüerrë è stata contesa fra i Fonteviva e una città d’oltre Truntum. Una notte d’inverno un Fonteviva la prese, e quattro giorni dopo la città la riprese. Un condottiero famoso la assediò, un altro la saccheggiò, e ogni volta il borgo è stato rifatto.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "Porta Maggiore",
+      "Sulla Piazza del Commercio",
+      "La porta grande, da cui arrivano i carri del vino e i mercanti. ⟦Sopra c’è lo stemma del borgo: due cavalieri che si battono.⟧"
+     ],
+     [
+      "⟦Porta del Fiume⟧",
+      "A nord, sotto il Torrione",
+      "⟦Una porta stretta, che scende ripida verso il Truntum e il guado. La usano le pattuglie, e di notte i contrabbandieri.⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Cundraüerrë.jpg",
    "didascalia": "Cundraüerrë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. Il Torrione.]] La torre tonda sulla punta del colle, la costruzione più vecchia del borgo. Da lassù si vede tutta la valle del Truntum, dalla montagna fino al mare. È stata torre di vedetta da sempre: ⟦di giorno si segnala col fumo, di notte col fuoco, e le vedette di Spaccatesta non la lasciano mai vuota.⟧\n· [[2. Il Palazzo dei Fonteviva.]] Appoggiato al Torrione, grande e un po’ cadente. Lo costruirono i Fonteviva quando il borgo era loro. ⟦Oggi è la casa del Barone e la caserma della compagnia: nelle sale dipinte dormono i soldati, e nel salone grande, sotto un soffitto di stelle d’oro, Spaccatesta mangia con i suoi capitani.⟧\n· [[3. Piazza del Commercio.]] La piazza davanti a Porta Maggiore, con il palazzo dell’arco che la chiude da un lato. Quando le due rive del Truntum erano due regni, qui si scambiavano le loro merci. ⟦Ancora oggi il mercato del sabato è mezzo picenorum e mezzo aprutino, e si paga in tutte e due le monete.⟧\n· [[4. Il solario di Benedetto.]] Il tempio grande del borgo. In una guerra antica il borgo fu distrutto tutto, e restarono in piedi solo i suoi muri. Il paese fu ricostruito intorno a lui.\n· [[5. L’ara dell’Icona.]] Una piccola ara con un’immagine antica della Vecchia Madre, venuta non si sa da dove. ⟦I soldati della compagnia ci lasciano un nastro prima di partire, e lo riprendono se tornano. I nastri appesi sono tanti.⟧\n· ⟦[[6. Il cortile degli ingaggi.]] Il cortile dietro il palazzo. Ogni mattina ci si presentano uomini che vogliono entrare nella compagnia: contadini senza terra, disertori, figli cadetti. Un sergente li guarda in faccia, li fa tirare con l’arco e li scrive o li manda via.⟧\n· ⟦[[7. L’armaiolo.]] Una bottega sotto le mura, sempre accesa. Ripara corazze, affila spade, vende frecce a fasci. Il fabbro è un omone muto che capisce tutto.⟧\n· ⟦[[8. L’osteria della Goccia.]] Sulla piazza. L’unica osteria del borgo, piena di soldati, di vino rosso e di risse. Sei stanze sopra. L’oste, Caietane Cecche, si chiama così perché a ogni conto sbagliato grida «Cecche!», e fa pagare in anticipo. Ci si mangiano maccheroni alla chitarra col sugo di castrato.⟧\n· [[9. Il palazzo dei mercanti.]] Il palazzo grande della piazza, con le finestre di pietra. ⟦Ci abita il pagatore della compagnia, che tiene i conti di Spaccatesta e i suoi debiti.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[10. La Lunaria delle Grazie.]] Un tempio della Vecchia Madre in campagna, il più amato dalle donne del borgo. Cominciò tutto quando un votato viandante, passando, predicò qui e lasciò un’immagine della Madre. La festa è il 2 luglio. ⟦Ci vengono le madri dei soldati a chiedere che i figli tornino.⟧\n· [[11. L’ara di Rocco.]] Una piccola ara sulla strada, costruita dopo una peste. Ci si fermano i viandanti.\n· [[12. Il Colle della Forca.]] Il punto più alto del territorio, sopra il borgo. Il nome lo dice. ⟦Spaccatesta ci ha fatto impiccare due ladri di cavalli, e le corde sono ancora lì.⟧\n· ⟦[[13. La Commenda.]] Un vecchio podere di cavalieri, in piano, che ha dato il nome al casale. Oggi è della compagnia: stalle, un campo per le esercitazioni, un fienile pieno di lance.⟧\n· [[14. Il guado del Truntum.]] Giù nella piana, dove il Truntum si passa a piedi d’estate e a cavallo d’inverno. Di là ci sono le Marche Picenorum. Per secoli questo fu un passo fra due regni: ci passavano mercanti, viandanti ed eserciti. ⟦Oggi ci passano soprattutto contrabbandieri, e la compagnia prende la sua parte.⟧\n· [[15. Le vigne.]] Tutto intorno al colle. Il vino di Cundraüerrë si vende fino a Teramum e oltre il Truntum; anche l’olio è buono. ⟦I soldati in congedo fanno i vignaioli, e i vignaioli in miseria fanno i soldati.⟧\n· [[16. La villa del vino.]] Una grande casa di campagna fra le vigne, con la cantina scavata nella terra. ⟦Ci abita una famiglia di mercanti di vino che compra tutta la vendemmia e la vende oltre Truntum.⟧\n· [[17. I casali.]] Mattonelle, Pignotto, Taiano, Piano del Truntum: vigne, ulivi, case di terra, e in ogni casa qualcuno nella compagnia. Nei campi sotto il borgo l’aratro trova ancora i fondi delle capanne di quelli di prima, e una pietra scritta dell’Impero."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "A Cundraüerrë tutti hanno un parente nella compagnia, vivo o morto, e tutti hanno una vigna. La gente è dura, parla forte, ride forte e litiga per il vino. Si rispetta chi sa battersi e chi sa bere, e si diffida di chi non fa né l’una né l’altra cosa.\n\n· [[Quattro soldati.]] Da sempre il borgo deve dare soldati a qualcuno: nei vecchi registri dei signori di Aprutium, Contraguerra doveva quattro uomini armati al suo conte. Oggi ne dà cento, e se li fa pagare.\n· [[Il Lucente Benedetto.]] Il 21 marzo, la festa del patrono, che è anche il primo giorno dei lavori nelle vigne. ⟦La compagnia sfila in piazza con le armi lucidate, e Spaccatesta paga il vino a tutti.⟧\n· [[La festa del vino.]] A luglio, sulla piazza: botti aperte, musica, maccheroni e carne alla brace fino a notte. ⟦Finisce sempre con una rissa, e la rissa fa parte della festa.⟧\n· [[Lo stemma.]] Due cavalieri su cavalli neri che si battono in campo d’oro; sotto, strisce d’oro e d’azzurro. In paese dicono che uno dei due è il borgo, e l’altro è chi viene a prenderlo.\n· [[Le guerre vecchie.]] Il borgo è stato assediato da capitani famosi, saccheggiato due volte e ripreso tre. I vecchi contano gli anni dalle guerre, non dai Duchi."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[La compagnia ferma.]] Da quest’estate la compagnia non ha un contratto. Gli uomini bevono, giocano a dadi e litigano. Il pagatore ha cominciato a vendere i cavalli.⟧\n· ⟦[[Gli ingaggiatori.]] Al borgo arrivano uomini con le borse piene a offrire contratti: da Teramum, da Atrë, e da gente che non dice per chi lavora e parla con l’accento del sud. Spaccatesta li ascolta tutti e non firma con nessuno. Dice che aspetta l’offerta giusta.⟧\n· ⟦[[Il proclama.]] Il bando di Teramum contro la Crociata è inchiodato su Porta Maggiore. Spaccatesta lo ha letto ad alta voce in piazza e ha chiesto: «E quanto pagano per obbedire?»⟧\n· ⟦[[Il guado.]] Lungo il Truntum si muovono i templari, quelli dell’Ordine d’Acciaio di Cëvëtëlla e quelli del Luminor. Le vedette del Torrione li hanno visti passare due volte, verso Ngarà.⟧\n· ⟦[[I disertori.]] Fra i nuovi arruolati ci sono uomini della Guardia Ducale scappati da Teramum. Se Teramum li viene a cercare, Spaccatesta non li consegna.⟧"
   }
  ],
  "illustrazione": "Mondo — Cundraüerrë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Prima li soldi, poi la spada. E chi non paga, se la canta da solo.»",
+  "cite": "Detto della compagnia di Spaccatesta"
+ }
 }

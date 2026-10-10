@@ -14,27 +14,125 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "I Signori della Costa · Casa Cavatassus a Tortoscuro",
-  "Fedeltà": "Naviganti Grigi",
-  "Corrisponde a": "Alba Adriatica e Tortoreto",
-  "Altri nomi": "Alba Argentea e Tortoscuro",
-  "Popolazione": "Alba ~4.000 · Tortoscuro ~6.000"
+  "Paese vero": "Tortoreto, alta e lido, e Alba Adriatica",
+  "Altri nomi": "Tërtëratë in dialetto, Tortoscuro nelle carte; Alba Argentea per la spiaggia d’argento",
+  "Abitanti": "Tortoscuro circa seimila, Alba circa quattromila",
+  "Chi comanda": "A Tortoscuro Casa Cavatassi, gli Ammiragli della flotta del nord; ad Alba Casa Bardalino, un ramo dei Castemar",
+  "Nel paese": "In alto le mura in rovina, la Torre dell’Orologio, la Lunaria della Misericordia, il solario del Lucente Nicola; in basso l’approdo della flotta, la Casa degli Ammiragli, le saline; ad Alba le case da gioco, il mercato, lo Specchio del Mare",
+  "Nei dintorni": "La Lunaria del Carmine, la contrada di Cavatassi, Colle Luna e Terrabianca, le vasche del sale, la foce della Vibrata",
+  "Strade": "La Strada della Costa, a sud verso il Salinellum e Julia Nova, a nord verso la Vibrata e Martëncëcurë",
+  "Guardia": "⟦A Tortoscuro i marinai della flotta, armati e disciplinati; ad Alba i buttafuori delle case da gioco⟧",
+  "Lucente": "Il Lucente Nicola a Tortoscuro, il 6 dicembre; la Lucente Eufemia ad Alba, il 16 settembre",
+  "Distanze": "⟦Julia Nova, due ore a sud oltre il Salinellum; Martëncëcurë, due ore a nord; da Tortoscuro alta ad Alba, mezz’ora di discesa⟧"
  },
- "gm": "I Cavatassus mantengono contatti segreti coi pirati dell'Adriaticum. I Bardalino sono totalmente ricattabili (debiti con potenze straniere). Tra Julia Nova e Alba c'è il Trabocco Maledetto: chi vi sale di notte vede il futuro nelle acque, a un prezzo sempre troppo alto.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il borgo armato della costa e la sua bisca. Tortoscuro ha l’unica flotta da guerra del Ducato oltre ai Naviganti Grigi: chi la convince, controlla il mare. Alba è il posto dove i nobili si rovinano e dove chiunque può essere comprato."
+  },
+  {
+   "t": "Corsari e debiti",
+   "txt": "· I Cavatassi mantengono contatti segreti con i pirati dell’Adriaticum. ⟦Le «vele scure» che la flotta vede al largo sono pirati amici, a cui la flotta lascia il passo in cambio di una parte. Se Adamus lo scopre, ha in mano gli Ammiragli.⟧\n· I Bardalino sono totalmente ricattabili: hanno debiti con potenze straniere. ⟦Il Gattopardo è di fatto in mano a un creditore che nessuno ha mai visto. Secondo i conti del Banco, i pagamenti vanno verso sud, per nave. Può essere Iuvenza, può essere Vesperia.⟧\n· ⟦Casa Neròn ritira le navi dai porti del sud: sa qualcosa che gli altri non sanno, o ha fatto un accordo con qualcuno.⟧\n· ⟦I Cavatassi si vantano di un antenato, Berardo di Tortoscuro, giudice del Ducato al tempo dei Pretutia: è la loro patente di nobiltà. Il suo sigillo, se esiste ancora, vale come una firma su qualsiasi carta antica.⟧"
+  },
+  {
+   "t": "Lo Specchio del Mare",
+   "txt": "Nel vecchio canone qui c’era il Trabocco Maledetto: chi ci saliva di notte vedeva il futuro nelle acque, a un prezzo sempre troppo alto. Sulla costa di Teramo i trabocchi non ci sono, e lo Specchio del Mare prende il suo posto.\n\n⟦Chi si specchia nella pozza di notte, con la luna, vede una cosa che deve ancora accadere. Il prezzo: un ricordo, scelto dallo Specchio. È lo stesso «non ricordare» della Forgia dell’Identità di Colleventoso: forse l’acqua ferma è un resto della magia lunare dei Celomanti, o di qualcosa di più vecchio.⟧"
+  },
+  {
+   "t": "Palma, la città perduta",
+   "txt": "⟦Prima di Tortoscuro, fra il Salinellum e la Vibrata, c’era Palma, una città che si ribellò all’Impero e fu cancellata. Non se ne sa più dove stesse. I contadini di Colle Luna, arando, tirano su mosaici e torchi per l’uva. Chi trova Palma trova le tombe dei ribelli, e quello che portarono con sé.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[La flotta del nord.]] ⟦Se la Crociata ha bisogno di navi, gli Ammiragli ne hanno. Vogliono in cambio che le Gilde di Julia Nova perdano il diritto al porto franco, o che Adamus si inchini.⟧\n· [[Il Gattopardo.]] ⟦Una partita contro un Bardalino è una scena pronta: si vince un debito, un segreto, un favore. Chi bara viene buttato in mare.⟧\n· [[I fiori sulle mura.]] Il primo del mese tutti i pescatori salgono alle mura vecchie: il posto per parlare con chi va per mare.\n· [[Le vele dipinte.]] Ogni barca ha il suo segno sulla vela: chi li conosce riconosce una barca dei Cavatassi, o una che finge di esserlo.\n· [[Lo Specchio del Mare.]] Una visione del futuro, per chi accetta il prezzo."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Tortoreto vera ha il borgo alto con i rioni Terravecchia (sulle rovine del Castrum Salini) e Terranova, una sola porta con la scalinata, la Torre dell’Orologio, Santa Maria della Misericordia nata dopo la peste e affrescata da Giacomo Bonfini, San Nicola patrono il 6 dicembre, Sant’Agostino con il quadro di Mattia Preti, il Carmine fuori le mura, le frazioni Cavatassi, Salino, Terrabianca e Colle Luna, la foce del Salinello, le vongole, la processione in mare dell’Assunta fino ad Alba con la corona d’alloro. Il nome viene dalle tortore. Alba Adriatica è nata da Tortoreto, sulla spiaggia, intorno alla stazione: ha la «Spiaggia d’Argento», Sant’Eufemia, la Madonnina dei marinai, il mercato del lunedì, la pelletteria, una villa sopra un antico castello di guardia oggi locale da ballo («Il Gattopardo»), le anfore dei centri di raccolta del sale romani, e il nome forse dal fiume Albula, cioè la Vibrata. Quello che non è segnato come proposta viene da lì.\n· Fonti nuove di Giuseppe (sera del 10-10): con il Lessico di Ea le chiese diventano solari e lunarie, i santi lucenti, la Madonnina la Madre dei marinai, il Cristo in trono Valerus in trono; con i Nomi delle casate la casata è Cavatassi (non Cavatassus). Lo Studio dice che Tortoreto non è un porto: qui la flotta sta all’ancora davanti al lido e l’unico porto vero resta Julia Nova. Dallo Studio anche le tortore del nome, Palma, Berardo di Tortoreto e le vasche del sale; dal Folklore la processione in mare, le pinciaie, le vele dipinte; dai Dialetti «trase», «aijaccete», «lu frichì».\n· La contrada di Cavatassi è vera: dà il nome alla casata.\n· La voce della Guerra delle Due Lune dice che le mura di Tortoscuro sono in rovina e che nessuno le ha ricostruite, e insieme Tortoscuro ha seimila anime: si tengono tutte e due, il borgo alto in rovina e la gente nella Terranova e sul lido.\n· La voce della Guerra delle Due Lune e la Porta del Sale di Julia Nova mettono Tortoscuro a sud di Julia Nova. Tortoreto è a nord di Giulianova, e le voci della contea e del borgo dicono «a nord»: qui vale il nord.\n· Tolto il Trabocco Maledetto: diventa lo Specchio del Mare, che il Manuale metteva già fra i due borghi."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi guida Casa Cavatassi, e chi Casa Bardalino.\n· Chi è il creditore dei Bardalino.\n· Che rapporto c’è fra gli Ammiragli e i Naviganti Grigi di Adamus: rivali, o alleati per forza dopo le Navi Rosse.\n· Se la flotta del nord resta, visto che Tortoreto vera non ha un porto (qui sta all’ancora davanti al lido).\n· Correggere «a sud di Julia Nova» nella voce della Guerra delle Due Lune e nella Porta del Sale."
+  }
+ ],
  "livello": "borgo",
  "group": "La Costa del Sale",
  "id": "borgo-alba-tortoscuro",
  "parent": "contea-costa-del-sale",
  "title": "Alba e Tërtëratë",
- "sub": "Alba Argentea e Tortoscuro · Naviganti Grigi",
+ "sub": "Alba Argentea e Tortoscuro, i borghi gemelli del nord",
  "pub": [
   {
    "t": "",
-   "txt": "Due porti gemelli a nord di Julia Nova. Alba Argentea (~4.000 anime) vive del vizio: casinò, bische, prestiti, usura, veleni rari, sotto Casa «Bardalino», un ramo cadetto dei Castemar sommerso dai debiti. Tortoscuro (~6.000) è il porto oscuro e pericoloso della flotta settentrionale: Casa Cavatassus, ex corsari diventati Ammiragli, lo governa con pugno di ferro e disprezza le Gilde. Tra i due, lo Specchio del Mare. Tutta la costa qui sente l'influenza di Adamus Marothianus.",
+   "capo": true,
+   "txt": "A nord di Julia Nova, oltre il Salinellum, ci sono due borghi che sono uno solo. In alto, su una collina sopra il mare, Tortoscuro: il borgo vecchio, con le mura ancora in rovina dalla Guerra delle Due Lune, e sotto, sul lido, l’approdo della flotta del nord. In basso, sulla spiaggia d’argento verso la Vibrata, Alba Argentea: il borgo nuovo, nato ai piedi di Tortoscuro, dove d’estate non si dorme, si gioca, si presta e si perde.\n\nTortoscuro è il borgo più duro della costa, quello degli Ammiragli. Alba è il più allegro e il più disonesto. Fra i due, sulla spiaggia, c’è lo Specchio del Mare. E su tutta questa costa, oggi, si sente il nome di Adamus, il capo dei Naviganti Grigi."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "· [[Tortoscuro alta.]] Il borgo vecchio sta su una collina a picco sulla riva. Ha due rioni: la [[Terravecchia]], sorta sulle rovine di un castello più antico, e la [[Terranova]], dove la gente si è spostata dopo la guerra. Delle mura resta poco: una porta con la scalinata e l’arco, e la Torre dell’Orologio. Il resto è in rovina, e nessuno lo ha mai ricostruito. Il nome, dicono i vecchi, viene dalle tortore che riempivano queste colline; lo «scuro» ce lo ha messo la guerra.\n· [[Il lido.]] Sotto la collina, sulla spiaggia, c’è l’approdo della flotta del nord. Tortoscuro non ha un porto vero: l’unico della costa è Julia Nova. Le navi stanno all’ancora davanti alla riva, e d’inverno le più piccole si tirano in secco con gli argani. Intorno, i magazzini, i cantieri sulla sabbia, le case dei marinai. Verso sud, alla foce del Salinellum, le saline.\n· [[Alba Argentea.]] Più a nord, sulla spiaggia piatta fino alla Vibrata, il borgo nuovo. Case basse, ville dei ricchi, una strada lunga sul mare, e le case da gioco. Ha preso il nome dal fiume, che gli antichi chiamavano Albula, e dalla sabbia, che al sole sembra d’argento.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La Strada della Costa, verso sud",
+      "Al Salinellum e a Julia Nova",
+      "⟦Due ore a piedi⟧"
+     ],
+     [
+      "La Strada della Costa, verso nord",
+      "Alla Vibrata e a Martëncëcurë",
+      "⟦Due ore a piedi⟧"
+     ],
+     [
+      "La salita di Tortoscuro",
+      "Dal lido alla porta del borgo alto",
+      "Mezz’ora, per una scalinata e una strada a tornanti"
+     ],
+     [
+      "La strada dei colli",
+      "Da Tortoscuro alta alla Val Vibrata",
+      "⟦Mezza giornata ai borghi della Val Vibrata⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Alba e Tërtëratë.png",
    "didascalia": "Alba e Tërtëratë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Le mura vecchie.]] Le mura in rovina di Tortoscuro, sulla Terravecchia, dove la guarnigione resistette tre settimane nella Guerra delle Due Lune. I pescatori ci lasciano dei fiori il primo giorno di ogni mese, per quelli che le Navi Rosse portarono via.\n· [[2. La Torre dell’Orologio.]] L’unico pezzo intero delle mura: base di pietra antica, corpo di mattoni rossi, l’orologio e la cella delle campane in cima. Quando suona, si sente fino al lido.\n· [[3. La porta della scalinata.]] L’ultima porta del borgo, con l’arco e i gradini. Ci passa chi sale dal lido.\n· [[4. La Lunaria della Misericordia.]] La costruirono durante una peste, per chiedere alla Vecchia Madre di fermarla; la peste si fermò. Dentro, le pareti sono dipinte con la storia del contagio e della Madre che lo scaccia: le fece un maestro di nome Giacomo, con i suoi allievi.\n· [[5. Il solario del Lucente Nicola.]] Il solario del patrono, il più antico del borgo. Sopra l’altare c’è Valerus in trono. Il Lucente Nicola protegge i marinai, e a Tortoscuro i marinai sono tutti.\n· [[6. Il convento del Lucente Agostino.]] Il solario dei votati, pieno di stucchi, con un grande quadro del lucente dipinto da un maestro venuto da lontano.\n· ⟦[[7. La Casa degli Ammiragli.]] Il palazzo dei Cavatassi, sul lido, con le finestre sulle navi all’ancora. Ci si entra per farsi dare un passaggio sul mare, o per farsi perdonare di averlo preso senza chiedere. Sopra il portone: «Il Vento e il Sangue».⟧\n· [[8. L’approdo della flotta.]] Le navi da guerra della flotta del nord all’ancora davanti alla spiaggia, gli argani, i cordai, i calafati che lavorano sulla sabbia. Gli stranieri non ci vanno senza un motivo.\n· [[9. Il magazzino dei Neròn.]] Un magazzino sul lido con lo stemma di Casa Neròn, un’ancora d’argento su campo blu. I Neròn sono più presenti qui che a Julia Nova, e i loro agenti tengono buona parte del commercio via mare.\n· [[10. Le saline.]] Alla foce del Salinellum, dove c’era un castello antico, le vasche del sale. Erano la ricchezza di Tortoscuro e davano il nome alla Via del Sale di Julia Nova. Oggi molte sono abbandonate, e il sale sta finendo.\n· ⟦[[11. La Casa del Gattopardo.]] La casa da gioco più grande di Alba, costruita sopra un vecchio castello di guardia. Tavoli di dadi, di carte e di ruota, musica, vino. Di notte le finestre sono le uniche accese della spiaggia. È dei Bardalino.⟧\n· ⟦[[12. Il Banco della Fortuna.]] Accanto al Gattopardo, una stanza con un bancone e due uomini grossi alla porta. Ci si va a prendere i soldi per giocare, e ci si torna a restituirli il doppio. Sulla porta, il motto dei Bardalino: «La Fortuna Gira».⟧\n· [[13. Il solario della Lucente Eufemia.]] Il solario di Alba, il più nuovo della costa. Il 16 settembre la lucente esce in processione sulla strada lunga.\n· [[14. La Madre dei marinai.]] Una piccola statua della Vecchia Madre sul mare, in fondo alla strada lunga di Alba, che protegge i marinai e i forestieri. Ci si lascia una moneta prima di partire.\n· [[15. Lo Specchio del Mare.]] Sulla spiaggia fra Alba e Tortoscuro, una lingua di scogli chiude una pozza grande come una piazza. L’acqua dentro è sempre ferma, anche quando fuori c’è burrasca, e ci si specchia il cielo intero. ⟦I ragazzi ci fanno il bagno di giorno. Di notte non ci va nessuno.⟧\n· [[16. Il mercato del lunedì.]] Ogni lunedì Alba si riempie di banchi: pesce, sale, stoffe, e le cinture e le borse dei cuoiai del borgo, che si vendono fino a Teramum. La pelle di Alba la conoscono tutti.\n· ⟦[[17. L’osteria di Zi’ Nunziata.]] Sul lido di Tortoscuro, per i marinai: brodetto, vino aspro, e la padrona che fa credito solo a chi ha una nave. Quando entri ti dice «Trase!», e quando esci ti conta i debiti.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[18. La Lunaria del Carmine.]] Una piccola lunaria appena fuori dalla porta di Tortoscuro, dove si fermano a pregare la Vecchia Madre quelli che partono.\n· [[19. Cavatassi.]] Una contrada sulle colline dietro Tortoscuro, fra ulivi e casali. Da qui veniva la famiglia dei corsari che diventarono Ammiragli, e ne porta il nome.\n· [[20. Colle Luna e Terrabianca.]] Le colline di Tortoscuro: vigne, ulivi, e i casali dei contadini che lavorano per la casata. Molti sono [[pinciaie]], case fatte di terra, paglia e letame impastati con i buoi, con le finestre piccole.\n· [[21. Le vasche del sale.]] Dietro la spiaggia di Alba, sotto la sabbia, ci sono le vasche dove l’Impero raccoglieva il sale, con i cocci delle anfore. Ogni tanto una mareggiata ne scopre una.\n· [[22. La foce della Vibrata.]] A nord di Alba, il torrente arriva al mare fra dune e canneti. Dall’altra parte comincia la terra di Martëncëcurë, con la sua torre."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "La gente di Tortoscuro è gente di mare e di lutto: dura, silenziosa, fiera della sua flotta. Quasi ogni famiglia ha un nome sulle mura vecchie. Quella di Alba è il contrario: allegra, svelta, pronta a venderti quello che hai e a prestarti quello che non hai. Le due si disprezzano e si sposano fra loro da sempre. Qui la parlata comincia a suonare come quella del nord, con le parole tronche: ad Alba il bambino è «lu frichì», e chi entra in casa si sente dire «trase» e «aijaccete», mettiti comodo.\n\n· [[I fiori sulle mura.]] Il primo giorno di ogni mese i pescatori salgono alle mura vecchie e lasciano un fiore. Chi chiede perché si sente rispondere: «Pë li nustrë, ca nu’ sò turnàtë.»\n· [[La Madre sul mare.]] A mezzo agosto le barche di Tortoscuro portano la Vecchia Madre in processione sul mare, lungo la costa fino ad Alba, e al largo si getta una corona d’alloro per i morti in mare.\n· [[Il Lucente Nicola.]] Il 6 dicembre il lucente scende al lido e benedice le barche una per una.\n· [[Gli Ammiragli.]] I Cavatassi erano corsari. Ora sono Ammiragli del Ducato, comandano la flotta del nord con il pugno di ferro e disprezzano le Gilde di Julia Nova. Il loro motto è «Il Vento e il Sangue».\n· [[I Bardalino.]] Un ramo dei Castemar di Julia Nova, che vive di case da gioco e di prestiti. Vestono bene e pagano in ritardo.\n· [[Il giorno di Alba.]] D’estate ad Alba non si dorme di notte e non ci si sveglia prima di mezzogiorno. D’inverno si svuota. Il mercato del lunedì è l’unica cosa che comincia all’alba.\n· [[Le vongole.]] Sul lido di Tortoscuro si pescano le vongole con il rastrello, camminando in acqua fino alla vita."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Il sale finisce.]] Le saline di Tortoscuro rendono ogni anno meno, e molte sono abbandonate. I salinari se ne vanno a Julia Nova o salgono sulle navi.\n· [[I Naviganti Grigi.]] Da quando Adamus è capo dei Naviganti Grigi e ha respinto le Navi Rosse, sulla costa del nord tutti parlano di lui. Agli Ammiragli non piace che un uomo delle Gilde comandi il mare.\n· ⟦[[Le vele all’orizzonte.]] Dopo l’assedio di Julia Nova la flotta del nord esce ogni notte. Due volte ha visto vele scure al largo, che sono sparite prima dell’alba.⟧\n· ⟦[[I debiti dei Bardalino.]] Si dice che il Gattopardo non sia più dei Bardalino da un pezzo, e che i soldi vengano da oltre il mare.⟧\n· ⟦[[Lo Specchio.]] Quest’estate un ragazzo è andato allo Specchio di notte, per scommessa. È tornato all’alba, e da allora non parla più.⟧"
+  },
+  {
+   "t": "Quello che sapete",
+   "txt": "· Le Navi Rosse sono tornate e sono state respinte davanti a Julia Nova (Atti I e VII). Adamus è il capo dei Naviganti Grigi (Atto V).\n· A Julia Nova, dal magazzino dei Neròn e dalla Porta del Sale, arrivano voci su Tortoscuro: le saline abbandonate, il sale che finisce, Casa Neròn che ritira le navi dai porti."
   }
  ],
  "illustrazione": "Mondo — Alba e Tërtëratë.png",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Pë li nustrë, ca nu’ sò turnàtë.»",
+  "cite": "Un vecchio pescatore di Tortoscuro: «Per i nostri, che non sono tornati»"
+ }
 }

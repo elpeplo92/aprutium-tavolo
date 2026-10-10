@@ -14,25 +14,106 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Gli Anziani del Villaggio",
-  "Fedeltà": "Neutrale",
-  "Corrisponde a": "Castel Castagna"
+  "Paese vero": "Castel Castagna",
+  "Altri nomi": "Castagna, negli atti antichi; la gente si chiama castagnola",
+  "Abitanti": "⟦Circa quattrocento, con i casali⟧",
+  "Chi comanda": "Gli anziani del villaggio. ⟦Si riuniscono sotto la torre, e decide il più vecchio che sa ancora camminare fino in piazza⟧",
+  "Dentro le mura": "La torre quadrata, il solario del Lucente Pietro, il cerchio delle case fortificate, la piazza degli anziani",
+  "Fuori le mura": "L’abbazia di Ronzano, Castagna Vecchia, i castagneti, il Mavone, i casali",
+  "Porte": "⟦Una porta sola, sotto la torre⟧",
+  "Guardia": "⟦Nessuna. Ogni casa delle mura ha un uomo che sa tirare con l’arco⟧",
+  "Lucente": "Il Lucente Pietro, che si festeggia il 29 aprile",
+  "Distanze": "⟦Lésënë, mezza giornata a sud-ovest; Li Cashtillë, mezza mattina a sud; Bisindë, Bbashanë e Cullëdarë, mezza giornata ciascuno⟧"
  },
- "gm": "Memoria pretuziana viva: canti, riti, forse conoscenze sul Gigante e sui vecchi patti. Neutrali.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Memoria pretuziana viva: canti, riti, forse conoscenze sul Gigante e sui vecchi patti. Neutrali. Cashtagnë non ha forza: ha memoria. Per la Crociata è un posto sicuro sulla strada di Lésënë, lontano da Tussëcië, e il posto dove si impara come si acclamava un Duca prima dei Pretutia."
+  },
+  {
+   "t": "Il canto dell’acclamazione",
+   "txt": "⟦I vecchi dei paesi di montagna dicono che un tempo, sotto il Gigante, il Duca non nasceva: lo si acclamava (voce del Ducato, approvata). A Cashtagnë la Cantatrice conosce ancora il canto dell’acclamazione, con le parole che le Casate dicevano sulla Pietra della Fronte. Nessuno lo canta da secoli. Alla Convocazione, chi conosce quelle parole può far valere la Legge Antica contro chi dice che è una leggenda. La Cantatrice lo insegna solo a chi ha sangue pretuziano: Alessandros o Vicarus.⟧"
+  },
+  {
+   "t": "Ronzano",
+   "txt": "· Nella storia vera il castello nacque per custodire l’abbazia, e l’abbazia fu contesa fra un vescovo e un abate. ⟦Nel gioco: un flamine di Teramum e l’abate di Ronzano litigano ancora per le decime della valle. La lite è ferma da anni nella Camera dei Cavillatori dei Chiodi.⟧\n· ⟦La figura dell’uomo con la montagna nel petto, sotto gli affreschi, è il Gigante dipinto dai votati per non farlo cancellare: lo hanno coperto con un lucente. Religione CD 14 per vederla; con una candela di traverso si legge sotto una riga in pretuziano antico: «Chi lo sveglia, lo paga». Adamus, se ha parlato con il druido di Torricella, la capisce subito.⟧\n· ⟦L’uomo di luce del libro aperto è Valerus. Mattheus, se guarda bene, vede che il libro ha due pagine bianche in fondo: per i votati di Ronzano la storia del Sole non è finita.⟧"
+  },
+  {
+   "t": "La vecchia signoria",
+   "txt": "⟦Nella storia vera il borgo fu dei signori della valle, poi degli Orsini, poi dei Mendoza; gli Acquaviva di Atri comprarono terre intorno, ma il paese restò com’era. Nel gioco: i Fonteviva di Atrë provarono a comprare Cashtagnë, e gli anziani rifiutarono. Da allora Atrë la chiama «il borgo dei vecchi testardi». Iuvenza, tramite d’Avalos, ci sta provando ora.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[La casa dei forestieri.]] Tre notti sicure senza domande: il posto giusto per nascondere Silvanus o un testimone prima della Convocazione.\n· [[Il fuoco della torre.]] ⟦Un segnale che arriva fino a Lésënë in pochi minuti. Gli anziani lo accendono solo per un pericolo vero.⟧\n· [[La Cantatrice.]] ⟦Vecchia, cieca, ride di tutto. Sa canti per ogni cosa: per trovare l’acqua, per calmare i lupi, per riconoscere chi mente. Un PNG da cui imparare una cosa, non da cui comprarla.⟧\n· [[Il dialetto.]] ⟦Un PG che impara qualche parola dei vecchi viene trattato come uno di casa dai pastori di Crognaleto e dai montanari di Fano: vantaggio alle prove di Persuasione con loro.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Castel Castagna vera: borgo circolare del XII secolo di case-mura in cerchio, con una torre quadrata; il castello con la torre nato a guardia di Santa Maria di Ronzano (1168); l’abbazia di Ronzano del 1170-1181, con gli affreschi (il Cristo «EGO SUM LUX MUNDI», gli apostoli) e la lite fra il vescovo di Penne e un abate (1184); San Pietro Martire; le frazioni; il legame con Bisenti; gli abitanti «castagnoli»; i signori della valle, gli Orsini, i Mendoza, gli Acquaviva che comprarono terre vicine. Quello che non è segnato come proposta viene da lì, dallo Studio dei paesi veri o dalla voce attuale.\n· Con il Lessico di Ea: il solario del Lucente Pietro, l’abbazia di Ronzano (non più «Santa Maria»), il sacerdote, i votati, il flamine; il Cristo dell’affresco è diventato un uomo di luce, Valerus.\n· Il patrono: Wikipedia dà San Pietro Martire il 29 aprile, lo Studio il 29 giugno. San Pietro Martire si festeggia il 29 aprile: qui vale quello.\n· Lo Studio nota che «il dialetto più antico del Ducato» e «isolato» non reggono: il dialetto arcaico vero è quello di Pietracamela, e il borgo domina una valle di passaggio. Il testo ora dice «antico» e mette il borgo sulla strada del Mavone; le tradizioni pretuziane restano, perché sono canone.\n· L’id del file è `borgo-li-cashtille`, ma la voce è Cashtagnë (Castel Castagna): nel vecchio canone, nel Manuale e nei titoli dello Studio i nomi erano scambiati; vale la decisione di Giuseppe dell’8-10 (v166)."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se il canto dell’acclamazione esiste e chi lo conosce.\n· Se la porta del borgo vecchio è una o due.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Montagna del Gigante",
  "id": "borgo-li-cashtille",
  "parent": "contea-montagna-del-gigante",
  "title": "Cashtagnë",
- "sub": "Neutrale",
+ "sub": "Il borgo tondo fra i castagni",
  "pub": [
   {
    "t": "",
-   "txt": "Un borgo isolato tra i boschi di castagni, governato dagli anziani. Qui le tradizioni pretuziane sono ancora vive e si parla il dialetto più antico del Ducato.",
+   "capo": true,
+   "txt": "Cashtagnë sta su un colle sopra la valle del Mavone, a metà strada fra la pianura e la montagna. Da lassù si vede tutto: la strada che sale verso Lésënë, i carri che vanno a Li Cashtillë, il fumo delle fornaci, e alle spalle la parete del Gigante. Intorno, fino in fondo ai valloni, ci sono i castagni.\n\nÈ un borgo piccolo e non somiglia a nessun altro. Le case stanno in cerchio, strette l’una all’altra, e fanno da mura. Qui non comanda nessun signore: comandano gli anziani. E qui le tradizioni pretuziane non sono un ricordo: sono la vita di tutti i giorni. Il borgo nacque per fare la guardia a un’abbazia, e sotto il colle l’abbazia c’è ancora."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo vecchio è un anello. Le case sono costruite una accanto all’altra, con i muri esterni senza finestre in basso, e insieme formano un cerchio chiuso. In un punto del cerchio c’è una torre quadrata, più vecchia di tutto il resto. Dentro l’anello ci sono una piazza, il solario e qualche orto. Una volta, quando arrivavano i nemici, si chiudeva la porta e il borgo diventava un castello.\n\nFuori dal cerchio, giù per il colle, ci sono le case nuove, i fienili e gli essiccatoi delle castagne. Più lontano i casali, sparsi nei castagneti e lungo la valle. Sotto il borgo passa la strada del Mavone: chi va dalla pianura a Lésënë per la valle passa da qui.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "⟦La Porta della Torre⟧",
+      "⟦Sotto la torre quadrata, l’unica apertura nel cerchio⟧",
+      "⟦La sola porta del borgo vecchio. Di notte si chiude con una trave, e la chiave la tiene l’anziano più vecchio.⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Cashtagnë.jpg",
    "didascalia": "Cashtagnë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. La torre quadrata.]] Una torre di pietra, murata dentro il cerchio delle case. Era la torre del piccolo castello che guardava la valle e l’abbazia di Ronzano. ⟦In cima c’è ancora un fuoco pronto: se si accende, lo vedono da Lésënë e da Li Cashtillë.⟧\n· [[2. Il solario del Lucente Pietro.]] Il solario del borgo, piccolo, rifatto più volte. ⟦Il sacerdote sale una volta al mese da Bisindë. Le altre volte gli anziani aprono il solario lo stesso, e pregano a modo loro.⟧\n· ⟦[[3. La piazza degli anziani.]] Il cuore dell’anello. Sotto la torre c’è una panca di pietra lunga, consumata: è lì che siedono gli anziani a decidere. Le decisioni si prendono in piedi, ma si discutono seduti.⟧\n· ⟦[[4. Le case del cerchio.]] Ogni casa delle mura ha una stanza in alto con una feritoia sulla valle. Si passa da una casa all’altra per porticine interne, e i bambini girano tutto il borgo senza mai scendere in strada.⟧\n· ⟦[[5. La casa della Cantatrice.]] Una casa sul cerchio, con una lupa dipinta sulla porta. Ci abita Za’ Dumeneche la Cantatrice, la donna che sa a memoria i canti antichi, quelli che si cantano ai funerali, alle nascite e alla prima neve. Quando muore, insegna i canti a un’altra. Nessuno li scrive.⟧\n· ⟦[[6. Il forno e la cantina comune.]] Il forno del borgo e sotto, scavata nella roccia, una cantina dove ogni famiglia tiene una botte. Si cuoce e si beve insieme.⟧\n· ⟦[[7. La casa dei forestieri.]] Una stanza con quattro pagliericci sopra il forno, sempre calda. Chi arriva e chiede ospitalità la ottiene per tre notti. La quarta deve dire chi è.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[8. L’abbazia di Ronzano.]] Un’abbazia di campagna sotto il borgo, più vecchia di quasi tutti i solari della valle. La facciata è semplice; dentro, le pareti sono dipinte con le storie sacre, e i colori sono ancora vivi. Sopra l’altare c’è un uomo di luce con un libro aperto, e sul libro è scritto in lingua antica «Io sono la luce del mondo». ⟦In un angolo, sotto un lucente, c’è una figura più vecchia: un uomo grande sdraiato, con una montagna al posto del petto.⟧\n· [[9. Castagna Vecchia.]] Il primo villaggio, prima che la gente salisse a chiudersi nel cerchio. Oggi poche case e molti muri crollati. ⟦Ci vivono ancora tre famiglie, e dicono di essere loro i veri castagnoli.⟧\n· ⟦[[10. I castagneti.]] I boschi di castagni intorno al borgo, curati come orti. Ogni famiglia ha i suoi alberi, segnati con un taglio sulla corteccia. Il castagno più vecchio, giù verso il Mavone, lo chiamano lu Nonne: non lo raccoglie nessuno, le castagne sono sue.⟧\n· ⟦[[11. Gli essiccatoi.]] Casette basse di pietra, fuori dal cerchio, dove le castagne seccano sul graticcio con il fumo, per tutto l’inverno. D’autunno il borgo sa di fumo dolce.⟧\n· ⟦[[12. Il ponte sul Mavone.]] Un ponte di legno sul fiume, sotto il borgo. Chi va a Lésënë per la valle passa di qui, e da lassù lo vedono arrivare.⟧\n· [[13. I casali.]] Ronzano, vicino all’abbazia; Chiavoni, Scaricasale, Vasto, Villa Ruzzi: case di contadini e di castagnari sparse sul colle e nella valle."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I castagnoli sono pochi, testardi e gentili a modo loro. Non si fidano dei signori, perché nessun signore è mai rimasto: sono venuti, hanno preso, se ne sono andati. Gli anziani invece restano. Per questo qui la parola di un vecchio vale più di un sigillo.\n\n· [[Gli anziani.]] Comandano i vecchi del borgo, tutti insieme. Non c’è un capo: si discute finché si è d’accordo, e se non si è d’accordo si aspetta. ⟦Un giovane può parlare all’assemblea solo se un vecchio gli cede il posto sulla panca.⟧\n· [[Le tradizioni pretuziane.]] Qui il Gigante si prega senza nascondersi. ⟦Alla prima neve si accende un fuoco in piazza e si canta il Cantico del Gigante Dormiente, tutto, dalla prima all’ultima strofa.⟧\n· [[Il Lucente Pietro.]] Il 29 aprile, la festa del patrono. ⟦Si benedicono i castagneti, e il sacerdote, se è salito, fa finta di non vedere che gli anziani benedicono anche le pietre.⟧\n· ⟦[[La festa delle castagne.]] A fine ottobre tutte le famiglie portano in piazza le prime castagne arrostite e il vino nuovo. Si mangia fino a notte, e chi arriva da fuori mangia gratis.⟧\n· [[Il dialetto.]] Antico e stretto. ⟦Chi parla come i vecchi di Cashtagnë si fa capire dai pastori di Crognaleto e dai montanari di Fano, e poco da quelli di Teramum.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[I giovani se ne vanno.]] A Li Cashtillë si guadagna di più, a Teramum ancora di più. Nel cerchio ci sono case vuote, e gli anziani sono più numerosi dei bambini.⟧\n· ⟦[[Il mal dell’inchiostro.]] Una malattia dei castagni: le radici anneriscono e l’albero muore in due anni. Ha preso il versante sud. Gli anziani dicono che è la terra che si muove sotto.⟧\n· ⟦[[La terra trema.]] Una scossa ha aperto una crepa nella torre, dall’alto in basso. Gli anziani hanno deciso di non ripararla finché non smette.⟧\n· ⟦[[Forestieri sulla strada.]] Uomini a cavallo, con i colori di Tussëcië, sono passati due volte sul ponte del Mavone senza fermarsi. Gli anziani hanno fatto chiudere la porta di notte, cosa che non si faceva da anni.⟧"
   }
  ],
  "illustrazione": "Mondo — Cashtagnë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "⟦«Il vecchio sa la vije, che l’ha fatta a piedi.»⟧",
+  "cite": "Detto degli anziani di Cashtagnë"
+ }
 }

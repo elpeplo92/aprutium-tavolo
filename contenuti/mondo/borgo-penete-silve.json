@@ -14,26 +14,129 @@
  "mappa": null,
  "colore": "#6E8C3A",
  "scheda": {
-  "Governatore": "Casa Barbus",
-  "Fedeltà": "Luigis",
-  "Corrisponde a": "Pineto e Silvi",
-  "Altri nomi": "Secernium"
+  "Paese vero": "Pineto, con Mutignano e Scerne, e Silvi",
+  "Altri nomi": "Pënëtë e Silvë in dialetto; Secernium negli atti antichi e nelle carte dei nobili; Silvë nelle carte vecchie è Castel Belfiore",
+  "Abitanti": "⟦Circa tremila fra i due paesi, e altrettanti nelle contrade⟧",
+  "Chi comanda": "Casa Barbas, Conti di Secernium. ⟦Il Conte è il padre di Luigis⟧. A Silvë tiene il castello la famiglia Vallescura",
+  "Nel paese": "Mutignano e la Casa Grande dei Barbas, la marina e la pineta, la torre del Cerrano, Silvë Alta con le sue torri e Castel Belfiore",
+  "Nei dintorni": "La Lunaria dello Splendore, il Concio della liquirizia, il Cenerone, le contrade, i granai, Scerne e il guado del Vomanum",
+  "Strade": "La Strada della Costa, a nord verso il Vomanum e a sud verso il Piomba; la strada di Atrë, nell’interno",
+  "Guardia": "⟦Nessuna guardia di mestiere. I fattori e i carrettieri dei Barbas hanno la balestra, e quando la torre accende il fuoco si radunano alla Casa Grande. A Silvë, gli armigeri dei Vallescura⟧",
+  "Lucente": "Il Lucente Ilario a Mutignano; il Lucente Leone a Silvë, il 14 marzo",
+  "Distanze": "⟦Atrë, tre ore a piedi verso l’interno; il guado del Vomanum, un’ora a nord; Rosetum, mezza giornata; Julia Nova, una giornata di carro⟧"
  },
- "gm": "La Confraternita del Grano Duro («Li V'ttarule») è legata ai Barbus: sta ammassando grano in silos segreti per una carestia artificiale che faccia crollare il prezzo delle terre dei nobili in rovina, Cerullius compresi. Filo aperto per Luigis. Motto Barbus: «La Terra Nutre, il Denaro Comanda».",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il filo personale di Luigis, e la dispensa della Crociata. I Barbas possono sfamare la colonna e pagarla. Ma sotto la loro terra c’è un segreto che Luigis non conosce: la Confraternita del Grano Duro, legata alla sua casata, ammassa grano in silos nascosti per creare una carestia e far crollare il prezzo delle terre dei nobili in rovina, Cerullius compresi. Il filo del personaggio è «il complotto sul grano della sua gilda familiare»."
+  },
+  {
+   "t": "Il grano",
+   "txt": "La Confraternita del Grano Duro, «li V’ttarule», ha sede a Canzañë e a Secernium. È il paniere del Ducato e tiene le scorte di cibo. In pubblico compra il grano dei fattori. In segreto lo nasconde, e aspetta che i nobili indebitati vendano le terre per niente.\n\n· ⟦I granai delle contrade (luogo 18) sono quelli che si vedono. I silos veri stanno altrove: nelle fosse sotto il solario di Mòrrë e nelle grotte dei calanchi, verso Atrë.⟧\n· ⟦La lettera di Luigis non ha avuto risposta perché il padre l’ha capita. Sta già ammassando: per la Crociata o per il complotto, lo decide chi arriva prima a Secernium.⟧\n· Casa Fiore di Rosetum (nel vecchio canone Florius) è alleata dei Barbas nel mercato agricolo.\n· La Lega dei Sensali dei Melatino ha comprato parte dei debiti dei Cerullius. Il grano basso e i debiti comprati sono due mani della stessa tenaglia: ⟦chi tira le fila è da decidere⟧."
+  },
+  {
+   "t": "Barbas e Cerullius",
+   "txt": "Rivali storici: i Cerullius si aggrappavano all’onore, i Barbas si arricchivano. Luigis è amico di Alessandros. La domanda del personaggio è se la rivalità conta ancora, o se l’amicizia è più forte del sangue.\n\n⟦Se Luigis scopre il grano, ha in mano la rovina dei Cerullius e la salvezza di Canzañë insieme. Può fermare la Confraternita, o usarla per comprare i debiti di Alessandros e liberarlo dai Melatino.⟧"
+  },
+  {
+   "t": "I Vallescura di Silvë",
+   "txt": "⟦I Vallescura tengono Castel Belfiore e Silvë Alta. Sono vassalli dei Barbas, e parenti per un matrimonio di due generazioni fa. Ma nelle carte di Atrë Silvë fu venduta ai Fonteviva insieme alla città, e i Vallescura lo sanno: se il Duca Giosia alza la voce, possono cambiare padrone senza cambiare casa. Sono il punto debole dei Barbas.⟧"
+  },
+  {
+   "t": "Teramum, Atrë e il mare",
+   "txt": "· Nelle scene di Teramum, Beltramo Savini fa a Luigis il suo prezzo: «I Barbas vendono vino. Vendetelo a me, e a nessun altro.»\n· ⟦Il Duca Giosia vuole la torre del Cerrano, il vecchio porto di Atrë. Se la Crociata chiede l’aiuto di Atrë, la torre può finire sul tavolo, e Luigis deve scegliere fra la sua casa e la Crociata.⟧\n· I Barbas sono isolati dal blocco di Iuvenza: le strade dell’interno le tiene il Loto Nero.\n· ⟦Il Lucente Leone è venerato anche sull’altra sponda del mare, in un porto di corsari. Le famiglie di Mutignano venute da oltremare hanno ancora parenti là. È un ponte con i pirati dell’Adriaticum, che i Cavatassi di Tortoscuro pagherebbero caro per avere.⟧\n· ⟦Il Cenerone: i draghi della leggenda non ci sono, ma il fango è caldo perché sotto passa qualcosa che viene dal Gigante. Quando la terra trema, il Cenerone lo sente per primo.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[La Casa Grande.]] ⟦Un posto sicuro per la Crociata, se torna indietro: viveri, carri, cavalli, e un padre che ha molte domande per suo figlio.⟧\n· [[Zio Nando.]] Il carrettiere della famiglia, con la balestra. Sa dove vanno i carri, anche quelli che partono di notte.\n· [[Gli halfling.]] ⟦Nessuno guarda un halfling che porta una cesta. Vedono tutto quello che passa per le contrade, e i carri della Confraternita passano di lì.⟧\n· [[La torre del Cerrano.]] ⟦Sotto la torre, nell’acqua bassa, c’è il molo del porto antico. Qualcuno lo usa ancora per scaricare di notte.⟧\n· [[Lu Ciancialone.]] Un ragazzo con una torcia ha fatto credere a una flotta di avere davanti un esercito: i PG possono rifare il trucco, o subirlo. A fine maggio, poi, tutta Silvë è in piazza davanti al fuoco: un buon momento per parlare senza essere sentiti."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Pineto vera ha la pineta, la marina, la Torre di Cerrano dove c’era il porto di Atri (il molo sommerso), il paese vecchio di Mutignano con il patrono sant’Ilario e San Silvestro con il trittico di Andrea De Litio, i coloni venuti dall’altra sponda (nel catasto del 1447 un «Albanese» e un «duraczino»), Scerne, Borgo Santa Maria con il Cenerone (il vulcano di fango dei draghi e dei grifoni), Villa Fumosa, Torre San Rocco, le nuvolette, i fuochi sul mare dopo Ferragosto, sant’Agnese patrona della marina. Silvi vera ha il paese alto detto Belvedere, le mura con tre torri, la Torre Belfiore e Castel Belfiore a cinque lati, San Salvatore con i tre portali e il busto di San Leone, la Madonna dello Splendore con la leggenda della torcia contro i Turchi, Lu Ciancialone con la slitta e il ragazzo che si chiama Leone, la liquirizia del Concio. Quello che non è segnato come proposta viene da lì.\n· Fonti nuove di Giuseppe (sera del 10-10): con il Lessico di Ea i santi diventano lucenti, le chiese solari, la Madonna dello Splendore una lunaria della Vecchia Madre, San Salvatore il Solario del Belvedere; i Turchi diventano i predoni del mare. Con i Nomi delle casate la famiglia di Silvë è Vallescura. Con lo Studio: Mutignano patrono Ilario, i coloni dell’altra sponda, Castel Belfiore, il legame con Atrë (nella storia vera Silvi e Mutignano erano degli Acquaviva e prima dell’abbazia di San Giovanni in Venere). Con il Folklore: il Cenerone, il Ciancialone completo. Con i Dialetti: la parlata atriana, i soprannomi «l’Albanese» e «lu Duraccino», i nomi dei popolani senza cognome (Pasquà, Za’ Peppine).\n· La casata è Barbas, non Barbus (decisione del 10-10). Negli Atti la gente dice «lu giovine Barbus»: lasciato com’è nella citazione.\n· Gli halfling di Secernium vengono dalla voce del popolo halfling, che chiedeva quale paese vero fosse Secernium: è Pineto con Silvi. Lo Studio nota che Secernium somiglia a Scerne.\n· Il vecchio testo diceva «Conti di Secernium» e «Conti di Pënëtë»: è lo stesso titolo.\n· La pineta vera è stata piantata nel Novecento: nel gioco è antica. Pineto non esisteva nel Medioevo: nel gioco la marina è cresciuta dopo la guerra."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome del Conte, padre di Luigis, e chi altro c’è in famiglia.\n· Se il padre sa del grano, e da che parte sta.\n· Chi guida la Confraternita del Grano Duro, e dove sono i silos veri.\n· Che cosa sono i Vallescura per i Barbas: vassalli, come propone questa voce, o altro.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Costa del Sale",
  "id": "borgo-penete-silve",
  "parent": "contea-costa-del-sale",
  "title": "Pënëtë e Silvë",
- "sub": "Secernium · Luigis",
+ "sub": "Secernium, la terra dei Barbas",
  "pub": [
   {
    "t": "",
-   "txt": "La terra dei Barbus, Conti di Secernium, e la terra natale di Luigis Barbas. Nobiltà terriera pragmatica, rivale storica dei Cerullius: mentre quelli si aggrappavano all'onore, i Barbus si sono arricchiti con bestiame, grano e vino, e i loro possedimenti arrivano fino alle pianure di Rosetum. Oggi Pënëtë è isolata dal blocco di Iuvenza.",
+   "capo": true,
+   "txt": "Pënëtë e Silvë sono due paesi e una sola terra: le colline basse fra il Vomanum e il Piomba, che gli antichi chiamavano Secernium. Pënëtë sta sulla riva, dietro una pineta che arriva fino alla sabbia: è la costa verde, quella dove d’estate si va a cercare l’ombra. Il suo paese vecchio, Mutignano, sta più in alto, sul primo colle. Silvë sta su un colle a picco sul mare, con le sue torri, e la chiamano il Belvedere. In mezzo ci sono vigne, ulivi, campi di grano e frutteti, fino alle colline di Atrë.\n\nÈ la terra dei [[Barbas]], la casata di Luigis. I Barbas non hanno castelli famosi né antenati nei libri: hanno bestiame, grano, olio e vino, e una parola che è sempre stata buona. Sui loro carri c’è la Spiga e il Pesce, e sulla costa li conoscono tutti."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "La terra di Secernium ha tre piani.\n\n· [[La riva.]] Una spiaggia lunga e bassa, la pineta, le case dei pescatori e i magazzini della marina di Pënëtë. A metà spiaggia, dove il torrente Cerrano arriva al mare, c’è una torre di vedetta. Più a nord, verso il Vomanum, il borgo di pescatori di Scerne.\n· [[I paesi alti.]] A un’ora di salita: Mutignano, il paese vecchio di Pënëtë, dove stanno il solario antico e la casa dei Barbas; e Silvë, chiusa nelle sue mura con tre torri, sul colle più a sud.\n· [[Le contrade.]] Dietro i paesi, le colline si riempiono di casali, vigne e frutteti. Ci vivono i fattori dei Barbas e le famiglie halfling di Secernium, che erano qui prima di tutti.\n\nPënëtë non ha mura: quando arrivava il pericolo dal mare, la gente saliva a Mutignano o a Silvë. Lo fa ancora.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La Strada della Costa, verso nord",
+      "A Scerne, al guado del Vomanum, a Rosetum e a Julia Nova",
+      "⟦Un’ora al guado; una giornata di carro a Julia Nova⟧"
+     ],
+     [
+      "La Strada della Costa, verso sud",
+      "A Silvë, al Piomba e ai Calanchi",
+      "⟦Due ore al Piomba⟧"
+     ],
+     [
+      "La strada di Atrë",
+      "Da Mutignano, per le colline, fino alla Porta di Mutignano di Atrë",
+      "⟦Tre ore a piedi⟧"
+     ],
+     [
+      "La strada dei carri",
+      "Su per la valle del Vomanum, verso le Terre di Mezzo e Teramum",
+      "⟦Due giornate di carro fino a Teramum, quando è aperta⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Pënëtë e Silvë.jpg",
    "didascalia": "Pënëtë e Silvë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Mutignano.]] Il paese vecchio di Pënëtë, su un colle a un’ora dal mare: case di mattone strette intorno a una piazza, e la vista fino alla spiaggia. Prima della pineta e della marina, Pënëtë era questa. Molte famiglie vengono dall’altra sponda del mare, arrivate generazioni fa: si sente ancora nelle parole, e nei soprannomi, come [[l’Albanese]] o [[lu Duraccino]].\n· ⟦[[2. La Casa Grande dei Barbas.]] La casa della famiglia, in cima a Mutignano. Non è un castello: è una grande casa di campagna, con il cortile per i carri, le stalle, il frantoio e le cantine sotto. Sopra il portone, la Spiga e il Pesce. Qui il Conte riceve i fattori, i sensali e i mercanti, e la tavola è sempre apparecchiata per uno in più.⟧\n· [[3. Il solario del Lucente Silvestro.]] Il solario di Mutignano, vecchio di tre secoli. Sull’altare c’è un trittico dipinto da Andrea de Litio, lo stesso maestro del Solario Grande di Atrë. Il patrono del paese è il Lucente Ilario.\n· [[4. La pineta.]] Un bosco di pini lungo tutta la riva, fra la sabbia e i campi, piantato contro il vento del mare. D’estate ci si cerca l’ombra, d’inverno la legna. I pini di Pënëtë hanno dato il nome al paese.\n· [[5. La marina.]] Le case basse dei pescatori, le barche tirate in secco e i magazzini, dietro la pineta. È cresciuta dopo la guerra, quando il mare è tornato a dare da mangiare.\n· [[6. Il solario della Lucente Agnese.]] Il solario della marina. Il 21 gennaio la lucente esce in processione fino alla spiaggia.\n· [[7. La torre del Cerrano.]] Una torre di vedetta quadrata, dove il torrente Cerrano arriva al mare. Qui c’era il porto della Hatria antica: quando il mare è calmo, sotto l’acqua si vede il molo. Qui sbarcavano i predoni per salire a Silvë. La torre fu distrutta da una flotta nemica e rifatta. Oggi la tengono i Barbas, e la sera ci si accende la lanterna.\n· ⟦[[8. Il fondaco della Spiga e del Pesce.]] I magazzini dei Barbas sulla marina: botti, giare d’olio, sacchi di grano, e i carri che partono per i porti. Lo manda avanti Zio Nando, quando non è sulla strada.⟧\n· ⟦[[9. L’osteria del Pino Storto.]] Sotto un pino piegato dal vento, sulla marina. Pesce fritto, vino di Secernium che macchia i denti, e il Cerasuolo per chi vuole finire sotto il tavolo. L’oste, Pasquale «Lu Marrocche», sa quando partono i carri e quando arrivano le barche.⟧\n· [[10. Silvë Alta, il Belvedere.]] Il paese di Silvë, sul colle che guarda il mare a picco. È chiuso da mura con tre torri di vedetta alte otto metri; la più bella, la Torre Belfiore, guarda il castello. Si entra dal Largo della Porta, accanto al solario.\n· [[11. Castel Belfiore.]] Il castello di Silvë, a cinque lati, di fronte alla Torre Belfiore. Da lassù si vedono il mare e i monti insieme. Lo tiene la famiglia [[Vallescura]].\n· [[12. Il Solario del Belvedere.]] Il solario di Silvë, con tre portali di pietra lavorati alla maniera di Atrë. Dentro c’è il busto di legno del Lucente Leone, e due acquasantiere ricavate dalle pietre di un tempio antico.\n· ⟦[[13. Il forno di Silvë.]] Sotto le mura, l’unico forno del paese. La fornaia, Za’ Peppine, cuoce per tutto il Belvedere e sa chi ha fame e chi no.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[14. La Lunaria dello Splendore.]] Una piccola ara della Vecchia Madre sulla strada fra la marina e Silvë Alta, nel punto dove, dicono, i predoni tornarono indietro.\n· [[15. Il Concio della liquirizia.]] Lungo il fosso del Concio, sotto Silvë, crescono le radici di liquirizia. Le tirano su i contadini e le portano ad Atrë, dove ne fanno i pani neri. Il posto lo chiamano ancora il Concio del Regolizio.\n· [[16. Il Cenerone.]] Vicino a Borgo Santa Maria, fra i campi, c’è un piccolo monte di fango che bolle e sbuffa, e non gela mai. La gente dice che sotto dormono draghi e grifoni: se li fai arrabbiare, fanno tremare la terra. I bambini ci tirano i sassi; le madri li riportano a casa per un orecchio.\n· [[17. Le contrade di Secernium.]] Villa Fumosa, Borgo Santa Maria, Torre San Rocco, e verso Silvë Pianacce, San Silvestro e Santo Stefano: casali sparsi fra le vigne e i frutteti. In molte vivono famiglie halfling, in case basse mezzo scavate nella collina, con le porte tonde e gli orti curati come giardini.\n· [[18. I granai della Confraternita.]] Grandi magazzini di pietra fra le contrade, dove la [[Confraternita del Grano Duro]] raccoglie il grano dei fattori prima di venderlo. La Confraternita la chiamano «li V’ttarule».\n· [[19. Scerne e il guado del Vomanum.]] A nord, dove la Strada della Costa scende al fiume: un borgo di pescatori sulla spiaggia, e il guado vecchio, largo e fangoso. Quando il Vomanum è grosso, i carri aspettano qui anche due giorni. ⟦Gli halfling dicono che il nome Secernium viene da Scerne, e quelli di Scerne ne vanno fieri.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "La gente di Secernium è gente pratica: lavora, conta, paga i debiti e se li fa pagare. Non ama i discorsi lunghi e diffida di chi parla d’onore a stomaco vuoto. Parlano come ad Atrë: la sera è «la sàrë». I Barbas sono come la loro gente: si sono arricchiti con il bestiame, il grano e il vino, mentre le casate antiche come i Cerullius si tenevano stretto il nome. Per questo le due casate sono rivali da generazioni. E per questo, sulla costa, si dice che la parola di un Barbas vale quanto una carta firmata.\n\n· [[Gli halfling di Secernium.]] Vivono su queste colline da prima che arrivasse l’Impero, tra vigne e frutteti. Fanno il vino migliore della costa e non hanno mai fretta. Il loro proverbio lo conoscono tutti: «Non serve correre quando sai dove mettere i piedi.»\n· [[Lu Ciancialone.]] Alla fine di maggio, per il Lucente Leone, tutta Silvë raccoglie canne e le lega in un fascio enorme, alto come una casa. Lo trascinano su una slitta di legno dalla parte alta del paese fino alla piazza, lo alzano con le funi davanti al solario, e il ragazzo più coraggioso, che di solito si chiama Leone, sale su una scala e gli dà fuoco dall’alto. Si canta e si balla finché resta la cenere. Si racconta che una notte i predoni sbarcarono al Cerrano e salirono verso Silvë, e un ragazzo di nome Leone scese dalla collina con una torcia: la fiamma era così grande che i predoni credettero di avere davanti un esercito, e scapparono. Altri dicono che il ragazzo era il Lucente stesso.\n· [[Il Lucente Leone.]] Il 14 marzo il busto del lucente esce dal solario. Fu un martire gettato da un burrone con una pietra al collo, e i silvesi dicono che per questo protegge chi sta sul ciglio.\n· [[Il vino e l’olio.]] Il vino di Secernium è rosso e scuro, e macchia i denti. Il Cerasuolo, rosato, lo chiamano il «Vino Traditore»: si beve come acqua e ti stende come un pugno. L’olio buono dei Barbas, verde e amaro, è la [[Riserva del Barbas]].\n· [[Le nuvolette.]] Le donne di Mutignano fanno cialde sottili con uno stampo rovente, e le chiamano nuvolette. Nelle case dei Barbas lo stampo ha la Spiga e il Pesce.\n· [[I fuochi sul mare.]] Dopo la festa di mezzo agosto, la marina di Pënëtë accende i fuochi sulle barche, al largo, e tutta la costa li guarda.\n· [[La Spiga e il Pesce.]] Lo stemma dei Barbas: la terra e il mare. Sui carri, sulle botti, sul portone della Casa Grande."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Le strade chiuse.]] Da quando Iuvenza è salita a Teramum, le strade dell’interno non sono più sicure, e i carri dei Barbas non arrivano alla capitale. Secernium vende sulla costa e basta. I magazzini sono pieni, i prezzi bassi.\n· [[Il figlio nella Crociata.]] Luigis Barbas marcia con la Crociata verso Teramum. In paese se ne parla con orgoglio, e un po’ con paura.\n· ⟦[[Il grano non vale niente.]] Quest’anno il grano si vende a prezzo di fame, e la Confraternita lo compra lo stesso, tutto. I fattori sono contenti di venderlo; i vecchi dicono che non è mai buon segno quando qualcuno compra quello che nessuno vuole.⟧\n· ⟦[[La torre e il porto.]] Ad Atrë qualcuno torna a dire che la torre del Cerrano è «il porto di Atrë», e che Silvë fu venduta insieme ad Atrë. Un notaio dei Fonteviva è venuto a misurare la spiaggia. I Barbas lo hanno fatto mangiare bene e l’hanno rimandato a casa.⟧\n· ⟦[[Il Cenerone si sveglia.]] Quest’estate il monte di fango ha sbuffato più del solito, e due volte le botti hanno ballato nelle cantine di Mutignano. Le vecchie dicono che i draghi sono arrabbiati.⟧"
+  },
+  {
+   "t": "Quello che sapete",
+   "txt": "· Al Concilio di Julia Nova, contro le paure del Primo Cittadino, avete messo sul tavolo le rotte della Gilda di Adamus, il grano di Canzanium e il vino di Secernium (Atto IX).\n· Luigis ha mandato a casa, con un ragazzino e un mulo, una lettera cifrata: «Il vino quest’anno sarà acido. Non vendete. State pronti. L’inverno è arrivato in anticipo.» Nessuna risposta è ancora arrivata (Atto IX).\n· Alla Caserma Est, prima della marcia, Luigis ha riconosciuto nella zuppa l’olio di casa: la Riserva del Barbas (Atto IX).\n· Al guado del Vomanum i due carri dei Barbas, con Zio Nando e la sua balestra, sono stati fermati da trenta sfollati affamati guidati da Titta il Fornaio. La gente ha riconosciuto «lu giovine Barbus», e invece del sangue ci sono state le gallette e la promessa della pentola comune. Poi i carri sono entrati in Julia Nova con farina, olio e vino, e Zio Nando ha portato a Luigis le parole di suo padre: «Dite a mio figlio che se serve acciaio, fonderemo gli aratri. Ma per ora, che mangino.» (Atto X)."
   }
  ],
  "illustrazione": "Mondo — Pënëtë e Silvë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«La Terra Nutre, il Denaro Comanda.»",
+  "cite": "Motto di Casa Barbas"
+ }
 }

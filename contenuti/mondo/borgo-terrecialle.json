@@ -14,25 +14,125 @@
  "mappa": null,
  "colore": "#4A2B5C",
  "scheda": {
-  "Governatore": "Il Castellano Fantasma dei Portocenere",
-  "Fedeltà": "Ignota",
-  "Corrisponde a": "Torricella Sicura"
+  "Paese vero": "Torricella Sicura",
+  "Altri nomi": "Tërrëciallë in dialetto; Torricella nella lingua di città, per la piccola torre del castello",
+  "Abitanti": "⟦Circa seicento nel borgo, che ne terrebbe il doppio; altrettanti nei casali⟧",
+  "Chi comanda": "Il castellano dei Portocenere, che nessuno vede. Gli ordini arrivano scritti. Per secoli il borgo è stato del flamine di Teramum",
+  "Nel paese": "I cinque rioni (Sicura, Oscura, lo Scarpone, la Romana, Colle Pero), il solario del Lucente Paolo, le cantine, le case chiuse, l’osteria del minestrone",
+  "Nei dintorni": "Il castello sul Colle Ciliegio, la grotta del serpente, la Cona, l’altare del dio senza nome, le votate di Scorzone, Valle Piola, i boschi dei druidi",
+  "Strade": "Per Teramum, a sud-est; su per i boschi, verso la Laga e le Terre Selvagge",
+  "Guardia": "⟦Nessuna. Il castello non manda uomini, e il borgo non ne chiede⟧",
+  "Lucente": "Il Lucente Paolo, che si festeggia il 29 giugno",
+  "Distanze": "⟦Teramum, un’ora e mezza a piedi verso sud-est, per La Cona e Porta del Lucente Giorgio; i boschi della Laga, mezza giornata a ovest; Mëndurjë, mezza giornata a sud⟧"
  },
- "gm": "Le cantine sono collegate alle cripte della Capitale: la via segreta per entrare a Teramum dal basso e arrivare al Sigillo. Il Castellano Fantasma è un mistero da giocare. Fedeltà ignota.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Due misteri in un borgo. Il primo è la via di sotto: le cantine di Tërrëciallë sono collegate alle cripte di Teramum, ed è la via segreta per entrare in città dal basso e arrivare al Sigillo. Il secondo è il castellano dei Portocenere, di cui nessuno sa la fedeltà. E in più ci sono i druidi di Adamus, che sanno del Gigante più di chiunque nel Cuore del Ducato. I giocatori non sanno niente delle cantine sotto Teramum (decisione del 10-10)."
+  },
+  {
+   "t": "La via dei Portocenere",
+   "txt": "Dalla Città Sepolta, sotto Teramum, una galleria fatta di cantine di case nobili sfondate va verso ovest. Più si va avanti, più i muri sono coperti di una cenere fine che non vola: non è cenere di incendio, è una magia vecchia e lenta, una custodia di famiglia che tiene le cose come erano il giorno in cui è successo qualcosa. Nell’ultima cantina ci sono le bottiglie di vino dei Portocenere, con il sigillo della torre nel cerchio, un anello d’argento con lo stesso segno e un bicchiere pulito. Sull’ultimo arco, qualcuno scrive e cancella un nome (scena della Città Sepolta).\n\nNella storia vera dal castello di Torricella partiva una galleria sotterranea verso la campagna. ⟦Nel gioco la via arriva qui, nelle cantine sotto le case chiuse, e risale al castello per la grotta del serpente. Lunghezza: una notte e un giorno di cammino al buio. I colpi dei mazzemarille, nelle cantine, sono la custodia che lavora.⟧\n\n⟦Chi porta l’anello a Tërrëciallë è ospite, non intruso: il castellano lo riconosce.⟧"
+  },
+  {
+   "t": "Il castellano",
+   "txt": "Nel vecchio canone è «il Castellano Fantasma dei Portocenere», fedeltà ignota. È un mistero voluto: per i giocatori restano le dicerie.\n\n· Diceria: è un fantasma, e il castello è vuoto.\n· Diceria: è un vecchio pazzo, ultimo della casata, che non vuole farsi vedere.\n· Diceria: non c’è nessuno, e gli ordini li scrive Zi’ Mariano.\n\nNella storia vera Torricella fu del vescovo di Teramo per cinque secoli, e un castellano di casato non c’è. ⟦Due proposte. Prima: i Portocenere erano i castellani del flamine di Teramum, e morirono tutti in una notte di festa, tanti anni fa, in una sala piena di gente che rideva (è il sogno che dà il loro vino). Il castellano è l’ultimo, e non è vivo né morto: la cenere lo tiene com’era quella notte. Scende ogni tanto nelle cantine sotto Teramum, beve un bicchiere da solo e scrive il nome della sposa, Aurelia. Seconda: il castellano è un uomo del flamine di Teramum, che tiene il borgo vuoto e le cantine chiuse per ordine della Fiamma, perché sotto c’è qualcosa che la Fiamma non vuole si trovi. In tutti e due i casi: chi gli racconta che cosa successe quella notte, e chi la ordinò, ha un alleato che conosce ogni passaggio sotto la capitale.⟧"
+  },
+  {
+   "t": "I druidi di Tërrëciallë",
+   "txt": "Sono del cerchio di Adamus. Il druido che lo ha incontrato a Bëllindë è venuto a cercarlo, non è passato per caso.\n\n⟦Proposta: sono pochi, tre o quattro, e vivono nei boschi fra Tërrëciallë e la Laga. Fanno per il Cuore del Ducato quello che i de Caelis fanno a Lésënë: ascoltano il sonno del Gigante. Sanno che i rituali dei Drukarri lo disturbano; conoscono gli sciamani del Lupo di Bbacucchë. Tengono la lapide di Numisia come una cosa loro: dicono che era una sibilla della Vecchia Madre, e che a Tërrëciallë la Vecchia Madre non se n’è mai andata. Non entrano nelle cantine e non salgono al castello: dicono che la cenere «non è roba loro».⟧\n\n⟦Il qualcos’altro che si muove nel Ducato può restare aperto. Il druido lo sente, ma non sa che cosa sia.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Le querce dei druidi.]] Adamus è accolto come uno di loro. Qui può avere notizie sul Gigante, sui Brak e sulle campagne, e un rifugio per la Crociata fuori dalla vista di Teramum, a un’ora e mezza dalle mura.\n· [[L’anello della torre nel cerchio.]] Se il gruppo lo ha preso sotto Teramum, al castello apre il portone.\n· [[La grotta del serpente.]] ⟦Il serpente c’è. È un guardiano della custodia dei Portocenere: si può usare un serpente costrittore gigante, o un naga d’ossa se il gruppo è forte. Non attacca chi porta l’anello.⟧\n· [[I mazzemarille.]] Battono dove c’è un tesoro, o dove un morto ha qualcosa da dire. Se a uno gli si ruba il berretto rosso, perde i poteri, e per riaverlo indica la strada.\n· [[La pandafeche.]] Chi dorme in una casa chiusa può svegliarsi con lei sul petto. Una manciata di ceci per terra la tiene occupata a contarli fino all’alba.\n· [[Il vino dei Portocenere.]] Una bottiglia per quattro: per un’ora si sogna una sala piena di gente che ride, e si ha vantaggio ai tiri salvezza contro l’Oblio dell’Arlecchino (scena della Città Sepolta).\n· [[Zi’ Mariano.]] ⟦Il fattore sa più di quello che dice: ogni mese porta su i tributi e ogni mese trova la pietra pulita. Intuizione CD 13: ha paura, ma non del castello. Ha paura dei forestieri di città.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Dal paese vero (Studio dei paesi veri e Wikipedia): Torricella Sicura a circa sei chilometri a nord-ovest di Teramo, sul colle fra Tordino e Vezzola, primo gradino verso la Laga; i cinque rioni (Sicura, Oscura, Scarpone, Romana, Colle Pero); il castello quasi sparito sul colle detto «lu castille» o Colle Ciliegio e la galleria sotterranea descritta da Luigi Ercole; la leggenda del tesoro guardato da un serpente; il vescovo di Teramo signore del paese dal Trecento al 1806; il monastero di monache di San Giovanni a Scorzone; San Paolo, rifatta al posto della pieve di San Paolo in Albata, campanile merlato, capitello antico; la Madonna della Cona con le cappelle nel tufo; San Bartolomeo a Villa Popolo col soffitto dipinto; Valle Piola abbandonata; l’altare al dio ignoto, la lapide della sacerdotessa Numisia, il tempio, le tombe e le terme; il minestrone, la pecora alla callara, l’infiorata coi trucioli d’abete; rame, maiolica, legno e pietra.\n· Mazzemarille e pandafeche vengono dal Folklore teramano (10-10).\n· Dal vecchio canone: il Castellano Fantasma dei Portocenere, fedeltà ignota; le cantine collegate alle cripte della capitale. Il vecchio canone metteva il borgo «sulla strada che sale al Gigante»: Torricella sale verso la Laga, corretto.\n· La cenere, l’anello, il vino, il nome «Aurelia» e la lunghezza della via vengono dalle proposte della scena della Città Sepolta.\n· Il druido di Torricella è dell’Atto XVIII.\n· Lessico di Ea: chiese → solari, Madonna → la Vecchia Madre, santi → lucenti, monache → votate, sacerdotessa → sibilla."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi è davvero il castellano, e che cosa successe ai Portocenere.\n· Chi è Aurelia.\n· Quanti sono i druidi, e se il druido di Bëllindë ha un nome.\n· Chi erano i forestieri che chiedevano delle cantine (proposta: agenti di Iuvenza, che cercano il passaggio sotto la Basilica, come le frecce di polvere d’osso nella Città Sepolta)."
+  }
+ ],
  "livello": "borgo",
  "group": "Il Cuore del Ducato",
  "id": "borgo-terrecialle",
  "parent": "contea-cuore-del-ducato",
  "title": "Tërrëciallë",
- "sub": "Ignota",
+ "sub": "Il borgo del castellano che nessuno vede",
  "pub": [
   {
    "t": "",
-   "txt": "Un borgo antico e mezzo vuoto sulla strada che sale al Gigante. Il castello dei Portocenere è abitato — dicono — da un castellano che nessuno vede, e le cantine del borgo sono più grandi del borgo stesso.",
+   "capo": true,
+   "txt": "Tërrëciallë sta sul colle fra il Tordinum e la Vezzola, a monte di Teramum, a un’ora e mezza dalla capitale verso nord-ovest. È il primo gradino fra la città e la Laga: oltre il borgo cominciano i boschi. È un borgo antico e mezzo vuoto. Ha più case che famiglie, più cantine che case, e un castello che nessuno ricorda di aver visto aperto.\n\nIl castello è dei Portocenere. Dicono che ci abiti un castellano. Gli ordini arrivano al borgo scritti, i tributi si lasciano davanti al portone, e la mattina dopo non ci sono più. Nessuno a Tërrëciallë lo ha mai visto in faccia. Nessuno, a Tërrëciallë, ne parla volentieri.\n\nAttorno al borgo vivono i druidi. La gente li chiama per nome, li paga in pane e in formaggio, e quando la terra trema va a chiedere a loro."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo è fatto di cinque rioni sparsi sulla dorsale: Sicura, che è il più grande e ha la piazza; Oscura, sul versante in ombra; lo Scarpone, sotto il colle del castello; la Romana, dove escono i sassi antichi; Colle Pero, il più piccolo. Le case sono di pietra e di mattone, alte e strette, con i portoni da cantina sul davanti. Una casa su tre è chiusa. Non ci sono mura: ci sono i boschi tutto intorno, e il colle del castello a nord, che guarda il borgo dall’alto.\n\nSotto il borgo la collina è vuota. Ogni casa ha la sua cantina scavata nel tufo, e molte scendono a due, tre piani. Chi ci è sceso dice che non si capisce dove finisca una cantina e cominci quella del vicino.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La strada di Teramum",
+      "A sud-est, per La Cona, fino a Porta del Lucente Giorgio",
+      "⟦Un’ora e mezza a piedi⟧"
+     ],
+     [
+      "La strada del castello",
+      "A nord, su per il Colle Ciliegio",
+      "⟦Mezz’ora di salita⟧"
+     ],
+     [
+      "I sentieri dei boschi",
+      "A ovest, verso Valle Piola, la Laga e le Terre Selvagge",
+      "⟦Mezza giornata, e serve una guida⟧"
+     ],
+     [
+      "La strada di costa",
+      "A sud, per le colline, fino al Vomanum e a Mëndurjë",
+      "⟦Mezza giornata⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Tërrëciallë.jpg",
    "didascalia": "Tërrëciallë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. La piazza e il solario del Lucente Paolo.]] Il solario del borgo sta sulla piazza di Sicura, con la facciata di mattoni e il campanile con i merli, come una torre. È nuovo: l’hanno costruito al posto della pieve vecchia del Lucente Paolo in Albata, che cadeva a pezzi. Dentro c’è una pala d’altare dipinta più di cento anni fa, e in sagrestia un capitello di pietra di un tempio antico, usato come tavolo.\n· [[2. Le cantine.]] Sono la ricchezza e la stranezza del borgo. Ogni famiglia tiene il vino, l’olio, il grano e il formaggio sotto terra, al fresco tutto l’anno. Le cantine più grandi sono sotto le case chiuse, e nessuno ci scende. Di notte, laggiù, si sentono i colpi dei mazzemarille: i folletti col berretto rosso che battono sui muri dove c’è un tesoro.\n· [[3. Le case chiuse.]] Una casa su tre. Alcune le hanno lasciate le famiglie andate a Teramum, altre le ha rotte il terremoto. Chi ci dorme, dicono, si sveglia con la pandafeche seduta sul petto. ⟦Su molti portoni c’è ancora uno stemma: una torre piccola dentro un cerchio, scalpellata via a metà.⟧\n· ⟦[[4. La casa del fattore.]] L’unica casa grande aperta, in fondo alla piazza. Ci abita Zi’ Mariano, il fattore dei Portocenere: è lui che riceve gli ordini scritti, li legge al borgo e porta su i tributi. Ha sessant’anni, e dice di non aver mai visto il padrone.⟧\n· ⟦[[5. L’osteria del minestrone.]] Sotto i portici di Sicura. Ha una pentola di minestrone che bolle dalla mattina alla sera, la pecora alla callara la domenica e due stanze per chi va verso i boschi.⟧\n· [[6. Le botteghe.]] Un ramaio, un vasaio che fa piatti dipinti, un falegname, uno scalpellino. Lavorano per Teramum, e a Teramum li pagano poco.\n· ⟦[[7. Il forno e il mulino.]] Il forno è in piazza. Il mulino, giù nel vallone, gira solo con l’acqua di primavera.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[8. Il castello dei Portocenere.]] Sul Colle Ciliegio, sopra lo Scarpone. In paese lo chiamano «lu castille». Da sotto si vedono un muro lungo, una torre mozza e un portone che non si apre. Davanti al portone c’è una pietra piatta, dove si lasciano i tributi. ⟦Di notte, a volte, una finestra è accesa.⟧\n· [[9. La grotta del serpente.]] Sotto il Colle Ciliegio c’è una grotta. Dicono che dentro ci sia un tesoro, e che lo guardi un serpente enorme. I vecchi dicono anche che dal castello partisse una galleria sotto terra, che usciva nella campagna.\n· [[10. La Cona.]] La Lunaria delle Vergini, sulla strada di Teramum, dove i viandanti mettevano una pietra con l’immagine della Vecchia Madre. Ha due are scavate nella roccia, e d’estate dentro fa freddo.\n· [[11. L’altare del dio senza nome.]] Nei campi della Romana, fra tombe vecchie dell’Impero e le pietre di un tempio, c’è un altare con una scritta: «al dio sconosciuto». Più in là c’è una lapide per una sibilla, Numisia, e dalla terra escono pezzi di vasche: c’erano delle terme. I contadini girano attorno all’altare con l’aratro, e non lo toccano.\n· [[12. Le votate di Scorzone.]] Vicino a Ioanella, una casa di votate antica quanto il borgo, una delle poche case di donne della contea.\n· [[13. Villa Popolo.]] Un casale con un solario piccolo, il Lucente Bartolomeo, che ha il soffitto di legno tutto dipinto.\n· [[14. Valle Piola.]] Su in alto, verso la Laga, un villaggio di pietra con il suo solario. È quasi vuoto: chi è rimasto vive di pecore e di castagne.\n· ⟦[[15. Le querce dei druidi.]] Mezz’ora a ovest, nel bosco, una radura con tre querce vecchissime. Lì si trovano i druidi. Chi ha bisogno di loro lascia un pane sulla radice più grande e torna il giorno dopo.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "Gente di bosco e di poche parole, che non va volentieri in città e non vede volentieri la città venire da loro. Sono rimasti in pochi, e si conoscono tutti. Sono devoti del Lucente Paolo, rispettano i druidi e hanno paura del castello: non sentono contraddizione in nessuna delle tre cose.\n\n· [[Il minestrone alla torricellese.]] La minestra del borgo: legumi, verdure dell’orto, cotiche, quello che c’è. A settembre se ne fa la festa, e ogni cantina tira fuori il suo vino.\n· [[L’infiorata.]] Per una festa d’inizio estate le strade si coprono di quadri di lucenti fatti con trucioli di legno d’abete colorati. Ci lavorano tutte le famiglie per una settimana, e la processione li cammina sopra.\n· [[Il Lucente Paolo.]] Il 29 giugno: il rito del Sole, la processione, e i ragazzi che portano il lucente fino alla Cona e indietro.\n· [[I druidi.]] A Tërrëciallë non sono stregoni. Sono quelli che sanno quando piove, quando la terra trema e perché la vacca non fa latte. Il sacerdote lo sa e fa finta di niente.\n· ⟦[[Il tributo del castello.]] Il primo giorno di ogni mese ogni famiglia porta qualcosa alla pietra davanti al portone: un pane, un formaggio, una bottiglia. Chi non lo porta trova la porta della cantina aperta, la mattina dopo, e niente rubato.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[La terra trema.]] Qui trema prima e più forte che a Teramum. I druidi dicono che è la montagna che trema, e che non è finita.\n· [[I Brak.]] I druidi dicono che nelle campagne se ne sono visti altri, dopo quelli della guerra.\n· ⟦[[Forestieri.]] Quest’estate sono venuti due uomini di città a chiedere chi tiene le chiavi delle cantine chiuse. Zi’ Mariano li ha mandati al castello. Non sono tornati giù dalla stessa strada.⟧\n· ⟦[[La finestra accesa.]] Da qualche settimana la finestra del castello si accende tutte le notti, non solo ogni tanto.⟧"
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Fra le vigne di Bëllindë, Adamus ha incontrato un druido del suo ordine, uno dei druidi di Tërrëciallë: gli Atti lo chiamano «di Torricella». Adamus gli ha raccontato dei Celomanti, del Sigillo e dell’inquietudine che sente sul Ducato. Il druido gli ha risposto che la montagna trema, che nelle campagne si vedono altri Brak, e che nel Ducato si muove anche qualcos’altro. Poi se n’è andato in volo, in forma di corvo (Atto XVIII)."
   }
  ],
  "illustrazione": "Mondo — Tërrëciallë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«A Tërrëciallë le cantine sono più grandi delle case.»",
+  "cite": "Si dice a Teramum"
+ }
 }

@@ -14,28 +14,144 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Duca Giosia d'Acquaviva",
-  "Fedeltà": "Indipendente",
-  "Corrisponde a": "Atri",
-  "Altri nomi": "Atrax Aurea",
-  "Popolazione": "~8.000",
-  "Casata": "da Fiorforte — «Dalla Polvere, l'Oro»"
+  "Paese vero": "Atri",
+  "Altri nomi": "Atrë in dialetto; Hatria negli atti antichi; Atrax Aurea nelle carte dei nobili",
+  "Abitanti": "Circa ottomila, contando le contrade",
+  "Chi comanda": "Il Duca Giosia di Fonteviva e la sua casata",
+  "Dentro le mura": "Il Solario Grande, il Palazzo Ducale, la Piazza dei Fonteviva, il Corso, il solario della Lucente Reparata, il solario del Lucente Nicola, le Votate di Chiara, la Rocca di Capo d’Atrë, le grotte",
+  "Fuori le mura": "I calanchi, la Lunaria delle Grazie alla Cona, le fonti della strada del mare, le contrade, la torre del Cerrano",
+  "Porte": "Sette: la Porta del Lucente Domenico, Capo d’Atrë, la Stufa, i Macelli, i Cappuccini, Mutignano, Muralto",
+  "Guardia": "⟦Duecento armigeri dei Fonteviva in città, con il loro stemma; altri nei castelli della casata⟧",
+  "Lucente": "La Lucente Reparata, il giorno dopo la Festa del Sole Nuovo",
+  "Distanze": "⟦Il mare e la torre del Cerrano, tre ore a piedi; Pënëtë, tre ore; Julia Nova, una giornata; Nutaròschë, mezza giornata a nord-ovest, oltre il Vomanum⟧"
  },
- "gm": "Alleato potente contro Iuvenza, a un prezzo che i giocatori potrebbero non voler pagare. SEGRETO: le miniere esaurite dei da Fiorforte hanno aperto un passaggio verso l'Underdark; commerciano artefatti recuperati di nascosto. Non sanno che dall'altra parte qualcosa sta risalendo — Casa Umbra lo sente. Cëllinë è sua vassalla.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "La grande potenza della costa e l’alleato possibile contro Iuvenza, a un prezzo che i giocatori potrebbero non voler pagare. Atrë non è sulla strada della Crociata, ma la Crociata passa sulle sue terre: Nutaròschë, Mòrrë e il Castello Basso di Cashtalladdë sono dei Fonteviva. Chi vuole arrivare a Teramum senza nemici alle spalle, prima o poi deve sedersi al tavolo del Duca."
+  },
+  {
+   "t": "Il prezzo di Giosia",
+   "txt": "Giosia di Fonteviva odia Iuvenza e disprezza il Consiglio. È disposto ad aiutare la Crociata, ma non per Silvanus né per la Convocazione: per Atrë.\n\n⟦Che cosa può chiedere, e che cosa può dare:⟧\n\n· ⟦Chiede un seggio: che alla Grande Convocazione Atrë voti come le Otto Casate di Teramum, o che il nuovo Duca riconosca Atrë città libera come Julia Nova.⟧\n· ⟦Chiede Mushanë: un amministratore dei Fonteviva per «proteggere» l’abbazia, come nella storia vera Mosciano passò ai signori di Atri.⟧\n· ⟦Chiede la torre del Cerrano, cioè il vecchio porto di Atrë, e i diritti su Silvë: nelle carte di Atrë, Silvë fu venduta insieme alla città. Luigis si trova in mezzo.⟧\n· ⟦Dà uomini e denaro: duecento armigeri, il Banco dei Fonteviva, i castelli sulla strada. E dà la testa di Dama Violante, se gli si porta la prova che è una spia.⟧"
+  },
+  {
+   "t": "Giosia, quello vero",
+   "txt": "Giosia Acquaviva è esistito: sesto duca di Atri, governatore di Teramo dal 1424, partecipò alla strage dei Melatini e ne fece impiccare tredici; morì di peste a Cellino nel 1462.\n\n⟦Nel gioco: Giosia è stato, da giovane, governatore di Teramum per l’ultimo dei Pretutia. Conosce la capitale meglio di chi la governa oggi, i suoi passaggi e i suoi archivi. Per questo il Consiglio lo teme, e per questo i Melatino lo vogliono morto. Il suo destino, se serve: la peste, o qualcosa che le somiglia, a Cëllinë.⟧"
+  },
+  {
+   "t": "La rete dei Fonteviva",
+   "txt": "· [[Nutaròschë.]] Il palazzo dei Fonteviva sul Vomanum. Dama Violante Rosaspina lo tiene per il Duca e passa tutto a Iuvenza. Se la Crociata lo scopre e lo porta a Giosia, si guadagna il Duca.\n· [[Mòrrë e il Castello Basso.]] Dipendono da Nutaròschë. Il castellano del Castello Basso guarda il Barone Pietramala dall’altra parte del colle.\n· [[Cëllinë.]] Nei Calanchi: chi ha Giosia ha Cëllinë, e il Barone di Scorrano con le sue difese nei burroni.\n· [[Canzañë.]] ⟦Un’antica sentenza dell’Imperatore restituì Canzañë ai Cerullius, ma lasciò ai Fonteviva metà dei diritti sulla valle del Vomanum. Giosia la tiene in un cassetto. Può usarla contro Alessandros o regalargliela.⟧\n· [[Teramum.]] Il conto di sangue con i Melatino: un Fonteviva fece impiccare tredici Melatino sulla strada di Teramum. Gli Spennati della città non l’hanno dimenticato.\n· ⟦[[Martëncëcurë.]] La casa di caccia dei Fonteviva a Villa Rosa, vicino alla dogana: da lì il Duca sa che cosa entra nel Ducato dal nord.⟧\n· ⟦[[La costa.]] Per due secoli Tortoscuro, Silvë, Mutignano e Montepagano hanno pagato ad Atrë. Giosia ha le carte: ogni volta che un signore della costa alza la testa, il Banco tira fuori un vecchio debito.⟧"
+  },
+  {
+   "t": "Sotto Atrë",
+   "txt": "Il vecchio canone diceva: le miniere d’oro esaurite hanno aperto un passaggio verso il Sottosuolo profondo, e la casata commercia di nascosto gli artefatti che ne recupera. Non sa che dall’altra parte qualcosa sta risalendo: Casa Umbra lo sente.\n\nAtri non ha miniere: il suolo è argilla. ⟦Il passaggio sta nei cunicoli sotto la città, dove l’acqua scende verso i calanchi. Il più profondo parte dalla Fonte della Strega, accanto alle mura «che non hanno messo gli uomini», e scende molto più in basso di quanto serva a un acquedotto. I Fonteviva lo hanno trovato due generazioni fa. Il loro «oro» non sono monete: sono oggetti dei tempi prima della Frattura, venduti di nascosto ai collezionisti di mezzo Impero. È da qui che viene la ricchezza del Banco.⟧\n\n⟦L’aria calda dalle crepe di Muralto e le frane dei calanchi sono il segno che qualcosa, sotto, si è svegliato. Il Gigante si gira nel sonno anche qui. Nei cunicoli i manovali sentono bussare dentro i muri: dicono che è [[lu Mazzemarille]], il folletto col berretto rosso che bussa dove c’è un tesoro.⟧"
+  },
+  {
+   "t": "Il Decano",
+   "txt": "Nel materiale vecchio il Decano della Fiamma di Atrax Aurea è Agnellus, detto «Lu Calligrafàtte»: storico e censore dei testi pretuziani. Con la regola dei nomi qui si chiama ⟦Agnello «Lu Calligrafàtte»⟧. ⟦Tiene l’archivio del Solario Grande e ha letto quello che la Fiamma non vuole che si legga: le carte della Convocazione, gli stemmi delle casate antiche. Teme l’Arciflamine Impaloni più di quanto ami la verità. È l’uomo da trovare se si cercano prove sulla Legge Antica fuori da Teramum.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[La Campana della Giustizia.]] ⟦Un personaggio può suonarla e chiedere udienza al Duca davanti a tutta la piazza. Il Duca deve ascoltarlo: è la legge della città. Giosia lo detesta, ma la rispetta.⟧\n· [[Li Faugni.]] Una città intera che cammina con il fuoco in mano prima dell’alba: il momento migliore per entrare o uscire di nascosto, o per far sparire qualcuno.\n· [[La Porta Lucente.]] Si apre a mezzo agosto: arrivano viandanti da tutta la costa, e con loro le notizie.\n· [[Il teatro sotto le cantine.]] ⟦I Cicada ci tengono il vino e non solo: dal fondo del teatro parte un cunicolo che arriva sotto il Palazzo Ducale.⟧\n· ⟦[[Cicche «Lu Sinnache».]] L’oste del Lupo d’Oro. Vende notizie al Duca e a chiunque paghi meglio del Duca.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Atri vera ha i tre colli, le sette porte (ne resta in piedi solo Porta San Domenico), la cattedrale con il campanile più alto d’Abruzzo, il Campanone, il coro affrescato da Andrea De Litio e la Porta Santa dell’Assunta, il Palazzo Ducale degli Acquaviva sulla cisterna romana, la piazza sull’antico foro, il teatro romano sotto le cantine di Palazzo Cicada, le grotte e i cunicoli dell’acqua, la Fonte della Strega, i calanchi, la Madonna della Cona (2 luglio), le Clarisse con la promessa e i briganti messi in fuga, santa Reparata (lunedì dopo Pasqua), i Faugni del 7-8 dicembre, la liquirizia, i dolci delle clarisse, i maccheroni con la mollica, la fiera di Maralto, la lumaca dello scultore «ciammaica» sul portale di San Nicola. La campana del cavallo è la «campana di Atri». Il porto antico era al Cerrano; Hatria commerciava con la Grecia e da lei forse viene il nome dell’Adriatico. Gli Acquaviva comprarono la città nel 1393 per 35.000 ducati: nel gioco sono i Fonteviva. Quello che non è segnato come proposta viene da lì.\n· Lessico di Ea (fonte nuova di Giuseppe): il Duomo diventa il Solario Grande (la Basilica Aurea è solo di Teramum), le chiese solari, la Madonna la Vecchia Madre, i santi lucenti, le clarisse e i domenicani votate e votati, la Porta Santa la Porta Lucente, Pasqua la Festa del Sole Nuovo. Tolta la processione del Cristo morto. Le porte e i solari della città sono tradotti come chiede la regola sui nomi dentro le città.\n· Studio dei paesi veri e Folklore (fonti nuove): da lì il Giosia vero, i Faugni con il Campanone e le pupe, la Cona, le Clarisse, la lumaca, il dialetto atriano a due registri (la sàrë, lu sàel), il mare che prende il nome da Hatria. Nomi: Agnellus diventa Agnello (niente nomi latini).\n· Casa Fonteviva sostituisce Giosia d’Acquaviva e Casa da Fiorforte (decisione del 10-10). Il motto dei da Fiorforte («Dalla Polvere, l’Oro») non è stato passato ai Fonteviva.\n· Il vecchio canone metteva Atrë nelle «Terre del Sud»: oggi è nella Costa del Sale.\n· Tolte le «miniere d’oro esaurite»: Atri non ha miniere. Il passaggio verso il Sottosuolo va nelle grotte (come chiedevano la voce del Ducato e lo Studio).\n· Il conto di sangue con i Melatino viene dalla voce di Teramum e dalla storia vera."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il prezzo di Giosia per aiutare la Crociata.\n· Il motto e lo stemma di Casa Fonteviva.\n· Com’è Giosia: età, famiglia, eredi; e se è stato governatore di Teramum, come propone questa voce.\n· Se il titolo di Duca di Atrë resta, o se Giosia va chiamato in un altro modo per non confonderlo con il Duca d’Aprutium.\n· Chi è Casa Umbra, che «sente» quello che risale da sotto Atrë.\n· Il nome della Porta Santa nel lessico di Ea: qui «Porta Lucente», la stessa parola va usata per Propezzano."
+  }
+ ],
  "livello": "borgo",
  "group": "La Costa del Sale",
  "id": "borgo-atre",
  "parent": "contea-costa-del-sale",
  "title": "Atrë",
- "sub": "Atrax Aurea · Indipendente",
+ "sub": "Atrax Aurea, la città dei Fonteviva",
  "pub": [
   {
    "t": "",
-   "txt": "La città più potente dopo Teramum, ~8.000 anime, e la più antica del Ducato. Il Duca Giosia d'Acquaviva si considera il vero signore di Aprutium, disprezza Teramum e odia Iuvenza. Le miniere d'oro di Casa da Fiorforte, che diedero il nome alla città, sono esaurite da generazioni; oggi Atrax Aurea vive di commercio e di una rivalità mai sopita con la capitale.",
+   "capo": true,
+   "txt": "Atrë sta su tre colli, a una decina di miglia dal mare, in cima a una costa di argilla tagliata dai calanchi. Dalle mura si vede tutto: a est il mare, a ovest il Gigante, a nord e a sud le colline fino al Vomanum e al Piomba. È la città più antica del Ducato. Si chiamava Hatria quando Teramum era un villaggio fra due fiumi: aveva un porto, batteva moneta con il lupo dei Pretuziani, e mandava vino e olio oltre il mare. Gli atriani dicono che il Mare Adriaticum porta il nome della loro città, e nessuno è mai riuscito a dimostrare il contrario.\n\nOggi è la città di [[Casa Fonteviva]] e del suo Duca, [[Giosia di Fonteviva]]: la seconda città del Ducato, la più ricca dopo la capitale, e la sua rivale da sempre. Ad Atrë si dice che Teramum ha il Consiglio, ma Atrë ha la storia. Fuori da Atrë la conoscono tutti per due cose: la liquirizia, e il campanile più alto di Aprutium."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "La città occupa tre colli: [[Maralto]], [[Muralto]] e il [[Colle di Mezzo]]. Il centro sta in mezzo, fra la piazza dei Fonteviva, che era il foro dell’Impero, e il Solario Grande. Lo attraversa il [[Corso]], dritto da una piazza all’altra, con i solari e i palazzi dei nobili ai lati. Sui colli di Maralto e di Muralto ci sono i fortini vecchi, e sul versante ovest la Rocca di Capo d’Atrë.\n\nLe mura un tempo avevano tredici porte. Quando la città si strinse, ne restarono sette. I Fonteviva le hanno rifatte e rinforzate, e ci hanno speso più denaro che in qualsiasi altra cosa: Atrë non è mai stata presa.\n\nSotto la città c’è un’altra città: grotte, cisterne, cunicoli per l’acqua, così vecchi che nessuno sa chi li ha scavati. Tutto intorno la collina frana nei [[calanchi]], burroni di argilla grigia e nuda che al tramonto diventano d’oro.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "Porta del Lucente Domenico",
+      "A sud, sotto il solario del Lucente Domenico",
+      "La porta più bella, con lo stemma vecchio sopra l’arco a punta. Da qui scende la strada del mare."
+     ],
+     [
+      "Porta di Capo d’Atrë",
+      "A ovest, sotto la Rocca",
+      "La porta della strada di Teramum. È la più guardata."
+     ],
+     [
+      "Porta della Stufa",
+      "A est, vicino alla fontana della Stufa",
+      "Le lavandaie e l’acqua."
+     ],
+     [
+      "Porta dei Macelli",
+      "A nord",
+      "La porta delle bestie e dei macellai, verso la strada del Vomanum."
+     ],
+     [
+      "Porta dei Cappuccini",
+      "Verso il convento dei votati",
+      "La porta dei viandanti e dei mendicanti."
+     ],
+     [
+      "Porta di Mutignano",
+      "Verso sud-est",
+      "Il suo nome vero è Porta del Poggio e della Vigna. Da qui si va a Mutignano e a Pënëtë."
+     ],
+     [
+      "Porta di Muralto",
+      "Sul colle di Muralto",
+      "La porta più piccola, sopra i calanchi. Ci passa poca gente, e non sempre di giorno."
+     ]
+    ]
+   },
    "img": "Mondo — Atrë.jpg",
    "didascalia": "Atrë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. Il Solario Grande.]] Il grande solario della città, di pietra chiara, in cima ad Atrë. Il campanile è il più alto di Aprutium, più alto di quello di Teramum, e gli atriani lo ricordano a ogni occasione. La sua campana grande, il [[Campanone]], dà l’ora alla città e la sveglia per le feste. Dentro, il coro è dipinto da cima a fondo con le storie della Vecchia Madre e dei lucenti: le dipinse un maestro di nome Andrea de Litio, che ad Atrë visse e morì. Sotto il pavimento c’è una cisterna dell’Impero. Il Solario ha una [[Porta Lucente]] che si apre una volta l’anno, a mezzo agosto.\n· [[2. Il Palazzo Ducale.]] La casa dei Fonteviva, costruita sopra le rovine di una casa dell’Impero, con un torrione sull’angolo. Sotto il chiostro c’è un’altra cisterna antica, ancora piena d’acqua. Qui il Duca riceve, giudica e fa aspettare.\n· [[3. La Piazza dei Fonteviva.]] La piazza davanti al palazzo, dove un tempo c’era il foro. Qui si leggono i bandi del Duca, si fa mercato e si impiccano i ladri.\n· [[4. La Campana della Giustizia.]] Sotto il portico della piazza pende una campana con una corda lunga. Chiunque abbia subito un torto può suonarla, e il Duca deve ascoltarlo. Si racconta che una volta la suonò un cavallo vecchio, abbandonato dal suo cavaliere, che tirava la corda per mangiare l’erba che ci era cresciuta sopra. Il Duca di allora fece chiamare il cavaliere e lo obbligò a mantenere il cavallo fino alla morte.\n· [[5. Il Corso.]] La strada dritta fra il Solario Grande e il palazzo. Botteghe, palazzi dei nobili, e a metà il solario del Lucente Francesco, rifatto dopo un crollo.\n· [[6. Il solario della Lucente Reparata.]] Il solario della patrona, pieno di stucchi. Custodisce il busto d’argento della lucente, che esce in processione una volta l’anno.\n· [[7. Il solario del Lucente Nicola.]] Il più antico della città. Dentro c’è una Vecchia Madre dipinta dallo stesso maestro del Solario Grande. Sul portale c’è una lumaca di pietra: lo scultore era lento, gli atriani lo chiamavano [[Ciammaica]], la lumaca, e lui per ripicca la scolpì lì, dove la vedono tutti.\n· [[8. Le Votate di Chiara.]] Il monastero delle votate, con gli stucchi e una Vecchia Madre del Rosario. Si dice che la Vecchia Madre abbia promesso alle votate che il monastero non sarebbe mai stato finito; infatti non lo è. E che una notte abbia messo in fuga i briganti venuti a rubare. Le votate fanno i dolci più buoni della città.\n· [[9. Il solario del Lucente Domenico.]] Sopra la porta omonima, con un portale di pietra a punta. Nel convento accanto i votati fanno bollire la liquirizia: l’odore si sente in tutto il quartiere.\n· [[10. Il teatro sotto le cantine.]] Sotto le cantine di un palazzo nobile, quello dei Cicada, ci sono le gradinate di un teatro antico, grande come una piazza. Il padrone di casa ci tiene il vino.\n· [[11. Le grotte e le fonti.]] Sotto la città corre una rete di cunicoli per l’acqua, più vecchia dell’Impero. Escono alla luce nelle fonti: la fontana della Stufa, la fonte del Lucente Ilario e la [[Fonte della Strega]], vicino a un tratto di mura di pietre enormi che, dicono, non hanno messo gli uomini.\n· [[12. La Rocca di Capo d’Atrë.]] Il castello sul versante ovest, che guarda la strada di Teramum. È la caserma della guardia dei Fonteviva.\n· [[13. Il Piazzale di Maralto.]] In cima al colle, la fiera delle bestie di mezzo agosto: buoi, muli, pecore, e i sensali di tutta la costa.\n· ⟦[[14. La Locanda del Lupo d’Oro.]] Sul Corso, sotto l’insegna di una moneta antica con il lupo. È la locanda dei mercanti e dei messi: stanze pulite, prezzi alti, e un oste, Cicche «Lu Sinnache», che sa sempre chi è arrivato in città e perché.⟧\n· ⟦[[15. L’osteria della Mollica.]] Dietro il solario della Lucente Reparata, per chi ha pochi soldi: maccheroni con la mollica, rustelle, pecorino, vino nero. Ci bevono i carrettieri e la guardia fuori servizio.⟧\n· ⟦[[16. Il Banco dei Fonteviva.]] Sotto il palazzo, una stanza con le grate e un notaio. Qui la casata presta denaro a mezzo Ducato, e tiene i conti di chi le deve qualcosa.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[17. I calanchi.]] Tutto intorno alla città la collina si spacca in burroni di argilla, senza un filo d’erba, che scendono a ventaglio verso il fiume. Quando piove franano, e ogni tanto si portano via un campo o una casa. I bambini ci giocano, i vecchi ci tengono lontani i bambini. ⟦In città li chiamano «le Bolge».⟧\n· [[18. La Lunaria delle Grazie alla Cona.]] Una piccola lunaria della Vecchia Madre nella contrada della Cona, in mezzo ai campi. Il 2 luglio tutta la città ci va in processione, sei miglia a piedi, e il rito si fa all’aperto con la colazione sull’erba.\n· [[19. Le fonti della strada del mare.]] Lungo la strada che scende alla costa ci sono due fonti antiche, la [[Canale]] e la [[Pila]], dove si fermano le bestie e i carrettieri.\n· [[20. Le contrade.]] Casoli, Cavalieri, Fontanelle, Treciminiere, Santa Margherita, Colle della Giustizia e le altre: case di campagna, ulivi, liquirizia nei campi bassi, grano su quelli alti. Lavorano tutte per i Fonteviva o per i loro vassalli. A Casoli e a Fontanelle parlano già come a Rosetum.\n· [[21. La torre del Cerrano.]] Sul mare, dove il torrente Cerrano arriva alla spiaggia, c’era il porto di Hatria. Oggi c’è una torre di vedetta, e il porto è sott’acqua. La torre sta sulle terre dei Barbas, ma ad Atrë la chiamano ancora «il porto di Atrë»."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "Gli atriani sono orgogliosi, lenti a fidarsi e svelti a offendersi. Per loro Teramum è una città di nuovi ricchi e di avvocati. Parlano bene, vestono meglio, e ricordano a chiunque che la loro città aveva un porto e una moneta prima che la capitale avesse un nome. In città si parlano due lingue: quella dei signori, pulita, e quella del popolo, dove la sera è «la sàrë» e il sole «lu sàel».\n\n· [[Li Faugni.]] La sera del 7 dicembre si accende un grande falò davanti al Solario Grande, e si fa festa tutta la notte nelle case e nelle osterie. Alle cinque del mattino suona il Campanone: grandi e piccoli prendono un [[faugno]], un fascio di canne alto come due uomini legato con i giunchi, lo accendono e girano per la città con la banda, fino al falò. La sera si accendono due «pupe», fantocci di donna che ballano coperti di fuochi, con un uomo dentro. I vecchi dicono che è un fuoco più vecchio della Fiamma, il fuoco di Fauno, e che serve a portare luce nella notte più buia.\n· [[La Lucente Reparata.]] Il giorno dopo la Festa del Sole Nuovo il busto d’argento della patrona gira per la città, e a mezzanotte si sparano i fuochi. Per la sua seconda festa, in autunno, i contadini dicono che l’oliva è matura.\n· [[La festa di mezzo agosto.]] Si apre la Porta Lucente del Solario Grande: per otto giorni chi entra da lì ed esce dal portone grande è perdonato. Sfila il corteo dei Fonteviva e passano i carri della Maggiolata, tirati dai buoi e coperti di fiori. Sul Maralto c’è la fiera delle bestie.\n· [[La liquirizia.]] Le radici crescono nei campi bassi verso il mare, e ad Atrë le fanno bollire fino a farne pani neri e duri. Mezza costa ha in tasca un pezzo di liquirizia di Atrë.\n· [[Il pan ducale.]] Il dolce della città, che si regala per le feste. ⟦Si dice che la ricetta l’abbia data una duchessa dei Fonteviva, e che quella vera la conoscano solo le Votate di Chiara.⟧\n· [[Il nome.]] Nessuno sa più bene perché Atrë si chiami Aurea. Chi dice per le monete d’oro antiche, chi per il colore dei calanchi al tramonto, chi per un oro nascosto sotto la città che nessuno ha mai trovato."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Il Duca e la capitale.]] Giosia di Fonteviva si considera il vero signore di Aprutium, disprezza il Consiglio di Teramum e odia Veneranda Iuvenza. A Teramum non entra senza scorta: fra i Fonteviva e i Melatino c’è un vecchio conto di sangue, tredici Melatino impiccati sulla strada di Teramum, e i Melatino non l’hanno dimenticato.\n· ⟦[[Il Duca non è il Duca.]] Giosia porta il titolo di Duca di Atrë, che i Fonteviva hanno da quando comprarono la città. Non è il Duca d’Aprutium, il cui trono è vuoto. Ma ad Atrë, quando si dice «il Duca», si intende lui, e a Giosia non dispiace.⟧\n· ⟦[[Gli sfollati.]] Da quando Julia Nova è bruciata, ad Atrë sono saliti mercanti e famiglie del porto con i loro soldi. Gli affitti sono raddoppiati, e i poveri della città dormono nelle grotte.⟧\n· ⟦[[I calanchi si muovono.]] Quest’anno la terra ha tremato due volte, e dopo le piogge un pezzo di Muralto è sceso nei burroni con due case. Dalle crepe, la notte, esce un’aria calda.⟧\n· ⟦[[Il proclama di Teramum.]] Anche qui è arrivato il bando contro la Crociata. Il Duca non l’ha fatto inchiodare sulle porte: l’ha fatto leggere in piazza e poi bruciare. Nessuno sa se per amore della Crociata o per dispetto alla capitale.⟧"
   }
  ],
  "illustrazione": "Mondo — Atrë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Hatria civitas vetusta.»",
+  "cite": "Motto della città: Atrë, la città antica"
+ }
 }

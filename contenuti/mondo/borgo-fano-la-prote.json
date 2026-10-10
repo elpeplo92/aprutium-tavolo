@@ -14,25 +14,130 @@
  "mappa": null,
  "colore": "#C9A24A",
  "scheda": {
-  "Governatore": "I Clan dei Montanari",
-  "Fedeltà": "Silvanus",
-  "Corrisponde a": "Fano Adriano e Pietracamela"
+  "Paese vero": "Fano Adriano e Pietracamela",
+  "Altri nomi": "Fano, «il tempio», sul Colle Marcello; La Pròtë è il nome in dialetto di Pietracamela, e la sua gente si chiama pretarola",
+  "Abitanti": "⟦Circa settecento in tutto; d’inverno metà, quando i pastori e i cardatori sono in viaggio⟧",
+  "Chi comanda": "I clan dei montanari; il più grande è quello dei Ferramonte. ⟦Quando c’è da decidere per tutti, i capi dei clan si trovano all’eremo del Colle⟧",
+  "Nel paese": "A Fano: il solario dei Lucenti Pietro e Paolo, l’eremo del Colle, la fontana della Cannalecchia. A La Pròtë: il solario del Lucente Leucio, la casa delle Forbici, le case alte di pietra",
+  "Nei dintorni": "Cerqueto, Prato Selva, i Prati di Tivo, Intermesoli, la Lunaria di Collemolino, il Rio Arno, il Monte Corvo, i due Corni",
+  "Strade": "Per Lésënë, per Crognaleto, per Tussëcië e Mëndurjë; i sentieri per i pascoli e per i Corni",
+  "Guardia": "⟦Nessuna guardia: ogni uomo ha l’arco, la lancia e il cane⟧",
+  "Lucente": "A Fano il Lucente Valentino, il 14 febbraio e di nuovo a fine estate, prima che partano le greggi; a La Pròtë il Lucente Leucio, la seconda domenica di luglio",
+  "Distanze": "⟦Lésënë, mezza giornata abbondante di sentiero; Crognaleto, mezza giornata per il tratturo; fra Fano e La Pròtë, due ore di salita⟧"
  },
- "gm": "Se Silvanus si mostra, i montanari scendono. Alleati militari fedeli e duri. Fedeltà «Silvanus»: la sola contea dove il suo nome vale già.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Se Silvanus si mostra, i montanari scendono. Alleati militari fedeli e duri: il solo posto del Ducato dove il suo nome vale già. Il Manuale: «Se la Crociata punta dritto verso ovest salendo la montagna, i Clan dei Montanari di Fano scenderanno per Silvanus, ma la strada è lunga e pericolosa.»"
+  },
+  {
+   "t": "Il Sangue Solare",
+   "txt": "· I montanari venerano il Sangue Solare degli antichi imperatori e aspettano che torni. I cardatori hanno portato su le voci della Crociata, ma non sanno ancora chi sia Silvanus.\n· ⟦Il riconoscimento. I capi dei clan non credono alle parole: credono al sangue. Se Silvanus si taglia il palmo davanti a loro, come fece a Julia Nova davanti a Virellius, e il sole sul masso all’ingresso della Pròtë si scalda sotto la sua mano, i clan sono suoi.⟧\n· ⟦La lastra del Lucente Leucio. Sotto c’è davvero un Aurex: un principe della stirpe che fuggì quassù durante la Guerra delle Due Lune e morì nella Pròtë. I clan discendono in parte dalla sua scorta. Per questo aspettano. Il Lucente Leucio, per i vecchi, era lui.⟧\n· ⟦I sette templi di Fano. Sul Colle Marcello, sotto l’eremo, ci sono le fondamenta di sette are antiche, una per ogni dio che i Pretuziani riconobbero quando accettarono il Trono Solare. Il settimo è quello del Sole: se ne trova la pietra, ha inciso lo stesso sole del masso della Pròtë.⟧"
+  },
+  {
+   "t": "I cardatori, la rete",
+   "txt": "⟦I cardatori della Pròtë sono la rete di informatori migliore della montagna: girano dappertutto, parlano una lingua che nessuno capisce e si passano le notizie con i gesti anche davanti alle guardie. Se i Ferramonte decidono per la Crociata, la Crociata sa cosa succede a Tussëcië, a Teramum e sulla costa due giorni prima degli altri. Mattheus può imparare qualche gesto: vantaggio a Furtività o Inganno quando c’è da passare un messaggio a un cardatore.⟧"
+  },
+  {
+   "t": "Che cosa portano i montanari",
+   "txt": "⟦Se scendono: un centinaio di uomini fra arcieri, lancieri e guide, con i loro cani, che conoscono ogni sentiero fra la Laga e Lésënë. Non fanno assedi e non stanno in pianura più di un mese. Ma possono portare la Crociata a Lésënë senza passare da Tussëcië, e tenere i passi mentre la Convocazione siede. Nel Registro della Crociata valgono come un sostegno grande, «I clan della Montagna».⟧"
+  },
+  {
+   "t": "La bestia di Prato Selva",
+   "txt": "⟦Le impronte sono di un Brak: uno di quelli usciti dalla guerra che girano per le campagne (Atto XVIII). Questo è salito in alto, ferito e affamato. I montanari lo vogliono morto. Vhaerun, se è con la Crociata, può parlarci: è una scena di scelta, non di combattimento.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Le guide.]] Gli Aquilotti della Pròtë: con uno di loro i sentieri alti non chiedono prove; senza, Sopravvivenza CD 15 per ogni tratto, e d’inverno CD 18.\n· [[L’eremo del Colle.]] Il posto dove parlare a tutti i clan insieme. Si arriva, si accende un fuoco, e si aspetta che salgano.\n· [[Il baratto.]] ⟦Al fondaco della Pròtë si trovano pellicce, corde, ramponi, carne secca e formaggio per una settimana in montagna. Si paga in sale, ferro o polvere da medicina, più volentieri che in monete.⟧\n· [[Il giuramento di Collemolino.]] ⟦Un patto con i clan si fa lì. Chi lo rompe, i montanari non lo dimenticano.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Fano Adriano vero: sul colle di San Marcello sopra il Vomano, sotto il Monte Corvo; il nome da fanum, «tempio», e il motto delle 7 F, che gli studiosi leggono come sette templi; Santi Pietro e Paolo con il campanile del 1550 e gli altari barocchi; le quattro campane, la Grossa fusa in Piazza Prato, e la credenza delle campane che suonano da sole; l’eremo dell’Annunziata; la fontana della Cannalecchia del 1335; i grignetti; Cerqueto con Sant’Egidio, le zampogne e il gergo dei cardatori; Prato Selva; San Valentino il 14 febbraio e una seconda festa prima della partenza dei pastori; la transumanza verso la Campagna Romana e la Puglia; i signori Orsini, poi gli Alarcón y Mendoza.\n· Pietracamela vera: «La Pròtë» in dialetto, gli abitanti «pretaroli»; sul Rio Arno sotto il macigno a gobba di cammello, Corno Piccolo e Corno Grande; le case alte di pietra con vicoli, scalette, balconcini e architravi scolpiti; la Casa de li Signuritte con le forbici dei lanai; San Leucio con la chiave d’arco del 1432, San Rocco, la Madonna di Collemolino in rovina; i cardatori di lana girovaghi, il loro italiano pulito, le donne istruite, il gergo, i gesti, il conto a ventine, le parole vascia e rijuf; gli Aquilotti; Matteo Manodoro. Quello che non è segnato come proposta viene da lì (Studio dei paesi veri, Folklore, Dialetti).\n· Con il Lessico di Ea le chiese sono solari, i santi lucenti, l’eremo dell’Annunziata è diventato l’eremo del Colle, la Madonna di Collemolino una lunaria, il Natale la Notte Lunga.\n· La famiglia del borgo è Ferramonte (Nomi delle casate).\n· Lo Studio nota che «scendono di rado» era l’opposto del vero: Fano è un paese di transumanti, La Pròtë di cardatori girovaghi. Ora i loro uomini viaggiano per lavoro, ma i clan non scendono in armi per nessun signore. Il Sangue Solare resta: è canone del gioco.\n· «Fedeltà: Silvanus» e il sottotitolo «Silvanus» sono stati tolti dal testo per i giocatori (decisione del 10-10, n. 15): la scheda anticipava l’esito.\n· Nella vecchia voce: «la sola contea dove il suo nome vale già». È un borgo, non una contea: corretto in «il solo posto»."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se i montanari sanno già che Silvanus è vivo, o lo scoprono solo quando si mostra.\n· La prova che i clan chiedono a Silvanus (qui c’è una proposta).\n· Quanti uomini possono scendere.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Montagna del Gigante",
  "id": "borgo-fano-la-prote",
  "parent": "contea-montagna-del-gigante",
  "title": "Fano e La Pròtë",
- "sub": "Silvanus",
+ "sub": "I villaggi dei montanari, sotto i due Corni",
  "pub": [
   {
    "t": "",
-   "txt": "Villaggi di montagna alti sotto il Gigante, di clan di montanari che vivono di pastorizia e di caccia e scendono raramente. Venerano il Sangue Solare degli antichi imperatori e aspettano, da generazioni, che torni.",
+   "capo": true,
+   "txt": "Fano e La Pròtë sono due villaggi di pietra sul versante nord del Gigante, dove la montagna smette di essere un paesaggio e diventa un muro. Fano sta più in basso, su un colle sopra la valle del Vomanum, ed è un paese di pastori. La Pròtë sta più in alto, sotto il Corno Piccolo e il Corno Grande, aggrappata a un dosso sopra il Rio Arno sotto un macigno enorme a forma di gobba, così in alto che d’inverno la neve arriva ai davanzali. È un paese di cardatori di lana.\n\nCi vivono i clan dei montanari. I loro uomini girano il mondo per lavoro: a settembre i pastori scendono con le greggi fino alle pianure oltre i monti, e i cardatori della Pròtë partono con gli attrezzi in spalla e lavorano la lana in mezzo Impero. Ma come popolo, in armi, i clan non scendono per nessun signore. Da generazioni venerano il Sangue Solare degli antichi imperatori, e aspettano che torni."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Fano è un villaggio sparso sul Colle Marcello: un solario grande, un campanile, case basse di pietra, stalle e fienili, e intorno i pascoli che scendono verso il fiume. In cima al colle, da solo, c’è un eremo da cui si vede tutto intorno. Si dice che sul colle un tempo ci fossero sette templi, e che il nome di Fano venga da lì.\n\nLa Pròtë è l’opposto: un mucchio di case alte e strette, tutte di pietra del posto, strette l’una sull’altra come se avessero freddo. Le strade sono vicoli e scalette, con balconcini di legno e terrazzini. Sopra le porte ci sono architravi scolpiti con stemmi e scritte. Sopra il villaggio, enorme, la roccia.\n\nNessuno dei due villaggi ha mura: le mura sono la montagna.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "Il sentiero delle falde",
+      "A sud-est, lungo il Gigante, fino a Lésënë",
+      "⟦Mezza giornata abbondante, d’inverno a volte chiuso⟧"
+     ],
+     [
+      "La strada del Vomanum",
+      "Giù per la valle verso Tussëcië e Mëndurjë, e da lì a Teramum",
+      "⟦Una giornata fino a Mëndurjë⟧"
+     ],
+     [
+      "Il tratturo di Crognaleto",
+      "A nord-ovest, su per l’alto Vomanum fino a Crognaleto e alla Laga",
+      "⟦Mezza giornata, al passo delle greggi⟧"
+     ],
+     [
+      "La salita della Pròtë",
+      "Da Fano a La Pròtë, lungo il Rio Arno",
+      "⟦Due ore di salita⟧"
+     ],
+     [
+      "I sentieri alti",
+      "Ai Prati di Tivo, ai pascoli e ai Corni",
+      "⟦Da un’ora a un giorno; solo con una guida⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Fano e La Pròtë.jpg",
    "didascalia": "Fano e La Pròtë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il solario dei Lucenti Pietro e Paolo.]] Il solario grande di Fano, con il campanile alto e un portale scolpito. Dentro gli altari sono di legno lavorato e dorato, pieni di colonne a spirale. Ha quattro campane, e la più grande, la Grossa, fu fusa in una fossa scavata in mezzo a Piazza Prato. Se le campane suonano da sole, dicono, viene una disgrazia.\n· [[2. L’eremo del Colle.]] In cima al Colle Marcello, da solo, dove stavano i templi antichi. Da lassù si vede tutto il giro dell’orizzonte: il Gigante, la Laga, la valle fino a Mëndurjë. ⟦È qui che i capi dei clan si trovano quando c’è da decidere per tutti, e qui si accendono i fuochi per chiamare gli uomini.⟧\n· [[3. La fontana della Cannalecchia.]] La fontana vecchia di Fano, con un anno inciso nella pietra, più vecchio di ogni casa del paese. ⟦Ci si lava le mani prima di un patto.⟧\n· [[4. I grignetti.]] Grandi vasche scavate nella pietra, dove a vendemmia si pigia l’uva tutti insieme.\n· ⟦[[5. La casa dei Ferramonte.]] Una casa lunga di pietra in mezzo a Fano, con le corna di cervo sopra la porta. È la casa del capo del clan più grande, e la sala grande è anche il posto dove si mangia nelle feste. Chi è ospite dorme qui, sulla paglia vicino al fuoco.⟧\n· ⟦[[6. Le stalle d’inverno.]] Quando le greggi tornano dai pascoli dormono sotto le case. Le stanze di sopra restano calde col fiato delle bestie.⟧\n· [[7. Il solario del Lucente Leucio.]] Il solario del patrono di La Pròtë, antico, rifatto e pieno di ori, con una data incisa sulla chiave dell’arco. ⟦Sul pavimento davanti all’altare c’è una lastra senza nome: si dice che sotto ci sia un uomo «venuto da molto lontano, di sangue d’oro».⟧\n· [[8. Le case alte.]] Il cuore della Pròtë: case di quattro piani, scalette, balconcini, architravi con gli stemmi dei clan. ⟦Ogni clan ha la sua scala, e passare per la scala di un altro clan senza salutare è un’offesa.⟧\n· [[9. La casa delle Forbici.]] Una casa antica dei signori della Pròtë, con un paio di forbici da lanaiolo scolpite sulla facciata: il segno del mestiere che ha fatto ricco il villaggio. ⟦Oggi è la casa dove i cardatori si radunano prima di partire, e dove si tiene il conto di chi è in viaggio e dove.⟧\n· ⟦[[10. Il fondaco.]] La casa in basso della Pròtë, dove si scambiano pelli, lana, formaggio e carne secca con i mercanti che salgono da Tussëcië. Si pesa e si baratta. Ci si trova anche da mangiare e un pagliericcio.⟧\n· ⟦[[11. Il sole sulla roccia.]] Su un masso all’ingresso della Pròtë è inciso un grande sole con i raggi, consumato dalla pioggia. I montanari lo toccano quando partono e quando tornano.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[12. Cerqueto.]] Il villaggio più grosso dopo Fano, in basso verso la valle, con il solario del Lucente Egidio e le pareti dipinte. Qui si fanno le zampogne, e anche qui i cardatori parlano la loro lingua segreta.\n· [[13. Prato Selva.]] I pascoli alti di Fano, a mezza montagna. D’estate ci sono le greggi e le capanne dei pastori, d’inverno solo la neve.\n· [[14. I Prati di Tivo.]] I pascoli sopra La Pròtë, sotto le rocce bianche del Corno Piccolo. Erba corta, fiori, marmotte, e le greggi di tutti i clan.\n· [[15. Intermesoli.]] Il casale della Pròtë più in fondo alla valle, l’ultimo prima del bosco.\n· [[16. La Lunaria di Collemolino.]] Una lunaria in rovina, fuori dalla Pròtë. ⟦Ci si va a giurare: un giuramento fatto fra quei muri senza tetto non si rompe.⟧\n· [[17. Il solario del Lucente Rocco.]] Appena fuori dalla Pròtë, per chi parte per la montagna o per il viaggio.\n· [[18. Il Monte Corvo.]] La cima sopra Fano, dove finiscono i pascoli dei fanesi.\n· [[19. I due Corni.]] Il Corno Grande e il Corno Piccolo, le cime più alte del Gigante. ⟦Gli Aquilotti ci salgono; gli altri no. In cima al Corno Grande, dicono, c’è un nevaio che non si scioglie mai, e sotto il nevaio c’è il viso del Gigante.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I montanari sono duri, silenziosi e leali. Parlano poco, e quello che dicono lo fanno. Ma non sono gente chiusa. I pastori di Fano passano l’inverno con le greggi nelle pianure oltre i monti. I cardatori della Pròtë girano per mezzo Impero a pettinare la lana, e tornano a casa con le notizie e con un parlare così pulito che in pianura li prendono per gente di città. Le donne della Pròtë sanno leggere, e i pretaroli vestono meglio di tanti signori.\n\n· [[Il Sangue Solare.]] Nelle case dei montanari, accanto al focolare, c’è spesso un sole inciso o dipinto. Venerano gli antichi imperatori, i figli di Aurax, e dicono che il loro sangue non è finito. ⟦Ai vecchi si chiede: «Quanno arrive?», e i vecchi rispondono: «Quanno serve.»⟧\n· [[La lingua dei cardatori.]] Fra di loro i cardatori parlano un gergo che nessun altro capisce, e si dicono le cose con i gesti. Alla Pròtë si conta a venti: per dire ottanta si dice «quattro venti». Una ragazza è una vascia, un bambino un rijuf.\n· [[Gli Aquilotti.]] I giovani della Pròtë che salgono sulle rocce dove nessuno sale: per i nidi, per le erbe rare, per i camosci, o per scommessa. Se ti perdi in montagna, ti trovano loro.\n· [[Manodoro.]] Si racconta ancora di Matteo Manodoro, il capo della Pròtë che con i suoi uomini respinse una compagnia di soldati venuti da fuori. I bambini giocano a fare Manodoro.\n· [[Il Lucente Valentino e il Lucente Leucio.]] A Fano il lucente si festeggia due volte: il 14 febbraio, nella neve, e a fine estate, prima che le greggi partano, con le campane che suonano «ad allegrezza». A La Pròtë si festeggia la seconda domenica di luglio. ⟦Per il Lucente Leucio si fa la corsa su per la scalinata, con una pecora in spalla.⟧\n· [[Il motto.]] A Fano tutti sanno il motto delle sette F: «Fanesi furono forti: fatevi forti, figli fanesi.» I dotti dicono che le sette F erano i sette templi. Ai fanesi non interessa.\n· [[La zampogna.]] Nelle feste e nella Notte Lunga suonano le zampogne di Cerqueto. ⟦Quando un montanaro muore, lo si porta all’eremo con la zampogna davanti.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[La montagna si stacca.]] Quest’estate dal Corno Piccolo sono venuti giù massi grandi come case, e uno ha sfondato una stalla della Pròtë. I vecchi dicono che il Gigante si gira.⟧\n· ⟦[[Le bestie strane.]] I pastori di Prato Selva hanno trovato pecore sventrate e impronte di qualcosa che cammina su due gambe ma non è un uomo. I cani non vogliono seguirne la pista.⟧\n· ⟦[[Le guardie di Tussëcië.]] Sulla strada del Vomanum le guardie del Marchese d’Avalos chiedono un pedaggio nuovo per ogni capo di bestiame e per ogni cardatore che passa. I montanari hanno smesso di scendere per quella strada, e scendono per i sentieri.⟧\n· ⟦[[L’attesa.]] I cardatori tornati dalla pianura raccontano di una Crociata, di un uomo che porta il sole. I vecchi ascoltano senza dire niente, e la sera, all’eremo, i fuochi restano accesi più a lungo.⟧"
   }
  ],
  "illustrazione": "Mondo — Fano e La Pròtë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Fanesi Furono Forti: Fatevi Forti, Figli Fanesi.»",
+  "cite": "Il motto delle sette F di Fano, come lo legge la gente"
+ }
 }

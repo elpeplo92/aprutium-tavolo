@@ -14,25 +14,115 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Il Consiglio dei Savi",
-  "Fedeltà": "Neutrale",
-  "Corrisponde a": "Nereto"
+  "Paese vero": "Nereto",
+  "Altri nomi": "Narèta in dialetto; Castrum Nereti negli atti antichi",
+  "Abitanti": "⟦Circa duemilacinquecento, contando i casali⟧",
+  "Chi comanda": "Il Consiglio dei Savi, senza spada e senza signore",
+  "Dentro le mura": "Piazza Grande, la Lunaria della Consolazione, il Palazzo dei Savi, la Casa delle Carte, la Via dei Notai, la Lunaria della Madre Dolente",
+  "Fuori le mura": "Il solario di Martino, l’ara di Rocco, il Campo della Fiera, la Fontana Vecchia, i casali",
+  "Porte": "⟦Porta Martino, a sud; Porta della Fiera, a est⟧",
+  "Guardia": "⟦Nessun soldato: una ventina di guardie del Consiglio, i «bastoni», pagate a giornata⟧",
+  "Lucente": "Il Lucente Martino, quello che tagliò il mantello per un povero: si festeggia l’11 novembre",
+  "Distanze": "⟦Curruppjë, tre ore a est per la strada maestra; Sandémirë, tre ore a sud; Cundraüerrë, quattro ore a nord-ovest per il tratturo; Bëllindë, mezza giornata a sud; Teramum, una giornata lunga⟧"
  },
- "gm": "Il posto per documenti falsi e per leggi antiche che possono servire alla Convocazione. Neutrali: vendono competenza a chi paga.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il posto per documenti falsi e per leggi antiche che possono servire alla Grande Convocazione. I Savi sono neutrali: vendono competenza a chi paga. Per la Crociata, Nnaréta è una biblioteca e un tribunale; per i nemici, una fabbrica di carte."
+  },
+  {
+   "t": "Il privilegio che nessuno ha visto",
+   "txt": "Nella realtà si racconta che Nereto ebbe i suoi privilegi da Carlo Magno, ma nessun documento lo prova: è perfetto per il tema delle carte «più vere del vero».\n\n⟦Nel gioco: la pergamena appesa nella sala dei Savi dice che la città ebbe i suoi diritti da un Imperatore antico, della Stirpe di Aurax. È falsa, e lo sanno solo i Savi più vecchi: la fecero i loro nonni, quando la città tornò al Ducato, per non finire sotto un barone. Chi lo scopre ha in mano il Consiglio.⟧"
+  },
+  {
+   "t": "Le carte della Convocazione",
+   "txt": "⟦Nella Casa delle Carte c’è la copia di un ruolo dell’ultima Grande Convocazione vera, prima che i Pretutia la riducessero a un’acclamazione: l’elenco delle casate chiamate a Lésënë, con i loro sigilli. I Cerullius ci sono. Se Alessandros deve presentarsi come candidato, una copia autenticata dai Savi vale più di qualsiasi testimone. I «forestieri dei libri» la stanno cercando anche loro.⟧\n\n⟦Chi li manda: i Malavolta, che cercano l’Atto di Fondazione e seguono ogni filo che porta alla Legge Antica. Non è Iuvenza: lei, le carte, le fa falsificare.⟧"
+  },
+  {
+   "t": "Il falsario e il Luminor",
+   "txt": "⟦Il doppio atto di Pignotto è la prova che a Nnaréta lavora un falsario capace di copiare la mano di un notaio. È uno scrivano giovane della Via dei Notai, bravo e povero, e qualcuno lo paga per tenersi in esercizio.⟧\n\n⟦Due dei nove Savi vengono da famiglie che governavano la città per conto della città d’oltre Truntum, e ne conservano ancora i sigilli. Il Luminor Meridionale li usa come orecchie nel Ducato, e il falsario lavora anche per loro.⟧"
+  },
+  {
+   "t": "Il proclama e i sigilli",
+   "txt": "Il proclama di Teramum non è un falso: è autenticato con le procedure arcane della capitale (Atto XV). ⟦I Savi lo sanno, perché lo hanno verificato. Sanno anche quali sigilli porta, e uno dei sigilli non dovrebbe esserci. È un aggancio per la domanda «chi, dentro Teramum, usa i sigilli del Consiglio».⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Trovare una carta.]] ⟦Nella Casa delle Carte: Indagare CD 13 con mezza giornata di ricerca, CD 18 per una carta che qualcuno ha spostato apposta. Un grosso d’argento per guardare, un fiorino per una copia autenticata.⟧\n· [[Una carta falsa.]] ⟦Il falsario chiede da cinque a cinquanta fiorini, secondo il sigillo. Un Savio la riconosce con Indagare CD 17; un ufficiale di Teramum con CD 20.⟧\n· [[Il Consiglio.]] ⟦Per avere un parere dei Savi bisogna parlare in seduta, davanti a tutti: Persuasione CD 15, con vantaggio se si porta una legge scritta.⟧\n· [[La fiera del Lucente Martino.]] Tutta la valle a Nnaréta, fra bestie e notai: il posto giusto per incontrare chiunque senza dare nell’occhio, o per sapere quanto grano c’è e chi lo compra.\n· [[La campana.]] Se la Crociata passa a dicembre, le campane del 22 sono una scena pronta: la gente in piazza, la storia della vecchia Tonelli, gli spiriti di luce contro i Brak. Mattheus ha già parlato in una piazza (Atto XVIII)."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Nereto vera (Studio dei paesi veri): la collinetta al centro della valle, il centro storto intorno alla piazza, le mura quasi sparite, la Chiesa Madre di Maria della Consolazione con il campanile in cotto, il Suffragio, l’Addolorata con la cupola, San Martino benedettina con il rilievo del mantello, lesionata dal terremoto, San Rocco ottagonale fuori le mura, il Castrum Nereti, il Vicus Gallianus, la vendita ad Ascoli e il Consiglio degli Anziani, la «Terra Regia» confermata da tre re, la presunta concessione di Carlo Magno, la fiera boaria di San Martino, il mercato del martedì, le due tipografie dell’Ottocento, il tacchino e la capra alla neretese, la favetta, la ruzzola, le ciliegie, la Fontana Vecchia, il miracolo della vecchia Tonelli (nella realtà contro i Francesi, 1798), Annibale e il vino. Dialetto: Narèta, la -a finale, dittonghi ascolani.\n· Lessico di Ea applicato: Chiesa Madre → Lunaria della Consolazione; Addolorata → Lunaria della Madre Dolente; San Martino, San Rocco → solario di Martino, ara di Rocco; gli angeli del miracolo → spiriti di luce.\n· Lo Studio dice che la «città accademica» non ha riscontro (Nereto era la piazza commerciale della valle) e che «neutrale» stride (era guelfa, sotto Ascoli). Tenuti i Savi e le carte del vecchio canone; la piazza, la fiera e il legame con oltre Truntum vengono dal vero.\n· La fiera di San Martino era di bestiame, non di grano: corretta."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· La grafia: Nnaréta (titolo del sito), Nnarëta (rapporto della consegna 7) o Narèta (dialetto vero).\n· Quanti sono i Savi e chi li guida.\n· Se il ruolo della Convocazione esiste davvero, e chi lo cerca.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Val Vibrata",
  "id": "borgo-nnareta",
  "parent": "contea-val-vibrata",
  "title": "Nnaréta",
- "sub": "Neutrale",
+ "sub": "La piazza della valle: la fiera, i Savi e le carte",
  "pub": [
   {
    "t": "",
-   "txt": "La città accademica del nord: scribi, magistrati, notai, copisti. Il Consiglio dei Savi la governa senza spada. Qui si trovano leggi antiche, atti dimenticati e — dicono — documenti che sembrano veri più dei veri.",
+   "capo": true,
+   "txt": "Nnaréta sta su una collinetta nel mezzo della Val Vibrata, dove tutte le strade della valle si incrociano. Non è il borgo più alto né il più forte. È il più utile: è la piazza della valle. Qui si viene per la fiera, per il mercato, per vendere una vacca o comprare un campo, per sposare una figlia, fare testamento o fare causa al vicino.\n\nÈ la città degli scribi, dei magistrati, dei notai e dei copisti. Il Consiglio dei Savi la governa senza spada. Qui si trovano leggi antiche, atti dimenticati e, dicono, documenti che sembrano veri più dei veri. E in tutto il Ducato si conosce la sua cucina: il tacchino alla neretese, la capra alla neretese, la favetta, e a giugno le ciliegie."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo è piccolo e raccolto sulla cima della collinetta, storto, con le strade che girano intorno alla piazza come i cerchi intorno a un sasso nell’acqua. Le mura vecchie sono quasi sparite: ne restano dei pezzi dentro le case, e due porte. Sopra i tetti si vede il campanile di mattoni della Lunaria della Consolazione.\n\nNnaréta ha una storia diversa dai borghi vicini. Al tempo dell’Impero il villaggio stava più a sud, dove oggi c’è il solario di Martino; distrutto quello, rinacque qui. Poi diventò un castello di confine. Un Duca senza soldi lo vendette a una città del Luminor Meridionale, di là dal Truntum, e per più di un secolo Nnaréta fu governata da un Consiglio di Anziani, con un governatore mandato da oltre il fiume. Quando tornò al Ducato, il Consiglio restò, e la città rimase «terra del Duca»: senza un barone, e con i suoi privilegi confermati da tre Duchi uno dopo l’altro. Gli Anziani diventarono i Savi.\n\nFuori dalle porte il borgo scende in piano verso il Campo della Fiera e verso i casali, sparsi fra i campi fino all’Ubrata.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "⟦Porta Martino⟧",
+      "A sud",
+      "⟦La porta vecchia, verso il solario di Martino e la strada di Sandémirë.⟧"
+     ],
+     [
+      "⟦Porta della Fiera⟧",
+      "A est",
+      "⟦La porta dei carri e delle bestie: da qui si scende al Campo della Fiera e alla strada maestra per Curruppjë e il mare.⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Nnaréta.jpg",
    "didascalia": "Nnaréta"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. Piazza Grande.]] La piazza in mezzo al borgo, con l’ara dei morti e una fontana. Qui si leggono i bandi, qui si fanno gli affari, qui si aspetta il proprio turno davanti ai notai. Il mercato è il martedì.\n· [[2. La Lunaria della Consolazione.]] Il tempio grande della Vecchia Madre, costruito sopra un’ara più vecchia. È chiaro, con le colonne, e ha il campanile di mattoni cotti che si vede da tutta la valle. È da lassù che la vecchia Tonelli suonò le campane, la notte degli spiriti di luce.\n· ⟦[[3. Il Palazzo dei Savi.]] Una casa di pietra sulla piazza, con una sala lunga e nove sedie di noce. I Savi si riuniscono il lunedì e il giovedì. Le sedute sono aperte: chiunque può entrare, sedersi in fondo e ascoltare, purché stia zitto. Nella sala è appesa la pergamena dei privilegi, sotto un vetro.⟧\n· ⟦[[4. La Casa delle Carte.]] L’archivio della città, dietro il palazzo. Scaffali fino al soffitto, atti di compravendita, testamenti, sentenze, patti fra i borghi, copie di leggi che a Teramum nessuno ricorda più. Lo tiene un archivista che non esce quasi mai, Zi’ Dumineche lu Sorde, che sente benissimo quando gli conviene. Per guardare una carta si paga, per copiarla si paga di più.⟧\n· ⟦[[5. La Via dei Notai.]] La strada che scende dalla piazza alla Porta della Fiera. Ogni porta è uno studio: un banco, un calamaio, un notaio o uno scrivano. Ci sono i notai per i contadini e quelli per i nobili, e si riconoscono dal prezzo.⟧\n· ⟦[[6. Le due stamperie.]] In fondo alla Via dei Notai, due botteghe con i torchi: stampano bandi, avvisi della fiera, calendari dei lucenti e, a chi paga, moduli di contratto già pronti. Le due famiglie che le tengono non si salutano da tre generazioni.⟧\n· [[7. La Lunaria della Madre Dolente.]] Un tempio con la cupola, rifatto di nuovo. Ci vanno le donne, e ci vanno quelli che hanno perso una causa.\n· [[8. Il vecchio castello.]] Il Castrum Nereti, rifatto più di una volta e mai finito di sistemare. ⟦Oggi è la prigione dei Savi: ci stanno i debitori, finché qualcuno non paga per loro.⟧\n· ⟦[[9. Il Banco.]] Sulla piazza. Si cambiano fiorini, grossi e quattrini con le monete d’oltre Truntum, si presta su pegno e si custodiscono i soldi dei mercanti di bestiame.⟧\n· ⟦[[10. L’osteria della Penna.]] Vicino alla Porta della Fiera. Ci dormono quelli che aspettano un atto, una sentenza o un testimone, a volte per settimane. Stanze piccole, letti puliti, tacchino alla neretese la domenica. La tiene Za’ Tardèche, che sa a che punto è ogni causa del borgo.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[11. Il solario di Martino.]] Il tempio più vecchio, in campagna, dove al tempo dell’Impero c’era il primo villaggio. Lo costruirono i votati neri. Sulla porta c’è scolpito il Lucente Martino a cavallo, che taglia con la spada il suo mantello per darne metà a un povero. È lesionato da quando la terra ha tremato: sta su con le travi, e il rito non ci si dice più.\n· [[12. L’ara di Rocco.]] Un’ara a otto lati fuori dalle mura, costruita per gli appestati. Oggi ci si fermano i viandanti prima di entrare in città.\n· [[13. Il Campo della Fiera.]] Un prato largo fuori dalla Porta della Fiera. A metà novembre, per il Lucente Martino, c’è la fiera grande del bestiame, la più frequentata della valle: buoi, vacche, muli, maiali, e i notai con i banchetti in mezzo alle bestie. A giugno ci si fa la fiera delle ciliegie.\n· [[14. La Fontana Vecchia.]] Fuori le mura, sulla strada dei campi. Ci si abbeverano le bestie della fiera, e ci si danno gli appuntamenti.\n· [[15. I casali.]] Capo di Valle, Parignano, Pignotto, Rote, Vibrata: campi di grano e di fave, pagliai, case di terra.\n· ⟦[[16. Il mulino dell’Ubrata.]] Giù sul torrente, nel casale che si chiama come lui. Ci si macina il grano dei Savi. D’estate l’acqua non basta, e il mugnaio litiga con tutti.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I nnaretesi sono gente di carta e di commercio. Anche il più povero ha un atto in un cassetto, e lo tira fuori a ogni lite. Nel resto della valle si dice che a Nnaréta non si dà nemmeno il buongiorno senza un testimone. Parlano con le vocali larghe d’oltre Truntum, e mettono la «a» in fondo a tutto: la moja, la neva.\n\n· [[Il Lucente Martino.]] L’11 novembre è la festa del lucente e il giorno dei patti: si rinnovano gli affitti dei campi, si pagano i debiti, si assaggia il vino nuovo, e la fiera del bestiame riempie il borgo. I notai lavorano anche di notte.\n· [[La vecchia Tonelli.]] Durante la Guerra delle Due Lune le orde dei Brak salirono dalla costa fino alla valle e una notte attaccarono il borgo. La vecchia Tonelli salì da sola sul campanile della Lunaria e suonò le campane a stormo. Dal cielo scese un esercito di spiriti di luce, armati di fuoco, e i Brak scapparono senza combattere. Da allora, ogni 22 dicembre, le campane di Nnaréta suonano a festa.\n· [[La ruzzola.]] A maggio, per la festa della favetta, si fa la gara della ruzzola: si lancia una forma di formaggio lungo la strada, e chi la manda più lontano con meno tiri se la porta a casa.\n· [[I Savi.]] ⟦Sono nove, eletti fra i notai e i magistrati più anziani. Portano una toga nera con il collo di pelliccia e un anello con il sigillo della città. Si chiamano «Savio» davanti a tutti e per soprannome alle spalle.⟧\n· [[Il vino del generale.]] Dicono che un generale nemico dell’Impero, passando per la valle, trovò a Nnaréta tanto vino da lavarci i cavalli."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[Il proclama.]] Anche qui è arrivato il bando di Teramum contro la Crociata. I Savi lo hanno letto, copiato, archiviato e non lo hanno inchiodato da nessuna parte. Dicono che prima devono verificare i sigilli.⟧\n· ⟦[[Le carte false.]] Quest’inverno un campo vicino a Pignotto è stato venduto due volte, con due atti perfetti, firmati dallo stesso notaio. Il notaio giura di averne scritto uno solo.⟧\n· ⟦[[I forestieri dei libri.]] Da qualche mese arrivano gentiluomini che non vogliono campi né testamenti: chiedono di vedere i vecchi alberi delle famiglie del Ducato, e pagano bene per non dire chi li manda.⟧\n· ⟦[[Il grano.]] Alla fiera il prezzo del grano è caduto, e c’è chi compra lo stesso, a carri interi. I Savi hanno scritto tutto, ma non dicono a nessuno i nomi.⟧\n· ⟦[[La terra trema.]] Il solario di Martino è puntellato, e due case della Via dei Notai hanno le crepe. Gli archivi sono stati spostati in cantina.⟧"
   }
  ],
  "illustrazione": "Mondo — Nnaréta.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«La carta canta, e lu villano dorme.»",
+  "cite": "Detto dei notai di Nnaréta"
+ }
 }

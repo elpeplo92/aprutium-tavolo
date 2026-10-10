@@ -14,26 +14,107 @@
  "mappa": null,
  "colore": "#4E5A6E",
  "scheda": {
-  "Governatore": "Castellano Drago Ferroalto",
-  "Fedeltà": "Lealista imperiale",
-  "Corrisponde a": "Civitella del Tronto",
-  "Altri nomi": "Civitax Solis"
+  "Paese vero": "Civitella del Tronto",
+  "Altri nomi": "Cëvëtëlla in dialetto; Civitax Solis negli atti e nelle carte della Fiamma; la Fedelissima, per il Ducato",
+  "Abitanti": "⟦Circa milleduecento in paese e nelle ville, più la guarnigione e circa duecento templari dell’Ordine⟧",
+  "Chi comanda": "Il Castellano Drago Ferroalto, per l’Impero. Nella stessa fortezza sta l’Ordine d’Acciaio, che risponde alla Fiamma",
+  "Dentro le mura": "La fortezza con le sue tre piazze, il Palazzo del Governatore, il solario della fortezza; in paese la Ruetta, il solario del Lucente Lorenzo, la casa dei votati",
+  "Fuori le mura": "La Lunaria dei Lumi, l’abbazia di Montesanto, le Gole del Salinellum con le grotte e gli eremi, le ville, la Montagna dei Fiori",
+  "Porte": "La porta del paese, con le cinque torri sulla chiave; l’ingresso della fortezza, a est, con il ponte levatoio",
+  "Guardia": "⟦Trecento uomini del Castellano, venti cannoni e viveri per tre mesi; più i templari, che non obbediscono a lui⟧",
+  "Lucente": "Il Lucente Ubaldo, che si festeggia il 16 maggio. E la Vecchia Madre dei Lumi, a fine aprile",
+  "Distanze": "⟦Chimblë, quattro ore di strada maestra in discesa; Teramum, una giornata; Sandiglië, una giornata verso est; Ngarà, una giornata di tratturi verso nord; Lë Piana, una giornata e mezza di montagna⟧"
  },
- "gm": "Drago Ferroalto aspetta un vero Duca: potente alleato se Silvanus si mostra con le carte giuste. L'Ordine d'Acciaio («Un Sole, Una Fede, Una Lama») considera Virellius troppo moderato e sogna una purificazione del Ducato col fuoco: è il braccio armato di Casa Impalox e attende un «Eroe del Sole» da seguire. Due poteri sotto lo stesso tetto che non vanno d'accordo.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "La più grande forza armata del Ducato dopo la Guardia Ducale, e la più divisa. Il Castellano Drago Ferroalto aspetta un sovrano vero: se Silvanus si mostra con le carte giuste, è un alleato potente. L’Ordine d’Acciaio, circa duecento templari, è il braccio armato di Casa Impaloni e considera Virellius troppo moderato: sogna una purificazione del Ducato col fuoco. Due poteri sotto lo stesso tetto che non vanno d’accordo."
+  },
+  {
+   "t": "Il Castellano e l’Ordine",
+   "txt": "· [[Drago Ferroalto.]] Serve l’Impero con una lealtà che non ha prezzo, e che non ha flessibilità. Non si compra, non si spaventa, non si convince con le parole. Si convince con un sigillo, una carta, un anello: le prove di un sovrano. ⟦Proposta: tiene in una cassa del Palazzo del Governatore l’ultimo ordine ricevuto dall’Impero, vecchio di vent’anni, e lo rilegge ogni sera. Se Silvanus gli mostra l’anello imperiale e il taglio sul palmo, Ferroalto apre le porte, e con le porte i cannoni.⟧\n· ⟦[[L’ordine di resa.]] Nella storia vera, all’ultimo assedio, il re mandò ai difensori di Civitella l’ordine di arrendersi, e quelli non ci credettero: tennero ancora un mese, e fucilarono fuori dalla porta chi voleva cedere. Ferroalto è fatto così. Un ordine di Teramum, o anche dell’Impero, se non porta il sigillo giusto, per lui è un falso. Il proclama contro la Crociata, autenticato con le procedure arcane della capitale, lo ha letto e lo ha messo nella cassa senza rispondere.⟧\n· [[L’Ordine d’Acciaio.]] «Un Sole, una Fede, una Lama.» Aspetta un «Eroe del Sole» da seguire: senza saperlo, un erede di Aurax. Se Silvanus si presenta, l’Ordine può seguirlo o dichiararlo impostore. Il punto è chi lo vede per primo: il Castellano o il Priore.\n· ⟦[[Il conto delle armi.]] Le armi che partono di notte vanno a Teramum, alla Basilica Aurea di Impaloni. Se la Crociata arriva alla capitale, l’Ordine scende. Fermare un carico sulla strada di Chimblë vuol dire togliere a Impaloni le lame, e dare a Ferroalto la prova che l’Ordine prepara una guerra nel Ducato senza il suo permesso.⟧"
+  },
+  {
+   "t": "Sotto la fortezza",
+   "txt": "· Le torri sono imperiali, ma le fondamenta sono pre-imperiali, e sotto le fondamenta ci sono grotte che nessuno ha esplorato.\n· ⟦Le due cisterne che perdono acqua scaricano in una di quelle grotte, che scende verso le Gole del Salinellum. È un buon modo di entrare nella fortezza senza passare dal ponte: lungo, bagnato, e passa sotto il Calabozzo.⟧\n· ⟦Nella guerra i difensori di Cëvëtëlla usarono un Sigillo Lunare, come quelli di Teramum. Le valli bruciate sono il prezzo. Il Sigillo non è più qui: lo portarono via i Custodi del Ciclo. Ma nell’archivio del Palazzo del Governatore c’è ancora il registro dell’assedio, con i nomi di chi lo usò.⟧\n· ⟦Le luci della Lunaria dei Lumi sono vere. Compaiono le notti in cui la Luna bianca è piena, e si muovono sul colle come persone che camminano. L’Ordine dice che sono fuochi fatui. Mattheus e Adamus, se le vedono, sentono che sono anime che aspettano qualcuno.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[L’osteria della Ruetta.]] Il posto per parlare con i soldati del Castellano, che detestano i templari e sanno a che ora partono i carri.\n· [[La magia.]] Un druido o un sacerdote di Mortus, a Cëvëtëlla, deve stare attento. Adamus e Mattheus sono riconoscibili: l’Ordine sa di un sacerdote di Mortus che marcia con la Crociata, se la lettera di Don Fulgenzio è arrivata a Chimblë.\n· [[L’abbraccio e il banchetto d’agosto.]] Due giorni in cui la fortezza è aperta al paese: i momenti buoni per entrare. All’abbraccio di aprile il Castellano c’è e l’Ordine no.\n· ⟦[[Il registro dell’assedio.]] Storia CD 15 nell’archivio del Governatore: i nomi di chi usò il Sigillo, e fra questi una casata di Teramum che oggi siede nel Consiglio.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Civitella del Tronto vera: la rupe di travertino, la fortezza spagnola lunga cinquecento metri con le tre piazze d’armi, il Palazzo del Governatore, San Giacomo, i bastioni, le cinque cisterne, il «Calabozzo del coccodrillo»; Porta Napoli con le cinque torri, dove fu fucilato il sergente che rifiutava la resa nel 1861; la Ruetta; San Lorenzo, San Francesco, Santa Maria degli Angeli detta della Scopa; la Madonna dei Lumi con le luci sul colle, i miracoli della pioggia, la processione con le lanterne rosse e l’abbraccio con Sant’Ubaldo, la Torcia di Rocche del 20 maggio; Montesanto; le Gole del Salinello con le grotte di Sant’Angelo e Salomone e gli eremi; Sant’Ubaldo che sostituì San Lorenzo dopo l’assedio del 1557, con quarant’anni di esenzione dalle tasse e il titolo di «Fidelissima»; i maccheroni alle ceppe col ragù di cinghiale; il banchetto di agosto; San Giacomo della Marca che libera un’indemoniata; il proverbio della cerqua e delle melarance; i ghiaccioli detti piccardill. Nel 1806 Matteo Wade la tenne con 323 uomini, 19 cannoni e viveri per tre mesi: è la base della guardia proposta.\n· Lessico di Ea: santi → lucenti, chiese → solari, Madonna → la Vecchia Madre, santuario mariano → lunaria, frati → votati.\n· Il vecchio testo diceva che l’assedio durò dieci anni: la guerra durò nove anni e otto mesi. Ora è «quasi tutta la guerra». Nella storia vera nessun assedio di Civitella è durato più di cinque mesi.\n· Lo Studio dice che «più presidio che paese» non è vero: ora sotto la fortezza c’è un paese vero.\n· Casa Impaloni, non Impalox.\n· Il Manuale chiama il Priore dell’Ordine «Odilon de Serlum», ma nel sito Frate Odilon de Serlum è il bibliotecario di Julia Nova: qui il Priore resta senza nome."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome del Priore dell’Ordine d’Acciaio.\n· Che cosa vuole davvero Ferroalto come prova di un sovrano.\n· Se nella guerra a Cëvëtëlla fu usato un Sigillo, e chi lo usò.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre del Nord",
  "id": "borgo-cevetella",
  "parent": "contea-terre-del-nord",
  "title": "Cëvëtëlla",
- "sub": "Civitax Solis · Lealista imperiale",
+ "sub": "Civitax Solis, la Fedelissima: la fortezza che non è mai caduta",
  "pub": [
   {
    "t": "",
-   "txt": "La fortezza inespugnabile. Nella Guerra delle Due Lune Civitax Solis sostenne un assedio di dieci anni e divenne il simbolo della tenacia del Ducato; fu qui che i Sigilli Lunari vennero usati con effetti terribili, lasciando valli avvelenate. Oggi è più presidio che paese: il Castellano Drago Ferroalto la tiene per l'Impero, e l'Ordine d'Acciaio — duecento templari fanatici della Fiamma — vi forgia armi sacre e addestra chierici guerrieri.",
+   "capo": true,
+   "txt": "Cëvëtëlla sta su una rupe di travertino sotto la Montagna dei Fiori, a metà strada fra Teramum e il confine, e la fortezza le sta sopra come un coperchio. Da lontano non si vede il paese: si vede una muraglia chiara, lunga quanto mezzo crinale, e il vento che la batte. Chi sale ci mette mezza mattina, e ogni curva della strada è sotto gli occhi di una feritoia.\n\nÈ la fortezza che non è mai caduta. Nella Guerra delle Due Lune resistette all’assedio per quasi tutta la guerra, e da allora nel Ducato si dice: «Cëvëtëlla nen se pìje. Se aspette.» Il Ducato le diede il titolo di Fedelissima. Oggi la tiene per l’Impero il [[Castellano Drago Ferroalto]], e dentro le stesse mura vive l’[[Ordine d’Acciaio]], i templari della Fiamma che forgiano le armi sacre per tutta la Fiamma del Ducato. Ma sotto la fortezza c’è un paese vero, con le sue strade strette, le sue feste e la sua Vecchia Madre."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo ha due piani. In basso, sul fianco della rupe, il paese: case di pietra a gradoni, vicoli ripidi e storti, fatti apposta perché chi sale venga stretto e rallentato. In alto, su tutta la cima, la [[fortezza]]: una cittadella lunga cinquecento passi e larga quarantacinque, con la pianta di un uovo, costruita in blocchi di travertino. Dentro ha tre piazze una dopo l’altra, a livelli diversi, unite da rampe; ogni piazza si può difendere anche se cade quella prima.\n\nIntorno alla cima corrono i bastioni, e il più alto, sulla punta, è ottagonale. Sotto le piazze ci sono cinque grandi cisterne per l’acqua piovana: è per quelle che Cëvëtëlla ha potuto aspettare. C’è una sola strada per salire, e un solo ingresso.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "⟦Porta delle Cinque Torri⟧",
+      "In basso, all’ingresso del paese",
+      "L’unica porta del paese rimasta in piedi: un arco tondo di travertino, con lo stemma delle cinque torri sulla chiave. Da qui arriva la strada maestra di Chimblë e di Teramum. Fuori da questa porta si fucila chi tradisce."
+     ],
+     [
+      "L’ingresso della fortezza",
+      "In alto, sul lato est",
+      "Si passa il fossato sul ponte levatoio, poi il muro basso davanti alla muraglia, poi la porta. Chi non è atteso non arriva alla seconda."
+     ]
+    ]
+   },
    "img": "Mondo — Cëvëtëlla.jpg",
    "didascalia": "Cëvëtëlla"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. Il ponte levatoio.]] L’unico ingresso della fortezza, a est. Due guardie del Castellano e, accanto, due templari dell’Ordine: ognuno controlla i suoi.\n· [[2. Piazza del Cavaliere.]] La prima piazza d’armi, appena dentro. Da qui si scende a una delle cisterne. ⟦In mezzo c’è la statua di un castellano dell’assedio, con la spada spezzata ai piedi.⟧\n· [[3. Piazza d’Armi.]] La seconda piazza, sotto un bastione, con gli alloggi dei soldati e la cisterna più grande sotto il selciato. Ci si fanno gli esercizi all’alba.\n· [[4. La Gran Piazza.]] La terza e la più grande, sul punto più alto, con il bastione ottagonale. Da qui si vedono il Truntum, il mare, il Gigante e, nelle giornate chiare, i campanili delle Marche.\n· [[5. Il Palazzo del Governatore.]] Due piani, con i magazzini, il forno e la sua cisterna. Ci abita il Castellano Ferroalto. Ci ricevono i messi dell’Impero, quando ne arrivano.\n· [[6. Il solario della fortezza.]] Dedicato al Lucente Giacomo, con tre are. Sotto il pavimento sono sepolti i castellani.\n· [[7. L’ara della Lucente Barbara.]] Piccola, accanto alle polveri. I cannonieri ci accendono una candela prima di ogni tiro di prova.\n· ⟦[[8. Le forge dell’Ordine.]] Nelle vecchie scuderie, sotto un bastione. Giorno e notte si sente battere il ferro. Le lame escono benedette nel fuoco della Fiamma, e hanno il sole inciso sul tallone. Dicono che anche qui, come in ogni forgia, ci sia un chiodo piantato nell’incudine, che nessun priore ha mai fatto togliere: un fabbro senza chiodo, a Civitax, non trova garzoni.⟧\n· ⟦[[9. La casa dell’Ordine.]] Le vecchie caserme sul lato nord, dove vivono i templari: dormitorio, refettorio, sala del capitolo. Un mondo a parte dentro la fortezza. Chi non ha la sopravveste non entra.⟧\n· [[10. Il Calabozzo del coccodrillo.]] La cella di punizione sotto la fortezza, umida e senza luce. Il nome è più vecchio di chiunque sappia spiegarlo.\n· [[11. La Ruetta.]] In paese, il vicolo più stretto del Ducato: ci passa una persona alla volta, di fianco. I bambini ci fanno le gare, i contrabbandieri ci fanno gli affari.\n· [[12. Il solario del Lucente Lorenzo.]] Il solario del paese, con un organo che si sente fino alla porta. Ci sta la statua del Lucente Ubaldo, che la gente porta in processione a maggio.\n· [[13. La casa dei votati.]] Un solario con un rosone di pietra e un chiostro mezzo vuoto. I votati sono rimasti in sei.\n· [[14. Il solario della Scopa.]] Una navata sola. Tutti lo chiamano così, e nessuno sa più perché.\n· ⟦[[15. L’osteria della Ruetta.]] All’imbocco del vicolo, la tiene Zi’ Ggiuwanne lu Piccardille, che ha il naso sempre rosso come i ghiaccioli che d’inverno pendono dai tetti. Ci bevono i soldati del Castellano; i templari no. Pecorino, maccheroni alle ceppe col sugo di cinghiale, vino di Tërà annacquato. Tre stanze per chi viene da fuori, e un oste che ricorda tutte le facce.⟧\n· ⟦[[16. La bottega dell’armaiolo.]] Sotto la fortezza, in paese. Ripara quello che l’Ordine non degna di riparare: le armi dei soldati, dei cacciatori e di chi passa. Vende anche quello che non dovrebbe avere.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[17. La Lunaria dei Lumi.]] La casa della Vecchia Madre sotto il paese, con la casa delle votate e un chiostro. Si chiama così perché sul colle, un tempo, si vedevano luci tremolanti che sparivano quando ci si avvicinava. La chiamano anche la Madre della piova: due volte, in anni di siccità, l’hanno portata in processione ed è piovuto.\n· [[18. L’abbazia di Montesanto.]] Un’abbazia di votati neri, su un colle vicino. Ha priorati fino alla Vibrata: anche il solario di Sandiglië era suo.\n· [[19. Le Gole del Salinellum.]] La gola stretta fra la Montagna dei Fiori e la Montagna di Chimblë, dove passa il fiume sacro. Ci sono grotte abitate da prima dei Pretuziani, come la grotta dell’Angelo e quella di Salomone, e piccoli eremi appesi alla roccia. Ci vanno ancora i pastori a chiedere la pioggia.\n· [[20. Le ville.]] I villaggi sotto la rupe: Ripe, Rocche, Borrano, Ponzano, Collevirtù, Villa Lempa. Contadini e pastori che salgono in fortezza quando suona la campana.\n· [[21. La Montagna dei Fiori.]] Sopra il borgo, verso ovest. Faggi, pascoli alti, le greggi e le capanne dei pastori che fanno il pecorino. D’estate è tutta fiorita, e da lì prende il nome.\n· ⟦[[22. Le valli bruciate.]] Più in alto, verso la Laga, ci sono valloni dove l’erba cresce grigia. Si dice che lì, nella guerra, furono usati i Sigilli Lunari. I pastori ci passano veloci e non ci fanno pascolare.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "Gente dura, abituata a vivere sotto i cannoni e a obbedire a chi sta sopra. I cëvëtëllesi sono orgogliosi della loro fortezza come se l’avessero costruita con le mani, e i loro nonni lo hanno fatto davvero. Parlano già un po’ come quelli di là dal fiume. Del Castellano dicono che è giusto. Dell’Ordine non dicono niente, almeno ad alta voce. E per dire che uno non cambierà mai, dicono che la cerqua non ha mai fatto le melarance.\n\n· [[Il Lucente Ubaldo.]] Il patrono era il Lucente Lorenzo. Poi un grande assedio finì il 16 maggio, giorno del Lucente Ubaldo, e il paese cambiò patrono. ⟦Si dice che fu l’assedio della guerra, e che quel giorno le orde si ritirarono senza una ragione.⟧ Per quarant’anni, dopo, il borgo non pagò tasse.\n· [[L’abbraccio.]] A fine aprile, al tramonto, la Vecchia Madre dei Lumi sale in paese in processione, con le lanterne di vetro rosso. In piazza la sua statua si inchina davanti a quella del Lucente Ubaldo, e la gente dice che si abbracciano. L’Ordine non ci va. Il Castellano sì.\n· [[La Torcia di Rocche.]] Il 20 maggio i pastori di Rocche portano alla Lunaria un cero dipinto alto quanto un uomo, a piedi, a suon di tamburo. I due fuochi del villaggio se lo contendono all’asta: chi offre di più lo tiene un anno.\n· [[I maccheroni alle ceppe.]] Pasta grossa arrotolata a mano attorno a un bastoncino, il ceppo, col sugo di cinghiale. Ogni casa ha il suo ceppo, e una sposa porta il suo nella dote.\n· [[Alla corte del Governatore.]] A metà agosto il Castellano apre la Gran Piazza al paese: un banchetto lungo quanto la piazza, i soldati che servono, e il Castellano che mangia con tutti.\n· [[Il votato delle Marche.]] Si racconta che un votato venuto da oltre il Truntum liberò qui una donna da uno spirito maligno, davanti a tutto il paese. L’Ordine lo racconta come un miracolo della Fiamma; i vecchi raccontano che il votato prima chiese il nome della donna, e solo dopo quello dello spirito.\n· [[La magia.]] A Cëvëtëlla l’Ordine considera eresia ogni magia che non viene dal Sole. Anche una guarigione con le erbe, fatta dalla persona sbagliata, può finire davanti al capitolo."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Due padroni.]] Il Castellano e l’Ordine vivono dentro le stesse mura e non si parlano. I soldati e i templari non bevono nella stessa osteria e non pregano alla stessa ora.\n· [[Il trono vuoto.]] Il Castellano tiene la fortezza per l’Impero, non per Teramum. Da due anni il Ducato non ha un Duca, e lui lo dice a chiunque: aspetta un sovrano vero.\n· ⟦[[Le forge non si fermano.]] Da qualche mese l’Ordine lavora anche di notte. I carri delle armi partono per Teramum coperti, e scendono per la strada di Chimblë.⟧\n· ⟦[[I ragazzi dell’Ordine.]] L’Ordine prende ragazzi da tutto il Ducato per farne sacerdoti guerrieri. A Teramum si minacciano i figli disubbidienti dicendo: «Ti mando a Civitax, a imparare la Fiamma a bastonate.»⟧\n· ⟦[[La terra trema.]] Anche qui. Due cisterne hanno perso acqua da una crepa, e nessuno sa dove va.⟧"
   }
  ],
  "illustrazione": "Mondo — Cëvëtëlla.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Un Sole, una Fede, una Lama.»",
+  "cite": "Motto dell’Ordine d’Acciaio, sopra la porta delle forge"
+ }
 }

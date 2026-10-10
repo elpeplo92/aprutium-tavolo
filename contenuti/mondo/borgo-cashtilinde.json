@@ -14,25 +14,112 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Gilda dei Conciatori",
-  "Fedeltà": "Neutrale",
-  "Corrisponde a": "Castilenti"
+  "Paese vero": "Castilenti",
+  "Altri nomi": "Cashtilindë in dialetto; Castrum Lentius negli atti antichi",
+  "Abitanti": "⟦Circa millecinquecento, e d’estate qualche centinaio di lavoranti in più⟧",
+  "Chi comanda": "La Gilda dei Conciatori, dal Castello. ⟦Il Gran Mastro è sempre un Roccaspina: oggi Ermanno Roccaspina, detto il Marchese⟧",
+  "Nel paese": "Il Castello dei Roccaspina, il solario della Lucente Vittoria, il solario della confraternita, la Fontana Vecchia, le conce",
+  "Nei dintorni": "La casa dei votati di Oliveto, Casabianca, Colle della Morte, San Romualdo, Colle San Pietro, Castilenti Vecchio, la valle del Fino",
+  "Strade": "Verso Atrë, verso Cëllinë e Mundësòcchë, giù al Fino",
+  "Guardia": "⟦Una trentina di armigeri della Gilda, vestiti di cuoio buono e pagati bene⟧",
+  "Lucente": "La Lucente Vittoria, il 23 dicembre",
+  "Distanze": "⟦Mundësòcchë, due ore a ovest; Cëllinë, mezza giornata a nord-ovest; Atrë, mezza giornata a est; Mòrrë, una giornata a nord⟧"
  },
- "gm": "Fornitura di equipaggiamento leggero. Neutrali: vendono a tutti.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Fornitura di equipaggiamento leggero. Neutrali: vendono a tutti. Per la Crociata è il posto dove armare bene, e in fretta, i miliziani e i civili che si sono uniti per strada. E la Gilda sa chi altro compra armature nel Ducato."
+  },
+  {
+   "t": "I Roccaspina e la Gilda",
+   "txt": "⟦I Roccaspina erano marchesi, e i trecento «schiavi» della leggenda erano i primi conciatori: gente comprata per debiti e messa a lavorare le pelli delle greggi del marchese. Quando i contadini assaltarono il Castello, il marchese di allora salvò la casa facendo dei suoi lavoranti una gilda, con le paghe e le regole. Da allora la Gilda governa, e un Roccaspina la guida.⟧\n\n⟦Ermanno Roccaspina: sessant’anni, grasso, gentile, con le mani ancora macchiate. Tiene la Gilda con i conti, non con la paura. Il suo problema è uno solo: per rifare le conce ha preso denaro dalla Lega dei Sensali, e il debito ce l’hanno i Melatino. Se la Lega lo chiede indietro, i Roccaspina perdono il Castello.⟧"
+  },
+  {
+   "t": "Chi compra il cuoio",
+   "txt": "⟦I carri che partono di notte vanno ad Atrë, al porto. Là il cuoio prende la nave per Vesperia, e torna nel Ducato addosso ai mercenari pagati da Iuvenza. La Gilda lo sa a metà: sa che va per mare, non vuole sapere dove. Il registro dei contratti, nel Castello, porta un nome falso e un sigillo di Luminor. È una prova del filo Velthuria–Vesperia.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Comprare.]] Armature di cuoio, cuoio borchiato, giachi imbottiti, selle, foderi, faretre, a prezzo del manuale, pronte in pochi giorni; per tutta la Crociata ci vuole una settimana e un contratto. ⟦Uno sconto se si paga in anticipo, o se si toglie di mezzo il problema della Lega sulla strada.⟧\n· ⟦[[Il registro.]] Leggere i contratti della Gilda: Furtività o Inganno CD 15 nel Castello, o Persuasione CD 14 con Teresina all’osteria. Porta al cuoio per Vesperia.⟧\n· ⟦[[I carri di notte.]] Seguirli porta ad Atrë, e a una scelta: denunciare il traffico al Duca Giosia, o usarlo.⟧\n· ⟦[[Lu mazzemarille di Castilenti Vecchio.]] Il folletto bussa per tenere lontani i curiosi da un tesoro. Chi gli ruba il berretto rosso lo costringe a dire dove: rame subito, argento dopo, oro solo a chi ha pazienza.⟧\n· [[Le tombe di Colle San Pietro.]] Un posto antico, pretuziano, vicino a un borgo che non ci pensa mai. ⟦Chi le apre trova i segni del lupo, come a Gerenzano.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Castilenti vera ha il palazzo-castello dei marchesi De Sterlich (qui dei Roccaspina), costruito sopra il vecchio castello, con il mattone del 1501, il cortile, lo scalone, l’atrio con lo stemma e la leggenda dei trecento schiavi del marchese; l’assalto dei contadini al palazzo nel 1848; Santa Vittoria (patrona, 23 dicembre, anche sullo stemma con la palma); San Rocco con la confraternita; il convento di Santa Maria di Oliveto con il chiostro affrescato; la Fontana Vecchia con il mascherone e i tritoni; la tomba di Casabianca, il tempio di San Romualdo, la necropoli di Colle San Pietro, la villa di Fonte Pisciarello, «Castilenti vecchio» sull’abitato romano, le torri contro i Saraceni; il Montepulciano. Tradotto con il Lessico di Ea. Quello che non è segnato come proposta viene da lì.\n· I Roccaspina sono la famiglia di Cashtilindë decisa da Giuseppe il 10-10: prendono il posto dei De Sterlich veri, che nel gioco stanno a Cashtijunë.\n· La concia delle pelli non ha appoggio in nessuna fonte vera: la Gilda dei Conciatori resta perché è canone del sito, e la voce la lega al marchese e ai suoi «schiavi», come suggerisce lo studio dei paesi veri."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Come si chiama il Roccaspina che guida la Gilda.\n· Se il cuoio di Cashtilindë arriva ai mercenari di Iuvenza.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Terra dei Calanchi",
  "id": "borgo-cashtilinde",
  "parent": "contea-calanchi",
  "title": "Cashtilindë",
- "sub": "Neutrale",
+ "sub": "Il borgo delle conce e del Castello dei Roccaspina",
  "pub": [
   {
    "t": "",
-   "txt": "Puzza di pelle e tannino da lontano. La Gilda dei Conciatori fa armature di cuoio per le legioni e per chiunque paghi; neutrali, laboriosi, poco amati per l'odore.",
+   "capo": true,
+   "txt": "Cashtilindë sta su un colle sopra la valle del Fino, dalla parte di Atrë, fra vigne di Montepulciano e ulivi. In cima c’è il Castello dei Roccaspina, un palazzo grande che domina tutto il borgo. E poi c’è l’odore. Il vento porta l’odore delle conce per mezza lega: pelle, calce, tannino, acqua marcia. Chi arriva la prima volta si copre il naso. Chi ci vive non ci fa più caso.\n\nQui non comanda un signore: comanda la Gilda dei Conciatori, e la guidano i Roccaspina. Fa armature di cuoio per le legioni e per chiunque paghi. È neutrale, laboriosa, ricca, e poco amata per l’odore."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo vecchio sta in cima al colle, attorno al Castello. Le case sono di mattone, strette e alte. Giù per il fianco che guarda il fiume ci sono le conce: vasche di pietra a gradoni, tettoie, pelli stese ad asciugare, canali che portano l’acqua dalla Fontana Vecchia e la riportano giù sporca. Il borgo non ha mura: il Castello basta.\n\nIntorno, i casali: Casabianca, Villa San Romualdo, Vicenne, Colle della Morte. Più in là, sulle rovine di un villaggio dell’Impero, c’è Castilenti Vecchio, il primo borgo, abbandonato. E sotto, nella valle del Fino, la casa dei votati.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La strada di Atrë",
+      "A est, per i colli",
+      "⟦Mezza giornata coi carri⟧"
+     ],
+     [
+      "La strada dei calanchi",
+      "A nord-ovest, verso Cëllinë e Mundësòcchë",
+      "⟦Due ore fino a Mundësòcchë; mezza giornata fino a Cëllinë⟧"
+     ],
+     [
+      "La strada del fiume",
+      "A sud, giù al Fino e alla casa dei votati",
+      "⟦Un’ora⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Cashtilindë.jpg",
    "didascalia": "Cashtilindë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il Castello dei Roccaspina.]] Un palazzo grande e quadrato, costruito sopra un castello più vecchio, con un cortile, uno scalone di pietra e un atrio a volta con lo stemma della famiglia. Si dice che lo costruirono trecento schiavi del marchese. Oggi è anche la sede della Gilda: ci si tengono i registri, ci si firmano i contratti e ci si conserva la merce migliore.\n· [[2. Il solario della Lucente Vittoria.]] Il solario grande, a una navata, tutto stucchi e dorature, con un organo. La lucente è anche sullo stemma del borgo: una giovane vestita d’azzurro, con l’aureola d’oro e una palma in mano.\n· [[3. Il solario della confraternita.]] Un solario semplice, sede di una confraternita antica. ⟦I conciatori ci vanno a pregare contro le febbri, che nelle conce non mancano mai.⟧\n· [[4. La Fontana Vecchia.]] Appena fuori dalle case: una fontana di mattone con un mascherone che sputa l’acqua e due tritoni. Da qui parte l’acqua che serve alle conce.\n· ⟦[[5. Le conce.]] Le vasche a gradoni sul fianco del colle, una ventina, ognuna di una famiglia. Si lavora dall’alba: si scarnano le pelli, si mettono in calce, poi nella corteccia di quercia, poi si battono e si ungono. Chi ci lavora ha le mani marroni fino al gomito.⟧\n· ⟦[[6. La Sala delle Armature.]] Una bottega grande sotto il Castello, dove le pelli finite diventano corpetti, giachi, cinture, foderi, selle e bracciali. È qui che si compra: i prezzi sono scritti su una tavola, e non si tratta.⟧\n· ⟦[[7. L’osteria de lu Cunciatore.]] Sotto la piazza, l’unica del borgo: vino della valle, pecora in umido, e finestre sempre chiuse per l’odore. Ha quattro stanze per i mercanti. La tiene Teresina la Lònghe, che ha un fratello nella Gilda e sa chi compra cosa.⟧\n· ⟦[[8. Il magazzino del sale e della calce.]] Una casa lunga in fondo al borgo dove si tiene quello che serve alle conce. Ci arrivano carri da Atrë e dalla costa, e non tutti passano dal dazio.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[9. La casa dei votati di Oliveto.]] Giù nella valle del Fino: un portico, un chiostro con le pareti dipinte, un soffitto di legno a cassettoni e un organo. I votati curano gli ulivi e i malati delle conce.\n· [[10. Casabianca.]] Un casale sui colli. Arando, i contadini hanno trovato una tomba antica, con vasi dipinti e gioielli di prima dell’Impero.\n· [[11. San Romualdo.]] Il casale dove stava un tempio dei Pretuziani. Le pietre squadrate si vedono nei muri delle case.\n· [[12. Colle San Pietro.]] La collina delle tombe pretuziane. Ci si va solo il giorno dei morti.\n· [[13. Colle della Morte.]] Un casale con un nome che nessuno sa spiegare. ⟦I vecchi dicono che lì si seppellivano gli appestati, e che di notte non ci si passa.⟧\n· [[14. Castilenti Vecchio.]] Il borgo abbandonato, sopra una villa dell’Impero. Muri bassi, un pavimento di pietruzze colorate sotto l’erba a Fonte Pisciarello. ⟦Di notte si sente bussare nei muri: i ragazzi dicono che è lu mazzemarille, che fa la guardia a qualcosa.⟧\n· [[15. Le vecchie torri.]] Su due colli, a Fano San Savino e a Colle Marciano, i resti di due torri di guardia contro i predoni venuti dal mare."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I castilentesi lavorano molto, parlano di soldi e non si offendono quando li prendono in giro per l’odore. Rispondono che il cuoio di Cashtilindë lo portano anche i nobili di Teramum, e che i nobili puzzano di peggio.\n\n· ⟦[[La Gilda.]] Un ragazzo entra a bottega a dieci anni, diventa lavorante a quindici e mastro, se gli va bene, a trenta. La Gilda paga i medici, le doti delle ragazze e i funerali dei suoi. Chi non è della Gilda, a Cashtilindë, conta poco.⟧\n· [[La Lucente Vittoria.]] Il 23 dicembre, alla vigilia della Notte Lunga, la lucente esce in processione con la palma. ⟦I conciatori le portano un paio di sandali nuovi, ogni anno.⟧\n· [[La confraternita.]] Fa la sua festa d’estate. ⟦I confratelli girano con il cane e il bastone, e benedicono le vasche.⟧\n· [[La rivolta.]] Tutti sanno che una volta i contadini assaltarono il Castello, e che i Roccaspina tennero duro. ⟦Da quella notte i Roccaspina non si fanno più chiamare marchesi in pubblico: si fanno chiamare mastri, e lavorano il cuoio come gli altri, almeno il giorno della festa.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[Troppe ordinazioni.]] La Gilda non ha mai lavorato tanto: corpetti di cuoio a centinaia, pagati in oro. Chi li compra non si sa: i carri partono di notte, verso la costa.⟧\n· ⟦[[Il proclama di Teramum.]] La Gilda lo ha letto, lo ha messo agli atti e ha continuato a vendere a tutti. «Il cuoio non ha bandiera.»⟧\n· ⟦[[Il fiume sporco.]] I contadini della valle si lamentano: le conce sporcano il Fino, e le bestie non bevono più. I votati di Oliveto stanno con i contadini.⟧\n· ⟦[[La Lega dei Sensali.]] I Melatino vogliono comprare il cuoio di Cashtilindë tutto insieme, a un prezzo fisso. La Gilda ha detto di no. Da allora un carro su tre viene fermato sulla strada.⟧"
   }
  ],
  "illustrazione": "Mondo — Cashtilindë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«A Cashtilindë i soldi non puzzano. Puzza tutto lu reste.»",
+  "cite": "⟦Detto dei carrettieri⟧"
+ }
 }

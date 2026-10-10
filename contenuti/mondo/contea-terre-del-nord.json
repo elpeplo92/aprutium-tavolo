@@ -17,21 +17,37 @@
  "mappa": null,
  "colore": "#4E5A6E",
  "scheda": {
-  "In dialetto": "La Fruntiere",
-  "Contea": "La terza",
-  "Dove": "Il nord del Ducato, lungo il Truntum, sotto la Montagna dei Fiori",
-  "Paesaggio": "La fortezza di pietra chiara sul crinale, borghi sui ripiani, vigne sui colli del confine",
-  "Borghi": "Cëvëtëlla, Chimblë, Ngarà, Tërà, Sandiglië",
-  "Chi comanda": "Un castellano dell’Impero, un vescovo-principe, i vignaioli e un capitano di ventura"
+  "Nome": "Le Terre del Nord; in dialetto, La Fruntiere",
+  "Contea": "La terza delle otto",
+  "Il borgo che conta": "Cëvëtëlla, Civitax Solis, la Fedelissima: la fortezza che non è mai caduta",
+  "Chi comanda": "Nessun conte. Un castellano dell’Impero, un flamine-principe, un flamine d’oltre confine, i vignaioli e un capitano di ventura",
+  "Borghi": "Cëvëtëlla, Chimblë, Ngarà e Tërà, Sandiglië",
+  "Confini": "A nord il Truntum e, oltre, le Marche Picenorum e il Luminor Meridionale; a est la Val Vibrata; a sud Teramum e le Terre di Mezzo; a ovest la Montagna dei Fiori e i boschi della Laga",
+  "Fiumi": "Il Truntum, che fa da confine; il Salinellum, che nasce qui e passa nelle sue gole; la Vibrata, che la gente chiama Ubrata",
+  "Paesaggio": "La fortezza di travertino sul crinale, borghi murati sulle colline, vigne sui colli del confine, faggi e pascoli sui Monti Gemelli",
+  "Vive di": "Il vino rosso di Tërà, i viandanti della Scala Santa, le armi delle forge dell’Ordine, il pecorino della Montagna dei Fiori, la porchetta di Chimblë, e quello che passa il confine senza dazio",
+  "Fedeltà": "Divisa: l’Impero a Cëvëtëlla, la Fiamma a Chimblë, il Luminor a Ngarà, il denaro a Tërà e a Sandiglië"
  },
  "gm": [
   {
    "t": "",
-   "txt": "Il Castellano Drago Ferroalto tiene Cëvëtëlla per l’Impero e aspetta un vero sovrano. Se Silvanus si mostra con le carte giuste, è un alleato potente. Nella stessa fortezza sta l’Ordine d’Acciaio, circa duecento templari: forgiano armi sacre, sognano di purificare il Ducato col fuoco e sono il braccio armato di Casa Impaloni. Due poteri sotto lo stesso tetto che non si sopportano.\n\nChimblë è una Chiesa dura e una possibile sponda per Impaloni. Don Fulgenzio, il prete di Bëllindë che ha murato Micuccio, viene da qui.\n\n⟦Ngarà è un pezzo di Luminor Meridionale dentro il Ducato: nella storia vera Ancarano fu per secoli feudo del vescovo di Ascoli, oltre il confine. Nel gioco il suo signore è un vescovo delle Marche Picenorum, e i templari ci passano senza chiedere permesso.⟧\n\nTra i braccianti delle vigne di Tërà ci sono spie dei Drukarri, o Forgiati. I Grappoloverde non lo sanno, o fingono. Ventonero si compra, e dà rifugio ai disertori della Guardia Ducale."
+   "txt": "La contea che sta sopra Teramum. Chimblë è a mezza giornata dalla capitale, sulla strada maestra, e la fortezza è a una giornata. Se la Crociata arriva a Teramum, la prima risposta armata della Fiamma può scendere da qui: l’Ordine d’Acciaio è il braccio di Casa Impaloni, e il Luminor Meridionale, oltre il fiume, finanzia Impaloni in segreto. Ma la contea è anche piena di gente che si può portare dalla propria parte: un castellano che aspetta un sovrano, una città che odia Teramum, un mercenario che si compra."
   },
   {
-   "t": "Corretto rispetto al vecchio canone",
-   "txt": "· L’assedio di Cëvëtëlla non durò «dieci anni»: la guerra durò nove anni e otto mesi. Ora è «quasi tutta la guerra». Da sistemare anche nella voce del borgo."
+   "t": "Le trame del confine",
+   "txt": "· [[Due poteri sotto lo stesso tetto.]] Il Castellano Drago Ferroalto tiene Cëvëtëlla per l’Impero e aspetta un sovrano vero. Se Silvanus si mostra con le carte giuste, è un alleato potente. Nella stessa fortezza sta l’Ordine d’Acciaio, circa duecento templari: forgiano armi sacre, sognano di purificare il Ducato col fuoco e sono il braccio armato di Casa Impaloni. I due non si sopportano.\n· [[L’Eroe del Sole.]] L’Ordine aspetta un «Eroe del Sole» da seguire. È, senza saperlo, un erede di Aurax. Se Silvanus si presentasse a Cëvëtëlla, l’Ordine potrebbe seguirlo, o dichiararlo un impostore.\n· [[Chimblë.]] Una Fiamma dura e una possibile sponda per Impaloni. Ma la città odia Teramum, e il suo Parlamento non ama i flamini. Da Chimblë dipende il fuoco di Bëllindë: la lettera di Don Fulgenzio, se parte, arriva qui.\n· [[Ngarà.]] Un pezzo di Luminor Meridionale dentro il Ducato. Nella storia vera Ancarano fu per secoli feudo del vescovo di Ascoli, oltre il confine. Un borgo del Ducato che risponde a un signore straniero è la sponda perfetta per spie e agenti, e per il denaro del Luminor che va a Impaloni.\n· [[Tërà.]] Tra i braccianti delle vigne ci sono spie dei Drukarri, o Forgiati. I Grappoloverde non lo sanno, o fingono.\n· [[Sandiglië.]] Ventonero si compra, e dà rifugio ai disertori della Guardia Ducale. Sa chi passa il confine e quando.\n· ⟦[[I Melatino.]] Una casata di Teramum ha radici nella contea: a Chimblë c’è ancora la Torre dei Melatino, e un Melatino, secoli fa, fu processato per aver occupato mezzo castello di Faraone. La Lega dei Sensali ha qui vecchi diritti e vecchi amici.⟧"
+  },
+  {
+   "t": "Sotto la contea",
+   "txt": "· Le torri di Cëvëtëlla sono imperiali, ma le fondamenta sono più vecchie, e sotto le fondamenta ci sono grotte che nessuno ha esplorato.\n· ⟦Le valli avvelenate dai Sigilli, sotto la Montagna dei Fiori, non sono guarite: l’acqua è buona, ma le pecore non ci pascolano, e di notte i pastori sentono contare.⟧\n· ⟦Le tombe di Campovalano sono dei clan pretuziani del nord. Il carro da guerra della tomba grande portava il lupo inciso sul mozzo.⟧\n· Nelle Gole del Salinellum ci sono grotte abitate da prima dei Pretuziani, e eremi. Ci vive il mazzemarille, il folletto col berretto rosso che bussa sui muri quando c’è un tesoro vicino; e più in alto, a Castel Manfrino di Lë Piana, una donna vestita di bianco custodisce il tesoro di un re."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Lessico di Ea: niente Chiesa, vescovi, santi e Madonne. Il «Vescovo-Principe» di Chimblë diventa Flamine-Principe; i santuari mariani diventano lunarie (la Lunaria dei Lumi); i santi lucenti (il Lucente Berardo, il Lucente Ubaldo); Virellius è il Gran Flamine.\n· L’assedio di Cëvëtëlla non durò «dieci anni»: la guerra durò nove anni e otto mesi. Ora è «quasi tutta la guerra». Nella storia vera nessun assedio di Civitella è durato più di cinque mesi (1557: ventidue giorni): la durata dell’assedio della guerra resta un fatto del mondo di Ea, ma va saputo.\n· Il vecchio Manuale metteva Cëvëtëlla in una contea «delle Montagne della Laga» e Ngarà e Tërà in una «Marca del Nord» con Cundraüerrë: non vale più. Vale la tabella delle otto contee del Ducato.\n· La voce del borgo diceva che Ngarà e Tërà le governa insieme il Consorzio dei Vignaioli; la pagina di Giuseppe sulla contea dice che Ngarà obbedisce a un flamine d’oltre Truntum. Ora sono tutte e due vere: Ngarà è del flamine, Tërà e le vigne del Consorzio. Lo Studio dei paesi veri li vuole borghi separati: vedi Da decidere.\n· Lo Studio: Campli non ebbe mai un principe-vescovo e il suo vescovato era povero; il potere vero era il Parlamento civico. Ora il Flamine-Principe c’è (canone), ma il Parlamento gli fa da contrappeso. Sant’Egidio era città regia con Civitella, non una terra senza legge: ora Sandiglië era terra del Castellano, e Ventonero la tiene da poco.\n· L’Ordine d’Acciaio è il braccio di Casa Impaloni (non Impalox).\n· Nelle scene di Bëllindë la sede del flamine si chiama Campli: nel testo per i giocatori è Chimblë."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se Ngarà e Tërà diventano due voci, come vuole lo Studio dei paesi veri (stavano ai lati opposti del confine).\n· Il nome del Priore dell’Ordine d’Acciaio. Il Manuale lo chiama Odilon de Serlum, ma nel sito Frate Odilon de Serlum è il bibliotecario di Julia Nova.\n· Il nome del flamine d’oltre Truntum che tiene Ngarà, e della sua città (⟦Asculum⟧).\n· Che cosa fa l’Ordine d’Acciaio quando la Crociata arriva a Teramum.\n· Quanti abitanti ha la contea."
   }
  ],
  "id": "contea-terre-del-nord",
@@ -44,11 +60,114 @@
   {
    "t": "",
    "capo": true,
-   "txt": "La frontiera. Colline e valli lungo il fiume Truntum, dove il Ducato guarda in faccia le Marche Picenorum e la Chiesa più dura dell’Impero. Terra di castellani, di vescovi, di mercenari e di briganti, e di vigne che nessuno difende."
+   "txt": "La frontiera. Colline e valli lungo il fiume Truntum, dove il Ducato guarda in faccia le Marche Picenorum e la Fiamma più dura dell’Impero. Terra di castellani, di flamini, di mercenari e di briganti, e di vigne che nessuno difende.\n\nChi viene da Teramum sale verso nord e in mezza giornata vede cambiare tutto: meno ulivi, più campanili, più soldati, e una parlata che somiglia già a quella di là dal fiume. Questa voce racconta la contea intera. I borghi hanno le loro voci."
   },
   {
-   "t": "I borghi",
-   "txt": "· [[Cëvëtëlla]], Civitax Solis: la fortezza che non è mai caduta. Una lunga cinta di pietra chiara sul crinale, con il paese aggrappato sotto. Nella Guerra delle Due Lune resistette all’assedio per quasi tutta la guerra.\n· [[Chimblë]]: la città della Scala Santa, che i pellegrini salgono in ginocchio. La governa il Vescovo-Principe Orsini Solardente.\n· [[Ngarà]]: un borgo murato con la Porta da Monte e la Porta da Mare, sulla linea del confine. Obbedisce a un vescovo d’oltre Truntum, non a Teramum.\n· [[Tërà]]: vigne a perdita d’occhio, il vino rosso migliore del Ducato, governate da un consorzio di vignaioli guidato dai Grappoloverde.\n· [[Sandiglië]]: terra senza legge del Capitano Vento Ventonero, che non chiede da dove vieni.\n\nQui è di casa l’[[Ordine d’Acciaio]]: templari della Fiamma per cui persino l’Inquisitore Virellius è troppo moderato."
+   "t": "I. Una terra di guardia",
+   "txt": "Prima dell’Impero, sulle colline sopra Chimblë vivevano i clan dei Pretuziani. A [[Campovalano]] i contadini aprono ancora le loro tombe: sono più di seicento, e in una c’era un carro da guerra intero.\n\nIl Truntum è sempre stato un confine. Di qua il Ducato, di là le terre della Fiamma: le colline che oggi sono il [[Luminor Meridionale]]. Le guerre di questa contea sono quasi tutte guerre di confine. Gli uomini d’oltre fiume hanno invaso Cëvëtëlla più di una volta, hanno preso Chimblë con l’inganno, hanno tenuto Faraone sopra Sandiglië. E un pezzo del Ducato, [[Ngarà]], è loro da secoli: il suo signore è un flamine d’oltre Truntum.\n\nPoi venne la [[Guerra delle Due Lune]], due secoli fa. Le orde scesero dai monti e trovarono sulla strada [[Cëvëtëlla]]. La fortezza resistette all’assedio per quasi tutta la guerra, e da allora nel Ducato si dice che Cëvëtëlla non si prende: si aspetta. Il Ducato le diede un titolo che porta ancora: la Fedelissima. Si racconta che proprio qui, in quegli anni, i [[Sigilli Lunari]] vennero usati con effetti terribili, e che certe valli sotto la Montagna dei Fiori ne portano ancora il segno.\n\nCon Teramum i conti sono aperti da sempre. In una vecchia guerra per i confini dei campi i soldati della capitale saccheggiarono le campagne di Chimblë, e a Chimblë non l’hanno dimenticato. Poi la Fiamma fece di Chimblë la sede di un flamine, togliendo terre al flamine di Teramum, e la ferita si allargò.",
+   "img": "Mondo — Le Terre del Nord.jpg",
+   "didascalia": "Le Terre del Nord"
+  },
+  {
+   "t": "II. Il fiume del confine e i Monti Gemelli",
+   "txt": "La contea è un gradino fra la montagna e la valle del Truntum. A ovest si alzano i [[Monti Gemelli]]: la [[Montagna dei Fiori]] sopra Cëvëtëlla e la Montagna di Chimblë, divise da una gola stretta. Faggi, pascoli alti, pecore, e d’estate prati fioriti che si vedono da Teramum. Da lì la terra scende a colline verso nord, fino al fiume.\n\n· [[Il Truntum]], a nord. Il fiume del confine. Si guada in pochi punti, e quasi ognuno ha la sua torre.\n· [[Il Salinellum]]. Il fiume sacro delle Terre di Mezzo nasce qui e passa fra i Monti Gemelli in una gola piena di grotte e di eremi: le [[Gole del Salinellum]].\n· [[La Vibrata]], che qui chiamano Ubrata. Nasce sulla Montagna dei Fiori e porta verso la piana di Sandiglië e la Val Vibrata.\n\nSul crinale più alto sta la fortezza. Sulle colline i borghi, con le mura e i campanili. Sui colli che guardano il Truntum le vigne, fino all’acqua. In piano, verso la Vibrata, le case sono di terra cruda, impastata con la paglia: le pinciare."
+  },
+  {
+   "t": "III. I borghi",
+   "tabella": {
+    "head": [
+     "Borgo",
+     "Dove",
+     "Chi lo tiene",
+     "Per che cosa è noto"
+    ],
+    "rows": [
+     [
+      "[[Cëvëtëlla]]",
+      "Su una rupe di travertino sotto la Montagna dei Fiori, a una giornata da Teramum",
+      "Il Castellano Drago Ferroalto, per l’Impero",
+      "La fortezza che non è mai caduta; l’Ordine d’Acciaio; la Lunaria dei Lumi; i maccheroni alle ceppe"
+     ],
+     [
+      "[[Chimblë]]",
+      "Alla confluenza di due torrenti, a mezza giornata a nord di Teramum",
+      "Il Flamine-Principe Orsini Solardente, con il Parlamento della città",
+      "La Scala Santa, che i viandanti salgono in ginocchio; la porchetta"
+     ],
+     [
+      "[[Ngarà e Tërà]]",
+      "Sulle colline sopra il Truntum, all’estremo nord",
+      "Ngarà: un flamine d’oltre Truntum. Tërà: il Consorzio dei Vignaioli dei Grappoloverde",
+      "Il borgo murato che appartiene all’altra riva; il vino rosso migliore del Ducato"
+     ],
+     [
+      "[[Sandiglië]]",
+      "Nella piana della Vibrata, con il castello di Faraone sopra le gole",
+      "Il Capitano Vento Ventonero",
+      "Una volta terra del Castellano; oggi terra senza legge, dove chi deve sparire passa"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. Chi comanda",
+   "txt": "Le Terre del Nord non hanno un conte. Ogni borgo ha il suo padrone, e i padroni non si somigliano: un soldato, due uomini della Fiamma, una famiglia di vignaioli e un mercenario. Si sopportano perché il confine fa paura a tutti.",
+   "tabella": {
+    "head": [
+     "Signore",
+     "Che cosa tiene",
+     "Guarda a"
+    ],
+    "rows": [
+     [
+      "Il Castellano Drago Ferroalto",
+      "La fortezza e il paese di Cëvëtëlla",
+      "All’Impero. Dice che aspetta un sovrano vero"
+     ],
+     [
+      "L’Ordine d’Acciaio",
+      "Le forge e le caserme dentro la fortezza di Cëvëtëlla",
+      "Alla Fiamma, e a Teramum: è la lama di Casa Impaloni"
+     ],
+     [
+      "Il Flamine-Principe Orsini Solardente",
+      "Chimblë, le sue campagne e i suoi fuochi, fino a quello di Bëllindë",
+      "Alla Fiamma"
+     ],
+     [
+      "Il Parlamento di Chimblë",
+      "Il mercato, gli statuti, le porte della città",
+      "Ai mercanti, e a nessun flamine"
+     ],
+     [
+      "Il Flamine d’oltre Truntum",
+      "Ngarà e il suo palazzo d’estate",
+      "Al Luminor Meridionale"
+     ],
+     [
+      "Il Consorzio dei Vignaioli",
+      "Tërà e le vigne del confine",
+      "A chi compra il vino"
+     ],
+     [
+      "Il Capitano Vento Ventonero",
+      "Sandiglië e il castello di Faraone",
+      "A chi paga"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Il confine e la Fiamma",
+   "txt": "Qui il Ducato finisce e comincia la Fiamma più dura dell’Impero. Di là dal Truntum i libri si bruciano e il teatro è proibito. Di qua i culti antichi sono ancora vivi nelle case vecchie, e la Vecchia Madre ha le sue lunarie accanto ai solari. Il confine passa in mezzo.\n\nLa Fiamma, nelle Terre del Nord, ha tre facce. A Chimblë è la Fiamma dei viandanti, della Scala Santa e delle decime. A Ngarà è la Fiamma d’oltre confine, che ha un palazzo dentro il Ducato. A Cëvëtëlla è l’[[Ordine d’Acciaio]]: templari che forgiano armi sacre e addestrano sacerdoti guerrieri, e per cui il Gran Flamine Virellius era troppo moderato già prima di Julia Nova. Il loro motto è «Un Sole, una Fede, una Lama». Le guardie con la sopravveste dell’Ordine si vedono anche nelle basiliche della costa.\n\nE poi c’è chi vive del confine senza pregare nessuno: i contrabbandieri dei guadi, i disertori di Sandiglië, i braccianti stagionali che vengono a vendemmiare e se ne vanno senza dire da dove.\n\nPer chi viaggia, le strade sono poche. La strada maestra sale da Teramum a Chimblë e da Chimblë alla fortezza; un’altra va dalla fortezza a Sandiglië e alla Val Vibrata. Il resto sono tratturi e mulattiere. La vecchia strada dell’Impero, la [[Via Metella]], passa sotto Faraone e guada il Truntum: oggi la usano soprattutto i contrabbandieri."
+  },
+  {
+   "t": "VI. La gente",
+   "txt": "Gente di confine: abituata ai soldati, ai sacerdoti e ai forestieri, e sospettosa di tutti e tre. Molti hanno parenti oltre il fiume, e la parlata somiglia già a quella delle Marche: si tronca la fine delle parole, e un bambino è un frichì. Prega più di quanto si preghi a Teramum, almeno davanti agli altri. Fa il vino, porta le pecore sui Monti Gemelli e fa il pecorino, e quando può vende qualcosa di là dal fiume senza pagare.\n\nOgni borgo ha il suo vanto. A Chimblë la Scala Santa e la porchetta. A Cëvëtëlla la fortezza e i maccheroni alle ceppe, arrotolati attorno a un bastoncino. A Tërà il vino. A Sandiglië il Carnevale, e per il resto è meglio non chiedere.\n\nA Cëvëtëlla, per dire che uno non cambierà mai, si dice che la cerqua non ha mai fatto le melarance."
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Nella cripta della Basilica di Julia Nova il Gran Flamine Virellius ha dato ad Alessandros il Dito del Lucente Berardo: con quello, ha detto, la Fiamma parlerà per bocca sua a Mushanë e a Chimblë (Atto X).\n· Don Fulgenzio, il sacerdote di Bëllindë, viene da Chimblë e risponde al suo flamine. Ha murato la porta dietro cui c’era Micuccio, e lo ha confessato (Atti XV–XVIII)."
   }
  ],
  "epigrafe": {

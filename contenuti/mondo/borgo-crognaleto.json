@@ -14,25 +14,133 @@
  "mappa": null,
  "colore": "#6E8C3A",
  "scheda": {
-  "Governatore": "I Mastri-Pastori Anziani",
-  "Fedeltà": "Transumanza",
-  "Corrisponde a": "Crognaleto"
+  "Paese vero": "Crognaleto",
+  "Altri nomi": "Il paese del corniolo, che qui chiamano crognale; ⟦Crugnalétë in dialetto⟧. Per i pastori, semplicemente «la Casa»",
+  "Abitanti": "⟦Circa mille, sparsi in sedici villaggi; d’estate il doppio, con i pastori ai pascoli⟧",
+  "Chi comanda": "I Mastri-Pastori anziani dell’Ordine dei Tratturi, che decidono insieme. Fra loro la famiglia che conta di più è quella dei Mazzaferri",
+  "Nel paese": "Nerito, con la Casa dell’Ordine, la Piazza della Stella, lo stazzo grande e il canile dei Mastini; la Lunaria della Tibia; il solario vecchio",
+  "Nei dintorni": "Rocca Roseto e il Piano, Senarica, Cesacastina e la cascata, Tottea degli scalpellini, Campanea, Piano Vomano alle sorgenti, gli altri villaggi; i pascoli della Laga",
+  "Strade": "Il tratturo grande che scende il Vomanum; i tratturi per Fano e La Pròtë e per Curtënë; i passi della Laga verso il Latium",
+  "Guardia": "Nessun soldato: i pastori e i Mastini d’Aprutium",
+  "Lucente": "I Lucenti Pietro e Paolo, che si festeggiano il 29 giugno",
+  "Distanze": "⟦Fano e La Pròtë, mezza giornata per il tratturo; Curtënë, mezza giornata nei boschi; Mëndurjë, una giornata giù per il Vomanum; Lésënë, una giornata e mezza⟧"
  },
- "gm": "L'Ordine dei Tratturi considera le vie d'erba sacre. I Mastini d'Aprutium sono creature spirituali, dono del Gigante. Potere economico enorme e apolitico: chi li ha con sé muove il Ducato.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "L’Ordine dei Tratturi è un potere enorme e senza politica: chi lo ha con sé muove il Ducato. Se l’Ordine concede alla Crociata il diritto di marciare sui Tratturi, la marcia è più veloce e più sicura, perché nessun signore osa bloccare le vie sacre dei pastori. Se rifiuta, la Crociata usa le strade dei signori e della Lega dei Sensali. Per arrivare a Lésënë senza passare da Tussëcië, i Tratturi sono la strada."
+  },
+  {
+   "t": "L’Ordine dei Tratturi",
+   "txt": "· Soprannome «Li Re de la Pécora». Motto: «La terra era qui prima di voi e sarà qui dopo di voi». La fazione più antica del Ducato, più delle Casate, della Fiamma e dell’Impero. Una fratellanza di pastori, mandriani, guaritori di campagna e druidi di montagna; classi comuni ranger, druidi, guerrieri; per lo più Neutrali (Manuale).\n· Monopolio sull’economia delle pecore: arrosticini, lana, pecorino, Montepulciano.\n· Obiettivi: proteggere i Tratturi da ogni interferenza, politica, militare o religiosa; tenere il monopolio; custodire i segreti della montagna.\n· Un Mastro-Pastore dell’Ordine è già pronto nelle scene di Teramum: Mastro Venanzio Collepietra, alla stazione del tratturo del Tordinum fuori dalla capitale, con il bastone di corniolo. Il suo campanaccio vale ospitalità su tutti i tratturi.\n· Il capitano Guarnerio della Porta di Teramum è di Mëndurjë, e sua sorella ha sposato un pastore dell’Ordine.\n· ⟦I Mazzaferri. La famiglia di pastori più grande della valle: tre greggi, due Mastri-Pastori nel consiglio, cugini in ogni villaggio. Il vecchio Mazzaferri non parla mai per primo, ma quando parla il consiglio finisce. Suo nipote è il più giovane dei Mastri-Pastori, e vuole che l’Ordine si schieri.⟧"
+  },
+  {
+   "t": "I Mastini d’Aprutium",
+   "txt": "I Mastini d’Aprutium, i grandi cani bianchi con gli occhi d’argento che brillano al buio, non sono semplici animali: sono creature spirituali, un dono del Gigante Dormiente. Nessun Mastro-Pastore ne parla con un forestiero. Ma se Adamus si presenta con la sua magia druidica può guadagnarsi la fiducia necessaria. Per i numeri: Lupo crudele, che non combatte se non attaccato (scheda di Venanzio). ⟦Al canile di Nerito c’è una cagna vecchissima, cieca, che tutti chiamano la Madre. I cuccioli nascono solo da lei, e lei non invecchia più da quarant’anni.⟧"
+  },
+  {
+   "t": "Che cosa chiede l’Ordine",
+   "txt": "⟦L’Ordine non vuole denaro. Per dare i Tratturi alla Crociata chiede tre cose, e i Mastri-Pastori decidono solo quando le hanno tutte e tre:⟧\n\n· ⟦che i tratturi di Mushanë restino aperti per sempre: e qui la Crociata ha già un merito, perché ha tolto di mezzo Gofferio;⟧\n· ⟦che la gabella dell’erba di Teramum sia tolta, o che la Crociata la porti davanti al Consiglio;⟧\n· ⟦che alla Convocazione l’Ordine sieda come una Casata, con il suo voto. Non l’ha mai chiesto; ora lo chiede, perché sente che la montagna si muove.⟧"
+  },
+  {
+   "t": "Campanea",
+   "txt": "⟦Le mura di pietre enormi di Campanea sono pretuziane, o più vecchie ancora: le alzarono i giganti, prima dei Pretuziani. Sotto il villaggio abbandonato c’è una porta di pietra chiusa, con la stessa spirale della Pietra del Primo Tratturo. I lupi che scappano vengono da lì.⟧"
+  },
+  {
+   "t": "La vecchia signoria",
+   "txt": "Nella storia vera la Montagna di Roseto entrò nel Ducato di Atri degli Acquaviva, e prima alcuni villaggi furono contesi con Amatrice, al di là dei monti. ⟦Nel gioco: Rocca Roseto fu dei Fonteviva di Atrë, finché i pastori non smisero di pagare. I Fonteviva non hanno mai rinunciato al titolo di «signori di Roseto», e Giosia lo usa ancora nelle lettere.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Il consiglio dei Mastri-Pastori.]] Una scena di persuasione lenta: tre sere davanti al fuoco, una prova a sera (Persuasione, Natura o Addestrare Animali, CD 15). Vantaggio per chi rispetta le bestie, chi ha aiutato i tratturi a Mushanë, chi porta il campanaccio di Venanzio; svantaggio per chi offre denaro o parla da signore.\n· [[La Fiera della Pastorizia.]] All’inizio dell’estate a Rocca Roseto: il posto per incontrare in un giorno solo i pastori di tutto il Ducato.\n· [[La Repubblica di Senarica.]] ⟦Una scena da ridere: il Doge di Senarica chiede alla Crociata un trattato d’alleanza scritto, con i sigilli. Se glielo fanno, Senarica dichiara guerra a Iuvenza.⟧\n· [[Il Fuoco della Notte Lunga.]] Se la Crociata passa d’inverno, dodici notti di fuoco in piazza: tutta la valle è lì, ed è il momento di parlare all’Ordine.\n· [[I lupi che scappano.]] ⟦Scappano dai Brak usciti dalla guerra, o da quello che c’è sotto Campanea: un aggancio verso le Terre Selvagge.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Crognaleto vera: comune sparso sui due versanti dell’alto Vomano, sotto i Monti della Laga, con sede a Nerito; il nome da crognale, corniolo; l’università di Roseto, fatta di villaggi quasi autonomi; Piano Roseto e la Rocca Roseto in rovina sulla gola; Santa Maria della Tibia (1617, da un voto), San Salvatore, Santa Maria Apparens; San Silvestro ad Aiello, Sant’Andrea a Cervaro, San Nicola a Piano Vomano, San Giorgio a Rocca Roseto, Senarica con le case «franche», le castagne e la leggenda della repubblica con il Doge alleata di Venezia; Cesacastina con le logge, l’ospedale «dei tignosi» e la cascata della Morricana; gli scalpellini di Tottea; Campanea sulle mura megalitiche, abbandonata nel 1526; le liti con Amatrice; la transumanza verso l’Agro Romano e la Puglia, quattro mesi d’estate ai pascoli alti, la carosa; il Fuoco di Natale in Piazza della Stella, acceso dall’ultimo carbonaio, fino all’Epifania; l’Erede del giovedì grasso, che accoglie il primo figlio maschio; le croci sul pelo delle bestie a gennaio e le croci di legno contro la grandine; la polentata; la ventricina; il trajin; i patroni Pietro e Paolo; la Montagna di Roseto nel Ducato di Atri degli Acquaviva. Quello che non è segnato come proposta viene da lì (Studio dei paesi veri, Folklore, Dialetti), dal Manuale (Ordine dei Tratturi) o dalle voci del sito.\n· Con il Lessico di Ea le chiese sono solari, i santi lucenti, la Madonna della Tibia una lunaria, il Natale la Notte Lunga, la benedizione di gennaio la Benedizione delle Bestie, le croci «segni».\n· La famiglia del borgo è Mazzaferri (Nomi delle casate).\n· Lo Studio nota che «centro nevralgico dei Tratturi» e «Li Re de la Pécora» non hanno riscontro vero: il grande tratturo abruzzese non passa dal Vomano, e i pastori di Crognaleto andavano soprattutto verso Roma. Restano: sono canone del gioco. La transumanza vera verso il Latium è stata aggiunta.\n· I cani si chiamano Mastini d’Aprutium (Manuale, scheda di Venanzio); «mastini bianchi» è il modo in cui li chiama la gente (voce dei Calanchi). È lo stesso cane.\n· «Piano Vomano» è anche un casale di Canzañë nella voce di quel borgo: la Piano Vomano vera è questa, alle sorgenti. Si può lasciare a tutte e due, oppure cambiare il nome a Canzañë.\n· Il nome in dialetto «Crugnalétë» è una proposta: Crognaleto era l’unico borgo senza nome in dialetto (audit del 10-10), e lo Studio non l’ha trovato."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Che cosa chiede l’Ordine per dare i Tratturi alla Crociata (qui c’è una proposta).\n· Se l’Ordine siede alla Convocazione come una Casata.\n· Il nome in dialetto del borgo.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "La Montagna del Gigante",
  "id": "borgo-crognaleto",
  "parent": "contea-montagna-del-gigante",
  "title": "Crognaleto",
- "sub": "Transumanza",
+ "sub": "Il cuore dei Tratturi, la casa di «Li Re de la Pécora»",
  "pub": [
   {
    "t": "",
-   "txt": "Il centro nevralgico dei Tratturi e la sede dell'Ordine dei Tratturi — «Li Re de la Pécora» —, il consiglio di Mastri-Pastori anziani che tiene il monopolio dell'economia ovina del Ducato. Non si fidano di nessuno se non della terra e delle bestie.",
+   "capo": true,
+   "txt": "Crognaleto non è un borgo: è una valle intera. Sedici villaggi di pietra sparsi sui due versanti dell’alto Vomanum, dove il fiume è ancora un torrente e scende dalla Laga fra boschi di faggi, cornioli e pascoli. Non ci sono mura, non c’è un castello, non c’è un signore. Ci sono le pecore, a migliaia, e i pastori che le guidano.\n\nQui ha la sua casa l’[[Ordine dei Tratturi]], che in tutto il Ducato chiamano «Li Re de la Pécora». Da Crognaleto partono, a settembre, le greggi che scendono per le vie d’erba verso il mare, i Calanchi e le pianure oltre i monti; a Crognaleto tornano, a giugno, quando la neve se ne va dai pascoli. Ogni pastore del Ducato, da Julia Nova alla Laga, sa che qui c’è qualcuno a cui rispondere."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "La valle sale da est a ovest. In basso, dove il Vomanum si allarga, ci sono i mulini e i villaggi più grandi. In alto, sotto la Laga, i villaggi si fanno piccoli e poveri, e poi finiscono nei pascoli. Il villaggio che conta è [[Nerito]], a metà della valle, dove l’Ordine ha la sua casa. I villaggi sono quasi indipendenti l’uno dall’altro, e un tempo insieme si chiamavano la Montagna di Roseto.\n\nOgni villaggio è fatto allo stesso modo: un solario, una fontana, case basse di pietra con le stalle sotto, i fienili, e intorno gli stazzi, i recinti di pietra a secco per le pecore. Fra un villaggio e l’altro passano sentieri e tratturi, segnati da pietre di confine con incisa una pecora.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "Il tratturo grande",
+      "Giù per il Vomanum, fino a Mëndurjë e alla pianura; da lì per tutto il Ducato",
+      "⟦Una giornata fino a Mëndurjë con le greggi⟧"
+     ],
+     [
+      "Il tratturo del Gigante",
+      "A sud-est, fino a Fano e La Pròtë e poi lungo le falde fino a Lésënë",
+      "⟦Mezza giornata fino a Fano⟧"
+     ],
+     [
+      "Il sentiero di Curtënë",
+      "A nord, nei boschi della Laga e nelle Terre Selvagge",
+      "⟦Mezza giornata; solo di giorno⟧"
+     ],
+     [
+      "I passi della Laga",
+      "A ovest, oltre i monti, verso il Latium e le sue pianure, dove molte greggi passano l’inverno",
+      "⟦Da sette a nove giorni con le greggi; i passi chiudono da novembre ad aprile⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Crognaleto.jpg",
    "didascalia": "Crognaleto"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· ⟦[[1. La Casa dell’Ordine.]] A Nerito, una casa lunga di pietra con il tetto basso e un camino grande quanto una stanza. Qui si riuniscono i Mastri-Pastori anziani, seduti intorno al fuoco su sgabelli di legno, senza tavolo e senza carte. Sopra la porta, inciso, il motto dell’Ordine. Non c’è un capo: ci sono i più vecchi, e il più ascoltato è il vecchio Mazzaferri.⟧\n· [[2. La Piazza della Stella.]] La piazza di Nerito. Qui, la sera della Notte Lunga, si accende il grande fuoco: un palo alto come tre case e intorno la legna raccolta da tutte le famiglie. Lo accende il carbonaio più vecchio, e arde per dodici notti. Nessuno deve lasciarlo spegnere.\n· ⟦[[3. Lo stazzo grande.]] Il recinto di pietra più grande della valle, sotto Nerito. A giugno e a settembre ci si contano le greggi di tutti i Mastri-Pastori prima della partenza: un giorno intero di belati, di cani e di bastoni di corniolo.⟧\n· ⟦[[4. Il canile dei Mastini.]] Una corte chiusa dietro la Casa dell’Ordine, dove nascono e crescono i Mastini d’Aprutium: cani bianchi grandi come vitelli, con gli occhi chiari. Nessun forestiero ci entra. I cuccioli non si vendono: si danno, a chi l’Ordine sceglie.⟧\n· [[5. Il solario dei Lucenti Pietro e Paolo.]] Il solario di Nerito, dei patroni della valle. ⟦Sul sagrato si benedicono le greggi prima della partenza.⟧\n· [[6. La Lunaria della Tibia.]] Una lunaria della Vecchia Madre nata da un voto, nella valle, con la sua storia di un miracolo. ⟦Le pareti sono coperte di ex voto dei pastori: bastoni, campanacci, collari di cani, una pelle di lupo, piccole pecore di legno.⟧\n· [[7. Il solario vecchio.]] Un solario antico sul versante. ⟦Il sacerdote gira i villaggi a turno, e qui celebra il rito una volta al mese.⟧\n· ⟦[[8. La casa del sale.]] Il magazzino dell’Ordine, a Nerito: sale per le pecore, che arriva dalla costa ed è più prezioso del grano, e le forme di pecorino che fanno da moneta. Lo tiene Zi’ Ggiuwanne Mancamano, un Mastro-Pastore con una sola mano e una memoria che non sbaglia un conto.⟧\n· ⟦[[9. Lo stazzo dei forestieri.]] Una casa con il fienile e un fuoco sempre acceso, per i pastori di passaggio e per chi viene a chiedere qualcosa all’Ordine. Si dorme sulla paglia, si mangia ventricina e pane, e si aspetta di essere chiamati.⟧\n· [[10. I mulini.]] Giù sul Vomanum, dove l’acqua corre più forte. Macinano il grano dei villaggi e battono la lana."
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[11. Rocca Roseto e il Piano.]] Un villaggio sotto le rovine di una vecchia rocca, sopra la gola del Vomanum, con il solario del Lucente Giorgio. Una volta era il posto che comandava la valle, quando la valle aveva un signore. Sopra c’è il Piano di Roseto, un pianoro d’erba dove l’acqua sparisce nella terra. All’inizio dell’estate ci si fa la [[Fiera della Pastorizia]]: pecore, cani, lana, formaggi, campanacci e coltelli, e gente da tutta la montagna.\n· [[12. Senarica.]] Un villaggio di poche case «franche» e un solario. Quelli di Senarica dicono di essere una repubblica, con un loro Doge, e di avere un’alleanza antica con una grande città di mare lontana. Nessuno l’ha mai vista per iscritto. Fanno anche le castagne migliori della valle.\n· [[13. Cesacastina.]] Il villaggio più in alto, sotto la Laga, con le logge di pietra e un vecchio ospizio dei votati per i viandanti e i malati, che tutti chiamano «dei tignosi». Sopra il villaggio l’acqua della montagna cade in una serie di salti bianchi: la cascata della Morricana. D’estate i pastori di Cesacastina stanno quattro mesi lassù.\n· [[14. Tottea.]] Il villaggio degli scalpellini: lavorano la pietra arenaria della valle, e le loro mani si riconoscono in mezzo Ducato.\n· [[15. Campanea.]] Sul Colle del Vento, un villaggio abbandonato, costruito sopra mura di pietre enormi, più vecchie di chiunque. ⟦Ci vanno solo i pastori, e solo di giorno.⟧\n· [[16. Piano Vomano.]] Dove il fiume nasce e la valle è ancora piana, con il solario del Lucente Nicola. Qui pascolano le greggi a giugno, prima di salire.\n· [[17. Aiello e Cervaro.]] Due villaggi sul versante, con i solari del Lucente Silvestro e del Lucente Andrea. ⟦Aiello fa i formaggi migliori della valle, e Cervaro non è d’accordo.⟧\n· [[18. Gli altri villaggi.]] Alvi, Frattoli, Macchia Vomano, Poggio Umbricchio, San Giorgio, Valle Vaccaro, Aprati, Tintorale: case di pastori, boscaioli, intagliatori e carbonai.\n· ⟦[[19. I pascoli della Laga.]] Sopra i villaggi, i prati alti e i faggi. D’estate ci sono le capanne di pietra dei pastori e il fumo dei fuochi; d’inverno i lupi.⟧\n· ⟦[[20. La Pietra del Primo Tratturo.]] Su un prato sopra Nerito, una pietra ritta con incise una pecora e una spirale. I pastori dicono che da lì partì il primo tratturo, quando il Gigante lo tracciò camminando nel sonno. Ogni gregge che parte ci passa accanto.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I crognaletani sono pastori da sempre. Parlano con le bestie meglio che con le persone, e con le persone parlano poco. Non si fidano di nessuno, se non della terra e delle bestie. I nobili, per loro, vanno e vengono; le pecore restano. Guardano più ai passi della Laga e alle pianure dove svernano che a Teramum.\n\n· [[L’Ordine dei Tratturi.]] Il consiglio dei Mastri-Pastori anziani. Non c’è un capo: le decisioni si prendono tutti insieme, e per questo si prendono lentamente. Ma una decisione dell’Ordine non si revoca mai. Le vie d’erba, i Tratturi, sono sacre: nessun signore osa bloccarle. L’ultima volta che qualcuno ci provò, dicono, i Mastini bianchi gli mangiarono i cavalli.\n· [[La transumanza.]] Due volte l’anno la valle si svuota e si riempie. A settembre le greggi scendono, chi per i Tratturi verso il mare e i Calanchi, chi oltre i passi verso le pianure del Latium; a giugno risalgono. Prima della partenza si fa la carosa, la tosatura di tutto il gregge in un giorno solo, lavoro e festa insieme. Con le greggi viaggiano le notizie: i pastori sono le gazzette del Ducato.\n· [[Il campanaccio.]] Ogni Mastro-Pastore ha un campanaccio con il suo segno. Chi lo porta, perché un Mastro-Pastore glielo ha dato, è ospite su tutti i Tratturi.\n· [[Il Fuoco della Notte Lunga.]] A Nerito, per dodici notti dopo la Notte Lunga, il fuoco in Piazza della Stella non si spegne mai. Ogni famiglia porta la sua legna, e la prima sera si mangia la polenta tutti insieme sotto le stelle.\n· [[L’Erede.]] Il giovedì grasso, a Nerito, il paese accoglie l’Erede: il primo figlio maschio nato in ogni famiglia nuova. ⟦Lo portano in giro per i villaggi su un trajin, il carretto di legno, e ogni casa gli dà un pezzo di formaggio.⟧\n· [[La Benedizione delle Bestie.]] A metà gennaio si fanno segni protettivi nel pelo delle pecore, dei muli e delle vacche, e poi si portano a benedire. D’inverno i pastori intagliano nel legno i segni contro la grandine.\n· [[I Lucenti Pietro e Paolo.]] Il 29 giugno, quando le greggi sono tornate. ⟦I pastori si sposano, quelli che si devono sposare, e la sera si risale ai pascoli.⟧\n· [[A tavola.]] Pecora, agnello, ricotta e pecorino. La ventricina di Nerito, il grasso di maiale col peperoncino che si spalma sul pane. ⟦Gli arrosticini, qui, si dice che li abbiano inventati loro: lo dicono anche in altri venti paesi.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[I tratturi chiusi.]] A Mushanë l’Abate Gofferio aveva chiuso le vie della transumanza con le catene e il dazio, e i pastori erano rovinati. Lo sa tutta la montagna. ⟦L’Ordine non ha dimenticato, e non ha dimenticato chi l’Abate l’ha tolto di mezzo.⟧\n· ⟦[[La gabella dell’erba.]] Il Consiglio di Teramum, su voglia della Lega dei Sensali, fa pagare un tanto a capo a chi porta le greggi a meno di una lega dalle mura della capitale. Per l’Ordine è un’offesa.⟧\n· ⟦[[I confini dei passi.]] Oltre la Laga, i signori del Latium rivendicano i pascoli alti di Nerito, come già fecero in passato. Due pastori sono stati bastonati sul passo.⟧\n· ⟦[[La terra trema.]] Sui pascoli alti si sono aperte crepe nuove, e una fonte che non si era mai seccata si è seccata. Le pecore non vogliono salire al prato della Pietra.⟧\n· ⟦[[I lupi.]] Quest’anno i lupi sono scesi presto e in branchi grossi. I Mastini li tengono lontani, ma i pastori dicono che i lupi scappano da qualcosa, non vengono per le pecore.⟧"
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Sulla Strada dei Pastori, verso Mushanë, una pietra di confine dei tratturi sbarrata da una catena e un lucchetto, e Narduccio lu pecuràre: «le pecore non conoscono i confini; sono solo gli uomini che li inventano» (Atto XII).\n· Adamus aveva sognato i tratturi strozzati da una pietra: «Hanno chiuso la strada ai vivi. Per questo i morti non possono più passare» (Atto XII)."
   }
  ],
  "illustrazione": "Mondo — Crognaleto.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«La terra era qui prima di voi, e sarà qui dopo di voi.»",
+  "cite": "Motto dell’Ordine dei Tratturi"
+ }
 }

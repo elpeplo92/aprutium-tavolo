@@ -20,21 +20,37 @@
  "mappa": null,
  "colore": "#B0561E",
  "scheda": {
-  "In dialetto": "Li Calanghë",
-  "Contea": "La sesta",
-  "Dove": "Il sud del Ducato, tra il Vomanum e il Fino, ai piedi del Gigante",
-  "Paesaggio": "Creste e gole di argilla grigia, quasi senza alberi; borghi di mattone sulle alture, uliveti, la parete del Gigante a ovest",
+  "Nome": "La Terra dei Calanchi; in dialetto, Li Calanghë",
+  "Contea": "La sesta delle otto",
+  "Il borgo che conta": "Bisindë, sul Fino",
+  "Chi comanda": "Nessun conte per tutta la contea. Ogni borgo ha il suo: una strega, gli sciamani del Lupo, un podestà eletto, una gilda, un signore eremita, una famiglia antica, un barone",
   "Borghi": "Bisindë, Cëllinë, Cirmignanë, Cashtilindë, Mundësòcchë, Cashtijunë, Bbacucchë",
-  "Chi comanda": "Una strega, druidi, un podestà eletto, una gilda, un eremita, una famiglia antica, un barone"
+  "Confini": "A nord il Vomanum e, oltre, Canzañë e il Cuore del Ducato; a ovest la parete del Gigante e la Montagna del Gigante; a est i colli di Atrë e la Costa del Sale; a sud il Fino, dove finisce il Ducato",
+  "Fiumi": "Il Vomanum, la Piomba, il Fino",
+  "Paesaggio": "Creste e gole di argilla grigia, quasi senza alberi; borghi di mattone e di arenaria sulle alture; uliveti e vigne nelle valli; la parete del Gigante a ovest",
+  "Vive di": "Le greggi e la transumanza, il pecorino, il cuoio di Cashtilindë, l’olio e il vino, e quello che passa di nascosto per i burroni",
+  "Fedeltà": "Divisa: Cëllinë sta con Atrë, Cashtijunë con la memoria dell’Impero, Cirmignanë con sé stessa; gli altri con nessuno"
  },
  "gm": [
   {
    "t": "",
-   "txt": "· Iuvenza evita Bisindë: la magia lì è troppo forte e imprevedibile. La Strega del Fiume è potente e neutrale, legata alla terra e forse a Maia.\n· Azzurravena conosce i cunicoli che portano a Teramum: un’altra via verso la capitale. Va convinto, non comprato.\n· I De Sterlich sono fedeli alla memoria degli Aurex. A Silvanus danno asilo, se si fa riconoscere.\n· A Bbacucchë la magia di Adamus è rispettata, e sanno che il Gigante è inquieto.\n· Cirmignanë è popolo, non signori: qui la Crociata può trovare consenso vero. I mastini bianchi dei pastori sono creature spirituali, dono del Gigante.\n· Cëllinë segue Atrë: chi ha Giosia di Fonteviva ha Cëllinë.\n· Bisindë non sta sul Salinellum, come diceva il vecchio testo, ma sul Fino."
+   "txt": "La contea che la Crociata non ha ancora visto, e la strada di riserva per Teramum. È la terra dei culti antichi, dei sentieri nascosti e degli alleati che non si comprano: la Strega, gli Sciamani, i De Sterlich, il Podestà, Azzurravena. Ognuno vuole qualcosa di diverso dal denaro."
   },
   {
-   "t": "Corretto rispetto al vecchio canone",
-   "txt": "· Il vecchio testo diceva che a Bbacucchë si venera «il Gran Sasso». Nel mondo di Ea la montagna è il Gigante Dormiente.\n· Il confine sud non è più «verso Vesperia»: vedi Da decidere nella voce del Ducato."
+   "t": "Le trame dei Calanchi",
+   "txt": "· [[Iuvenza evita Bisindë.]] La magia lì è troppo forte e imprevedibile. La Strega del Fiume è potente e neutrale, legata alla terra e forse a Maia. Un posto dove gli uomini di Iuvenza non vanno è un posto dove la Crociata può respirare.\n· [[Azzurravena e i cunicoli.]] Conosce i cunicoli che portano a Teramum: un’altra via verso la capitale, da fuori le mura. Va convinto, non comprato.\n· [[I De Sterlich e gli Aurex.]] Sono fedeli alla memoria degli Aurex. A Silvanus danno asilo, se si fa riconoscere.\n· [[Bbacucchë e il Gigante.]] La magia di Adamus è rispettata, e sanno che il Gigante è inquieto. Sono legati ai Custodi del Gigante.\n· [[Cirmignanë.]] È popolo, non signori: qui la Crociata può trovare consenso vero.\n· [[Cëllinë e Atrë.]] Cëllinë segue Atrë: chi ha il Duca Giosia di Fonteviva ha Cëllinë.\n· ⟦[[La casata divisa.]] Nella storia vera i De Sterlich erano baroni di Scorrano, e tenevano Cermignano e Castilenti. Nel gioco il Barone di Scorrano che regge Cëllinë per i Fonteviva è un ramo cadetto dei De Sterlich di Cashtijunë: due rami della stessa casata, uno con Atrë e uno con la memoria dell’Impero, che non si parlano da una generazione.⟧\n· ⟦[[Il contrabbando e la Lega dei Sensali.]] La Gilda dei Calanchi porta il sale e la lana fuori dai dazi della Lega dei Sensali. I Melatino la vogliono schiacciare, o comprare. Chi la protegge ha i sentieri dei Calanchi.⟧"
+  },
+  {
+   "t": "Sotto i Calanchi",
+   "txt": "· I cunicoli di Azzurravena arrivano sotto Teramum: una seconda porta d’ingresso alla capitale (vedi la Città Sepolta di Teramum).\n· La Fonte Vecchia di Bisindë ha cunicoli scavati nella roccia, più vecchi del borgo. ⟦Arrivano fino alle sorgenti dove vive la Strega.⟧\n· I mastini bianchi dei pastori sono creature spirituali, dono del Gigante: è il segreto dell’Ordine dei Tratturi.\n· Il Gigante si gira nel sonno: a Bbacucchë lo sentono prima che altrove.\n· ⟦Il passaggio verso il Sottosuolo profondo, che il vecchio canone metteva nelle «miniere d’oro» di Atrë, può aprirsi nei calanchi fra Atrë e Cëllinë: una gola franata dopo un terremoto, con una scala che nessuno ha scavato.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Il vecchio testo diceva che a Bbacucchë si venera «il Gran Sasso». Nel mondo di Ea la montagna è il Gigante Dormiente.\n· Bisindë non sta sul Salinellum, come diceva il vecchio testo, ma sul Fino.\n· Il confine sud non è più «verso Vesperia», che sta molto più a sud: vedi Da decidere nella voce del Ducato.\n· Il Manuale aveva una contea «Le Terre del Sud (Lu Vasciùne)» con Atrax Aurea, Cëllinë e Bisindë: è superata dalle otto contee.\n· Ad Atrë c’è Casa Fonteviva, non Giosia d’Acquaviva (decisione del 10-10). Le voci di Atrë e di Cëllinë hanno ancora il nome vecchio.\n· Le famiglie dei borghi vengono dai nomi decisi da Giuseppe il 10-10: De Sterlich a Cashtijunë, Fulminis a Cirmignanë, Roccaspina a Cashtilindë, Biancone a Bisindë.\n· Lessico di Ea: votati e non monaci o frati, lucenti e non santi, solari e lunarie e non chiese.\n· Dallo studio dei paesi veri: cinque borghi su sette (Bbacucchë, Bisindë, Cashtijunë, Cashtilindë, Mundësòcchë) stanno nella valle del Fino e nella storia vera guardano a Penne e ad Atri più che a Teramo. Cëllinë e Cirmignanë stanno sul Vomano e sulla Piomba. Le rivalità dei matti e dell’orologio sono vere.\n· Stride col paese vero, ma resta il canone del sito: Cirmignanë «repubblica» (Cermignano fu uno dei paesi più feudali), Cashtilindë «dei conciatori» (nessuna fonte sulla concia), i De Sterlich a Cashtijunë (nella storia vera stavano a Cermignano e Castilenti), Mundësòcchë «sui burroni».\n· I fatti veri usati qui: i templi italici di Colle San Giorgio e di San Romualdo, le donazioni del conte Trasmondo a Montecassino (1085) e i castelli sulle sue porte di bronzo, le mura degli Acquaviva a Cellino, Raimondo Caldora a Castiglione, i De Sterlich a Cermignano, Castilenti e Scorrano. Gli Acquaviva diventano i Fonteviva."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Che cosa c’è a sud del Fino, fuori dal Ducato: nella storia vera, Penne, padrona di Bacucco e confinante di Bisenti.\n· Quanti abitanti ha la contea.\n· Bbacucchë non ha un posto sulla mappa della Crociata.\n· Se il Barone di Scorrano è un De Sterlich, come propone questa voce, e come si chiama."
   }
  ],
  "id": "contea-calanchi",
@@ -47,11 +63,128 @@
   {
    "t": "",
    "capo": true,
-   "txt": "Il sud del Ducato. Gole di argilla grigia, creste sottili come lame, piramidi di terra alte più di una casa: i Calanchi, un labirinto naturale che i contrabbandieri conoscono meglio dei signori. Terra arida e antica, dove la Fiamma è arrivata tardi e in punta di piedi. È anche terra di transumanza: qui passano le greggi con i loro mastini bianchi."
+   "txt": "Il sud del Ducato. Gole di argilla grigia, creste sottili come lame, piramidi di terra alte più di una casa: i Calanchi, un labirinto naturale che i contrabbandieri conoscono meglio dei signori. Terra arida e antica, dove la Fiamma è arrivata tardi e in punta di piedi. È anche terra di transumanza: qui passano le greggi con i loro mastini bianchi.\n\nQuesta voce racconta la contea intera. I sette borghi hanno le loro voci."
   },
   {
-   "t": "I borghi",
-   "txt": "· [[Bisindë]]: sul Fino, fra tre rioni e una torre quadrata. Nelle sue acque, dicono, vive una strega antica quanto la terra.\n· [[Cëllinë]]: un borgo murato, vassallo di Atrë. Le sue difese stanno nei burroni attorno.\n· [[Cirmignanë]]: una piccola repubblica di pastori con un Podestà eletto, e una torre a tre lati che non c’è da nessun’altra parte.\n· [[Cashtilindë]]: la Gilda dei Conciatori. Si sente prima di vederla.\n· [[Mundësòcchë]]: un borgo a gradoni sullo strapiombo, del Signore dei Calanchi Azzurravena, che non riceve quasi nessuno.\n· [[Cashtijunë]]: la casa dei De Sterlich, famiglia antica e discreta, con i ritratti di imperatori che nessuno ricorda più.\n· [[Bbacucchë]]: un borgo sotto la parete del Gigante, governato dagli sciamani del Lupo, che venerano il Gigante come Titano."
+   "t": "I. La terra dei votati e delle torri",
+   "txt": "Prima dell’Impero, sulle alture fra il Vomanum e il Fino vivevano i clan dei Pretuziani. Hanno lasciato i loro templi in cima ai colli: sul Colle San Giorgio, sopra Cashtijunë, e a San Romualdo, vicino a Cashtilindë, l’aratro tira su ancora le pietre squadrate e i vasi delle offerte. Sulle colline di Cashtilindë ci sono le loro tombe.\n\nPoi vennero i votati neri. Un conte di nome Trasmondo donò loro le rocche della valle del Fino, Bisindë e Bbacucchë comprese, e i nomi di quei castelli furono incisi sulle porte di bronzo della loro abbazia madre, lontano, oltre il Gigante. Altre abbazie si contesero Cëllinë e il vecchio castello sopra Cirmignanë. Per generazioni la gente dei Calanchi pagò le decime ai votati.\n\nQuando le abbazie persero forza arrivarono i signori. I [[Fonteviva]] di Atrë presero Cëllinë e la chiusero dentro mura con nove torri tonde, e da allora non l’hanno più lasciata. Un Messer Raimondo, di una famiglia di capitani di ventura, diede il suo nome a Cashtijunë. A Cirmignanë le famiglie scesero dal vecchio castello di Montegualtieri e si fecero un borgo loro, e quando i signori del castello si estinsero nessuno ne volle altri. E le famiglie dei borghi presero il posto dei signori che se ne andavano: i [[De Sterlich]] a Cashtijunë, i [[Fulminis]] a Cirmignanë, i [[Roccaspina]] a Cashtilindë, i [[Biancone]] a Bisindë. Nessuna di loro si è mai fatta vedere a Teramum.",
+   "img": "Mondo — La Terra dei Calanchi.jpg",
+   "didascalia": "La Terra dei Calanchi"
+  },
+  {
+   "t": "II. L’argilla, i tre fiumi e il Gigante",
+   "txt": "I Calanchi sono colline di argilla che la pioggia ha mangiato. Dove l’argilla è nuda l’acqua scava a ogni temporale: creste sottili, gole, burroni, coni di terra grigia che cambiano forma da un inverno all’altro. Non ci cresce quasi niente. Un sentiero che c’era l’anno scorso quest’anno può non esserci più.\n\nFra un burrone e l’altro, sulle alture dove la terra tiene, stanno i borghi: case di mattone verso il mare, di arenaria gialla verso la montagna. Nelle valli ci sono gli ulivi, le vigne del Montepulciano e del Montonico, e i casali sparsi: in questa contea più gente vive nei casali che nei borghi.\n\n· [[Il Vomanum]], a nord. Il fiume grande del Ducato: fa da confine con le Terre di Mezzo e con il Cuore del Ducato. Sulla sua riva sud guarda la torre di Cirmignanë.\n· [[La Piomba]], al centro. Un torrente che d’estate quasi non c’è e d’autunno porta via i ponti. Cëllinë sta sul crinale fra la sua valle e quella del Vomanum.\n· [[Il Fino]], che in dialetto chiamano lu Fène, a sud. Scende dalla parete del Gigante, passa sotto Bbacucchë, Bisindë, Cashtijunë e Mundësòcchë, e oltre il fiume finisce il Ducato.\n\nA ovest tutto finisce contro la parete del [[Gigante Dormiente]]: un muro di roccia che d’inverno è bianco e d’estate è grigio, alto sopra Bbacucchë come una nuvola ferma. Fra una valle e l’altra passano i [[Tratturi]], le vie d’erba delle greggi."
+  },
+  {
+   "t": "III. I borghi",
+   "tabella": {
+    "head": [
+     "Borgo",
+     "Dove",
+     "Chi lo tiene",
+     "Per che cosa è noto"
+    ],
+    "rows": [
+     [
+      "[[Bisindë]]",
+      "Nell’alta valle del Fino",
+      "Nessun signore: la Strega del Fiume, dicono",
+      "Tre rioni e una torre quadrata; la strega nelle acque; la Fonte Vecchia di Ponzio"
+     ],
+     [
+      "[[Cëllinë]]",
+      "Sul crinale fra il Vomanum e la Piomba, verso Atrë",
+      "Il Barone di Scorrano, per i Fonteviva",
+      "Le mura con le nove torri tonde; le difese nascoste nei burroni"
+     ],
+     [
+      "[[Cirmignanë]]",
+      "Su un colle sopra il Vomanum, a sud di Canzañë",
+      "Il Podestà, eletto dal popolo",
+      "Una piccola repubblica di pastori; la torre a tre lati; gli arrosticini"
+     ],
+     [
+      "[[Cashtilindë]]",
+      "Nella valle del Fino, verso Atrë",
+      "La Gilda dei Conciatori",
+      "Il cuoio e le armature leggere; si sente prima di vederla"
+     ],
+     [
+      "[[Mundësòcchë]]",
+      "Sui burroni sopra il Fino",
+      "Il Signore dei Calanchi, Azzurravena",
+      "Il borgo a gradoni sullo strapiombo; un signore che non riceve nessuno"
+     ],
+     [
+      "[[Cashtijunë]]",
+      "Su un colle di arenaria sopra il Fino",
+      "Casa De Sterlich",
+      "Il belvedere sul Gigante; i ritratti di imperatori che nessuno ricorda più"
+     ],
+     [
+      "[[Bbacucchë]]",
+      "Sotto la parete del Gigante, alle sorgenti del Fino",
+      "Gli Sciamani del Lupo",
+      "Il borgo pagano: lì il Gigante si venera apertamente"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. Sette padroni",
+   "txt": "La Terra dei Calanchi non ha un conte. Ogni borgo risponde a chi lo tiene, e quasi nessuno guarda a Teramum. È la contea dove la legge della capitale arriva più piano, e dove i bandi del Consiglio si inchiodano sulle porte e si leggono poco.",
+   "tabella": {
+    "head": [
+     "Signore",
+     "Che cosa tiene",
+     "Guarda a"
+    ],
+    "rows": [
+     [
+      "La Strega del Fiume",
+      "Bisindë, se è vero quello che si dice",
+      "A nessuno: alla terra e al fiume"
+     ],
+     [
+      "Il Barone di Scorrano",
+      "Cëllinë e i suoi casali",
+      "Ad Atrë e al Duca Giosia di Fonteviva"
+     ],
+     [
+      "Il Podestà di Cirmignanë",
+      "Cirmignanë",
+      "Al popolo che lo elegge"
+     ],
+     [
+      "La Gilda dei Conciatori",
+      "Cashtilindë e le sue conce",
+      "A chi paga"
+     ],
+     [
+      "Azzurravena, il Signore dei Calanchi",
+      "Mundësòcchë e i burroni intorno",
+      "A sé stesso"
+     ],
+     [
+      "Casa De Sterlich",
+      "Cashtijunë",
+      "Alla memoria dell’Impero, e a nessuno di Teramum"
+     ],
+     [
+      "Gli Sciamani del Lupo",
+      "Bbacucchë",
+      "Al Gigante Dormiente"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Le strade che non stanno sulle mappe",
+   "txt": "Nei Calanchi una strada dritta non esiste. Quelle dei carri seguono i crinali, dove l’argilla tiene, e girano larghe attorno ai burroni. Quelle dei pastori sono i Tratturi, che scendono dalla montagna e tagliano le valli. E poi ci sono i sentieri di fondo, giù nelle gole, che conoscono solo i contrabbandieri e i ragazzi dei casali.\n\nPer questo i Calanchi sono la terra del contrabbando. Il sale della costa sale verso la montagna senza pagare dazio, la lana scende verso il mare senza passare dai sensali, e le guardie del Consiglio non si avventurano nei burroni dopo il tramonto. In osteria si parla a mezza voce di una [[Gilda dei Calanchi]], che nessuno ammette di conoscere.\n\nDa Canzañë e da Cirmignanë, per il crinale, si arriva a Teramum senza passare dalla valle del Tordinum. Chi conosce i Calanchi può portare uomini e carri dove nessuno li aspetta. Chi non li conosce ci si perde, e qualche volta non esce.\n\nLe distanze qui si contano a ore, e sono sempre più lunghe di quello che sembra dall’alto: un borgo che si vede di fronte, oltre un burrone, può stare a mezza giornata di cammino."
+  },
+  {
+   "t": "VI. La gente",
+   "txt": "Gente di poche parole e di molta pazienza. Sanno che la terra frana, che il fiume cambia letto e che i signori passano. Vanno al rito della Fiamma il giorno del Sole, e alla vecchia fede tutti gli altri giorni: in nessun’altra contea del Ducato i culti antichi sono così vivi, e a Bbacucchë non si nascondono nemmeno.\n\nOgni borgo ha il suo lucente e prende in giro il vicino. A Bisindë chiamano quelli di Cashtijunë «li mìtte di Castiùne», i matti; a Cashtijunë raccontano di aver alzato una siepe davanti al campanile perché quelli di Mundësòcchë non sentissero l’ora dell’orologio senza pagare. A Cirmignanë fanno gli arrosticini migliori del Ducato, e lo dicono a tutti. A Cashtilindë hanno l’odore delle conce addosso, e gli altri glielo ricordano. A Bisindë non parlano della strega, e se insisti cambiano discorso.\n\nLe notizie viaggiano con i pastori dei Tratturi, che scendono dalla montagna d’autunno e risalgono a primavera con i loro mastini bianchi. Nessun signore dei Calanchi blocca un tratturo: si racconta che l’ultimo che ci provò si trovò i cavalli sbranati."
   }
  ],
  "epigrafe": {

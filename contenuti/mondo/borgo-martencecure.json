@@ -14,25 +14,117 @@
  "mappa": null,
  "colore": "#6E5A46",
  "scheda": {
-  "Governatore": "Doganiere Nerius Scavafondo «Volpone»",
-  "Fedeltà": "Corrotto",
-  "Corrisponde a": "Martinsicuro"
+  "Paese vero": "Martinsicuro, con Villa Rosa",
+  "Altri nomi": "Martëncëcurë in dialetto; nelle carte la Torre di Segura; sotto la sabbia, la città antica di Truentum",
+  "Abitanti": "⟦Poche centinaia, fra pescatori, barcaioli, facchini e gente della dogana⟧",
+  "Chi comanda": "Il doganiere Nerio Scavafondo, che tutti chiamano il Volpone",
+  "Nel paese": "La Torre di Segura e la dogana, il molo, il solario del Lucente Gabriele, le case dei pescatori",
+  "Nei dintorni": "Le rovine di Truentum, il guado del Truntum, Villa Rosa e la casa di caccia dei Fonteviva, le fornaci, le dune, Colle di Marzio",
+  "Strade": "La Strada della Costa, a sud verso la Vibrata e Alba; il guado e il traghetto del Truntum, a nord verso il Luminor Meridionale; la strada di Culënnëllë, nell’interno",
+  "Guardia": "⟦Una dozzina di gabellieri della dogana, con la balestra e poca voglia⟧",
+  "Lucente": "Il Lucente Gabriele, il 27 febbraio",
+  "Distanze": "⟦Alba, due ore a sud; Julia Nova, mezza giornata; Culënnëllë, due ore di salita; il guado del Truntum, mezz’ora⟧"
  },
- "gm": "Il punto d'ingresso delle spie celamanti. Volpone è corrotto ma non stupido: sa più di quanto dice, e si vende a chi paga di più.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il punto d’ingresso delle spie dei Celomanti nel Ducato. Il Volpone è corrotto ma non stupido: sa più di quanto dice, e si vende a chi paga di più. Per la Crociata è una fonte: chi è entrato, quando, con che cosa. Per i nemici è una porta."
+  },
+  {
+   "t": "Il Volpone",
+   "txt": "⟦Nerio Scavafondo è il doganiere del Consiglio di Teramum: i dazi del Ducato passano dalla Lega dei Sensali dei Melatino. Ne gira una parte a Teramum, una la tiene, una la vende. Ha tre registri: quello per Teramum, quello vero, e quello di quello che non ha mai visto passare.⟧\n\n· ⟦Il registro vero dice chi sono i forestieri pallidi, dove sono andati e chi ha pagato per loro. Vale quanto la vita del Volpone, e lui lo sa.⟧\n· ⟦Il Volpone si vanta di discendere da Martino de Segura, il capitano della torre. Non è vero, ma ci tiene.⟧\n· ⟦Vende notizie anche al Duca Giosia, che da Villa Rosa tiene d’occhio la dogana. Teramum non lo sa.⟧\n· ⟦Se messo alle strette, il Volpone non combatte: tratta. Vuole uscirne vivo e ricco, possibilmente in un altro posto.⟧"
+  },
+  {
+   "t": "Le spie",
+   "txt": "· I Celomanti entrano da qui: con le barche di notte sulle dune, o a piedi dal guado, con documenti buoni. ⟦I documenti falsi li fanno a Nnaréta, in Val Vibrata.⟧\n· ⟦Fra le rovine di Truentum c’è un magazzino antico mezzo sepolto, con l’ingresso fra le dune. Ci si nasconde chi aspetta di entrare nel Ducato, e ci si tiene quello che non deve passare la dogana.⟧\n· ⟦Il flamine scomunicato di Truentum fu cacciato perché predicava una fede venuta dal mare. I suoi libri sono sotto la sabbia, nel magazzino antico.⟧\n· La Contessa Orofalco di Culënnëllë, sulla collina sopra, vide le navi elfiche prima di tutti. ⟦Dalla sua terrazza si vede la foce: sa che cosa sbarca, e nessuno le crede.⟧\n· ⟦Di là dal fiume il Luminor Meridionale: i borghi del confine obbediscono a flamini stranieri, e la Questura della Fiamma passa il guado quando vuole.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Il registro del Volpone.]] ⟦Rubarlo, comprarlo o farselo dettare: CD 15 di Intuizione per capire quale dei tre registri si ha davanti.⟧\n· [[L’osteria del Passo.]] ⟦Rosa la Muta sente tutto. Parla solo per iscritto, e solo per denaro.⟧\n· [[Il fuoco della torre.]] Un fuoco acceso di notte svuota il borgo in un’ora: vero o falso, apre la strada a chi vuole passare."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Martinsicuro vera ha la torre di Carlo V, alzata contro i Saraceni e diretta da Martín de Segura, da cui viene il nome; la torre fu poi una dogana. Ha le rovine di Castrum Truentinum (fondata secondo Plinio dai Liburni, navigatori illirici; vie lastricate, il mercato vicino al porto, i tintori di porpora; un vescovo scomunicato), il Colle di Marzio, la frazione Villa Rosa con il casone di caccia degli Acquaviva e le fornaci, le dune con il fratino. È «la prima spiaggia d’Abruzzo». Fu frazione di Colonnella: per questo la gente sale a Culënnëllë. Quello che non è segnato come proposta viene da lì.\n· Fonti nuove di Giuseppe (sera del 10-10): con il Lessico di Ea la chiesa diventa solario e San Gabriele il Lucente Gabriele, il vescovo un flamine. Dallo Studio: oltre il Truntum c’è il Luminor Meridionale (non le Marche Picenorum), i Liburni, la porpora, il flamine scomunicato, il doganiere che si dice erede del capitano. Dai Dialetti: la parlata di passaggio con le parole tronche («’massera», «mandemà»). Niente nomi latini: Nerius diventa Nerio. L’epigrafe in dialetto stretto è diventata una frase italiana con una parola sola.\n· Il patrono vero (san Gabriele) non è sicuro: lo Studio dice «non trovato», Wikipedia lo dà.\n· Il vecchio testo scrive «celamanti»: la grafia giusta è Celomanti (decisione del 10-10).\n· Il casone degli Acquaviva diventa la casa di caccia dei Fonteviva (decisione del 10-10)."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Per chi lavora il Volpone: Teramum, come propone questa voce, o altri.\n· Se il Volpone si chiama Nerio o resta Nerius.\n· Che cosa ha visto passare quest’estate."
+  }
+ ],
  "livello": "borgo",
  "group": "La Costa del Sale",
  "id": "borgo-martencecure",
  "parent": "contea-costa-del-sale",
  "title": "Martëncëcurë",
- "sub": "Corrotto",
+ "sub": "La dogana sul Truntum, l’ultimo angolo del Ducato",
  "pub": [
   {
    "t": "",
-   "txt": "Il confine costiero estremo, all'angolo tra il mare e il Truntum. Una dogana, un porto piccolo, un doganiere — Nerius Scavafondo, che tutti chiamano Volpone — che non ha mai fermato un carico che pagasse abbastanza. Chi vuole entrare nel Ducato senza farsi notare, entra da qui.",
+   "capo": true,
+   "txt": "Martëncëcurë sta all’angolo più a nord del Ducato, dove il Truntum arriva al mare. È la prima spiaggia di Aprutium per chi scende dal nord. Di là dal fiume comincia il Luminor Meridionale, un’altra provincia dell’Impero, con altri signori e altri flamini. Di qua c’è una torre quadrata, una dogana, un molo piccolo, e un pugno di case di pescatori e di barcaioli sulla sabbia.\n\nTutto quello che entra nel Ducato dal nord, per mare o per la strada della costa, dovrebbe passare di qui e pagare. Lo tiene il doganiere [[Nerio Scavafondo]], che tutti chiamano il [[Volpone]]: un uomo che non ha mai fermato un carico che pagasse abbastanza. Chi vuole entrare nel Ducato senza farsi notare, entra da qui."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Martëncëcurë è poco più di una torre con un paese intorno. La torre sta sulla riva, a un tiro di balestra dalla foce. Intorno ci sono i magazzini della dogana, il molo, le case dei pescatori e dei barcaioli, un solario, un’osteria. Il resto è sabbia, dune e canneti fino alla Vibrata.\n\nSotto la sabbia, però, c’è una città. Quando l’Impero era giovane, alla foce del Truntum c’era Truentum: l’avevano fondata navigatori venuti dall’altra sponda del mare, e l’Impero ne fece un porto, con le vie lastricate, un mercato, i magazzini e le botteghe dei tintori di porpora. Aveva perfino un suo flamine, che la Fiamma scomunicò. Poi il mare si ritirò, il porto si insabbiò e la città fu abbandonata. La gente salì sulle colline, a Culënnëllë e più in là. Sulla riva restò solo una torre di guardia.\n\nLa torre di oggi la fece alzare un capitano venuto da lontano, [[Martino de Segura]], per guardare la costa dai predoni del mare. Il borgo cresciuto intorno ha preso il suo nome.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "La Strada della Costa",
+      "A sud, alla Vibrata, ad Alba e a Julia Nova",
+      "⟦Due ore ad Alba, mezza giornata a Julia Nova⟧"
+     ],
+     [
+      "Il guado e il traghetto del Truntum",
+      "Oltre il fiume, nel Luminor Meridionale",
+      "⟦Mezz’ora al guado. Quando il fiume è grosso c’è solo la barca, e la barca è della dogana⟧"
+     ],
+     [
+      "La strada di Culënnëllë",
+      "Su per le colline, nella Val Vibrata",
+      "⟦Due ore di salita⟧"
+     ],
+     [
+      "Il mare",
+      "Lungo la costa, a nord e a sud",
+      "Mezza giornata di barca fino a Julia Nova, con il vento buono"
+     ]
+    ]
+   },
    "img": "Mondo — Martëncëcurë.jpg",
    "didascalia": "Martëncëcurë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. La Torre di Segura.]] Una torre quadrata di mattone, con la base larga e le feritoie, sulla riva. In cima c’è il posto per il fuoco: quando si accende, lo vedono ad Alba e lo ripetono giù per tutta la costa.\n· [[2. La dogana.]] Il pianterreno della torre e i magazzini accanto. Qui si pesano le merci, si contano le casse, si pagano i dazi del Ducato. E qui siede il Volpone, dietro un tavolo con un registro grosso come una pietra da macina, che scrive quello che vuole lui.\n· [[3. Il molo.]] Un molo corto di pietra e di pali, dove attraccano le barche dei pescatori e quelle che scaricano per la dogana. Le navi grandi restano al largo e mandano le scialuppe.\n· [[4. Il solario del Lucente Gabriele.]] Il solario del borgo, piccolo e bianco. Il 27 febbraio il lucente esce in processione fino al molo.\n· [[5. Le case dei pescatori.]] Una fila di case basse sulla sabbia, con le reti stese e le barche tirate in secco. Qui si vive di pesca, di facchinaggio per la dogana, e di quello che arriva di notte.\n· ⟦[[6. L’osteria del Passo.]] L’unica osteria, accanto alla dogana. Ci aspettano i carrettieri, i mercanti che devono pagare e quelli che preferiscono non farlo. La padrona, Rosa «la Muta», non ha mai sentito niente di quello che si dice ai suoi tavoli.⟧\n· ⟦[[7. Il magazzino dei sequestri.]] Dietro la torre. Qui il Volpone tiene quello che ha sequestrato, e che non risulta da nessun registro.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[8. Le rovine di Truentum.]] Fra le dune, verso il fiume, il vento scopre ogni tanto le pietre della città antica: tratti di strada lastricata, le basi di un mercato vicino al vecchio porto, le vasche dei tintori ancora macchiate di porpora. I ragazzi ci trovano monete; i vecchi dicono di non scavare troppo.\n· [[9. Il guado del Truntum.]] Il passaggio verso il Luminor Meridionale, e il confine del Ducato. Quando il fiume è basso si passa a piedi; quando è grosso c’è il traghetto della dogana.\n· [[10. Villa Rosa.]] Una contrada fra i campi, nell’interno. C’è la casa di caccia dei [[Fonteviva]] di Atrë, una grande casa di campagna dove il Duca viene a cacciare le anatre e a vedere chi passa la dogana.\n· [[11. Le fornaci.]] A Villa Rosa, i forni dove si cuociono i mattoni per mezza costa. Fumo, argilla, operai.\n· [[12. Le dune.]] La riva fra il Truntum e la Vibrata: sabbia, gigli di mare, canneti, e gli uccelletti che fanno il nido sulla spiaggia. Di notte ci si scaricano cose che non devono passare la dogana.\n· [[13. Colle di Marzio.]] La collina dietro il borgo, dove abitava gente prima ancora di Truentum. Ci restano pietre, cocci, e un pozzo che nessuno usa."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "La gente di Martëncëcurë vive di quello che passa. Pescatori, barcaioli, facchini, gabellieri: tutti sanno contare, tutti sanno tacere, e quasi tutti hanno un parente dall’altra parte del fiume. Parlano come quelli di là, con le parole tronche: stasera è «’massera», stamattina «mandemà». Agli stranieri sorridono e chiedono da dove vengono. Poi lo vanno a dire al Volpone.\n\n· [[Il dazio.]] Ogni cosa che passa paga: il sale, il vino, le stoffe, i muli, i forestieri. Il dazio scritto è uno, quello vero un altro. La differenza la tiene il Volpone, e una parte la gira a chi deve.\n· [[Il fuoco della torre.]] Quando la torre accende il fuoco, il borgo si svuota in un’ora: i pescatori tirano in secco le barche, le famiglie salgono a Culënnëllë. Lo fanno da quando c’è la torre, e quest’anno l’hanno fatto due volte.\n· [[Il brodetto.]] Quello di Martëncëcurë si fa con il pesce che resta in fondo alla rete, e un pizzico di zafferano comprato di contrabbando."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Il Volpone.]] Tutti sanno che è corrotto. Nessuno sa per chi lavora davvero.\n· ⟦[[Facce nuove.]] Da quest’estate dalla barca del traghetto scendono forestieri pallidi, con mantelli scuri e poche parole. Pagano il doppio e non aspettano il resto.⟧\n· ⟦[[La strada della costa.]] Da quando Julia Nova è bruciata, la dogana vede passare il doppio dei carri: grano, armi, gente che scappa. Il Volpone non è mai stato così ricco.⟧"
   }
  ],
  "illustrazione": "Mondo — Martëncëcurë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "⟦«Qui passa tutto, ’massera. Basta che paghi.»⟧",
+  "cite": "⟦Detto dei barcaioli del Truntum⟧"
+ }
 }

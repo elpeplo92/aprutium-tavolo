@@ -11,16 +11,46 @@
  "mappa": null,
  "colore": "#7B4F8E",
  "scheda": {
+  "Governo": "Un Senato ereditario delle famiglie più antiche, guidato da un Primo Senatore",
   "Chi comanda": "Il Primo Senatore Lorendis Solvirax III, con il Senato ereditario",
+  "Capitale": "⟦Eldamere, sul golfo⟧",
   "Popolazione": "Circa tre milioni",
+  "Popoli": "Umani del vecchio sangue meridionale; halfling nelle campagne, gnomi artigiani nelle città",
   "Casata": "Solvirax, i Figli del Sole",
+  "Fede": "La Fiamma Solare, ricca e senza fretta: basiliche piene d’oro, pochi roghi",
   "Vive di": "Lusso: cavalli, profumi, vino, olio, arte; e l’educazione dei figli dei nobili",
-  "Dialetto": "Il Senatorio, elegante e lunghissimo: parlarlo male è un insulto"
+  "Esercito": "⟦Nessuna Falange: la Guardia del Senato, la cavalleria delle famiglie, e i mercenari che si possono pagare⟧",
+  "Dialetto": "Il Senatorio, elegante e lunghissimo: parlarlo male è un insulto",
+  "Motto": "⟦«Il sangue ricorda»⟧"
  },
  "gm": [
   {
-   "t": "",
-   "txt": "· I Solvirax appoggiano i moderati della Chiesa, i «Restauratori».\n· Tutti sanno che sono parassiti, ma tengono gli ostaggi, e questo li rende intoccabili.\n· Sono il bersaglio perfetto per Sylva Noctis, che non entra qui con i soldati ma come artisti, maestri, mogli e consiglieri.\n· Se Silvanus si rivela, Lorendis è il primo a perdere tutto: il sangue di Aurax batte qualunque discendenza dai suoi capitani."
+   "t": "Lorendis e la Fiamma",
+   "txt": "I Solvirax appoggiano i moderati della Fiamma, i «Restauratori», che vogliono la Fiamma e l’Impero alleati. ⟦Nel Concilio dei Reggenti Lorendis è il rivale naturale di Morvex e degli Orivex. Sulla Fiamma sta dalla parte di Virellius, finché Virellius resta un moderato: dopo il miracolo di Julia Nova, non è detto.⟧"
+  },
+  {
+   "t": "Gli ostaggi",
+   "txt": "Tutti sanno che i Solvirax sono parassiti, ma tengono gli ostaggi, e questo li rende intoccabili.\n\n⟦Fra gli «ospiti del Senato» c’è un figlio di una delle Otto Casate di Teramum. Proposta: il figlio minore dei Thaulero, i nuovi ricchi, che hanno pagato caro il posto per farsi accettare dalle casate vecchie. Lorendis può usarlo per comprare il voto dei Thaulero in Consiglio.⟧"
+  },
+  {
+   "t": "Sylva Noctis a Campus Aurum",
+   "txt": "Campus Aurum è il bersaglio perfetto per Sylva Noctis, che qui non entra con i soldati ma come artisti, maestri, mogli e consiglieri. L’arroganza della provincia la rende cieca: nessuno chiede da dove viene un talento."
+  },
+  {
+   "t": "Se Silvanus si rivela",
+   "txt": "Lorendis è il primo a perdere tutto: il sangue di Aurax batte qualunque discendenza dai suoi capitani.\n\n⟦Prima proverà a comprarlo, con un matrimonio Solvirax e l’invito a «completare la sua educazione» a Campus Aurum: cioè a diventare un ostaggio. Poi proverà a screditarlo come impostore. Per ultimo, a farlo sparire. Contro Silvanus, Lorendis sta senza saperlo dalla stessa parte dei Reggenti manovrati da Sylva Noctis.⟧"
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· ⟦Una lettera del Primo Senatore arriva alla Crociata: complimenti in Senatorio, tre pagine, e l’invito per l’Erede a Campus Aurum.⟧\n· ⟦La Crociata ha bisogno di cavalli. Un mercante di Campus Aurum ne ha venti, bellissimi, e chiede in cambio una cosa sola: sapere chi è davvero l’Erede.⟧\n· ⟦A Teramum, in casa di una delle Casate, insegna un maestro di musica venuto da Campus Aurum. Scrive spesso a casa.⟧"
+  },
+  {
+   "t": "Da allineare",
+   "txt": "· I testi di lore chiamano la provincia Eldamere e mettono lì la sede dei Solvirax. Qui Eldamere è proposta come nome della capitale.\n· Il Manuale dà a Campus Aurum un dialetto «napoletano, vibrante e teatrale»; il sito dice Senatorio, elegante e lunghissimo. Vale il sito.\n· Nei testi di lore Casa Solvirax tiene i latifondi e i cavalli: qui è ripreso senza segno."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome della capitale (proposta: Eldamere).\n· Se la Via del Tramonto passa per Campus Aurum.\n· Il motto di Casa Solvirax.\n· Quale figlio delle Casate di Teramum è ostaggio a Campus Aurum, se ce n’è uno."
   }
  ],
  "parent": "impero-aureo",
@@ -33,21 +63,104 @@
   {
    "t": "",
    "capo": true,
-   "txt": "A sud del Latium, una pianura fertile si affaccia sul golfo più grande dell’Impero: agrumeti, frutteti, allevamenti di cavalli, città che sono gioielli costruiti sulle rovine dell’Età dei Miti. L’arte è sublime e la cucina la migliore dell’Impero. E tutto è impregnato di arroganza: qui ogni altra provincia è barbara."
+   "txt": "A sud del Latium, una pianura fertile si affaccia sul golfo più grande dell’Impero: agrumeti, frutteti, allevamenti di cavalli, città che sono gioielli costruiti sulle rovine dell’Età dei Miti. L’arte è sublime e la cucina la migliore dell’Impero. E tutto è impregnato di arroganza: qui ogni altra provincia è barbara.\n\nA Campus Aurum si va a studiare, a comprare un cavallo o a sposarsi bene. Spesso ci si resta più a lungo di quanto si volesse."
   },
   {
-   "t": "I. Il banchetto di Aurax",
-   "txt": "Campus Aurum era già ricca e colta quando arrivò Aurax, e non aveva voglia di inchinarsi a un uomo venuto dal cielo. Aurax la conquistò con un banchetto: sposò i suoi capitani più fedeli alle figlie delle grandi famiglie, e le famiglie entrarono nell’Impero dalla porta principale. Da quei capitani dice di discendere [[Casa Solvirax]].",
+   "t": "I. In breve, la sua storia",
+   "txt": "Campus Aurum era già ricca e colta quando arrivò Aurax, e non aveva voglia di inchinarsi a un uomo venuto dal cielo. Aurax la conquistò con un banchetto, non con una battaglia: sposò i suoi capitani più fedeli alle figlie delle grandi famiglie, e le famiglie entrarono nell’Impero dalla porta principale. Da quei capitani dice di discendere [[Casa Solvirax]], che ancora oggi si crede più degna del trono degli stessi Aurex.\n\n⟦Nei secoli d’oro Campus Aurum diede all’Impero poeti, ambasciatori e mogli.⟧ A ogni elezione diede anche un candidato Solvirax, e a ogni elezione lo vide perdere.\n\n⟦Nella Guerra delle Due Lune stette lontana dal fronte: mandò cavalli, oro e figli cadetti, e ne riebbe meno di quanti ne aveva mandati. I Solvirax ricordano ancora la guerra come un debito che l’Impero ha con loro.⟧",
    "img": "Mondo — Campus Aurum.png",
    "didascalia": "Campus Aurum"
   },
   {
-   "t": "II. Chi comanda",
-   "txt": "Il [[Primo Senatore Lorendis Solvirax III]], settant’anni, sempre vestito di bianco e viola, colto, affascinante e spietato. Casa Solvirax ha un candidato al trono a ogni generazione, e a ogni generazione perde. Lorendis è convinto che il trono spetti alla sua famiglia per diritto divino."
+   "t": "II. Come si governa",
+   "txt": ""
   },
   {
-   "t": "III. Gli ostaggi",
-   "txt": "I figli delle famiglie nobili di tutto l’Impero vengono mandati a Campus Aurum a studiare. È un onore. Ed è anche un modo per tenerli in ostaggio."
+   "t": "Il Senato e il Primo Senatore",
+   "liv": 3,
+   "txt": "Campus Aurum non ha un re né un duca: ha un [[Senato ereditario]] delle famiglie più antiche, quelle che fanno risalire il loro sangue ai compagni dell’Eroe Solare. Il seggio passa di padre in figlio. ⟦Il Senato elegge il Primo Senatore, che è il governatore della provincia e porta il suo voto al Concilio dei Reggenti. Da sempre elegge un Solvirax.⟧\n\nOggi il [[Primo Senatore]] è [[Lorendis Solvirax III]]: settant’anni, sempre vestito di bianco e viola, circondato da servitori, poeti e cacciatori di talenti. È colto, affascinante e spietato, ed è convinto che il trono spetti alla sua famiglia per diritto divino."
+  },
+  {
+   "t": "Casa Solvirax",
+   "liv": 3,
+   "txt": "I Figli del Sole sono la casata più antica e più superba dell’Impero. Tengono latifondi, allevamenti di cavalli e una rete di matrimoni che arriva in ogni provincia. Vogliono il trono per diritto di sangue. Casa Solvirax ha un candidato al trono a ogni generazione, e a ogni generazione perde: i voti non bastano mai. ⟦Si dice che non ci sia casata dell’Impero senza una nonna Solvirax, e che ogni nonna Solvirax scriva al Senato una volta al mese.⟧"
+  },
+  {
+   "t": "Gli ostaggi",
+   "liv": 3,
+   "txt": "I figli delle famiglie nobili di tutto l’Impero vengono mandati a Campus Aurum a studiare. È un onore. Ed è anche un modo per tenerli in ostaggio.\n\n⟦Li chiamano «ospiti del Senato». Vivono in palazzi con giardini e maestri, imparano il Senatorio, la scherma e la musica, e tornano a casa a vent’anni pieni di buone maniere e di amici Solvirax. Chi ha un figlio a Campus Aurum ci pensa due volte prima di votare contro il Primo Senatore.⟧"
+  },
+  {
+   "t": "La fede",
+   "liv": 3,
+   "txt": "La Fiamma qui è elegante e senza fretta: grandi basiliche piene d’oro e di pittori, sacerdoti che vengono dalle famiglie buone, pochi roghi. Per i Purificatori del Luminor Meridionale Campus Aurum è una corte, non un solario. Per Campus Aurum i Purificatori sono contadini con la stola."
+  },
+  {
+   "t": "III. Le terre",
+   "tabella": {
+    "head": [
+     "Terra",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "Il golfo",
+      "Il golfo più grande dell’Impero, ⟦con le isole davanti e le ville sui promontori⟧. Sul golfo sta la capitale, ⟦Eldamere⟧."
+     ],
+     [
+      "La pianura",
+      "Terra nera e grassa: agrumeti, frutteti, campi di fiori per i profumi, ⟦bufale nelle paludi verso il mare⟧."
+     ],
+     [
+      "I pascoli dei cavalli",
+      "Le scuderie migliori dell’Impero. ⟦Un cavallo di Campus Aurum costa quanto una casa a Teramum.⟧"
+     ],
+     [
+      "Le città dell’Età dei Miti",
+      "Città costruite sulle rovine di altre città, più vecchie dell’Impero. ⟦Sotto i palazzi si trovano ancora strade di pietra, statue senza nome e porte murate.⟧"
+     ],
+     [
+      "⟦Le colline delle terme⟧",
+      "⟦Acque calde che escono dalla terra e fumano d’inverno. I senatori ci passano l’autunno; i medici giurano che guariscono tutto, tranne la noia.⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito",
+   "txt": "Campus Aurum non ha una Falange Solare e non ne vuole una: i soldati costano, e sporcano. ⟦La difendono la Guardia del Senato, i cavalieri delle famiglie e, quando serve, l’oro.⟧",
+   "tabella": {
+    "head": [
+     "Forza",
+     "Quanti",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "⟦La Guardia del Senato⟧",
+      "⟦Qualche migliaio, in corazze dorate⟧",
+      "⟦Al Senato⟧"
+     ],
+     [
+      "⟦La cavalleria delle famiglie⟧",
+      "⟦Ogni casata senatoria ha i suoi cavalieri⟧",
+      "⟦Alla propria famiglia⟧"
+     ],
+     [
+      "Le compagnie di mercenari",
+      "Quante se ne possono pagare",
+      "A chi paga"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Il lusso e il denaro",
+   "txt": "Campus Aurum vende all’Impero quello che non serve e che tutti vogliono: i migliori cavalli, fiori rari per i profumi, vino pregiato, olio, quadri, statue, musica. E vende la cosa più cara di tutte: l’educazione dei figli dei nobili.\n\n⟦La Via del Tramonto, la Strada Solare che da Solaria scende verso Vesperia, attraversa la pianura del golfo, e ogni carovana lascia qualcosa.⟧ ⟦In Aprutium una bottiglia di Campus Aurum si stappa solo alle nozze dei nobili, perché tutti vedano quanto si è speso.⟧"
+  },
+  {
+   "t": "VI. I mali di Campus Aurum oggi",
+   "txt": "· [[L’arroganza.]] Qui ogni altra provincia è barbara, e i barbari se ne ricordano.\n· [[Il trono che non arriva.]] Ogni generazione un candidato Solvirax, ogni generazione una sconfitta. Lorendis ha settant’anni, e il tempo gli manca.\n· [[Gli ostaggi.]] Tutti odiano Campus Aurum per questo; nessuno può toccarla, per questo.\n· [[La decadenza.]] Palazzi bellissimi, debiti bellissimi. ⟦Le famiglie più antiche vendono le terre per pagare i banchetti, e i banchieri di Luminor comprano.⟧\n· [[Gli stranieri a corte.]] Artisti, maestri, poeti e consiglieri venuti da lontano: a Campus Aurum un talento si accoglie senza chiedere da dove viene."
   }
  ],
  "epigrafe": {

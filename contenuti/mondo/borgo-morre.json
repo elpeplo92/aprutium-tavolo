@@ -15,19 +15,44 @@
  "colore": "#6E5A46",
  "scheda": {
   "Paese vero": "Morro d’Oro",
-  "In dialetto": "Mòrrë",
-  "Dove": "Fra il Tordinum e il Vomanum, nella campagna bassa a mezza giornata dal mare",
-  "Chi comanda": "⟦I Fonteviva, tramite Nutaròschë, da cui il borgo dipende⟧",
-  "Fedeltà": "⟦Atrë⟧"
+  "Altri nomi": "Mòrrë in dialetto; Muro e Castello Vecchio negli atti antichi",
+  "Abitanti": "⟦Circa seicento, quasi tutti nei campi⟧",
+  "Chi comanda": "I Fonteviva, da Nutaròschë, da cui il borgo dipende. In paese li rappresenta la famiglia del borgo, gli Scimitarra",
+  "Nel paese": "Il solario del Lucente Nicola con le fosse del grano, la casa degli Scimitarra, l’aia comune, l’osteria dei viandanti",
+  "Nei dintorni": "La Lunaria di Propezzano e la sua Porta Santa, la casa delle Bestie, la Piana dei Cesari, Pagliare, Torrenera",
+  "Strade": "Verso Nutaròschë, verso il mare, verso Propezzano, verso il Tordinum",
+  "Guardia": "⟦Nessuna: dieci uomini degli Scimitarra, e la campana⟧",
+  "Lucente": "Il Lucente Nicola, il 6 dicembre. Il 10 maggio, la Vecchia Madre di Propezzano",
+  "Distanze": "Il mare, mezza giornata. ⟦Nutaròschë, un’ora; Propezzano, mezz’ora; Mushanë, tre ore a nord, oltre il Tordinum⟧"
  },
  "gm": [
   {
    "t": "",
-   "txt": "⟦[[Dove passano le notizie.]] I pellegrini di Propezzano vengono da ogni parte e parlano. Il chiostro dell’abbazia è il posto giusto per sapere quello che succede lontano, e per far arrivare un messaggio a qualcuno senza farsi vedere.⟧\n\n⟦[[La Porta Santa.]] Chi la attraversa il giorno giusto riceve un perdono. Nel gioco il «perdono» può essere vero: una benedizione, o la fine di una maledizione. Il Bastone di Lyaras, per esempio.⟧\n\n⟦[[Le fosse del grano.]] Sono il posto dove la Confraternita del Grano Duro può nascondere quello che ammassa.⟧"
+   "txt": "Un borgo piccolo e tranquillo, con due cose che servono: un posto dove passano le notizie (Propezzano) e un posto dove si nasconde il grano (le fosse). La Crociata non ci è passata."
   },
   {
-   "t": "Corretto rispetto al vecchio canone",
-   "txt": "· Mòrrë non è più una «città libera della Gilda dei Tessitori»: nella realtà Morro era un piccolo castello agricolo, prima dell’abbazia di Montecassino e poi degli Acquaviva, e dipendeva da Notaresco. Di tessitura non c’è traccia. Il suo luogo vero è Propezzano."
+   "t": "Dove passano le notizie",
+   "txt": "⟦I viandanti di Propezzano vengono da ogni parte e parlano. Il chiostro dell’abbazia è il posto giusto per sapere quello che succede lontano, e per far arrivare un messaggio a qualcuno senza farsi vedere.⟧\n\nGhita la pellegrina, all’osteria de lu Passe, viene da Mòrrë e va alla Basilica Aurea, a Teramum, a sciogliere un voto: è un aggancio già nelle scene."
+  },
+  {
+   "t": "Le fosse del grano",
+   "txt": "⟦Sono il posto dove la Confraternita del Grano Duro, legata ai Barbas, nasconde quello che ammassa per far crollare il prezzo delle terre dei nobili in rovina, Cerullius compresi. Gli Scimitarra prendono la loro parte e non chiedono. Le due fosse riaperte (vedi «I guai di oggi») sono piene di grano della Confraternita. Seguire i carri di notte da Canzañë porta qui.⟧"
+  },
+  {
+   "t": "La Porta Santa",
+   "txt": "⟦Chi la attraversa il giorno giusto riceve un perdono. Nel gioco il «perdono» può essere vero: una benedizione, o la fine di una maledizione. Il Bastone di Lyaras, per esempio.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· ⟦[[Il capo degli Scimitarra.]] (3) Un uomo piccolo, grasso e prudente, che serve i Fonteviva e prende soldi da chiunque paghi. Si compra facilmente, e si spaventa ancora più facilmente.⟧\n· ⟦[[La Piana dei Cesari.]] (9) Sotto i campi c’è ancora la cisterna della fattoria imperiale, asciutta e grande come un solario: un nascondiglio, o una via.⟧\n· [[La festa di maggio.]] Il giorno della Porta Santa sulla strada ci sono centinaia di forestieri: il momento buono per far passare uomini, messaggi e merci senza che nessuno li conti."
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Mòrrë non è più una «città libera della Gilda dei Tessitori»: nella realtà Morro era un piccolo castello agricolo, prima dell’abbazia di Montecassino e poi degli Acquaviva, e dipendeva da Notaresco. Di tessitura non c’è traccia. Il suo luogo vero è Propezzano. Il Manuale (superato) la chiama «città libera mercantile dove il denaro compra il silenzio».\n· Gli Scimitarra sono la famiglia del borgo (Nomi delle casate, decisi il 10-10). Il cognome è vero: a Teramo nel Seicento, a Castellalto e a Morro nel Settecento.\n· I Fonteviva a Mòrrë erano una proposta: approvata il 10-10, il segno è tolto.\n· Dal paese vero: il nome antico (Muro e un «Castello Veccio» nel 1021), Santa Maria di Propezzano, la chiesa del Salvatore e di San Nicola con le tombe e le fosse per i cereali sotto il pavimento e la Madonna di terracotta, il convento di Sant’Antonio Abate (la visita di San Francesco), la Piana dei Cesari con olio, vino e garum, Pagliare e le sue case a due piani, Torrenera, San Nicola il 6 dicembre, il gonfalone rosso e bianco.\n· La voce vecchia diceva che le fosse del grano stanno sotto la chiesa: è vero anche nel paese vero."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Se le fosse di Mòrrë sono il nascondiglio della Confraternita del Grano Duro (la contea lo propone).\n· Il nome del capo degli Scimitarra.\n· Lessico di Ea (10-10): nella voce della contea «Santa Maria di Propezzano» va resa «la Lunaria di Propezzano». Se «Porta Santa» resta (è il nome della voce vecchia) o diventa «Porta del Perdono».\n· Gli abitanti e le distanze."
   }
  ],
  "livello": "borgo",
@@ -40,14 +65,69 @@
   {
    "t": "",
    "capo": true,
-   "txt": "Un piccolo castello in mezzo alla campagna più grassa delle Terre di Mezzo. Grano, ortaggi, frutteti, vigne: «d’oro» la chiamano per questo. Sotto la chiesa ci sono fosse scavate nella terra dove il borgo tiene il suo grano.\n\nFuori dal paese, in mezzo ai campi, c’è l’abbazia di [[Santa Maria di Propezzano]]. Si racconta che tre pellegrini, di ritorno da molto lontano, legarono i cavalli a un albero e appesero le borse con le loro reliquie. L’albero crebbe e le portò in alto, dove nessuno poteva prenderle. In sogno la Madonna chiese una chiesa. Quando l’altare fu pronto, l’albero si abbassò.\n\nL’abbazia ha una [[Porta Santa]] di pietra che si apre un solo giorno l’anno, a maggio. Quel giorno arrivano pellegrini da tutto il Ducato, e da fuori.\n\nNei campi vicini, l’aratro tira su ancora cocci e pietre squadrate: la chiamano la Piana dei Cesari, e c’era una grande fattoria quando l’Impero era giovane.",
+   "txt": "Un piccolo castello in mezzo alla campagna più grassa delle Terre di Mezzo, fra il Tordinum e il Vomanum, a mezza giornata dal mare. Grano, ortaggi, frutteti, vigne: «d’oro» la chiamano per questo. Non ha signori suoi: dipende da Nutaròschë, e quindi dai Fonteviva.\n\nMòrrë in sé è poca cosa. Quello che la fa conoscere in tutto il Ducato sta fuori dal paese, in mezzo ai campi: l’abbazia di Propezzano, la Lunaria della Vecchia Madre, con la sua Porta Santa che si apre un solo giorno l’anno."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Mòrrë non ha mura vere. È un giro di case attaccate sulla cima di una collina bassa, con le facciate verso l’interno e le spalle verso i campi: le case stesse fanno da muro. In mezzo c’è il solario, e sotto il solario le fosse dove il borgo tiene il grano. Intorno, per miglia, la campagna, divisa in poderi e casali.\n\nIl borgo è vecchio. Negli atti antichi si chiama Muro, e c’è un Castello Vecchio, di cui oggi resta il nome. Fu prima dei votati di un’abbazia lontana, poi dei signori di Atrë, i Fonteviva, che lo tengono da Nutaròschë. Sul posto, per loro, comandano gli Scimitarra.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "⟦La strada di Nutaròschë⟧",
+      "Verso mezzogiorno, su per il colle tondo dei Fonteviva",
+      "⟦Un’ora⟧"
+     ],
+     [
+      "⟦La strada dei viandanti⟧",
+      "Verso Propezzano, fra i campi",
+      "⟦Mezz’ora a piedi⟧"
+     ],
+     [
+      "⟦La strada del mare⟧",
+      "Verso levante, giù fino alla costa",
+      "Mezza giornata"
+     ],
+     [
+      "⟦La strada del Tordinum⟧",
+      "Verso nord, al fiume e oltre, a Mushanë",
+      "⟦Tre ore⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Mòrrë.jpg",
    "didascalia": "Mòrrë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Il solario del Lucente Nicola.]] Il solario del borgo, rifatto sopra uno più vecchio. Dentro ci sono altari di legno intagliato e una Vecchia Madre di terracotta dipinta. Sotto il pavimento ci sono tombe antiche, e accanto alle tombe le fosse del grano.\n· [[2. Le fosse del grano.]] Buche profonde scavate nella terra sotto il solario e sotto la piazza, chiuse da una lastra di pietra. Ci si tiene il grano del borgo, al fresco e al sicuro, da prima che ci fossero i Fonteviva.\n· [[3. La casa degli Scimitarra.]] La casa della famiglia che tiene il borgo per i Fonteviva: riscuote le decime del grano e decide chi apre le fosse. ⟦È la più grande del giro, con il portone ad arco e, sopra, lo stemma di Atrë accanto a una scimitarra di ferro.⟧\n· ⟦[[4. L’aia comune.]] Lo spiazzo di terra battuta davanti al solario. D’estate ci si batte il grano tutti insieme, d’inverno ci giocano i bambini.⟧\n· ⟦[[5. L’osteria dei viandanti.]] Una stanza lunga con le panche, e un fienile per dormire. A maggio è piena da scoppiare; il resto dell’anno ci bevono i carrettieri del grano.⟧\n· ⟦[[6. Il forno.]] Dietro il solario. Ci si cuoce il pane per tutto il borgo, e a maggio per i viandanti, che lo pagano il doppio.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[7. La Lunaria di Propezzano.]] Un’abbazia di pietra in mezzo ai campi, dedicata alla Vecchia Madre, con un chiostro e una Porta Santa. Si racconta che tre viandanti, di ritorno da molto lontano, legarono i cavalli a un corniolo e appesero le borse con le loro reliquie. L’albero crebbe e le portò in alto, dove nessuno poteva prenderle. In sogno la Vecchia Madre chiese un posto per lei. Quando l’altare fu pronto, l’albero si abbassò. La [[Porta Santa]] di pietra si apre un solo giorno l’anno, il 10 maggio: quel giorno arrivano viandanti da tutto il Ducato, e da fuori. La storia dei tre viandanti è dipinta sopra la porta.\n· [[8. La casa delle Bestie.]] A ovest del borgo, fra i campi. Era la casa dei votati della Benedizione delle Bestie, dove a gennaio i contadini portavano i buoi e i muli. Ne resta un muro solo, ma la benedizione si fa ancora, davanti al muro. Si dice che ci sia passato un lucente povero, molto tempo fa, e che abbia dormito sulla paglia della stalla.\n· [[9. La Piana dei Cesari.]] Vicino alla casa delle Bestie. L’aratro tira su cocci, pietre squadrate, pezzi di anfore: c’era una grande fattoria quando l’Impero era giovane, con le vasche per l’olio e per il vino.\n· [[10. Pagliare.]] Un casale giù verso il Vomanum, sulla strada della valle. Le case hanno due piani: sotto la stalla e il fieno, sopra la gente. Si chiamano pagliare, e il casale ha preso il nome da loro.\n· ⟦[[11. Torrenera.]] Un casale con una torre di guardia annerita da un incendio che nessuno ricorda. Dalla cima si vede il mare.⟧"
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "Contadini, quasi tutti. Lavorano la terra dei Fonteviva a mezzadria, e la terra è buona: per questo non se ne vanno. Parlano poco e di raccolti. Una volta l’anno il mondo viene a casa loro, con i viandanti di Propezzano, e loro lo guardano passare.\n\n· [[La Porta Santa.]] Il 10 maggio, per un giorno, la porta dell’abbazia si apre. Chi la attraversa riceve il perdono. La notte prima i viandanti dormono nei campi intorno all’abbazia, e si cantano le litanie fino all’alba.\n· [[Il Lucente Nicola.]] Il patrono, il 6 dicembre. ⟦Quel giorno gli Scimitarra aprono una fossa del grano e ne dà un sacco a ogni famiglia povera.⟧\n· ⟦[[Le fosse.]] Chi apre una fossa senza permesso paga con la mano, dice una legge vecchia. Nessuno ricorda che sia mai stata usata.⟧\n· ⟦[[La vendemmia.]] A fine estate tutto il borgo scende nelle vigne, e la sera si canta sull’aia comune. Chi ha la voce più forte porta a casa il primo mosto.⟧\n· [[I colori.]] Il borgo porta il rosso e il bianco.\n· [[Il detto.]] «La Porta Santa s’apre ’na vote l’anne. Chi passe, passe.»"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[Il grano non vale niente.]] ⟦Quest’anno il grano si vende a prezzo di fame. Eppure qualcuno lo compra lo stesso, a carri interi, e i carri arrivano di notte.⟧\n· [[Il proclama di Teramum.]] ⟦È arrivato anche qui, portato dagli Scimitarra. Mòrrë non ha visto la Crociata, ma i viandanti che vengono dal nord ne parlano.⟧\n· ⟦[[Le fosse piene.]] Gli Scimitarra hanno fatto aprire due fosse vecchie, chiuse da anni, e le hanno fatte riempire. Non è grano del borgo.⟧\n· ⟦[[La terra trema.]] A Propezzano, in estate, si è aperta una crepa nel chiostro. I votati dicono che è la Vecchia Madre che si gira nel sonno.⟧"
   }
  ],
  "epigrafe": {
   "txt": "«La Porta Santa s’apre ’na vote l’anne. Chi passe, passe.»",
-  "cite": "Detto dei pellegrini"
+  "cite": "Detto dei viandanti"
  },
  "blocchi": true,
  "illustrazione": "Mondo — Mòrrë.jpg"

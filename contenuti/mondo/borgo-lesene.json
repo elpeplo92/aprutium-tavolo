@@ -14,28 +14,115 @@
  "mappa": null,
  "colore": "#8A6E2E",
  "scheda": {
-  "Governatore": "I Custodi del Santuario",
-  "Fedeltà": "Sacra",
-  "Corrisponde a": "Isola del Gran Sasso",
-  "Altri nomi": "L'Aquila Aurea",
-  "Popolazione": "~2.000",
-  "Gilde": "Custodi del Gigante · Speziali d'Argento · Domatori d'Aquile"
+  "Paese vero": "Isola del Gran Sasso",
+  "Altri nomi": "L’Aquila Aurea; l’Isola, perché sta fra due fiumi; il Paese dei Motti; il paese dove il sole sorge due volte",
+  "Abitanti": "Circa duemila, contando i casali",
+  "Chi comanda": "I Custodi del Santuario: le Casate delle Vette, de Caelis, Argentus e Fiandrani",
+  "Dentro le mura": "La Torre dell’Orologio, il solario del Lucente Massimo, il solario del Lucente Giovanni, Largo Corte e le case dei motti, la casa degli Speziali d’Argento, l’ara della Vecchia Madre, le case chiuse delle Casate",
+  "Fuori le mura": "Il solario della Lucente Lucia, il solario dell’Isola sul Mavone, la casa dei votati, la Pagliara, l’eremo della Lucente Colomba, i cerchi di pietre, la Pietra della Fronte, la cascata di Biselli, i casali",
+  "Porte": "Porta Canapina e Porta del Torrione",
+  "Guardia": "⟦Nessun soldato. Le Casate hanno i loro uomini; in tempo di Convocazione le porte le tengono i pastori dell’Ordine dei Tratturi⟧",
+  "Lucente": "Il Lucente Massimo, che si festeggia la prima domenica di maggio; la Lucente Colomba, il primo di settembre",
+  "Distanze": "⟦Teramum, due giorni a piedi per la strada maestra di Tussëcië; Li Cashtillë e Cashtagnë, mezza giornata; Fano e La Pròtë, mezza giornata abbondante di sentiero⟧"
  },
- "gm": "Luogo mistico dove il confine tra materiale e spirituale è sottile. De Caelis (Custodi del Gigante) sanno che il Titano è inquieto per i rituali di Lyaras. Argentus cerca di riparare la Frattura. Fiandrani addestra un esercito segreto di cavalcatori di grifoni, pronto all'indipendenza se Teramum elegge un Duca non pretuziano. Umbra, quasi estinti, sentono qualcosa risalire dalle profondità. La Dama Bianca dell'Aquila: lo spirito di Maia che cammina nei vicoli con la luna piena. Obiettivo finale di Silvanus: la Grande Convocazione qui.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Il finale della parte del Ducato. Qui Silvanus vuole chiamare a rispondere Iuvenza e il Consiglio davanti a tutte le Casate, e qui il Ducato può acclamare il suo Duca. Ci si arriva solo con il Sigillo Ducale di Teramum: Lésënë è il premio, Teramum la chiave. Lésënë è luogo mistico: il confine fra il mondo e lo spirito qui è sottile, e le Casate delle Vette ne sono i guardiani."
+  },
+  {
+   "t": "La Convocazione",
+   "txt": "· La Legge Antica dice che il Duca d’Aprutium non si eredita: lo sceglie la Grande Convocazione, fra le casate di sangue pretuziano. Per secoli si è limitata ad acclamare i Pretutia. Con la morte dell’ultimo Pretutia l’uso è finito, e resta la legge (voce del Ducato).\n· Il Sigillo Ducale lo porta Gualtiero Mazzarelli, il Reggente, ed è l’unico che può chiamarla. I Mazzarelli non la chiamano perché perderebbero il trono. Il Reggente lo dice ai giocatori nelle scene del Palazzo: «chi chiama la Convocazione deve esserci. In prima fila.»\n· Il Duca che la storia prepara è Alessandros Cerullius, per sangue antico e per scelta della Convocazione. Silvanus è l’erede del Trono Solare, non del Ducato: la Convocazione può acclamare un Duca pretuziano, e il Duca riconoscere l’Imperatore.\n· L’Arciflamine Serafino Impaloni accetta la Convocazione solo se è aperta da un rito suo: «una Convocazione senza la Fiamma è un sabba con i sigilli» (scene della Basilica).\n· ⟦Come si svolge. Chiamata con il Sigillo, la Convocazione si riunisce alla luna piena successiva sulla Pietra della Fronte. I Custodi aprono le case chiuse, i pastori dell’Ordine dei Tratturi tengono le porte e le armi restano giù al borgo. Parla chi tiene in mano la pietra piccola; vota ogni Casata e ogni Città Libera presente, con un sasso bianco o nero. Il Duca si acclama a voce, tutti insieme, o non si acclama.⟧\n· ⟦I testimoni. Il Registro della Crociata conta i «testimoni ammissibili all’Aquila Aurea». Proposta: davanti alla Convocazione vale la parola di chi ha visto con i propri occhi, e i Custodi la mettono alla prova con la Pietra: chi mente sulla Fronte del Gigante sente la terra tremare sotto i piedi.⟧"
+  },
+  {
+   "t": "Le Casate delle Vette",
+   "txt": "· [[Casa de Caelis]], i Custodi del Gigante. Motto «Sopra le Nuvole». La guida Dominius Rehalor (il Manuale lo chiama «Arciprete»: titolo da cambiare, ⟦proposta: il Primo Custode⟧). I guardiani filosofi del borgo, discendenti più puri dei druidi pretuziani: vegliano sul sonno del Gigante e vendono a caro prezzo le profezie. Sanno che il Titano è inquieto, e che lo disturbano i rituali di Lyaras. Sono nella lista di Impaloni insieme ai Cerullius. Rehalor è uno dei Custodi del Ciclo.\n· [[Casa Argentus]], lo Specchio della Luna. Motto «Lo Specchio Riflette». La guida la Sibilla Amarantha. Studiosi e maghi di Maia, legati agli Speziali d’Argento. Cercano un modo di riparare la Frattura o di purificare la magia lunare corrotta. Amarantha è dei Custodi del Ciclo e conosce la cosmologia vera. Nelle scene della Biblioteca di Teramum, Caelinus Tancredus può affidare alla Crociata una lettera per lei (proposta di aggancio).\n· [[Casa Fiandrani]], la Roccia che Resiste. Motto «La Roccia Resiste». La guida Beltramo de’ Fiandrani. Nobiltà guerriera di montagna, pretuziani puri che non si sono mai fidati dell’Impero, i più grandi allevatori di aquile giganti e grifoni del Ducato. Con la Confraternita dei Domatori d’Aquile tengono una messaggeria per aria e vendono di nascosto uova di grifone. Addestrano in segreto cavalcatori di grifoni, pronti all’indipendenza se Teramum impone un Duca non pretuziano. Il Consiglio non lo sa. Con Alessandros candidato, sono dalla sua parte.\n· [[Casa Umbra]], le Voci del Profondo. Motto «Ascoltiamo nel Sonno». Capo sconosciuto. Casata reietta e quasi estinta, discendente degli sciamani che pregavano gli spiriti sotto il Gigante. Sentono che qualcosa di terribile risale dalle profondità."
+  },
+  {
+   "t": "Sotto il borgo",
+   "txt": "· [[La Dama Bianca.]] È lo spirito della Vecchia Madre, che nelle notti di luna piena cammina nei vicoli e protegge il borgo dai Forgiati. ⟦I Forgiati non possono entrare a Lésënë con la luna piena: se ci provano, all’alba si trovano i loro corpi nei prati, puliti come statue.⟧\n· [[La via di sotto.]] Le voci di Teramum dicono che dalle cripte della capitale una via sotterranea arriva fino all’Aquila Aurea, in tre giorni senza vedere il sole. È una proposta delle scene di Teramum. ⟦Se la si tiene: sbuca nella grotta della Lucente Colomba, e l’impronta della mano sulla roccia è il segno per aprirla.⟧\n· ⟦[[La pietra sotto la Pietra.]] Sotto la Pietra della Fronte la roccia è cava. I de Caelis ci scendono una volta l’anno per ascoltare il respiro del Gigante. Ultimamente il respiro è più corto.⟧\n· ⟦[[Le case raschiate.]] Sulle case chiuse gli stemmi raschiati sono di casate spente o cacciate. Uno è dei Pretutia. Un altro, dicono i Custodi, è stato raschiato l’anno scorso, di notte, e nessuno sa da chi: è quello dei Mazzarelli.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Le profezie dei de Caelis.]] ⟦Funzionano come un Augurio o una Divinazione lanciati dal master: tre giorni di attesa, e un prezzo che non è sempre in denaro (un favore, un nome, un ricordo).⟧\n· [[Le pozioni degli Speziali.]] ⟦Pozioni di guarigione ai prezzi del manuale, maggiori e superiori solo per chi ha l’amicizia di Casa Argentus; antidoti contro i veleni di Velthuria.⟧\n· [[La strada.]] Arrivare a Lésënë è già una scena: la strada maestra passa da Tussëcië e dal Marchese d’Avalos; i Tratturi chiedono il permesso dell’Ordine; i sentieri dei montanari di Fano e La Pròtë chiedono una guida.\n· [[La Madre e il figlio.]] ⟦La leggenda dei pastori è vera a metà: il Gigante non è figlio di Maia, ma Maia lo ha vegliato. Per questo la sua magia a Lésënë è più forte che altrove, e la Dama Bianca cammina proprio qui.⟧\n· [[Il Cantore del Gigante.]] Il Manuale ha un background, il Cantore del Gigante, che può entrare nei luoghi sacri pretuziani, il santuario di Lésënë compreso, senza essere fermato. Un PNG così può fare da guida.\n· [[Le chiavi delle case chiuse.]] ⟦La casa dei Cerullius è fra le case chiuse. Se Alessandros si presenta, i Custodi gli danno la chiave: dentro ci sono vecchi seggi, un albero della casata dipinto sul muro e, in un cassone, il mantello che un Cerullius portò all’ultima Convocazione vera.⟧\n· [[Adamus e Mattheus.]] ⟦L’ara della Vecchia Madre riconosce il Medaglione Lunare Fratturato di Adamus: l’acqua della ciotola si increspa. I votati della casa a valle, invece, sono i soli che non hanno paura di Mattheus.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Isola del Gran Sasso ha la Borgata San Leonardo a forma di ovale, Porta Canapina e Porta del Torrione, la torre dell’orologio (resto del castello), San Massimo, San Giovanni e Santa Lucia nelle mura o accanto, i motti latini sulle porte (il «Paese dei Motti», e «il paese dove il sole sorge due volte»), gli Statuti del 1419 in volgare (qui le Carte dell’Isola), San Giovanni ad Insulam sul Mavone rifatto dai benedettini, il convento che la tradizione dice fondato da San Francesco (oggi il santuario di San Gabriele), il castello di Pagliara dove nacquero San Berardo e sua sorella Santa Colomba, i ciliegi che fruttano d’inverno, l’eremo di Santa Colomba con l’impronta della mano o del pettine, la pietra che cura il mal di testa, le reliquie a Pretara, la festa del 1° settembre, la cascata di Biselli, i casali, San Massimo patrono. La leggenda di Maia e del figlio gigante sepolto sul Gran Sasso viene dal Folklore. Con il Lessico di Ea i santi sono lucenti, le chiese solari, i frati votati, la cappella di Maia un’ara, la Madonna la Vecchia Madre.\n· Lo Studio dei paesi veri: nessuna assemblea pretuziana a Isola, e Isola sta forse fuori dai Pretuzi veri. La Convocazione qui resta canone del gioco (Atto IX).\n· «Nengua» (nevica) è parola vera di Isola (Dialetti). Quello che non è segnato come proposta viene da lì, dal Manuale (Casate delle Vette, gilde, Dama Bianca, cerchi di pietre) o dalle voci del sito.\n· Il nome è Grande Convocazione (Atto IX), non «Convocazione Straordinaria» come diceva la vecchia voce.\n· I nomi dei capi delle Casate (Rehalor, Amarantha, Beltramo de’ Fiandrani) vengono dal Manuale e non sono mai stati detti ai giocatori: per questo stanno qui e non nel testo pubblico.\n· «Beltramo» è anche il nome di Beltramo Savini, l’Archivista di Teramum: due Beltramo nel Ducato."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Come si svolge la Convocazione, e quando si riunisce dopo la chiamata (qui c’è una proposta).\n· Se la via sotterranea da Teramum arriva davvero fin qui, e dove sbuca.\n· Se le Casate delle Vette tengono i loro nomi latini (de Caelis, Argentus, Umbra): la regola nuova vuole niente nomi latini tranne i PG.\n· Se i capi delle Casate delle Vette restano quelli del Manuale (Rehalor, Amarantha, Beltramo de’ Fiandrani), o se uno dei due Beltramo cambia nome.\n· Le distanze: quanto ci vuole da Teramum."
+  }
+ ],
  "livello": "borgo",
  "group": "La Montagna del Gigante",
  "id": "borgo-lesene",
  "parent": "contea-montagna-del-gigante",
  "title": "Lésënë",
- "sub": "L'Aquila Aurea · Sacra",
+ "sub": "L’Aquila Aurea, la terra della Convocazione",
  "pub": [
   {
    "t": "",
-   "txt": "L'Aquila Aurea, ~2.000 anime, ai piedi del Titano: il luogo sacro dei Pretuziani, sede del Concilio antico e della Convocazione Straordinaria delle Casate. Terra neutrale, dove nessun esercito entra armato. Economia esoterica: profezie, pozioni, uova di grifone. Le Casate delle Vette — de Caelis, Argentus, Fiandrani, Umbra — sono antiche, legate al Gigante e alla magia della terra, e qui la Luna Maia si venera alla luce del giorno.",
+   "capo": true,
+   "txt": "Lésënë sta nel fondo della valle, proprio sotto la parete più grande del Gigante Dormiente, dove il Mavone incontra il Ruzzo. Per questo i vecchi la chiamano l’Isola. Ma in tutto il Ducato la conoscono con un altro nome: l’Aquila Aurea. Sopra il borgo la roccia sale dritta per più di mille passi. La mattina il sole sorge sopra le colline, poi sparisce dietro uno sperone e risorge una seconda volta: per questo la chiamano anche il paese dove il sole sorge due volte. Nelle mattine chiare le aquile girano sotto le cime come foglie nel vento.\n\nÈ il luogo sacro dei Pretuziani. Qui, secondo la Legge Antica, si riunisce la Grande Convocazione di tutte le Casate del Ducato, e qui nessun esercito entra armato. È anche l’unico posto di Aprutium dove la Vecchia Madre, la Luna Maia, si prega alla luce del giorno. E qui vicino, alla Pagliara, è nato il Lucente Berardo. Chi sale a Lésënë viene a cercare una profezia, una pozione, una guarigione, o a pregare: è la meta del Viaggio Sacro di tutta la montagna. Nessuno ci viene per caso."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Il borgo vecchio, che qui chiamano [[la Borgata]], è un ovale di case e mura su un dosso fra i due fiumi. Le mura sono fatte dalle case stesse e dai solari, messi spalla a spalla. Del castello antico resta solo una torre, che oggi porta l’orologio. Dentro, le strade sono corte e storte, e si aprono in piccole piazze: la più nota è [[Largo Corte]].\n\nQuello che si nota per primo sono le porte delle case. Sopra quasi ogni portale c’è un motto inciso nella pietra, in lingua antica: per questo Lésënë si chiama anche il Paese dei Motti. «Neutri fortunae», dice uno, «a nessuna delle due sorti». «Melius mori quam foedari», dice un altro, «meglio morire che macchiarsi».\n\nLésënë ha anche le sue leggi scritte, le [[Carte dell’Isola]]: le più antiche della montagna, e le sole scritte nella lingua di tutti, non in quella dei notai.\n\nFuori dalle mura il borgo si allunga sulle due rive, fra orti, mulini e prati. Poi cominciano i casali, sparsi nella valle e su per i fianchi del Gigante.",
+   "tabella": {
+    "head": [
+     "Porta",
+     "Dove",
+     "Che cosa"
+    ],
+    "rows": [
+     [
+      "Porta Canapina",
+      "⟦A valle, verso est⟧",
+      "⟦La porta principale. Da qui arrivano la strada maestra di Tussëcië e i viandanti. Prende il nome dai campi di canapa che c’erano sotto le mura.⟧"
+     ],
+     [
+      "Porta del Torrione",
+      "⟦A monte, verso la parete⟧",
+      "⟦La porta della montagna, sotto la torre. Da qui partono i sentieri per la Pagliara, per i pascoli e per la Pietra della Fronte.⟧"
+     ]
+    ]
+   },
    "img": "Mondo — Lésënë.jpg",
    "didascalia": "Lésënë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Dentro le mura",
+   "liv": 3,
+   "txt": "· [[1. La Torre dell’Orologio.]] L’unica cosa che resta del castello di Lésënë. ⟦L’orologio va sempre un po’ avanti. Dicono che lo faccia apposta, per ricordare che la montagna ha i suoi tempi.⟧\n· [[2. Il solario del Lucente Massimo.]] Il solario del lucente patrono, chiuso dentro la cerchia delle mura, con le pareti dipinte e un portale scolpito. ⟦Il sacerdote è uno solo, vecchio e mezzo sordo, Zi’ Caietane. La Fiamma, qui, fa quello che può.⟧\n· [[3. Il solario del Lucente Giovanni.]] Il secondo solario delle mura, piccolo e scuro. ⟦Ci si va a pregare per i viaggi: chi parte per la pianura lascia una candela.⟧\n· [[4. Largo Corte.]] La piazza più bella del borgo, con le case dei motti tutto intorno. Su una porta c’è scritto che la ruggine mangia il ferro come l’invidia mangia l’uomo. ⟦È la piazza dove si leggono i bandi delle Casate, e dove si radunano i viandanti la mattina.⟧\n· ⟦[[5. La Casa della Pietra.]] Il palazzo dei Custodi del Santuario, su Largo Corte: tre portali, uno per Casata, e sopra ognuno il suo motto. Qui le Casate delle Vette si riuniscono e decidono le cose del borgo. Si entra solo se si è chiamati.⟧\n· ⟦[[6. La casa degli Speziali d’Argento.]] La bottega della Gilda degli Speziali, legata a Casa Argentus: pozioni di guarigione, antidoti, reagenti rari, fatti con la magia di Maia. L’odore di erbe si sente dalla piazza. Si paga caro, e si aspetta il proprio turno.⟧\n· ⟦[[7. L’ara della Vecchia Madre.]] Un’ara bianca con una luna falce sopra la porta, aperta giorno e notte. Dentro, la Vecchia Madre di legno con il manto blu e un giovane gigante addormentato in grembo, e una ciotola d’argento piena d’acqua. Le levatrici di mezzo Ducato ci vengono almeno una volta nella vita.⟧\n· ⟦[[8. La Torre dei Custodi.]] La casa di Casa de Caelis, la più alta del borgo. Qui i Custodi del Gigante ascoltano i sogni del Titano e li scrivono. Chi vuole una profezia bussa qui: la risposta arriva dopo tre giorni, e costa.⟧\n· ⟦[[9. La Casa delle Aquile.]] La casa fortificata di Casa Fiandrani, sul lato delle mura che guarda la parete. Ha una loggia aperta in cima, e sulla loggia ci sono sempre due o tre aquile incappucciate. I Fiandrani mandano messaggi per aria, e dicono che allevino anche bestie più grosse delle aquile.⟧\n· ⟦[[10. Le case chiuse.]] Lungo le mura ci sono una ventina di case con le finestre sbarrate e uno stemma sopra la porta. Sono le case delle Casate del Ducato, una per Casata, e si aprono solo per la Convocazione. Le chiavi le tengono i Custodi. Su alcune porte lo stemma è stato raschiato via.⟧\n· ⟦[[11. La locanda della Fortuna.]] Sotto un portale che dice «Neutri fortunae». Pane, pecorino, minestra di farro, vino che sale da Cullëdarë, e stanze per i viandanti. Ci mangiano tutti, e ci si ascolta tutti. La tiene una vedova, Za’ Peppina la Fortunata. Se fuori nengua, la minestra è gratis.⟧\n· ⟦[[12. Il forno e il mercato del martedì.]] Davanti al solario del Lucente Massimo. Il martedì scendono i casali con le castagne, il formaggio, la lana e le erbe di montagna.⟧"
+  },
+  {
+   "t": "Fuori le mura",
+   "liv": 3,
+   "txt": "· [[13. Il solario della Lucente Lucia.]] Appena fuori dalle mura, dove si fermano i viandanti prima di entrare.\n· [[14. Il solario dell’Isola.]] Un solario antico e spoglio, tutto solo su un poggio sopra il Mavone, di pietra chiara, rifatto dai votati di un’abbazia lontana. Sotto c’è una cripta più vecchia ancora. ⟦Ci si sposa, a Lésënë: chi si sposa lì, dicono, non si lascia più.⟧\n· [[15. La casa dei votati.]] A valle del borgo, fra gli alberi. La tradizione vuole che l’abbia fondata un votato lucente, salito a piedi fin qui più di due secoli fa, scalzo e povero. ⟦I votati accolgono i viandanti che non possono pagare la locanda, e sono gli unici in tutta la valle che parlano bene della Fiamma.⟧\n· [[16. La Pagliara.]] Sul colle sotto la parete, le pietre di un castello antico e un piccolo eremo. Qui nacquero il [[Lucente Berardo]], il lucente del Ducato, e sua sorella Colomba. Si racconta che per Berardo i ciliegi della Pagliara fecero frutti in pieno inverno. ⟦Il 19 dicembre ci sale una processione da Teramum, quando la strada è aperta; quando non lo è, ci salgono quelli di Lésënë da soli.⟧\n· [[17. L’eremo della Lucente Colomba.]] Sul monte Fornace. Colomba, la sorella di Berardo, si ritirò in una grotta lì vicino; sulla roccia, dicono, c’è ancora l’impronta della sua mano, o del suo pettine. Chi ha mal di testa ci appoggia la fronte. Le sue reliquie sono nel solario della Lucente Lucia a Pretara.\n· [[18. I cerchi di pietre.]] Nei prati sopra il borgo. Pietre ritte in cerchio, più vecchie di ogni solario. Sono luoghi sacri della Vecchia Madre: nelle notti di luna piena ci si va a pregare, e nessuno lo nasconde.\n· ⟦[[19. La Pietra della Fronte.]] In alto, sotto la parete, una lastra di roccia grande come una piazza, liscia come una fronte. È lì che si riunisce la Grande Convocazione: la chiamano la fronte del Gigante. Ci sono intorno sedili di pietra a gradoni, consumati dal vento, e in mezzo una pietra più piccola per chi deve parlare. Ci si sale in un’ora dal borgo. Ci si va disarmati.⟧\n· [[20. La cascata di Biselli.]] Un salto d’acqua bianca sulla parete, che si vede da tutta la valle. ⟦Quando d’estate smette di cadere, i vecchi dicono che il Gigante ha sete.⟧\n· ⟦[[21. I nidi.]] Sulle rocce sopra la Casa delle Aquile ci sono i nidi delle aquile dei Fiandrani. Nessuno ci sale senza il loro permesso.⟧\n· [[22. I casali.]] Pretara, con le reliquie della Lucente Colomba; Casale San Nicola, con la Lunaria delle Grazie; Fano a Corno, Cerchiara, San Pietro: villaggi di pastori e boscaioli sparsi nella valle e sulle pendici."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I lésenesi sono gente seria e cortese, abituata a ospitare chi viene da lontano senza fargli troppe domande. Hanno visto passare viandanti, maghi, nobili, eretici e malati: non si stupiscono di niente. Sono fieri del loro borgo e della sua legge, e lo dicono con i motti sulle porte.\n\n· [[I motti.]] Quando una famiglia si fa la casa, sceglie il suo motto e lo fa incidere sopra la porta. Il motto resta anche quando la famiglia se ne va. Ci sono motti che nessuno sa più leggere.\n· [[Il Lucente Massimo e la Lucente Colomba.]] La prima domenica di maggio la festa del patrono; il primo di settembre quella di Colomba, con la salita all’eremo. ⟦Le porte delle case restano aperte tutto il giorno, e chiunque può entrare a mangiare.⟧\n· [[La Vecchia Madre alla luce del giorno.]] A Lésënë la Vecchia Madre si prega apertamente, sotto la protezione di Casa Argentus. Qui la raccontano come la madre del Gigante: lo portò fin quassù ferito, lo distese sulla vetta quando morì, e pianse tanto che le sue lacrime sono la rugiada dei pascoli. Nelle notti di luna piena si sale ai cerchi di pietre, e le donne portano una ciotola d’acqua per farci specchiare la luna.\n· [[La Dama Bianca dell’Aquila.]] Nelle notti di luna piena, dicono, una donna vestita di bianco cammina per i vicoli. Non parla con nessuno. Chi la incontra si fa da parte e china la testa.\n· [[La legge delle armi.]] A Lésënë nessuno gira con la spada in mano. ⟦Le armi lunghe si lasciano appese all’ingresso della locanda o alla porta di chi ti ospita, e non le tocca nessuno.⟧\n· [[Il Gigante.]] Qui si dice «il Gigante» come altrove si dice «il tempo»: il Gigante è di buon umore, il Gigante si è girato, il Gigante ha sete. ⟦Quando la terra trema, si apre la porta di casa per lasciarlo passare.⟧"
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· [[La terra trema.]] Più spesso di prima. ⟦Sulla parete si sono staccate frane che i vecchi non ricordano, e una notte la cascata di Biselli si è fermata per un’ora.⟧\n· [[La strada di Tussëcië.]] La strada maestra che sale da Teramum passa da Tussëcië, dove le guardie del Marchese d’Avalos fermano chi non gli piace. ⟦I viandanti arrivano di meno, e arrivano raccontando di essere stati perquisiti.⟧\n· ⟦[[Tutti aspettano.]] Da quando il Ducato non ha un Duca, a Lésënë si parla solo della Convocazione. Qualcuno ha visto i Custodi far arieggiare due delle case chiuse. Nessuno sa per chi.⟧\n· ⟦[[Visite da Teramum.]] Un votato della Basilica Aurea di Teramum, con due armigeri dell’Ordine d’Acciaio, è salito a «visitare» la casa degli Speziali d’Argento e ha fatto domande sull’ara della Vecchia Madre. È ripartito con un registro pieno di nomi.⟧\n· ⟦[[Le aquile inquiete.]] Le aquile dei Fiandrani non vogliono più volare verso est, verso la pianura. I falconieri non sanno dire perché.⟧"
+  },
+  {
+   "t": "Quello che sapete",
+   "txt": "· A Julia Nova, a cena finita, Silvanus vi ha detto il suo piano: la Grande Convocazione, il Concilio Pretuziano sotto il Gigante Dormiente, a L’Aquila Aurea. Chiamare a raccolta tutte le Casate e le Città Libere e costringere i traditori a rispondere davanti a tutti (Atto IX).\n· La Legge Antica è chiara: solo il sigillo della Città Ducale di Teramum può chiamare la Convocazione. Per questo la Crociata marcia sulla capitale (Atto IX)."
   }
  ],
  "illustrazione": "Mondo — Lésënë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Quod rubigo ferro, hoc livor homini.» Quello che la ruggine fa al ferro, l’invidia lo fa all’uomo.",
+  "cite": "Motto sopra una porta di Largo Corte"
+ }
 }

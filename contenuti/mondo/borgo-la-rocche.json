@@ -14,26 +14,117 @@
  "mappa": null,
  "colore": "#3E5A3A",
  "scheda": {
-  "Governatore": "Eremiti Guerrieri",
-  "Fedeltà": "Sacro",
-  "Corrisponde a": "Rocca Santa Maria",
-  "Altri nomi": "lë Mbòshtë"
+  "Paese vero": "Rocca Santa Maria",
+  "Altri nomi": "La Ròcchë in dialetto; lë Mbòshtë, dal nome della villa più grande, Imposte; Rocca Imposta nelle carte",
+  "Abitanti": "⟦Circa cinquecento, sparsi in venticinque ville; gli eremiti non si contano⟧",
+  "Chi comanda": "Gli eremiti guerrieri, i Ranger del Bosco. Sulla carta, il flamine di Teramum. Fra le famiglie conta quella degli Ammazzalorso",
+  "Nel paese": "Lë Mbòshtë, la rocca in rovina sul Colle Castello, la casa degli Ammazzalorso, i solari delle ville",
+  "Nei dintorni": "Le venticinque ville, il Bosco Martese, il valico del Ceppo, le cascate della Morricana e della Cavata, le sorgenti della Vezzola, le ville bruciate di Serra e Tavolero",
+  "Strade": "Sentieri per Lë Piana e per Curtënë; la valle della Vezzola verso Teramum",
+  "Guardia": "Nessuna. ⟦Ma nessuno entra nel territorio senza che gli eremiti lo sappiano entro sera⟧",
+  "Lucente": "Il Lucente Lorenzo, che si festeggia il 10 agosto",
+  "Distanze": "⟦Lë Piana, una giornata di sentieri verso nord-est; Curtënë, una giornata verso sud; Teramum, due giorni scendendo la Vezzola⟧"
  },
- "gm": "Guide invisibili per la Laga e per aggirare i posti di blocco. Sacri, non politici. Servono i contatti giusti — l'Ordine Ospitaliero, i Custodi, o un druido.",
+ "gm": [
+  {
+   "t": "",
+   "txt": "Guide invisibili per la Laga e per aggirare i posti di blocco. Sacri, non politici. Servono i contatti giusti: l’Ordine Ospitaliero, i Custodi, o un druido. Per la Crociata, La Ròcchë è la porta di servizio di Teramum: la Vezzola scende da qui fino alle mura della capitale, e i Ranger conoscono la strada."
+  },
+  {
+   "t": "Gli eremiti guerrieri",
+   "txt": "⟦Non sono un ordine della Fiamma. Sono nati da eremiti che, al tempo delle ville bruciate, presero le armi per difendere i villaggi dai briganti e dai soldati. Pregano il sole e la pietra insieme: per loro il Sole e la montagna non litigano. Accolgono chiunque voglia restare, ma lo mettono alla prova per un anno. I Ranger del Bosco sono quelli che hanno finito la prova.⟧\n\n⟦Rispettano tre cose: l’Ordine Ospitaliero, che cura senza chiedere; i Custodi del Ciclo, di cui sanno più di quanto dicano; e i druidi. Adamus è il contatto naturale. Il druido di Torricella li conosce, e può farsi garante per lui.⟧\n\n⟦Il loro capo è un vecchio che chiamano solo Fratë. Non dice il suo nome e non scende mai a lë Mbòshtë. Gli Ammazzalorso gli portano il pane una volta la settimana: sono il tramite.⟧"
+  },
+  {
+   "t": "Gli uomini con le carte",
+   "txt": "⟦Gli uomini visti nel Bosco Martese sono cartografi pagati da Teramum. Qualcuno nel Consiglio cerca i sentieri della Laga per lo stesso motivo per cui li cerca la Crociata: arrivare alla capitale, o uscirne, senza passare dalle porte. Chi li paga? I Malavolta, per i loro scavi, o Iuvenza, per la sua fuga. I Ranger li hanno seguiti fino alla Vezzola, e hanno ancora una delle loro carte.⟧"
+  },
+  {
+   "t": "Gli strumenti per giocare",
+   "txt": "· [[Il ceppo dei messaggi.]] ⟦Il segno giusto è il cerchio con tre tagli, il segno dei Custodi. O una foglia di quercia piegata in tre, il segno dei druidi. Chi lascia il segno sbagliato viene seguito per una giornata e poi lasciato perdere nel bosco.⟧\n· [[Una guida.]] ⟦Con un Ranger, la Laga si passa senza tiri. Senza, Sopravvivenza CD 15 ogni giornata per non perdersi; chi fallisce perde mezza giornata e incontra qualcosa.⟧\n· [[Il Lucente Lorenzo.]] I fuochi sui colli si vedono da Teramum: un segnale pronto, se qualcuno vuole mandarne uno.\n· [[La carta dei cartografi.]] La prova che qualcuno, a Teramum, cerca una via segreta.\n· [[Il coltello di Sciarra.]] ⟦Gli Ammazzalorso discendono da Marco Sciarra, e lo sanno solo loro. Il coltello di casa è suo. Chi lo porta, nella Laga, è riconosciuto dai vecchi briganti come uno della famiglia.⟧"
+  },
+  {
+   "t": "Da sapere",
+   "txt": "· Rocca Santa Maria vera: comune sparso di venticinque frazioni, con il municipio a Imposte (da cui lë Mbòshtë; un itinerario la chiama «Rocca Imposta»); la rocca medievale sul Colle Castello; feudo del vescovo di Teramo; Santa Maria Assunta ad Alvelli, San Michele a Riano, San Martino a Fioli, Sant’Egidio ad Acquaratola; i ruderi di San Flaviano a Tavolero e le chiese bruciate nel 1668-70 dai banditi; i borghi abbandonati di Serra e Tavolero; la Vezzola nasce qui; il Ceppo; il Bosco Martese, con i faggi torti, detto sacro a Marte e attraversato da Annibale; le cascate della Morricana e della Cavata; i porcini e la festa di agosto; San Lorenzo patrono il 10 agosto (da verificare); Marco Sciarra, nato a Castiglione di Riano, «flagellum Dei», il matrimonio di Ripattoni, ucciso dal compagno Battistello per il perdono del papa. Le streghe della Laga che rubano il fiato vengono dal Folklore (fonte debole, ma teramana).\n· Lo Studio non ha trovato eremi a Rocca Santa Maria: gli eremiti guerrieri sono canone del gioco, non del paese vero.\n· La famiglia del borgo è quella decisa da Giuseppe: gli Ammazzalorso. Che discendano da Sciarra è una proposta.\n· Lessico di Ea: chiese → solari, cappella → ara, santi → lucenti, vescovo → flamine; la croce degli eremiti diventa un sole di legno. Marte → Bellator, il dio della guerra del Pantheon.\n· Il «grosso» è la moneta d’argento del Ducato."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Chi sono davvero gli eremiti guerrieri, e quanti sono.\n· Se gli Ammazzalorso discendono da Marco Sciarra.\n· Chi paga i cartografi.\n· Il numero degli abitanti e le distanze."
+  }
+ ],
  "livello": "borgo",
  "group": "Le Terre Selvagge",
  "id": "borgo-la-rocche",
  "parent": "contea-terre-selvagge",
  "title": "La Ròcchë",
- "sub": "lë Mbòshtë · Sacro",
+ "sub": "lë Mbòshtë, la rocca degli eremiti guerrieri",
  "pub": [
   {
    "t": "",
-   "txt": "Una rocca tra i boschi della Laga abitata da eremiti guerrieri: i Ranger del Bosco, che si addestrano qui e conoscono ogni sentiero. Non guidano chiunque. Guidano chi ha i contatti giusti.",
+   "capo": true,
+   "txt": "La Ròcchë non è un paese: è una montagna con venticinque villaggi addosso. Stanno sparsi sui fianchi della Laga, fra il Castellano e il Tordinum, sopra le sorgenti della Vezzola, a due giorni di cammino da Teramum: case di pietra scura, un forno, un solario, e intorno il bosco. Il villaggio più grande è [[lë Mbòshtë]], e dà il nome a tutti.\n\nIl nome di La Ròcchë viene dalla rocca del flamine di Teramum, che stava sul Colle Castello e oggi è un mucchio di pietre. Fra quelle rovine vivono gli [[eremiti guerrieri]]: i [[Ranger del Bosco]], che si addestrano qui e conoscono ogni sentiero della Laga. Non guidano chiunque. Guidano chi ha i contatti giusti.\n\nE in ogni casa della Ròcchë, prima o poi, qualcuno racconta di [[Marco Sciarra]], il brigante più grande che il Ducato abbia avuto. Era nato qui."
+  },
+  {
+   "t": "I. Com’è fatta",
+   "txt": "Non ci sono mura e non c’è una piazza. Ogni villa è un mucchietto di case attorno a una fontana o a un solario, e da una villa all’altra si va per mulattiere, nel bosco. Lë Mbòshtë sta in mezzo, sul punto dove si incrociano i sentieri. Sopra, sul Colle Castello, ci sono le rovine della rocca. Più in alto ancora, verso nord, il valico del Ceppo, dove i faggi sono piegati dalla neve.",
+   "tabella": {
+    "head": [
+     "Strada",
+     "Dove porta",
+     "Quanto ci vuole"
+    ],
+    "rows": [
+     [
+      "Il sentiero della Vezzola",
+      "Giù per la valle, verso Teramum",
+      "⟦Due giorni⟧"
+     ],
+     [
+      "Il sentiero del Ceppo",
+      "Al valico, e da lì a Lë Piana e alla valle del Castellano",
+      "⟦Una giornata⟧"
+     ],
+     [
+      "Il sentiero del Tordinum",
+      "A Curtënë, passando il fiume sotto Caiano",
+      "⟦Una giornata⟧"
+     ],
+     [
+      "I sentieri dei Ranger",
+      "Dappertutto",
+      "Non sono segnati, e non si chiedono"
+     ]
+    ]
+   },
    "img": "Mondo — La Ròcchë.jpg",
    "didascalia": "La Ròcchë"
+  },
+  {
+   "t": "II. I luoghi",
+   "txt": ""
+  },
+  {
+   "t": "Nel paese",
+   "liv": 3,
+   "txt": "· [[1. Lë Mbòshtë.]] La villa più grande: venti case, un forno comune, una fontana con tre cannelle. Qui scende la gente delle altre ville per il mercato d’autunno, e qui si lasciano i messaggi per gli eremiti.\n· [[2. La rocca.]] Sul Colle Castello, sopra lë Mbòshtë. Muri a secco, una cisterna, il basamento di una torre: quello che resta della rocca del flamine. ⟦È la casa degli eremiti guerrieri. Hanno rimesso il tetto a due stanze e all’ara, e il resto lo hanno lasciato al bosco.⟧\n· ⟦[[3. L’ara della rocca.]] Una stanza di pietra con un altare e una sola finestra a est. Ci pregano gli eremiti all’alba. Sull’altare c’è un sole di legno di faggio e, accanto, una pietra liscia di fiume.⟧\n· ⟦[[4. La casa degli Ammazzalorso.]] La casa più grande di lë Mbòshtë, con la stalla e il fienile. Gli Ammazzalorso sono la famiglia che conta: hanno le pecore, i castagneti e la parola. Il nome, dicono, viene da un antenato che uccise un orso col coltello. In casa tengono un coltello vecchio che dicono fosse di Marco Sciarra.⟧\n· ⟦[[5. La casa della fontana.]] A lë Mbòshtë, l’unica casa che dà da mangiare e da dormire a chi passa. La tiene Za’ Ghanne, vedova, con due figli grandi. Polenta, pecorino, porcini alla brace, castagne, e un letto vicino al fuoco.⟧\n· ⟦[[6. Il ceppo dei messaggi.]] Un tronco cavo accanto alla fontana. Chi vuole parlare con gli eremiti ci lascia un segno inciso su un pezzo di legno. Se il segno è giusto, qualcuno viene. Se no, il legno sparisce lo stesso.⟧"
+  },
+  {
+   "t": "Nei dintorni",
+   "liv": 3,
+   "txt": "· [[7. I solari delle ville.]] Il solario della Vecchia Madre ad Alvelli, il più bello della montagna; quello del Lucente Michele a Riano; quelli del Lucente Martino a Fioli e del Lucente Egidio ad Acquaratola, piccoli, con i tetti di lastre.\n· [[8. Il Bosco Martese.]] Il bosco grande, di faggi secolari e abeti, fra La Ròcchë e la valle del Tordinum. I vecchi dicono che è sacro a Bellator, il dio della guerra, e che un condottiero antico lo attraversò con il suo esercito. Fino a poco fa lo si passava solo con la scure e la roncola. ⟦È il bosco dove si addestrano i Ranger.⟧\n· [[9. Il valico del Ceppo.]] In alto, fra i faggi torti dalla neve. Da qui si scende verso il Castellano e Lë Piana.\n· [[10. Le cascate.]] La Morricana, un salto d’acqua alto come una torre in mezzo agli abeti, vicino alla villa di Ceppo, e la Cavata, più nascosta. ⟦D’inverno la Morricana gela, e i ragazzi ci fanno la prova del coraggio.⟧\n· [[11. Le sorgenti della Vezzola.]] Sotto le ville, dove nasce il fiume che arriva sotto le mura di Teramum.\n· [[12. Le ville bruciate.]] Serra, con il solario senza tetto, e Tavolero, con le rovine del solario del Lucente Flaviano su un crinale. Le bruciarono i briganti, in una guerra fra loro e i soldati, e nessuno è più tornato.\n· [[13. Castiglione.]] Una villa vicino a Riano, poche case. Qui è nato Marco Sciarra.\n· [[14. Le altre ville.]] Belvedere, Ceppo, Colle, Faiete, Forno, Licciano, Paranesi, Pomarolo, Tevere e le altre: dieci case ognuna, pastori, castagnari, cercatori di porcini."
+  },
+  {
+   "t": "III. La gente e le usanze",
+   "txt": "I roccolani parlano poco e vedono tutto. Sono gente di bosco: portano le pecore ai prati d’estate, raccolgono le castagne e i porcini d’autunno, tagliano la legna che serve. Degli eremiti non parlano con i forestieri. Fra loro li chiamano «quelli di sopra», e quando qualcuno si perde nel bosco sanno a chi chiedere.\n\n· [[Marco Sciarra.]] Un pastore povero di Castiglione, che rubava le bestie ai grandi signori e arrivò a guidare mille uomini. Si chiamava da solo il Flagello della Fiamma, mandato contro gli usurai e contro chi tiene i soldi fermi. Ai contadini non toglieva niente; a un matrimonio, a Ripattoni di Bëllindë, ballò con le donne e regalò alla sposa i soldi raccolti fra i suoi. I vecchi lo chiamano ancora il re della campagna. Lo uccise un suo compagno, per avere il perdono.\n· [[Il Lucente Lorenzo.]] Il 10 agosto, con la processione da una villa all’altra, e la sera i fuochi sui colli: si vedono fino a Teramum.\n· [[I porcini.]] Ad agosto, quando escono, tutta la Ròcchë è nel bosco, e la sera si arrostiscono sulla brace.\n· [[Le streghe della Laga.]] Di notte cavalcano i venti ed entrano dal buco della serratura a rubare il fiato a chi dorme. Sulla soglia si lascia il sale, o una scopa con tante setole: devono contare tutto fino all’alba.\n· ⟦[[La pietra e il sole.]] In ogni solario delle ville, accanto al sole di legno, c’è una pietra di fiume. Il sacerdote dice che è per ricordare il Lucente Lorenzo. Le donne la toccano prima di uscire, e non per il Lucente Lorenzo.⟧\n· [[La moneta.]] Qui una forma di pecorino vale più di una manciata di quattrini, e un buon coltello quanto un grosso d’argento."
+  },
+  {
+   "t": "IV. I guai di oggi",
+   "txt": "· ⟦[[Gli eremiti sono pochi.]] Una volta erano cinquanta. Oggi, dicono le donne di lë Mbòshtë, sono meno di venti, e i più giovani hanno i capelli grigi.⟧\n· ⟦[[Forestieri nel bosco.]] Quest’estate i pastori hanno visto uomini nel Bosco Martese che non erano né pastori né Ranger: vestiti da città, con le carte e i compassi. Sono spariti prima che qualcuno chiedesse loro qualcosa.⟧\n· ⟦[[La terra trema.]] La fontana di lë Mbòshtë, che non si era mai fermata, a settembre è rimasta asciutta per tre giorni.⟧"
   }
  ],
  "illustrazione": "Mondo — La Ròcchë.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«Il bosco ti vede prima che tu veda lui.»",
+  "cite": "⟦Detto dei Ranger del Bosco⟧"
+ }
 }

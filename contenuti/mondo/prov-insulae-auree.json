@@ -11,20 +11,46 @@
  "mappa": null,
  "colore": "#2E6E5E",
  "scheda": {
-  "Chi comanda": "Sulla carta un Governatore Imperiale; davvero, il Consiglio dei Capitani",
+  "Governo": "Sulla carta un Governatore Imperiale; davvero, il Consiglio dei Capitani",
+  "Chi comanda": "Il Governatore Imperiale Ademaro Nerion, dentro il suo palazzo; fuori, i Signori del Mare",
+  "Capitale": "⟦Ashkarn, il porto grande dell’isola maggiore⟧",
   "Popolazione": "Circa un milione e mezzo, di ogni popolo",
-  "Vive di": "Ufficialmente miniere, perle e porpora; in pratica pirateria e contrabbando",
+  "Popoli": "Isolani dalla pelle bronzea, esuli dell’Impero, mezzelfi, nani in fuga, halfling in cerca di avventura",
+  "Casata": "Nessuna: qui il rispetto non si eredita",
   "Fede": "Nerio e il mare; la Fiamma quasi non c’è",
-  "Dialetto": "L’Ashkari, un miscuglio di tutte le lingue, con parole di mare tutte sue"
+  "Vive di": "Ufficialmente miniere, perle e porpora; in pratica pirateria e contrabbando",
+  "Esercito": "Nessuno dell’Impero: le navi dei capitani, ognuna per conto suo",
+  "Dialetto": "L’Ashkari, un miscuglio di tutte le lingue, con parole di mare tutte sue",
+  "Motto": "⟦«Chi ha la nave, ha la legge»⟧"
  },
  "gm": [
   {
-   "t": "",
-   "txt": "· I Naviganti Grigi hanno qui porti sicuri.\n· Pericoli: guerre tra Signori del Mare, mostri degli abissi, e la posizione perfetta per uno sbarco segreto di Sylva Noctis.\n· Rovine di torri di pietre giganti, più vecchie dell’Impero. I frammenti di Noxtua caddero qui con violenza, e le grotte marine sono piene degli echi della luna morta.\n· Nei vecchi documenti il Governatore si chiamava Aldric Nerion: il nome è stato cambiato, perché Aldric è il principe della guerra. Ora è Ademaro Nerion."
+   "t": "I porti dei Naviganti Grigi",
+   "txt": "I Naviganti Grigi hanno qui porti sicuri. ⟦Adamus è il capo della Gilda dei Naviganti Grigi (Atto V): i contatti, i favori e i debiti della Gilda nelle isole ora sono suoi, che lo sappia o no. Un capitano delle isole può presentarsi a Julia Nova a riscuotere, o a offrire.⟧"
+  },
+  {
+   "t": "Il punto di sbarco",
+   "txt": "Le isole sono la posizione perfetta per uno sbarco segreto di Sylva Noctis. Dopo la sconfitta all’assedio di Julia Nova le Navi Rosse non hanno più mandato navi, per ora. ⟦Se tornano, possono partire da una baia delle isole che nessun capitano controlla, o che un capitano ha venduto.⟧"
+  },
+  {
+   "t": "Le torri e la luna morta",
+   "txt": "Le rovine di torri di pietre giganti sono più vecchie dell’Impero. I frammenti di Noxtua caddero qui con violenza, e le grotte marine sono piene degli echi della luna morta: sono i Fantasmi del Mare dei racconti."
+  },
+  {
+   "t": "Mostri e guerre",
+   "txt": "Pericoli: guerre tra Signori del Mare, mostri degli abissi, e la posizione delle isole sulle rotte del sud-ovest, dove Vesperia e le isole si contendono ogni passaggio."
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· ⟦Un capitano delle isole entra nel Covo della Conchiglia con un vecchio debito della Gilda da riscuotere, e una proposta: navi, se la Crociata arriva al mare.⟧\n· ⟦Un carico di porpora, nascosto nella stiva di una nave di Julia Nova, era destinato a Teramum: chi a Teramum si veste di porpora di contrabbando?⟧\n· ⟦Voci dai porti delle isole: navi senza bandiera in una baia dell’arcipelago, e marinai che tornano con lo sguardo vuoto.⟧"
+  },
+  {
+   "t": "Da allineare",
+   "txt": "· Nei vecchi documenti il Governatore si chiamava Aldric Nerion: il nome è stato cambiato, perché Aldric è il principe della guerra. Ora è Ademaro Nerion.\n· I testi di lore chiamano la provincia Isole di Ashkarn, e da lì viene il nome del dialetto. Qui Ashkarn è proposta come nome della capitale.\n· I testi di lore dicono che le isole hanno «la flotta più temuta»; la voce dell’Impero dice che le sole flotte vere sono quelle di Vesperia e di Luminor. Qui le due cose tornano così: le isole non hanno una flotta, ma tante navi di tanti capitani.\n· Il baratto preferito alla moneta viene dal Manuale."
   },
   {
    "t": "Da decidere",
-   "txt": "· Se le coste tolte ai Saladax erano quelle delle Insulae Auree o di Vesperia."
+   "txt": "· Se le coste tolte ai Saladax erano quelle delle Insulae Auree o di Vesperia.\n· Il nome della capitale (proposta: Ashkarn) e quello delle due isole grandi."
   }
  ],
  "parent": "impero-aureo",
@@ -37,21 +63,109 @@
   {
    "t": "",
    "capo": true,
-   "txt": "Due grandi isole e un arcipelago al largo delle coste di sud-ovest: montagne aspre, coste frastagliate, grotte marine, miniere nascoste. Aurax mandò due flotte a conquistarle. La prima affondò nelle tempeste, la seconda trovò porti vuoti e clan spariti nelle grotte. Alla fine si accontentò di un forziere d’oro all’anno. L’Impero dice che le isole sono sue da allora."
+   "txt": "Due grandi isole e un arcipelago al largo delle coste di sud-ovest: montagne aspre, coste frastagliate, grotte marine, miniere nascoste. Per l’Impero sono una delle dieci province. Per chi ci vive sono le isole, e basta.\n\nIl rispetto, qui, si guadagna con la forza e con l’astuzia, non con il sangue. Comandano i capitani che hanno più navi, e il Governatore che manda Solaria firma documenti che nessuno legge."
   },
   {
-   "t": "I. Chi comanda",
-   "txt": "Il [[Governatore Imperiale]] firma documenti che nessuno legge, chiuso nel suo palazzo dorato. Il potere vero è del [[Consiglio dei Capitani]], i Signori del Mare, che tengono una pace armata tra i clan di pirati. Ogni anno un capitano porta ancora a Solaria il forziere d’oro. Ogni anno è un po’ più piccolo.",
+   "t": "I. In breve, la sua storia",
+   "txt": "Le isole erano abitate da prima dell’Impero, e da prima ancora: sulle coste restano torri di pietre enormi, messe una sull’altra senza calce, che nessuno sa chi abbia costruito.\n\nAurax mandò due flotte a conquistarle. La prima affondò nelle tempeste, la seconda trovò porti vuoti e clan spariti nelle grotte. Alla fine si accontentò di un forziere d’oro all’anno, portato a Solaria dai capitani. L’Impero dice che le isole sono sue da allora. Le isole non sono mai state d’accordo.\n\n⟦Nei secoli i porti delle isole sono diventati il rifugio di chi scappava dall’Impero: debitori, eretici, disertori, figli cadetti senza eredità. Nella Guerra delle Due Lune i capitani combatterono le Navi Rosse per conto loro, e si tennero tutto quello che presero.⟧",
    "img": "Mondo — Le Insulae Auree.png",
    "didascalia": "Le Insulae Auree"
   },
   {
-   "t": "II. Chi ci vive",
-   "txt": "Esuli dell’Impero, isolani dalla pelle bronzea, mezzelfi cacciati da altrove, nani in fuga, halfling in cerca di avventura. Qui il rispetto si guadagna con la forza e con l’astuzia, non con il sangue."
+   "t": "II. Come si governa",
+   "txt": ""
   },
   {
-   "t": "III. Vicini e nemici",
-   "txt": "Con Vesperia, una lotta per le rotte. Con Sidepondia, odio giurato. Con i Naviganti Grigi di Julia Nova, ottimi affari."
+   "t": "Il Governatore Imperiale",
+   "liv": 3,
+   "txt": "Il [[Governatore Imperiale]], oggi Ademaro Nerion, firma documenti che nessuno legge, chiuso nel suo palazzo dorato. Lo manda Solaria, e porta il voto delle isole al Concilio dei Reggenti. ⟦Lo paga Solaria, quando se ne ricorda. Lo tengono vivo i capitani, perché un governatore tranquillo fa comodo a tutti.⟧"
+  },
+  {
+   "t": "Il Consiglio dei Capitani",
+   "liv": 3,
+   "txt": "Il potere vero è del [[Consiglio dei Capitani]], i Signori del Mare, che tengono una pace armata tra i clan di pirati. Ogni anno un capitano porta ancora a Solaria il forziere d’oro. Ogni anno è un po’ più piccolo.\n\n⟦Il Consiglio si riunisce in una grotta sul mare. Chi entra lascia la spada fuori; il coltello, non sempre.⟧"
+  },
+  {
+   "t": "La legge delle navi",
+   "liv": 3,
+   "txt": "⟦Una nave delle isole è una piccola repubblica. Il capitano comanda in mare; in porto decide l’equipaggio. Il bottino si divide a parti scritte prima di partire, e chi ruba ai compagni finisce legato a uno scoglio con l’alta marea.⟧"
+  },
+  {
+   "t": "Chi ci vive",
+   "liv": 3,
+   "txt": "Esuli dell’Impero, isolani dalla pelle bronzea, mezzelfi cacciati da altrove, nani in fuga, halfling in cerca di avventura. Gli isolani sono marinai asciutti e superstiziosi, e secondo le autorità imperiali «occasionalmente pirati». ⟦Nelle montagne dell’interno vivono clan di pastori che non scendono al mare, e che dell’Impero hanno sentito parlare solo dagli esattori.⟧"
+  },
+  {
+   "t": "La fede",
+   "liv": 3,
+   "txt": "La Fiamma quasi non c’è. Qui si prega [[Nerio]], il mare, più di Valerus, e nessuno se ne vergogna. I minatori pregano la terra, i superstiziosi consultano oracoli in fondo alle grotte. E tutti, di notte, hanno paura dei [[Fantasmi del Mare]]: luci e voci nelle grotte marine, che i vecchi dicono siano l’eco di una luna morta."
+  },
+  {
+   "t": "III. Le terre",
+   "tabella": {
+    "head": [
+     "Terra",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "Le due isole grandi",
+      "Montagne aspre, boschi, pastori e miniere nascoste. ⟦Sulla maggiore stanno Ashkarn e il palazzo del Governatore; l’altra, più a nord, è tutta roccia e clan.⟧"
+     ],
+     [
+      "L’arcipelago",
+      "Decine di isole piccole, ⟦ognuna con il suo capitano⟧: porti nascosti, grotte marine, correnti che cambiano ogni ora."
+     ],
+     [
+      "Le grotte marine",
+      "Dove i clan sparirono davanti alla flotta di Aurax, e dove si nasconde ancora chi deve nascondersi."
+     ],
+     [
+      "Le torri dei giganti",
+      "Torri di pietre enormi, più vecchie dell’Impero, sparse sulle coste. ⟦Ci si riparano le greggi. Nessuno ci dorme volentieri.⟧"
+     ],
+     [
+      "Le miniere",
+      "Oro, argento e rame. Ufficialmente dell’Impero; in pratica di chi le scava."
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito",
+   "txt": "Nelle isole non c’è una Falange e non c’è una flotta: ci sono tante navi, ognuna del suo capitano. Messe insieme farebbero paura a chiunque. ⟦Insieme sono state una volta sola, contro le Navi Rosse.⟧",
+   "tabella": {
+    "head": [
+     "Forza",
+     "Quanti",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "Le navi dei Signori del Mare",
+      "⟦Un centinaio, da guerra e da corsa⟧",
+      "Al proprio capitano"
+     ],
+     [
+      "⟦La guardia del Governatore⟧",
+      "⟦Qualche decina di uomini⟧",
+      "⟦Al Governatore, finché è pagata⟧"
+     ],
+     [
+      "⟦I clan delle montagne⟧",
+      "⟦Pastori armati⟧",
+      "⟦Al capo del clan⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Il mare e il denaro",
+   "txt": "Ufficialmente le isole vivono di miniere, di perle e di porpora, il colore dei re che si fa con le conchiglie. In pratica vivono di pirateria, di contrabbando e di commerci che non pagano dazio. Si preferisce il baratto alla moneta. ⟦Una cassa di porpora vale più di un sacco di Lune d’Argento, e non si svaluta.⟧\n\nCon i [[Naviganti Grigi]] di Julia Nova le isole fanno ottimi affari. ⟦Tutto quello che non deve pagare dazio, prima o poi, passa per un porto delle isole.⟧"
+  },
+  {
+   "t": "VI. I mali delle isole oggi",
+   "txt": "· [[Le guerre fra i capitani.]] La pace del Consiglio è armata, e ogni tanto qualcuno sfodera.\n· [[I mostri degli abissi.]] Nel mare intorno alle isole ci sono cose che non salgono mai in superficie, finché non salgono.\n· [[Vesperia.]] Una lotta per le rotte. Contro i pirati delle isole Vesperia si allea con Sidepondia.\n· [[Sidepondia.]] Odio giurato: le sue galere sono le più veloci di Ea, e danno la caccia ai pirati delle isole.\n· [[Il forziere.]] Ogni anno più piccolo. ⟦Un giorno Solaria se ne accorgerà, o un anno il forziere non partirà affatto.⟧"
   }
  ],
  "epigrafe": {
