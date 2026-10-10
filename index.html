@@ -2042,13 +2042,213 @@ html body #zoomctl input#aoeSize::-webkit-inner-spin-button, #zoomctl #aoeSize::
 #modal .sch3 .s3-att-t b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #modal .sch3 .s3-att-t small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #modal .sch3 .s3-lettura .s3-la{background-size:cover}
+/* le sei pagine (v197): regole del prototipo chiuse in .sch3 */
+.sch3 .s3-pagina{display:none;flex:1;min-height:0}
+.sch3 .s3-pagina.on{display:flex;flex-direction:column}
+.sch3 .s3-pagina>div{flex:1;min-height:0;display:grid}
+.sch3 .s3-pg-att{grid-template-columns:minmax(0,2.1fr) minmax(0,1fr)}
+.sch3 .s3-pg-inv{grid-template-columns:minmax(0,.95fr) minmax(0,1.6fr) minmax(0,1fr)}
+.sch3 .s3-pg-inc,.sch3 .s3-pg-cap{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.sch3 .s3-pagina .s3-col{border-right:1px solid rgba(217,177,92,.14)}
+.sch3 .s3-mazzo{margin-bottom:20px}
+.sch3 .s3-mazzo h4{display:flex;align-items:center;gap:8px;font:400 15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.12em;color:var(--c);margin:0 0 8px 2px}
+.sch3 .s3-mazzo h4 i{width:9px;height:9px;transform:rotate(45deg);background:var(--c);box-shadow:0 0 8px var(--c)}
+.sch3 .s3-carte{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.sch3 .s3-carta{display:flex;flex-direction:column;border-radius:12px;overflow:hidden;cursor:pointer;border:1px solid rgba(217,177,92,.3);background:linear-gradient(180deg,#16171c,#0c0d10);box-shadow:0 10px 24px rgba(0,0,0,.5);transition:transform .15s,border-color .15s}
+.sch3 .s3-carta:hover,.sch3 .s3-carta.sel{transform:translateY(-3px);border-color:var(--o1);box-shadow:0 0 0 1px rgba(217,177,92,.25),0 16px 30px rgba(0,0,0,.6)}
+.sch3 .s3-ca-art{position:relative;height:120px;background:var(--a) center/cover,radial-gradient(circle at 50% 40%,#5a4a30,#1a1610 75%)}
+.sch3 .s3-ca-art::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,#16171c)}
+.sch3 .s3-ca-tipo{position:absolute;top:8px;left:8px;z-index:1;font:12px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.12em;padding:2px 8px;border-radius:10px;background:rgba(0,0,0,.6);color:var(--c);border:1px solid var(--c)}
+.sch3 .s3-ca-in{padding:4px 14px 14px;display:flex;flex-direction:column;flex:1}
+.sch3 .s3-ca-in>b{font:400 22px/1.05 'Mr Eaves Small Caps',Georgia,serif;color:#F3EBD6}
+.sch3 .s3-ca-in>small{font:italic 14px 'Bookinsanity',Georgia,serif;color:var(--dim)}
+.sch3 .s3-ca-num{display:flex;gap:10px;margin:10px 0 8px}
+.sch3 .s3-ca-num>div{flex:1;text-align:center;padding:6px 4px;border-radius:8px;background:rgba(0,0,0,.4);border:1px solid rgba(217,177,92,.2)}
+.sch3 .s3-ca-num small{display:block;font:11px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.12em;color:var(--sp)}
+.sch3 .s3-ca-num em{font:normal 28px/1.1 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1)}
+.sch3 .s3-ca-num em.s3-ts2{font-size:18px;color:#C7B6EE}
+.sch3 .s3-ca-num i{display:block;font:italic 12px 'Bookinsanity',Georgia,serif;color:var(--dim)}
+.sch3 .s3-ca-in p{font:italic 14px/1.35 'Bookinsanity',Georgia,serif;color:var(--dim);flex:1;margin-bottom:10px}
+.sch3 .s3-tira.s3-grande{height:40px;width:100%}
+.sch3 .s3-regola{padding:12px 14px;margin-bottom:8px;border-radius:10px;border:1px solid rgba(217,177,92,.16);background:rgba(255,255,255,.02)}
+.sch3 .s3-regola b{font:400 19px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1)}
+.sch3 .s3-regola p{font:15px/1.45 'Bookinsanity',Georgia,serif;color:#CFC5AE;margin-top:4px}
+.sch3 .s3-slots{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sch3 .s3-slot{display:flex;align-items:center;gap:10px;padding:8px;border-radius:10px;border:1px dashed rgba(217,177,92,.2);background:rgba(0,0,0,.25)}
+.sch3 .s3-slot.pieno{border:1px solid rgba(217,177,92,.45);background:linear-gradient(90deg,rgba(217,177,92,.1),transparent);cursor:pointer}
+.sch3 .s3-si{width:46px;height:46px;flex:none;border-radius:8px;background-position:center;background-size:contain;background-repeat:no-repeat;background-color:#1a1610;box-shadow:inset 0 0 0 1px rgba(217,177,92,.3)}
+.sch3 .s3-slot small{display:block;font:12px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.1em;color:var(--sp)}
+.sch3 .s3-slot b{font:400 17px/1.1 'Mr Eaves Small Caps',Georgia,serif;color:#E8D7AE}
+.sch3 .s3-slot:not(.pieno) b{color:var(--sp)}
+.sch3 .s3-carico .s3-cb{height:12px;border-radius:7px;overflow:hidden;background:#050806;box-shadow:inset 0 1px 3px #000,0 0 0 1px rgba(217,177,92,.45)}
+.sch3 .s3-carico .s3-cb i{display:block;height:100%;background:linear-gradient(90deg,#0B3A22,#3FA35F,#8FDC8A)}
+.sch3 .s3-carico p{margin-top:6px;font:16px 'Mr Eaves Small Caps',Georgia,serif;color:var(--dim)}
+.sch3 .s3-carico b{font:400 22px 'Mr Eaves Small Caps',Georgia,serif;color:#F3EBD6}
+.sch3 .s3-monete{display:flex;gap:8px}
+.sch3 .s3-monete span{flex:1;display:flex;flex-direction:column;align-items:center;padding:10px 4px;border-radius:10px;background:rgba(0,0,0,.3);border:1px solid rgba(217,177,92,.2);font:13px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.06em;color:var(--dim)}
+.sch3 .s3-monete i{width:30px;height:30px;border-radius:50%;margin-bottom:4px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.35),0 3px 6px rgba(0,0,0,.6)}
+.sch3 .s3-monete b{font:400 24px 'Mr Eaves Small Caps',Georgia,serif;color:#F3EBD6}
+.sch3 .s3-mo i{background:radial-gradient(circle at 35% 30%,#fff2c0,#e0b85a 50%,#8a6420)}
+.sch3 .s3-ma i{background:radial-gradient(circle at 35% 30%,#fff,#c9ccd2 50%,#6d727b)}
+.sch3 .s3-mp i{background:radial-gradient(circle at 35% 30%,#fff,#dfe8f0 45%,#8aa0b5)}
+.sch3 .s3-filtri{display:flex;gap:6px;margin-bottom:12px}
+.sch3 .s3-filtri button{height:34px;padding:0 14px;border-radius:17px;border:1px solid rgba(217,177,92,.3);font:16px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.03em;color:var(--dim)}
+.sch3 .s3-filtri button.on{border-color:var(--o1);color:var(--o1);background:rgba(217,177,92,.1)}
+.sch3 .s3-invcat{font:400 15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.12em;color:var(--o2);margin:14px 0 8px;display:flex;gap:8px;align-items:baseline}
+.sch3 .s3-invcat small{color:var(--sp)}
+.sch3 .s3-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
+.sch3 .s3-tile{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px 10px;border-radius:12px;border:1px solid rgba(217,177,92,.18);background:radial-gradient(120% 80% at 50% 0%,rgba(217,177,92,.08),transparent 60%),rgba(255,255,255,.015);text-align:center}
+.sch3 .s3-tile:hover,.sch3 .s3-tile.sel{border-color:var(--o1);background:radial-gradient(120% 80% at 50% 0%,rgba(217,177,92,.18),transparent 60%),rgba(255,255,255,.02)}
+.sch3 .s3-ti{width:64px;height:64px;background-position:center;background-size:contain;background-repeat:no-repeat;filter:drop-shadow(0 4px 6px rgba(0,0,0,.6))}
+.sch3 .s3-tile b{font:400 15px/1.1 'Mr Eaves Small Caps',Georgia,serif;color:#E8D7AE}
+.sch3 .s3-tile em{position:absolute;top:6px;right:8px;font:normal 14px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1)}
+.sch3 .s3-tile.equip::after{content:'addosso';position:absolute;top:6px;left:6px;font:10px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.08em;color:#2a1c08;background:var(--o2);border-radius:6px;padding:1px 5px}
+.sch3 .s3-azinv{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.sch3 .s3-pagina .s3-lettura{min-height:300px}
+.sch3 .s3-incband{display:flex;gap:10px;align-items:center;margin-bottom:16px;padding:12px;border-radius:12px;background:linear-gradient(90deg,rgba(150,120,230,.12),transparent);border:1px solid rgba(180,155,232,.3)}
+.sch3 .s3-incband>div:not(.s3-nota){padding:4px 16px;border-right:1px solid rgba(180,155,232,.25)}
+.sch3 .s3-incband small{display:block;font:12px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.1em;color:#C7B6EE}
+.sch3 .s3-incband b{font:400 26px 'Mr Eaves Small Caps',Georgia,serif;color:#F0EAFF}
+.sch3 .s3-incband .s3-nota{font:italic 14px 'Bookinsanity',Georgia,serif;color:var(--dim);margin-left:6px}
+.sch3 .s3-livello{margin-bottom:18px}
+.sch3 .s3-lv-h{display:flex;align-items:center;gap:14px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(180,155,232,.25)}
+.sch3 .s3-lv-h h4{font:400 22px 'Mr Eaves Small Caps',Georgia,serif;color:#E6DCFF}
+.sch3 .s3-lv-h em{margin-left:auto;font:normal 16px 'Mr Eaves Small Caps',Georgia,serif;color:#C7B6EE}
+.sch3 .s3-incs2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.sch3 .s3-inc{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:10px;cursor:pointer;border:1px solid rgba(180,155,232,.2);background:linear-gradient(90deg,rgba(120,100,200,.10),rgba(255,255,255,.01))}
+.sch3 .s3-inc:hover,.sch3 .s3-inc.sel{border-color:#C7B6EE;background:linear-gradient(90deg,rgba(150,120,230,.2),rgba(255,255,255,.02))}
+.sch3 .s3-ii{width:48px;height:48px;flex:none;border-radius:50%;background-position:center;background-size:cover;background-color:#1a1630;box-shadow:0 0 0 2px #0b0a10,0 0 0 3px rgba(180,155,232,.5)}
+.sch3 .s3-inc-t{flex:1;min-width:0}
+.sch3 .s3-inc-t b{display:block;font:400 19px/1.1 'Mr Eaves Small Caps',Georgia,serif;color:#F0EAFF}
+.sch3 .s3-inc-t small{font:italic 13px 'Bookinsanity',Georgia,serif;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.sch3 .s3-conc,.sch3 .s3-rit{width:22px;height:22px;flex:none;border-radius:50%;display:grid;place-items:center;font:12px 'Mr Eaves Small Caps',Georgia,serif;color:#0b0a10;background:#C7B6EE}
+.sch3 .s3-rit{background:#9FD3E8}
+.sch3 .s3-inc .s3-tira{height:34px;padding:0 12px;font-size:16px;border-color:rgba(180,155,232,.5);color:#E6DCFF}
+.sch3 .s3-capsez{margin-bottom:20px}
+.sch3 .s3-capsez h4{font:400 22px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(217,177,92,.25)}
+.sch3 .s3-capsez h4 small{font:14px 'Mr Eaves Small Caps',Georgia,serif;color:var(--sp)}
+.sch3 .s3-capg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sch3 .s3-capc{display:flex;gap:12px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid rgba(217,177,92,.16);background:rgba(255,255,255,.02)}
+.sch3 .s3-capc:hover,.sch3 .s3-capc.sel{border-color:var(--o1);background:rgba(217,177,92,.06)}
+.sch3 .s3-ci2{width:52px;height:52px;flex:none;border-radius:10px;background-position:center;background-size:cover;background-color:#1a1610;box-shadow:inset 0 0 0 1px rgba(217,177,92,.4)}
+.sch3 .s3-capc b{font:400 19px/1.1 'Mr Eaves Small Caps',Georgia,serif;color:#F3EBD6}
+.sch3 .s3-capc small{display:block;font:italic 13px 'Bookinsanity',Georgia,serif;color:var(--o3)}
+.sch3 .s3-capc p{font:14px/1.35 'Bookinsanity',Georgia,serif;color:var(--dim);margin-top:3px}
+.sch3 .s3-cmps{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sch3 .s3-cmp{padding:10px 12px;border-radius:10px;background:rgba(0,0,0,.3);border:1px solid rgba(217,177,92,.16)}
+.sch3 .s3-cmp small{display:block;font:12px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.1em;color:var(--o2)}
+.sch3 .s3-cmp b{font:400 17px 'Mr Eaves Small Caps',Georgia,serif;color:#E8D7AE}
+.sch3 .s3-pg-bg{padding:22px;display:block!important;overflow:hidden}
+.sch3 .s3-libro{height:100%;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);border-radius:8px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.6),0 0 0 1px rgba(217,177,92,.4)}
+.sch3 .s3-pagina-sx{overflow:auto;padding:30px 44px;background:radial-gradient(ellipse at 100% 50%,rgba(120,80,30,.35),transparent 30%),linear-gradient(180deg,#f0e4c7,#dfcda6);color:#2b1f14;scrollbar-color:#b49461 transparent}
+.sch3 .s3-lead{font:italic 24px/1.4 'Bookinsanity',Georgia,serif;color:#5a3418;text-align:center;padding:0 30px 20px;margin-bottom:10px;border-bottom:2px solid #a88c62}
+.sch3 .s3-capitolo{position:relative;padding:14px 0 6px 52px}
+.sch3 .s3-cnum{position:absolute;left:0;top:18px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:18px 'Mr Eaves Small Caps',Georgia,serif;color:#f6e3a8;background:radial-gradient(circle at 35% 30%,#a8402a,#6e1d12);box-shadow:0 2px 4px rgba(60,20,10,.5)}
+.sch3 .s3-capitolo small{font:13px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.1em;color:#8a5a2a}
+.sch3 .s3-capitolo h2{font:400 28px/1 'Mr Eaves Small Caps',Georgia,serif;color:#7a2a12;margin:2px 0 6px}
+.sch3 .s3-capitolo p{font:17px/1.6 'Bookinsanity',Georgia,serif;color:#2b1f14}
+.sch3 .s3-capitolo p.s3-capo::first-letter{float:left;font:400 64px/.8 'Nodesto Caps Condensed',Georgia,serif;color:#7a2a12;padding:6px 8px 0 0}
+.sch3 .s3-pagina-dx{overflow:auto;padding:26px 26px;background:linear-gradient(90deg,rgba(0,0,0,.25),transparent 6%),linear-gradient(180deg,#e9dbbb,#d8c49b);color:#2b1f14;border-left:1px solid #b49461}
+.sch3 .s3-pagina-dx h3{color:#7a2a12;border-color:#a88c62}
+.sch3 .s3-pagina-dx h3 small{color:#8a6a4a}
+.sch3 .s3-breve>div{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid rgba(120,90,40,.25)}
+.sch3 .s3-breve small{font:15px 'Mr Eaves Small Caps',Georgia,serif;color:#8a5a2a}
+.sch3 .s3-breve b{font:400 16px 'Mr Eaves Small Caps',Georgia,serif;color:#2b1f14;text-align:right}
+.sch3 .s3-perso{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sch3 .s3-perso>div{padding:8px 10px;border-radius:6px;border:1px dashed rgba(120,90,40,.4)}
+.sch3 .s3-perso small{font:13px 'Mr Eaves Small Caps',Georgia,serif;color:#8a5a2a}
+.sch3 .s3-perso p{font:italic 15px 'Bookinsanity',Georgia,serif;color:#8a7a60}
+.sch3 .s3-prog{font:15px/1.5 'Bookinsanity',Georgia,serif;color:#3b2a18}
+.sch3 .s3-pg-dia{grid-template-columns:320px minmax(0,1fr);padding:22px;gap:22px}
+.sch3 .s3-indice{display:flex;flex-direction:column;gap:8px}
+.sch3 .s3-nuova{height:46px;border-radius:8px;text-align:center;font:19px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1);border:1px dashed var(--o2);background:rgba(217,177,92,.06)}
+.sch3 .s3-voce{padding:12px 14px;border-radius:10px;border:1px solid rgba(217,177,92,.16);background:rgba(255,255,255,.02);cursor:pointer}
+.sch3 .s3-voce.on{border-color:var(--o1);background:rgba(217,177,92,.08)}
+.sch3 .s3-voce small{font:12px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.08em;color:var(--o3)}
+.sch3 .s3-voce b{display:block;font:400 20px 'Mr Eaves Small Caps',Georgia,serif;color:#F3EBD6}
+.sch3 .s3-voce p{font:italic 14px 'Bookinsanity',Georgia,serif;color:var(--dim)}
+.sch3 .s3-solo{margin-top:auto;font:italic 14px 'Bookinsanity',Georgia,serif;color:var(--sp);text-align:center}
+.sch3 .s3-foglio{display:flex;flex-direction:column;border-radius:8px;padding:30px 48px 22px;background:linear-gradient(180deg,#f0e4c7,#dfcda6);box-shadow:0 18px 40px rgba(0,0,0,.6),0 0 0 1px rgba(217,177,92,.4);color:#2b1f14}
+.sch3 .s3-tit{background:none;border:0;outline:0;font:400 40px 'Mr Eaves Small Caps',Georgia,serif;color:#7a2a12;border-bottom:2px solid #a88c62;padding-bottom:6px}
+.sch3 .s3-meta{display:flex;gap:16px;margin:8px 0 14px;font:14px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.06em;color:#8a5a2a}
+.sch3 .s3-meta .es{margin-left:auto;color:#a8402a;font-style:italic}
+.sch3 .s3-righe{flex:1;outline:0;font:italic 21px/36px 'Bookinsanity',Georgia,serif;color:#2b1f14;background:repeating-linear-gradient(180deg,transparent 0 35px,rgba(120,90,40,.25) 35px 36px);padding-top:2px;overflow:auto}
+.sch3 .s3-piede{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+.sch3 .s3-piede .s3-tira{width:130px;color:#3b2714;border-color:rgba(110,80,40,.5);background:rgba(255,255,255,.35)}
+.sch3 .s3-piede .s3-pri2{background:#2b1f14;color:#f2dfae;border-color:#1a1108}
+.sch3 .s3-ii.vuota{display:grid;place-items:center;font:22px serif;color:#C7B6EE;background:radial-gradient(circle at 40% 30%,#3a2f6a,#14102a)}
+.sch3 .s3-capg{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.sch3 .s3-mp i{background:radial-gradient(circle at 35% 30%,#ffffff,#cfe3f2 40%,#7d9bb8 75%,#4d6782)!important;box-shadow:inset 0 -3px 0 rgba(0,0,0,.3),0 0 10px rgba(160,200,240,.45),0 3px 6px rgba(0,0,0,.6)}
+.sch3 .s3-pagina.on{flex:1;min-height:0;display:flex;flex-direction:column}
+.sch3 .s3-pagina>div{flex:1;min-height:0;display:grid}
+.sch3 .s3-pagina .s3-col{overflow:auto;padding:18px 20px 30px;scrollbar-width:thin;scrollbar-color:#4a3e26 transparent}
+.sch3 .s3-ca-art{background-image:var(--a),radial-gradient(circle at 50% 40%,#5a4a30,#1a1610 75%);background-size:cover;background-position:center}
+.sch3 .s3-mazzo h4.s3-az,.sch3 .s3-carta.s3-az{--c:var(--az)}.sch3 .s3-mazzo h4.s3-bo,.sch3 .s3-carta.s3-bo{--c:var(--bo)}.sch3 .s3-mazzo h4.s3-gr,.sch3 .s3-carta.s3-gr{--c:var(--gr)}.sch3 .s3-mazzo h4.s3-re,.sch3 .s3-carta.s3-re{--c:var(--re)}
+.sch3 .s3-carta .s3-tira{margin-top:auto}
+.sch3 .s3-fx .fxadv{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sch3 .s3-fx button{padding:6px 10px;border-radius:6px;border:1px solid rgba(217,177,92,.35);font:16px 'Mr Eaves Small Caps',Georgia,serif;color:#E8D7AE;text-align:center}
+.sch3 .s3-fx .fxtogs{display:grid;gap:6px;margin-top:8px}
+.sch3 .s3-fx .fxtog{display:grid!important;grid-template-columns:44px 1fr;column-gap:10px;align-items:center;text-align:left;padding:8px 10px}
+.sch3 .s3-fx .fxtog img{grid-row:1/3;width:44px;height:44px;border-radius:8px}
+.sch3 .s3-fx .fxtog b{font:400 18px 'Mr Eaves Small Caps',Georgia,serif;color:#F3EBD6}
+.sch3 .s3-fx .fxtog small{font:italic 13px/1.3 'Bookinsanity',Georgia,serif;color:var(--dim)}
+.sch3 .s3-fx .on,.sch3 .s3-fx button.on{border-color:var(--o1);box-shadow:0 0 14px rgba(217,177,92,.3);background:rgba(217,177,92,.1)}
+.sch3 .s3-fx h2,.sch3 .s3-fx h3,.sch3 .s3-fx h4,.sch3 .s3-fx .eyebrow{font:400 18px 'Mr Eaves Small Caps',Georgia,serif!important;color:var(--o2)!important;text-transform:none!important;letter-spacing:.04em!important;margin:12px 0 6px!important;border:0!important;padding:0!important;background:none!important;-webkit-text-fill-color:var(--o2)!important}
+.sch3 .s3-fx ul,.sch3 .s3-fx p,.sch3 .s3-fx .note{font:14px/1.45 'Bookinsanity',Georgia,serif;color:#CFC5AE}
+.sch3 .s3-fx select{background:#0b0a08;border:1px solid rgba(217,177,92,.35);color:#E8D7AE;border-radius:6px;padding:4px 8px}
+.sch3 .s3-fx .shcard,.sch3 .s3-fx .shitem{padding:10px 12px;border-radius:10px;border:1px solid rgba(217,177,92,.2);background:rgba(255,255,255,.02);margin-bottom:8px}
+.sch3 .s3-fx .shitem b{font:400 17px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1)}
+.sch3 .s3-fx .pips i{display:inline-block;width:14px;height:14px;transform:rotate(45deg);margin:3px;background:radial-gradient(circle at 35% 30%,#E6DCFF,#9C86E6 55%,#5A44A8);cursor:pointer}
+.sch3 .s3-fx .pips i.used{background:#0b0a10;box-shadow:inset 0 0 0 1px #4a3e78}
+.sch3 .s3-la-ogg{height:190px;background-size:contain!important;background-repeat:no-repeat;background-position:center;-webkit-mask-image:none!important;mask-image:none!important;margin-top:12px}
+.sch3 .s3-ogg-num{display:flex;gap:8px;margin:6px 0 10px}
+.sch3 .s3-ogg-num>div{flex:1;text-align:center;padding:6px;border-radius:8px;background:rgba(120,80,30,.12);border:1px solid rgba(120,80,30,.3)}
+.sch3 .s3-ogg-num small{display:block;font:12px 'Mr Eaves Small Caps',Georgia,serif;color:#7a2a12}
+.sch3 .s3-ogg-num b{font:400 24px 'Mr Eaves Small Caps',Georgia,serif;color:#3b2410}
+.sch3 .s3-props{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.sch3 .s3-props span{font:13px 'Mr Eaves Small Caps',Georgia,serif;color:#5a3418;padding:2px 8px;border-radius:10px;border:1px solid rgba(120,80,30,.35)}
+.sch3 .s3-pv{display:flex;gap:16px;margin:6px 0 10px;font:16px 'Bookinsanity',Georgia,serif;color:#2b1f14}
+.sch3 .s3-pv small{display:block;font:12px 'Mr Eaves Small Caps',Georgia,serif;color:#7a2a12}
+.sch3 .s3-azinv{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.sch3 .s3-azinv button{flex:1 1 45%;height:36px;border-radius:6px;font:16px 'Mr Eaves Small Caps',Georgia,serif;color:#3b2714;border:1px solid rgba(110,80,40,.5);background:rgba(255,255,255,.35);text-align:center}
+.sch3 .s3-azinv button.primary{background:#2b1f14;color:#f2dfae;border-color:#1a1108}
+.sch3 .s3-azinv button.danger{color:#8c1c13;border-color:rgba(140,28,19,.5)}
+.sch3 .s3-azinv select,.sch3 .s3-azinv input{border:1px solid rgba(110,80,40,.5);background:rgba(255,255,255,.5);border-radius:6px;padding:4px}
+.sch3 .s3-tile{cursor:pointer}
+.sch3 .s3-tile.s3-rr b,.sch3 .s3-tile.s3-rnc b,.sch3 .s3-tile.s3-rmr b,.sch3 .s3-tile.s3-rl b{color:#9FD3E8}
+.sch3 .s3-tile.s3-rq b{color:#E6B34E}
+.sch3 .s3-cb i.over{background:linear-gradient(90deg,#6e0e06,#e0503c)}
+.sch3 .s3-cacalc{display:grid;gap:4px}
+.sch3 .s3-cacalc div{display:flex;justify-content:space-between;padding:6px 10px;border-radius:6px;background:rgba(0,0,0,.25);font:16px 'Mr Eaves Small Caps',Georgia,serif;color:#D9CFB8}
+.sch3 .s3-cacalc b{color:var(--o1);font-weight:400}
+.sch3 .s3-monete .s3-mr i{background:radial-gradient(circle at 35% 30%,#ffd2b0,#c46a3a 50%,#6e2c10)}
+.sch3 .s3-hb{font:15px 'Mr Eaves Small Caps',Georgia,serif}
+.sch3 .s3-livello .s3-pp{display:flex;gap:6px}
+.sch3 .s3-livello .s3-pp i{width:15px;height:15px;transform:rotate(45deg);border-radius:2px;cursor:pointer;background:radial-gradient(circle at 35% 30%,#E6DCFF,#9C86E6 55%,#5A44A8);box-shadow:0 0 6px rgba(160,140,240,.5)}
+.sch3 .s3-livello .s3-pp i.vuota{background:#0b0a10;box-shadow:inset 0 0 0 1px #4a3e78}
+.sch3 .s3-pagina-sx,.sch3 .s3-pagina-dx{overflow:auto}
+.sch3 .s3-pagina-dx h3{color:#7a2a12!important;-webkit-text-fill-color:#7a2a12!important;border-color:#a88c62!important}
+.sch3 .s3-legami>div{flex-direction:column;align-items:flex-start}
+.sch3 .s3-legami b{text-align:left!important;font:15px/1.4 'Bookinsanity',Georgia,serif!important}
+.sch3 .s3-ora{border-top:1px solid #a88c62;margin-top:10px}
+.sch3 textarea.s3-righe{width:100%;border:0;resize:none;background-color:transparent}
+.sch3 input.s3-tit{width:100%}
+.sch3 .s3-foglio .s3-tira{height:42px;padding:0 20px}
+.sch3 .s3-pericolo{color:#8c1c13!important;border-color:#8c1c13!important}
+.sch3 .s3-voce,.sch3 .s3-nuova{cursor:pointer}
+#modal .sch3 .s3-pagina-dx h3{color:#7a2a12!important;-webkit-text-fill-color:#7a2a12!important;border-color:#a88c62!important}
+#modal .sch3 h3.s3-h3b{margin-top:24px!important}
+#modal .sch3 .s3-foglio .s3-tira{width:auto;min-width:200px;white-space:nowrap;text-align:center}
+#modal .sch3 .s3-foglio .s3-tira[data-diadel]{color:#3b2714;background:rgba(255,255,255,.35);border-color:rgba(110,80,40,.5)}
+.sch3 .s3-props-inc b{width:100%;font:400 13px 'Mr Eaves Small Caps',Georgia,serif;color:#7a2a12;letter-spacing:.08em}
+.sch3 .s3-props-inc span{border-color:rgba(90,60,170,.4);color:#3a2a6a}
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v196</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v197</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -7636,12 +7836,26 @@ function ccAureole(){ const layer=document.getElementById('croLayer'); if(!layer
   const gioc=!IS_GM||ccVistaG;
   layer.classList.toggle('ccgioc',IS_GM&&ccVistaG);
   layer.querySelectorAll('.cropin.citta[data-cp]').forEach(el=>{ const b=el.dataset.cp;
-    if(!el.querySelector('.ccaur')) el.insertAdjacentHTML('afterbegin','<i class="ccaur"></i>');
+    if(!el.dataset.ccb){ el.dataset.ccb='1'; el.addEventListener('pointerenter',e=>{ if(e.pointerType!=='touch') ccPop(b); }); el.addEventListener('pointerleave',ccPopVia); el.addEventListener('click',ccPopVia); }
     let liv, st;
     if(gioc){ const v=ccVisto(b); liv=v.liv; st=v.stato; } else { liv='vero'; st=ccVero(b).stato; }
     el.dataset.liv=liv;
     if(st===undefined||liv==='sconosciuto'){ el.removeAttribute('data-aur'); el.style.removeProperty('--aur'); }
     else { el.dataset.aur=String(st); el.style.setProperty('--aur',(CC_ST[st]||CC_ST[0]).c); } }); }
+/* il riquadro a comparsa: passando sopra lo stemma, a sinistra sulla mappa, le cose principali del borgo */
+let ccPopT=null;
+function ccPopVia(){ clearTimeout(ccPopT); ccPopT=setTimeout(()=>{ const p=document.getElementById('ccPop'); if(p) p.classList.remove('on'); },180); }
+function ccPop(b){ const p=croPlace(b); if(!p) return; clearTimeout(ccPopT);
+  let el=document.getElementById('ccPop'); if(!el){ el=document.createElement('div'); el.id='ccPop'; (document.getElementById('stage')||document.body).appendChild(el); }
+  const gioc=!IS_GM||ccVistaG, v=gioc?ccVisto(b):{liv:'vero',...ccVero(b)}, s=v.stato!==undefined&&v.liv!=='sconosciuto'?CC_ST[v.stato]||CC_ST[0]:null;
+  const livTxt=v.liv==='vero'?'lo stato vero':v.liv==='visitato'?`visitato${v.g!=null?' il giorno '+croG(v.g):''}`:(CC_LIV[v.liv]||'').toLowerCase();
+  const M=croS(), st=M.dove===b?null:croStima(M.pos,p), cc=ccChiComanda(b);
+  let h=`<div class="ccph">${p.stemma?`<img src="${p.stemma}" alt="">`:''}<div><b>${croEsc(p.nome)}</b><small>${croEsc(livTxt)}</small></div></div>`;
+  h+=`<div class="ccps"${s?` style="--aur:${s.c}"`:''}>${s?croEsc(s.n):'Non sapete da che parte stia'}${v.liv==='sentito'?' <small>(si dice)</small>':''}${v.liv==='vero'?` <small>media ${ccNum(Math.round(v.media*10)/10)}</small>`:''}</div>`;
+  if(cc&&v.liv!=='sconosciuto') h+=`<p class="ccpc">Comanda: ${croEsc(cc)}</p>`;
+  if(Array.isArray(v.att)&&v.att.length) h+=`<ul class="ccpa">${v.att.map(a=>`<li><span>${croEsc(a.nome)} <small>${CC_ROM[Math.max(1,Math.min(5,a.peso||1))]}</small></span><i style="--aur:${(CC_ST[a.stato]||CC_ST[0]).c}" title="${croEsc((CC_ST[a.stato]||CC_ST[0]).n)}"></i></li>`).join('')}</ul>`;
+  h+=`<p class="ccpd">${M.dove===b?'La Crociata è qui':`Da qui: ${st.leghe.toLocaleString('it-IT',{maximumFractionDigits:1})} leghe · ${croG(st.giorni)} ${st.giorni===1?'giorno':'giorni'}`}</p>`;
+  el.innerHTML=h; el.classList.add('on'); }
 function ccSettimana(){ if(!IS_GM) return; const w=Math.floor((Number(croS().giorno)||0)/7);
   if(ccSett===null){ ccSett=w; return; } if(w>ccSett){ toast(`Finita la settimana ${w} della Crociata: qui scatterà il turno della settimana`); log({kind:'sys',txt:`Finisce la ${w}ª settimana della Crociata.`}); save(true); } ccSett=w; }
 
@@ -7700,10 +7914,24 @@ function ccGuida(box){ const host=box.querySelector('.croguide')||box; let el=ho
 
 (function(){ const st=document.createElement('style'); st.id='ccStile'; st.textContent=`
 .cropin.citta{--stw:clamp(12px,calc(34px / var(--croInv,1)),22px)}
-.ccaur{position:absolute;left:50%;top:50%;width:calc(var(--stw) * 1.9);height:calc(var(--stw) * 1.9);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:-1;display:none}
-.cropin[data-aur] .ccaur{display:block;background:radial-gradient(circle,color-mix(in srgb,var(--aur) 60%,transparent) 0 38%,transparent 70%);box-shadow:0 0 0 2px var(--aur),0 0 12px 2px color-mix(in srgb,var(--aur) 70%,transparent)}
-.cropin[data-liv="sentito"] .ccaur{background:none;box-shadow:none;border:2px dashed var(--aur);box-sizing:border-box;opacity:.9}
-.cropin[data-liv="visitato"] .ccaur{opacity:.78}
+.cropin[data-aur="2"],.cropin[data-aur="-2"]{--ccg:drop-shadow(0 0 3px var(--aur)) drop-shadow(0 0 9px var(--aur)) drop-shadow(0 0 18px var(--aur))}
+.cropin[data-aur="1"],.cropin[data-aur="-1"]{--ccg:drop-shadow(0 0 3px var(--aur)) drop-shadow(0 0 8px var(--aur))}
+.cropin[data-aur="0"]{--ccg:drop-shadow(0 0 2px color-mix(in srgb,var(--aur) 50%,transparent))}
+.cropin[data-liv="sentito"][data-aur="2"],.cropin[data-liv="sentito"][data-aur="-2"],.cropin[data-liv="sentito"][data-aur="1"],.cropin[data-liv="sentito"][data-aur="-1"]{--ccg:drop-shadow(0 0 4px color-mix(in srgb,var(--aur) 60%,transparent))}
+#croLayer .cropin.citta[data-aur] .crost{filter:var(--ccg) drop-shadow(0 1px 2px rgba(0,0,0,.9))!important}
+#croLayer .cropin.citta[data-aur="2"] .crost,#croLayer .cropin.citta[data-aur="-2"] .crost{animation:ccPulsa 2.6s ease-in-out infinite}
+@keyframes ccPulsa{50%{filter:var(--ccg) drop-shadow(0 0 26px var(--aur)) drop-shadow(0 1px 2px rgba(0,0,0,.9))}}
+#ccPop{position:absolute;left:84px;top:12px;z-index:30;width:290px;padding:12px 14px;border:1px solid rgba(217,177,92,.4);border-radius:10px;background:linear-gradient(180deg,rgba(22,23,29,.96),rgba(10,11,15,.96));box-shadow:0 8px 24px rgba(0,0,0,.6);pointer-events:none;opacity:0;transform:translateX(-6px);transition:opacity .15s,transform .15s;color:#E8E3D6;font-size:16px;line-height:1.35}
+#ccPop.on{opacity:1;transform:none}
+.ccph{display:flex;align-items:center;gap:10px}.ccph img{width:34px;height:40px;object-fit:contain}
+.ccph b{display:block;font-family:var(--display);font-size:24px;color:#F3E6C4;line-height:1.1}.ccph small{opacity:.65;font-size:14px}
+.ccps{margin:8px 0 4px;padding:4px 10px;border-radius:6px;font-weight:600;color:var(--aur,#A9A497);background:color-mix(in srgb,var(--aur,#6E6A62) 16%,transparent);border-left:3px solid var(--aur,#6E6A62)}
+.ccps small{font-weight:400;opacity:.75}
+.ccpc{margin:6px 0;font-size:15px;opacity:.85}
+.ccpa{list-style:none;margin:6px 0;padding:0}.ccpa li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:3px 0;font-size:15px}
+.ccpa li+li{border-top:1px solid rgba(217,177,92,.12)}.ccpa small{opacity:.55}
+.ccpa i{flex:none;width:11px;height:11px;border-radius:50%;background:var(--aur);box-shadow:0 0 6px var(--aur)}
+.ccpd{margin:8px 0 0;font-size:14px;opacity:.7}
 .ccgioc .cropin[data-liv="sconosciuto"] .crost,#croLayer:not(.ccgioc) .cropin[data-liv="sconosciuto"] .crost{filter:grayscale(.8) brightness(.8) drop-shadow(0 1px 2px rgba(0,0,0,.9))}
 .ccbox{margin:14px 0;padding:14px 16px;border:1px solid rgba(201,162,74,.35);border-radius:8px;background:rgba(10,12,18,.55)}
 .cchead{display:flex;align-items:center;gap:12px;margin-bottom:8px}
@@ -7731,6 +7959,150 @@ function ccGuida(box){ const host=box.querySelector('.croguide')||box; let el=ho
 }
 /* ===== FINE IL CONSENSO DEL DUCATO (v194, prova) ===== */
 /* ===== SCHEDA NUOVA (v195) ===== */
+/* ---------- le sei pagine della scheda nuova (v197), come nel prototipo ----------
+   Ogni pagina usa gli stessi dati e gli stessi comandi di prima (stessi data-*), legati di nuovo da legaComandi. */
+const S3P={};
+const s3esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const s3big=p=>p?(p[1]||p[0]):'';
+const S3ECO={azione:'s3-az',bonus:'s3-bo',gratuita:'s3-gr',reazione:'s3-re'};
+let s3DiaSel=null;
+function s3split(n){ const m=/^(.*?)\s*[(:]\s*(.*?)\)?\s*$/.exec(n)||[]; return (m[1]&&m[2])?[m[1],m[2]]:[n,'']; }
+function s3let(cls){ return `<div class="s3-lettura s3-let ${cls||''}"><div class="s3-lt"><small>Il pannello di lettura</small><h2>Scegli una voce</h2><p>Clicca una carta, un oggetto, un incantesimo o una capacità: qui compare la sua spiegazione completa.</p></div></div>`; }
+
+/* ---------- ATTACCHI: carte ---------- */
+S3P.att=(id,t,sh,mine,LET)=>{
+  const acts=sheetActList(id,t), form=activeWildForm(id,t); let mazzi='';
+  for(const [eco,lab] of ACT_ECO){ const L=acts.map((a,i)=>[a,i]).filter(([a])=>isAttackAct(a)&&actEco(a)===eco); if(!L.length) continue;
+    mazzi+=`<section class="s3-mazzo"><h4 class="${S3ECO[eco]}"><i></i>${lab}</h4><div class="s3-carte">`+L.map(([a,i])=>{ const [tit,sub]=s3split(a.n), p=s3big(icoAct(a)), k='a'+i;
+      LET[k]={t:poiText(a.n),s:`${lab}${a.atk!=null?' · colpire '+fmtMod(a.atk):''}${a.dmg?' · '+poiText(a.dmg):''}`,x:poiText(a.note||''),i:p,b:mine?`<button class="s3-tira s3-grande" data-s3act="${i}">Tira</button>`:''};
+      return `<div class="s3-carta ${S3ECO[eco]}" data-k="${k}" data-q="${s3esc(a.n.toLowerCase())}"><div class="s3-ca-art" style="--a:url('${p}')"><span class="s3-ca-tipo">${lab}</span></div><div class="s3-ca-in"><b>${poiText(tit)}</b><small>${poiText(sub||(a.note||'').split(/[.·]/)[0].slice(0,46))}</small>
+        <div class="s3-ca-num">${a.atk!=null?`<div><small>Colpire</small><em>${fmtMod(a.atk)}</em></div>`:''}${a.dmg?`<div><small>${actTipo(a)==='cura'?'Cura':'Danni'}</small><em>${s3esc(String(a.dmg).replace(/\s*\(.*$/,''))}</em></div>`:''}</div>
+        <p>${poiText((a.note||'').slice(0,110))}${(a.note||'').length>110?'…':''}</p>${mine?`<button class="s3-tira s3-grande" data-s3act="${i}">Tira</button>`:''}</div></div>`; }).join('')+`</div></section>`; }
+  const extra=(sh.features||[]).some(f=>/^Attacco Extra/i.test(f))||((sh.pg||{}).privilegi||[]).some(p=>/^Attacco extra/i.test(p.n));
+  const reg=[...((sh.pg||{}).privilegi||[]),...((sh.pg||{}).talenti||[])].filter(p=>/attacc|danni|arma|colp|scudo|armatur|maestria/i.test(p.n+' '+(p.d||'').slice(0,120))).slice(0,6);
+  const regole=reg.map(p=>`<div class="s3-regola"><b>${poiText(p.n.replace(/\s*\(.*$/,''))}</b><p>${poiText((p.d||'').slice(0,240))}${(p.d||'').length>240?'…':''}</p></div>`).join('');
+  return `<div class="s3-pagina on"><div class="s3-pg-att"><section class="s3-col s3-larga"><h3>Attacchi${form?' — '+poiText(form.name):''} <small>${extra&&!form?'due attacchi con l’azione Attacco':'un attacco con l’azione Attacco'}</small></h3>${mazzi||'<p class="s3-nulla">Nessun attacco registrato.</p>'}</section>
+    <section class="s3-col">${s3let()}<h3 class="s3-h3b">Effetti e tiri</h3><div class="s3-fx">${fxPanelHtml(id,t,mine).replace(/<h2>[^<]*<\/h2>/,'')}</div>${regole?`<h3 class="s3-h3b">In combattimento</h3>${regole}`:''}</section></div></div>`;
+};
+
+/* ---------- INVENTARIO ---------- */
+S3P.inv=(id,t,sh,mine,LET)=>{
+  const inv=INVENTORIES[id]||{items:[]}, items=invItems(id), eq=invEquip(id,items), isEq=it=>Object.values(eq).includes(it);
+  const grp=INV_GROUPS.find(g=>g[0]===sheetInvCat)||INV_GROUPS[0]; if(grp[0]!==sheetInvCat) sheetInvCat='Tutti';
+  const kg=s=>{ const m=String(s||'').match(/([\d.,]+)\s*lb/); return m?parseFloat(m[1].replace(/\./g,'').replace(',','.'))*0.5:0; };
+  const load=kg(inv.load)+items.filter(i=>!i.base).reduce((a,i)=>a+kg(i.weight)*(/ciascun/.test(i.weight||'')?i.q:1),0), cap=kg(inv.capacity), f1=n=>(Math.round(n*10)/10).toLocaleString('it-IT');
+  const slots=INV_SLOTS.map(([k,l])=>{ const it=eq[k], p=it&&icoItem(it.n); return `<div class="s3-slot ${it?'pieno':''}" ${it?`data-invi="${items.indexOf(it)}"`:''} title="${it?s3esc(it.n):l+': vuoto'}"><span class="s3-si" style="${p?`background-image:url('${p[1]||p[0]}')`:''}"></span><div><small>${l}</small><b>${it?poiText(it.n):'—'}</b></div></div>`; }).join('');
+  const coins=String((SHEETS[id]||{}).coins||'').match(/(\d[\d.]*)\s*(mp|mo|ma|mr|me)/g)||[], g=(S.monete||{})[id]||{}, C={mp:0,mo:0,ma:0,mr:0};
+  coins.forEach(c=>{ const m=c.match(/(\d[\d.]*)\s*(\w+)/); if(C[m[2]]!=null) C[m[2]]+=+m[1].replace(/\./g,''); }); for(const k of Object.keys(C)) C[k]+=+(g[k]||0);
+  const monete=[['mp','platino'],['mo','oro'],['ma','argento'],['mr','rame']].filter(([k])=>C[k]||k==='mo').map(([k,l])=>`<span class="s3-${k}"><i></i><b>${C[k].toLocaleString('it-IT')}</b>${l}</span>`).join('');
+  const rows=items.map((it,i)=>({it,i})).filter(({it})=>grp[1](it));
+  if(sheetInvSel==null||!items[sheetInvSel]) sheetInvSel=(rows[0]||{}).i??null;
+  const cats={}; rows.forEach(r=>{ (cats[r.it.cat]=cats[r.it.cat]||[]).push(r); });
+  const tiles=Object.entries(cats).map(([c,L])=>`<h4 class="s3-invcat">${poiText(c)} <small>${L.length}</small></h4><div class="s3-tiles">`+L.map(({it,i})=>{ const p=icoItem(it.n), [rl,rc]=invRarity(it);
+      return `<button class="s3-tile ${isEq(it)?'equip':''} ${i===sheetInvSel?'sel':''} s3-r${rc}" data-invi="${i}" data-s3drag="${s3esc(it.key)}" draggable="${mine}" data-q="${s3esc((it.n+' '+it.cat).toLowerCase())}"><span class="s3-ti" style="${p?`background-image:url('${p[1]||p[0]}')`:''}"></span><b>${poiText(it.n)}</b>${it.q>1?`<em>×${it.q}</em>`:''}</button>`; }).join('')+`</div>`).join('');
+  /* la carta dell'oggetto scelto, nel pannello di lettura */
+  const sel=sheetInvSel!=null?items[sheetInvSel]:null; let card='';
+  if(sel){ const [rl]=invRarity(sel), act=invActFor(id,t,sel), arm=invArmorCA(sel), p=icoItem(sel.n);
+    const props=String(sel.stats||'').split('·').map(s=>s.trim()).filter(Boolean);
+    card=`<div class="s3-lettura s3-inv-carta">${p?`<div class="s3-la s3-la-ogg" style="background-image:url('${p[1]||p[0]}')"></div>`:''}<div class="s3-lt"><small>${poiText(rl)} · ${poiText(sel.cat)}${sel.q>1?' · ×'+sel.q:''}${isEq(sel)?' · addosso':''}</small><h2>${poiText(sel.n)}</h2>
+      ${act&&act.dmg?`<div class="s3-ogg-num"><div><small>Colpire</small><b>${fmtMod(act.atk)}</b></div><div><small>Danni</small><b>${s3esc(act.dmg)}</b></div></div>`:arm?`<div class="s3-ogg-num"><div><small>Classe armatura</small><b>${arm.base}${arm.dex?' + Des':''}</b></div></div>`:''}
+      <p>${poiText(invLbToKg(sel.desc||'Nessuna descrizione disponibile.'))}</p>${props.length?`<div class="s3-props">${props.map(s=>`<span>${poiText(invLbToKg(s))}</span>`).join('')}</div>`:''}${(sel.spells||[]).length?`<div class="s3-props s3-props-inc"><b>Incantesimi o poteri</b>${sel.spells.map(x=>`<span>${poiText(x)}</span>`).join('')}</div>`:''}
+      <div class="s3-pv"><span><small>Peso</small>${poiText(invLbToKg(sel.weight))}${/lb/.test(sel.weight||'')?' kg':''}</span><span><small>Valore</small>${invValueHtml(sel.value)}</span></div>
+      ${mine?`<div class="s3-azinv">${invActionsHtml(sel,isEq(sel),false)}</div>`:''}</div></div>`; }
+  const ca=invCaBreakdown(id,t,eq).concat(bondOn(t)?[['Legame di interdizione',1]]:[]);
+  return `<div class="s3-pagina on"><div class="s3-pg-inv"><section class="s3-col"><h3>Addosso</h3><div class="s3-slots">${slots}</div>
+      <h3 class="s3-h3b">Carico</h3><div class="s3-carico"><div class="s3-cb"><i style="width:${cap?Math.min(100,100*load/cap):0}%" class="${cap&&load>cap?'over':''}"></i></div><p><b>${f1(load)}</b> / ${cap?f1(cap):'—'} kg · ${poiText(inv.status||'')}</p></div>
+      <h3 class="s3-h3b">Monete</h3><div class="s3-monete">${monete}</div>
+      <h3 class="s3-h3b">Classe armatura <small>come si arriva a ${tokAc(t)}</small></h3><div class="s3-cacalc">${ca.map(([k,v])=>`<div><span>${poiText(k)}</span><b>${v>=0?'+':'−'}${Math.abs(v)}</b></div>`).join('')}</div></section>
+    <section class="s3-col s3-larga"><h3>Zaino <small>${items.reduce((a,i)=>a+i.q,0)} oggetti · clicca per leggere${mine?', trascina sulla barra rapida':''}</small></h3>
+      <div class="s3-filtri">${INV_GROUPS.filter(x=>x[0]==='Tutti'||items.some(x[1])).map(([c])=>`<button class="${c===sheetInvCat?'on':''}" data-invcat="${c}">${c}</button>`).join('')}</div>${tiles||'<p class="s3-nulla">Lo zaino è vuoto.</p>'}
+      <h3 class="s3-h3b">Barra rapida <small>condivisa con il Tavolo</small></h3><div class="s3-hb">${hotbarHtml(id,true)}${hbPickerHtml(id)}</div></section>
+    <section class="s3-col">${card||s3let()}</section></div></div>`;
+};
+
+/* ---------- INCANTESIMI ---------- */
+S3P.inc=(id,t,sh,mine,LET)=>{
+  const sp=sh.spell; let corpo='';
+  if(sp){ const used=t.used||{}, xs=t.xs||{}, by={};
+    for(const n of sp.list){ const d=SPELLS[n]; if(d) (by[d.l]=by[d.l]||[]).push([n,d]); }
+    for(const l of Object.keys(by).sort((a,b)=>a-b)){ const tot=(sp.slots[l]||0)+(xs[l]||0), u=used[l]||0;
+      const gem=l==='0'?'':`<div class="s3-pp slot">${Array.from({length:tot},(_,i)=>`<i class="${i<u?'vuota':''}" ${mine?`data-slot="${l}" data-i="${i}"`:''} title="${mine?'clicca per spendere o recuperare':''}"></i>`).join('')}</div><em>${Math.max(0,tot-u)} / ${tot} slot</em>`;
+      corpo+=`<section class="s3-livello"><div class="s3-lv-h"><h4>${l==='0'?'Trucchetti':l+'° livello'}</h4>${gem}</div><div class="s3-incs2">`+by[l].map(([n,d])=>{ const k='s'+n, p=s3big(icoSpell(n)), can=mine&&(l==='0'||u<tot);
+        LET[k]={t:poiText(d.it),s:`${l==='0'?'Trucchetto':l+'° livello'}${d.scuola?' · '+d.scuola:''}`,h:spellFullHtml(d,n),i:p,b:mine?`<button class="s3-tira s3-grande ${can?'':'off'}" data-cast="${s3esc(n)}" ${can?'':'disabled'}>${l==='0'?'Usa':'Lancia'}</button>`:''};
+        return `<div class="s3-inc" data-k="${k}" data-q="${s3esc((d.it+' '+n).toLowerCase())}"><span class="s3-ii ${p?'':'vuota'}" style="${p?`background-image:url('${p}')`:''}">${p?'':'✦'}</span><div class="s3-inc-t"><b>${poiText(d.it)}</b><small>${poiText(String(d.t||'').split(',')[0])} · ${poiText(d.r||'')} · ${poiText(d.durata||'')}</small></div>${d.conc?'<span class="s3-conc" title="Concentrazione">C</span>':''}${d.rituale?'<span class="s3-rit" title="Rituale">R</span>':''}${mine?`<button class="s3-tira ${can?'':'off'}" data-cast="${s3esc(n)}" ${can?'':'disabled'}>${l==='0'?'Usa':'Lancia'}</button>`:''}</div>`; }).join('')+`</div></section>`; }
+  }
+  const band=sp?`<div class="s3-incband"><div><small>Caratteristica</small><b>${({For:'Forza',Des:'Destrezza',Cos:'Costituzione',Int:'Intelligenza',Sag:'Saggezza',Car:'Carisma'})[sp.stat]||sp.stat}</b></div><div><small>CD tiro salvezza</small><b>${sp.dc}</b></div><div><small>Attacco</small><b>+${sp.atk}</b></div><div><small>Incantesimi</small><b>${sp.list.length}</b></div><div class="s3-nota">C = concentrazione · R = rituale · clicca una gemma per spendere o recuperare uno slot</div></div>`:`<p class="s3-nulla">${poiText(t.name)} non lancia incantesimi di classe.</p>`;
+  const extra=(sorceryHtml(id,t,mine)||'')+(itemSpellsHtml(id,t,mine)||'');
+  return `<div class="s3-pagina on"><div class="s3-pg-inc"><section class="s3-col s3-larga">${band}${corpo}</section><section class="s3-col">${s3let()}${extra?`<div class="s3-fx s3-extra">${extra}</div>`:''}</section></div></div>`;
+};
+
+/* ---------- CAPACITÀ E TALENTI ---------- */
+S3P.cap=(id,t,sh,mine,LET)=>{
+  const pg=sh.pg||{};
+  const blocco=(tit,L,grp)=>L&&L.length?`<section class="s3-capsez"><h4>${tit} <small>${L.length}</small></h4><div class="s3-capg">`+L.map((c,i)=>{ const n=c.n.replace(/\s*\(.*$/,''), k='c'+grp+i, p=s3big(icoAbil(c.n,grp)||icoAbil(n,grp)||icoAbil(n,'Privilegio'));
+      LET[k]={t:poiText(n),s:poiText(c.fonte||tit)+(c.usi?' · '+poiText(c.usi):''),x:poiText(c.d||''),i:p};
+      const prima=String(c.d||'').split(/(?<=[.:])\s/)[0];
+      return `<div class="s3-capc" data-k="${k}" data-q="${s3esc(n.toLowerCase())}"><span class="s3-ci2" style="${p?`background-image:url('${p}')`:''}"></span><div><b>${poiText(n)}</b><small>${poiText(c.fonte||tit)}${c.usi?' · '+poiText(c.usi):''}</small><p>${poiText(prima.slice(0,150))}${prima.length>150?'…':''}</p></div></div>`; }).join('')+`</div></section>`:'';
+  const acts=sheetActList(id,t), usa=acts.map((a,i)=>[a,i]).filter(([a])=>!isAttackAct(a));
+  const daUsare=usa.length?`<section class="s3-capsez"><h4>Da usare <small>${usa.length}</small></h4><div class="s3-capg">`+usa.map(([a,i])=>{ const k='u'+i, p=s3big(icoAct(a)), [tit,sub]=s3split(a.n);
+      LET[k]={t:poiText(a.n),s:(ACT_ECO.find(e=>e[0]===actEco(a))||['','Azione'])[1],x:poiText(a.note||''),i:p,b:mine?`<button class="s3-tira s3-grande" data-s3act="${i}">Usa</button>`:''};
+      return `<div class="s3-capc" data-k="${k}" data-q="${s3esc(a.n.toLowerCase())}"><span class="s3-ci2" style="${p?`background-image:url('${p}')`:''}"></span><div><b>${poiText(tit)}</b><small>${(ACT_ECO.find(e=>e[0]===actEco(a))||['','Azione'])[1]}${sub?' · '+poiText(sub):''}</small><p>${poiText((a.note||'').slice(0,120))}</p></div>${mine?`<button class="s3-tira" data-s3act="${i}">Usa</button>`:''}</div>`; }).join('')+`</div></section>`:'';
+  const R=pg.risorse||[]; let ris='';
+  R.forEach((r,i)=>{ const u=resUsed(id,i), mx=+r.max||0; if(!mx) return;
+    const corpo=mx>12?`<div class="s3-barra"><i style="width:${100*(mx-u)/mx}%"></i></div>${mine?`<button class="s3-mini2" data-resuse="${i}">Usa</button>`:''}`
+      :`<div class="s3-pp ${/slot/i.test(r.n)?'slot':''}">${Array.from({length:mx},(_,j)=>`<i class="${j<u?'vuota':''}" ${mine?`data-res="${i}" data-k="${j}"`:''}></i>`).join('')}</div>`;
+    ris+=`<div class="s3-ris"><span>${poiText(r.n.replace(/\s*\(.*$/,''))}</span><em>${mx-u} / ${mx}</em>${corpo}</div>`; });
+  const comp=pg.competenze||{}, cmps=Object.entries(comp).map(([k,v])=>`<div class="s3-cmp"><small>${s3esc(k)}</small><b>${poiText(v)}</b></div>`).join('')+`<div class="s3-cmp"><small>Dadi vita</small><b>${poiText(sh.hitDice||'—')}</b></div>`;
+  return `<div class="s3-pagina on"><div class="s3-pg-cap"><section class="s3-col s3-larga">${blocco('Privilegi di classe',pg.privilegi,'Privilegio')}${blocco('Talenti',pg.talenti,'Talento')}${blocco('Tratti di specie'+(pg.specie?' · '+poiText(pg.specie):''),pg.tratti_specie,'Tratto')}${daUsare}
+      <section class="s3-capsez"><h4>Competenze</h4><div class="s3-cmps">${cmps}</div></section></section>
+    <section class="s3-col">${s3let()}${ris?`<h3 class="s3-h3b">Risorse <small>tornano con i riposi</small></h3><div class="s3-risorse">${ris}</div>`:''}</section></div></div>`;
+};
+
+/* ---------- STORIA: un libro aperto ---------- */
+S3P.bg=(id,t,sh,mine,LET)=>{
+  const s=CHAR_STORIES[id], pg=sh.pg||{}, ROM=['I','II','III','IV','V','VI','VII','VIII'];
+  const sx=s?`<p class="s3-lead">${poiText(s.lead)}</p>`+s.chapters.map((c,i)=>`<section class="s3-capitolo"><span class="s3-cnum">${ROM[i]||i+1}</span><small>${poiText(c.when)}</small><h2>${poiText(c.title)}</h2><p class="${i===0?'s3-capo':''}">${poiText(c.text)}</p></section>`).join('')+(s.now?`<section class="s3-capitolo s3-ora"><span class="s3-cnum">✦</span><small>Oggi</small><h2>Dove si trova adesso</h2><p>${poiText(s.now)}</p></section>`:'')
+    :`<p class="s3-lead">${poiText(sh.lore||'Nessuna storia disponibile.')}</p>`;
+  const per=pg.personalita||{}, pv=v=>v&&String(v).trim()?poiText(v):'<i>—</i>';
+  const dx=`<h3>In breve</h3><div class="s3-breve">${[['Specie',pg.specie],['Background',sh.background],['Classe',t.cls],['Livello',sh.level],['Esperienza',sheetXp(id)],['Lingue',sh.languages]].filter(([,v])=>v).map(([k,v])=>`<div><small>${k}</small><b>${poiText(String(v))}</b></div>`).join('')}</div>
+    ${s&&s.bonds&&s.bonds.length?`<h3 class="s3-h3b">Persone e legami</h3><div class="s3-breve s3-legami">${s.bonds.map(([n,x])=>`<div><small>${poiText(n)}</small><b>${poiText(x)}</b></div>`).join('')}</div>`:''}
+    <h3 class="s3-h3b">Personalità</h3><div class="s3-perso">${[['Tratti',per.tratti],['Ideali',per.ideali],['Legami',per.legami],['Difetti',per.difetti]].map(([k,v])=>`<div><small>${k}</small><p>${pv(v)}</p></div>`).join('')}</div>
+    ${pg.progressione?`<h3 class="s3-h3b">Prossimi livelli</h3><p class="s3-prog">${poiText(pg.progressione)}</p>`:''}`;
+  return `<div class="s3-pagina on"><div class="s3-pg-bg"><article class="s3-libro"><div class="s3-pagina-sx">${sx}</div><aside class="s3-pagina-dx">${dx}</aside></article></div></div>`;
+};
+
+/* ---------- DIARIO ---------- */
+S3P.dia=(id,t,sh,mine,LET)=>{
+  if(!mine) return `<div class="s3-pagina on"><div class="s3-pg-dia"><aside class="s3-indice"><p class="s3-solo">Il diario è personale: lo leggono solo ${poiText(t.name)} e il master.</p></aside><article class="s3-foglio"></article></div></div>`;
+  const pages=Object.entries((S.diari||{})[id]||{}).filter(([,p])=>p&&p.txt).sort((a,b)=>(b[1].t||0)-(a[1].t||0));
+  const when=ms=>new Date(ms).toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'}), who=b=>b==='master'?'il master':(S.tokens[b]?.name||'');
+  if(s3DiaSel&&s3DiaSel!=='nuova'&&!pages.some(([k])=>k===s3DiaSel)) s3DiaSel=null;
+  if(!s3DiaSel) s3DiaSel=pages.length?pages[0][0]:'nuova';
+  const ind=`<button class="s3-nuova ${s3DiaSel==='nuova'?'on':''}" data-s3dia="nuova">+ Nuova pagina</button>`+pages.map(([k,p])=>`<div class="s3-voce ${k===s3DiaSel?'on':''}" data-s3dia="${k}"><small>${when(p.t)}</small><b>${poiText(p.tit||'Senza titolo')}</b><p>${poiText(String(p.txt).slice(0,60))}…</p></div>`).join('');
+  let fog;
+  if(s3DiaSel==='nuova') fog=`<input class="s3-tit" id="diaTit" placeholder="Titolo della pagina" autocomplete="off"><div class="s3-meta"><span>${when(Date.now())}</span><span>scritto da ${poiText(IS_GM?'il master':t.name)}</span></div>
+      <textarea class="s3-righe" id="diaTxt" placeholder="Cosa è successo, cosa hai scoperto, cosa vuoi ricordare…">${poiText(sheetDiaDraft)}</textarea><div class="s3-piede"><button class="s3-tira s3-pri2" id="diaAdd">Salva nel diario</button></div>`;
+  else { const p=((S.diari||{})[id]||{})[s3DiaSel]; fog=`<div class="s3-tit">${poiText(p.tit||'Senza titolo')}</div><div class="s3-meta"><span>${when(p.t)}</span><span>scritto da ${poiText(who(p.by))}</span></div><div class="s3-righe">${poiText(p.txt).split('\n').join('<br>')}</div><div class="s3-piede"><button class="s3-tira" data-diadel="${s3DiaSel}">Elimina</button></div>`; }
+  return `<div class="s3-pagina on"><div class="s3-pg-dia"><aside class="s3-indice">${ind}<p class="s3-solo">Lo leggete solo tu e il master.</p></aside><article class="s3-foglio">${fog}</article></div></div>`;
+};
+
+/* tutti i comandi delle pagine: gli stessi della scheda di prima */
+function s3Comandi(box,id,t,mine){
+  const rer=()=>renderSheet(id);
+  sheetInvBind(box,id); fxBind(box,id); itemSpellsBind(box,id); sorceryBind(box,id);
+  box.querySelectorAll('[data-s3dia]').forEach(b=>b.onclick=()=>{ s3DiaSel=b.dataset.s3dia; rer(); });
+  if(!mine) return;
+  box.querySelectorAll('[data-s3drag]').forEach(r=>r.ondragstart=ev=>ev.dataTransfer.setData('text/plain','item|'+r.dataset.s3drag));
+  box.querySelectorAll('[data-slot]').forEach(p=>p.onclick=e=>{ e.stopPropagation(); const l=p.dataset.slot, i=+p.dataset.i; t.used=t.used||{}; t.used[l]=(i<(t.used[l]||0))?i:i+1; save(); rer(); });
+  box.querySelectorAll('[data-cast]').forEach(b=>b.onclick=e=>{ e.preventDefault(); e.stopPropagation(); castSpell(id,b.dataset.cast); });
+  box.querySelectorAll('.s3-pagina [data-s3act]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); const a=sheetActList(id,t)[+b.dataset.s3act]; if(a){ closeModal(); doAction(id,a); } });
+  box.querySelectorAll('.s3-pagina [data-res]').forEach(p=>p.onclick=e=>{ e.stopPropagation(); const r=+p.dataset.res, k=+p.dataset.k, u=resUsed(id,r), nv=(k<u)?k:k+1; if(resSet(id,r,nv)===false){ toast('Gli slot si spendono nella pagina Incantesimi'); return; } if(nv>u&&!resLink(id,r)) useResource(id,r,true); else save(); rer(); });
+  box.querySelectorAll('.s3-pagina [data-resuse]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); useResource(id,+b.dataset.resuse); });
+  const da=box.querySelector('#diaAdd'); if(da) da.onclick=()=>{ const txt=(box.querySelector('#diaTxt').value||'').trim(), ti=(box.querySelector('#diaTit').value||'').trim(); if(!txt){ toast('Scrivi qualcosa nel diario'); return; }
+    S.diari=S.diari||{}; S.diari[id]=S.diari[id]||{}; const k='p'+Date.now(); S.diari[id][k]={t:Date.now(),tit:ti,txt,by:IS_GM?'master':me}; sheetDiaDraft=''; s3DiaSel=k; save(true); rer(); };
+  const dt=box.querySelector('#diaTxt'); if(dt) dt.oninput=()=>{ sheetDiaDraft=dt.value; };
+  box.querySelectorAll('[data-diadel]').forEach(b=>b.onclick=()=>{ const k=b.dataset.diadel; if(b.dataset.armed!=='1'){ b.dataset.armed='1'; b.textContent='Conferma: elimina'; b.classList.add('s3-pericolo'); return; } if(S.diari&&S.diari[id]) delete S.diari[id][k]; s3DiaSel=null; save(true); rer(); });
+}
 /* Scheda del personaggio nuova (v195, prototipo approvato da Giuseppe il 10-10-2026: «capolavoro»).
    renderSheet resta quella di prima (dati, comandi, linguette): qui si costruisce la cornice nuova — l'eroe a sinistra,
    i numeri in alto, la ricerca, i segnalibri — e la pagina «Scheda» (caratteristiche, In gioco, risorse, lettura).
@@ -7748,6 +8120,7 @@ function ccGuida(box){ const host=box.querySelector('.croguide')||box; let el=ho
     lettura(box,(d.i?`<div class="s3-la" style="background-image:url('${d.i}')"></div>`:'')+`<div class="s3-lt"><small>${d.s||''}</small><h2>${d.t}</h2>${d.h||`<p>${d.x||''}</p>`}${d.b||''}</div>`);
     box.querySelectorAll('[data-k]').forEach(e=>e.classList.toggle('sel',e.dataset.k===k));
     const b=box.querySelector('.s3-let [data-s3cast]'); if(b) b.onclick=()=>{ const id=sheetOf; closeModal(); castSpell(id,b.dataset.s3cast); };
+    const c=box.querySelector('.s3-let [data-cast]'); if(c) c.onclick=()=>castSpell(sheetOf,c.dataset.cast);
     const a=box.querySelector('.s3-let [data-s3act]'); if(a) a.onclick=()=>{ const id=sheetOf, t=S.tokens[id], x=sheetActList(id,t)[+a.dataset.s3act]; if(x){ closeModal(); doAction(id,x); } };
   }
 
@@ -7838,13 +8211,19 @@ function ccGuida(box){ const host=box.querySelector('.croguide')||box; let el=ho
       const spec=[...oldBody.querySelectorAll('.shcard')].filter(x=>x.querySelector('#wildToggle,#giantToggle,#zenithToggle')||/Forma selvatica|Possanza|Zenith/.test(x.textContent));
       if(spec.length&&h){ const w=document.createElement('div'); w.className='s3-spec'; spec.forEach(x=>w.append(x)); h.after(w); }
       const fx=oldBody.querySelector('.fxpanel'); if(fx&&c2){ const w=document.createElement('div'); w.className='s3-fx'; w.innerHTML='<h3 class="s3-h3b">Effetti e tiri <small>vantaggio, svantaggio, effetti accesi</small></h3>'; fx.querySelector('h2')?.remove(); w.append(fx); c2.append(w); }
-    } else dove.append(oldBody);   /* le altre pagine: il contenuto di sempre, con i suoi tasti */
+    } else if(S3P[sheetTab]){ dove.innerHTML=S3P[sheetTab](id,t,sh,mine,LET); }
+    else dove.append(oldBody);   /* le altre pagine: il contenuto di sempre, con i suoi tasti */
     wrap.replaceWith(nuovo);
     /* ---------- comandi ---------- */
     nuovo.querySelectorAll('[data-s3tab]').forEach(a=>a.onclick=()=>{ sheetTab=a.dataset.s3tab; renderSheet(id); });
     nuovo.querySelector('[data-s3back]').onclick=()=>closeModal();
     nuovo.querySelectorAll('[data-s3pg]').forEach(b=>b.onclick=()=>renderSheet(b.dataset.s3pg));
     nuovo.querySelectorAll('[data-s3rest]').forEach(b=>b.onclick=()=>b.dataset.s3rest==='lungo'?restLong(id):restShortOpen(id));
+    if(sheetTab!=='pan'&&S3P[sheetTab]){
+      s3Comandi(nuovo,id,t,mine);
+      nuovo.querySelectorAll('.s3pag [data-k]').forEach(e=>e.addEventListener('click',ev=>{ if(ev.target.closest('button')) return; leggi(nuovo,e.dataset.k,LET); }));
+      if(sch3Sel&&LET[sch3Sel]) leggi(nuovo,sch3Sel,LET); else { const k=Object.keys(LET).find(k=>(LET[k].x||LET[k].h||'').length>40)||Object.keys(LET)[0]; if(k) leggi(nuovo,k,LET); }
+    }
     if(sheetTab==='pan'){
       if(mine){
         nuovo.querySelectorAll('.s3pag [data-roll]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); const sk=b.dataset.roll, mod=sheetRollMod(id,sk); askAdvThen(id,'Tiro di '+sk,()=>{ if(IS_GM) rollFor(id,sk,mod); else doRoll(sk,null,null,mod); toast(`${t.name}: tiro di ${sk} nel registro`); renderSheet(id); }); });

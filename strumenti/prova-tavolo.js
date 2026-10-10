@@ -190,18 +190,18 @@ const file = path.resolve(process.argv[2] || 'index.html');
       try {
         const ids=['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
         // v103: lo zaino è una tabella (righe [data-invi]) e il dettaglio dell'oggetto scelto sta nella carta .invcard
-        const pick=(row)=>{ row.click(); return document.querySelector('#modal .invcard')?.textContent||''; };
+        const pick=(row)=>{ row.click(); return (document.querySelector('#modal .invcard')||document.querySelector('#modal .s3-inv-carta'))?.textContent||''; };
         for(const id of ids){
           sheetInvCat='Tutti'; sheetInvQ=''; sheetInvSel=null; openSheet(id,'eq');
-          const rows=[...document.querySelectorAll('#modal [data-invi]')], card=document.querySelector('#modal .invcard')?.textContent||'';
-          if(rows.length<12||!card.includes('Valore')||!card.includes('Peso')||!document.getElementById('invSearch')) rotte.push('Zaino '+id+' → inventario incompleto o privo di dettagli e ricerca');
+          const rows=[...document.querySelectorAll('#modal [data-invi]')], card=(document.querySelector('#modal .invcard')||document.querySelector('#modal .s3-inv-carta'))?.textContent||'';
+          if(rows.length<12||!card.includes('Valore')||!card.includes('Peso')||!(document.getElementById('invSearch')||document.querySelector('#modal .s3q'))) rotte.push('Zaino '+id+' → inventario incompleto o privo di dettagli e ricerca');
           if(rows.some(r=>{ const c=pick(r); return !c.includes('Valore'); })) rotte.push('Zaino '+id+' → un oggetto non mostra il dettaglio');
         }
         sheetInvCat='Tutti'; sheetInvQ=''; sheetInvSel=null; openSheet('vicarus','eq');
         const staffRow=[...document.querySelectorAll('#modal [data-invi]')].find(x=>x.textContent.includes('Bastone di Lyaras'));
         const staff=staffRow?pick(staffRow):'';
         if(!staff.includes('Comando — 1 carica')||!staff.includes('Bastone arcano +2')) rotte.push('Zaino Vicarus → incantesimi, cariche o bonus del Bastone non visibili');
-        const search=document.getElementById('invSearch'); search.value='filatterio'; search.dispatchEvent(new Event('input'));
+        const search=document.getElementById('invSearch')||document.querySelector('#modal .s3q'); search.value='filatterio'; search.dispatchEvent(new Event('input'));
         sheetInvQ=''; openSheet('mattheus','eq');
         if(![...document.querySelectorAll('#modal [data-invi]')].some(x=>x.textContent.includes('Filatterio di Lyaras'))) rotte.push('Zaino Mattheus → manca il Filatterio');
         sheetTab='car'; closeModal();
@@ -212,8 +212,8 @@ const file = path.resolve(process.argv[2] || 'index.html');
         const ids=['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
         for(const id of ids){
           openSheet(id,'sto');
-          const text=document.querySelector('#modal .sheetbody')?.textContent||'';
-          if(document.querySelectorAll('#modal .storychapter').length<4||document.querySelectorAll('#modal .storybond').length<4||!text.includes('Dove si trova adesso')||!text.includes('Galleria della Schiera')) rotte.push('Storia '+id+' → passato, avventura, legami o posizione attuale incompleti');
+          const text=(document.querySelector('#modal .sheetbody')||document.querySelector('#modal .s3pag'))?.textContent||'';
+          if(document.querySelectorAll('#modal .storychapter, #modal .s3-capitolo').length<4||document.querySelectorAll('#modal .storybond, #modal .s3-legami>div').length<4||!text.includes('Dove si trova adesso')||!text.includes('Galleria della Schiera')) rotte.push('Storia '+id+' → passato, avventura, legami o posizione attuale incompleti');
         }
         sheetTab='car'; closeModal();
       } catch (e) { rotte.push('Storie dettagliate dei personaggi → '+e.name+': '+e.message); }
