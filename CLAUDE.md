@@ -1165,3 +1165,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Pannello dello scontro (blocco «PANNELLO DELLO SCONTRO (v218, senza fronti v219)»): campo `scontro.prepara` (gruppi da mettere con «Prepara lo scontro»); senza fronti spariscono il tiro dei fronti e i testi sui soldati, tutti i nemici tirano l'iniziativa. Fonte: `Revisioni/Guado - pannello dello scontro (v218)/pannello.js` + `codice.py`.
 - Le schede della Crociata e i token della v218 restano (i Forgiati usano i loro token).
 - Pubblicata da un `git worktree`. `prova-tavolo.js` verde (66 e 38).
+
+## v220 (10/10/2026) — nella colonna dei personaggi il ritratto, non il token
+
+- Segnalato da Giuseppe: nella colonna di sinistra i mostri del guado mostravano il token con la cornice invece del ritratto. Ogni pedina ha ora il campo `ritratto` (nome leggibile «Ritratto pedina — <nome>.jpg», 600 px, risolto da `build.py` come `img`); `railImg(t)` (in fondo al blocco del pannello dello scontro) dà alla colonna il ritratto della pedina che ha quel token. La mappa continua a usare il token.
+- `Revisioni/Guado - pannello dello scontro (v218)/token_guado.py` scrive anche `ritratti.json`; `applica.py` e `codice.py` (agganci in `renderRail`) aggiornati. Attenzione: `applica.py` è la scena col convoglio (v218): dopo la v219 non va rilanciato da solo, ma seguito da `Revisioni/Guado senza convoglio (v219)/riscrivi_guado.py`.
+- `prova-tavolo.js` verde.
