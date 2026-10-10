@@ -991,3 +991,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Pagina «Scheda» rifatta: caratteristiche con tiro salvezza e abilità (stessi `data-roll`), «In gioco» = `sheetActList` per `actEco` con «Tira» (= `doAction`), risorse a gemme (stessi `data-res`/`data-resuse` di prima), pannello di lettura (spiegazione completa della voce cliccata; per gli incantesimi `spellFullHtml` + «Lancia» = `castSpell`), incantesimi e capacità; i riquadri speciali (forma selvatica, Possanza, Zenith) e «Effetti e tiri» vengono spostati dalla Panoramica di prima con i loro tasti.
 - Le altre pagine (Attacchi, Inventario, Incantesimi, Capacità, Storia, Diario) per ora mostrano il contenuto di prima dentro la cornice nuova: da rifare come nel prototipo nelle versioni successive.
 - `prova-tavolo.js`: il controllo «scheda trasformata / gigante» ora guarda anche `.s3-eroe`. Verde (66 e 38). Provati a mano: tiro di abilità (chiede vantaggio), Tira, gemma spesa, Lancia, ricerca, tutte le pagine; 1920 e 1366.
+
+## v196 (10/10/2026) — la scheda nuova identica al prototipo su ogni schermo
+
+- Giuseppe: «non è uguale alle mockup». Sotto 1920 px la scheda si rompeva (nomi a capo, colonne schiacciate). Ora la scheda è disegnata a 1920×1080 e si rimpicciolisce in proporzione (`zoom` = `--z` fra 0,7 e 1, calcolato da `scala()` su larghezza e altezza della finestra; la finestra prende `100vw/--z`): identica al prototipo anche a 1536 e 1366.
+- «In gioco»: il nome dell'azione si divide in titolo e riga breve («Spada lunga (1 mano)» → «Spada lunga» / «1 mano»), come nel prototipo; il pannello di lettura parte da una voce con un testo.
+- `prova-tavolo.js` verde.

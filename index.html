@@ -2030,13 +2030,25 @@ html body #zoomctl input#aoeSize::-webkit-inner-spin-button, #zoomctl #aoeSize::
   .sch3 .s3-riposi button{font-size:16px!important}
   .sch3{grid-template-columns:clamp(260px,22vw,392px) minmax(0,1fr) 112px}
 }
+
+/* la scheda è disegnata per 1920×1080: sugli schermi più piccoli si rimpicciolisce in proporzione, identica (zoom fra 0,8 e 1) */
+#modal .box.sheet2.sch3box{zoom:var(--z,1);width:calc((100vw - 32px)/var(--z,1))!important;height:calc((100vh - 92px)/var(--z,1))!important}
+#modal .sch3{grid-template-columns:392px minmax(0,1fr) 112px!important}
+#modal .sch3 .s3-colonne{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(0,1.25fr) minmax(0,1fr)!important;overflow:hidden!important}
+#modal .sch3 .s3-col{overflow:auto!important}
+#modal .sch3 .s3-col.s3-c3{display:block!important;grid-column:auto!important;border-top:0!important}
+#modal .sch3 .s3-vitali{flex-wrap:nowrap!important}#modal .sch3 .s3-cerca{width:440px!important;margin-left:auto!important}
+#modal .sch3 .s3-eroe h1{font-size:56px!important}
+#modal .sch3 .s3-att-t b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#modal .sch3 .s3-att-t small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#modal .sch3 .s3-lettura .s3-la{background-size:cover}
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v195</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v196</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -7790,7 +7802,8 @@ function ccGuida(box){ const host=box.querySelector('.croguide')||box; let el=ho
           LET[k]={t:poiText(a.n),s:`${lab}${a.atk!=null?` · colpire ${fmtMod(a.atk)}`:''}${a.dmg?` · ${poiText(a.dmg)}`:''}`,x:poiText(a.note||''),i:p,b:mine?`<button class="s3-tira s3-grande" data-s3act="${i}">${a.atk!=null||a.dmg?'Tira':'Usa'}</button>`:''};
           const colp=a.atk!=null?`<div class="s3-num"><small>Colpire</small><b>${fmtMod(a.atk)}</b></div>`:'';
           const dan=a.dmg?`<div class="s3-num"><small>${actTipo(a)==='cura'?'Cura':'Danni'}</small><b>${esc(String(a.dmg).replace(/\s*\(.*$/,''))}</b></div>`:'';
-          return `<div class="s3-att" data-k="${k}" data-q="${esc((a.n+' '+(a.note||'')).toLowerCase())}"><div class="s3-art" style="--a:url('${p}')"></div><div class="s3-att-t"><b>${poiText(a.n)}</b><small>${poiText((a.note||'').slice(0,70))}</small></div>${colp}${dan}${mine?`<button class="s3-tira" data-s3act="${i}">${a.atk!=null||a.dmg?'Tira':'Usa'}</button>`:''}</div>`; }).join('')+`</section>`;
+          const m=/^(.*?)\s*[(:]\s*(.*?)\)?\s*$/.exec(a.n)||[], tit=(m[1]&&m[2])?m[1]:a.n, sub=(m[1]&&m[2])?m[2]:((a.note||'').split(/[.·]/)[0]||lab);
+          return `<div class="s3-att" data-k="${k}" data-q="${esc((a.n+' '+(a.note||'')).toLowerCase())}"><div class="s3-art" style="--a:url('${p}')"></div><div class="s3-att-t"><b>${poiText(tit)}</b><small>${poiText(sub.slice(0,48))}</small></div>${colp}${dan}${mine?`<button class="s3-tira" data-s3act="${i}">${a.atk!=null||a.dmg?'Tira':'Usa'}</button>`:''}</div>`; }).join('')+`</section>`;
       }
       /* Risorse: gemme da spendere (stesso comando dei pallini di prima) */
       const R=pg.risorse||[]; let ris='';
@@ -7841,13 +7854,15 @@ function ccGuida(box){ const host=box.querySelector('.croguide')||box; let el=ho
       }
       nuovo.querySelectorAll('.s3pag [data-k]').forEach(e=>e.addEventListener('click',()=>leggi(nuovo,e.dataset.k,LET)));
       if(sch3Sel&&LET[sch3Sel]) leggi(nuovo,sch3Sel,LET);
-      else { const primo=Object.keys(LET).find(k=>k[0]==='a'); if(primo) leggi(nuovo,primo,LET); }
+      else { const primo=Object.keys(LET).find(k=>k[0]==='a'&&(LET[k].x||'').length>40)||Object.keys(LET).find(k=>k[0]==='c'&&(LET[k].x||'').length>40)||Object.keys(LET)[0]; if(primo) leggi(nuovo,primo,LET); }
     }
     const q=nuovo.querySelector('.s3q');
     q.oninput=()=>{ const v=q.value.trim().toLowerCase(); nuovo.querySelectorAll('[data-q]').forEach(e=>e.classList.toggle('fuori',!!v&&!e.dataset.q.includes(v))); nuovo.classList.toggle('cercando',!!v);
       if(sheetTab!=='pan') nuovo.querySelectorAll('.s3pag .shbody *').forEach(()=>{}); };
   }
-  const _r=renderSheet; renderSheet=function(id){ _r.apply(this,arguments); try{ sch3(id); }catch(e){ console.warn('scheda nuova',e); } };
+  function scala(){ const b=document.querySelector('#modal .box.sch3box'); if(!b) return; const z=Math.max(.7,Math.min(1,innerWidth/1920,(innerHeight-60)/1020)); b.style.setProperty('--z',z); }
+  addEventListener('resize',scala);
+  const _r=renderSheet; renderSheet=function(id){ _r.apply(this,arguments); try{ sch3(id); scala(); }catch(e){ console.warn('scheda nuova',e); } };
 })();
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
 </script>
