@@ -1630,7 +1630,7 @@ select option{background:#0C0F15;color:#EFE6D0}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v183</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v184</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -6960,4 +6960,167 @@ function croNotte(){ const M=croS(), A=M.campo||{}, T=M.campoTiri||{}, fatti=[];
 @media (max-width:1200px){.cxresgrid,.cxresgrid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.cxmid{grid-template-columns:1fr}.cxpost{grid-template-columns:1fr}.cxbeasts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:700px){.cxresgrid,.cxresgrid.three,.cxresgrid.two{grid-template-columns:1fr}.cxtop{grid-template-columns:1fr}.cxban{display:none}.cxtiles{grid-template-columns:1fr 1fr}}
 `; document.head.appendChild(st); }
+/* ===== SCHEDE DEL COMPENDIO DA MANUALE (v184): ogni scheda come una voce dei manuali D&D. In testa la veduta (o l'illustrazione), lo stemma o il ritratto a medaglione accanto al titolo; il testo a sinistra; a destra, ferma, la colonna con l'epigrafe e «… in breve». Riordina la scheda già disegnata da c3RenderDetail e renderC2Entry: i testi e i tasti restano quelli (stessi nodi, stessi clic). Prova scelta da Giuseppe il 10/10/2026 (Revisioni/Prova grafica Teramum). ===== */
+(function(){
+  const zoom=src=>{ const z=document.getElementById('c3zoom'); if(!z||!src) return; z.querySelector('img').src=src; z.style.display='flex'; };
+  const urlDi=el=>{ const m=/url\(["']?(.*?)["']?\)/.exec((el&&el.style&&el.style.backgroundImage)||''); return m?m[1]:''; };
+  /* medaglione: ritratto (alto, ritagliato) se l'immagine è più alta che larga, altrimenti stemma intero (stemmi, oggetti) */
+  function medaglione(src,tipo,alt){ const m=document.createElement('img'); m.className='pv-med pv-'+tipo; m.alt=alt||''; m.title='Ingrandisci'; m.onclick=()=>zoom(src);
+    const forma=()=>{ if(!m.naturalWidth) return; const r=m.naturalWidth/m.naturalHeight; m.classList.toggle('pv-ritratto',r<.9); m.classList.toggle('pv-stemma',r>=.9); };
+    m.onload=forma; m.src=src; if(m.complete) forma(); return m; }
+  function pvScheda(){
+    const d=document.getElementById('compDetail'); if(!d||!d.classList.contains('c3det')) return;
+    if(d.querySelector(':scope > .pv-testa')) return; /* già riordinata (renderC2Entry chiamata da c3RenderDetail) */
+    d.classList.remove('pv','pv-banner');
+    const e=c2Open?c2All().find(x=>x.id===c2Open):null; if(!e||d.classList.contains('hidden')||d.querySelector('#ceSave')) return;
+    const h2=d.querySelector(':scope > h2.big, :scope > .sheethead h2.big'); if(!h2) return;
+    const albero=!!d.querySelector(':scope > .row #c3close');
+    let banner='', med=null, sub=null, meta=null, azioni=null;
+    if(albero){
+      const hero=d.querySelector(':scope > .hero'); const img=urlDi(hero);
+      sub=d.querySelector(':scope > p.note'); meta=d.querySelector(':scope > .meta'); azioni=d.querySelector(':scope > .actions');
+      const fig=e.illustrazione?d.querySelector('.c2v-blocco figure.c2v-tav'):null;
+      if(fig&&img){ banner=fig.querySelector('img').getAttribute('src'); fig.remove(); med=medaglione(img,'stemma','Stemma'); }
+      else if(img) banner=img;
+      else if(hero){ med=document.createElement('div'); med.className='pv-med pv-iniziale'; med.style.background=hero.style.background; med.textContent=hero.textContent; }
+      if(hero) hero.remove();
+    } else {
+      const sh=d.querySelector(':scope > .sheethead'); if(!sh) return;
+      const por=sh.querySelector('.portrait'); if(por&&urlDi(por)) med=medaglione(urlDi(por),'ritratto',e.title);
+      const eb=sh.querySelector('.eyebrow'); if(eb){ meta=document.createElement('div'); meta.className='meta'; meta.innerHTML=`<span>${eb.innerHTML}</span>`; }
+      const resto=[...sh.querySelectorAll(':scope > div:last-child > :not(.eyebrow):not(h2)')].filter(x=>x.textContent.trim());
+      sub=document.createElement('div'); sub.className='pv-righe'; resto.forEach(x=>sub.append(x));
+      const cop=d.querySelector(':scope > figure.c2v-copertina img, :scope > img.poiimg');
+      if(cop){ banner=cop.getAttribute('src'); (cop.closest('figure')||cop).remove(); }
+      const dio=d.querySelector(':scope > .c2v-diocard > img.c2v-ritr'); if(dio&&!med){ med=medaglione(dio.getAttribute('src'),'ritratto',e.title); dio.remove(); }
+      sh.replaceWith(h2);
+    }
+    /* la testata */
+    const testa=document.createElement('div'); testa.className='pv-testa';
+    const tit=document.createElement('div'); tit.className='pv-titolo'; const nomi=document.createElement('div'); nomi.className='pv-nomi';
+    h2.removeAttribute('style'); nomi.append(h2);
+    if(sub&&sub.textContent.trim()){ sub.removeAttribute('style'); sub.classList.add('pv-sub'); nomi.append(sub); } else if(sub) sub.remove();
+    if(meta) nomi.append(meta);
+    if(med) tit.append(med); tit.append(nomi); if(azioni&&azioni.children.length) tit.append(azioni); else if(azioni) azioni.remove();
+    if(banner){ const v=document.createElement('div'); v.className='pv-veduta'; v.style.backgroundImage=`url(${banner})`; v.title='Ingrandisci'; v.onclick=()=>zoom(banner); testa.append(v); d.classList.add('pv-banner');
+      /* un'immagine quasi quadrata (stemma, ritratto) non si taglia a striscia: diventa il medaglione */
+      const prova=new Image(); const decidi=()=>{ const r=prova.naturalWidth/(prova.naturalHeight||1); if(!prova.naturalWidth||r>=(['luogo','diario'].includes(e.cat)?.75:1.25)) return; /* le illustrazioni dei luoghi restano in testata anche se quasi quadrate */ v.remove(); d.classList.remove('pv-banner'); if(!tit.querySelector('.pv-med')) tit.prepend(medaglione(banner,r<.85?'ritratto':'stemma',e.title)); };
+      prova.onload=decidi; prova.src=banner; if(prova.complete) decidi(); }
+    testa.append(tit);
+    const riga=d.querySelector(':scope > .row'); if(riga) riga.after(testa); else d.prepend(testa);
+    /* il corpo: testo a sinistra, colonna dei fatti a destra */
+    const lato=document.createElement('div'); lato.className='pv-lato';
+    const epi=d.querySelector(':scope > .c2v-epi'); if(epi) lato.append(epi);
+    const kv=d.querySelector(':scope > .kv2, :scope > .c2v-diocard');
+    if(kv){ const box=document.createElement('aside'); box.className='pv-breve'; const nome=e.title.length>24?'In breve':`${e.title} in breve`; box.innerHTML=`<h3>${c3Esc(nome)}</h3>`;
+      const k=kv.classList.contains('kv2')?kv:kv.querySelector('.kv2'); if(k){ k.classList.remove('c2v-scheda'); [...k.querySelectorAll(':scope > b')].forEach(b=>{ const f=document.createElement('div'); f.className='pv-fatto'; const s=b.nextElementSibling; b.before(f); f.append(b); if(s&&s.tagName==='SPAN') f.append(s); }); box.append(k); }
+      const ap=kv.querySelector('.c2v-apri'); if(ap) box.append(ap);
+      if(kv!==k) kv.remove(); if(k&&k.children.length) lato.append(box); }
+    const lnk=d.querySelector(':scope > .c2links'); if(lnk) lato.append(lnk);
+    const desc=[...d.querySelectorAll(':scope > h3')].find(h=>/^(Descrizione|Il luogo)$/.test(h.textContent.trim())); if(desc) desc.remove();
+    const tabs=d.querySelector(':scope > .c3tabs');
+    const dopo=[...d.children].filter(x=>!x.classList.contains('row')&&x!==testa&&x!==tabs&&!x.classList.contains('foot'));
+    const corpo=document.createElement('div'); corpo.className='pv-corpo'+(lato.children.length?'':' solo');
+    const testo=document.createElement('div'); testo.className='pv-testo'; dopo.forEach(x=>testo.append(x));
+    corpo.append(testo); if(lato.children.length) corpo.append(lato);
+    (tabs||testa).after(corpo);
+    d.classList.add('pv');
+  }
+  const _c3=c3RenderDetail; c3RenderDetail=function(){ _c3.apply(this,arguments); pvScheda(); };
+  const _c2=renderC2Entry; renderC2Entry=function(){ _c2.apply(this,arguments); pvScheda(); };
+  const st=document.createElement('style'); st.id='pvStile'; st.textContent=`
+.c3det.pv{width:min(1240px,96vw);top:max(5vh,70px);height:calc(95vh - max(5vh,70px));padding:0 0 44px;overflow-x:hidden} /* sotto la barra in alto anche sugli schermi bassi */
+.c3det.pv > .row{position:relative;z-index:3;margin:16px 38px 0!important}
+.c3det.pv.pv-banner > .row{position:absolute;top:0;left:0;right:0;margin:14px 18px 0!important}
+.c3det.pv.pv-banner > .row button,.c3det.pv.pv-banner > .row select{background:rgba(7,9,13,.74);backdrop-filter:blur(6px);border-color:rgba(212,174,92,.45)}
+.pv-testa{position:relative;margin:0 0 6px}
+.pv-veduta{height:clamp(300px,46vh,500px);background-size:cover;background-position:center 40%;cursor:zoom-in;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}
+.pv-titolo{position:relative;display:flex;align-items:flex-end;gap:24px;padding:22px 38px 0}
+.pv-banner .pv-titolo{margin-top:-150px;padding-top:0}
+.pv-med{flex:none;cursor:zoom-in}
+.pv-stemma{width:150px;height:150px;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.7))}
+.pv-ritratto{width:150px;height:188px;object-fit:cover;object-position:center 20%;border:1px solid var(--gold-dim);border-radius:4px;box-shadow:0 12px 26px rgba(0,0,0,.6)}
+.pv-iniziale{width:120px;height:120px;display:flex;align-items:center;justify-content:center;border:1px solid var(--gold-dim);border-radius:4px;font:64px var(--display);color:#F3E6C4;cursor:default}
+.pv-nomi{flex:1;min-width:0}
+.c3det.pv h2.big{margin:0!important;font-size:68px!important;line-height:.95;letter-spacing:.005em;color:#F3E6C4;text-shadow:0 3px 18px rgba(0,0,0,.8);text-wrap:balance}
+.c3det.pv .pv-sub{margin:8px 0 0;font-style:italic;color:#CDBF9F}
+.c3det.pv .pv-righe > *{margin:4px 0 0}
+.c3det.pv .pv-nomi .meta{margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px 8px}
+.c3det.pv .pv-nomi .meta span{color:#C9B27A}
+.c3det.pv .pv-titolo .actions{margin:0 0 6px;flex:none}
+.c3det.pv .pv-titolo .actions .primary{width:auto;padding:9px 18px;background:transparent;color:var(--gold);border:1px solid var(--gold-dim);box-shadow:none}
+.c3det.pv .pv-titolo .actions .primary:hover{background:rgba(212,174,92,.12);border-color:var(--gold)}
+.c3det.pv .c3tabs{margin:26px 38px 0;display:flex;gap:28px;justify-content:flex-start;border-bottom:1px solid rgba(212,174,92,.22)}
+.c3det.pv .c3tabs button{flex:none;display:inline-flex;flex-direction:row;align-items:center;gap:8px;padding:10px 2px;min-height:0}
+.c3det.pv .c3tabs button svg{width:18px;height:18px;margin:0}
+.c3det.pv .c3tabs button small{margin-left:4px}
+.c3det.pv > .foot{margin:24px 38px 0}
+.pv-corpo{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:0 46px;margin:30px 38px 0;align-items:start}
+.pv-corpo.solo{grid-template-columns:minmax(0,1fr)}
+.pv-corpo.solo .pv-testo{max-width:860px}
+.pv-testo{min-width:0}
+.pv-testo > :first-child{margin-top:0}
+.pv-lato{position:sticky;top:18px;display:grid;gap:22px}
+.c3det.pv .c2v-epi{margin:0;padding:16px 6px;border:0;border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim);background:none;text-align:center}
+.c3det.pv .c2v-epi p{font-size:22px;line-height:1.3}
+.c3det.pv .c2v-epi cite{display:block;margin-top:6px}
+.pv-breve{padding:16px 18px 18px;background:#14110C;border-top:4px solid #9C6A2C;border-bottom:4px solid #9C6A2C;box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.c3det.pv .pv-breve h3{margin:0!important;padding:0 0 8px!important;font-family:var(--display)!important;font-size:30px!important;line-height:1;letter-spacing:.01em;text-transform:none!important;color:#E7C980!important;border-bottom:1px solid #9C6A2C}
+.c3det.pv .pv-breve h3::before,.c3det.pv .pv-breve h3::after{display:none!important}
+.c3det.pv .pv-breve .kv2{display:block;border:0;padding:4px 0 0;margin:0;background:none}
+.c3det.pv .pv-breve .pv-fatto{padding:7px 0;border-bottom:1px solid rgba(156,106,44,.28)}
+.c3det.pv .pv-breve .pv-fatto:last-child{border-bottom:0}
+.c3det.pv .pv-breve .kv2 b{display:inline;font-family:var(--sans);font-weight:700;font-size:16px;color:#E7C980;margin:0 6px 0 0;border:0;padding:0}
+.c3det.pv .pv-breve .kv2 span{display:inline;font-family:var(--sans);font-size:16px;line-height:1.45;border:0;padding:0}
+.c3det.pv .pv-breve .c2v-apri{margin-top:12px}
+.c3det.pv .pv-lato .c2links{margin:0}
+.c3det.pv .pv-lato .c2links .row{flex-wrap:wrap}
+.c3det.pv .c2v-blocco,.c3det.pv .lore,.c3det.pv .c2v-lore,.c3det.pv .c2v-tab{max-width:none!important}
+.c3det.pv .lore,.c3det.pv .lore p,.c3det.pv .c2v-lore p,.c3det.pv .c2v-ul li{font-style:normal}
+.c3det.pv .lore p,.c3det.pv .c2v-ul{font-size:19px;line-height:1.6}
+.c3det.pv .lore p{text-wrap:pretty;hyphens:auto}
+.c3det.pv .lore p+p{margin-top:.7em}
+.c3det.pv p.c2v-capo{font-size:20px}
+.c3det.pv p.c2v-capo::first-letter{float:left;font-family:var(--display)!important;font-size:5.4em!important;line-height:.82!important;padding:4px 12px 0 0!important;color:#E7C980}
+.c3det.pv .c2v-blocco{margin-top:40px}
+.c3det.pv .pv-testo > .c2v-blocco:first-child,.c3det.pv .pv-testo > .lore:first-child > .c2v-blocco:first-child{margin-top:0}
+.c3det.pv h4.c3bt{font-family:var(--display);font-style:normal;font-size:38px;line-height:1;letter-spacing:.005em;text-transform:none;color:#E7C980;margin:0 0 16px;padding:0 0 6px;border-bottom:2px solid #9C6A2C}
+.c3det.pv h4.c2v-nome{font-family:var(--display);font-style:normal;font-size:30px;line-height:1;text-transform:none;color:#E7C980;margin:0 0 12px}
+.c3det.pv .c2v-ul{padding-left:1.1em}
+.c3det.pv .c2v-ul li{margin:.45em 0;font-family:var(--ui)}
+.c3det.pv .c2v-ul li::marker{color:#9C6A2C}
+.c3det.pv .c2v-ul li b{color:#F3E6C4}
+.c3det.pv .c2v-tab{margin:20px 0 6px}
+.c3det.pv .c2v-tab table{width:100%!important;border-collapse:collapse;font-size:16px}
+.c3det.pv .c2v-tab th{font-family:var(--sans);font-weight:700;font-size:16px;color:#E7C980;text-align:left;padding:7px 12px;border:0}
+.c3det.pv .c2v-tab td{padding:8px 12px;vertical-align:top;border:0;font-variant-numeric:lining-nums}
+.c3det.pv .c2v-tab tbody tr:nth-child(odd){background:rgba(156,106,44,.14)}
+.c3det.pv .c2v-tab td:first-child{font-weight:700;color:#F3E6C4}
+.c3det.pv ::selection{background:rgba(212,174,92,.35);color:#fff}
+.c3det.pv .c2lnk:focus-visible,.c3det.pv button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:1100px){ .pv-corpo{grid-template-columns:minmax(0,1fr)} .pv-lato{position:static;order:-1;margin-bottom:24px} }
+@media (max-width:700px){
+  .c3det.pv{width:100vw;top:120px;height:calc(100vh - 120px)} /* sotto l'intestazione a due righe del telefono */
+  .c3det.pv > .row{margin:10px 16px 0!important}
+  .c3det.pv.pv-banner > .row{margin:10px 10px 0!important}
+  .pv-veduta{height:260px}
+  .pv-titolo{padding:16px 16px 0;gap:14px;flex-wrap:wrap;align-items:flex-end}
+  .pv-banner .pv-titolo{margin-top:-46px}
+  .pv-stemma{width:68px;height:68px}
+  .pv-ritratto{width:84px;height:105px}
+  .pv-iniziale{width:68px;height:68px;font-size:38px}
+  .c3det.pv h2.big{font-size:36px!important}
+  .c3det.pv .pv-nomi .meta{font-size:13px;letter-spacing:.08em}
+  .c3det.pv .pv-sub{font-size:15px}
+  .c3det.pv .pv-titolo .actions{width:100%}
+  .c3det.pv .pv-titolo .actions .primary{width:100%}
+  .c3det.pv .c3tabs{margin:20px 16px 0}
+  .pv-corpo{margin:24px 16px 0}
+  .c3det.pv > .foot{margin:20px 16px 0}
+  .c3det.pv h4.c3bt{font-size:30px}
+  .c3det.pv .c2v-tab{overflow-x:auto}
+}
+`; document.head.appendChild(st);
+})();
+/* ===== FINE SCHEDE DA MANUALE (v184) ===== */
 </script>
