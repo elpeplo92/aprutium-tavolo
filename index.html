@@ -2525,7 +2525,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v215</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v216</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -6250,12 +6250,13 @@ function c2LnkLc(){
     for(const m of txt.matchAll(/(^|[^\p{L}])([a-z\u00e0-\u00ff][\p{L}']{3,})/gu)) set.add(c2LnkNorm(m[2])); }
   C2LNK_LC={n:all.length,set}; return set;
 }
+let c2LnkCat=null;
 function c2LnkBuild(curId){
   const map={}, dead=new Set(), lc=c2LnkLc();
-  const add=(name,id)=>{ name=(name||'').trim(); if(name.length<4) return; const k=c2LnkNorm(name); if(dead.has(k)) return; if(map[k]&&map[k].id!==id){ dead.add(k); delete map[k]; return; } map[k]={id,name}; };
+  const add=(name,id)=>{ name=(name||'').trim(); if(name.length<4) return; const k=c2LnkNorm(name); if(dead.has(k)) return; if(map[k]&&map[k].id!==id){ dead.add(k); delete map[k]; return; } map[k]={id,name,cat:c2LnkCat}; };
   for(const e of c2All()){
     if(e.id===curId||!c2Visible(e)) continue;
-    let t=(e.title||'').replace(/^\s*\d+\s*[\.\u00b7:]?\s*/,'').trim();
+    c2LnkCat=e.cat; let t=(e.title||'').replace(/^\s*\d+\s*[\.\u00b7:]?\s*/,'').trim();
     const nicks=[...t.matchAll(/\u00ab\s*([^\u00bb]+?)\s*\u00bb/g)].map(m=>m[1]).concat([...t.matchAll(/'([^']{4,})'/g)].map(m=>m[1]));
     const plain=t.replace(/[\u00ab\u00bb]/g,' ').replace(/\s+/g,' ').trim();
     add(plain,e.id);
@@ -6263,11 +6264,11 @@ function c2LnkBuild(curId){
     for(const w of plain.split(/[\s\u2014\u00b7,()\u2019]+/)){ const k=c2LnkNorm(w); if(w.length>=5&&/^[A-Z\u00c0-\u00de]/.test(w)&&!C2LNK_STOP.has(k)&&!lc.has(k)) add(w,e.id); }
   }
   const names=Object.values(map).map(x=>x.name).sort((a,b)=>b.length-a.length);
-  const flat={}; for(const k in map) flat[k]=map[k].id;
-  if(!names.length) return {map:flat,rx:null};
+  const flat={}, nm={}; for(const k in map){ flat[k]=map[k].id; nm[k]=/^(popolo|mito)$/.test(map[k].cat||'')?null:map[k].name; }
+  if(!names.length) return {map:flat,name:nm,rx:null};
   const esc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/&/g,'&amp;');
   let rx=null; try{ rx=new RegExp('(^|[^\\p{L}])('+names.map(esc).join('|')+')(?![\\p{L}])','giu'); }catch(_){ rx=null; }
-  return {map:flat,rx};
+  return {map:flat,name:nm,rx};
 }
 function c2Text(t,lnk){
   let s=(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
@@ -6276,7 +6277,13 @@ function c2Text(t,lnk){
   s=s.replace(/\[(PNG|LUOGO|SCENA|OGGETTO|FAZIONE|MITO|QUEST)\s*[\u2014\-\u2013]\s*([^\]]+)\]/g,(m,kind,txt)=>{ txt=txt.trim(); const id=lnk&&lnk.map[c2LnkNorm(txt)]; return put(id?`<a class="c2lnk" data-go="${id}">${txt}</a>`:txt); });
   s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(m,txt,id)=>{ id=id.trim(); const te=c2All().find(x=>x.id===id); return put(te&&c2Visible(te)?`<a class="c2lnk" data-go="${id}">${txt}</a>`:`<b>${txt}</b>`); });
   s=s.replace(/\[\[([^\]]+)\]\]/g,(m,txt)=>{ const id=lnk&&lnk.map[c2LnkNorm(txt)]; return put(id?`<a class="c2lnk" data-go="${id}">${txt}</a>`:`<b>${txt}</b>`); });
-  if(lnk&&lnk.rx) s=s.replace(lnk.rx,(m,pre,name)=>{ if(!name.includes(' ')&&!/^[A-Z\u00c0-\u00de]/.test(name)) return m; const id=lnk.map[c2LnkNorm(name)]; return id?pre+put(`<a class="c2lnk" data-go="${id}">${name}</a>`):m; });
+  if(lnk&&lnk.rx) s=s.replace(lnk.rx,(m,pre,name,off,str)=>{ if(!name.includes(' ')&&!/^[A-Z\u00c0-\u00de]/.test(name)) return m; const id=lnk.map[c2LnkNorm(name)]; if(!id) return m;
+    /* v215: una parola sola dopo San/Santa/Santo/Sant\u2019/Porta/Piazza/Via \u00e8 un altro nome (\u00abSan Martino\u00bb non \u00e8 Frate Martino) */
+    if(!name.includes(' ')&&/(^|[^\p{L}])(San|Santa|Santo|Sant[\u2019']|S\.|Porta|Piazza|Via)\s*$/u.test(str.slice(0,off+pre.length))) return m;
+    /* v215: un titolo di pi\u00f9 parole scritto con le parole maiuscole del titolo in minuscolo \u00e8 un nome comune (\u00abla piazza\u00bb non \u00e8 La Piazza) */
+    if(name.includes(' ')&&lnk.name[c2LnkNorm(name)]!==null){ const tw=(lnk.name[c2LnkNorm(name)]||name).split(' '), mw=name.split(' '), up=w=>/(^|['\u2019])[A-Z\u00c0-\u00de]/.test(w||''), art=/^(il|lo|la|l['\u2019].*|i|gli|le|lu|li|un|una|uno)$/i;
+      const k=tw.map((w,i)=>i).filter(i=>up(tw[i])&&!(i===0&&art.test(tw[0]))); if(k.length&&!k.some(i=>up(mw[i]))) return m; }
+    return pre+put(`<a class="c2lnk" data-go="${id}">${name}</a>`); });
   s=s.replace(/⟦([\s\S]*?)⟧/g,(m,x)=>IS_GM?`<span class="c2prop" title="Proposta da approvare">${x}</span>`:x); /* PROPOSTE A PUNTINI (v162) */
   s=s.replace(/\n\n/g,'</p><p>').replace(/\n/g,'<br>');
   return s.replace(/\x01(\d+)\x02/g,(m,i)=>out[+i]);

@@ -1131,3 +1131,11 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Numeri, Peso e atteggiamenti: NUOVO DETTAGLIO PROPOSTO (contrari alla Crociata: Velthuria e Loto Nero −2; Impaloni, Melatino, Fiamma, Ordine d'Acciaio, Marchese d'Avalos −1; Naviganti Grigi +2; gli altri neutrali). Bbacucchë non ha un punto sulla mappa del Ducato, quindi niente fazione (gli Sciamani del Lupo).
 - Script rigiocabile `Revisioni/Gioco della Crociata (10-10-2026)/fazioni_ducato.py` (aggiunge solo gli id che mancano, una riga per fazione in `consenso.fazioni`).
 - Pubblicata da una copia pulita (`git worktree`) perché un'altra conversazione aveva modifiche non pubblicate in `Sito/` (link del Compendio, segnate «v215»): chi pubblica dopo passa a v216.
+
+## v216 (11/10/2026) — collegamenti automatici del Compendio più prudenti
+
+- Segnalato in `borgo-canzane`: «San Martino» collegava «Martino» a Frate Martino, «la piazza» alla voce La Piazza di Mushanë (`mu-24`). Correzione in `c2Text` (il sostituto di `lnk.rx`); `c2LnkBuild` restituisce anche `name` (titolo originale per chiave, `null` per popoli e miti) e segna la categoria (`c2LnkCat`).
+- Regola 1: una parola sola non si collega se è preceduta da San, Santa, Santo, Sant’, S., Porta, Piazza, Via (maiuscole).
+- Regola 2: un titolo di più parole non si collega se nel testo tutte le sue parole maiuscole (articolo iniziale escluso: il, la, lu, li, l’…) sono scritte in minuscolo («la piazza», «La piazza», «borgo vecchio», «il forno comune»). Non vale per popoli e miti («i giganti», «la frattura» restano collegati).
+- Confronto su tutte le voci prima/dopo (script `lnk.js` nello scratchpad della sessione): da master 6307 collegamenti, tolti 110, tutti sbagliati (48 piazze, 8 «borgo vecchio» di altri borghi verso Bëllindë, santi verso frati e PNG, nomi comuni); nessuno nuovo. `prova-tavolo.js` verde.
+- Rimasto com'era (non toccato): in Canzañë il nome «Canzañë» collega a Casa Cerullius (soprannome della casata).
