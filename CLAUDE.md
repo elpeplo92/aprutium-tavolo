@@ -884,3 +884,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Giuseppe: Ciccillo «Lu Sorce» sta nella Crociata, non a Julia Nova. Nuovo gruppo «La Crociata» fra i personaggi: `C2_CITY.crociata` e `C2_CITY_ORDER` (primo della lista); Ciccillo ha `city:"crociata"`, `group:"La compagnia"` (COMPENDIO_DATA, `comp/out/julianova.json`, `compendio_all.json`).
 - Ritratti scelti da me su delega di Giuseppe (foglio 4): Lu Biondo e Storto 4, Berardo de Còlle Lungo 4, Celestina Colabello 2 (`ritratti-jn-scelte5.json`).
 - In corso: Nardìne e Fenix rifatti coi colori di Julia Nova (rosso e oro); Ciccillo, Mastro Biagio, Mastro Gerolamo, Tonino «La Botte» rifatti buffi.
+
+## v181 (10/10/2026) — Nardìne e Fenix in rosso e oro; Ciccillo, Biagio, Gerolamo, Tonino buffi
+
+- Da `Ritratti Julia Nova - foglio 6.jpg` (job in `ritratti-jn6-job.json`), scelte di Giuseppe: Nardìne 4, Fenix 4 (coi colori di Julia Nova), Ciccillo 1, Mastro Biagio 1, Mastro Gerolamo 2, Tonino «La Botte» 4 (`ritratti-jn-scelte6.json`).
+- `scarica_ritratti_jn.py`: se il ritratto `<nome>.png` esiste già (scelto prima), va in archivio invece di essere sovrascritto (`_ARCHIVIO_2026-10-09/Ritratti sostituiti (Julia Nova)/`, registro).
+- A Julia Nova resta senza ritratto solo Gabrielus Forcinum (Giuseppe darà una foto).
