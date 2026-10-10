@@ -1123,3 +1123,11 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Luoghi numerati in ogni borgo (Mushanë e Bëllindë con i numeri dei loro luoghi). Le id `borgo-cashtagne` = Li Cashtillë (Castelli) e `borgo-li-cashtille` = Cashtagnë (Castel Castagna) restano incrociate (v166).
 - Voti del Concilio dei Reggenti allineati in tutte le province (tabella nel master del Latium: 18 voti, quello di Aprutium ⟦sospeso⟧).
 - Prova: tutte le 61 voci aperte da giocatore (`foto.js finale giocatore …`): nessun errore, nessuna parte master visibile; `prova-tavolo.js` verde. Domande aperte per Giuseppe in `Revisioni/Schede uniformi…/Domande per Giuseppe.md`.
+
+## v215 (10/10/2026) — le fazioni del Ducato che mancavano (gioco della Crociata)
+
+- Segnalato da Giuseppe: nel gioco della Crociata c'erano solo 16 fazioni in 6 borghi. Ora sono **68**: una per ogni «Chi comanda» delle schede dei borghi (signori, gilde, consigli, compagnie, clan), le sei Casate di Teramum che mancavano (Impaloni, Melatino con la Lega dei Sensali, Malavolta, Thaulero, Chiodi, Savini), Velthuria e Loto Nero, la Fiamma e l'Ordine d'Acciaio, le gilde e i Castemar di Julia Nova, i Fonteviva (Atrë, Cëllinë, Nutaròschë, Mòrrë, Cashtalladdë basso, Curtënë), Cavatassi, Bardalino, d'Altaria, Fiore, Confraternita del Grano Duro, Ordine Ospitaliero, Ordine dei Tratturi, druidi ecc. Le fazioni con una voce nel Compendio la collegano (`voce`).
+- **Presenze solo dal testo pubblico** dei borghi (niente ⟦⟧ né parte master): il giocatore apre solo le fazioni dei borghi visitati, e non scopre nulla. Quello che sa solo il master (debiti, complotti, chi paga chi) sta in `vuole`.
+- Numeri, Peso e atteggiamenti: NUOVO DETTAGLIO PROPOSTO (contrari alla Crociata: Velthuria e Loto Nero −2; Impaloni, Melatino, Fiamma, Ordine d'Acciaio, Marchese d'Avalos −1; Naviganti Grigi +2; gli altri neutrali). Bbacucchë non ha un punto sulla mappa del Ducato, quindi niente fazione (gli Sciamani del Lupo).
+- Script rigiocabile `Revisioni/Gioco della Crociata (10-10-2026)/fazioni_ducato.py` (aggiunge solo gli id che mancano, una riga per fazione in `consenso.fazioni`).
+- Pubblicata da una copia pulita (`git worktree`) perché un'altra conversazione aveva modifiche non pubblicate in `Sito/` (link del Compendio, segnate «v215»): chi pubblica dopo passa a v216.
