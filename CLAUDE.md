@@ -1171,3 +1171,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Segnalato da Giuseppe: nella colonna di sinistra i mostri del guado mostravano il token con la cornice invece del ritratto. Ogni pedina ha ora il campo `ritratto` (nome leggibile «Ritratto pedina — <nome>.jpg», 600 px, risolto da `build.py` come `img`); `railImg(t)` (in fondo al blocco del pannello dello scontro) dà alla colonna il ritratto della pedina che ha quel token. La mappa continua a usare il token.
 - `Revisioni/Guado - pannello dello scontro (v218)/token_guado.py` scrive anche `ritratti.json`; `applica.py` e `codice.py` (agganci in `renderRail`) aggiornati. Attenzione: `applica.py` è la scena col convoglio (v218): dopo la v219 non va rilanciato da solo, ma seguito da `Revisioni/Guado senza convoglio (v219)/riscrivi_guado.py`.
 - `prova-tavolo.js` verde.
+
+## v221 (10/10/2026) — il tasto dell'iniziativa nella colonna dei personaggi torna a funzionare
+
+- Segnalato da Giuseppe: cliccando il medaglione dell'iniziativa sopra la scheda di un personaggio, il master non chiedeva più l'iniziativa. Causa: dalla v190 il riquadro del nome `.med .info` è alto quanto tutta la scheda (`top:0`) e sta sopra il medaglione `.init` (che è dentro `.pic`): il clic vero andava a `.info` e quindi a `select(id)`. I clic simulati di `prova-tavolo.js` (`el.click()`) non se ne accorgevano.
+- Correzione nel CSS del blocco del pannello dello scontro: `.med .info{pointer-events:none}` e `.med .info>*{pointer-events:auto}`. Provato con clic veri: medaglione = chiede l'iniziativa, nome = seleziona. `prova-tavolo.js` verde.
