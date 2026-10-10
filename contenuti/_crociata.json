@@ -744,5 +744,37 @@
    "julianova": "Rapporti personali, nessun impegno formale.",
    "teramum": "Proclami ostili contro la Crociata."
   }
+ },
+ "consenso": {
+  "_nota": "PROVA (10-10-2026), dalla bozza «Il gioco della Crociata» (03_Compendio/04 La Crociata): tutto NUOVO DETTAGLIO PROPOSTO. Lo stato del borgo è la media degli stati degli attori pesata col Peso (I-V), arrotondata: da +1,5 alleato, da +0,5 favorevole, sopra −0,5 neutrale, sopra −1,5 ostile, altrimenti passato al nemico. Un borgo senza attori qui sotto ha solo «Il popolo», neutrale. Valori di partenza presi dai Sostegni del Registro.",
+  "stati": [[-2, "Passato al nemico", "#C23B2E"], [-1, "Ostile", "#E07B2E"], [0, "Neutrale", "#A9A497"], [1, "Favorevole", "#6FAF4E"], [2, "Alleato", "#F0C75E"]],
+  "fa": {"2": "Vi aiuta anche quando gli costa. Nelle prove sociali con chi sta qui: vantaggio.", "1": "Vi aiuta se non gli costa niente. Nelle prove sociali con chi sta qui: vantaggio.", "0": "Non vi aiuta e non vi ostacola.", "-1": "Vi crea guai se non gli costa niente. Nelle prove sociali con chi sta qui: svantaggio.", "-2": "Vi colpisce appena può. Nelle prove sociali con chi sta qui: svantaggio."},
+  "tipi": {"casata": "Casata", "gilda": "Gilda", "fazione": "Fazione", "compagnia": "Compagnia", "popolo": "Il popolo"},
+  "livelli": {"sconosciuto": "Sconosciuto", "sentito": "Sentito dire", "visitato": "Visitato", "presente": "La Crociata è qui"},
+  "borghi": {
+   "canzane": [
+    {"id": "cerullius", "nome": "Casa Cerullius", "tipo": "casata", "peso": 3, "stato": 1, "vuole": ""},
+    {"id": "spinozzi", "nome": "Gli Spinozzi", "tipo": "casata", "peso": 2, "stato": 2, "vuole": ""},
+    {"id": "taraschi", "nome": "I Taraschi", "tipo": "casata", "peso": 2, "stato": 0, "vuole": ""},
+    {"id": "popolo-madonna", "nome": "Il popolo di Porta Madonna", "tipo": "popolo", "peso": 1, "stato": -1, "vuole": ""},
+    {"id": "popolo-nuova", "nome": "Il popolo di Porta Nuova", "tipo": "popolo", "peso": 1, "stato": 2, "vuole": ""}
+   ],
+   "bellinde": [
+    {"id": "melacera", "nome": "Casa Melacera", "tipo": "casata", "peso": 3, "stato": 1, "vuole": ""},
+    {"id": "popolo", "nome": "Il popolo di Bëllindë", "tipo": "popolo", "peso": 2, "stato": 1, "vuole": ""}
+   ],
+   "mushane": [
+    {"id": "popolo", "nome": "Il popolo di Mushanë", "tipo": "popolo", "peso": 2, "stato": 1, "vuole": ""}
+   ],
+   "julianova": [
+    {"id": "pompizius", "nome": "Casa Pompizius", "tipo": "casata", "peso": 2, "stato": 1, "vuole": ""},
+    {"id": "popolo", "nome": "Il popolo di Julia Nova", "tipo": "popolo", "peso": 3, "stato": 0, "vuole": ""}
+   ],
+   "teramum": [
+    {"id": "mazzarelli", "nome": "Casa Mazzarelli, il Reggente", "tipo": "casata", "peso": 4, "stato": -1, "vuole": ""},
+    {"id": "popolo", "nome": "Il popolo di Teramum", "tipo": "popolo", "peso": 3, "stato": 0, "vuole": ""}
+   ]
+  },
+  "noti": {"bellinde": "visitato", "mushane": "visitato", "julianova": "visitato", "canzane": "visitato", "teramum": ["sentito", -1]}
  }
 }
