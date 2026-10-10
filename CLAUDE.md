@@ -18,6 +18,10 @@ il Sigillo. Nel dubbio, non scriverlo nel testo pubblico. Chiedi a Giuseppe se n
 Attenzione: i testi `gm` sono comunque nel sorgente della pagina (la password master
 blocca il ruolo, non il codice). Vero segreto = solo nel nodo Firebase `master/` (ancora non usato).
 
+## Immagini: solo Midjourney (regola di Giuseppe, 10/10/2026)
+
+Ogni immagine nuova (ritratti, luoghi, paesaggi, stemmi, oggetti, icone, battlemap) si fa con **Midjourney** sull'account di Giuseppe, con fogli di varianti da far scegliere a lui. Dove più sotto si parla di Higgsfield o GPT Image (v109, v110, v117, v121, v139, v151…), è storia: non si usa più. Regole e stile: sezione «Le immagini» di `7_Aprutium/CLAUDE.md`.
+
 ## Struttura del repo
 
 | Percorso | Cosa è |
