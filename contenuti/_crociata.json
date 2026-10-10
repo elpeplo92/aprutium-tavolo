@@ -776,6 +776,10 @@
    ]
   },
   "notizie": {"raggioGiorni": 2, "_nota": "Una notizia è vicina se il borgo è entro raggioGiorni giorni di marcia dalla Crociata: arriva da sola; se è più lontano arriva solo se qualcuno la porta (decide il master). NUOVO DETTAGLIO PROPOSTO."},
+  "trattativa": {"_nota": "NUOVO DETTAGLIO PROPOSTO (Pathfinder 2e, Influenza): 3 round, una prova per PG a round contro CD = cdBase + Peso; critico +2, successo +1, fallito 0, disastro -1; a soglie[0] punti l'attore sale di un passo, a soglie[1] di due, sotto zero scende di uno.", "round": 3, "cdBase": 12, "soglie": [4, 6], "abilita": ["Persuasione", "Inganno", "Intimidire", "Intrattenere", "Intuizione", "Storia", "Religione", "Indagare"]},
+  "turno": {"_nota": "NUOVO DETTAGLIO PROPOSTO: una volta a settimana le casate dei PG fanno un'azione; gli orologi dei nemici tirano tanti d6 quanto il Peso (1-3 = 1 spicchio, 4-5 = 2, 6 = 3, due 6 = 5).",
+   "casate": [["cerullius", "Casa Cerullius", "Alessandros e Vicarus"], ["grazianus", "Casa Grazianus", "Maximus"], ["barbas", "Casa Barbas", "Luigis"], ["naviganti", "I Naviganti Grigi", "Adamus"]],
+   "azioni": [["Investire", "mette denaro in terre e botteghe: rende nelle settimane dopo"], ["Reclutare", "trova uomini per la casata o per la Crociata"], ["Fortificare", "rinforza difese e guardie"], ["Commerciare", "vende, compra, apre una strada"], ["Trattare", "manda qualcuno a parlare con un attore di un borgo"], ["Intrigare", "lavora di nascosto contro un nemico"], ["Tenere l'ordine", "si occupa dei guai di casa"], ["Sostenere la Crociata", "manda viveri, oro o uomini alla colonna"]]},
   "noti": {"bellinde": "visitato", "mushane": "visitato", "julianova": "visitato", "canzane": "visitato", "teramum": ["sentito", -1]}
  }
 }
