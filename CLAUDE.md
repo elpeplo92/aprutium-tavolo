@@ -976,3 +976,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v193 (10/10/2026) — Vhaerun nella Crociata; rivalità del Girella confermata
 
 - Giuseppe: Vhaerun è partito con la Crociata (`city:"crociata"`, gruppo «La compagnia», come gli altri di Bëllindë in v188). La rivalità dei Melacera col Barone Ugo Pietramala di Cashtalladdë (pedaggi e guadi del Tordinum) è canone: tolto il segno di proposta (faz-melacera, Gisulfo). Nota: `correzioni-bellinde-v188.py` contiene ancora la frase «NUOVO DETTAGLIO PROPOSTO»: se si rilancia, rimettere «canone».
+
+## v194 (10/10/2026) — immagini dei luoghi di Mushanë
+
+- I 24 luoghi di Mushanë non avevano immagini (le chiavi «Luogo — NN · …jpg» nelle voci non erano registrate). Fatte con Midjourney solo le 10 che i giocatori hanno visto: Cattedrale, Casa dell'Abate, Casa dei Frati, Forno Comune, Locanda del Frate, Casa di Lekë, Casa di Iosephus Pompizius, Casa dei Pompizius, Case dei mercenari, Piazza. Le altre 14 restano senza immagine (luoghi mai visti: da decidere se archiviarli come i PNG in v185).
+- Lezione: col borgo all'inizio del prompt Midjourney fa solo vedute del paese; per gli interni il luogo va per primo e il paesaggio in `--no` («landscape panorama, distant town view»). Prompt e job: `mj/luoghi-mu-job.json`, `luoghi-mu-job-2.json`, fogli `Luoghi Mushanè - foglio 1-2.jpg` (`mj/foglio_luoghi.py`, foglio per immagini larghe); scaricate con `mj/scarica_luoghi_mu.py` in `03_Compendio/02 Luoghi/Mushanè/Luoghi/`. Scelte mie su delega.
+- Canone notato: le bandieruole dei mercenari Velthuria a Mushanë sono **rosso-bianche** (voce Casa di Lekë); i ritratti v186 li vestono di grigio col loto nero. Da allineare se Giuseppe vuole.
+- Mappa VTT numerata di Mushanë (come quella di Bëllindë): da fare solo se i giocatori ci tornano.
