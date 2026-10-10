@@ -1139,3 +1139,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Regola 2: un titolo di più parole non si collega se nel testo tutte le sue parole maiuscole (articolo iniziale escluso: il, la, lu, li, l’…) sono scritte in minuscolo («la piazza», «La piazza», «borgo vecchio», «il forno comune»). Non vale per popoli e miti («i giganti», «la frattura» restano collegati).
 - Confronto su tutte le voci prima/dopo (script `lnk.js` nello scratchpad della sessione): da master 6307 collegamenti, tolti 110, tutti sbagliati (48 piazze, 8 «borgo vecchio» di altri borghi verso Bëllindë, santi verso frati e PNG, nomi comuni); nessuno nuovo. `prova-tavolo.js` verde.
 - Rimasto com'era (non toccato): in Canzañë il nome «Canzañë» collega a Casa Cerullius (soprannome della casata).
+
+## v217 (10/10/2026) — via Bbacucchë
+
+- Decisione di Giuseppe: **Bbacucchë (Arsita) non c'è più**. La Terra dei Calanchi ha sei borghi («Sei padroni»). Voce, illustrazione e stemma originali in `_ARCHIVIO_2026-10-10/Bbacucchë/` (con `registro.csv`).
+- Rimandi riscritti in contea dei Calanchi (elenco, tabelle, collegamento, testi), Bisindë, Cëllinë, Tërrëciallë, voci vecchie della Crociata e dei druidi. Gli **Sciamani del Lupo** restano come druidi sulle pendici del Gigante, senza un borgo.
+- Script rigiocabile `Revisioni/Compendio - voci nuove v148/togli-bbacucche.py`. **Attenzione**: la pagina di Giuseppe `03_Compendio/01 Il Mondo/Ducato e contee/La Terra dei Calanchi — Compendio di Aprutium.html` nomina ancora Bbacucchë: se si riconverte la contea con `converti.py`, rilanciare lo script.
