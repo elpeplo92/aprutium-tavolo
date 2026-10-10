@@ -1039,3 +1039,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - `#livePill` nascosto: al suo posto **chi è al tavolo** in ritratti (`.htav`: cappuccio del master + i PG da `S.tokens`), accesi con pallino verde se collegati, grigi se no, anello chiaro per sé stessi; «N su 7». Legge `partita/presenza` (campo `ruolo`, scritto ogni 60 s da `presence()`); in `?prova=1` si simula con `__testataPresenti([...])`.
 - La Vista è una targa come il trittico (ritratto, «Vista» piccolo sopra, nome sotto). Rosa dei venti d'ottone accanto a «dove siamo».
 - Nota: il numero v202 non ha un commit suo: il blocco è stato preso dal `git add -A` della v203 di un'altra sessione mentre lo provavo. Lezione: con sessioni parallele, committare subito dopo la build.
+
+## v204 (10/10/2026) — frontespizio dei miti: torna l'immagine di prima
+
+- Giuseppe: per «Divinità, miti e leggende» era più bella l'immagine di prima (quella del Pantheon): `miti` tolto da `C4_COVER`. Nel commit c'è anche `_immagini.json` con le chiavi dei frontespizi v203 (era rimasto fuori). `contenuti/_crociata.json` (lavoro in corso di un'altra sessione) NON è pubblicato: dopo il build il blocco `/*@CROCIATA*/` di `src/tavolo.html` e `index.html` è stato rimesso com'era nell'ultima versione pubblicata.

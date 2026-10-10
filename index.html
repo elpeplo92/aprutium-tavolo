@@ -2249,6 +2249,69 @@ html body #zoomctl input#aoeSize::-webkit-inner-spin-button, #zoomctl #aoeSize::
 #modal .sch3 .s3-ca-art.s3-ogg{background-image:var(--a),radial-gradient(circle at 50% 45%,#4a3d28,#141210 75%)!important;background-size:auto 88%,cover!important;background-repeat:no-repeat!important;background-position:center!important}
 #modal .sch3 .s3-art.s3-ogg{background-size:contain,cover!important;background-repeat:no-repeat!important;background-position:center!important}
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
+/* ===== TESTATA NUOVA (v202) ===== */
+/* la testata nuova: fascia da manuale con doppio filo, trittico d'ottone per le tre porte, chi è al tavolo in ritratti, vista come targa */
+html body header{background:radial-gradient(50% 160% at 50% 0%,rgba(217,177,92,.09),transparent 70%),linear-gradient(180deg,#14151b,#09090c)!important;
+  box-shadow:0 1px 0 rgba(217,177,92,.55),0 2px 0 #000,0 4px 0 rgba(217,177,92,.16),0 12px 28px rgba(0,0,0,.65)!important}
+
+/* dove siamo: rosa dei venti d'ottone + luogo e passaggio */
+header .hdove{flex-direction:row!important;align-items:center;gap:10px;padding-left:16px}
+header .hdove .hrosa{width:26px;height:26px;flex:none;color:var(--ott2);opacity:.85}
+header .hdove .htesto{display:flex;flex-direction:column;min-width:0;line-height:1.1}
+
+/* il trittico: una sola targa d'ottone divisa in tre, la porta aperta è una placca d'oro */
+header #nav{position:relative;gap:0!important;height:46px!important;padding:3px!important;align-items:stretch!important;border-radius:9px!important;
+  border:1px solid rgba(217,177,92,.5)!important;background:linear-gradient(180deg,#0b0b0e,#121218)!important;
+  box-shadow:inset 0 2px 6px rgba(0,0,0,.8),0 0 0 1px #000,0 6px 16px rgba(0,0,0,.55)!important}
+header .navb{height:auto!important;border:0!important;border-radius:6px!important;background:none!important;box-shadow:none!important;
+  padding:0 22px 0 16px!important;gap:11px!important;font-size:21px!important;letter-spacing:.07em!important;color:#B8AE97!important}
+header .navb+.navb{margin-left:1px!important}
+header .navb+.navb::before{content:''!important;display:block!important;position:absolute!important;left:-1px!important;top:9px!important;bottom:9px!important;width:1px!important;
+  background:linear-gradient(180deg,transparent,rgba(217,177,92,.45),transparent)!important;transform:none!important;border:0!important}
+header .navb svg.navart{width:24px!important;height:24px!important;opacity:.9}
+header .navb svg.navart path{fill:#9C8352!important}
+header .navb:hover{color:#F3EBD6!important;background:linear-gradient(180deg,rgba(217,177,92,.10),rgba(217,177,92,.03))!important}
+header .navb:hover svg.navart path{fill:var(--ott2)!important}
+/* aperta: placca d'oro battuto con l'inchiostro sopra */
+header .navb.on{color:#1d1407!important;
+  background:linear-gradient(180deg,#F4DE9C 0%,#D9B15C 48%,#B8893A 100%)!important;
+  box-shadow:inset 0 1px 0 rgba(255,250,225,.75),inset 0 -1px 0 rgba(94,67,24,.8),0 0 0 1px #5E4318,0 0 18px rgba(217,177,92,.35)!important}
+header .navb.on .navlbl{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#1d1407!important;-webkit-text-fill-color:#1d1407!important;text-shadow:0 1px 0 rgba(255,240,200,.45)}
+header .navb.on svg.navart{filter:none!important;opacity:1}
+header .navb.on svg.navart path{fill:#2a1c08!important}
+header .navb.on::before, header .navb.on+.navb::before{opacity:0}
+/* rombo d'oro sotto la porta aperta, appoggiato al filo della targa */
+header .navb::after{bottom:-10px!important}
+
+/* a destra */
+header .right{gap:16px!important}
+header #livePill{display:none!important}
+/* al tavolo: i ritratti di chi gioca, accesi se collegati */
+header .htav{display:flex;align-items:center;gap:10px}
+header .htav .hcap{font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:14px;letter-spacing:.1em;color:var(--ott3);line-height:1;text-align:right}
+header .htav .hcap b{display:block;font-weight:400;font-size:19px;letter-spacing:.02em;color:#E9DFC6;margin-top:2px}
+header .htav .hcoins{display:flex;gap:5px}
+header .hcoin{position:relative;width:30px;height:30px;border-radius:50%;background:center 20%/cover no-repeat #15130d;flex:none;
+  box-shadow:0 0 0 1px #000,0 0 0 2px #4a3a1c;filter:grayscale(1) brightness(.62) contrast(.9);opacity:.75;transition:filter .3s,box-shadow .3s;display:grid;place-items:center;color:var(--ott2)}
+header .hcoin svg{width:18px;height:18px}
+header .hcoin.si{filter:none;opacity:1;box-shadow:0 0 0 1px #000,0 0 0 2px var(--ott2),0 0 10px rgba(217,177,92,.35)}
+header .hcoin.si::after{content:'';position:absolute;right:-2px;bottom:-2px;width:9px;height:9px;border-radius:50%;background:#5FC27A;box-shadow:0 0 0 2px #0b0b0e,0 0 6px #5FC27A}
+header .hcoin.io{box-shadow:0 0 0 1px #000,0 0 0 2px var(--ott1),0 0 12px rgba(246,227,168,.45)}
+
+/* la vista: targa come il trittico, ritratto e due righe */
+header label.ctl{display:grid!important;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px!important;row-gap:0!important;align-items:center;
+  height:46px!important;padding:0 10px 0 4px!important;border-radius:9px!important;border:1px solid rgba(217,177,92,.5)!important;
+  background:linear-gradient(180deg,#0b0b0e,#121218)!important;box-shadow:inset 0 2px 6px rgba(0,0,0,.8),0 0 0 1px #000,0 6px 16px rgba(0,0,0,.55)!important}
+header label.ctl .vav{grid-row:1/3;width:38px!important;height:38px!important}
+header label.ctl>span:not(.vav){grid-column:2;grid-row:1;align-self:end;font-size:12px!important;letter-spacing:.14em!important;line-height:1;margin-bottom:-1px}
+header #roleSel{grid-column:2;grid-row:2;align-self:start;font-size:18px!important;line-height:1.1;padding:0 22px 0 0!important}
+
+@media (max-width:1500px){ header .htav .hcap{display:none} header .navb{padding:0 15px 0 11px!important;font-size:19px!important} }
+@media (max-width:1300px){ header .hcoin{width:24px;height:24px} header .htav .hcoins{gap:3px} }
+@media (max-width:1100px){ header .htav{display:none} }
+header label.ctl{width:auto!important;max-width:260px}
+header #roleSel{max-width:200px;text-overflow:ellipsis}
+/* ===== FINE TESTATA NUOVA (v202) ===== */
 /* ===== COMPENDIO NUOVO (v199) ===== */
 /* Compendio nuovo (v199): stesso linguaggio della scheda (oro e ottone, Mr Eaves, Bookinsanity, tavole illustrate) */
 #modal .box.comp.c4box{--o1:#F6E3A8;--o2:#D9B15C;--o3:#9A7330;--o4:#5E4318;--ink:#ECE4D2;--dim:#A69C88;--sp:#6F675A;
@@ -2356,75 +2419,12 @@ html body #zoomctl input#aoeSize::-webkit-inner-spin-button, #zoomctl #aoeSize::
 #modal .c4box .c3det .pv-breve .kv2 span{font-family:'Bookinsanity',Georgia,serif!important;font-size:15px!important}
 #modal .c4box .c3det #c3close{font:15px 'Mr Eaves Small Caps',Georgia,serif!important}
 /* ===== FINE COMPENDIO NUOVO (v199) ===== */
-/* ===== TESTATA NUOVA (v202) ===== */
-/* la testata nuova: fascia da manuale con doppio filo, trittico d'ottone per le tre porte, chi è al tavolo in ritratti, vista come targa */
-html body header{background:radial-gradient(50% 160% at 50% 0%,rgba(217,177,92,.09),transparent 70%),linear-gradient(180deg,#14151b,#09090c)!important;
-  box-shadow:0 1px 0 rgba(217,177,92,.55),0 2px 0 #000,0 4px 0 rgba(217,177,92,.16),0 12px 28px rgba(0,0,0,.65)!important}
-
-/* dove siamo: rosa dei venti d'ottone + luogo e passaggio */
-header .hdove{flex-direction:row!important;align-items:center;gap:10px;padding-left:16px}
-header .hdove .hrosa{width:26px;height:26px;flex:none;color:var(--ott2);opacity:.85}
-header .hdove .htesto{display:flex;flex-direction:column;min-width:0;line-height:1.1}
-
-/* il trittico: una sola targa d'ottone divisa in tre, la porta aperta è una placca d'oro */
-header #nav{position:relative;gap:0!important;height:46px!important;padding:3px!important;align-items:stretch!important;border-radius:9px!important;
-  border:1px solid rgba(217,177,92,.5)!important;background:linear-gradient(180deg,#0b0b0e,#121218)!important;
-  box-shadow:inset 0 2px 6px rgba(0,0,0,.8),0 0 0 1px #000,0 6px 16px rgba(0,0,0,.55)!important}
-header .navb{height:auto!important;border:0!important;border-radius:6px!important;background:none!important;box-shadow:none!important;
-  padding:0 22px 0 16px!important;gap:11px!important;font-size:21px!important;letter-spacing:.07em!important;color:#B8AE97!important}
-header .navb+.navb{margin-left:1px!important}
-header .navb+.navb::before{content:''!important;display:block!important;position:absolute!important;left:-1px!important;top:9px!important;bottom:9px!important;width:1px!important;
-  background:linear-gradient(180deg,transparent,rgba(217,177,92,.45),transparent)!important;transform:none!important;border:0!important}
-header .navb svg.navart{width:24px!important;height:24px!important;opacity:.9}
-header .navb svg.navart path{fill:#9C8352!important}
-header .navb:hover{color:#F3EBD6!important;background:linear-gradient(180deg,rgba(217,177,92,.10),rgba(217,177,92,.03))!important}
-header .navb:hover svg.navart path{fill:var(--ott2)!important}
-/* aperta: placca d'oro battuto con l'inchiostro sopra */
-header .navb.on{color:#1d1407!important;
-  background:linear-gradient(180deg,#F4DE9C 0%,#D9B15C 48%,#B8893A 100%)!important;
-  box-shadow:inset 0 1px 0 rgba(255,250,225,.75),inset 0 -1px 0 rgba(94,67,24,.8),0 0 0 1px #5E4318,0 0 18px rgba(217,177,92,.35)!important}
-header .navb.on .navlbl{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#1d1407!important;-webkit-text-fill-color:#1d1407!important;text-shadow:0 1px 0 rgba(255,240,200,.45)}
-header .navb.on svg.navart{filter:none!important;opacity:1}
-header .navb.on svg.navart path{fill:#2a1c08!important}
-header .navb.on::before, header .navb.on+.navb::before{opacity:0}
-/* rombo d'oro sotto la porta aperta, appoggiato al filo della targa */
-header .navb::after{bottom:-10px!important}
-
-/* a destra */
-header .right{gap:16px!important}
-header #livePill{display:none!important}
-/* al tavolo: i ritratti di chi gioca, accesi se collegati */
-header .htav{display:flex;align-items:center;gap:10px}
-header .htav .hcap{font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:14px;letter-spacing:.1em;color:var(--ott3);line-height:1;text-align:right}
-header .htav .hcap b{display:block;font-weight:400;font-size:19px;letter-spacing:.02em;color:#E9DFC6;margin-top:2px}
-header .htav .hcoins{display:flex;gap:5px}
-header .hcoin{position:relative;width:30px;height:30px;border-radius:50%;background:center 20%/cover no-repeat #15130d;flex:none;
-  box-shadow:0 0 0 1px #000,0 0 0 2px #4a3a1c;filter:grayscale(1) brightness(.62) contrast(.9);opacity:.75;transition:filter .3s,box-shadow .3s;display:grid;place-items:center;color:var(--ott2)}
-header .hcoin svg{width:18px;height:18px}
-header .hcoin.si{filter:none;opacity:1;box-shadow:0 0 0 1px #000,0 0 0 2px var(--ott2),0 0 10px rgba(217,177,92,.35)}
-header .hcoin.si::after{content:'';position:absolute;right:-2px;bottom:-2px;width:9px;height:9px;border-radius:50%;background:#5FC27A;box-shadow:0 0 0 2px #0b0b0e,0 0 6px #5FC27A}
-header .hcoin.io{box-shadow:0 0 0 1px #000,0 0 0 2px var(--ott1),0 0 12px rgba(246,227,168,.45)}
-
-/* la vista: targa come il trittico, ritratto e due righe */
-header label.ctl{display:grid!important;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px!important;row-gap:0!important;align-items:center;
-  height:46px!important;padding:0 10px 0 4px!important;border-radius:9px!important;border:1px solid rgba(217,177,92,.5)!important;
-  background:linear-gradient(180deg,#0b0b0e,#121218)!important;box-shadow:inset 0 2px 6px rgba(0,0,0,.8),0 0 0 1px #000,0 6px 16px rgba(0,0,0,.55)!important}
-header label.ctl .vav{grid-row:1/3;width:38px!important;height:38px!important}
-header label.ctl>span:not(.vav){grid-column:2;grid-row:1;align-self:end;font-size:12px!important;letter-spacing:.14em!important;line-height:1;margin-bottom:-1px}
-header #roleSel{grid-column:2;grid-row:2;align-self:start;font-size:18px!important;line-height:1.1;padding:0 22px 0 0!important}
-
-@media (max-width:1500px){ header .htav .hcap{display:none} header .navb{padding:0 15px 0 11px!important;font-size:19px!important} }
-@media (max-width:1300px){ header .hcoin{width:24px;height:24px} header .htav .hcoins{gap:3px} }
-@media (max-width:1100px){ header .htav{display:none} }
-header label.ctl{width:auto!important;max-width:260px}
-header #roleSel{max-width:200px;text-overflow:ellipsis}
-/* ===== FINE TESTATA NUOVA (v202) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v203</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v204</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -8422,6 +8422,40 @@ function s3Comandi(box,id,t,mine){
   const _r=renderSheet; renderSheet=function(id){ _r.apply(this,arguments); try{ sch3(id); scala(); }catch(e){ console.warn('scheda nuova',e); } };
 })();
 /* ===== FINE SCHEDA NUOVA (v195) ===== */
+/* ===== TESTATA NUOVA (v202) ===== */
+/* Testata nuova (prova 10-10-2026): rosa dei venti accanto a «dove siamo», ritratti di chi è al tavolo */
+(function(){
+  const H=document.querySelector('header'); if(!H) return;
+  const ROSA='<svg class="hrosa" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11.5" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/><path fill="currentColor" d="M16 1.5l2.4 12.1L16 16l-2.4-2.4zM16 30.5l-2.4-12.1L16 16l2.4 2.4zM1.5 16l12.1-2.4L16 16l-2.4 2.4zM30.5 16l-12.1 2.4L16 16l2.4-2.4z"/><path fill="currentColor" opacity=".55" d="M6.8 6.8l8 7.1-.9.9zM25.2 25.2l-8-7.1.9-.9zM25.2 6.8l-7.1 8-.9-.9zM6.8 25.2l7.1-8 .9.9z"/></svg>';
+  const HOOD='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-7 3.5-7 8.5V21h14v-9.5C19 6.5 16 3 12 3z"/><path d="M8.5 21v-6.5a3.5 3.5 0 017 0V21"/></svg>';
+  let presenti=new Set();
+  const vlab=H.querySelector('label.ctl');
+  if(vlab&&!H.querySelector('.htav')) vlab.insertAdjacentHTML('beforebegin','<div class="htav" title="Chi è al tavolo adesso"><span class="hcap">al tavolo<b></b></span><span class="hcoins"></span></div>');
+  function dove(){
+    const d=H.querySelector('.hdove'); if(!d||d.querySelector('.htesto')) return;
+    const t=document.createElement('div'); t.className='htesto'; while(d.firstChild) t.append(d.firstChild);
+    d.innerHTML=ROSA; d.append(t);
+  }
+  function tavolo(){
+    const box=H.querySelector('.htav .hcoins'); if(!box||typeof S==='undefined') return;
+    const chi=[['master','il Master',null],...Object.entries(S.tokens||{}).filter(([k,t])=>t.kind==='pg').map(([k,t])=>[k,t.name,t.img])];
+    const io=typeof ROLE!=='undefined'?ROLE:'';
+    const qui=new Set(presenti); if(io) qui.add(io);
+    box.innerHTML=chi.map(([k,n,img])=>`<span class="hcoin${qui.has(k)?' si':''}${k===io?' io':''}" title="${n.split(' ')[0]}${k===io?' (tu)':''} — ${qui.has(k)?'al tavolo':'non collegato'}"${img?` style="background-image:url('${img}')"`:''}>${img?'':HOOD}</span>`).join('');
+    const c=H.querySelector('.htav .hcap b'); if(c) c.textContent=`${chi.filter(x=>qui.has(x[0])).length} su ${chi.length}`;
+  }
+  function aggiorna(){ dove(); tavolo(); }
+  window.__testataPresenti=function(arr){ presenti=new Set(arr); tavolo(); };
+  const r=renderRail; renderRail=function(){ r.apply(this,arguments); aggiorna(); };
+  const sel=document.getElementById('roleSel'); if(sel) sel.addEventListener('change',()=>setTimeout(aggiorna,80));
+  /* chi è collegato: partita/presenza/<uid> = {t, ruolo} */
+  (function ascolta(n){
+    if(typeof fbDb!=='undefined'&&fbDb){ try{ fbDb.ref('partita/presenza').on('value',s=>{ const v=s.val()||{}; presenti=new Set(Object.values(v).map(x=>x&&x.ruolo).filter(Boolean)); tavolo(); }); }catch(e){ console.warn('testata presenza',e); } return; }
+    if(n<30) setTimeout(()=>ascolta(n+1),1000);
+  })(0);
+  aggiorna();
+})();
+/* ===== FINE TESTATA NUOVA (v202) ===== */
 /* ===== COMPENDIO NUOVO (v199) ===== */
 /* Compendio nuovo (v199, prototipo approvato da Giuseppe il 10-10-2026).
    Cornice come la scheda: frontespizio con i capitoli illustrati, indice a sinistra con le miniature, testata illustrata per ogni sezione. */
@@ -8432,7 +8466,7 @@ function s3Comandi(box,id,t,mine){
     impero:'L’Impero Aureo, le sue dieci province e la stirpe che lo governa.',ducato:'La vostra terra: il Ducato, le otto contee, i borghi e i luoghi delle città.',fazioni:'Chiese, gilde, casate e ordini: chi tira i fili.',
     persone:'Le persone che avete incontrato, città per città.',atti:'Il diario della campagna, le imprese aperte e la Crociata.',appendici:'Oggetti, reliquie e documenti.',bestiario:'Le creature affrontate.'};
   /* v201: frontespizi dei capitoli e copertine delle città dei Personaggi, immagini proprie (Midjourney, mj/copertine.py) */
-  const C4_COVER={"miti": "img/8a468a0f7cad.jpg", "storia": "img/d315d29b6fe6.jpg", "popoli": "img/9752eea609f8.jpg", "impero": "img/aac51dd79c68.jpg", "fazioni": "img/d1d705f98ac4.jpg", "persone": "img/6dd7b73f1758.jpg", "atti": "img/37dc6df39be8.jpg", "appendici": "img/9ed9b3488942.jpg", "bestiario": "img/47d3b00e9e1b.jpg"};
+  const C4_COVER={"storia": "img/d315d29b6fe6.jpg", "popoli": "img/9752eea609f8.jpg", "impero": "img/aac51dd79c68.jpg", "fazioni": "img/d1d705f98ac4.jpg", "persone": "img/6dd7b73f1758.jpg", "atti": "img/37dc6df39be8.jpg", "appendici": "img/9ed9b3488942.jpg", "bestiario": "img/47d3b00e9e1b.jpg"};
   const C4_CITY={"crociata": "img/d62fddb26a48.jpg", "julianova": "img/2a9df3d7e1a0.jpg", "strada": "img/bfd0d3ec7937.jpg", "mushane": "img/a6a027b4a6e2.jpg", "bellinde": "img/db25d9344e60.jpg", "teramum": "img/f721e1dad68d.jpg"};
   window.c4Home=window.c4Home??true;
   const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
@@ -8474,38 +8508,4 @@ function s3Comandi(box,id,t,mine){
   if(document.querySelector('#modal .box.comp')) renderCompendio();
 })();
 /* ===== FINE COMPENDIO NUOVO (v199) ===== */
-/* ===== TESTATA NUOVA (v202) ===== */
-/* Testata nuova (prova 10-10-2026): rosa dei venti accanto a «dove siamo», ritratti di chi è al tavolo */
-(function(){
-  const H=document.querySelector('header'); if(!H) return;
-  const ROSA='<svg class="hrosa" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11.5" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/><path fill="currentColor" d="M16 1.5l2.4 12.1L16 16l-2.4-2.4zM16 30.5l-2.4-12.1L16 16l2.4 2.4zM1.5 16l12.1-2.4L16 16l-2.4 2.4zM30.5 16l-12.1 2.4L16 16l2.4-2.4z"/><path fill="currentColor" opacity=".55" d="M6.8 6.8l8 7.1-.9.9zM25.2 25.2l-8-7.1.9-.9zM25.2 6.8l-7.1 8-.9-.9zM6.8 25.2l7.1-8 .9.9z"/></svg>';
-  const HOOD='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-7 3.5-7 8.5V21h14v-9.5C19 6.5 16 3 12 3z"/><path d="M8.5 21v-6.5a3.5 3.5 0 017 0V21"/></svg>';
-  let presenti=new Set();
-  const vlab=H.querySelector('label.ctl');
-  if(vlab&&!H.querySelector('.htav')) vlab.insertAdjacentHTML('beforebegin','<div class="htav" title="Chi è al tavolo adesso"><span class="hcap">al tavolo<b></b></span><span class="hcoins"></span></div>');
-  function dove(){
-    const d=H.querySelector('.hdove'); if(!d||d.querySelector('.htesto')) return;
-    const t=document.createElement('div'); t.className='htesto'; while(d.firstChild) t.append(d.firstChild);
-    d.innerHTML=ROSA; d.append(t);
-  }
-  function tavolo(){
-    const box=H.querySelector('.htav .hcoins'); if(!box||typeof S==='undefined') return;
-    const chi=[['master','il Master',null],...Object.entries(S.tokens||{}).filter(([k,t])=>t.kind==='pg').map(([k,t])=>[k,t.name,t.img])];
-    const io=typeof ROLE!=='undefined'?ROLE:'';
-    const qui=new Set(presenti); if(io) qui.add(io);
-    box.innerHTML=chi.map(([k,n,img])=>`<span class="hcoin${qui.has(k)?' si':''}${k===io?' io':''}" title="${n.split(' ')[0]}${k===io?' (tu)':''} — ${qui.has(k)?'al tavolo':'non collegato'}"${img?` style="background-image:url('${img}')"`:''}>${img?'':HOOD}</span>`).join('');
-    const c=H.querySelector('.htav .hcap b'); if(c) c.textContent=`${chi.filter(x=>qui.has(x[0])).length} su ${chi.length}`;
-  }
-  function aggiorna(){ dove(); tavolo(); }
-  window.__testataPresenti=function(arr){ presenti=new Set(arr); tavolo(); };
-  const r=renderRail; renderRail=function(){ r.apply(this,arguments); aggiorna(); };
-  const sel=document.getElementById('roleSel'); if(sel) sel.addEventListener('change',()=>setTimeout(aggiorna,80));
-  /* chi è collegato: partita/presenza/<uid> = {t, ruolo} */
-  (function ascolta(n){
-    if(typeof fbDb!=='undefined'&&fbDb){ try{ fbDb.ref('partita/presenza').on('value',s=>{ const v=s.val()||{}; presenti=new Set(Object.values(v).map(x=>x&&x.ruolo).filter(Boolean)); tavolo(); }); }catch(e){ console.warn('testata presenza',e); } return; }
-    if(n<30) setTimeout(()=>ascolta(n+1),1000);
-  })(0);
-  aggiorna();
-})();
-/* ===== FINE TESTATA NUOVA (v202) ===== */
 </script>
