@@ -957,3 +957,11 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Riquadro della fase: medaglione con simbolo vero — bussola (esplorazione), occhio (fermi tutti; Giuseppe ha bocciato l'«eyeball» che sembrava un ingranaggio), spade incrociate (scontro). `renderRail` è avvolta: dopo il disegno `fase()` sostituisce l'svg di `renderPhaseBtn` con lo `.fmed`. Simboli di game-icons.net (Lorc), licenza CC BY 3.0: il credito sta nel `title` del medaglione.
 - Prova: tre stati a 1920 e 1366; `prova-tavolo.js` verde (66 e 38 comandi).
 - Prossimi pezzi (in ordine, uno per volta, ognuno da far vedere prima): da decidere con Giuseppe. Già piaciuti: i tasti degli attrezzi del prototipo (Muovi, Misura, Tira, Indica, Nebbia, Muri, Porte) e l'avviso centrale quando qualcuno nota qualcosa.
+
+## v191 (10/10/2026) — la testata
+
+- Secondo pezzo del metodo «un pezzo alla volta» (vedi v190). Blocchi «TESTATA (v191)» (CSS prima della chiusura dello stile principale, JS in fondo allo script); fonte rigiocabile `Revisioni/Testata (10-10-2026)/` (`header.css`, `header.js`, `py applica.py`, foto con `shothdr.js`).
+- Marchio: logo con sotto «Atto Terzo» (Mr Eaves); accanto «dove si trova il gruppo» (`passOf` della scena `S.scene`: luogo + passaggio, il passaggio sparisce sotto 1500 px, tutto sotto 1200 px); la versione `#ver` resta (Giuseppe la controlla) ma piccola e discreta.
+- Tre bottoni Tavolo / Scheda / Compendio: restano bottoni (Giuseppe li vuole così, ha bocciato le schede senza cornice); Mr Eaves maiuscoletto, cornice d'ottone, fondo scuro con luce; acceso = cornice d'oro piena, luce calda, alone e rombo d'oro sotto.
+- A destra: `#modePill` nascosto (la fase è nel riquadro della colonna); `#livePill` mostra «N al tavolo» (`.hn`, letto da `#liveTxt`, pallino verde se c'è gente) o «solo tu»; la Vista è una targhetta con il ritratto del personaggio scelto (`.vav`, dal `t.img` del token; cappuccio per il master). Attenzione: una regola vecchia mette `background-clip:text` agli span delle pillole — `.vav` la annulla.
+- `renderRail` è avvolta di nuovo (dopo il blocco della colonna) per aggiornare la testata; `#roleSel` e il resto dei comandi non cambiano. `prova-tavolo.js` verde.

@@ -1718,12 +1718,86 @@ select option{background:#0C0F15;color:#EFE6D0}
 #railWrap #rail #phaseBtn b, #railWrap #rail #phaseBtn.fight b{font-size:16.5px!important;letter-spacing:0!important}
 @media (max-width:1700px){ #railWrap #rail #phaseBtn{padding-right:14px!important;gap:8px!important} #railWrap #rail #phaseBtn b, #railWrap #rail #phaseBtn.fight b{font-size:14px!important} }
 /* ===== FINE COLONNA DEI PERSONAGGI (v190) ===== */
+/* ===== TESTATA (v191) ===== */
+/* la testata: marchio + dove siamo · tre schede in oro · chi c'è e con chi guardi */
+:root{--ott1:#F6E3A8;--ott2:#D9B15C;--ott3:#9A7330;--ott4:#5E4318}
+html body header{background:radial-gradient(60% 140% at 50% 0%,rgba(217,177,92,.10),transparent 70%),linear-gradient(180deg,#121319,#08090c)!important;
+  border-bottom:0!important;box-shadow:0 1px 0 rgba(217,177,92,.45),0 2px 0 #000,0 10px 26px rgba(0,0,0,.6)!important}
+/* marchio */
+header .brand{display:flex!important;align-items:center!important;gap:16px!important;min-width:0}
+header .hmarchio{display:flex;flex-direction:column;align-items:flex-start;line-height:1;gap:1px}
+header .hmarchio h1{margin:0!important;line-height:0}
+header .hmarchio .logo{height:34px!important}
+header .hmarchio .hatto{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:15px!important;letter-spacing:.14em!important;text-transform:none!important;color:var(--ott3)!important;margin:2px 0 0 2px!important;padding:0!important}
+header .hmarchio .hatto::before{display:none!important;content:none!important}
+/* dove siamo */
+header .hdove{display:flex;flex-direction:column;justify-content:center;padding-left:16px;border-left:1px solid rgba(217,177,92,.25);min-width:0;line-height:1.1}
+header .hdove b{font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;font-size:21px;color:#F3EBD6;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header .hdove span{font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:15px;color:var(--ott2);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* la versione: discreta */
+header #ver{border:0!important;background:none!important;padding:0!important;margin-left:4px!important;font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:13px!important;color:#6f6858!important;opacity:1!important;align-self:flex-end;margin-bottom:6px!important}
+/* le tre schede */
+header #nav{gap:6px!important;background:none!important;border:0!important;padding:0!important;height:60px;align-items:stretch}
+header .navb{position:relative;display:flex!important;align-items:center!important;gap:10px!important;padding:0 18px!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;
+  font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:22px!important;letter-spacing:.06em!important;text-transform:none!important;color:#A79E89!important;transition:color .15s}
+header .navb .navlbl{font:inherit!important;letter-spacing:inherit!important;text-transform:none!important}
+header .navb svg.navart{width:26px!important;height:26px!important;opacity:.75}
+header .navb svg.navart path{fill:#8f7a4e!important}
+header .navb:hover{color:#EADFC6!important}
+header .navb:hover svg.navart{opacity:1}
+header .navb.on{color:transparent!important}
+header .navb.on .navlbl{background:linear-gradient(180deg,var(--ott1),var(--ott2) 55%,var(--ott3));-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important}
+header .navb.on svg.navart{opacity:1;filter:drop-shadow(0 0 6px rgba(217,177,92,.5))}
+header .navb.on svg.navart path{fill:url(#navOro)!important}
+header .navb::before{content:none!important;display:none!important}
+header .navb::after{content:''!important;display:block!important;position:absolute!important;left:18px!important;right:18px!important;bottom:0!important;top:auto!important;width:auto!important;height:2px!important;margin:0!important;border:0!important;transform:scaleX(0)!important;
+  background:linear-gradient(90deg,transparent,var(--ott2),var(--ott1),var(--ott2),transparent)!important;box-shadow:0 0 10px rgba(217,177,92,.7)!important;transition:transform .2s;clip-path:none!important}
+header .navb.on::after{transform:scaleX(1)!important}
+header .navb:hover::after{transform:scaleX(.5)!important}
+/* a destra: chi c'è e con chi guardi */
+header .right{gap:10px!important;align-items:center}
+header #modePill{display:none!important}
+header #livePill{display:flex!important;align-items:center;gap:8px;height:38px;padding:0 14px!important;border-radius:20px!important;border:1px solid rgba(217,177,92,.28)!important;background:rgba(255,255,255,.03)!important;
+  font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:17px!important;letter-spacing:.04em!important;text-transform:none!important;color:#D9CFB8!important}
+header #livePill #liveTxt{display:none!important}
+header #livePill .dot{width:9px!important;height:9px!important;border-radius:50%;background:#6b6455!important;box-shadow:none!important}
+header #livePill:not([data-n="0"]) .dot{background:#5FC27A!important;box-shadow:0 0 8px #5FC27A!important}
+header label.ctl{display:flex!important;align-items:center;gap:10px!important;height:44px;padding:0 12px 0 4px!important;border-radius:24px!important;border:1px solid rgba(217,177,92,.45)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01))!important;box-shadow:inset 0 1px 0 rgba(255,236,190,.08)!important}
+header label.ctl>span:not(.vav){font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:14px!important;letter-spacing:.1em!important;text-transform:none!important;color:var(--ott3)!important}
+header label.ctl>svg, header label.ctl>.uico{display:none!important}
+header .vav{width:36px;height:36px;border-radius:50%;flex:none;background:center 20%/cover #15130d;box-shadow:0 0 0 1px #000,0 0 0 2px var(--ott3);display:grid;place-items:center;color:var(--ott2)}
+header .vav svg{width:22px;height:22px}
+header #roleSel{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:19px!important;color:#F3EBD6!important;background-color:transparent!important;border:0!important;box-shadow:none!important;padding:2px 26px 2px 2px!important;cursor:pointer}
+@media (max-width:1500px){ header .hdove span{display:none} header .navb{padding:0 12px!important;font-size:19px!important} header .hdove b{font-size:18px} }
+@media (max-width:1200px){ header .hdove{display:none} }
+header label.ctl::before, header label.ctl::after, header label.ctl>span::before, header label.ctl>span::after{content:none!important;display:none!important}
+header label.ctl .vav{-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:currentColor!important;background-size:cover!important;background-position:center 20%!important;background-repeat:no-repeat!important;background-color:#15130d!important;padding:0!important;border:0!important}
+header label.ctl .vav.master{background-image:none!important}
+header #livePill .hn{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:17px!important;letter-spacing:.04em;white-space:nowrap;color:#D9CFB8}
+header #livePill::before, header #livePill::after{content:none!important;display:none!important}
+/* i tre bottoni restano bottoni (richiesta di Giuseppe): cornice d'ottone, fondo scuro con luce, quello aperto acceso in oro */
+header #nav{gap:10px!important;height:auto!important;align-items:center!important}
+header .navb{height:44px!important;padding:0 20px 0 14px!important;border-radius:6px!important;border:1px solid rgba(217,177,92,.32)!important;
+  background:radial-gradient(120% 160% at 50% 0%,rgba(217,177,92,.08),transparent 60%),linear-gradient(180deg,#17181e,#0c0d11)!important;
+  box-shadow:inset 0 1px 0 rgba(255,236,190,.07),0 4px 12px rgba(0,0,0,.5)!important;transition:border-color .15s,box-shadow .15s,color .15s}
+header .navb:hover{border-color:rgba(246,227,168,.6)!important;box-shadow:inset 0 1px 0 rgba(255,236,190,.1),0 0 14px rgba(217,177,92,.18),0 4px 12px rgba(0,0,0,.5)!important}
+header .navb.on{border-color:var(--ott1)!important;
+  background:radial-gradient(120% 160% at 50% 0%,rgba(246,227,168,.22),transparent 65%),linear-gradient(180deg,#2a2412,#120f08)!important;
+  box-shadow:inset 0 1px 0 rgba(255,240,200,.18),0 0 0 1px rgba(217,177,92,.25),0 0 22px rgba(217,177,92,.32),0 4px 12px rgba(0,0,0,.5)!important}
+header .navb::after{content:''!important;left:50%!important;right:auto!important;bottom:-5px!important;width:9px!important;height:9px!important;margin-left:-4.5px!important;
+  transform:rotate(45deg) scale(0)!important;background:radial-gradient(circle at 35% 30%,var(--ott1),var(--ott2) 55%,var(--ott3))!important;box-shadow:0 0 8px rgba(217,177,92,.7)!important;border:1px solid var(--ott4)!important}
+header .navb.on::after{transform:rotate(45deg) scale(1)!important}
+header .navb:hover::after{transform:rotate(45deg) scale(0)!important}
+header .navb.on:hover::after{transform:rotate(45deg) scale(1)!important}
+@media (max-width:1500px){ header .navb{padding:0 14px 0 10px!important} }
+/* ===== FINE TESTATA (v191) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v190</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v191</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -7226,4 +7300,31 @@ function fase(){ const b=document.getElementById('phaseBtn'); if(!b||b.dataset.i
 const r=renderRail; renderRail=function(){ r.apply(this,arguments); fase(); }; fase();
 })();
 /* ===== FINE COLONNA DEI PERSONAGGI (v190) ===== */
+/* ===== TESTATA (v191) ===== */
+/* Testata (v191, scelta da Giuseppe il 10-10-2026): «dove siamo» accanto al marchio, «N al tavolo», Vista con il ritratto */
+(function(){
+  const H=document.querySelector('header'); if(!H) return;
+  const brand=H.querySelector('.brand'); const ver=document.getElementById('ver');
+  if(brand&&!brand.querySelector('.hdove')){
+    const atto=brand.querySelector('.eyebrow:not(#ver)');
+    const col=document.createElement('div'); col.className='hmarchio';
+    const logo=brand.querySelector('h1'); brand.insertBefore(col,logo); col.append(logo); if(atto){ atto.classList.add('hatto'); col.append(atto); }
+    const dove=document.createElement('div'); dove.className='hdove'; dove.title='Dove si trova il gruppo'; brand.append(dove);
+    if(ver) brand.append(ver);
+  }
+  const vlab=H.querySelector('label.ctl'); const sel=document.getElementById('roleSel');
+  if(vlab&&!vlab.querySelector('.vav')){ const a=document.createElement('span'); a.className='vav'; vlab.prepend(a); }
+  const HOOD='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-7 3.5-7 8.5V21h14v-9.5C19 6.5 16 3 12 3z"/><path d="M8.5 21v-6.5a3.5 3.5 0 017 0V21"/></svg>';
+  function aggiorna(){
+    const d=document.querySelector('.hdove');
+    if(d&&typeof SCENE_DATA!=='undefined'){ const sc=SCENE_DATA.find(x=>x.id===S.scene); if(sc){ const p=passOf(sc); d.innerHTML=`<b>${poiText(p.luogo)}</b>${p.nome?`<span>${poiText(p.nome)}</span>`:''}`; } }
+    const a=document.querySelector('header .vav'); if(a&&sel){ const t=S.tokens&&S.tokens[sel.value]; a.innerHTML=t&&t.img?'':HOOD; if(t&&t.img) a.style.setProperty('background-image',`url('${t.img}')`,'important'); else a.style.removeProperty('background-image'); a.classList.toggle('master',!(t&&t.img)); }
+    const lt=document.getElementById('liveTxt'); if(lt){ const m=/(\d+)/.exec(lt.textContent||''); const n=m?+m[1]:0; const lp=document.getElementById('livePill'); if(lp){ lp.dataset.n=n; lp.querySelector('.hn')||lp.insertAdjacentHTML('beforeend','<span class="hn"></span>'); lp.querySelector('.hn').textContent=n?`${n} al tavolo`:'solo tu'; } }
+  }
+  const r=renderRail; renderRail=function(){ r.apply(this,arguments); aggiorna(); };
+  if(sel) sel.addEventListener('change',()=>setTimeout(aggiorna,50));
+  const lt=document.getElementById('liveTxt'); if(lt) new MutationObserver(aggiorna).observe(lt,{childList:true,characterData:true,subtree:true});
+  aggiorna();
+})();
+/* ===== FINE TESTATA (v191) ===== */
 </script>
