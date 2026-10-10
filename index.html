@@ -1625,12 +1625,105 @@ select option{background:#0C0F15;color:#EFE6D0}
 .c3det .hero{max-height:58vh;background-size:contain;background-color:#0d0b09} /* l'immagine intera: stemmi quadrati e ritratti non si tagliano */
 .c3det .lore p{max-width:72ch}
 @media (max-width:700px){.c3det{top:0;left:0;transform:none;width:100vw;height:100vh;border-radius:0;padding:16px}}
+/* ===== COLONNA DEI PERSONAGGI (v190) ===== */
+/* la colonna dei personaggi:
+   un solo carattere (Mr Eaves, quello dei manuali) per nome, punti ferita e Scheda; oro e ottone anticato; ritratto su tutto il riquadro; verde profondo */
+:root{--ott1:#F6E3A8;--ott2:#D9B15C;--ott3:#9A7330;--ott4:#5E4318}
+#rail{gap:6px!important;padding:8px!important}
+/* ---------- il riquadro del personaggio ---------- */
+#rail .med{position:relative!important;display:block!important;height:148px!important;min-height:0!important;padding:0!important;overflow:hidden;
+  border:1px solid rgba(217,177,92,.38)!important;border-radius:6px!important;background:#07080b!important;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.55)!important}
+#rail .med .pic{position:absolute!important;inset:0!important;width:auto!important;height:auto!important;min-height:0!important;max-height:none!important;margin:0!important;
+  background-size:cover!important;background-position:center 18%!important;border:0!important;border-radius:0!important;box-shadow:none!important;transition:transform .5s ease}
+#rail .med:hover .pic{transform:scale(1.04)}
+#rail .med .pic::after{content:''!important;display:block!important;position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,7,10,0) 30%,rgba(6,7,10,.55) 58%,rgba(6,7,10,.94) 100%)!important}
+#rail .med .info{position:absolute!important;left:0;right:0;bottom:0;padding:0 12px 10px!important;display:grid!important;grid-template-columns:1fr auto;grid-template-areas:"nm hp" "bar bar";align-items:end;gap:4px 8px!important;z-index:2;background:none!important}
+#rail .med .nm, #rail .med .hpn, #rail .med .hpn small, #rail .med .rail-sheet{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-weight:400!important;text-transform:none!important;font-style:normal!important}
+#rail .med .nm{grid-area:nm;font-size:25px!important;line-height:1!important;letter-spacing:.02em!important;
+  background:linear-gradient(180deg,var(--ott1) 0%,var(--ott2) 45%,var(--ott3) 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important;
+  filter:drop-shadow(0 1px 0 rgba(0,0,0,.95)) drop-shadow(0 0 6px rgba(0,0,0,.8));overflow:visible!important}
+#rail .med .hpn{grid-area:hp;font-size:22px!important;line-height:1!important;color:#F3EBD6!important;text-shadow:0 1px 2px #000,0 0 8px rgba(0,0,0,.8);font-variant-numeric:lining-nums}
+#rail .med .hpn small{font-size:17px!important;color:var(--ott2)!important}
+/* la barra dei punti ferita: verde profondo, incassata in un filo d'ottone */
+#rail .med .hpbar{grid-area:bar;height:8px!important;margin:2px 0 0!important;max-width:none!important;border-radius:5px!important;overflow:hidden;
+  background:linear-gradient(180deg,#050806,#0d1410)!important;box-shadow:inset 0 1px 3px #000,0 0 0 1px rgba(217,177,92,.45),0 1px 0 rgba(255,255,255,.05)!important}
+#rail .med .hpbar i{display:block;height:100%;border-radius:5px!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,0) 45%),linear-gradient(90deg,#0B3A22 0%,#1F6B3D 45%,#3FA35F 80%,#8FDC8A 100%)!important;
+  box-shadow:0 0 8px rgba(70,170,100,.45)!important}
+#rail .med .hpbar i.low{background:linear-gradient(180deg,rgba(255,255,255,.25),rgba(255,255,255,0) 45%),linear-gradient(90deg,#3d0705,#8e1a12 50%,#E0503C)!important;box-shadow:0 0 10px rgba(220,60,40,.6)!important}
+/* «Scheda»: un piccolo sigillo in alto a destra */
+#rail .med .rail-sheet{position:absolute!important;top:7px;right:7px;margin:0!important;z-index:3;display:inline-flex!important;align-items:center;gap:5px;
+  padding:3px 9px 2px!important;font-size:16px!important;line-height:1.1!important;border-radius:4px!important;color:var(--ott1)!important;
+  background:rgba(8,9,12,.62)!important;border:1px solid rgba(217,177,92,.5)!important;backdrop-filter:blur(4px);box-shadow:0 2px 6px rgba(0,0,0,.5)!important}
+#rail .med .rail-sheet:hover{background:rgba(30,24,12,.8)!important;border-color:var(--ott1)!important}
+#rail .med .rail-sheet svg{width:14px!important;height:14px!important;stroke:var(--ott2)!important;--uico:var(--ott2)!important}
+/* l'iniziativa: un medaglione d'ottone in alto a sinistra */
+#rail .med .init{position:absolute!important;top:7px;left:7px;z-index:3;width:34px!important;height:34px!important;border-radius:50%!important;display:grid!important;place-items:center;
+  font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:19px!important;color:#2a1c08!important;
+  background:radial-gradient(circle at 35% 30%,var(--ott1),var(--ott2) 45%,var(--ott3))!important;border:1px solid var(--ott4)!important;box-shadow:0 2px 6px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.5)!important}
+#rail .med .init.d20{background:rgba(8,9,12,.62)!important;border:1px solid rgba(217,177,92,.5)!important;color:var(--ott2)!important;backdrop-filter:blur(4px)}
+#rail .med .init svg{width:20px!important;height:20px!important}
+/* chi ha il turno: cornice d'ottone accesa */
+#rail .med.active{border-color:var(--ott1)!important;box-shadow:0 0 0 1px var(--ott2),0 0 18px rgba(217,177,92,.45),0 6px 16px rgba(0,0,0,.55)!important}
+#rail .med.down .pic{filter:grayscale(1) brightness(.7)}
+/* ---------- il riquadro della fase ---------- */
+#rail #phaseBtn{position:relative;display:flex!important;align-items:center;gap:14px!important;width:100%;min-height:76px!important;padding:12px 14px!important;text-align:left;
+  border-radius:6px!important;border:1px solid rgba(217,177,92,.45)!important;animation:none!important;filter:none!important;
+  background:radial-gradient(120% 140% at 0% 0%,rgba(217,177,92,.14),transparent 55%),linear-gradient(180deg,#15161b,#0b0c10)!important;
+  box-shadow:inset 0 1px 0 rgba(255,236,190,.08),0 6px 16px rgba(0,0,0,.55)!important}
+#rail #phaseBtn .fmed{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#2a2416,#0d0c09 70%);border:1px solid var(--ott3);box-shadow:inset 0 0 0 3px #0b0a07,inset 0 0 0 4px rgba(217,177,92,.55),0 0 14px rgba(217,177,92,.25)}
+#rail #phaseBtn .fmed svg{width:28px;height:28px;fill:url(#uiOro);fill:var(--ott2)}
+#rail #phaseBtn span:not(.fmed){display:flex;flex-direction:column;gap:3px;min-width:0}
+#rail #phaseBtn b{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-weight:400!important;font-size:23px!important;line-height:1!important;letter-spacing:.02em!important;text-transform:none!important;
+  background:linear-gradient(180deg,var(--ott1),var(--ott2) 50%,var(--ott3));-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important}
+#rail #phaseBtn small{font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:16px!important;color:#BFB49C!important;letter-spacing:.02em}
+#rail #phaseBtn .caret{position:absolute;top:8px;right:10px;color:var(--ott3)!important}
+/* «fermi tutti»: l'occhio che guarda, il riquadro che respira in oro */
+#rail #phaseBtn.stop{border-color:var(--ott1)!important;background:radial-gradient(120% 140% at 0% 0%,rgba(246,227,168,.28),transparent 60%),linear-gradient(180deg,#2a2210,#120e06)!important;animation:faseOro 1.8s ease-in-out infinite!important}
+#rail #phaseBtn.stop .fmed{background:radial-gradient(circle at 35% 30%,var(--ott1),var(--ott2) 50%,var(--ott3));border-color:var(--ott4)}
+#rail #phaseBtn.stop .fmed svg{fill:#2a1c08}
+@keyframes faseOro{50%{box-shadow:inset 0 1px 0 rgba(255,236,190,.12),0 0 0 3px rgba(217,177,92,.18),0 0 26px rgba(217,177,92,.4)}}
+/* scontro: spade incrociate, rosso sangue */
+#rail #phaseBtn.fight{border-color:#C0473A!important;background:radial-gradient(120% 140% at 0% 0%,rgba(200,60,45,.30),transparent 60%),linear-gradient(180deg,#22100e,#0e0706)!important}
+#rail #phaseBtn.fight .fmed{background:radial-gradient(circle at 35% 30%,#5a1610,#1a0503 70%);border-color:#8a2418;box-shadow:inset 0 0 0 3px #120403,inset 0 0 0 4px rgba(230,110,90,.6),0 0 16px rgba(220,60,40,.35)}
+#rail #phaseBtn.fight .fmed svg{fill:#F2B4A4}
+#rail #phaseBtn.fight b{background:linear-gradient(180deg,#FFE2D6,#F09A84 55%,#B9493A);-webkit-background-clip:text;background-clip:text}
+@media (max-width:1700px){ #rail .med{height:128px!important} #rail .med .nm{font-size:22px!important} #rail .med .hpn{font-size:19px!important} #rail .med .rail-sheet{font-size:0!important;gap:0;padding:4px 6px!important} #rail #phaseBtn b{font-size:20px!important} #rail #phaseBtn .fmed{width:40px;height:40px} }
+/* correzioni: nome su tutta la riga, punti ferita accanto alla barra, Scheda in alto a destra, testo della fase senza a capo strani */
+#railWrap #rail .med .info{grid-template-columns:auto 1fr!important;grid-template-areas:"nm nm" "hp bar"!important;align-items:center!important;gap:6px 10px!important}
+#railWrap #rail .med .info .nm{white-space:nowrap!important;text-overflow:clip!important;overflow:visible!important;max-width:none!important}
+#railWrap #rail .med .info .hpn{display:block!important;position:static!important}
+#railWrap #rail .med .info .hpbar{margin:0!important;align-self:center}
+#railWrap #rail .med .info .rail-sheet{position:absolute!important;top:-108px!important;right:7px!important;bottom:auto!important;left:auto!important}
+#railWrap #rail .med .pic{background-position:center 24%!important}
+#railWrap #rail #phaseBtn{gap:12px!important;padding:12px 12px!important}
+#railWrap #rail #phaseBtn .fmed{width:42px!important;height:42px!important}
+#railWrap #rail #phaseBtn .fmed svg{width:25px;height:25px}
+#railWrap #rail #phaseBtn b{font-size:20px!important;line-height:1.05!important;word-break:keep-all;overflow-wrap:normal;hyphens:none}
+#railWrap #rail #phaseBtn small{font-size:15px!important;line-height:1.2!important}
+#railWrap #rail .med{height:clamp(96px,calc((100vh - 236px)/6),150px)!important}
+#railWrap #rail .med .info{top:0!important;align-content:end!important}
+#railWrap #rail .med .info .rail-sheet{top:7px!important}
+#railWrap #rail #phaseBtn.fight b{font-size:18px!important}
+@media (max-width:1700px){ #railWrap #rail .med{height:clamp(88px,calc((100vh - 200px)/6),130px)!important} }
+#railWrap #rail #phaseBtn{padding-right:22px!important}
+#railWrap #rail #phaseBtn span:not(.fmed){flex:1;min-width:0}
+#railWrap #rail #phaseBtn b{font-size:18px!important}
+#railWrap #rail #phaseBtn.fight b{font-size:17px!important}
+@media (max-width:1700px){ #railWrap #rail #phaseBtn{gap:9px!important;padding:10px 18px 10px 9px!important} #railWrap #rail #phaseBtn .fmed{width:36px!important;height:36px!important} #railWrap #rail #phaseBtn .fmed svg{width:21px;height:21px} #railWrap #rail #phaseBtn b, #railWrap #rail #phaseBtn.fight b{font-size:15.5px!important} #railWrap #rail #phaseBtn small{font-size:13.5px!important} }
+#railWrap #rail #phaseBtn{padding-right:16px!important;gap:10px!important}
+#railWrap #rail #phaseBtn b, #railWrap #rail #phaseBtn.fight b{font-size:16.5px!important;letter-spacing:0!important}
+@media (max-width:1700px){ #railWrap #rail #phaseBtn{padding-right:14px!important;gap:8px!important} #railWrap #rail #phaseBtn b, #railWrap #rail #phaseBtn.fight b{font-size:14px!important} }
+/* ===== FINE COLONNA DEI PERSONAGGI (v190) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v189</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v190</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -7123,4 +7216,14 @@ function croNotte(){ const M=croS(), A=M.campo||{}, T=M.campoTiri||{}, fatti=[];
 `; document.head.appendChild(st);
 })();
 /* ===== FINE SCHEDE DA MANUALE (v184) ===== */
+/* ===== COLONNA DEI PERSONAGGI (v190) ===== */
+/* Colonna dei personaggi (v190, scelta da Giuseppe il 10-10-2026): simboli nuovi nel riquadro della fase (game-icons.net, Lorc, CC BY 3.0) */
+(function(){
+const IC={"explore": ["m203.97 23-18.032 4.844 11.656 43.468c-25.837 8.076-50.32 21.653-71.594 40.75L94.53 80.594l-13.218 13.22 31.376 31.374c-19.467 21.125-33.414 45.53-41.813 71.343l-42.313-11.343-4.843 18.063 42.25 11.313c-6.057 27.3-6.157 55.656-.345 83L23.72 308.78l4.843 18.064 41.812-11.22a193.261 193.261 0 0 0 31.25 59.876l-29.97 52.688-16.81 29.593 29.56-16.842 52.657-29.97a193.306 193.306 0 0 0 60.094 31.407l-11.22 41.844 18.033 4.81 11.218-41.905a195.701 195.701 0 0 0 83-.375l11.312 42.28 18.063-4.81-11.344-42.376c25.812-8.4 50.217-22.315 71.342-41.78l31.375 31.373 13.22-13.218-31.47-31.47a193.26 193.26 0 0 0 40.72-71.563l43.53 11.657 4.813-18.063-43.625-11.686a195.693 195.693 0 0 0-.344-82.063l43.97-11.78-4.813-18.063L440.908 197c-6.73-20.866-17.08-40.79-31.032-58.844l29.97-52.656 16.842-29.563-29.593 16.844-52.656 29.97c-17.998-13.875-37.874-24.198-58.657-30.906l11.783-44L309.5 23l-11.78 43.97c-27-5.925-55.02-6.05-82.064-.376L203.97 23zm201.56 85L297.25 298.313l-.75.437-40.844-40.875-148.72 148.72-2.186 1.25 109.125-191.75 41.78 41.78L405.532 108zm-149.686 10.594c21.858 0 43.717 5.166 63.594 15.47l-116.625 66.342-2.22 1.28-1.28 2.22-66.25 116.406c-26.942-52.04-18.616-117.603 25.03-161.25 26.99-26.988 62.38-40.468 97.75-40.468zm122.72 74.594c26.994 52.054 18.67 117.672-25.002 161.343-43.66 43.662-109.263 52.005-161.312 25.033l116.438-66.282 2.25-1.25 1.25-2.25 66.375-116.592z"], "stop": ["M258.063 19.5c-117.45 0-215.188 85.162-234.844 197.03l-.44.345.314.406a238.704 238.704 0 0 0-3.032 25.814c4.73-4 9.484-7.87 14.25-11.625l.063.06c146.48-115.9 305.707-112.07 447.344 0l.03-.03c4.787 3.76 9.572 7.615 14.313 11.625a238.268 238.268 0 0 0-3.032-25.875l.283-.375c-.135-.106-.272-.206-.407-.313C473.26 104.68 375.522 19.5 258.062 19.5zm0 18.688c101.242 0 186.342 68.277 211.906 161.343-66.862-46.73-138.216-70.87-210.064-71.31-72.09-.444-144.657 22.953-213.72 71.25 25.59-93.032 110.66-161.282 211.876-161.282zm1.843 126.906c-19.728-.138-39.508 1.77-59.28 5.75-28.27 18.638-46.876 50.68-46.876 87.156 0 36.69 18.828 68.857 47.375 87.438 19.428 3.744 38.904 5.57 58.344 5.468 18.58-.098 37.148-1.952 55.624-5.53 28.473-18.593 47.25-50.737 47.25-87.376 0-36.436-18.573-68.447-46.78-87.094-18.504-3.747-37.068-5.682-55.658-5.812zM162 181.314c-44.358 15.08-88.47 40.774-131.625 77.624 42.734 36.39 87.183 61.755 132.22 76.5-17.2-21.155-27.532-48.113-27.532-77.438 0-28.983 10.098-55.64 26.937-76.688zm192.188.092C370.976 202.44 381.03 229.06 381.03 258c0 29.296-10.305 56.23-27.467 77.375 45.355-14.86 89.806-40.357 132.156-76.406-42.67-36.427-86.778-62.318-131.533-77.564zm-96.125 17.375c6.243 0 12.255.957 17.906 2.75-9.1 4.638-15.345 14.09-15.345 25 0 15.492 12.572 28.064 28.063 28.064 11.16 0 20.795-6.534 25.312-15.97a59.072 59.072 0 0 1 3.25 19.376c0 32.69-26.498 59.188-59.188 59.188S198.875 290.69 198.875 258s26.498-59.22 59.188-59.22zm237.875 76.095a488.107 488.107 0 0 1-20.594 16.406c-.022.147-.04.293-.063.44-68.965 55.238-142.036 83.367-215.467 83.842-73.467.476-147.678-26.688-218.97-83.78-.022-.146-.04-.292-.062-.438a490.628 490.628 0 0 1-20.593-16.438C28.874 398.63 132.153 496.47 258.063 496.47c125.92 0 229.204-97.856 237.875-221.595zm-448.782 45.22c68.69 50.006 140.915 74.62 212.78 74.155 71.622-.463 142.556-25.776 209.033-74.156-26.753 91.21-110.98 157.687-210.908 157.687-99.92 0-184.145-66.49-210.906-157.686z"], "fight": ["M19.75 14.438c59.538 112.29 142.51 202.35 232.28 292.718l3.626 3.75.063-.062c21.827 21.93 44.04 43.923 66.405 66.25-18.856 14.813-38.974 28.2-59.938 40.312l28.532 28.53 68.717-68.717c42.337 27.636 76.286 63.646 104.094 105.81l28.064-28.06c-42.47-27.493-79.74-60.206-106.03-103.876l68.936-68.938-28.53-28.53c-11.115 21.853-24.413 42.015-39.47 60.593-43.852-43.8-86.462-85.842-130.125-125.47-.224-.203-.432-.422-.656-.625C183.624 122.75 108.515 63.91 19.75 14.437zm471.875 0c-83.038 46.28-154.122 100.78-221.97 161.156l22.814 21.562 56.81-56.812 13.22 13.187-56.438 56.44 24.594 23.186c61.802-66.92 117.6-136.92 160.97-218.72zm-329.53 125.906 200.56 200.53a402.965 402.965 0 0 1-13.405 13.032L148.875 153.53l13.22-13.186zm-76.69 113.28-28.5 28.532 68.907 68.906c-26.29 43.673-63.53 76.414-106 103.907l28.063 28.06c27.807-42.164 61.758-78.174 104.094-105.81l68.718 68.717 28.53-28.53c-20.962-12.113-41.08-25.5-59.937-40.313 17.865-17.83 35.61-35.433 53.157-52.97l-24.843-25.655-55.47 55.467c-4.565-4.238-9.014-8.62-13.374-13.062l55.844-55.844-24.53-25.374c-18.28 17.856-36.602 36.06-55.158 54.594-15.068-18.587-28.38-38.758-39.5-60.625z"]};
+function fase(){ const b=document.getElementById('phaseBtn'); if(!b||b.dataset.ic) return; const k=['fight','stop','explore'].find(c=>b.classList.contains(c))||'explore';
+  const sv=b.querySelector('svg'); if(!sv) return; const n=document.createElement('span'); n.className='fmed'; n.title='Simbolo: game-icons.net (Lorc), CC BY 3.0';
+  n.innerHTML='<svg viewBox="0 0 512 512" aria-hidden="true">'+IC[k].map(d=>'<path d="'+d+'"/>').join('')+'</svg>'; sv.replaceWith(n); b.dataset.ic=k; }
+const r=renderRail; renderRail=function(){ r.apply(this,arguments); fase(); }; fase();
+})();
+/* ===== FINE COLONNA DEI PERSONAGGI (v190) ===== */
 </script>
