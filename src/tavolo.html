@@ -1830,12 +1830,213 @@ html body #zoomctl input#aoeSize::-webkit-inner-spin-button, #zoomctl #aoeSize::
 #zoomctl>#btnMeasure{order:6}
 #zoomctl>.aoectl{order:5}
 /* ===== FINE ATTREZZI DELLA MAPPA (v192) ===== */
+/* ===== SCHEDA NUOVA (v195) ===== */
+/* scheda nuova (v195): regole del prototipo chiuse in .sch3 */
+.sch3{--o1:#F6E3A8;--o2:#D9B15C;--o3:#9A7330;--o4:#5E4318;--ink:#ECE4D2;--dim:#A69C88;--sp:#6F675A;
+  --az:#D9B15C;--bo:#7FB5E0;--gr:#B49BE8;--re:#E08A6E;--ok:#5FC27A}
+.sch3 .s3-eroe{position:relative;overflow:hidden;border-right:1px solid rgba(217,177,92,.35)}
+.sch3 .s3-ritr{position:absolute;inset:0 0 auto 0;height:68%;background:center 12%/cover;filter:saturate(1.05) contrast(1.05)}
+.sch3 .s3-ritr::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,14,0) 40%,rgba(10,11,14,.8) 78%,#0a0b0e 100%),linear-gradient(90deg,transparent 80%,rgba(10,11,14,.6))}
+.sch3 .s3-eroe-in{position:absolute;inset:auto 0 0 0;padding:0 28px 26px;display:flex;flex-direction:column}
+.sch3 .stemma{align-self:flex-start;font:15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.14em;color:var(--o2);padding:3px 10px;border:1px solid rgba(217,177,92,.45);border-radius:3px;background:rgba(10,11,14,.6);margin-bottom:12px}
+.sch3 .s3-eroe h1{font:400 56px/.92 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.01em;background:linear-gradient(180deg,#fff4cf,var(--o1) 30%,var(--o2) 65%,var(--o3));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 rgba(0,0,0,.9)) drop-shadow(0 0 22px rgba(0,0,0,.8))}
+.sch3 .s3-eroe h1 span{display:block;font-size:36px;letter-spacing:.06em}
+.sch3 .s3-classe{margin-top:10px;font:20px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.03em;color:#E8D7AE}
+.sch3 .s3-specie{font:15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;color:var(--dim);margin-top:2px}
+.sch3 .s3-pf{margin-top:18px;padding:14px 16px 12px;border-radius:10px;background:rgba(0,0,0,.45);border:1px solid rgba(217,177,92,.28)}
+.sch3 .s3-pfn{display:flex;align-items:baseline;gap:8px}
+.sch3 .s3-pfn b{font:400 52px/1 'Mr Eaves Small Caps',Georgia,serif;color:#F6EED9}
+.sch3 .s3-pfn span{font:26px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o2)}
+.sch3 .s3-pfn em{margin-left:auto;font:italic 15px 'Bookinsanity',Georgia,serif;color:#9FD3E8}
+.sch3 .s3-pfb{position:relative;height:12px;margin:8px 0 6px;border-radius:7px;overflow:hidden;background:#050806;box-shadow:inset 0 1px 3px #000,0 0 0 1px rgba(217,177,92,.5)}
+.sch3 .s3-pfb i{position:absolute;inset:0 auto 0 0;border-radius:7px;background:linear-gradient(180deg,rgba(255,255,255,.28),transparent 45%),linear-gradient(90deg,#0B3A22,#1F6B3D 45%,#3FA35F 80%,#8FDC8A);box-shadow:0 0 10px rgba(70,170,100,.5)}
+.sch3 .s3-pfb u{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,rgba(130,200,230,.55) 0 4px,rgba(130,200,230,.25) 4px 8px)}
+.sch3 .s3-pf small{font:14px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.1em;color:var(--sp)}
+.sch3 .s3-cond{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.sch3 .s3-cond span{font:15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;padding:4px 10px;border-radius:14px;border:1px solid}
+.sch3 .s3-cond .s3-ok{color:#8FD9A0;border-color:rgba(95,194,122,.45);background:rgba(95,194,122,.08)}
+.sch3 .s3-cond .ins{color:var(--o1);border-color:rgba(217,177,92,.55);background:rgba(217,177,92,.1)}
+.sch3 .s3-riposi{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.sch3 .s3-riposi button,.sch3 .s3-tira{height:40px;text-align:center;border-radius:6px;font:18px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;border:1px solid rgba(217,177,92,.4);color:#EADFC6;
+  background:radial-gradient(120% 160% at 50% 0%,rgba(217,177,92,.1),transparent 60%),linear-gradient(180deg,#191a20,#0d0e12);box-shadow:inset 0 1px 0 rgba(255,236,190,.08),0 3px 8px rgba(0,0,0,.5)}
+.sch3 .s3-riposi .pri{border-color:var(--o1);color:var(--o1);background:radial-gradient(120% 160% at 50% 0%,rgba(246,227,168,.28),transparent 65%),linear-gradient(180deg,#2c2512,#120f07);box-shadow:inset 0 1px 0 rgba(255,240,200,.18),0 0 16px rgba(217,177,92,.25)}
+.sch3 .corpo{display:flex;flex-direction:column;min-width:0;min-height:0}
+.sch3 .s3-vitali{display:flex;align-items:center;gap:10px;padding:18px 22px;border-bottom:1px solid rgba(217,177,92,.25);background:linear-gradient(180deg,rgba(217,177,92,.06),transparent)}
+.sch3 .s3-v{width:104px;height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:10px;background:rgba(0,0,0,.35);border:1px solid rgba(217,177,92,.25)}
+.sch3 .s3-v b{font:400 34px/1 'Mr Eaves Small Caps',Georgia,serif;color:#F6EED9}
+.sch3 .s3-v small{font:13px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.06em;color:var(--o2);margin-top:4px;text-align:center;line-height:1.05}
+.sch3 .s3-v.s3-ca{width:92px;height:96px;margin:-10px 4px;border:0;background:none;position:relative}
+.sch3 .s3-v.s3-ca::before{content:'';position:absolute;inset:0;clip-path:path('M46 2 L88 14 L88 50 C88 76 68 90 46 96 C24 90 4 76 4 50 L4 14 Z');background:linear-gradient(180deg,var(--o1),var(--o3));}
+.sch3 .s3-v.s3-ca::after{content:'';position:absolute;inset:3px;clip-path:path('M43 2 L83 13 L83 48 C83 72 64 85 43 91 C22 85 3 72 3 48 L3 13 Z');background:radial-gradient(circle at 50% 30%,#2a2416,#0c0b08)}
+.sch3 .s3-v.s3-ca b,.sch3 .s3-v.s3-ca small{position:relative;z-index:1}
+.sch3 .s3-v.s3-ca b{font-size:40px;margin-top:6px}
+.sch3 .s3-v.s3-ca small{font-size:11px;margin-top:0}
+.sch3 .s3-v.s3-mag{border-color:rgba(180,155,232,.35)}
+.sch3 .s3-v.s3-mag small{color:#C7B6EE}
+.sch3 .s3-cerca{margin-left:auto;display:flex;align-items:center;gap:10px;width:440px;height:46px;padding:0 14px;border-radius:24px;background:rgba(0,0,0,.45);border:1px solid rgba(217,177,92,.4);box-shadow:inset 0 2px 6px rgba(0,0,0,.5)}
+.sch3 .s3-cerca svg{width:20px;height:20px;fill:none;stroke:var(--o2);stroke-width:2;flex:none}
+.sch3 .s3-cerca input{flex:1;background:none;border:0;outline:0;color:var(--ink);font:italic 17px 'Bookinsanity',Georgia,serif}
+.sch3 .s3-cerca input::placeholder{color:var(--sp)}
+.sch3 .s3-colonne{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.25fr) minmax(0,1fr);gap:0}
+.sch3 .s3-col{min-height:0;overflow:auto;padding:18px 20px 30px;border-right:1px solid rgba(217,177,92,.14);scrollbar-width:thin;scrollbar-color:#4a3e26 transparent}
+.sch3 .s3-col:last-child{border-right:0}
+.sch3 h3{font:400 24px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.03em;color:var(--o1);padding-bottom:8px;margin-bottom:12px;border-bottom:1px solid rgba(217,177,92,.3);display:flex;align-items:baseline;gap:10px}
+.sch3 h3 small{font:italic 14px 'Bookinsanity',Georgia,serif;color:var(--sp);letter-spacing:0}
+.sch3 .s3-h3b{margin-top:24px}
+.sch3 .s3-car{display:flex;gap:12px;padding:10px;margin-bottom:8px;border-radius:10px;background:rgba(255,255,255,.02);border:1px solid rgba(217,177,92,.14)}
+.sch3 .s3-sig{flex:none;width:74px;height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:50% 50% 46% 46%/42% 42% 58% 58%;
+  background:radial-gradient(120% 90% at 50% 10%,rgba(217,177,92,.2),transparent 60%),linear-gradient(180deg,#1d1a14,#0b0a08);border:1px solid rgba(217,177,92,.55);box-shadow:inset 0 1px 0 rgba(255,236,190,.12),0 4px 10px rgba(0,0,0,.5)}
+.sch3 .s3-sig small{font:12px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.14em;color:var(--o2)}
+.sch3 .s3-sig b{font:400 32px/1 'Mr Eaves Small Caps',Georgia,serif;color:#F6EED9}
+.sch3 .s3-sig em{font:normal 13px 'Mr Eaves Small Caps',Georgia,serif;color:var(--dim);margin-top:2px}
+.sch3 .s3-cars{flex:1;min-width:0}
+.sch3 .s3-carn{display:flex;align-items:center;justify-content:space-between;padding-bottom:4px;margin-bottom:2px;border-bottom:1px solid rgba(217,177,92,.16)}
+.sch3 .s3-carn span{font:20px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.03em;color:#E8D7AE}
+.sch3 .s3-ts{display:flex;align-items:center;gap:6px;font:14px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;color:var(--dim);padding:2px 8px;border-radius:5px;border:1px solid transparent}
+.sch3 .s3-ts b{font:17px 'Mr Eaves Small Caps',Georgia,serif;color:var(--ink);font-weight:400}
+.sch3 .s3-ts:hover{border-color:rgba(217,177,92,.4)}
+.sch3 .s3-ts i,.sch3 .s3-ab i{width:8px;height:8px;transform:rotate(45deg);border:1px solid var(--o3);flex:none}
+.sch3 .s3-ts.c i,.sch3 .s3-ab.c i{background:radial-gradient(circle at 35% 30%,var(--o1),var(--o2) 55%,var(--o3));border-color:var(--o2);box-shadow:0 0 6px rgba(217,177,92,.55)}
+.sch3 .s3-ab{width:100%;display:flex;align-items:center;gap:10px;height:30px;padding:0 6px;border-radius:5px;border:1px solid transparent}
+.sch3 .s3-ab:hover{border-color:rgba(217,177,92,.4);background:rgba(217,177,92,.06)}
+.sch3 .s3-ab span{flex:1;font:17px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.02em;color:#D9CFB8}
+.sch3 .s3-ab.c span{color:#F3EBD6}
+.sch3 .s3-ab b{font:400 18px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1);min-width:28px;text-align:right}
+.sch3 .s3-nulla{font:italic 14px 'Bookinsanity',Georgia,serif;color:var(--sp);padding:6px}
+.sch3 .s3-grp{margin-bottom:14px}
+.sch3 .s3-grp h4{display:flex;align-items:center;gap:8px;font:400 15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.12em;color:var(--c);margin:0 0 6px 2px}
+.sch3 .s3-grp h4 i{width:9px;height:9px;transform:rotate(45deg);background:var(--c);box-shadow:0 0 8px var(--c)}
+.sch3 .s3-az{--c:var(--az)}
+.sch3 .s3-bo{--c:var(--bo)}
+.sch3 .s3-gr{--c:var(--gr)}
+.sch3 .s3-re{--c:var(--re)}
+.sch3 .s3-att{display:grid;grid-template-columns:52px minmax(0,1fr) auto auto auto;align-items:center;gap:12px;padding:8px 10px 8px 8px;margin-bottom:6px;border-radius:10px;cursor:pointer;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--c) 9%,transparent),rgba(255,255,255,.015) 60%);border:1px solid rgba(217,177,92,.16);border-left:2px solid var(--c);transition:border-color .15s,background .15s}
+.sch3 .s3-att:hover,.sch3 .s3-att.sel{border-color:rgba(246,227,168,.55);border-left-color:var(--c);background:linear-gradient(90deg,color-mix(in srgb,var(--c) 16%,transparent),rgba(217,177,92,.05) 70%)}
+.sch3 .s3-art{width:52px;height:52px;border-radius:8px;background:center/cover #0b0a08;box-shadow:inset 0 0 0 1px rgba(217,177,92,.4),0 3px 8px rgba(0,0,0,.6)}
+.sch3 .s3-att-t b{display:block;font:400 21px/1.05 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.02em;color:#F3EBD6}
+.sch3 .s3-att-t small{font:italic 14px 'Bookinsanity',Georgia,serif;color:var(--dim)}
+.sch3 .s3-num{text-align:center;min-width:58px}
+.sch3 .s3-num small{display:block;font:11px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.12em;color:var(--sp)}
+.sch3 .s3-num b{font:400 24px/1.1 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1)}
+.sch3 .s3-num b.s3-ts2{font-size:18px;color:#C7B6EE}
+.sch3 .s3-num em{display:block;font:italic 12px 'Bookinsanity',Georgia,serif;color:var(--dim);margin-top:-2px}
+.sch3 .s3-tira{height:36px;padding:0 14px;font-size:17px}
+.sch3 .s3-tira:hover{border-color:var(--o1);color:var(--o1)}
+.sch3 .s3-risorse{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sch3 .s3-ris{display:grid;grid-template-columns:1fr auto;grid-template-areas:"n e" "p p";gap:4px 8px;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.02);border:1px solid rgba(217,177,92,.16);cursor:pointer}
+.sch3 .s3-ris.sel,.sch3 .s3-ris:hover{border-color:rgba(246,227,168,.5)}
+.sch3 .s3-ris span{grid-area:n;font:17px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.02em;color:#E8D7AE}
+.sch3 .s3-ris em{grid-area:e;font:normal 16px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1)}
+.sch3 .s3-pp{grid-area:p;display:flex;gap:6px}
+.sch3 .s3-pp i{width:15px;height:15px;transform:rotate(45deg);border-radius:2px;background:radial-gradient(circle at 35% 30%,var(--o1),var(--o2) 55%,var(--o3));box-shadow:0 0 6px rgba(217,177,92,.5)}
+.sch3 .s3-pp i.vuota{background:#0b0a08;box-shadow:inset 0 0 0 1px var(--o4)}
+.sch3 .s3-pp.slot i{background:radial-gradient(circle at 35% 30%,#E6DCFF,#9C86E6 55%,#5A44A8);box-shadow:0 0 6px rgba(160,140,240,.5)}
+.sch3 .s3-pp.slot i.vuota{background:#0b0a10;box-shadow:inset 0 0 0 1px #4a3e78}
+.sch3 .s3-pp.ispi i{border-radius:50%;transform:none}
+.sch3 .s3-barra{grid-area:p;height:10px;border-radius:6px;overflow:hidden;background:#0b0a08;box-shadow:inset 0 0 0 1px var(--o4)}
+.sch3 .s3-barra i{display:block;height:100%;background:linear-gradient(90deg,#8a6a2a,var(--o2),var(--o1))}
+.sch3 .s3-lettura{position:relative;min-height:260px;margin-bottom:22px;border-radius:12px;overflow:hidden;border:1px solid rgba(217,177,92,.4);background:linear-gradient(180deg,#efe3c6,#ddc9a1);color:#2b1f14;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.sch3 .s3-la{height:150px;background:center 40%/cover;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
+.sch3 .s3-lt{padding:6px 20px 18px}
+.sch3 .s3-lt small{font:13px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.08em;color:#7a2a12}
+.sch3 .s3-lt h2{font:400 32px/1 'Mr Eaves Small Caps',Georgia,serif;color:#3b2410;margin:2px 0 8px;letter-spacing:.01em}
+.sch3 .s3-lt p{font:17px/1.5 'Bookinsanity',Georgia,serif;color:#2b1f14}
+.sch3 .s3-liv{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.sch3 .s3-liv small{width:100%;font:13px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.12em;color:#C7B6EE}
+.sch3 .s3-spell{display:flex;align-items:center;gap:8px;height:34px;padding:0 10px 0 4px;border-radius:17px;border:1px solid rgba(180,155,232,.3);background:rgba(120,100,200,.08);font:16px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.02em;color:#E6DCFF}
+.sch3 .s3-spell:hover{border-color:#C7B6EE}
+.sch3 .s3-sa{width:26px;height:26px;border-radius:50%;background:center/cover #1a1630}
+.sch3 .s3-caps{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sch3 .s3-cap{display:flex;flex-direction:column;padding:8px 10px;border-radius:8px;border:1px solid rgba(217,177,92,.16);background:rgba(255,255,255,.02);font:17px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.02em;color:#E8D7AE}
+.sch3 .s3-cap small{font:italic 12px 'Bookinsanity',Georgia,serif;color:var(--sp)}
+.sch3 .s3-cap:hover,.sch3 .s3-cap.sel{border-color:rgba(246,227,168,.5)}
+.sch3.cercando [data-q].fuori{opacity:.18}
+.sch3.cercando .s3-car:has(.s3-ab:not(.fuori)){opacity:1}
+.sch3 .s3-segnalibri{position:fixed;right:24px;top:70px;display:flex;flex-direction:column;gap:6px;z-index:2}
+.sch3 .s3-segnalibri a{position:relative;width:76px;min-height:78px;padding:10px 6px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;
+  background:linear-gradient(90deg,#3a0f10,#6e1d1a 40%,#561615);clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);box-shadow:inset 0 0 0 1px rgba(255,200,170,.12);margin-left:-6px;transition:transform .15s}
+.sch3 .s3-segnalibri a b{font:400 15px/1.05 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.03em;color:#F2D9B8}
+.sch3 .s3-segnalibri a small{font:11px 'Mr Eaves Small Caps',Georgia,serif;color:#D9A98E;margin-top:3px}
+.sch3 .s3-segnalibri a:hover{transform:translateX(4px)}
+.sch3 .s3-segnalibri a.on{background:linear-gradient(90deg,#8a6a2a,var(--o2) 45%,#b08a3a);transform:translateX(6px)}
+.sch3 .s3-segnalibri a.on b{color:#2a1c08}
+.sch3 .s3-segnalibri .s3-chiudi{margin-top:18px;background:linear-gradient(90deg,#16171c,#25262c 45%,#1b1c21);box-shadow:inset 0 0 0 1px rgba(217,177,92,.4)}
+.sch3 .s3-segnalibri .s3-chiudi b{color:var(--o1)}
+.sch3 .s3-segnalibri a{width:104px;min-height:70px;padding:8px 6px 16px}
+.sch3 .s3-segnalibri a b{font-size:15px;word-break:normal;overflow-wrap:normal;hyphens:none}
+.sch3 .s3-art{background-color:#3a3226;background-image:var(--a),radial-gradient(circle at 50% 40%,#5a4a30,#1a1610 75%)!important;background-size:cover,cover}
+.sch3 .s3-v.s3-ca small{font-size:12px;letter-spacing:.1em}
+#modal .box.sheet2.sch3box{width:calc(100vw - 32px)!important;max-width:none!important;height:calc(100vh - 92px)!important;max-height:none!important;padding:0!important;overflow:hidden!important;border-radius:14px!important;border:1px solid rgba(217,177,92,.45)!important;background:linear-gradient(180deg,#121318,#0a0b0e)!important;box-shadow:0 0 0 1px #000,0 40px 100px rgba(0,0,0,.8)!important}
+.sch3{height:100%;display:grid;grid-template-columns:clamp(300px,21vw,392px) minmax(0,1fr) 112px;color:var(--ink);font:400 17px/1.4 'Scaly Sans',sans-serif;text-align:left}
+.sch3 *{box-sizing:border-box}
+.sch3 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left;box-shadow:none;border-radius:0;padding:0;height:auto;min-height:0}
+.sch3 .s3pag{flex:1;min-height:0;display:flex;flex-direction:column}
+.sch3 .s3pag>.s3-colonne{flex:1;min-height:0}
+.sch3 .s3pag>.shbody{flex:1;min-height:0;overflow:auto;padding:18px 22px}
+.sch3 .s3-segnalibri{position:static;padding:60px 0 0 0;align-self:start}
+.sch3 .s3-segnalibri a{width:104px;margin-left:-2px}
+.sch3 .s3sw{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:6px;z-index:2}
+.sch3 .s3sw button{width:40px;height:40px;border-radius:50%;background-size:cover;background-position:center 20%;box-shadow:0 0 0 2px #0a0b0e,0 0 0 3px rgba(217,177,92,.4);opacity:.7}
+.sch3 .s3sw button.on,.sch3 .s3sw button:hover{opacity:1;box-shadow:0 0 0 2px #0a0b0e,0 0 0 3px var(--o1)}
+.sch3 .s3-cond .s3-cc{color:#FFB3A8;border-color:rgba(234,90,75,.5);background:rgba(234,90,75,.1)}
+.sch3 .s3-riposi button,.sch3 .s3-tira{height:40px;text-align:center;border-radius:6px;border:1px solid rgba(217,177,92,.4)}
+.sch3 .s3-tira.off{opacity:.45;cursor:not-allowed}
+.sch3 .s3-mini2{grid-area:e;justify-self:end;font:15px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1);border:1px solid rgba(217,177,92,.45);border-radius:5px;padding:2px 10px}
+.sch3 .s3-ris em{grid-area:auto}
+.sch3 .s3-ris{grid-template-areas:"n e" "p p"}
+.sch3 .s3-ris .s3-mini2{grid-column:2;grid-row:1}
+.sch3 .s3-ris em{grid-column:2;grid-row:1}
+.sch3 .s3-ris:has(.s3-mini2) em{grid-row:3;justify-self:end}
+.sch3 .s3-pp i{cursor:pointer}
+.sch3 .s3-lt .spellfull .kv{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font:15px 'Bookinsanity',Georgia,serif;margin:6px 0}
+.sch3 .s3-lt .spellfull .kv b{color:#7a2a12;font-weight:400;font-family:'Mr Eaves Small Caps',Georgia,serif}
+.sch3 .s3-lt .spellfull p,.sch3 .s3-lt .spelltxt p{font:16px/1.5 'Bookinsanity',Georgia,serif;color:#2b1f14;margin:4px 0}
+.sch3 .s3-lt .note{color:#7a2a12}
+.sch3 .s3-lt .s3-tira.s3-grande{margin-top:12px;color:#f2dfae;background:#2b1f14;border-color:#1a1108;width:100%}
+.sch3 .s3-lettura{max-height:58vh;overflow:auto}
+/* le pagine non ancora rifatte: il contenuto di prima, nei colori nuovi */
+.sch3 .s3pag>.shbody .shpanel{background:rgba(255,255,255,.02);border:1px solid rgba(217,177,92,.2);border-radius:10px}
+.sch3 .s3pag>.shbody h2,.sch3 .s3pag>.shbody h3{font-family:'Mr Eaves Small Caps',Georgia,serif;text-transform:none;letter-spacing:.03em;color:var(--o1)}
+@media (max-width:1500px){ .sch3 .s3-colonne{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)} .sch3 .s3-col.s3-c3{grid-column:1/-1;border-top:1px solid rgba(217,177,92,.14)} .sch3 .s3-eroe h1{font-size:44px} .sch3 .s3-vitali{flex-wrap:wrap} .sch3 .s3-cerca{width:100%;margin-left:0} }
+
+#modal .sch3 svg.uico{display:none!important}
+#modal .sch3 h3{font:400 24px 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.03em!important;text-transform:none!important;color:var(--o1)!important;-webkit-text-fill-color:var(--o1)!important;background:none!important;padding:0 0 8px!important;margin:0 0 12px!important;border-bottom:1px solid rgba(217,177,92,.3)!important;display:flex;align-items:baseline;gap:10px}
+#modal .sch3 h3 small{font:italic 14px 'Bookinsanity',Georgia,serif!important;color:var(--sp)!important;letter-spacing:0!important;text-transform:none!important}
+#modal .sch3 h3::before,#modal .sch3 h3::after{display:none!important}
+#modal .sch3 .s3-eroe h1, #modal .sch3 .s3-eroe h1 span{font-family:'Mr Eaves Small Caps',Georgia,serif!important;text-transform:none!important;font-weight:400!important}
+#modal .sch3 .s3-lt h2{font:400 32px/1 'Mr Eaves Small Caps',Georgia,serif!important;color:#3b2410!important;-webkit-text-fill-color:#3b2410!important;text-transform:none!important;background:none!important}
+#modal .sch3 .s3-grp h4{font:400 15px 'Mr Eaves Small Caps',Georgia,serif!important;letter-spacing:.12em!important;text-transform:none!important}
+
+.sch3 .s3-spec{display:grid;gap:8px;margin-bottom:14px}
+.sch3 .s3-spec .shcard{padding:12px 14px;border-radius:10px;border:1px solid rgba(217,177,92,.45);background:linear-gradient(90deg,rgba(217,177,92,.12),rgba(255,255,255,.01))}
+.sch3 .s3-spec .shcard h3{font-size:20px!important;border:0!important;margin:0 0 4px!important;padding:0!important}
+.sch3 .s3-spec .shcard .note{font:italic 15px 'Bookinsanity',Georgia,serif;color:var(--dim)}
+.sch3 .s3-spec .shcard button, .sch3 .s3-fx button{margin-top:8px;padding:6px 14px;border-radius:6px;border:1px solid rgba(217,177,92,.45);font:17px 'Mr Eaves Small Caps',Georgia,serif;color:var(--o1)}
+.sch3 .s3-spec .shcard button.primary, .sch3 .s3-fx button.on{background:linear-gradient(180deg,#2c2512,#120f07);border-color:var(--o1);box-shadow:0 0 14px rgba(217,177,92,.3)}
+.sch3 .s3-fx .fxadv{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sch3 .s3-fx .fxtogs{display:grid;gap:6px;margin-top:8px}
+.sch3 .s3-fx .fxtog{display:grid!important;grid-template-columns:44px 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;text-align:left;margin:0;padding:8px 10px;border-color:rgba(217,177,92,.25)}
+.sch3 .s3-fx .fxtog img{grid-row:1/3;width:44px;height:44px;border-radius:8px}
+.sch3 .s3-fx .fxtog b{font:400 18px 'Mr Eaves Small Caps',Georgia,serif;color:#F3EBD6}
+.sch3 .s3-fx .fxtog small{font:italic 13px/1.3 'Bookinsanity',Georgia,serif;color:var(--dim)}
+.sch3 .s3-fx h4,.sch3 .s3-fx .eyebrow{font:400 14px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.1em;color:var(--o2);margin:12px 0 6px}
+.sch3 .s3-fx ul{margin:0;padding-left:18px;font:14px/1.45 'Bookinsanity',Georgia,serif;color:#CFC5AE}
+@media (max-width:1500px){
+  .sch3 .s3-colonne{overflow:auto;grid-auto-rows:min-content;align-content:start}
+  .sch3 .s3-col{overflow:visible!important;min-height:0}
+  .sch3 .s3-col.s3-c3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 20px}
+  .sch3 .s3-col.s3-c3>.s3-lettura{grid-row:span 4;max-height:none}
+  .sch3 .s3-riposi button{font-size:16px!important}
+  .sch3{grid-template-columns:clamp(260px,22vw,392px) minmax(0,1fr) 112px}
+}
+/* ===== FINE SCHEDA NUOVA (v195) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v194</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v195</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -7517,4 +7718,136 @@ function ccGuida(box){ const host=box.querySelector('.croguide')||box; let el=ho
 `; document.head.appendChild(st); })();
 }
 /* ===== FINE IL CONSENSO DEL DUCATO (v194, prova) ===== */
+/* ===== SCHEDA NUOVA (v195) ===== */
+/* Scheda del personaggio nuova (v195, prototipo approvato da Giuseppe il 10-10-2026: «capolavoro»).
+   renderSheet resta quella di prima (dati, comandi, linguette): qui si costruisce la cornice nuova — l'eroe a sinistra,
+   i numeri in alto, la ricerca, i segnalibri — e la pagina «Scheda» (caratteristiche, In gioco, risorse, lettura).
+   Le altre pagine, per ora, mostrano il contenuto di sempre dentro la cornice nuova (stessi tasti, stessi clic). */
+(function(){
+  const RITRATTO = {"alessandros": "img/e557b39295d7.jpg", "adamus": "img/dfe043424f53.jpg", "luigis": "img/50aa51b6c583.jpg", "mattheus": "img/d1e77e965037.jpg", "maximus": "img/b9c760121be5.jpg", "vicarus": "img/a910dbd9beaf.jpg"};
+  const CAR_NOME={For:'Forza',Des:'Destrezza',Cos:'Costituzione',Int:'Intelligenza',Sag:'Saggezza',Car:'Carisma'};
+  const ECO_CL={azione:'s3-az',bonus:'s3-bo',gratuita:'s3-gr',reazione:'s3-re'};
+  const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+  const big=p=>p?(p[1]||p[0]):'';
+  let sch3Sel=null;   /* la voce aperta nel pannello di lettura, per personaggio */
+
+  function lettura(box,html){ const l=box.querySelector('.s3-let'); if(l) l.innerHTML=html; }
+  function leggi(box,k,LET){ const d=LET[k]; if(!d) return; sch3Sel=k;
+    lettura(box,(d.i?`<div class="s3-la" style="background-image:url('${d.i}')"></div>`:'')+`<div class="s3-lt"><small>${d.s||''}</small><h2>${d.t}</h2>${d.h||`<p>${d.x||''}</p>`}${d.b||''}</div>`);
+    box.querySelectorAll('[data-k]').forEach(e=>e.classList.toggle('sel',e.dataset.k===k));
+    const b=box.querySelector('.s3-let [data-s3cast]'); if(b) b.onclick=()=>{ const id=sheetOf; closeModal(); castSpell(id,b.dataset.s3cast); };
+    const a=box.querySelector('.s3-let [data-s3act]'); if(a) a.onclick=()=>{ const id=sheetOf, t=S.tokens[id], x=sheetActList(id,t)[+a.dataset.s3act]; if(x){ closeModal(); doAction(id,x); } };
+  }
+
+  function sch3(id){
+    const box=document.querySelector('#modal .box.sheet2'); if(!box||box.dataset.s3===String(Date.now())) return;
+    const t=S.tokens[id], sh=SHEETS[id]; if(!t||!sh) return;
+    const pg=sh.pg||{}, mine=canAct(id), form=activeWildForm(id,t), abil=form?{...sh.abil,...form.abil}:sh.abil;
+    const oldHead=box.querySelector('.shhead'), oldTabs=box.querySelector('.shtabs'), oldBody=box.querySelector('.shbody'); if(!oldHead||!oldBody) return;
+    box.classList.add('sch3box');
+    const LET={};
+    const nome=(form?`${t.name} — ${form.name}`:t.name).split(' '); const n1=nome.shift(), n2=nome.join(' ');
+    const hpPct=Math.max(0,Math.min(100,100*t.hp/t.hpMax)), thpPct=t.thp?Math.min(100-hpPct,100*t.thp/t.hpMax):0;
+    const conds=(t.conds||[]).map(c=>{ const nm=(CONDS.find(x=>x[0]===c.n)||[c.n,c.n])[1]; return `<span class="s3-cc">${poiText(nm)}${c.r?` · ${c.r} r`:''}</span>`; }).join('')||'<span class="s3-ok">Nessuna condizione</span>';
+    const ini=t.mods?.Iniziativa??modCalc(abil.Des), speed=form?form.speed:sh.speed;
+    const pgs=Object.entries(S.tokens).filter(([k,x])=>x.kind==='pg'&&SHEETS[k]);
+    const sw=IS_GM?`<div class="s3sw">${pgs.map(([k,x])=>`<button class="${k===id?'on':''}" data-s3pg="${k}" title="${esc(x.name)}" style="background-image:url('${x.img||''}')"></button>`).join('')}</div>`:'';
+    const hasSpell=!!sh.spell;
+    /* ---------- l'eroe ---------- */
+    const eroe=`<aside class="s3-eroe"><div class="s3-ritr" style="background-image:url('${RITRATTO[id]||t.img||''}')"></div>${sw}
+      <div class="s3-eroe-in"><h1>${esc(n1)}${n2?`<span>${esc(n2)}</span>`:''}</h1>
+      <p class="s3-classe">${poiText(t.cls||'')}${sh.level?` · livello ${sh.level}`:''}${(t.size||1)>1?' · Taglia Grande':''}</p>
+      <p class="s3-specie">${[pg.specie,sh.background].filter(Boolean).map(poiText).join(' · ')}${sheetXp(id)?` · ${sheetXp(id)} PE`:''}</p>
+      <div class="s3-pf"><div class="s3-pfn"><b>${t.hp}</b><span>/ ${t.hpMax}</span>${t.thp?`<em>+${t.thp} temporanei</em>`:''}</div><div class="s3-pfb"><i style="width:${hpPct}%"></i>${thpPct?`<u style="left:${hpPct}%;width:${thpPct}%"></u>`:''}</div><small>Punti ferita</small></div>
+      <div class="s3-cond">${conds}</div>
+      ${mine?`<div class="s3-riposi"><button data-s3rest="breve">Riposo breve</button><button class="pri" data-s3rest="lungo">Riposo lungo</button></div>`:''}</div></aside>`;
+    /* ---------- i numeri in alto ---------- */
+    const vit=`<header class="s3-vitali"><div class="s3-v s3-ca"><b>${tokAc(t)}</b><small>CA</small></div><div class="s3-v"><b>${fmtMod(ini)}</b><small>Iniziativa</small></div><div class="s3-v"><b>${speed} m</b><small>Velocità</small></div>
+      <div class="s3-v"><b>+${sh.prof}</b><small>Competenza</small></div><div class="s3-v"><b>${spotPassiva(t)}</b><small>Percezione passiva</small></div>
+      ${hasSpell?`<div class="s3-v s3-mag"><b>${sh.spell.dc}</b><small>CD incantesimi</small></div><div class="s3-v s3-mag"><b>+${sh.spell.atk}</b><small>Attacco incantesimi</small></div>`:''}
+      <label class="s3-cerca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input class="s3q" placeholder="Cerca nella scheda…"></label></header>`;
+    /* ---------- i segnalibri ---------- */
+    const hasItemSpells=invItems(id).some(it=>(it.spells||[]).length);
+    const pagine=[['pan','Scheda'],['att','Attacchi'],['inv','Inventario'],['inc','Incantesimi'],['cap','Capacità'],['bg','Storia'],['dia','Diario']].filter(([k])=>k!=='inc'||hasSpell||hasItemSpells);
+    const seg=`<nav class="s3-segnalibri">${pagine.map(([k,l])=>`<a data-s3tab="${k}" class="${sheetTab===k?'on':''}"><b>${l}</b></a>`).join('')}<a class="s3-chiudi" data-s3back="1"><b>Torna al Tavolo</b></a></nav>`;
+    /* ---------- la pagina «Scheda» ---------- */
+    let pag='';
+    if(sheetTab==='pan'){
+      let car='';
+      for(const [k,v] of Object.entries(abil)){
+        const tsc=/pgcomp/.test(pgTsMark(id,k)), tsm=sheetRollMod(id,'TS '+k);
+        const sks=(ABIL_SKILLS[k]||[]).map(s=>{ const c=/pgcomp/.test(pgSkillMark(id,s)), e=/esp/.test(pgSkillMark(id,s));
+          return `<button class="s3-ab ${c?'c':''} ${e?'e':''}" data-roll="${esc(s)}" data-q="${esc(s.toLowerCase())}" title="Tira ${esc(s)}"><i></i><span>${esc(s)}</span><b>${fmtMod(sheetRollMod(id,s))}</b></button>`; }).join('');
+        car+=`<div class="s3-car" data-q="${esc((CAR_NOME[k]||k).toLowerCase())}"><div class="s3-sig"><small>${k}</small><b>${fmtMod(modCalc(v))}</b><em>${v}</em></div>
+          <div class="s3-cars"><div class="s3-carn"><span>${CAR_NOME[k]||k}</span><button class="s3-ts ${tsc?'c':''}" data-roll="TS ${k}" title="Tiro salvezza su ${CAR_NOME[k]||k}"><i></i>Tiro salvezza <b>${fmtMod(tsm)}</b></button></div>${sks||'<p class="s3-nulla">Nessuna abilità</p>'}</div></div>`;
+      }
+      /* In gioco: le azioni del personaggio, per tipo */
+      const acts=sheetActList(id,t), grp={};
+      acts.forEach((a,i)=>{ (grp[actEco(a)]=grp[actEco(a)]||[]).push([a,i]); });
+      let az='';
+      for(const [eco,lab] of ACT_ECO){ const L=grp[eco]; if(!L||!L.length) continue;
+        az+=`<section class="s3-grp ${ECO_CL[eco]||'s3-az'}"><h4><i></i>${lab}</h4>`+L.map(([a,i])=>{ const p=big(icoAct(a)), k='a'+i;
+          LET[k]={t:poiText(a.n),s:`${lab}${a.atk!=null?` · colpire ${fmtMod(a.atk)}`:''}${a.dmg?` · ${poiText(a.dmg)}`:''}`,x:poiText(a.note||''),i:p,b:mine?`<button class="s3-tira s3-grande" data-s3act="${i}">${a.atk!=null||a.dmg?'Tira':'Usa'}</button>`:''};
+          const colp=a.atk!=null?`<div class="s3-num"><small>Colpire</small><b>${fmtMod(a.atk)}</b></div>`:'';
+          const dan=a.dmg?`<div class="s3-num"><small>${actTipo(a)==='cura'?'Cura':'Danni'}</small><b>${esc(String(a.dmg).replace(/\s*\(.*$/,''))}</b></div>`:'';
+          return `<div class="s3-att" data-k="${k}" data-q="${esc((a.n+' '+(a.note||'')).toLowerCase())}"><div class="s3-art" style="--a:url('${p}')"></div><div class="s3-att-t"><b>${poiText(a.n)}</b><small>${poiText((a.note||'').slice(0,70))}</small></div>${colp}${dan}${mine?`<button class="s3-tira" data-s3act="${i}">${a.atk!=null||a.dmg?'Tira':'Usa'}</button>`:''}</div>`; }).join('')+`</section>`;
+      }
+      /* Risorse: gemme da spendere (stesso comando dei pallini di prima) */
+      const R=pg.risorse||[]; let ris='';
+      R.forEach((r,i)=>{ const u=resUsed(id,i), mx=+r.max||0; if(!mx) return;
+        const k='r'+i; LET[k]={t:poiText(r.n),s:poiText(r.recupero||''),x:poiText(r.note||''),i:big(icoAbil(r.n,'Risorsa'))};
+        const corpo=mx>12?`<div class="s3-barra"><i style="width:${100*(mx-u)/mx}%"></i></div>${mine?`<button class="s3-mini2" data-resuse="${i}">Usa</button>`:''}`
+          :`<div class="s3-pp ${/slot/i.test(r.n)?'slot':''}">${Array.from({length:mx},(_,j)=>`<i class="${j<u?'vuota':''}" ${mine?`data-res="${i}" data-k="${j}"`:''} title="${mine?'clicca per spendere o recuperare':''}"></i>`).join('')}</div>`;
+        ris+=`<div class="s3-ris" data-k="${k}" data-q="${esc(r.n.toLowerCase())}"><span>${poiText(r.n.replace(/\s*\(.*$/,''))}</span><em>${mx-u} / ${mx}</em>${corpo}</div>`; });
+      /* Incantesimi e capacità: si leggono nel pannello */
+      let inc='';
+      if(hasSpell){ const by={}; for(const n of sh.spell.list){ const d=SPELLS[n]; if(d) (by[d.l]=by[d.l]||[]).push([n,d]); }
+        const used=t.used||{};
+        for(const l of Object.keys(by).sort()){ inc+=`<div class="s3-liv"><small>${l==='0'?'Trucchetti':l+'° livello'}</small>`+by[l].map(([n,d])=>{ const k='s'+n, p=big(icoSpell(n)), can=mine&&(l==='0'||(used[l]||0)<(sh.spell.slots[l]||0));
+            LET[k]={t:poiText(d.it),s:`${l==='0'?'Trucchetto':l+'° livello'}${d.scuola?' · '+d.scuola:''}`,h:spellFullHtml(d,n),i:p,b:mine?`<button class="s3-tira s3-grande ${can?'':'off'}" data-s3cast="${esc(n)}" ${can?'':'disabled'}>${l==='0'?'Usa':'Lancia'}</button>`:''};
+            return `<button class="s3-spell" data-k="${k}" data-q="${esc((d.it+' '+n).toLowerCase())}"><span class="s3-sa" style="background-image:url('${p}')"></span>${poiText(d.it)}</button>`; }).join('')+`</div>`; } }
+      const caps=[...(pg.privilegi||[]),...(pg.talenti||[]),...(pg.tratti_specie||[])];
+      const cap=caps.map((c,i)=>{ const k='c'+i, n=c.n.replace(/\s*\(.*$/,''); LET[k]={t:poiText(n),s:poiText(c.fonte||''),x:poiText(c.d||''),i:big(icoAbil(c.n,'Privilegio')||icoAbil(n,'Talento')||icoAbil(n,'Tratto'))};
+        return `<button class="s3-cap" data-k="${k}" data-q="${esc(n.toLowerCase())}">${poiText(n)}<small>${poiText(c.fonte||'')}</small></button>`; }).join('');
+      pag=`<div class="s3-colonne"><section class="s3-col s3-c1"><h3>Caratteristiche e abilità</h3>${car}</section>
+        <section class="s3-col s3-c2"><h3>In gioco <small>clicca una voce per leggerla${mine?', «Tira» per tirare':''}</small></h3>${az||'<p class="s3-nulla">Nessuna azione</p>'}${ris?`<h3 class="s3-h3b">Risorse <small>tornano con i riposi</small></h3><div class="s3-risorse">${ris}</div>`:''}</section>
+        <section class="s3-col s3-c3"><div class="s3-lettura s3-let"><div class="s3-lt"><small>Il pannello di lettura</small><h2>Scegli una voce</h2><p>Clicca un attacco, una risorsa, un incantesimo o una capacità: qui compare la sua spiegazione completa.</p></div></div>
+          ${inc?`<h3>Incantesimi <small>${sh.spell.stat} · CD ${sh.spell.dc} · +${sh.spell.atk}</small></h3><div class="s3-incs">${inc}</div>`:''}${cap?`<h3>Capacità e talenti</h3><div class="s3-caps">${cap}</div>`:''}</section></div>`;
+    }
+    /* ---------- montaggio ---------- */
+    const wrap=box.querySelector('.sheet2wrap');
+    const nuovo=document.createElement('div'); nuovo.className='sch3';
+    nuovo.innerHTML=`${eroe}<section class="corpo">${vit}<div class="s3pag ${sheetTab}"></div></section>${seg}`;
+    const dove=nuovo.querySelector('.s3pag');
+    if(sheetTab==='pan'){ dove.innerHTML=pag;
+      /* dalla Panoramica di prima: i riquadri speciali (forma selvatica, Possanza, Zenith) e «Effetti e tiri», con i loro tasti già collegati */
+      const c2=dove.querySelector('.s3-c2'), h=c2&&c2.querySelector('h3');
+      const spec=[...oldBody.querySelectorAll('.shcard')].filter(x=>x.querySelector('#wildToggle,#giantToggle,#zenithToggle')||/Forma selvatica|Possanza|Zenith/.test(x.textContent));
+      if(spec.length&&h){ const w=document.createElement('div'); w.className='s3-spec'; spec.forEach(x=>w.append(x)); h.after(w); }
+      const fx=oldBody.querySelector('.fxpanel'); if(fx&&c2){ const w=document.createElement('div'); w.className='s3-fx'; w.innerHTML='<h3 class="s3-h3b">Effetti e tiri <small>vantaggio, svantaggio, effetti accesi</small></h3>'; fx.querySelector('h2')?.remove(); w.append(fx); c2.append(w); }
+    } else dove.append(oldBody);   /* le altre pagine: il contenuto di sempre, con i suoi tasti */
+    wrap.replaceWith(nuovo);
+    /* ---------- comandi ---------- */
+    nuovo.querySelectorAll('[data-s3tab]').forEach(a=>a.onclick=()=>{ sheetTab=a.dataset.s3tab; renderSheet(id); });
+    nuovo.querySelector('[data-s3back]').onclick=()=>closeModal();
+    nuovo.querySelectorAll('[data-s3pg]').forEach(b=>b.onclick=()=>renderSheet(b.dataset.s3pg));
+    nuovo.querySelectorAll('[data-s3rest]').forEach(b=>b.onclick=()=>b.dataset.s3rest==='lungo'?restLong(id):restShortOpen(id));
+    if(sheetTab==='pan'){
+      if(mine){
+        nuovo.querySelectorAll('.s3pag [data-roll]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); const sk=b.dataset.roll, mod=sheetRollMod(id,sk); askAdvThen(id,'Tiro di '+sk,()=>{ if(IS_GM) rollFor(id,sk,mod); else doRoll(sk,null,null,mod); toast(`${t.name}: tiro di ${sk} nel registro`); renderSheet(id); }); });
+        nuovo.querySelectorAll('.s3pag .s3-att [data-s3act]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); const a=sheetActList(id,t)[+b.dataset.s3act]; if(a){ closeModal(); doAction(id,a); } });
+        nuovo.querySelectorAll('.s3pag [data-res]').forEach(p=>p.onclick=e=>{ e.stopPropagation(); const r=+p.dataset.res, k=+p.dataset.k, u=resUsed(id,r), nv=(k<u)?k:k+1; if(resSet(id,r,nv)===false){ toast('Gli slot si spendono nella pagina Incantesimi'); return; } if(nv>u&&!resLink(id,r)) useResource(id,r,true); else save(); renderSheet(id); });
+        nuovo.querySelectorAll('.s3pag [data-resuse]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); useResource(id,+b.dataset.resuse); });
+      }
+      nuovo.querySelectorAll('.s3pag [data-k]').forEach(e=>e.addEventListener('click',()=>leggi(nuovo,e.dataset.k,LET)));
+      if(sch3Sel&&LET[sch3Sel]) leggi(nuovo,sch3Sel,LET);
+      else { const primo=Object.keys(LET).find(k=>k[0]==='a'); if(primo) leggi(nuovo,primo,LET); }
+    }
+    const q=nuovo.querySelector('.s3q');
+    q.oninput=()=>{ const v=q.value.trim().toLowerCase(); nuovo.querySelectorAll('[data-q]').forEach(e=>e.classList.toggle('fuori',!!v&&!e.dataset.q.includes(v))); nuovo.classList.toggle('cercando',!!v);
+      if(sheetTab!=='pan') nuovo.querySelectorAll('.s3pag .shbody *').forEach(()=>{}); };
+  }
+  const _r=renderSheet; renderSheet=function(id){ _r.apply(this,arguments); try{ sch3(id); }catch(e){ console.warn('scheda nuova',e); } };
+})();
+/* ===== FINE SCHEDA NUOVA (v195) ===== */
 </script>
