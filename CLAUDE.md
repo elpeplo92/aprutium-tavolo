@@ -965,3 +965,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Tre bottoni Tavolo / Scheda / Compendio: restano bottoni (Giuseppe li vuole così, ha bocciato le schede senza cornice); Mr Eaves maiuscoletto, cornice d'ottone, fondo scuro con luce; acceso = cornice d'oro piena, luce calda, alone e rombo d'oro sotto.
 - A destra: `#modePill` nascosto (la fase è nel riquadro della colonna); `#livePill` mostra «N al tavolo» (`.hn`, letto da `#liveTxt`, pallino verde se c'è gente) o «solo tu»; la Vista è una targhetta con il ritratto del personaggio scelto (`.vav`, dal `t.img` del token; cappuccio per il master). Attenzione: una regola vecchia mette `background-clip:text` agli span delle pillole — `.vav` la annulla.
 - `renderRail` è avvolta di nuovo (dopo il blocco della colonna) per aggiornare la testata; `#roleSel` e il resto dei comandi non cambiano. `prova-tavolo.js` verde.
+
+## v192 (10/10/2026) — gli attrezzi della mappa
+
+- Terzo pezzo (metodo v190). Blocchi «ATTREZZI DELLA MAPPA (v192)»; fonte `Revisioni/Attrezzi della mappa (10-10-2026)/` (`genera.py` → `attrezzi.css` + `attrezzi.js`, poi `py applica.py`; simboli copiati in `icone/`).
+- `#zoomctl`: caselle d'ottone 46 px; i simboli sono maschere CSS (`--ic` su `::before`, l'svg originale nascosto: così `uiIcoSwap` può continuare a riscrivere gli svg senza effetti). Lanterna (rivela), nebbia (copri), muro, porta: game-icons.net (Lorc, Delapouite, CC BY 3.0, credito nel commento); cerchio, cono, linea, togli, righello disegnati. Acceso (`.on`/`.primary`) = cornice d'oro e simbolo dorato.
+- Ordine con `order` (flex): nebbia (rivela, copri) · muri, porte · aree (`.aoectl`) · misura; stacco di 7 px fra i gruppi. Nome breve accanto al tasto al passaggio del mouse (`data-nome` → `::after`). Metri dell'area in Scaly Sans grassetto (stile inline: c'era una regola più forte).
+- `prova-tavolo.js` verde.
