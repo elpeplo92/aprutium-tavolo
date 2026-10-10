@@ -972,3 +972,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - `#zoomctl`: caselle d'ottone 46 px; i simboli sono maschere CSS (`--ic` su `::before`, l'svg originale nascosto: così `uiIcoSwap` può continuare a riscrivere gli svg senza effetti). Lanterna (rivela), nebbia (copri), muro, porta: game-icons.net (Lorc, Delapouite, CC BY 3.0, credito nel commento); cerchio, cono, linea, togli, righello disegnati. Acceso (`.on`/`.primary`) = cornice d'oro e simbolo dorato.
 - Ordine con `order` (flex): nebbia (rivela, copri) · muri, porte · aree (`.aoectl`) · misura; stacco di 7 px fra i gruppi. Nome breve accanto al tasto al passaggio del mouse (`data-nome` → `::after`). Metri dell'area in Scaly Sans grassetto (stile inline: c'era una regola più forte).
 - `prova-tavolo.js` verde.
+
+## v190 (10/10/2026) — Vhaerun nella Crociata; rivalità del Girella confermata
+
+- Giuseppe: Vhaerun è partito con la Crociata (`city:"crociata"`, gruppo «La compagnia», come gli altri di Bëllindë in v188). La rivalità dei Melacera col Barone Ugo Pietramala di Cashtalladdë (pedaggi e guadi del Tordinum) è canone: tolto il segno di proposta (faz-melacera, Gisulfo). Nota: `correzioni-bellinde-v188.py` contiene ancora la frase «NUOVO DETTAGLIO PROPOSTO»: se si rilancia, rimettere «canone».
