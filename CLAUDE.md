@@ -1176,3 +1176,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 - Segnalato da Giuseppe: cliccando il medaglione dell'iniziativa sopra la scheda di un personaggio, il master non chiedeva più l'iniziativa. Causa: dalla v190 il riquadro del nome `.med .info` è alto quanto tutta la scheda (`top:0`) e sta sopra il medaglione `.init` (che è dentro `.pic`): il clic vero andava a `.info` e quindi a `select(id)`. I clic simulati di `prova-tavolo.js` (`el.click()`) non se ne accorgevano.
 - Correzione nel CSS del blocco del pannello dello scontro: `.med .info{pointer-events:none}` e `.med .info>*{pointer-events:auto}`. Provato con clic veri: medaglione = chiede l'iniziativa, nome = seleziona. `prova-tavolo.js` verde.
+
+## v222 (10/10/2026) — il medaglione dell'iniziativa si accende quando la richiesta è partita
+
+- Giuseppe: «si è rotto il tasto dell'iniziativa». Il tasto funzionava (dalla v221 il clic arriva; la richiesta parte, classe `waiting`), ma dalla v190 lo stato «richiesta inviata» era un alone sottilissimo (`pulse`) sul fondo scuro trasparente, invisibile sopra i ritratti: sembrava che non succedesse niente.
+- Ora `#rail .med .init.d20.waiting` è un medaglione d'oro pieno, icona scura, che pulsa (`initLuce`) finché il giocatore non tira. Serve il prefisso `#rail`: le regole della v190 hanno `!important` con quel prefisso. CSS nel blocco del pannello dello scontro (fonte `Revisioni/Guado - pannello dello scontro (v218)/pannello.js`). `prova-tavolo.js` verde.
