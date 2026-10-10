@@ -1031,3 +1031,11 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v203 (10/10/2026) — frontespizi rifatti: storia, popoli, impero; il Ducato torna com'era
 
 - Giuseppe: le tavole di «La storia di Ea», «Popoli e Nazioni», «L'Impero Aureo» erano poco coerenti con lo stile; per il Ducato era meglio l'immagine di prima. Rifatte con prompt «traditional oil painting… muted earthy palette… NOT sci-fi, like a classic 1990s fantasy book plate» e `--no planets, space, sci-fi` (foglio `Frontespizi dei capitoli - foglio 2.jpg`, scelte mie: 1, 3, 3); il Ducato è tolto da `C4_COVER` e torna alla voce (`contea-cuore-del-ducato`). Le tavole sostituite in `_ARCHIVIO_2026-10-09/Frontespizi sostituiti/`. Approvate da Giuseppe: fazioni, personaggi, atti, appendici.
+
+## v202 (10/10/2026) — la testata nuova (entrata online con il commit della v203)
+
+- Giuseppe ha chiesto di rifare la testata (v191). Blocchi «TESTATA NUOVA (v202)» (CSS subito dopo quello della v191, JS in fondo allo script); fonte rigiocabile `Revisioni/Testata nuova (10-10-2026)/` (`testata.css`, `testata.js`, `py applica.py`, foto con `foto.js`).
+- Le tre porte sono **un trittico**: una sola targa d'ottone incassata divisa in tre, la porta aperta è una placca d'oro con la scritta in inchiostro; resta il rombo sotto.
+- `#livePill` nascosto: al suo posto **chi è al tavolo** in ritratti (`.htav`: cappuccio del master + i PG da `S.tokens`), accesi con pallino verde se collegati, grigi se no, anello chiaro per sé stessi; «N su 7». Legge `partita/presenza` (campo `ruolo`, scritto ogni 60 s da `presence()`); in `?prova=1` si simula con `__testataPresenti([...])`.
+- La Vista è una targa come il trittico (ritratto, «Vista» piccolo sopra, nome sotto). Rosa dei venti d'ottone accanto a «dove siamo».
+- Nota: il numero v202 non ha un commit suo: il blocco è stato preso dal `git add -A` della v203 di un'altra sessione mentre lo provavo. Lezione: con sessioni parallele, committare subito dopo la build.
