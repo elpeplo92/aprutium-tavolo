@@ -13,17 +13,50 @@
  "mappa": null,
  "colore": "#B5392C",
  "scheda": {
-  "Chi comanda": "Il Re giurato Thessan IV, di Casa Vespri",
+  "Governo": "Un Re giurato: regna per diritto proprio e giura fedeltà al Trono Solare a ogni incoronazione",
+  "Chi comanda": "Il Re Thessan IV, di Casa Vespri",
+  "Capitale": "⟦Una città di porto sullo Stretto di Fuoco: il nome è da decidere⟧",
   "Popolazione": "Circa due milioni e mezzo",
+  "Popoli": "Umani quasi tutti; sulle montagne le Genti dell’Aquila",
   "Casata": "Vespri, i Signori del Tramonto",
-  "Vive di": "Commercio per mare verso il sud e l’ovest, olio, agrumi, spezie, esplorazione",
+  "Fede": "La Fiamma Solare, tiepida; Vespera e Nerio nei porti",
+  "Vive di": "Commercio per mare verso il sud e l’ovest, olio, agrumi, spezie, esplorazione, e i mercenari",
   "Esercito": "La Flotta Reale (più di quaranta navi) e la Quinta Falange del Drago (circa 6.000)",
-  "Dialetto": "Il Tirsenno, melodioso e cantato"
+  "Dialetto": "Il Tirsenno, melodioso e cantato",
+  "Motto": "«Dove il Sole va a dormire, i Vespri vegliano»"
  },
  "gm": [
   {
-   "t": "",
-   "txt": "· [[Thessan IV]]: quarantacinque anni, bello come una statua, pericoloso come una tempesta.\n· Si dice che nel profondo sud la magia sia più selvaggia: un’eco di Noxtua mai spenta. Vespera è figlia di Noxtua, e Vesperia è la provincia dove la Luna d’Ombra si ricorda meglio.\n· Miti di città sommerse, e la credenza che sia qui che Valerus scende a dormire: per questo i tramonti di Vesperia sono i più belli di Ea.\n· Nei vecchi documenti la casata si chiamava Drakon: ora è Casa Vespri. Il Maestro della Vela e della Stella è Elia Vespri."
+   "t": "Thessan IV",
+   "txt": "Quarantacinque anni, bello come una statua, pericoloso come una tempesta. Vuole la corona senza il giuramento. ⟦Se la Crociata vince a Teramum, Vesperia sarà la prima a riconoscere il nuovo Duca, e la prima a presentargli il conto. Se perde, il re offrirà «protezione» alle contee del sud del Ducato: l’inizio dello spezzatino.⟧"
+  },
+  {
+   "t": "La Luna d’Ombra al sud",
+   "txt": "Si dice che nel profondo sud la magia sia più selvaggia: un’eco di Noxtua mai spenta. Vespera è figlia di Noxtua, e Vesperia è la provincia dove la Luna d’Ombra si ricorda meglio. Ci sono miti di città sommerse, e la credenza che sia qui che Valerus scende a dormire: per questo i tramonti di Vesperia sono i più belli di Ea."
+  },
+  {
+   "t": "Il filo Velthuria–Vesperia",
+   "txt": "⟦Iuvenza paga le compagnie vesperiane in oro «pulito», passato per i banchi di Luminor. La fibbia della Masseria Bruciata e le armature del Loto Nero sono la stessa pista. A Vesperia qualcuno tiene il registro dei contratti, e un registro si può comprare, rubare o farsi raccontare. Aggancio per dopo Teramum.⟧"
+  },
+  {
+   "t": "La regola delle Aquile",
+   "txt": "⟦Le compagnie dell’Aquila non combattono contro altre Aquile: se due compagnie si trovano su fronti opposti, una si ritira. Tanush Dushmàni, che scorta il convoglio del Loto, è cugino di Lekë e vecchio compagno di Kostandìn: Kostandìn può trattare con lui da pari, o rifiutarsi di combatterlo. Vasco invece è vesperiano del continente, non un’Aquila: per lui la regola non vale.⟧"
+  },
+  {
+   "t": "Cosa Vesperia non è",
+   "txt": "⟦Non è alleata di Sylva Noctis. I vesperiani vendono a chiunque, ma un popolo di mercanti diffida di chi paga in monete che nessun banco accetta e non lascia ricevute. È un cuneo da usare al momento giusto.⟧"
+  },
+  {
+   "t": "Agganci per il tavolo",
+   "txt": "· La paga dei vesperiani della Crociata scade: chi paga, e con quali soldi?\n· Un capitano dell’Aquila si presenta alla Crociata con un’offerta: i suoi uomini, a un prezzo, e le notizie di chi li aveva assoldati prima.\n· Un messo di Thessan IV cerca Silvanus. Vuole sapere se l’erede del Trono Solare è disposto a sciogliere i Vespri dal loro giuramento."
+  },
+  {
+   "t": "Da allineare",
+   "txt": "· I testi vecchi chiamano la casata regnante Drakon: ora è Casa Vespri. Il Maestro della Vela e della Stella è Elia Vespri.\n· La voce di Vespera dice che Casa Vespri «regna sull’isola»: questa voce propone la Grande Isola come parte di Vesperia, e così le due cose tornano.\n· La voce delle compagnie vesperiane dice «a sud dei Calanchi c’è il Regno di Vesperia»: non va, Vesperia sta molto più a sud (vedi Da decidere nella voce del Ducato).\n· Il materiale vecchio dava a Vesperia il grano; la Terpuria è il granaio dell’Impero, e Vesperia vive del mare."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome della capitale e dei due vulcani.\n· Se la Grande Isola è parte di Vesperia.\n· Se le compagnie vesperiane hanno un nome, come i «Cani da Guerra» del materiale vecchio."
   }
  ],
  "parent": "impero-aureo",
@@ -36,25 +69,122 @@
   {
    "t": "",
    "capo": true,
-   "txt": "Vesperia è la punta della penisola, affacciata sullo Stretto di Fuoco: coste di roccia, due vulcani accesi, campagne bruciate dal sole, un vento che porta cenere e sale. Prende il nome da Vespera, la stella della sera, e la sua gente si vanta di discendere da lei. Casa Vespri regnava qui da prima dell’Impero, e regna ancora."
+   "txt": "Vesperia è la punta della penisola, affacciata sullo Stretto di Fuoco: coste di roccia, due vulcani accesi, campagne bruciate dal sole, un vento che porta cenere e sale. Prende il nome da Vespera, la stella della sera, e la sua gente si vanta di discendere da lei. Casa Vespri regnava qui da prima dell’Impero, e regna ancora.\n\nÈ la provincia più lontana da Solaria e quella che obbedisce meno. Ha la flotta più forte dell’Impero, le carte di navigazione migliori di Ea e i mercenari più famosi della costa. In Aprutium la conoscete soprattutto per questi ultimi."
   },
   {
-   "t": "I. Il giuramento dei Vespri",
-   "txt": "Aurax e il re dei Vespri si affrontarono sulle rive dello Stretto di Fuoco, ma nessuno dei due voleva perdere la propria gente. Si accordarono: i Vespri avrebbero giurato fedeltà al Trono Solare e tenuto la loro corona. Quel giuramento vale ancora. Ma ogni re di Vesperia lo pronuncia un po’ più piano, e il re di oggi, [[Thessan IV]], parla apertamente di andarsene.",
+   "t": "I. In breve, la sua storia",
+   "txt": "Quando Aurax scese verso sud, Casa Vespri era già un regno. Aurax e il re dei Vespri si affrontarono sulle rive dello Stretto di Fuoco, ma nessuno dei due voleva perdere la propria gente. Si accordarono: i Vespri avrebbero giurato fedeltà al Trono Solare e tenuto la loro corona. Per questo Vesperia è l’unica provincia che ha un re.\n\nNei secoli d’oro Vesperia si arricchì sul mare del sud e dell’ovest. ⟦Nella Guerra delle Due Lune fu toccata appena: le flotte nemiche puntavano altrove. Vendette navi, olio e spade a chi ne aveva bisogno, e ne uscì più ricca di prima. Da allora le sue compagnie di mercenari sono una parte di ogni guerra dell’Impero.⟧\n\nQuel giuramento vale ancora. Ma ogni re di Vesperia lo pronuncia un po’ più piano, e da quando il Trono Solare è vuoto il re di oggi, [[Thessan IV]], parla apertamente di andarsene.",
    "img": "Mondo — Vesperia.png",
    "didascalia": "Vesperia"
   },
   {
-   "t": "II. La flotta e i mercenari",
-   "txt": "La [[Flotta Reale]] è la più forte rimasta all’Impero, e risponde al re, non a Solaria. Le sue navi hanno raggiunto terre che il resto dell’Impero non sa nemmeno che esistono. Qui ha sede la [[Gilda della Vela e della Stella]], che custodisce le carte di navigazione. E da Vesperia vengono i mercenari più famosi della costa: i [[Vesperiani]], compagnie di soldati duri che combattono per chi paga, come quella di Lekë Muzàka."
+   "t": "II. Come si governa",
+   "txt": ""
   },
   {
-   "t": "III. Come si vive",
-   "txt": "Gente passionale, orgogliosa e vendicativa. Le faide tra famiglie durano generazioni, la musica è intensa, l’amore è una guerra. Per i vesperiani la gente del nord è fredda e paurosa. I vulcani sono considerati segni degli dèi."
+   "t": "Il Re giurato",
+   "liv": 3,
+   "txt": "Il Re di Vesperia regna per diritto proprio, non per nomina di Solaria. Ogni nuovo re, il giorno dell’incoronazione, ripete il giuramento dei Vespri davanti a un messo dell’Impero. Senza un Imperatore, il messo è del Concilio dei Reggenti, e il giuramento è sempre più corto.\n\n[[Thessan IV]] ha il voto di Vesperia nel Concilio dei Reggenti, la flotta e una falange. Non ha fretta di eleggere un Imperatore: senza Imperatore, nessuno può chiedergli niente."
   },
   {
-   "t": "IV. Vicini e nemici",
-   "txt": "Con le Insulae Auree, una lotta per le rotte. Con Luminor, una guerra commerciale. Con Sidepondia, un’alleanza contro i pirati."
+   "t": "Le famiglie e le masserie",
+   "liv": 3,
+   "txt": "Sotto i Vespri ci sono le famiglie della costa e della campagna. ⟦In campagna ogni fattoria è una piccola fortezza bianca, con le mura cieche e una sola porta ferrata: la masseria. Secoli di pirati, di briganti e di esattori hanno insegnato che un muro bianco vale più di un esercito lontano. Ogni masseria ha il suo santo, il suo pozzo e il suo padrone, e si entra solo se invitati.⟧"
+  },
+  {
+   "t": "La Gilda della Vela e della Stella",
+   "liv": 3,
+   "txt": "Una delle cinque Gilde Maggiori dell’Impero ha casa qui. Custodisce le carte di navigazione, le rotte e i porti, e ha un voto nel Concilio dei Reggenti. Le sue carte sono le migliori di Ea: arrivano a terre che il resto dell’Impero non sa nemmeno che esistono."
+  },
+  {
+   "t": "Le Genti dell’Aquila",
+   "liv": 3,
+   "txt": "Sulle montagne di Vesperia vivono le Genti dell’Aquila: discendenti di profughi venuti dal mare, generazioni fa. Hanno tenuto la loro lingua e i loro nomi, come Lekë, Kostandìn, Ndriçim, Tanush, e un codice d’onore tutto loro: la parola data vale più del sangue, il contratto vale più della parola, e niente vale più del clan. Sono i montanari più poveri del regno e i soldati più richiesti: metà dei mercenari vesperiani porta un nome dell’Aquila."
+  },
+  {
+   "t": "La fede",
+   "liv": 3,
+   "txt": "La Chiesa della Fiamma Solare c’è, ma a Vesperia è tiepida. Nei porti si saluta Nerio prima di uscire in mare. Si giura su Vespera, la stella della sera, e Casa Vespri la conta fra i suoi antenati. I vulcani sono considerati segni degli dèi: quando fumano più del solito, nelle chiese si prega e nelle taverne si scommette."
+  },
+  {
+   "t": "III. Le terre",
+   "tabella": {
+    "head": [
+     "Terra",
+     "Com’è"
+    ],
+    "rows": [
+     [
+      "La costa dello Stretto di Fuoco",
+      "Rocce nere, porti stretti, città bianche. Di fronte, oltre lo Stretto, i deserti del Califfato."
+     ],
+     [
+      "I due vulcani",
+      "Accesi tutto l’anno. Sui fianchi la terra è nera e fertile: vigne, agrumi, ulivi. La cenere arriva fino al mare."
+     ],
+     [
+      "Le campagne",
+      "Ulivi in file lunghe fino all’orizzonte, campi bruciati dal sole, ⟦masserie fortificate⟧."
+     ],
+     [
+      "Le montagne dell’Aquila",
+      "Pietra, pecore, villaggi poveri appesi alle rocce. Ne scendono i mercenari."
+     ],
+     [
+      "I porti dell’ovest",
+      "Le navi della Flotta Reale e della Gilda, e i mercanti di spezie che arrivano dal sud."
+     ],
+     [
+      "⟦La Grande Isola⟧",
+      "⟦Oltre un braccio di mare stretto, un’isola grande quanto una provincia, con il vulcano più alto. È Vesperia anche lei, e là, dicono, regnavano i primi Vespri.⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. L’esercito e la flotta",
+   "txt": "La forza di Vesperia è sul mare. La flotta imperiale non è mai stata ricostruita dopo la guerra: la [[Flotta Reale]] dei Vespri è oggi la più forte dell’Impero, e risponde al re, non a Solaria. A terra il re ha una delle sei Falangi Solari rimaste. Tutto il resto lo fanno le compagnie di mercenari.",
+   "tabella": {
+    "head": [
+     "Forza",
+     "Quanti",
+     "Obbedisce a"
+    ],
+    "rows": [
+     [
+      "La Flotta Reale",
+      "Più di quaranta navi",
+      "Il Re"
+     ],
+     [
+      "La Quinta Falange del Drago",
+      "Circa 6.000",
+      "Il Re"
+     ],
+     [
+      "Le compagnie di mercenari",
+      "Decine, da venti a qualche centinaio di lame ciascuna",
+      "A chi paga, fino alla scadenza del contratto"
+     ],
+     [
+      "⟦Le milizie delle masserie⟧",
+      "⟦Pochi uomini per ogni masseria⟧",
+      "⟦Al padrone di casa⟧"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. Il mare e il denaro",
+   "txt": "Vesperia vive del mare. Le sue navi vanno a sud e a ovest, verso terre lontane, e tornano con le spezie; dalla terra partono olio, agrumi e vino dei vulcani. La [[Via del Tramonto]], una delle cinque Strade Solari, la lega a Solaria per terra.\n\nIl prodotto più famoso di Vesperia però non viaggia nelle stive: marcia. Le [[compagnie vesperiane]] si vendono in tutto l’Impero. Armature brunite dalle fogge del sud, fibbie col punzone del regno: se ne trovate una su un cadavere, qualcuno ha pagato in oro, ed esiste una ricevuta. I vesperiani sono fedeli esattamente fino alla scadenza del contratto. Non lo tradiscono mai; ma alla scadenza si vendono al rialzo, sempre."
+  },
+  {
+   "t": "VI. I mali di Vesperia oggi",
+   "txt": "· [[Il giuramento che si assottiglia.]] Thessan IV parla di andarsene dall’Impero, e nessuno a Solaria può fermarlo.\n· [[La guerra delle rotte.]] Con il Luminor Settentrionale c’è una guerra commerciale: si sabotano le navi a vicenda. Con le Insulae Auree si contendono le rotte.\n· [[I pirati.]] Contro di loro Vesperia è alleata della Repubblica di Sidepondia, ma i pirati non finiscono mai.\n· [[Le faide.]] Le famiglie si odiano per generazioni, e una faida può durare più di una casata.\n· [[I figli che partono.]] Dalle montagne i giovani partono con le compagnie. Molti tornano con l’oro. Molti non tornano: muoiono in un borgo lontano, per una paga che nessuno verrà a ritirare."
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· Tra la cenere della Masseria Bruciata, una fibbia vesperiana: non briganti, professionisti (Atto XII).\n· Il Loto Nero dei Velthuria ha chiuso la strada per Teramum con mercenari in armatura di Vesperia, pagati in oro straniero (Atti X e XII).\n· Al Ponte dei Frati c’erano i mercenari senza insegne del sergente Vasco. Maximus ha sciolto le corde a lui e ai suoi tre, e li ha presi al suo soldo (Atto XII).\n· A Mushanë la compagnia del Kapitàn Lekë Muzàka, delle Genti dell’Aquila, teneva il borgo per conto di qualcuno a Teramum. Lekë è morto sul sagrato di San Pietro; il sergente Kostandìn e i superstiti sono passati al soldo della Crociata (Atti XIII e XIV).\n· Oggi nella Crociata marciano dodici vesperiani, più Kostandìn. La loro paga è la prima spesa della cassa: se salta, salta la loro fedeltà."
   }
  ],
  "epigrafe": {

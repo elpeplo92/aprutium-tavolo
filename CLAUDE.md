@@ -1095,3 +1095,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - **Turno della settimana** (Guida, solo master; a fine settimana l'avviso lo ricorda): 1) le quattro casate dei PG (Cerullius, Grazianus, Barbas, Naviganti Grigi) scelgono un'azione fra otto e il master scrive com'è andata (va nel Registro); 2) ogni orologio aperto tira d6 pari al Peso, conta il più alto (1-3 = 1, 4-5 = 2, 6 = 3, due 6 = 5), correggibile; 3) chiusura: gli orologi pieni mettono la notizia nelle bozze delle Cronache e fanno scendere l'attore. `S.marcia.turni['s'+settimana]`.
 - I giocatori non vedono orologi, turno né il tasto «Tratta»; vedono le righe del Registro (trattativa chiusa, azioni delle casate, fine settimana). `prova-tavolo.js` verde.
 - Da fare: voti e Convocazione; fondere i Sostegni del Registro (v145) col consenso; decidere i numeri con Giuseppe.
+
+## v212 (10/10/2026) — schede uniformi: Canzañë, Teramum, Terre di Mezzo, Vesperia
+
+- Richiesta di Giuseppe: uniformare le schede del Compendio sui modelli scelti da lui: **borghi come Teramum, contee come il Ducato, province come l'Impero Aureo** (popoli, nazioni, storia, dèi e miti vanno bene così). Fonte rigiocabile: `7_Aprutium/Revisioni/Schede uniformi del Compendio (10-10-2026)/` (`voci/<id>.json` con sub, epigrafe, scheda, pub, gm; `py applica.py [cartella del sito] [id…]` tiene id, immagini, collegamenti e stato; `foto.js` per le foto intere).
+- Forma del borgo decisa con Giuseppe: I. Com'è fatta (forma, quartieri, porte) · II. I luoghi, con «Dentro le mura» e «Fuori le mura» (senza mura: «Nel paese», «Nei dintorni», e la tabella delle strade) · III. La gente e le usanze · IV. I guai di oggi · Quello che sapete. **Luoghi numerati di seguito** (dentro, poi fuori), per la mappa VTT; quanti servono, nessun limite. Teramum solo riordinato (stesse parole).
+- Fatti del paese vero senza segno; invenzioni fra ⟦…⟧. Jessica Laika (moglie di Alessandros) resta proposta finché Giuseppe non la conferma.
+- Prova fatta in un `git worktree` a parte prima del sì; `prova-tavolo.js` verde.

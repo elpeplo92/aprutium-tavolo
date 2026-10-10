@@ -751,29 +751,25 @@
   "fa": {"2": "Vi aiuta anche quando gli costa. Nelle prove sociali con chi sta qui: vantaggio.", "1": "Vi aiuta se non gli costa niente. Nelle prove sociali con chi sta qui: vantaggio.", "0": "Non vi aiuta e non vi ostacola.", "-1": "Vi crea guai se non gli costa niente. Nelle prove sociali con chi sta qui: svantaggio.", "-2": "Vi colpisce appena può. Nelle prove sociali con chi sta qui: svantaggio."},
   "tipi": {"casata": "Casata", "gilda": "Gilda", "fazione": "Fazione", "compagnia": "Compagnia", "popolo": "Il popolo"},
   "livelli": {"sconosciuto": "Sconosciuto", "sentito": "Sentito dire", "visitato": "Visitato", "presente": "La Crociata è qui"},
-  "borghi": {
-   "canzane": [
-    {"id": "cerullius", "nome": "Casa Cerullius", "tipo": "casata", "peso": 3, "stato": 1, "vuole": ""},
-    {"id": "spinozzi", "nome": "Gli Spinozzi", "tipo": "casata", "peso": 2, "stato": 2, "vuole": ""},
-    {"id": "taraschi", "nome": "I Taraschi", "tipo": "casata", "peso": 2, "stato": 0, "vuole": ""},
-    {"id": "popolo-madonna", "nome": "Il popolo di Porta Madonna", "tipo": "popolo", "peso": 1, "stato": -1, "vuole": ""},
-    {"id": "popolo-nuova", "nome": "Il popolo di Porta Nuova", "tipo": "popolo", "peso": 1, "stato": 2, "vuole": ""}
-   ],
-   "bellinde": [
-    {"id": "melacera", "nome": "Casa Melacera", "tipo": "casata", "peso": 3, "stato": 1, "vuole": ""},
-    {"id": "popolo", "nome": "Il popolo di Bëllindë", "tipo": "popolo", "peso": 2, "stato": 1, "vuole": ""}
-   ],
-   "mushane": [
-    {"id": "popolo", "nome": "Il popolo di Mushanë", "tipo": "popolo", "peso": 2, "stato": 1, "vuole": ""}
-   ],
-   "julianova": [
-    {"id": "pompizius", "nome": "Casa Pompizius", "tipo": "casata", "peso": 2, "stato": 1, "vuole": ""},
-    {"id": "popolo", "nome": "Il popolo di Julia Nova", "tipo": "popolo", "peso": 3, "stato": 0, "vuole": ""}
-   ],
-   "teramum": [
-    {"id": "mazzarelli", "nome": "Casa Mazzarelli, il Reggente", "tipo": "casata", "peso": 4, "stato": -1, "vuole": ""},
-    {"id": "popolo", "nome": "Il popolo di Teramum", "tipo": "popolo", "peso": 3, "stato": 0, "vuole": ""}
-   ]
+  "_fazioni": "NUOVO DETTAGLIO PROPOSTO (v212, disegno di Giuseppe § 15): ogni fazione ha Forza, Ricchezza, Influenza, Lealtà da 0 a 6, lo stato verso la Crociata (-2..+2) e i borghi dove sta col Peso (I-V). Numeri e stati sono proposte; gli stati vengono dai Sostegni del Registro. I borghi senza un popolo scritto qui hanno «Il popolo di …» (1/1/1/2, neutrale). La Crociata è calcolata dal Registro (crociata: soglie per Forza e Ricchezza, Fama di partenza).",
+  "crociata": {"fama": 2, "sogliaForza": [1, 10, 25, 50, 100, 200], "sogliaRicchezza": [50, 200, 500, 1000, 2500, 5000]},
+  "fazioni": {
+   "cerullius": {"nome": "Casa Cerullius", "tipo": "casata", "voce": "faz-casa-cerullius", "forza": 2, "ricchezza": 1, "influenza": 3, "lealta": 3, "stato": 1, "vuole": "", "presenze": {"canzane": 3}},
+   "spinozzi": {"nome": "Gli Spinozzi", "tipo": "casata", "forza": 1, "ricchezza": 2, "influenza": 1, "lealta": 3, "stato": 2, "vuole": "", "presenze": {"canzane": 2}},
+   "taraschi": {"nome": "I Taraschi", "tipo": "casata", "forza": 1, "ricchezza": 1, "influenza": 1, "lealta": 2, "stato": 0, "vuole": "", "presenze": {"canzane": 2}},
+   "popolo-madonna": {"nome": "Il popolo di Porta Madonna", "tipo": "popolo", "forza": 1, "ricchezza": 1, "influenza": 1, "lealta": 2, "stato": -1, "vuole": "", "presenze": {"canzane": 1}},
+   "popolo-nuova": {"nome": "Il popolo di Porta Nuova", "tipo": "popolo", "forza": 1, "ricchezza": 1, "influenza": 1, "lealta": 3, "stato": 2, "vuole": "", "presenze": {"canzane": 1}},
+   "melacera": {"nome": "Casa Melacera", "tipo": "casata", "voce": "faz-melacera", "forza": 2, "ricchezza": 2, "influenza": 2, "lealta": 3, "stato": 1, "vuole": "", "presenze": {"bellinde": 3}},
+   "popolo-bellinde": {"nome": "Il popolo di Bëllindë", "tipo": "popolo", "forza": 1, "ricchezza": 1, "influenza": 1, "lealta": 2, "stato": 1, "vuole": "", "presenze": {"bellinde": 2}},
+   "pompizius": {"nome": "Casa Pompizius", "tipo": "casata", "voce": "faz-pompizius", "forza": 1, "ricchezza": 3, "influenza": 2, "lealta": 3, "stato": 2, "vuole": "", "presenze": {"mushane": 2}},
+   "abbazia-mushane": {"nome": "L'Abbazia di San Pietro", "tipo": "fazione", "voce": "faz-abbazia-mushane", "forza": 1, "ricchezza": 2, "influenza": 2, "lealta": 4, "stato": 1, "vuole": "", "presenze": {"mushane": 3}},
+   "popolo-mushane": {"nome": "Il popolo di Mushanë", "tipo": "popolo", "forza": 1, "ricchezza": 1, "influenza": 1, "lealta": 2, "stato": 1, "vuole": "", "presenze": {"mushane": 1}},
+   "concilio-ristretto": {"nome": "Il Concilio Ristretto", "tipo": "fazione", "voce": "faz-concilio-ristretto", "forza": 3, "ricchezza": 4, "influenza": 3, "lealta": 2, "stato": 0, "vuole": "", "presenze": {"julianova": 3}},
+   "popolo-julianova": {"nome": "Il popolo di Julia Nova", "tipo": "popolo", "forza": 2, "ricchezza": 2, "influenza": 1, "lealta": 2, "stato": 0, "vuole": "", "presenze": {"julianova": 2}},
+   "mazzarelli": {"nome": "Casa Mazzarelli, il Reggente", "tipo": "casata", "voce": "faz-consiglio-reggente-teramum", "forza": 4, "ricchezza": 4, "influenza": 5, "lealta": 3, "stato": -1, "vuole": "", "presenze": {"teramum": 4}},
+   "grazianus": {"nome": "Casa Grazianus", "tipo": "casata", "voce": "faz-casa-grazianus", "forza": 4, "ricchezza": 2, "influenza": 3, "lealta": 4, "stato": 0, "vuole": "", "presenze": {"teramum": 2}},
+   "popolo-teramum": {"nome": "Il popolo di Teramum", "tipo": "popolo", "forza": 2, "ricchezza": 2, "influenza": 2, "lealta": 2, "stato": 0, "vuole": "", "presenze": {"teramum": 3}},
+   "barbas": {"nome": "Casa Barbas", "tipo": "casata", "voce": "faz-casa-barbus", "forza": 1, "ricchezza": 2, "influenza": 1, "lealta": 3, "stato": 1, "vuole": "", "presenze": {"penete": 3}}
   },
   "notizie": {"raggioGiorni": 2, "_nota": "Una notizia è vicina se il borgo è entro raggioGiorni giorni di marcia dalla Crociata: arriva da sola; se è più lontano arriva solo se qualcuno la porta (decide il master). NUOVO DETTAGLIO PROPOSTO."},
   "trattativa": {"_nota": "NUOVO DETTAGLIO PROPOSTO (Pathfinder 2e, Influenza): 3 round, una prova per PG a round contro CD = cdBase + Peso; critico +2, successo +1, fallito 0, disastro -1; a soglie[0] punti l'attore sale di un passo, a soglie[1] di due, sotto zero scende di uno.", "round": 3, "cdBase": 12, "soglie": [4, 6], "abilita": ["Persuasione", "Inganno", "Intimidire", "Intrattenere", "Intuizione", "Storia", "Religione", "Indagare"]},
