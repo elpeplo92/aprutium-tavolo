@@ -2312,6 +2312,107 @@ header #roleSel{grid-column:2;grid-row:2;align-self:start;font-size:18px!importa
 header label.ctl{width:auto!important;max-width:260px}
 header #roleSel{max-width:200px;text-overflow:ellipsis}
 /* ===== FINE TESTATA NUOVA (v202) ===== */
+/* ===== LUOGHI E PASSAGGI COME CAMMINO (v207) ===== */
+/* «Luoghi e passaggi» come cammino della campagna (v207, 10-10-2026) — tavolozza della scheda e del Compendio */
+#modal .box.psbox.lxbox{max-width:1320px;height:calc(100vh - 92px)!important;max-height:calc(100vh - 92px);padding:0;overflow:hidden;border-radius:10px;
+  background:linear-gradient(180deg,#14110c,#0b0a08)!important;border:1px solid rgba(217,177,92,.45)!important;box-shadow:0 0 0 1px #000,0 24px 60px rgba(0,0,0,.75)!important}
+.lx{--o1:#F6E3A8;--o2:#D9B15C;--o3:#9A7330;--o4:#5E4318;--tx:#E8D7AE;--tx2:#F3EBD6;--dim:#A69C88;--sp:#6F675A;--ok:#5FC27A;
+  height:100%;display:grid;grid-template-rows:auto auto 1fr;color:var(--tx);font-family:Bookinsanity,Georgia,serif}
+.lx button{font:inherit;cursor:pointer;color:inherit}
+.lx svg{width:18px;height:18px;flex:none}
+.lx-ey{display:block;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:14px;letter-spacing:.16em;color:var(--o3)}
+.lx h2{margin:0;font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;color:var(--tx2);letter-spacing:.01em}
+
+/* testa: titolo e le due mappe grandi */
+.lx-testa{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 64px 12px 26px;border-bottom:1px solid rgba(217,177,92,.18)}
+.lx-testa h2{font-size:32px;line-height:1}
+.lx-mappe{display:flex;gap:10px}
+.lx-mp{position:relative;display:flex!important;align-items:center;gap:10px;height:54px!important;min-width:210px;padding:0 16px 0 12px!important;border-radius:8px!important;overflow:hidden;text-align:left;
+  border:1px solid rgba(217,177,92,.4)!important;background:linear-gradient(90deg,rgba(11,10,8,.92) 35%,rgba(11,10,8,.55)),var(--im) center/cover!important;box-shadow:none!important}
+.lx-mp svg{width:22px;height:22px;color:var(--o2)}
+.lx-mp span{display:flex;flex-direction:column;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:18px;color:var(--tx2);line-height:1.05}
+.lx-mp small{font-family:Bookinsanity,Georgia,serif;font-style:italic;font-size:13px;color:var(--dim)}
+.lx-mp:hover,.lx-mp.sel{border-color:var(--o1)!important}
+.lx-mp.on{border-color:var(--o2)!important;box-shadow:0 0 14px rgba(217,177,92,.25)!important}
+.lx-mp.on small{color:var(--o1);font-style:normal}
+
+/* adesso: ultimo giocato → il gruppo è qui → prossimo */
+.lx-adesso{display:grid;grid-template-columns:1fr auto 1.25fr auto 1fr;align-items:stretch;gap:8px;padding:14px 26px;background:linear-gradient(180deg,rgba(217,177,92,.06),transparent)}
+.lx-fr{display:grid;place-items:center;color:var(--o4)}
+.lx-fr svg{width:22px;height:22px}
+.lx-ora{position:relative;display:flex!important;flex-direction:column;justify-content:flex-end;gap:1px;height:92px!important;padding:10px 14px!important;border-radius:8px!important;overflow:hidden;text-align:left;
+  border:1px solid rgba(217,177,92,.3)!important;background:linear-gradient(0deg,rgba(11,10,8,.95) 18%,rgba(11,10,8,.35) 75%,rgba(11,10,8,.2)),var(--im) center/cover #14110c!important;box-shadow:none!important}
+.lx-ora em{font-style:normal;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:13.5px;letter-spacing:.14em;color:var(--o2)}
+.lx-ora b{font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;font-size:20px;color:var(--tx2);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lx-ora span{font-style:italic;font-size:14.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lx-ora.ul{opacity:.78}
+.lx-ora.qu{border-color:var(--o2)!important;box-shadow:inset 0 0 0 1px rgba(246,227,168,.25),0 0 18px rgba(217,177,92,.2)!important}
+.lx-ora.qu b{font-size:23px}
+.lx-ora.pr em{color:var(--o1)}
+.lx-ora:hover,.lx-ora.sel{border-color:var(--o1)!important}
+.lx-ora.vuoto{background:#100e0a!important;justify-content:center}
+
+/* corpo: il cammino a sinistra, l'anteprima a destra */
+.lx-corpo{display:grid;grid-template-columns:minmax(420px,1fr) 1.15fr;min-height:0;border-top:1px solid rgba(217,177,92,.18)}
+.lx-cam{overflow:auto;padding:6px 18px 18px 26px;border-right:1px solid rgba(217,177,92,.18);scrollbar-color:var(--o4) transparent}
+.lx-cit{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid rgba(217,177,92,.3)}
+.lx-cit h3{margin:0;font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;font-size:21px;color:var(--o2);letter-spacing:.03em}
+.lx-cit span{font-family:'Scaly Sans',sans-serif;font-size:13px;color:var(--sp)}
+.lx-cam ol{list-style:none;margin:0;padding:0;position:relative}
+.lx-cam ol::before{content:'';position:absolute;left:15px;top:14px;bottom:14px;width:1px;background:linear-gradient(var(--o4),var(--o4)) center/1px 100% no-repeat}
+.lx-r{position:relative;width:100%;display:flex!important;align-items:center;gap:12px;padding:6px 10px 6px 0!important;margin:2px 0;border:0!important;border-radius:7px!important;background:none!important;box-shadow:none!important;text-align:left}
+.lx-r:hover{background:rgba(217,177,92,.06)!important}
+.lx-r.sel{background:linear-gradient(90deg,rgba(217,177,92,.16),rgba(217,177,92,.04))!important;box-shadow:inset 0 0 0 1px rgba(217,177,92,.4)!important}
+.lx-n{position:relative;z-index:1;flex:none;width:31px;height:31px;border-radius:50%;display:grid;place-items:center;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:16px;
+  background:#14110c;border:1px solid var(--o4);color:var(--dim)}
+.lx-n svg{width:15px;height:15px}
+.lx-th{flex:none;width:76px;height:46px;border-radius:4px;background:center/cover #14110c;box-shadow:0 0 0 1px rgba(217,177,92,.25)}
+.lx-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.1}
+.lx-t b{font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;font-size:19px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lx-t small{font-style:italic;font-size:14px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lx-st{flex:none;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:14px;letter-spacing:.06em;color:var(--sp)}
+/* stati */
+.lx-r.st-giocata .lx-n{background:#1d2a1f;border-color:#3f6b48;color:#8fd6a0}
+.lx-r.st-giocata .lx-th{filter:saturate(.35) brightness(.7)}
+.lx-r.st-giocata .lx-t b{color:var(--dim)}
+.lx-r.st-incorso .lx-n{background:radial-gradient(circle at 35% 30%,var(--o1),var(--o2) 60%,var(--o3));border-color:var(--o4);color:#1d1407;box-shadow:0 0 0 3px rgba(217,177,92,.25),0 0 12px rgba(217,177,92,.45)}
+.lx-r.st-incorso .lx-st{color:var(--o1)}
+.lx-r.pross .lx-n{border-color:var(--o2);color:var(--o1);box-shadow:0 0 0 2px rgba(217,177,92,.18)}
+.lx-r.pross .lx-st{color:var(--o2)}
+.lx-r.st-archiviata{opacity:.45}
+.lx-arch{margin:18px 0 0;padding:6px 12px!important;border-radius:6px!important;border:1px solid rgba(217,177,92,.25)!important;background:none!important;color:var(--dim)!important;font-family:'Scaly Sans',sans-serif!important;font-size:13px!important}
+
+/* anteprima */
+.lx-det{display:flex;flex-direction:column;min-height:0;overflow:auto;scrollbar-color:var(--o4) transparent}
+.lx-big{position:relative;flex:none;aspect-ratio:16/8;background:center/cover #14110c;box-shadow:inset 0 -60px 50px -20px #0f0d0a}
+.lx-stb{position:absolute;left:22px;top:16px;padding:3px 11px;border-radius:12px;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:15px;letter-spacing:.06em;background:rgba(11,10,8,.8);border:1px solid rgba(217,177,92,.45);color:var(--tx)}
+.lx-stb.st-incorso{background:linear-gradient(180deg,var(--o1),var(--o2) 55%,var(--o3));color:#1d1407;border-color:var(--o4)}
+.lx-stb.st-giocata{color:#8fd6a0;border-color:#3f6b48}
+.lx-dt{padding:4px 26px 0}
+.lx-dt h2{font-size:34px;line-height:1.02;margin:2px 0 10px}
+.lx-breve{margin:0 0 14px;font-size:17.5px;line-height:1.5;color:var(--tx)}
+.lx-pu summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none;font-family:'Scaly Sans',sans-serif;font-size:14px;color:var(--dim)}
+.lx-pu summary::-webkit-details-marker{display:none}
+.lx-pu summary b{font-weight:400;color:var(--tx)}
+.lx-bar{width:90px;height:6px;border-radius:3px;background:#2a241a;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(217,177,92,.2)}
+.lx-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--o3),var(--o2))}
+.lx-pu ol{margin:8px 0 0;padding-left:22px;columns:2;column-gap:24px;font-family:'Scaly Sans',sans-serif;font-size:14px;color:var(--dim)}
+.lx-pu li{break-inside:avoid;padding:1px 0}
+.lx-pu li.rev{color:#8fd6a0}
+.lx-az{margin-top:auto;padding:18px 26px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;border-top:1px solid rgba(217,177,92,.15);background:linear-gradient(0deg,#0b0a08,transparent)}
+.lx-vai{display:flex!important;align-items:center;gap:10px;height:50px!important;padding:0 24px!important;border-radius:8px!important;border:1px solid var(--o4)!important;
+  background:linear-gradient(180deg,#F4DE9C,#D9B15C 50%,#B8893A)!important;color:#1d1407!important;box-shadow:inset 0 1px 0 rgba(255,250,225,.7),0 0 16px rgba(217,177,92,.25)!important;
+  font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:21px!important;letter-spacing:.05em}
+.lx-vai svg{width:21px;height:21px}
+.lx-guarda{display:flex!important;align-items:center;gap:8px;height:50px!important;padding:0 18px!important;border-radius:8px!important;border:1px solid rgba(217,177,92,.45)!important;background:rgba(255,255,255,.03)!important;box-shadow:none!important;
+  font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:19px!important;color:var(--tx2)!important}
+.lx-guarda small{font-family:Bookinsanity,Georgia,serif;font-style:italic;font-size:13px;color:var(--dim)}
+.lx-guarda svg{color:var(--o2)}
+.lx-qui{display:flex;align-items:center;gap:8px;height:50px;padding:0 18px;border-radius:8px;border:1px solid var(--o2);color:var(--o1);font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:20px}
+.lx-pic{display:flex;gap:14px;margin-left:auto}
+.lx-pic button{padding:0!important;border:0!important;background:none!important;box-shadow:none!important;font-family:'Scaly Sans',sans-serif!important;font-size:13.5px!important;color:var(--dim)!important;text-decoration:underline;text-decoration-color:rgba(166,156,136,.4);text-underline-offset:3px}
+.lx-pic button:hover{color:var(--tx2)!important}
+/* ===== FINE LUOGHI E PASSAGGI COME CAMMINO (v207) ===== */
 /* ===== COMPENDIO NUOVO (v199) ===== */
 /* Compendio nuovo (v199): stesso linguaggio della scheda (oro e ottone, Mr Eaves, Bookinsanity, tavole illustrate) */
 #modal .box.comp.c4box{--o1:#F6E3A8;--o2:#D9B15C;--o3:#9A7330;--o4:#5E4318;--ink:#ECE4D2;--dim:#A69C88;--sp:#6F675A;
@@ -2419,113 +2520,12 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 #modal .c4box .c3det .pv-breve .kv2 span{font-family:'Bookinsanity',Georgia,serif!important;font-size:15px!important}
 #modal .c4box .c3det #c3close{font:15px 'Mr Eaves Small Caps',Georgia,serif!important}
 /* ===== FINE COMPENDIO NUOVO (v199) ===== */
-/* ===== LUOGHI E PASSAGGI COME CAMMINO (v207) ===== */
-/* «Luoghi e passaggi» come cammino della campagna (v207, 10-10-2026) — tavolozza della scheda e del Compendio */
-#modal .box.psbox.lxbox{max-width:1320px;height:calc(100vh - 92px)!important;max-height:calc(100vh - 92px);padding:0;overflow:hidden;border-radius:10px;
-  background:linear-gradient(180deg,#14110c,#0b0a08)!important;border:1px solid rgba(217,177,92,.45)!important;box-shadow:0 0 0 1px #000,0 24px 60px rgba(0,0,0,.75)!important}
-.lx{--o1:#F6E3A8;--o2:#D9B15C;--o3:#9A7330;--o4:#5E4318;--tx:#E8D7AE;--tx2:#F3EBD6;--dim:#A69C88;--sp:#6F675A;--ok:#5FC27A;
-  height:100%;display:grid;grid-template-rows:auto auto 1fr;color:var(--tx);font-family:Bookinsanity,Georgia,serif}
-.lx button{font:inherit;cursor:pointer;color:inherit}
-.lx svg{width:18px;height:18px;flex:none}
-.lx-ey{display:block;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:14px;letter-spacing:.16em;color:var(--o3)}
-.lx h2{margin:0;font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;color:var(--tx2);letter-spacing:.01em}
-
-/* testa: titolo e le due mappe grandi */
-.lx-testa{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 64px 12px 26px;border-bottom:1px solid rgba(217,177,92,.18)}
-.lx-testa h2{font-size:32px;line-height:1}
-.lx-mappe{display:flex;gap:10px}
-.lx-mp{position:relative;display:flex!important;align-items:center;gap:10px;height:54px!important;min-width:210px;padding:0 16px 0 12px!important;border-radius:8px!important;overflow:hidden;text-align:left;
-  border:1px solid rgba(217,177,92,.4)!important;background:linear-gradient(90deg,rgba(11,10,8,.92) 35%,rgba(11,10,8,.55)),var(--im) center/cover!important;box-shadow:none!important}
-.lx-mp svg{width:22px;height:22px;color:var(--o2)}
-.lx-mp span{display:flex;flex-direction:column;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:18px;color:var(--tx2);line-height:1.05}
-.lx-mp small{font-family:Bookinsanity,Georgia,serif;font-style:italic;font-size:13px;color:var(--dim)}
-.lx-mp:hover,.lx-mp.sel{border-color:var(--o1)!important}
-.lx-mp.on{border-color:var(--o2)!important;box-shadow:0 0 14px rgba(217,177,92,.25)!important}
-.lx-mp.on small{color:var(--o1);font-style:normal}
-
-/* adesso: ultimo giocato → il gruppo è qui → prossimo */
-.lx-adesso{display:grid;grid-template-columns:1fr auto 1.25fr auto 1fr;align-items:stretch;gap:8px;padding:14px 26px;background:linear-gradient(180deg,rgba(217,177,92,.06),transparent)}
-.lx-fr{display:grid;place-items:center;color:var(--o4)}
-.lx-fr svg{width:22px;height:22px}
-.lx-ora{position:relative;display:flex!important;flex-direction:column;justify-content:flex-end;gap:1px;height:92px!important;padding:10px 14px!important;border-radius:8px!important;overflow:hidden;text-align:left;
-  border:1px solid rgba(217,177,92,.3)!important;background:linear-gradient(0deg,rgba(11,10,8,.95) 18%,rgba(11,10,8,.35) 75%,rgba(11,10,8,.2)),var(--im) center/cover #14110c!important;box-shadow:none!important}
-.lx-ora em{font-style:normal;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:13.5px;letter-spacing:.14em;color:var(--o2)}
-.lx-ora b{font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;font-size:20px;color:var(--tx2);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lx-ora span{font-style:italic;font-size:14.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lx-ora.ul{opacity:.78}
-.lx-ora.qu{border-color:var(--o2)!important;box-shadow:inset 0 0 0 1px rgba(246,227,168,.25),0 0 18px rgba(217,177,92,.2)!important}
-.lx-ora.qu b{font-size:23px}
-.lx-ora.pr em{color:var(--o1)}
-.lx-ora:hover,.lx-ora.sel{border-color:var(--o1)!important}
-.lx-ora.vuoto{background:#100e0a!important;justify-content:center}
-
-/* corpo: il cammino a sinistra, l'anteprima a destra */
-.lx-corpo{display:grid;grid-template-columns:minmax(420px,1fr) 1.15fr;min-height:0;border-top:1px solid rgba(217,177,92,.18)}
-.lx-cam{overflow:auto;padding:6px 18px 18px 26px;border-right:1px solid rgba(217,177,92,.18);scrollbar-color:var(--o4) transparent}
-.lx-cit{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid rgba(217,177,92,.3)}
-.lx-cit h3{margin:0;font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;font-size:21px;color:var(--o2);letter-spacing:.03em}
-.lx-cit span{font-family:'Scaly Sans',sans-serif;font-size:13px;color:var(--sp)}
-.lx-cam ol{list-style:none;margin:0;padding:0;position:relative}
-.lx-cam ol::before{content:'';position:absolute;left:15px;top:14px;bottom:14px;width:1px;background:linear-gradient(var(--o4),var(--o4)) center/1px 100% no-repeat}
-.lx-r{position:relative;width:100%;display:flex!important;align-items:center;gap:12px;padding:6px 10px 6px 0!important;margin:2px 0;border:0!important;border-radius:7px!important;background:none!important;box-shadow:none!important;text-align:left}
-.lx-r:hover{background:rgba(217,177,92,.06)!important}
-.lx-r.sel{background:linear-gradient(90deg,rgba(217,177,92,.16),rgba(217,177,92,.04))!important;box-shadow:inset 0 0 0 1px rgba(217,177,92,.4)!important}
-.lx-n{position:relative;z-index:1;flex:none;width:31px;height:31px;border-radius:50%;display:grid;place-items:center;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:16px;
-  background:#14110c;border:1px solid var(--o4);color:var(--dim)}
-.lx-n svg{width:15px;height:15px}
-.lx-th{flex:none;width:76px;height:46px;border-radius:4px;background:center/cover #14110c;box-shadow:0 0 0 1px rgba(217,177,92,.25)}
-.lx-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.1}
-.lx-t b{font-family:'Mr Eaves Small Caps',Georgia,serif;font-weight:400;font-size:19px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lx-t small{font-style:italic;font-size:14px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lx-st{flex:none;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:14px;letter-spacing:.06em;color:var(--sp)}
-/* stati */
-.lx-r.st-giocata .lx-n{background:#1d2a1f;border-color:#3f6b48;color:#8fd6a0}
-.lx-r.st-giocata .lx-th{filter:saturate(.35) brightness(.7)}
-.lx-r.st-giocata .lx-t b{color:var(--dim)}
-.lx-r.st-incorso .lx-n{background:radial-gradient(circle at 35% 30%,var(--o1),var(--o2) 60%,var(--o3));border-color:var(--o4);color:#1d1407;box-shadow:0 0 0 3px rgba(217,177,92,.25),0 0 12px rgba(217,177,92,.45)}
-.lx-r.st-incorso .lx-st{color:var(--o1)}
-.lx-r.pross .lx-n{border-color:var(--o2);color:var(--o1);box-shadow:0 0 0 2px rgba(217,177,92,.18)}
-.lx-r.pross .lx-st{color:var(--o2)}
-.lx-r.st-archiviata{opacity:.45}
-.lx-arch{margin:18px 0 0;padding:6px 12px!important;border-radius:6px!important;border:1px solid rgba(217,177,92,.25)!important;background:none!important;color:var(--dim)!important;font-family:'Scaly Sans',sans-serif!important;font-size:13px!important}
-
-/* anteprima */
-.lx-det{display:flex;flex-direction:column;min-height:0;overflow:auto;scrollbar-color:var(--o4) transparent}
-.lx-big{position:relative;flex:none;aspect-ratio:16/8;background:center/cover #14110c;box-shadow:inset 0 -60px 50px -20px #0f0d0a}
-.lx-stb{position:absolute;left:22px;top:16px;padding:3px 11px;border-radius:12px;font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:15px;letter-spacing:.06em;background:rgba(11,10,8,.8);border:1px solid rgba(217,177,92,.45);color:var(--tx)}
-.lx-stb.st-incorso{background:linear-gradient(180deg,var(--o1),var(--o2) 55%,var(--o3));color:#1d1407;border-color:var(--o4)}
-.lx-stb.st-giocata{color:#8fd6a0;border-color:#3f6b48}
-.lx-dt{padding:4px 26px 0}
-.lx-dt h2{font-size:34px;line-height:1.02;margin:2px 0 10px}
-.lx-breve{margin:0 0 14px;font-size:17.5px;line-height:1.5;color:var(--tx)}
-.lx-pu summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none;font-family:'Scaly Sans',sans-serif;font-size:14px;color:var(--dim)}
-.lx-pu summary::-webkit-details-marker{display:none}
-.lx-pu summary b{font-weight:400;color:var(--tx)}
-.lx-bar{width:90px;height:6px;border-radius:3px;background:#2a241a;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(217,177,92,.2)}
-.lx-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--o3),var(--o2))}
-.lx-pu ol{margin:8px 0 0;padding-left:22px;columns:2;column-gap:24px;font-family:'Scaly Sans',sans-serif;font-size:14px;color:var(--dim)}
-.lx-pu li{break-inside:avoid;padding:1px 0}
-.lx-pu li.rev{color:#8fd6a0}
-.lx-az{margin-top:auto;padding:18px 26px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;border-top:1px solid rgba(217,177,92,.15);background:linear-gradient(0deg,#0b0a08,transparent)}
-.lx-vai{display:flex!important;align-items:center;gap:10px;height:50px!important;padding:0 24px!important;border-radius:8px!important;border:1px solid var(--o4)!important;
-  background:linear-gradient(180deg,#F4DE9C,#D9B15C 50%,#B8893A)!important;color:#1d1407!important;box-shadow:inset 0 1px 0 rgba(255,250,225,.7),0 0 16px rgba(217,177,92,.25)!important;
-  font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:21px!important;letter-spacing:.05em}
-.lx-vai svg{width:21px;height:21px}
-.lx-guarda{display:flex!important;align-items:center;gap:8px;height:50px!important;padding:0 18px!important;border-radius:8px!important;border:1px solid rgba(217,177,92,.45)!important;background:rgba(255,255,255,.03)!important;box-shadow:none!important;
-  font-family:'Mr Eaves Small Caps',Georgia,serif!important;font-size:19px!important;color:var(--tx2)!important}
-.lx-guarda small{font-family:Bookinsanity,Georgia,serif;font-style:italic;font-size:13px;color:var(--dim)}
-.lx-guarda svg{color:var(--o2)}
-.lx-qui{display:flex;align-items:center;gap:8px;height:50px;padding:0 18px;border-radius:8px;border:1px solid var(--o2);color:var(--o1);font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:20px}
-.lx-pic{display:flex;gap:14px;margin-left:auto}
-.lx-pic button{padding:0!important;border:0!important;background:none!important;box-shadow:none!important;font-family:'Scaly Sans',sans-serif!important;font-size:13.5px!important;color:var(--dim)!important;text-decoration:underline;text-decoration-color:rgba(166,156,136,.4);text-underline-offset:3px}
-.lx-pic button:hover{color:var(--tx2)!important}
-/* ===== FINE LUOGHI E PASSAGGI COME CAMMINO (v207) ===== */
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v207</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v208</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -8562,58 +8562,6 @@ function s3Comandi(box,id,t,mine){
   aggiorna();
 })();
 /* ===== FINE TESTATA NUOVA (v202) ===== */
-/* ===== COMPENDIO NUOVO (v199) ===== */
-/* Compendio nuovo (v199, prototipo approvato da Giuseppe il 10-10-2026).
-   Cornice come la scheda: frontespizio con i capitoli illustrati, indice a sinistra con le miniature, testata illustrata per ogni sezione. */
-(function(){
-  const PREF={miti:['mito-pantheon','mito-genesi'],storia:['mito-la-frattura','mito-guerra-due-lune'],popoli:['popoli-di-ea','nazioni-ea'],impero:['prov-aprutium','impero-aureo'],
-    ducato:['contea-cuore-del-ducato','borgo-teramum'],fazioni:['faz-crociata-due-lune'],persone:[],atti:[],appendici:['ogg-stendardo-aldric-aurex','ogg-scimitarra-piu-1'],bestiario:[]};
-  const DESCR={miti:'Gli dèi, la creazione del mondo e le leggende che si raccontano davanti al fuoco.',storia:'Le ere di Ea, dalla Frattura alla Guerra delle Due Lune.',popoli:'Chi abita il mondo e le nazioni in cui vive.',
-    impero:'L’Impero Aureo, le sue dieci province e la stirpe che lo governa.',ducato:'La vostra terra: il Ducato, le otto contee, i borghi e i luoghi delle città.',fazioni:'Chiese, gilde, casate e ordini: chi tira i fili.',
-    persone:'Le persone che avete incontrato, città per città.',atti:'Il diario della campagna, le imprese aperte e la Crociata.',appendici:'Oggetti, reliquie e documenti.',bestiario:'Le creature affrontate.'};
-  /* v201: frontespizi dei capitoli e copertine delle città dei Personaggi, immagini proprie (Midjourney, mj/copertine.py) */
-  const C4_COVER={"storia": "img/d315d29b6fe6.jpg", "popoli": "img/9752eea609f8.jpg", "impero": "img/aac51dd79c68.jpg", "fazioni": "img/d1d705f98ac4.jpg", "persone": "img/6dd7b73f1758.jpg", "atti": "img/37dc6df39be8.jpg", "appendici": "img/9ed9b3488942.jpg", "bestiario": "img/47d3b00e9e1b.jpg"};
-  const C4_CITY={"crociata": "img/d62fddb26a48.jpg", "julianova": "img/2a9df3d7e1a0.jpg", "strada": "img/bfd0d3ec7937.jpg", "mushane": "img/a6a027b4a6e2.jpg", "bellinde": "img/db25d9344e60.jpg", "teramum": "img/f721e1dad68d.jpg"};
-  window.c4Home=window.c4Home??true;
-  const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
-  function imgSez(s){ if(C4_COVER[s]) return C4_COVER[s]; const all=c2All().filter(e=>c2Visible(e)&&c2SecOf(e)===s);
-    for(const id of PREF[s]||[]){ const e=all.find(x=>x.id===id); if(e&&c2Img(e)) return c2Img(e); }
-    if(s==='atti') return 'img/93cb1cd3ef80.jpg';
-    if(s==='persone'){ const e=all.find(x=>x.city==='julianova'&&c2Img(x)); if(e) return c2Img(e); }
-    const e=all.find(x=>c2Img(x)); return e?c2Img(e):''; }
-  function conta(s){ return c2All().filter(e=>c2Visible(e)&&c2SecOf(e)===s).length; }
-  function c4(){
-    const box=document.querySelector('#modal .box.comp'); if(!box) return; box.classList.add('c4box');
-    const z=Math.max(.7,Math.min(1,innerWidth/1920,(innerHeight-60)/1020)); box.style.setProperty('--z',z);
-    const nav=box.querySelector('.c3nav'), main=box.querySelector('#compBody'); if(!nav||!main) return;
-    main.querySelectorAll('.c2city[data-city]').forEach(el=>{ const im=C4_CITY[el.dataset.city]; const cc=el.querySelector('.cc'); if(im&&cc) cc.style.backgroundImage=`url(${im})`; });   /* v201 */
-    /* indice: miniature e frontespizio */
-    if(!nav.querySelector('[data-c4home]')){ const h=document.createElement('button'); h.dataset.c4home='1'; h.className=window.c4Home?'on':''; h.innerHTML='<span>Frontespizio</span>'; h.onclick=()=>{ window.c4Home=true; c2Open=null; renderCompendio(); }; nav.querySelector('.eyebrow').after(h); }
-    nav.querySelectorAll('[data-sec]').forEach(b=>{ const s=b.dataset.sec; b.style.setProperty('--m',`url('${imgSez(s)}')`); b.classList.add('c4sec'); if(window.c4Home) b.classList.remove('on');
-      const o=b.onclick; b.onclick=e=>{ window.c4Home=false; o&&o.call(b,e); }; });
-    nav.querySelector('.eyebrow').textContent='Compendio di Aprutium';
-    if(window.c4Home){ main.classList.add('c4home');
-      const sez=C2_SECTIONS.filter(([s])=>conta(s));
-      main.innerHTML=`<div class="c4front"><small>Atto Terzo</small><h1>Compendio di Aprutium</h1><p>Tutto ciò che i vostri personaggi sanno del mondo di Ea: dèi, popoli, terre, persone e la storia della Crociata.</p>
-        <label class="c4cerca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="c4q" placeholder="Cerca nel Compendio: un dio, un borgo, una persona…"></label></div>
-        <div class="c4capitoli">${sez.map(([s,n],i)=>`<button class="c4cap ${i<2?'grande':''}" data-c4go="${s}" style="--m:url('${imgSez(s)}')"><span class="c4num">${['I','II','III','IV','V','VI','VII','VIII','IX','X'][i]}</span><div><b>${esc(n)}</b><p>${esc(DESCR[s]||'')}</p><small>${conta(s)} voci</small></div></button>`).join('')}</div>`;
-      main.querySelectorAll('[data-c4go]').forEach(b=>b.onclick=()=>{ window.c4Home=false; c2Sec=b.dataset.c4go; c3Liv=''; c2Open=null; renderCompendio(); });
-      const q=main.querySelector('#c4q'); q.onkeydown=e=>{ if(e.key==='Enter'&&q.value.trim()){ window.c4Home=false; c2Q=q.value.trim(); renderCompendio(); } };
-    } else { main.classList.remove('c4home');
-      /* testata illustrata della sezione */
-      const h2=main.querySelector('h2.big'), sub=main.querySelector('p.sub'); const citta=(c2Sec==='persone'&&c2City)?c2City:null;
-      if(h2&&!main.querySelector('.c4hero')){ const s=c2Sec, hero=document.createElement('div'); hero.className='c4hero'; let im=imgSez(s); if(citta){ if(C4_CITY[citta]) im=C4_CITY[citta]; else { const e=c2All().find(x=>c2Visible(x)&&x.city===citta&&c2Img(x)); if(e) im=c2Img(e); } } hero.style.setProperty('--m',`url('${im}')`);
-        const tit=h2.textContent.replace(/^[\s‹<←]+/,'').trim();
-        if(/^Risultati/i.test(tit)){ const nr=main.querySelectorAll('.c3card').length; hero.style.setProperty('--m',"url('img/a3dc3a98a695.jpg')");
-          hero.innerHTML=`<div><small>Ricerca in tutto il Compendio · ${nr} voci</small><h1>${esc(tit)}</h1><p>Le voci che parlano di quello che cerchi, in ogni capitolo.</p></div>`; }
-        else hero.innerHTML=`<div><small>${['I','II','III','IV','V','VI','VII','VIII','IX','X'][C2_SECTIONS.findIndex(x=>x[0]===s)]||''} · ${conta(s)} voci</small><h1>${esc(tit)}</h1><p>${esc((sub&&sub.textContent&&!/^\d+ voci/.test(sub.textContent))?sub.textContent:(DESCR[s]||''))}</p></div>`;
-        const row=h2.closest('.row'); (row&&row.parentNode===main?row:h2).replaceWith(hero); if(row&&row!==hero){ const btn=row.querySelector('button'); if(btn) hero.append(btn); } if(sub) sub.remove(); }
-    }
-  }
-  const _r=renderCompendio; renderCompendio=function(){ _r.apply(this,arguments); try{ c4(); }catch(e){ console.warn('c4',e); } };
-  if(document.querySelector('#modal .box.comp')) renderCompendio();
-})();
-/* ===== FINE COMPENDIO NUOVO (v199) ===== */
 /* ===== LUOGHI E PASSAGGI COME CAMMINO (v207) ===== */
 /* «Luoghi e passaggi» come cammino della campagna (v207, 10-10-2026).
    In alto: dove è il gruppo adesso, l'ultimo passaggio giocato e il prossimo. Le due mappe grandi a parte.
@@ -8719,4 +8667,95 @@ function s3Comandi(box,id,t,mine){
   window.__lxApri=apri;
 })();
 /* ===== FINE LUOGHI E PASSAGGI COME CAMMINO (v207) ===== */
+/* ===== COMPENDIO NUOVO (v199) ===== */
+/* Compendio nuovo (v199, prototipo approvato da Giuseppe il 10-10-2026).
+   Cornice come la scheda: frontespizio con i capitoli illustrati, indice a sinistra con le miniature, testata illustrata per ogni sezione. */
+(function(){
+  const PREF={miti:['mito-pantheon','mito-genesi'],storia:['mito-la-frattura','mito-guerra-due-lune'],popoli:['popoli-di-ea','nazioni-ea'],impero:['prov-aprutium','impero-aureo'],
+    ducato:['contea-cuore-del-ducato','borgo-teramum'],fazioni:['faz-crociata-due-lune'],persone:[],atti:[],appendici:['ogg-stendardo-aldric-aurex','ogg-scimitarra-piu-1'],bestiario:[]};
+  const DESCR={miti:'Gli dèi, la creazione del mondo e le leggende che si raccontano davanti al fuoco.',storia:'Le ere di Ea, dalla Frattura alla Guerra delle Due Lune.',popoli:'Chi abita il mondo e le nazioni in cui vive.',
+    impero:'L’Impero Aureo, le sue dieci province e la stirpe che lo governa.',ducato:'La vostra terra: il Ducato e le sue otto contee.',borghi:'I borghi del Ducato e i luoghi delle città dove siete passati.',fazioni:'Chiese, gilde, casate e ordini: chi tira i fili.',
+    persone:'Le persone che avete incontrato, città per città.',atti:'Il diario della campagna, le imprese aperte e la Crociata.',appendici:'Oggetti, reliquie e documenti.',bestiario:'Le creature affrontate.'};
+  /* v201: frontespizi dei capitoli e copertine delle città dei Personaggi, immagini proprie (Midjourney, mj/copertine.py) */
+  const C4_COVER={"storia": "img/d315d29b6fe6.jpg", "popoli": "img/9752eea609f8.jpg", "impero": "img/aac51dd79c68.jpg", "fazioni": "img/d1d705f98ac4.jpg", "persone": "img/6dd7b73f1758.jpg", "atti": "img/37dc6df39be8.jpg", "appendici": "img/9ed9b3488942.jpg", "bestiario": "img/47d3b00e9e1b.jpg", "borghi": "img/b7b5bf436699.jpg"};
+  const C4_BORGO={"julianova": "img/b7b5bf436699.jpg", "mushane": "img/772e5ebe11d2.jpg", "bellinde": "img/ef322272850e.jpg", "teramum": "img/a4a6520b9ce1.jpg", "strada": "img/bfd0d3ec7937.jpg"};   /* v208: veduta del borgo nella testata della sua pagina (sezione I Borghi) */
+  const C4_CITY={"crociata": "img/d62fddb26a48.jpg", "julianova": "img/2a9df3d7e1a0.jpg", "strada": "img/bfd0d3ec7937.jpg", "mushane": "img/a6a027b4a6e2.jpg", "bellinde": "img/db25d9344e60.jpg", "teramum": "img/f721e1dad68d.jpg"};
+  window.c4Home=window.c4Home??true;
+  const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+  function imgSez(s){ if(C4_COVER[s]) return C4_COVER[s]; const all=c2All().filter(e=>c2Visible(e)&&c2SecOf(e)===s);
+    for(const id of PREF[s]||[]){ const e=all.find(x=>x.id===id); if(e&&c2Img(e)) return c2Img(e); }
+    if(s==='atti') return 'img/93cb1cd3ef80.jpg';
+    if(s==='persone'){ const e=all.find(x=>x.city==='julianova'&&c2Img(x)); if(e) return c2Img(e); }
+    const e=all.find(x=>c2Img(x)); return e?c2Img(e):''; }
+  function conta(s){ return c2All().filter(e=>c2Visible(e)&&c2SecOf(e)===s).length; }
+  function c4(){
+    const box=document.querySelector('#modal .box.comp'); if(!box) return; box.classList.add('c4box');
+    const z=Math.max(.7,Math.min(1,innerWidth/1920,(innerHeight-60)/1020)); box.style.setProperty('--z',z);
+    const nav=box.querySelector('.c3nav'), main=box.querySelector('#compBody'); if(!nav||!main) return;
+    main.querySelectorAll('.c2city[data-city]').forEach(el=>{ const im=C4_CITY[el.dataset.city]; const cc=el.querySelector('.cc'); if(im&&cc) cc.style.backgroundImage=`url(${im})`; });   /* v201 */
+    /* indice: miniature e frontespizio */
+    if(!nav.querySelector('[data-c4home]')){ const h=document.createElement('button'); h.dataset.c4home='1'; h.className=window.c4Home?'on':''; h.innerHTML='<span>Frontespizio</span>'; h.onclick=()=>{ window.c4Home=true; c2Open=null; renderCompendio(); }; nav.querySelector('.eyebrow').after(h); }
+    nav.querySelectorAll('[data-sec]').forEach(b=>{ const s=b.dataset.sec; b.style.setProperty('--m',`url('${imgSez(s)}')`); b.classList.add('c4sec'); if(window.c4Home) b.classList.remove('on');
+      const o=b.onclick; b.onclick=e=>{ window.c4Home=false; o&&o.call(b,e); }; });
+    nav.querySelector('.eyebrow').textContent='Compendio di Aprutium';
+    if(window.c4Home){ main.classList.add('c4home');
+      const sez=C2_SECTIONS.filter(([s])=>conta(s));
+      main.innerHTML=`<div class="c4front"><small>Atto Terzo</small><h1>Compendio di Aprutium</h1><p>Tutto ciò che i vostri personaggi sanno del mondo di Ea: dèi, popoli, terre, persone e la storia della Crociata.</p>
+        <label class="c4cerca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="c4q" placeholder="Cerca nel Compendio: un dio, un borgo, una persona…"></label></div>
+        <div class="c4capitoli">${sez.map(([s,n],i)=>`<button class="c4cap ${i<2?'grande':''}" data-c4go="${s}" style="--m:url('${imgSez(s)}')"><span class="c4num">${['I','II','III','IV','V','VI','VII','VIII','IX','X'][i]}</span><div><b>${esc(n)}</b><p>${esc(DESCR[s]||'')}</p><small>${conta(s)} voci</small></div></button>`).join('')}</div>`;
+      main.querySelectorAll('[data-c4go]').forEach(b=>b.onclick=()=>{ window.c4Home=false; c2Sec=b.dataset.c4go; c3Liv=''; c2Open=null; renderCompendio(); });
+      const q=main.querySelector('#c4q'); q.onkeydown=e=>{ if(e.key==='Enter'&&q.value.trim()){ window.c4Home=false; c2Q=q.value.trim(); renderCompendio(); } };
+    } else { main.classList.remove('c4home');
+      /* testata illustrata della sezione */
+      const h2=main.querySelector('h2.big'), sub=main.querySelector('p.sub'); const citta=(c2Sec==='persone'&&c2City)?c2City:null;
+      if(h2&&!main.querySelector('.c4hero')){ const s=c2Sec, hero=document.createElement('div'); hero.className='c4hero'; let im=imgSez(s); if(c2Sec==='borghi'&&typeof c3Liv!=='undefined'&&C4_BORGO[c3Liv]) im=C4_BORGO[c3Liv]; if(citta){ if(C4_CITY[citta]) im=C4_CITY[citta]; else { const e=c2All().find(x=>c2Visible(x)&&x.city===citta&&c2Img(x)); if(e) im=c2Img(e); } } hero.style.setProperty('--m',`url('${im}')`);
+        const tit=h2.textContent.replace(/^[\s‹<←]+/,'').trim();
+        if(/^Risultati/i.test(tit)){ const nr=main.querySelectorAll('.c3card').length; hero.style.setProperty('--m',"url('img/a3dc3a98a695.jpg')");
+          hero.innerHTML=`<div><small>Ricerca in tutto il Compendio · ${nr} voci</small><h1>${esc(tit)}</h1><p>Le voci che parlano di quello che cerchi, in ogni capitolo.</p></div>`; }
+        else hero.innerHTML=`<div><small>${['I','II','III','IV','V','VI','VII','VIII','IX','X'][C2_SECTIONS.findIndex(x=>x[0]===s)]||''} · ${conta(s)} voci</small><h1>${esc(tit)}</h1><p>${esc((sub&&sub.textContent&&!/^\d+ voci/.test(sub.textContent))?sub.textContent:(DESCR[s]||''))}</p></div>`;
+        const row=h2.closest('.row'); (row&&row.parentNode===main?row:h2).replaceWith(hero); if(row&&row!==hero){ const btn=row.querySelector('button'); if(btn) hero.append(btn); } if(sub) sub.remove(); }
+    }
+  }
+  const _r=renderCompendio; renderCompendio=function(){ _r.apply(this,arguments); try{ c4(); }catch(e){ console.warn('c4',e); } };
+  if(document.querySelector('#modal .box.comp')) renderCompendio();
+})();
+/* ===== FINE COMPENDIO NUOVO (v199) ===== */
+/* ===== SEZIONE BORGHI (v208) ===== */
+/* Sezione «I Borghi» (v207, richiesta di Giuseppe): un punto del menu fra il Ducato e le Fazioni con tutti i borghi;
+   un borgo che ha luoghi (Julia Nova, Mushanë, Bëllindë, Teramum) apre la sua pagina: la voce del borgo e tutti i suoi luoghi.
+   Il Ducato resta col Ducato e le otto contee. Riveste le funzioni del Compendio senza cambiare i dati. */
+(function(){
+  const BORGO_CITY={'borgo-giglie':'julianova','borgo-mushane':'mushane','borgo-bellinde':'bellinde','borgo-teramum':'teramum'};
+  const CITY_BORGO=Object.fromEntries(Object.entries(BORGO_CITY).map(([b,c])=>[c,b]));
+  if(!C2_SECTIONS.some(s=>s[0]==='borghi')){ const i=C2_SECTIONS.findIndex(s=>s[0]==='ducato'); C2_SECTIONS.splice(i+1,0,['borghi','I Borghi']); }
+  const secOf0=c2SecOf;
+  c2SecOf=function(e){ if(!e.sez&&e.cat==='mondo'&&e.livello==='borgo') return 'borghi'; if(!e.sez&&e.cat==='luogo') return 'borghi'; return secOf0(e); };
+  if(typeof C3_ALBERO!=='undefined'&&C3_ALBERO.ducato){ C3_ALBERO.ducato.sub='Il Ducato e le sue otto contee.'; C3_ALBERO.ducato.ph='Cerca una contea…'; C3_ALBERO.ducato.chips=()=>[]; }
+  const body0=c3RenderBody;
+  c3RenderBody=function(all){
+    if(c2Sec!=='borghi'||c3Racc||c2Q) return body0(all);
+    const body=document.getElementById('compBody');
+    const borghi=all.filter(e=>e.cat==='mondo'&&e.livello==='borgo');
+    const luoghi=all.filter(e=>e.cat==='luogo');
+    const nL=c=>luoghi.filter(e=>e.city===c).length;
+    const citta=c3Liv&&(CITY_BORGO[c3Liv]||c3Liv==='strada')?c3Liv:'';
+    let html;
+    if(citta){
+      const b=all.find(e=>e.id===CITY_BORGO[citta]); const ls=c3Filter(luoghi.filter(e=>e.city===citta));
+      const nome=b?b.title:(C2_CITY[citta]||citta);
+      html=`<h2 class="big">${c3Esc(nome)}</h2><p class="sub">${b?'Il borgo e i suoi luoghi':'I luoghi lungo la strada'} · ${ls.length} luoghi</p>${c3Tools('Cerca un luogo…')}
+        <div class="c3chips"><button data-liv="">‹ Tutti i borghi</button></div>${b?c3Cards([b],false):''}${c3Cards(ls,true)}`;
+    } else {
+      const shown=c3Filter(borghi).map(e=>BORGO_CITY[e.id]&&nL(BORGO_CITY[e.id])?Object.assign({},e,{sub:`${nL(BORGO_CITY[e.id])} luoghi · ${e.sub||''}`}):e);
+      const strada=nL('strada')?`<div class="c3group">Fuori dai borghi</div><div class="c2cities"><div class="c2city" data-bstrada="1"><div class="cc" style="background-image:url(${(luoghi.find(e=>e.city==='strada'&&c2Img(e))&&c2Img(luoghi.find(e=>e.city==='strada'&&c2Img(e))))||''})"></div><div><b>La strada per Teramum</b><small>${nL('strada')} luoghi</small></div></div></div>`:'';
+      html=`<h2 class="big">I Borghi</h2><p class="sub">I borghi del Ducato. Quelli con i luoghi delle vostre avventure aprono la loro pagina.</p>${c3Tools('Cerca un borgo…')}${c3Cards(shown,true)}${strada}`;
+    }
+    body.innerHTML=html; c3Wire(body);
+    if(!citta){
+      body.querySelectorAll('.c3card').forEach(a=>{ const c=BORGO_CITY[a.dataset.id]; if(c&&nL(c)) a.onclick=ev=>{ if(ev.target.closest('.star')) return; c3Liv=c; c2Open=null; renderCompendio(); }; });
+      const s=body.querySelector('[data-bstrada]'); if(s) s.onclick=()=>{ c3Liv='strada'; c2Open=null; renderCompendio(); };
+    }
+  };
+})();
+/* ===== FINE SEZIONE BORGHI (v208) ===== */
 </script>

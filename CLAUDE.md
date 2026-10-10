@@ -1067,3 +1067,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - **Ordine delle scene corretto** (campo `ordine`, vale anche per la tendina Scena): bëllinde 1, sotto 2, bellinde_dopo 3, guado 4 (prima: sotto 1, bellinde 2, guado 3, bellinde_dopo 4).
 - Colori della scheda e del Compendio (fondo `#14110c`→`#0b0a08`, oro `#D9B15C`/`#F6E3A8`, testo `#E8D7AE`).
 - Pubblicata da una copia pulita (`git worktree`) perché un'altra sessione aveva la v206 in corso con modifiche non pubblicate nello stesso `src/tavolo.html`: il numero v206 resta a lei.
+
+## v208 (10/10/2026) — la sezione «I Borghi»
+
+- Richiesta di Giuseppe: più ordine. Nuovo punto del menu **I Borghi** fra «Il Ducato d'Aprutium e le sue Contee» e le Fazioni, con tutti i borghi raggruppati per contea; un borgo che ha luoghi (Julia Nova, Mushanë, Bëllindë, Teramum) apre la sua pagina: la voce del borgo e tutti i suoi luoghi divisi per gruppo, con «‹ Tutti i borghi» per tornare. In fondo «Fuori dai borghi»: la strada per Teramum. Il Ducato ora ha solo il Ducato e le otto contee.
+- Codice: blocco «SEZIONE BORGHI (v208)» in fondo allo script, fonte `Revisioni/Sezione Borghi (v208)/borghi.js` + `py applica.py`. Aggiunge `['borghi','I Borghi']` a `C2_SECTIONS`, riveste `c2SecOf` (borghi e luoghi → `borghi`) e `c3RenderBody` (pagina della sezione e del borgo, `c3Liv` = città), toglie i filtri del Ducato. Corrispondenza borgo → città in `BORGO_CITY`. Nel Compendio nuovo (`comp4.js`): descrizione della sezione, copertina (veduta di Julia Nova) e `C4_BORGO` (veduta del borgo nella testata della sua pagina).
+- I capitoli dopo il Ducato scalano di un numero (Fazioni = VII…).
