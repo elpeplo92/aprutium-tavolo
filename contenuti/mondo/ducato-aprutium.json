@@ -39,32 +39,206 @@
  "mappa": "Ducato di Aprutium.jpg",
  "colore": "#8A7A6A",
  "scheda": {
-  "Nome": "Ducato d'Aprutium — in dialetto Abbruzze",
-  "Capitale": "Teramum, ~55.000 anime",
-  "Governo": "Duca vacante da due anni; Consiglio Reggente Permanente delle Otto Casate (servono tre sigilli su otto)",
-  "Confini": "Nord: fiume Truntum e le Marche Picenorum · Sud: i Calanchi e il Regno di Vesperia · Est: Mare Adriaticum · Ovest: il Gigante Dormiente e, oltre, il Latium",
+  "Nome": "Ducato d’Aprutium; in dialetto, Abbruzze",
+  "Capitale": "Teramum, circa cinquantacinquemila abitanti",
+  "Chi comanda": "Il trono del Duca è vuoto da due anni. Governa il Consiglio Reggente delle Otto Casate di Teramum",
+  "Popolazione": "⟦Circa un milione e mezzo⟧",
   "Contee": "Otto",
-  "Economia": "La Pietra (montagne), la Pecora (colline), il Sale (mare)",
-  "Moneta": "Fiorino Ducale d'oro · Grosso d'argento · Quattrino di rame",
-  "Stemma": "Lupo d'argento rampante su campo di pietra grigia, aquila dorata che plana dall'alto",
-  "Motto": "Prima la Pietra, Poi il Sangue",
+  "Confini": "A nord il fiume Truntum e le Marche Picenorum; a est il Mare Adriaticum; a ovest il Gigante Dormiente e, oltre, il Latium; a sud i Calanchi",
+  "Vive di": "La Pietra delle montagne, la Pecora delle colline, il Sale del mare",
+  "Moneta": "Fiorino Ducale d’oro, Grosso d’argento, Quattrino di rame",
+  "Stemma": "Un lupo d’argento rampante su campo di pietra grigia; dall’alto plana un’aquila d’oro",
+  "Motto": "«Prima la Pietra, poi il Sangue»",
   "Anno": "1437 del Calare della Fiamma"
  },
- "gm": "Le Otto Casate Reggenti: Mazzarellus (il Trono Vacante, il Sigillo Ducale), Grazianus (la Spada: Guardia Ducale ~3.000, padre di Maximus), Impalox (la Fede: Basilica, Inquisizione, Ordine d'Acciaio), Savinellus (l'Oro: Lega dei Sensali), de Spina (il Sangue Antico), Mellitius (i Nuovi Ricchi), Clavax (la Legge: Camera dei Cavillatori), Tancredus (la Memoria: Circolo dei Glossatori). Il contrappeso: la Convocazione Straordinaria a Lésënë (L'Aquila Aurea), che obbliga TUTTE le Casate — e solo il sigillo di Teramum può chiamarla.\n\nLe cinque trame di Teramum: guerra fredda Savinellus–Julia Nova · colpo di stato Grazianus+Clavax · purga di Impalox contro le casate pretuziane · la guerra dei segreti di Iuvenza · la corsa al trono dei de Spina (scavano l'Atto di Fondazione).\n\nSEGRETI: Sigillo Lunare attivo sotto la Basilica Aurea, che fa da tappo; il Gigante è un Titano vero e i rituali di Lyaras ne disturbano il sonno; le antiche casate (Cerullius, de Spina, de Caelis) portano la magia del Gigante nel sangue — per questo Impalox le vuole epurare; Mazzarellus e Tancredus sanno che Silvanus è l'erede vero; passaggio verso l'Underdark nelle miniere di Atrax Aurea. Obiettivo di Silvanus: la Grande Convocazione, non la conquista.",
+ "gm": [
+  {
+   "t": "Il Duca che verrà",
+   "txt": "La Legge Antica dice che il Duca d’Aprutium non si eredita. Lo sceglie la Grande Convocazione, fra le casate di sangue pretuziano. Per secoli i Pretutia si sono passati il Sigillo da padre in figlio, e la Convocazione si limitava ad acclamarli: come per il Trono Solare, la legge diceva una cosa e l’uso un’altra. Con la morte dell’ultimo Pretutia, l’uso è finito. Resta la legge.\n\nI Mazzarelli sono un ramo cadetto dei Pretutia. Hanno il Sigillo Ducale, e con il Sigillo l’unico potere di chiamare la Convocazione. Per questo non la chiamano. Il Consiglio Reggente Permanente è un modo di tenere il trono senza farselo togliere.\n\n[[Il Duca che la storia prepara è Alessandros Cerullius.]] Non per nascita: per sangue antico e per scelta della Convocazione. I Cerullius sono tra le casate più antiche del Ducato, e la loro biblioteca custodisce i libri proibiti in cui Alessandros ha riconosciuto i sigilli d’incoronazione sulla pelle di Silvanus (Atto VIII).\n\nSilvanus è l’erede del Trono Solare, non del Ducato. La sua Convocazione può finire così: il Ducato acclama un Duca pretuziano, e il Duca riconosce l’Imperatore. Aprutium diventa la prima provincia a dire che la Stirpe Aurex vive.\n\n⟦[[Perché i Cerullius.]] Tre fili che esistono già e si possono annodare:⟧\n\n· ⟦i libri della casata sui riti d’incoronazione (Atto VIII);⟧\n· ⟦il Culto del Sole Tramortito, la fede pretuziana delle antiche casate: «Tre voci nel cielo, nessuna più alta delle altre»;⟧\n· ⟦la pietra dei dodici «che tennero la porta» sotto Teramum, dove due nomi si leggono come casate di oggi. La proposta delle scene era de Spina e Cerullius: de Spina è il sangue da cui viene Tarsilla Malavolta.⟧\n\n⟦Nel mondo vero i Cerulli Irelli sono una famiglia teramana: gli Irelli venivano da Bellante, uno di loro fu sindaco di Teramo, e un Cerulli fondò l’osservatorio di Collurania. Si può dare ai Cerullius una vecchia specola sulle colline sopra la capitale.⟧"
+  },
+  {
+   "t": "L’Atto di Fondazione",
+   "txt": "È la Legge Antica scritta: la carta del Patto di Teramum e della Convocazione. Sta da qualche parte sotto la città. I Malavolta la cercano perché credono che provi il loro diritto al trono. Si sbagliano a metà: prova che il trono non è di nessuno finché la Convocazione non lo dà. Tarsilla vota per la Crociata se Alessandros le promette l’appoggio dei Cerullius nella ricerca."
+  },
+  {
+   "t": "Le trame di Teramum",
+   "txt": "· [[Iuvenza al Colle.]] Vuole farsi nominare Reggente sul disordine che ha creato lei. Ricatta Mazzarelli, Thaulero e Savini, e forse paga gli scavi dei Malavolta. Con l’incappucciato vuole isolare Lucius Grazianus.\n· [[Grazianus e Chiodi.]] Chiodi passa a Lucius le informazioni militari e ha già scritto un decreto di legge marziale senza data.\n· [[Impaloni contro le casate pretuziane.]] La lista con le croci: Casa Cerullius, Casa de Caelis, il Magister Celino Savini, Frate Davide de li Piccole Vie. Il Luminor Meridionale lo finanzia in segreto.\n· [[Melatino contro Julia Nova.]] La Lega dei Sensali paga i briganti sulla Via Bianca e sui passi. Ha comprato debiti dei Cerullius.\n· [[I Malavolta sotto la città.]] Scavano sotto il Ventre Vecchio e l’Arena in cerca dell’Atto di Fondazione."
+  },
+  {
+   "t": "Sotto il Ducato",
+   "txt": "· Sotto Teramum c’è un Sigillo Lunare, sotto la Basilica Aurea, e fa da tappo. Secondo la voce I Sigilli Lunari potrebbe essere quello della Carne.\n· Sotto la Cattedrale Ducale di Teramum c’è la forgia di annullamento: l’unica cosa che può spezzare il filatterio di Lyaras (Atto IX).\n· Il Gigante Dormiente è un Titano vero. I rituali dei Drukarri ne disturbano il sonno, e la montagna trema: lo ha detto anche il druido di Torricella ad Adamus, a Bëllindë (Atto XVIII).\n· Le antiche casate (Cerullius, de Caelis, e il sangue de Spina dei Malavolta) portano nel sangue la magia del Gigante. Per questo Impaloni le vuole spegnere.\n· Sotto Bëllindë c’è il Quarto Sigillo, con il suo Custode."
+  },
+  {
+   "t": "Da allineare (non toccato in questa consegna)",
+   "txt": "· ⟦I nomi nel Cristallo. I giocatori hanno sentito «Mazzarellus, Savinellus, De Spina». Mazzarellus e Savinellus sono le forme latine degli atti notarili, che i nobili usano fra loro. De Spina è il casato di nascita di Tarsilla, oggi Malavolta per matrimonio.⟧\n· Le scene di Teramum fanno di Silvanus l’erede del Ducato: Mazzarelli e Savini «sanno che la linea ducale non è estinta e che Silvanus è vivo», e l’albero della Biblioteca «scende intatto fino al nome Ardentus». Con la scelta di Giuseppe il segreto cambia: i Mazzarelli nascondono la Legge Antica, e l’albero porta ai Cerullius.\n· Il voto del Consiglio. La vecchia voce del Ducato dice «tre sigilli su otto», quella di Teramum «cinque voti su otto». Proposta: un atto vale con tre sigilli, una decisione grande ne vuole cinque.\n· La Guardia Ducale: tremila uomini nel vecchio canone, seicento nel Manuale di Teramum. Proposta: seicento in servizio, tremila se Grazianus chiama i richiamati.\n· Basilica Aurea e Cattedrale Ducale: sono lo stesso edificio o due? Il Sigillo sta sotto la prima, la forgia sotto la seconda.\n· Il passaggio verso il Sottosuolo profondo era «nelle miniere d’oro di Atrax Aurea». Atri non ha miniere: va spostato nei calanchi, sotto la città. Si sistema con la voce del borgo."
+  },
+  {
+   "t": "Da decidere",
+   "txt": "· Il nome dell’ultimo Duca Pretutia, morto nel 1435.\n· Chi è l’uomo incappucciato del Cristallo.\n· Cosa c’è a sud dei Calanchi, tra Aprutium e Vesperia. Il vecchio canone diceva «il Regno di Vesperia», che però sta molto più a sud.\n· Quanti abitanti ha il Ducato."
+  }
+ ],
  "id": "ducato-aprutium",
  "livello": "ducato",
  "parent": "prov-aprutium",
  "group": "Il Ducato",
  "title": "Il Ducato d'Aprutium",
- "sub": "Lo Scudo dell'Est e la Pietra del Gigante",
+ "sub": "Lo Scudo dell’Est e la Pietra del Gigante",
  "pub": [
   {
    "t": "",
-   "txt": "«La terra è dura, l'acqua è fredda, il vento taglia. Ma noi siamo ancora qui. Pretuziani siamo nati, Pretuziani moriamo.» Il Ducato è la vostra terra: una provincia dell'Impero sulla costa orientale, stretta tra il Gigante Dormiente e il Mare Adriaticum, più antica dell'Impero stesso. Prima era Pretutia, la terra dei Pretuziani — pastori, guerrieri e sciamani che veneravano il Gigante e portavano il Lupo come simbolo. L'Impero non li vinse: li assimilò col Patto di Teramum, riconoscendo le loro linee di sangue in cambio della Fede Solare. Il lupo dello stemma guarda in alto, l'aquila guarda in basso: un patto, non una sottomissione.\n\nQuattro volti: la Montagna a ovest, sacra e piena di ferro e legname; la Collina al centro, un mare di vigne, ulivi e grano tagliato dai Tratturi, le vie d'erba dei pastori; la Costa a est, con i porti, i trabocchi e le torri di vedetta da cui vennero le flotte celamanti nella Guerra; e il Sottosuolo, *lu Sott'a Terre*, un labirinto di grotte, cripte e tunnel che tutti sanno esistere e pochi hanno visto. Tre fiumi: il Tordinum di Teramum, il grande Vomanum del sud, il piccolo e sacro Salinellum.\n\nDa due anni non c'è un Duca. Alla morte dell'ultimo Pretutia le Otto Casate di Teramum non ne elessero uno: formarono il Consiglio Reggente Permanente, dove niente si muove senza tre sigilli e le Casate si odiano. Fuori dalla capitale ogni borgo ha il suo signore, il suo abate, il suo capitano, e la fedeltà cambia col vento. Le uniche cose che attraversano tutti i confini sono la Chiesa, le Gilde e i Tratturi. Gente testarda come la pietra e tagliente come il vento: tutti hanno un soprannome, gli arrosticini sono un sacramento, la transumanza è il ritmo dell'anno.",
+   "capo": true,
+   "txt": "Il Ducato è casa vostra. È una provincia dell’Impero sulla costa orientale, stretta tra il Gigante Dormiente e il Mare Adriaticum, ed è più antica dell’Impero stesso. Prima si chiamava Pretutia, la terra dei Pretuziani: pastori, guerrieri e sciamani che veneravano il Gigante e portavano il lupo come simbolo. Questa voce racconta il Ducato tutto intero. Le otto contee, le città e le Casate hanno le loro voci."
+  },
+  {
+   "t": "I. Il patto, non la conquista",
+   "txt": "L’Impero non vinse i Pretuziani. Aurax salì a piedi fino a loro, e ai piedi del Gigante Dormiente strinse con le tribù il [[Patto di Teramum]]. L’Impero riconobbe le loro stirpi e promise che nessun re sarebbe mai sceso a dire loro chi pregare. I Pretuziani accettarono il Trono Solare, e nelle città la Fiamma.\n\nPer questo nello stemma il lupo guarda in alto e l’aquila guarda in basso: è un patto, non una sottomissione. Per questo in Aprutium i culti antichi sono ancora vivi, nei paesi di montagna e nelle case vecchie. E per questo la Chiesa non ha mai amato il Ducato.\n\nIl santo del Ducato è [[San Berardo]], che secondo la tradizione unificò le tribù prima che arrivasse l’Impero.",
    "img": "Mondo — Il Ducato d'Aprutium.jpg",
    "didascalia": "Il Ducato d'Aprutium"
+  },
+  {
+   "t": "II. Quattro volti e tre fiumi",
+   "txt": "Il Ducato ha quattro volti.\n\n· [[La Montagna]], a ovest. Il Gigante Dormiente e i Monti della Laga: neve, pietra, boschi di faggi e di abeti, ferro e legname. È sacra.\n· [[La Collina]], al centro. Un mare di ulivi, vigne e grano, tagliato dai [[Tratturi]], le vie d’erba su cui le greggi scendono al mare d’inverno e risalgono d’estate.\n· [[La Costa]], a est. Spiagge lunghe, pinete, porti e torri di vedetta in mattone. Da qui vengono il sale, il pesce, il commercio e il pericolo.\n· [[Il Sottosuolo]], lu Sott’a Terre. Grotte, cripte, cantine e cunicoli. Tutti sanno che esiste, pochi lo hanno visto.\n\nI fiumi scendono tutti dal Gigante al mare: il [[Truntum]] fa da confine a nord; il [[Tordinum]] passa sotto Teramum; il grande [[Vomanum]] taglia il Ducato a metà; il piccolo [[Salinellum]] è sacro. Più a sud, il Fino attraversa i Calanchi."
+  },
+  {
+   "t": "III. Le otto contee",
+   "tabella": {
+    "head": [
+     "N.",
+     "Contea",
+     "In dialetto",
+     "Dove",
+     "Il borgo che conta"
+    ],
+    "rows": [
+     [
+      "1",
+      "La Costa del Sale",
+      "Li Côtë",
+      "La costa, dal Truntum ai Calanchi",
+      "Julia Nova"
+     ],
+     [
+      "2",
+      "La Val Vibrata",
+      "Lu Granaije",
+      "Il nord-est, tra i colli e il Truntum",
+      "Nnaréta"
+     ],
+     [
+      "3",
+      "Le Terre del Nord",
+      "La Fruntiere",
+      "Il nord, sul confine con le Marche Picenorum",
+      "Cëvëtëlla"
+     ],
+     [
+      "4",
+      "Le Terre di Mezzo",
+      "Lu Corre",
+      "Le colline tra Julia Nova e Teramum",
+      "Bëllindë"
+     ],
+     [
+      "5",
+      "Il Cuore del Ducato",
+      "Tërëmë",
+      "Teramum e le valli che salgono al Gigante",
+      "Teramum"
+     ],
+     [
+      "6",
+      "La Terra dei Calanchi",
+      "Li Calanghë",
+      "Il sud, tra il Vomanum e il Fino",
+      "Bisindë"
+     ],
+     [
+      "7",
+      "La Montagna del Gigante",
+      "Lu Muntë",
+      "Le valli sotto il Gigante Dormiente",
+      "Lésënë, l’Aquila Aurea"
+     ],
+     [
+      "8",
+      "Le Terre Selvagge",
+      "L’Abbandônë",
+      "Il nord-ovest, i boschi della Laga",
+      "Nessuno: lì non comanda nessuno"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "IV. Il trono vuoto",
+   "txt": "Da due anni Aprutium non ha un Duca. Quando morì l’ultimo dei [[Pretutia]], la famiglia che per secoli aveva tenuto il Sigillo Ducale, le Otto Casate di Teramum non elessero nessuno. Fecero invece il [[Consiglio Reggente Permanente]]: otto seggi, otto sigilli, e nessuna Casata che si fidi delle altre.\n\nIl Sigillo Ducale lo porta al collo Gualtiero Mazzarelli, che presiede il Consiglio. Ma da solo non basta: un atto del Consiglio vale solo se porta i sigilli di altre Casate.\n\nFuori dalla capitale ogni borgo ha il suo signore, il suo abate o il suo capitano, e la fedeltà cambia col vento. Ci sono anche le [[Città Libere]], come Julia Nova, che si governano da sole. Le sole cose che attraversano tutti i confini sono la Chiesa, le Gilde e i Tratturi.",
+   "tabella": {
+    "head": [
+     "Casata",
+     "Che cosa tiene",
+     "Chi la guida"
+    ],
+    "rows": [
+     [
+      "Mazzarelli",
+      "Il Trono Vacante e il Sigillo Ducale",
+      "Gualtiero Mazzarelli, il Reggente"
+     ],
+     [
+      "Grazianus",
+      "La Spada: la Guardia Ducale",
+      "Lucius Grazianus, lo Stratega, padre di Maximus"
+     ],
+     [
+      "Impaloni",
+      "La Fede: la Basilica, l’Inquisizione, l’Ordine d’Acciaio",
+      "Serafino Impaloni, l’Arcimandrita"
+     ],
+     [
+      "Melatino",
+      "L’Oro: la Lega dei Sensali",
+      "Maccabeo Melatino, il Decano"
+     ],
+     [
+      "Malavolta",
+      "Il Sangue Antico",
+      "Tarsilla Malavolta, nata de Spina, la Matriarca"
+     ],
+     [
+      "Thaulero",
+      "I nuovi ricchi, venuti da fuori",
+      "Ottone Thaulero, il Dominus"
+     ],
+     [
+      "Chiodi",
+      "La Legge: la Camera dei Cavillatori",
+      "Severino Chiodi, il Sommo Giudice"
+     ],
+     [
+      "Savini",
+      "La Memoria: il Circolo dei Glossatori e la Biblioteca",
+      "Beltramo Savini, l’Archivista"
+     ]
+    ]
+   }
+  },
+  {
+   "t": "V. La Grande Convocazione",
+   "txt": "Sopra il Consiglio, la Legge Antica mette una cosa sola: la [[Grande Convocazione]], il Concilio Pretuziano che si riunisce a [[Lésënë, l’Aquila Aurea]], ai piedi del Gigante. Quando è chiamata, tutte le Casate e tutte le Città Libere devono presentarsi, e lì nessun esercito entra armato.\n\nSolo il sigillo di Teramum può chiamarla. Per questo chi la vuole deve prima passare dalla capitale.\n\n⟦I vecchi dei paesi di montagna dicono che un tempo, sotto il Gigante, il Duca non nasceva: lo si acclamava.⟧"
+  },
+  {
+   "t": "VI. La gente",
+   "txt": "Gente testarda come la pietra e tagliente come il vento. Tutti hanno un soprannome, e spesso conta più del nome. Gli arrosticini sono un sacramento. La transumanza dà il ritmo all’anno: quando le greggi scendono, scende anche la notizia di quello che succede in montagna. Si parla il Pretuziano volgare, aspro e musicale, e in campagna si dice ancora: «Lu Sole ’cceche, la Luna ’mbriache, la Terre te salve.»"
+  },
+  {
+   "t": "Quello che avete visto",
+   "txt": "· A Julia Nova il Concilio della città vi ha dato il mandato per Teramum. Il piano di Silvanus non è una guerra: è la Grande Convocazione, per chiamare a rispondere davanti a tutti chi ha tradito il Ducato (Atto IX).\n· Veneranda Iuvenza di Velthuria è salita verso Teramum per farsi nominare Reggente. Nei documenti di Pietraluna, accanto ad alcuni nomi, c’era il Ponte a Due Archi di Teramum: «Quando il porto brucia, il fumo coprirà la mia ascesa al Colle.» (Atto VIII).\n· Nel Cristallo di Memoria della Tenuta di Altavia avete visto Iuvenza e un uomo incappucciato, con l’accento dei nobili di Teramum, passare in rassegna il Consiglio: «Mazzarellus è cieco, Savinellus si compra, De Spina si distrae.» Il loro vero bersaglio è Lucius Grazianus, il padre di Maximus (Atto XI).\n· Il falco di Lucius ha portato a Maximus due righe: «Non venire per la Via Bianca. Aspetta mio segnale.» (Atto XI).\n· Il Loto Nero dei Velthuria, con mercenari armati alla maniera di Vesperia, ha chiuso la Via Salaria verso Teramum (Atti X e XII).\n· A Mushanè e poi a Bëllindë vi ha preceduto un proclama di Teramum: chiama la Crociata sediziosa e vieta di darvi uomini, cavalli, viveri e ospitalità. Non è un falso. È autenticato con le procedure arcane della capitale: qualcuno, dentro Teramum, sa usare i suoi sigilli (Atto XV)."
   }
  ],
  "illustrazione": "Mondo — Il Ducato d'Aprutium.jpg",
- "blocchi": true
+ "blocchi": true,
+ "epigrafe": {
+  "txt": "«La terra è dura, l’acqua è fredda, il vento taglia. Ma noi siamo ancora qui. Pretuziani siamo nati, Pretuziani moriamo.»",
+  "cite": "Detto dei pastori"
+ }
 }
