@@ -1233,3 +1233,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v230 (11/10/2026) — via Casa Castemar
 
 - Giuseppe: «Castemar toglila, non mi piace». Tolte la voce `faz-casa-castemar` (in `_ARCHIVIO_2026-10-07/Casa Castemar (v230)/voci-vecchie.json`; il file sorgente e il simbolo originale in `_ARCHIVIO_2026-10-11/Casa Castemar (tolta da Giuseppe)/`), la fazione `castemar` del gioco della Crociata e i suoi rimandi nelle schede (relazioni, alleanze, collegamenti di Cerullius, Bardalino, Velthuria, Concilio Ristretto). Restano come storia di Julia Nova i nomi nei testi, il PNG Aulo Dernas di Castemar (giocato negli Atti) e la Tenuta.
+
+## v231 (11/10/2026) — Guida della scena più asciutta
+
+- Richiesta di Giuseppe (selezionati sulla pagina, «completamente inutili»): nella Guida della scena del master non ci sono più il pannello dello scontro (`scRender` non lo disegna più; la logica `S.fronti` e gli eventi restano nel codice), l'etichetta «Copione» sopra i testi (introduzione e punti), il riquadro «In breve» e le «Note per il Master» dei punti d'interesse. La scheda del punto (`openPoi`) è invariata.
