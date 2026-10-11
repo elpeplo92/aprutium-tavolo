@@ -2579,7 +2579,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v256</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v257</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10333,4 +10333,344 @@ const S3_COIN_NOMI={mp:'platino',mo:'oro',ma:'argento',mr:'rame'};
   window.__v256={creaArea,areeSweep,spingi,dentroLung,dentro,AREE,CENTRO_FORZATO:null,SCELTA_FORZATA:null,POS,setCentro:v=>{ __v256.CENTRO_FORZATO=v; },setScelta:v=>{ __v256.SCELTA_FORZATA=v; }};
 })();
 /* ===== FINE AREE CHE DURANO, SPINTE E MALEDIZIONE (v256) ===== */
+/* ===== MOTORE DELLE ANIMAZIONI (v257) — copia di Revisioni/Animazioni degli incantesimi (prototipo 11-10-2026)/motore.js ===== */
+/* Motore delle animazioni degli incantesimi — prototipo 2 (11-10-2026)
+   Una ricetta per ogni incantesimo: forma a scala di griglia (1 casella = 1,5 m) + strati di elementi + tempi.
+   geo = {a: chi lancia {x,y}, b: bersaglio {x,y}, sq: px per casella, ctx}
+   Forme: sfera(r m), cubo(lato m), cono(L m), linea(L m, W m), cilindro(r m), emanazione(r m), punto, contatto, bersaglio, personale.
+   Strati: {el:'nome', ...parametri}; ogni elemento è una funzione (p, g, L) con p 0→1. */
+(function(){
+const TAU=Math.PI*2, rnd=(a,b)=>a+Math.random()*(b-a), ease=p=>1-Math.pow(1-p,3), easeIn=p=>p*p*p;
+const fade=(p,k=.7)=>p<k?1:1-(p-k)/(1-k), inOut=(p,a=.15,b=.7)=>p<a?p/a:p<b?1:1-(p-b)/(1-b);
+const rgba=(h,a)=>{ const n=parseInt(h.slice(1),16); return `rgba(${n>>16},${(n>>8)&255},${n&255},${a})`; };
+const M=1.5; /* metri per casella */
+/* ----- palette per elemento (chiaro, pieno, scuro) ----- */
+const PAL={fuoco:['#FFE08A','#E8702A','#7A1E08'],gelo:['#F0FAFF','#9FD8FF','#3C7DB0'],fulmine:['#FFFFFF','#9FD8FF','#2B5C9C'],tuono:['#FFF6E0','#E8D7AE','#8C7A52'],radioso:['#FFFBE6','#FFE9A8','#C9A24A'],necro:['#C9B0E6','#8E6BB0','#3A1A4A'],cura:['#E6FFD9','#9BD48A','#3F7A2E'],oro:['#FFF0C0','#D9B15C','#9C7428'],arcano:['#F0E6FF','#B48CFF','#5A3A9C'],natura:['#C8F0A0','#5E9E3B','#2E5A1C'],luna:['#FFFFFF','#CFD8F0','#6F7CA8'],acqua:['#E6F7FF','#6FB8E8','#1F5C8A'],vento:['#FFFFFF','#D8E6E0','#7A9A90'],veleno:['#D8FFB0','#7FBF3A','#2E5A10'],acido:['#F0FFA0','#B8E040','#5A7A10'],psichico:['#FFD8F8','#E08CD8','#7A2E70'],ombra:['#B0A8C0','#5A5470','#1A1626'],terra:['#E8D0A8','#A8804A','#4A3418'],sangue:['#FFB0A0','#B02A2A','#4A0A0A'],ferro:['#F0F0F0','#B0B8C0','#4A5058']};
+/* ----- aiuti ----- */
+function dir(g){ const dx=g.b.x-g.a.x, dy=g.b.y-g.a.y; return Math.atan2(dy,dx); }
+function along(g,t){ return {x:g.a.x+(g.b.x-g.a.x)*t,y:g.a.y+(g.b.y-g.a.y)*t}; }
+function px(g,m){ return m/M*g.sq; }
+function glow(ctx,col,blur){ ctx.shadowColor=col; ctx.shadowBlur=blur; }
+function poly(ctx,pts){ ctx.beginPath(); pts.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y)); ctx.closePath(); }
+/* geometria delle forme → percorso per clip e contorno */
+function shapePath(ctx,g,L){ const f=L.forma||'bersaglio', c=L.centro==='a'?g.a:(L.centro==='b'||!L.centro?g.b:g.b);
+  if(f==='sfera'||f==='cilindro'||f==='emanazione'){ const cc=f==='emanazione'?g.a:c; ctx.beginPath(); ctx.arc(cc.x,cc.y,px(g,L.r||3),0,TAU); return {c:cc,r:px(g,L.r||3)}; }
+  if(f==='cubo'){ const s=px(g,L.lato||4.5); let cc=c; if(L.adiacente){ const d=dir(g); cc={x:g.a.x+Math.cos(d)*(s/2+g.sq*.5),y:g.a.y+Math.sin(d)*(s/2+g.sq*.5)}; } ctx.beginPath(); ctx.rect(cc.x-s/2,cc.y-s/2,s,s); return {c:cc,r:s/2}; }
+  if(f==='cono'){ const Lp=px(g,L.L||4.5), d=dir(g), h=Math.atan(0.5); const p1={x:g.a.x+Math.cos(d-h)*Lp/Math.cos(h),y:g.a.y+Math.sin(d-h)*Lp/Math.cos(h)}, p2={x:g.a.x+Math.cos(d+h)*Lp/Math.cos(h),y:g.a.y+Math.sin(d+h)*Lp/Math.cos(h)}; ctx.beginPath(); ctx.moveTo(g.a.x,g.a.y); ctx.lineTo(p1.x,p1.y); ctx.arc(g.a.x,g.a.y,Lp/Math.cos(h),d-h,d+h); ctx.closePath(); return {c:{x:g.a.x+Math.cos(d)*Lp/2,y:g.a.y+Math.sin(d)*Lp/2},r:Lp/2}; }
+  if(f==='linea'){ const Lp=px(g,L.L||9), W=px(g,L.W||1.5), d=dir(g), nx=-Math.sin(d)*W/2, ny=Math.cos(d)*W/2; const e={x:g.a.x+Math.cos(d)*Lp,y:g.a.y+Math.sin(d)*Lp}; poly(ctx,[{x:g.a.x+nx,y:g.a.y+ny},{x:e.x+nx,y:e.y+ny},{x:e.x-nx,y:e.y-ny},{x:g.a.x-nx,y:g.a.y-ny}]); return {c:{x:(g.a.x+e.x)/2,y:(g.a.y+e.y)/2},r:Lp/2}; }
+  if(f==='personale'||f==='contatto'){ ctx.beginPath(); ctx.arc(g.a.x,g.a.y,g.sq*.8,0,TAU); return {c:g.a,r:g.sq*.8}; }
+  ctx.beginPath(); ctx.arc(c.x,c.y,g.sq*.8,0,TAU); return {c,r:g.sq*.8}; }
+/* contorno dell'area a scala di griglia: tratteggio oro che appare e sfuma */
+function contorno(p,g,L){ const ctx=g.ctx; if(!L.forma||['bersaglio','contatto','personale','punto'].includes(L.forma)) return; const k=inOut(p,.1,.75); ctx.save(); ctx.setLineDash([8,6]); ctx.lineDashOffset=-p*40; ctx.strokeStyle=rgba(L.col||'#D9B15C',.9*k); ctx.lineWidth=2; shapePath(ctx,g,L); ctx.stroke(); ctx.fillStyle=rgba(L.col||'#D9B15C',.08*k); ctx.fill(); ctx.restore(); }
+/* ----- elementi ----- */
+const EL={};
+/* particelle dentro la forma: n, colore, taglia, moto 'su'|'giu'|'fuori'|'dentro'|'orbita'|'fermo' */
+EL.particelle=(p,g,L)=>{ const ctx=g.ctx; if(!L._ps){ L._ps=[]; for(let i=0;i<(L.n||40);i++) L._ps.push({a:rnd(0,TAU),d:Math.sqrt(Math.random()),s:rnd((L.s||2)*1.3,(L.s||2)*2.8),v:rnd(.5,1),f:rnd(0,TAU)}); }
+  const sh=shapePath(ctx,g,L), pal=PAL[L.pal||'oro'], moto=L.moto||'su', k=fade(p,L.k||.65), q=ease(Math.min(1,p*(L.vel||1.4)));
+  ctx.save(); if(L.clip!==false&&L.forma&&!['bersaglio','contatto','personale'].includes(L.forma)) ctx.clip(); ctx.globalCompositeOperation=L.luce===false?'source-over':'lighter';
+  for(const k2 of L._ps){ let d=sh.r*k2.d, a=k2.a; if(moto==='fuori') d=sh.r*k2.d*q; if(moto==='dentro') d=sh.r*k2.d*(1-q); if(moto==='orbita') a+=p*3*k2.v; let x=sh.c.x+Math.cos(a)*d, y=sh.c.y+Math.sin(a)*d*(L.piatto?.6:1); if(moto==='su') y-=p*k2.v*px(g,L.alt||2); if(moto==='giu') y+=p*k2.v*px(g,L.alt||2)-px(g,L.alt||2)*.8; x+=Math.sin(p*6+k2.f)*(L.onda||0);
+    const col=k2.v>.8?pal[0]:pal[1]; ctx.fillStyle=rgba(col,k*(L.alpha||.95)); ctx.beginPath(); ctx.arc(x,y,k2.s*(L.shrink?1-p*.5:1),0,TAU); ctx.fill(); }
+  ctx.restore(); };
+/* anelli d'urto */
+EL.anelli=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, R=px(g,L.r||3), pal=PAL[L.pal||'tuono'], n=L.n||3; ctx.save(); glow(ctx,pal[1],10);
+  for(let i=0;i<n;i++){ const q=Math.max(0,Math.min(1,ease(p*1.4-i*.18))); if(q<=0) continue; ctx.strokeStyle=rgba(pal[0],(1-q)); ctx.lineWidth=(L.w||6)-i*1.5; ctx.beginPath(); ctx.arc(c.x,c.y,R*q,0,TAU); ctx.stroke(); } ctx.restore(); };
+/* bagliore radiale */
+EL.bagliore=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, R=px(g,L.r||2)*(L.cresce?ease(Math.min(1,p*1.5)):1), pal=PAL[L.pal||'radioso'], k=fade(p,L.k||.6); ctx.save(); ctx.globalCompositeOperation='lighter'; const gr=ctx.createRadialGradient(c.x,c.y,0,c.x,c.y,R); gr.addColorStop(0,rgba(pal[0],(L.alpha||.8)*k)); gr.addColorStop(.5,rgba(pal[1],(L.alpha||.8)*.5*k)); gr.addColorStop(1,rgba(pal[2],0)); ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(c.x,c.y,R,0,TAU); ctx.fill(); ctx.restore(); };
+/* dardo/i da a a b, curva per gli arcani, scia; n colpi sfalsati */
+EL.dardo=(p,g,L)=>{ const ctx=g.ctx, pal=PAL[L.pal||'fuoco'], n=L.n||1; ctx.save(); ctx.globalCompositeOperation='lighter'; glow(ctx,pal[1],12);
+  for(let i=0;i<n;i++){ const off=i*(L.sfasa||.18), q=Math.min(1,Math.max(0,(p-off)/(L.volo||.55))); if(q<=0) continue; const k=(i-(n-1)/2)*(L.curva||0)*g.sq; const pt=t=>{ const P=along(g,t); if(!k) return P; const d=dir(g), s=Math.sin(t*Math.PI)*k; return {x:P.x-Math.sin(d)*s,y:P.y+Math.cos(d)*s}; };
+    ctx.strokeStyle=rgba(pal[1],.85*(q<1?1:Math.max(0,1-(p-off-(L.volo||.55))*4))); ctx.lineWidth=L.w||4; ctx.beginPath(); const t0=Math.max(0,q-(L.scia||.3)); for(let t=t0;t<=q;t+=.02){ const P=pt(t); t===t0?ctx.moveTo(P.x,P.y):ctx.lineTo(P.x,P.y); } ctx.stroke();
+    if(q<1){ const h=pt(q); ctx.fillStyle=pal[0]; ctx.beginPath(); ctx.arc(h.x,h.y,L.testa||6,0,TAU); ctx.fill(); }
+    else { const f=Math.min(1,(p-off-(L.volo||.55))/.3); ctx.strokeStyle=rgba(pal[1],1-f); ctx.lineWidth=3; ctx.beginPath(); ctx.arc(g.b.x,g.b.y,8+f*g.sq,0,TAU); ctx.stroke(); ctx.fillStyle=rgba(pal[0],.35*(1-f)); ctx.fill(); } }
+  ctx.restore(); };
+/* saetta spezzata da 'da' (cielo o a) a b */
+EL.saetta=(p,g,L)=>{ const ctx=g.ctx, pal=PAL[L.pal||'fulmine']; const a=L.origine==='cielo'?{x:g.b.x+(L._dx??(L._dx=rnd(-40,40))),y:-10}:g.a; if(!L._s){ L._s=[]; const n=12; for(let i=1;i<=n;i++){ const t=i/n; L._s.push({x:a.x+(g.b.x-a.x)*t+(i<n?rnd(-18,18):0),y:a.y+(g.b.y-a.y)*t+(i<n?rnd(-8,8):0)}); } }
+  const vis=p<.3?1:fade(p,.3); ctx.save(); ctx.globalCompositeOperation='lighter'; if(p<.1){ ctx.fillStyle=rgba(pal[1],.18); ctx.fillRect(-9999,-9999,19999,19999); }
+  for(const [w,col] of [[8,rgba(pal[1],.35*vis)],[3,rgba(pal[0],.95*vis)]]){ ctx.strokeStyle=col; ctx.lineWidth=w; ctx.lineJoin='round'; ctx.beginPath(); ctx.moveTo(a.x,a.y); for(const s of L._s) ctx.lineTo(s.x,s.y); ctx.stroke(); }
+  const gr=ctx.createRadialGradient(g.b.x,g.b.y,0,g.b.x,g.b.y,g.sq*1.6); gr.addColorStop(0,rgba(pal[0],.7*vis)); gr.addColorStop(1,rgba(pal[0],0)); ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(g.b.x,g.b.y,g.sq*1.6,0,TAU); ctx.fill(); ctx.restore(); };
+/* archi elettrici attorno a un punto */
+EL.archi=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'fulmine'], R=px(g,L.r||1), k=fade(p,.6); ctx.save(); ctx.globalCompositeOperation='lighter'; glow(ctx,pal[1],8); ctx.strokeStyle=rgba(pal[0],.9*k); ctx.lineWidth=2;
+  for(let i=0;i<(L.n||6);i++){ const a0=i/(L.n||6)*TAU+Math.floor(p*12)*.7; ctx.beginPath(); for(let t=0;t<=1;t+=.2){ const a=a0+t*1.2, r=R*(.7+Math.sin((p*20+i+t*9))*.25); const x=c.x+Math.cos(a)*r, y=c.y+Math.sin(a)*r; t?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.stroke(); } ctx.restore(); };
+/* raggi dal centro (luce radiosa / luce diurna) */
+EL.raggi=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, R=px(g,L.r||3)*ease(Math.min(1,p*1.4)), pal=PAL[L.pal||'radioso'], k=fade(p,.6); ctx.save(); ctx.globalCompositeOperation='lighter'; for(let i=0;i<(L.n||16);i++){ const a=i/(L.n||16)*TAU+p*(L.gira||.4), w=.06; ctx.fillStyle=rgba(pal[0],(L.r>9?.18:.35)*k); ctx.beginPath(); ctx.moveTo(c.x,c.y); ctx.arc(c.x,c.y,R,a-w,a+w); ctx.closePath(); ctx.fill(); } ctx.restore(); };
+/* colonna di luce dall'alto su b (o a) */
+EL.colonna=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'radioso'], r=px(g,L.r||1), k=fade(p,.65), h=(L.h||220)*ease(Math.min(1,p*1.6)); ctx.save(); ctx.globalCompositeOperation='lighter'; const gr=ctx.createLinearGradient(c.x,c.y-h,c.x,c.y+8); gr.addColorStop(0,rgba(pal[0],0)); gr.addColorStop(1,rgba(pal[0],.75*k)); ctx.fillStyle=gr; ctx.beginPath(); ctx.moveTo(c.x-r*.6,c.y+8); ctx.lineTo(c.x-r,c.y-h); ctx.lineTo(c.x+r,c.y-h); ctx.lineTo(c.x+r*.6,c.y+8); ctx.closePath(); ctx.fill(); ctx.strokeStyle=rgba(pal[0],.9*k); ctx.lineWidth=2; ctx.beginPath(); ctx.ellipse(c.x,c.y+6,r*.9,r*.33,0,0,TAU); ctx.stroke(); ctx.restore(); };
+/* sigillo d'oro che ruota sopra il bersaglio (benedizioni) ; stile 'cerchio'|'stella'|'croce'|'scudo' */
+EL.sigillo=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'oro'], R=px(g,(L.r||1.2)*1.3), k=fade(p,.7), y=c.y-g.sq*.9-ease(Math.min(1,p*2))*12; ctx.save(); ctx.translate(c.x,y); ctx.scale(1,.42); ctx.rotate(p*(L.gira??1.2)); glow(ctx,pal[0],10); ctx.strokeStyle=rgba(pal[1],k); ctx.lineWidth=3; ctx.beginPath(); ctx.arc(0,0,R,0,TAU); ctx.stroke();
+  const st=L.stile||'cerchio'; if(st==='cerchio'){ ctx.beginPath(); ctx.arc(0,0,R*.7,0,TAU); ctx.stroke(); for(let i=0;i<8;i++){ const a=i/8*TAU; ctx.beginPath(); ctx.moveTo(Math.cos(a)*R*.7,Math.sin(a)*R*.7); ctx.lineTo(Math.cos(a)*R,Math.sin(a)*R); ctx.stroke(); } }
+  if(st==='stella'){ ctx.beginPath(); for(let i=0;i<5;i++){ const a=i*4/5*TAU-Math.PI/2; i?ctx.lineTo(Math.cos(a)*R*.85,Math.sin(a)*R*.85):ctx.moveTo(Math.cos(a)*R*.85,Math.sin(a)*R*.85); } ctx.closePath(); ctx.stroke(); }
+  if(st==='croce'){ ctx.beginPath(); ctx.moveTo(-R*.6,0); ctx.lineTo(R*.6,0); ctx.moveTo(0,-R*.6); ctx.lineTo(0,R*.6); ctx.stroke(); }
+  if(st==='triangolo'){ ctx.beginPath(); for(let i=0;i<3;i++){ const a=i/3*TAU-Math.PI/2; i?ctx.lineTo(Math.cos(a)*R*.8,Math.sin(a)*R*.8):ctx.moveTo(Math.cos(a)*R*.8,Math.sin(a)*R*.8); } ctx.closePath(); ctx.stroke(); }
+  if(st==='rune'){ for(let i=0;i<6;i++){ const a=i/6*TAU; ctx.beginPath(); ctx.moveTo(Math.cos(a)*R*.8,Math.sin(a)*R*.8); ctx.lineTo(Math.cos(a+.3)*R*.6,Math.sin(a+.3)*R*.6); ctx.lineTo(Math.cos(a-.2)*R*.45,Math.sin(a-.2)*R*.45); ctx.stroke(); } }
+  ctx.restore(); ctx.save(); ctx.globalCompositeOperation='lighter'; const gr=ctx.createRadialGradient(c.x,c.y,0,c.x,c.y,R*1.6); gr.addColorStop(0,rgba(pal[1],.25*k)); gr.addColorStop(1,rgba(pal[1],0)); ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(c.x,c.y,R*1.6,0,TAU); ctx.fill(); ctx.restore(); };
+/* volute (necrotico, ombra, nebbia che si avvita) */
+EL.volute=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'necro'], R=px(g,L.r||1.3), k=fade(p,.7); if(!L._w){ L._w=[]; for(let i=0;i<(L.n||9);i++) L._w.push({o:i/(L.n||9)*TAU,s:rnd(.6,1)}); } ctx.save(); glow(ctx,pal[2],8); ctx.lineCap='round';
+  for(const w of L._w){ ctx.strokeStyle=rgba(pal[1],k); ctx.lineWidth=4; ctx.beginPath(); for(let t=0;t<=1;t+=.1){ const q=p*w.s, d=R*(1.1-t*.9)*(L.dentro===false?1:(1-q*.6)), a=w.o+t*2.2+q*3*(L.verso||1); const x=c.x+Math.cos(a)*d, y=c.y+Math.sin(a)*d*.8-t*px(g,.4); t===0?ctx.moveTo(x,y):ctx.lineTo(x,y); } ctx.stroke(); }
+  const gr=ctx.createRadialGradient(c.x,c.y,0,c.x,c.y,R); gr.addColorStop(0,rgba(pal[2],.7*k)); gr.addColorStop(1,rgba(pal[2],0)); ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(c.x,c.y,R,0,TAU); ctx.fill(); ctx.restore(); };
+/* viticci che spuntano (natura) nella forma */
+EL.viticci=(p,g,L)=>{ const ctx=g.ctx, sh=shapePath(ctx,g,L), pal=PAL[L.pal||'natura'], k=fade(p,.75); if(!L._v){ L._v=[]; for(let i=0;i<(L.n||12);i++) L._v.push({a:i/(L.n||12)*TAU+rnd(-.2,.2),l:rnd(.5,1),k:rnd(-1,1),o:rnd(0,1)}); } const q=ease(Math.min(1,p*1.3)); ctx.save(); ctx.lineCap='round';
+  for(const v of L._v){ const ox=sh.c.x+Math.cos(v.a)*sh.r*v.o*.6, oy=sh.c.y+Math.sin(v.a)*sh.r*v.o*.6*.7; ctx.strokeStyle=rgba(pal[1],k); ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(ox,oy+4); const len=sh.r*v.l*q*(L.lung||.8); for(let t=.1;t<=1;t+=.1){ const d=len*t, s=Math.sin(t*6+v.k)*8*t; ctx.lineTo(ox+Math.cos(v.a)*d-Math.sin(v.a)*s,oy+4+Math.sin(v.a)*d*.6+Math.cos(v.a)*s*.6-t*t*10); } ctx.stroke();
+    if(L.spine) for(let t=.3;t<=1;t+=.25){ const d=len*t; ctx.fillStyle=rgba(pal[2],k); ctx.beginPath(); ctx.moveTo(ox+Math.cos(v.a)*d,oy+4+Math.sin(v.a)*d*.6); ctx.lineTo(ox+Math.cos(v.a)*d+4,oy+Math.sin(v.a)*d*.6-7); ctx.lineTo(ox+Math.cos(v.a)*d+1,oy+4+Math.sin(v.a)*d*.6+1); ctx.fill(); }
+    if(L.foglie) for(let t=.5;t<=1;t+=.5){ const d=len*t; ctx.fillStyle=rgba(pal[0],k*.9); ctx.beginPath(); ctx.ellipse(ox+Math.cos(v.a)*d,oy+Math.sin(v.a)*d*.6-4,5,2.5,v.a,0,TAU); ctx.fill(); } }
+  ctx.restore(); };
+/* schegge (gelo, pietra, vetro) che partono dal centro */
+EL.schegge=(p,g,L)=>{ const ctx=g.ctx, sh=shapePath(ctx,g,L), pal=PAL[L.pal||'gelo'], k=fade(p,.7); if(!L._s){ L._s=[]; for(let i=0;i<(L.n||22);i++) L._s.push({a:rnd(0,TAU),l:rnd(.5,1),w:rnd(4,9)}); } const q=ease(Math.min(1,p*1.5)); ctx.save(); for(const s of L._s){ const d=sh.r*q*s.l; ctx.save(); ctx.translate(sh.c.x+Math.cos(s.a)*d,sh.c.y+Math.sin(s.a)*d*(L.piatto?.7:1)); ctx.rotate(s.a); ctx.fillStyle=rgba(pal[0],k); ctx.strokeStyle=rgba(pal[1],k); ctx.beginPath(); ctx.moveTo(0,-s.w/2); ctx.lineTo(s.w*2.2,0); ctx.lineTo(0,s.w/2); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore(); } ctx.restore(); };
+/* nebbia / nuvole morbide nella forma */
+EL.nebbia=(p,g,L)=>{ const ctx=g.ctx, sh=shapePath(ctx,g,L), pal=PAL[L.pal||'vento'], k=inOut(p,.2,.7)*(L.alpha||.5); if(!L._n){ L._n=[]; for(let i=0;i<(L.n||26);i++) L._n.push({a:rnd(0,TAU),d:Math.sqrt(Math.random()),s:rnd(.25,.5),v:rnd(.2,.6),f:rnd(0,TAU)}); } ctx.save(); if(L.forma) ctx.clip(); for(const n of L._n){ const x=sh.c.x+Math.cos(n.a+p*n.v)*sh.r*n.d, y=sh.c.y+Math.sin(n.a+p*n.v)*sh.r*n.d*(L.piatto?.7:1); const gr=ctx.createRadialGradient(x,y,0,x,y,sh.r*n.s); gr.addColorStop(0,rgba(pal[0],k)); gr.addColorStop(1,rgba(pal[1],0)); ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(x,y,sh.r*n.s,0,TAU); ctx.fill(); } ctx.restore(); };
+/* strisce di vento lungo la direzione (linea/cono) o attorno (emanazione) */
+EL.vento=(p,g,L)=>{ const ctx=g.ctx, sh=shapePath(ctx,g,L), pal=PAL[L.pal||'vento'], k=fade(p,.7), d=dir(g); if(!L._v){ L._v=[]; for(let i=0;i<(L.n||14);i++) L._v.push({o:rnd(0,1),y:rnd(-1,1),l:rnd(.2,.4)}); } ctx.save(); ctx.clip(); ctx.strokeStyle=rgba(pal[0],.8*k); ctx.lineWidth=2; ctx.lineCap='round';
+  for(const v of L._v){ const t=(v.o+p*1.5)%1, Lp=sh.r*2; const base={x:g.a.x+Math.cos(d)*Lp*t,y:g.a.y+Math.sin(d)*Lp*t}, nx=-Math.sin(d)*sh.r*.45*v.y, ny=Math.cos(d)*sh.r*.45*v.y; ctx.beginPath(); ctx.moveTo(base.x+nx,base.y+ny); ctx.quadraticCurveTo(base.x+nx+Math.cos(d)*Lp*v.l*.5-ny*.3,base.y+ny+Math.sin(d)*Lp*v.l*.5+nx*.3,base.x+nx+Math.cos(d)*Lp*v.l,base.y+ny+Math.sin(d)*Lp*v.l); ctx.stroke(); } ctx.restore(); };
+/* onde concentriche piatte (suono, acqua, psichico) attorno a un centro */
+EL.onde=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'psichico'], R=px(g,L.r||2), k=fade(p,.7), n=L.n||4; ctx.save(); ctx.strokeStyle=rgba(pal[1],k); ctx.lineWidth=2; for(let i=0;i<n;i++){ const q=((p*1.2+i/n)%1); ctx.strokeStyle=rgba(pal[1],k*(1-q)); ctx.beginPath(); ctx.ellipse(c.x,c.y,R*q,R*q*(L.piatto===false?1:.5),0,0,TAU); ctx.stroke(); } ctx.restore(); };
+/* glifo: disegni semplici sopra un punto (occhio, orecchio, mano, scudo, cuore, teschio, catene, corona, parole, piuma, impronta, croce, clessidra, lente, ossa, maschera, foglia, bacca, zampa, ala, freccia, specchio, martello, onda, nota, chiave, fiamma, fiocco, stella, bocca, libro, goccia, osso, ancora, ingranaggio, cerchio) */
+EL.glifo=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'oro'], k=fade(p,.7), s=px(g,(L.s||1)*1.45), y=c.y-(L.sopra===false?0:g.sq*1+ease(Math.min(1,p*2))*10); ctx.save(); ctx.translate(c.x,y); if(L.gira) ctx.rotate(p*L.gira); if(L.pulsa) ctx.scale(1+Math.sin(p*12)*.08,1+Math.sin(p*12)*.08); glow(ctx,pal[0],10); ctx.strokeStyle=rgba(pal[1],k); ctx.fillStyle=rgba(pal[0],k*.45); ctx.lineWidth=3.5; ctx.lineCap='round'; ctx.lineJoin='round'; const G=GLIFI[L.tipo]||GLIFI.cerchio; G(ctx,s); ctx.restore(); };
+const GLIFI={
+ cerchio:(c,s)=>{ c.beginPath(); c.arc(0,0,s*.5,0,TAU); c.stroke(); },
+ occhio:(c,s)=>{ c.beginPath(); c.moveTo(-s*.6,0); c.quadraticCurveTo(0,-s*.5,s*.6,0); c.quadraticCurveTo(0,s*.5,-s*.6,0); c.stroke(); c.beginPath(); c.arc(0,0,s*.17,0,TAU); c.fill(); c.stroke(); },
+ orecchio:(c,s)=>{ c.beginPath(); c.arc(0,0,s*.5,-1.2,1.6); c.stroke(); c.beginPath(); c.arc(0,0,s*.28,-1,1.4); c.stroke(); },
+ mano:(c,s)=>{ c.beginPath(); c.moveTo(-s*.3,s*.5); c.lineTo(-s*.3,-s*.1); c.lineTo(-s*.15,-s*.5); c.lineTo(-s*.05,-s*.1); c.lineTo(s*.05,-s*.55); c.lineTo(s*.15,-s*.1); c.lineTo(s*.3,-s*.4); c.lineTo(s*.3,s*.5); c.closePath(); c.fill(); c.stroke(); },
+ scudo:(c,s)=>{ c.beginPath(); c.moveTo(0,-s*.55); c.lineTo(s*.5,-s*.35); c.lineTo(s*.45,s*.1); c.quadraticCurveTo(s*.3,s*.45,0,s*.6); c.quadraticCurveTo(-s*.3,s*.45,-s*.45,s*.1); c.lineTo(-s*.5,-s*.35); c.closePath(); c.fill(); c.stroke(); },
+ cuore:(c,s)=>{ c.beginPath(); c.moveTo(0,s*.5); c.quadraticCurveTo(-s*.7,0,-s*.35,-s*.35); c.quadraticCurveTo(0,-s*.55,0,-s*.15); c.quadraticCurveTo(0,-s*.55,s*.35,-s*.35); c.quadraticCurveTo(s*.7,0,0,s*.5); c.fill(); c.stroke(); },
+ teschio:(c,s)=>{ c.beginPath(); c.arc(0,-s*.1,s*.42,Math.PI*.9,Math.PI*2.1); c.lineTo(s*.25,s*.4); c.lineTo(-s*.25,s*.4); c.closePath(); c.fill(); c.stroke(); c.fillStyle=c.strokeStyle; c.beginPath(); c.arc(-s*.16,-s*.12,s*.09,0,TAU); c.arc(s*.16,-s*.12,s*.09,0,TAU); c.fill(); c.beginPath(); c.moveTo(-s*.12,s*.25); c.lineTo(s*.12,s*.25); c.stroke(); },
+ catene:(c,s)=>{ for(let i=-2;i<=2;i++){ c.beginPath(); c.ellipse(i*s*.3,(i%2)*s*.05,s*.17,s*.1,0,0,TAU); c.stroke(); } },
+ corona:(c,s)=>{ c.beginPath(); c.moveTo(-s*.5,s*.3); c.lineTo(-s*.5,-s*.2); c.lineTo(-s*.25,s*.05); c.lineTo(0,-s*.45); c.lineTo(s*.25,s*.05); c.lineTo(s*.5,-s*.2); c.lineTo(s*.5,s*.3); c.closePath(); c.fill(); c.stroke(); },
+ parole:(c,s)=>{ c.beginPath(); c.moveTo(-s*.5,-s*.3); c.lineTo(s*.5,-s*.3); c.moveTo(-s*.5,0); c.lineTo(s*.3,0); c.moveTo(-s*.5,s*.3); c.lineTo(s*.45,s*.3); c.stroke(); },
+ piuma:(c,s)=>{ c.beginPath(); c.moveTo(-s*.5,s*.5); c.quadraticCurveTo(-s*.2,-s*.1,s*.5,-s*.55); c.quadraticCurveTo(s*.1,-s*.1,-s*.5,s*.5); c.fill(); c.stroke(); c.beginPath(); c.moveTo(-s*.5,s*.5); c.lineTo(s*.3,-s*.35); c.stroke(); },
+ impronta:(c,s)=>{ c.beginPath(); c.ellipse(0,s*.1,s*.22,s*.32,0,0,TAU); c.fill(); c.stroke(); for(let i=0;i<4;i++){ c.beginPath(); c.arc(-s*.3+i*s*.2,-s*.35+Math.abs(i-1.5)*s*.05,s*.07,0,TAU); c.fill(); } },
+ croce:(c,s)=>{ c.beginPath(); c.moveTo(0,-s*.55); c.lineTo(0,s*.55); c.moveTo(-s*.4,-s*.15); c.lineTo(s*.4,-s*.15); c.stroke(); },
+ clessidra:(c,s)=>{ c.beginPath(); c.moveTo(-s*.35,-s*.5); c.lineTo(s*.35,-s*.5); c.lineTo(-s*.35,s*.5); c.lineTo(s*.35,s*.5); c.closePath(); c.stroke(); },
+ lente:(c,s)=>{ c.beginPath(); c.arc(-s*.1,-s*.1,s*.32,0,TAU); c.stroke(); c.beginPath(); c.moveTo(s*.13,s*.13); c.lineTo(s*.5,s*.5); c.stroke(); },
+ ossa:(c,s)=>{ c.beginPath(); c.moveTo(-s*.45,-s*.3); c.lineTo(s*.45,s*.3); c.moveTo(-s*.45,s*.3); c.lineTo(s*.45,-s*.3); c.stroke(); for(const [x,y] of [[-.45,-.3],[.45,.3],[-.45,.3],[.45,-.3]]){ c.beginPath(); c.arc(x*s,y*s,s*.09,0,TAU); c.fill(); } },
+ maschera:(c,s)=>{ c.beginPath(); c.ellipse(0,0,s*.45,s*.55,0,0,TAU); c.fill(); c.stroke(); c.fillStyle=c.strokeStyle; c.beginPath(); c.ellipse(-s*.17,-s*.1,s*.1,s*.06,0,0,TAU); c.ellipse(s*.17,-s*.1,s*.1,s*.06,0,0,TAU); c.fill(); },
+ foglia:(c,s)=>{ c.beginPath(); c.moveTo(0,s*.55); c.quadraticCurveTo(-s*.6,0,0,-s*.55); c.quadraticCurveTo(s*.6,0,0,s*.55); c.fill(); c.stroke(); c.beginPath(); c.moveTo(0,s*.55); c.lineTo(0,-s*.45); c.stroke(); },
+ bacca:(c,s)=>{ for(const [x,y] of [[-.2,.1],[.2,.1],[0,-.2]]){ c.beginPath(); c.arc(x*s,y*s,s*.17,0,TAU); c.fill(); c.stroke(); } },
+ zampa:(c,s)=>{ c.beginPath(); c.ellipse(0,s*.15,s*.28,s*.22,0,0,TAU); c.fill(); c.stroke(); for(let i=0;i<4;i++){ c.beginPath(); c.arc(-s*.33+i*s*.22,-s*.2-(i===1||i===2?s*.1:0),s*.09,0,TAU); c.fill(); c.stroke(); } },
+ ala:(c,s)=>{ c.beginPath(); c.moveTo(0,s*.3); c.quadraticCurveTo(-s*.5,-s*.2,-s*.6,-s*.5); c.quadraticCurveTo(-s*.2,-s*.4,0,-s*.1); c.quadraticCurveTo(s*.2,-s*.4,s*.6,-s*.5); c.quadraticCurveTo(s*.5,-s*.2,0,s*.3); c.fill(); c.stroke(); },
+ freccia:(c,s)=>{ c.beginPath(); c.moveTo(0,s*.5); c.lineTo(0,-s*.5); c.moveTo(-s*.3,-s*.2); c.lineTo(0,-s*.5); c.lineTo(s*.3,-s*.2); c.stroke(); },
+ freccegiu:(c,s)=>{ c.beginPath(); c.moveTo(0,-s*.5); c.lineTo(0,s*.5); c.moveTo(-s*.3,s*.2); c.lineTo(0,s*.5); c.lineTo(s*.3,s*.2); c.stroke(); },
+ martello:(c,s)=>{ c.beginPath(); c.moveTo(-s*.1,s*.55); c.lineTo(s*.15,-s*.1); c.stroke(); c.beginPath(); c.rect(-s*.1,-s*.5,s*.6,s*.3); c.fill(); c.stroke(); },
+ spada:(c,s)=>{ c.beginPath(); c.moveTo(0,-s*.6); c.lineTo(0,s*.3); c.moveTo(-s*.25,s*.15); c.lineTo(s*.25,s*.15); c.moveTo(0,s*.3); c.lineTo(0,s*.5); c.stroke(); },
+ nota:(c,s)=>{ c.beginPath(); c.ellipse(-s*.15,s*.3,s*.18,s*.12,-.4,0,TAU); c.fill(); c.stroke(); c.beginPath(); c.moveTo(s*.02,s*.25); c.lineTo(s*.02,-s*.5); c.lineTo(s*.4,-s*.35); c.stroke(); },
+ fiamma:(c,s)=>{ c.beginPath(); c.moveTo(0,s*.5); c.quadraticCurveTo(-s*.45,s*.1,-s*.1,-s*.2); c.quadraticCurveTo(0,-s*.45,s*.05,-s*.6); c.quadraticCurveTo(s*.35,-s*.2,s*.3,s*.1); c.quadraticCurveTo(s*.25,s*.45,0,s*.5); c.fill(); c.stroke(); },
+ fiocco:(c,s)=>{ for(let i=0;i<3;i++){ c.save(); c.rotate(i*Math.PI/3); c.beginPath(); c.moveTo(0,-s*.5); c.lineTo(0,s*.5); c.moveTo(-s*.12,-s*.3); c.lineTo(0,-s*.18); c.lineTo(s*.12,-s*.3); c.moveTo(-s*.12,s*.3); c.lineTo(0,s*.18); c.lineTo(s*.12,s*.3); c.stroke(); c.restore(); } },
+ stella:(c,s)=>{ c.beginPath(); for(let i=0;i<5;i++){ const a=i*4/5*TAU-Math.PI/2; i?c.lineTo(Math.cos(a)*s*.5,Math.sin(a)*s*.5):c.moveTo(Math.cos(a)*s*.5,Math.sin(a)*s*.5); } c.closePath(); c.fill(); c.stroke(); },
+ bocca:(c,s)=>{ c.beginPath(); c.moveTo(-s*.5,0); c.quadraticCurveTo(0,s*.5,s*.5,0); c.quadraticCurveTo(0,s*.15,-s*.5,0); c.fill(); c.stroke(); },
+ libro:(c,s)=>{ c.beginPath(); c.moveTo(0,-s*.35); c.quadraticCurveTo(-s*.3,-s*.45,-s*.55,-s*.3); c.lineTo(-s*.55,s*.35); c.quadraticCurveTo(-s*.3,s*.2,0,s*.35); c.quadraticCurveTo(s*.3,s*.2,s*.55,s*.35); c.lineTo(s*.55,-s*.3); c.quadraticCurveTo(s*.3,-s*.45,0,-s*.35); c.closePath(); c.fill(); c.stroke(); c.beginPath(); c.moveTo(0,-s*.35); c.lineTo(0,s*.35); c.stroke(); },
+ goccia:(c,s)=>{ c.beginPath(); c.moveTo(0,-s*.55); c.quadraticCurveTo(s*.45,s*.1,0,s*.5); c.quadraticCurveTo(-s*.45,s*.1,0,-s*.55); c.fill(); c.stroke(); },
+ ancora:(c,s)=>{ c.beginPath(); c.arc(0,-s*.4,s*.1,0,TAU); c.moveTo(0,-s*.3); c.lineTo(0,s*.5); c.moveTo(-s*.35,-s*.05); c.lineTo(s*.35,-s*.05); c.moveTo(-s*.5,s*.2); c.quadraticCurveTo(0,s*.75,s*.5,s*.2); c.stroke(); },
+ specchio:(c,s)=>{ for(const dx of [-.55,0,.55]){ c.beginPath(); c.ellipse(dx*s,0,s*.22,s*.4,0,0,TAU); c.fill(); c.stroke(); } },
+ chiave:(c,s)=>{ c.beginPath(); c.arc(-s*.3,0,s*.18,0,TAU); c.moveTo(-s*.12,0); c.lineTo(s*.5,0); c.moveTo(s*.3,0); c.lineTo(s*.3,s*.2); c.moveTo(s*.45,0); c.lineTo(s*.45,s*.2); c.stroke(); },
+ ingranaggio:(c,s)=>{ c.beginPath(); for(let i=0;i<8;i++){ const a=i/8*TAU; c.moveTo(Math.cos(a)*s*.3,Math.sin(a)*s*.3); c.lineTo(Math.cos(a)*s*.5,Math.sin(a)*s*.5); } c.stroke(); c.beginPath(); c.arc(0,0,s*.3,0,TAU); c.stroke(); },
+ onda:(c,s)=>{ c.beginPath(); for(let i=0;i<3;i++){ c.moveTo(-s*.5,-s*.3+i*s*.3); c.quadraticCurveTo(-s*.25,-s*.5+i*s*.3,0,-s*.3+i*s*.3); c.quadraticCurveTo(s*.25,-s*.1+i*s*.3,s*.5,-s*.3+i*s*.3); } c.stroke(); },
+ sole:(c,s)=>{ c.beginPath(); c.arc(0,0,s*.25,0,TAU); c.fill(); c.stroke(); for(let i=0;i<8;i++){ const a=i/8*TAU; c.beginPath(); c.moveTo(Math.cos(a)*s*.35,Math.sin(a)*s*.35); c.lineTo(Math.cos(a)*s*.55,Math.sin(a)*s*.55); c.stroke(); } },
+ luna:(c,s)=>{ c.beginPath(); c.arc(0,0,s*.45,-Math.PI*.6,Math.PI*.6); c.arc(s*.18,0,s*.35,Math.PI*.6,-Math.PI*.6,true); c.closePath(); c.fill(); c.stroke(); },
+ pietra:(c,s)=>{ c.beginPath(); c.moveTo(-s*.5,s*.2); c.lineTo(-s*.3,-s*.4); c.lineTo(s*.2,-s*.5); c.lineTo(s*.5,-s*.1); c.lineTo(s*.35,s*.45); c.lineTo(-s*.2,s*.5); c.closePath(); c.fill(); c.stroke(); },
+ risata:(c,s)=>{ c.font=`bold ${s*.7}px serif`; c.textAlign='center'; c.fillStyle=c.strokeStyle; c.fillText('ha ha',0,s*.25); },
+ punto_int:(c,s)=>{ c.font=`bold ${s*.9}px serif`; c.textAlign='center'; c.fillStyle=c.strokeStyle; c.fillText('?',0,s*.3); },
+ esclam:(c,s)=>{ c.font=`bold ${s*.9}px serif`; c.textAlign='center'; c.fillStyle=c.strokeStyle; c.fillText('!',0,s*.3); },
+ zzz:(c,s)=>{ c.font=`bold ${s*.5}px serif`; c.textAlign='center'; c.fillStyle=c.strokeStyle; c.fillText('z z z',0,s*.15); },
+ pane:(c,s)=>{ c.beginPath(); c.ellipse(0,s*.1,s*.5,s*.3,0,0,TAU); c.fill(); c.stroke(); c.beginPath(); c.moveTo(-s*.25,0); c.lineTo(-s*.1,s*.15); c.moveTo(0,0); c.lineTo(s*.15,s*.15); c.stroke(); },
+ trappola:(c,s)=>{ c.beginPath(); c.arc(0,0,s*.45,0,TAU); c.stroke(); for(let i=0;i<10;i++){ const a=i/10*TAU; c.beginPath(); c.moveTo(Math.cos(a)*s*.45,Math.sin(a)*s*.45); c.lineTo(Math.cos(a)*s*.3,Math.sin(a)*s*.3); c.stroke(); } },
+ cavallo:(c,s)=>{ c.beginPath(); c.moveTo(-s*.5,s*.4); c.lineTo(-s*.4,-s*.1); c.lineTo(-s*.1,-s*.3); c.lineTo(s*.2,-s*.55); c.lineTo(s*.45,-s*.3); c.lineTo(s*.3,-s*.1); c.lineTo(s*.35,s*.4); c.stroke(); },
+ cerchiom:(c,s)=>{ c.beginPath(); c.arc(0,0,s*.5,0,TAU); c.stroke(); c.beginPath(); for(let i=0;i<5;i++){ const a=i*4/5*TAU-Math.PI/2; i?c.lineTo(Math.cos(a)*s*.5,Math.sin(a)*s*.5):c.moveTo(Math.cos(a)*s*.5,Math.sin(a)*s*.5); } c.closePath(); c.stroke(); },
+ ragnatela:(c,s)=>{ for(let i=0;i<6;i++){ const a=i/6*TAU; c.beginPath(); c.moveTo(0,0); c.lineTo(Math.cos(a)*s*.5,Math.sin(a)*s*.5); c.stroke(); } for(let r=.17;r<=.5;r+=.16){ c.beginPath(); c.arc(0,0,s*r,0,TAU); c.stroke(); } },
+ sirena:(c,s)=>{ c.beginPath(); c.arc(0,s*.1,s*.3,0,TAU); c.stroke(); c.beginPath(); c.moveTo(-s*.3,-s*.4); c.lineTo(-s*.5,-s*.55); c.moveTo(s*.3,-s*.4); c.lineTo(s*.5,-s*.55); c.stroke(); },
+ vite:(c,s)=>{ c.beginPath(); c.moveTo(-s*.5,s*.5); c.quadraticCurveTo(-s*.3,-s*.3,0,0); c.quadraticCurveTo(s*.3,s*.3,s*.5,-s*.5); c.stroke(); for(const [x,y] of [[-.3,.1],[.1,.1],[.4,-.3]]){ c.beginPath(); c.ellipse(x*s,y*s,s*.12,s*.06,.6,0,TAU); c.fill(); c.stroke(); } }
+};
+/* copie fantasma della pedina (Immagine speculare) */
+EL.fantasmi=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, k=fade(p,.75), R=g.sq*.45; ctx.save(); for(let i=0;i<3;i++){ const a=i/3*TAU+p*2.5, x=c.x+Math.cos(a)*g.sq*.9*ease(Math.min(1,p*2)), y=c.y+Math.sin(a)*g.sq*.5*ease(Math.min(1,p*2)); ctx.strokeStyle=rgba('#B48CFF',.9*k); ctx.fillStyle=rgba('#B48CFF',.2*k); ctx.lineWidth=2; ctx.setLineDash([4,3]); ctx.beginPath(); ctx.arc(x,y,R,0,TAU); ctx.fill(); ctx.stroke(); } ctx.restore(); };
+/* cerchio/anello che pulsa attorno a un bersaglio (buff che durano) */
+EL.anello=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'oro'], R=px(g,(L.r||.9)*1.25), k=fade(p,.7); ctx.save(); glow(ctx,pal[0],10); ctx.strokeStyle=rgba(pal[1],k); ctx.lineWidth=4; if(L.tratto) ctx.setLineDash([6,4]); ctx.beginPath(); ctx.ellipse(c.x,c.y+6,R*(1+Math.sin(p*8)*.05),R*.4*(1+Math.sin(p*8)*.05),0,0,TAU); ctx.stroke(); ctx.restore(); };
+/* lame/armi che compaiono (arma spirituale, lama infuocata, randello) */
+EL.arma=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'radioso'], s=g.sq*1.5, k=fade(p,.75); ctx.save(); ctx.translate(c.x+g.sq*.7,c.y-g.sq*.7); ctx.rotate(-.6+Math.sin(p*10)*.25); glow(ctx,pal[0],12); ctx.strokeStyle=rgba(pal[0],k); ctx.fillStyle=rgba(pal[1],.5*k); ctx.lineWidth=3; (GLIFI[L.tipo||'spada'])(ctx,s); ctx.restore(); };
+/* fulmini a pioggia in un'area (tempesta) / gocce */
+EL.pioggia=(p,g,L)=>{ const ctx=g.ctx, sh=shapePath(ctx,g,L), pal=PAL[L.pal||'acqua'], k=inOut(p,.1,.75); if(!L._r){ L._r=[]; for(let i=0;i<(L.n||50);i++) L._r.push({a:rnd(0,TAU),d:Math.sqrt(Math.random()),o:rnd(0,1)}); } ctx.save(); ctx.clip(); ctx.strokeStyle=rgba(pal[0],.8*k); ctx.lineWidth=1.5; for(const r of L._r){ const x=sh.c.x+Math.cos(r.a)*sh.r*r.d, y0=sh.c.y+Math.sin(r.a)*sh.r*r.d, t=(r.o+p*3)%1, y=y0-sh.r+t*sh.r*2; ctx.beginPath(); ctx.moveTo(x,y-10); ctx.lineTo(x+(L.vento||0),y); ctx.stroke(); } ctx.restore(); };
+/* tremolio: lineette attorno al bersaglio (paura, tremori) */
+EL.tremolio=(p,g,L)=>{ const ctx=g.ctx, c=L.centro==='a'?g.a:g.b, pal=PAL[L.pal||'tuono'], k=fade(p,.7), R=g.sq*.7; ctx.save(); ctx.strokeStyle=rgba(pal[0],k); ctx.lineWidth=2; const j=Math.floor(p*14)%2?3:-3; for(let i=0;i<8;i++){ const a=i/8*TAU+.4; ctx.beginPath(); ctx.moveTo(c.x+Math.cos(a)*R+j,c.y+Math.sin(a)*R*.7); ctx.lineTo(c.x+Math.cos(a)*(R+10)+j,c.y+Math.sin(a)*(R+10)*.7); ctx.stroke(); } ctx.restore(); };
+/* filo/raggio continuo fra a e b (legami, marchio, frusta) */
+EL.filo=(p,g,L)=>{ const ctx=g.ctx, pal=PAL[L.pal||'oro'], k=inOut(p,.15,.7); ctx.save(); glow(ctx,pal[1],8); ctx.strokeStyle=rgba(pal[1],k); ctx.lineWidth=L.w||3; if(L.tratto) ctx.setLineDash([8,6]); ctx.lineDashOffset=-p*60; ctx.beginPath(); ctx.moveTo(g.a.x,g.a.y); if(L.onda){ for(let t=0;t<=1;t+=.04){ const P=along(g,t), d=dir(g), s=Math.sin(t*12+p*14)*L.onda*(1-t); ctx.lineTo(P.x-Math.sin(d)*s,P.y+Math.cos(d)*s); } } else ctx.lineTo(g.b.x,g.b.y); ctx.stroke(); ctx.restore(); };
+/* ---------- esecuzione di una ricetta ---------- */
+function esegui(ricetta,g,p){ const ctx=g.ctx; for(const L of ricetta.strati){ const t0=L.da||0, t1=L.a||1; if(p<t0||p>t1) continue; const q=(p-t0)/(t1-t0); ctx.save(); if(L.el==='contorno') contorno(q,g,L); else if(EL[L.el]) EL[L.el](q,g,L); ctx.restore(); } }
+function nuova(ricetta){ return {dur:ricetta.dur||1400,strati:ricetta.strati.map(L=>({...L}))}; }
+window.MotoreFX={EL,PAL,GLIFI,esegui,nuova,shapePath,px,ease,fade};
+})();
+/* ===== RICETTE DELLE ANIMAZIONI (v257) — copia di .../ricette.js: una per incantesimo ===== */
+/* Ricette: una per ogni incantesimo dei PG (123 incantesimi, 169 voci nelle schede). Chiave = nome inglese di SPELLS.
+   Ogni ricetta: durata e strati (el = elemento del motore, forma e raggio in metri, pal = tavolozza, da/a = finestra di tempo 0-1). */
+window.RICETTE={
+/* ---------- trucchetti ---------- */
+'Fire Bolt':{dur:1100,strati:[{el:'dardo',pal:'fuoco',w:5,testa:7},{el:'particelle',pal:'fuoco',forma:'sfera',r:1,moto:'fuori',n:30,s:2,da:.5}]},
+'Sorcerous Burst':{dur:1200,strati:[{el:'dardo',pal:'arcano',curva:.6,w:4,testa:7},{el:'particelle',pal:'psichico',forma:'sfera',r:1.2,moto:'fuori',n:40,s:2,da:.5},{el:'anelli',pal:'arcano',r:1.2,n:2,w:4,da:.55}]},
+'Thorn Whip':{dur:1000,strati:[{el:'filo',pal:'natura',onda:14,w:4},{el:'schegge',pal:'natura',forma:'sfera',r:.8,n:10,da:.35},{el:'glifo',tipo:'vite',pal:'natura',s:1,da:.4}]},
+'Starry Wisp':{dur:1200,strati:[{el:'dardo',pal:'luna',w:3,testa:5},{el:'particelle',pal:'luna',forma:'sfera',r:1,moto:'orbita',n:24,s:1.5,da:.45},{el:'glifo',tipo:'stella',pal:'luna',s:.8,da:.5}]},
+'Guidance':{dur:1200,strati:[{el:'sigillo',pal:'oro',stile:'stella',r:.9},{el:'bagliore',pal:'radioso',r:1.2,alpha:.5}]},
+'Minor Illusion':{dur:1300,strati:[{el:'nebbia',pal:'ombra',forma:'sfera',r:1.5,n:20},{el:'glifo',tipo:'maschera',pal:'ombra',s:1.1,da:.2}]},
+'Light':{dur:1300,strati:[{el:'bagliore',pal:'radioso',r:2.5,cresce:true},{el:'raggi',pal:'radioso',r:3,n:12},{el:'glifo',tipo:'sole',pal:'radioso',s:1}]},
+'Mage Hand':{dur:1200,strati:[{el:'filo',pal:'arcano',tratto:true,w:2},{el:'glifo',tipo:'mano',pal:'arcano',s:1.1,da:.2}]},
+'Shillelagh':{dur:1200,strati:[{el:'arma',tipo:'martello',pal:'natura',centro:'a'},{el:'particelle',pal:'natura',forma:'personale',centro:'a',moto:'orbita',n:20,s:2},{el:'glifo',tipo:'foglia',pal:'natura',centro:'a',s:.8,da:.3}]},
+'Toll the Dead':{dur:1300,strati:[{el:'onde',pal:'necro',r:2.5,n:4},{el:'glifo',tipo:'teschio',pal:'necro',s:1.1},{el:'volute',pal:'necro',r:1,n:5,da:.3}]},
+'Spare the Dying':{dur:1300,strati:[{el:'anello',pal:'cura',r:.9},{el:'glifo',tipo:'cuore',pal:'cura',s:.9,pulsa:true},{el:'bagliore',pal:'cura',r:1.2,alpha:.5}]},
+'Thaumaturgy':{dur:1200,strati:[{el:'tremolio',pal:'tuono',centro:'a'},{el:'onde',pal:'tuono',centro:'a',r:2.5,n:3},{el:'glifo',tipo:'bocca',pal:'tuono',centro:'a',s:.9}]},
+'Shocking Grasp':{dur:900,strati:[{el:'saetta',pal:'fulmine',origine:'a'},{el:'archi',pal:'fulmine',r:.9,n:8,da:.2}]},
+/* ---------- 1° livello ---------- */
+'Animal Friendship':{dur:1300,strati:[{el:'glifo',tipo:'zampa',pal:'natura',s:1,pulsa:true},{el:'particelle',pal:'cura',forma:'sfera',r:1,moto:'orbita',n:16,s:2},{el:'glifo',tipo:'cuore',pal:'cura',s:.5,da:.5}]},
+'Bane':{dur:1400,strati:[{el:'sigillo',pal:'necro',stile:'triangolo',r:1,gira:-1.2},{el:'volute',pal:'necro',r:.9,n:5,da:.2},{el:'glifo',tipo:'freccegiu',pal:'necro',s:.7,da:.4}]},
+'Goodberry':{dur:1200,strati:[{el:'glifo',tipo:'bacca',pal:'natura',centro:'a',s:1},{el:'particelle',pal:'natura',forma:'personale',centro:'a',moto:'su',n:24,s:2}]},
+'Bless':{dur:1500,strati:[{el:'sigillo',pal:'oro',stile:'cerchio',r:1.2},{el:'particelle',pal:'oro',forma:'bersaglio',moto:'su',n:30,s:2},{el:'colonna',pal:'radioso',r:.6,h:120,da:.1}]},
+'Charm Person':{dur:1300,strati:[{el:'glifo',tipo:'cuore',pal:'psichico',s:1,pulsa:true},{el:'onde',pal:'psichico',r:2,n:3}]},
+'Ensnaring Strike':{dur:1300,strati:[{el:'viticci',pal:'natura',forma:'bersaglio',n:10,spine:true,lung:1.2},{el:'anello',pal:'natura',r:.9,tratto:true,da:.3}]},
+'Command':{dur:1200,strati:[{el:'onde',pal:'tuono',centro:'a',r:2,n:3},{el:'glifo',tipo:'corona',pal:'oro',s:1},{el:'glifo',tipo:'parole',pal:'tuono',centro:'a',s:.8,da:.1}]},
+'Create or Destroy Water':{dur:1400,strati:[{el:'contorno',forma:'sfera',r:1.5,col:'#6FB8E8'},{el:'pioggia',pal:'acqua',forma:'sfera',r:1.5,n:40},{el:'glifo',tipo:'goccia',pal:'acqua',s:.9}]},
+'Cure Wounds':{dur:1400,strati:[{el:'particelle',pal:'cura',forma:'bersaglio',moto:'su',n:50,s:2.2,alt:2.5},{el:'anello',pal:'cura',r:.9},{el:'bagliore',pal:'cura',r:1.3,alpha:.5}]},
+'Magic Missile':{dur:1300,strati:[{el:'dardo',pal:'arcano',n:3,curva:.9,sfasa:.14,w:4,testa:6}]},
+'Guiding Bolt':{dur:1400,strati:[{el:'dardo',pal:'radioso',w:6,testa:8,volo:.45},{el:'colonna',pal:'radioso',r:.9,h:200,da:.45},{el:'anello',pal:'oro',r:.9,da:.5}]},
+'Compelled Duel':{dur:1400,strati:[{el:'filo',pal:'oro',tratto:true,w:3},{el:'glifo',tipo:'spada',pal:'oro',s:1},{el:'anello',pal:'oro',centro:'a',r:.9}]},
+'Divine Favor':{dur:1300,strati:[{el:'arma',tipo:'spada',pal:'radioso',centro:'a'},{el:'particelle',pal:'radioso',forma:'personale',centro:'a',moto:'orbita',n:24,s:2}]},
+'Detect Evil and Good':{dur:1600,strati:[{el:'contorno',forma:'emanazione',r:9,col:'#FFE9A8'},{el:'raggi',pal:'radioso',centro:'a',r:9,n:18,gira:.6},{el:'glifo',tipo:'occhio',pal:'oro',centro:'a',s:1}]},
+'Detect Magic':{dur:1600,strati:[{el:'contorno',forma:'emanazione',r:9,col:'#B48CFF'},{el:'onde',pal:'arcano',centro:'a',r:9,n:4,piatto:false},{el:'glifo',tipo:'occhio',pal:'arcano',centro:'a',s:1}]},
+'Detect Poison and Disease':{dur:1600,strati:[{el:'contorno',forma:'emanazione',r:9,col:'#7FBF3A'},{el:'particelle',pal:'veleno',forma:'emanazione',r:9,moto:'orbita',n:40,s:2},{el:'glifo',tipo:'goccia',pal:'veleno',centro:'a',s:.9}]},
+'Inflict Wounds':{dur:1300,strati:[{el:'glifo',tipo:'mano',pal:'necro',s:1.1,sopra:false},{el:'volute',pal:'necro',r:1.2,n:8},{el:'bagliore',pal:'necro',r:1.3,alpha:.6}]},
+'Entangle':{dur:1600,strati:[{el:'contorno',forma:'cubo',lato:6,col:'#5E9E3B'},{el:'viticci',pal:'natura',forma:'cubo',lato:6,n:22,spine:true}]},
+'Faerie Fire':{dur:1600,strati:[{el:'contorno',forma:'cubo',lato:6,col:'#CFD8F0'},{el:'particelle',pal:'luna',forma:'cubo',lato:6,moto:'orbita',n:70,s:2.2},{el:'particelle',pal:'psichico',forma:'cubo',lato:6,moto:'su',n:30,s:2,da:.2}]},
+"Hunter's Mark":{dur:1300,strati:[{el:'filo',pal:'sangue',tratto:true,w:2},{el:'sigillo',pal:'sangue',stile:'triangolo',r:.9,gira:0},{el:'anello',pal:'sangue',r:.9,tratto:true}]},
+'Fog Cloud':{dur:1800,strati:[{el:'contorno',forma:'sfera',r:6,col:'#D8E6E0'},{el:'nebbia',pal:'vento',forma:'sfera',r:6,n:44,alpha:.6}]},
+'Thunderwave':{dur:1000,strati:[{el:'contorno',forma:'cubo',lato:4.5,adiacente:true,col:'#E8D7AE'},{el:'anelli',pal:'tuono',centro:'a',r:4.5,n:3,w:7},{el:'vento',pal:'vento',forma:'cubo',lato:4.5,adiacente:true,n:12}]},
+'Speak with Animals':{dur:1300,strati:[{el:'glifo',tipo:'zampa',pal:'natura',centro:'a',s:.9},{el:'glifo',tipo:'parole',pal:'natura',centro:'a',s:.7,da:.3},{el:'onde',pal:'natura',centro:'a',r:2,n:3}]},
+'Healing Word':{dur:1300,strati:[{el:'glifo',tipo:'parole',pal:'cura',centro:'a',s:.7,a:.5},{el:'dardo',pal:'cura',w:3,testa:4,volo:.4},{el:'particelle',pal:'cura',forma:'bersaglio',moto:'su',n:30,s:2,da:.4}]},
+'Longstrider':{dur:1200,strati:[{el:'glifo',tipo:'impronta',pal:'vento',s:.9},{el:'particelle',pal:'vento',forma:'bersaglio',moto:'fuori',n:20,s:1.8,piatto:true,luce:false}]},
+'Protection from Evil and Good':{dur:1500,strati:[{el:'sigillo',pal:'oro',stile:'croce',r:1.1},{el:'anello',pal:'oro',r:.9},{el:'raggi',pal:'radioso',r:1.6,n:10}]},
+'Ice Knife':{dur:1300,strati:[{el:'dardo',pal:'gelo',w:4,testa:7,volo:.5},{el:'contorno',forma:'sfera',r:1.5,col:'#9FD8FF',da:.5},{el:'schegge',pal:'gelo',forma:'sfera',r:1.5,n:24,da:.5}]},
+'Divine Smite':{dur:1200,strati:[{el:'arma',tipo:'spada',pal:'radioso',centro:'a'},{el:'colonna',pal:'radioso',r:.8,h:160},{el:'anelli',pal:'radioso',r:1.5,n:2,w:5,da:.2}]},
+'Thunderous Smite':{dur:1100,strati:[{el:'arma',tipo:'martello',pal:'tuono',centro:'a'},{el:'anelli',pal:'tuono',r:2,n:3,w:6},{el:'tremolio',pal:'tuono'}]},
+'Purify Food and Drink':{dur:1300,strati:[{el:'contorno',forma:'sfera',r:1.5,col:'#6FB8E8'},{el:'particelle',pal:'acqua',forma:'sfera',r:1.5,moto:'su',n:30,s:2},{el:'glifo',tipo:'pane',pal:'acqua',s:.9}]},
+"Tasha's Hideous Laughter":{dur:1500,strati:[{el:'glifo',tipo:'risata',pal:'psichico',s:1.2,pulsa:true},{el:'tremolio',pal:'psichico'},{el:'onde',pal:'psichico',r:1.8,n:3}]},
+'Jump':{dur:1100,strati:[{el:'glifo',tipo:'freccia',pal:'vento',s:1,pulsa:true},{el:'particelle',pal:'terra',forma:'bersaglio',moto:'fuori',n:16,s:2,piatto:true,luce:false},{el:'anello',pal:'vento',r:.8}]},
+'Sanctuary':{dur:1400,strati:[{el:'glifo',tipo:'scudo',pal:'oro',s:1.1},{el:'anello',pal:'oro',r:.9},{el:'bagliore',pal:'radioso',r:1.4,alpha:.5}]},
+'Shield':{dur:900,strati:[{el:'glifo',tipo:'scudo',pal:'arcano',centro:'a',s:1.6,pulsa:true,sopra:false},{el:'anelli',pal:'arcano',centro:'a',r:1.3,n:2,w:4}]},
+'Shield of Faith':{dur:1500,strati:[{el:'glifo',tipo:'scudo',pal:'oro',s:1},{el:'sigillo',pal:'oro',stile:'cerchio',r:1.1,gira:.8},{el:'particelle',pal:'oro',forma:'bersaglio',moto:'orbita',n:20,s:2}]},
+'Chromatic Orb':{dur:1300,strati:[{el:'dardo',pal:'arcano',w:5,testa:9,volo:.5},{el:'particelle',pal:'fuoco',forma:'sfera',r:1.2,moto:'fuori',n:16,s:2,da:.5},{el:'particelle',pal:'gelo',forma:'sfera',r:1.2,moto:'fuori',n:16,s:2,da:.5},{el:'particelle',pal:'veleno',forma:'sfera',r:1.2,moto:'fuori',n:16,s:2,da:.5},{el:'anelli',pal:'psichico',r:1.2,n:2,w:4,da:.55}]},
+'Find Familiar':{dur:1600,pf:.72,strati:[{el:'contorno',forma:'sfera',r:1.5,col:'#D9B15C'},{el:'particelle',pal:'oro',forma:'sfera',r:1.5,moto:'dentro',n:60,s:2.2},{el:'glifo',tipo:'zampa',pal:'oro',s:1,da:.6},{el:'bagliore',pal:'radioso',r:1.5,da:.6,alpha:.6}]},
+/* ---------- 2° livello ---------- */
+'Aid':{dur:1400,strati:[{el:'glifo',tipo:'cuore',pal:'oro',s:1,pulsa:true},{el:'particelle',pal:'cura',forma:'bersaglio',moto:'su',n:30,s:2},{el:'anello',pal:'oro',r:.9}]},
+'Alter Self':{dur:1400,strati:[{el:'glifo',tipo:'maschera',pal:'arcano',centro:'a',s:1.1,gira:.6},{el:'volute',pal:'arcano',centro:'a',r:1,n:6}]},
+'Spiritual Weapon':{dur:1500,strati:[{el:'arma',tipo:'martello',pal:'radioso'},{el:'sigillo',pal:'radioso',stile:'cerchio',r:.9},{el:'anelli',pal:'radioso',r:1.2,n:2,w:4,da:.4}]},
+'Hold Person':{dur:1400,strati:[{el:'glifo',tipo:'catene',pal:'arcano',s:1.6,sopra:false},{el:'anello',pal:'arcano',r:.9,tratto:true},{el:'bagliore',pal:'arcano',r:1.2,alpha:.5}]},
+'Calm Emotions':{dur:1700,strati:[{el:'contorno',forma:'sfera',r:6,col:'#E08CD8'},{el:'onde',pal:'psichico',r:6,n:5},{el:'particelle',pal:'psichico',forma:'sfera',r:6,moto:'giu',n:40,s:2,alt:1.5}]},
+'Blindness/Deafness':{dur:1400,strati:[{el:'glifo',tipo:'occhio',pal:'ombra',s:1,a:.6},{el:'glifo',tipo:'orecchio',pal:'ombra',s:1,da:.5},{el:'volute',pal:'ombra',r:.9,n:5}]},
+'Spike Growth':{dur:1700,strati:[{el:'contorno',forma:'sfera',r:6,col:'#5E9E3B'},{el:'viticci',pal:'natura',forma:'sfera',r:6,n:28,spine:true,lung:.6},{el:'schegge',pal:'terra',forma:'sfera',r:6,n:30,piatto:true,da:.2}]},
+'Summon Beast':{dur:1700,pf:.72,strati:[{el:'contorno',forma:'sfera',r:1.5,col:'#5E9E3B'},{el:'particelle',pal:'natura',forma:'sfera',r:1.5,moto:'dentro',n:70,s:2.5},{el:'glifo',tipo:'zampa',pal:'natura',s:1.1,da:.6},{el:'bagliore',pal:'cura',r:1.6,da:.6}]},
+'Continual Flame':{dur:1400,strati:[{el:'glifo',tipo:'fiamma',pal:'fuoco',s:1,pulsa:true,sopra:false},{el:'bagliore',pal:'fuoco',r:1.5,alpha:.6},{el:'raggi',pal:'fuoco',r:6,n:12,gira:.2}]},
+'Gust of Wind':{dur:1500,strati:[{el:'contorno',forma:'linea',L:18,W:3,col:'#D8E6E0'},{el:'vento',pal:'vento',forma:'linea',L:18,W:3,n:24},{el:'particelle',pal:'vento',forma:'linea',L:18,W:3,moto:'fermo',n:30,s:1.5,luce:false}]},
+'Shatter':{dur:1100,strati:[{el:'contorno',forma:'sfera',r:3,col:'#E8D7AE'},{el:'anelli',pal:'tuono',r:3,n:3,w:6},{el:'schegge',pal:'ferro',forma:'sfera',r:3,n:22},{el:'glifo',tipo:'nota',pal:'tuono',s:.9}]},
+'Mirror Image':{dur:1400,strati:[{el:'fantasmi',centro:'a'},{el:'bagliore',pal:'arcano',centro:'a',r:1.4,alpha:.5}]},
+'Enlarge/Reduce':{dur:1300,strati:[{el:'glifo',tipo:'freccia',pal:'arcano',s:1.1,pulsa:true},{el:'anelli',pal:'arcano',r:1.5,n:2,w:4},{el:'glifo',tipo:'freccegiu',pal:'arcano',s:.6,da:.5}]},
+'Flame Blade':{dur:1300,strati:[{el:'arma',tipo:'spada',pal:'fuoco',centro:'a'},{el:'particelle',pal:'fuoco',forma:'personale',centro:'a',moto:'orbita',n:30,s:2.2}]},
+'Warding Bond':{dur:1500,strati:[{el:'filo',pal:'oro',w:3},{el:'anello',pal:'oro',centro:'a',r:.9},{el:'anello',pal:'oro',r:.9},{el:'glifo',tipo:'catene',pal:'oro',s:1.2,da:.3}]},
+'Locate Animals or Plants':{dur:1500,strati:[{el:'glifo',tipo:'foglia',pal:'natura',centro:'a',s:.9,a:.6},{el:'onde',pal:'natura',centro:'a',r:4,n:4},{el:'glifo',tipo:'freccia',pal:'natura',centro:'a',s:.9,gira:2,da:.4}]},
+'Locate Object':{dur:1500,strati:[{el:'glifo',tipo:'lente',pal:'arcano',centro:'a',s:1,a:.6},{el:'onde',pal:'arcano',centro:'a',r:4,n:4},{el:'glifo',tipo:'freccia',pal:'arcano',centro:'a',s:.9,gira:2,da:.4}]},
+'Animal Messenger':{dur:1400,strati:[{el:'glifo',tipo:'ala',pal:'natura',s:1,pulsa:true},{el:'glifo',tipo:'parole',pal:'natura',centro:'a',s:.7,a:.5},{el:'filo',pal:'natura',tratto:true,w:2}]},
+'Pass without Trace':{dur:1700,strati:[{el:'contorno',forma:'emanazione',r:9,col:'#5A5470'},{el:'nebbia',pal:'ombra',forma:'emanazione',r:9,n:40,alpha:.45},{el:'glifo',tipo:'impronta',pal:'ombra',centro:'a',s:.9}]},
+'Misty Step':{dur:1000,pf:.3,strati:[{el:'nebbia',pal:'vento',forma:'personale',centro:'a',n:14,alpha:.7,a:.5},{el:'dardo',pal:'vento',w:2,testa:4,volo:.3,scia:.5},{el:'nebbia',pal:'vento',forma:'bersaglio',n:14,alpha:.7,da:.3},{el:'bagliore',pal:'luna',r:1,da:.3}]},
+'Barkskin':{dur:1400,strati:[{el:'glifo',tipo:'pietra',pal:'natura',s:1,sopra:false,pulsa:true},{el:'anello',pal:'natura',r:.9},{el:'particelle',pal:'terra',forma:'bersaglio',moto:'orbita',n:18,s:2,luce:false}]},
+'Enhance Ability':{dur:1400,strati:[{el:'glifo',tipo:'freccia',pal:'oro',s:1,pulsa:true},{el:'sigillo',pal:'oro',stile:'rune',r:1.1},{el:'particelle',pal:'oro',forma:'bersaglio',moto:'su',n:24,s:2}]},
+'Prayer of Healing':{dur:1800,strati:[{el:'contorno',forma:'emanazione',r:9,col:'#9BD48A'},{el:'particelle',pal:'cura',forma:'emanazione',r:9,moto:'su',n:90,s:2.2},{el:'sigillo',pal:'oro',stile:'cerchio',centro:'a',r:1.2}]},
+'Augury':{dur:1500,strati:[{el:'glifo',tipo:'cerchiom',pal:'oro',centro:'a',s:1.3,gira:1},{el:'particelle',pal:'oro',forma:'personale',centro:'a',moto:'orbita',n:20,s:2},{el:'glifo',tipo:'punto_int',pal:'oro',centro:'a',s:.9,da:.5}]},
+'Protection from Poison':{dur:1400,strati:[{el:'particelle',pal:'veleno',forma:'bersaglio',moto:'fuori',n:24,s:2,shrink:true},{el:'glifo',tipo:'scudo',pal:'cura',s:1,da:.2},{el:'anello',pal:'cura',r:.9,da:.2}]},
+'Moonbeam':{dur:1600,strati:[{el:'contorno',forma:'cilindro',r:1.5,col:'#CFD8F0'},{el:'colonna',pal:'luna',r:1.5,h:320},{el:'particelle',pal:'luna',forma:'cilindro',r:1.5,moto:'giu',n:40,s:1.8,alt:4}]},
+'Scorching Ray':{dur:1300,strati:[{el:'dardo',pal:'fuoco',n:3,curva:.35,sfasa:.15,w:5,testa:6}]},
+'Gentle Repose':{dur:1500,strati:[{el:'glifo',tipo:'clessidra',pal:'oro',s:1},{el:'particelle',pal:'oro',forma:'bersaglio',moto:'giu',n:20,s:1.8,alt:1},{el:'anello',pal:'oro',r:.9}]},
+'Heat Metal':{dur:1400,strati:[{el:'glifo',tipo:'martello',pal:'fuoco',s:1,pulsa:true},{el:'particelle',pal:'fuoco',forma:'bersaglio',moto:'su',n:30,s:1.8,onda:6},{el:'bagliore',pal:'fuoco',r:1.2,alpha:.6}]},
+'Lesser Restoration':{dur:1300,strati:[{el:'particelle',pal:'cura',forma:'bersaglio',moto:'su',n:34,s:2},{el:'glifo',tipo:'croce',pal:'cura',s:1},{el:'anello',pal:'cura',r:.9}]},
+'Darkvision':{dur:1300,strati:[{el:'glifo',tipo:'occhio',pal:'ombra',s:1},{el:'glifo',tipo:'luna',pal:'luna',s:.6,da:.4},{el:'onde',pal:'ombra',r:2,n:3}]},
+'Beast Sense':{dur:1400,strati:[{el:'glifo',tipo:'occhio',pal:'natura',centro:'a',s:.9},{el:'filo',pal:'natura',tratto:true,w:2},{el:'glifo',tipo:'zampa',pal:'natura',s:.9,da:.3}]},
+'Flaming Sphere':{dur:1500,strati:[{el:'contorno',forma:'sfera',r:1.5,col:'#E8702A'},{el:'particelle',pal:'fuoco',forma:'sfera',r:1.5,moto:'orbita',n:50,s:2.5},{el:'bagliore',pal:'fuoco',r:1.8,alpha:.7}]},
+'Silence':{dur:1700,strati:[{el:'contorno',forma:'sfera',r:6,col:'#5A5470'},{el:'onde',pal:'ombra',r:6,n:4},{el:'glifo',tipo:'orecchio',pal:'ombra',s:1},{el:'nebbia',pal:'ombra',forma:'sfera',r:6,n:20,alpha:.25}]},
+"Dragon's Breath":{dur:1300,strati:[{el:'contorno',forma:'cono',L:4.5,col:'#E8702A'},{el:'particelle',pal:'fuoco',forma:'cono',L:4.5,moto:'fuori',n:90,s:3,vel:1.2},{el:'vento',pal:'fuoco',forma:'cono',L:4.5,n:10}]},
+'Find Steed':{dur:1700,pf:.72,strati:[{el:'contorno',forma:'sfera',r:1.5,col:'#D9B15C'},{el:'particelle',pal:'oro',forma:'sfera',r:1.5,moto:'dentro',n:70,s:2.5},{el:'glifo',tipo:'cavallo',pal:'oro',s:1.3,da:.6},{el:'bagliore',pal:'radioso',r:1.8,da:.6}]},
+'Find Traps':{dur:1500,strati:[{el:'contorno',forma:'sfera',r:6,col:'#B48CFF'},{el:'onde',pal:'arcano',centro:'a',r:6,n:4},{el:'glifo',tipo:'trappola',pal:'arcano',s:1,da:.3}]},
+'Zone of Truth':{dur:1600,strati:[{el:'contorno',forma:'sfera',r:4.5,col:'#D9B15C'},{el:'sigillo',pal:'oro',stile:'cerchio',r:1.2,gira:.6},{el:'glifo',tipo:'libro',pal:'oro',s:1,da:.3}]},
+/* ---------- 3° livello ---------- */
+'Animate Dead':{dur:1600,strati:[{el:'glifo',tipo:'ossa',pal:'necro',s:1.2,sopra:false},{el:'volute',pal:'necro',r:1.3,n:8},{el:'particelle',pal:'necro',forma:'bersaglio',moto:'su',n:30,s:2}]},
+'Elemental Weapon':{dur:1400,strati:[{el:'arma',tipo:'spada',pal:'fuoco'},{el:'archi',pal:'fulmine',r:1,n:5},{el:'particelle',pal:'fuoco',forma:'bersaglio',moto:'orbita',n:20,s:2}]},
+'Aura of Vitality':{dur:1800,strati:[{el:'contorno',forma:'emanazione',r:9,col:'#9BD48A'},{el:'particelle',pal:'cura',forma:'emanazione',r:9,moto:'su',n:90,s:2},{el:'anello',pal:'cura',centro:'a',r:.9}]},
+'Water Walk':{dur:1400,strati:[{el:'glifo',tipo:'onda',pal:'acqua',s:1,sopra:false},{el:'particelle',pal:'acqua',forma:'bersaglio',moto:'fuori',n:24,s:2,piatto:true},{el:'anello',pal:'acqua',r:.9}]},
+'Magic Circle':{dur:1800,strati:[{el:'contorno',forma:'cilindro',r:3,col:'#D9B15C'},{el:'sigillo',pal:'oro',stile:'rune',r:3,gira:.5},{el:'colonna',pal:'radioso',r:3,h:220}]},
+'Clairvoyance':{dur:1600,strati:[{el:'glifo',tipo:'occhio',pal:'arcano',centro:'a',s:1.4},{el:'onde',pal:'arcano',centro:'a',r:4,n:4},{el:'raggi',pal:'arcano',centro:'a',r:3,n:10,gira:.5}]},
+'Counterspell':{dur:1000,strati:[{el:'filo',pal:'arcano',w:3,tratto:true},{el:'particelle',pal:'arcano',forma:'sfera',r:1.5,moto:'dentro',n:40,s:2,da:.2},{el:'glifo',tipo:'esclam',pal:'arcano',s:1,da:.4}]},
+'Create Food and Water':{dur:1500,strati:[{el:'glifo',tipo:'pane',pal:'oro',s:1},{el:'pioggia',pal:'acqua',forma:'sfera',r:1.5,n:30},{el:'bagliore',pal:'radioso',r:1.3,alpha:.4}]},
+'Plant Growth':{dur:1800,strati:[{el:'contorno',forma:'sfera',r:9,col:'#5E9E3B'},{el:'viticci',pal:'natura',forma:'sfera',r:9,n:34,foglie:true,lung:.7},{el:'particelle',pal:'cura',forma:'sfera',r:9,moto:'su',n:50,s:2}]},
+'Dispel Magic':{dur:1200,pf:.35,strati:[{el:'particelle',pal:'arcano',forma:'sfera',r:2,moto:'dentro',n:60,s:2,shrink:true},{el:'glifo',tipo:'chiave',pal:'arcano',s:1,da:.3},{el:'bagliore',pal:'arcano',r:1.4,da:.5}]},
+'Conjure Animals':{dur:1700,pf:.72,strati:[{el:'contorno',forma:'sfera',r:3,col:'#5E9E3B'},{el:'nebbia',pal:'natura',forma:'sfera',r:3,n:20,alpha:.4},{el:'particelle',pal:'natura',forma:'sfera',r:3,moto:'orbita',n:60,s:2.5},{el:'glifo',tipo:'zampa',pal:'natura',s:1,da:.5}]},
+'Summon Fey':{dur:1700,pf:.72,strati:[{el:'contorno',forma:'sfera',r:1.5,col:'#CFD8F0'},{el:'particelle',pal:'luna',forma:'sfera',r:1.5,moto:'dentro',n:70,s:2.2},{el:'glifo',tipo:'ala',pal:'luna',s:1.1,da:.6},{el:'bagliore',pal:'luna',r:1.8,da:.6}]},
+'Beacon of Hope':{dur:1600,strati:[{el:'colonna',pal:'radioso',r:1,h:260},{el:'glifo',tipo:'stella',pal:'oro',s:1,pulsa:true},{el:'raggi',pal:'radioso',r:2.5,n:12,gira:.5}]},
+'Meld into Stone':{dur:1500,strati:[{el:'glifo',tipo:'pietra',pal:'terra',s:1.3,sopra:false},{el:'particelle',pal:'terra',forma:'bersaglio',moto:'dentro',n:40,s:2.5,luce:false},{el:'nebbia',pal:'terra',forma:'bersaglio',n:10,alpha:.5}]},
+'Glyph of Warding':{dur:1600,strati:[{el:'sigillo',pal:'oro',stile:'rune',r:1.2,gira:.3},{el:'bagliore',pal:'radioso',r:1.4,alpha:.5},{el:'glifo',tipo:'esclam',pal:'oro',s:.8,da:.5}]},
+'Spirit Guardians':{dur:1800,strati:[{el:'contorno',forma:'emanazione',r:4.5,col:'#FFE9A8'},{el:'particelle',pal:'radioso',forma:'emanazione',r:4.5,moto:'orbita',n:70,s:2.5},{el:'raggi',pal:'radioso',centro:'a',r:4.5,n:14,gira:.8}]},
+'Sending':{dur:1400,strati:[{el:'glifo',tipo:'parole',pal:'arcano',centro:'a',s:.9},{el:'glifo',tipo:'ala',pal:'arcano',centro:'a',s:.8,da:.3},{el:'onde',pal:'arcano',centro:'a',r:3,n:4,piatto:false}]},
+'Call Lightning':{dur:1400,strati:[{el:'nebbia',pal:'ombra',forma:'sfera',r:9,n:30,alpha:.35,a:.9},{el:'saetta',pal:'fulmine',origine:'cielo',da:.25},{el:'anelli',pal:'fulmine',r:1.5,n:2,w:5,da:.35}]},
+'Tongues':{dur:1400,strati:[{el:'glifo',tipo:'bocca',pal:'oro',s:1},{el:'glifo',tipo:'parole',pal:'oro',s:.7,da:.3},{el:'onde',pal:'oro',r:2,n:3}]},
+'Daylight':{dur:1800,strati:[{el:'contorno',forma:'sfera',r:18,col:'#FFE9A8'},{el:'raggi',pal:'radioso',r:18,n:24,gira:.3},{el:'bagliore',pal:'radioso',r:18,cresce:true,alpha:.5}]},
+'Feign Death':{dur:1500,strati:[{el:'glifo',tipo:'clessidra',pal:'ombra',s:1},{el:'particelle',pal:'ombra',forma:'bersaglio',moto:'giu',n:20,s:2,alt:1,luce:false},{el:'anello',pal:'ombra',r:.9}]},
+'Wind Wall':{dur:1600,strati:[{el:'contorno',forma:'linea',L:15,W:1.5,col:'#D8E6E0'},{el:'vento',pal:'vento',forma:'linea',L:15,W:1.5,n:30},{el:'particelle',pal:'vento',forma:'linea',L:15,W:1.5,moto:'su',n:90,s:2.2,alt:2}]},
+'Fireball':{dur:1700,strati:[{el:'dardo',pal:'fuoco',w:5,testa:8,volo:.4,a:.5},{el:'contorno',forma:'sfera',r:6,col:'#E8702A',da:.4},{el:'particelle',pal:'fuoco',forma:'sfera',r:6,moto:'fuori',n:160,s:3,da:.4,vel:1.6},{el:'anelli',pal:'fuoco',r:6,n:2,w:6,da:.4},{el:'bagliore',pal:'fuoco',r:6,cresce:true,alpha:.7,da:.4},{el:'nebbia',pal:'ombra',forma:'sfera',r:6,n:20,alpha:.35,da:.65}]},
+'Speak with Dead':{dur:1500,strati:[{el:'glifo',tipo:'teschio',pal:'ombra',s:1},{el:'glifo',tipo:'parole',pal:'ombra',s:.7,da:.3},{el:'volute',pal:'ombra',r:1,n:6}]},
+'Speak with Plants':{dur:1400,strati:[{el:'glifo',tipo:'foglia',pal:'natura',centro:'a',s:.9},{el:'glifo',tipo:'parole',pal:'natura',centro:'a',s:.7,da:.3},{el:'onde',pal:'natura',centro:'a',r:2,n:3}]},
+'Mass Healing Word':{dur:1600,strati:[{el:'glifo',tipo:'parole',pal:'cura',centro:'a',s:.8,a:.5},{el:'contorno',forma:'sfera',r:9,col:'#9BD48A',centro:'a'},{el:'particelle',pal:'cura',forma:'sfera',r:9,centro:'a',moto:'su',n:80,s:2}]},
+'Fear':{dur:1500,strati:[{el:'contorno',forma:'cono',L:9,col:'#5A5470'},{el:'volute',pal:'ombra',r:2.5,n:12,dentro:false},{el:'nebbia',pal:'ombra',forma:'cono',L:9,n:24,alpha:.45},{el:'tremolio',pal:'ombra'},{el:'glifo',tipo:'esclam',pal:'ombra',s:1,da:.3}]},
+'Protection from Energy':{dur:1500,strati:[{el:'glifo',tipo:'scudo',pal:'arcano',s:1.1},{el:'archi',pal:'fulmine',r:1,n:5},{el:'particelle',pal:'gelo',forma:'bersaglio',moto:'orbita',n:16,s:2},{el:'particelle',pal:'fuoco',forma:'bersaglio',moto:'orbita',n:16,s:2}]},
+'Water Breathing':{dur:1400,strati:[{el:'glifo',tipo:'goccia',pal:'acqua',s:1},{el:'particelle',pal:'acqua',forma:'bersaglio',moto:'su',n:30,s:2.5,alt:2.5},{el:'anello',pal:'acqua',r:.9}]},
+'Revivify':{dur:1800,strati:[{el:'colonna',pal:'radioso',r:1,h:320},{el:'glifo',tipo:'cuore',pal:'cura',s:1,pulsa:true,da:.3},{el:'particelle',pal:'oro',forma:'bersaglio',moto:'giu',n:40,s:2,alt:3},{el:'anelli',pal:'radioso',r:2,n:2,w:4,da:.5}]},
+'Remove Curse':{dur:1400,strati:[{el:'volute',pal:'necro',r:1.2,n:6,verso:-1,a:.6},{el:'glifo',tipo:'chiave',pal:'oro',s:1,da:.3},{el:'bagliore',pal:'radioso',r:1.4,da:.4}]},
+'Bestow Curse':{dur:1600,strati:[{el:'glifo',tipo:'teschio',pal:'necro',s:1.1},{el:'volute',pal:'necro',r:1.3,n:8},{el:'sigillo',pal:'necro',stile:'triangolo',r:1,gira:-1}]},
+'Sleet Storm':{dur:1800,strati:[{el:'contorno',forma:'cilindro',r:6,col:'#9FD8FF'},{el:'nebbia',pal:'gelo',forma:'cilindro',r:6,n:30,alpha:.4},{el:'pioggia',pal:'gelo',forma:'cilindro',r:6,n:90,vento:4},{el:'glifo',tipo:'fiocco',pal:'gelo',s:1,da:.3}]},
+'Fly':{dur:1300,strati:[{el:'glifo',tipo:'ala',pal:'vento',s:1.2,pulsa:true},{el:'particelle',pal:'vento',forma:'bersaglio',moto:'su',n:30,s:1.8,alt:2.5},{el:'anello',pal:'vento',r:.9}]},
+"Rary's Telepathic Bond":{dur:1500,strati:[{el:'filo',pal:'arcano',tratto:true,w:2},{el:'glifo',tipo:'parole',pal:'arcano',centro:'a',s:.8},{el:'glifo',tipo:'parole',pal:'arcano',s:.8,da:.2},{el:'onde',pal:'psichico',r:2,n:3}]}
+};
+/* ===== ANIMAZIONI DEGLI INCANTESIMI (v257) — 11-10-2026 =====
+   Giuseppe: «vai, proviamole nel sito». Una animazione per ogni incantesimo (motore e ricette del prototipo, qui sopra nel sorgente:
+   MotoreFX e RICETTE), disegnata su un canvas sopra le pedine, a scala di griglia, con il contorno dell'area.
+   Come parte: ogni lancio scrive già un evento nel Registro; qui, al momento del lancio, l'evento riceve `fx` = {en, ids, c}
+   (incantesimo, bersagli, centro dell'area). Ogni client, a ogni render, anima gli eventi più nuovi dell'ultimo visto (FX_VISTI):
+   così tutti vedono la stessa cosa, chi entra dopo non rivede il passato. Benedizione passa dalla sua finestra: l'evento è segnato lì.
+   Più bersagli: le ricette «su una creatura» si ripetono per ciascuno (sfalsate), quelle ad area una volta sola sul centro.
+   Interruttore «animazioni» in alto a destra sulla mappa (localStorage aprutium.fx = 'no'), per i telefoni lenti.
+   Prova rigiocabile in Revisioni/Animazioni degli incantesimi (v257)/. */
+(function(){
+  if(typeof MotoreFX==='undefined'||typeof RICETTE==='undefined'){ console.warn('v257: motore o ricette mancanti'); return; }
+  const FORME_AREA=new Set(['sfera','cubo','cono','linea','cilindro','emanazione']);
+  let cv=null, ctx=null, EFF=[], raf=null;
+  function canvas(){ if(cv) return cv; const w=document.getElementById('world'); if(!w) return null; cv=document.createElement('canvas'); cv.id='fxCanvas'; cv.style.cssText='position:absolute;left:0;top:0;pointer-events:none;z-index:5'; w.appendChild(cv); ctx=cv.getContext('2d'); return cv; }
+  function dimensiona(){ const c=canvas(); if(!c) return false; const W=Math.round(MAP_W||1448), H=Math.round(MAP_H||1086); if(c.width!==W||c.height!==H){ c.width=W; c.height=H; c.style.width=W+'px'; c.style.height=H+'px'; } return true; }
+  const fxOff=()=>{ try{ return localStorage.getItem('aprutium.fx')==='no'; }catch(e){ return false; } };
+  function loop(){ raf=requestAnimationFrame(loop); const now=performance.now(); ctx.clearRect(0,0,cv.width,cv.height); EFF=EFF.filter(e=>now-e.t0<e.dur); for(const e of EFF){ if(now<e.t0) continue; try{ MotoreFX.esegui(e,e.g,(now-e.t0)/e.dur); }catch(err){ e.dur=0; } } if(!EFF.length){ cancelAnimationFrame(raf); raf=null; ctx.clearRect(0,0,cv.width,cv.height); } }
+  function suona(en,a,b,ritardo){ const R=RICETTE[en]; if(!R||!dimensiona()||fxOff()) return false; const e=MotoreFX.nuova(R); e.g={a,b,sq:S.grid.size||30,ctx}; e.t0=performance.now()+(ritardo||0); EFF.push(e); if(!raf) loop(); return true; }
+  function tokDaNome(n){ const k=Object.keys(S.tokens).find(k=>S.tokens[k]&&S.tokens[k].name===n); return k?S.tokens[k]:null; }
+  /* anima un evento del Registro segnato con fx */
+  function animaEvento(ev){ const f=ev.fx; if(!f||!RICETTE[f.en]) return false; const a=(f.a&&S.tokens[f.a])||tokDaNome(ev.who); if(!a) return false; const R=RICETTE[f.en], area=R.strati.some(L=>FORME_AREA.has(L.forma));
+    const centro=f.c&&typeof f.c.x==='number'?f.c:null, ids=(f.ids||[]).filter(i=>S.tokens[i]);
+    if(area||!ids.length){ const b=centro||(ids.length?S.tokens[ids[0]]:null)||a; return suona(f.en,{x:a.x,y:a.y},{x:b.x,y:b.y},0); }
+    let n=0; ids.slice(0,6).forEach((i,k)=>{ const t=S.tokens[i]; if(suona(f.en,{x:a.x,y:a.y},{x:t.x,y:t.y},k*140)) n++; }); return n>0; }
+  /* eventi nuovi dal Registro (tutti i client) */
+  /* FX_T = l'istante in cui questo client ha caricato il tavolo (gli eventi di prima non si animano); FX_VISTI = eventi già animati.
+     Il segno fx arriva dopo il primo render del lancio (il salvataggio ridisegna prima che il lancio finisca), quindi si guarda per chiave, non per tempo. */
+  let FX_T=null; const FX_VISTI=new Set();
+  function sorveglia(){ const log=S.log||[]; if(FX_T==null){ FX_T=Math.max(0,...log.map(e=>+e.t||0)); return; }
+    for(const ev of log){ const t=+ev.t||0; if(t<=FX_T||!ev.fx) continue; const k=t+':'+(ev.who||'')+':'+ev.fx.en; if(FX_VISTI.has(k)) continue; FX_VISTI.add(k); try{ animaEvento(ev); }catch(e){ console.warn('v257 anima',e); } }
+    if(FX_VISTI.size>400){ const arr=[...FX_VISTI]; arr.slice(0,200).forEach(k=>FX_VISTI.delete(k)); } }
+  { const _r=render; render=function(){ const out=_r.apply(this,arguments); try{ if(READY){ dimensiona(); sorveglia(); } }catch(e){ console.warn('v257',e); } return out; }; }
+  /* segna l'evento del lancio: incantesimo, bersagli, centro */
+  function segna(id,name,ids,c,prima){ const t=S.tokens[id]; if(!t) return; const ev=(S.log||[]).find(e=>!prima.has(e)&&(e.kind==='spell'||e.kind==='atk')&&e.who===t.name); if(!ev) return; ev.fx={en:name,a:id,ids:(ids||[]).slice(0,8),c:c||undefined}; }
+  { const _rc=resolveCast; resolveCast=function(id,name,slot,ids){ const prima=new Set(S.log||[]); let c=null; try{ const box=document.getElementById('modal'); const s2=box&&box.querySelector('#cCentro2'), s1=box&&box.querySelector('#cCentro'); const v=(s2&&s2.dataset.sp===name)?s2.value:(s1&&s1.value)||null; if(v==='_aoe'&&S.aoe) c={x:S.aoe.x,y:S.aoe.y}; else if(v&&v!=='_me'&&S.tokens[v]) c={x:S.tokens[v].x,y:S.tokens[v].y}; }catch(e){}
+      if(!c&&window.__v256&&__v256.CENTRO_FORZATO){ const v=__v256.CENTRO_FORZATO; if(v==='_aoe'&&S.aoe) c={x:S.aoe.x,y:S.aoe.y}; else if(S.tokens[v]) c={x:S.tokens[v].x,y:S.tokens[v].y}; }
+      const r=_rc.apply(this,arguments);
+      try{ if(!c){ const tk=Object.values(S.tokens).find(x=>x&&x.spellTok===name&&x.owner===id); if(tk) c={x:tk.x,y:tk.y}; } segna(id,name,ids,c,prima); save(true); }catch(e){ console.warn('v257 segna',e); } return r; }; }
+  if(typeof resolveCastMulti==='function'){ const _rm=resolveCastMulti; resolveCastMulti=function(id,name,slot,ids){ const prima=new Set(S.log||[]); const r=_rm.apply(this,arguments); try{ segna(id,name,[...new Set(ids||[])],null,prima); }catch(e){} return r; }; }
+  { const _ob=openBlessPicker; openBlessPicker=function(id){ const r=_ob.apply(this,arguments); try{ const box=document.getElementById('modal'), go=box&&box.querySelector('#blessGo'); if(!go) return r; const orig=go.onclick; go.onclick=function(ev){ const ids=[...box.querySelectorAll('[name=blessTgt]:checked')].map(x=>x.value), prima=new Set(S.log||[]); const out=orig?orig.call(this,ev):undefined; try{ segna(id,'Bless',ids,null,prima); save(true); }catch(e){} return out; }; }catch(e){} return r; }; }
+  /* interruttore */
+  function bottone(){ const st=document.getElementById('stage'); if(!st||document.getElementById('fxToggle')) return; const b=document.createElement('button'); b.id='fxToggle'; b.type='button'; b.title='Animazioni degli incantesimi: accese o spente (solo su questo schermo)'; b.style.cssText='position:absolute;right:8px;top:8px;z-index:6;font:12px var(--sans,sans-serif);color:#E8D7AE;background:rgba(11,15,24,.75);border:1px solid rgba(217,177,92,.45);border-radius:5px;padding:2px 8px;cursor:pointer;opacity:.75';
+    const agg=()=>{ b.textContent=fxOff()?'✦ animazioni: spente':'✦ animazioni: accese'; }; b.onclick=e=>{ e.stopPropagation(); try{ localStorage.setItem('aprutium.fx',fxOff()?'si':'no'); }catch(x){} agg(); if(fxOff()){ EFF=[]; if(ctx) ctx.clearRect(0,0,cv.width,cv.height); } }; agg(); st.appendChild(b); }
+  bottone(); setTimeout(bottone,1500);
+  window.__v257={suona,animaEvento,sorveglia,segna,attivi:()=>EFF.length,azzera:()=>{ EFF=[]; },visti:FX_VISTI,t:()=>FX_T};
+})();
+/* ===== FINE ANIMAZIONI DEGLI INCANTESIMI (v257) ===== */
 </script>
