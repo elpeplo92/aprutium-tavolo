@@ -2529,7 +2529,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v247</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v248</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -4247,7 +4247,7 @@ function invEquip(id,items,partenza){
 function pgAcBase(id){ const v=(typeof PLAYER_V85!=='undefined'&&PLAYER_V85[id])||null, t=S.tokens[id]; return v&&v.ac!=null?+v.ac:(t?+t.ac:10); }
 function invCaSum(id,t,eq){ return invCaBreakdown(id,t,eq,true).reduce((s,[,v])=>s+v,0); }
 function pgAcResid(id){ const t=S.tokens[id]; if(!t||!SHEETS[id]) return 0; const items=invItems(id); return pgAcBase(id)-invCaSum(id,t,invEquip(id,items,true)); }
-function pgAcNow(id){ const t=S.tokens[id]; if(!t||!SHEETS[id]) return t?t.ac:null; const items=invItems(id); return invCaSum(id,t,invEquip(id,items))+pgAcResid(id); }
+function pgAcNow(id){ const t=S.tokens[id]; if(!t||!SHEETS[id]) return t?t.ac:null; const items=invItems(id); return invCaSum(id,t,invEquip(id,items))+pgAcResid(id)+(hasCondition(t,'scudofede')?2:0); }
 function invTwoHanded(it){ return !!it&&/due mani/i.test(String(it.stats||''))&&!/versatile/i.test(String(it.stats||'')); }
 /* mette in mano un'arma (o uno scudo): con un'arma a due mani lo scudo va via, con lo scudo va via l'arma a due mani. Ritorna quello che ha tolto. */
 function invHold(id,it){
@@ -4587,7 +4587,7 @@ const SPELL_RULES={
  'Mass Healing Word':{m:'cura',mod:true,max:6},
  'Aura of Vitality':{m:'cura',mod:false,uno:true},
  'Aid':{m:'effetto',max:3,alleati:true},
- 'Shield of Faith':{m:'effetto',uno:true,alleati:true},
+ 'Shield of Faith':{m:'effetto',uno:true,alleati:true,condSu:'scudofede',nota:'+2 alla CA finché dura la concentrazione (10 minuti)'},
  'Protection from Evil and Good':{m:'effetto',uno:true,alleati:true,condSu:'protetto',nota:'aberrazioni, celestiali, elementali, folletti, immondi e non morti hanno svantaggio ad attaccarlo e non possono affascinarlo, spaventarlo né possederlo'},
  'Guidance':{m:'effetto',uno:true,alleati:true},
  'Barkskin':{m:'effetto',uno:true,alleati:true},
@@ -5767,8 +5767,8 @@ function checkTurn(){
 }
 
 /* ---------- condizioni ---------- */
-const CONDS=[['prono','Prono'],['afferrato','Afferrato'],['trattenuto','Trattenuto'],['spaventato','Spaventato'],['avvelenato','Avvelenato'],['affascinato','Affascinato'],['accecato','Accecato'],['assordato','Assordato'],['stordito','Stordito'],['incapacitato','Incapacitato'],['paralizzato','Paralizzato'],['invisibile','Invisibile'],['concentrazione','Concentrazione'],['benedetto','Benedetto'],['marchiato','Marchiato'],['scatto','In scatto'],['protetto','Protetto dal male']];
-const CONDS_ABBR={prono:'PRN',afferrato:'AFF',trattenuto:'TRA',spaventato:'SPA',avvelenato:'VEL',affascinato:'CHA',accecato:'CIE',assordato:'SOR',stordito:'STO',incapacitato:'INC',paralizzato:'PAR',invisibile:'INV',concentrazione:'CON',benedetto:'BEN',marchiato:'MAR',scatto:'SCA',protetto:'PRO'};
+const CONDS=[['prono','Prono'],['afferrato','Afferrato'],['trattenuto','Trattenuto'],['spaventato','Spaventato'],['avvelenato','Avvelenato'],['affascinato','Affascinato'],['accecato','Accecato'],['assordato','Assordato'],['stordito','Stordito'],['incapacitato','Incapacitato'],['paralizzato','Paralizzato'],['invisibile','Invisibile'],['concentrazione','Concentrazione'],['benedetto','Benedetto'],['marchiato','Marchiato'],['scatto','In scatto'],['protetto','Protetto dal male'],['scudofede','Scudo della fede']];
+const CONDS_ABBR={prono:'PRN',afferrato:'AFF',trattenuto:'TRA',spaventato:'SPA',avvelenato:'VEL',affascinato:'CHA',accecato:'CIE',assordato:'SOR',stordito:'STO',incapacitato:'INC',paralizzato:'PAR',invisibile:'INV',concentrazione:'CON',benedetto:'BEN',marchiato:'MAR',scatto:'SCA',protetto:'PRO',scudofede:'SDF'};
 function condLabel(k){ const c=CONDS.find(x=>x[0]===k); return c?c[1]:k; }
 function clearBlessing(source){ for(const x of Object.values(S.tokens)) x.conds=(x.conds||[]).filter(c=>!(c.n==='benedetto'&&c.source===source)); }
 function toggleCond(id,k,rounds){ const t=S.tokens[id]; if(!t) return; t.conds=t.conds||[]; const i=t.conds.findIndex(c=>c.n===k); if(i>=0){ const old=t.conds[i]; t.conds.splice(i,1); if(old.n==='concentrazione'&&old.source==='benedizione') clearBlessing(id); if(old.n==='concentrazione'&&old.spell) spellEnd(id,old.spell,'fine della concentrazione'); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} non è più ${condLabel(k).toLowerCase()}`}); } else { t.conds.push({n:k,r:rounds||null}); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name}: ${condLabel(k).toLowerCase()}${rounds?` per ${rounds} round`:''}`}); } save(); }
@@ -6956,7 +6956,7 @@ CONDS.push(['legame','Legame di interdizione']); CONDS_ABBR.legame='LEG';
 const BOND_M=18, BOND_TOUCH=1.5;
 function bondOf(t){ return ((t&&t.conds)||[]).find(c=>c.n==='legame'); }
 function bondOn(t){ return !!bondOf(t); }
-function tokAc(t,base){ let a=base; if(a==null&&t){ const id=fxIdOf(t), form=id?activeWildForm(id,t):null; a=form?form.ac:(id&&SHEETS[id]?pgAcNow(id):t.ac); } return a==null?a:(+a)+(bondOn(t)?1:0); }
+function tokAc(t,base){ let a=base; if(a==null&&t){ const id=fxIdOf(t), form=id?activeWildForm(id,t):null; a=form?form.ac:(id&&SHEETS[id]?pgAcNow(id):t.ac); } return a==null?a:(+a)+(bondOn(t)?1:0)+((t&&base==null&&!(fxIdOf(t)&&SHEETS[fxIdOf(t)])&&hasCondition(t,'scudofede'))?2:0); }
 function bondEnd(tid,why){ const t=S.tokens[tid], c=bondOf(t); if(!c) return false; const by=c.source&&S.tokens[c.source]; t.conds=t.conds.filter(x=>x.n!=='legame'); log({kind:'sys',txt:`Legame di interdizione${by?` di ${by.name}`:''} su ${t.name}: finisce${why?` (${why})`:''}`}); return true; }
 function bondEndAll(id,why){ let n=0; for(const [k,x] of Object.entries(S.tokens)){ const c=bondOf(x); if(c&&(k===id||c.source===id)&&bondEnd(k,why)) n++; } return n; }
 function bondRest(id){ return bondEndAll(id,'riposo: è passata più di un’ora'); }
@@ -7451,7 +7451,8 @@ function uiIcoAll(root){ try{ const r=root||document; uiIcoSwap(); r.querySelect
    che nuocciono, oro per quelle buone (COND_BUONE). I round restanti stanno in un numerino sull'angolo. Il nome completo
    resta nel suggerimento (title). Nella scheda il simbolo va accanto al nome. Il testo dei segnali lo scrive ancora condHtml():
    condBadges() lo sostituisce dopo ogni disegno della pagina (chiamata da uiIcoAll). */
-const COND_BUONE=new Set(['benedetto','concentrazione','legame','invisibile','scatto','protetto']);
+const COND_BUONE=new Set(['benedetto','concentrazione','legame','invisibile','scatto','protetto','scudofede']);
+UI_ICO.c_scudofede='<path d="M12 2.5l7.5 3v6.2c0 4.6-3.2 8-7.5 9.8-4.3-1.8-7.5-5.2-7.5-9.8V5.5z"/><path d="M9 12h6M12 9v6"/>';
 UI_ICO.c_protetto='<path d="M12 2.5l7.5 3v6.2c0 4.6-3.2 8-7.5 9.8-4.3-1.8-7.5-5.2-7.5-9.8V5.5z"/><path d="M12 7v9M8 11.5h8"/>';
 function condKeyDaEtichetta(lbl){ lbl=String(lbl||'').split(' · ')[0].trim(); const c=CONDS.find(x=>x[1]===lbl); return c?c[0]:''; }
 function condBadges(root){ const r=root||document;
