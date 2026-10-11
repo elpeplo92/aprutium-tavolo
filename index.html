@@ -2549,7 +2549,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v251</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v252</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -5929,7 +5929,7 @@ function applyDamage(t,v){ // v>0 danni
     else log({kind:'hit',txt:`${t.name} subisce danni a 0 PF${era?' e non è più stabile':''}: ${n===2?'due fallimenti (colpo critico)':'un fallimento'} contro la morte (${f} su 3)`});
     return; }
   const avanzo=left-t.hp; t.hp=Math.max(0,t.hp-left);
-  { const c=typeof concOf==='function'?concOf(t):null; if(c){ const id=fxIdOf(t); if(t.hp<=0){ if(id) concEnd(id,`${t.name} cade a 0 PF`); } else log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} subisce danni mentre si concentra${c.spell&&SPELLS[c.spell]?' su '+SPELLS[c.spell].it:''}: tiro salvezza su Costituzione CD ${Math.max(10,Math.floor(left/2))} o la concentrazione finisce`}); } }
+  { const c=typeof concOf==='function'?concOf(t):null; if(c){ const id=fxIdOf(t); if(t.hp<=0){ if(id) concEnd(id,`${t.name} cade a 0 PF`); } else log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} subisce danni mentre si concentra${c.spell&&SPELLS[c.spell]?' su '+SPELLS[c.spell].it:''}: tiro salvezza su Costituzione CD ${Math.min(30,Math.max(10,Math.floor(v/2)))} o la concentrazione finisce`}); } }
   if(!pg){ if(t.ds) delete t.ds; return; }
   if(t.hp>0){ if(t.ds) delete t.ds; return; }
   if(avanzo>=t.hpMax){ t.ds={s:0,f:3,dead:true}; log({kind:'hit',txt:`${t.name}: danno massiccio (ne avanzano ${avanzo}, i suoi PF massimi sono ${t.hpMax}) — è MORTO sul colpo`}); }
@@ -9666,4 +9666,147 @@ function vistaRipristina(){
 if(!TEST_MODE||/[?&]vista=1/.test(location.search)){ let n=0; const tm=setInterval(()=>{ n++; if(!READY) return; if(!TEST_MODE&&!FB_LOADED&&n<60) return; clearInterval(tm); vistaRipristina(); },250); }
 
 /* ===== fine DIALOGHI DEI PNG ===== */
+/* ===== INCANTESIMI E CONCENTRAZIONE (v252) — audit dell'11-10-2026 =====
+   Giuseppe ha chiesto di verificare che ogni incantesimo dei giocatori faccia davvero quello che deve (bersagli, buff, fine dei buff
+   con la concentrazione) e che il tavolo faccia tirare da solo la concentrazione quando qualcuno viene ferito, o avvisi prima
+   di un'azione che la farebbe finire. Che cosa cambia (regole 2024, SRD 5.2.1):
+   1. Il TIRO DI CONCENTRAZIONE si apre da solo sullo schermo di chi deve farlo (il giocatore di quel personaggio; il master per
+      mostri, PNG e alleati) appena il danno arriva; gli altri vedono un avviso. Una ferita = un tiro: più ferite nello stesso round
+      si mettono in coda (il tasto dice «+N») e si tirano una dopo l'altra; prima il tavolo teneva solo la CD più alta.
+   2. Chi diventa INCAPACITATO (incapacitato, paralizzato, stordito, pietrificato, privo di sensi) perde la concentrazione, da
+      qualunque parte arrivi la condizione (incantesimo di un PG, condizione messa dal master, mostro). Prima non succedeva: un
+      Blocca persone su un incantatore nemico non gli chiudeva l'incantesimo. Tempesta di nevischio: chi fallisce perde anche la
+      concentrazione (testo 2024).
+   3. BENEDIZIONE chiudeva la concentrazione precedente senza chiudere l'incantesimo: lo Scudo della fede restava sul bersaglio
+      per sempre. Ora avvisa e chiude davvero l'incantesimo di prima (concEnd), come fanno tutti gli altri lanci.
+   4. RIPETERE un incantesimo su cui ci si concentra già (Invocare il fulmine, Raggio di luna, Sfera infuocata, Arma spirituale,
+      Lama infuocata, Guardiani spirituali, Soffio del drago, spostare il Marchio del cacciatore) con «Senza slot» ripete l'effetto
+      senza riavviare la durata e senza la riga «finisce»; la finestra lo dice e mette «Senza slot» da sola. Con uno slot si rilancia da capo.
+   5. Buff che prima erano solo una riga nel Registro e ora valgono davvero: SCUDO (CA +5 fino all'inizio del tuo prossimo turno,
+      condizione «scudo» su chi lancia), PELLE DI CORTECCIA (CA almeno 17, condizione «corteccia», 1 ora), AIUTO (+5 ai PF massimi e
+      attuali per livello di slot sopra il 1°, condizione «aiutato»: quando la condizione va via i PF massimi tornano giù), GUIDA (il
+      bersaglio ha «guidato»: la prossima prova di caratteristica somma 1d4 da sola e l'incantesimo finisce), ANATEMA (chi fallisce ha
+      «anatema», −1d4 ai tiri per colpire e ai tiri salvezza, 10 round), LUMINESCENZA (chi fallisce è «luminescente»: vantaggio a
+      colpirlo, segnato nella finestra dei bersagli e messo da solo). Tutte finiscono con la concentrazione (spellEnd) o coi round.
+   6. Nelle finestre dei bersagli (attacchi dei mostri e dei PG, incantesimi con attacco) accanto al nome si legge la condizione che
+      conta (luminescente, trattenuto, paralizzato, prono, accecato, invisibile, Scudo, Anatema…) e il vantaggio si mette da solo.
+   Tutto in questo blocco, con le funzioni di prima avvolte; prova rigiocabile in Revisioni/Audit incantesimi e concentrazione (v252)/. */
+(function(){
+  /* ----- condizioni nuove ----- */
+  const NUOVE=[['anatema','Anatema','ANA',false],['luminescente','Luminescente','LUM',false],['scudo','Scudo','SCU',true],['corteccia','Pelle di corteccia','COR',true],['aiutato','Aiuto','AIU',true],['guidato','Guida','GUI',true]];
+  for(const [k,n,ab,buona] of NUOVE){ if(!CONDS.some(c=>c[0]===k)) CONDS.push([k,n]); CONDS_ABBR[k]=ab; if(buona) COND_BUONE.add(k); }
+  UI_ICO.c_anatema='<path d="M12 21L4 7h16z"/><path d="M12 11v4M12 17.5v.5"/>';
+  UI_ICO.c_luminescente='<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.8 2.8M15.2 15.2L18 18M18 6l-2.8 2.8M8.8 15.2L6 18"/><circle cx="12" cy="12" r="2.5"/>';
+  UI_ICO.c_scudo='<path d="M12 2.5l7.5 3v6.2c0 4.6-3.2 8-7.5 9.8-4.3-1.8-7.5-5.2-7.5-9.8V5.5z"/><path d="M12 6.5v10M8.5 10l3.5-3.5 3.5 3.5"/>';
+  UI_ICO.c_corteccia='<path d="M12 21V9"/><path d="M12 9c-4 0-6-2.5-6-5.5 3 0 6 1.5 6 5.5zM12 9c4 0 6-2.5 6-5.5-3 0-6 1.5-6 5.5z"/><path d="M12 15c-3 0-5-1.5-5-4 2.5 0 5 1 5 4zM12 15c3 0 5-1.5 5-4-2.5 0-5 1-5 4z"/>';
+  UI_ICO.c_aiutato='<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/><path d="M12 8.5v6M9 11.5h6"/>';
+  UI_ICO.c_guidato='<circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>';
+
+  /* ----- regole aggiunte alla tabella ----- */
+  SPELL_RULES['Bane'].cond=['anatema']; SPELL_RULES['Bane'].rounds=10; SPELL_RULES['Bane'].nota='chi fallisce ha Anatema: −1d4 ai tiri per colpire e ai tiri salvezza per 1 minuto (il tavolo lo toglie da solo)';
+  SPELL_RULES['Faerie Fire'].cond=['luminescente']; SPELL_RULES['Faerie Fire'].rounds=10; SPELL_RULES['Faerie Fire'].nota='chi fallisce è luminescente: gli attacchi contro di lui hanno vantaggio e non può essere invisibile';
+  SPELL_RULES['Sleet Storm'].rompeConc=true;
+  SPELL_RULES['Barkskin'].condSu='corteccia'; SPELL_RULES['Barkskin'].nota='la CA del bersaglio non scende sotto 17 per 1 ora (condizione «Pelle di corteccia»: la toglie il master o il riposo lungo)';
+  SPELL_RULES['Guidance']={m:'effetto',uno:true,alleati:true,condSu:'guidato',nota:'il bersaglio aggiunge 1d4 a una prova di caratteristica entro 1 minuto: il tavolo lo somma da solo alla sua prossima prova e l’incantesimo finisce'};
+  SPELL_RULES['Shield']={m:'effetto',se:true,condSe:'scudo',condSeRound:1,nota:'reazione quando vieni colpito o preso da Dardo incantato: CA +5 fino all’inizio del tuo prossimo turno (anche contro quel colpo: se il tavolo ha già tolto i danni, il master li ridà) e Dardo incantato non ti colpisce'};
+  SPELL_RULES['Aid']={m:'effetto',max:3,alleati:true,nota:'+5 ai PF massimi e attuali per 8 ore (+5 per ogni livello di slot sopra il 2°); quando la condizione «Aiuto» va via, i PF massimi tornano come prima'};
+  const INCAP=new Set(['incapacitato','paralizzato','stordito','pietrificato','privo di sensi']);
+  const incap=t=>((t&&t.conds)||[]).some(c=>c&&INCAP.has(c.n));
+
+  /* ----- 4. concentrazione: ripetere lo stesso incantesimo senza slot non la riavvia ----- */
+  let CAST_SLOT=null;
+  concStart=function(id,en){ const t=S.tokens[id], d=SPELLS[en]; if(!t||!d||!d.conc) return; const c=concOf(t);
+    if(c&&c.spell===en&&!(CAST_SLOT>0)) return;
+    concEnd(id,`${t.name} lancia ${d.it}`); const dur=String(d.durata||''), r=/1 minuto/i.test(dur)?10:null; t.conds=t.conds||[]; t.conds.push({n:'concentrazione',r,source:'incantesimo',spell:en}); };
+
+  /* ----- 5. Anatema: −1d4 ai tiri per colpire (PG e mostri) e ai tiri salvezza; Guida: +1d4 alla prossima prova ----- */
+  let ANATEMA_LIVE=false;
+  { const _fab=fxAtkBonus; fxAtkBonus=function(t,a){ const r=_fab.apply(this,arguments)||{b:0,why:[]}; if(t&&hasCondition(t,'anatema')){ const x=rollExpr('1d4').total; r.b-=x; r.why=[...(r.why||[]),`Anatema −${x}`]; } return r; }; }
+  { const _fg=fxGuidance; fxGuidance=function(t,skill){ const g=_fg.apply(this,arguments); if(t&&String(skill).startsWith('TS ')&&hasCondition(t,'anatema')){ const x=rollExpr('1d4').total; return {b:g.b-x,txt:[g.txt,`Anatema −${x}`].filter(Boolean).join(', ')}; }
+      if(t&&!String(skill).startsWith('TS ')&&skill!=='Iniziativa'&&!/Guida/.test(g.txt||'')){ const c=(t.conds||[]).find(x=>x&&x.n==='guidato'); if(c){ const x=rollExpr('1d4').total; t.conds=t.conds.filter(y=>y!==c); const src=c.source&&S.tokens[c.source]; if(src&&concOf(src)&&concOf(src).spell==='Guidance') concEnd(c.source,'Guida usata da '+t.name); return {b:g.b+x,txt:[g.txt,`Guida +${x}`].filter(Boolean).join(', ')}; } }
+      return g; }; }
+  { const _msm=monsterSaveMod; monsterSaveMod=function(t,ab){ let m=_msm.apply(this,arguments); if(ANATEMA_LIVE&&t&&hasCondition(t,'anatema')){ const x=rollExpr('1d4').total; m-=x; log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name}: Anatema, −${x} al tiro salvezza`}); } return m; }; }
+  { const _msr=monsterSaveRoll; monsterSaveRoll=function(){ ANATEMA_LIVE=true; try{ return _msr.apply(this,arguments); } finally{ ANATEMA_LIVE=false; } }; }
+
+  /* ----- 5. Scudo e Pelle di corteccia nella CA ----- */
+  { const _pa=pgAcNow; pgAcNow=function(id){ let a=_pa.apply(this,arguments); const t=S.tokens[id]; if(a==null||!t) return a; if(hasCondition(t,'scudo')) a+=5; if(hasCondition(t,'corteccia')) a=Math.max(a,17); return a; }; }
+  { const _ta=tokAc; tokAc=function(t,base){ let a=_ta.apply(this,arguments); if(a==null||!t||base!=null) return a; const id=fxIdOf(t); if(id&&SHEETS[id]&&!activeWildForm(id,t)) return a; if(hasCondition(t,'scudo')) a+=5; if(hasCondition(t,'corteccia')) a=Math.max(a,17); return a; }; }
+
+  /* ----- lancio: slot per concStart, condizione su chi lancia, incapacitati, Tempesta di nevischio, Aiuto ----- */
+  { const _rc=resolveCast; resolveCast=function(id,name,slot,ids){ CAST_SLOT=+slot||0; ANATEMA_LIVE=true; let r; try{ r=_rc.apply(this,arguments); } finally{ CAST_SLOT=null; ANATEMA_LIVE=false; }
+      const t=S.tokens[id], d=SPELLS[name]||{}, R=SPELL_RULES[name]||{}, list=(ids||[]).map(i=>[i,S.tokens[i]]).filter(x=>x[1]); let n=0;
+      if(R.condSe&&t){ t.conds=(t.conds||[]).filter(c=>c.n!==R.condSe); t.conds.push({n:R.condSe,r:R.condSeRound||null,source:id,spell:name}); log({kind:'sys',txt:`${t.name}: ${condLabel(R.condSe)} (${d.it})${R.condSe==='scudo'?' — CA +5 fino all’inizio del suo prossimo turno':''}`}); n++; }
+      for(const [i,tg] of list){ if(!concOf(tg)) continue; if(incap(tg)){ concEnd(i,`${tg.name} è incapacitato`); n++; } else if(R.rompeConc&&(tg.conds||[]).some(c=>c&&c.source===id&&c.spell===name)){ concEnd(i,`${d.it}`); n++; } }
+      if(name==='Aid'){ const b=5*Math.max(1,(+slot||2)-1); for(const [i,tg] of list){ if(isDead(tg)) continue; if(tg.aid){ tg.hpMax=Math.max(1,tg.hpMax-tg.aid); tg.hp=Math.min(tg.hp,tg.hpMax); } tg.aid=b; tg.hpMax=(+tg.hpMax||0)+b; tg.hp=(+tg.hp||0)+b; tg.conds=(tg.conds||[]).filter(c=>c.n!=='aiutato'); tg.conds.push({n:'aiutato',r:null,source:id,spell:name,v:b}); log({kind:'sys',txt:`${tg.name}: Aiuto, +${b} ai PF massimi e attuali → ${tg.hp}/${tg.hpMax} (8 ore)`}); n++; } }
+      if(n) save(true); return r; }; }
+
+  /* ----- 2. chi diventa incapacitato (o va a 0 PF) perde la concentrazione; Aiuto finito → PF massimi come prima ----- */
+  function concSweep(){ let n=0; for(const [id,t] of Object.entries(S.tokens)){ if(!t||typeof t!=='object') continue;
+      if(concOf(t)){ if(incap(t)){ concEnd(id,`${t.name} è incapacitato`); n++; } else if(+t.hp<=0){ concEnd(id,`${t.name} è a 0 PF`); n++; } }
+      if(t.aid&&!hasCondition(t,'aiutato')){ const b=+t.aid||0; t.hpMax=Math.max(1,(+t.hpMax||0)-b); t.hp=Math.min(+t.hp||0,t.hpMax); delete t.aid; log({kind:'sys',txt:`${t.name}: Aiuto finisce, PF massimi di nuovo ${t.hpMax} (${t.hp}/${t.hpMax})`}); n++; } }
+    return n>0; }
+  { const _tc=toggleCond; toggleCond=function(id,k){ const r=_tc.apply(this,arguments); const t=S.tokens[id]; if(t&&INCAP.has(k)&&hasCondition(t,k)&&concOf(t)){ concEnd(id,`${t.name} è ${condLabel(k).toLowerCase()}`); save(true); } return r; }; }
+
+  /* ----- 1. una ferita, un tiro: coda dei tiri di concentrazione; finestra aperta da sola a chi deve tirare ----- */
+  { const _ad=applyDamage; applyDamage=function(t,v){ const old=t&&t.concTs?{...t.concTs}:null, prima=!!(t&&concOf(t)); const r=_ad.apply(this,arguments);
+      if(prima&&t&&concOf(t)&&t.hp>0&&(+v>0)){ const dc=Math.min(30,Math.max(10,Math.floor(+v/2))), dmg=Math.floor(+v);
+        if(old&&old.at) t.concTs={dc:old.dc,dmg:old.dmg,at:old.at,coda:[...(old.coda||[]),{dc,dmg}]}; else t.concTs={dc,dmg,at:Date.now(),coda:[]}; }
+      return r; }; }
+  concRoll=function(id){
+    const t=S.tokens[id], c=concOf(t); if(!t) return; if(!c){ delete t.concTs; toast(`${t.name} non si sta concentrando`); save(true); return; }
+    const sp=c.spell&&SPELLS[c.spell]?SPELLS[c.spell].it:(c.source==='benedizione'?'Benedizione':'');
+    const p=t.concTs, coda=(p&&p.coda)||[], ana=hasCondition(t,'anatema');
+    const modBase=tokenSaveMod(t,'Cos');
+    openModal(`<div class="eyebrow">${poiText(t.name)} · tiro salvezza</div><h2 class="big">Concentrazione</h2>
+      <p class="note" style="margin:0 0 8px">${sp?`Si concentra su <b>${poiText(sp)}</b>. `:''}Tiro salvezza su Costituzione (${fmtMod(modBase)}${ana?' − 1d4 di Anatema':''}): CD 10 o metà dei danni subiti, la più alta (massimo 30). Se fallisce, la concentrazione finisce${sp?' e con lei '+poiText(sp):''}.</p>
+      ${coda.length?`<p class="note" style="margin:0 0 8px;color:var(--gold)">Altre ${coda.length} ferite in coda: una ferita, un tiro. Dopo questo arriva il prossimo.</p>`:''}
+      <label>Danni subiti <input type="number" id="ccDmg" min="0" value="${p?p.dmg:0}" style="width:70px"></label> <b id="ccDc" style="margin-left:8px"></b>
+      <div class="fxadv" style="margin:8px 0"><label><input type="radio" name="ccAdv" value="" checked> Normale</label><label><input type="radio" name="ccAdv" value="v"> Vantaggio</label><label><input type="radio" name="ccAdv" value="s"> Svantaggio</label></div>
+      <div class="row" style="margin-top:10px"><button class="primary" id="ccGo">Tira</button><button id="ccBack">Annulla</button></div>`,'poibox');
+    const box=document.getElementById('modal'), inp=box.querySelector('#ccDmg');
+    const dcOf=()=>Math.min(30,Math.max(10,Math.floor((+inp.value||0)/2))), show=()=>{ box.querySelector('#ccDc').textContent='CD '+(p&&+inp.value===p.dmg?p.dc:dcOf()); };
+    inp.oninput=show; show();
+    box.querySelector('#ccBack').onclick=closeModal;
+    box.querySelector('#ccGo').onclick=()=>{ const dc=(p&&+inp.value===p.dmg)?p.dc:dcOf(), adv=box.querySelector('[name=ccAdv]:checked').value;
+      let mod=modBase, why=''; if(ana){ const x=rollExpr('1d4').total; mod-=x; why=` (Anatema −${x})`; }
+      const r1=d20(); let r=r1, extra=null; if(adv){ extra=d20(); r=adv==='v'?Math.max(r1,extra):Math.min(r1,extra); }
+      const tot=r+mod, ok=tot>=dc;
+      log({kind:'roll',gm:t.kind==='nemico'&&!S.publicRolls,who:`${t.name} · Concentrazione`,skill:'TS Cos'+why,r,mod,tot,dc,extra,advantage:adv==='v',disadvantage:adv==='s'});
+      if(ok){ log({kind:'sys',txt:`${t.name} mantiene la concentrazione${sp?' su '+sp:''} (${tot} contro CD ${dc})`});
+        if(coda.length){ t.concTs={...coda[0],at:Date.now(),coda:coda.slice(1)}; save(true); closeModal(); toast(`Concentrazione mantenuta (${tot}) — prossima ferita`); setTimeout(()=>concRoll(id),300); return; }
+        delete t.concTs; }
+      else { delete t.concTs; log({kind:'sys',txt:`${t.name} perde la concentrazione${sp?' su '+sp:''} (${tot} contro CD ${dc})`}); concEnd(id,'tiro salvezza di concentrazione fallito'); }
+      save(true); closeModal(); toast(ok?`Concentrazione mantenuta (${tot})`:`Concentrazione persa (${tot})`); };
+  };
+  const CONC_VISTI=new Set();
+  function concAvvisi(){ if(typeof dragging!=='undefined'&&dragging) return; const modal=document.getElementById('modal'), aperto=!!modal&&getComputedStyle(modal).display!=='none';
+    for(const [id,t] of Object.entries(S.tokens)){ const p=t&&t.concTs; if(!p||!p.at||!concOf(t)) continue; const k=id+':'+p.at+':'+((p.coda||[]).length);
+      if(CONC_VISTI.has(k)) continue;
+      const mio=(id===me)||(IS_GM&&t.kind!=='pg');
+      if(mio){ if(aperto) continue; CONC_VISTI.add(k); concRoll(id); return; }
+      CONC_VISTI.add(k); toast(`${t.name} deve tirare la concentrazione (CD ${p.dc})`); } }
+  { const _r=render; render=function(){ const out=_r.apply(this,arguments);
+      try{ if(READY&&(TEST_MODE||FB_LOADED)){ if(IS_GM&&!dragging&&!pending&&concSweep()) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0); concAvvisi(); } }catch(e){ console.warn('v252',e); }
+      return out; }; }
+  { const _rr=renderRail; renderRail=function(){ const r=_rr.apply(this,arguments); try{ const meds=[...document.querySelectorAll('#rail .med')], ids=orderForRail(); meds.forEach((m,k)=>{ const t=S.tokens[ids[k]], b=m.querySelector('.rail-conc.pend'); if(!t||!b||!t.concTs) return; const n=(t.concTs.coda||[]).length; if(n) b.textContent+=` (+${n})`; }); }catch(e){} return r; }; }
+
+  /* ----- 6. finestre dei bersagli: condizioni che contano, vantaggio da solo ----- */
+  const HINT={luminescente:['luminescente: vantaggio a colpirlo','v'],trattenuto:['trattenuto: vantaggio a colpirlo','v'],paralizzato:['paralizzato: vantaggio, critico se colpito entro 1,5 m','v'],stordito:['stordito: vantaggio a colpirlo','v'],accecato:['accecato: vantaggio a colpirlo','v'],incapacitato:['incapacitato',''],prono:['prono: vantaggio in mischia (1,5 m), svantaggio da lontano',''],invisibile:['invisibile: svantaggio a colpirlo','s'],scudo:['Scudo: CA +5',''],corteccia:['Pelle di corteccia: CA almeno 17',''],scudofede:['Scudo della fede: CA +2',''],anatema:['Anatema: −1d4 ai suoi tiri',''],benedetto:['benedetto',''],aiutato:['Aiuto',''],guidato:['Guida','']};
+  function tgtHints(box,nameTgt,nameAdv){ if(!box) return; box.querySelectorAll(`[name=${nameTgt}]`).forEach(inp=>{ const x=S.tokens[inp.value]; if(!x) return; const ks=(x.conds||[]).map(c=>c&&c.n).filter(k=>HINT[k]); if(!ks.length) return; const lb=inp.closest('label'), tn=lb&&lb.querySelector('.tn'); if(!tn||tn.querySelector('.cndhint')) return;
+      tn.insertAdjacentHTML('beforeend',` <small class="cndhint" style="color:#EDCB73">· ${ks.map(k=>poiText(HINT[k][0])).join(' · ')}</small>`);
+      if(nameAdv) inp.addEventListener('change',()=>{ if(!inp.checked||hasCondition(x,'protetto')) return; const adv=ks.map(k=>HINT[k][1]).find(Boolean); if(!adv) return; const r=box.querySelector(`[name=${nameAdv}][value=${adv}]`); if(r) r.checked=true; }); }); }
+  { const _otp=openTargetPicker; openTargetPicker=function(){ const r=_otp.apply(this,arguments); try{ tgtHints(document.getElementById('modal'),'tgt','tAdv'); }catch(e){} return r; }; }
+  { const _cs=castSpell; castSpell=function(id,name){ const r=_cs.apply(this,arguments); try{ castPatch(id,name); }catch(e){ console.warn('v252 castPatch',e); } return r; }; }
+  function castPatch(id,name){ const box=document.getElementById('modal'); if(!box||getComputedStyle(box).display==='none'||!box.querySelector('#cGo')) return; const t=S.tokens[id], d=SPELLS[name], c=t&&concOf(t); if(!t||!d) return; const h2=box.querySelector('h2.big');
+    if(d.conc&&c&&c.spell===name&&h2){ const sel=box.querySelector('#cSlot'); if(sel) sel.value='0'; h2.insertAdjacentHTML('afterend',`<p class="note" style="margin:0 0 8px;color:var(--gold)">Ti stai già concentrando su ${poiText(d.it)}: con «Senza slot» ne ripeti l’effetto (nuovo tiro, nessuno slot speso, la durata non riparte). Con uno slot lo rilanci da capo.</p>`); }
+    if(d.conc&&c&&c.source==='benedizione'&&!c.spell) box.querySelectorAll('p.note').forEach(p=>{ if(/^Sei già in concentrazione:/.test(p.textContent)) p.innerHTML=p.innerHTML.replace('Sei già in concentrazione:','Sei già in concentrazione su Benedizione:'); });
+    tgtHints(box,'cTgt','cAdv'); }
+
+  /* ----- 3. Benedizione: avviso e fine vera dell'incantesimo precedente ----- */
+  { const _ob=openBlessPicker; openBlessPicker=function(id){ const r=_ob.apply(this,arguments); try{ const t=S.tokens[id], c=concOf(t), box=document.getElementById('modal'), go=box&&box.querySelector('#blessGo'); if(!go||!c||c.source==='benedizione') return r;
+      const nome=c.spell&&SPELLS[c.spell]?SPELLS[c.spell].it:'un altro incantesimo'; const h2=box.querySelector('h2.big'); if(h2) h2.insertAdjacentHTML('afterend',`<p class="note" style="margin:0 0 8px;color:var(--gold)">Sei già in concentrazione su ${poiText(nome)}: lanciando Benedizione quella finisce, e con lei i suoi effetti.</p>`);
+      const orig=go.onclick; go.onclick=function(ev){ const n=box.querySelectorAll('[name=blessTgt]:checked').length, cc=concOf(t); if(n&&cc&&cc.source!=='benedizione') concEnd(id,`${t.name} lancia Benedizione`); return orig?orig.call(this,ev):undefined; }; }catch(e){} return r; }; }
+  window.__v252={concSweep,concAvvisi,tgtHints,INCAP};
+})();
+/* ===== FINE INCANTESIMI E CONCENTRAZIONE (v252) ===== */
 </script>
