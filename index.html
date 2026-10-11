@@ -2529,7 +2529,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v248</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v249</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -4784,6 +4784,33 @@ function resolveCast(id,name,slot,ids,meta=[],mcost=0){
   if(R.condSu) for(const i of ids){ const tg=S.tokens[i]; if(!tg) continue; for(const x of Object.values(S.tokens)) x.conds=(x.conds||[]).filter(c=>!(c.n===R.condSu&&c.source===id)); condizioni(tg,[R.condSu],null); log({kind:'sys',txt:`${tg.name}: ${condLabel(R.condSu).toLowerCase()} da ${t.name}`}); }
   save(true);
 }
+
+/* v249 — TROVA CAVALCATURA / CAVALCATURA FEDELE (Alessandros). Prima il lancio (anche gratuito dalla risorsa) scriveva solo una riga.
+   Ora, dopo il lancio, si sceglie il tipo (Celestiale, Fatato, Immondo) e compare la pedina del Destriero ultraterreno (regole 2024),
+   alleata e di Alessandros come Zenith per Luigis: Grande, CA 10 + livello dello slot, PF 5 + 10 × livello, velocità 18 m
+   (volo dal 4° livello), For 18 Des 12 Cos 14 Int 6 Sag 12 Car 8; Colpo ultraterreno con il bonus d'attacco degli incantesimi di chi
+   lo evoca, 1d8 + livello (radiosi, psichici o necrotici secondo il tipo); azione bonus del tipo. Non ha iniziativa sua: agisce nel turno
+   di chi lo ha evocato (noInit). Rievocarlo sostituisce il precedente. */
+const STEED_TIPI={celestiale:{n:'Celestiale',dmg:'radiosi',col:'#C9A24A',bonus:(L)=>({n:'Tocco guaritore (1 volta per riposo lungo)',tipo:'speciale',eco:'bonus',note:`Una creatura entro 1,5 m recupera 2d8 + ${L} PF`})},
+  fatato:{n:'Fatato',dmg:'psichici',col:'#5E9E7A',bonus:()=>({n:'Passo fatato (1 volta per riposo lungo)',tipo:'speciale',eco:'bonus',note:'Si teletrasporta, con chi lo cavalca, in uno spazio libero visibile entro 18 m'})},
+  immondo:{n:'Immondo',dmg:'necrotici',col:'#8A3A3A',bonus:(L,dc)=>({n:'Sguardo terribile (1 volta per riposo lungo)',tipo:'speciale',eco:'bonus',note:`Una creatura entro 18 m fa un TS Saggezza CD ${dc} o è Spaventata fino alla fine del tuo prossimo turno`})}};
+function summonSteed(id,slot){
+  const t=S.tokens[id], sh=SHEETS[id]; if(!t||!sh) return; const L=Math.max(2,+slot||2), sp=sh.spell||{atk:(sh.prof||2),dc:8+(sh.prof||2)};
+  openModal(`<div class="eyebrow">${poiText(t.name)} · Trova cavalcatura${slot?` (slot di ${L}°)`:' (Cavalcatura fedele, senza slot)'}</div><h2 class="big">Destriero ultraterreno</h2>
+    <p class="note" style="margin:0 0 8px">Grande · CA ${10+L} · ${5+10*L} PF · velocità 18 m${L>=4?' e volo 18 m':''}. Agisce nel turno di ${poiText(t.name)}. Scegli che cosa è:</p>
+    <div class="row">${Object.entries(STEED_TIPI).map(([k,v])=>`<button data-st="${k}" class="${k==='celestiale'?'primary':''}">${v.n}</button>`).join('')}<button id="stBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal'); box.querySelector('#stBack').onclick=closeModal;
+  box.querySelectorAll('[data-st]').forEach(b=>b.onclick=()=>{ const T=STEED_TIPI[b.dataset.st], key='destriero_'+id, step=S.grid.size||30;
+    let p=snap({x:t.x+step,y:t.y}); for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1],[1,1],[-1,1],[1,-1],[-1,-1]]){ const q=snap({x:t.x+dx*step,y:t.y+dy*step}); if(walkable(q.x,q.y)&&!Object.values(S.tokens).some(o=>Math.hypot(o.x-q.x,o.y-q.y)<step*.7)){ p=q; break; } }
+    const md=v=>Math.floor((v-10)/2);
+    S.tokens[key]={custom:true,name:`Destriero di ${t.name.split(' ')[0]}`,short:'D',kind:'alleato',owner:id,color:T.col,img:'',x:p.x,y:p.y,hp:5+10*L,hpMax:5+10*L,ac:10+L,speed:18,size:2,noInit:true,init:null,hidden:false,movedM:0,dash:false,conds:[],
+      mods:{'TS For':md(18),'TS Des':md(12),'TS Cos':md(14),'TS Int':md(6),'TS Sag':md(12),'TS Car':md(8),Atletica:md(18),Percezione:md(12)},
+      note:`Destriero ultraterreno ${T.n.toLowerCase()} · Grande · CA ${10+L} · velocità 18 m${L>=4?', volo 18 m':''} · legato a ${t.name}: agisce nel suo turno; se scende a 0 PF svanisce`,
+      actions:[{n:'Colpo ultraterreno',tipo:'mischia',eco:'azione',atk:+sp.atk||0,dmg:`1d8+${L}`,note:`danni ${T.dmg}`},T.bonus(L,sp.dc)]};
+    if(S.mode==='scontro'&&typeof sortOrder==='function') sortOrder();
+    log({kind:'sys',txt:`${t.name} evoca il suo destriero ultraterreno (${T.n.toLowerCase()}): CA ${10+L}, ${5+10*L} PF`}); selected=key; save(true); closeModal(); });
+}
+{ const _rc=resolveCast; resolveCast=function(id,name){ const r=_rc.apply(this,arguments); if(name==='Find Steed'){ const slot=arguments[2]; setTimeout(()=>summonSteed(id,slot),0); } return r; }; }
 
 /* ===== STREGONERIA (v114): Fonte della magia e Metamagia =====
    Punti stregoneria: sh.spell.points (massimo), t.pts (spesi). Slot creati coi punti: t.xs[livello] (spariscono col riposo lungo).
