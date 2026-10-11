@@ -2549,7 +2549,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v253</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v254</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10005,4 +10005,122 @@ if(!TEST_MODE||/[?&]vista=1/.test(location.search)){ let n=0; const tm=setInterv
   window.__v253={evoca,viaEvocati,inizioTurno,sweep2,tsDanno,abilOf,setScelta:v=>{ SCELTA_FORZATA=v; }};
 })();
 /* ===== FINE EFFETTI DEGLI INCANTESIMI (v253) ===== */
+/* ===== ABILITÀ DI CLASSE, TALENTI E OGGETTI (v254) — audit dell'11-10-2026 =====
+   Audit delle capacità dei sei PG (rapporto in Revisioni/Abilita di classe, talenti e oggetti (v254)/). Che cosa cambia:
+   1. AZIONI DELLA SCHEDA che aggiravano le regole: «Scintilla divina», «Scacciare non morti + Bruciare i non morti» (Mattheus) e
+      «Percezione del divino» (Alessandros) facevano danno o scrivevano la riga senza spendere Incanalare divinità: ora aprono
+      Incanalare. «Rintocco di morte», «Dardo guida/guidato», «Spiriti guardiani», «Rianimare», «Infliggere ferite», «Scaldare il
+      metallo», «Scudo (reazione)», «Passo velato: teletrasporto», «Onda di tuono» non venivano riconosciuti come incantesimi
+      (nome diverso da quello del Compendio) e facevano danno senza slot né tiro salvezza: ora passano dalla finestra di lancio
+      (spellKeyIt avvolta, con alias e nome-prefisso).
+   2. I tasti «Diventa Toro» (Adamus) e «Possanza del gigante» (Maximus) della scheda trasformavano senza spendere l'uso: ora
+      passano da useResource (se non restano usi, non si trasformano).
+   3. DURATE: Favore divino e Stregoneria innata (1 minuto = 10 round), Possanza del gigante (1 minuto), Arma sacra (10 minuti),
+      Forza del toro (1 ora) finiscono da sole col passare dei turni in scontro (t.fxR / t.giantR, contati dal master).
+   4. NUOVE: Ripristino stregonesco (ridà metà livello di punti stregoneria), Mente tattica (azione di Maximus: spende Recupero
+      energie e dà +1d10 a una prova fallita; se fallisce lo stesso l'uso non si spende), Compagno selvatico (azione di Adamus:
+      spende un uso di Forma selvatica e lancia Trova famiglio senza slot), Runa del fuoco (2d6 da fuoco e TS For CD 13 o
+      Trattenuto, 2d6 a ogni inizio turno), Runa della pietra (TS Sag CD 13 o Affascinato e Incapacitato per 1 minuto), i lanci
+      gratuiti dei talenti di Luigis (Iniziato alla magia: Salto o Passo veloce; Toccato dai Folletti: Risata di Tasha).
+   5. Punizione divina e Punizione tonante dopo un colpo critico raddoppiano i dadi (il tavolo guarda l'ultimo attacco a segno).
+   6. Zenith recupera i PF col riposo lungo di Luigis; il destriero a 0 PF svanisce.
+   7. Aiuto (v252): la sincronizzazione (normalize) rimetteva i PF massimi dei PG al valore della scheda, e alla fine dell'Aiuto
+      si sottraeva di nuovo. Ora i PF massimi valgono scheda + Aiuto finché la condizione c'è, e tornano alla scheda dopo.
+   8. Il catalogo mette Punizione del paladino e Passo velato tra le azioni bonus, lo Scudo gratuito tra le reazioni, la Runa del
+      fuoco tra le gratuite. */
+(function(){
+  const PG6=['alessandros','adamus','luigis','mattheus','maximus','vicarus'];
+  /* ----- 1. alias delle azioni → incantesimo conosciuto ----- */
+  const ALIAS={'rintocco di morte':'Toll the Dead','dardo guida':'Guiding Bolt','dardo guidato':'Guiding Bolt','spiriti guardiani':'Spirit Guardians','rianimare':'Revivify','infliggere ferite':'Inflict Wounds','scaldare il metallo':'Heat Metal','scudo':'Shield','passo velato':'Misty Step','onda di tuono':'Thunderwave'};
+  { const _sk=spellKeyIt; spellKeyIt=function(id,n){ const k=_sk.apply(this,arguments); if(k) return k; const sh=SHEETS[id]; if(!sh||!sh.spell||!Array.isArray(sh.spell.list)) return null; const base=pgNorm(n); if(!base) return null;
+      for(const [a,en] of Object.entries(ALIAS)){ if((base===a||base.startsWith(a+' '))&&SPELLS[en]&&sh.spell.list.includes(en)) return en; }
+      return sh.spell.list.find(k=>SPELLS[k]&&SPELLS[k].it&&base.startsWith(pgNorm(SPELLS[k].it)+' '))||null; }; }
+  { const _da=doAction; doAction=function(tokId,a){ const t=S.tokens[tokId], n=pgNorm(a&&a.n); if(t&&t.kind==='pg'&&SHEETS[tokId]&&n){
+        if(tokId==='mattheus'&&/^(scintilla divina|scacciare non morti|bruciare i non morti|preservare la vita)/.test(n)&&typeof chiericoChannel==='function'){ const i=resIndexFor(tokId,'Incanalare divinità'); if(i>=0){ chiericoChannel(tokId,i,false); return; } }
+        if(tokId==='alessandros'&&/^percezione del divino/.test(n)&&typeof sacraChannel==='function'){ const i=resIndexFor(tokId,'Incanalare divinità'); if(i>=0){ sacraChannel(tokId,i,false); return; } }
+        if(/^mente tattica/.test(n)) return menteTattica(tokId);
+        if(/^compagno selvatico/.test(n)) return compagnoSelvatico(tokId); }
+      return _da.apply(this,arguments); }; }
+
+  /* ----- 4. azioni nuove nella lista del personaggio ----- */
+  const NUOVE_AZIONI={maximus:[{n:'Mente tattica (spende Recupero energie: +1d10 a una prova fallita)',tipo:'speciale',eco:'gratuita',note:'Quando fallisci una prova di caratteristica: tiri 1d10 e lo aggiungi alla prova; se fallisce lo stesso, l’uso di Recupero energie non si spende (regole 2024).'}],
+    adamus:[{n:'Compagno selvatico (Trova famiglio con un uso di Forma selvatica)',tipo:'speciale',eco:'azione',note:'Spende un uso di Forma selvatica e lancia Trova famiglio senza slot: il famiglio è un Folletto e svanisce al prossimo riposo lungo.'}]};
+  for(const [id,acts] of Object.entries(NUOVE_AZIONI)) for(const a of acts){ const v=typeof PLAYER_V85!=='undefined'&&PLAYER_V85[id]; if(v&&Array.isArray(v.actions)&&!v.actions.some(x=>x.n===a.n)) v.actions.push({...a}); const t=typeof S!=='undefined'&&S&&S.tokens&&S.tokens[id]; if(t&&Array.isArray(t.actions)&&!t.actions.some(x=>x.n===a.n)) t.actions.push({...a}); }
+  function menteTattica(id){ const t=S.tokens[id], i=resIndexFor(id,'Recupero energie'); if(!t||i<0) return; const R=SHEETS[id].pg.risorse[i], max=+R.max||0, u=resUsed(id,i); if(max&&u>=max){ toast('Mente tattica: nessun uso di Recupero energie rimasto'); return; }
+    const x=rollExpr('1d10').total;
+    openModal(`<div class="eyebrow">${poiText(t.name)} · Mente tattica</div><h2 class="big">+${x} alla prova</h2><p class="note" style="margin:0 0 8px">Hai tirato 1d10 = <b>${x}</b>: aggiungilo alla prova di caratteristica appena fallita. Se adesso riesce, spendi un uso di Recupero energie (ne restano ${Math.max(0,max-u-1)}); se fallisce lo stesso, l’uso non si spende.</p><div class="row"><button class="primary" id="mtSi">Riesce: spendo l’uso</button><button id="mtNo">Fallisce lo stesso</button></div>`,'poibox');
+    const box=document.getElementById('modal'); box.querySelector('#mtSi').onclick=()=>{ resSet(id,i,u+1); log({kind:'sys',txt:`${t.name} usa Mente tattica: +${x} alla prova (riuscita), spende un uso di Recupero energie (ne restano ${Math.max(0,max-u-1)})`}); save(true); closeModal(); };
+    box.querySelector('#mtNo').onclick=()=>{ log({kind:'sys',txt:`${t.name} usa Mente tattica: +${x} non basta, l’uso di Recupero energie non si spende`}); save(true); closeModal(); }; }
+  function compagnoSelvatico(id){ const t=S.tokens[id], i=resIndexFor(id,'Forma selvatica'); if(!t||i<0||!SPELLS['Find Familiar']) return; const R=SHEETS[id].pg.risorse[i], max=+R.max||0, u=resUsed(id,i); if(max&&u>=max){ toast('Compagno selvatico: nessun uso di Forma selvatica rimasto'); return; }
+    CAST_PEND={onCast:()=>{ resSet(id,i,u+1); log({kind:'sys',txt:`${t.name} usa Compagno selvatico: spende un uso di Forma selvatica (ne restano ${Math.max(0,max-u-1)}) per Trova famiglio`}); },onCancel:()=>{}}; castSpell(id,'Find Familiar',{free:true}); }
+
+  /* ----- 4. risorse: Ripristino stregonesco, lanci gratuiti dei talenti, rune ----- */
+  function sceltaGratis(id,i,counted,lista,label){ const t=S.tokens[id], sh=SHEETS[id], r=sh.pg.risorse[i], max=+r.max||0, u=counted?Math.max(0,resUsed(id,i)-1):resUsed(id,i); const rendi=()=>{ if(counted){ resSet(id,i,u); save(); } };
+    if(!counted&&max&&u>=max){ toast(`${r.n}: nessun uso rimasto`); return; }
+    const ok=lista.filter(en=>SPELLS[en]&&sh.spell&&sh.spell.list.includes(en)); if(!ok.length){ toast(`${label}: nessun incantesimo adatto nella lista`); rendi(); return; }
+    const via=en=>{ CAST_PEND={onCast:()=>{ if(!counted) resSet(id,i,u+1); log({kind:'sys',txt:`${t.name} usa ${r.n} (${SPELLS[en].it} senza slot)${max?` — ne ${max-u-1===1?'resta':'restano'} ${Math.max(0,max-u-1)}`:''}`}); },onCancel:rendi}; castSpell(id,en,{free:true}); };
+    if(ok.length===1) return via(ok[0]);
+    openModal(`<div class="eyebrow">${poiText(t.name)} · ${poiText(label)}</div><h2 class="big">Quale incantesimo?</h2><div class="row">${ok.map(en=>`<button data-en="${en}">${poiText(SPELLS[en].it)}</button>`).join('')}<button id="sgBack">Annulla</button></div>`,'poibox');
+    const box=document.getElementById('modal'); box.querySelector('#sgBack').onclick=()=>{ rendi(); closeModal(); }; box.querySelectorAll('[data-en]').forEach(b=>b.onclick=()=>{ closeModal(); via(b.dataset.en); }); }
+  const runaDc=id=>{ const sh=SHEETS[id]||{}; return 8+(sh.prof||3)+modCalc((sh.abil||{}).Cos||10); };
+  function runaFuoco(id,i,counted){ const t=S.tokens[id], r=SHEETS[id].pg.risorse[i], max=+r.max||0, u=counted?Math.max(0,resUsed(id,i)-1):resUsed(id,i), dc=runaDc(id); const rendi=()=>{ if(counted){ resSet(id,i,u); save(); } };
+    if(!counted&&max&&u>=max){ toast('Runa del fuoco: già invocata, torna col riposo'); return; }
+    const list=targetsFor(id).filter(o=>!o.same); if(!list.length){ toast('Nessun nemico in vista'); rendi(); return; }
+    openModal(`<div class="eyebrow">${poiText(t.name)} · Runa del fuoco</div><h2 class="big">Catene di fuoco</h2><p class="note" style="margin:0 0 8px">Quando colpisci con un’arma: il bersaglio subisce 2d6 danni da fuoco in più e fa un TS Forza CD ${dc}; se fallisce è Trattenuto per 1 minuto e subisce 2d6 da fuoco all’inizio di ogni suo turno (lo toglie il tavolo); a fine turno può ripetere il TS.</p><p class="note">Chi hai colpito?</p><div class="tgtlist">${list.map(o=>`<label class="tgt"><input type="radio" name="rfTgt" value="${o.id}"><span class="tn">${poiText(o.label)}</span><span class="note">${o.dist.toLocaleString('it-IT')} m</span></label>`).join('')}</div><div class="row" style="margin-top:10px"><button class="primary" id="rfGo">Invoca</button><button id="rfBack">Annulla</button></div>`,'poibox');
+    const box=document.getElementById('modal'); box.querySelector('#rfBack').onclick=()=>{ rendi(); closeModal(); };
+    box.querySelector('#rfGo').onclick=()=>{ const k=box.querySelector('[name=rfTgt]:checked')?.value, tg=k&&S.tokens[k]; if(!tg){ toast('Scegli il bersaglio'); return; } closeModal(); if(!counted&&max) resSet(id,i,u+1);
+      const x=fxRoll('2d6'); applyDamage(tg,x.total); log({kind:'hit',tid:k,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${t.name} invoca la Runa del fuoco: ${tg.name} subisce ${x.total} danni da fuoco (${x.txt})`});
+      const mod=(tg.kind==='pg'||tg.kind==='alleato')?(tg.mods?.['TS For']??0):monsterSaveMod(tg,'For'), rr=d20(), tot=rr+mod, ok=tot>=dc; log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · Runa del fuoco`,skill:'TS For',r:rr,mod,tot,dc});
+      if(!ok&&tg.hp>0){ tg.conds=(tg.conds||[]).filter(c=>c.n!=='trattenuto'); tg.conds.push({n:'trattenuto',r:10,source:id,spell:'Runa del fuoco',dc}); log({kind:'sys',txt:`${tg.name} fallisce il TS Forza: è trattenuto dalle catene di fuoco (2d6 a ogni suo inizio turno; a fine turno ripete il TS)`}); } else log({kind:'sys',txt:`${tg.name} ${tg.hp>0?'supera il TS Forza: niente catene':'è a terra'}`});
+      if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); save(true); }; }
+  function runaPietra(id,i,counted){ const t=S.tokens[id], r=SHEETS[id].pg.risorse[i], max=+r.max||0, u=counted?Math.max(0,resUsed(id,i)-1):resUsed(id,i), dc=runaDc(id); const rendi=()=>{ if(counted){ resSet(id,i,u); save(); } };
+    if(!counted&&max&&u>=max){ toast('Runa della pietra: già invocata, torna col riposo'); return; }
+    const list=targetsFor(id).filter(o=>o.dist<=9); if(!list.length){ toast('Nessuno entro 9 m'); rendi(); return; }
+    openModal(`<div class="eyebrow">${poiText(t.name)} · Runa della pietra</div><h2 class="big">Torpore sognante</h2><p class="note" style="margin:0 0 8px">Reazione, quando una creatura entro 9 m finisce il suo turno: fa un TS Saggezza CD ${dc}; se fallisce è Affascinata e Incapacitata (velocità 0) per 1 minuto; ripete il TS alla fine di ogni suo turno.</p><div class="tgtlist">${list.map(o=>`<label class="tgt ${o.same?'same':''}"><input type="radio" name="rpTgt" value="${o.id}"><span class="tn">${poiText(o.label)}</span><span class="note">${o.dist.toLocaleString('it-IT')} m</span></label>`).join('')}</div><div class="row" style="margin-top:10px"><button class="primary" id="rpGo">Invoca</button><button id="rpBack">Annulla</button></div>`,'poibox');
+    const box=document.getElementById('modal'); box.querySelector('#rpBack').onclick=()=>{ rendi(); closeModal(); };
+    box.querySelector('#rpGo').onclick=()=>{ const k=box.querySelector('[name=rpTgt]:checked')?.value, tg=k&&S.tokens[k]; if(!tg){ toast('Scegli il bersaglio'); return; } closeModal(); if(!counted&&max) resSet(id,i,u+1);
+      const mod=(tg.kind==='pg'||tg.kind==='alleato')?(tg.mods?.['TS Sag']??0):monsterSaveMod(tg,'Sag'), rr=d20(), tot=rr+mod, ok=tot>=dc; log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · Runa della pietra`,skill:'TS Sag',r:rr,mod,tot,dc});
+      if(!ok){ for(const c of ['affascinato','incapacitato']){ tg.conds=(tg.conds||[]).filter(x=>x.n!==c); tg.conds.push({n:c,r:10,source:id,spell:'Runa della pietra'}); } log({kind:'sys',txt:`${tg.name} fallisce il TS Saggezza: affascinato e incapacitato nel torpore sognante (1 minuto; ripete il TS a fine turno)`}); } else log({kind:'sys',txt:`${tg.name} supera il TS Saggezza della Runa della pietra`});
+      save(true); }; }
+  { const _ur=useResource; useResource=function(id,i,counted){ const t=S.tokens[id], r=(((SHEETS[id]||{}).pg||{}).risorse||[])[i]; if(t&&r){ const n=String(r.n||''), max=+r.max||0, u=counted?Math.max(0,resUsed(id,i)-1):resUsed(id,i); const rendi=()=>{ if(counted){ resSet(id,i,u); save(); } };
+        if(/ripristino stregonesco/i.test(n)){ if(!counted&&max&&u>=max){ toast('Ripristino stregonesco: già usato, torna col riposo lungo'); return; } const lvl=(SHEETS[id]||{}).level||5, k=Math.floor(lvl/2), prima=+t.pts||0; if(prima<=0){ toast('Nessun punto stregoneria da recuperare'); rendi(); return; } t.pts=Math.max(0,prima-k); if(!counted&&max) resSet(id,i,u+1); log({kind:'sys',txt:`${t.name} usa Ripristino stregonesco (dopo un riposo breve): recupera ${prima-t.pts} punti stregoneria (${ptsLeft(id)} disponibili)`}); save(true); return; }
+        if(/iniziato alla magia \(mago\)|lancio gratuito dell.incantesimo di 1° livello di iniziato/i.test(n)) return sceltaGratis(id,i,counted,['Jump','Longstrider'],'Iniziato alla magia (Mago)');
+        if(/incantesimo di 1° livello gratuito di toccato/i.test(n)) return sceltaGratis(id,i,counted,["Tasha's Hideous Laughter"],'Toccato dai Folletti');
+        if(/^runa del fuoco/i.test(n)) return runaFuoco(id,i,counted);
+        if(/^runa della pietra/i.test(n)) return runaPietra(id,i,counted); }
+      return _ur.apply(this,arguments); }; }
+
+  /* ----- 2. i tasti della scheda spendono l'uso ----- */
+  let VIA_RES=false;
+  { const _ur=useResource; useResource=function(){ VIA_RES=true; try{ return _ur.apply(this,arguments); } finally{ VIA_RES=false; } }; }
+  { const _sw=setWildShape; setWildShape=function(on){ const t=S.tokens.adamus; if(on&&!VIA_RES&&t&&!activeWildForm('adamus',t)){ const i=resIndexFor('adamus','Forma selvatica'); if(i>=0){ useResource('adamus',i); return; } } return _sw.apply(this,arguments); }; }
+  { const _sg=setGiantMight; setGiantMight=function(on){ const t=S.tokens.maximus; if(on&&!VIA_RES&&t&&!t.giant){ const i=resIndexFor('maximus','Possanza del gigante'); if(i>=0){ useResource('maximus',i); return; } } const r=_sg.apply(this,arguments); if(t){ if(on) t.giantR=10; else delete t.giantR; } return r; }; }
+
+  /* ----- 3. durate contate in scontro ----- */
+  const FX_DUR={favore:10,innata:10,armaSacra:100,forzaToro:600}, FX_NOME={favore:'Favore divino',innata:'Stregoneria innata',armaSacra:'Arma sacra',forzaToro:'Forza del toro'};
+  function fxTick(id){ const t=S.tokens[id]; if(!t) return 0; t.fxR=t.fxR||{}; let n=0;
+    for(const [k,dur] of Object.entries(FX_DUR)){ if(!fxOn(t,k)){ delete t.fxR[k]; continue; } if(t.fxR[k]==null){ t.fxR[k]=dur; continue; } t.fxR[k]--; if(t.fxR[k]<=0){ delete t.fxR[k]; if(k==='armaSacra'&&typeof sacraEnd==='function') sacraEnd(id,'sono passati 10 minuti'); else { delete t.fx[k]; log({kind:'sys',txt:`${t.name}: ${FX_NOME[k]} finisce (è passato il tempo)`}); } n++; } }
+    if(t.giant){ if(t.giantR==null) t.giantR=10; else { t.giantR--; if(t.giantR<=0){ delete t.giantR; VIA_RES=true; try{ setGiantMight(false); } finally{ VIA_RES=false; } log({kind:'sys',txt:`${t.name}: Possanza del gigante finisce (è passato il minuto)`}); n++; } } } else delete t.giantR;
+    return n; }
+  { const _tk=tickConds; tickConds=function(id){ const r=_tk.apply(this,arguments); try{ if(S.mode==='scontro'&&S.order&&S.order[S.turn]===id){ fxTick(id); const tg=S.tokens[id], c=tg&&(tg.conds||[]).find(c=>c&&c.n==='trattenuto'&&c.spell==='Runa del fuoco'); if(c&&tg.hp>0){ const x=fxRoll('2d6'); applyDamage(tg,x.total); log({kind:'hit',tid:id,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} subisce ${x.total} danni da fuoco dalle catene della Runa del fuoco (${x.txt}); a fine turno può ripetere il TS Forza CD ${c.dc||13}`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); } } }catch(e){ console.warn('v254 tick',e); } return r; }; }
+
+  /* ----- 5. Punizione dopo un critico ----- */
+  { const _rc=resolveCast; resolveCast=function(id,name,slot,ids){ const r=_rc.apply(this,arguments); try{ if((name==='Divine Smite'||name==='Thunderous Smite')&&ids&&ids.length){ const t=S.tokens[id], tg=S.tokens[ids[0]], d=SPELLS[name]; const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name&&e.tid===ids[0]&&e.hit&&e.r!=null); if(ev&&ev.crit&&Date.now()-(ev.t||0)<180000&&tg&&tg.hp>0){ const expr=d.dmg+upcastExtra(d,slot||+d.l||1), x=fxRoll(expr); applyDamage(tg,x.total); log({kind:'hit',tid:ids[0],hpNow:tg.hp,hpTop:tg.hpMax,txt:`${d.it} su un colpo critico: dadi raddoppiati, altri ${x.total} danni a ${tg.name} (${x.txt})`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); save(true); } } }catch(e){ console.warn('v254 smite',e); } return r; }; }
+
+  /* ----- 6. Zenith e destriero ----- */
+  { const _rl=restLong; restLong=function(id){ const r=_rl.apply(this,arguments); if(id==='luigis'&&S.tokens.zenith){ const z=S.tokens.zenith; z.hp=z.hpMax; z.conds=[]; log({kind:'sys',txt:'Zenith recupera tutti i punti ferita col riposo lungo di Luigis'}); save(true); } return r; }; }
+  function steedSweep(){ let n=0; for(const [k,x] of Object.entries(S.tokens)){ if(/^destriero_/.test(k)&&x&&+x.hp<=0){ delete S.tokens[k]; log({kind:'sys',txt:`${x.name} scende a 0 PF e svanisce`}); if(selected===k) selected=null; n++; } } if(n&&S.mode==='scontro'&&typeof sortOrder==='function') sortOrder(); return n>0; }
+
+  /* ----- 7. Aiuto: PF massimi = scheda + Aiuto finché dura ----- */
+  function aidFix(){ let n=0; for(const [id,t] of Object.entries(S.tokens)){ if(!t||!t.aid) continue; const can=(typeof PLAYER_V85!=='undefined'&&PLAYER_V85[id]&&PLAYER_V85[id].hpMax!=null)?+PLAYER_V85[id].hpMax:null, b=+t.aid||0;
+      if(hasCondition(t,'aiutato')){ if(can!=null&&+t.hpMax<can+b){ const diff=can+b-t.hpMax; t.hpMax=can+b; t.hp=Math.min(t.hpMax,(+t.hp||0)+diff); n++; } }
+      else { t.hpMax=can!=null?can:Math.max(1,(+t.hpMax||0)-b); t.hp=Math.min(+t.hp||0,t.hpMax); delete t.aid; log({kind:'sys',txt:`${t.name}: Aiuto finisce, PF massimi di nuovo ${t.hpMax}`}); n++; } }
+    return n; }
+  { const _r=render; render=function(){ let fixed=0; try{ fixed=aidFix(); }catch(e){} const out=_r.apply(this,arguments); try{ if(READY&&(TEST_MODE||FB_LOADED)&&IS_GM&&!dragging&&!pending&&(steedSweep()||fixed)) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0); }catch(e){ console.warn('v254',e); } return out; }; }
+
+  /* ----- 8. catalogo: economia delle azioni delle risorse ----- */
+  { const _eo=ecoOfRes; ecoOfRes=function(n){ if(/punizione del paladino|passo velato/i.test(n)) return 'bonus'; if(/scudo gratuito/i.test(n)) return 'reazione'; if(/runa del fuoco/i.test(n)) return 'gratuita'; return _eo.apply(this,arguments); }; }
+  window.__v254={menteTattica,compagnoSelvatico,fxTick,aidFix,runaFuoco,runaPietra,sceltaGratis,steedSweep,ALIAS};
+})();
+/* ===== FINE ABILITÀ DI CLASSE, TALENTI E OGGETTI (v254) ===== */
 </script>
