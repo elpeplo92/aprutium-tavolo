@@ -2524,12 +2524,32 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 #rail .rail-conc{position:absolute;left:4px;top:4px;z-index:4;padding:1px 6px;font:700 11px/1.3 var(--sans);color:#E8D7AE;background:#14110c;border:1px solid rgba(217,177,92,.45);border-radius:5px;cursor:pointer;pointer-events:auto}
 #rail .rail-conc.pend{color:#1A1207;background:radial-gradient(circle at 40% 35%,#FFF3C4,#D9B15C 60%,#9C7428);border-color:#FFF3C4;animation:initLuce 1.1s ease-in-out infinite}
 #rail .rail-conc:disabled{cursor:default;opacity:.8}
+/* ===== v251 — feedback di Maximus: le cose piccole ===== */
+#rail .rail-conc{left:7px;top:46px}   /* sotto il medaglione dell'iniziativa, non più sopra */
+.tok.mira,.tok.hastok.mira{box-shadow:0 0 0 3px #FFF3C4,0 0 0 7px rgba(224,80,60,.95),0 0 30px 12px rgba(224,80,60,.8)!important;z-index:5;animation:miraLuce .9s ease-in-out infinite}
+.tok.mira2,.tok.hastok.mira2{box-shadow:0 0 0 3px #FFF3C4,0 0 0 6px rgba(217,177,92,.95),0 0 24px 8px rgba(217,177,92,.75)!important;z-index:5}
+@keyframes miraLuce{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4)}}
+#modal.mirando{background:rgba(0,0,0,.3);justify-content:flex-end}
+#modal.mirando .box{margin-right:20px}
+.sch3 .s3-cond .s3-cc.s3-cc-x{cursor:pointer}
+.sch3 .s3-cond .s3-cc.s3-cc-x b{font-weight:400;opacity:.7;margin-left:4px}
+.sch3 .s3-cond .s3-cc.s3-cc-x:hover{border-color:#FFB3A8;background:rgba(234,90,75,.28)}
+.sch3 .s3-condadd{width:100%;margin-top:4px}
+.sch3 .s3-condadd summary{cursor:pointer;list-style:none;display:inline-block;padding:3px 12px;border:1px solid rgba(217,177,92,.45);border-radius:999px;color:var(--ott2);font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:17px;line-height:1.2}
+.sch3 .s3-condadd summary::-webkit-details-marker{display:none}
+.sch3 .s3-condadd summary:hover,.sch3 .s3-condadd[open] summary{background:rgba(217,177,92,.14);border-color:var(--ott1)}
+.sch3 .s3-condlist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center}
+.sch3 .s3-condlist button{padding:3px 11px;border:1px solid rgba(217,177,92,.4);border-radius:999px;background:rgba(8,9,12,.6);color:#E8D7AE;font:16px/1.2 'Mr Eaves Small Caps',Georgia,serif;cursor:pointer}
+.sch3 .s3-condlist button:hover{border-color:var(--ott1);background:rgba(217,177,92,.18)}
+.sch3 .s3-condr{display:inline-flex;align-items:center;gap:6px;font:16px 'Mr Eaves Small Caps',Georgia,serif;color:var(--ink-dim)}
+.sch3 .s3-condr input{width:52px}
+.sch3 .s3-piede .s3-tira+.s3-tira{margin-left:8px}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v250</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v251</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -9543,5 +9563,107 @@ function dlgHtml(d,ctx){
 .dlgbox .dlg{max-width:none}
 `; document.head.appendChild(st);
 })();
+/* ===== v251 — FEEDBACK DI MAXIMUS, LE COSE PICCOLE (11-10-2026) =====
+   1. Chi cade esce subito dall'ordine di iniziativa (mostri a 0 PF, personaggi morti) e ci rientra se torna in piedi:
+      prima applyDamage non riordinava, e il caduto restava nella colonna finché qualcosa non rifaceva l'ordine.
+   2. Il tasto «Concentrazione» sta sotto il medaglione dell'iniziativa, non più sopra (solo CSS).
+   3. Quando si scelgono i bersagli di un attacco o di un incantesimo, le pedine scelte si accendono sulla mappa
+      (rosso), quella col mouse sopra in oro; la finestra si sposta a destra e il velo si schiarisce per vedere la mappa.
+   4. Il giocatore mette e toglie le condizioni sul proprio personaggio dalla scheda (prima solo il master, dal riquadro Selezione).
+   5. Una pagina del Diario si può modificare (prima solo aggiungere ed eliminare).
+   6. Al ricarico si riapre l'ultima schermata: scheda e pagina, Compendio (sezione e voce), zoom della mappa,
+      scena sbirciata dal master. Sta in localStorage (`aprutium.vista`), per ruolo e per browser.
+   Fonte: Revisioni/Feedback di Maximus (11-10-2026)/v251/ */
+
+/* ---------- 1. caduti fuori dall'ordine ---------- */
+function ordineDopoDanni(t){ try{ if(!t||S.mode!=='scontro') return; const id=fxIdOf(t); if(!id) return; const dentro=(S.order||[]).includes(id), vale=orderKeep(id); if(dentro!==vale) sortOrder(); }catch(e){ console.warn('ordine dopo i danni',e); } }
+{ const _ad=applyDamage; applyDamage=function(t,v){ const r=_ad.apply(this,arguments); ordineDopoDanni(t); return r; };
+  const _ah=applyHeal; applyHeal=function(t,v){ const r=_ah.apply(this,arguments); ordineDopoDanni(t); return r; };
+  const _ds=deathSave; deathSave=function(id){ const r=_ds.apply(this,arguments); ordineDopoDanni(S.tokens[id]); return r; }; }
+
+/* ---------- 3. bersagli accesi sulla mappa ---------- */
+const MIRA=new Set();
+function miraPaint(){ document.querySelectorAll('#tokens .tok').forEach(d=>d.classList.toggle('mira',MIRA.has(d.dataset.id))); }
+function miraSet(ids){ MIRA.clear(); for(const i of ids) MIRA.add(i); miraPaint(); }
+function miraBind(){
+  const box=document.getElementById('modal'), inputs=[...box.querySelectorAll('input[name=tgt],input[name=cTgt]')]; if(!inputs.length) return;
+  box.classList.add('mirando');
+  const tok=v=>document.querySelector(`#tokens .tok[data-id="${v}"]`), sync=()=>miraSet(inputs.filter(i=>i.checked).map(i=>i.value));
+  inputs.forEach(i=>{ i.addEventListener('change',sync); const lb=i.closest('label'); if(!lb) return;
+    lb.addEventListener('mouseenter',()=>{ const d=tok(i.value); if(d) d.classList.add('mira2'); });
+    lb.addEventListener('mouseleave',()=>{ const d=tok(i.value); if(d) d.classList.remove('mira2'); }); });
+  const cc=box.querySelector('#cCentro'); if(cc) cc.addEventListener('change',()=>setTimeout(sync,0));
+  sync();
+}
+{ const _rt=renderTokens; renderTokens=function(){ const r=_rt.apply(this,arguments); if(MIRA.size) miraPaint(); return r; };
+  const _om=openModal; openModal=function(){ const r=_om.apply(this,arguments); document.getElementById('modal').classList.remove('mirando'); if(MIRA.size) miraSet([]); return r; };
+  const _cm=closeModal; closeModal=function(){ const r=_cm.apply(this,arguments); document.getElementById('modal').classList.remove('mirando'); if(MIRA.size) miraSet([]); return r; };
+  const _tp=openTargetPicker; openTargetPicker=function(){ const r=_tp.apply(this,arguments); miraBind(); return r; };
+  const _cs=castSpell; castSpell=function(){ const r=_cs.apply(this,arguments); miraBind(); return r; }; }
+
+/* ---------- 4. le condizioni dalla scheda del giocatore ---------- */
+let s3CondOpen=false;
+function s3CondBox(root,id,t){
+  const wrap=root.querySelector('.s3-eroe .s3-cond'); if(!wrap||wrap.querySelector('.s3-condadd')) return;
+  const conds=(t.conds||[]).filter(c=>c&&c.n), have=new Set(conds.map(c=>c.n));
+  wrap.querySelectorAll('.s3-cc').forEach((el,i)=>{ const c=conds[i]; if(!c) return; el.classList.add('s3-cc-x'); el.title='Togli '+condLabel(c.n); el.insertAdjacentHTML('beforeend','<b>×</b>');
+    el.onclick=e=>{ e.stopPropagation(); toggleCond(id,c.n,null); renderSheet(id); }; });
+  const add=document.createElement('details'); add.className='s3-condadd'; add.open=s3CondOpen;
+  add.innerHTML=`<summary title="Segna una condizione sul personaggio">+ condizione</summary><div class="s3-condlist"><label class="s3-condr">round <input type="number" min="1" placeholder="∞"></label>${CONDS.filter(([k])=>k!=='concentrazione'&&!have.has(k)).map(([k,l])=>`<button type="button" data-k="${k}">${l}</button>`).join('')}</div>`;
+  add.addEventListener('toggle',()=>{ s3CondOpen=add.open; });
+  add.querySelectorAll('button[data-k]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); const r=+add.querySelector('input').value||null; toggleCond(id,b.dataset.k,r); s3CondOpen=false; renderSheet(id); });
+  wrap.appendChild(add);
+}
+
+/* ---------- 5. il Diario si può modificare ---------- */
+let s3DiaEdit=false;
+S3P.dia=(id,t,sh,mine,LET)=>{
+  const h=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  if(!mine) return `<div class="s3-pagina on"><div class="s3-pg-dia"><aside class="s3-indice"><p class="s3-solo">Il diario è personale: lo leggono solo ${poiText(t.name)} e il master.</p></aside><article class="s3-foglio"></article></div></div>`;
+  const pages=Object.entries((S.diari||{})[id]||{}).filter(([,p])=>p&&p.txt).sort((a,b)=>(b[1].t||0)-(a[1].t||0));
+  const when=ms=>new Date(ms).toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'}), who=b=>b==='master'?'il master':(S.tokens[b]?.name||'');
+  if(s3DiaSel&&s3DiaSel!=='nuova'&&!pages.some(([k])=>k===s3DiaSel)) s3DiaSel=null;
+  if(!s3DiaSel) s3DiaSel=pages.length?pages[0][0]:'nuova';
+  if(s3DiaSel==='nuova') s3DiaEdit=false;
+  const ind=`<button class="s3-nuova ${s3DiaSel==='nuova'?'on':''}" data-s3dia="nuova">+ Nuova pagina</button>`+pages.map(([k,p])=>`<div class="s3-voce ${k===s3DiaSel?'on':''}" data-s3dia="${k}"><small>${when(p.t)}</small><b>${poiText(p.tit||'Senza titolo')}</b><p>${poiText(String(p.txt).slice(0,60))}…</p></div>`).join('');
+  let fog;
+  if(s3DiaSel==='nuova') fog=`<input class="s3-tit" id="diaTit" placeholder="Titolo della pagina" autocomplete="off"><div class="s3-meta"><span>${when(Date.now())}</span><span>scritto da ${poiText(IS_GM?'il master':t.name)}</span></div>
+      <textarea class="s3-righe" id="diaTxt" placeholder="Cosa è successo, cosa hai scoperto, cosa vuoi ricordare…">${poiText(sheetDiaDraft)}</textarea><div class="s3-piede"><button class="s3-tira s3-pri2" id="diaAdd">Salva nel diario</button></div>`;
+  else { const p=((S.diari||{})[id]||{})[s3DiaSel]; const meta=`<div class="s3-meta"><span>${when(p.t)}</span><span>scritto da ${poiText(who(p.by))}${p.mod?` · modificata il ${when(p.mod)}`:''}</span></div>`;
+    if(s3DiaEdit) fog=`<input class="s3-tit" id="diaTitEd" placeholder="Titolo della pagina" autocomplete="off" value="${h(p.tit)}">${meta}<textarea class="s3-righe" id="diaTxtEd">${h(p.txt)}</textarea><div class="s3-piede"><button class="s3-tira s3-pri2" id="diaSave">Salva le modifiche</button><button class="s3-tira" id="diaCancel">Annulla</button></div>`;
+    else fog=`<div class="s3-tit">${poiText(p.tit||'Senza titolo')}</div>${meta}<div class="s3-righe">${poiText(p.txt).split('\n').join('<br>')}</div><div class="s3-piede"><button class="s3-tira" id="diaEdit">Modifica</button><button class="s3-tira" data-diadel="${s3DiaSel}">Elimina</button></div>`; }
+  return `<div class="s3-pagina on"><div class="s3-pg-dia"><aside class="s3-indice">${ind}<p class="s3-solo">Lo leggete solo tu e il master.</p></aside><article class="s3-foglio">${fog}</article></div></div>`;
+};
+{ const _s3c=s3Comandi; s3Comandi=function(box,id,t,mine){ _s3c.apply(this,arguments); if(!mine) return;
+    box.querySelectorAll('[data-s3dia]').forEach(b=>b.onclick=()=>{ s3DiaEdit=false; s3DiaSel=b.dataset.s3dia; renderSheet(id); });
+    const be=box.querySelector('#diaEdit'); if(be) be.onclick=()=>{ s3DiaEdit=true; renderSheet(id); };
+    const bc=box.querySelector('#diaCancel'); if(bc) bc.onclick=()=>{ s3DiaEdit=false; renderSheet(id); };
+    const bs=box.querySelector('#diaSave'); if(bs) bs.onclick=()=>{ const txt=(box.querySelector('#diaTxtEd').value||'').trim(), ti=(box.querySelector('#diaTitEd').value||'').trim(); if(!txt){ toast('La pagina non può restare vuota: per toglierla usa «Elimina»'); return; }
+      const p=S.diari&&S.diari[id]&&S.diari[id][s3DiaSel]; if(!p) return; p.tit=ti; p.txt=txt; p.mod=Date.now(); s3DiaEdit=false; save(true); renderSheet(id); }; }; }
+
+/* ---------- 6. l'ultima schermata al ricarico ---------- */
+const VISTA={}; let vistaTm=null;
+function vistaSet(o){ Object.assign(VISTA,o); clearTimeout(vistaTm); vistaTm=setTimeout(()=>{ try{ c3Ls('vista',Object.assign({ruolo:ROLE},VISTA)); }catch(e){} },250); }
+function navOn(id){ ['navTavolo','navDiario','btnComp'].forEach(k=>{ const b=document.getElementById(k); if(b) b.classList.toggle('on',k===id); }); }
+{ const _om=openModal; openModal=function(){ const r=_om.apply(this,arguments); vistaSet({k:'tavolo'}); return r; };
+  const _cm=closeModal; closeModal=function(){ const r=_cm.apply(this,arguments); vistaSet({k:'tavolo'}); return r; };
+  const _rs=renderSheet; renderSheet=function(id){ const r=_rs.apply(this,arguments);
+    const m=document.getElementById('modal'); if(m.style.display==='flex'&&sheetOf===id){ vistaSet({k:'scheda',id,tab:sheetTab}); const root=m.querySelector('.sch3'); if(root&&S.tokens[id]&&canAct(id)) s3CondBox(root,id,S.tokens[id]); }
+    return r; };
+  const _rc=renderCompendio; renderCompendio=function(){ const r=_rc.apply(this,arguments); vistaSet({k:'comp',sec:c2Sec,open:c2Open||'',city:c2City==null?'':c2City,liv:c3Liv||'',racc:c3Racc||'',home:!!window.c4Home,q:c2Q||''}); return r; };
+  const _av=applyView; applyView=function(){ const r=_av.apply(this,arguments); vistaSet({zoom:{x:view.x,y:view.y,k:view.k,scena:viewKey()}}); return r; };
+  const _sv=sceneView; sceneView=function(key){ const r=_sv.apply(this,arguments); vistaSet({gm:GM_VIEW||''}); return r; }; }
+function vistaRipristina(){
+  const v=c3Ls('vista'); if(!v||v.ruolo!==ROLE) return;
+  if(document.getElementById('modal').style.display==='flex') return;   /* c'è già una finestra aperta (per esempio l'accesso del master): non si tocca */
+  try{
+    if(IS_GM&&v.gm&&typeof SCENES!=='undefined'&&SCENES[v.gm]&&v.gm!==S.scene) sceneView(v.gm);
+    if(v.zoom&&v.zoom.scena===viewKey()&&+v.zoom.k>0){ view.x=+v.zoom.x||0; view.y=+v.zoom.y||0; view.k=+v.zoom.k; applyView(); }
+    if(v.k==='scheda'&&v.id&&S.tokens[v.id]&&SHEETS[v.id]&&(IS_GM||v.id===me)){ sheetTab=v.tab||'pan'; openSheet(v.id); navOn('navDiario'); }
+    else if(v.k==='comp'){ c2Sec=v.sec||c2Sec; c2Open=v.open||null; c2City=v.city===''?null:v.city; c3Liv=v.liv||''; c3Racc=v.racc||''; c2Q=v.q||''; window.c4Home=!!v.home; openCompendio(); navOn('btnComp'); }
+  }catch(e){ console.warn('ultima schermata',e); }
+}
+if(!TEST_MODE||/[?&]vista=1/.test(location.search)){ let n=0; const tm=setInterval(()=>{ n++; if(!READY) return; if(!TEST_MODE&&!FB_LOADED&&n<60) return; clearInterval(tm); vistaRipristina(); },250); }
+
 /* ===== fine DIALOGHI DEI PNG ===== */
 </script>
