@@ -2529,7 +2529,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v246</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v247</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -3260,10 +3260,13 @@ function rollDmg(expr,crit){ const d=rollExpr(expr); if(!crit) return {total:d.t
 function openTargetPicker(tokId,a,count){
   const t=S.tokens[tokId]; const list=targetsFor(tokId); const isAtk=a.atk!=null;
   const showHp=x=>IS_GM||x.kind==='pg';
-  const row=(o)=>`<label class="tgt ${o.same?'same':''}"><input type="${isAtk?'radio':'checkbox'}" name="tgt" value="${o.id}"><span class="tn">${o.label}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${showHp(o.t)?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${tokAc(o.t)}`:''}</span></label>`;
+  const row=(o)=>`<label class="tgt ${o.same?'same':''}"><input type="${isAtk?'radio':'checkbox'}" name="tgt" value="${o.id}"><span class="tn">${o.label}${hasCondition(o.t,'protetto')?' <small style="color:#EDCB73">· protetto dal male</small>':''}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${showHp(o.t)?` · PF ${o.t.hp}/${o.t.hpMax}`:''}${IS_GM&&o.t.ac?` · CA ${tokAc(o.t)}`:''}</span></label>`;
   openModal(`<div class="eyebrow">${t.name}${count>1?' · Multiattacco':''}</div><h2 class="big">${a.n}</h2><p class="note" style="margin:0 0 8px">${isAtk?`Tiro per colpire +${a.atk}${a.dmg?` · danno ${a.dmg}`:''}. Scegli il bersaglio: se lo colpisci, i danni si tolgono da soli.`:`Danno ${a.dmg}. Scegli i bersagli: dopo il tiro decidi per ognuno se subisce tutto, metà o niente.`}${a.note?`<br><span style="color:var(--ink-dim)">${a.note}</span>`:''}</p>${isAtk?`<div class="fxadv" style="margin:0 0 8px"><label><input type="radio" name="tAdv" value="" checked> Normale</label><label><input type="radio" name="tAdv" value="v" ${t.adv==='v'?'checked':''}> Vantaggio</label><label><input type="radio" name="tAdv" value="s" ${t.adv==='s'?'checked':''}> Svantaggio</label></div>`:''}<div class="tgtlist">${list.map(row).join('')||'<span class="note">Nessun bersaglio in vista.</span>'}</div><div class="row" style="margin-top:12px"><button class="primary" id="tgtGo">Tira</button><button id="tgtNone">Solo il tiro, senza bersaglio</button></div>`,'poibox');
   const box=document.getElementById('modal');
   const setAdv=()=>{ const v=box.querySelector('[name=tAdv]:checked')?.value; if(v) t.adv=v; else delete t.adv; };
+  /* v247 — Protezione dal bene e dal male sul bersaglio: svantaggio messo da solo, con l'avviso */
+  if(isAtk){ const tl=box.querySelector('.tgtlist'); if(tl) tl.insertAdjacentHTML('afterend','<p class="note" id="tgtProt" style="display:none;margin:6px 0 0;color:#EDCB73">Il bersaglio è protetto dal male: svantaggio se chi attacca è aberrazione, celestiale, elementale, folletto, immondo o non morto. Se non lo è, rimetti «Normale».</p>');
+    box.querySelectorAll('input[name=tgt]').forEach(inp=>inp.addEventListener('change',()=>{ const x=S.tokens[inp.value], p=!!(x&&hasCondition(x,'protetto')); const n=box.querySelector('#tgtProt'); if(n) n.style.display=p?'':'none'; if(p){ const s2=box.querySelector('[name=tAdv][value=s]'); if(s2) s2.checked=true; } })); }
   const spend=()=>{ if(t.kind==='pg'&&actItem(tokId,a)){ actSpend(tokId,a); save(true); } };
   box.querySelector('#tgtNone').onclick=()=>{ setAdv(); const v=t.adv; closeModal(); for(let k=0;k<count;k++){ if(v) t.adv=v; plainRoll(tokId,a); } spend(); };
   box.querySelector('#tgtGo').onclick=()=>{ const ids=[...box.querySelectorAll('input[name=tgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un bersaglio'); return; } setAdv(); const v=t.adv; closeModal(); if(isAtk){ for(let k=0;k<count;k++){ if(v) t.adv=v; resolveAttack(tokId,a,ids[0]); } } else resolveSave(tokId,a,ids); spend(); };
@@ -4585,7 +4588,7 @@ const SPELL_RULES={
  'Aura of Vitality':{m:'cura',mod:false,uno:true},
  'Aid':{m:'effetto',max:3,alleati:true},
  'Shield of Faith':{m:'effetto',uno:true,alleati:true},
- 'Protection from Evil and Good':{m:'effetto',uno:true,alleati:true},
+ 'Protection from Evil and Good':{m:'effetto',uno:true,alleati:true,condSu:'protetto',nota:'aberrazioni, celestiali, elementali, folletti, immondi e non morti hanno svantaggio ad attaccarlo e non possono affascinarlo, spaventarlo né possederlo'},
  'Guidance':{m:'effetto',uno:true,alleati:true},
  'Barkskin':{m:'effetto',uno:true,alleati:true},
  'Blindness/Deafness':{m:'ts',ts:'Cos',uno:true,cond:['accecato'],rounds:10,nodmg:true},
@@ -5764,8 +5767,8 @@ function checkTurn(){
 }
 
 /* ---------- condizioni ---------- */
-const CONDS=[['prono','Prono'],['afferrato','Afferrato'],['trattenuto','Trattenuto'],['spaventato','Spaventato'],['avvelenato','Avvelenato'],['affascinato','Affascinato'],['accecato','Accecato'],['assordato','Assordato'],['stordito','Stordito'],['incapacitato','Incapacitato'],['paralizzato','Paralizzato'],['invisibile','Invisibile'],['concentrazione','Concentrazione'],['benedetto','Benedetto'],['marchiato','Marchiato'],['scatto','In scatto']];
-const CONDS_ABBR={prono:'PRN',afferrato:'AFF',trattenuto:'TRA',spaventato:'SPA',avvelenato:'VEL',affascinato:'CHA',accecato:'CIE',assordato:'SOR',stordito:'STO',incapacitato:'INC',paralizzato:'PAR',invisibile:'INV',concentrazione:'CON',benedetto:'BEN',marchiato:'MAR',scatto:'SCA'};
+const CONDS=[['prono','Prono'],['afferrato','Afferrato'],['trattenuto','Trattenuto'],['spaventato','Spaventato'],['avvelenato','Avvelenato'],['affascinato','Affascinato'],['accecato','Accecato'],['assordato','Assordato'],['stordito','Stordito'],['incapacitato','Incapacitato'],['paralizzato','Paralizzato'],['invisibile','Invisibile'],['concentrazione','Concentrazione'],['benedetto','Benedetto'],['marchiato','Marchiato'],['scatto','In scatto'],['protetto','Protetto dal male']];
+const CONDS_ABBR={prono:'PRN',afferrato:'AFF',trattenuto:'TRA',spaventato:'SPA',avvelenato:'VEL',affascinato:'CHA',accecato:'CIE',assordato:'SOR',stordito:'STO',incapacitato:'INC',paralizzato:'PAR',invisibile:'INV',concentrazione:'CON',benedetto:'BEN',marchiato:'MAR',scatto:'SCA',protetto:'PRO'};
 function condLabel(k){ const c=CONDS.find(x=>x[0]===k); return c?c[1]:k; }
 function clearBlessing(source){ for(const x of Object.values(S.tokens)) x.conds=(x.conds||[]).filter(c=>!(c.n==='benedetto'&&c.source===source)); }
 function toggleCond(id,k,rounds){ const t=S.tokens[id]; if(!t) return; t.conds=t.conds||[]; const i=t.conds.findIndex(c=>c.n===k); if(i>=0){ const old=t.conds[i]; t.conds.splice(i,1); if(old.n==='concentrazione'&&old.source==='benedizione') clearBlessing(id); if(old.n==='concentrazione'&&old.spell) spellEnd(id,old.spell,'fine della concentrazione'); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name} non è più ${condLabel(k).toLowerCase()}`}); } else { t.conds.push({n:k,r:rounds||null}); log({kind:'sys',gm:t.kind==='nemico'&&!S.publicRolls,txt:`${t.name}: ${condLabel(k).toLowerCase()}${rounds?` per ${rounds} round`:''}`}); } save(); }
@@ -7448,7 +7451,8 @@ function uiIcoAll(root){ try{ const r=root||document; uiIcoSwap(); r.querySelect
    che nuocciono, oro per quelle buone (COND_BUONE). I round restanti stanno in un numerino sull'angolo. Il nome completo
    resta nel suggerimento (title). Nella scheda il simbolo va accanto al nome. Il testo dei segnali lo scrive ancora condHtml():
    condBadges() lo sostituisce dopo ogni disegno della pagina (chiamata da uiIcoAll). */
-const COND_BUONE=new Set(['benedetto','concentrazione','legame','invisibile','scatto']);
+const COND_BUONE=new Set(['benedetto','concentrazione','legame','invisibile','scatto','protetto']);
+UI_ICO.c_protetto='<path d="M12 2.5l7.5 3v6.2c0 4.6-3.2 8-7.5 9.8-4.3-1.8-7.5-5.2-7.5-9.8V5.5z"/><path d="M12 7v9M8 11.5h8"/>';
 function condKeyDaEtichetta(lbl){ lbl=String(lbl||'').split(' · ')[0].trim(); const c=CONDS.find(x=>x[1]===lbl); return c?c[0]:''; }
 function condBadges(root){ const r=root||document;
   r.querySelectorAll('.condrow .cond:not(.cico)').forEach(el=>{ const k=condKeyDaEtichetta(el.title), ico=UI_ICO['c_'+k]; if(!ico) return; const i=el.querySelector('i'), round=i?i.textContent:'';
