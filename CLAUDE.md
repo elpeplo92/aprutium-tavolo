@@ -1302,3 +1302,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v244 (11/10/2026) — Incanalare divinità di Mattheus
 
 - Giuseppe: «Scacciare non morti funziona?» No: il pallino/tasto di Incanalare divinità del Chierico scalava solo un uso. Ora (`chiericoChannel`, aggancio su `useResource` come `sacraChannel` del Paladino) si sceglie l'effetto: **Scacciare non morti** (lista dei nemici in vista, spuntati quelli entro 9 m; TS Saggezza contro la CD 15; chi fallisce ha Spaventato e Incapacitato per 10 round; Bruciare i non morti: Saggezza d8 = 4d8 radiosi a chi fallisce, tirati una volta), **Scintilla divina** (una creatura entro 9 m: 1d8+Sag di cura, o danni radiosi/necrotici con TS Cos a metà), **Preservare la vita** (uso speso e regola nel Registro; cure a mano). Fonte: `Revisioni/Incanalare divinita del chierico (v244)/` (`applica.py` + `blocco.js`).
+
+## v245 (11/10/2026) — tasto Concentrazione e Leader ispiratore
+
+- **Concentrazione**: `applyDamage` (avvolto) segna in `t.concTs` la CD (10 o metà dei danni, max 30) quando chi si concentra subisce danni e resta in piedi. Sul medaglione della colonna di sinistra di chi si concentra compare il tasto «Concentrazione» (in alto a sinistra sul ritratto; lampeggia con la CD quando il tiro è da fare). Lo clicca il giocatore di quel personaggio o il master: finestra coi danni (CD calcolata), normale/vantaggio/svantaggio, d20 + TS Cos; se fallisce `concEnd` toglie l'incantesimo.
+- **Leader ispiratore** (Esibizione rinvigorente di Mattheus) e **Imposizione delle mani**: dal pallino della scheda la finestra si apriva e la scheda si ridisegnava subito sopra, quindi niente PF temporanei. Ora la finestra si apre dopo (`setTimeout`). PF temporanei = livello + il più alto fra Sag e Car (Mattheus: 5 + 4 = 9; la nota della scheda dice 8).
+- Fonte: `Revisioni/Concentrazione e Leader ispiratore (v245)/` (`applica.py` + `blocco.js`).
