@@ -1320,3 +1320,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v248 (11/10/2026) — Scudo della fede
 
 - Prima il lancio scriveva solo una riga. Ora `condSu:'scudofede'`: il bersaglio prende la condizione «Scudo della fede» (sigla SDF, icona a scudo con un «+», condizione buona) e la CA conta +2 in `pgAcNow` (personaggi: scheda e attacchi) e in `tokAc` (pedine senza scheda); finisce con la concentrazione di chi lo lancia. Fonte: `Revisioni/Scudo della fede (v248)/applica.py`.
+
+## v249 (11/10/2026) — Cavalcatura fedele
+
+- Prima Trova cavalcatura (anche gratuito, dalla risorsa «Cavalcatura fedele») scriveva solo una riga. Ora, dopo il lancio (`resolveCast` avvolto), si sceglie Celestiale, Fatato o Immondo e compare la pedina `destriero_<id>` (alleata, `owner` = chi lancia, quindi segue il gruppo fra le scene come Zenith): Grande, CA 10 + livello dello slot, PF 5 + 10 × livello (dal pallino gratuito vale il 2°: CA 12, 25 PF), velocità 18 m (volo dal 4°), Colpo ultraterreno col bonus d'attacco degli incantesimi di chi evoca, 1d8 + livello; azione bonus del tipo (Tocco guaritore / Passo fatato / Sguardo terribile). `noInit`: agisce nel turno di chi l'ha evocato. Rievocarlo lo sostituisce. Fonte: `Revisioni/Cavalcatura fedele (v249)/`.
