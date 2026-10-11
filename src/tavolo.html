@@ -2549,7 +2549,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v252</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v253</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -9809,4 +9809,200 @@ if(!TEST_MODE||/[?&]vista=1/.test(location.search)){ let n=0; const tm=setInterv
   window.__v252={concSweep,concAvvisi,tgtHints,INCAP};
 })();
 /* ===== FINE INCANTESIMI E CONCENTRAZIONE (v252) ===== */
+/* ===== EFFETTI DEGLI INCANTESIMI (v253) — seconda passata dell'audit dell'11-10-2026 =====
+   Giuseppe: «non sono sicuro che gli incantesimi creino in automatico i loro effetti». Fino alla v252 questi scrivevano solo una riga
+   nel Registro; ora fanno quello che dice il testo 2024 (SRD 5.2.1):
+   - EVOCAZIONI con la pedina: Evoca bestia (Spirito bestiale: ambiente Terra/Aria/Acqua, CA 11 + livello, PF 30/20 + 5 per livello
+     sopra il 2°, Squarciare 1d8 + 4 + livello col tiro per colpire da incantatore, Multiattacco dal 4°), Evoca folletto (Spirito fatato:
+     umore, CA 12 + livello, PF 30 + 10 per livello sopra il 3°, Lama fatata 2d6 + 3 + livello, Passo fatato), Trova famiglio (forma a
+     scelta, non attacca), Evoca animali (il branco: pedina Grande intangibile che si sposta col giocatore), Raggio di luna e Sfera
+     infuocata (pedina dell'area). Le pedine sono alleate di chi lancia e agiscono dopo di lui (noInit); spariscono quando finisce la
+     concentrazione (spellEnd avvolta) o a 0 PF; rievocare sostituisce.
+   - EFFETTI A INIZIO TURNO (tickConds avvolta, cioè quando «Prossimo» passa il turno a una pedina): Guardiani spirituali (nemici entro
+     4,5 m da chi si concentra: TS Sag, 3d8 radiosi, metà se supera), Evoca animali (entro 3 m dal branco: TS Des, 3d10), Raggio di luna
+     (entro 1,5 m: TS Cos, 2d10, metà), Sfera infuocata (entro 1,5 m: TS Des, 2d6, metà), Colpo intrappolante (1d6 a chi è trattenuto).
+     Livelli superiori: il livello dello slot è segnato sulla concentrazione (c.slot).
+   - SCELTE al lancio (menu «Scelta» nella finestra): tipo di danno di Sfera cromatica e di Esplosione stregonesca (conta per Adepto
+     elementale, va nel Registro), caratteristica di Potenziare caratteristica, Ingrandire o Ridurre, accecato o assordato, ambiente /
+     umore / forma degli evocati, tipo di danno di Arma elementale, Punizione divina contro immondi e non morti (+1d8).
+   - BUFF VERI (condizioni con origine, finiscono con la concentrazione o coi round): Potenziare caratteristica (vantaggio alle prove di
+     quella caratteristica, messo da solo), Immagine speculare (tre duplicati: a ogni colpo subito un d6 per duplicato, con un 3+ il colpo
+     va al duplicato e i danni non si tolgono), Santuario (chi attacca il protetto fa un TS Sag: se fallisce l'attacco è perso; finisce se
+     il protetto attacca o lancia), Dardo tracciante (il bersaglio è «tracciato»: il prossimo attacco contro di lui ha vantaggio), Faro di
+     speranza (vantaggio ai TS Sag e cure al massimo), Ingrandire/Ridurre (taglia, vantaggio/svantaggio a Forza, ±1d4 ai danni con le
+     armi; TS Cos se il bersaglio è un nemico), Passo veloce (+3 m), Volare (velocità 18 m), Passare senza tracce (+10 a Furtività a te e
+     agli alleati entro 9 m), Protezione dai veleni (toglie Avvelenato), Arma elementale (+1 a colpire e +1d4 del tipo scelto), Randello
+     incantato (segna il minuto: si usa l'attacco «Bastone ferrato con Shillelagh» della scheda), Duello obbligato (il bersaglio è segnato),
+     Esplosione stregonesca (gli 8 esplodono, fino al modificatore di Carisma), Sfera cromatica (con due d8 uguali avvisa che la sfera balza).
+   Tutto a funzioni avvolte, in questo blocco; prova rigiocabile in Revisioni/Effetti degli incantesimi (v253)/. */
+(function(){
+  const NUOVE=[['potenziato','Potenziare caratteristica','POT',true],['immagini','Immagine speculare','IMM',true],['santuario','Santuario','SAN',true],['tracciato','Tracciato','TRC',false],['faro','Faro di speranza','FAR',true],['ingrandito','Ingrandito','ING',true],['ridotto','Ridotto','RID',false],['passoveloce','Passo veloce','PVE',true],['volo','Volare','VOL',true],['senzatracce','Passare senza tracce','PST',true],['antiveleno','Protezione dai veleni','APV',true],['randello','Randello incantato','RAN',true],['armaelementale','Arma elementale','AEL',true],['duellante','Duello obbligato','DUE',false]];
+  for(const [k,n,ab,buona] of NUOVE){ if(!CONDS.some(c=>c[0]===k)) CONDS.push([k,n]); CONDS_ABBR[k]=ab; if(buona) COND_BUONE.add(k); }
+  const I=UI_ICO;
+  I.c_potenziato='<path d="M12 20V6M7 11l5-5 5 5"/><path d="M5 20h14"/>'; I.c_immagini='<path d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM16 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><path d="M3 20c0-3 2-5 5-5s5 2 5 5M11 20c0-3 2-5 5-5s5 2 5 5"/>';
+  I.c_santuario='<path d="M12 3L4 7v5c0 5 3.5 8.5 8 9.5 4.5-1 8-4.5 8-9.5V7z"/><path d="M12 8v6M9 11h6"/>'; I.c_tracciato='<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>';
+  I.c_faro='<path d="M12 2l2 5 5 .5-4 3.5 1.5 5L12 13l-4.5 3 1.5-5-4-3.5 5-.5z"/><path d="M12 13v9"/>'; I.c_ingrandito='<path d="M4 20L20 4M20 4h-6M20 4v6M4 20h6M4 20v-6"/>'; I.c_ridotto='<path d="M4 4l6 6M10 10H5M10 10V5M20 20l-6-6M14 14h5M14 14v5"/>';
+  I.c_passoveloce='<path d="M5 17h8l4-5-4-5H5"/><path d="M3 12h2M15 20l4-3-4-3"/>'; I.c_volo='<path d="M12 20V9M12 9C9 5 5 4 2 5c1 3 4 5 10 4M12 9c3-4 7-5 10-4-1 3-4 5-10 4"/>'; I.c_senzatracce='<path d="M8 20c-2-4 0-7 3-8M16 4c2 4 0 7-3 8"/><path d="M4 4l16 16"/>';
+  I.c_antiveleno='<path d="M12 3C8 8 6 11 6 14a6 6 0 0 0 12 0c0-3-2-6-6-11z"/><path d="M8 8l8 8"/>'; I.c_randello='<path d="M6 20l10-10M14 8l3-3 2 2-3 3z"/><circle cx="17.5" cy="6.5" r="2.5"/>'; I.c_armaelementale='<path d="M5 19L17 7M14 4l6 6M17 7l2-2"/><path d="M8 4l1 3-3 1z"/>'; I.c_duellante='<path d="M5 19L19 5M5 5l14 14M4 14l6 6M14 4l6 6"/>';
+
+  /* ----- regole (con «scelta» = menu nella finestra di lancio) ----- */
+  const R=SPELL_RULES;
+  R['Shillelagh']={m:'effetto',se:true,condSe:'randello',condSeRound:10,nota:'per 1 minuto attacca con «Bastone ferrato con Shillelagh» (+6, 1d10+3: Saggezza, dado d10 al 5°), nella scheda e nel catalogo delle azioni'};
+  R['Elemental Weapon']={m:'effetto',uno:true,alleati:true,condSu:'armaelementale',scelta:{k:'tipo',n:'Tipo di danno',v:['acido','freddo','fulmine','fuoco','tuono']},nota:'l’arma del bersaglio ha +1 ai tiri per colpire e +1d4 danni del tipo scelto: il tavolo li somma da solo'};
+  R['Enhance Ability']={m:'effetto',uno:true,alleati:true,condSu:'potenziato',scelta:{k:'ab',n:'Caratteristica',v:['For','Des','Int','Sag','Car'],et:ab=>ABIL_IT[ab]},nota:'vantaggio alle prove della caratteristica scelta, messo da solo'};
+  R['Mirror Image']={m:'effetto',se:true,condSe:'immagini',condSeRound:10,nota:'tre duplicati: a ogni colpo che ti prende il tavolo tira un d6 per duplicato e, se uno fa 3 o più, il colpo va al duplicato'};
+  R['Sanctuary']={m:'effetto',uno:true,alleati:true,condSu:'santuario',nota:'chi attacca il protetto fa un TS Saggezza (lo tira il tavolo): se fallisce perde l’attacco; finisce se il protetto attacca o lancia un incantesimo'};
+  R['Beacon of Hope']={m:'effetto',alleati:true,tutti:'faro',nota:'per chi è segnato: vantaggio ai TS Saggezza e ogni cura al massimo (applicati dal tavolo)'};
+  R['Enlarge/Reduce']={m:'effetto',uno:true,scelta:{k:'modo',n:'Effetto',v:['ingrandire','ridurre']},nota:'un nemico fa un TS Costituzione per evitarlo; taglia, vantaggio o svantaggio a Forza e ±1d4 ai danni con le armi li applica il tavolo'};
+  R['Longstrider']={m:'effetto',uno:true,alleati:true,condSu:'passoveloce',nota:'+3 m di velocità per 1 ora'};
+  R['Fly']={m:'effetto',uno:true,alleati:true,condSu:'volo',nota:'velocità di volo 18 m finché dura la concentrazione'};
+  R['Protection from Poison']={m:'effetto',uno:true,alleati:true,condSu:'antiveleno',nota:'toglie Avvelenato; per 1 ora vantaggio ai TS contro il veleno e resistenza ai danni da veleno (questi due a mano)'};
+  R['Pass without Trace']={m:'effetto',se:true,nota:'+10 a Furtività a te e agli alleati entro 9 m, sommato da solo alle prove'};
+  R['Guiding Bolt']={m:'atk',nota:'se colpisce, il bersaglio è «tracciato»: il prossimo attacco contro di lui ha vantaggio (messo da solo)'};
+  R['Chromatic Orb']={m:'atk',scelta:{k:'tipo',n:'Tipo di danno',v:['acido','freddo','fuoco','fulmine','tuono','veleno']},nota:'con due d8 uguali la sfera balza su un altro bersaglio entro 9 m: rilanciala «Senza slot» su di lui'};
+  R['Sorcerous Burst']={m:'atk',scelta:{k:'tipo',n:'Tipo di danno',v:['acido','freddo','fuoco','fulmine','psichici','tuono','veleno']},nota:'ogni 8 su un d8 fa tirare un altro d8 (fino al modificatore di Carisma): lo fa il tavolo'};
+  R['Divine Smite'].scelta={k:'tipo',n:'Bersaglio',v:['normale','immondo o non morto (+1d8)']};
+  R['Blindness/Deafness'].scelta={k:'cond',n:'Effetto',v:['accecato','assordato']};
+  R['Compelled Duel'].cond=['duellante']; R['Compelled Duel'].rounds=10; R['Compelled Duel'].nota='chi fallisce è in duello: svantaggio ai tiri per colpire contro chiunque altro e non può allontanarsi più di 9 m da te';
+  R['Summon Beast']={m:'effetto',se:true,evoca:true,scelta:{k:'amb',n:'Ambiente',v:['Terra','Aria','Acqua']},nota:'compare la pedina dello Spirito bestiale, alleata, che agisce dopo di te'};
+  R['Summon Fey']={m:'effetto',se:true,evoca:true,scelta:{k:'umore',n:'Umore',v:['Furioso','Gioioso','Ingannevole']},nota:'compare la pedina dello Spirito fatato, alleata, che agisce dopo di te'};
+  R['Find Familiar']={m:'effetto',se:true,evoca:true,scelta:{k:'forma',n:'Forma',v:['Gufo','Gatto','Corvo','Falco','Pipistrello','Ratto','Ragno','Rana','Lucertola','Donnola','Polpo']},nota:'compare la pedina del famiglio (non attacca)'};
+  R['Conjure Animals']={m:'effetto',se:true,evoca:true,nota:'compare il branco (pedina Grande, intangibile): all’inizio del turno dei nemici entro 3 m dal branco il tavolo fa tirare il TS Destrezza (3d10)'};
+  R['Moonbeam'].evoca=true; R['Moonbeam'].nota='il raggio è una pedina: la sposti tu (azione Magia); chi comincia il turno entro 1,5 m tira il TS Cos da solo';
+  R['Flaming Sphere'].evoca=true; R['Flaming Sphere'].nota='la sfera è una pedina: la sposti tu (azione bonus, 9 m); chi comincia il turno entro 1,5 m tira il TS Des da solo; per speronare rilancia «Senza slot»';
+  R['Spirit Guardians'].nota='all’inizio del turno di ogni nemico entro 4,5 m da te il tavolo fa tirare il TS Sag e toglie i danni';
+  R['Ensnaring Strike'].nota='finché è trattenuto, 1d6 all’inizio di ogni suo turno (lo toglie il tavolo); per liberarsi prova di Atletica contro la tua CD';
+  const INCAP=(window.__v251&&window.__v251.INCAP)||new Set(['incapacitato','paralizzato','stordito','pietrificato','privo di sensi']);
+  const nemici=(a,b)=>(a.kind==='nemico')!==(b.kind==='nemico');
+  const md=v=>Math.floor((v-10)/2);
+  const abilOf=skill=>{ const k=skillKey(skill); let ab=k?SKILLS[k]:null; if(!ab||ab==='Iniziativa') ab=abilAbbr(skill); return ab; };
+  const spOf=id=>{ const sh=SHEETS[id]; return (sh&&sh.spell)||{dc:13,atk:5,stat:'Sag'}; };
+  const dcOf=id=>spOf(id).dc+(fxOn(S.tokens[id],'innata')?1:0);
+
+  /* ----- scelta nella finestra di lancio ----- */
+  let SCELTA_FORZATA=null; /* per le prove: window.__v253.setScelta(v) */
+  function scelta(name){ if(SCELTA_FORZATA!=null) return SCELTA_FORZATA; const box=document.getElementById('modal'), sel=box&&box.querySelector('#cScelta'); return sel&&sel.dataset.sp===name?sel.value:null; }
+  { const _cs=castSpell; castSpell=function(id,name){ const r=_cs.apply(this,arguments); try{ const box=document.getElementById('modal'), rule=SPELL_RULES[name]; if(box&&rule&&rule.scelta&&box.querySelector('#cGo')&&!box.querySelector('#cScelta')){ const s=rule.scelta; const go=box.querySelector('#cGo').closest('.row');
+        go.insertAdjacentHTML('beforebegin',`<label style="display:block;margin:8px 0 4px">${poiText(s.n)} <select id="cScelta" data-sp="${name}">${s.v.map(v=>`<option value="${v}">${poiText(s.et?s.et(v):v)}</option>`).join('')}</select></label>`); }
+      hints2(box,'cTgt'); }catch(e){ console.warn('v253 castSpell',e); } return r; }; }
+
+  /* ----- pedine evocate ----- */
+  const FAMIGLI={Gufo:{ac:11,hp:1,sp:'volo 18 m',p:13},Gatto:{ac:12,hp:2,sp:'12 m',p:13},Corvo:{ac:12,hp:1,sp:'volo 15 m',p:13},Falco:{ac:13,hp:1,sp:'volo 18 m',p:14},Pipistrello:{ac:12,hp:1,sp:'volo 9 m',p:11},Ratto:{ac:10,hp:1,sp:'6 m',p:10},Ragno:{ac:12,hp:1,sp:'6 m, scalare 6 m',p:12},Rana:{ac:11,hp:1,sp:'6 m, nuotare 6 m',p:11},Lucertola:{ac:10,hp:2,sp:'6 m, scalare 6 m',p:9},Donnola:{ac:13,hp:1,sp:'9 m',p:13},Polpo:{ac:12,hp:3,sp:'1,5 m, nuotare 9 m',p:12}};
+  function posVicino(t){ const step=S.grid.size||30; let p=snap({x:t.x+step,y:t.y}); for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1],[1,1],[-1,1],[1,-1],[-1,-1],[2,0],[0,2]]){ const q=snap({x:t.x+dx*step,y:t.y+dy*step}); if(walkable(q.x,q.y)&&!Object.values(S.tokens).some(o=>Math.hypot(o.x-q.x,o.y-q.y)<step*.7)){ p=q; break; } } return p; }
+  function evoca(id,name,slot,sc){ const t=S.tokens[id]; if(!t) return; const sp=spOf(id), base=+SPELLS[name].l||0, L=Math.max(base,+slot||base), key=({'Summon Beast':'bestia_','Summon Fey':'folletto_','Find Familiar':'famiglio_','Conjure Animals':'branco_','Moonbeam':'raggio_','Flaming Sphere':'sfera_'})[name]+id;
+    const p=posVicino(t), nome=t.name.split(' ')[0]; let tok=null;
+    if(name==='Summon Beast'){ const amb=sc||'Terra', hp=(amb==='Aria'?20:30)+5*(L-2), n=Math.floor(L/2); const acts=[{n:'Squarciare',tipo:'mischia',eco:'azione',atk:+sp.atk||0,dmg:`1d8+${4+L}`,note:'perforanti'}]; if(n>=2) acts.unshift({n:`Multiattacco: ${n} × Squarciare`,tipo:'mischia',eco:'azione',note:`${n} attacchi Squarciare`});
+      tok={name:`Spirito bestiale di ${nome}`,short:'B',color:'#6E8E3B',hp,hpMax:hp,ac:11+L,speed:9,size:1,mods:{'TS For':md(18),'TS Des':md(11),'TS Cos':md(16),'TS Int':md(4),'TS Sag':md(14),'TS Car':md(5),Atletica:md(18),Percezione:md(14)},actions:acts,note:`Spirito bestiale (${amb}) · Bestia Piccola · CA ${11+L} · velocità 9 m${amb==='Aria'?', volo 18 m (Incursione in volo: niente attacchi di opportunità in volo)':amb==='Acqua'?', nuoto 9 m (respira solo sott’acqua)':', scalare 9 m'}${amb!=='Aria'?' · Tattiche di branco: vantaggio a colpire chi ha un alleato della bestia entro 1,5 m':''} · scurovisione 18 m · agisce dopo ${t.name}; svanisce a 0 PF o alla fine della concentrazione`}; }
+    else if(name==='Summon Fey'){ const um=sc||'Furioso', hp=30+10*(L-3), n=Math.floor(L/2); const acts=[{n:'Lama fatata',tipo:'mischia',eco:'azione',atk:+sp.atk||0,dmg:`2d6+${3+L}`,note:'da forza'}]; if(n>=2) acts.unshift({n:`Multiattacco: ${n} × Lama fatata`,tipo:'mischia',eco:'azione',note:`${n} attacchi Lama fatata`});
+      acts.push({n:'Passo fatato',tipo:'speciale',eco:'bonus',note:`Si teletrasporta fino a 9 m. ${um==='Furioso'?'Furioso: vantaggio al prossimo tiro per colpire di questo turno.':um==='Gioioso'?`Gioioso: una creatura entro 3 m fa un TS Saggezza CD ${sp.dc} o è Affascinata per 1 minuto o finché subisce danni.`:'Ingannevole: un cubo di 3 m entro 1,5 m si riempie di oscurità magica fino alla fine del suo prossimo turno.'}`});
+      tok={name:`Spirito fatato di ${nome}`,short:'F',color:'#5E9E7A',hp,hpMax:hp,ac:12+L,speed:9,size:1,mods:{'TS For':md(13),'TS Des':md(16),'TS Cos':md(14),'TS Int':md(14),'TS Sag':md(11),'TS Car':md(16),Furtività:md(16),Percezione:md(11)},actions:acts,note:`Spirito fatato (${um}) · Folletto Piccolo · CA ${12+L} · velocità 9 m, volo 9 m · immune ad Affascinato · scurovisione 18 m · agisce dopo ${t.name}; svanisce a 0 PF o alla fine della concentrazione`}; }
+    else if(name==='Find Familiar'){ const f=FAMIGLI[sc]||FAMIGLI.Gufo; tok={name:`${sc||'Gufo'} di ${nome}`,short:(sc||'G')[0],color:'#8A7A5A',hp:f.hp,hpMax:f.hp,ac:f.ac,speed:9,size:1,mods:{Percezione:f.p-10},actions:[{n:'Aiutare (Aiuto)',tipo:'speciale',eco:'azione',note:'Il famiglio non può attaccare; può aiutare, distrarre, portare il contatto degli incantesimi (reazione, entro 30 m)'}],note:`Famiglio (${sc||'Gufo'}) · CA ${f.ac} · velocità ${f.sp} · Percezione passiva ${f.p} · telepatia entro 30 m; ${t.name} può vedere coi suoi occhi (azione bonus) · a 0 PF scompare`}; tok.init=null; delete tok.noInit; }
+    else if(name==='Conjure Animals'){ tok={name:`Branco di ${nome}`,short:'Br',color:'#7A9A5A',hp:1,hpMax:1,ac:30,speed:9,size:2,mods:{},actions:[],note:`Branco di spiriti (Evoca animali, slot di ${L}°) · Grande, intangibile: non si attacca · ${t.name} lo sposta di 9 m quando si muove; vantaggio ai suoi TS Forza entro 1,5 m · chi comincia il turno entro 3 m: TS Des CD ${dcOf(id)} o ${3+(L-3)}d10 taglienti`,area:true}; }
+    else if(name==='Moonbeam'){ tok={name:`Raggio di luna di ${nome}`,short:'☾',color:'#B8C4E0',hp:1,hpMax:1,ac:30,speed:18,size:1,mods:{},actions:[],note:`Raggio di luna (slot di ${L}°) · cilindro di 1,5 m di raggio · ${t.name} lo sposta di 18 m con un’azione Magia · chi comincia il turno dentro: TS Cos CD ${dcOf(id)}, ${2+(L-2)}d10 radiosi (metà se supera) · svanisce con la concentrazione`,area:true}; }
+    else if(name==='Flaming Sphere'){ tok={name:`Sfera infuocata di ${nome}`,short:'🔥',color:'#D9772B',hp:1,hpMax:1,ac:30,speed:9,size:1,mods:{},actions:[],note:`Sfera infuocata (slot di ${L}°) · ${t.name} la sposta di 9 m con un’azione bonus (speronare: rilancia «Senza slot») · chi comincia il turno entro 1,5 m: TS Des CD ${dcOf(id)}, ${2+(L-2)}d6 da fuoco (metà se supera) · svanisce con la concentrazione`,area:true}; }
+    if(!tok) return;
+    Object.assign(tok,{custom:true,kind:'alleato',owner:id,spellTok:name,evLvl:L,img:'',x:p.x,y:p.y,init:null,hidden:false,movedM:0,dash:false,conds:[]}); if(name!=='Find Familiar') tok.noInit=true;
+    S.tokens[key]=tok; if(S.mode==='scontro'&&typeof sortOrder==='function') sortOrder();
+    log({kind:'sys',txt:`${t.name}: ${SPELLS[name].it} — compare ${tok.name}${tok.area?'':` (CA ${tok.ac}, ${tok.hp} PF)`}`}); selected=key; }
+  function viaEvocati(id,name,why){ let n=0; for(const [k,x] of Object.entries(S.tokens)){ if(x&&x.spellTok===name&&x.owner===id){ delete S.tokens[k]; n++; log({kind:'sys',txt:`${x.name} svanisce${why?' ('+why+')':''}`}); if(selected===k) selected=null; } } if(n&&S.mode==='scontro'&&typeof sortOrder==='function') sortOrder(); return n; }
+  { const _se=spellEnd; spellEnd=function(id,en,why){ const r=_se.apply(this,arguments); try{ viaEvocati(id,en,why); }catch(e){} return r; }; }
+
+  /* ----- tiri salvezza con danno (per gli effetti a inizio turno) ----- */
+  function tsDanno(ownerId,tg,ab,expr,meta,label,tipo){ const o=S.tokens[ownerId], dc=dcOf(ownerId), k=fxIdOf(tg); const mod=(tg.kind==='pg'||tg.kind==='alleato')?(tg.mods?.['TS '+ab]??0):monsterSaveMod(tg,ab); let r=d20(), extra=null; if(hasCondition(tg,'anatema')){ const x=rollExpr('1d4').total; log({kind:'sys',txt:`${tg.name}: Anatema, −${x} al tiro salvezza`}); r-=x; }
+    const tot=r+mod, ok=tot>=dc; log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · ${label}`,skill:'TS '+ab,r,mod,tot,dc,extra});
+    const x=fxRoll(expr); const v=ok?(meta?Math.floor(x.total/2):0):x.total; if(v>0){ applyDamage(tg,v); log({kind:'hit',tid:k,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} ${ok?'supera':'fallisce'} il TS ${ab} e subisce ${v} danni${tipo?' '+tipo:''} da ${label} (${x.txt})`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); } else log({kind:'sys',txt:`${tg.name} supera il TS ${ab} ed evita ${label}`}); return ok; }
+  function inizioTurno(id){ const tg=S.tokens[id]; if(!tg||tg.hp<=0||isDead(tg)) return 0; let n=0;
+    /* Colpo intrappolante */
+    for(const c of (tg.conds||[])){ if(c&&c.n==='trattenuto'&&c.spell==='Ensnaring Strike'&&c.source){ const x=fxRoll(c.dmg||'1d6'); applyDamage(tg,x.total); log({kind:'hit',tid:id,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} subisce ${x.total} danni perforanti dai viticci di Colpo intrappolante (${x.txt})`}); n++; } }
+    /* Guardiani spirituali: chi si concentra entro 4,5 m */
+    for(const [oid,o] of Object.entries(S.tokens)){ if(oid===id||!o||!nemici(o,tg)) continue; const c=concOf(o); if(!c||c.spell!=='Spirit Guardians'||!tokInScene(oid)||o.hp<=0) continue; if(distM(o,tg)>4.5) continue; const L=c.slot||3; tsDanno(oid,tg,'Sag',`${3+Math.max(0,L-3)}d8`,true,'Guardiani spirituali','radiosi'); n++; }
+    /* pedine delle aree: branco, raggio, sfera */
+    for(const [k,x] of Object.entries(S.tokens)){ if(!x||!x.spellTok||!x.area||x.owner===id||!tokInScene(k)) continue; const o=S.tokens[x.owner]; if(!o||!nemici(o,tg)) continue; const L=x.evLvl||2, d=distM(x,tg);
+      if(x.spellTok==='Conjure Animals'&&d<=3){ tsDanno(x.owner,tg,'Des',`${3+Math.max(0,L-3)}d10`,false,'Evoca animali','taglienti'); n++; }
+      else if(x.spellTok==='Moonbeam'&&d<=1.5){ tsDanno(x.owner,tg,'Cos',`${2+Math.max(0,L-2)}d10`,true,'Raggio di luna','radiosi'); n++; }
+      else if(x.spellTok==='Flaming Sphere'&&d<=1.5){ tsDanno(x.owner,tg,'Des',`${2+Math.max(0,L-2)}d6`,true,'Sfera infuocata','da fuoco'); n++; } }
+    return n; }
+  { const _tk=tickConds; tickConds=function(id){ const r=_tk.apply(this,arguments); try{ if(S.mode==='scontro'&&S.order&&S.order[S.turn]===id) inizioTurno(id); }catch(e){ console.warn('v253 inizioTurno',e); } return r; }; }
+
+  /* ----- lancio: scelte, effetti dopo il lancio ----- */
+  let CURA_MAX=null;
+  { const _rc=resolveCast; resolveCast=function(id,name,slot,ids,meta){ const t=S.tokens[id], d=SPELLS[name]||{}, rule=SPELL_RULES[name]||{}, sc=rule.scelta?scelta(name):null, sh=SHEETS[id]||{}, sp=spOf(id), base=+d.l||0, lv=slot||base;
+      const list=(ids||[]).map(i=>[i,S.tokens[i]]).filter(x=>x[1]); let n=0; const it0=d.it;
+      if(name==='Blindness/Deafness'&&sc) rule.cond=[sc];
+      if((name==='Chromatic Orb'||name==='Sorcerous Burst')&&sc) d.it=`${it0} (${sc})`;
+      if(rule.m==='cura'&&d.heal){ const expr=d.heal+upcastExtra(d,lv); let max=0; for(const m of expr.replace(/\s/g,'').matchAll(/([+-]?)(\d*)d(\d+)|([+-]?\d+)/g)){ if(m[3]) max+=(m[1]==='-'?-1:1)*(+(m[2]||1))*(+m[3]); else if(m[4]) max+=+m[4]; } CURA_MAX=Math.max(0,max+(rule.mod===false?0:modCalc(sh.abil?.[sp.stat]||10))+(id==='mattheus'&&slot>0?2+slot:0)); }
+      /* chi lancia un incantesimo perde il suo Santuario */
+      if(t&&hasCondition(t,'santuario')){ t.conds=t.conds.filter(c=>c.n!=='santuario'); log({kind:'sys',txt:`${t.name} lancia un incantesimo: il suo Santuario finisce`}); }
+      let r; try{ r=_rc.apply(this,arguments); } finally{ d.it=it0; CURA_MAX=null; }
+      if(!t) return r;
+      const conc=concOf(t); if(conc&&conc.spell===name&&slot>0) conc.slot=slot;
+      /* Dardo tracciante: colpito → tracciato */
+      if(name==='Guiding Bolt'){ const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name); if(ev&&ev.hit&&ev.tid&&S.tokens[ev.tid]){ const tg=S.tokens[ev.tid]; tg.conds=(tg.conds||[]).filter(c=>c.n!=='tracciato'); tg.conds.push({n:'tracciato',r:2,source:id,spell:name}); log({kind:'sys',txt:`${tg.name} è tracciato: il prossimo attacco contro di lui ha vantaggio`}); n++; } }
+      /* Esplosione stregonesca: gli 8 esplodono */
+      if(name==='Sorcerous Burst'){ const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name); const tg=ev&&ev.tid&&S.tokens[ev.tid]; if(ev&&ev.hit&&tg&&ev.dmgTxt){ const m=String(ev.dmgTxt).match(/\dd8\[([^\]]*)\]/); let otto=m?m[1].split(',').filter(v=>parseInt(v)===8).length:0; const cap=Math.max(0,modCalc(sh.abil?.Car||10)); let extra=0, rs=[]; while(otto>0&&rs.length<cap){ otto--; const v=rollExpr('1d8').total; rs.push(v); extra+=v; if(v===8) otto++; }
+          if(extra){ applyDamage(tg,extra); ev.dmg=(+ev.dmg||0)+extra; ev.dmgTxt+=` + esplosione [${rs.join(',')}]`; ev.hpAfter=tg.hp; log({kind:'hit',tid:ev.tid,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name}: gli 8 esplodono, altri ${extra} danni (${rs.join(', ')})`}); if(tg.hp<=0&&!ev.down){ ev.down=true; log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); } n++; } } }
+      /* Sfera cromatica: due d8 uguali → balza */
+      if(name==='Chromatic Orb'){ const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name); if(ev&&ev.hit&&ev.dmgTxt){ const m=String(ev.dmgTxt).match(/\dd8\[([^\]]*)\]/); const vs=m?m[1].split(',').map(v=>parseInt(v)):[]; if(new Set(vs).size<vs.length){ log({kind:'sys',txt:`${t.name}: due d8 uguali (${vs.join(', ')}): la sfera balza su un altro bersaglio entro 9 m — rilanciala «Senza slot» su di lui`}); toast('La sfera balza: scegli un altro bersaglio (rilancio senza slot)'); } } }
+      /* Punizione divina contro immondi e non morti */
+      if(name==='Divine Smite'&&sc&&/immondo/.test(sc)&&list.length){ const tg=list[0][1], x=fxRoll('1d8'); applyDamage(tg,x.total); log({kind:'hit',tid:list[0][0],hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} (immondo o non morto) subisce altri ${x.total} danni radiosi da Punizione divina (${x.txt})`}); n++; }
+      /* Faro di speranza su tutti i bersagli */
+      if(rule.tutti){ for(const [i,tg] of list){ tg.conds=(tg.conds||[]).filter(c=>!(c.n===rule.tutti&&c.source===id)); tg.conds.push({n:rule.tutti,r:null,source:id,spell:name}); } if(list.length) log({kind:'sys',txt:`${condLabel(rule.tutti)} su ${list.map(x=>x[1].name).join(', ')}`}); n++; }
+      /* Passare senza tracce: chi lancia e gli alleati entro 9 m */
+      if(name==='Pass without Trace'){ const chi=Object.entries(S.tokens).filter(([k,x])=>x&&(k===id||(!nemici(x,t)&&tokInScene(k)&&distM(t,x)<=9))); for(const [k,x] of chi){ x.conds=(x.conds||[]).filter(c=>!(c.n==='senzatracce'&&c.source===id)); x.conds.push({n:'senzatracce',r:null,source:id,spell:name}); } log({kind:'sys',txt:`Passare senza tracce: +10 a Furtività per ${chi.map(x=>x[1].name).join(', ')}`}); n++; }
+      /* Ingrandire/Ridurre */
+      if(name==='Enlarge/Reduce'&&list.length){ const [i,tg]=list[0], modo=sc||'ingrandire', k=modo==='ridurre'?'ridotto':'ingrandito'; let ok=false; if(nemici(t,tg)){ const mod=(tg.kind==='pg'||tg.kind==='alleato')?(tg.mods?.['TS Cos']??0):monsterSaveMod(tg,'Cos'); const rr=d20(), tot=rr+mod; ok=tot>=dcOf(id); log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · Ingrandire/Ridurre`,skill:'TS Cos',r:rr,mod,tot,dc:dcOf(id)}); }
+        if(ok) log({kind:'sys',txt:`${tg.name} supera il TS Cos: non cambia taglia`}); else { tg.conds=(tg.conds||[]).filter(c=>c.n!=='ingrandito'&&c.n!=='ridotto'); tg.conds.push({n:k,r:10,source:id,spell:name}); if(tg.sz0==null) tg.sz0=+tg.size||1; tg.size=Math.max(1,tg.sz0+(k==='ingrandito'?1:-1)); log({kind:'sys',txt:`${tg.name} è ${k}: ${k==='ingrandito'?'vantaggio':'svantaggio'} alle prove e ai TS di Forza, ${k==='ingrandito'?'+1d4':'−1d4'} ai danni con le armi`}); } n++; }
+      /* velocità: Passo veloce +3, Volare 18 */
+      for(const [i,tg] of list){ if(name==='Longstrider'&&hasCondition(tg,'passoveloce')){ if(tg.spd0==null) tg.spd0=+tg.speed||9; tg.speed=tg.spd0+3; n++; } if(name==='Fly'&&hasCondition(tg,'volo')){ if(tg.spd0==null) tg.spd0=+tg.speed||9; tg.speed=Math.max(tg.spd0,18); n++; } }
+      /* Protezione dai veleni toglie Avvelenato; Arma elementale segna il tipo; Colpo intrappolante segna i dadi */
+      for(const [i,tg] of list){ if(name==='Protection from Poison'&&hasCondition(tg,'avvelenato')){ tg.conds=tg.conds.filter(c=>c.n!=='avvelenato'); log({kind:'sys',txt:`${tg.name} non è più avvelenato`}); n++; }
+        if(name==='Elemental Weapon'){ const c=(tg.conds||[]).find(c=>c.n==='armaelementale'&&c.source===id); if(c){ c.tipo=sc||'fuoco'; n++; } }
+        if(name==='Ensnaring Strike'){ const c=(tg.conds||[]).find(c=>c.n==='trattenuto'&&c.source===id&&c.spell===name); if(c){ c.dmg=`${1+Math.max(0,lv-1)}d6`; n++; } } }
+      if(rule.condSu==='potenziato'&&sc) for(const [i,tg] of list){ const c=(tg.conds||[]).find(c=>c.n==='potenziato'&&c.source===id); if(c){ c.ab=sc; n++; } }
+      if(rule.condSu==='santuario') for(const [i,tg] of list){ const c=(tg.conds||[]).find(c=>c.n==='santuario'&&c.source===id); if(c){ c.dc=dcOf(id); c.r=10; n++; } }
+      if(rule.condSe==='immagini'){ const c=(t.conds||[]).find(c=>c.n==='immagini'); if(c){ c.k=3; n++; } }
+      /* evocazioni */
+      if(rule.evoca){ viaEvocati(id,name,''); evoca(id,name,slot,sc); n++; }
+      if(n) save(true); return r; }; }
+
+  /* ----- tiri: vantaggio di Potenziare, Faro, Ingrandire/Ridurre; Arma elementale; Passare senza tracce; cure al massimo ----- */
+  { const _fd=fxD20; fxD20=function(t,kind,skill){ let why=null; if(t&&!t.adv){ const ab=kind==='prova'?abilOf(skill):null, isFor=skill==='TS For'||ab==='For';
+        const pot=(t.conds||[]).find(c=>c&&c.n==='potenziato'); if(kind==='prova'&&pot&&pot.ab&&ab===pot.ab){ t.adv='v'; why='Potenziare caratteristica'; }
+        else if(kind==='ts'&&skill==='TS Sag'&&hasCondition(t,'faro')){ t.adv='v'; why='Faro di speranza'; }
+        else if(isFor&&hasCondition(t,'ingrandito')){ t.adv='v'; why='Ingrandito'; } else if(isFor&&hasCondition(t,'ridotto')){ t.adv='s'; why='Ridotto'; } }
+      const r=_fd.apply(this,arguments); if(why&&r) r.why=r.why?r.why+', '+why:why; return r; }; }
+  { const _fab=fxAtkBonus; fxAtkBonus=function(t,a){ const r=_fab.apply(this,arguments)||{b:0,why:[]}; if(t&&fxIsWeapon(a)&&hasCondition(t,'armaelementale')){ r.b+=1; r.why=[...(r.why||[]),'Arma elementale +1']; } return r; }; }
+  { const _fdm=fxDamage; fxDamage=function(t,a,crit){ const r=_fdm.apply(this,arguments); if(!t||!fxIsWeapon(a)) return r; const ae=(t.conds||[]).find(c=>c&&c.n==='armaelementale'); if(ae){ const x=fxRoll('1d4',{crit}); r.total+=x.total; r.txt+=` + Arma elementale (${ae.tipo||''}) ${x.txt}`; }
+      if(hasCondition(t,'ingrandito')){ const x=fxRoll('1d4',{crit}); r.total+=x.total; r.txt+=` + Ingrandito ${x.txt}`; } else if(hasCondition(t,'ridotto')){ const x=rollExpr('1d4').total; r.total=Math.max(1,r.total-x); r.txt+=` − Ridotto ${x}`; } return r; }; }
+  { const _fg=fxGuidance; fxGuidance=function(t,skill){ const g=_fg.apply(this,arguments); if(t&&skillKey(skill)==='Furtività'&&hasCondition(t,'senzatracce')) return {b:g.b+10,txt:[g.txt,'Passare senza tracce +10'].filter(Boolean).join(', ')}; return g; }; }
+  { const _ah=applyHeal; applyHeal=function(t,v){ if(CURA_MAX!=null&&t&&hasCondition(t,'faro')&&+v<CURA_MAX){ log({kind:'sys',txt:`${t.name}: Faro di speranza, la cura vale il massimo (${CURA_MAX})`}); return _ah.call(this,t,CURA_MAX); } return _ah.apply(this,arguments); }; }
+
+  /* ----- attacchi: Santuario, Immagine speculare, tracciato ----- */
+  { const _ra=resolveAttack; resolveAttack=function(tokId,a,targetId){ const t=S.tokens[tokId], tg=S.tokens[targetId]; if(!t||!tg) return _ra.apply(this,arguments);
+      const san=(tg.conds||[]).find(c=>c&&c.n==='santuario'); if(san&&tokId!==targetId){ const dc=san.dc||13, mod=(t.kind==='pg'||t.kind==='alleato')?(t.mods?.['TS Sag']??0):monsterSaveMod(t,'Sag'), rr=d20(), tot=rr+mod; log({kind:'roll',gm:t.kind==='nemico'&&!S.publicRolls,who:`${t.name} · Santuario`,skill:'TS Sag',r:rr,mod,tot,dc}); if(tot<dc){ log({kind:'sys',txt:`${t.name} non riesce ad attaccare ${tg.name} (Santuario): deve scegliere un altro bersaglio o perde l’attacco`}); toast(`${t.name} fallisce il TS Saggezza del Santuario: l’attacco è perso`); save(true); return; } log({kind:'sys',txt:`${t.name} supera il TS Saggezza del Santuario e attacca ${tg.name}`}); }
+      if(hasCondition(t,'santuario')){ t.conds=t.conds.filter(c=>c.n!=='santuario'); log({kind:'sys',txt:`${t.name} attacca: il suo Santuario finisce`}); }
+      const trc=(tg.conds||[]).find(c=>c&&c.n==='tracciato'); if(trc){ if(!t.adv) t.adv='v'; tg.conds=tg.conds.filter(c=>c!==trc); }
+      const imm=(tg.conds||[]).find(c=>c&&c.n==='immagini'&&(c.k||0)>0), snap0=imm?{hp:tg.hp,thp:tg.thp,ds:tg.ds?{...tg.ds}:undefined}:null;
+      const r=_ra.apply(this,arguments);
+      if(imm){ const i=S.log.findIndex(e=>e.kind==='atk'&&e.tid===targetId&&e.who===t.name), ev=S.log[i]; if(ev&&ev.hit){ const rolls=[]; for(let j=0;j<imm.k;j++) rolls.push(rollExpr('1d6').total);
+          if(rolls.some(x=>x>=3)){ tg.hp=snap0.hp; if(snap0.thp!=null) tg.thp=snap0.thp; if(snap0.ds) tg.ds=snap0.ds; else delete tg.ds; if(ev.down){ delete ev.down; if(i>0&&/cade a 0 PF/.test(S.log[i-1].txt||'')) S.log.splice(i-1,1); } ev.hpAfter=tg.hp; ev.name+=' → colpisce un duplicato'; imm.k--; log({kind:'sys',txt:`Immagine speculare: il colpo va a un duplicato di ${tg.name} (d6: ${rolls.join(', ')}), ne restano ${imm.k}`}); if(imm.k<=0){ tg.conds=tg.conds.filter(c=>c!==imm); log({kind:'sys',txt:`${tg.name}: Immagine speculare finisce`}); } save(true); }
+          else log({kind:'sys',txt:`Immagine speculare: i duplicati non ingannano il colpo (d6: ${rolls.join(', ')})`}); } }
+      return r; }; }
+
+  /* ----- controllo del tavolo (render del master): velocità e taglia tornano com'erano, evocati senza concentrazione o a 0 PF svaniscono ----- */
+  function sweep2(){ let n=0; for(const [k,x] of Object.entries(S.tokens)){ if(!x||typeof x!=='object') continue;
+      if(x.spd0!=null&&!hasCondition(x,'passoveloce')&&!hasCondition(x,'volo')){ x.speed=x.spd0; delete x.spd0; n++; }
+      if(x.sz0!=null&&!hasCondition(x,'ingrandito')&&!hasCondition(x,'ridotto')){ x.size=x.sz0; delete x.sz0; n++; }
+      if(x.spellTok){ const o=S.tokens[x.owner], d=SPELLS[x.spellTok]; const viva=o&&(!d||!d.conc||(concOf(o)&&concOf(o).spell===x.spellTok)); if(!viva||(+x.hp<=0&&!x.area)){ delete S.tokens[k]; log({kind:'sys',txt:`${x.name} svanisce${+x.hp<=0&&!x.area?' (0 PF)':''}`}); if(selected===k) selected=null; n++; } } }
+    return n>0; }
+  { const _r=render; render=function(){ const out=_r.apply(this,arguments); try{ if(READY&&(TEST_MODE||FB_LOADED)&&IS_GM&&!dragging&&!pending&&sweep2()) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0); }catch(e){ console.warn('v253',e); } return out; }; }
+
+  /* ----- etichette nelle finestre dei bersagli ----- */
+  const HINT2={tracciato:'tracciato: vantaggio a colpirlo',santuario:'Santuario: TS Sag per attaccarlo',immagini:'Immagine speculare',potenziato:'Potenziare caratteristica',faro:'Faro di speranza',ingrandito:'ingrandito (+1d4 ai suoi colpi)',ridotto:'ridotto (−1d4 ai suoi colpi)',duellante:'in duello: svantaggio contro altri',armaelementale:'Arma elementale',passoveloce:'Passo veloce',volo:'in volo',senzatracce:'senza tracce',antiveleno:'Protezione dai veleni',randello:'Randello incantato'};
+  function hints2(box,nameTgt){ if(!box) return; box.querySelectorAll(`[name=${nameTgt}]`).forEach(inp=>{ const x=S.tokens[inp.value]; if(!x) return; const ks=(x.conds||[]).map(c=>c&&c.n).filter(k=>HINT2[k]); if(!ks.length) return; const tn=inp.closest('label')?.querySelector('.tn'); if(!tn||tn.querySelector('.cndhint2')) return; tn.insertAdjacentHTML('beforeend',` <small class="cndhint2" style="color:#EDCB73">· ${ks.map(k=>poiText(HINT2[k])).join(' · ')}</small>`);
+      if(ks.includes('tracciato')) inp.addEventListener('change',()=>{ if(!inp.checked) return; const r=box.querySelector('[name=tAdv][value=v],[name=cAdv][value=v]'); if(r) r.checked=true; }); }); }
+  { const _otp=openTargetPicker; openTargetPicker=function(){ const r=_otp.apply(this,arguments); try{ hints2(document.getElementById('modal'),'tgt'); }catch(e){} return r; }; }
+  window.__v253={evoca,viaEvocati,inizioTurno,sweep2,tsDanno,abilOf,setScelta:v=>{ SCELTA_FORZATA=v; }};
+})();
+/* ===== FINE EFFETTI DEGLI INCANTESIMI (v253) ===== */
 </script>
