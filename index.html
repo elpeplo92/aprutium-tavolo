@@ -2520,12 +2520,16 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 #modal .c4box .c3det .pv-breve .kv2 span{font-family:'Bookinsanity',Georgia,serif!important;font-size:15px!important}
 #modal .c4box .c3det #c3close{font:15px 'Mr Eaves Small Caps',Georgia,serif!important}
 /* ===== FINE COMPENDIO NUOVO (v199) ===== */
+#rail .med{position:relative}
+#rail .rail-conc{position:absolute;left:4px;top:4px;z-index:4;padding:1px 6px;font:700 11px/1.3 var(--sans);color:#E8D7AE;background:#14110c;border:1px solid rgba(217,177,92,.45);border-radius:5px;cursor:pointer;pointer-events:auto}
+#rail .rail-conc.pend{color:#1A1207;background:radial-gradient(circle at 40% 35%,#FFF3C4,#D9B15C 60%,#9C7428);border-color:#FFF3C4;animation:initLuce 1.1s ease-in-out infinite}
+#rail .rail-conc:disabled{cursor:default;opacity:.8}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v244</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v245</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -3173,6 +3177,45 @@ function renderRail(){
     rail.appendChild(m);
   }
 }
+
+/* v245 — TIRO DI CONCENTRAZIONE. Quando chi si sta concentrando subisce danni (e resta in piedi), il tavolo segna la CD
+   (10 o metà dei danni, la più alta, massimo 30) in t.concTs; sul medaglione del personaggio nella colonna compare il tasto
+   «Concentrazione» (lampeggia finché il tiro è da fare). Il giocatore di quel personaggio o il master lo clicca: d20 + TS Costituzione
+   (con vantaggio a scelta); se fallisce la concentrazione finisce e con lei l'incantesimo (concEnd). Il tasto c'è sempre finché
+   il personaggio si concentra, per tirare anche a mano (danni scritti nella finestra). */
+{ const _ad=applyDamage; applyDamage=function(t,v){ const prima=!!(t&&concOf(t)); const r=_ad.apply(this,arguments);
+    if(prima&&t&&concOf(t)&&t.hp>0&&(+v>0)){ const dc=Math.min(30,Math.max(10,Math.floor(+v/2))); const old=t.concTs; t.concTs={dc:old?Math.max(old.dc,dc):dc,dmg:Math.floor(+v),at:Date.now()}; }
+    return r; }; }
+function concRoll(id){
+  const t=S.tokens[id], c=concOf(t); if(!t) return; if(!c){ delete t.concTs; toast(`${t.name} non si sta concentrando`); save(true); return; }
+  const sp=c.spell&&SPELLS[c.spell]?SPELLS[c.spell].it:(c.source==='benedizione'?'Benedizione':'');
+  const mod=tokenSaveMod(t,'Cos'), p=t.concTs;
+  openModal(`<div class="eyebrow">${poiText(t.name)} · tiro salvezza</div><h2 class="big">Concentrazione</h2>
+    <p class="note" style="margin:0 0 8px">${sp?`Si concentra su <b>${poiText(sp)}</b>. `:''}Tiro salvezza su Costituzione (${fmtMod(mod)}): CD 10 o metà dei danni subiti, la più alta (massimo 30). Se fallisce, la concentrazione finisce.</p>
+    <label>Danni subiti <input type="number" id="ccDmg" min="0" value="${p?p.dmg:0}" style="width:70px"></label> <b id="ccDc" style="margin-left:8px"></b>
+    <div class="fxadv" style="margin:8px 0"><label><input type="radio" name="ccAdv" value="" checked> Normale</label><label><input type="radio" name="ccAdv" value="v"> Vantaggio</label><label><input type="radio" name="ccAdv" value="s"> Svantaggio</label></div>
+    <div class="row" style="margin-top:10px"><button class="primary" id="ccGo">Tira</button><button id="ccBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal'), inp=box.querySelector('#ccDmg');
+  const dcOf=()=>Math.min(30,Math.max(10,Math.floor((+inp.value||0)/2))), show=()=>{ box.querySelector('#ccDc').textContent='CD '+(p&&+inp.value===p.dmg?p.dc:dcOf()); };
+  inp.oninput=show; show();
+  box.querySelector('#ccBack').onclick=closeModal;
+  box.querySelector('#ccGo').onclick=()=>{ const dc=(p&&+inp.value===p.dmg)?p.dc:dcOf(), adv=box.querySelector('[name=ccAdv]:checked').value;
+    const r1=d20(); let r=r1, extra=null; if(adv){ extra=d20(); r=adv==='v'?Math.max(r1,extra):Math.min(r1,extra); }
+    const tot=r+mod, ok=tot>=dc;
+    log({kind:'roll',gm:t.kind==='nemico'&&!S.publicRolls,who:`${t.name} · Concentrazione`,skill:'TS Cos',r,mod,tot,dc,extra,advantage:adv==='v',disadvantage:adv==='s'});
+    delete t.concTs;
+    if(ok) log({kind:'sys',txt:`${t.name} mantiene la concentrazione${sp?' su '+sp:''} (${tot} contro CD ${dc})`});
+    else { log({kind:'sys',txt:`${t.name} perde la concentrazione${sp?' su '+sp:''} (${tot} contro CD ${dc})`}); concEnd(id,'tiro salvezza di concentrazione fallito'); }
+    save(true); closeModal(); toast(ok?`Concentrazione mantenuta (${tot})`:`Concentrazione persa (${tot})`); };
+}
+{ const _rr=renderRail; renderRail=function(){ _rr.apply(this,arguments);
+    const meds=[...document.querySelectorAll('#rail .med')], ids=orderForRail();
+    meds.forEach((m,k)=>{ const id=ids[k], t=S.tokens[id]; if(!t) return; if(t.concTs&&!concOf(t)) delete t.concTs; if(!concOf(t)) return;
+      const puo=IS_GM||id===me, pend=!!t.concTs;
+      const b=document.createElement('button'); b.type='button'; b.className='rail-conc'+(pend?' pend':''); b.textContent=pend?`Concentrazione · CD ${t.concTs.dc}`:'Concentrazione';
+      b.title=pend?`${t.name} ha subito danni mentre si concentra: tiro salvezza su Costituzione CD ${t.concTs.dc}`:`${t.name} si sta concentrando: clicca per un tiro di concentrazione`;
+      if(!puo) b.disabled=true; b.onclick=e=>{ e.stopPropagation(); if(puo) concRoll(id); };
+      m.appendChild(b); }); }; }
 
 /* ---------- scontro ---------- */
 const d20=()=>{ const r=1+Math.floor(Math.random()*20); DICE_BUF.push([20,r]); DICE_T=Date.now(); return r; };
@@ -4885,8 +4928,8 @@ function useResource(id,i,counted){ const t=S.tokens[id], r=((SHEETS[id]||{}).pg
   if(!counted&&max&&u>=max){ toast(`${r.n}: nessun uso rimasto`); return; }
   const spendi=()=>{ if(max) resSet(id,i,u+1); }, rendi=()=>{ if(counted){ resSet(id,i,u); save(); if(sheetOf===id&&document.querySelector('#modal .sheet2wrap')) renderSheet(id); } };
   const resto=max?` (restano ${Math.max(0,max-(u+1))})`:'';
-  if(/^imposizione delle mani/i.test(n)){ if(counted) resSet(id,i,u); layOnHands(id,i); return; }
-  if(/esibizione rinvigorente|leader ispiratore/i.test(n)){ if(counted) resSet(id,i,u); inspiringLeader(id,i); return; }
+  if(/^imposizione delle mani/i.test(n)){ if(counted) resSet(id,i,u); setTimeout(()=>layOnHands(id,i),0); return; }
+  if(/esibizione rinvigorente|leader ispiratore/i.test(n)){ if(counted) resSet(id,i,u); setTimeout(()=>inspiringLeader(id,i),0); return; }
   if(/^recupero energie/i.test(n)){
     if(t.hp>=t.hpMax){ toast(`${t.name} ha già tutti i punti ferita`); rendi(); return; }
     if(isDead(t)){ toast(`${t.name} è morto`); rendi(); return; }
