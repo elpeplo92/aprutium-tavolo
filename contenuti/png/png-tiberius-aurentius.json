@@ -10,5 +10,136 @@
  "atti": [],
  "links": [],
  "pub": "L'intendente della Crociata, della famiglia Aurentius di Julia Nova, i cui carri sono partiti con la colonna dalla Porta delle Colline. Guida il Carro I, quello del comando, con le insegne e i documenti, e tiene i conti: viveri, paghe, debiti. Con lui i rifornimenti costano meno.",
- "gm": "Luogo abituale: con la Crociata, a cassetta del Carro I; al campo col registro aperto sulle ginocchia ·\nEtà: ⟦ventisei anni⟧.\nStatistiche: popolano (PF 4, CA 10); Persuasione +4, Intuizione +3. Nel Registro della Crociata: Intendente, «i rifornimenti costano un decimo in meno».\n⟦Giovane, alto e un po' curvo, la faccia pulita di chi ha passato la vita sui libri dei conti; la penna dietro l'orecchio, le dita macchiate d'inchiostro, una giubba buona ma consumata ai gomiti.⟧ ⟦Cadetto di Casa Aurentius: il padre lo ha mandato con la Crociata per tenere d'occhio i carri di famiglia.⟧\n\nSa: quanto c'è in cassa (620 mo all'Atto XVI), quanto si mangia al giorno, chi deve cosa a chi; ⟦i prezzi del grano da Julia Nova a Teramum.⟧\n•\nNon sa: combattere; niente dei Sigilli.\nVoce: ⟦educata, precisa, parla per numeri; si scusa prima di dare una cattiva notizia.⟧\nCosa vuole: che i conti tornino; ⟦che a Julia Nova suo padre veda che vale qualcosa.⟧\nSegreto: ⟦scrive a casa ogni settimana, e nelle lettere racconta tutto quello che fa la Crociata.⟧\n\nSe gli chiedono di…:\n…i soldi: ⟦apre il registro. «Ventidue giorni di viveri. Paga dei vesperiani fra nove. Dopo, non so.»⟧\n\nBattute pronte:\n⟦«Scusate. Una cosa sola. Chi ha preso le gallette?»⟧\n⟦«Lo scrivo. Se lo scrivo, è successo.»⟧"
+ "gm": "Luogo abituale: con la Crociata, a cassetta del Carro I; al campo col registro aperto sulle ginocchia ·\nEtà: ⟦ventisei anni⟧.\nStatistiche: popolano (PF 4, CA 10); Persuasione +4, Intuizione +3. Nel Registro della Crociata: Intendente, «i rifornimenti costano un decimo in meno».\n⟦Giovane, alto e un po' curvo, la faccia pulita di chi ha passato la vita sui libri dei conti; la penna dietro l'orecchio, le dita macchiate d'inchiostro, una giubba buona ma consumata ai gomiti.⟧ ⟦Cadetto di Casa Aurentius: il padre lo ha mandato con la Crociata per tenere d'occhio i carri di famiglia.⟧\n\nSa: quanto c'è in cassa (620 mo all'Atto XVI), quanto si mangia al giorno, chi deve cosa a chi; ⟦i prezzi del grano da Julia Nova a Teramum.⟧\n•\nNon sa: combattere; niente dei Sigilli.\nVoce: ⟦educata, precisa, parla per numeri; si scusa prima di dare una cattiva notizia.⟧\nCosa vuole: che i conti tornino; ⟦che a Julia Nova suo padre veda che vale qualcosa.⟧\nSegreto: ⟦scrive a casa ogni settimana, e nelle lettere racconta tutto quello che fa la Crociata.⟧\n\nSe gli chiedono di…:\n…i soldi: ⟦apre il registro. «Ventidue giorni di viveri. Paga dei vesperiani fra nove. Dopo, non so.»⟧\n\nBattute pronte:\n⟦«Scusate. Una cosa sola. Chi ha preso le gallette?»⟧\n⟦«Lo scrivo. Se lo scrivo, è successo.»⟧",
+ "dialogo": {
+  "apertura": "*Ferma il Carro I sulla riva di qua, scende con il registro già aperto e la penna dietro l'orecchio, e prima di guardare i corpi guarda voi, contandovi con la punta della penna.* «Sei. Grazie a Valerus.» *Poi, scusandosi già:* «Perdonate. Una cosa sola, prima di tutto il resto: qualcuno ha perso qualcosa che devo segnare?»",
+  "voce": "Italiano educato, preciso, da figlio di casa buona di Julia Nova. · Tic: «Perdonate», «Una cosa sola», «Lo scrivo»; parla per numeri e frazioni. · Ritmo: misurato, si scusa prima di ogni cattiva notizia e la dà comunque tutta intera; quando è nervoso si tocca la penna dietro l'orecchio.",
+  "argomenti": [
+   {
+    "tema": "I conti della Crociata",
+    "domanda": "«Tiberius, come stiamo a soldi e viveri?»",
+    "risposta": "*Apre il registro sulle ginocchia e scorre col dito.* «Perdonate se sono preciso, è il mio lavoro. A Bëllindë avevamo seicentoventi monete d'oro in cassa, prima dei viveri comprati col permesso del Conte. Adesso…» *Gira pagina.* «Ventidue giorni di viveri, se nessuno ruba le gallette e se i nuovi di Bëllindë mangiano come dicono. La paga dei vesperiani scade fra nove giorni. Fino a lì, tutto torna.» *Chiude il registro con un dito dentro.* «Dopo, non so. Dopo Teramum, o qualcuno ci paga, o paghiamo noi qualcuno per farci pagare.»",
+    "insistono": "«Se volete la verità che non scrivo: ogni bocca nuova costa, e da Bëllindë ne abbiamo prese parecchie. Il ragazzo, i suoi genitori, il banditore, Cecco… e quello là fra gli alberi, che mangia per tre.» *Si scusa con lo sguardo.* «Non dico che non dovevamo. Dico che lo scrivo.»",
+    "mai": "Non falsifica mai il registro, neanche per Silvanus. Non sa niente di Sigilli, Custode o Forgiatura."
+   },
+   {
+    "tema": "La pignatta dei Chiòdi",
+    "domanda": "«Sotto il fieno c'era una pignatta coi risparmi della famiglia. Che ne facciamo?»",
+    "risposta": "*Prende la pignatta con due mani, come una cosa viva, e conta senza toccare: i fiorini, l'argento, la fede sottile.* «I risparmi di una vita. Una vita lunga, e attenta.» *Si toglie la penna dall'orecchio e non scrive.* «Perdonate. Una cosa sola. Legalmente, se la famiglia è tutta morta e non ci sono eredi, va al signore della terra: il Barone di Cashtalladdë. Lo stesso che non è venuto a vedere.» *Pausa.* «Moralmente, non lo so. Io i conti li so fare. Questa non è una cosa da conti.»",
+    "insistono": "«Se la mettete in cassa, la scrivo con il loro nome: “Chiòdi, casale di Sant'Atto”. Così, se un giorno qualcuno viene a chiederla, sappiamo cosa rendere. La fede, però, io la lascerei con lei. Con la donna. Quella non si spende.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 12,
+     "si": "Tiberius vorrebbe tenerla per la cassa (i conti dopo Teramum non tornano) e si vergogna di volerlo: «Ci servirebbe. Ecco, l'ho detto. Adesso decidete voi, così non devo decidere io.»",
+     "no": "«Decidete voi. Io scrivo.»"
+    },
+    "mai": "Non prende la pignatta per sé né la mette in cassa di nascosto. La scelta resta al gruppo, e la colonna guarda.",
+    "scena": "guado"
+   },
+   {
+    "tema": "Quanto costa un'ora",
+    "domanda": "«Se seppelliamo i corpi, quanto ci costa?»",
+    "risposta": "*Calcola a mente, muovendo le labbra.* «Un'ora di lavoro per dieci uomini con le pale di Mastro Colangelo. Arriviamo all'osteria col buio invece che al tramonto: la cena costa uguale, la stalla costa uguale, ma i carrettieri chiedono un mezzo grosso in più per la strada al buio. Diciamo…» *Scrive.* «Un fiorino e qualcosa. Più la fatica, che non si scrive.» *Alza gli occhi, imbarazzato.* «Ma se li lasciamo qui, i carrettieri se lo ricordano per tutta la strada, e un carrettiere scontento costa di più di un fiorino. Questo l'ho imparato da mio padre.»",
+    "insistono": "*Indica il miliziano Aurentius che si è tolto il cappello.* «Quello è Bastiano, dei carri di casa mia. Ha detto: erano gente, ieri erano gente. Se non li seppelliamo, Bastiano stanotte non dorme. E un uomo che non dorme, domani, guida male.»",
+    "mai": "Non decide lui: dà i numeri e lascia la scelta.",
+    "scena": "guado"
+   },
+   {
+    "tema": "Le pozioni del dottore",
+    "domanda": "«Il dottore ci ha dato due pozioni.»",
+    "risposta": "*Il dito si ferma sulla pagina.* «Ah.» *Scorre, trova la riga.* «Carro IV, pozioni di guarigione: cinque. Adesso tre.» *Sospira, con educazione.* «Il dottore mi dirà stasera che si è sbagliato a contare. Lo fa sempre quando regala qualcosa. Io scriverò “usate per i feriti del guado”, perché è vero, e così nessuno deve dire bugie a nessuno.» *Abbassa la voce.* «Non ditelo al capitano. Non perché si arrabbi: perché poi si sente in colpa lui, di avervi mandati avanti.»",
+    "insistono": "«Un'altra fiala, a Teramum, costerà venticinque, trenta monete d'oro, se la trovate. Le farmacie del Colle hanno prezzi da Colle.»",
+    "mai": "Non toglie mai le pozioni ai feriti per rimetterle in cassa.",
+    "scena": "guado"
+   },
+   {
+    "tema": "Teramum, gabelle e prezzi",
+    "domanda": "«Che ci aspetta a Teramum, con i soldi?»",
+    "risposta": "«Gabelle.» *Lo dice come si dice “febbre”.* «Mio padre commercia con Teramum da vent'anni. Per i carri si paga alla porta, per le merci si paga al mercato, e per le armi da guerra si paga per entrare, a pezzo, oppure le si lascia in deposito sotto sigillo e si paga a giorno.» *Fa un conto rapido.* «Noi abbiamo una colonna di lance. Se le portiamo dentro tutte, la cassa si svuota alla prima porta. Se le lasciamo fuori, entriamo come mercanti disarmati in una città che ha già scritto un proclama contro di noi.» *Si tocca la penna.* «Perdonate. Non è una buona notizia. Ma è la notizia.»",
+    "insistono": "«Il grano a Teramum costa un terzo in più che a Julia Nova, quest'anno: la valle si svuota, l'avete visto. Chi ha il grano nei magazzini, adesso, sta diventando ricco. Io guarderei chi.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Tiberius ammette che, col nome Aurentius, può chiedere credito a un banco di Teramum che lavora con suo padre: «Non è un regalo. È un debito con la mia famiglia sopra. Ma ci fa passare la porta.»",
+     "no": "«Vedremo alla porta. Io porterò il registro.»"
+    },
+    "mai": "Non conosce le Casate di Teramum dall'interno né la regola dei sigilli dei lasciapassare: sa solo dei prezzi e delle gabelle."
+   },
+   {
+    "tema": "Casa Aurentius e le lettere",
+    "domanda": "«Perché sei qui, Tiberius? Tuo padre ti ha mandato?»",
+    "risposta": "*Arrossisce.* «Mio padre ha mandato i carri. Io sono venuto con i carri.» *Pausa.* «Sono il terzo figlio. Il primo fa i conti a Julia Nova, il secondo fa i conti sul mare. Io faccio i conti qui, sulla strada, perché qui nessuno li sapeva fare.» *Guarda la colonna.* «Vorrei che a casa vedessero che valgo qualcosa. Non per i soldi. Per il resto.» *Tocca il registro.* «Gli scrivo ogni settimana. Gli racconto i conti.»",
+    "insistono": "*Se gli chiedono che cosa racconta, esattamente:* «I conti, e… quello che succede. Dove siamo, chi è venuto con noi, chi è morto. Perché mi chiedete?» *Ci arriva da solo, un attimo dopo, e impallidisce.* «Le lettere passano per le poste di Bëllindë e per i carrettieri. Chiunque le può aprire.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Indagare"
+     ],
+     "cd": 14,
+     "si": "Capiscono che da Julia Nova a qui ogni settimana una lettera ha raccontato tutto della Crociata: numeri, nomi, strade. Tiberius giura che da oggi scriverà solo i conti, e mostrerà le lettere a chi gliele chiede prima di sigillarle.",
+     "no": "«Scrivo a mio padre. Lo fanno tutti i figli, no?»"
+    },
+    "mai": "Non tradisce di proposito: non sa chi possa aver letto le sue lettere e non lo saprà mai da solo."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Stringe il registro al petto come uno scudo.* «Perdonate, ma se mi fate del male nessuno sa più quanto pane abbiamo.» Poi va a dirlo a Silvanus, educatamente, con le date.",
+   "soldi": "«Per la cassa? Grazie. Lo scrivo.» *Lo scrive, con il nome di chi l'ha dato.* Per sé non prende niente: «Mio padre mi paga. Poco, ma mi paga.»",
+   "lusinga": "*Diventa rosso fino alle orecchie.* «Sono solo numeri.» Ma per il resto del giorno ripete a chiunque quello che gli è stato detto, una volta sola, facendo finta di niente.",
+   "bugia": "«Perdonate, ma non torna.» *Gira il registro verso di voi e indica la riga.* «Qui c'è scritto un'altra cosa. Uno dei due ha sbagliato, e il registro non sbaglia mai da solo.»"
+  },
+  "battute": [
+   "«Scusate. Una cosa sola. Chi ha preso le gallette?»",
+   "«Lo scrivo. Se lo scrivo, è successo.»",
+   "«Perdonate. Non è una buona notizia. Ma è la notizia.»",
+   "«Un mulo costa meno di un cavallo e mangia meno di un vesperiano.»",
+   "«Ventidue giorni. Ventuno, se qualcuno continua a mangiare il formaggio di notte.»",
+   "«Il capitano mangia per due. L'ho scritto sotto “spese di guerra”.»",
+   "«Mio padre direbbe che questa Crociata è un pessimo affare. Mio padre non ha visto la piazza di Bëllindë.»",
+   "*A uno spiritoso:* «Ridete, ridete. La risata è gratis. È l'unica cosa che non scrivo.»"
+  ],
+  "uscita": {
+   "frase": "«Perdonate, devo far passare il Carro I prima che il sole cali. Le insegne non si bagnano.»",
+   "dopo": "Risale a cassetta del Carro I e lo guida per primo sulla striscia di sassi, piano, con le insegne e i documenti legati sotto il telone. Sull'altra riva si ferma, scrive due righe nel registro, e per un momento resta a guardare la pagina senza scrivere.",
+   "aggancio": "Prima di salire a cassetta si volta: «Una cosa sola. Stasera all'osteria de lu Passe chiedo il conto prima di cena. Mio padre dice che gli osti di strada, d'estate, hanno sempre un cliente più ricco di noi. Vediamo chi è.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Ventidue giorni di viveri; la paga dei vesperiani scade fra nove giorni; dopo Teramum la cassa non regge.",
+    "via": "gratis"
+   },
+   {
+    "info": "Per legge la pignatta dei Chiòdi senza eredi andrebbe al Barone di Cashtalladdë.",
+    "via": "gratis"
+   },
+   {
+    "info": "Seppellire i corpi costa un'ora e un fiorino; lasciarli costa la fiducia dei carrettieri.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le pozioni del Carro IV restano tre dopo il regalo di Albino.",
+    "via": "gratis"
+   },
+   {
+    "info": "A Teramum le armi da guerra pagano per entrare, a pezzo, o restano in deposito sotto sigillo; il grano costa un terzo in più.",
+    "via": "gratis"
+   },
+   {
+    "info": "Tiberius può chiedere credito a un banco di Teramum legato a Casa Aurentius.",
+    "via": "prova"
+   },
+   {
+    "info": "Tiberius scrive ogni settimana a suo padre tutto ciò che fa la Crociata: le lettere possono essere state lette.",
+    "via": "prova"
+   },
+   {
+    "info": "Chi abbia letto le lettere di Tiberius.",
+    "via": "mai"
+   }
+  ]
+ }
 }

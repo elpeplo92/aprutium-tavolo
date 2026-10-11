@@ -10,5 +10,167 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: quarantotto.\nStatistiche: popolana. Intuizione +4, Persuasione +5. Due garzoni robusti (Bravo teramano) a portata di voce.\nAspetto: robusta, maniche arrotolate, avambracci forti, una borsa di cuoio legata in vita e un anello d’ottone per ogni anno di servizio alla Lega (ne ha dodici). Un dito che scorre le righe della tavoletta mentre parla.\nSa: tutte le tariffe, i prezzi del giorno, chi passa col grano e chi no; che la riga «armi dei forestieri in colonna: il doppio» è stata dipinta tre giorni fa, all’arrivo del Bando; che il Fondaco ha chiuso le lettere di cambio verso Julia Nova.\nNon sa: che il contrappeso della stadera è limato (le è stato dato dal Fondaco; lo sospetta).\nVoce: allegra, pratica, commerciale. Parla di soldi come altri parlano del tempo.\nCosa vuole: far quadrare il conto della giornata. Non avere grane con la Guardia.\nSegreto: la Lega le ha detto di segnalare subito al Fondaco se con la colonna c’è qualcuno dei Naviganti Grigi.\n\nSe gli chiedono di…:\n\nIl conto: 39 quattrini (persone), 46 (bestie), carri a stima (2 fiorini), armi da guerra 20 grossi il pezzo per i forestieri in colonna, oppure deposito sigillato a un grosso al giorno.\nContrattare: Persuasione o Inganno CD 13. Riuscita: carri a metà, deposito a mezzo grosso.\nCorromperla: un fiorino e i carri pesano la metà. Le armi no.\nLa stadera limata: se glielo dicono in privato, impallidisce e azzera il ponte. In pubblico, i pastori si arrabbiano e il Mastro-Pastore lo saprà (vantaggio al permesso del tratturo).\nAdamus e i Grigi: smette di sorridere, scrive il nome sul margine della tavoletta; il Fondaco lo saprà stasera.\n\nBattute pronte:\n«La Lega non ruba. La Lega pesa.»\n«A occhio mio, che è buono.»\n«Pagare subito costa meno che pagare dopo. Sempre.»\n«Qua dentro tutto ha un prezzo. Anche aspettare.»"
+ "gm": "Età: quarantotto.\nStatistiche: popolana. Intuizione +4, Persuasione +5. Due garzoni robusti (Bravo teramano) a portata di voce.\nAspetto: robusta, maniche arrotolate, avambracci forti, una borsa di cuoio legata in vita e un anello d’ottone per ogni anno di servizio alla Lega (ne ha dodici). Un dito che scorre le righe della tavoletta mentre parla.\nSa: tutte le tariffe, i prezzi del giorno, chi passa col grano e chi no; che la riga «armi dei forestieri in colonna: il doppio» è stata dipinta tre giorni fa, all’arrivo del Bando; che il Fondaco ha chiuso le lettere di cambio verso Julia Nova.\nNon sa: che il contrappeso della stadera è limato (le è stato dato dal Fondaco; lo sospetta).\nVoce: allegra, pratica, commerciale. Parla di soldi come altri parlano del tempo.\nCosa vuole: far quadrare il conto della giornata. Non avere grane con la Guardia.\nSegreto: la Lega le ha detto di segnalare subito al Fondaco se con la colonna c’è qualcuno dei Naviganti Grigi.\n\nSe gli chiedono di…:\n\nIl conto: 39 quattrini (persone), 46 (bestie), carri a stima (2 fiorini), armi da guerra 20 grossi il pezzo per i forestieri in colonna, oppure deposito sigillato a un grosso al giorno.\nContrattare: Persuasione o Inganno CD 13. Riuscita: carri a metà, deposito a mezzo grosso.\nCorromperla: un fiorino e i carri pesano la metà. Le armi no.\nLa stadera limata: se glielo dicono in privato, impallidisce e azzera il ponte. In pubblico, i pastori si arrabbiano e il Mastro-Pastore lo saprà (vantaggio al permesso del tratturo).\nAdamus e i Grigi: smette di sorridere, scrive il nome sul margine della tavoletta; il Fondaco lo saprà stasera.\n\nBattute pronte:\n«La Lega non ruba. La Lega pesa.»\n«A occhio mio, che è buono.»\n«Pagare subito costa meno che pagare dopo. Sempre.»\n«Qua dentro tutto ha un prezzo. Anche aspettare.»",
+ "dialogo": {
+  "apertura": "*Dietro il banco, sotto la tettoia, il dito scorre le righe della tavoletta inchiodata al palo.* «Ponte, un quattrino a testa. Bestie, due. Carri, secondo il carico.» *Alza gli occhi sui vostri cinque carri, e le si illumina la faccia.* «Secondo il carico», ripete, più contenta.",
+  "voce": "Italiano popolare da mercato, allegro e pratico, con qualche parola teramana («mo’», «a occhio mio», «’nzomma») · Tic: «La Lega non ruba. La Lega pesa.», conta ad alta voce sulle dita senza sbagliare mai, fa girare uno dei dodici anelli d’ottone quando pensa · Ritmo: svelto, ride spesso; quando arriva al totale rallenta, come chi assaggia.",
+  "argomenti": [
+   {
+    "tema": "Quanto fa",
+    "domanda": "«Quanto ci costa passare?»",
+    "risposta": "*Conta ad alta voce, con le dita, senza sbagliare mai.* «Trentanove teste, trentanove quattrini. Ventitré bestie, quarantasei. Cinque carri, e di carico…» *Si alza, guarda sotto i teli senza chiedere, si risiede.* «Due fiorini, a occhio. A occhio mio, che è buono. Più le armi.» *Intinge la penna.* «Le armi le contiamo dopo. Con calma. Ma ve lo dico subito, così non piangete dopo: il ponte si paga per passare il ponte. Il dazio si paga solo se le merci entrano. Se vi accampate di qua, pagate il ponte e basta, e solo se lo attraversate.»",
+    "insistono": "«Tutto insieme, se entrate con tutto? Sui due fiorini e quattro grossi, senza le armi. Con le armi…» *Ride.* «Con le armi vi conviene accamparvi. Non ve lo dico io: ve lo dice la tavoletta.»",
+    "mai": "Non fa passare gratis nessuno, per nessun nome. Conto (proposta della scena): 39 quattrini le persone, 46 le bestie, i carri un ventesimo del carico a stima (2 fiorini).",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Le armi e la riga nuova",
+    "domanda": "«Venti grossi a spada? E chi l’ha scritta quella riga fresca, “armi dei forestieri in colonna: il doppio”?»",
+    "risposta": "«Dieci grossi il pezzo. Venti per voi, che siete in colonna: c’è scritto.» *Batte il dito sulla riga più fresca.* «Oppure le lasciate in deposito: le chiudo in cassa, ci metto il sigillo della Lega, e un grosso al giorno. Nessuno ve le tocca.» *Pausa.* «La Lega non ruba. La Lega pesa. La riga l’ha mandata il Fondaco. Tre giorni fa. È arrivato il Bando della Guardia, e il Fondaco ha fatto i conti prima di tutti. È il mestiere nostro, fare i conti prima.» *Senza vergogna.* «Una colonna armata che paga il doppio, o che lascia le spade fuori. Al Fondaco va bene in tutti e due i modi.»",
+    "insistono": "«Spade, lance, balestre, asce grosse. Il coltello da pane no, il pugnale al fianco no: quelli li porta pure mio marito quando va al solario.» *Ride.* «Le armi da fianco passano. Quelle da guerra pagano. Per una colonna come la vostra fanno decine di fiorini: è fatto apposta, e lo sapete.»",
+    "mai": "Le armi non le sconta mai, neanche per corruzione: «Le armi sono della Guardia. Io le conto e basta, ma le conto giuste, perché loro ricontano.»"
+   },
+   {
+    "tema": "Contrattare",
+    "domanda": "«Facciamo un prezzo onesto. Siamo gente di passaggio, e paghiamo subito.»",
+    "risposta": "*Appoggia i gomiti sul banco: le piace.* «Pagare subito costa meno che pagare dopo. Sempre.» *Guarda i carri, poi voi.* «Mo’ vediamo. I carri li ho stimati a occhio, e l’occhio mio è buono, ma ogni tanto è generoso. Dipende da chi ha davanti. Ditemi cosa portate, e ditemelo bene: chi mi racconta i carri vuoti con le ruote basse mi fa venire la vista lunga.»",
+    "insistono": "«Il deposito per le armi a mezzo grosso al giorno, e i carri a metà. Di più no, sennò mi tocca spiegarlo al Fondaco, e al Fondaco non si spiega niente: si paga.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Inganno"
+     ],
+     "cd": 13,
+     "si": "I carri li stima metà. Le armi in deposito a mezzo grosso al giorno. «Perché siete simpatici. Non ditelo a nessuno.» Con 18 o più, anche un consiglio gratis: «Se entrate, cambiate i vostri soldi al Fondaco, non ai banchi del mercato. Al Fondaco vi fregano meno.»",
+     "no": "Rosalba ride. «Bravi. A Julia Nova si contratta così?» Il conto resta quello, e sul margine della tavoletta scrive il vostro nome."
+    },
+    "mai": "Il dazio conta solo se entrano con merci o armi. Le armi da guerra non scendono sotto il prezzo della tavoletta, se non in deposito.",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "La Lega dei Sensali",
+    "domanda": "«Chi è questa Lega? E il Fondaco?»",
+    "risposta": "«La Lega dei Sensali. Pesiamo, cambiamo, prestiamo. Il Decano Maccabeo Melatino ci guida.» *Sorride, e fa girare un anello.* «Dodici anelli, dodici anni di Lega. Da voi, a Julia Nova, ci chiamano Pesa-Aneme. Pure qua. Non ci offendiamo: pesiamo pure quelle.» *Indica la città col mento.* «Il Fondaco è il Gran Fondaco del Gigante, il mercato coperto. Il Decano comanda, ma i libri li tiene il nipote, messer Iacopo. Se volete parlare di soldi grossi, si parla con lui. Col Decano si parla solo per farsi perdonare.»",
+    "insistono": "*Se c’è un Cerullius:* il dito si ferma sulla tavoletta. «Cerullius? Di Canzañë?» *Ride, ma più piano.* «Le carte della vostra casa stanno al Fondaco, signorino. Qualche debito, comprato da chi ve l’aveva fatto. In buone mani: le nostre.» *Torna allegra.* «Non vi preoccupate. La Lega non ha fretta. La Lega aspetta sempre il momento buono per riscuotere.»",
+    "mai": "Non sa niente dei conti «di sotto» della Lega (i briganti pagati sui passi, il libro nero di Iacopo, il falsario): se glielo chiedono si offende davvero. Non sa quanto valgano i debiti dei Cerullius."
+   },
+   {
+    "tema": "Adamus e i Naviganti Grigi",
+    "domanda": "«E con i Naviganti Grigi come vi trovate?» (o quando riconosce Adamus)",
+    "risposta": "*Smette di sorridere. È la prima volta.* «Ah. I Grigi.» *Scrive qualcosa sul margine della tavoletta, piccolo.* «Per i Grigi la tariffa è quella. Uguale. La Lega è giusta.» *Alza gli occhi su Adamus e li tiene lì un momento di troppo.* «Le vostre navi portano il sale e il pesce alla costa, noi li pesiamo quando arrivano qua. Una volta si stava tutti contenti. Poi il Fondaco ha chiuso le lettere di cambio verso Julia Nova, e mo’ chi ha soldi da voi qui non li ritira più. Non l’ho deciso io. Io peso.»",
+    "insistono": "*Più piano, guardando la penna:* «Ma il Fondaco lo saprà stasera che siete qui.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 14,
+     "si": "Ha l’ordine di segnalare subito al Fondaco se con la colonna c’è qualcuno dei Naviganti Grigi. Non le piace farlo: le piace ancora meno non farlo. Se glielo dite in faccia, non nega: «Ordini. Voi non ne avete?»",
+     "no": "Una gabelliera che non ama i concorrenti. Ce ne sono tante."
+    },
+    "mai": "Non sa perché il Fondaco voglia sapere dei Grigi, né cosa ne farà. Il nome di Adamus arriva al Fondaco entro sera comunque, a meno che non la comprino con qualcosa di meglio dei soldi (non c’è)."
+   },
+   {
+    "tema": "La città e la Guardia",
+    "domanda": "«Com’è la situazione in città? E voi con la Guardia come state?»",
+    "risposta": "«I prezzi salgono di ora in ora. La notizia della Crociata ha fatto nascondere il grano: chi ce l’ha, lo tiene in cantina e aspetta. Il sale è salito di un quarto da lunedì.» *Batte la stadera con l’unghia.* «La Guardia conta le teste, io conto le cose. Loro vi fanno aspettare, io vi faccio pagare. Alla fine, chi dei due è più gentile?» *Ride.* «Noi e la Guardia siamo due file diverse, e nessuna delle due ve lo dice. Pagate me, e poi vi fanno aspettare loro lo stesso.»",
+    "insistono": "«Volete un consiglio vero, gratis, perché mi siete simpatici? Comprate adesso, fuori, quello che vi serve per tre giorni. Dentro, fra tre giorni, costa il doppio.» *Pausa.* «Qua dentro tutto ha un prezzo. Anche aspettare.»",
+    "mai": "Sa poco della politica e molto dei soldi: del Consiglio, del drappo, dello Stratega non sa niente e non finge."
+   },
+   {
+    "tema": "La stadera",
+    "domanda": "«Il vostro contrappeso è limato. Pesate più del vero.»",
+    "risposta": "*Se glielo dicono a bassa voce, al banco: impallidisce. Guarda il contrappeso come se lo vedesse per la prima volta, e forse è così.* «Il peso me l’ha dato il Fondaco. Io lo uso e basta.» *Cancella con il pollice la riga del ponte sulla vostra tavoletta.* «Il ponte, per voi, oggi non si paga.» *Più piano:* «E voi non avete visto niente, e io non vi ho detto niente.»",
+    "insistono": "*Se glielo dicono ad alta voce, davanti alla fila:* i pastori col pecorino si girano tutti insieme. Hanno pagato il pecorino così per anni. Rosalba diventa rossa. «Il peso è del Fondaco! Andate a gridare al Fondaco!» I garzoni si mettono dietro di lei; la fila brontola; un pastore se ne va verso il tratturo, di fretta.",
+    "mai": "È vero che il peso le è stato dato dal Fondaco: lo sospettava, non lo sapeva. Non sa chi l’abbia limato. Detto in pubblico: il Mastro-Pastore Venanzio lo sa prima di sera, e vale come un favore all’Ordine dei Tratturi (vantaggio al permesso di accamparsi); Rosalba non lo perdonerà. Il marchio della zecca di Teramum sul fondo (prova del modulo «La stadera», 20 naturale) è una piccola prova contro la Lega.",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Chi è passato prima di noi",
+    "domanda": "«Chi è passato di qui negli ultimi giorni? Qualcuno di strano?»",
+    "risposta": "«Di qua? Mezzo Ducato. Pecorino, fieno, votati, una sposa con la dote su un mulo, tre conti, un orso ammaestrato senza il padrone.» *Ride.* «Strano, a Teramum, è chi paga senza discutere.» *Poi, guardando verso nord, lungo il fiume:* «Strano è chi non passa di qua. Stamattina alla Melatina sono entrati dei carri chiusi, coi teli neri, e non hanno aspettato un momento. E non hanno pagato niente, mi dicono. A me nessuno passa senza pagare.»",
+    "insistono": "*Se le chiedono di un lanaiolo, di Ottavio Ceruso, di qualcuno di Bëllindë:* fa girare un anello. «Un lanaiolo di Bëllindë senza lana? Ce n’era uno, sì. Mi è rimasto in testa proprio per questo.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 14,
+     "si": "«⟦Quattro giorni fa, la mattina presto. Un uomo sui quaranta, curato, le mani morbide. Un mulo e una borsa di cuoio, niente balle. Ha pagato il ponte e niente dazio: non c’era niente da pesare.⟧» Ci pensa. «Mi ha chiamata “messere”, a me. E mi ha chiesto due cose di troppo: quanti carri passano al giorno, e chi comanda la porta.» Funziona anche con un grosso sul banco.",
+     "no": "«Di lanaioli ne passano cento. Le facce le guardo poco: guardo le balle.»"
+    },
+    "mai": "Non sa cosa c’era nei carri chiusi della Melatina (il convoglio del Loto) né dove sia andato il lanaiolo dentro la città. Non sa chi sia Ceruso, né per chi lavori."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Non si muove dalla sedia. Batte due volte la stadera con l’unghia: i due garzoni lasciano il pecorino e si mettono dietro di lei, e dall’arco una guardia si gira. «Mi volete toccare? Toccate la Lega. La Lega ha memoria lunga e braccia corte, ma ne ha tante.»",
+   "soldi": "Accetta con naturalezza. «Un fiorino per me, e i carri li stimo più leggeri.» Funziona: il conto dei carri scende a metà. Le armi no: «Le armi sono della Guardia. Io le conto e basta, ma le conto giuste, perché loro ricontano.»",
+   "lusinga": "«Bello sentirlo. Costa uguale.» Ride, e la cosa le fa piacere davvero: se insistono con garbo, l’ultimo carro lo stima «quasi vuoto». Le lusinghe sulla stadera non salgono.",
+   "bugia": "Pesa le parole come i formaggi (Intuizione +4). «Carri vuoti? E le ruote chi le ha abbassate, i lucenti?» E sul margine della tavoletta scrive il nome di chi ha mentito."
+  },
+  "battute": [
+   "«La Lega non ruba. La Lega pesa.»",
+   "«A occhio mio, che è buono.»",
+   "«Pagare subito costa meno che pagare dopo. Sempre.»",
+   "«Qua dentro tutto ha un prezzo. Anche aspettare.»",
+   "«Il quattrino non ha patria: ha peso.»",
+   "«Mo’ vi faccio la ricevuta. La ricevuta è gratis. Per ora.»",
+   "«Dodici anelli, dodici anni. Il tredicesimo me lo pagate voi.»",
+   "«Quella ricotta è di Menca. Il nipote suo scarica qua: quello che scarica storto.»",
+   "*Ai garzoni:* «Piano col pecorino, che pesa più di voi e vale di più!»"
+  ],
+  "uscita": {
+   "frase": "«Avanti, che dietro di voi c’è il pecorino che aspetta, e il pecorino non ha pazienza.»",
+   "dopo": "Scrive la ricevuta e il conto. Se c’era Adamus, o qualcuno ha nominato i Grigi, prima di sera manda un garzone al Gran Fondaco col nome scritto su un pezzo di carta. Se la stadera è stata denunciata in pubblico, la sera stessa il contrappeso sparisce e ne arriva uno nuovo, giusto.",
+   "aggancio": "«Se entrate e vi servono soldi, o vi servono carte, chiedete di messer Iacopo al Fondaco. Lui tiene i libri.» Fa girare un anello. «E coi libri si parla meglio che col Decano.» (Porta a Iacopo Melatino, che tiene il libro nero della Lega e i debiti dei Cerullius.)"
+  },
+  "ottenuto": [
+   {
+    "info": "Le tariffe del ponte e del dazio; il dazio si paga solo entrando con merci o armi",
+    "via": "gratis"
+   },
+   {
+    "info": "Armi da guerra: venti grossi il pezzo per i forestieri in colonna, o deposito sigillato a un grosso al giorno; la riga è del Fondaco, dipinta all’arrivo del Bando",
+    "via": "gratis"
+   },
+   {
+    "info": "Sconto: carri a metà, deposito a mezzo grosso",
+    "via": "prova"
+   },
+   {
+    "info": "Cambiare i soldi al Fondaco, non ai banchi del mercato",
+    "via": "prova"
+   },
+   {
+    "info": "La Lega dei Sensali (Decano Maccabeo Melatino; i libri li tiene Iacopo; il Gran Fondaco del Gigante)",
+    "via": "gratis"
+   },
+   {
+    "info": "La Lega ha comprato debiti di Casa Cerullius",
+    "via": "gratis"
+   },
+   {
+    "info": "Il Fondaco ha chiuso le lettere di cambio verso Julia Nova; il grano si nasconde; i prezzi salgono",
+    "via": "gratis"
+   },
+   {
+    "info": "Il Fondaco saprà stasera che i Naviganti Grigi sono qui; Rosalba ha l’ordine di segnalarli",
+    "via": "prova"
+   },
+   {
+    "info": "Il contrappeso della stadera è del Fondaco (in privato: ponte gratis; in pubblico: i pastori e Venanzio lo sanno)",
+    "via": "gratis"
+   },
+   {
+    "info": "Stamattina carri chiusi coi teli neri sono entrati alla Porta Melatina senza aspettare né pagare",
+    "via": "gratis"
+   },
+   {
+    "info": "Un lanaiolo di Bëllindë senza lana è passato quattro giorni fa e ha chiesto della porta",
+    "via": "prova"
+   },
+   {
+    "info": "I conti di sotto della Lega; cosa c’era nei carri chiusi; dove sia andato il lanaiolo",
+    "via": "mai"
+   }
+  ]
+ }
 }

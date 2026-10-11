@@ -10,5 +10,144 @@
  "atti": [],
  "links": [],
  "pub": "Un vecchio soldato che striglia i cavalli nel cortile della Rocca. Quando ha visto Maximus si è fermato con la striglia a mezz’aria. Poi ha ripreso, più piano.",
- "gm": "Luogo abituale: le stalle e il cortile della Rocca, su Piazza Garibaldi.\nEtà: ⟦sessantotto⟧. ⟦Quarant’anni nella Guardia, gli ultimi quindici alle stalle, per una gamba che non piega⟧.\nStatistiche: Veterano della Guardia Ducale (Bestiario), ma zoppo e stanco. Non combatte.\nAspetto: ⟦magro, curvo, baffi grigi gialli di tabacco, un vecchio tabarro grigio stinto, odore di cavallo⟧.\nSa: che Lucius Grazianus, lo Stratega, è sopra e sa che il figlio è in città; che ha detto di non farlo salire stasera; ⟦com’era Maximus da bambino, quale cavallo gli insegnò a montare⟧.\nNon sa: perché lo Stratega non voglia vedere il figlio. Niente dei piani della Rocca.\nVoce: poche parole, sottovoce, «signorino».\nCosa vuole: che padre e figlio si parlino prima che sia tardi.\nSegreto: ⟦di notte ha visto uscire dalla Rocca carri coperti verso la Forgia, senza lanterne⟧.\n\nSe gli chiedono di…:\n\nDel padre: «Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.»\nDi portare un messaggio allo Stratega: lo fa, la sera, con la biada. La risposta arriva col falco, o non arriva.\nDei carri di notte: Intuizione CD 15 per capire che sa qualcosa; Persuasione CD 14 (solo Maximus) per farselo dire.\n\nBattute pronte:\n«Signorino.»\n«Siete cresciuto. Pure troppo.»\n«Qua dentro le pareti sentono. Pure i cavalli.»"
+ "gm": "Luogo abituale: le stalle e il cortile della Rocca, su Piazza Garibaldi.\nEtà: ⟦sessantotto⟧. ⟦Quarant’anni nella Guardia, gli ultimi quindici alle stalle, per una gamba che non piega⟧.\nStatistiche: Veterano della Guardia Ducale (Bestiario), ma zoppo e stanco. Non combatte.\nAspetto: ⟦magro, curvo, baffi grigi gialli di tabacco, un vecchio tabarro grigio stinto, odore di cavallo⟧.\nSa: che Lucius Grazianus, lo Stratega, è sopra e sa che il figlio è in città; che ha detto di non farlo salire stasera; ⟦com’era Maximus da bambino, quale cavallo gli insegnò a montare⟧.\nNon sa: perché lo Stratega non voglia vedere il figlio. Niente dei piani della Rocca.\nVoce: poche parole, sottovoce, «signorino».\nCosa vuole: che padre e figlio si parlino prima che sia tardi.\nSegreto: ⟦di notte ha visto uscire dalla Rocca carri coperti verso la Forgia, senza lanterne⟧.\n\nSe gli chiedono di…:\n\nDel padre: «Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.»\nDi portare un messaggio allo Stratega: lo fa, la sera, con la biada. La risposta arriva col falco, o non arriva.\nDei carri di notte: Intuizione CD 15 per capire che sa qualcosa; Persuasione CD 14 (solo Maximus) per farselo dire.\n\nBattute pronte:\n«Signorino.»\n«Siete cresciuto. Pure troppo.»\n«Qua dentro le pareti sentono. Pure i cavalli.»",
+ "dialogo": {
+  "apertura": "*Nel cortile, la striglia si ferma a mezz’aria. Il vecchio guarda Maximus, poi guarda meglio. Riprende a strigliare, più piano, senza alzare la testa.* «Signorino.» *Il cavallo sbuffa; lui gli batte una mano sul collo.* «Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.»",
+  "voce": "Italiano popolare, sottovoce, con qualche parola di dialetto (*frechì*, *nen*, *lu cavalle*) · Tic: «Signorino»; parla al cavallo quando non vuole rispondere («Buono, buono…»); «Qua dentro le pareti sentono. Pure i cavalli.» · Ritmo: lentissimo, pochissime parole, lunghe pause in cui striglia; non guarda mai in faccia mentre parla delle cose importanti.",
+  "argomenti": [
+   {
+    "tema": "Chi sei, ti ricordi di me",
+    "domanda": "«(Maximus) Tobia? Sei tu?»",
+    "risposta": "*Non smette di strigliare.* «Tobia. Quarant’anni nella Guardia, gli ultimi quindici qua con le bestie, per questa gamba che non piega più.» *Si batte il ginocchio col pugno.* «Se mi ricordo di voi? Vi ho messo io sopra la prima sella. Una cavalla baia, Stella, buona come il pane. E voi l’avete fatta correre per tutta la piazza fino a Porta Due di Coppe, e siete caduto davanti alla fontana. Avete pianto?» *Quasi sorride sotto i baffi gialli di tabacco.* «No. Vostro padre vi guardava dalla finestra, e voi lo sapevate.»",
+    "insistono": "«Siete cresciuto. Pure troppo.» *Guarda le mani di Maximus, le nocche, le cicatrici, come un cavallo alla fiera.* «Stella è morta l’inverno scorso, vecchia. La sella l’ho tenuta: sta di là, appesa, unta ogni mese. Non so per chi. Per voi, forse.»",
+    "mai": "Agli altri personaggi non dice niente di Maximus bambino: «Chiedetelo a lui.» ⟦Il nome della cavalla, Stella, è deciso qui.⟧"
+   },
+   {
+    "tema": "Mio padre",
+    "domanda": "«Perché mio padre non vuole che salga?»",
+    "risposta": "*Striglia, piano.* «Ha detto di non salire stasera. Non ha detto domani.» *Pausa lunga.* «Non lo so, signorino. Lo Stratega a me dice: la biada, i ferri, il morello pronto all’alba. Non dice perché, e io non chiedo. Quarant’anni di Guardia, e non ho mai chiesto perché a nessuno.»",
+    "insistono": "«Non dorme.» *Indica la torre con il mento, senza guardarla.* «La lanterna lassù è accesa fino all’alba, da una settimana. E quando scende alle stalle, la mattina, i cavalli suoi li tocca uno per uno, come se li contasse. Prima non lo faceva.» *Torna al cavallo.* «Questo non vuol dire niente. Lo dico perché me l’avete chiesto.»",
+    "mai": "Non sa perché lo Stratega non voglia vedere il figlio stasera, né cosa prepari nella torre."
+   },
+   {
+    "tema": "Mia madre",
+    "domanda": "«E mia madre? Come sta?»",
+    "risposta": "*Le mani si fermano, per la prima volta.* «La Signora sta bene. Accende la candela ogni sera, alla finestra di levante, e la lascia finire. Tutta la Rocca la vede. I ragazzi di guardia sulle mura, quando si accende, si tolgono l’elmo. Non lo dice nessuno, ma lo fanno.» *Riprende a strigliare.* «I conti delle stalle li tiene lei. Pure quelli della biada. Lei sa quante bestie ha la Rocca meglio di me.»",
+    "insistono": "Se c’è solo Maximus, lo dice senza prova; davanti agli altri serve la prova. «La Signora l’altra sera, mentre mi dava i conti, ha detto una cosa: “Tobia, la porta delle stalle, dopo la campana, non la chiudere.” Io non l’ho chiusa.» *Non alza gli occhi.* «Non so per chi sia. Lo dico a voi perché ho le orecchie vecchie, e mi scordo le cose.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intuizione"
+     ],
+     "cd": 14,
+     "si": "Dice della porta delle stalle aperta dopo la campana, per ordine della Signora (vedi sopra).",
+     "no": "«La Signora sta bene. È tutto.» *E parla al cavallo.*"
+    },
+    "mai": "Non sa della lettera di Donna Ersilia per Maximus (aspetta al tratturo, nelle mani di Venanzio) né dell’ara della Vecchia Madre nella sua stanza."
+   },
+   {
+    "tema": "Portare un messaggio",
+    "domanda": "«Puoi portare un biglietto a mio padre?»",
+    "risposta": "«Con la biada, stasera.» *Tende la mano senza guardarla.* «Lo Stratega legge tutto quello che arriva dalle stalle, perché dalle stalle non arriva mai niente. La risposta arriva col falco, o non arriva.»",
+    "insistono": "*Abbassa la voce.* «Se volete che lo legga solo lui, scrivete piccolo e piegate stretto. Lo metto sotto la coperta del morello, quello che monta all’alba. Lì non ci guarda nessuno.» *Si guarda intorno.* «E la risposta, se c’è, non aspettatela dal falco. Passate dalle stalle.»",
+    "mai": "Non sale lui dallo Stratega a parlare per Maximus: «Io porto la biada, signorino. Le parole le portate voi.»"
+   },
+   {
+    "tema": "Il falconiere",
+    "domanda": "«Chi porta la posta della Rocca? Ci sono falchi che non arrivano.»",
+    "risposta": "*Sputa nella paglia.* «Il falconiere. Sta su nella torre coi suoi uccelli, e scende solo a bere.» *Striglia più forte.* «Gli uccelli li tiene bene, questo glielo devo dire. Il resto non sono affari miei.»",
+    "insistono": "«Da un mese ha gli stivali nuovi. Di quelli coi chiodi d’ottone. E all’osteria paga in argento.» *Pausa.* «La sera, dopo che parte un falco, esce dalla porta piccola e va verso i Tigli, al giardino del Duca. Torna senza niente in mano, e fischietta.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Racconta degli stivali, dell’argento e del giro serale al giardino del Duca (vedi sopra), e aggiunge: «La Signora l’ha detto allo Stratega. Lo Stratega ha risposto: un falconiere che beve è un falconiere che torna.»",
+     "no": "«Il falconiere fa il falconiere. Io faccio lo stalliere.»"
+    },
+    "mai": "Non sa a chi il falconiere consegni la posta (un uomo col cappuccio, dietro la gabbia della belva) né che la ricopi. Non accusa nessuno della casa."
+   },
+   {
+    "tema": "I carri della notte",
+    "domanda": "«Che succede di notte, alla Rocca?»",
+    "risposta": "«Di notte dormo, signorino. Alla mia età.» *Ma la striglia va più forte, e il cavallo si scansa.* (Intuizione CD 15: sa qualcosa e ha paura di dirlo.)",
+    "insistono": "Se è Maximus a chiederlo, e da solo: «Carri. Coperti, senza lanterne, dal portone dietro le stalle. Tre, quattro a notte, da due settimane, dopo la campana. Escono verso levante, verso Lucente Anna e la Forgia. I cavalli me li riportano prima dell’alba con la fuliggine sugli zoccoli e l’odore di carbone nel pelo, e sudati come se avessero tirato pietre.» *Si guarda intorno.* «Non sono carri di biada. E nessuno li scrive.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 14,
+     "si": "Racconta dei carri senza lanterne verso la Forgia e Lucente Anna (vedi sopra). Solo Maximus può tentarla.",
+     "no": "«Di notte dormo.» *E da quel momento non parla più di niente.*"
+    },
+    "mai": "Non sa che cosa portino i carri né chi li abbia ordinati: li immagina dello Stratega, e non vuole saperne di più. Non sa niente dei piani della Rocca."
+   },
+   {
+    "tema": "La Crociata",
+    "domanda": "«Che si dice alla Rocca di noi?»",
+    "risposta": "«Che siete tanti, che avete i carri, e che col capitano dagli occhi d’oro c’è il figlio dello Stratega.» *Quasi un sorriso.* «In caserma i ragazzi scommettono. C’è chi dice che vostro padre vi mette in cella, e chi dice che vi dà la Porta Reale da comandare. Io non scommetto. Ho perso abbastanza.»",
+    "insistono": "«Da una settimana i turni sono doppi. I ragazzi non dormono e affilano.» *Passa la mano sul collo del cavallo.* «Non si affila così per i terremoti, signorino.»",
+    "mai": "Non sa niente di Silvanus né della politica del Consiglio, e non giudica la Crociata."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Posa la striglia.* «Sono vecchio, signore. Ammazzarmi non vi porta da nessuna parte, e per chiamare la Guardia mi basta un fischio.» Se c’è Maximus non fischia; se Maximus non c’è, sì.",
+   "soldi": "«Ai cavalli i soldi non servono. A me nemmeno.» Guarda la moneta come una cosa sporca, e da lì parla solo di biada.",
+   "lusinga": "«Ero un soldato. Adesso sono uno che striglia.» Ma gli piace che qualcuno se ne ricordi, e la volta dopo saluta.",
+   "bugia": "Non dice niente: smette di parlare e torna al cavallo. A Maximus, piano: «Da piccolo mentivate meglio.»"
+  },
+  "battute": [
+   "«Signorino.»",
+   "«Siete cresciuto. Pure troppo.»",
+   "«Qua dentro le pareti sentono. Pure i cavalli.»",
+   "«Buono, buono… nen è niente.» (al cavallo)",
+   "«Il morello morde. Come vostro padre: solo chi non lo conosce.»",
+   "«La biada sale, gli ordini scendono. Io sto in mezzo, con la paglia.»",
+   "«Quarant’anni di Guardia, e non ho mai chiesto perché a nessuno.»"
+  ],
+  "uscita": {
+   "frase": "«Andate, signorino. Qua dentro le pareti sentono.» *Torna a strigliare e non vi guarda più.*",
+   "dopo": "Se Maximus gli ha dato un biglietto, la sera lo porta su con la biada, sotto la coperta del morello. Dopo la campana lascia aperta la porta delle stalle, come ha chiesto la Signora, e resta sveglio sulla paglia fino a mezzanotte.",
+   "aggancio": "Mentre vi allontanate, senza alzare la testa: «Le stalle, dopo la campana, non le chiudo prima di mezzanotte. Sono vecchio. Mi scordo.» È la porta per arrivare a Donna Ersilia senza passare dallo Stratega."
+  },
+  "ottenuto": [
+   {
+    "info": "Lo Stratega è alla Rocca, sa che Maximus è in città e ha detto di non salire stasera (non domani).",
+    "via": "gratis"
+   },
+   {
+    "info": "Lo Stratega non dorme: la lanterna della torre è accesa fino all’alba da una settimana.",
+    "via": "gratis"
+   },
+   {
+    "info": "Donna Ersilia accende ogni sera una candela alla finestra di levante.",
+    "via": "gratis"
+   },
+   {
+    "info": "Donna Ersilia ha chiesto di lasciare aperta la porta delle stalle dopo la campana.",
+    "via": "prova"
+   },
+   {
+    "info": "Tobia porta un biglietto allo Stratega con la biada, senza passare dal falco.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il falconiere ha stivali nuovi, paga in argento e la sera dopo ogni falco va al giardino del Duca.",
+    "via": "prova"
+   },
+   {
+    "info": "Di notte escono dalla Rocca carri coperti senza lanterne, verso Lucente Anna e la Forgia, e tornano con odore di carbone.",
+    "via": "prova"
+   },
+   {
+    "info": "Turni doppi da una settimana; in caserma si affila.",
+    "via": "gratis"
+   },
+   {
+    "info": "Che cosa prepara lo Stratega e che cosa portano i carri.",
+    "via": "mai"
+   }
+  ]
+ }
 }

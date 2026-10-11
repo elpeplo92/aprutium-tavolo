@@ -338,6 +338,26 @@
       "teramum_ponte_gola"
      ],
      "immagine": "PDI — Teramum — Il cambio della sera.jpg"
+    },
+    {
+     "id": "dlg_tobia_stalliere",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Tobia",
+     "parte": "evento",
+     "png": "png-tobia-stalliere",
+     "innesco": "Qualcuno parla con Tobia.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    },
+    {
+     "id": "dlg_cancelliere_della_spada",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il Cancelliere della Spada",
+     "parte": "evento",
+     "png": "png-cancelliere-della-spada",
+     "innesco": "Qualcuno parla con il Cancelliere della Spada.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
     }
    ]
   },
@@ -569,6 +589,26 @@
        "a": "crociata"
       }
      ]
+    },
+    {
+     "id": "dlg_morico_tavolaccio",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il sergente Morico",
+     "parte": "evento",
+     "png": "png-morico-tavolaccio",
+     "innesco": "Qualcuno parla con il sergente Morico.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    },
+    {
+     "id": "dlg_gerbino_sensale",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Gerbino",
+     "parte": "evento",
+     "png": "png-gerbino-sensale",
+     "innesco": "Qualcuno parla con Gerbino.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
     }
    ]
   },
@@ -1555,6 +1595,16 @@
       "teramum_rocca"
      ],
      "pe": 150
+    },
+    {
+     "id": "dlg_cancelliere_della_spada",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il Cancelliere della Spada",
+     "parte": "evento",
+     "png": "png-cancelliere-della-spada",
+     "innesco": "Qualcuno parla con il Cancelliere della Spada.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
     }
    ]
   },

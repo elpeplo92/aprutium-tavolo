@@ -10,5 +10,110 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: cinquantacinque. Alto, magro, camice nero, occhiali sulla punta del naso. Lingua tagliente: dice ad alta voce quello che i clienti comprano in silenzio.\nVende: pozioni di guarigione (tre, nascoste), antitossine, kit da guaritore, Genziana, Centerba, Ratafià.\nSa: la Rocca ha comprato tutte le altre pozioni, le bende e l’aceto, il mese scorso.\nNon vuole in bottega il metallo grigio della Forgia: «è pentito di essere un metallo».\nBattute: «Cura tutto, tranne chi la beve.» · «Lo dica più forte.» · «Qui la ricetta sono io.»"
+ "gm": "Età: cinquantacinque. Alto, magro, camice nero, occhiali sulla punta del naso. Lingua tagliente: dice ad alta voce quello che i clienti comprano in silenzio.\nVende: pozioni di guarigione (tre, nascoste), antitossine, kit da guaritore, Genziana, Centerba, Ratafià.\nSa: la Rocca ha comprato tutte le altre pozioni, le bende e l’aceto, il mese scorso.\nNon vuole in bottega il metallo grigio della Forgia: «è pentito di essere un metallo».\nBattute: «Cura tutto, tranne chi la beve.» · «Lo dica più forte.» · «Qui la ricetta sono io.»",
+ "dialogo": {
+  "apertura": "*Vi guarda arrivare da sopra le lenti, il pestello fermo nel mortaio. Il ragazzo davanti a voi paga e scappa; Ceraso gli grida dietro:* «E usatelo bene!» *Poi, a voi, senza cambiare tono:* «Voi invece avete l’aria di quelli che comprano bende a dozzine. Avanti.»",
+  "voce": "Italiano colto, secco, da bottega di città, con il teramano solo per le battute · Tic: «Cura tutto, tranne chi la beve»; «Lo dica più forte»; «Qui la ricetta sono io»; si toglie gli occhiali quando dice una cosa seria · Ritmo: frasi brevi e taglienti, pause per far ridere i clienti dietro, mai fretta.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Chi siete?»",
+    "risposta": "«Ceraso. Ottavio. Speziale.» *Indica la porta, il mortaio di bronzo appeso.* «Il terzo di quel nome in questa bottega. Mio nonno curava i capitani, mio padre i mercanti, io curo chi capita. Lu spizzijale, dicono in dialetto, come se fosse un mestiere da poco.» *Vi squadra.* «Vendo erbe, unguenti, bende, aceto, liquori della montagna e qualche pozione per chi può pagarla. E vendo consigli, ma quelli nessuno li compra. Ve ne do uno gratis: chi entra in una spezieria con la spada in mano non sta male. Sta per far star male qualcuno.»",
+    "insistono": "«Volete sapere perché il ragazzo è scappato? Ha comprato una cosa che si compra in silenzio. Io gliel’ho detto ad alta voce. È un servizio che faccio alla città: così i ragazzi imparano a vergognarsi, e le ragazze a scegliere meglio.»",
+    "mai": "Nessun segreto qui."
+   },
+   {
+    "tema": "Pozioni",
+    "domanda": "«Avete pozioni di guarigione?»",
+    "risposta": "«No.» *Pausa. Si toglie gli occhiali.* «Non per tutti. Le ultime le ha comprate la Rocca, tutte, il mese scorso.» *Si abbassa sotto il banco e tira fuori tre fiale rosse, avvolte nella paglia.* «Tre. Rosse, buone, fatte da me. Cinquanta a testa, in oro, al cambio della città. Queste le ho nascoste per i clienti che mi stanno simpatici.» *Vi guarda.* «Mi state simpatici fino a prova contraria. Ho anche due antitossine, stesso prezzo, e kit da guaritore per chi ha le mani e non ha la pazienza.»",
+    "insistono": "*Se c’è Mattheus o qualcuno che si vede che sa curare.* «Voi siete del mestiere, si vede da come guardate i vasi. Per voi, la terza fiala a quaranta. Non lo dite a nessuno: ho una reputazione da avaro da difendere.»",
+    "mai": "Ne ha solo tre e due antitossine: non ne avrà altre prima di un mese."
+   },
+   {
+    "tema": "La Rocca ha comprato tutto",
+    "domanda": "«Perché la Rocca ha comprato tutte le pozioni?»",
+    "risposta": "«Tutte. E le bende. E l’aceto. E il filo per cucire le ferite, e la polvere di corno, e la Centerba per lavare i tagli. Il mese scorso, in tre giorni, con un ordine col sigillo della Spada e un sergente che non sapeva leggere quello che portava.» *Si toglie gli occhiali e li pulisce, piano.* «Una guardia di città non ha bisogno di tutto questo. Una guardia di città litiga coi carrettieri e prende a bastonate gli ubriachi. Questo è quello che si compra come chi si aspetta una guerra.» *Si rimette gli occhiali.* «O come chi la vuole fare.»",
+    "insistono": "«Vi dico un’altra cosa, e poi non vi ho detto niente. Il sergente che ha ritirato la roba ha chiesto anche l’oppio. Quello che si dà a chi si taglia una gamba. Tanto. Per cento uomini. La Guardia della città sono trecento, e nessuno si taglia la gamba a dirigere il traffico.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intuizione"
+     ],
+     "cd": 14,
+     "si": "Ceraso vi dice che la Rocca ha preso anche oppio per cento uomini, con un ordine col sigillo della Spada: è quello che serve a chi prepara una battaglia, non a una guardia di città.",
+     "no": "«La Rocca compra, io vendo. Non chiedo.» Si rimette gli occhiali e vi chiede se volete altro."
+    },
+    "mai": "mai: non sa per cosa si prepari la Rocca e non lo dirà mai a una guardia. Non ha visto l’ordine di Lucius Grazianus, solo il sigillo della Spada."
+   },
+   {
+    "tema": "Il metallo grigio",
+    "domanda": "«Potete dirci cos’è questo?» (un pezzo di un Forgiato o del metallo della Forgia)",
+    "risposta": "*Analizza le cose strane, a pagamento: due grossi. Prende il frammento con una pinza, non con le dita, e lo avvicina alla lente. Poi lo posa sul banco e fa un passo indietro.* «Freddo. È stato al sole tutto il giorno nella vostra borsa, e è freddo come la neve di marzo.» *Lo tocca con l’unghia, poi con il pestello: non suona.* «Non è ferro. Non è stagno. Non è niente che si estragga a Li Cashtillë o nella montagna.» *Si toglie gli occhiali.* «Questo non è un metallo. È… pentito di essere un metallo.» *Spinge le monete verso di voi.* «Riprendetevi i soldi. Non lo voglio in bottega.»",
+    "insistono": "*Se lo convincono a dire altro, si lava le mani con l’aceto prima di parlare.* «Ho messo una goccia di sangue di gallina vicino al frammento, per vedere se reagiva come certi veleni. Il sangue si è mosso. Verso il metallo. Piano. Come l’acqua verso uno scolo.» *Si asciuga le mani tre volte.* «Io sono uno speziale, non un mago. Cercate un dotto. La Biblioteca dei Savini, se ci fanno entrare qualcuno. O i vostri druidi della montagna. E non dormiteci vicino.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 15,
+     "si": "Ceraso vi racconta la prova del sangue: il sangue si muove verso il metallo. Vi consiglia i dotti dei Savini o i druidi, e di non dormirci vicino.",
+     "no": "«Ve l’ho detto. Fuori dalla mia bottega.» Vi restituisce i soldi e apre la porta."
+    },
+    "mai": "mai: non sa cos’è né da dove viene; non tiene il frammento in bottega nemmeno una notte."
+   },
+   {
+    "tema": "Centerba e liquori",
+    "domanda": "«Cos’è questa Centerba?»",
+    "risposta": "«Cento erbe della montagna. Verde come il veleno, forte come un mulo arrabbiato. Cura tutto, tranne chi la beve.» *Ne versa un dito in un bicchierino.* «Prego. Un quattrino.» *Se qualcuno la beve, lo guarda con interesse scientifico.* «Respirate. Respirate. Ecco. Fra un minuto rivedete i colori.» *Indica gli altri vasi.* «La Genziana, amara, per lo stomaco e per i dispiaceri. Il Ratafià, di amarene, dolce: per le signore e per chi mente. Ditemi voi quale vi serve.»",
+    "insistono": "«La Centerba la usavano i pastori per lavare le ferite delle pecore e per lavare le proprie, dentro. Funziona tutte e due le volte. Se dovete passare la notte fuori, portatevene una bottiglia: scalda, pulisce, e se va male vi fa dimenticare di avere freddo.»",
+    "mai": "Chi beve la Centerba fa un TS su Costituzione CD 12 o è avvelenato per 1 minuto (per ridere)."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Si toglie gli occhiali e li posa sul banco.* «Ho trentadue veleni su questi scaffali e so dov’è ognuno al buio. Voi sapete dov’è la porta?» Non si muove; chiude le tre pozioni sotto il banco e non le riavrete.",
+   "soldi": "«I soldi li prendo per le pozioni. Per le chiacchiere no: le chiacchiere sono il mio vizio, non il mio mestiere.» Il denaro in più compra solo un’analisi (due grossi).",
+   "lusinga": "«Lo dica più forte, che il cliente dietro non ha sentito.» *Gli piace, e non lo nasconde.* Vi fa lo sconto sulla terza pozione.",
+   "bugia": "*Vi guarda sopra le lenti.* «Ratafià. Per chi mente.» Ve ne versa un bicchiere, gratis, e da quel momento ogni prezzo per voi è aumentato di un quarto."
+  },
+  "battute": [
+   "«Cura tutto, tranne chi la beve.»",
+   "«Lo dica più forte, che il cliente dietro non ha sentito.»",
+   "«Ricetta? Qui la ricetta sono io.»",
+   "«Il dolore passa. La vergogna è per sempre. Per quella ho solo il Ratafià.»",
+   "«Bende a dozzine. Lo sapevo.»",
+   "«Questa erba fa bene a tutto. Anche a chi la vende.»",
+   "«Le pozioni rosse sono rosse per un motivo. Le verdi pure. Non chiedete quale.»",
+   "«Avanti il prossimo, e si prepari a vergognarsi.»"
+  ],
+  "uscita": {
+   "frase": "*Rimette gli occhiali sulla punta del naso e riprende il pestello.* «Se tornate feriti, entrate dalla porta di dietro. Davanti c’è la reputazione.»",
+   "dopo": "Si lava le mani con l’aceto, tre volte. Se ha visto il metallo grigio, la sera brucia la pinza nel camino.",
+   "aggancio": "La Rocca ha preso pozioni, bende e oppio per cento uomini con il sigillo della Spada: qualcuno alla Rocca prepara una battaglia."
+  },
+  "ottenuto": [
+   {
+    "info": "Tre pozioni di guarigione nascoste (50 mo l’una), due antitossine, kit da guaritore; Genziana, Centerba, Ratafià.",
+    "via": "gratis"
+   },
+   {
+    "info": "La Rocca il mese scorso ha comprato tutte le pozioni, le bende e l’aceto della città, con un ordine col sigillo della Spada.",
+    "via": "gratis"
+   },
+   {
+    "info": "La Rocca ha preso anche oppio per cento uomini: preparativi da battaglia.",
+    "via": "prova"
+   },
+   {
+    "info": "Il metallo grigio della Forgia è freddo, non suona, «pentito di essere un metallo»; Ceraso non lo vuole in bottega.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il sangue si muove verso il metallo grigio; per capirne di più servono i dotti dei Savini o i druidi.",
+    "via": "prova"
+   },
+   {
+    "info": "Cos’è il metallo e per cosa si prepara la Rocca.",
+    "via": "mai"
+   }
+  ]
+ }
 }

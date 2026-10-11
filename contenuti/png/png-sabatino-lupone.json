@@ -10,5 +10,111 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: sessanta. Grosso, barba grigia, grembiule di cuoio, non sorride.\nHa aperto la birreria con due soci; se ne sono andati (uno sposato, uno «coi signori»). I loro grembiuli sono ancora al chiodo.\nSa: tutto quello che dicono studenti, scrivani e guardie fuori servizio. Sotto la sua cantina c’è un mosaico col leone; sotto il leone una volta ci è sceso, e non ne parla (ha visto le luci colorate dell’Arlecchino, e ha dimenticato una notte intera).\nCosa vuole: che non si rompa niente. Che i Diavoli non si facciano ammazzare.\nBattute: «Qui si beve. Si dorme a casa.» · «Ultimo giro.» · «T’ puzz’ n’om ambenn’» (fra amici)."
+ "gm": "Età: sessanta. Grosso, barba grigia, grembiule di cuoio, non sorride.\nHa aperto la birreria con due soci; se ne sono andati (uno sposato, uno «coi signori»). I loro grembiuli sono ancora al chiodo.\nSa: tutto quello che dicono studenti, scrivani e guardie fuori servizio. Sotto la sua cantina c’è un mosaico col leone; sotto il leone una volta ci è sceso, e non ne parla (ha visto le luci colorate dell’Arlecchino, e ha dimenticato una notte intera).\nCosa vuole: che non si rompa niente. Che i Diavoli non si facciano ammazzare.\nBattute: «Qui si beve. Si dorme a casa.» · «Ultimo giro.» · «T’ puzz’ n’om ambenn’» (fra amici).",
+ "dialogo": {
+  "apertura": "*Non sorride. Spilla una birra scura dalla botte, la posa sul banco, la guarda finché la schiuma si ferma.* «Qui si beve.» *Vi squadra le armi, poi le facce.* «Si dorme a casa. Due quattrini il boccale. Le armi sotto il tavolo, non sopra.»",
+  "voce": "Teramano di città, burbero, poche parole e pesanti · Tic: «Qui si beve. Si dorme a casa»; «Ultimo giro» detto a qualsiasi ora; si asciuga le mani sul grembiule di cuoio prima di dire una cosa vera · Ritmo: lentissimo, frasi di cinque parole, silenzi lunghi in cui spilla birra.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Siete voi Lu Lupe?»",
+    "risposta": "«Sabatino. Lupone di cognome, Lupe per tutti.» *Spilla.* «La birra è mia. Il lupo sull’insegna è mio, l’ha dipinto uno studente che non aveva da pagare. Il portone è verde perché la vernice verde costava meno.» *Pausa lunga.* «Trent’anni che apro questa cantina. Trent’anni che chiudo tardi. Qua sotto ci sono passati tutti quelli che a Terme non hanno un palazzo. Si sono innamorati su quei tavoli, si sono picchiati, ci hanno scritto sopra il nome. Io pulisco. Non leggo.»",
+    "insistono": "«Volete sapere perché la birra è scura? Orzo del Piano della Lenta, acqua della Fonte della Noce. Chi beve alla Fonte della Noce non se ne va più dalla città: lo dicono della fonte. Io lo dico della birra. Guardatevi intorno: nessuno di questi se n’è mai andato.»",
+    "mai": "Non parla mai di sé oltre a questo."
+   },
+   {
+    "tema": "I due grembiuli",
+    "domanda": "«Di chi sono quei due grembiuli al chiodo?»",
+    "risposta": "*Si irrigidisce. Il boccale gli resta a mezz’aria.* «Eravamo in tre.» *Lo posa.* «Adesso sono io.» *Torna alla botte, e per un po’ non parla con nessuno.*",
+    "insistono": "*Se insistono, senza voltarsi.* «Uno si è sposato. La moglie non voleva l’oste. Vende stoffe al Corso e quando passa davanti al portone guarda dall’altra parte.» *Pausa.* «L’altro si è messo coi signori. Fa i conti a una Casata, ai Tigli. Porta le scarpe buone.» *Si asciuga le mani.* «Quale dei due è peggio, decidetelo voi. I grembiuli restano lì. Se uno torna, il chiodo c’è.»",
+    "mai": "Non dice mai i nomi dei due soci né per quale Casata lavora il secondo."
+   },
+   {
+    "tema": "Chi viene qui e le voci",
+    "domanda": "«Chi viene qui? Cosa si sente?»",
+    "risposta": "«Tutti quelli che non hanno un palazzo. Studenti, scrivani della Biblioteca, le dita sporche d’inchiostro. Guardie senza tabarro. I Diavoli, la sera tardi. I signori no.» *Pausa.* «Qualche volta un signore vestito da poveraccio. Si riconoscono dalle scarpe.» *Spilla.* «Io non ascolto. Ma la sala è bassa e la voce gira. Gli scrivani dei Savini dicono che il Magister Celino ha murato la scala delle cantine della Biblioteca. Da dentro. Le guardie fuori servizio dicono che quelle nuove della Rocca hanno armature che non fanno rumore. E una serva l’altra sera diceva che la signora forestiera dei Tigli ha comprato tutto il lillà del mercato.»",
+    "insistono": "*Si asciuga le mani.* «Uno scrivano, ubriaco, ha detto che l’Arciflamine ha una lista. Coi nomi di quelli che non devono entrare in città. Ha detto due nomi. Uno era de Caelis.» *Guarda Alessandros o Vicarus, se ci sono.* «L’altro era il vostro.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Lu Lupe vi dice della lista dell’Arciflamine: ci sono i de Caelis e i Cerullius.",
+     "no": "«Si dicono tante cose, qua sotto. Domani non se le ricorda nessuno.» Torna alla botte."
+    },
+    "mai": "mai: non sa chi sia la signora forestiera né cosa contenga la lista oltre ai due nomi. Non ripete mai chi ha detto cosa."
+   },
+   {
+    "tema": "La cantina e la Città Sepolta",
+    "domanda": "«Cosa c’è sotto la vostra cantina? Avete sentito della città sepolta?»",
+    "risposta": "*Lu Lupe smette di spillare. La birra cola sul banco e lui non la ferma.* «Qui sotto c’è la mia cantina. Sotto la mia cantina c’è un pavimento a mosaico, con un leone. Pietre piccole, colorate, un leone con la bocca aperta.» *Chiude la spina.* «Sotto il leone non ci vado.» *Si asciuga le mani, piano.* «Una volta ci sono andato.» *Non dice altro. Spilla un’altra birra, per nessuno.*",
+    "insistono": "*Se si guadagnano la fiducia, a bassa voce, senza guardarvi.* «C’era un buco nel mosaico, dove il leone ha l’occhio. Sono sceso con la lanterna. Una scala, poi una strada. Una strada sotto la strada, con le case. E in fondo, luci. Colorate. Rosse, gialle, verdi, che si muovevano come i vestiti di uno che balla.» *Pausa lunghissima.* «Poi era mattina. Ero qui, al banco, con la lanterna spenta e le scarpe bagnate. Una notte intera, e non mi ricordo niente. Ho chiuso il buco col mattone. Non toccatelo.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intuizione"
+     ],
+     "cd": 15,
+     "si": "Lu Lupe racconta della scala sotto l’occhio del leone, della strada sotto la strada e delle luci colorate, e della notte intera che ha dimenticato.",
+     "no": "«Sotto il leone non ci vado.» Fine. Per stasera sull’argomento non si torna."
+    },
+    "mai": "mai: non porta mai nessuno giù e non apre la cantina. Non sa cosa sia l’uomo delle luci colorate (l’Arlecchino) e non sa cosa sia successo in quella notte."
+   },
+   {
+    "tema": "Carte e scrivani",
+    "domanda": "«Qualcuno qui vende carte, mappe?»",
+    "risposta": "*Fa un cenno appena col mento verso l’ultimo tavolo, dove un ragazzo magro con gli occhiali spessi copia qualcosa con la lingua fra i denti.* «Io vendo birra.» *Pausa.* «Quello là è Nicolino. Copista dei Savini. Ha debiti di gioco con mezza via Delfico. Quello che vende non lo so e non lo voglio sapere.» *Si asciuga le mani.* «Se comprate da lui, non ditegli che ve l’ho indicato io. E non fatelo cacciare. Se il Magister lo scopre, il ragazzo finisce a dormire sotto i portici.»",
+    "insistono": "«Ultimamente copia piante. Cantine. Le cantine di Lucente Anna, sotto la Torre Bruciata. Le sta copiando da tre sere. Qualcuno gliele ha chieste, e non siete voi.»",
+    "mai": "mai: non sa chi abbia chiesto le piante a Nicolino. Non fa da intermediario."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Si asciuga le mani sul grembiule, prende il mazzuolo della botte e lo posa sul banco.* «Chi rompe, paga.» Mezza sala si alza: guardie fuori servizio e Diavoli. Lu Lupe non deve fare niente.",
+   "soldi": "*Prende il quattrino della birra, lascia il resto sul banco.* «Qui si paga la birra.» Il denaro in più lo fa diventare più muto, non meno.",
+   "lusinga": "*Non sorride.* «La birra è buona. Lo so.» Ma vi spilla il boccale dalla botte di sotto, quella buona, e vi lascia restare dopo l’ultimo giro.",
+   "bugia": "*Vi guarda a lungo.* «T’ puzz’ n’om ambenn’.» *Stavolta non ride.* Vi mette il conto sul tavolo e non vi serve più fino a domani."
+  },
+  "battute": [
+   "«Qui si beve. Si dorme a casa.»",
+   "«Chi rompe, paga. Chi paga, rompe pure.»",
+   "«T’ puzz’ n’om ambenn’.» (ridendo, fra amici)",
+   "«Ultimo giro. Lo dico tutte le sere, e tutte le sere mento.»",
+   "«Chi si addormenta al tavolo si sveglia col nome inciso. Di un altro.»",
+   "«La pizza di Lupe? Non è quella di Mario. È meglio.»",
+   "«Bravi ragazzi, i Diavoli. Scemi, ma bravi. Non fateli ammazzare.»",
+   "«Il portone è verde. Il resto è affar mio.»"
+  ],
+  "uscita": {
+   "frase": "*Batte il mazzuolo sulla botte.* «Ultimo giro.» *Guarda il fondo della sala, i grembiuli al chiodo.* «Si dorme a casa.»",
+   "dopo": "Chiude il portone verde con tre giri di chiave e scende a controllare il mattone sopra l’occhio del leone, come ogni notte.",
+   "aggancio": "Nicolino «Quattrocchi» all’ultimo tavolo, con la pianta delle cantine sotto Lucente Anna che qualcun altro gli ha chiesto: chi l’ha ordinata?"
+  },
+  "ottenuto": [
+   {
+    "info": "Lu Lupe Bianche: studenti, scrivani dei Savini, guardie fuori servizio, Diavoli; posto sicuro per parlare finché si paga.",
+    "via": "gratis"
+   },
+   {
+    "info": "Voci: Celino Savini ha murato da dentro la scala delle cantine della Biblioteca; le armature delle guardie nuove non fanno rumore; la signora forestiera dei Tigli ha comprato tutto il lillà.",
+    "via": "gratis"
+   },
+   {
+    "info": "L’Arciflamine ha una lista di chi non deve entrare: ci sono i de Caelis e i Cerullius.",
+    "via": "prova"
+   },
+   {
+    "info": "Sotto la cantina c’è un mosaico col leone; sotto, una strada sepolta e luci colorate; Lupe ci ha perso una notte di memoria.",
+    "via": "prova"
+   },
+   {
+    "info": "Nicolino, copista dei Savini, vende copie; da tre sere copia le cantine di Lucente Anna per qualcun altro.",
+    "via": "gratis"
+   },
+   {
+    "info": "Cosa sia successo a Lupe quella notte, e chi abbia ordinato le piante a Nicolino.",
+    "via": "mai"
+   }
+  ]
+ }
 }

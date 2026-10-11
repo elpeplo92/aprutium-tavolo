@@ -10,5 +10,102 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: settanta. Giacca nera, tovagliolo sul braccio, capelli bianchi pettinati all’indietro, mani sempre pulite.\nDice che suo nonno inventò le scrippelle ’mbusse alla mensa dei capitani.\nSa: chi mangia da lui e con chi; che il giovedì il Cancelliere della Spada cena al tavolo in fondo; che una signora dai capelli bianchi ha chiesto chi c’era al tavolo del giovedì.\nCosa vuole: che la cucina vera non muoia. Disprezza la pizza mangiata in piedi.\nBattute: «Prima si mangia, poi si parla.» · «Trase, aijaccete.» · «Stà ben Rocc, stà ben tutt la rocc.»"
+ "gm": "Età: settanta. Giacca nera, tovagliolo sul braccio, capelli bianchi pettinati all’indietro, mani sempre pulite.\nDice che suo nonno inventò le scrippelle ’mbusse alla mensa dei capitani.\nSa: chi mangia da lui e con chi; che il giovedì il Cancelliere della Spada cena al tavolo in fondo; che una signora dai capelli bianchi ha chiesto chi c’era al tavolo del giovedì.\nCosa vuole: che la cucina vera non muoia. Disprezza la pizza mangiata in piedi.\nBattute: «Prima si mangia, poi si parla.» · «Trase, aijaccete.» · «Stà ben Rocc, stà ben tutt la rocc.»",
+ "dialogo": {
+  "apertura": "*Vi viene incontro dal fondo della cantina, giacca nera, tovagliolo sul braccio. Vi guarda le scarpe, le armi, le mani. Poi sorride.* «Quanti siete?» *Indica la tavola con le tovaglie bianche.* «Trase, aijaccete. Prima si mangia, poi si parla.»",
+  "voce": "Italiano curato da oste di una volta, col teramano solo nelle formule d’accoglienza · Tic: «Prima si mangia, poi si parla»; «Trase, aijaccete»; «Mio nonno»; si sistema il tovagliolo sul braccio prima di ogni risposta · Ritmo: lento, cerimonioso, racconta come si serve un piatto: con calma, e senza far cadere niente.",
+  "argomenti": [
+   {
+    "tema": "Chi sei e le scrippelle",
+    "domanda": "«Chi siete? E cosa sono queste scrippelle?»",
+    "risposta": "«Domenico Castorano. Zi’ Mimì da quando avevo trent’anni, e adesso ne ho settanta, quindi Zi’ Mimì per sempre.» *Si sistema il tovagliolo.* «Questa cantina l’ha aperta mio padre. Prima c’erano le botti e basta.» *Si illumina.* «Le scrippelle. Mio nonno. Garzone alla mensa dei capitani, alla Rocca, quando la Rocca aveva ancora una mensa. Una sera gli cascano le crespelle nella pentola del brodo. Tutte. Lui non si perde d’animo: le ripesca, le arrotola, ci mette il formaggio, e le serve così, nel brodo. ’Mbusse. Bagnate. Il capitano ne chiede altre tre.» *Pausa.* «Lo racconta tutta la città, e ognuno dice che era suo nonno. Ma era il mio.»",
+    "insistono": "«Volete sapere com’è davvero? Mio nonno era un disgraziato che rompeva tutto. Quella sera ha avuto fortuna. Ma la fortuna, se la servi bene, diventa una ricetta.»",
+    "mai": "Nessun segreto qui: solo l’orgoglio della cucina."
+   },
+   {
+    "tema": "Cosa si mangia",
+    "domanda": "«Cosa c’è da mangiare?»",
+    "risposta": "*Recita come una preghiera.* «Maccheroni alla chitarra con le pallottine, piccole come ceci, quattro quattrini. Scrippelle ’mbusse, cinque. Il timballo, otto, ma il timballo è un pranzo di nozze. Le mazzarelle, quattro. Agnello allo spiedo, dieci. Bocconotti e neole per finire. Vino cotto o Montepulciano.» *Si sistema il tovagliolo.* «Le virtù no. Le virtù il primo maggio. Sette legumi, sette verdure, sette paste, sette ore. Chi le mangia un altro giorno porta sfortuna alla casa. Volete la sfortuna? No. Allora prendete la chitarra.»",
+    "insistono": "«Un pasto intero qui è un banchetto, non una cena. Chi si alza da questa tavola sta bene fino a domani.» *Guarda le vostre armi.* «E voi, mi sembra, ne avete bisogno.»",
+    "mai": "Un pasto completo vale come un banchetto (1d4 PF temporanei fino al riposo lungo). Non fa mai le virtù fuori dal primo maggio, nemmeno per l’oro."
+   },
+   {
+    "tema": "Chi mangia qui e il tavolo del giovedì",
+    "domanda": "«Chi viene a mangiare da voi?»",
+    "risposta": "«Chi paga e sta zitto.» *Sorride.* «Notai, mercanti, il medico della Lunaria, qualche flamine senza la stola. Gente bene che non è nobile. I nobili mangiano a casa, e mangiano male, perché i loro cuochi hanno paura di loro.» *Poi, piano, indicando il tavolo in fondo sotto l’ultima botte, con una candela sola.* «Quello è riservato. Il giovedì. Ci mangia il Cancelliere della Spada, quello della Rocca. Da solo. Beve poco, mangia piano, lascia la mancia giusta. Un signore. Non parla di lavoro prima del timballo, e chi lo disturba prima del timballo non lo rivede più.»",
+    "insistono": "*Se c’è Maximus, lo guarda bene, e gli si inumidiscono gli occhi.* «Voi. Voi siete venuto qui da frechino, con vostro padre, al tavolo del giovedì. Vostro padre e il Cancelliere mangiavano insieme, allora. Voi avete rovesciato il vino cotto sulla tovaglia bianca, e vostro padre l’ha pagata come nuova.» *Pausa.* «Vostro padre non viene più da tre anni. Il Cancelliere mangia da solo.»",
+    "mai": "mai: non disturba mai il Cancelliere per conto di nessuno e non fa da intermediario; dice solo quando viene. Non sa perché Lucius Grazianus abbia smesso di venire."
+   },
+   {
+    "tema": "La signora coi capelli bianchi",
+    "domanda": "«Avete visto forestieri strani?»",
+    "risposta": "*Si guarda intorno, come se qualcuno potesse sentire anche qui sotto.* «Una signora. Capelli bianchi, ma non vecchia. Bianchi come la farina. È venuta due volte. Ha mangiato poco: le scrippelle, e le ha lasciate a metà, e a me questo dispiace. Ha pagato in oro. E ha chiesto chi c’era al tavolo del giovedì.» *Si sistema il tovagliolo, due volte.* «Io le ho detto: “Signora, al tavolo del giovedì ci sta chi ci sta.” Lei ha sorriso. Non mi è piaciuto come ha sorriso.»",
+    "insistono": "«L’oro. Non era oro nostro. Una moneta grossa, con una faccia di donna che non conosco e dei fiori intorno, scritta in una lingua di fuori. L’ho tenuta: non so a chi darla.» *La tira fuori da un cassetto, avvolta nel tovagliolo.* «E un’altra cosa. Quando se n’è andata, la cantina sapeva di fiori. Di lillà. Fino al giovedì dopo.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Zi’ Mimì vi mostra la moneta d’oro straniera (una faccia di donna fra i fiori, scritte di fuori) e vi dice che dopo di lei la cantina sapeva di lillà. La signora ha chiesto del Cancelliere: il giovedì, il Cancelliere della Spada potrebbe essere in pericolo.",
+     "no": "«Una signora forestiera, che mangia poco. Capita.» Non vi fa vedere la moneta."
+    },
+    "mai": "mai: non sa il suo nome né dove alloggi. Non sa cosa voglia dal Cancelliere."
+   },
+   {
+    "tema": "La città e la pizza",
+    "domanda": "«Come vanno gli affari? La città?»",
+    "risposta": "«Una volta qui sotto c’era la fila. Fino alla scala. Adesso c’è la crisi, il Banco caduto, il Corso vuoto, le botteghe chiuse con le assi.» *Scuote la testa.* «E la gente mangia la pizza. In piedi. Per strada. Come i cavalli.» *Si sistema il tovagliolo con dignità offesa.* «Mario, Flaminia, quadretti, strisce. A Terme si litiga su come si taglia una cosa che non si dovrebbe nemmeno mangiare in piedi. Intanto la chitarra la sa fare chi? Io, e due vecchie della Lunaria.»",
+    "insistono": "«Ma la pizza di Mario… la rossa… non è male.» *Abbassa la voce.* «Non ditelo a nessuno. Stà ben Rocc, stà ben tutt la rocc: se sta bene Mario, sta bene la città. Ma non ditelo a nessuno.»",
+    "mai": "Nessun segreto."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Non perde la calma. Si sistema il tovagliolo.* «Signori. Qui si mangia.» Il notaio al tavolo vicino si alza e va alla Rocca; entro un’ora il Cancelliere sa che la Crociata minaccia i vecchi osti.",
+   "soldi": "*Rifiuta la mancia con un gesto.* «La mancia la lascia chi è soddisfatto, alla fine. Non chi vuole qualcosa, all’inizio.» L’oro non lo fa parlare; il pasto finito sì.",
+   "lusinga": "«Mio nonno sarebbe contento.» *Si commuove.* Se lodate le scrippelle, vi porta i bocconotti senza conto e vi dice quale giovedì il Cancelliere è di buon umore.",
+   "bugia": "*Sorride, cortese, gelido.* «Il timballo non perdona chi mente a tavola.» Vi porta il conto prima del dolce."
+  },
+  "battute": [
+   "«Prima si mangia, poi si parla.»",
+   "«Trase, aijaccete.»",
+   "«La pizza in piedi. Come i cavalli.»",
+   "«Stà ben Rocc, stà ben tutt la rocc.»",
+   "«Le virtù il primo maggio. Oggi la chitarra.»",
+   "«Le pallottine si fanno col dito mignolo. Chi le fa col pollice le fa grosse, e grosse non sono pallottine.»",
+   "«Tovaglia bianca. Bianca davvero. Chi la macchia la ricompra.»",
+   "«Chi magne da sole zi strozz. Tranne il Cancelliere: lui no.»"
+  ],
+  "uscita": {
+   "frase": "*Vi porta il vino cotto e un piattino di neole.* «Questo è per la strada. E tornate il giovedì, se volete conoscere un signore.»",
+   "dopo": "Sparecchia con cura. Se i PG gli hanno detto del pericolo per il Cancelliere, il giovedì mette un garzone fidato sulla scala.",
+   "aggancio": "Il tavolo del giovedì: il Cancelliere della Spada, a cena da solo, è la via per il sigillo dei Grazianus fuori dalla fila; e la signora coi capelli bianchi lo sta cercando."
+  },
+  "ottenuto": [
+   {
+    "info": "Il Cantinone: cucina teramana; un pasto completo vale come un banchetto.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il giovedì il Cancelliere della Spada cena da solo al tavolo in fondo; non si parla di lavoro prima del timballo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Lucius Grazianus e il Cancelliere mangiavano insieme; Lucius non viene più da tre anni (Maximus ci veniva da bambino).",
+    "via": "gratis"
+   },
+   {
+    "info": "Una signora dai capelli bianchi ha chiesto due volte chi siede al tavolo del giovedì.",
+    "via": "gratis"
+   },
+   {
+    "info": "Ha pagato con una moneta d’oro straniera (una faccia di donna fra i fiori) e dopo di lei la cantina sapeva di lillà: il Cancelliere può essere in pericolo.",
+    "via": "prova"
+   },
+   {
+    "info": "Il nome della signora e cosa voglia dal Cancelliere.",
+    "via": "mai"
+   }
+  ]
+ }
 }

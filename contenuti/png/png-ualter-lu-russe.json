@@ -10,5 +10,93 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: quarantacinque. Rosso di capelli e di faccia, braccia tatuate di ancore. Marinaio venuto da Livarpola, una città di porto lontanissima, a nord e a ovest, che nessuno conosce.\nParla teramano perfetto con un accento che non si capisce. Canta canzoni tristi del suo paese.\nSa: i bravi del Ponte degli Impiccati si ritrovano da lui; stasera hanno soldi nuovi, e uno puzza di lillà.\nRegola: niente sangue nella sua taverna.\nBattute: «Mi hanno fregato.» · «Non camminerai mai da solo.» · «Niente sangue qui dentro.»"
+ "gm": "Età: quarantacinque. Rosso di capelli e di faccia, braccia tatuate di ancore. Marinaio venuto da Livarpola, una città di porto lontanissima, a nord e a ovest, che nessuno conosce.\nParla teramano perfetto con un accento che non si capisce. Canta canzoni tristi del suo paese.\nSa: i bravi del Ponte degli Impiccati si ritrovano da lui; stasera hanno soldi nuovi, e uno puzza di lillà.\nRegola: niente sangue nella sua taverna.\nBattute: «Mi hanno fregato.» · «Non camminerai mai da solo.» · «Niente sangue qui dentro.»",
+ "dialogo": {
+  "apertura": "*Batte un boccale di peltro sul banco, pieno di una birra nera e densa come il fango, e lo spinge verso di voi prima che abbiate chiesto.* «Benvenuti a Livarpola.» *Ride forte, con un teramano perfetto e un accento che non si capisce da dove venga.* «Questa la offre la casa. La seconda no.»",
+  "voce": "Teramano perfetto con un accento straniero che arrotonda tutte le vocali; allegro, rumoroso, poi di colpo malinconico · Tic: «Mi hanno fregato»; «Non camminerai mai da solo»; chiama tutti «compare» · Ritmo: risate lunghe e frasi corte; quando parla di casa sua rallenta e guarda il fondo del boccale.",
+  "argomenti": [
+   {
+    "tema": "Chi sei e Livarpola",
+    "domanda": "«Da dove venite? Dov’è Livarpola?»",
+    "risposta": "«Uàlter. Mac Bride, ma il cognome vi si annoda la lingua, quindi Lu Russe, per i capelli e per la faccia.» *Si batte il petto.* «Vengo da Livarpola. Lontano. Più lontano di dove siete stati voi, compare, e voi avete l’aria di gente che ha camminato.» *Indica verso nord, poi verso ovest, poi alza le spalle.* «Lassù. Mare grigio, pioggia tutto l’anno, navi nere, birra buona, canzoni tristi. Ho fatto il marinaio vent’anni, poi un giorno al porto di Julia Nova un mercante mi dice: su a Teramum c’è il sole, il vino, le donne belle. Sono salito per il sole.» *Indica fuori dalla porta, verso la montagna che copre il cielo del pomeriggio.* «Il Gigante. Il sole se lo mangia lui. Mi hanno fregato.»",
+    "insistono": "«C’è chi dice che Livarpola non esiste, che me la sono inventata. A Terme lo dicono di tutto quello che non hanno visto.» *Si fa serio.* «Esiste. Ci sono tornato una volta, coi soldi della taverna, e mia madre era morta e la casa venduta. Allora sono tornato qua. Adesso Livarpola è questa. L’insegna l’ho dipinta io.»",
+    "mai": "Non sa più bene come tornarci, e non lo dice; non parla mai della madre con chi non ha bevuto con lui."
+   },
+   {
+    "tema": "La canzone",
+    "domanda": "«Che cantano, quelli?»",
+    "risposta": "*Si gira verso il tavolo dei cantori, che battono i boccali a tempo, e canta anche lui, due versi, in una lingua che non capite.* «È di casa mia. La cantavamo al porto, quando una nave non tornava. Dice che non camminerai mai da solo. Che anche nella tempesta, alla fine della strada c’è un cielo d’oro.» *Si ferma, beve.* «A Teramum non è vero. Qui cammini sempre da solo. Le Casate camminano da sole, il Consiglio cammina da solo, i poveri della Lunaria camminano da soli fino al fiume.» *Batte il boccale.* «Per questo la canto. Per non dimenticarmi che da qualche parte è vero.»",
+    "insistono": "«Voi però camminate in tanti, si dice. Una Crociata. Gente di tutti i borghi, dietro uno stendardo.» *Vi guarda a lungo.* «Se è vero, compare, venite a cantarla qui una sera. La offro io, la birra. Tutta.»",
+    "mai": "Nessun segreto: è solo malinconia."
+   },
+   {
+    "tema": "I bravi del ponte",
+    "domanda": "«Chi sono quelli al tavolo in fondo?»",
+    "risposta": "*Smette di ridere. Pulisce un boccale che è già pulito.* «Clienti. Carrettieri di Porta Romana, mercenari di passaggio, gente che non fa domande e paga. Qui si assoldano spade, compare: chi cerca un braccio per una scorta, per un lavoro, viene da Lu Russe e chiede. Io non chiedo per cosa.» *Abbassa la voce di poco.* «Quelli in fondo lavorano al ponte. Il Ponte degli Impiccati, qua sotto. Di giorno portano i sacchi. La sera fanno altro. Non ce l’ho con loro. Bevono, pagano, e fuori di qui sono affari della vostra città.»",
+    "insistono": "*Si sporge sul banco, la voce sotto la canzone.* «Stasera hanno soldi nuovi. Fiorini lucidi, ne hanno pagati tre per un giro che ne valeva uno. E uno di loro puzza di lillà, come se ci avesse dormito dentro. Parlavano di un lavoro sul ponte, al tramonto. Cinque fiorini a testa per ognuno di voi. Venti per un Cerullius.» *Si raddrizza.* «Non ce l’ho con voi. Non ce l’ho con loro. Ma nella mia taverna niente sangue. Fuori, è la vostra città.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Lu Russe vi avvisa: i quattro in fondo lavorano al ponte, stasera hanno soldi nuovi, uno puzza di lillà, e c’è un prezzo sulle vostre teste (5 fiorini a testa, 20 per un Cerullius). Si ottiene anche senza prova offrendo una birra a tutto il tavolo dei cantori.",
+     "no": "«Clienti, compare. Bevono e pagano.» Vi riempie il boccale e va a cantare con gli altri."
+    },
+    "mai": "mai: non sa chi li paga davvero né chi sia la persona col lillà; non aiuterà mai i PG a prenderli dentro la taverna."
+   },
+   {
+    "tema": "Assoldare spade",
+    "domanda": "«Se ci servissero uomini? Spade?»",
+    "risposta": "*Vi squadra, poi guarda lo stendardo, se l’avete.* «La Crociata cerca braccia? Allora siete nel posto giusto e nel momento sbagliato.» *Conta sulle dita.* «Un mercenario buono a Terme costa un grosso al giorno e il vitto, due se deve vedere sangue. Ce ne sono, qua, la sera: soldati senza paga dalla montagna, marinai a terra, ragazzi di Porta Romana. Ma adesso c’è qualcuno che paga di più. Da due settimane le spade migliori le compra qualcuno che non si fa vedere, e quelle che restano sono quelle che nessuno vuole.»",
+    "insistono": "«Se volete, vi trovo tre o quattro uomini onesti. Onesti per il prezzo, intendo: restano finché li pagate. Ditemelo stasera, e domattina sono al vostro accampamento. Ma non quelli del tavolo in fondo. Quelli li ha già comprati qualcun altro.»",
+    "mai": "mai: non procura mai assassini. Non sa chi stia comprando le spade migliori."
+   },
+   {
+    "tema": "Un posto per dormire",
+    "domanda": "«Avete un letto?»",
+    "risposta": "«Un letto di paglia nel retro, un grosso a notte.» *Alza un dito.* «Niente domande da nessuna delle due parti. Io non chiedo chi siete, voi non chiedete chi ha dormito lì prima di voi. Il retro dà sugli orti, e dagli orti si scende alla Vezzola senza passare dalla porta. Chi deve andarsene di notte, se ne va.» *Ride.* «Non ve l’ho detto io. Io sono un oste onesto di Livarpola.»",
+    "insistono": "«La ronda di Porta Romana qui non entra. Il sergente Tavolaccio beve da me il giovedì, e il giovedì da me non succede niente. Un accordo vecchio: lui non vede le mie porte, io non vedo il suo debito.»",
+    "mai": "mai: non nasconde nessuno che abbia ucciso in città."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Smette di sorridere. Posa il boccale.* «Niente sangue qui dentro, compare.» Il tavolo dei cantori si alza tutto insieme: sono marinai, e sono suoi. Se insistete, vi accompagnano fuori, senza armi in mano ma senza gentilezza.",
+   "soldi": "*Prende la moneta, la morde, ride.* «Con questa bevete tutti, stasera.» Il denaro lo fa contento, non lo fa parlare: per parlare vuole una birra offerta ai cantori.",
+   "lusinga": "«Lo so, la mia birra è la migliore di Terme. Mangiare e bere insieme.» Se lodate la canzone o Livarpola, si commuove e vi offre il secondo boccale.",
+   "bugia": "*Ride forte.* «A Livarpola ci dicevano: chi mente al barista beve acqua.» Vi serve la birra allungata per il resto della sera, e non vi avvisa più di niente."
+  },
+  "battute": [
+   "«Mi hanno fregato.»",
+   "«Birra nera: mangiare e bere insieme.»",
+   "«Niente sangue qui dentro. Fuori, è la vostra città.»",
+   "«Non camminerai mai da solo, compare. Tranne qui.»",
+   "«Tre boccali e la Destrezza ve la saluto io.»",
+   "«Il pesce sul muro? L’ho preso io. Non chiedetemi che pesce è.»",
+   "«A Livarpola piove. Qui almeno piove meno.»",
+   "«Il sole se lo mangia il Gigante. La birra no.»"
+  ],
+  "uscita": {
+   "frase": "*Vi riempie i boccali un’ultima volta.* «Stasera il ponte lo passate di giorno, compare. O non lo passate.» *Torna dai cantori, e attacca la canzone.*",
+   "dopo": "Se i PG gli sono piaciuti, la sera tiene i bravi al tavolo un giro in più (birra offerta da lui), così l’agguato al ponte comincia più tardi o con un bravo ubriaco.",
+   "aggancio": "L’agguato al Ponte degli Impiccati al tramonto, con il prezzo sulle teste: venti fiorini per un Cerullius."
+  },
+  "ottenuto": [
+   {
+    "info": "La taverna di Livarpola è il posto dove si assoldano spade (1-2 grossi al giorno); qualcuno da due settimane compra le spade migliori.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il retro dà sugli orti e sulla Vezzola: ci si dorme per un grosso, senza domande; la ronda il giovedì non entra.",
+    "via": "gratis"
+   },
+   {
+    "info": "I bravi del ponte bevono qui, hanno soldi nuovi, uno puzza di lillà; c’è un lavoro sul ponte al tramonto e un prezzo sulle teste dei PG (5 fiorini, 20 per un Cerullius).",
+    "via": "prova"
+   },
+   {
+    "info": "Chi paga i bravi e chi è la persona col lillà.",
+    "via": "mai"
+   }
+  ]
+ }
 }

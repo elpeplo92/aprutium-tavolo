@@ -10,5 +10,135 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: sessantatré. Vedova da nove anni.\nStatistiche: popolana, ma col mestolo è pericolosa. Intuizione +5. Tre pastori fissi al tavolo in fondo che si alzano quando si alza lei.\nAspetto: alta, secca, fazzoletto bianco in testa, grembiule nero, un mestolo di legno tenuto come uno scettro. Occhi piccoli che contano gli avventori appena entrano.\nSa: chi dorme in città e chi no; i prezzi di tutto; che la ronda bussa una volta a notte e beve un bicchiere; cosa si dice al mercato; che il marito, sceso nelle cantine sotto la città, diceva che sotto ci sono strade «vere, con le pietre», e un giorno non è più tornato.\nNon sa: dove portino quelle strade. Cosa sia successo al marito.\nVoce: secca, comandi brevi, affetto burbero. Dialetto quando si arrabbia o quando si commuove.\nCosa vuole: una sala tranquilla, le spade al chiodo, i conti pagati. In fondo, sapere che fine ha fatto suo marito.\nSegreto: la porta del cortile dà sul vicolo che scende al fiume e non ha sbarra: chi vuole uscire di notte può farlo. Lei non l’ha mai detto.\n\nSe gli chiedono di…:\n\nUna stanza: stalla 2 quattrini, dormitorio 6, stanza 3 grossi, la stanza bella sul fiume un fiorino; cena 12 quattrini. Con il campanaccio del fratello: metà prezzo, e l’agnello della prima sera lo offre lei.\nUscire dopo la campana: non lo dice. Se qualcuno le fa un favore vero, guarda il cortile e dice «Io non l’ho detto.»\nLe cantine: «Non si scende.» Non insistere: ha perso il marito là sotto. Se un giorno qualcuno le riporta notizie di lui, ha un’amica per la vita.\nMinacciarla: «Fuori.» Il Cane Bianco è chiuso per la Crociata, e il tratturo lo saprà domattina.\nCorromperla: «Voi pagate la stanza e state zitti, e io sto zitta. Siamo pari.»\n\nBattute pronte:\n«Le spade al chiodo.»\n«Il vino non è buono, ma è tanto.»\n«Alla campana, sbarra.»\n«Qua dentro siete di casa. Fuori, siete forestieri.»"
+ "gm": "Età: sessantatré. Vedova da nove anni.\nStatistiche: popolana, ma col mestolo è pericolosa. Intuizione +5. Tre pastori fissi al tavolo in fondo che si alzano quando si alza lei.\nAspetto: alta, secca, fazzoletto bianco in testa, grembiule nero, un mestolo di legno tenuto come uno scettro. Occhi piccoli che contano gli avventori appena entrano.\nSa: chi dorme in città e chi no; i prezzi di tutto; che la ronda bussa una volta a notte e beve un bicchiere; cosa si dice al mercato; che il marito, sceso nelle cantine sotto la città, diceva che sotto ci sono strade «vere, con le pietre», e un giorno non è più tornato.\nNon sa: dove portino quelle strade. Cosa sia successo al marito.\nVoce: secca, comandi brevi, affetto burbero. Dialetto quando si arrabbia o quando si commuove.\nCosa vuole: una sala tranquilla, le spade al chiodo, i conti pagati. In fondo, sapere che fine ha fatto suo marito.\nSegreto: la porta del cortile dà sul vicolo che scende al fiume e non ha sbarra: chi vuole uscire di notte può farlo. Lei non l’ha mai detto.\n\nSe gli chiedono di…:\n\nUna stanza: stalla 2 quattrini, dormitorio 6, stanza 3 grossi, la stanza bella sul fiume un fiorino; cena 12 quattrini. Con il campanaccio del fratello: metà prezzo, e l’agnello della prima sera lo offre lei.\nUscire dopo la campana: non lo dice. Se qualcuno le fa un favore vero, guarda il cortile e dice «Io non l’ho detto.»\nLe cantine: «Non si scende.» Non insistere: ha perso il marito là sotto. Se un giorno qualcuno le riporta notizie di lui, ha un’amica per la vita.\nMinacciarla: «Fuori.» Il Cane Bianco è chiuso per la Crociata, e il tratturo lo saprà domattina.\nCorromperla: «Voi pagate la stanza e state zitti, e io sto zitta. Siamo pari.»\n\nBattute pronte:\n«Le spade al chiodo.»\n«Il vino non è buono, ma è tanto.»\n«Alla campana, sbarra.»\n«Qua dentro siete di casa. Fuori, siete forestieri.»",
+ "dialogo": {
+  "apertura": "*Vi conta prima ancora che abbiate passato la soglia: uno, due, sei. Il mestolo di legno batte una volta sul banco.* «Le spade al chiodo. Tutte. Le riprendete quando uscite.» *Indica la fila di chiodi accanto alla porta, poi la sala, i tavoli di castagno, il camino.* «Poi sedetevi. Qui si mangia.»",
+  "voce": "Italiano popolare, secco, a comandi brevi; il dialetto le esce quando si arrabbia o si commuove (*figlie mè*, *nisciune*, *catuzzo*) · Tic: batte il mestolo sul banco; «Siamo pari»; «Io non l’ho detto» · Ritmo: frasi corte, poi pause lunghe in cui vi guarda dritto; affetto burbero, mai una carezza a voce.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Siete voi la padrona?»",
+    "risposta": "*Sbatte il mestolo sul banco.* «Carmela. Za’ Carmela per chi mangia qua, Donna Carmela per chi non paga. Macchiarola di marito, buonanima. Collepietra di nascita: mio padre era Mastro-Pastore sul Tordinum, e il padre di mio padre pure. Io sono scesa in città a diciotto anni per un uomo, e in città ci sono rimasta quando l’uomo non c’era più.» *Si asciuga le mani sul grembiule nero.* «Il Cane Bianco ce l’ho da trent’anni. L’insegna l’ha dipinta mio marito: dice che il cane è bianco. Io dico che sembra una pecora malata. Ma la gente la conosce, e a Teramum quello che conta è che la gente ti conosca.»",
+    "insistono": "«Perché un cane? Perché i cani bianchi del tratturo guardano le pecore, e questa casa guarda i pastori quando scendono in città. Chi porta la stella e il bastone, qua dentro, non paga la stalla.» *Alza gli occhi al campanaccio sopra il camino, e non aggiunge altro.*",
+    "mai": "Del marito non parla alla prima domanda: vedi «La ripa e le cantine»."
+   },
+   {
+    "tema": "Stanze, prezzi, armi",
+    "domanda": "«Avete stanze? Quanto costa?»",
+    "risposta": "«Dipende. Siete di quelli che rompono le cose?» *Guarda le armi, una per una.* «Le spade al chiodo, qua dentro. Chi tira fuori il ferro nella mia sala, dorme nel fiume.» *Poi conta sulle dita, senza fretta.* «Stalla, due quattrini. Dormitorio, sei: è pulito, le pulci sono poche e educate. Stanza, tre grossi. La stanza bella, col letto grande e la finestra sul fiume, un fiorino.» *Pausa.* «La cena a parte, dodici quattrini, agnello e vino. L’agnello è buono. Il vino è di mio cognato: non è buono, ma è tanto.»",
+    "insistono": "«Contrattare? Con me?» *Ride, una volta sola, corta.* «Il prezzo è quello. Chi lava i piatti, la stalla non la paga. Chi porta il campanaccio di mio fratello, paga metà di tutto. Gli altri pagano e stanno zitti, e io sto zitta. Siamo pari.»",
+    "mai": "Non fa credito a nessuno, nemmeno alla Crociata."
+   },
+   {
+    "tema": "Venanzio e il tratturo",
+    "domanda": "«Conoscete il Mastro-Pastore Venanzio? Ci ha dato questo campanaccio.»",
+    "risposta": "*Il mestolo si abbassa piano.* «Quel vecchio testone. Mio fratello.» *Guarda il campanaccio, poi chi lo porta.* «Sta sul prato da quarant’anni e in città non entra da sei: dice che le mura gli tolgono il fiato, e che da qua dentro il Gigante non si sente.» *Si asciuga le mani, più a lungo del necessario.* «Se vi ha dato il campanaccio, qui siete di casa. Mezzo prezzo, e stasera l’agnello lo offro io. Ma se scopro che l’avete rubato…» *Guarda il mestolo, poi voi.*",
+    "insistono": "«Che fa mio fratello? Parla alle pecore come alle persone e alle persone come alle pecore. Mi manda il formaggio coi pastori, io gli mando il pane. Coi cani suoi non giocate: non sono cani come gli altri.» *Più piano.* «Se lo rivedete, ditegli che il tetto della stalla regge ancora. Lui capisce.»",
+    "mai": "Non dice niente dei Mastini né dei segreti dell’Ordine dei Tratturi: ne sa poco, e quel poco non è da forestieri."
+   },
+   {
+    "tema": "Il coprifuoco, e uscire di notte",
+    "domanda": "«E se dopo la campana dovessimo uscire?»",
+    "risposta": "«Alla campana chiudo il portone e metto la sbarra. Dentro si mangia, si beve, si canta piano. Fuori non si esce.» *Batte il mestolo.* «La ronda bussa una volta, verso mezzanotte. Io apro lo spioncino, la ronda conta le teste, beve un bicchiere, se ne va. Chi manca alla conta, per la Guardia, non ha dormito qua. Chiaro?»",
+    "insistono": "«Uscire per andare dove? Al ponte, dove la ronda si ferma sempre? Al fiume, a farvi portare via?» *Vi guarda a lungo, come chi pesa la carne.* «Chi esce di notte da casa mia, se lo prende la Guardia, io non lo conosco.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 15,
+     "si": "*Guarda il cortile, non voi.* «La porta del cortile dà sul vicolo che scende al fiume. Non ha sbarra: mio marito non l’ha mai messa, e io non la metto. Chi esce di là, rientra di là, e io dormo.» *Batte il mestolo.* «Io non l’ho detto.»",
+     "no": "«Fuori non si esce. Alla campana, sbarra. Fine.»"
+    },
+    "mai": "Senza prova lo dice solo a chi porta il campanaccio del fratello o le ha fatto un favore vero. Non apre il portone di notte a nessuno, tranne alla ronda."
+   },
+   {
+    "tema": "Cosa si dice in città",
+    "domanda": "«Che aria tira a Teramum? Cosa si dice della Crociata?»",
+    "risposta": "«Che il Consiglio è una pentola senza fuoco: bolle il coperchio, ma dentro niente. Che la Guardia fa i turni doppi. Che il pane sale ogni mattina, e i sensali ridono. Che una signora forestiera compra tutti ai Tigli.» *Pausa.* «Di voi? Il banditore dice che siete sediziosi. I pastori dicono che siete i soli in tutto il Ducato che vanno da qualche parte. Io dico che finché pagate siete clienti.» *Abbassa la voce.* «E che la terra trema. Io ce l’ho qua, il fiume, sotto la finestra: di notte sento l’acqua che cambia voce.»",
+    "insistono": "«La signora forestiera l’ho vista una volta, in lettiga, che saliva verso i Tigli. Non guardava la strada. Chi non guarda la strada pensa che la strada sia sua.» *Si asciuga le mani.* «E dietro la lettiga c’era un odore di fiori che a ottobre non ci deve stare.»",
+    "mai": "Non sa chi sia la signora né che cosa voglia; non sa niente della politica delle Casate, e non le interessa."
+   },
+   {
+    "tema": "La ripa e le cantine",
+    "domanda": "«Che c’è sotto la città? Si può scendere nelle cantine, da qui?»",
+    "risposta": "«Non si scende.» *Il mestolo resta fermo.* «Mio marito scendeva. Diceva che sotto le cantine ci sono strade. Strade vere, con le pietre, più vecchie di tutti noi.» *Silenzio.* «Un giorno è sceso e non è più salito.» *Torna a girare lo spiedo, e non dice altro.*",
+    "insistono": "*Se insistono con garbo, o se promettono di cercarlo, si siede per la prima volta.* «Nove anni fa. Faceva il bottaio. Scendeva nelle cantine di Lucente Anna ad aggiustare le botti dei mercanti, e la sera mi raccontava delle strade di sotto come un ragazzino. Una mattina è sceso. Hanno trovato la sua lanterna, spenta, in una cantina con una porta che nessuno apre.» *Si rialza.* «Basta. Il fiume ha la sua voce, e io la mia.»",
+    "mai": "Non sa dove portino quelle strade né che cosa sia successo al marito. Non scende e non manda nessuno. ⟦Il marito si chiamava Tanuccio Macchiarola, bottaio; la lanterna fu trovata nella cantina con la porta che «ogni tanto si trova aperta» delle voci del mercato⟧. Se un giorno qualcuno le riporta notizie vere di lui, ha un’amica per la vita."
+   },
+   {
+    "tema": "Li Mazzamarelli",
+    "domanda": "«A che serve quel piattino sul davanzale?»",
+    "risposta": "*Indica il piattino: un dito di Ratafià e un Bocconotto.* «Ogni sera. Per li Mazzamarelli. Chi se ne dimentica, la mattina trova il sale nel vino e le trecce alle code dei muli.» *Nessun sorriso: ci crede.* «Voi ridete. Ridete pure. Quando il vostro vino saprà di mare, ne riparliamo.»",
+    "insistono": "«Al mercato dicono che i sensali li pagano, li Mazzamarelli, per rovesciare i carri degli altri. Io li pago con un Bocconotto, e i miei carri non si rovesciano.» *Alza le spalle.* «Ognuno paga chi gli serve.»",
+    "mai": "Non sa niente dei patti fra la Lega dei Sensali e i Mazzamarelli: ripete solo la voce del mercato."
+   },
+   {
+    "tema": "Maximus e la Rocca",
+    "domanda": "«(Maximus) Sono il figlio dello Stratega. Avete notizie della Rocca?»",
+    "risposta": "*Lo guarda da capo a piedi, come si guarda un agnello alla fiera.* «Il figlio dello Stratega. Al Cane Bianco.» *Si asciuga le mani.* «La Rocca non mi manda notizie, figlio mio: alla Rocca mangiano meglio di qua. Ma vostra madre la conosco. La Signora della Torre è di montagna come me, e quando alla Rocca si fa il pane per la Benedizione delle Bestie, la farina la compra dai pastori, non dai sensali. Una donna così, a Teramum, ce ne sono poche.»",
+    "insistono": "«Dieci giorni fa due pastori di mio fratello hanno dormito qua. Venivano dalla Lunaria delle Grazie e salivano al tratturo. Uno aveva una lettera cucita nel giubbetto, e non se l’è tolto neanche per dormire.» *Abbassa la voce.* «Non so per chi fosse. Ma la cera era grigia, e i pastori la cera grigia non la usano.»",
+    "mai": "Non sa che cosa dica la lettera (è di Donna Ersilia per Maximus, e aspetta al tratturo nelle mani di Venanzio): lo immagina, e non lo dice."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Il mestolo si alza. I tre pastori al tavolo in fondo si alzano anche loro. «Fuori.» Da quel momento il Cane Bianco è chiuso per la Crociata, e il tratturo lo saprà domattina.",
+   "soldi": "«I soldi li pago al macellaio. Voi pagate la stanza e state zitti, e io sto zitta. Siamo pari.» Non si compra: la mancia la prende, ma non cambia niente.",
+   "lusinga": "«Le belle parole le dicono i sensali prima di fregarti.» Ma l’agnello arriva con una fetta in più, e il vino è quello buono, non quello del cognato.",
+   "bugia": "«Figlio mio, ho cresciuto quattro figli e un marito. Le bugie le sento prima che le dite.» (Intuizione +5.) Da lì il portone del cortile per voi non esiste più."
+  },
+  "battute": [
+   "«Le spade al chiodo.»",
+   "«Il vino non è buono, ma è tanto.»",
+   "«Alla campana, sbarra.»",
+   "«Qua dentro siete di casa. Fuori, siete forestieri.»",
+   "«Mangiate, che a Teramum i pensieri si fanno a pancia piena.»",
+   "«Chi si lu fije, questo? Di nessuno? Allora mangia doppio.»",
+   "«Catuzzo! I piedi giù dalla panca.»",
+   "«I sensali li ho cacciati vent’anni fa, e hanno imparato.»",
+   "«Il fiume stanotte parla. Dormite dall’altra parte.»"
+  ],
+  "uscita": {
+   "frase": "«Adesso basta chiacchiere. L’agnello si fredda, e io non lo scaldo due volte.» *Torna al camino e vi dà la schiena.*",
+   "dopo": "Alla campana chiude e sbarra il portone, con un colpo solo, come chi lo fa da trent’anni. Verso mezzanotte apre lo spioncino alla ronda, conta, versa un bicchiere, richiude. Se le hanno parlato del marito, quella notte resta sveglia al banco con la lanterna accesa.",
+   "aggancio": "Se il discorso è andato bene, o se hanno il campanaccio, prima di salire a dormire trovano sul loro tavolo una chiave grossa, vecchia, verde di ruggine. «Era di mio marito. Apriva una cantina a Lucente Anna. Io non ci vado.» ⟦È la chiave della cantina con la porta che nessuno apre: una strada verso la Città Sepolta.⟧"
+  },
+  "ottenuto": [
+   {
+    "info": "Za’ Carmela è sorella del Mastro-Pastore Venanzio; il Cane Bianco è la casa dei pastori in città.",
+    "via": "gratis"
+   },
+   {
+    "info": "Prezzi: stalla 2 quattrini, dormitorio 6, stanza 3 grossi, stanza bella 1 fiorino, cena 12 quattrini; col campanaccio metà prezzo e l’agnello offerto.",
+    "via": "gratis"
+   },
+   {
+    "info": "Alla campana il portone si sbarra; la ronda bussa una volta a notte e conta le teste.",
+    "via": "gratis"
+   },
+   {
+    "info": "La porta del cortile non ha sbarra e dà sul vicolo che scende al fiume.",
+    "via": "prova"
+   },
+   {
+    "info": "Voci: Consiglio che non decide, turni doppi della Guardia, la signora forestiera ai Tigli che sa di fiori, la terra che trema sotto il fiume.",
+    "via": "gratis"
+   },
+   {
+    "info": "Sotto le cantine ci sono strade vere, di pietra; il marito è sparito là sotto nove anni fa, in una cantina di Lucente Anna.",
+    "via": "gratis"
+   },
+   {
+    "info": "Dieci giorni fa due pastori hanno portato al tratturo una lettera con la cera grigia.",
+    "via": "gratis"
+   },
+   {
+    "info": "La chiave della cantina del marito, a Lucente Anna.",
+    "via": "prova"
+   },
+   {
+    "info": "Che fine ha fatto il marito; dove portano le strade di sotto.",
+    "via": "mai"
+   }
+  ]
+ }
 }

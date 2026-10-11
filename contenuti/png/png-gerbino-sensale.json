@@ -10,5 +10,145 @@
  "atti": [],
  "links": [],
  "pub": "Un sensale della Lega dei Sensali, col banco sotto i portici della Piazza del Mercato. Presta denaro e cambia monete.",
- "gm": "Luogo abituale: il suo banco sotto i portici della Piazza del Mercato, ⟦accanto al Fondaco della Lega⟧.\nEtà: ⟦quaranta⟧.\nStatistiche: popolano (Plebeo, MM 2024). Inganno +4. Scappa.\nAspetto: ⟦magro, untuoso, occhi che non stanno fermi, berretto di velluto verde spelacchiato, una piccola bilancia d’ottone sul banco, dita che contano sempre qualcosa⟧.\nSa: che ha pagato i bravi di Lu Spaccapreta con fiorini nuovi (limati) per una rissa sul Ponte degli Impiccati; che i soldi non erano suoi: venivano da «uno che profuma come un giardino».\nNon sa: chi sia davvero l’uomo del lillà (l’agente di Iuvenza). Se il Decano Maccabeo Melatino sappia di questa faccenda.\nVoce: mielosa, poi stridula quando ha paura.\nCosa vuole: non finire in mezzo. Tenere il banco.\nSegreto: ⟦i fiorini limati vengono dalla stessa borsa che paga Cenzino: l’uomo del lillà⟧.\n\nSe gli chiedono di…:\n\nDei bravi: «Ho prestato denaro a gente onesta.» Intimidire CD 14 per avere «uno che profuma come un giardino»; con 18 o più, l’ora e il posto dove l’uomo gli porta i soldi (⟦la sera, sotto l’Arco di Monsignore⟧).\nSe lo minacciano davanti alla Lega: altri sensali si avvicinano, e il sigillo dei Melatino si allontana.\n\nBattute pronte:\n«Ho prestato denaro a gente onesta.»\n«Io peso le monete, non le facce.»\n«Che volete, che vi cambi? Per voi, prezzo speciale.»"
+ "gm": "Luogo abituale: il suo banco sotto i portici della Piazza del Mercato, ⟦accanto al Fondaco della Lega⟧.\nEtà: ⟦quaranta⟧.\nStatistiche: popolano (Plebeo, MM 2024). Inganno +4. Scappa.\nAspetto: ⟦grasso, in velluto verde, untuoso, occhi che non stanno fermi, berretto di velluto verde spelacchiato, una piccola bilancia d’ottone sul banco, dita che contano sempre qualcosa⟧.\nSa: che ha pagato i bravi di Lu Spaccapreta con fiorini nuovi (limati) per una rissa sul Ponte degli Impiccati; che i soldi non erano suoi: venivano da «uno che profuma come un giardino».\nNon sa: chi sia davvero l’uomo del lillà (l’agente di Iuvenza). Se il Decano Maccabeo Melatino sappia di questa faccenda.\nVoce: mielosa, poi stridula quando ha paura.\nCosa vuole: non finire in mezzo. Tenere il banco.\nSegreto: ⟦i fiorini limati vengono dalla stessa borsa che paga Cenzino: l’uomo del lillà⟧.\n\nSe gli chiedono di…:\n\nDei bravi: «Ho prestato denaro a gente onesta.» Intimidire CD 14 per avere «uno che profuma come un giardino»; con 18 o più, l’ora e il posto dove l’uomo gli porta i soldi (⟦la sera, sotto l’Arco di Monsignore⟧).\nSe lo minacciano davanti alla Lega: altri sensali si avvicinano, e il sigillo dei Melatino si allontana.\n\nBattute pronte:\n«Ho prestato denaro a gente onesta.»\n«Io peso le monete, non le facce.»\n«Che volete, che vi cambi? Per voi, prezzo speciale.»",
+ "dialogo": {
+  "apertura": "Al mercato: *un uomo grasso, vestito di velluto verde, con una bilancia d’ottone appesa alla cintura come una spada, vi si mette davanti e sorride.* «I Grigi, a Teramum.» *Abbastanza forte da farsi sentire da tre banchi.* «Che onore. Volete cambiare? Vi cambio io. Per voi, prezzo speciale.» — Al suo banco, sotto i portici, se lo cercano dopo il ponte: *conta monete sul piatto della bilancia e non alza gli occhi.* «Cambio, prestito, pegno. I fiorini di Julia Nova a peso.» *Poi li alza, e il sorriso arriva un momento dopo.*",
+  "voce": "Italiano mieloso da bottega, con le parole del mestiere (aggio, peso, pegno, lettera di cambio); diventa stridulo e dialettale quando ha paura (*nen so niente*, *Vecchia Madre mia*) · Tic: le dita contano sempre qualcosa; «Io peso le monete, non le facce»; «gente onesta»; «per voi, prezzo speciale» · Ritmo: fluido e cortese, una cantilena; a scatti e a voce alta quando lo stringono, per farsi sentire dagli altri banchi.",
+  "argomenti": [
+   {
+    "tema": "Chi sei, cambiare",
+    "domanda": "«Chi siete? E quanto ci date per questi?»",
+    "risposta": "*Si tocca il berretto di velluto.* «Gerbino, sensale della Lega, con licenza del Fondaco e banco sotto questi portici da quindici anni. Cambio le monete, presto a chi ha bisogno, prendo in pegno quello che vale. Oggi, con le voci che girano, cambiano tutti: il grano si nasconde, il pane sale ogni mattina, e la gente vuole oro in tasca e non carta.» *Pesa una vostra moneta, la guarda contro la luce, la rimette sul banco.* «Per voi, prezzo speciale.»",
+    "insistono": "«Che vuol dire speciale?» *Sorride di più.* «Vuol dire che il Fondaco ha un listino per la gente di Teramum e uno per chi viene da fuori. E voi venite da molto fuori.» (Intuizione CD 13: il cambio è un furto, e non è nemmeno un’offerta: è un avviso.)",
+    "mai": "Non fa mai un cambio onesto alla Crociata: ordine del Fondaco."
+   },
+   {
+    "tema": "La Lega e i Naviganti Grigi",
+    "domanda": "«(Adamus) Che cosa avete contro i Naviganti Grigi?»",
+    "risposta": "*Il sorriso si allarga e diventa più freddo.* «Contro? Niente. Un fiorino di Julia Nova per mezzo fiorino ducale, e solo perché oggi sono di buon umore.» *Poi più basso, quasi gentile.* «Non è un’offerta, messere. È un avviso. La Lega ha il mercato, il grano, il cuoio, la lana, i debiti e i dazi. I Grigi hanno le barche. E qui le barche non arrivano: il mare è lontano, e la strada per il mare passa da noi.»",
+    "insistono": "«Io sono un uomo piccolo: faccio quello che fa il Fondaco. Il Decano ce l’ha con voi, non io. E il Fondaco, da quando la vostra colonna è entrata nel Ducato, ha chiuso le lettere di cambio verso Julia Nova. Chi viene da là paga in oro, o non paga.» *Allarga le mani grasse.* «Non è cattiveria. È contabilità.»",
+    "mai": "Non sa niente dei patti fra la Lega e i Mazzamarelli né dei piani del Decano per strangolare Julia Nova, se non quello che si dice al mercato."
+   },
+   {
+    "tema": "I fiorini limati",
+    "domanda": "«Questi fiorini sono limati sul bordo. Vengono dal vostro banco?»",
+    "risposta": "*Prende la moneta con due dita, la posa sul piatto, guarda il piatto che sale.* «Leggera. Succede. A Teramum girano monete da cent’anni, e le monete si consumano come le scarpe.» *La rimette sul banco, lontano da sé.* «Io peso le monete, non le facce. Chi me l’ha data non lo so, chi l’ha limata ancora meno.»",
+    "insistono": "Se gli mettono davanti una manciata di fiorini nuovi, lucidi, tutti limati uguali: *le dita smettono di contare.* «Nuove…» *Suda.* «Nuove e limate. Questo è lavoro di bottega, non di tasca. Ma non della mia bottega, Vecchia Madre mia, non della mia.»",
+    "prova": {
+     "abilita": [
+      "Indagare",
+      "Percezione"
+     ],
+     "cd": 14,
+     "si": "Sotto il panno del banco c’è un rotolo di fiorini nuovi, lucidi, con la stessa limatura sul bordo: vengono dalla stessa borsa di quelli del bravo.",
+     "no": "Il banco di un sensale come tanti, pieno di monete di ogni conio."
+    },
+    "mai": "Non sa chi limi i fiorini: li ha ricevuti già limati, e li ha passati."
+   },
+   {
+    "tema": "I bravi del ponte",
+    "domanda": "«Avete pagato voi Lu Spaccapreta e i suoi, per la rissa sul Ponte degli Impiccati?»",
+    "risposta": "*Si irrigidisce, poi sorride troppo.* «Io? Ho prestato denaro a gente onesta. Lu Spaccapreta ha un debito con me dalla Festa del Sole Nuovo, e mi paga come può. Che cosa fa la sera coi soldi suoi non sono affari miei.» *Si guarda intorno, verso gli altri banchi.* «E abbassate la voce, che qui si lavora.»",
+    "insistono": "«Una rissa? Sul ponte? Allora l’avete fatta voi, la rissa, che siete armati.» *Ride, ma la risata non gli arriva agli occhi.* «Lo dice tutta la città, stamattina: i Crociati la prima sera hanno picchiato i teramani. Io lo dico come lo dicono gli altri.»",
+    "prova": {
+     "abilita": [
+      "Intimidire"
+     ],
+     "cd": 14,
+     "si": "*La voce gli sale di un tono, stridula.* «Non erano soldi miei! Me li ha dati uno… uno che profuma come un giardino. Ha detto: una rissa, solo una rissa, che si sappia in città che i Crociati la prima sera picchiano i teramani. Io ho solo passato la borsa. Vecchia Madre mia, ho solo passato la borsa!»",
+     "no": "«Ho prestato denaro a gente onesta.» *E chiama con gli occhi i sensali dei banchi vicini, che si avvicinano.*"
+    },
+    "mai": "Non sa chi sia davvero l’uomo del lillà né per chi lavori (Iuvenza). Non sa se il Decano Maccabeo Melatino sappia di questa faccenda. Se lo intimidiscono davanti agli altri sensali, la prova ha svantaggio e il sigillo dei Melatino si allontana."
+   },
+   {
+    "tema": "L’uomo che profuma come un giardino",
+    "domanda": "«Chi è quello che vi ha dato la borsa? Dove lo troviamo?»",
+    "risposta": "«Non lo so. Viene lui.» *Le dita ricominciano a contare, più in fretta.* «Si fa chiamare Lanfranco, dice che commercia in lana. Un mercante di lana coi fiorini nuovi: l’avete mai visto, voi? Ha le mani lisce, il mantello buono, e si scusa sempre, come uno che ti pesta il piede apposta.»",
+    "insistono": "«Io non lo cerco. Non lo cerca nessuno. Quello là cerca gli altri.» *Guarda verso il Corso.* «Viene la sera, prima della campana. Più di questo non vi dico, perché più di questo voglio campare.»",
+    "prova": {
+     "abilita": [
+      "Intimidire",
+      "Persuasione"
+     ],
+     "cd": 18,
+     "si": "«La sera, prima della campana, sotto l’Arco di Monsignore, dalla parte della Basilica. Lui passa, io gli do quello che c’è da dare, lui mi dà quello che c’è da dare. Non guardo mai dove va dopo.» *Ingoia.* «Verso i Tigli. Va sempre verso i Tigli.»",
+     "no": "«Viene lui. Io non lo cerco.» *E per quel giorno non dice altro.*"
+    },
+    "mai": "⟦L’uomo del lillà fa un giro ogni sera prima della campana: i portici del mercato (Cenzino), l’Arco di Monsignore (Gerbino), poi i Tigli.⟧ Gerbino non sa dove abiti né chi sia la sua padrona."
+   },
+   {
+    "tema": "Il sigillo dei Melatino",
+    "domanda": "«Ci serve il sigillo dei Melatino. Come si ottiene?»",
+    "risposta": "«Al Fondaco della Lega, qui sotto i portici: il palazzo coi magazzini sotto e le grate alle finestre.» *Si gratta il mento.* «Il Decano Maccabeo Melatino firma per chi porta affari alla Lega, e non firma per chi la offende. È semplice. Il Fondaco ha la memoria lunga e il registro ancora più lungo.» *Guarda Adamus, se c’è.* «Per qualcuno è più semplice che per altri.»",
+    "insistono": "«Volete un consiglio gratis? È l’unica cosa gratis che trovate in questa piazza.» *Si china sul banco.* «Non umiliate nessun sensale davanti alla gente: il Fondaco lo sa prima di sera, e il sigillo si allontana. E se nell’istanza scrivete che il grano per la vostra colonna lo comprate dalla Lega, a prezzo di Lega, il Decano la legge due volte. Lui legge i numeri, non le parole.»",
+    "mai": "Non ha nessun potere sul sigillo: è un sensale piccolo, e lo sa."
+   },
+   {
+    "tema": "La Crociata e la signora dei Tigli",
+    "domanda": "«Che cosa dice la Lega della Crociata?»",
+    "risposta": "«La Lega dice quello che dicono i prezzi. Il pane ieri tre quattrini, oggi quattro; domani, se entrate voi, cinque. Una colonna mangia, e chi mangia compra.» *Allarga le mani.* «Per noi una Crociata è come la grandine: se cade sui campi degli altri, il grano nostro vale il doppio.»",
+    "insistono": "«Chi paga in oro, a Teramum? La signora dei Tigli. Sempre, e fiorini buoni, che pesano giusti: li ho pesati io, quando i suoi servitori vengono a cambiare.» *Le dita si fermano.* «Pesano giusti. Tutti tranne…» *Si morde la lingua, e ricomincia a contare.* «Tutti. Pesano giusti tutti.»",
+    "mai": "Non dice mai che i fiorini limati vengono dalla stessa parte dell’oro buono della signora: lo sospetta, ma per lui sospettarlo ad alta voce vuol dire finire nella Vezzola."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Davanti agli altri banchi alza la voce e chiama i colleghi: tre o quattro sensali si avvicinano, i cambiavalute smettono di pesare, e il sigillo dei Melatino si allontana. Da solo, in un vicolo, diventa stridulo e parla (vantaggio a Intimidire), poi scappa appena può.",
+   "soldi": "«Ah, ecco gente che ragiona.» Un fiorino gli fa dire che i soldi dei bravi «non erano suoi»; per l’ora e il posto dell’uomo del lillà ne vuole cinque, e il giorno dopo il banco è chiuso.",
+   "lusinga": "«Troppo gentili, troppo gentili.» Le dita contano più in fretta: la lusinga è il suo mestiere, e non ci casca.",
+   "bugia": "Mente meglio di loro (Inganno +4). Se lo beccano lui a mentire, cambia versione senza vergogna: «Ho detto prestato? Volevo dire anticipato. Le parole, in piazza, si consumano come le monete.»"
+  },
+  "battute": [
+   "«Ho prestato denaro a gente onesta.»",
+   "«Io peso le monete, non le facce.»",
+   "«Che volete, che vi cambi? Per voi, prezzo speciale.»",
+   "«L’oro non ha patria, messere. Ha peso.»",
+   "«Un quattrino oggi, due domani: è la Crociata che fa i prezzi, mica io.»",
+   "«Vecchia Madre mia, che giornata.»",
+   "«Il Fondaco ha la memoria lunga e il registro più lungo.»",
+   "«Contate, contate pure. Io intanto ho già contato voi.»"
+  ],
+  "uscita": {
+   "frase": "«Avanti un altro! Il banco non aspetta.» *Volta le spalle e conta, più in fretta di prima.*",
+   "dopo": "Se lo hanno stretto sui bravi, quella sera all’Arco di Monsignore non ci va: manda un garzone con un biglietto. L’uomo del lillà capisce che il filo è scoperto. La mattina dopo il banco di Gerbino è chiuso: si è nascosto dentro il Fondaco, sotto la protezione della Lega, e per tre giorni non esce.",
+   "aggancio": "Mentre richiude la borsa, borbotta senza guardarvi: «Chiedete al ragazzino col cappello troppo grande, quello della Porta della Madre. Pure lui, al tramonto, sotto questi portici, prende dalla stessa mano.» È il filo che porta a Cenzino."
+  },
+  "ottenuto": [
+   {
+    "info": "Gerbino è un sensale della Lega col banco sotto i portici della Piazza del Mercato; con la Crociata il cambio è un furto, e un avviso.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il Fondaco ha chiuso le lettere di cambio verso Julia Nova: chi viene da là paga in oro.",
+    "via": "gratis"
+   },
+   {
+    "info": "Sotto il panno del banco ci sono altri fiorini nuovi limati uguali a quelli del bravo.",
+    "via": "prova"
+   },
+   {
+    "info": "I soldi dei bravi non erano di Gerbino: glieli ha dati «uno che profuma come un giardino», per una rissa che screditasse la Crociata.",
+    "via": "prova"
+   },
+   {
+    "info": "L’uomo del lillà si fa chiamare Lanfranco, mercante di lana.",
+    "via": "gratis"
+   },
+   {
+    "info": "Lo si trova la sera, prima della campana, sotto l’Arco di Monsignore; poi va verso i Tigli.",
+    "via": "prova"
+   },
+   {
+    "info": "Come ottenere il sigillo dei Melatino: non umiliare i sensali, comprare il grano dalla Lega nell’istanza.",
+    "via": "gratis"
+   },
+   {
+    "info": "Anche Cenzino è pagato dalla stessa mano, sotto i portici, al tramonto.",
+    "via": "gratis"
+   },
+   {
+    "info": "Chi sia davvero l’uomo del lillà e per chi lavori; se il Decano sappia.",
+    "via": "mai"
+   }
+  ]
+ }
 }

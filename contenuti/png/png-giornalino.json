@@ -10,5 +10,101 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: cinquanta. Magro, cappello di paglia sfondato, una cassetta per sedia, una lavagna e un mazzo di fogli scritti a mano.\nFiglio del primo e unico strillone di Teramum. Ironico con tutti: a ognuno una cattiveria diversa, sempre con dentro una cosa vera.\nFa girare le notizie: un grosso, e domani la sa tutta la città; due, e la scrive come volete voi.\nBattute: «Fogli! Fogli!» · «Un quattrino la verità, gratis la bugia.» · «Le prime due sono vecchie. La terza è nuova!»"
+ "gm": "Età: cinquanta. Magro, cappello di paglia sfondato, una cassetta per sedia, una lavagna e un mazzo di fogli scritti a mano.\nFiglio del primo e unico strillone di Teramum. Ironico con tutti: a ognuno una cattiveria diversa, sempre con dentro una cosa vera.\nFa girare le notizie: un grosso, e domani la sa tutta la città; due, e la scrive come volete voi.\nBattute: «Fogli! Fogli!» · «Un quattrino la verità, gratis la bugia.» · «Le prime due sono vecchie. La terza è nuova!»",
+ "dialogo": {
+  "apertura": "*Seduto sulla cassetta, agita un foglio scritto a mano sopra il cappello di paglia sfondato.* «Fogli! Fogli! Il Consiglio non decide! Il ponte non si finisce! La Crociata è alle porte!» *Vi vede, si ferma, ride da solo.* «Le prime due sono vecchie. La terza è nuova, e mi sta davanti.»",
+  "voce": "Teramano di strada, ironico, cattivo con allegria · Tic: «Fogli! Fogli!»; «Un quattrino la verità, gratis la bugia»; ogni nome che pronuncia ha una battuta attaccata · Ritmo: veloce, a battute, come uno che vende: una frase, una risata, un’altra frase; diventa lento solo quando conta i soldi.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Chi siete?»",
+    "risposta": "«Giornalino. Il nome vero ce l’ho, ma non lo usa nessuno, nemmeno mia moglie.» *Si toglie il cappello.* «Mio padre era lo strillone. Il primo e l’unico di Terme. Andava strada per strada coi bandi in mano e li urlava, e la gente lo pagava per sapere cosa c’era scritto, perché leggere non sapeva nessuno. Io sono il secondo e l’ultimo. Dopo di me la gente le notizie se le inventa da sola.» *Indica la piazza.* «Già lo fa. Io almeno le scrivo. Un quattrino il foglio. La lavagna è gratis, e infatti la leggono tutti e non compra nessuno. Li saluto per nome, uno per uno, e a ognuno dico una cattiveria. Così almeno pagano in un altro modo.»",
+    "insistono": "«Volete sapere come si fa? Le notizie si copiano dai bandi, si rubano alle osterie, si comprano dai servi. Poi ci si mette sopra una cattiveria. Sotto la cattiveria c’è sempre una cosa vera. Chi ride si ricorda la cattiveria. Chi è furbo si ricorda la cosa vera.»",
+    "mai": "Non dice mai il suo nome vero, né chi sono i servi che gli vendono le notizie."
+   },
+   {
+    "tema": "Che notizie ci sono",
+    "domanda": "«Che notizie ci sono oggi?»",
+    "risposta": "*Batte la mano sulla lavagna.* «Il Bando della Guardia: forestieri armati dopo la campana, cella e cinque grossi. La Crociata al tratturo: cinquanta, cento, mille? Chi lo sa. I prezzi del grano: su. Il Reggente sta bene, dice il Reggente.» *Ride.* «Il Corso si svuota. Il Banco è caduto e nessuno ha visto il buco, solo la polvere. Il ponte nuovo si inaugura di nuovo a primavera, la quarta volta: il nastro ormai lo tagliano col coltello del pane, che le forbici sono finite.» *Vi squadra.* «E arrivate voi. Voi siete la notizia. Ditemi qualcosa, che domani vi vendo bene.»",
+    "insistono": "«La notizia di domani ve la dico gratis, che tanto non la scriverò: le guardie del Palazzo stanno raddoppiando la scorta della sala dei sigilli. Qualcuno ha paura che qualcuno entri. O che qualcuno esca.»",
+    "mai": "Nessun segreto: le notizie sono sulla lavagna."
+   },
+   {
+    "tema": "Far girare una notizia",
+    "domanda": "«Se volessimo che la città sapesse una cosa?»",
+    "risposta": "*Gli brillano gli occhi.* «Ah, adesso parliamo di affari.» *Conta sulle dita.* «Un grosso, e domattina lo sa tutta Terme. Come lo scrivo io, cioè con una cattiveria in più. Due grossi, e lo sa pure come volete voi, senza la cattiveria. Tre grossi…» *Ride.* «Tre, e non lo scrivo. Che a volte è la notizia migliore.» *Si fa serio, per un attimo.* «Ma state attenti. Quello che scrivo io arriva al Palazzo prima di mezzogiorno, ai Tigli prima di pranzo, alla Rocca prima della campana. Se dite una cosa a Giornalino, la dite al Consiglio. Con una voce più forte.»",
+    "insistono": "«Volete un consiglio, gratis? Non scrivete chi siete. Scrivete cosa avete fatto. A Terme i nomi si dimenticano e le cose no. “La Crociata ha salvato il guado” vale più di dieci nomi con lo stemma.»",
+    "mai": "Le Cronache del Ducato a Teramum passano da lui: una notizia data a Giornalino muove la Fama della Crociata in città. Non scrive mai una cosa contro la Vecchia Madre o i votati della Basilica, per paura."
+   },
+   {
+    "tema": "Sor Paolo e la satira",
+    "domanda": "«Chi è Sor Paolo?»",
+    "risposta": "*Ride fino a tossire.* «Sor Paolo! La statua senza naso di Porta Romana. Ogni mattina ha un biglietto nuovo in mano, e nessuno sa chi ce lo mette. Io lo copio e lo vendo.» *Legge da un foglio.* «Stamattina: “A Terme ci stanno otto Casate e nessuna casa.”» *Ride ancora.* «Ieri: “Il Reggente non dorme: conta i consiglieri, e ogni notte gliene manca uno.” L’altro ieri: “I Cerullius tornano a casa e il Consiglio si caca addosso.”» *Guarda Alessandros e Vicarus, se ci sono, e ride più forte.*",
+    "insistono": "«Chi li scrive? Tutti dicono che sono io.» *Si mette una mano sul cuore.* «Io non so scrivere così bene. Io copio. Chi li scrive alza la mano presto, prima del mercato, e ha una calligrafia da scrivano di Palazzo. Pensateci: chi a Palazzo vuole che si rida del Reggente?»",
+    "mai": "mai: non sa chi scriva i biglietti di Sor Paolo (è un mistero della città e resta tale)."
+   },
+   {
+    "tema": "Su qualcuno",
+    "domanda": "«Che si dice di…?» (i Cerullius, lo Stratega, il Reggente, l’Arciflamine)",
+    "risposta": "«Di chi volete? Ho una battuta per tutti.» *Le spara una dietro l’altra.* «I Cerullius? Palazzo grande, tre servitori e mille topi. Di notte si sente scavare: o sono i topi, o sono i Malavolta che cercano i soldi che i Cerullius non hanno più.» *Ride.* «Lo Stratega Grazianus? Si è rasato la testa: o ha i pidocchi, o ha un’idea. Tutti e due si attaccano.» *Ride.* «Il Reggente? Sta bene, dice il Reggente. L’Arciflamine? Ha una lista, e ci scrive sopra pure i Lucenti vecchi, che non si sa mai.» *Si gratta il cappello.* «E la Crociata? Arriva un signore con gli occhi d’oro, e la città non sa se deve suonare le campane o chiudere le porte. Per ora fa tutte e due le cose.»",
+    "insistono": "*Se gli si chiede cosa c’è di vero.* «Ve l’ho detto: sotto la cattiveria c’è sempre una cosa vera. I Malavolta scavano davvero, sotto l’anfiteatro. Lo Stratega si è rasato davvero, e da quel giorno non è più venuto a comprare il foglio. E la lista dell’Arciflamine esiste: me l’ha detto uno che l’ha ricopiata. Non vi dico il nome. Ma i Cerullius ci stanno sopra.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "Separate la cosa vera dalla cattiveria: i Malavolta scavano sotto l’anfiteatro (e quindi sotto il palazzo Cerullius); lo Stratega si è rasato e non compra più il foglio; la lista dell’Arciflamine esiste e ci sono i Cerullius.",
+     "no": "Ridete con lui. Sono solo battute: il giorno dopo non sapreste dire cosa ci fosse dentro di vero."
+    },
+    "mai": "mai: non dice chi gli ha parlato della lista. Non sa cosa cerchino i Malavolta né cosa abbia deciso lo Stratega."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Si alza sulla cassetta e urla alla piazza.* «Fogli! Fogli! La Crociata minaccia lo strillone!» Ride. La gente si gira; domani è sulla lavagna, con una cattiveria in più, e la Fama della Crociata in città scende.",
+   "soldi": "*Morde la moneta.* «Questa è vera. Meno male: con la Crociata non si sa mai.» Per un grosso vi scrive quello che volete; per l’oro non vi dice i nomi delle fonti.",
+   "lusinga": "«Lo so, lo so, sono il migliore. Sono anche l’unico.» Si diverte, e vi regala un foglio con la satira di Sor Paolo di domani, che ha già.",
+   "bugia": "*Si illumina.* «Una bugia! Gratis! La scrivo subito.» E la scrive davvero, firmata «dalla Crociata»: domani la sa tutta Terme."
+  },
+  "battute": [
+   "«Fogli! Fogli!»",
+   "«Un quattrino la verità, gratis la bugia.»",
+   "«Le prime due sono vecchie. La terza è nuova!»",
+   "«Il Reggente sta bene, dice il Reggente.»",
+   "«Il ponte? Lo finiscono quando finisce la città.»",
+   "«A Terme ci stanno otto Casate e nessuna casa.»",
+   "«Leggete gratis, pagate in salute.»",
+   "«Ciao Nicola, ancora vivo? Peccato, avevo già scritto il necrologio.»"
+  ],
+  "uscita": {
+   "frase": "*Si rimette il cappello, si alza sulla cassetta.* «Fogli! Fogli! La Crociata è in città, e ha la faccia di quelli là!» *Vi indica alla piazza, ride.*",
+   "dopo": "Scrive sulla lavagna una riga sui PG (com’erano, cosa hanno detto), con una cattiveria. Se gli hanno dato una notizia e un grosso, la notizia gira per la città il giorno dopo.",
+   "aggancio": "La sala dei sigilli del Palazzo ha la scorta raddoppiata: qualcuno a Palazzo ha paura che qualcuno entri o esca."
+  },
+  "ottenuto": [
+   {
+    "info": "Notizie di oggi: il Bando della Guardia, il grano che sale, il Consiglio che non decide, il ponte mai finito.",
+    "via": "gratis"
+   },
+   {
+    "info": "Una notizia data a Giornalino (un grosso, due per scriverla come si vuole) la sa tutta Teramum il giorno dopo: canale per le Cronache e la Fama della Crociata in città.",
+    "via": "gratis"
+   },
+   {
+    "info": "La scorta della sala dei sigilli del Palazzo è stata raddoppiata.",
+    "via": "gratis"
+   },
+   {
+    "info": "I biglietti di Sor Paolo li scrive qualcuno con una calligrafia da scrivano di Palazzo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Vero sotto le battute: i Malavolta scavano sotto l’anfiteatro; lo Stratega si è rasato; la lista dell’Arciflamine esiste e ci sono i Cerullius.",
+    "via": "prova"
+   },
+   {
+    "info": "Chi scrive i biglietti di Sor Paolo e chi gli ha parlato della lista.",
+    "via": "mai"
+   }
+  ]
+ }
 }

@@ -10,5 +10,112 @@
  "atti": [],
  "links": [],
  "pub": "Una donna sui cinquant’anni, di Mòrrë, col mantello scuro, una conchiglia cucita sul cappello e il bordone del pellegrino. All’osteria de lu Passe mangiava pane e cipolla da sola, vicino alla porta. Va alla Basilica Aurea di Teramum a sciogliere un voto: suo figlio è tornato dal mare. «Tornato davvero. Non come quelli della valle.»",
- "gm": "Luogo abituale: in cammino da Mòrrë verso la Basilica Aurea di Teramum ·\nEtà: una cinquantina d’anni.\nStatistiche: popolana (CA 10, PF 4). Non combatte.\nMantello scuro, una conchiglia cucita sul cappello, il bordone stretto fra le ginocchia come se qualcuno volesse rubarglielo. ⟦Faccia cotta dal sole, mani screpolate, un sorriso a cui manca un dente.⟧\n\nSa: che l’anno scorso, dormendo sui gradini della Basilica Aurea, di notte ha sentito suonare sotto (non le campane: sotto); che il votato di guardia le ha detto che sono le campane che si assestano. Dopo il terremoto della notte, dice una cosa sola: «È la Basilica.»\n•\nNon sa: cosa c’è sotto la Basilica; niente del convoglio né della Crociata.\nVoce: ⟦lenta, devota, in dialetto della costa; offre sempre quello che ha nel piatto.⟧\nCosa vuole: arrivare alla Basilica Aurea e sciogliere il voto per il figlio tornato dal mare.\nSegreto: nessuno. È una donna devota.\n\nSe gli chiedono di…:\n…il voto: «Vado alla Basilica Aurea. Ho un voto da sciogliere. Mio figlio è tornato dal mare. Tornato davvero. Non come quelli della valle.»\n…la Basilica: «L’anno scorso ho dormito sui gradini della Basilica. Di notte, sotto, suonava. Non le campane: sotto.»\n…a Mattheus, se porta il simbolo in vista: «Pure voi andate a pregare in città? Lassù pregano in tanti. Pochi vengono ascoltati.»\n…venire con la colonna: accetta, se glielo offrono; resta fino a Teramum (una bocca in più, una testimone che non chiede niente).\n\nBattute pronte:\n«È la Basilica.»\n⟦«Volete mezza cipolla?»⟧"
+ "gm": "Luogo abituale: in cammino da Mòrrë verso la Basilica Aurea di Teramum ·\nEtà: una cinquantina d’anni.\nStatistiche: popolana (CA 10, PF 4). Non combatte.\nMantello scuro, una conchiglia cucita sul cappello, il bordone stretto fra le ginocchia come se qualcuno volesse rubarglielo. ⟦Faccia cotta dal sole, mani screpolate, un sorriso a cui manca un dente.⟧\n\nSa: che l’anno scorso, dormendo sui gradini della Basilica Aurea, di notte ha sentito suonare sotto (non le campane: sotto); che il votato di guardia le ha detto che sono le campane che si assestano. Dopo il terremoto della notte, dice una cosa sola: «È la Basilica.»\n•\nNon sa: cosa c’è sotto la Basilica; niente del convoglio né della Crociata.\nVoce: ⟦lenta, devota, in dialetto della costa; offre sempre quello che ha nel piatto.⟧\nCosa vuole: arrivare alla Basilica Aurea e sciogliere il voto per il figlio tornato dal mare.\nSegreto: nessuno. È una donna devota.\n\nSe gli chiedono di…:\n…il voto: «Vado alla Basilica Aurea. Ho un voto da sciogliere. Mio figlio è tornato dal mare. Tornato davvero. Non come quelli della valle.»\n…la Basilica: «L’anno scorso ho dormito sui gradini della Basilica. Di notte, sotto, suonava. Non le campane: sotto.»\n…a Mattheus, se porta il simbolo in vista: «Pure voi andate a pregare in città? Lassù pregano in tanti. Pochi vengono ascoltati.»\n…venire con la colonna: accetta, se glielo offrono; resta fino a Teramum (una bocca in più, una testimone che non chiede niente).\n\nBattute pronte:\n«È la Basilica.»\n⟦«Volete mezza cipolla?»⟧",
+ "dialogo": {
+  "apertura": "*Una donna sui cinquant’anni, sola vicino alla porta, pane e cipolla nel piatto e il bordone stretto fra le ginocchia. Vi guarda arrivare, sorride con un dente in meno, e spinge il piatto verso di voi.* «Volete mezza cipolla? È buona. L’ho portata da Mòrrë.»",
+  "voce": "Dialetto della campagna di Mòrrë, lento e dolce, mai stretto («mo’», «fijje mì», «la Madre ce guarda»). · Tic: offre sempre quello che ha nel piatto; tocca la conchiglia sul cappello prima di dire una cosa importante; «Tornato davvero». · Ritmo: lento, con pause da preghiera; ripete le frasi che le stanno a cuore.",
+  "argomenti": [
+   {
+    "tema": "Chi sei, il voto",
+    "domanda": "«Dove andate, da sola, a quest’ora?»",
+    "risposta": "«Ghita, de Mòrrë. Margherita, come mia nonna, ma nessuno se lo ricorda.» *Tocca la conchiglia.* «Vado alla Basilica Aurea. Ho un voto da sciogliere. Mio figlio è tornato dal mare. S’era imbarcato sulla costa, e della nave per tre mesi nessuno ne ha saputo niente. Io ho fatto il voto: se torna, vado a piedi fino alla Basilica e dormo sui gradini una notte. È tornato.» *Sorride.* «Tornato davvero. Non come quelli della valle.»",
+    "insistono": "«Non è la prima volta che vado. L’anno scorso ci sono andata per mio marito, che stava male. Mio marito è morto lo stesso.» *Si stringe nelle spalle.* «Lassù pregano in tanti. Pochi vengono ascoltati. Ma io ci torno: stavolta m’hanno ascoltata, e i debiti si pagano.»",
+    "mai": "Niente da nascondere: è una donna devota."
+   },
+   {
+    "tema": "La Basilica che suona sotto",
+    "domanda": "«Com’è la Basilica Aurea? Ci hai dormito?»",
+    "risposta": "*Abbassa la voce, come in un solario.* «L’anno scorso ho dormito sui gradini della Basilica, col mantello sotto e il bordone stretto, che a Teramum rubano pure i bordoni. Di notte, sotto, suonava. Non le campane: sotto. Come una campana grande sepolta, che qualcuno tocca piano con un dito.» *Tocca la conchiglia.* «Il votato di guardia m’ha detto che sono le campane che si assestano. Io gli ho detto: fijje mì, le campane stanno in cima, mica sotto. Lui m’ha detto di dormire.»",
+    "insistono": "«Era la notte della Festa del Gigante. Proprio quando la terra fece quel tremito piccolo, che nessuno se ne accorse. Io me ne accorsi, perché stavo con la guancia sulla pietra.» *Pausa.* «La pietra era calda. Di notte. In città dicono che è il sole del giorno. Io dico che il sole del giorno non suona.»",
+    "mai": "Non sa cosa ci sia sotto la Basilica (niente sul Sigillo, niente sulla «chiave vera»). Non è mai entrata nelle cripte."
+   },
+   {
+    "tema": "Quelli della valle",
+    "domanda": "«Cosa intendi, ‘non come quelli della valle’?»",
+    "risposta": "*Si fa il segno del sole.* «Per strada, venendo, l’ho sentito dire in ogni fuoco dove ho chiesto l’acqua. Nella valle la gente se ne va e poi torna. Ma non torna lei. Torna la faccia, e dentro non c’è nessuno.» *Guarda il suo piatto.* «Io ho visto un uomo così, fermo in mezzo al grano, vicino al guado. M’ha guardata passare. Non m’ha detto niente. Io ho camminato più svelta e ho detto tre volte il nome della Vecchia Madre.»",
+    "insistono": "«Per questo ho fatto il voto per mio figlio così forte. Perché io ho avuto paura che tornasse così.» *Le trema la voce.* «È tornato che mangia, che ride, che mi chiama mamma. Tornato davvero. Ditemi voi se non è una grazia.»",
+    "mai": "Non sa chi o cosa svuoti la gente della valle."
+   },
+   {
+    "tema": "Mòrrë e Nutaròschë",
+    "domanda": "«Vieni da Mòrrë? Sei passata per Nutaròschë?»",
+    "risposta": "«Mòrrë sta sotto Nutaròschë, come un cane sotto il tavolo. Il grano lo contano gli Scimitarra, ma comanda la castellana, Dama Violante. Una signora che spende bene, dicono: feste, vino buono, cavalli buoni.» *Sorride.* «A me ha dato un pane, una volta, alla festa del Lucente Gennaro. Bianco. Non me lo scordo.»",
+    "insistono": "*Tocca la conchiglia, esita.* «La notte prima di partire ho dormito sotto il portico dell’Osteria della Rosa, che una stanza costava troppo. Di notte, in piazza, c’erano dei carri. Lunghi, coperti. Uscivano dalle cantine sotto la piazza, che sono tutte bucate una dentro l’altra fino al palazzo. Gli armigeri della castellana tenevano le lanterne.» *Guarda verso il cortile.* «Erano carri come quelli là fuori. Ma io sono una donna vecchia, e di notte vedo male.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Racconta dei carri usciti di notte dalle cantine di Nutaròschë con gli armigeri della castellana a fare luce (la seconda risposta). Con Persuasione basta essere gentili; con Intuizione si capisce che ha visto qualcosa e ha paura di dirlo.",
+     "no": "«Nutaròschë è un bel borgo. Ci sono tante cantine.» E torna alla cipolla."
+    },
+    "mai": "Non sa che Dama Violante lavora per Iuvenza, né cosa ci fosse nei carri. Non accusa mai la castellana: «Io ho visto delle lanterne. Le lanterne non sono peccato.»"
+   },
+   {
+    "tema": "Pregare in città",
+    "domanda": "(Se Mattheus porta in vista il suo simbolo, o se qualcuno le parla di fede.)",
+    "risposta": "*Guarda il simbolo di Mattheus a lungo.* «Pure voi andate a pregare in città? Lassù pregano in tanti. Pochi vengono ascoltati.» *Lo dice senza cattiveria, come si dice che piove.* «Io prego la Vecchia Madre per le cose di casa e il Sole per le cose grandi. Voi chi pregate? Avete la faccia di uno che prega per i morti.»",
+    "insistono": "*Se Mattheus le dice di Mortus:* annuisce piano, senza paura. «Allora pregate per quelli della valle. Che a loro non ci pensa nessuno. Né il Barone, né la Fiamma, né Teramum.» *Gli spinge la mezza cipolla.* «Mangiate, che chi prega per i morti si scorda di mangiare.»",
+    "mai": "Nessun altro significato: è una donna devota, non sa niente di Mortus oltre al nome e non ha visioni."
+   },
+   {
+    "tema": "Venire con la colonna",
+    "domanda": "«Vuoi venire con noi fino a Teramum?»",
+    "risposta": "*Si illumina.* «Con voi? Con tutta quella gente e le picche?» *Ride.* «Una vecchia sola, sulla strada, quest’anno, è una vecchia che non arriva. Sì, fijje mì. Vengo. Non vi do fastidio: cammino dietro, mangio poco, e se c’è da cucire, cucio.»",
+    "insistono": "«E quando arriviamo, se a voi non vi fanno entrare, io entro lo stesso: una pellegrina col bordone la fanno passare sempre. Se volete che porto una parola a qualcuno, dentro, la porto. Nessuno guarda una vecchia.»",
+    "mai": "Non entra mai in uno scontro e non porta armi. Non tradisce mai la Crociata: per lei sono gente che l’ha protetta."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Stringe il bordone fra le ginocchia, ma non si alza.* «Fate pure, fijje mì. Una vecchia che va a sciogliere un voto, se la toccate, la Madre ve la conta.» Poi si chiude nel mantello e non dice più niente a nessuno del gruppo.",
+   "soldi": "*Spinge indietro la moneta.* «No, no. Il voto si fa coi piedi, non coi soldi.» Accetta solo da mangiare, e allora racconta di più.",
+   "lusinga": "«Eh, a cinquant’anni ci credo poco.» Ride, contenta, e offre l’altra mezza cipolla.",
+   "bugia": "Non se ne accorge quasi mai, e quando se ne accorge non dice niente: si fa il segno del sole e pensa ad altro."
+  },
+  "battute": [
+   "«Volete mezza cipolla?»",
+   "«Tornato davvero. Non come quelli della valle.»",
+   "«Lassù pregano in tanti. Pochi vengono ascoltati.»",
+   "«A Teramum rubano pure i bordoni.»",
+   "«Il voto si fa coi piedi, non coi soldi.»",
+   "«La Madre ce guarda. Pure qua, pure stasera.»",
+   "(Dopo il terremoto, inginocchiata sulla soglia, a mani giunte) «È la Basilica.»"
+  ],
+  "uscita": {
+   "frase": "*Si avvolge nel mantello e si appoggia al muro, il bordone fra le ginocchia.* «Io dormo qua, vicino alla porta, che se succede qualcosa esco per prima. Buona notte, fijje mì. Pregate, prima di dormire. Stanotte la terra è inquieta: lo sento nelle ossa.»",
+   "dopo": "Dorme seduta vicino alla porta. Al terremoto si inginocchia sulla soglia, a mani giunte, e dice una cosa sola: «È la Basilica.» Se le hanno offerto di seguire la colonna, all’alba è già pronta col bordone, e resta con la Crociata fino a Teramum.",
+   "aggancio": "«È la Basilica.» Dopo il colpo da occidente, è lei a dare un nome al presagio: sotto la Basilica Aurea qualcosa suona da almeno un anno."
+  },
+  "ottenuto": [
+   {
+    "info": "Ghita va alla Basilica Aurea per sciogliere un voto: il figlio è tornato dal mare, «davvero».",
+    "via": "gratis"
+   },
+   {
+    "info": "Dormendo sui gradini della Basilica l’anno scorso, la notte della Festa del Gigante, ha sentito suonare sotto, e la pietra era calda.",
+    "via": "gratis"
+   },
+   {
+    "info": "Nella valle la gente torna «con la faccia ma senza nessuno dentro»; ne ha visto uno fermo nel grano vicino al guado.",
+    "via": "gratis"
+   },
+   {
+    "info": "A Nutaròschë comanda la castellana Dama Violante; la sua piazza è bucata di cantine fino al palazzo.",
+    "via": "gratis"
+   },
+   {
+    "info": "A Nutaròschë ha visto di notte carri come quelli del convoglio uscire dalle cantine, con gli armigeri della castellana a fare luce.",
+    "via": "prova"
+   },
+   {
+    "info": "Se la porta con sé, a Teramum può entrare da pellegrina e portare un messaggio dentro le mura.",
+    "via": "gratis"
+   },
+   {
+    "info": "Cosa ci sia sotto la Basilica; cosa ci fosse nei carri di Nutaròschë.",
+    "via": "mai"
+   }
+  ]
+ }
 }

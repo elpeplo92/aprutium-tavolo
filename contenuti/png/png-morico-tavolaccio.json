@@ -10,5 +10,132 @@
  "atti": [],
  "links": [],
  "pub": "Un sergente grosso della Guardia Ducale, con la barba nera e un naso rotto più volte. Comanda la ronda della notte al ponte sotto Porta Romana. Chiede tre cose, sempre nello stesso ordine: lanterna, nome, motivo.",
- "gm": "Luogo abituale: il Ponte degli Impiccati sulla Vezzola e la Porta Romana, di notte; il resto del tempo alla Rocca.\nEtà: ⟦cinquanta⟧. ⟦Sergente da vent’anni, nato a Porta Romana⟧.\nStatistiche: Sergente della Guardia Ducale (Bestiario), con quattro Guardie Ducali. Non combatte se non lo attaccano: fischia (uno lungo, due corti) e in tre minuti arrivano altre due ronde.\nAspetto: grosso, barba nera, naso rotto più volte, tabarro grigio con la torre e il lupo, lanterna sempre alzata verso le facce.\nSa: gli orari di tutte le ronde; chi passa il ponte di notte; che da una settimana il coprifuoco «lo fanno rispettare», per ordine della Rocca; che di notte in città non succede più niente, e che è strano.\nNon sa: chi paga i bravi del ponte. Perché la Rocca abbia stretto il coprifuoco (dicono i terremoti: lui non ci crede).\nVoce: stanca, pratica, un po’ di dialetto; sospira prima di ogni arresto.\nCosa vuole: finire la notte senza carte da scrivere. Odia le carte.\nSegreto: ⟦per un fiorino non vede nessuno per un’ora; ma lo dice sempre: «la ronda dopo di me, sì»⟧.\n\nSe gli chiedono di…:\n\nLasciarli passare con la tessera prima della campana: «Siete in ritardo, voi. La porta sta per chiudere.» E li accompagna dentro.\nLasciarli passare dopo la campana: no. Rocca, una notte in cella, tessera bruciata, il capitano Guarnerio umiliato.\nLasciar andare forestieri armati senza tessera: Persuasione CD 16 (o un nome che pesa, CD 14): li scorta a una locanda e scrive «trovati sul ponte, diretti a dormire».\nChi comanda la notte: «La Rocca. Di notte la città è della Guardia. Di giorno è dei signori.»\nChiudere un occhio: uno scudo o un grosso, niente; un fiorino, un’ora.\n\nBattute pronte:\n«Lanterna, nome, motivo. In quest’ordine.»\n«Di notte la città è della Guardia.»\n«Mi fate fare le carte, e io odio le carte.»\n«I terremoti non girano con la lanterna.»"
+ "gm": "Luogo abituale: il Ponte degli Impiccati sulla Vezzola e la Porta Romana, di notte; il resto del tempo alla Rocca.\nEtà: ⟦cinquanta⟧. ⟦Sergente da vent’anni, nato a Porta Romana⟧.\nStatistiche: Sergente della Guardia Ducale (Bestiario), con quattro Guardie Ducali. Non combatte se non lo attaccano: fischia (uno lungo, due corti) e in tre minuti arrivano altre due ronde.\nAspetto: grosso, barba nera, naso rotto più volte, tabarro grigio con la torre e il lupo, lanterna sempre alzata verso le facce.\nSa: gli orari di tutte le ronde; chi passa il ponte di notte; che da una settimana il coprifuoco «lo fanno rispettare», per ordine della Rocca; che di notte in città non succede più niente, e che è strano.\nNon sa: chi paga i bravi del ponte. Perché la Rocca abbia stretto il coprifuoco (dicono i terremoti: lui non ci crede).\nVoce: stanca, pratica, un po’ di dialetto; sospira prima di ogni arresto.\nCosa vuole: finire la notte senza carte da scrivere. Odia le carte.\nSegreto: ⟦per un fiorino non vede nessuno per un’ora; ma lo dice sempre: «la ronda dopo di me, sì»⟧.\n\nSe gli chiedono di…:\n\nLasciarli passare con la tessera prima della campana: «Siete in ritardo, voi. La porta sta per chiudere.» E li accompagna dentro.\nLasciarli passare dopo la campana: no. Rocca, una notte in cella, tessera bruciata, il capitano Guarnerio umiliato.\nLasciar andare forestieri armati senza tessera: Persuasione CD 16 (o un nome che pesa, CD 14): li scorta a una locanda e scrive «trovati sul ponte, diretti a dormire».\nChi comanda la notte: «La Rocca. Di notte la città è della Guardia. Di giorno è dei signori.»\nChiudere un occhio: uno scudo o un grosso, niente; un fiorino, un’ora.\n\nBattute pronte:\n«Lanterna, nome, motivo. In quest’ordine.»\n«Di notte la città è della Guardia.»\n«Mi fate fare le carte, e io odio le carte.»\n«I terremoti non girano con la lanterna.»",
+ "dialogo": {
+  "apertura": "*Da Porta Romana scende una lanterna, poi altre quattro. Si fermano a capo del ponte, in fila.* «Alt.» *Un sergente grosso, barba nera, naso rotto più volte, alza la lanterna verso le vostre facce, una per una, senza fretta.* «Lanterna, nome, motivo. In quest’ordine.»",
+  "voce": "Italiano pratico da caserma, con un po’ di dialetto di Porta Romana (*nen*, *mo’*, *lu ponte*; «T’ puzz’ n’om ambenn’» quando scherza o si arrabbia) · Tic: sospira prima di ogni arresto; «Mi fate fare le carte»; «In quest’ordine»; alza la lanterna sulle facce · Ritmo: stanco, lento, frasi corte; non cerca guai e non alza mai la voce, fischia.",
+  "argomenti": [
+   {
+    "tema": "Farci passare",
+    "domanda": "«Abbiamo la tessera del capitano. Fateci passare.» (o: «Siamo forestieri, andiamo a dormire.»)",
+    "risposta": "*Prende la tessera, la guarda alla lanterna, la gira.* «La tessera di Guarnerio. La conosco.» *Guarda il cielo.* Se la campana non è ancora suonata: «Siete in ritardo, voi. La porta sta per chiudere.» E li accompagna dentro lui, a passo svelto, su per la salita. Se la campana è suonata: «La tessera vale fino alla campana. La campana è suonata.» *Sospira.* «Mi fate fare le carte.» Li porta alla Rocca: nessuna violenza, una notte in cella, la tessera bruciata, e il capitano Guarnerio umiliato davanti ai suoi. Senza tessera e disarmati: un grosso a testa e li accompagna al Cane Bianco. Senza tessera e armati: «Forestieri, armati, di notte.» Arresto, cella alla Rocca, cinque grossi a testa la mattina.",
+    "insistono": "«Lo so che non avete fatto niente. Nemmeno io. Eppure stiamo qua tutti e due, al freddo, sul ponte.» *Batte la lanterna contro il parapetto.* «L’ordine è l’ordine. Se vi lascio, domattina la tavoletta la legge la Rocca, e la Rocca legge pure quello che non scrivo.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 16,
+     "si": "«Trovati sul ponte, diretti a dormire.» *Lo scrive così sulla tavoletta, lettera per lettera.* Li scorta fino al Cane Bianco e li consegna a Za’ Carmela. (CD 14 con un nome che pesa. Vale per i forestieri armati senza tessera; con la tessera dopo la campana non c’è prova che tenga.)",
+     "no": "*Sospira.* «Avanti. Alla Rocca. E non fatemi correre, che ho le ginocchia di mio padre.»"
+    },
+    "mai": "Con la tessera, dopo la campana, non li lascia passare per nessuna parola: è l’ordine nuovo della Rocca. Il fiorino gli fa solo chiudere gli occhi per un’ora (vedi le reazioni)."
+   },
+   {
+    "tema": "Chi comanda la notte",
+    "domanda": "«Chi comanda, di notte, a Teramum?»",
+    "risposta": "«La Rocca. Di notte la città è della Guardia. Di giorno è dei signori. Di notte i signori dormono.» *Ride, una risata corta.* «Quasi tutti.» *Alza la lanterna verso le mura.* «Sei porte, sei ronde, un sergente e quattro per rione. Io qua, al ponte, che è il posto peggiore: ci tira il vento del fiume e ci passa chi non deve passare.»",
+    "insistono": "«E di giorno? Di giorno comanda chi ha più sigilli. Di notte chi ha più lanterne.» *Scuote la lanterna.* «E le lanterne le ha la Rocca. Pensateci, quando andate a chiedere i vostri sigilli.»",
+    "mai": "Non parla mai male dello Stratega: lo rispetta come si rispetta un comandante."
+   },
+   {
+    "tema": "Perché il coprifuoco",
+    "domanda": "«Il coprifuoco c’è sempre stato?»",
+    "risposta": "«C’è sempre stato. Ma da una settimana lo fanno rispettare. Ordine della Rocca, con la torre e il lupo. Turni doppi, porte alla campana, forestieri in cella. Dicono per i terremoti.» *Sputa nel fiume, oltre il parapetto.* «I terremoti non girano con la lanterna.»",
+    "insistono": "*Si guarda dietro, verso le sue quattro guardie, e abbassa la voce.* «Nell’ordine c’era un’altra riga. I carri con il segno della Rocca, di notte, non si fermano e non si scrivono.» *Si morde la lingua.* «Questo non l’ho detto. E da questo ponte, comunque, non ne passa nessuno: vanno tutti dall’altra parte, verso levante.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intuizione"
+     ],
+     "cd": 15,
+     "si": "Dice della riga sui carri della Rocca (vedi sopra).",
+     "no": "«Terremoti. Così dicono. Io faccio la ronda.»"
+    },
+    "mai": "Non sa perché la Rocca abbia stretto il coprifuoco né che cosa portino i carri. Non ci crede, ai terremoti, ma non indaga."
+   },
+   {
+    "tema": "Cosa succede di notte",
+    "domanda": "«Cosa succede in città, la notte?»",
+    "risposta": "«Niente. Ed è strano.» *Si appoggia al parapetto.* «Prima, di notte, succedeva di tutto. Risse a Porta Romana, ladri sui tetti alla Lunaria a Bitetto, li Mazzamarelli che slegavano i muli. Adesso i ladri stanno a casa, le donne di vita stanno a casa, pure li Mazzamarelli stanno a casa.» *Pausa.* «Come se aspettassero qualcosa.»",
+    "insistono": "«Sapete quando i cani non abbaiano? Quando passa uno che conoscono.» *Guarda la città nera sopra la ripa.* «A Teramum, di notte, non abbaia più nessuno. Vent’anni che faccio la ronda, e questa cosa non mi piace.»",
+    "mai": "Non sa che cosa stia per succedere. Non lo immagina nemmeno: pensa a una guerra di casate, non a un colpo della Rocca."
+   },
+   {
+    "tema": "I bravi del ponte",
+    "domanda": "«Ci hanno aggrediti! Avete visto chi erano?» (dopo l’agguato)",
+    "risposta": "*Guarda i feriti, il sangue sul selciato, il parapetto.* Se la ronda è arrivata coi bravi ancora lì, o c’è un bravo a terra: «Lu Spaccapreta. Lo conosco da quando rubava i fichi negli orti qua sotto. Picchia per chi paga: di solito un oste che vuole chiudere un conto, mai i forestieri. Mai la Crociata.» Crede ai personaggi. Se invece li trova da soli, armati, sul ponte, dopo la campana: «Rissa sul ponte. Crociati.» *Sospira.* «E adesso mi fate fare un sacco di carte.» Rocca.",
+    "insistono": "«Chi l’ha pagato? Non lo so. Ma Lu Spaccapreta, quando ha soldi nuovi, se li beve tutti la sera stessa, da Za’ Flaminia, giù a Porta Romana. Domani a mezzogiorno sarà ubriaco e senza una moneta.» *Guarda la borsa del bravo, se ce l’hanno.* «Se volete sapere chi l’ha pagato, chiedete a chi ha cambiato quei fiorini. Fiorini così nuovi non escono dalle tasche di Porta Romana.»",
+    "mai": "Non sa chi paghi i bravi (Gerbino il sensale, coi soldi dell’uomo del lillà). Non arresta Lu Spaccapreta senza una denuncia scritta: «Mi fate fare le carte.»"
+   },
+   {
+    "tema": "Il nome che pesa",
+    "domanda": "«(Maximus) Sono Maximus Grazianus, figlio dello Stratega.»",
+    "risposta": "*Alza la lanterna fino alla faccia di Maximus e la tiene lì un momento di troppo.* «Il figlio dello Stratega. Con la Crociata. Sul mio ponte. Di notte.» *Sospira più forte del solito.* «Lo sapete, signore, che stanotte mi avete rovinato? Se vi porto alla Rocca, vostro padre mi guarda. Se vi lascio andare, vostro padre lo viene a sapere.»",
+    "insistono": "Il nome pesa: per lasciarli andare scortati la prova è a CD 14 invece di 16. «Vi accompagno io, al Cane Bianco. E scrivo che vi ho trovato io, che è pure vero.» *Si gratta la barba.* «Così, se vostro padre mi chiama, gli dico che vi ho messo a letto. Come quando eravate frechì.»",
+    "mai": "Non sa niente di quello che lo Stratega vuole da suo figlio, e non porta Maximus su alla Rocca di notte se non per la cella."
+   },
+   {
+    "tema": "Il ponte e l’edicola",
+    "domanda": "«Perché lo chiamano Ponte degli Impiccati? E quel segno sotto l’edicola?»",
+    "risposta": "«Ci stava la forca, al tempo di mio nonno. Li appendevano qua, così li vedeva chi entrava da Porta Romana. Adesso la forca non c’è più, ma il nome è rimasto, e la ronda pure.» *Indica l’edicola con la lanterna.* «Quella è la Signora del Ponte. La faccia se l’è mangiata il fiume. Le donne di Porta Romana le portano i fiori quando i figli partono.»",
+    "insistono": "«Il segno sotto i piedi? Un cerchio e due tondi ai lati. Lo graffiano di notte, io lo gratto via col coltello, loro lo rifanno. Tre volte, da quest’estate.» *Alza le spalle.* «Ragazzi. O gente della fede vecchia. A me basta che non lo facciano durante il mio turno.»",
+    "mai": "Non sa che cosa significhi il segno (il sole fra due lune, come al casale del guado) né chi lo graffi. ⟦«La Signora del Ponte» è il nome popolare dell’edicola, deciso qui.⟧"
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Fischia. Un fischio lungo, due corti. In tre minuti arrivano altre due ronde. Non combatte se non lo attaccano; se lo attaccano, la Crociata ha attaccato la Guardia Ducale, e lo sa tutta la città entro l’alba.",
+   "soldi": "Uno scudo, un grosso: niente, e lo scrive. Un fiorino, e nessuno lo vede: «Io non ho visto nessuno. Ma la ronda dopo di me, sì.» Funziona per un’ora.",
+   "lusinga": "«Bravo, bravo. Pure mia moglie dice che sono il sergente migliore di Teramum. Poi mi manda a dormire in stalla.» Non cambia niente.",
+   "bugia": "Ha vent’anni di ponte: le scuse le ha sentite tutte. «Mo’ ditemi la verità, che le bugie mi fanno scrivere il doppio.» Svantaggio a convincerlo per il resto della notte."
+  },
+  "battute": [
+   "«Lanterna, nome, motivo. In quest’ordine.»",
+   "«Di notte la città è della Guardia.»",
+   "«Mi fate fare le carte, e io odio le carte.»",
+   "«I terremoti non girano con la lanterna.»",
+   "«T’ puzz’ n’om ambenn’… ma non stanotte, che è tardi.»",
+   "«Il fiume non restituisce niente. Neanche i cappelli.»",
+   "«Io sono nato a Porta Romana. Qua di notte ci si conosce tutti, pure i fantasmi.»",
+   "«Avanti, avanti. La notte è lunga e io sono vecchio.»"
+  ],
+  "uscita": {
+   "frase": "«Avanti. La notte è lunga e io ho ancora mezzo turno.» *Gira la lanterna verso la porta e si rimette in fila coi suoi.*",
+   "dopo": "Scrive la tavoletta (odia farlo) e all’alba la porta alla Rocca: entro mezzogiorno lo Stratega sa dove erano i personaggi stanotte e con chi. Se c’è stato l’agguato, scrive anche il nome di Lu Spaccapreta.",
+   "aggancio": "Se c’è stato l’agguato: «Domani a mezzogiorno, da Za’ Flaminia. Lu Spaccapreta beve quello che ha preso. Io in tabarro là dentro non ci posso entrare. Voi sì.» Se no, guardando la città: «Stanotte non è passato nessuno. Neanche un gatto. Il Gigante, quando sta zitto così, poi si gira.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Al ponte la ronda è del sergente Morico Tavolaccio: lanterna, nome, motivo.",
+    "via": "gratis"
+   },
+   {
+    "info": "La tessera vale fino alla campana; dopo, cella alla Rocca, tessera bruciata e Guarnerio umiliato.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il coprifuoco lo fanno rispettare da una settimana per ordine della Rocca, «per i terremoti».",
+    "via": "gratis"
+   },
+   {
+    "info": "Nell’ordine della Rocca: i carri col segno della Rocca, di notte, non si fermano e non si scrivono; vanno verso levante.",
+    "via": "prova"
+   },
+   {
+    "info": "Di notte in città non succede più niente: ladri, donne di vita e Mazzamarelli stanno a casa, «come se aspettassero qualcosa».",
+    "via": "gratis"
+   },
+   {
+    "info": "Il capo dei bravi è Lu Spaccapreta; spende i soldi nuovi da Za’ Flaminia a Porta Romana; i fiorini nuovi non vengono da Porta Romana.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il segno del cerchio con due tondi sotto l’edicola viene graffiato di notte da quest’estate.",
+    "via": "gratis"
+   },
+   {
+    "info": "Chi paga i bravi; perché la Rocca ha stretto il coprifuoco.",
+    "via": "mai"
+   }
+  ]
+ }
 }

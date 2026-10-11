@@ -10,5 +10,129 @@
  "atti": [],
  "links": [],
  "pub": "Un ragazzino scalzo, con le ginocchia sbucciate e i capelli pieni di polvere, che correva lungo la fila sul ponte. Si è fermato davanti a Mattheus, gli ha tirato la manica, ha detto «Frate Davide» e gli ha messo in mano un rametto di lavanda secca. Poi è sparito fra le ruote.",
- "gm": "Luogo abituale: i vicoli della Lunaria a Bitetto, il rione più povero, sopra il fiume; ⟦il tempio murato di Mortus sta lì⟧ (voce «Teramum»).\nEtà: dieci anni (corretta anche la voce «I fedeli del vicolo», che diceva sette).\nStatistiche: popolano (CA 10, PF 2). Velocissimo nella folla: per prenderlo Atletica o Acrobazia CD 15.\nAspetto: scalzo, magro, ginocchia sbucciate, capelli pieni di polvere; mangia cipolle crude come mele (voce «I fedeli del vicolo»).\nSa: «Mi ha dato un quattrino e mi ha detto: quello col viso stanco e le mani che odorano di terra.» Chi glielo ha detto: «Un votato. Piccolo. Coi sandali rotti.»\nNon sa: chi sia Mattheus; cosa voglia dire la lavanda; le frasi che porta non le capisce.\nVoce: ⟦fiato corto, dialetto, ride quando lo acchiappano⟧.\nCosa vuole: il quattrino, e scappare.\nSegreto: è Tittarello, il messaggero di Frate Davide de li Piccole Vie (voce png-fedeli-del-vicolo; scena «Tempio sigillato di Mortus», dove aspetta Mattheus sul paracarro del vicolo). La lavanda è la stessa lasciata sulla porta murata del tempio.\n\nSe gli chiedono di…:\n\nFermarlo: nessuna prova, è già andato. Inseguirlo: Atletica o Acrobazia CD 15, lo prendono all’arco.\nChi lo manda: «Un votato. Piccolo. Coi sandali rotti.» Il nome «Frate Davide» l’ha già detto.\n\nBattute pronte:\n«Frate Davide.»\n«Mi ha dato un quattrino.»\n«Quello col viso stanco e le mani che odorano di terra.»"
+ "gm": "Luogo abituale: i vicoli della Lunaria a Bitetto, il rione più povero, sopra il fiume; ⟦il tempio murato di Mortus sta lì⟧ (voce «Teramum»).\nEtà: dieci anni (corretta anche la voce «I fedeli del vicolo», che diceva sette).\nStatistiche: popolano (CA 10, PF 2). Velocissimo nella folla: per prenderlo Atletica o Acrobazia CD 15.\nAspetto: scalzo, magro, ginocchia sbucciate, capelli pieni di polvere; mangia cipolle crude come mele (voce «I fedeli del vicolo»).\nSa: «Mi ha dato un quattrino e mi ha detto: quello col viso stanco e le mani che odorano di terra.» Chi glielo ha detto: «Un votato. Piccolo. Coi sandali rotti.»\nNon sa: chi sia Mattheus; cosa voglia dire la lavanda; le frasi che porta non le capisce.\nVoce: ⟦fiato corto, dialetto, ride quando lo acchiappano⟧.\nCosa vuole: il quattrino, e scappare.\nSegreto: è Tittarello, il messaggero di Frate Davide de li Piccole Vie (voce png-fedeli-del-vicolo; scena «Tempio sigillato di Mortus», dove aspetta Mattheus sul paracarro del vicolo). La lavanda è la stessa lasciata sulla porta murata del tempio.\n\nSe gli chiedono di…:\n\nFermarlo: nessuna prova, è già andato. Inseguirlo: Atletica o Acrobazia CD 15, lo prendono all’arco.\nChi lo manda: «Un votato. Piccolo. Coi sandali rotti.» Il nome «Frate Davide» l’ha già detto.\n\nBattute pronte:\n«Frate Davide.»\n«Mi ha dato un quattrino.»\n«Quello col viso stanco e le mani che odorano di terra.»",
+ "dialogo": {
+  "apertura": "*Solo se lo prendono, all’arco (Atletica o Acrobazia CD 15). Si divincola come un gatto bagnato, poi capisce che non serve, si ferma, e ride col fiato corto, i capelli pieni di polvere.* «Lassateme! Ho fatto la cosa mia!» *Si pulisce il naso col polso.* «Io porto le parole. Le parole nen pesano. Mo’ me ne vaje.»",
+  "voce": "Italiano di strada a pezzi, con molto dialetto leggero dentro («nen», «mo’», «lu frate», «addò serve», «frechì» per gli altri bambini), ma sempre capibile. · Tic: «Io porto le parole», «lu frate dice…», «e che ne so». · Ritmo: fiato corto, frasi a scatti, ride quando ha paura; quando ripete una cosa imparata a memoria cambia voce e la dice con la cadenza di chi non la capisce.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Come ti chiami? Di chi sei figlio?»",
+    "risposta": "*Alza il mento, fiero.* «Tittarello.» *Una pausa, come se il nome bastasse per tutto.* «Di nessuno. Mamma è morta quando c’era la febbre, a Bitetto, e papà nen l’ho conosciuto. Dormo dove capita: d’inverno sopra il forno, d’estate dove fa fresco. Mangio quello che trovo.» *Tira fuori di tasca mezza cipolla cruda e le dà un morso come a una mela.* «Lu frate dice che le cipolle fanno bene all’anima. Io dico che fanno bene alla fame.»",
+    "insistono": "«Quanti anni? Dieci. Forse. Lu frate dice dieci, e lu frate sa contare.»",
+    "mai": "Ha dieci anni (la scheda corregge i «sette» della voce «I fedeli del vicolo»). Non dice mai dove dorme davvero: lo sa solo Frate Davide."
+   },
+   {
+    "tema": "Chi ti manda",
+    "domanda": "«Chi ti ha mandato? Chi ti ha dato quel nome?»",
+    "risposta": "*Si gratta la testa, si sforza di ricordare bene, come chi vuole fare un lavoro fatto bene.* «Un votato. Piccolo. Coi sandali rotti. Stamattina, giù al fiume, sotto Bitetto. Mi ha dato un quattrino e mi ha detto: va’ al ponte della Madre, dove arrivano i carri della Crociata, e cerca quello col viso stanco e le mani che odorano di terra. Digli il nome, dagli il fiore, e scappa.» *Mostra il quattrino, che teneva in bocca.* «E io ho fatto così. Il fiore gliel’ho dato, il nome l’ho detto, e stavo scappando, che voi mi avete preso.»",
+    "insistono": "*Alza le spalle.* «Il votato piccolo nen lo so chi è. Il nome è de lu frate. Lu frate è un altro, è lungo lungo, ha i piedi neri. Il votato piccolo l’ha detto da parte sua.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "*Abbassa la voce, guardando le guardie.* «Lu frate nen se trova. È isse che trova a te.» Dice la verità: non sa dove sia Davide. Lo vede quando Davide vuole.",
+     "no": "«Ve l’ho detto. Un votato piccolo. Coi sandali rotti. Mo’ me lassate?»"
+    },
+    "mai": "Chi sia il votato piccolo coi sandali rotti: non lo sa. Dove si nasconde Frate Davide: non lo sa e non lo direbbe.",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Come hai riconosciuto Mattheus",
+    "domanda": "«Perché proprio lui? Come l’hai riconosciuto?»",
+    "risposta": "*Guarda Mattheus dal basso, a lungo, serio, poi ride.* «Quello col viso stanco e le mani che odorano di terra. Così ha detto.» *Annusa l’aria verso di lui, come un cane.* «E è vero. Odorate di terra. Come quelli che scavano al camposanto. Gli altri odorano di cavallo, di ferro e di sudore. Voi di terra.» *Si stringe nelle spalle.* «Nen era difficile. Gli altri ridevano, voi no.»",
+    "insistono": "«Lu frate dice che chi accompagna i morti ha le mani che sanno di terra pure quando se le lava.»",
+    "mai": "Non sa chi sia Mattheus né cosa porti con sé. Non sa niente del Filatterio."
+   },
+   {
+    "tema": "La lavanda",
+    "domanda": "«Che vuol dire questo rametto di lavanda?»",
+    "risposta": "*Guarda il rametto come se lo vedesse per la prima volta.* «E che ne so? È un fiore secco. Odora buono.» *Ci pensa.* «Lu frate ne tiene un sacco, nella stanza sua. Dice che la lavanda la mettono sui morti, che così vanno via puliti. Io l’ho messa pure sotto il cuscino quando mamma è morta, e ho dormito.» *Si stringe nelle spalle.* «A voi l’hanno data perché siete vivo, però. Forse per quando morite.» *Ride.*",
+    "insistono": "*Si guarda alle spalle, verso l’arco.* «La mettono pure su una porta. Giù a Bitetto, dove la strada scende al fiume. Una porta murata, con i sigilli de la Fiamma sopra. La gente passa e ci lascia un rametto, quando nessuno guarda.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "La porta murata è quella del tempio di Mortus, alla Lunaria a Bitetto, nel vicolo che scende dal rione dei poveri verso il fiume: la stessa lavanda è sulla soglia (scena «Teramum — la città» e «Tempio sigillato di Mortus»).",
+     "no": "«È un fiore. Mo’ me lassate andà?»"
+    },
+    "mai": "La preghiera: qui non la dice e non la sa dire per intero. La prima metà («Mortus, accòjele. Mortus, accompàgnele…») la reciterà a Mattheus solo nel vicolo, sul paracarro (scena «Tempio sigillato di Mortus»). Non sa niente della cantina con il cerchio né della cripta.",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Dove troviamo Frate Davide",
+    "domanda": "«Portaci da Frate Davide. Dove sta?»",
+    "risposta": "*Fa di no con la testa, svelto, tre volte.* «Addò serve.» *Morde la cipolla.* «Lu frate nen sta in un posto. Oggi qua, domani là. E se vi porto io, e vi vedono quelli co’ la fiamma ricamata sul petto, a me mi chiudono nell’Ospizio e a lui lo bruciano.» *Si fa piccolo.* «Nen ce dite niente a quelli. Ai questori. Passano nel vicolo due volte al giorno, la mattina e quando cala il sole, e guardano i sigilli sulla porta. Se vedono un forestiero fermo davanti, lo segnano.»",
+    "insistono": "«Lu frate vi trova lui. Quando vuole lui. Lu frate dice: le vie grandi le guarda la Fiamma, io cammino sulle piccole.»",
+    "mai": "Non li porta mai da Davide: non sa dove sia, e anche se lo sapesse non lo direbbe. Davide si trova solo passando dal vicolo e dalla preghiera (scena «Tempio sigillato di Mortus»). ⟦Che lo chiudano nell’Ospizio è una paura di bambino, non una regola.⟧"
+   },
+   {
+    "tema": "Il paracarro, il vicolo",
+    "domanda": "«Se ti vogliamo ritrovare?»",
+    "risposta": "*Lo dice come un segreto grosso, a mezza voce, contento di averne uno.* «Io sto sul paracarro. Giù a Bitetto, nel vicolo che scende al fiume, quello dove la gente nen passa. Tutti i giorni. Lu frate mi ci manda da quando si dice che arriva la Crociata.» *Guarda Mattheus.* «Ci sto per voi, mi sa. Ma lu frate ha detto: al ponte solo il nome e il fiore. Il resto, al vicolo.»",
+    "insistono": "«Il resto che? E che ne so. Il resto lo sa lu frate. Io porto le parole che mi dà, e al ponte mi ha dato solo quella.»",
+    "mai": "Le parole del vicolo (la prima metà della preghiera dell’Atto XI) e l’appuntamento all’ultima campana: solo nel vicolo, solo a Mattheus, solo se Mattheus risponde «…faje truvà la via».",
+    "scena": "teramum_porta"
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Si mette a urlare con tutta la voce che ha.* «Ajute! Ajute! Li forestieri! Me vonne acchiappà!» Le guardie dell’arco si girano, la fila mormora, Iaco scrive anche questo. Se lo lasciano, scappa fra le ruote; se lo tengono ancora, le guardie lo vengono a prendere e se lo portano dentro. Frate Davide lo saprà: per tre giorni nessuno aspetterà Mattheus sul paracarro del vicolo.",
+   "soldi": "*Prende la moneta, la morde, se la mette in bocca accanto all’altra.* «Grazie», dice con la bocca piena. Non cambia niente: le parole che porta le porta gratis, e quelle che non porta non le vende.",
+   "lusinga": "*Ride, imbarazzato, e si gratta le ginocchia sbucciate.* «Bravo io? Lu frate dice che sono un disgraziato.» Gli fa piacere: risponde a una domanda in più, la più facile (il paracarro del vicolo).",
+   "bugia": "Non la capisce, o fa finta. «Lu frate dice che chi dice le bugie se le deve portare appresso, come i sassi in tasca.» E guarda il pavimento finché non gli fanno un’altra domanda."
+  },
+  "battute": [
+   "«Frate Davide.»",
+   "«Io porto le parole. Le parole nen pesano.»",
+   "«Mi ha dato un quattrino.»",
+   "«Quello col viso stanco e le mani che odorano di terra.»",
+   "«Lu frate dice che le cipolle fanno bene all’anima. Io dico che fanno bene alla fame.»",
+   "«Addò serve.»",
+   "«Lassateme, che me vede la gente!»",
+   "«Odorate di terra. Gli altri di cavallo.»",
+   "«Mo’ me ne vaje.»"
+  ],
+  "uscita": {
+   "frase": "*Approfitta di un attimo di distrazione, sguscia via e si volta solo quando è già fra le ruote.* «Lu frate dice: le parole nen pesano, ma la fame sì!» *E sparisce dall’altra parte del ponte.*",
+   "dopo": "Torna a Bitetto per i vicoli, fino al fiume, e la sera dice al votato piccolo, o direttamente a Davide, che il fiore è arrivato in mano giusta. Dal giorno dopo aspetta sul paracarro del vicolo, tutti i giorni, finché Mattheus non passa (scena «Tempio sigillato di Mortus»): chi lo ha visto al ponte lo riconosce subito.",
+   "aggancio": "Il paracarro del vicolo a Bitetto: Tittarello ci sta tutti i giorni, per Mattheus, e «il resto» lo dirà là."
+  },
+  "ottenuto": [
+   {
+    "info": "Il nome «Frate Davide» e un rametto di lavanda secca, per Mattheus.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il ragazzino si chiama Tittarello, è orfano di Bitetto; lo ha mandato un votato piccolo coi sandali rotti, da parte del frate.",
+    "via": "gratis"
+   },
+   {
+    "info": "«Quello col viso stanco e le mani che odorano di terra»: cercavano proprio Mattheus.",
+    "via": "gratis"
+   },
+   {
+    "info": "Frate Davide non si trova: è lui che trova.",
+    "via": "prova"
+   },
+   {
+    "info": "La lavanda si lascia su una porta murata coi sigilli della Fiamma, a Bitetto, dove il vicolo scende al fiume.",
+    "via": "prova"
+   },
+   {
+    "info": "I questori passano nel vicolo due volte al giorno e segnano i forestieri fermi davanti alla porta.",
+    "via": "gratis"
+   },
+   {
+    "info": "Tittarello aspetta tutti i giorni sul paracarro del vicolo; «il resto» lo dirà là.",
+    "via": "gratis"
+   },
+   {
+    "info": "La preghiera di riconoscimento, la cantina col cerchio, dove sta Davide.",
+    "via": "mai"
+   }
+  ]
+ }
 }

@@ -10,5 +10,122 @@
  "atti": [],
  "links": [],
  "pub": "Il ragazzo di stalla dell’osteria de lu Passe: dodici anni, magro, scalzo, la testa rasata per i pidocchi. Dorme nella stalla e stringe la forca come una lancia. «Io non ho visto niente, messere.»",
- "gm": "Luogo abituale: la stalla grande dell’osteria de lu Passe, nell’angolo della paglia ·\nEtà: dodici anni. Figlio di nessuno.\nStatistiche: popolano (CA 10, PF 4). Non combatte.\nMagro, scalzo, la testa rasata per i pidocchi; stringe la forca come una lancia. ⟦Orecchie a sventola, ginocchia sbucciate, paglia dappertutto.⟧\n\nSa: ieri, quando hanno scaricato il quarto carro per cambiare la ruota, una cassa è caduta e lui ha visto dentro: «un cavaliere tutto di ferro, nero e d’argento, rannicchiato come un bambino, con le ginocchia in bocca», che rimesso dritto «s’è sistemato, come uno che dorme»; che di notte la cassa canta la canzone della pecorella che non torna; che il messere è venuto a guardare la cassa rotta, ci ha messo la mano sopra e ha detto una cosa piano, e per un po’ non ha cantato più.\n•\nNon sa: chi sia il messere; cosa sia il fiore raschiato; dove vanno le casse.\nVoce: ⟦bassa, a scatti, guarda sempre verso il fondo della stalla mentre parla.⟧\nCosa vuole: dormire stanotte vicino ai carri della Crociata, «che siete tanti». Se lo prendono sotto la loro protezione, chiede di seguire la colonna.\nSegreto: da ieri non dorme, per paura della cassa.\n\nSe gli chiedono di…:\n…cosa ha visto: Persuasione CD 10 (una moneta, un pezzo di pane o una voce gentile; vantaggio a chi ha una bestia con sé). Fallito: «Niente, messere. Paglia.»\n…venire con la colonna: «Posso?» ⟦Ha già la forca in spalla.⟧\n\nBattute pronte:\n«Io non ho visto niente, messere. Niente.»\n«Di notte canta. Una canzone da bambini. Quella della pecorella che non torna.»"
+ "gm": "Luogo abituale: la stalla grande dell’osteria de lu Passe, nell’angolo della paglia ·\nEtà: dodici anni. Figlio di nessuno.\nStatistiche: popolano (CA 10, PF 4). Non combatte.\nMagro, scalzo, la testa rasata per i pidocchi; stringe la forca come una lancia. ⟦Orecchie a sventola, ginocchia sbucciate, paglia dappertutto.⟧\n\nSa: ieri, quando hanno scaricato il quarto carro per cambiare la ruota, una cassa è caduta e lui ha visto dentro: «un cavaliere tutto di ferro, nero e d’argento, rannicchiato come un bambino, con le ginocchia in bocca», che rimesso dritto «s’è sistemato, come uno che dorme»; che di notte la cassa canta la canzone della pecorella che non torna; che il messere è venuto a guardare la cassa rotta, ci ha messo la mano sopra e ha detto una cosa piano, e per un po’ non ha cantato più.\n•\nNon sa: chi sia il messere; cosa sia il fiore raschiato; dove vanno le casse.\nVoce: ⟦bassa, a scatti, guarda sempre verso il fondo della stalla mentre parla.⟧\nCosa vuole: dormire stanotte vicino ai carri della Crociata, «che siete tanti». Se lo prendono sotto la loro protezione, chiede di seguire la colonna.\nSegreto: da ieri non dorme, per paura della cassa.\n\nSe gli chiedono di…:\n…cosa ha visto: Persuasione CD 10 (una moneta, un pezzo di pane o una voce gentile; vantaggio a chi ha una bestia con sé). Fallito: «Niente, messere. Paglia.»\n…venire con la colonna: «Posso?» ⟦Ha già la forca in spalla.⟧\n\nBattute pronte:\n«Io non ho visto niente, messere. Niente.»\n«Di notte canta. Una canzone da bambini. Quella della pecorella che non torna.»",
+ "dialogo": {
+  "apertura": "*Dal fondo della stalla, da sopra la forca stretta come una lancia, un ragazzo magro e scalzo vi guarda e fa finta di niente. Se avete l’asse in mano, guarda l’asse.* «Io non ho visto niente, messere.» *Pausa.* «Niente.»",
+  "voce": "Dialetto teramano da ragazzo di stalla, a scatti, a bassa voce («messe’», «gnente», «mo’», «la cascia»). · Tic: «Io non ho visto niente» anche quando sta raccontando; guarda sempre verso il fondo della stalla mentre parla; si gratta la testa rasata. · Ritmo: frasi corte, poi tutto d’un fiato quando si sblocca, come si raccontano le cose che fanno paura.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Come ti chiami? Dormi qui?»",
+    "risposta": "«Pasqualino.» *Si gratta la testa rasata.* «Pasqualino e basta, che mamma e papà non ce li ho. Lu Passe m’ha preso che ero così» *mostra un’altezza da bambino piccolo* «e da allora sto con le bestie. Dormo qua, sulla paglia, che è calda. Le bestie non dicono niente e non picchiano. Ninetta mi porta il pane.» *Stringe la forca.* «Da ieri però non ci dormo più tanto bene, qua.»",
+    "insistono": "«Perché? Perché niente, messe’.» *Guarda il fondo della stalla.* «Perché la notte è lunga.»",
+    "mai": "Non sa chi siano i suoi genitori."
+   },
+   {
+    "tema": "Cosa hai visto",
+    "domanda": "«Cos’è successo ieri, quando hanno scaricato il carro?»",
+    "risposta": "«Niente, messe’. Paglia.» *Ma non stacca gli occhi dal fondo della stalla, dove la paglia è smossa.* «Hanno cambiato la ruota. Il fabbro di Bbashanë ha battuto tutto il pomeriggio. Io tenevo i buoi. Basta.»",
+    "insistono": "*Si siede sulla paglia, la forca sulle ginocchia, e racconta a bassa voce, tutto d’un fiato.* «Una cascia è caduta. S’è aperta così.» *Allarga le mani di un palmo.* «C’era un cavaliere dentro, messe’. Tutto di ferro, nero e d’argento. Rannicchiato come un bambino, con le ginocchia in bocca. E quando l’hanno rimesso dritto… s’è sistemato. Come uno che dorme. Gli uomini col coltello l’hanno richiusa subito e m’hanno guardato. Io ho fatto finta di guardare i buoi.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 10,
+     "si": "Si siede e racconta tutto (la seconda risposta, poi il canto e la mano del messere). Vantaggio a chi ha una bestia con sé (Zenith, un cavallo, un mulo) o a chi gli offre una moneta, un pezzo di pane o una voce gentile.",
+     "no": "«Niente, messe’. Paglia.» Ma non stacca gli occhi dal fondo della stalla."
+    },
+    "mai": "Non sa cosa sia l’armatura, né chi ci sia dentro, né dove vadano le casse."
+   },
+   {
+    "tema": "Il canto",
+    "domanda": "«Hai sentito qualcosa, di notte?»",
+    "risposta": "*Si stringe le ginocchia.* «Di notte canta. Una canzone da bambini. Quella della pecorella che non torna, che la cantano le mamme per far dormire i figli.» *Piano.* «A me non me l’ha cantata mai nessuno. Me l’ha cantata la cascia.»",
+    "insistono": "«Era una voce di ragazza, messe’. Giovane. Non tanto più grande di Ninetta. E non era una cascia sola: dai carri, di notte, ne parla più d’una. Una piange. Una chiama.» *Gli si inumidiscono gli occhi.* «Io mi sono messo la paglia nelle orecchie. Non è servito.»",
+    "mai": "Non sa il nome della ragazza (Lucia di Sant’Atto: lo può dire solo lei, se la liberano, modulo «Lasciarla andare»)."
+   },
+   {
+    "tema": "Il messere e la cassa",
+    "domanda": "«E il signore vestito di nero? L’hai visto vicino alle casse?»",
+    "risposta": "«Il messere è venuto a guardare la cascia rotta, dopo. Da solo, con la lanterna. Ha messo la mano sopra, così, aperta» *appoggia la mano sulla paglia* «e ha detto una cosa piano. Io stavo nascosto dietro il bue grosso.» *Deglutisce.* «Poi non ha cantato più, per un po’. Come un cane quando il padrone gli dice basta.»",
+    "insistono": "«Cosa ha detto? Non ho sentito, messe’. Una parola sola, o due. Ma l’ha detta come la dice Ninetta alle galline la sera: buona, ferma.» *Pausa.* «E il messere puzza di fiori pure lui. Più della cascia.»",
+    "mai": "Non ha sentito le parole del messere."
+   },
+   {
+    "tema": "L’asse",
+    "domanda": "«Sai niente di quest’asse rotta?»",
+    "risposta": "*Guarda l’asse, poi voi.* «È della cascia caduta. S’è spaccata quando è caduta, e quelli l’hanno buttata nella paglia. Io non l’ho toccata.» *Si allontana di un passo.* «Non la tocco. Di dentro è graffiata. Come uno che vuole uscire.»",
+    "insistono": "«Di fuori c’era un fiore, bruciato nel legno. Uno degli uomini col coltello l’ha raschiato via ieri sera, prima di buttarla. E l’ha raschiato pure dal fianco del terzo carro.» *Si gratta la testa.* «Perché uno raschia un fiore, messe’? Io i fiori li lascio stare.»",
+    "mai": "Non sa cosa sia il Loto Nero né di chi sia il fiore."
+   },
+   {
+    "tema": "Venire con voi",
+    "domanda": "«Vuoi stare con noi, stanotte?»",
+    "risposta": "*Ha già la forca in spalla.* «Posso? Stanotte vicino ai carri vostri, che siete tanti.» *Indica il fondo della stalla senza guardarlo.* «Qua da solo non ci sto. Porto le bestie vostre a bere, ve le striglio. Gratis.»",
+    "insistono": "*Se lo prendono sotto la loro protezione, sottovoce:* «E domani? Domani potete portarmi pure a Teramum? Lu Passe non dice niente. Lu Passe ha già tanti conti.» *Si stringe la forca.* «Io sono buono coi muli. I muli mi vogliono bene.»",
+    "mai": "Non ruba niente alla Crociata e non scappa: se lo prendono, li segue come un cane."
+   },
+   {
+    "tema": "Le bestie e Zenith",
+    "domanda": "(Se Luigis ha Zenith con sé, o qualcuno ha una bestia.)",
+    "risposta": "*Gli si spalancano gli occhi.* «È vostra? Si fa toccare?» *Allunga la mano, la ritira, la allunga di nuovo.* «Le bestie lo sanno, messe’. I buoi del messere da ieri non mangiano. Stanno con la testa girata dall’altra parte dei carri. I nostri invece mangiano. Le bestie sanno chi è buono.»",
+    "insistono": "«Pure il bue grosso del convoglio, quello con la macchia, ieri notte ha pianto. I buoi piangono, lo sapevate? Pochi lo sanno.»",
+    "mai": "Niente da nascondere."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Alza la forca come una lancia, gli tremano le braccia.* «Io non ho visto niente! Niente!» Poi scappa nel fienile e non si fa più trovare fino all’alba.",
+   "soldi": "*Prende la moneta, la morde, la guarda.* «Per me?» Si siede subito sulla paglia e racconta tutto, senza prova.",
+   "lusinga": "«Coraggioso io? Io dormo coi buoi, messe’.» Ma si raddrizza, e da quel momento li segue ovunque.",
+   "bugia": "Non se ne accorge. Ci crede, e ci crede per sempre: se poi lo scopre, non lo dice, ma smette di parlare a chi gli ha mentito."
+  },
+  "battute": [
+   "«Io non ho visto niente, messe’. Niente.»",
+   "«Di notte canta. Una canzone da bambini.»",
+   "«Le bestie sanno chi è buono.»",
+   "«I buoi piangono, lo sapevate?»",
+   "«Ninetta dice che sembro un manico di scopa. Ninetta è cattiva.» *Ride.*",
+   "«Posso dormire vicino a voi? Che siete tanti.»",
+   "«Perché uno raschia un fiore, messe’?»"
+  ],
+  "uscita": {
+   "frase": "*Si stringe la forca e guarda il fondo della stalla.* «Mo’ devo dare la biada ai buoi. Pure a quelli del messere, che tanto non la mangiano.» *Poi, piano:* «Stanotte posso venire da voi?»",
+   "dopo": "Se gli hanno detto di sì, dorme accanto ai carri della Crociata con la forca fra le braccia, e di notte può fare da distrazione (far scappare un bue verso il cortile: vantaggio alla Furtività per arrivare alle casse, modulo «Di notte, ai carri»). Se gli hanno detto di no, resta sveglio nel fienile. Al terremoto corre dalle bestie per calmarle. All’alba, se lo hanno preso sotto protezione, è già sul carro della Crociata.",
+   "aggancio": "«Era una ragazza, messe’. Cantava come canta una persona.» La voce nella cassa è una persona: chi va ai carri di notte può sentirla e provare a liberarla (moduli «Di notte, ai carri» e «Lasciarla andare»)."
+  },
+  "ottenuto": [
+   {
+    "info": "Pasqualino dorme nella stalla, è orfano e ha paura del fondo della stalla da ieri.",
+    "via": "gratis"
+   },
+   {
+    "info": "Nella cassa caduta c’era un cavaliere di ferro nero e d’argento, rannicchiato, che rimesso dritto «s’è sistemato come uno che dorme».",
+    "via": "prova"
+   },
+   {
+    "info": "Di notte la cassa canta la canzone della pecorella con una voce di ragazza, e dai carri di notte parlano altre voci.",
+    "via": "prova"
+   },
+   {
+    "info": "Il messere ha messo la mano sulla cassa e l’ha zittita con una parola, «come un cane quando il padrone gli dice basta».",
+    "via": "prova"
+   },
+   {
+    "info": "L’asse è della cassa caduta; il fiore è stato raschiato anche dal carro di mezzo, ieri sera, da un uomo della scorta.",
+    "via": "gratis"
+   },
+   {
+    "info": "I buoi del convoglio non mangiano e stanno girati dall’altra parte dei carri.",
+    "via": "gratis"
+   },
+   {
+    "info": "Pasqualino può distrarre le guardie di notte facendo scappare un bue.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il nome della ragazza nella cassa, cosa abbia detto il messere.",
+    "via": "mai"
+   }
+  ]
+ }
 }
