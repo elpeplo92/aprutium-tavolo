@@ -1,10 +1,10 @@
 {
  "id": "te-basilica-aurea",
  "tipo": "luogo",
- "titolo": "2. Basilica Aurea dei Santi Martiri",
- "sottotitolo": "il cuore della Fiamma Solare nel Ducato",
+ "titolo": "2. La Basilica Aurea",
+ "sottotitolo": "il solario grande della Vecchia Madre e del Lucente Berardo — il cuore della Fiamma nel Ducato",
  "citta": "teramum",
- "gruppo": "1. San Giorgio",
+ "gruppo": "1. Il Lucente Giorgio",
  "livello": "luogo",
  "parent": "te-rione-san-giorgio",
  "img": "Luogo — 2. Basilica Aurea dei Santi Martiri.jpg",
@@ -12,46 +12,47 @@
  "atti": [],
  "compendio": true,
  "scheda": {
-  "Tipo": "basilica della Fiamma Solare, sede di Casa Impalox",
-  "Rione": "1. San Giorgio",
-  "Chi la tiene": "Arcimandrita Serafinus Impalox",
+  "Tipo": "il solario grande di Teramum, sede della Fiamma nel Ducato e di Casa Impaloni",
+  "Rione": "1. Il Lucente Giorgio, sulla Piazza del Mercato",
+  "Chi la tiene": "l’Arciflamine Serafino Impaloni",
+  "Campane": "il campanile è alto cinquanta braccia; la campana più grande si chiama l’Aprutina",
   "Orari": "aperta dall’alba al vespro; le campane scandiscono le ore di tutta la città",
-  "Collegato a": "Palazzo Ducale, sull’altro lato della piazza"
+  "Collegato a": "Palazzo Ducale, sull’altro lato della Piazza del Mercato"
  },
  "pub": [
   {
    "t": "Aspetto esterno",
-   "txt": "La facciata è coperta d’oro: mosaici di fondo dorato, santi in fila, e al centro Valerus come lo dipinge la Chiesa, un re guerriero con lancia e scudo. Al mattino brilla tanto che bisogna socchiudere gli occhi.\nAlla base, sotto l’oro, corre un basamento di pietra grigia a blocchi grossi, consumati. L’oro comincia un metro sopra."
+   "txt": "Una facciata di pietra chiara, coi merli in cima come una fortezza. Il portale è scolpito: un angelo, e la Vecchia Madre con le mani aperte. Sopra tutto, il campanile, alto cinquanta braccia.\nAlla base, le pietre cambiano: blocchi grigi, enormi, consumati, presi dai teatri antichi. La Basilica è stata costruita con quelli, dopo il grande incendio."
   },
   {
    "t": "Entrando",
-   "txt": "Incenso, e freddo. Tre navate, colonne rivestite di marmo, e in alto le cupole a mosaico con i Santi Martiri della Guerra delle Due Lune, ognuno con lo strumento del proprio martirio.\nLa voce si perde in alto. Il pavimento è di marmo nuovo, ma in qualche punto le lastre sono state rattoppate e si sente il vuoto sotto il passo."
+   "txt": "Incenso, e freddo. Tre navate, colonne alte, e sulle pareti i Lucenti Martiri della Guerra delle Due Lune, ognuno con lo strumento del proprio martirio.\nSull’altare maggiore, un paliotto d’argento e d’oro con trentacinque storie sbalzate: è per lui che la chiamano Basilica Aurea. Al mattino, quando ci batte la luce, brilla tanto che bisogna socchiudere gli occhi.\nLa voce si perde in alto. Il pavimento è di marmo nuovo, ma in qualche punto le lastre sono state rattoppate e si sente il vuoto sotto il passo."
   },
   {
    "t": "Cosa si vede subito",
-   "txt": "• Inquisitori in nero e oro davanti alle cappelle laterali. Guardano le mani dei fedeli più delle facce.\n• Pellegrini in ginocchio, candele a centinaia, cassette per le offerte con il lucchetto.\n• Dietro l’altare maggiore una scala scende sotto il pavimento, chiusa da una grata. Da lì sale aria fredda.\n• Le campane: quando suonano, la basilica vibra come una cassa di risonanza."
+   "txt": "• Questori in nero e oro davanti alle are laterali. Guardano le mani dei fedeli più delle facce.\n• Viandanti in ginocchio, candele a centinaia, cassette per le offerte con il lucchetto.\n• Dietro l’altare maggiore una scala scende sotto il pavimento, chiusa da una grata. Da lì sale aria fredda.\n• Le campane: quando suona l’Aprutina, la Basilica vibra come una cassa di risonanza."
   }
  ],
  "gm": [
   {
    "t": "Cosa sta succedendo oggi",
-   "txt": "• L’Arcimandrita predica sui Forgiati: il male si nasconde nelle vecchie famiglie e nei vecchi riti. Non fa nomi. Non ce n’è bisogno.\n• Gli inquisitori prendono nota di chi entra: la Crociata porta con sé un Erede, un Conte pretuziano e troppi eretici per i loro gusti.\n• Da qualche mese le candele davanti alla scala della cripta si piegano tutte dalla stessa parte, anche senza vento. I sacrestani hanno smesso di accenderle lì."
+   "txt": "• L’Arciflamine predica sui Forgiati: il male si nasconde nelle vecchie famiglie e nei vecchi riti. Non fa nomi. Non ce n’è bisogno.\n• I questori prendono nota di chi entra: la Crociata porta con sé un Erede, un Conte pretuziano e troppi eretici per i loro gusti.\n• Da qualche mese le candele davanti alla scala della cripta si piegano tutte dalla stessa parte, anche senza vento. I votati hanno smesso di accenderle lì."
   },
   {
    "t": "Persone presenti",
-   "txt": "Arcimandrita Serafinus Impalox — capo di Casa Impalox, sessant’anni, membro del Consiglio Reggente. Un politico in vesti sacre: arrogante, dogmatico, burocrate. Non è un fanatico: è un cinico che usa la devozione degli altri.\nQui e ora: riceve in sacrestia, seduto, con un segretario che scrive tutto. Sa già chi siete. Vuole capire chi di voi può essere comprato e chi va bruciato.\nBattute: «La Fiamma pulisce. Il dubbio uccide. Voi, figlioli, di che cosa dubitate?» · «Il Conte di Canzanium porta un’armatura molto interessante. Me la farebbe vedere da vicino?»\n\nInquisitori della Basilica — Qui e ora: due di loro seguono a distanza chiunque arrivi con la Crociata.\n\nMattheus, qui dentro, è l’uomo più in pericolo del gruppo: se la sua magia si mostra, la luce argentea lo tradisce.\n\nSchede complete: Serafinus Impalox, Zi’ Pasquale «Lu Battaje», il sacrestano Clemente, l’Inquisitore Bonifatius Caldora (PNG di Teramum)."
+   "txt": "L’Arciflamine Serafino Impaloni — capo di Casa Impaloni, sessant’anni, membro del Consiglio Reggente. Un politico in vesti sacre: arrogante, dogmatico, burocrate. Non è un fanatico: è un cinico che usa la devozione degli altri.\nQui e ora: riceve in sacrestia, seduto, con un segretario che scrive tutto. Sa già chi siete. Vuole capire chi di voi può essere comprato e chi va bruciato.\nBattute: «La Fiamma pulisce. Il dubbio uccide. Voi, figlioli, di che cosa dubitate?» · «Il Conte di Canzañë porta un’armatura molto interessante. Me la farebbe vedere da vicino?»\n\nI questori della Basilica — Qui e ora: due di loro seguono a distanza chiunque arrivi con la Crociata.\n\nMattheus, qui dentro, è l’uomo più in pericolo del gruppo: se la sua magia si mostra, la luce argentea lo tradisce.\n\nSchede complete: Serafino Impaloni, Zi’ Pasquale «Lu Battaje» (il campanaro), Clemente (il sacrestano maggiore), il questore Bonifatius Caldora (PNG di Teramum)."
   },
   {
    "t": "Voci e dicerie (d6)",
-   "txt": "1. La Basilica è stata costruita sopra un tempio più vecchio, e il tempio sopra una grotta.\n2. Sotto la cripta c’è una porta murata con una luna incisa. Chi l’ha vista ha preso la febbre.\n3. L’Arcimandrita ha fatto espellere tre volte un vecchio mago dei Tancredus. Tre volte il mago è tornato.\n4. Gli inquisitori hanno sequestrato una ciotola d’argento a una levatrice: «roba de Maia».\n5. Le campane hanno suonato da sole, una notte d’inverno. Il giorno dopo la terra ha tremato.\n6. Il vecchio duomo si chiamava Santa Maria. Il nome non si dice più in chiesa."
+   "txt": "1. La Basilica è stata costruita sopra un tempio più vecchio, e il tempio sopra una grotta.\n2. Sotto la cripta c’è una porta murata con una luna incisa. Chi l’ha vista ha preso la febbre.\n3. L’Arciflamine ha fatto espellere tre volte un vecchio mago dei Savini. Tre volte il mago è tornato.\n4. I questori hanno sequestrato una ciotola d’argento a una levatrice: «roba de Maia».\n5. L’Aprutina ha suonato da sola, una notte d’inverno. Il giorno dopo la terra ha tremato.\n6. Prima che ci mettessero il Lucente Berardo, la Basilica era solo della Vecchia Madre. In Basilica, questo, non lo dice nessuno."
   },
   {
    "t": "Segreti",
-   "txt": "• Sotto la cripta della vecchia cattedrale di Santa Maria Aprutiensis i difensori di Teramum attivarono un Sigillo Lunare durante la Guerra delle Due Lune. La Basilica fu costruita sopra quel punto esatto come tappo spirituale: la fede nel Sole per sopprimere il potere della Luna.\n• La magia di Lyaras ha disturbato il Sigillo: le candele, il freddo, le campane che suonano da sole sono i sintomi.\n• Secondo 08 - Ducato, Casa Impalox non sa cosa dorme sotto il proprio tempio.\n• Nell’Era della Pietra Sovrapposta la Basilica Aurea sorse sul tempio del Gigante dei Pretuziani.\n• Il diario di Iuvenza (Atto XI) parla di un «passaggio sotto la Basilica Aurea» chiamato «la chiave vera».\n• Impalox usa la crisi dei Forgiati per un’epurazione contro le casate pretuziane dei vecchi riti (Cerullius, de Caelis): Alessandros è un bersaglio naturale."
+   "txt": "• Sotto la cripta i difensori di Teramum attivarono un Sigillo Lunare durante la Guerra delle Due Lune. La Basilica fu costruita sopra quel punto esatto come tappo spirituale: la fede nel Sole per sopprimere il potere della Luna.\n• Dalla cripta del Lucente Berardo parte un cunicolo verso la piazza: è la strada del master (voce Teramum). Il campanaro sente la campana che suona da sola, sotto terra.\n• La magia di Lyaras ha disturbato il Sigillo: le candele, il freddo, le campane che suonano da sole sono i sintomi.\n• Secondo 08 - Ducato, Casa Impaloni non sa cosa dorme sotto il proprio solario.\n• Nell’Era della Pietra Sovrapposta la Basilica Aurea sorse sul tempio del Gigante dei Pretuziani.\n• Il diario di Iuvenza (Atto XI) parla di un «passaggio sotto la Basilica Aurea» chiamato «la chiave vera».\n• Impaloni usa la crisi dei Forgiati per un’epurazione contro le casate pretuziane dei vecchi riti. La sua lista: Casa Cerullius, Casa de Caelis, il Magister Celino Savini, Frate Davide de li Piccole Vie (voce del Ducato). Alessandros è un bersaglio naturale. Il Luminor Meridionale lo finanzia in segreto."
   },
   {
    "t": "Da decidere",
-   "txt": "• La forgia di annullamento che può spezzare il filatterio di Lyaras: l’Atto IX dice «sotto la Cattedrale Ducale di Teramum»; il canone non dice se la Cattedrale Ducale sia questa Basilica, la vecchia Santa Maria Aprutiensis o un altro edificio. Non scelto. E il filatterio stesso è in conflitto (CC-04: Pietraluna nell’Atto VII, la scatola di ossidiana nell’Atto IX).\n• Cronologia in conflitto: la Basilica sorge sul tempio del Gigante al tempo del Patto (08 - Ducato, §Era della Pietra Sovrapposta) ma è anche la «nuova» basilica costruita dopo la Guerra sopra Santa Maria Aprutiensis. Proposta: due fasi dello stesso cantiere.\n• Titolo e motto di Impalox variano: Arcimandrita / Alto Chierico / Arciprete; «La Fiamma Pulisce, il Dubbio Uccide» (08 - Ducato) contro «La Fiamma Non Perdona» (Manuale §7.1.2).\n• Impalox sa o non sa del Sigillo? 08 - Ducato dice di no; conviene tenerlo così.\n• PNG minore: il campanaro Zi’ Pasquale «Lu Battaje» (ora ha la sua scheda), che sa quando le campane hanno suonato da sole e ha paura a dirlo.\n• Scena del tavolo «Basilica Aurea» (te_basilica): 7 punti — sagrato, navata, campanile, sacrestia dell’Arcimandrita, altare e grata, cripta di Santa Maria Aprutiensis, porta con la luna.\n• La porta con la luna in fondo alla cripta è il «passaggio sotto la Basilica Aurea» del diario di Iuvenza, «la chiave vera»: proposta, una squadra di Iuvenza scava da lì con le sue armature nuove («Ne ho altri. Più nuovi. Più forti.»). Se ci sia sempre o solo di notte, da decidere.\n• Quale dei sette Sigilli Lunari sia quello sotto il cerchio di piombo, e come si purifica: non stabilito.\n• Il profilo di Alessandros nomina anche una «Cattedrale Solare di Teramum», dove serviva il suo maestro Ser Audentius Flavian: terzo nome da mettere accanto a Basilica Aurea e Cattedrale Ducale. Audentius è ancora qui? Non stabilito.\n• PNG nuovi: il sacrestano Clemente (ha venduto una copia della chiave della grata a un «Messere» dei Tigli) e l’Inquisitore Bonifatius Caldora. Fra’ Tobia, il segretario dell’Arcimandrita, è solo nominato.\n• La lista dell’Arcimandrita (nel registro di Fra’ Tobia): Cerullius, de Caelis, Caelinus Tancredus, Frate Davide, una levatrice di San Leonardo, gli Speziali d’Argento. Proposta."
+   "txt": "• La forgia di annullamento che può spezzare il filatterio di Lyaras: l’Atto IX dice «sotto la Cattedrale Ducale di Teramum». La voce Teramum la mette sotto il Duomo, cioè sotto la Basilica Aurea; la voce del Ducato lascia aperto se Basilica Aurea e Cattedrale Ducale siano lo stesso edificio. E il filatterio stesso è in conflitto (CC-04: Pietraluna nell’Atto VII, la scatola di ossidiana nell’Atto IX).\n• La basilica vecchia: la voce Teramum dice che la Torre Bruciata è il suo campanile, ancora nero del fuoco. Le scene la chiamavano «Santa Maria Aprutiensis» e ne mettevano la cripta sotto la Basilica nuova. Proposta: la cripta sotto la Basilica è quella del Lucente Berardo, scavata dentro fondamenta più antiche; col Lessico il nome vecchio diventa ⟦la Lunaria Aprutiensis⟧.\n• Cronologia: la Basilica sorge sul tempio del Gigante al tempo del Patto (08 - Ducato, §Era della Pietra Sovrapposta), ma è anche costruita dopo il grande incendio con le pietre dei teatri antichi (voce Teramum). Proposta: due fasi dello stesso cantiere.\n• Titolo e motto di Impaloni: il Lessico di Ea dice Arciflamine (la tabella della voce del Ducato dice ancora Arcimandrita); «La Fiamma Pulisce, il Dubbio Uccide» (08 - Ducato) contro «La Fiamma Non Perdona» (Manuale §7.1.2).\n• Impaloni sa o non sa del Sigillo? 08 - Ducato dice di no; conviene tenerlo così.\n• Il campanaro Zi’ Pasquale «Lu Battaje» (ha la sua scheda) sa quando le campane hanno suonato da sole e ha paura a dirlo.\n• Scena del tavolo «Basilica Aurea» (te_basilica): 7 punti — sagrato, navata, campanile, sacrestia dell’Arciflamine, altare e grata, cripta vecchia, porta con la luna. La scena ha ancora i nomi vecchi delle casate, «Santa Maria Aprutiensis» e la facciata d’oro.\n• La porta con la luna in fondo alla cripta è il «passaggio sotto la Basilica Aurea» del diario di Iuvenza, «la chiave vera»: proposta, una squadra di Iuvenza scava da lì con le sue armature nuove («Ne ho altri. Più nuovi. Più forti.»). Se ci sia sempre o solo di notte, da decidere.\n• Quale dei sette Sigilli Lunari sia quello sotto il cerchio di piombo, e come si purifica: non stabilito (la voce del Ducato propone quello della Carne).\n• Il profilo di Alessandros nomina anche una «Cattedrale Solare di Teramum», dove serviva il suo maestro Ser Audentius Flavian: terzo nome da mettere accanto a Basilica Aurea e Cattedrale Ducale. Audentius è ancora qui? Non stabilito.\n• PNG nuovi: il sacrestano Clemente (ha venduto una copia della chiave della grata a un «Messere» dei Tigli) e il questore Bonifatius Caldora. Fra’ Tobia, il segretario dell’Arciflamine, è solo nominato.\n• La lista dell’Arciflamine (nel registro di Fra’ Tobia): oltre ai quattro nomi della voce del Ducato, una levatrice di Porta Romana e gli Speziali d’Argento. Proposta."
   }
  ],
  "prove": [
@@ -59,8 +60,8 @@
    "t": "L’iconografia",
    "skill": "Religione",
    "dc": 12,
-   "ok": "il Valerus con lancia e scudo è un’immagine della Chiesa del dopoguerra, del Concilio del 1247. Nei mosaici più alti, quelli vecchi, al suo posto c’è solo un disco di luce.",
-   "ko": "il Sole e i Santi, come in ogni chiesa del Ducato."
+   "ok": "il Valerus con lancia e scudo, nelle storie nuove del paliotto, è un’immagine della Fiamma del dopoguerra, del Concilio del 1247. Nelle formelle più vecchie, al suo posto, c’è solo un disco di luce.",
+   "ko": "il Sole e i Lucenti, come in ogni solario del Ducato."
   },
   {
    "t": "La scala dietro l’altare",
@@ -70,18 +71,18 @@
    "ko": "una cripta chiusa, come tutte."
   },
   {
-   "t": "Il vecchio duomo",
+   "t": "La cripta vecchia",
    "skill": "Storia",
    "dc": 14,
-   "ok": "prima della Basilica, qui c’era la cattedrale di Santa Maria Aprutiensis. La cripta è ancora la sua: la Basilica nuova le è stata costruita sopra dopo la Guerra.",
+   "ok": "la cripta è più vecchia della Basilica: è scavata dentro le fondamenta di un solario più antico, e la Basilica nuova le è stata costruita sopra dopo la Guerra.",
    "ko": "la Basilica c’è da sempre, almeno così dice chiunque lo sappia."
   },
   {
-   "t": "Passare davanti agli inquisitori",
+   "t": "Passare davanti ai questori",
    "skill": "Inganno",
    "dc": 14,
-   "ok": "vi prendono per pellegrini qualunque e smettono di seguirvi.",
-   "ko": "un inquisitore scrive i vostri nomi, e la sera l’Arcimandrita li legge."
+   "ok": "vi prendono per viandanti qualunque e smettono di seguirvi.",
+   "ko": "un questore scrive i vostri nomi, e la sera l’Arciflamine li legge."
   }
  ],
  "links": [
