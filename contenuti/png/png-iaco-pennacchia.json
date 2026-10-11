@@ -10,5 +10,154 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: quarantacinque. Sergente da dodici anni.\nStatistiche: Sergente della Guardia Ducale (Bestiario) con 22 PF; non combatte se può evitarlo. Percezione +5.\nAspetto: magro, pelato, orecchie a sventola, dita macchiate di cera. Il ricamo della torre e del lupo sul tabarro è consumato dove appoggia la tavoletta. Non si alza mai dal tavolo, se non per lo stendardo.\nSa: il numero esatto di tutto (39 persone, 5 carri, 23 bestie, un mulo zoppo, diciassette mosche); il Bando; che la tavoletta portava già scritto «colonna armata priva di mandato» quando è arrivato; il secondo ordine a voce: mandare subito il ragazzo alla Rocca appena arriva la colonna.\nNon sa: chi alla Rocca volesse saperlo per primo. Perché.\nVoce: monotona, precisa, senza aggettivi. Quasi sorride solo quando parla di numeri.\nCosa vuole: che i conti tornino.\nSegreto: il secondo ordine gli pesa. Non gli piacciono gli ordini che non si scrivono.\n\nSe gli chiedono di…:\n\nIl ragazzo mandato di corsa: non risponde. Intuizione CD 13: ha due ordini e il secondo gli pesa; il ragazzo è andato alla Rocca dei Grazianus, su Piazza Garibaldi, all’altro capo della città.\nScrivere «pellegrini» invece di «colonna armata»: Persuasione o Inganno CD 14 (vantaggio se il picchetto di Colleatterrato ha già scritto «pellegrini»).\nCorromperlo: «Metti via. Qua la Guardia non si compra. Si comprano gli scrivani.»\nMinacciarlo: «Scrivo anche questo?» E lo scrive.\n\nBattute pronte:\n«Nome, provenienza, numero, armi. In quest’ordine, e senza discorsi.»\n«Questa porta si apre per la Madre e per i lucenti. Voi siete lucenti?»\n«Contare non è decidere. Io conto.»\n«Diciassette. Ora diciotto.»"
+ "gm": "Età: quarantacinque. Sergente da dodici anni.\nStatistiche: Sergente della Guardia Ducale (Bestiario) con 22 PF; non combatte se può evitarlo. Percezione +5.\nAspetto: magro, pelato, orecchie a sventola, dita macchiate di cera. Il ricamo della torre e del lupo sul tabarro è consumato dove appoggia la tavoletta. Non si alza mai dal tavolo, se non per lo stendardo.\nSa: il numero esatto di tutto (39 persone, 5 carri, 23 bestie, un mulo zoppo, diciassette mosche); il Bando; che la tavoletta portava già scritto «colonna armata priva di mandato» quando è arrivato; il secondo ordine a voce: mandare subito il ragazzo alla Rocca appena arriva la colonna.\nNon sa: chi alla Rocca volesse saperlo per primo. Perché.\nVoce: monotona, precisa, senza aggettivi. Quasi sorride solo quando parla di numeri.\nCosa vuole: che i conti tornino.\nSegreto: il secondo ordine gli pesa. Non gli piacciono gli ordini che non si scrivono.\n\nSe gli chiedono di…:\n\nIl ragazzo mandato di corsa: non risponde. Intuizione CD 13: ha due ordini e il secondo gli pesa; il ragazzo è andato alla Rocca dei Grazianus, su Piazza Garibaldi, all’altro capo della città.\nScrivere «pellegrini» invece di «colonna armata»: Persuasione o Inganno CD 14 (vantaggio se il picchetto di Colleatterrato ha già scritto «pellegrini»).\nCorromperlo: «Metti via. Qua la Guardia non si compra. Si comprano gli scrivani.»\nMinacciarlo: «Scrivo anche questo?» E lo scrive.\n\nBattute pronte:\n«Nome, provenienza, numero, armi. In quest’ordine, e senza discorsi.»\n«Questa porta si apre per la Madre e per i lucenti. Voi siete lucenti?»\n«Contare non è decidere. Io conto.»\n«Diciassette. Ora diciotto.»",
+ "dialogo": {
+  "apertura": "*Non si alza. Vi guarda, conta sottovoce, scrive: sulla cera ci sono già dei segni. Accanto al tavolo, il ragazzo con le gambe lunghe è già partito di corsa.* «Nome, provenienza, numero, armi.» *Non alza la testa.* «In quest’ordine, e senza discorsi.»",
+  "voce": "Italiano di caserma, monotono, senza aggettivi; un filo di teramano solo sui numeri e quando è stanco («trentanove, nen trentotto») · Tic: «Io conto», «In quest’ordine», ripete i numeri a mezza voce, la stilo che si ferma mezzo respiro quando sente un nome di Casata · Ritmo: lento, piatto, non alza mai la testa; quasi sorride solo quando parla di numeri.",
+  "argomenti": [
+   {
+    "tema": "Chi è, lu Cuntatùre",
+    "domanda": "«Perché ti chiamano lu Cuntatùre?»",
+    "risposta": "*Per la prima volta quasi sorride.* «Perché conto. Pure le mosche.» *Indica col mento il primo mulo.* «Ce ne sono diciassette su quel mulo.» *Torna alla cera.* «Iaco Pennacchia, sergente di porta. Dodici anni a questo tavolo. Il capitano decide, io conto. È un buon mestiere: i numeri non mentono, non pagano e non minacciano. Se il numero è giusto, la sera dormo. Se è sbagliato, la sera ricomincio. Contare non è decidere. Io conto.»",
+    "insistono": "«Volete sapere cosa penso di voi? Trentanove. Cinque carri. Ventitré bestie. Uno zoppica: il terzo mulo, zampa davanti a sinistra.» *Pausa.* «Questo penso. Il resto lo pensa chi sta sopra di me.»",
+    "mai": "Non dà mai un giudizio sulla Crociata, sul Consiglio o sullo Stratega: non è il suo mestiere avere un’opinione davanti a due guardie che ascoltano."
+   },
+   {
+    "tema": "Perché aspettare, e quanto",
+    "domanda": "«Perché ci fate aspettare? Quanto ci vuole? Chi decide?»",
+    "risposta": "«Perché siete armati, siete tanti, e non avete carta. Tre cose. Ne basterebbe una.» *Scrive.* «Quanto? Quanto ci mette il capitano. Il capitano ci mette quanto ci mette. Di solito un’ora.» *Gira la stilo fra le dita.* «Il capitano Guarnerio. Della porta. È un uomo giusto.» *Pausa.* «Giusto non vuol dire comodo. Aspettate qui, non sul ponte: sul ponte bloccate la fila, e la fila poi se la prende con me.»",
+    "insistono": "«Le bestie possono bere? Possono. Non ve l’ha detto nessuno perché nessuno ve l’ha chiesto.» *Indica il fiume col mento.* «A valle. Non a monte: a monte bevono le pecore del tratturo, e il vecchio dei pastori conta meglio di me.»",
+    "mai": "Non può far entrare nessuno né dire se entreranno: decide il capitano.",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "La tavoletta",
+    "domanda": "«Cosa c’è scritto sulla tavoletta? Scrivi che siamo pellegrini, non una colonna armata.»",
+    "risposta": "*La gira verso di voi. In cima, con un’altra mano: COLONNA ARMATA PRIVA DI MANDATO.* «Quello che siete.» *La rigira.* «Non l’ho scritto io. Era già scritto quando sono arrivato stamattina. Io sotto ci scrivo quello che vedo: trentanove, cinque carri, ventitré bestie, armi tante. Se voi mi dite che siete pellegrini, io scrivo che dite di essere pellegrini. Non è la stessa cosa, ma è scritto. Le parole scritte, a Teramum, camminano più delle gambe.»",
+    "insistono": "*Abbassa la voce di poco, senza alzare la testa.* «Le tavolette arrivano dalla Rocca all’alba, già cerate, una per porta. Questa aveva già la riga.» *Pausa.* «È la stessa parola della Camera. Colonna armata priva di mandato. Alla Rocca, la parola della Camera la sapevano prima di me.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Inganno"
+     ],
+     "cd": 14,
+     "si": "Sotto «colonna armata» aggiunge, piccolo: «dice di essere pellegrinaggio». Non cambia niente oggi; cambierà qualcosa nella pratica di domani. Con 20 naturale cancella «armata» col pollice: «Colonna priva di mandato», legge ad alta voce. «Il resto lo decide chi sta sopra di me.»",
+     "no": "Scrive tutto, parola per parola, anche quello che non avete detto."
+    },
+    "mai": "Non sa di chi sia la mano che ha scritto la riga in cima. Vantaggio alla prova se il picchetto di Colleatterrato ha già scritto «colonna di pellegrini».",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Il ragazzo partito di corsa",
+    "domanda": "«Dov’è andato il ragazzo che è partito appena ci hai visti?»",
+    "risposta": "*Non alza la testa.* «A portare un messaggio.» *A chi?* «A chi lo deve ricevere.» *Scrive una riga, la stessa di prima, due volte.* «Ogni porta ha i suoi ragazzi. Corrono, portano, tornano. Se vi mettete a chiedere di tutti i ragazzi che corrono a Teramum, stasera siete ancora qui, e io pure.»",
+    "insistono": "«Ho degli ordini. Alcuni sono scritti.» *La stilo si ferma.* «Gli altri no.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "Non ha paura di voi e non vi odia. Ha due ordini, e il secondo gli pesa: appena la colonna è comparsa ha mandato il ragazzo alla Rocca dei Grazianus, su Piazza Garibaldi, all’altro capo della città. Qualcuno, alla Rocca, voleva saperlo prima di chiunque altro. Se glielo dite in faccia, non nega: «Non mi piacciono gli ordini che non si scrivono.»",
+     "no": "Un sergente che fa il suo lavoro. Lento, preciso, indifferente."
+    },
+    "mai": "Non dice mai chi alla Rocca volesse saperlo: non lo sa, lo immagina (lo Stratega Lucius Grazianus, padre di Maximus). Il segreto si legge in faccia, non nelle parole."
+   },
+   {
+    "tema": "Il Bando",
+    "domanda": "«Che ordini avete su di noi? Che cos’è questo Bando?»",
+    "risposta": "«Tre giorni fa. La Guardia deve contare una colonna che viene da levante, con carri, con uno stendardo. Contare, non fermare. Io conto.» *Si ferma.* «E vi ho contati bene: trentanove, cinque carri, ventitré bestie. Uno zoppica. Il picchetto di Colleatterrato ha scritto lo stesso numero.» *Quasi sorride.* «Bravo, il picchetto.»",
+    "insistono": "«Il Bando dice “con uno stendardo”. Non dice quale. Non dice chi comanda. Non dice niente di un capitano col sangue che brilla, se è questo che volete sapere.» *Pausa.* «Me l’hanno chiesto in tre, oggi, se c’era uno col sangue che brilla. Voi siete il quarto.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 15,
+     "si": "«Chi me l’ha chiesto? Un mulattiere che non portava niente. Un votato che non ha comprato niente. E una delle mie guardie, che non ha mai chiesto niente in dodici anni.» Riprende a scrivere. «Anche questo lo segno.»",
+     "no": "«Gente. A Teramum la gente chiede.»"
+    },
+    "mai": "Non sa perché c’è il Bando né chi l’ha voluto. Non sa nulla del proclama ai borghi. ⟦Il mulattiere, il votato e la guardia curiosa sono pagati dalla rete di Iuvenza, come l’uomo col lillà sul ponte⟧: Iaco non lo sa, lo ha solo segnato.",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Lo stendardo e la porta della Madre",
+    "domanda": "«Perché la porta grande è chiusa? Noi portiamo uno stendardo benedetto dalle Due Lune.»",
+    "risposta": "*Alza gli occhi, per una volta: prima alla Vecchia Madre di pietra sopra la sua testa, poi a voi.* «Questa porta si apre per la Madre e per i lucenti. Voi siete lucenti?» *Torna alla cera.* «Per le processioni, per il Duca quando c’era, per chi porta la benedizione della Basilica. Per tutti gli altri c’è la porticina, e la porticina obbliga a chinare la testa. È fatta apposta.»",
+    "insistono": "*Se lo stendardo è spiegato, si alza in piedi. È l’unica cosa per cui si alza.* «Quella la tenete arrotolata. Qui le bandiere le alza il Consiglio.» Se non lo arrotolano, fa un segno a un secondo ragazzo, che parte verso la Basilica.",
+    "mai": "Stendardo spiegato e non arrotolato: secondo ragazzo alla Basilica, la pratica di Ser Eutichio vuole il sigillo degli Impaloni (quattro invece di tre), il capitano arriva più freddo (Persuasione con svantaggio).",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Vhaerun, il Brak",
+    "domanda": "«Che cos’hai da guardare il nostro compagno?» (se Vhaerun è con la colonna)",
+    "risposta": "*La stilo resta ferma sopra la cera. Guarda Vhaerun, poi la tavoletta, poi di nuovo Vhaerun.* «Ho una colonna per le persone e una per le bestie.» *Pausa.* «Lui in quale lo metto?» *Non è una battuta: lo chiede davvero, e aspetta la risposta. Qualunque cosa dicano, la scrive così com’è.* «Trentanove. Più uno, “da decidere”. Il capitano non sarà contento: al capitano piacciono i numeri tondi.»",
+    "insistono": "«Non ho mai visto uno così. Nemmeno mio nonno, e mio nonno ha visto il terremoto grosso.» *Abbassa la voce.* «Tenetelo vicino ai carri, e coperto. Sul ponte c’è gente che conta meno bene di me, e quando non sa contare una cosa, la chiama mostro.»",
+    "mai": "Non sa che cosa sia un Brak (non se ne vedono da due secoli). Scriverà comunque «uno, da decidere», e la voce arriverà in città entro sera.",
+    "scena": "teramum_porta"
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Non alza la testa. «Scrivo anche questo?» E lo scrive. Le due guardie abbassano le picche di un palmo.",
+   "soldi": "«Metti via.» Senza guardare la moneta. «Qua la Guardia non si compra. Si comprano gli scrivani. Vicino alla porta ne arriva uno fra poco: provate con lui.»",
+   "lusinga": "«Scrivo “cortesi”.» E lo scrive davvero, in un angolo. «Non cambia niente. Ma è scritto.»",
+   "bugia": "Scrive la bugia così come gliel’hanno detta. Poi scrive, accanto, un piccolo segno. Nessuno sa cosa voglia dire; il capitano sì, e quando legge la tavoletta guarda proprio chi ha mentito."
+  },
+  "battute": [
+   "«Nome, provenienza, numero, armi. In quest’ordine, e senza discorsi.»",
+   "«Questa porta si apre per la Madre e per i lucenti. Voi siete lucenti?»",
+   "«Contare non è decidere. Io conto.»",
+   "«Diciassette. Ora diciotto.»",
+   "«Uno zoppica. Il terzo mulo, zampa davanti a sinistra.»",
+   "«Trentanove teste, settantotto mani. Pure le mani conto.»",
+   "«Il capitano ci mette quanto ci mette.»",
+   "«Scrivo. Non commento.»",
+   "«Le mosche almeno arrivano e si fanno contare.»"
+  ],
+  "uscita": {
+   "frase": "«Aspettate qui.» *Torna alla cera.* «Il prossimo.»",
+   "dopo": "Passa la tavoletta al capitano quando arriva; tiene la metà della tessera di cera, se il capitano la dà. A fine turno porta la tavoletta alla Rocca lui stesso. Di notte non c’è: la ronda la fa un altro sergente.",
+   "aggancio": "*Senza alzare la testa, mentre l’ombra della montagna sale sul ponte:* «Il ragazzo sta tornando. Di corsa.» Pausa. «Dalla Rocca non si torna mai di corsa, se non c’è una risposta.» (Poco dopo arriva il capitano, che a Maximus dirà: «Vostro padre sa che siete qui.»)"
+  },
+  "ottenuto": [
+   {
+    "info": "La colonna è contata esattamente (39, 5 carri, 23 bestie, un mulo zoppo)",
+    "via": "gratis"
+   },
+   {
+    "info": "Il capitano Guarnerio decide; arriva di solito in un’ora; è «giusto, non comodo»",
+    "via": "gratis"
+   },
+   {
+    "info": "Sulla tavoletta: COLONNA ARMATA PRIVA DI MANDATO, scritto da un’altra mano prima del loro arrivo",
+    "via": "gratis"
+   },
+   {
+    "info": "Le tavolette arrivano già cerate dalla Rocca; la riga usa la stessa parola della Camera",
+    "via": "gratis"
+   },
+   {
+    "info": "Far scrivere «dice di essere pellegrinaggio» sotto «colonna armata»",
+    "via": "prova"
+   },
+   {
+    "info": "Il ragazzo è andato alla Rocca dei Grazianus: secondo ordine a voce, che a Iaco pesa",
+    "via": "prova"
+   },
+   {
+    "info": "Il Bando: contare, non fermare; colonna da levante con carri e stendardo",
+    "via": "gratis"
+   },
+   {
+    "info": "Oggi tre persone gli hanno chiesto di un capitano col sangue che brilla: un mulattiere, un votato, una guardia",
+    "via": "prova"
+   },
+   {
+    "info": "Lo stendardo va tenuto arrotolato sotto la porta della Madre",
+    "via": "gratis"
+   },
+   {
+    "info": "Chi alla Rocca ha dato il secondo ordine; chi ha scritto la riga sulla tavoletta",
+    "via": "mai"
+   }
+  ]
+ }
 }

@@ -10,5 +10,115 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: diciotto. Alto, magro, orecchino d’osso, capelli tagliati male apposta, diavolo rosso cucito sul petto. Ride forte, parla forte, ha paura di niente tranne che di sua madre.\nCompagnia dei Diavoli: una ventina di ragazzi delle contrade; due estati fa hanno vinto il Palio, e la vittoria gli è stata tolta. Ha pagato Casa Thaulero perché vincesse la contrada che sponsorizzava: Tittì lo sa e non lo può provare.\nCosa vuole: che qualcuno importante dica in pubblico che il Palio era loro.\nCosa può dare: guide, diversivi, risse a comando, voci delle osterie, un nascondiglio.\nBattute: «Siete meglio del Consiglio.» · «Chiedete dei Diavoli, da Mario, la sera.» · «Lu Palie è lu nostre.»"
+ "gm": "Età: diciotto. Alto, magro, orecchino d’osso, capelli tagliati male apposta, diavolo rosso cucito sul petto. Ride forte, parla forte, ha paura di niente tranne che di sua madre.\nCompagnia dei Diavoli: una ventina di ragazzi delle contrade; due estati fa hanno vinto il Palio, e la vittoria gli è stata tolta. Ha pagato Casa Thaulero perché vincesse la contrada che sponsorizzava: Tittì lo sa e non lo può provare.\nCosa vuole: che qualcuno importante dica in pubblico che il Palio era loro.\nCosa può dare: guide, diversivi, risse a comando, voci delle osterie, un nascondiglio.\nBattute: «Siete meglio del Consiglio.» · «Chiedete dei Diavoli, da Mario, la sera.» · «Lu Palie è lu nostre.»",
+ "dialogo": {
+  "apertura": "*Smette di litigare per l’ultimo quadretto, lo prende lui, e se lo mangia guardandovi.* «Siete quelli della Crociata?» *Lo dice forte, perché lo senta la strada.* «Quelli che hanno preso a calci i Forgiati?» *Non aspetta.* «Allora siete meglio del Consiglio.»",
+  "voce": "Teramano giovane, svelto, mezze parole mangiate · Tic: «Lu Palie è lu nostre»; «Frà» per chiunque gli piaccia; ride prima di finire la frase · Ritmo: a raffica, parla forte apposta, si ferma di colpo solo quando nomina sua madre.",
+  "argomenti": [
+   {
+    "tema": "Chi siete",
+    "domanda": "«Chi sono i Diavoli?»",
+    "risposta": "«I Diavoli siamo noi.» *Si batte il diavolo rosso cucito sul petto.* «Una ventina, delle contrade di sotto, Bitetto, Porta Romana, il Lucente Leonardo. Correvamo il Palio per le contrade, quelli col diavolo. Prima ci chiamavano così per prenderci in giro, perché facevamo casino. Poi abbiamo vinto e il nome ce lo siamo tenuti. Io sono Tittì. Lu Diavele, per quelli che mi vogliono bene. Per mia madre sono Battista, e quando mi chiama Battista è finita.» *Ride.* «Facciamo quello che c’è da fare. Portiamo i sacchi al mercato, guardiamo le porte, sappiamo tutti i vicoli. Tutti. Pure quelli che non stanno sulle carte.»",
+    "insistono": "«Volete sapere se siamo pericolosi? Siamo ragazzi. Abbiamo bastoni, coltelli da pane e un sacco di rabbia. Contro le guardie nuove della Rocca non ci andiamo, che quelle non sono guardie: uno di noi gli ha tirato una pietra in testa, all’elmo, e quello non si è nemmeno girato.»",
+    "mai": "Non porta mai i Diavoli a uccidere nessuno: rissa sì, sangue no. Non tradisce mai un compagno."
+   },
+   {
+    "tema": "Il Palio rubato",
+    "domanda": "«Che è successo col Palio?»",
+    "risposta": "*Smette di ridere.* «Due estati fa. La corsa delle contrade, giù al Corso, dalla Piazza Grande a Piazza Garibaldi. Abbiamo vinto noi. Di tre cavalli. L’ha visto tutta Terme. Poi il giorno dopo arriva una carta col sigillo: “irregolare”, il nostro fantino aveva toccato la corda. Toccato la corda! E il Palio va alla contrada che arrivava seconda, quella con l’ape d’oro sullo stendardo, che quest’anno aveva le giubbe nuove e i cavalli comprati a Julia Nova.» *Sputa.* «Il Consiglio ce l’ha rubato per due fiorini. Lu Palie è lu nostre. Ce lo devono ridare davanti a tutti, o glielo prendiamo in un altro modo.»",
+    "insistono": "*Vi guarda per capire se siete del Consiglio anche voi.* «Lo so chi ha pagato. Lo sanno tutti e nessuno lo dice. L’ape d’oro è dei Thaulero: quelli coi soldi nuovi, che danno le feste ai Tigli. Hanno comprato la contrada, i cavalli, e poi il giudice. Uno dei giudici, la sera dopo, aveva una mula nuova.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intimidire"
+     ],
+     "cd": 17,
+     "si": "Vi racconta chi ha pagato: i Thaulero, attraverso la contrada dell’ape d’oro. «E se ci serve un favore a noi, sappiamo dove trovarvi.»",
+     "no": "«Lo sapete pure voi chi è stato. Tutti lo sanno.» Non fa il nome: con chi non conosce bene ha paura di finire nelle celle della Rocca."
+    },
+    "mai": "non ha una prova scritta e non sa quale giudice, di preciso, ha preso i soldi. Non dirà mai il nome del ragazzo che glielo ha raccontato (un garzone dei Thaulero)."
+   },
+   {
+    "tema": "Il patto",
+    "domanda": "«Cosa volete da noi? Cosa potete fare per la Crociata?»",
+    "risposta": "«Noi?» *Si guarda coi compagni.* «Possiamo portarvi dove volete senza passare davanti a una guardia. Possiamo fare una rissa davanti a una porta mentre voi entrate da un’altra. Possiamo sentire quello che si dice nelle osterie, da Lupe, al Shakidù, sotto i portici. E possiamo nascondervi: c’è un fienile alla Lunaria che il sergente di rione non trova da tre anni.» *Si fa serio.* «In cambio ne vogliamo una sola. Che qualcuno importante, uno con un nome, vada al Corso il sabato, alla calata, quando ci sono tutti, e dica forte che il Palio era dei Diavoli. Non a noi. A tutti.»",
+    "insistono": "*Guarda Alessandros, Vicarus o Maximus, se ci sono.* «Uno come voi. Un Cerullius, un Grazianus. Se lo dice uno di voi, al Corso, domenica siamo venti con la Crociata. E venti Diavoli in questa città valgono più di cento guardie, perché le guardie stanno ferme e noi no.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intimidire"
+     ],
+     "cd": 12,
+     "si": "Tittì vi dà la mano, sporca di pecorino. «Se vi serve qualcosa in città, chiedete dei Diavoli. Da Mario, la sera.»",
+     "no": "«Belle parole. Le dicono tutti, i signori.» Tornano alla pizza."
+    },
+    "mai": "non dà i Diavoli per un lavoro in cui si uccide qualcuno o contro i votati della Basilica. Senza la dichiarazione in pubblico, aiuta solo con guide e voci, mai con la rissa a comando."
+   },
+   {
+    "tema": "Voci della città",
+    "domanda": "«Cosa si dice in giro? Cosa avete visto?»",
+    "risposta": "«Si dice che il Consiglio non decide, ma questo lo dice pure la lavagna di Giornalino.» *Ride.* «Noi facciamo cùppe a la villa, al giardino del Duca, quando non abbiamo voglia di lavorare. E la notte ci restiamo, coi cigni e con la tigre. Da due settimane la tigre non dorme. Ruggisce verso il viale, a notte fonda. E passano uomini col mantello, dal giardino verso la Porta del Lucente Giorgio. Camminano pesanti. Tutti uguali. Uno di noi, Scarafone, gli è andato dietro per una scommessa. È tornato bianco come la pizza scema e non ha voluto dire niente.»",
+    "insistono": "«Scarafone dice che uno di quelli si è girato. Che sotto il cappuccio non aveva una faccia. Aveva un elmo liscio, grigio, senza buchi per gli occhi. Io dico che Scarafone era ubriaco. Ma da allora non va più alla villa di notte, e Scarafone ha paura di niente.»",
+    "mai": "non sa dove vadano gli uomini col mantello né chi li comanda; non sa niente della Forgia oltre a quello che dice Mastro Mario."
+   },
+   {
+    "tema": "Il ponte e i bravi",
+    "domanda": "«E quelli del Ponte degli Impiccati? Sono dei vostri?»",
+    "risposta": "*Si offende sul serio.* «Dei nostri? Quelli prendono i soldi da chiunque paghi. Sono di Porta Romana, i più grandi, quelli che il Palio non l’hanno mai corso perché correvano dietro ai mercanti. Lu Spaccapreta comanda, e Lu Spaccapreta a sette anni rompeva le teste ai gatti. Noi no. Noi facciamo casino, loro fanno male.» *Abbassa la voce.* «Ultimamente hanno soldi. Fiorini nuovi, lucidi. Al Lupe pagano da bere a tutti. Uno di loro l’altra sera puzzava di fiori, come una sposa.»",
+    "insistono": "«Se ve li trovate sul ponte, non scappate verso le mura: è lì che vi vogliono, sotto, dove la ronda vi trova armati. Scappate verso gli orti. E se c’è Peppino lu Sciancato, quello che zoppica, non toccatelo: ha la madre malata e non è cattivo. Za’ Flaminia lo sa meglio di me.»",
+    "mai": "non sa chi paga i bravi, né il prezzo sulle teste dei PG."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Si mette davanti ai compagni, ride.* «Fatelo, frà. Fatelo qua, davanti a Mario. Domani lo sa tutta Terme che la Crociata picchia i ragazzi.» I Diavoli se ne vanno insieme e per un giorno non si trovano più.",
+   "soldi": "*Prende la moneta, la fa girare sulle dita, la lancia a uno dei suoi.* «Pizza per tutti!» Poi a voi: «Coi soldi ci comprate la pizza. Noi si comprano col Palio.»",
+   "lusinga": "«Lo so, lo so che siamo belli.» *Si sistema l’orecchino.* Diventa più chiacchierone: una voce in più, vera, gratis.",
+   "bugia": "*Smette di ridere di colpo.* «Questa la diceva il giudice del Palio.» Si alza, e da quel momento la CD delle prove con i Diavoli sale di 2."
+  },
+  "battute": [
+   "«Siete meglio del Consiglio.»",
+   "«Lu Palie è lu nostre.»",
+   "«Chiedete dei Diavoli, da Mario, la sera.»",
+   "«Frà, quella è una guardia. Girate qua.»",
+   "«Mia madre mi ammazza. Ma prima ammazza voi.»",
+   "«Quel vicolo non c’è sulla carta. Ma c’è.»",
+   "«Cùppe a la villa, oggi. La scuola la facciamo domani.»",
+   "«Il Consiglio siede. Noi corriamo.»"
+  ],
+  "uscita": {
+   "frase": "«È tardi, mia madre conta le campane.» *Si alza, dà una manata sul bancone.* «Da Mario, la sera. E sabato, alla calata, vediamo chi ha il coraggio.»",
+   "dopo": "Se i PG gli sono piaciuti, la sera dopo un Diavolo li segue a distanza per la città e avvisa Tittì di chi incontrano. Se qualcuno dei PG dice in pubblico al Corso che il Palio era loro, i Diavoli si uniscono alla Crociata (circa venti ragazzi).",
+   "aggancio": "La calata del sabato al Corso: lì un nobile dei PG può dichiarare il Palio dei Diavoli davanti a tutte le Casate, e farsi nemici i Thaulero."
+  },
+  "ottenuto": [
+   {
+    "info": "La Compagnia dei Diavoli: una ventina di ragazzi delle contrade, guide nei vicoli, voci, risse, un nascondiglio alla Lunaria.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il Palio vinto due estati fa è stato tolto ai Diavoli dal Consiglio con una carta col sigillo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il Palio l’hanno comprato i Thaulero (la contrada dell’ape d’oro).",
+    "via": "prova"
+   },
+   {
+    "info": "Per avere i Diavoli con la Crociata: un nobile del gruppo deve dichiarare in pubblico, al Corso, che il Palio era loro.",
+    "via": "gratis"
+   },
+   {
+    "info": "Di notte uomini dal passo pesante attraversano il giardino del Duca verso la Porta del Lucente Giorgio; uno aveva un elmo grigio liscio senza occhi.",
+    "via": "gratis"
+   },
+   {
+    "info": "I bravi del ponte hanno fiorini nuovi; uno puzza di fiori; Peppino lu Sciancato non va toccato.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il nome del giudice comprato e una prova scritta del Palio.",
+    "via": "mai"
+   }
+  ]
+ }
 }

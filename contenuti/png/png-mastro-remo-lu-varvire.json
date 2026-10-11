@@ -10,5 +10,114 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: settantotto. Piccolo, baffi bianchi curatissimi, mani velocissime, parla senza respirare.\nÈ arrivato in città a piedi da un paese della montagna, a dodici anni; ha imparato dal vecchio barbiere di via dell’Arco.\nSa tutto: debiti, tradimenti, chi è arrivato, quali guardie bevono. La domenica fa la barba anche al Reggente (ha le mani che tremano). Lucius Grazianus si è rasato la testa. Le guardie nuove della Rocca non vengono più a farsi la barba.\nVuole: chiacchierare. Ogni cliente un amico.\nBattute: «A Terme la barba si fa a contropelo.» · «La notizia è gratis, la barba no.» · «Più amici che clienti.»"
+ "gm": "Età: settantotto. Piccolo, baffi bianchi curatissimi, mani velocissime, parla senza respirare.\nÈ arrivato in città a piedi da un paese della montagna, a dodici anni; ha imparato dal vecchio barbiere di via dell’Arco.\nSa tutto: debiti, tradimenti, chi è arrivato, quali guardie bevono. La domenica fa la barba anche al Reggente (ha le mani che tremano). Lucius Grazianus si è rasato la testa. Le guardie nuove della Rocca non vengono più a farsi la barba.\nVuole: chiacchierare. Ogni cliente un amico.\nBattute: «A Terme la barba si fa a contropelo.» · «La notizia è gratis, la barba no.» · «Più amici che clienti.»",
+ "dialogo": {
+  "apertura": "*Il rasoio va su e giù sulla striscia di cuoio, zic-zac, senza fermarsi.* «Forestieri. Si vede dalla barba.» *Indica la poltrona libera col mento, senza smettere di parlare al cliente insaponato.* «Sedetevi, sedetevi, la panca è comoda, quelli non hanno fretta. Nessuno ha fretta da Remo. Allora: chi siete? No, aspettate, ve lo dico io.»",
+  "voce": "Teramano di montagna ammorbidito da sessant’anni di città, chiacchierone e affettuoso · Tic: «Allora»; «A Terme la barba si fa a contropelo»; «La notizia è gratis, la barba no»; chiama tutti «bello mio» · Ritmo: a raffica, senza respirare, salta da una storia all’altra; si ferma solo quando il rasoio è sulla gola di qualcuno.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Da quanto fate il barbiere?»",
+    "risposta": "«Sessant’anni, bello mio. Sessantasei, a contarli bene. Sono arrivato a Terme a piedi, a dodici anni, da un paese della montagna che adesso non c’è più quasi nessuno, con le scarpe in mano per non consumarle. Mi ha preso il vecchio Walterio, quello di via dell’Arco, il barbiere dei capitani. Mi faceva scopare i capelli per terra, un anno intero. Poi mi ha dato il rasoio e mi ha detto: “Remo, la barba è niente. Quello che conta è stare zitto quando parla il cliente.”» *Ride, il cliente insaponato ride con lui.* «Non ci sono mai riuscito. Ma ho imparato a stare zitto sulle cose giuste.» *Indica i ritratti al muro.* «Quelli sono i miei clienti. Più amici che clienti. Metà sono morti, e io mi ricordo come tagliavano la barba tutti.»",
+    "insistono": "«Il tribuno di Julia Nova, quando passa da Terme, si fa la barba solo qua. Mi chiama Remuccio e mi chiede le novità della città prima ancora di sedersi. Io gliele dico. Lui le scrive. Poi a Julia Nova decidono le cose con le novità mie. Pensate un po’, un barbiere.»",
+    "mai": "Non dice mai chi gli ha raccontato una cosa: le notizie le dà, le fonti mai."
+   },
+   {
+    "tema": "Che si dice in giro",
+    "domanda": "«Che si dice in città?»",
+    "risposta": "«Allora.» *Vi prende la testa con due dita, come un melone.* «Il Consiglio non decide, ma questo lo sapete. Il Reggente ha le mani che tremano: me l’ha detto il suo barbiere, che sono io, la domenica. Gli tremano, bello mio, gli tremano che la schiuma gliela devo mettere io con la mano ferma sulla sua. Non è il freddo: ha paura. L’Arciflamine non lo saluta più. I Thaulero danno feste con soldi che puzzano di mare. Al Ponte degli Impiccati di notte ci sono bravi pagati, e chi li paga profuma di fiori, me l’ha detto uno di loro, seduto dove siete voi, che se la faceva fare per una ragazza. E i Melatino comprano picconi. Tutti i picconi della città. Che ci fanno coi picconi, i sensali? Scavano i conti?»",
+    "insistono": "*Il rasoio si ferma.* «Il bravo che profumava di fiori l’ho rasato io. Mi ha pagato con un fiorino nuovo. Bello, lucido. Troppo lucido. Sul bordo era limato. Io i fiorini limati li riconosco al tatto, che a Terme ne girano da quando sono frechino. Questo era limato da poco, e bene. Lavoro di un sensale, non di un ladro.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Remo racconta del fiorino limato pagato dal bravo che profumava di fiori: limato da poco, «lavoro di un sensale».",
+     "no": "Remo è già passato ai Thaulero e alle loro feste: della moneta non dice niente, se l’è dimenticata nella chiacchiera."
+    },
+    "mai": "non sa chi sia la persona che profuma di fiori. Non conosce i nomi dei bravi."
+   },
+   {
+    "tema": "Lucius Grazianus",
+    "domanda": "«Lo Stratega Grazianus? Viene da voi?»",
+    "risposta": "*Si illumina, poi si fa serio, e guarda Maximus se c’è.* «Veniva. Per vent’anni, ogni sabato, la barba corta e il pizzo, come i capitani vecchi. Un signore. Non parlava mai, e io gli parlavo per due. Poi, tre settimane fa, viene di lunedì, che non era mai venuto di lunedì, si siede, e mi dice: “Remo, la testa. Tutta.” Tutta la testa, bello mio. Rasa come un uovo. Io ho le mani che non tremano, ma quella volta un poco sì.» *Abbassa la voce.* «Un uomo che si rade la testa ha deciso qualcosa. I soldati vecchi lo fanno prima di una campagna. Lo faceva suo padre prima di lui.»",
+    "insistono": "*Se Maximus c’è, gli posa una mano sulla spalla.* «Vostro padre mi ha chiesto di voi. Non di dove siete, di come state. Ha detto: “Se passa mio figlio, fategli la barba gratis e non ditegli niente.” Io la barba ve la faccio gratis. Il niente, scusate, non mi è mai riuscito.»",
+    "mai": "non sa cosa abbia deciso Lucius Grazianus e non lo immagina: ne parla come di un uomo, non di un congiurato."
+   },
+   {
+    "tema": "Le guardie nuove",
+    "domanda": "«E le guardie della Rocca?»",
+    "risposta": "*Ride, ma il rasoio gli si ferma un attimo sulla striscia.* «Le guardie della Rocca vengono tutte qua. Da quarant’anni. Le giovani per la ragazza, le vecchie per le chiacchiere, i sergenti perché il capitano li vuole puliti. Le conosco tutte: quella beve, quella gioca, quella ha il figlio con la moglie del fornaio.» *Pausa.* «Le guardie nuove no. Quelle arrivate da due settimane. Non vengono più a farsi la barba. Nessuna. Come se non gli crescesse più.» *Ride di nuovo, troppo forte.* «Bella fortuna, eh? Risparmiano un quattrino al giorno.»",
+    "insistono": "«Una l’ho vista da vicino, al Corso, senza l’elmo per un momento. Giovane. Lo conoscevo, figlio di un carrettiere di Bitetto, si faceva la barba qua da quando aveva i primi peli. Gli ho detto “Ciao Nino”. Mi ha guardato come si guarda un muro. E la pelle, bello mio, era grigia. Liscia. Come quando uno muore e lo lavano.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 14,
+     "si": "Fra cento chiacchiere, Remo dice la cosa che lo spaventa davvero: le guardie nuove non si fanno più la barba, e una era un ragazzo di Bitetto che lui conosceva, con la pelle grigia e liscia. Ne parla ridendo, ma il rasoio gli si ferma. (Indagare CD 14 per pensarci sopra: le armature della Forgia stanno cambiando chi le porta.)",
+     "no": "Remo parla tanto. Una parte sarà vera."
+    },
+    "mai": "non sa cosa siano diventati e non vuole saperlo. Non ripete mai la storia di Nino davanti ad altri clienti."
+   },
+   {
+    "tema": "I Cerullius e il palazzo",
+    "domanda": "«Conoscete il palazzo Cerullius?»",
+    "risposta": "«Il palazzo Cerullius!» *Batte il pettine sul palmo.* «Ottorino viene qua il venerdì, a farsi i baffi, quei quattro peli che ha. Povero Ottorino. Tre servitori, metà delle stanze chiuse, i mobili coperti come morti. Aspetta i signorini da anni.» *Guarda Alessandros e Vicarus, se ci sono.* «Voi siete i signorini. Vi ha descritto così bene che vi riconosco. Ottorino è contento, ma ha paura. Dice che di notte, dalle cantine, si sente scavare. Sotto gli archi dell’anfiteatro. Lui dice che sono i morti. Io gli ho detto: Ottorino, i morti non scavano, i morti sono già sotto.»",
+    "insistono": "«Volete sapere chi scava? Non lo so. Ma i Malavolta comprano lanterne a dozzine, e la Matriarca non esce più dal palazzo ai Tigli. E le guardie di casa Malavolta, quando vengono qua, hanno la polvere di tufo nei capelli. Tufo, non polvere di strada. Io i capelli li guardo da sessant’anni.»",
+    "mai": "non sa cosa cercano i Malavolta. Non dice mai una parola cattiva sui Cerullius davanti ai fratelli."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Il rasoio si ferma a un dito dalla gola del cliente. Remo sorride.* «Bello mio, io ho il rasoio in mano da sessant’anni. Voi da quanto?» Poi riprende a radere come se niente fosse, e da quel momento parla solo del tempo.",
+   "soldi": "«La notizia è gratis, la barba no.» *Prende un quattrino, rende il resto.* Se insistete con l’oro, si offende: «Volete comprare Remo? Remo non si vende. Si affitta, a un quattrino la barba.»",
+   "lusinga": "«Più amici che clienti, ve l’ho detto.» *Si commuove facile.* Vi offre l’allume sulla ferita e una notizia in più dalla tabella delle voci della città.",
+   "bugia": "*Ride.* «Bello mio, io faccio la barba ai bugiardi di Terme da sessant’anni. Voi siete bravo, ma loro sono meglio.» Non si offende, ma la prossima notizia che vi dà è una diceria falsa, e lo sa."
+  },
+  "battute": [
+   "«A Terme la barba si fa a contropelo.»",
+   "«La notizia è gratis, la barba no.»",
+   "«Più amici che clienti.»",
+   "«Fermo, bello mio, fermo, che qua c’è la vena.»",
+   "«Un dente? Ve lo tolgo io. Male, ma ve lo tolgo.»",
+   "«Questo l’ho rasato al matrimonio e al funerale. Stessa faccia.»",
+   "«A lo parlare agi mesura, diceva Walterio. Io non l’ho mai imparato.»",
+   "«Prossimo! Chi è il prossimo? Siete voi? No, voi siete già fatto.»"
+  ],
+  "uscita": {
+   "frase": "*Vi porge lo specchio macchiato.* «Ecco. Adesso sembrate di Terme. Quasi.» *Si gira verso la panca.* «Prossimo!»",
+   "dopo": "Racconta ai clienti del giorno dopo che è passata la Crociata, e com’erano le barbe. La notizia arriva alla Rocca entro sera.",
+   "aggancio": "Il fiorino limato del bravo profumato di fiori: un lavoro da sensale, che porta ai portici della Piazza del Mercato e al banco di Gerbino della Lega."
+  },
+  "ottenuto": [
+   {
+    "info": "Il Reggente ha le mani che tremano per paura; l’Arciflamine e il Reggente non si salutano; i Thaulero spendono soldi «che puzzano di mare»; la Lega compra tutti i picconi.",
+    "via": "gratis"
+   },
+   {
+    "info": "I bravi del ponte sono pagati da qualcuno che profuma di fiori.",
+    "via": "gratis"
+   },
+   {
+    "info": "Un bravo ha pagato Remo con un fiorino nuovo limato da poco: lavoro di sensale.",
+    "via": "prova"
+   },
+   {
+    "info": "Lucius Grazianus, tre settimane fa, si è fatto radere la testa: «ha deciso qualcosa»; ha chiesto di Maximus.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le guardie nuove della Rocca non si fanno più la barba; una era un ragazzo di Bitetto con la pelle diventata grigia e liscia.",
+    "via": "prova"
+   },
+   {
+    "info": "Dalle cantine del palazzo Cerullius si sente scavare; le guardie dei Malavolta hanno polvere di tufo nei capelli.",
+    "via": "gratis"
+   },
+   {
+    "info": "Chi gli ha raccontato ogni cosa.",
+    "via": "mai"
+   }
+  ]
+ }
 }

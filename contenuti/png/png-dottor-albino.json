@@ -10,5 +10,133 @@
  "atti": [],
  "links": [],
  "pub": "Il medico della Crociata. Viaggia sul Carro IV con i feriti e la cassa delle medicine, e la sera passa fra i fuochi a guardare chi zoppica. Visita tutti, che lo vogliano o no: nelle orecchie, negli occhi, sotto le unghie.",
- "gm": "Luogo abituale: con la Crociata, sotto il telone del Carro IV ·\nEtà: ⟦quarantotto anni⟧.\nStatistiche: popolano (PF 9, CA 10); Medicina +6, kit da erborista. Nel Registro della Crociata: «Ogni notte un ferito grave diventa leggero… Senza le sue medicine, nessuno dei due». Al campo è il Guaritore con Mattheus (Medicina CD 12).\n⟦Piccolo, magro, calvo in cima e coi capelli lunghi ai lati; un paio di occhiali di vetro legati con lo spago; la veste scura macchiata di unguenti, sempre una borsa di cuoio a tracolla.⟧\n\nSa: ferite, febbri, veleni comuni; quante pozioni e quanti unguenti restano (li conta ogni sera, a voce alta); dopo Bëllindë: «Polvere di pietra. Di quella vecchia».\n•\nNon sa: niente di magia; non si fida dei miracoli e lo dice anche a Mattheus, con rispetto.\nVoce: veloce, nervoso, conta tutto a voce alta; ⟦finisce le frasi degli altri.⟧\nCosa vuole: i suoi feriti vivi e le sue medicine asciutte.\nSegreto: ⟦ha lasciato la città perché un paziente importante gli è morto fra le mani, e la famiglia lo cercava.⟧\n\nSe gli chiedono di…:\n…una cura: «Fate pure gli spiritosi. Poi venite da me col braccio rotto.»\n…i Forgiati: «Ho visto morti di febbre, di guerra, di fame. Questi sono morti due volte.»\n…Vhaerun: «Una ferita è una ferita. La pelle è un dettaglio.»\n\nBattute pronte:\n«Ferma la bestia! Ho i feriti qua dietro!»\n«No. Questa la teniamo. Voi avete bisogno di dormire, non di me.»"
+ "gm": "Luogo abituale: con la Crociata, sotto il telone del Carro IV ·\nEtà: ⟦quarantotto anni⟧.\nStatistiche: popolano (PF 9, CA 10); Medicina +6, kit da erborista. Nel Registro della Crociata: «Ogni notte un ferito grave diventa leggero… Senza le sue medicine, nessuno dei due». Al campo è il Guaritore con Mattheus (Medicina CD 12).\n⟦Piccolo, magro, calvo in cima e coi capelli lunghi ai lati; un paio di occhiali di vetro legati con lo spago; la veste scura macchiata di unguenti, sempre una borsa di cuoio a tracolla.⟧\n\nSa: ferite, febbri, veleni comuni; quante pozioni e quanti unguenti restano (li conta ogni sera, a voce alta); dopo Bëllindë: «Polvere di pietra. Di quella vecchia».\n•\nNon sa: niente di magia; non si fida dei miracoli e lo dice anche a Mattheus, con rispetto.\nVoce: veloce, nervoso, conta tutto a voce alta; ⟦finisce le frasi degli altri.⟧\nCosa vuole: i suoi feriti vivi e le sue medicine asciutte.\nSegreto: ⟦ha lasciato la città perché un paziente importante gli è morto fra le mani, e la famiglia lo cercava.⟧\n\nSe gli chiedono di…:\n…una cura: «Fate pure gli spiritosi. Poi venite da me col braccio rotto.»\n…i Forgiati: «Ho visto morti di febbre, di guerra, di fame. Questi sono morti due volte.»\n…Vhaerun: «Una ferita è una ferita. La pelle è un dettaglio.»\n\nBattute pronte:\n«Ferma la bestia! Ho i feriti qua dietro!»\n«No. Questa la teniamo. Voi avete bisogno di dormire, non di me.»",
+ "dialogo": {
+  "apertura": "*Salta giù dal Carro IV prima che il carro si fermi, inciampa, si rimette dritto gli occhiali legati con lo spago e arriva di corsa sui sassi con le bende già srotolate.* «Fermi tutti. Nessuno si siede, nessuno beve. Uno, due, tre…» *Vi conta, uno per uno, puntando il dito.* «Sei. Bene. Adesso fatemi vedere dove.»",
+  "voce": "Italiano svelto da uomo di città, con qualche imprecazione da ospedale. · Tic: conta tutto a voce alta («uno, due, tre…»), finisce le frasi degli altri, «Non ditelo a Silvanus». · Ritmo: a raffica, nervoso, salta da una ferita all'altra; si ferma di colpo solo quando vede qualcosa che non capisce, e allora sta zitto.",
+  "argomenti": [
+   {
+    "tema": "Le ferite",
+    "domanda": "«Dottore, guardi qui.»",
+    "risposta": "*Vi gira intorno, vi tira giù le palpebre col pollice, annusa le ferite.* «Morsi. Graffi. Uno, due, tre graffi qui, e questo è un morso: denti di vecchio, mezzi marci. Lavare, subito, con l'acqua bollita, non con quella del fiume.» *Si ferma.* «Qualcuno è rimasto rigido? Le gambe che non rispondono, la mano che non si chiude?» *Se sì, si guarda intorno, fruga nella borsa e vi mette in mano due fiale chiuse con la cera.* «Non ditelo a Silvanus. Sono contate. Le conto io, ogni sera, e stasera ne conterò due di meno e dirò che mi sono sbagliato.»",
+    "insistono": "*Se gli chiedono altre fiale:* «No. Questa la teniamo.» *La stappa, la richiude.* «Voi avete bisogno di dormire, non di me. Tre ne restano, per i carrettieri e per i bambini. Se volete morire, fatelo dopo l'osteria.»",
+    "mai": "Non regala più di due pozioni al guado. Non mette mai le mani sulla magia: se Mattheus guarisce qualcuno davanti a lui, guarda da un'altra parte con rispetto e annota solo «guarito».",
+    "scena": "guado"
+   },
+   {
+    "tema": "I corpi",
+    "domanda": "«Che ne pensa di questi, dottore?»",
+    "risposta": "*Si inginocchia accanto alla donna col fazzoletto e le gira la mano: le dita rovinate dal bucato.* «Ho visto morti di febbre, di guerra, di fame. Questi sono morti due volte.» *Le tocca il polso, poi il collo, per abitudine.* «Freddi troppo presto. Col sole che c'è, dovrebbero essere già caldi come pietre. E guardate le labbra: secche, spaccate. Non bevono da giorni, non mangiano da giorni. Hanno solo aspettato.» *Si pulisce le mani sulla veste.* «Uno che aspetta così non mangia, non dorme, non piscia. Io lo so cos'è un corpo. Questo non lo so.»",
+    "insistono": "«Due settimane, forse due e mezza. Non di più. Lo dico dal filo delle cuciture e dalla pelle sopra: è ancora rossa ai bordi. Chi li ha cuciti, li ha cuciti da vivi, o appena dopo.»",
+    "prova": {
+     "abilita": [
+      "Medicina"
+     ],
+     "cd": 12,
+     "si": "Albino abbassa la voce: «Li hanno cuciti da vivi. Guardate: la pelle ha provato a guarire intorno al punto. Un morto non guarisce. Erano vivi quando gli hanno messo dentro quella roba, e sono rimasti vivi abbastanza da sanguinare.»",
+     "no": "«Non lo so. E quando non lo so, lo dico. Scrivetelo.»"
+    },
+    "mai": "Non sa niente della Forgiatura, delle schegge lunari o di Lyaras: parla solo di corpi, ferite e tempi.",
+    "scena": "guado"
+   },
+   {
+    "tema": "Le cuciture e il medaglione",
+    "domanda": "«Chi li ha cuciti? Uno che sa il mestiere?»",
+    "risposta": "*Prende il bordo della cicatrice fra due dita, con la lente.* «No. Questo non è un medico. Punti larghi, nodi doppi, il filo tirato troppo: così si cuce una pecora che si è squarciata sul filo spinato, non un uomo.» *Si raddrizza gli occhiali.* «Uno che ha fatto il pastore, o il vaccaro, o il macellaio. Uno pratico. Uno che ne ha cuciti tanti in fila, perché gli ultimi sono più veloci dei primi: si vede, la mano si stanca e poi impara.» *Guarda il disco di piombo e non lo tocca.* «Quello lì non mi riguarda. Io mi occupo di quello che c'è intorno.»",
+    "insistono": "«Quattordici, tutti con la stessa mano. In uno, due giorni al massimo. Con qualcuno che li teneva fermi, oppure con loro che stavano fermi da soli. E questo, se volete il mio parere, è la cosa più brutta che ho visto oggi.»",
+    "mai": "Non dà un nome al cucitore: non lo sa. Non tocca mai la scheggia.",
+    "scena": "guado"
+   },
+   {
+    "tema": "L'acqua del pozzo",
+    "domanda": "«Il pozzo del casale. Si può bere?»",
+    "risposta": "«No.» *Lo dice prima che finiate la domanda.* «Nessuno beve acqua di un posto dove la gente è morta senza che si sappia di cosa. Regola mia, da prima che ci fosse la Crociata.» *Se gli dicono che i muli non hanno voluto bere:* «Ecco. Le bestie sono medici migliori di me. Riempite le botti al fiume, a monte del guado, non a valle: a valle ci sono loro.» *Indica i corpi senza guardarli.*",
+    "insistono": "*Se qualcuno ha già bevuto:* lo afferra per il mento, gli guarda la lingua e gli occhi. «Niente. Per ora niente. Stanotte dormi vicino al Carro IV e se sogni qualcosa di strano mi svegli. Non ridete: lo dico sul serio.»",
+    "mai": "Non sa cosa c'è nell'acqua e non ne riconosce l'odore; non scende nel pozzo.",
+    "scena": "guado"
+   },
+   {
+    "tema": "Micuccio e Vhaerun",
+    "domanda": "«Come sta Micuccio? E il Brak, lo curerebbe?»",
+    "risposta": "*Guarda verso la coda della colonna, dove il ragazzo sta seduto fra i genitori.* «Tre anni senza mangiare e mi arriva col polso di un ragazzo che ha dormito male. Non chiedetemi di scriverlo nel registro, perché nessuno ci crederebbe.» *Si gratta la testa calva.* «Mangia poco e spesso, come gli ho detto io. Lacrima alla luce. Ha paura di notte. Quella non la curo io: quella la cura chi gli parla.» *Poi, del Brak, alza le spalle:* «Una ferita è una ferita. La pelle è un dettaglio. Se sanguina lo cucio. Se morde, lo cucio da lontano.»",
+    "insistono": "«Il ragazzo obbedisce a tutto. Gli ho detto “apri la bocca” e l'ha aperta prima che finissi. Poi si è spaventato. Non è una malattia del corpo. Ma non è neanche niente.»",
+    "mai": "Non sa niente della voce sotto Bëllindë né del vincolo che teneva Micuccio: per lui è un ragazzo denutrito e spaventato."
+   },
+   {
+    "tema": "Chi è, da dove viene",
+    "domanda": "«Lei da dove viene, dottore? Perché è con la Crociata?»",
+    "risposta": "*Per un attimo smette di contare.* «Da una città dove c'erano più medici che malati, e i malati sceglievano il medico come si sceglie un sarto.» *Riprende a riavvolgere le bende.* «A Julia Nova invece c'era bisogno, dopo l'assedio. Tanto bisogno. Ho fatto il mio. Poi la Crociata cercava uno che sapesse distinguere una febbre da una maledizione, e io quella differenza la so.» *Vi guarda da sopra gli occhiali.* «Non mi fido dei miracoli. Lo dico anche al vostro chierico, con tutto il rispetto. Lui prega, io lavo. Ogni tanto funziona tutti e due.»",
+    "insistono": "*Se gli chiedono di quella città:* «Teramum.» *Lo dice piano.* «Un paziente mi è morto fra le mani. Un uomo importante, di una famiglia del Colle. Non era colpa mia, ma alle famiglie del Colle la colpa serve sempre a qualcuno. Sono partito di notte.» *Si sistema la borsa.* «Adesso ci torno con quaranta persone e un capitano con gli occhi d'oro. Non è il modo che avevo pensato.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Persuasione"
+     ],
+     "cd": 14,
+     "si": "Ammette la sua paura: a Teramum qualcuno potrebbe riconoscerlo, e allora la Crociata si porterebbe dietro un medico ricercato. «Se mi riconoscono, lasciatemi indietro. Ho già deciso così. Ma ditelo a me prima che a Silvanus.»",
+     "no": "«Vengo da dove vengono tutti: da un posto dove non potevo restare. Avanti il prossimo.»"
+    },
+    "mai": "Non dice il nome del paziente morto né della famiglia del Colle, neanche se insistono: «Se ve lo dico, lo dite a qualcuno, e quel qualcuno lo dice a loro.»"
+   }
+  ],
+  "reazioni": {
+   "minaccia": "«Fate pure. Poi chi vi cuce?» *Torna alle sue bende senza guardarvi.* Se la minaccia è seria, va dritto da Silvanus a dirlo, a voce alta, contando le parole.",
+   "soldi": "«Per me no. Per la cassa sì: aceto, filo, ragnatela pulita, olio. Datelo a Tiberius e ditegli che è per il Carro IV, così lo scrive bene.»",
+   "lusinga": "«Un bravo medico è quello che i pazienti non ringraziano, perché non si ricordano di essere stati male.» Ma arrossisce, e per mezz'ora conta più piano.",
+   "bugia": "*Vi guarda la lingua.* «Avete la faccia di chi ha dormito e dite di non aver dormito. Avete la febbre e dite di stare bene. Con me non funziona: io i corpi li leggo, e i corpi non mentono.» Se la bugia riguarda una ferita, vi lega il braccio al collo per punizione."
+  },
+  "battute": [
+   "«Fate pure gli spiritosi. Poi venite da me col braccio rotto.»",
+   "«Ferma la bestia! Ho i feriti qua dietro!»",
+   "«No. Questa la teniamo. Voi avete bisogno di dormire, non di me.»",
+   "«Uno, due, tre… chi manca? Ah, il falco. Il falco non lo curo.»",
+   "«Acqua bollita! Non quella del fiume, quella bollita! Bollita vuol dire che ha fatto le bolle!»",
+   "«Morsi, graffi, una gamba storta e un'anima ammaccata. Una giornata normale.»",
+   "«Lui prega, io lavo.»",
+   "«Se vi sentite bene, non fidatevi: è il primo sintomo di tante cose.»"
+  ],
+  "uscita": {
+   "frase": "«Basta così. Chi non sanguina, via dal mio carro.»",
+   "dopo": "Torna sul Carro IV, conta le fiale a voce alta (due di meno), e le bende ad asciugare sul telone. Durante la marcia passa due volte vicino a chi ha avuto un morso o è rimasto paralizzato, senza dire niente, solo per guardarlo in faccia.",
+   "aggancio": "Mentre chiude la borsa si annusa le dita e aggrotta la fronte: «Strano. Le loro camicie sanno di lillà. Contadini che sanno di lillà, ad agosto. Non lo usano neanche le signore di Julia Nova.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Il Dottor Albino dà due pozioni di guarigione (2d4+2) a chi è ferito, di nascosto da Silvanus.",
+    "via": "gratis"
+   },
+   {
+    "info": "I corpi sono freddi troppo presto e non bevevano né mangiavano da giorni: hanno solo aspettato.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le cuciture hanno due settimane; sono state fatte su gente ancora viva.",
+    "via": "prova"
+   },
+   {
+    "info": "Chi ha cucito è un uomo pratico, da bestie (pastore, vaccaro, macellaio), e ne ha cuciti quattordici in uno o due giorni.",
+    "via": "gratis"
+   },
+   {
+    "info": "Non bere al pozzo; riempire le botti al fiume, a monte del guado.",
+    "via": "gratis"
+   },
+   {
+    "info": "Micuccio sta fisicamente meglio di quanto dovrebbe; obbedisce a ogni ordine prima di capirlo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le camicie dei morti sanno di lillà.",
+    "via": "gratis"
+   },
+   {
+    "info": "Albino fuggì da Teramum dopo la morte di un paziente di una famiglia del Colle, e teme di essere riconosciuto.",
+    "via": "prova"
+   },
+   {
+    "info": "Il nome del paziente morto e della famiglia.",
+    "via": "mai"
+   }
+  ]
+ }
 }

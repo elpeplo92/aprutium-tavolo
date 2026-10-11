@@ -10,5 +10,121 @@
  "atti": [],
  "links": [],
  "pub": "Due vecchi carrettieri di Bbashanë che portano fieno lungo la strada di valle. All’osteria de lu Passe giocano a morra in un angolo, a voce bassa; smettono quando qualcuno si avvicina, e ricominciano a parlare se vedono arrivare una brocca. Conoscono le voci della strada.",
- "gm": "Luogo abituale: la strada di valle fra Bbashanë e Teramum, coi carri di fieno; all’osteria de lu Passe, nell’angolo della sala ·\nEtà: ⟦sulla settantina Brunone, qualcosa meno il cognato.⟧\nStatistiche: popolani (CA 10, PF 4). Non combattono.\n⟦Brunone: piccolo, secco, cappello sfondato, tre denti e mani nodose che buttano le dita con violenza. Il cognato: grosso, lento, ride sempre un attimo dopo gli altri.⟧\n\nSa (una voce per domanda): che a Teramum chiudono le porte al tramonto e non le aprono nemmeno per un flamine; che il Barone di Cashtalladdë l’anno scorso ha fatto tirare le baliste su un gregge, per provarle; che una signora dai capelli bianchi ha comprato mezza Teramum e l’altra metà l’ha ricattata; che la Guardia raddoppia i turni da una settimana, dicono per i terremoti; che nella valle la gente dei casali sparisce e poi torna diversa.\n•\nNon sa: niente del convoglio oltre a quello che vede; chi sia il messere; cosa sia successo al guado.\nVoce: ⟦dialetto stretto, si parlano sopra; Brunone urla i numeri della morra.⟧\nCosa vuole: ⟦bere gratis; arrivare a Teramum col fieno prima che la Guardia alzi il dazio.⟧\nSegreto: nessuno.\n\nSe gli chiedono di…:\n…giocare: ⟦«Una brocca a chi perde.» Brunone bara, il cognato lo sa e non dice niente.⟧\n…la valle: «Nella valle sparisce la gente dei casali. Non muore: sparisce, e poi torna diversa.»\n\nBattute pronte:\n«Sette!»\n«A Teramum chiudono le porte al tramonto e non le aprono nemmeno per un flamine.»"
+ "gm": "Luogo abituale: la strada di valle fra Bbashanë e Teramum, coi carri di fieno; all’osteria de lu Passe, nell’angolo della sala ·\nEtà: ⟦sulla settantina Brunone, qualcosa meno il cognato.⟧\nStatistiche: popolani (CA 10, PF 4). Non combattono.\n⟦Brunone: piccolo, secco, cappello sfondato, tre denti e mani nodose che buttano le dita con violenza. Il cognato: grosso, lento, ride sempre un attimo dopo gli altri.⟧\n\nSa (una voce per domanda): che a Teramum chiudono le porte al tramonto e non le aprono nemmeno per un flamine; che il Barone di Cashtalladdë l’anno scorso ha fatto tirare le baliste su un gregge, per provarle; che una signora dai capelli bianchi ha comprato mezza Teramum e l’altra metà l’ha ricattata; che la Guardia raddoppia i turni da una settimana, dicono per i terremoti; che nella valle la gente dei casali sparisce e poi torna diversa.\n•\nNon sa: niente del convoglio oltre a quello che vede; chi sia il messere; cosa sia successo al guado.\nVoce: ⟦dialetto stretto, si parlano sopra; Brunone urla i numeri della morra.⟧\nCosa vuole: ⟦bere gratis; arrivare a Teramum col fieno prima che la Guardia alzi il dazio.⟧\nSegreto: nessuno.\n\nSe gli chiedono di…:\n…giocare: ⟦«Una brocca a chi perde.» Brunone bara, il cognato lo sa e non dice niente.⟧\n…la valle: «Nella valle sparisce la gente dei casali. Non muore: sparisce, e poi torna diversa.»\n\nBattute pronte:\n«Sette!»\n«A Teramum chiudono le porte al tramonto e non le aprono nemmeno per un flamine.»",
+ "dialogo": {
+  "apertura": "*Smettono di giocare quando vi avvicinate. Zi’ Brunone vi squadra dal cappello sfondato in giù, vede la brocca che portate, e la mano nodosa torna a battere sul tavolo.* «Sette! …E voi, che volete? Se pagate da bere, sedete. Se no, la morra è nostra.» *Il cognato ride, un attimo dopo.*",
+  "voce": "Dialetto teramano di campagna, ma comprensibile («nen», «mo’», «lu cugnate», «’na vote», «frichì»); si parlano sopra. · Tic: Brunone urla i numeri della morra in mezzo alle frasi; chiama tutti «giuvanò»; il cognato ripete l’ultima parola di Brunone e ride dopo gli altri. · Ritmo: Brunone a raffica, il cognato lento; si interrompono per giocare un colpo.",
+  "argomenti": [
+   {
+    "tema": "Chi siete",
+    "domanda": "«Chi siete, voi due?»",
+    "risposta": "«Brunone, de Bbashanë. Zi’ Brunone, per i giovani, che so’ vecchio pure per me stesso.» *Butta tre dita.* «Otto! …E questo è lu cugnate mio, che ha sposato mia sorella e da allora si mangia il pane mio. Portiamo fieno a Teramum, su e giù per la valle, da quarant’anni. Il carro sta in cortile, quello che puzza di fieno e non di fiori.» *Il cognato:* «…di fiori.» *E ride.*",
+    "insistono": "«Domani passiamo la sbarra di Colleatterrato prima di voi, se ci lasciate. Che se la Guardia alza il dazio sul fieno un’altra volta, a Bbashanë mangiamo l’erba noi.»",
+    "mai": "Niente da nascondere, tranne che Brunone bara alla morra (il cognato lo sa e non dice niente)."
+   },
+   {
+    "tema": "Teramum e la Guardia",
+    "domanda": "«Che aria tira a Teramum?»",
+    "risposta": "«Chiudono le porte al tramonto e non le aprono nemmeno per un flamine. L’ho visto io, ’na vote: un flamine col mulo, sotto la Porta, che bussava e pregava, e quelli di sopra niente.» *Beve.* «E la Guardia raddoppia i turni da una settimana. Dicono per i terremoti. Io dico: se la terra trema, che ci fai con due guardie invece di una? La tieni ferma?»",
+    "insistono": "«A Colleatterrato c’è la sbarra e c’è il sergente col librone. Scrive tutto. Pure quante pecore porti, e di che colore. Io gli dico sempre: scrivete pure che so’ bello. Lui non lo scrive.» *Il cognato ride.* «Con voi, giuvanò, ci starà una giornata a scrivere.»",
+    "mai": "Non sa niente del Consiglio, dei sigilli o delle Casate: per lui «quelli dei palazzi» sono tutti uguali."
+   },
+   {
+    "tema": "Il Barone di Cashtalladdë",
+    "domanda": "«Il Barone di queste terre, com’è?»",
+    "risposta": "*Sputa per terra, poi si guarda intorno e pulisce col piede.* «Il Barone Pietramala ha fatto tirare le baliste su un gregge, l’anno scorso. Per provarle. Cinquanta pecore di Peppe Lu Mute, de Bbashanë, tutte stese su un prato. Poi ha mandato il castaldo a dire che erano pecore malate.» *Batte la mano.* «Cinque! I pastori non se lo sono scordato. Nessuno se lo scorda, da qua a Bbashanë.»",
+    "insistono": "«Il castaldo è passato tre giorni fa col foglio contro di voi. Ha letto, s’è bevuto il vino di Nicola e se n’è andato. Quello lavora per il Barone, e il Barone lavora per Teramum. Così dicono.» *Abbassa la voce.* «A noi della valle, il Barone ci conta solo quando paghiamo.»",
+    "mai": "Non sa cosa voglia il Barone dalla Crociata."
+   },
+   {
+    "tema": "La signora dai capelli bianchi",
+    "domanda": "«Chi comanda davvero, a Teramum?»",
+    "risposta": "«Una signora dai capelli bianchi ha comprato mezza Teramum. L’altra metà l’ha ricattata.» *Lo dice come si dice una cosa che sanno tutti.* «Così dicono ai Tigli, dove scarico il fieno per le stalle dei palazzi. Una forestiera. Nessuno sa da dove viene, e tutti sanno dove abita.»",
+    "insistono": "*Guarda il tavolo del messere, poi abbassa la voce del tutto.* «Le stalle del palazzo suo puzzano come la stalla di Nicola stasera. Fiori. Io il fieno ce lo porto e me ne vado subito, che i cavalli là dentro non mangiano. Stanno fermi e guardano il muro.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Racconta delle stalle del palazzo che puzzano di fiori (la seconda risposta). Vale anche una seconda brocca.",
+     "no": "«Io porto fieno, giuvanò. I nomi dei signori non li so e non li voglio sapere.»"
+    },
+    "mai": "Non sa il nome della signora né quale sia di preciso il palazzo («uno sui Tigli, col portone chiuso»)."
+   },
+   {
+    "tema": "La valle",
+    "domanda": "«Al guado ci hanno assaliti. Cosa succede nei casali?»",
+    "risposta": "*Smette di giocare. Il cognato, per una volta, non ride.* «Nella valle sparisce la gente dei casali. Non muore: sparisce, e poi torna diversa. ’Na vote li incontri sulla strada e ti salutano. Il giorno dopo stanno fermi in mezzo al grano, e non ti salutano più.» *Si fa il segno del sole.* «Noi passiamo di giorno. Di notte, per la valle, nen ce passa più nessuno.»",
+    "insistono": "«Li Chiòde di Sant’Atto, li conoscevamo. Gente buona. Il vecchio Anselmo mi vendeva il fieno quando a Bbashanë pioveva poco.» *Pausa.* «Se li avete trovati al guado, non ce lo dite. Il cognato si mette a piangere.»",
+    "mai": "Non sa chi forgi la gente né del votato con la botticella (non lo ha visto)."
+   },
+   {
+    "tema": "Una partita a morra",
+    "domanda": "«Possiamo giocare?»",
+    "risposta": "«Una brocca a chi perde.» *Allarga le dita nodose.* «E si gioca alla bbashanese: chi sbaglia beve, chi indovina paga.» *Il cognato:* «…paga.» «Statevi attenti, giuvanò. A Bbashanë la morra la impariamo prima di camminare.»",
+    "insistono": "*Brunone bara: butta le dita un istante dopo. Chi lo becca e lo dice ridendo diventa suo amico; chi lo dice male lo offende.*",
+    "prova": {
+     "abilita": [
+      "Percezione",
+      "Rapidità di mano"
+     ],
+     "cd": 13,
+     "si": "Lo beccano o barano meglio di lui. Brunone scoppia a ridere: «Questo è de Bbashanë dentro!» Da qui racconta tutto quello che sa, e domani alla sbarra di Colleatterrato dice al sergente che la Crociata è «gente che paga da bere».",
+     "no": "Perdono tre brocche. Brunone è contentissimo e racconta lo stesso, ma una voce per brocca."
+    },
+    "mai": "Brunone non ammette mai di barare, nemmeno beccato: «Le dita mi tremano, so’ vecchio.»"
+   }
+  ],
+  "reazioni": {
+   "minaccia": "«Ah, giuvanò, io ho settant’anni e tre denti. Che mi levate, i denti?» Il cognato si alza, grosso e lento; Brunone lo rimette a sedere. Da quel momento non parlano più, e domattina alla sbarra raccontano al sergente che la Crociata minaccia i vecchi.",
+   "soldi": "«Mo’ ragioniamo.» Una moneta d’argento vale una voce in più e un racconto lungo. Il cognato ripete: «…ragioniamo.»",
+   "lusinga": "«Lo so che so’ bello. Me lo dice pure il sergente di Colleatterrato, ma non lo scrive.»",
+   "bugia": "«Questa la racconto a Bbashanë, che ridono.» Non si offende: ride e cambia discorso."
+  },
+  "battute": [
+   "«Sette!»",
+   "«A Teramum chiudono le porte al tramonto e non le aprono nemmeno per un flamine.»",
+   "«Tutta!» (alla morra: dieci)",
+   "«Questo è lu cugnate mio. Ha sposato mia sorella e da allora si mangia il pane mio.»",
+   "«Scrivete pure che so’ bello.»",
+   "«Il fieno non mente. Gli uomini sì.»",
+   "«Bevi, cugnà, che domani si sale.»",
+   "«Nella valle, di notte, nen ce passa più nessuno.»"
+  ],
+  "uscita": {
+   "frase": "*Butta l’ultima mano e si alza, scricchiolando.* «Basta, che domani si parte col buio. Cugnà, andiamo a dormire sul fieno, che almeno quello non canta.»",
+   "dopo": "Dormono sul loro carro di fieno in cortile. Al terremoto il cognato si sveglia urlando e Brunone gli dà uno scappellotto. All’alba partono dopo il convoglio e prima della Crociata: alla sbarra di Colleatterrato diranno al sergente quello che pensano dei PG (bene se li hanno fatti ridere o bere, male se li hanno minacciati).",
+   "aggancio": "Alzandosi, al cognato, ma per farsi sentire: «Il fieno per le stalle della signora lo porto io, il giorno della fiera. Se qualcuno vuole vedere i cavalli che guardano il muro, sul carro ci sta posto.» È un modo per entrare ai Tigli, nascosti nel fieno."
+  },
+  "ottenuto": [
+   {
+    "info": "A Teramum chiudono le porte al tramonto, anche per i flamini; la Guardia ha raddoppiato i turni «per i terremoti».",
+    "via": "gratis"
+   },
+   {
+    "info": "Il Barone Pietramala ha provato le baliste su un gregge; i pastori lo odiano; il castaldo lavora per il Barone e il Barone per Teramum.",
+    "via": "gratis"
+   },
+   {
+    "info": "Una signora forestiera dai capelli bianchi ha comprato mezza Teramum e ricattato l’altra metà; abita ai Tigli.",
+    "via": "gratis"
+   },
+   {
+    "info": "Nella valle la gente dei casali sparisce e torna diversa; i Chiòdi di Sant’Atto erano brava gente.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le stalle del palazzo della signora sui Tigli puzzano di fiori e i cavalli non mangiano.",
+    "via": "prova"
+   },
+   {
+    "info": "Brunone porta il fieno alle stalle della signora il giorno della fiera e può nascondere qualcuno sul carro.",
+    "via": "prova"
+   },
+   {
+    "info": "Il nome della signora, chi forgi la gente della valle.",
+    "via": "mai"
+   }
+  ]
+ }
 }

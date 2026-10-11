@@ -10,5 +10,106 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: sessanta. Grossa, braccia infarinate fino alle spalle, voce che arriva in fondo alla fila.\nPizza a strisce, non a quadretti: rivale di Mastro Mario. La sua «pizza scema» (sale grosso e rosmarino) ha sfamato mezza Porta Romana.\nSa: chi sono i bravi del Ponte degli Impiccati (li ha cresciuti a pizza scema). Peppino lu Sciancato ha la madre malata e non vuole uccidere: se gli dicono che li manda Flaminia, non alza il coltello.\nBattute: «Qui niente quadretti.» · «Mangia, che sei sciupato.» · «Pure il Reggente farebbe la fila.»"
+ "gm": "Età: sessanta. Grossa, braccia infarinate fino alle spalle, voce che arriva in fondo alla fila.\nPizza a strisce, non a quadretti: rivale di Mastro Mario. La sua «pizza scema» (sale grosso e rosmarino) ha sfamato mezza Porta Romana.\nSa: chi sono i bravi del Ponte degli Impiccati (li ha cresciuti a pizza scema). Peppino lu Sciancato ha la madre malata e non vuole uccidere: se gli dicono che li manda Flaminia, non alza il coltello.\nBattute: «Qui niente quadretti.» · «Mangia, che sei sciupato.» · «Pure il Reggente farebbe la fila.»",
+ "dialogo": {
+  "apertura": "*Dalla finestra del forno esce una teglia lunga come una porta, e dietro la teglia due braccia infarinate fino alle spalle.* «In fila!» *La voce arriva in fondo alla strada.* «In fila come tutti. Pure il Reggente farebbe la fila.» *Quando arriva il vostro turno, vi guarda dall’alto in basso, coltello in mano.* «Quante strisce?»",
+  "voce": "Teramano di Porta Romana, forte, materno e spiccio · Tic: «Mangia, che sei sciupato»; «Qui niente quadretti»; chiama tutti «fijë mi» · Ritmo: frasi corte urlate sopra la fila, poi, quando decide di parlare davvero, abbassa la voce di colpo e si appoggia alla finestra.",
+  "argomenti": [
+   {
+    "tema": "Chi sei",
+    "domanda": "«Siete voi la famosa Za’ Flaminia?»",
+    "risposta": "«Flaminia. Za’ Flaminia per tutta Terme.» *Taglia una striscia con un colpo solo.* «La mamma della pizza, dicono. Io dico solo che i figli miei mangiano tutti. Quarant’anni che accendo questo forno prima delle campane. Mio marito faceva il pane, io facevo la pizza col pane che avanzava, sale grosso e rosmarino, e la davo ai facchini della porta per niente. La chiamavano la pizza scema, perché non c’è niente sopra. Adesso la vogliono pure le signore dei Tigli. Mandano la serva con l’ombrello.» *Indica la dama in fila.* «Quella. Guardatela. Davanti al forno siamo tutti uguali. Dietro il forno ci sto io.»",
+    "insistono": "«Mio marito è morto, il forno no. I figli miei veri sono andati a Julia Nova a fare i marinai. Così i figli di Porta Romana me li sono presi io. Li ho cresciuti tutti, a strisce. Qualcuno è venuto bene. Qualcuno no.»",
+    "mai": "Non parla mai male di un ragazzo di Porta Romana davanti a una guardia."
+   },
+   {
+    "tema": "E da Mario?",
+    "domanda": "«Ma da Mario dicono che…»",
+    "risposta": "*Il coltello si ferma a metà teglia. La fila tace.* «Mario chi? Il nipote? Quello che taglia a quadretti come un ragioniere?» *Taglia la teglia con un colpo solo, che fa saltare il rosmarino.* «La pizza si taglia a strisce. Come si è sempre fatto. La striscia la tieni in mano, la pieghi, ci cammini, ci lavori. Il quadretto è una moda. È roba per chi mangia coi guanti.» *Vi passa una striscia.* «Assaggia. Poi dimmi.» *Se le dite che la sua è meglio, la fila lo sente, e lei sorride per la prima volta.* «Visto? Lo dicono pure i forestieri.»",
+    "insistono": "*Piano, appoggiata alla finestra.* «Il nonno di Mario era un brav’uomo. Al funerale gli ho portato una teglia, a strisce, e il nipote se l’è mangiata tutta piangendo. Crede che non lo sappia nessuno. Non glielo dite.»",
+    "mai": "Chi chiede «ma da Mario…» viene servito per ultimo, sempre. Non andrà mai a mangiare da lui."
+   },
+   {
+    "tema": "Porta Romana e la città",
+    "domanda": "«Che si dice a Porta Romana?»",
+    "risposta": "«A Porta Romana passa tutto. Le guardie del Bando la mattina, coi timbri. I carri del sud, coi muli. I votati che scendono all’Arena. I bravi del ponte, che la sera salgono a prendersi la pizza prima del lavoro. Io li vedo tutti dalla finestra.» *Conta sulle dita infarinate.* «Il grano è salito due volte questo mese. Il ponte nuovo lo inaugurano di nuovo a primavera, il quarto anno. Sor Paolo stamattina aveva un biglietto contro il Reggente. E da due settimane le guardie della Rocca non comprano più la pizza. Le vecchie sì. Le nuove no. Le nuove non mangiano, fijë mi. Ve lo dico io che dò da mangiare a tutti: chi non mangia è malato o è cattivo.»",
+    "insistono": "«Una di quelle, una notte, si è fermata davanti alla finestra. Le ho dato una striscia, per abitudine. L’ha tenuta in mano fino all’alba, ferma, e poi l’ha posata sul davanzale, intera, fredda. Come fanno i cani coi morti.»",
+    "mai": "non sa niente delle guardie nuove oltre a quello che ha visto alla finestra."
+   },
+   {
+    "tema": "I bravi del ponte",
+    "domanda": "«Chi sono i bravi del Ponte degli Impiccati?»",
+    "risposta": "*Smette di tagliare. Vi guarda per capire se siete della Guardia.* «Ragazzi di qua. Li ho cresciuti a pizza scema, quando le madri lavoravano al fiume. Adesso fanno i bravi.» *Sputa di lato, nel cenere.* «Lu Spaccapreta comanda. Quello no: quello è nato cattivo, a sette anni rompeva la testa ai gatti, e io gli davo la pizza uguale perché la fame è fame. Gli altri seguono chi paga. Prima pagava nessuno, e facevano i facchini. Adesso paga uno che profuma di fiori, e fanno i bravi.»",
+    "insistono": "*Si sporge dalla finestra, vicina vicina, e la voce scende.* «Peppino lu Sciancato no. Peppino zoppica da quando l’ha preso un carro, e ha la madre malata, la tosse che non passa. Prende i soldi per le medicine. Non vuole ammazzare nessuno: ha la testa buona. Se ve lo trovate davanti, ditegli che vi manda Flaminia, e vedete se alza il coltello.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "Vi racconta di Peppino lu Sciancato: se gli dite che vi manda Flaminia, non combatte (all’agguato del ponte, un bravo in meno). Vantaggio se avete comprato e detto che la sua è meglio di quella di Mario.",
+     "no": "«I bravi? Qua ci sono solo facchini che mangiano.» Vi dà la striscia e chiama il prossimo."
+    },
+    "mai": "non dà mai i nomi degli altri bravi a una guardia o a chi la tratta male. Non sa chi sia, davvero, l’uomo che profuma di fiori."
+   },
+   {
+    "tema": "Chi paga i bravi",
+    "domanda": "«Da dove vengono i soldi dei bravi?»",
+    "risposta": "«Da dove vengono i soldi a Terme? Dai signori.» *Ride amaro.* «I ragazzi mi pagano la pizza con fiorini nuovi, adesso. Un fiorino per una striscia, e non vogliono il resto. Io il resto glielo do lo stesso, che non sono una ladra. Ma i fiorini li guardo.» *Ne tira fuori uno dal grembiule.* «Guardate il bordo.»",
+    "insistono": "«Limati. Tutti, sul bordo. Peppino mi ha detto che glieli dà un sensale della Lega, uno grasso che tiene il banco sotto i portici della Piazza del Mercato. Lui dice che li presta. Prestare a dei bravi, fijë mi. Uno che presta a dei bravi non si aspetta di riavere i soldi. Si aspetta qualcos’altro.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Persuasione"
+     ],
+     "cd": 14,
+     "si": "Vi mostra il fiorino limato e vi dice che i soldi li dà ai bravi un sensale grasso della Lega che ha il banco sotto i portici della Piazza del Mercato.",
+     "no": "Vi fa vedere il fiorino («nuovo, troppo nuovo») ma non vi dice altro: la fila preme."
+    },
+    "mai": "non sa il nome del sensale (Gerbino) né per conto di chi lavori."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Alza il coltello lungo, e dietro di voi la fila si gira tutta: facchini, guardie, votati.* «Fijë mi, qui davanti ci sono cento persone che mangiano grazie a me. Contale.» Nessuno vi difenderà in Porta Romana per un giorno.",
+   "soldi": "«Qua si paga la pizza, e basta.» *Prende un quattrino, vi dà tre strisce.* Se insistete con l’oro: «Dallo a Peppino, per la madre. Io sto bene.»",
+   "lusinga": "«Mangia, che sei sciupato.» *Vi mette una striscia in più, la più grossa.* La lode alla sua pizza contro quella di Mario vale come vantaggio alla prova sui bravi.",
+   "bugia": "*Ride forte, per la fila.* «Questo mi vuole fregare!» *Poi piano, dura:* «Le bugie le dicevano i ragazzi a sei anni. Non funzionavano allora.» Vi serve per ultimi, da quel momento."
+  },
+  "battute": [
+   "«Qui niente quadretti.»",
+   "«In fila, come tutti. Pure il Reggente farebbe la fila.»",
+   "«Mangia, che sei sciupato.»",
+   "«Fijë mi, la pizza scema è per chi ha fame, non per chi è scemo.»",
+   "«Il rosmarino è di Porta Romana. Il sale pure, l’ho rubato io.»",
+   "«Calda! Scotta! E allora? Soffiate.»",
+   "«Il quadretto è una moda. Le mode passano. La fame no.»",
+   "«Chi magne da sole zi strozz.»"
+  ],
+  "uscita": {
+   "frase": "*Vi mette in mano una striscia in più, avvolta nella carta.* «Questa è per strada. E state lontani dal ponte, la sera.» *Alla fila:* «Avanti!»",
+   "dopo": "Se i PG le sono piaciuti, la sera stessa manda un frechino a dire a Peppino lu Sciancato che la Crociata «è gente di Flaminia».",
+   "aggancio": "Peppino lu Sciancato: all’agguato del ponte, se i PG pronunciano il nome di Flaminia, posa il coltello; e può parlare del sensale con i fiorini limati."
+  },
+  "ottenuto": [
+   {
+    "info": "Za’ Flaminia: pizza a strisce e pizza scema, rivale di Mastro Mario; i bravi del ponte sono ragazzi di Porta Romana cresciuti da lei; Lu Spaccapreta è il capo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le guardie nuove della Rocca non mangiano.",
+    "via": "gratis"
+   },
+   {
+    "info": "Peppino lu Sciancato ha la madre malata e non vuole uccidere: se gli dicono che li manda Flaminia, non alza il coltello.",
+    "via": "prova"
+   },
+   {
+    "info": "I bravi pagano con fiorini nuovi limati, avuti da un sensale grasso della Lega col banco sotto i portici della Piazza del Mercato.",
+    "via": "prova"
+   },
+   {
+    "info": "Il nome del sensale e chi c’è dietro di lui.",
+    "via": "mai"
+   }
+  ]
+ }
 }

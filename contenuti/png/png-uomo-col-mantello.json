@@ -10,5 +10,185 @@
  "atti": [],
  "links": [],
  "pub": "Un uomo vestito da mercante, con un mantello troppo buono per uno che aspetta al sole. In fila sul ponte non guardava né il mulo della contadina né la porta: guardava i carri della colonna, uno per uno, muovendo le labbra. Passandogli vicino, un odore dolce di fiori. Dice di commerciare in lana.",
- "gm": "Luogo abituale: ⟦la casa della signora forestiera che paga in oro, lungo i Tigli⟧ (proposta: la signora è Iuvenza sotto altro nome, se il master decide che è già in città).\nEtà: ⟦trentacinque⟧.\nStatistiche: ⟦Spia (MM 2024)⟧: Inganno +5, Intuizione +4, Furtività +4; per seguirlo Furtività CD 15. Non combatte: se lo toccano grida.\nAspetto: mantello buono, mani lisce senza un callo; profuma di lillà; una piccola spilla d’argento a forma di ragno, grande come un’unghia, sul bordo del mantello. ⟦Barba curata, sorriso da vicino di casa⟧.\nSa: l’ordine: contare persone, carri, bestie e armi, e soprattutto dire se con la colonna c’è un «capitano col sangue che brilla» (Silvanus); che alla Porta Carrese una parola alla guardia basta per entrare senza carte.\nNon sa: ⟦perché Iuvenza voglia Silvanus vivo⟧.\nVoce: cortese, piana, da vicino di casa; si scusa sempre.\nCosa vuole: riferire stasera numeri, armi, e se Silvanus è con la colonna.\nSegreto: è un agente di Veneranda Iuvenza. La prima notte al tratturo torna: dal buio del ponte, odore di lillà (ha contato anche i cavalli).\n\nSe gli chiedono di…:\n\nChi è: «Lana. Commercio in lana. Perdonate se guardavo: non si vede tutti i giorni una colonna così.»\nToccarlo o fermarlo: grida alle guardie «Aiuto! Mi derubano!»: è la cosa peggiore che possa succedere alla colonna in quel momento.\nSeguirlo: Furtività CD 15. Riuscita: va alla Porta Carrese, la porta dei carri, dice una parola alla guardia, entra senza carte. Fallita: si gira, saluta con la mano, e parla con due guardie indicandovi.\n\nBattute pronte:\n«Lana, signori. Solo lana.»\n«Perdonate.»\n«Aiuto! Mi derubano!»"
+ "gm": "Luogo abituale: ⟦la casa della signora forestiera che paga in oro, lungo i Tigli⟧ (proposta: la signora è Iuvenza sotto altro nome, se il master decide che è già in città).\nEtà: ⟦trentacinque⟧.\nStatistiche: ⟦Spia (MM 2024)⟧: Inganno +5, Intuizione +4, Furtività +4; per seguirlo Furtività CD 15. Non combatte: se lo toccano grida.\nAspetto: mantello buono, mani lisce senza un callo; profuma di lillà; una piccola spilla d’argento a forma di ragno, grande come un’unghia, sul bordo del mantello. ⟦Barba curata, sorriso da vicino di casa⟧.\nSa: l’ordine: contare persone, carri, bestie e armi, e soprattutto dire se con la colonna c’è un «capitano col sangue che brilla» (Silvanus); che alla Porta Carrese una parola alla guardia basta per entrare senza carte.\nNon sa: ⟦perché Iuvenza voglia Silvanus vivo⟧.\nVoce: cortese, piana, da vicino di casa; si scusa sempre.\nCosa vuole: riferire stasera numeri, armi, e se Silvanus è con la colonna.\nSegreto: è un agente di Veneranda Iuvenza. La prima notte al tratturo torna: dal buio del ponte, odore di lillà (ha contato anche i cavalli).\n\nSe gli chiedono di…:\n\nChi è: «Lana. Commercio in lana. Perdonate se guardavo: non si vede tutti i giorni una colonna così.»\nToccarlo o fermarlo: grida alle guardie «Aiuto! Mi derubano!»: è la cosa peggiore che possa succedere alla colonna in quel momento.\nSeguirlo: Furtività CD 15. Riuscita: va alla Porta Carrese, la porta dei carri, dice una parola alla guardia, entra senza carte. Fallita: si gira, saluta con la mano, e parla con due guardie indicandovi.\n\nBattute pronte:\n«Lana, signori. Solo lana.»\n«Perdonate.»\n«Aiuto! Mi derubano!»",
+ "dialogo": {
+  "apertura": "*Non si sposta, non si irrigidisce. Si volta piano, con il sorriso che si fa a un vicino di casa incontrato al mercato, e si tocca il bordo del mantello, dove luccica qualcosa di piccolo.* «Perdonate. Guardavo i carri.» *Un mezzo inchino.* «Non se ne vedono tutti i giorni, colonne così. Lanfranco, per servirvi. Lana.» *E un odore dolce, di fiori, arriva un attimo dopo le parole.*",
+  "voce": "Italiano pulito e cortese, da mercante di città, senza un filo di dialetto: troppo pulito per uno che dice di venire dalla costa. · Tic: «perdonate», «solo lana», «a ciascuno il suo». · Ritmo: calmo, piano, mai una parola più alta dell’altra; risponde sempre con una domanda gentile; l’unica volta che alza la voce è per gridare «Aiuto! Mi derubano!».",
+  "argomenti": [
+   {
+    "tema": "Chi sei, cosa fai qui",
+    "domanda": "«Chi sei? Che ci fai in fila senza merce?»",
+    "risposta": "*Allarga le mani, lisce, pulite.* «Lanfranco, mercante di lana. Lana di pecora di montagna, quella buona, che compro ai tratturi e porto ai tintori, dentro le mura, sotto la Porta Romana. La merce viaggia coi carri, io a piedi: i carri passano dalla Carrese, io aspetto qui perché da questa parte arriva la strada della costa, e dalla costa arrivano le notizie. Un mercante che non sa le notizie compra caro e vende male.» *Sorride.* «E oggi la notizia siete voi. Perdonate se vi guardavo: in tutta la fila non c’era altro da guardare. Il mulo della signora, forse. Ma il mulo lo conosco.»",
+    "insistono": "*Senza smettere di sorridere.* «Quali tintori? Quelli bravi. A ciascuno il suo segreto, signori: io non vi chiedo dove comprate i cavalli.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 15,
+     "si": "Le mani non hanno un callo, le unghie sono curate, e uno che compra lana ai tratturi ha le dita unte di grasso di pecora per tutto l’inverno. Quando parla dei tintori non dice un nome, non una strada. Non è un mercante: è uno che fa il mercante da poco, e lo fa bene.",
+     "no": "Un mercante cortese e annoiato. Ce ne sono cento come lui."
+    },
+    "mai": "Il suo vero nome (Lanfranco è quello che usa questa settimana) e per chi lavora. Non nomina mai Iuvenza, Velthuria, il Loto Nero, né la casa dei Tigli."
+   },
+   {
+    "tema": "Perché ci contavi?",
+    "domanda": "«Ti abbiamo visto muovere le labbra. Ci stavi contando.»",
+    "risposta": "*Ride piano, colto in fallo come un ragazzo.* «Mi avete scoperto. È un vizio di mestiere: conto tutto. Le balle di lana, le pecore, i gradini dei solari. Cinque carri, ventitré bestie, una che zoppica. Chi arriva in città con cinque carri o compra o vende, e io volevo sapere quale delle due. Voi comprate o vendete, signori? Perché se vendete lana, io compro.»",
+    "insistono": "«Contare non è un reato. Lo fa la Guardia, lo fa la Lega al ponte, lo fa il sergente al suo tavolo. Io conto gratis, e non scrivo niente.» *Si tocca la tempia.* «Tengo tutto qui.»",
+    "prova": {
+     "abilita": [
+      "Intuizione",
+      "Percezione"
+     ],
+     "cd": 14,
+     "si": "Non contava solo i carri. Ha contato le spade sui fianchi, le balestre sotto i teli, i cavalli da guerra e quelli da tiro, e si è fermato più a lungo su chi sta in testa alla colonna, come se cercasse una faccia precisa e non la trovasse.",
+     "no": "Un mercante curioso, come lo è tutta la fila."
+    },
+    "mai": "Gli ordini: riferire stasera numeri, armi, e se con la colonna c’è il «capitano col sangue che brilla». Non dice mai a chi riferisce."
+   },
+   {
+    "tema": "Il profumo di lillà",
+    "domanda": "«Che cos’è questo odore? È lillà.» (Chi era a Julia Nova se lo ricorda: il Loto d’Ombra, lillà e cenere.)",
+    "risposta": "*Si annusa il polso, divertito.* «Lillà, sì. Avete buon naso. Lo vendono ai Tigli, in boccette di vetro soffiato, e da quest’estate lo porta mezza Teramum: è venuto di moda dalla costa, dicono che le signore di Julia Nova non mettono altro. Io sono un uomo semplice, ma vendo alle signore, e alle signore piace chi profuma come loro.» *Piega la testa.* «Vi piace? Ve ne faccio avere una boccetta. Ai Tigli costa cara; a me la fanno a metà.»",
+    "insistono": "«È solo un profumo, signori. Un fiore. Non avete mai visto un fiore?»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 15,
+     "si": "Ha risposto troppo in fretta, con una storia già pronta: la moda, la costa, le boccette. E da vicino, sotto il lillà, c’è un’altra cosa, appena, come di camino spento. Cenere. Lo stesso odore del molo del Covo della Conchiglia, e del fumo dell’ultima Armatura.",
+     "no": "Un profumo da signora su un uomo vanitoso. A Teramum, a quanto pare, va di moda."
+    },
+    "mai": "Che il lillà è il segno di Casa Velthuria e di Iuvenza. Non ammette mai di essere stato a Julia Nova. La moda del lillà ai Tigli è vera (la signora dei Tigli ha comprato tutto il lillà del mercato): la sua bugia sta in piedi."
+   },
+   {
+    "tema": "Iuvenza, Velthuria, il Loto Nero",
+    "domanda": "«Lavori per Iuvenza? Per Veneranda Iuvenza di Velthuria?»",
+    "risposta": "*Corruga la fronte, cortese, come chi non ha capito il nome.* «Per chi? Perdonate, signori, io lavoro per me e per i tintori della Romana. Di signore che si chiamano Veneranda, in città, ce ne saranno trenta, tutte vedove, tutte con un banco al Fondaco.» *Allarga le braccia.* «Se è una che compra lana, ditemi dove sta e ci vado domattina. Se è una che vi ha fatto un torto, mi dispiace per voi. Io vendo lana. Il resto, a ciascuno il suo.»",
+    "insistono": "*Il sorriso resta, gli occhi no.* «Signori, mi state accusando di qualcosa davanti a mezza fila e a dodici guardie. Ditemi di che cosa, così lo ripeto parola per parola al sergente.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 16,
+     "si": "Al nome di Iuvenza la mano destra è andata da sola al bordo del mantello, sulla spilla, e si è fermata lì un respiro, come chi si tocca un amuleto. Poi è tornata giù. Lo sa anche lui che l’avete vista.",
+     "no": "Nessuna reazione. O non la conosce, o è molto bravo."
+    },
+    "mai": "Non ammette mai, nemmeno con Persuasione 30, nemmeno legato: preferisce gridare e farsi portare via dalle guardie. Non sa perché Iuvenza voglia Silvanus vivo."
+   },
+   {
+    "tema": "Lu Grise, il pugnale dell’Osservatore",
+    "domanda": "«Conosci Lu Grise? L’Osservatore. Lo abbiamo preso a Mushanë.» (o gli mostrano il pugnale stretto, senza guardia, con la scanalatura per il veleno)",
+    "risposta": "*Guarda il pugnale un attimo di troppo. Poi alza gli occhi, e il sorriso è di nuovo al suo posto.* «Lu Grise? Un soprannome da osteria. Non conosco nessuno che si chiami come un colore.» *Pausa.* «Bel pugnale. Da chi l’avete preso?» *E aspetta la risposta con un interesse che non aveva avuto per niente altro.*",
+    "insistono": "«Mi chiedete se conosco un uomo che non conosco. Vi chiedo dove l’avete preso. Siamo pari.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "È l’unica domanda vera che ha fatto da quando parla con voi: vuole sapere se Lu Grise è vivo, e dove lo tenete. Se gli rispondete, lo ricorderà parola per parola.",
+     "no": "Curiosità da mercante per un bel pezzo di ferro."
+    },
+    "mai": "Che conosce Lu Grise, e cosa farà la sua padrona quando saprà dove lo tengono. Qualunque cosa i PG gli dicano su Lu Grise, stasera arriva ai Tigli."
+   },
+   {
+    "tema": "La spilla",
+    "domanda": "«Che cos’è quella spilla?»",
+    "risposta": "*Ci mette due dita sopra, con affetto.* «Questa? Un regalo. Un ragnetto d’argento, piccolo come un’unghia. Lo portano i tessitori, dalle mie parti: il ragno è il primo tessitore del mondo, e chi vende lana se lo tiene addosso per fortuna. Mia moglie me l’ha appuntato il giorno che sono partito.» *Sorride.* «Le mogli credono a queste cose. Io la porto perché se torno senza, la fortuna me la fa vedere lei.»",
+    "insistono": "«È d’argento, sì. Non vale niente. Se la volete, non ve la do: ma non è per il prezzo.»",
+    "prova": {
+     "abilita": [
+      "Percezione",
+      "Indagare"
+     ],
+     "cd": 15,
+     "si": "È lavorata da un orefice bravo, non da un bottegaio: le zampe sono otto, ognuna con la sua giuntura. E sul dorso del ragno c’è una venatura scura, come un petalo nero. Non è un regalo da moglie di mercante.",
+     "no": "Una spilla d’argento, piccola e graziosa."
+    },
+    "mai": "⟦La spilla a ragno è il segno di riconoscimento degli informatori di Iuvenza a Teramum: chi la vede, alla Porta Carrese e in certi banchi del Fondaco, lo lascia passare senza carte e senza domande.⟧ Non se la toglie mai."
+   },
+   {
+    "tema": "Che cosa vuoi da noi?",
+    "domanda": "«Insomma, che cosa ti interessa di noi?»",
+    "risposta": "*Fa un passo indietro, le mani aperte, come chi si arrende ridendo.* «Niente, signori, niente. Mi interessa sapere chi entra in città, perché chi entra compra, mangia, si veste, si copre d’inverno. Lana.» *Poi, leggero, con lo sguardo che scivola verso la testa della colonna:* «Ma ditemi una cosa sola, per curiosità di mercante: è vero quello che si dice, che il vostro capitano ha gli occhi… diversi? Che quando si taglia, il sangue luccica? A Teramum si raccontano storie così, e io vendo meglio se so quali sono vere.»",
+    "insistono": "«Non volete dirmelo? Fate bene. Lo scoprirò al mercato, come tutti.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 14,
+     "si": "Tutto il resto era copertura. Questa è la domanda per cui è venuto fin qui e ha aspettato al sole: vuole sapere se Silvanus è con la colonna. E qualunque cosa rispondiate, gli basta guardarvi in faccia mentre rispondete.",
+     "no": "Pettegolezzi da mercato. Il capitano della Crociata è sulla bocca di tutti."
+    },
+    "mai": "Che Iuvenza vuole Silvanus vivo. Se Silvanus non è con la colonna, riferisce anche questo."
+   },
+   {
+    "tema": "Come si entra in città",
+    "domanda": "«E tu come entri? Hai il lasciapassare?»",
+    "risposta": "*Ride.* «Il lasciapassare d’armi? Io porto un coltello per il pane e una penna. Entro come tutti, signori: aspetto, pago il ponte, dico il mio nome al sergente.» *Pausa.* «O vado alla Carrese, dove mi conoscono. Là il sergente è un brav’uomo, e il formaggio della sua povera madre lo compro io. Teramum è una città di carte, ma le carte le leggono uomini, e gli uomini si conoscono.»",
+    "insistono": "«Volete un consiglio, gratis? Non andate alla Carrese con lo stendardo. Ridono ancora adesso di un barone che ci è entrato col cavallo bardato.»",
+    "mai": "Che alla Carrese basta una parola alla guardia (e la spilla) per entrare senza mostrare niente. Se lo seguono (Furtività CD 15) lo vedono loro."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Fa un passo indietro e grida, con tutta la voce che non ha mai usato:* «Aiuto! Aiuto! Mi derubano! Guardie!» Le guardie dell’arco si girano, la fila si apre, Iaco scrive. È la cosa peggiore che possa succedere alla colonna in quel momento: lui è un mercante derubato, loro una colonna armata senza mandato.",
+   "soldi": "*Guarda la moneta e ride, sinceramente divertito.* «Mettete via. Semmai sono io che compro: quanto volete per dirmi quanti siete davvero?» Non accetta niente. Stanotte, al campo, prova a comprare le stesse notizie dal più povero del seguito.",
+   "lusinga": "*Si inchina, compiaciuto ma immobile.* «Troppo buoni. Un mercante di lana non merita tanto.» Non cambia niente: è abituato a essere lusingato da chi vuole qualcosa, e lo nota.",
+   "bugia": "*Sorride.* «Certo.» Ci crede subito, o fa finta: non discute mai. Ma la bugia la riferisce lo stesso, insieme alla faccia di chi l’ha detta, e ai Tigli sapranno distinguere."
+  },
+  "battute": [
+   "«Lana, signori. Solo lana.»",
+   "«Perdonate.»",
+   "«A ciascuno il suo.»",
+   "«Un mercante che non sa le notizie compra caro e vende male.»",
+   "«Conto tutto. È un vizio. Le pecore, i gradini, le persone.»",
+   "«Teramum è una città di carte, ma le carte le leggono uomini.»",
+   "«Che bel mulo. Zoppica dalla sinistra, però.»",
+   "«Il sole qui sparisce presto. Conviene sbrigarsi a guardare.»",
+   "«Aiuto! Mi derubano!»"
+  ],
+  "uscita": {
+   "frase": "«Perdonate: la fila si muove, e la mia lana mi aspetta.» *Un mezzo inchino, e mentre si volta, come un saluto qualunque:* «Salutatemi il vostro capitano.»",
+   "dopo": "Esce dalla fila e se ne va a piedi lungo le mura, verso sud. Alla Porta Carrese dice una parola alla guardia ed entra senza che nessuno guardi le sue carte (Furtività CD 15 per seguirlo; se fallisce, si gira, saluta con la mano e si mette a parlare con due guardie indicando i PG). Stasera riferisce ai Tigli: numeri, armi, e se Silvanus c’è. Paga Cenzino Mezzalingua un grosso al giorno per sapere dove vanno i forestieri, e la borsa da cui escono i fiorini limati dei bravi del Ponte degli Impiccati è la sua. La prima notte al tratturo torna: dal buio del ponte, odore di lillà, e conta anche i cavalli.",
+   "aggancio": "«Salutatemi il vostro capitano»: nessuno dei PG ha parlato di un capitano. Lui lo sapeva già, e voleva solo vedere le loro facce."
+  },
+  "ottenuto": [
+   {
+    "info": "Profuma di lillà, si fa chiamare Lanfranco e dice di commerciare in lana.",
+    "via": "gratis"
+   },
+   {
+    "info": "Non è un mercante: mani lisce, nessun nome di tintore, una storia preparata.",
+    "via": "prova"
+   },
+   {
+    "info": "Sotto il lillà c’è odore di cenere, come il Loto d’Ombra di Julia Nova.",
+    "via": "prova"
+   },
+   {
+    "info": "Al nome di Iuvenza si tocca la spilla a ragno.",
+    "via": "prova"
+   },
+   {
+    "info": "Vuole sapere se Lu Grise è vivo e dove lo tengono.",
+    "via": "prova"
+   },
+   {
+    "info": "Cerca il «capitano col sangue che brilla»: vuole sapere se Silvanus è con la colonna.",
+    "via": "prova"
+   },
+   {
+    "info": "Sa del capitano senza che glielo abbiano detto («Salutatemi il vostro capitano»).",
+    "via": "gratis"
+   },
+   {
+    "info": "Entra dalla Porta Carrese senza mostrare carte.",
+    "via": "prova"
+   },
+   {
+    "info": "Che lavora per Iuvenza, che lei è ai Tigli, che vuole Silvanus vivo, cosa significa la spilla.",
+    "via": "mai"
+   }
+  ]
+ }
 }

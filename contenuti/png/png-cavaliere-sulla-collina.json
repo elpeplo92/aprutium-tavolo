@@ -10,5 +10,131 @@
  "atti": [],
  "links": [],
  "pub": "Un cavaliere fermo sulla collina oltre la strada, verso levante, accanto a una quercia sola, nella notte del terremoto. Il cavallo non brucava, lui non si muoveva: guardava il campo. Quando la terra ha tremato ha tenuto il cavallo con una mano sola, senza staccare gli occhi da voi. Appena qualcuno si è mosso verso di lui, è sparito oltre la cresta, al galoppo verso sud-est.",
- "gm": "Luogo abituale: dietro la colonna, a distanza, da Bëllindë (è lui il cavaliere notato all’ara di Sant’Atto) ·\nEtà: ⟦una ventina d’anni.⟧\nStatistiche: Esploratore (SRD 5.2.1: CA 13, PF 16; Percezione +5, Furtività +6, Sopravvivenza +5). Non combatte: fugge. Ha un buon cavallo e cento metri di vantaggio.\nUn giovane in tabarro scuro, senza stemma. ⟦Magro, imberbe, occhi che non sbattono; mangia mele per stare sveglio.⟧\n\nChi è: Guelfo (proposta), scudiero di Dama Violante Rosaspina di Nutaròschë. Porta il conto della Crociata a Teramum per la via segreta: lui, poi Rosaspina, poi Iuvenza.\nSa: il conto della colonna; che il capitano porta il cappuccio anche di notte; la strada per Nutaròschë di notte.\n•\nNon sa: cosa c’è nei carri del convoglio; cosa sia stato il colpo da occidente.\nVoce: ⟦poche parole, educate, da casa nobile; se preso, chiede solo di non far male al cavallo.⟧\nCosa vuole: consegnare la lettera; non farsi prendere.\nSegreto: la lettera sigillata con cera rossa e una rosa per impronta, «a chi sapete, a Teramum»: dentro il conto della colonna e «il capitano porta il cappuccio anche di notte». I ferri del cavallo hanno i chiodi a forma di rosa (il fabbro di Rosaspina li firma).\n\nSe gli chiedono di…:\n…chi è (se preso): ⟦«Un viandante. Guardavo la luna.»⟧ Intuizione CD 13: mente.\n…la lettera: ⟦«Non è mia. La porto.»⟧ Non dice il nome di Rosaspina se non minacciato (Intimidire CD 15).\n\nBattute pronte:\n⟦«Il cavallo no. Il cavallo non c’entra.»⟧\n⟦«A chi sapete. Non lo so nemmeno io, a chi.»⟧"
+ "gm": "Luogo abituale: dietro la colonna, a distanza, da Bëllindë (è lui il cavaliere notato all’ara di Sant’Atto) ·\nEtà: ⟦una ventina d’anni.⟧\nStatistiche: Esploratore (SRD 5.2.1: CA 13, PF 16; Percezione +5, Furtività +6, Sopravvivenza +5). Non combatte: fugge. Ha un buon cavallo e cento metri di vantaggio.\nUn giovane in tabarro scuro, senza stemma. ⟦Magro, imberbe, occhi che non sbattono; mangia mele per stare sveglio.⟧\n\nChi è: Guelfo (proposta), scudiero di Dama Violante Rosaspina di Nutaròschë. Porta il conto della Crociata a Teramum per la via segreta: lui, poi Rosaspina, poi Iuvenza.\nSa: il conto della colonna; che il capitano porta il cappuccio anche di notte; la strada per Nutaròschë di notte.\n•\nNon sa: cosa c’è nei carri del convoglio; cosa sia stato il colpo da occidente.\nVoce: ⟦poche parole, educate, da casa nobile; se preso, chiede solo di non far male al cavallo.⟧\nCosa vuole: consegnare la lettera; non farsi prendere.\nSegreto: la lettera sigillata con cera rossa e una rosa per impronta, «a chi sapete, a Teramum»: dentro il conto della colonna e «il capitano porta il cappuccio anche di notte». I ferri del cavallo hanno i chiodi a forma di rosa (il fabbro di Rosaspina li firma).\n\nSe gli chiedono di…:\n…chi è (se preso): ⟦«Un viandante. Guardavo la luna.»⟧ Intuizione CD 13: mente.\n…la lettera: ⟦«Non è mia. La porto.»⟧ Non dice il nome di Rosaspina se non minacciato (Intimidire CD 15).\n\nBattute pronte:\n⟦«Il cavallo no. Il cavallo non c’entra.»⟧\n⟦«A chi sapete. Non lo so nemmeno io, a chi.»⟧",
+ "dialogo": {
+  "apertura": "Quando lo raggiungono, o quando il cavallo inciampa e lo butta giù: *un giovane in tabarro scuro, senza stemma, si rialza con le mani aperte e non tocca la spada. Guarda prima il cavallo, poi voi.* «Il cavallo no. Il cavallo non c’entra.» *Poi, più piano, con la voce educata di chi è cresciuto in un palazzo:* «Un viandante. Guardavo la luna.»",
+  "voce": "Italiano formale, da casa nobile di provincia, imparato a forza; nessun dialetto, tranne una parola quando si spaventa · Tic: «messere» e «come vi piace»; chiede sempre del cavallo; mastica qualcosa (una mela, un filo d’erba) per stare sveglio · Ritmo: poche parole, educate, con pause lunghe in cui guarda il buio come se calcolasse la distanza dalla cresta; non alza mai la voce, nemmeno quando lo minacciano.",
+  "argomenti": [
+   {
+    "tema": "Chi è",
+    "domanda": "«Chi sei? Perché ci guardavi dalla collina?»",
+    "risposta": "«Un viandante, messere. Guardavo la luna. Di notte, in campagna, non c’è altro da guardare.» *Sostiene lo sguardo, ma le mani gli tremano un poco.* «Ho visto i vostri fuochi e mi sono fermato. Uno che viaggia solo, di notte, si ferma a guardare i fuochi degli altri: per sapere se andarci vicino o girare largo. Ho deciso di girare largo. Mi pare di aver fatto bene, a vedere come mi correte dietro.» *Pausa.* «Come vi piace. Se volete il mio nome, è Guelfo. Un nome vale l’altro, a quest’ora.»",
+    "insistono": "«Sono scudiero. Di chi, non conta. Di una casa che non ha niente contro di voi.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "Mente sulla luna: è stato ore sotto la quercia, a guardare il campo, non il cielo. Il nome invece è vero: l’ha detto troppo in fretta per averlo inventato. E ha paura, ma non di voi: ha paura di tornare senza la lettera.",
+     "no": "Un ragazzo di buona famiglia che si è trovato nel posto sbagliato."
+    },
+    "mai": "Non dice mai spontaneamente di chi è scudiero (Dama Violante Rosaspina di Nutaròschë): solo con Intimidire CD 15 (vedi «La lettera»)."
+   },
+   {
+    "tema": "La lettera col sigillo della rosa",
+    "domanda": "«Che cos’è questa lettera? A chi la porti?»",
+    "risposta": "*Guarda la lettera nelle vostre mani: cera rossa, una rosa per impronta, «a chi sapete, a Teramum».* «Non è mia. La porto.» *Si morde il labbro.* «Io porto le lettere che mi danno, messere, come un mulo porta il basto. Il mulo non sa cosa c’è nel basto e io non so cosa c’è nella lettera. A chi va? A chi sapete. Così c’è scritto. Non lo so nemmeno io, a chi.» *Guarda la cera.* «Se la aprite, io sono un uomo morto. Non per voi: per quelli che l’aspettano. Una lettera aperta si vede.»",
+    "insistono": "Se la aprono comunque, dentro c’è il conto della colonna (uomini, carri, bestie, armi) e una riga sola in fondo: «il capitano porta il cappuccio anche di notte». Lui chiude gli occhi. «Adesso lo sapete. Adesso sono un uomo morto.»",
+    "prova": {
+     "abilita": [
+      "Intimidire"
+     ],
+     "cd": 15,
+     "si": "«Dama Violante. Rosaspina. Di Nutaròschë.» *Lo dice al cavallo, non a voi.* «Io la porto a lei. Lei la manda avanti. Da lì in poi non so niente, giuro: non so chi la legge, a Teramum. So solo che chi la legge paga bene, e che la mia signora ha paura di lui.» Dopo un momento: «Di lei. Ha paura di lei.»",
+     "no": "«A chi sapete, messere. Potete battermi fino all’alba: a chi sapete.»"
+    },
+    "mai": "Non sa il nome di chi riceve il rapporto a Teramum (Veneranda Iuvenza, Casa Velthuria): non l’ha mai sentito. Sa solo che è una donna, e che la sua signora la teme. La lettera è una prova contro Rosaspina, non ancora contro Iuvenza."
+   },
+   {
+    "tema": "Da quando ci segue",
+    "domanda": "«Da quanto ci stai dietro?»",
+    "risposta": "«Da Bëllindë.» *Lo ammette subito: tanto lo sapete.* «Vi ho aspettato fuori dalla Porta di Levante. Vi ho contati quando siete usciti, poi vi ho contati al guado, poi qui. Ogni sera vi conto. È tutto quello che faccio: conto e scrivo.» *Quasi sorride.* «Al guado ho visto che vi siete fermati a lungo. Non sono sceso a guardare. Dal fiume veniva un odore che non mi piaceva, e il cavallo nemmeno.»",
+    "insistono": "Se gli chiedono del mazzetto di finocchio all’ara di Sant’Atto: arrossisce. «Era mio. Mia madre dice che il Lucente Atto porta di là dal fiume quelli che viaggiano soli. Gli ho lasciato il finocchio, era l’unica cosa che avevo. Non pensavo che qualcuno guardasse un mazzetto di finocchio.»",
+    "mai": "Non è sceso al guado e non sa niente dei Forgiati né del pozzo."
+   },
+   {
+    "tema": "Il capitano col cappuccio",
+    "domanda": "«Perché scrivi del nostro capitano?»",
+    "risposta": "«Perché me l’hanno chiesto, messere. La mia signora ha detto: conta tutto, ma soprattutto guarda il capitano. Se si toglie il cappuccio, guardagli gli occhi e scrivi di che colore sono.» *Pausa.* «Non se l’è mai tolto. Né di giorno né di notte, nemmeno quando mangia. Così ho scritto quello. Era l’unica cosa vera che avevo da scrivere sugli occhi.»",
+    "insistono": "«Perché gli occhi? Non lo so. Davvero, non lo so. Ho pensato a una malattia, a una cicatrice. La mia signora non spiega, ordina.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 14,
+     "si": "«Ha detto anche un’altra cosa, la mia signora, quando mi ha mandato. Ha detto: se è lui, non deve succedergli niente per strada. Chi lo vuole, lo vuole intero.» *Vi guarda.* «Non so cosa voglia dire. Mi ha fatto più paura di tutto il resto.»",
+     "no": "«Gli occhi. Solo gli occhi. Non so altro.»"
+    },
+    "mai": "Non sa perché gli occhi contino (il sangue di Aurelius Lux che «brilla»): nessuno gliel’ha detto."
+   },
+   {
+    "tema": "Il terremoto e il colpo",
+    "domanda": "«Hai sentito il colpo stanotte? Che cos’era?»",
+    "risposta": "«L’ho sentito. Il cavallo ha scartato e quasi mi butta giù dalla collina.» *Si massaggia il polso.* «Da occidente, verso la città. Sordo. Come un portone di quercia chiuso in fondo a un corridoio lungo.» *Esita.* «Ho visto anche il messere dei carri uscire con la lanterna, e mettere la mano sul telone. Da lassù non ho sentito cosa diceva. Ma i carri, messere, i carri si sono mossi. Tutti insieme. Senza cavalli attaccati.»",
+    "insistono": "«Non lo so cos’era. Non lo voglio sapere. Io conto i fuochi e i carri, non le cose che si muovono da sole.»",
+    "mai": "Non sa cosa sia stato il colpo da occidente né cosa ci sia nei carri del convoglio."
+   },
+   {
+    "tema": "Cosa ne facciamo di te",
+    "domanda": "«Che cosa dovremmo fare con te, adesso?»",
+    "risposta": "*Ci pensa sul serio.* «Se mi lasciate andare con la lettera, arrivo a Nutaròschë domani a mezzogiorno, e nessuno sa che mi avete preso. Se mi lasciate andare senza la lettera, arrivo lo stesso, e dico che l’ho persa nel fiume, e la mia signora mi fa frustare. Se mi tenete, la lettera non arriva, e fra tre giorni ne parte un’altra con un altro.» *Alza le spalle.* «Il conto arriva comunque, messere. C’è chi conta per la Guardia, chi per il mercante, chi per la mia signora. Io sono solo il più giovane.»",
+    "insistono": "Se gli propongono di portare una lettera falsa, con un conto sbagliato: lo guarda a lungo. «Se la cera è rotta, se ne accorgono. Se la cera è intera…» *Pausa.* «La cera rossa la vende lo speziale di Nutaròschë. La rosa no: la rosa è un anello, e l’anello ce l’ha lei.» Con Persuasione CD 16 accetta di dire a voce, a Rosaspina, quello che i PG vogliono, purché il cavallo resti suo.",
+    "mai": "Non tradirà mai Rosaspina per soldi: solo per paura o per il cavallo."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Non alza la voce, diventa bianco.* «Fate quello che volete con me. Il cavallo no.» Con Intimidire CD 15 dice il nome di Rosaspina; non sa nient’altro da dire.",
+   "soldi": "*Guarda la moneta e non la prende.* «Non sono io che mi vendo, messere. Io sono già venduto: da quando avevo dodici anni.» Accetta invece la promessa di tenersi il cavallo.",
+   "lusinga": "«Cavalco bene, sì. Me l’ha insegnato il maestro di stalla della mia signora.» Si scioglie un poco: se gli lodano il cavallo, risponde a una domanda in più.",
+   "bugia": "Se gli dicono che Rosaspina è già presa o che lo hanno tradito, ci pensa e non ci crede: «Allora non mi avreste rincorso fin qua.»"
+  },
+  "battute": [
+   "«Il cavallo no. Il cavallo non c’entra.»",
+   "«A chi sapete. Non lo so nemmeno io, a chi.»",
+   "«Un viandante. Guardavo la luna.»",
+   "«Come vi piace, messere.»",
+   "«Conto i fuochi. È tutto quello che faccio.»",
+   "*(mangiando una mela)* «Sveglia la testa. Le mele, non il vino.»",
+   "«Il conto arriva comunque. Io sono solo il più giovane.»"
+  ],
+  "uscita": {
+   "frase": "*Se lo lasciano andare, monta senza fretta e accarezza il collo del cavallo.* «Grazie per il cavallo, messere. Il resto lo dimenticherò, se voi dimenticate me.»",
+   "dopo": "Galoppa verso sud-est, verso Nutaròschë. Preso o no, la seconda via del rapporto esiste: con la lettera arriva il conto e il cappuccio; senza lettera, arriva il racconto di Guelfo. Se lo tengono prigioniero, fra tre giorni da Nutaròschë parte un altro cavaliere.",
+   "aggancio": "Già in sella, a voce bassa: «Un consiglio, per il cavallo. A Teramum, il mercante dei carri entra dalla porta dei Melatino senza aspettare. Voi aspetterete. Chiedetevi chi gliel’ha aperta.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Si chiama Guelfo, è uno scudiero; segue la colonna da Bëllindë e la conta ogni sera.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il finocchio all’ara di Sant’Atto l’ha lasciato lui.",
+    "via": "gratis"
+   },
+   {
+    "info": "La lettera (cera rossa, rosa per impronta, «a chi sapete, a Teramum») contiene il conto della colonna e «il capitano porta il cappuccio anche di notte».",
+    "via": "gratis"
+   },
+   {
+    "info": "Lavora per Dama Violante Rosaspina di Nutaròschë, che manda avanti il rapporto a qualcuno a Teramum: una donna che la sua signora teme.",
+    "via": "prova"
+   },
+   {
+    "info": "Gli è stato ordinato di guardare gli occhi del capitano; chi lo vuole, «lo vuole intero».",
+    "via": "prova"
+   },
+   {
+    "info": "La notte del colpo i carri del convoglio si sono mossi tutti insieme, senza cavalli.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il convoglio entra a Teramum dalla porta dei Melatino senza aspettare.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il nome di chi riceve il rapporto a Teramum (Iuvenza).",
+    "via": "mai"
+   }
+  ]
+ }
 }

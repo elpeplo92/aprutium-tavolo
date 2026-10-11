@@ -10,5 +10,102 @@
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: cinquanta. Tabarro grigio stirato, stivali lucidi, piuma dritta, fischietto d’osso, tavoletta di cera.\nDirige il traffico in piazza e multa tutto. È l’unico onesto della Guardia: per questo lo tengono a fare multe e non alla Rocca. Soprannomi: «Punti Perfetti», e in caserma «Ciccio Colonna».\nSa: da due settimane escono dalla Rocca, di notte, carri senza registro: diciotto in quindici notti, verso Lucente Anna. Li ha segnati.\nNon si corrompe (un grosso in più di multa).\nBattute: «In multa.» · «E chi se n’arcord?» · «La regola è la regola, pure per lo Stratega.»"
+ "gm": "Età: cinquanta. Tabarro grigio stirato, stivali lucidi, piuma dritta, fischietto d’osso, tavoletta di cera.\nDirige il traffico in piazza e multa tutto. È l’unico onesto della Guardia: per questo lo tengono a fare multe e non alla Rocca. Soprannomi: «Punti Perfetti», e in caserma «Ciccio Colonna».\nSa: da due settimane escono dalla Rocca, di notte, carri senza registro: diciotto in quindici notti, verso Lucente Anna. Li ha segnati.\nNon si corrompe (un grosso in più di multa).\nBattute: «In multa.» · «E chi se n’arcord?» · «La regola è la regola, pure per lo Stratega.»",
+ "dialogo": {
+  "apertura": "*Un fischio lungo, d’osso, che ferma mezza piazza. Il sergente scende dal piedistallo a strisce, con calma, e vi si mette davanti con la tavoletta di cera già aperta.* «Sergente Marcozzi, Guardia Ducale.» *Lo stilo comincia a scrivere prima che abbiate aperto bocca.* «E voi siete in multa.»",
+  "voce": "Italiano da regolamento, formale e piatto, con il teramano solo nelle frasi fatte · Tic: «In multa»; «E chi se n’arcord?» quando non vuole ricordare; batte lo stilo sulla tavoletta a ogni parola importante · Ritmo: lento, scandito, come se dettasse un verbale; pause per scrivere.",
+  "argomenti": [
+   {
+    "tema": "Chi sei e perché la multa",
+    "domanda": "«Multa? E per cosa?»",
+    "risposta": "«Sergente Marcozzi, Guardia Ducale, piazza della fiera, turno di giorno, turno di sera, turno di festa.» *Legge dalla tavoletta.* «Cavallo fuori fila: un grosso. Stendardo non registrato: due grossi. Arma lunga senza fodero, quella lì: cinque grossi.» *Alza lo stilo verso uno di voi.* «E quello ha guardato male il piedistallo, ma per questo non c’è ancora la norma. Ci sto lavorando.» *Vi guarda da sotto la piuma, dritta.* «Qua passano carri, muli, pecore, portantine, signori e Crociate. Tutti sotto lo stesso braccio. La piazza è una sola, la regola è una sola. Se la regola vale per il carrettiere, vale pure per voi. Pure per lo Stratega, se ci passasse col cavallo fuori fila. Non ci passa, perché lo sa.»",
+    "insistono": "«Volete discutere? Discutete. Io scrivo intanto. Ogni discussione sulla piazza durante l’orario dei carri è intralcio: mezzo grosso.» *Scrive.* «Pagate, e vi spiego come si registra lo stendardo alla Cancelleria della Rocca. Un grosso, una firma, e la prossima volta passate in regola.»",
+    "mai": "Non cancella mai una multa, nemmeno per un nobile. Non scrive niente che non abbia visto."
+   },
+   {
+    "tema": "Conoscete…?",
+    "domanda": "«Vi ricordate di…? Chi è il capitano…?»",
+    "risposta": "*Alza gli occhi al cielo, lentamente.* «E chi se n’arcord?» *Torna alla tavoletta.* «Io mi ricordo i carri, le targhe dei carri, i cavalli fuori fila e le portantine che si fermano dove non si fermano. Le persone le dimentico. È più sano. In questa città, chi si ricorda le persone poi deve dire cosa si ricorda, e da chi è andato, e a che ora. Io non mi ricordo niente. Ho trent’anni di servizio e nessun nemico. Sapete perché? Perché non mi ricordo di nessuno.»",
+    "insistono": "*Si guarda intorno, e per un momento smette di scrivere.* «Mi ricordo tutto, invece. Mi ricordo il signorino Grazianus che veniva in piazza col padre, alto così, e il padre gli faceva fermare il cavallo alla riga, ogni volta.» *Guarda Maximus, se c’è.* «Vostro padre la riga la rispettava. Adesso non scende più in piazza. Mandano gli scrivani.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 12,
+     "si": "Capite che «E chi se n’arcord?» è una porta chiusa, non un vuoto: si ricorda tutto e lo scrive. Se gli mostrate rispetto per la regola, la porta si apre (vantaggio sulla prova dei carri).",
+     "no": "Sembra davvero uno che non si ricorda niente: un vecchio sergente ottuso, buono solo per le multe."
+    },
+    "mai": "non dice niente contro un superiore né contro lo Stratega. Non fa nomi di guardie corrotte, anche se li conosce tutti."
+   },
+   {
+    "tema": "I carri di notte",
+    "domanda": "«Avete visto passare carri, di notte?»",
+    "risposta": "*Lo stilo si ferma. Diventa rosso, piano, dal collo.* «Non mi parlate dei carri.» *Pausa.* «Escono dalla Rocca. Di notte, dopo la campana. Senza registro.» *Batte lo stilo sulla tavoletta, una volta per parola.* «Senza. Registro. Trent’anni che su questa piazza non passa un carro senza che io lo scriva. E adesso escono dalla Rocca, la casa della Guardia, sotto il mio naso, e il capitano mi dice di guardare la piazza di giorno. Io la piazza la guardo pure di notte. Non è affar mio dove vanno. È affar mio che non sono registrati.»",
+    "insistono": "*Abbassa la voce, apre un’altra tavoletta, quella che tiene sotto il tabarro.* «Li ho segnati lo stesso. Diciotto carri in quindici notti. Tre, quattro a notte, fra la campana e l’alba. Coperti. Girano a destra in fondo alla piazza, verso Lucente Anna. Quattro uomini di scorta per carro, col tabarro grigio nuovo, senza la piuma del rione. Ho dato l’alt, la terza notte. Non si sono fermati. Non si sono nemmeno voltati. Una guardia che non si ferma all’alt di un sergente, io non l’avevo mai vista.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 15,
+     "si": "Vi dà le ore (fra la prima e la terza ora dopo la campana) e il numero dei carri, e vi lascia copiare la tavoletta. Vantaggio se avete pagato una sua multa senza discutere.",
+     "no": "«Non è affar vostro. E nemmeno mio.» Torna al piedistallo e fischia a un carro che non ha fatto niente."
+    },
+    "mai": "non sa cosa portano né chi ha dato l’ordine; non va a vedere dove vanno (non è il suo turno e non è la sua piazza). Non darà mai la tavoletta: la copia sì, se gliela chiedono come si deve."
+   },
+   {
+    "tema": "Le guardie nuove",
+    "domanda": "«E le guardie nuove della Rocca? Le conoscete?»",
+    "risposta": "«Le guardie nuove.» *Lo dice come si dice una parolaccia.* «Sono arrivate da due settimane. Non so quante. Non so i nomi. Non hanno firmato il ruolino di caserma: il ruolino ce l’ho in mano io la domenica, quando conto i turni, e ci sono dodici righe vuote. Dodici guardie che mangiano alla Rocca, dormono alla Rocca, escono coi carri, e non esistono sul registro. Non vengono in piazza, non vanno all’osteria, non giocano a carte. Il cappello lo portano storto, la piuma niente. Io a un ragazzo così gli avrei fatto rifare il servizio da capo.»",
+    "insistono": "«Una volta ne ho visto uno da vicino, alla fontana. Non beveva. Stava fermo davanti all’acqua. Gli ho chiesto nome e rione. Ha girato la testa verso di me, tutta la testa, non gli occhi. Poi è andato via. Il passo, sergente, il passo: come un mulo carico di ferro.»",
+    "mai": "non sa cosa siano (non ha mai sentito la parola Forgiati e non ci crederebbe). Non si lascia convincere a entrare nella Rocca con i PG."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Non si muove. Scrive.* «Minaccia a pubblico ufficiale in servizio: dieci grossi e una notte alla Rocca.» Fischia: in un minuto arrivano quattro guardie di rione. Non ha paura, e la piazza è tutta dalla sua parte.",
+   "soldi": "*Diventa rosso fino alle orecchie.* «Un altro grosso. Tentata corruzione di pubblico ufficiale.» Scrive, e conta le monete che gli avete dato come acconto sulla multa.",
+   "lusinga": "«La regola non ha bisogno di complimenti.» *Ma si aggiusta la piuma.* Una lode alla regola (non a lui) gli fa abbassare la multa di mezzo grosso: «Errore di scrittura.»",
+   "bugia": "«E chi se n’arcord?» *Vi guarda fisso.* «Io. Io me lo ricordo.» Scrive il vostro nome sulla tavoletta di sotto, quella dei carri. Da quel momento non vi dice più niente."
+  },
+  "battute": [
+   "«In multa.»",
+   "«E chi se n’arcord?»",
+   "«La regola è la regola, pure per lo Stratega.»",
+   "*Un fischio lungo, d’osso, che ferma tutto.*",
+   "«Quella pecora è fuori fila. Di chi è la pecora?»",
+   "«Intralcio: mezzo grosso.»",
+   "«Firmate qui. No, qui. Con la mano destra.»",
+   "«Trent’anni di piazza e nessun nemico. Secondo voi perché?»"
+  ],
+  "uscita": {
+   "frase": "*Vi tende la tavoletta.* «Firmate qui. Pagate alla Rocca entro tre giorni, sportello della Cancelleria, porta piccola.» *Risale sul piedistallo.* «Circolare.»",
+   "dopo": "Torna a dirigere il traffico. Stanotte, come ogni notte, si mette dietro la fontana dopo la campana e conta i carri. Se i PG gli hanno detto che cercano di far rispettare le regole, lascia per loro un biglietto alla locanda: le ore della notte seguente.",
+   "aggancio": "Per pagare la multa bisogna andare alla Cancelleria della Rocca, porta piccola: la stessa porta dove si chiede il sigillo della Spada."
+  },
+  "ottenuto": [
+   {
+    "info": "Multe sulla piazza: cavallo fuori fila 1 grosso, stendardo non registrato 2, arma lunga senza fodero 5; Marcozzi non si corrompe.",
+    "via": "gratis"
+   },
+   {
+    "info": "Dalla Rocca escono di notte carri senza registro verso Lucente Anna.",
+    "via": "gratis"
+   },
+   {
+    "info": "Diciotto carri in quindici notti, fra la prima e la terza ora dopo la campana, con scorta di quattro guardie in tabarro nuovo che non si fermano all’alt; copia della tavoletta.",
+    "via": "prova"
+   },
+   {
+    "info": "Dodici guardie nuove alla Rocca non risultano sul ruolino; non bevono, non parlano, hanno il passo pesante.",
+    "via": "gratis"
+   },
+   {
+    "info": "Lucius Grazianus non scende più in piazza: manda gli scrivani.",
+    "via": "prova"
+   },
+   {
+    "info": "Chi ha dato l’ordine dei carri e cosa portano.",
+    "via": "mai"
+   }
+  ]
+ }
 }

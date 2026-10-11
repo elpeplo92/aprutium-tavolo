@@ -10,5 +10,146 @@
  "atti": [],
  "links": [],
  "pub": "Un vecchio seduto sul cippo di pietra all’imbocco del ponte sul Tordinum. Sgrana fave in un cappello e butta i baccelli nel fiume. Commenta ogni porta della città senza che nessuno glielo chieda, e non chiede soldi.",
- "gm": "Luogo abituale: il cippo delle porte, all’imbocco del ponte sul Tordinum, ogni pomeriggio.\nEtà: ⟦settantotto⟧.\nStatistiche: popolano (Plebeo, MM 2024). Non combatte.\nAspetto: vecchio, barba bianca; ⟦magro e secco, tre denti davanti, cappello di paglia sfondato che usa per le fave, camicia rattoppata, occhi stretti che ridono⟧.\nSa: tutto quello che si dice sulla strada: cosa costa ogni porta (attesa, testimoni, chi lo viene a sapere), che la porta grande, la Porta della Madre, si apre per la Madre e per i Duchi, che sulla strada della montagna pattugliano gli uomini del Marchese, che di notte la Guardia conta i fuochi due volte.\nNon sa: niente di quello che succede dentro le mura: ⟦non ci entra da anni, «troppe scale»⟧.\nVoce: dialetto, lento, sputa le bucce fra una frase e l’altra; parla guardando le fave.\nCosa vuole: ⟦qualcuno che lo stia a sentire⟧.\nSegreto: ⟦stamattina ha visto l’uomo dal bel mantello arrivare a piedi da sud, lungo le mura, e ripartire verso la porta delle pecore: «Quello là le carte non le mostra mai.»⟧\n\nSe gli chiedono di…:\n\nQuale porta conviene: il discorso delle sette porte (modulo «Zi’ Berardino lu Sgranafave»): Reale o della Madre, Carrese, Romana, Melatina, del Lucente Giorgio, Due di Coppe, delle Recluse.\nDargli qualcosa (pane, un sorso, un quattrino): «Stanotte, contate i fuochi vostri prima della Guardia. Loro li contano due volte.»\nChi è lui: «Nessuno. Uno che sgrana.»\n\nBattute pronte:\n«Sette porte, sette modi d’entrare. E sei modi di restare fuori.»\n«Voi siete la Madre? No. Duchi? Manco.»\n«Io non ci andrei.»\n«Qua dentro, senza carta, non entra manco la pioggia.»"
+ "gm": "Luogo abituale: il cippo delle porte, all’imbocco del ponte sul Tordinum, ogni pomeriggio.\nEtà: ⟦settantotto⟧.\nStatistiche: popolano (Plebeo, MM 2024). Non combatte.\nAspetto: vecchio, barba bianca; ⟦magro e secco, tre denti davanti, cappello di paglia sfondato che usa per le fave, camicia rattoppata, occhi stretti che ridono⟧.\nSa: tutto quello che si dice sulla strada: cosa costa ogni porta (attesa, testimoni, chi lo viene a sapere), che la porta grande, la Porta della Madre, si apre per la Madre e per i Duchi, che sulla strada della montagna pattugliano gli uomini del Marchese, che di notte la Guardia conta i fuochi due volte.\nNon sa: niente di quello che succede dentro le mura: ⟦non ci entra da anni, «troppe scale»⟧.\nVoce: dialetto, lento, sputa le bucce fra una frase e l’altra; parla guardando le fave.\nCosa vuole: ⟦qualcuno che lo stia a sentire⟧.\nSegreto: ⟦stamattina ha visto l’uomo dal bel mantello arrivare a piedi da sud, lungo le mura, e ripartire verso la porta delle pecore: «Quello là le carte non le mostra mai.»⟧\n\nSe gli chiedono di…:\n\nQuale porta conviene: il discorso delle sette porte (modulo «Zi’ Berardino lu Sgranafave»): Reale o della Madre, Carrese, Romana, Melatina, del Lucente Giorgio, Due di Coppe, delle Recluse.\nDargli qualcosa (pane, un sorso, un quattrino): «Stanotte, contate i fuochi vostri prima della Guardia. Loro li contano due volte.»\nChi è lui: «Nessuno. Uno che sgrana.»\n\nBattute pronte:\n«Sette porte, sette modi d’entrare. E sei modi di restare fuori.»\n«Voi siete la Madre? No. Duchi? Manco.»\n«Io non ci andrei.»\n«Qua dentro, senza carta, non entra manco la pioggia.»",
+ "dialogo": {
+  "apertura": "*Seduto sul cippo, il cappello di paglia sfondato in grembo, pieno di fave. Non alza la testa. Sgrana un baccello, butta la buccia nel fiume, guarda i vostri carri uno per uno.* «Sette porte, sette modi d’entrare.» *Sputa una pellicina.* «E sei modi di restare fuori.»",
+  "voce": "Dialetto teramano leggero dentro un italiano di campagna, lento, di chi ha tutto il pomeriggio («nen», «mo’», «manco», «lu Marchese», «frechì»). · Tic: «Io non ci andrei», «Ognuno ha la sua», «e io sgrano». · Ritmo: lentissimo, una frase, una fava, una buccia nel fiume; ride coi tre denti che gli restano e parla guardando le fave, non le persone.",
+  "argomenti": [
+   {
+    "tema": "Quale porta conviene",
+    "domanda": "«Da che porta conviene entrare?»",
+    "risposta": "*Indica l’arco col mento, senza smettere di sgranare.* «La Reale? La Porta de la Madrë. Quella si apre per la Madre e per i Duchi. Voi siete la Madre? No. Duchi? Manco. E allora vi fanno aspettare sotto la Madre de pietra finché non vi viene la barba bianca come la mia.» *Una fava nel cappello.* «La Carrese è per i carri e per le pecore: entri, nessuno ti guarda, ma poi in città ridono che la Crociata è entrata dalla porta delle pecore. La Romana è la più grossa: quattro scrivani, quattro timbri, e mezza città che guarda. La Melatina è stretta, il ponte è lungo e non si torna indietro, e là le guardie sono gente seria e quelli della Lega pure. Lu Lucente Giorgio sta dall’altra parte, mezza giornata di giro, e là sotto ci sono gli uomini del Marchese. La Due di Coppe sta sotto la Rocca: entri dalla Due di Coppe, entri in casa della Guardia.» *Si ferma. Ascolta la campanella lontana.* «E le Recluse… da là passano i morti. Voi morti non ne avete. Spero.»",
+    "insistono": "*Butta un baccello nel fiume e lo guarda andare.* «Volete sapere che farei io? La Madre. È la vostra, ci siete davanti. Aspettate sotto la Madre de pietra, col cappello in mano e lo stendardo arrotolato. Chi aspetta sotto la Madre almeno nessuno lo chiama ladro. Chi gira intorno alle mura, a Teramum, lo chiamano in un altro modo.»",
+    "mai": "Non sa niente di quello che succede dentro le mura: non ci entra da anni. Quello che dice delle porte è quello che si dice sulla strada (modulo «Zi’ Berardino lu Sgranafave»).",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "Chi sei",
+    "domanda": "«E tu chi sei, nonno?»",
+    "risposta": "*Ride coi tre denti.* «Nessuno. Uno che sgrana.» *Mostra il cappello.* «Berardino, da Colleatterrato. Zi’ Berardino, perché a settantotto anni tutti diventano zii di qualcuno. Lu Sgranafave, perché d’estate sgrano le fave e d’inverno sgrano i ceci, e se non c’è niente da sgranare sgrano le parole.» *Una buccia nel fiume.* «Vengo qua ogni pomeriggio da quando mia moglie è morta. A casa il silenzio è troppo. Qua passa il mondo, e il mondo parla. Io sto zitto e sgrano, e il mondo mi racconta tutto senza che glielo chieda.»",
+    "insistono": "«In città? Nen ce entro da… da quando c’era ancora il Duca a cavallo, l’ultima volta che è passato sotto la Madre. Troppe scale. Teramum è fatta tutta di scale, e io ho le ginocchia di un mulo vecchio.»",
+    "mai": "Non chiede mai soldi. Non si alza dal cippo per nessuno."
+   },
+   {
+    "tema": "Perché si chiama Due di Coppe",
+    "domanda": "«Due di Coppe? Che razza di nome è?»",
+    "risposta": "*È la domanda che gli piace di più. Si sistema sul cippo.* «Eh. Sapete perché si chiama così? Perché alla Rocca uno beve e l’altro paga. Due coppe: una piena e una vuota.» *Ride.* «Mio cugino dice che è per una partita a carte: un Duca ha giocato la porta contro un Grazianus, e il Grazianus ha vinto col due di coppe, che è la carta più scema del mazzo. Mia moglie, pace all’anima sua, diceva che sopra l’arco c’erano due coppe di pietra, e che una l’ha rotta il terremoto. Il sacerdote del solario dice un’altra cosa ancora, e non me la ricordo perché quando predica io dormo.» *Una fava nel cappello.* «Ognuno ha la sua. A Teramum tutto ha almeno tre storie, e nessuna è quella vera.»",
+    "insistono": "«La vera? La sapeva solo chi l’ha messa, e quello è morto prima di mio nonno.»",
+    "mai": "Nessuno sa più perché si chiami così (voce «Teramum»): ogni versione è una diceria."
+   },
+   {
+    "tema": "L’uomo col bel mantello",
+    "domanda": "«Hai visto quell’uomo in fila, col mantello buono? Sai chi è?»",
+    "risposta": "*Per la prima volta alza gli occhi dalle fave, e li stringe.* «Quello col mantello che non ha mai visto la pioggia?» *Torna a sgranare.* «Nen lo so chi è. Ma io qua ci sto tutto il giorno, e la gente che passa la conto pure io, come lu Cuntatùre. Solo che io non lo scrivo.» *Una buccia nel fiume.* «Stamattina è arrivato a piedi, da sud, lungo le mura. Non dalla strada: dalle mura. Uno che arriva dalle mura sta già dentro, o ci sa entrare quando vuole.»",
+    "insistono": "*Parla piano, alle fave.* «E non è la prima volta. Ieri l’altro uguale. Arriva, si mette in fila, guarda, e poi se ne va verso la porta delle pecore. Quello là le carte non le mostra mai.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "«Una volta l’ho visto parlare col ragazzo che fa la guida ai forestieri, quello con la lingua lunga. Gli ha dato una moneta e il ragazzo è corso via contento. Quando uno paga un ragazzo per correre, vuol dire che i piedi suoi non li vuole consumare. O non li vuole far vedere.»",
+     "no": "«Uno col mantello. A Teramum ce ne sono più dei sassi.»"
+    },
+    "mai": "Non sa chi sia né per chi lavori. Non sa niente di Iuvenza. Con un dono (pane, un sorso, un quattrino) la prova riesce da sola. ⟦Che lo abbia visto pagare Cenzino è un’invenzione coerente con la scheda di Cenzino.⟧"
+   },
+   {
+    "tema": "Il cerchio intorno al sole, sul cippo",
+    "domanda": "«Chi ha disegnato quel cerchio intorno al sole, sotto l’ultima freccia?»",
+    "risposta": "*Si sporge a guardare sotto di sé, come se non ci avesse mai fatto caso.* «Questo?» *Ci passa sopra il pollice.* «La luna passata non c’era. Io su ’sto sasso ci sto seduto tutti i pomeriggi, e la pietra la conosco come la faccia mia. Quindi l’hanno fatto di notte, o la mattina presto, prima che arrivassi io.» *Torna alle fave.* «Il sole sotto la freccia delle Recluse l’hanno messo gli scalpellini, al tempo. Il cerchio no. Il cerchio è nuovo.»",
+    "insistono": "*Abbassa la voce.* «Il sole col cerchio intorno… io sono vecchio, e da ragazzo l’ho visto fare. Ai funerali dei poveri, quando il sacerdote non veniva. Sulla porta del morto. Poi la Fiamma ha detto che non si fa più, e nessuno l’ha fatto più.» *Guarda Mattheus, se c’è.* «Fino alla luna passata.»",
+    "mai": "Non sa chi l’ha fatto: nessuno lo sa (modulo «Il cippo»). Non sa niente di Frate Davide né del culto di Mortus a Teramum: ricorda solo un’usanza di quando era ragazzo. ⟦Il ricordo del cerchio sulle porte dei morti poveri è un’invenzione.⟧",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "La notte, la Guardia, i fuochi",
+    "domanda": "«Se ci accampiamo fuori, che succede di notte?»",
+    "risposta": "*Fa spallucce.* «Che succede? Niente. Le porte si chiudono alla campana della sera, una dopo l’altra, e le sentite fino a qua: bum, bum, bum. Sulle mura accendono i fuochi. E a mezzanotte la Guardia esce con le lanterne e viene a contare.» *Sputa una buccia.* «Contano tutto, quelli. Le pecore di Venanzio, i carri, i fuochi. Contare non costa niente, per questo lo fanno tutti.» *Indica il prato.* «Se dormite là, sul tratturo, chiedete al vecchio Venanzio. Col cappello in mano. Quello vi sopporta, se le bestie vostre stanno a valle.»",
+    "insistono": "«Stanotte, contate i fuochi vostri prima della Guardia. Loro li contano due volte.» *Sorride.* «E se uno dei fuochi lo contano tre volte, vuol dire che avete fatto arrabbiare qualcuno.»",
+    "mai": "La battuta sui fuochi la dice da sola se gli danno qualcosa (pane, un sorso, un quattrino), come nel modulo della scena.",
+    "scena": "teramum_porta"
+   },
+   {
+    "tema": "La strada della montagna, il Marchese",
+    "domanda": "«Chi sono gli uomini del Marchese? Perché non ci andresti?»",
+    "risposta": "*Smette di sgranare. Per un momento il cappello resta fermo.* «Il Marchese, quello di Tussëcië. Prima la strada della montagna era dei mulattieri e dei pecorai. Mo’ ci stanno gli uomini suoi, a cavallo, che pattugliano. Dicono per i briganti.» *Riprende a sgranare, più svelto.* «Io briganti non ne ho mai visti pagare in oro forestiero. Quelli sì. Al mercato di Colleatterrato hanno comprato il fieno di mezzo paese e l’hanno pagato con monete che nessuno conosce, con un fiore sopra.» *Una buccia nel fiume.* «Io non ci andrei.»",
+    "insistono": "«Che fiore? Nero. Un fiore nero. Il fieno l’abbiamo venduto lo stesso: l’oro è oro.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "Ha paura, e non dei briganti. Il fiore nero sulle monete (il Loto Nero) lo ha visto davvero, e da allora a Colleatterrato nessuno vende più niente agli uomini del Marchese senza farsi pagare prima.",
+     "no": "Chiacchiere di un vecchio sui forestieri."
+    },
+    "mai": "Non sa che il Marchese Rodrigo d’Avalos è uomo di Iuvenza, né cosa sia il Loto Nero: ha visto una moneta con un fiore nero e basta. ⟦Le monete col fiore nero pagate a Colleatterrato sono un’invenzione coerente con l’oro straniero del Loto Nero (Atti X e XIII).⟧"
+   },
+   {
+    "tema": "Le mura, la città di sotto",
+    "domanda": "«Perché le mura sono di due pietre diverse?»",
+    "risposta": "*Guarda le mura come si guarda un parente.* «Quella grigia, sotto, la chiamano la pietra dei vecchi. Quella chiara sopra l’hanno messa quelli dell’Impero, quando hanno vinto. Si sono costruiti la casa sopra la casa degli altri, e la casa di sotto non l’hanno mai tolta.» *Sgrana.* «Mio nonno diceva che sotto Teramum c’è un’altra Teramum, con le strade e le porte, e che certe notti le campane di sotto rispondono a quelle di sopra. Io ho sempre pensato che mio nonno beveva.» *Pausa.* «Poi l’anno scorso le ho sentite pure io.»",
+    "insistono": "«Che dicevano? E che ne so. Le campane non dicono, suonano.» *Ride.* «Ma suonavano dopo. Come chi risponde.»",
+    "mai": "Seme per la Città Sepolta, senza rivelare niente: non sa niente di quello che c’è sotto la Basilica. È una diceria (si sente suonare di notte), non una conferma."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "*Non alza nemmeno gli occhi.* «A settantotto anni? Fate pure. Risparmio le fave.» Continua a sgranare. Se lo toccano davvero, la fila si gira e il votato sull’asino scende a mettersi in mezzo: Zi’ Berardino lo conoscono tutti, e la Crociata diventa quella che picchia i vecchi sul ponte.",
+   "soldi": "*Guarda la moneta, poi voi.* «Io nen chiedo soldi.» La prende lo stesso, la mette nel cappello in mezzo alle fave, e aggiunge: «Stanotte, contate i fuochi vostri prima della Guardia. Loro li contano due volte.» Pane o un sorso di vino valgono più della moneta: con quelli dice anche dell’uomo col mantello.",
+   "lusinga": "*Ride fino a tossire.* «Bello io? Mia moglie diceva che avevo la faccia di una fava secca, e aveva ragione.» Gli fa piacere: racconta tutte e tre le storie della Due di Coppe.",
+   "bugia": "*Sgrana, senza guardarvi.* «Eh. Pure mio cugino diceva così, e mo’ sta al camposanto con le scarpe nuove.» Non discute: smette di dare consigli e parla solo di fave."
+  },
+  "battute": [
+   "«Sette porte, sette modi d’entrare. E sei modi di restare fuori.»",
+   "«Voi siete la Madre? No. Duchi? Manco.»",
+   "«Io non ci andrei.»",
+   "«Ognuno ha la sua.»",
+   "«Qua dentro, senza carta, non entra manco la pioggia.»",
+   "«Contare non costa niente. Per questo lo fanno tutti.»",
+   "«Teramum è fatta tutta di scale, e io ho le ginocchia di un mulo vecchio.»",
+   "«Le fave si sgranano una alla volta. Pure le porte.»",
+   "«A Teramum tutto ha almeno tre storie, e nessuna è quella vera.»"
+  ],
+  "uscita": {
+   "frase": "*Butta l’ultimo baccello nel fiume.* «Comunque andate, la carta ve la chiedono lo stesso. Qua dentro, senza carta, non entra manco la pioggia.» *E torna alle sue fave.*",
+   "dopo": "Resta sul cippo fino a quando l’ombra del Gigante arriva al ponte, poi si mette il cappello pieno di fave sotto il braccio e risale piano verso Colleatterrato. Racconta in paese da che porta è andata la Crociata. Se lo ritrovano, è sul cippo ogni pomeriggio, e si ricorda di chi gli ha dato da bere.",
+   "aggancio": "Il cerchio nuovo intorno al sole sotto la freccia delle Recluse: qualcuno, a Teramum, ha ricominciato a segnare i morti come si faceva una volta. Per Mattheus."
+  },
+  "ottenuto": [
+   {
+    "info": "Cosa costa ogni porta: chi guarda, quanto si aspetta, chi lo viene a sapere.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il consiglio: aspettare alla Porta della Madre col cappello in mano e lo stendardo arrotolato.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le tre storie del nome Due di Coppe (nessuna vera).",
+    "via": "gratis"
+   },
+   {
+    "info": "L’uomo col mantello arriva a piedi da sud lungo le mura e se ne va verso la Porta Carrese; non mostra mai le carte.",
+    "via": "gratis"
+   },
+   {
+    "info": "L’uomo col mantello paga il ragazzo che fa la guida ai forestieri.",
+    "via": "prova"
+   },
+   {
+    "info": "Il cerchio intorno al sole sul cippo è nuovo (dalla luna passata); una volta si segnavano così le porte dei morti poveri.",
+    "via": "gratis"
+   },
+   {
+    "info": "La Guardia conta i fuochi due volte; per accamparsi bisogna chiedere a Venanzio.",
+    "via": "gratis"
+   },
+   {
+    "info": "Gli uomini del Marchese di Tussëcië pagano in oro forestiero con un fiore nero sopra.",
+    "via": "gratis"
+   },
+   {
+    "info": "Chi ha fatto il cerchio; cosa c’è sotto la città.",
+    "via": "mai"
+   }
+  ]
+ }
 }
