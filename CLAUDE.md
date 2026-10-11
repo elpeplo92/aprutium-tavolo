@@ -1312,3 +1312,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v246 (11/10/2026) — Bruciare i non morti separato
 
 - Giuseppe: Scacciare non morti e Bruciare i non morti devono restare due comandi. Nel menu di Incanalare divinità di Mattheus ora c'è «Bruciare i non morti» a parte: non spende un altro uso (se arriva dal pallino, l'uso viene restituito), spunta già i non morti che hanno fallito Scacciare di Mattheus, un solo tiro di Sag d8 (4d8) radiosi per tutti; i danni non tolgono Spaventato/Incapacitato. Scacciare non fa più danni. Fonte: `Revisioni/Incanalare divinita del chierico (v244)/blocco.js` + `aggiorna.py` (sostituisce il blocco già nel sito).
+
+## v247 (11/10/2026) — Protezione dal bene e dal male
+
+- Prima il lancio scriveva solo una riga nel Registro (e la concentrazione a chi lancia). Ora (`SPELL_RULES` con `condSu:'protetto'`) il bersaglio prende la condizione **Protetto dal male** (icona a scudo, condizione «buona», sigla PRO), che finisce da sola con la concentrazione di chi l'ha lanciata. Nella finestra d'attacco dei mostri chi è protetto ha l'etichetta «protetto dal male»; scegliendolo, il tavolo mette lo svantaggio e lo scrive (il master rimette «Normale» se l'attaccante non è aberrazione, celestiale, elementale, folletto, immondo o non morto: il tavolo non conosce i tipi dei mostri). Fonte: `Revisioni/Protezione dal bene e dal male (v247)/applica.py`.
