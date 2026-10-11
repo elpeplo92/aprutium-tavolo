@@ -2544,12 +2544,42 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 .sch3 .s3-condr{display:inline-flex;align-items:center;gap:6px;font:16px 'Mr Eaves Small Caps',Georgia,serif;color:var(--ink-dim)}
 .sch3 .s3-condr input{width:52px}
 .sch3 .s3-piede .s3-tira+.s3-tira{margin-left:8px}
+/* ===== v255 — la scheda si può scrivere ===== */
+.sch3 .s3-mini{margin-left:8px;padding:1px 10px;border:1px solid rgba(217,177,92,.45);border-radius:999px;background:rgba(8,9,12,.5);color:var(--ott2);font:15px/1.4 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;cursor:pointer;vertical-align:middle;-webkit-text-fill-color:currentColor}
+.sch3 .s3-mini:hover{border-color:var(--ott1);background:rgba(217,177,92,.14)}
+.sch3 .s3-lettura .s3-mini,.sch3 .s3-pagina-dx .s3-mini{border-color:#a88c62;background:rgba(255,255,255,.3);color:#7a2a12;-webkit-text-fill-color:#7a2a12}
+.sch3 .s3-lettura .s3-mini:hover,.sch3 .s3-pagina-dx .s3-mini:hover{background:rgba(255,255,255,.55)}
+/* punti ferita */
+.sch3 .s3-pf{position:relative}
+.sch3 .s3-pfmod{position:absolute;right:12px;top:10px;padding:1px 9px;border:1px solid rgba(217,177,92,.35);border-radius:999px;background:rgba(8,9,12,.5);color:var(--ott2);font:14px/1.4 'Mr Eaves Small Caps',Georgia,serif;cursor:pointer;opacity:.75}
+.sch3 .s3-pfmod:hover{opacity:1;border-color:var(--ott1)}
+.sch3 .s3-pfform{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(217,177,92,.25)}
+.sch3 .s3-pfform label{display:flex;flex-direction:column;gap:3px;font:14px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.08em;color:var(--sp)}
+.sch3 .s3-pfform input,.sch3 .s3-moneteform input{width:100%;box-sizing:border-box;padding:4px 6px;border:1px solid rgba(217,177,92,.4);border-radius:6px;background:rgba(0,0,0,.45);color:#F6EED9;font:400 24px/1.1 'Mr Eaves Small Caps',Georgia,serif;text-align:center}
+.sch3 .s3-pfbtn{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end;margin-top:6px}
+.sch3 .s3-pfbtn .s3-tira{height:32px;padding:0 12px;font-size:16px}
+.sch3 .s3-pfbtn .s3-pri2{background:rgba(217,177,92,.18);border-color:var(--ott2);color:#F6EED9}
+/* monete */
+.sch3 .s3-moneteform input{font-size:20px;margin:2px 0;padding:2px 4px}
+.sch3 .s3-moneteform+.s3-pfbtn{margin-top:8px}
+/* nota sull'oggetto (carta di pergamena) */
+.sch3 .s3-nota{margin:8px 0 10px;padding:10px 12px;border-radius:8px;background:rgba(120,90,40,.09);border:1px dashed #a88c62}
+.sch3 .s3-nota small{display:block;font:14px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.08em;color:#7a2a12;margin-bottom:4px}
+.sch3 .s3-nota p{margin:0 0 6px;font:italic 16px/1.45 'Bookinsanity',Georgia,serif;color:#2b1f14}
+.sch3 .s3-nota .s3-mini{margin-left:0}
+.sch3 .s3-nota-vuota{padding:6px 10px;background:none;border-style:dotted}
+.sch3 .s3-nota textarea,.sch3 .s3-appform textarea{width:100%;box-sizing:border-box;padding:8px;border:1px solid #a88c62;border-radius:6px;background:rgba(255,255,255,.35);color:#2b1f14;font:16px/1.45 'Bookinsanity',Georgia,serif;resize:vertical;outline:0}
+.sch3 .s3-nota .s3-piede,.sch3 .s3-appform .s3-piede{margin-top:8px}
+.sch3 .s3-nota .s3-piede .s3-tira,.sch3 .s3-appform .s3-piede .s3-tira{width:auto;padding:0 14px;height:32px;font-size:16px}
+/* appunti nella Storia */
+.sch3 .s3-appunti p{font:italic 17px/1.5 'Bookinsanity',Georgia,serif;color:#3b2a18;margin:0}
+.sch3 .s3-pagina-dx h3 .s3-mini{font-size:14px;vertical-align:middle}
 </style></style>
 
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v254</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v255</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -2840,7 +2870,7 @@ roleSel.onchange=async()=>{ const want=roleSel.value; if(want==='master'&&fbAuth
    di loro va in errore — il che spegneva la nebbia, i tasti muri/porte e
    "Rivela intorno al gruppo". Qui la forma viene ricostruita a ogni lettura. */
 const SHAPE_ARR=['order','log','removed','archive','met','visited','comp','comp2'];
-const SHAPE_OBJ=['doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti'];
+const SHAPE_OBJ=['doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti'];
 function normalize(s){
   if(!s||typeof s!=='object') s={};
   for(const k of SHAPE_ARR) if(!Array.isArray(s[k])) s[k]=[];
@@ -2910,7 +2940,7 @@ const LIVE=['hd','sc','light','xs','ich','res','fx','adv','fxT','x','y','hp','hp
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
+  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
   const rt=remote.tokens||{};
   for(const [id,t] of Object.entries(rt)){
     if(s.tokens[id]){ for(const k of LIVE) if(t[k]!==undefined) s.tokens[id][k]=t[k]; }
@@ -2921,7 +2951,7 @@ function merge(remote){
 }
 function toRemote(s){
   const out={};
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti']) if(s[k]!==undefined) out[k]=s[k];
+  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti']) if(s[k]!==undefined) out[k]=s[k];
   out.tokens={};
   for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,img:t.img||'',mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
   return out;
@@ -9664,6 +9694,88 @@ function vistaRipristina(){
   }catch(e){ console.warn('ultima schermata',e); }
 }
 if(!TEST_MODE||/[?&]vista=1/.test(location.search)){ let n=0; const tm=setInterval(()=>{ n++; if(!READY) return; if(!TEST_MODE&&!FB_LOADED&&n<60) return; clearInterval(tm); vistaRipristina(); },250); }
+
+/* ===== v255 — LA SCHEDA SI PUÒ SCRIVERE (feedback di Maximus, 11-10-2026) =====
+   Prima il giocatore poteva scrivere solo il Diario: punti ferita, monete, descrizioni e storia venivano dal JSON della scheda
+   o dal codice, e nessuno li toccava dal sito. Ora, sulla propria scheda (canAct: il giocatore del PG o il master):
+   1. PUNTI FERITA E TEMPORANEI — «modifica» nel riquadro dei PF dell'eroe: due caselle, Salva. Se torna sopra 0 spariscono i tiri
+      contro la morte; l'ordine di iniziativa si aggiorna (ordineDopoDanni, v251).
+   2. MONETE — «modifica» accanto a Monete (pagina Inventario): quattro caselle coi totali. Si salva la differenza rispetto al testo
+      della scheda in S.monete[id] (anche negativa), così il bottino assegnato dal master continua a sommarsi.
+   3. NOTA SULL'OGGETTO — nella carta dell'oggetto scelto, una nota del giocatore (S.invNote[id][chiave]); la descrizione del
+      canone resta com'è. La leggono tutti quelli che aprono la scheda.
+   4. APPUNTI NELLA STORIA — in fondo alla pagina destra del libro, «Appunti di <nome>» (S.appunti[id]), scrivibili dal
+      giocatore; li leggono tutti.
+   Ogni modifica scrive una riga nel Registro, così il master la vede. invNote e appunti sono in SHAPE_OBJ, merge e toRemote.
+   Fonte: Revisioni/Feedback di Maximus (11-10-2026)/v255/ */
+
+const S3W={id:null,pf:false,coins:false,note:false,app:false};
+const s3h=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const s3DaChi=()=>` (scritto nella scheda${IS_GM?' dal master':''})`;
+
+/* ---------- 1. punti ferita e temporanei ---------- */
+function s3PfBox(root,id,t){
+  const pf=root.querySelector('.s3-eroe .s3-pf'); if(!pf||pf.querySelector('.s3-pfmod,.s3-pfform')) return;
+  if(!S3W.pf){ const b=document.createElement('button'); b.type='button'; b.className='s3-pfmod'; b.title='Scrivi i punti ferita e i temporanei'; b.textContent='modifica'; b.onclick=e=>{ e.stopPropagation(); S3W.pf=true; renderSheet(id); }; pf.appendChild(b); return; }
+  const f=document.createElement('div'); f.className='s3-pfform';
+  f.innerHTML=`<label>Punti ferita<input type="number" id="s3hp" min="0" max="${t.hpMax}" value="${t.hp}"></label><label>Temporanei<input type="number" id="s3thp" min="0" value="${t.thp||0}"></label>
+    <div class="s3-pfbtn"><button type="button" class="s3-tira s3-pri2" id="s3pfOk">Salva</button><button type="button" class="s3-tira" id="s3pfNo">Annulla</button></div>`;
+  pf.appendChild(f);
+  f.querySelector('#s3pfNo').onclick=()=>{ S3W.pf=false; renderSheet(id); };
+  f.querySelector('#s3pfOk').onclick=()=>{
+    const hp=Math.max(0,Math.min(t.hpMax,Math.floor(+f.querySelector('#s3hp').value||0))), thp=Math.max(0,Math.floor(+f.querySelector('#s3thp').value||0));
+    const parts=[]; if(hp!==t.hp) parts.push(`punti ferita ${t.hp} → ${hp}`); if(thp!==(t.thp||0)) parts.push(`temporanei ${t.thp||0} → ${thp}`);
+    if(parts.length){ t.hp=hp; if(thp) t.thp=thp; else delete t.thp; if(hp>0&&t.ds) delete t.ds; log({kind:'sys',txt:`${t.name}: ${parts.join(', ')}${s3DaChi()}`}); if(typeof ordineDopoDanni==='function') ordineDopoDanni(t); }
+    S3W.pf=false; save(true); renderSheet(id); };
+  setTimeout(()=>{ const i=f.querySelector('#s3hp'); if(i){ i.focus(); i.select(); } },0);
+}
+{ const _rs=renderSheet; renderSheet=function(id){ if(id!==S3W.id) Object.assign(S3W,{id,pf:false,coins:false,note:false,app:false});
+    const r=_rs.apply(this,arguments); const m=document.getElementById('modal'); if(m.style.display==='flex'&&sheetOf===id){ const root=m.querySelector('.sch3'); if(root&&S.tokens[id]&&canAct(id)) s3PfBox(root,id,S.tokens[id]); } return r; }; }
+
+/* ---------- 2. monete  ·  3. nota sull'oggetto ---------- */
+function s3CoinTot(id){ const coins=String((SHEETS[id]||{}).coins||'').match(/(\d[\d.]*)\s*(mp|mo|ma|mr|me)/g)||[], g=(S.monete||{})[id]||{}, B={mp:0,mo:0,ma:0,mr:0};
+  coins.forEach(c=>{ const m=c.match(/(\d[\d.]*)\s*(\w+)/); if(B[m[2]]!=null) B[m[2]]+=+m[1].replace(/\./g,''); }); const C={}; for(const k of COIN_KEYS) C[k]=B[k]+(+(g[k]||0)); return {B,C}; }
+const S3_COIN_NOMI={mp:'platino',mo:'oro',ma:'argento',mr:'rame'};
+{ const _inv=S3P.inv; S3P.inv=function(id,t,sh,mine,LET){ let h=_inv.apply(this,arguments);
+  /* la nota sull'oggetto scelto: la leggono tutti, la scrive chi può agire */
+  const sel=sheetInvSel!=null?invItems(id)[sheetInvSel]:null;
+  if(sel&&h.includes('<div class="s3-pv">')){ const nota=((S.invNote||{})[id]||{})[sel.key]||'', chi=s3h(t.name.split(' ')[0]);
+    let blk='';
+    if(mine&&S3W.note) blk=`<div class="s3-nota s3-notaform"><small>Nota di ${chi}</small><textarea id="s3notaTxt" rows="3" placeholder="Com'è fatto, dove l'hai preso, a che cosa ti serve…">${s3h(nota)}</textarea><div class="s3-piede"><button type="button" class="s3-tira s3-pri2" id="s3notaOk">Salva</button><button type="button" class="s3-tira" id="s3notaNo">Annulla</button></div></div>`;
+    else if(nota) blk=`<div class="s3-nota"><small>Nota di ${chi}</small><p>${poiText(nota).split('\n').join('<br>')}</p>${mine?'<button type="button" class="s3-mini" id="s3notaMod">modifica</button>':''}</div>`;
+    else if(mine) blk=`<div class="s3-nota s3-nota-vuota"><button type="button" class="s3-mini" id="s3notaMod">+ scrivi una nota</button></div>`;
+    h=h.replace('<div class="s3-pv">',blk+'<div class="s3-pv">'); }
+  if(!mine) return h;
+  const {C}=s3CoinTot(id);
+  if(S3W.coins){ const form=`<div class="s3-monete s3-moneteform">${COIN_KEYS.map(k=>`<span class="s3-${k}"><i></i><input type="number" min="0" data-coin="${k}" value="${C[k]}">${S3_COIN_NOMI[k]}</span>`).join('')}</div><div class="s3-pfbtn"><button type="button" class="s3-tira s3-pri2" id="s3coinOk">Salva</button><button type="button" class="s3-tira" id="s3coinNo">Annulla</button></div>`;
+    h=h.replace(/<div class="s3-monete">[\s\S]*?<\/div>/,form); }
+  else h=h.replace('<h3 class="s3-h3b">Monete</h3>','<h3 class="s3-h3b">Monete <button type="button" class="s3-mini" id="s3coinMod">modifica</button></h3>');
+  return h; }; }
+
+/* ---------- 4. appunti nella Storia ---------- */
+{ const _bg=S3P.bg; S3P.bg=function(id,t,sh,mine,LET){ const h=_bg.apply(this,arguments); const a=(S.appunti||{})[id]||'', chi=s3h(t.name.split(' ')[0]);
+  const blk=(mine&&S3W.app)?`<h3 class="s3-h3b">Appunti di ${chi}</h3><div class="s3-appunti s3-appform"><textarea id="s3appTxt" rows="9" placeholder="Quello che il tuo personaggio tiene a mente: giuramenti, sospetti, debiti, persone da rivedere…">${s3h(a)}</textarea><div class="s3-piede"><button type="button" class="s3-tira s3-pri2" id="s3appOk">Salva</button><button type="button" class="s3-tira" id="s3appNo">Annulla</button></div></div>`
+    :`<h3 class="s3-h3b">Appunti di ${chi}${mine?` <button type="button" class="s3-mini" id="s3appMod">${a?'modifica':'+ scrivi'}</button>`:''}</h3><div class="s3-appunti">${a?`<p>${poiText(a).split('\n').join('<br>')}</p>`:'<p class="s3-nulla">Nessun appunto.</p>'}</div>`;
+  return h.replace('</aside></article>',blk+'</aside></article>'); }; }
+
+/* ---------- i tasti ---------- */
+{ const _s3c=s3Comandi; s3Comandi=function(box,id,t,mine){ _s3c.apply(this,arguments); if(!mine) return;
+  const q=s=>box.querySelector(s), rer=()=>renderSheet(id);
+  box.addEventListener('click',e=>{ if(e.target.closest('[data-invi]')) S3W.note=false; },true);   /* cambiando oggetto la nota in scrittura si chiude */
+  if(q('#s3coinMod')) q('#s3coinMod').onclick=()=>{ S3W.coins=true; rer(); };
+  if(q('#s3coinNo')) q('#s3coinNo').onclick=()=>{ S3W.coins=false; rer(); };
+  if(q('#s3coinOk')) q('#s3coinOk').onclick=()=>{ const {B,C}=s3CoinTot(id); S.monete=S.monete||{}; const g=S.monete[id]=S.monete[id]||{}; const prima=[],dopo=[];
+    for(const k of COIN_KEYS){ const v=Math.max(0,Math.floor(+(q(`[data-coin=${k}]`)||{}).value||0)); if(v!==C[k]){ prima.push(`${C[k]} ${k}`); dopo.push(`${v} ${k}`); } g[k]=v-B[k]; if(!g[k]) delete g[k]; }
+    if(dopo.length) log({kind:'sys',txt:`${t.name}: monete ${prima.join(', ')} → ${dopo.join(', ')}${s3DaChi()}`}); S3W.coins=false; save(true); rer(); };
+  if(q('#s3notaMod')) q('#s3notaMod').onclick=()=>{ S3W.note=true; rer(); };
+  if(q('#s3notaNo')) q('#s3notaNo').onclick=()=>{ S3W.note=false; rer(); };
+  if(q('#s3notaOk')) q('#s3notaOk').onclick=()=>{ const sel=sheetInvSel!=null?invItems(id)[sheetInvSel]:null; if(!sel) return; const v=(q('#s3notaTxt').value||'').trim();
+    S.invNote=S.invNote||{}; S.invNote[id]=S.invNote[id]||{}; if(v) S.invNote[id][sel.key]=v; else delete S.invNote[id][sel.key];
+    log({kind:'sys',txt:`${t.name} ${v?'scrive una nota su':'toglie la nota da'} ${sel.n}${IS_GM?' (il master)':''}`}); S3W.note=false; save(true); rer(); };
+  if(q('#s3appMod')) q('#s3appMod').onclick=()=>{ S3W.app=true; rer(); };
+  if(q('#s3appNo')) q('#s3appNo').onclick=()=>{ S3W.app=false; rer(); };
+  if(q('#s3appOk')) q('#s3appOk').onclick=()=>{ const v=(q('#s3appTxt').value||'').trim(); S.appunti=S.appunti||{}; if(v) S.appunti[id]=v; else delete S.appunti[id];
+    log({kind:'sys',txt:`${t.name} aggiorna i suoi appunti nella Storia${IS_GM?' (il master)':''}`}); S3W.app=false; save(true); rer(); }; }; }
 
 /* ===== fine DIALOGHI DEI PNG ===== */
 /* ===== INCANTESIMI E CONCENTRAZIONE (v252) — audit dell'11-10-2026 =====
