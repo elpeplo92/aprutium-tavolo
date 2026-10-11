@@ -2525,7 +2525,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v242</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v243</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -4603,6 +4603,18 @@ function spellEnd(id,en,why){ /* toglie da tutti i token ciò che quell'incantes
 function concEnd(id,why){ const t=S.tokens[id], c=concOf(t); if(!t||!c) return false; t.conds=t.conds.filter(x=>x!==c); if(c.source==='benedizione') clearBlessing(id); if(c.spell) spellEnd(id,c.spell,why||'fine della concentrazione'); return true; }
 function concStart(id,en){ const t=S.tokens[id], d=SPELLS[en]; if(!t||!d||!d.conc) return; concEnd(id,`${t.name} lancia ${d.it}`);
   const dur=String(d.durata||''), r=/1 minuto/i.test(dur)?10:null; t.conds=t.conds||[]; t.conds.push({n:'concentrazione',r,source:'incantesimo',spell:en}); }
+/* v243 — incantesimi ad area (Palla di fuoco, Frantumare, Intralciare…): nella finestra di lancio si sceglie il CENTRO
+   (un personaggio, un mostro o l'area già segnata sulla mappa) e il tavolo spunta da solo tutti quelli che ci cadono dentro,
+   amici compresi, con la distanza dal centro; l'area si vede sulla mappa finché la finestra è aperta.
+   Prima la lista dava solo la distanza da chi lancia e non si capiva chi altro veniva preso. Raggio = distanza a caselle (come il righello). */
+function spellArea(d){
+  const t=(String(d.r||'')+' '+String(d.d||'')).replace(/\n/g,' '), n=x=>+String(x).replace(',','.');
+  let m=t.match(/(\d+(?:,\d+)?)\s*m di raggio/i)||t.match(/raggio (?:di )?(\d+(?:,\d+)?)\s*m/i)||t.match(/sfera di (\d+(?:,\d+)?)\s*m/i);
+  if(m) return {r:n(m[1]),forma:'sfera',se:/^personale/i.test(String(d.r||''))};
+  m=t.match(/(?:cubo|quadrato) (?:di )?(\d+(?:,\d+)?)\s*m/i); if(m) return {r:n(m[1])/2,forma:'cubo',se:/^personale/i.test(String(d.r||''))};
+  m=String(d.r||'').match(/^personale \((\d+(?:,\d+)?)\s*m\)/i); if(m) return {r:n(m[1]),forma:'intorno',se:true};
+  return null;
+}
 function castSpell(id,name,opt={}){
   const t=S.tokens[id], sh=SHEETS[id], d=SPELLS[name]; if(!t||!sh||!d) return;
   if(!IS_GM&&t.kind==='pg'&&t.hp<=0){ toast(`${t.name} è a 0 punti ferita: non può lanciare incantesimi`); castUnpaid(); return; }
@@ -4619,6 +4631,8 @@ function castSpell(id,name,opt={}){
   const io={id,t,same:true,dist:0,label:t.name+' (tu)'};
   let list=targetsFor(id); if(R.alleati||heal) list=[io,...list.filter(o=>o.same)]; else if(R.nemici) list=list.filter(o=>!o.same); else if(R.m==='effetto'&&!R.condSu) list=[io,...list];
   if(R.m==='rianima') list=list.filter(o=>isDead(o.t)); else if(R.m==='stabile') list=list.filter(o=>o.t.kind==='pg'&&o.t.hp<=0&&!isDead(o.t)); else list=list.filter(o=>!isDead(o.t)||!heal);
+  const area=(R.m==='ts'&&!uno)?spellArea(d):null; if(area&&!list.some(o=>o.id===id)) list=[io,...list];
+  const areaBox=area?`<div class="careablk" style="margin:8px 0 4px;padding:8px 10px;border:1px solid rgba(217,177,92,.4);border-radius:6px"><b>Centro ${area.forma==='intorno'?'dell’effetto':'dell’esplosione'}</b> <small class="note">(${area.forma==='cubo'?'cubo di '+(area.r*2).toLocaleString('it-IT'):'raggio '+area.r.toLocaleString('it-IT')} m)</small><br><select id="cCentro" style="margin-top:6px;max-width:100%"><option value="">— scegli dove cade —</option>${S.aoe?'<option value="_aoe">L’area segnata sulla mappa</option>':''}${list.map(o=>`<option value="${o.id}">${poiText(o.label)}${o.dist?' — a '+o.dist.toLocaleString('it-IT')+' m da te':''}</option>`).join('')}</select><div id="cAreaInfo" class="note" style="margin-top:6px">Scegli il centro: il tavolo segna chi è dentro l’area, amici compresi.</div></div>`:'';
   const dcOf=()=>sp.dc+(fxOn(t,'innata')?1:0), cMod=modCalc(sh.abil[sp.stat]||10);
   const row=o=>`<label class="tgt ${o.same?'same':''}"><input type="${uno?'radio':'checkbox'}" name="cTgt" value="${o.id}"><span class="tn">${poiText(o.label)}</span><span class="note">${o.dist?o.dist.toLocaleString('it-IT')+' m':''}${(IS_GM||o.t.kind==='pg'||o.t.owner)?`${o.dist?' · ':''}PF ${o.t.hp}/${o.t.hpMax}`:''}${isDead(o.t)?' · morto':''}${IS_GM&&o.t.ac&&isAtk?` · CA ${tokAc(o.t)}`:''}${sv&&IS_GM?` · TS ${sv.ability} ${fmtMod(tokenSaveMod(o.t,sv.ability))}`:''}</span></label>`;
   const what=isAtk?`Attacco con incantesimo +${sp.atk}`:R.m==='ts'?`Tiro salvezza su ${ABIL_IT[R.ts]||R.ts}, CD ${dcOf()}${R.meta?' (metà dei danni se lo supera)':''}`:heal?'Cura':R.m==='colpo'?'Dopo un colpo andato a segno: il danno si aggiunge, senza tiro':R.m==='danno'?'Danno sicuro, senza tiro':R.m==='bacche'?'Dieci bacche nello zaino: mangiarne una (azione bonus) ridà 1 PF':R.m==='stabile'?'Una creatura a 0 PF diventa stabile':R.m==='rianima'?'Una creatura morta da meno di 1 minuto torna in vita con 1 PF':R.m==='ristora'?'Toglie una condizione: accecato, assordato, paralizzato o avvelenato':'Effetto';
@@ -4630,13 +4644,25 @@ function castSpell(id,name,opt={}){
     ${isAtk&&fxOn(t,'innata')?`<p class="note" style="margin:6px 0 0;color:var(--gold)">Stregoneria innata attiva: l'attacco ha già vantaggio (e la CD è ${sp.dc+1}).</p>`:''}
     ${isAtk?`<div class="fxadv" style="margin:8px 0"><label><input type="radio" name="cAdv" value="" checked> ${fxOn(t,'innata')?'Normale (con vantaggio da Stregoneria innata)':'Normale'}</label><label><input type="radio" name="cAdv" value="v" ${t.adv==='v'?'checked':''}> Vantaggio</label><label><input type="radio" name="cAdv" value="s" ${t.adv==='s'?'checked':''}> Svantaggio</label></div>`:''}
     ${meta.length?`<div class="cmeta"><b>Metamagia</b> <small class="note">punti stregoneria: ${ptsLeft(id)}</small>${meta.map(m=>`<label title="${poiText(m.d)}"><input type="checkbox" name="cMeta" value="${m.k}"> ${poiText(m.n)} <small>(${m.c||'livello'})</small></label>`).join('')}</div>`:''}
-    ${senza?'':`<p class="note" style="margin:8px 0 4px">${quanti}:</p><div class="tgtlist">${list.map(row).join('')||'<span class="note">Nessuno in vista.</span>'}</div>`}
+    ${senza?'':`${areaBox}<p class="note" style="margin:8px 0 4px">${quanti}:</p><div class="tgtlist">${list.map(row).join('')||'<span class="note">Nessuno in vista.</span>'}</div>`}
     <div class="row" style="margin-top:12px"><button class="primary" id="cGo">Lancia</button><button id="cBack">Annulla</button></div>`,'poibox');
   const box=document.getElementById('modal'); const sel=box.querySelector('#cSlot'); if(sel&&firstFree) sel.value=String(firstFree); if(sel&&(opt.free||!firstFree)) sel.value='0'; (opt.meta||[]).forEach(k=>{ const c=box.querySelector(`[name=cMeta][value="${k}"]`); if(c) c.checked=true; });
   if(heal&&list.length===1){ const c=box.querySelector('[name=cTgt]'); if(c) c.checked=true; }
   if(max) box.querySelectorAll('[name=cTgt]').forEach(c=>c.onchange=()=>{ const n=box.querySelectorAll('[name=cTgt]:checked').length; box.querySelectorAll('[name=cTgt]:not(:checked)').forEach(x=>x.disabled=n>=max); });
-  box.querySelector('#cBack').onclick=()=>{ castUnpaid(); renderSheet(id); };
+  const cc=box.querySelector('#cCentro');
+  if(cc){ const segna=()=>{ const v=cc.value; box.querySelectorAll('[name=cTgt]').forEach(c=>{ const lb=c.closest('label'); lb.classList.remove('inarea'); lb.style.outline=''; const x=lb.querySelector('.careanote'); if(x) x.remove(); });
+      if(!v){ drawAoe(S.aoe); box.querySelector('#cAreaInfo').textContent='Scegli il centro: il tavolo segna chi è dentro l’area, amici compresi.'; return; }
+      const c=v==='_aoe'?{x:S.aoe.x,y:S.aoe.y}:S.tokens[v]; if(!c) return; let n=0; const amici=[];
+      box.querySelectorAll('[name=cTgt]').forEach(inp=>{ const tk=S.tokens[inp.value]; if(!tk) return; const dd=distM(c,tk), dentro=dd<=area.r; inp.checked=dentro; const lb=inp.closest('label');
+        if(dentro){ n++; const amico=(tk.kind!=='nemico')===(t.kind!=='nemico'); if(amico) amici.push(tk.name); lb.classList.add('inarea'); lb.style.outline=amico?'2px solid #C0392B':'2px solid #D9B15C';
+          lb.querySelector('.tn').insertAdjacentHTML('afterend',`<span class="careanote" style="margin-left:6px;font-size:.85em;color:${amico?'#E06B5A':'#D9B15C'}">${amico?'⚠ amico, ':''}nell’area (${dd.toLocaleString('it-IT')} m dal centro)</span>`); } });
+      box.querySelector('#cAreaInfo').innerHTML=`<b>Nell’area: ${n}</b>${amici.length?` — <span style="color:#E06B5A">attenzione, prende anche ${amici.map(poiText).join(', ')}</span>`:' — nessun amico'}. Puoi ancora togliere o aggiungere a mano.`;
+      const tl=box.querySelector('.tgtlist'); if(tl) [...tl.querySelectorAll('label.inarea')].reverse().forEach(l=>tl.prepend(l));
+      drawAoe({shape:'cerchio',x:c.x,y:c.y,r:(area.r/SQUARE_M+.5)*S.grid.size,m:area.r,tmp:true}); };
+    cc.onchange=segna; if(area.se){ cc.value=id; segna(); } else if(S.aoe){ cc.value='_aoe'; segna(); } }
+  box.querySelector('#cBack').onclick=()=>{ if(cc) drawAoe(S.aoe); castUnpaid(); renderSheet(id); };
   box.querySelector('#cGo').onclick=()=>{
+    if(cc) drawAoe(S.aoe);
     const slot=base===0?0:+(sel?.value||0), ids=senza?[]:[...box.querySelectorAll('[name=cTgt]:checked')].map(x=>x.value);
     if(slot>0&&(used[slot]||0)>=cap(slot)){ toast('Nessuno slot di livello '+slot); return; }
     const mk=[...box.querySelectorAll('[name=cMeta]:checked')].map(x=>x.value), mcost=mk.reduce((a,k)=>{ const m=META_DEFS.find(x=>x.k===k); return a+(m.c||Math.max(1,slot||base)); },0);
