@@ -2525,7 +2525,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v243</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v244</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -7019,6 +7019,72 @@ function sacraChannel(id,i,counted){
 }
 const useResourceSenzaSacra=useResource;
 useResource=function(id,i,counted){ const r=(((SHEETS[id]||{}).pg||{}).risorse||[])[i]; if(r&&/incanalare divinit/i.test(r.n)&&sacraHas(id)&&S.tokens[id]){ setTimeout(()=>sacraChannel(id,i,counted),0); return; } return useResourceSenzaSacra(id,i,counted); };
+/* v244 — INCANALARE DIVINITÀ DEL CHIERICO (Mattheus). Prima il pallino/tasto scalava solo un uso e scriveva una riga nel Registro.
+   Ora si sceglie l'effetto:
+   · Scacciare non morti (2024): azione Magia; ogni non morto scelto entro 9 m fa un TS Saggezza contro la CD degli incantesimi;
+     se fallisce è Spaventato e Incapacitato per 1 minuto (10 round). Bruciare i non morti (Chierico 5): si tirano tanti d8 quanto il
+     modificatore di Saggezza (minimo 1) e chi fallisce subisce quei danni radiosi (non finiscono l'effetto).
+   · Scintilla divina: una creatura entro 9 m; 1d8 + Saggezza (2d8 dal 7°, 3d8 dal 13°, 4d8 dal 18°): cura, oppure danni radiosi o
+     necrotici con TS Costituzione (metà se lo supera).
+   · Preservare la vita: un uso speso e la regola nel Registro (le cure si danno a mano). */
+function chiericoHas(id){ return ((((SHEETS[id]||{}).pg||{}).privilegi)||[]).some(p=>/scacciare non morti/i.test(p.n||'')); }
+function chiericoChannel(id,i,counted){
+  const t=S.tokens[id], sh=SHEETS[id], r=(((sh||{}).pg||{}).risorse||[])[i]; if(!t||!sh||!r) return;
+  const max=+r.max||0, prima=counted?Math.max(0,resUsed(id,i)-1):resUsed(id,i);
+  if(!counted&&max&&prima>=max){ toast('Incanalare divinità: nessun uso rimasto'); return; }
+  const spendi=()=>{ if(max) resSet(id,i,prima+1); }, annulla=()=>{ if(counted){ resSet(id,i,prima); save(); } };
+  const torna=()=>{ if(counted&&typeof renderSheet==='function') renderSheet(id); else closeModal(); };
+  const resta=()=>max?` (Incanalare divinità: ne ${max-prima-1===1?'resta':'restano'} ${Math.max(0,max-prima-1)})`:'';
+  const sag=modCalc((sh.abil||{}).Sag||10), dc=(sh.spell&&sh.spell.dc)||(8+(sh.prof||2)+sag), lvl=sh.level||1;
+  const brucia=((sh.pg||{}).privilegi||[]).some(p=>/bruciare i non morti|sear undead/i.test(p.n||''));
+  const vicini=conMe=>{ let L=targetsFor(id); if(conMe) L=[{id,t,same:true,dist:0,label:t.name+' (tu)'},...L]; return L.filter(o=>!isDead(o.t)); };
+  openModal(`<div class="eyebrow">${poiText(t.name)}</div><h2 class="big">Incanalare divinità</h2><p class="note" style="margin:0 0 10px">Quale effetto vuoi creare? ${max?`Ne ${max-prima===1?'resta':'restano'} <b>${Math.max(0,max-prima)}</b> di ${max}.`:''}</p>
+    <div class="row"><button class="primary" id="cdScaccia">Scacciare non morti</button><button id="cdScintilla">Scintilla divina</button><button id="cdPreserva">Preservare la vita</button><button id="cdBack">Annulla</button></div>`,'poibox');
+  const box=document.getElementById('modal');
+  box.querySelector('#cdBack').onclick=()=>{ annulla(); torna(); };
+  box.querySelector('#cdPreserva').onclick=()=>{ if(!counted) spendi(); log({kind:'sys',txt:`${t.name} usa Incanalare divinità: Preservare la vita — ${5*lvl} PF da dividere fra creature entro 9 m, ciascuna al massimo fino a metà dei suoi PF massimi${resta()}`}); save(true); torna(); };
+  box.querySelector('#cdScaccia').onclick=()=>{
+    const L=vicini(false).filter(o=>!o.same);
+    const row=o=>`<label class="tgt"><input type="checkbox" name="tuTgt" value="${o.id}" ${o.dist<=9?'checked':''}><span class="tn">${poiText(o.label)}</span><span class="note">${o.dist.toLocaleString('it-IT')} m${o.dist>9?' · oltre 9 m':''}${IS_GM?` · PF ${o.t.hp}/${o.t.hpMax} · TS Sag ${fmtMod(tokenSaveMod(o.t,'Sag'))}`:''}</span></label>`;
+    openModal(`<div class="eyebrow">${poiText(t.name)} · Incanalare divinità · azione</div><h2 class="big">Scacciare non morti</h2>
+      <p class="note" style="margin:0 0 8px">Presenta il simbolo sacro: ogni <b>non morto</b> scelto entro <b>9 m</b> fa un tiro salvezza su Saggezza (CD ${dc}). Chi fallisce è <b>Spaventato</b> e <b>Incapacitato</b> per 1 minuto e si allontana da te; l’effetto finisce se subisce danni.${brucia?` Bruciare i non morti: chi fallisce subisce anche <b>${Math.max(1,sag)}d8 radiosi</b> (questi danni non finiscono l’effetto).`:''}</p>
+      <p class="note" style="margin:0 0 4px">Scegli i non morti (quelli entro 9 m sono già spuntati):</p><div class="tgtlist">${L.map(row).join('')||'<span class="note">Nessuno in vista.</span>'}</div>
+      ${brucia?`<label style="display:block;margin-top:8px"><input type="checkbox" id="tuSear" checked> Bruciare i non morti (${Math.max(1,sag)}d8 radiosi a chi fallisce)</label>`:''}
+      <div class="row" style="margin-top:12px"><button class="primary" id="tuGo">Scaccia</button><button id="tuBack">Annulla</button></div>`,'poibox');
+    const b2=document.getElementById('modal');
+    b2.querySelector('#tuBack').onclick=()=>{ annulla(); torna(); };
+    b2.querySelector('#tuGo').onclick=()=>{
+      const ids=[...b2.querySelectorAll('[name=tuTgt]:checked')].map(x=>x.value); if(!ids.length){ toast('Scegli almeno un non morto'); return; }
+      if(!counted) spendi(); const sc=b2.querySelector('#tuSear'), sear=(brucia&&sc&&sc.checked)?rollExpr(`${Math.max(1,sag)}d8`):null;
+      log({kind:'sys',txt:`${t.name} usa Incanalare divinità: Scacciare non morti (CD ${dc})${sear?` — Bruciare i non morti: ${sear.total} radiosi (${sear.parts})`:''}${resta()}`});
+      let ko=0, ok=0;
+      for(const k of ids){ const tg=S.tokens[k]; if(!tg) continue; const mod=tokenSaveMod(tg,'Sag'), r=d20(), tot=r+mod, sup=tot>=dc;
+        log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · Scacciare non morti`,skill:'TS Sag',r,mod,tot,dc});
+        if(sup){ ok++; log({kind:'sys',txt:`${tg.name} supera il TS Saggezza e resiste a Scacciare non morti`}); continue; }
+        ko++; for(const c of ['spaventato','incapacitato']){ tg.conds=(tg.conds||[]).filter(x=>x.n!==c); tg.conds.push({n:c,r:10,source:id,spell:'Scacciare non morti'}); }
+        log({kind:'sys',txt:`${tg.name} fallisce il TS Saggezza: spaventato e incapacitato per 1 minuto, fugge da ${t.name}`});
+        if(sear&&sear.total>0){ applyDamage(tg,sear.total); log({kind:'hit',tid:typeof fxIdOf==='function'?fxIdOf(tg):undefined,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} subisce ${sear.total} danni radiosi da Bruciare i non morti`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); } }
+      save(true); closeModal(); toast(`Scacciare non morti: ${ko} scacciati, ${ok} resistono`); };
+  };
+  box.querySelector('#cdScintilla').onclick=()=>{
+    const L=vicini(true), nd=lvl>=18?4:lvl>=13?3:lvl>=7?2:1, expr=`${nd}d8${sag>=0?'+':''}${sag}`;
+    const row=o=>`<label class="tgt ${o.same?'same':''}"><input type="radio" name="sdTgt" value="${o.id}"><span class="tn">${poiText(o.label)}</span><span class="note">${o.dist?o.dist.toLocaleString('it-IT')+' m':''}${o.dist>9?' · oltre 9 m':''}${(IS_GM||o.t.kind==='pg')?`${o.dist?' · ':''}PF ${o.t.hp}/${o.t.hpMax}`:''}</span></label>`;
+    openModal(`<div class="eyebrow">${poiText(t.name)} · Incanalare divinità · azione</div><h2 class="big">Scintilla divina</h2>
+      <p class="note" style="margin:0 0 8px">Una creatura entro 9 m: <b>${expr}</b>. Cura, oppure danni radiosi o necrotici con tiro salvezza su Costituzione (CD ${dc}, metà se lo supera).</p>
+      <div class="fxadv" style="margin:0 0 8px"><label><input type="radio" name="sdMode" value="cura" checked> Cura</label><label><input type="radio" name="sdMode" value="radiosi"> Danni radiosi</label><label><input type="radio" name="sdMode" value="necrotici"> Danni necrotici</label></div>
+      <div class="tgtlist">${L.map(row).join('')}</div><div class="row" style="margin-top:12px"><button class="primary" id="sdGo">Usa</button><button id="sdBack">Annulla</button></div>`,'poibox');
+    const b3=document.getElementById('modal');
+    b3.querySelector('#sdBack').onclick=()=>{ annulla(); torna(); };
+    b3.querySelector('#sdGo').onclick=()=>{ const sel=b3.querySelector('[name=sdTgt]:checked'), mode=b3.querySelector('[name=sdMode]:checked').value, tg=sel?S.tokens[sel.value]:null; if(!tg){ toast('Scegli la creatura'); return; }
+      if(!counted) spendi(); const x=rollExpr(expr);
+      if(mode==='cura'){ const h=applyHeal(tg,x.total); log({kind:'sys',txt:`${t.name} usa Scintilla divina su ${tg.name}: +${h.v} PF (${x.parts}) → ${tg.hp}/${tg.hpMax}${resta()}`}); }
+      else { const mod=tokenSaveMod(tg,'Cos'), r=d20(), tot=r+mod, sup=tot>=dc; log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · Scintilla divina`,skill:'TS Cos',r,mod,tot,dc});
+        const v=sup?Math.floor(x.total/2):x.total; applyDamage(tg,v); log({kind:'hit',tid:typeof fxIdOf==='function'?fxIdOf(tg):undefined,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} ${sup?'supera':'fallisce'} il TS Costituzione e subisce ${v} danni ${mode} da Scintilla divina (${x.parts})${resta()}`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); }
+      save(true); closeModal(); };
+  };
+}
+{ const _ur=useResource; useResource=function(id,i,counted){ const r=(((SHEETS[id]||{}).pg||{}).risorse||[])[i]; if(r&&/incanalare divinit/i.test(r.n)&&chiericoHas(id)&&S.tokens[id]){ setTimeout(()=>chiericoChannel(id,i,counted),0); return; } return _ur(id,i,counted); }; }
+
 const doActionSenzaSacra=doAction;
 doAction=function(tokId,a){ return a&&SACRA_RE.test(a.n||'')&&sacraHas(tokId)&&SHEETS[tokId]?sacraOpen(tokId):doActionSenzaSacra(tokId,a); };
 const actEcoSenzaSacra=actEco;
