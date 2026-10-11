@@ -2529,7 +2529,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v249</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v250</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -4803,13 +4803,16 @@ function summonSteed(id,slot){
   box.querySelectorAll('[data-st]').forEach(b=>b.onclick=()=>{ const T=STEED_TIPI[b.dataset.st], key='destriero_'+id, step=S.grid.size||30;
     let p=snap({x:t.x+step,y:t.y}); for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1],[1,1],[-1,1],[1,-1],[-1,-1]]){ const q=snap({x:t.x+dx*step,y:t.y+dy*step}); if(walkable(q.x,q.y)&&!Object.values(S.tokens).some(o=>Math.hypot(o.x-q.x,o.y-q.y)<step*.7)){ p=q; break; } }
     const md=v=>Math.floor((v-10)/2);
-    S.tokens[key]={custom:true,name:`Destriero di ${t.name.split(' ')[0]}`,short:'D',kind:'alleato',owner:id,color:T.col,img:'',x:p.x,y:p.y,hp:5+10*L,hpMax:5+10*L,ac:10+L,speed:18,size:2,noInit:true,init:null,hidden:false,movedM:0,dash:false,conds:[],
+    S.tokens[key]={custom:true,name:`Destriero di ${t.name.split(' ')[0]}`,short:'D',kind:'alleato',owner:id,color:T.col,img:(STEED_IMG[id]||{}).tok||'',ritratto:(STEED_IMG[id]||{}).rit||'',x:p.x,y:p.y,hp:5+10*L,hpMax:5+10*L,ac:10+L,speed:18,size:2,noInit:true,init:null,hidden:false,movedM:0,dash:false,conds:[],
       mods:{'TS For':md(18),'TS Des':md(12),'TS Cos':md(14),'TS Int':md(6),'TS Sag':md(12),'TS Car':md(8),Atletica:md(18),Percezione:md(12)},
       note:`Destriero ultraterreno ${T.n.toLowerCase()} · Grande · CA ${10+L} · velocità 18 m${L>=4?', volo 18 m':''} · legato a ${t.name}: agisce nel suo turno; se scende a 0 PF svanisce`,
       actions:[{n:'Colpo ultraterreno',tipo:'mischia',eco:'azione',atk:+sp.atk||0,dmg:`1d8+${L}`,note:`danni ${T.dmg}`},T.bonus(L,sp.dc)]};
     if(S.mode==='scontro'&&typeof sortOrder==='function') sortOrder();
     log({kind:'sys',txt:`${t.name} evoca il suo destriero ultraterreno (${T.n.toLowerCase()}): CA ${10+L}, ${5+10*L} PF`}); selected=key; save(true); closeModal(); });
 }
+/* v250 — il ritratto (Midjourney) e il token (cornice verde degli alleati) del destriero di Alessandros; anche a un destriero già evocato */
+const STEED_IMG={alessandros:{tok:'img/tok-86300f85990d.png',rit:'img/c9f0d3f46063.jpg'}};
+{ const _rr2=renderRail; renderRail=function(){ for(const [k,x] of Object.entries(S.tokens)) if(/^destriero_/.test(k)&&(!x.img||!x.ritratto)&&STEED_IMG[x.owner]){ x.img=STEED_IMG[x.owner].tok; x.ritratto=STEED_IMG[x.owner].rit; } return _rr2.apply(this,arguments); }; }
 { const _rc=resolveCast; resolveCast=function(id,name){ const r=_rc.apply(this,arguments); if(name==='Find Steed'){ const slot=arguments[2]; setTimeout(()=>summonSteed(id,slot),0); } return r; }; }
 
 /* ===== STREGONERIA (v114): Fonte della magia e Metamagia =====
@@ -5420,7 +5423,7 @@ document.addEventListener('click',e=>{ const a=e.target.closest('[data-scprep],[
 `; document.head.appendChild(st); })();
 /* v219: nella colonna dei personaggi le pedine mostrano il ritratto (campo "ritratto" della pedina), non il token con la cornice */
 let PED_RIT=null;
-function railImg(t){ if(!t||!t.img) return t&&t.img; if(!PED_RIT){ PED_RIT={}; for(const s of SCENE_DATA) for(const x of s.pedine||[]) if(x.img&&x.ritratto) PED_RIT[x.img]=x.ritratto; } return PED_RIT[t.img]||t.img; }
+function railImg(t){ if(t&&t.ritratto&&/^img\//.test(t.ritratto)) return t.ritratto; if(!t||!t.img) return t&&t.img; if(!PED_RIT){ PED_RIT={}; for(const s of SCENE_DATA) for(const x of s.pedine||[]) if(x.img&&x.ritratto) PED_RIT[x.img]=x.ritratto; } return PED_RIT[t.img]||t.img; }
 function v3RenderMod(p,m){
   const key=v3k(p.id,m.id), T=V3_TIPI[m.tipo]||V3_TIPI.dettaglio, P=V3_PARTE[m.parte]||null;
   const badge=(m.prove||[]).map(pv=>`${(pv.abilita||[]).join('/')} ${pv.cd}`).join(' · ');
