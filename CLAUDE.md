@@ -1324,3 +1324,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v249 (11/10/2026) — Cavalcatura fedele
 
 - Prima Trova cavalcatura (anche gratuito, dalla risorsa «Cavalcatura fedele») scriveva solo una riga. Ora, dopo il lancio (`resolveCast` avvolto), si sceglie Celestiale, Fatato o Immondo e compare la pedina `destriero_<id>` (alleata, `owner` = chi lancia, quindi segue il gruppo fra le scene come Zenith): Grande, CA 10 + livello dello slot, PF 5 + 10 × livello (dal pallino gratuito vale il 2°: CA 12, 25 PF), velocità 18 m (volo dal 4°), Colpo ultraterreno col bonus d'attacco degli incantesimi di chi evoca, 1d8 + livello; azione bonus del tipo (Tocco guaritore / Passo fatato / Sguardo terribile). `noInit`: agisce nel turno di chi l'ha evocato. Rievocarlo lo sostituisce. Fonte: `Revisioni/Cavalcatura fedele (v249)/`.
+
+## v250 (11/10/2026) — immagine e token del destriero di Alessandros
+
+- Ritratto Midjourney (cavallo bianco celestiale, gualdrappa azzurra e argento con le due spade sotto il sole nascente dei Cerullius; job 9ff027a9…, variante 2) in `03_Compendio/03 Personaggi/Personaggi giocanti/Ritratti/Destriero di Alessandros.png`, token con la cornice verde degli alleati in `…/Token/`. Sul sito: `STEED_IMG.alessandros` (`img/tok-86300f85990d.png`, `img/c9f0d3f46063.jpg`; alias in `_immagini.json`); il destriero evocato li prende subito, uno già evocato al primo disegno della colonna. `railImg` ora preferisce `t.ritratto` quando è un percorso `img/…`.
