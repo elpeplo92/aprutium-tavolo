@@ -1248,3 +1248,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v233 (11/10/2026) — via la sezione «I Naviganti Grigi» del Compendio
 
 - Giuseppe: «completamente inutile, ed è un refuso». Le 6 voci `nav-*` (cat `naviganti`, gruppo «I Naviganti Grigi») tolte da `comp/out/*.json` e da `COMPENDIO_DATA` con `archivia-voci.py` (copia con `SITO` dall'ambiente), salvate in `_ARCHIVIO_2026-10-07/Naviganti Grigi (sezione del Compendio, 11-10)/`. I collegamenti a `nav-gilda-naviganti-grigi` ora vanno a `faz-naviganti-grigi`, gli altri `nav-*` sono tolti; `[[Perla Silenziosa|nav-perla-silenziosa]]` (Famiglie della Costa del Sale) ora è testo semplice. La fazione `faz-naviganti-grigi` resta.
+
+## v234 (11/10/2026) — via «Fuori mappa»
+
+- Giuseppe: tolta la riga «Fuori mappa:» con i tasti ↩ per rimettere le pedine tolte (colonna del master, sotto «Metti sulla mappa»). Il contenitore `#removedBox` resta nascosto (`display:none`), `renderRemoved()` continua a girare senza effetti visibili.
