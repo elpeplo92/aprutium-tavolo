@@ -277,6 +277,56 @@
       },
       "moduli": [
         {
+          "id": "i_cinque_tornati",
+          "tipo": "dettaglio",
+          "titolo": "Dopo il rituale di Mattheus: i cinque tornati persone",
+          "parte": "evento",
+          "innesco": "Mattheus ha invertito l’incantesimo di forgiatura sui Forgiati ancora in piedi (sessione dell’11-10).",
+          "leggi": "La carne grigia si ritira come acqua che si asciuga. Restano cinque persone sui sassi, nude sotto i vestiti strappati, che tremano al sole di mezzogiorno: Gerardo Tosti il soldato, Mèmmo Chiòdi, Cola lu vaccaro, Lucia dei campi e Zi’ Pasquale il mugnaio. Gli altri nove non si muovono più: per loro era tardi.",
+          "note": "Sul tavolo le cinque pedine sono alleate, con i punti ferita di popolani (Gerardo come guardia): le ferite dello scontro restano. Nessuno dei cinque ricorda la notte: la nebbia venuta su dal fiume, una mano fredda, poi il buio. Zi’ Pasquale è quello che sa di più (chi è passato al mulino). Gerardo vuole tornare a Cashtalladdë a riferire. Silvanus, arrivando con la colonna, li fa caricare sul Carro IV dal Dottor Albino. Ritratti umani dei cinque ancora da fare (Midjourney): per ora tengono il volto da Forgiati.",
+          "prove": [
+            {
+              "id": "medicina",
+              "abilita": [
+                "Medicina"
+              ],
+              "cd": 12,
+              "gruppo": "migliore",
+              "esiti": [
+                {
+                  "fascia": "failure",
+                  "max": 11,
+                  "leggi": "Sono vivi, ma non si capisce quanto reggano: meglio non farli camminare."
+                },
+                {
+                  "fascia": "baseSuccess",
+                  "leggi": "Sfiniti ma vivi: un giorno di riposo e tornano in piedi. I segni della forgiatura sulle braccia resteranno."
+                }
+              ]
+            },
+            {
+              "id": "arcano",
+              "abilita": [
+                "Arcano",
+                "Religione"
+              ],
+              "cd": 15,
+              "gruppo": "migliore",
+              "esiti": [
+                {
+                  "fascia": "failure",
+                  "max": 14,
+                  "leggi": "Il rituale ha funzionato: perché, non lo sai."
+                },
+                {
+                  "fascia": "baseSuccess",
+                  "leggi": "La forgiatura si è sciolta perché era recente: giorni, non anni. Su chi è forgiato da più tempo il rituale potrebbe non bastare."
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "il_medaglione_sotto_la_pelle",
           "tipo": "dettaglio",
           "titolo": "Il medaglione sotto la pelle",
@@ -945,7 +995,11 @@
       "y": 467,
       "gruppo": "inizio",
       "img": "TOKEN — Forgiato — fratelli Chiòdi 2.png",
-      "ritratto": "Ritratto pedina — Forgiato — fratelli Chiòdi 2.jpg"
+      "ritratto": "Ritratto pedina — Forgiato — fratelli Chiòdi 2.jpg",
+      "dopo": {
+        "nome": "Mèmmo Chiòdi (tornato persona)",
+        "tac": "Il più giovane dei Chiòdi. Cerca il fratello Berardo fra i corpi: lo trova. Non parla più per tutta la giornata."
+      }
     },
     {
       "id": "g_g",
@@ -956,7 +1010,11 @@
       "y": 217,
       "gruppo": "round2",
       "img": "TOKEN — Forgiato — Gerardo Tosti.png",
-      "ritratto": "Ritratto pedina — Forgiato — Gerardo Tosti.jpg"
+      "ritratto": "Ritratto pedina — Forgiato — Gerardo Tosti.jpg",
+      "dopo": {
+        "nome": "Gerardo Tosti, soldato di Cashtalladdë (tornato persona)",
+        "tac": "Soldato della guarnigione di Cashtalladdë, mandato di scorta al mulino. Ricorda la nebbia e una mano fredda sul collo; poi niente. Vuole tornare al suo posto e dire al suo sergente che cosa è successo."
+      }
     },
     {
       "id": "g_v3",
@@ -967,7 +1025,11 @@
       "y": 98,
       "gruppo": "round4",
       "img": "TOKEN — Forgiato — Cola lu vaccaro.png",
-      "ritratto": "Ritratto pedina — Forgiato — Cola lu vaccaro.jpg"
+      "ritratto": "Ritratto pedina — Forgiato — Cola lu vaccaro.jpg",
+      "dopo": {
+        "nome": "Cola lu vaccaro, del casale accanto (tornato persona)",
+        "tac": "Si guarda le mani. Chiede delle vacche. Se gliele riportano, piange."
+      }
     },
     {
       "id": "g_z",
@@ -978,7 +1040,11 @@
       "y": 825,
       "gruppo": "round3",
       "img": "TOKEN — Forgiato — Zi' Pasquale.png",
-      "ritratto": "Ritratto pedina — Forgiato — Zi' Pasquale.jpg"
+      "ritratto": "Ritratto pedina — Forgiato — Zi' Pasquale.jpg",
+      "dopo": {
+        "nome": "Zi' Pasquale lu mulinaro (tornato persona)",
+        "tac": "Il mugnaio del guado. È il primo a capire: «È stata la nebbia della notte, è venuta su dal fiume». Sa chi è passato al mulino negli ultimi giorni (aggancio per il master)."
+      }
     },
     {
       "id": "g_w1",
@@ -1001,7 +1067,11 @@
       "y": 967,
       "gruppo": "round3",
       "img": "TOKEN — Forgiato — Rosa 2.png",
-      "ritratto": "Ritratto pedina — Forgiato — Rosa 2.jpg"
+      "ritratto": "Ritratto pedina — Forgiato — Rosa 2.jpg",
+      "dopo": {
+        "nome": "Lucia (tornata persona)",
+        "tac": "Giovane, dei campi della riva di qua. Chiede di Sabatino e di Giuvanne: erano con lei. Sono fra i corpi."
+      }
     },
     {
       "id": "g_w7",
