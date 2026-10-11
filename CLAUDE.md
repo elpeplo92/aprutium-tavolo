@@ -1252,3 +1252,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v234 (11/10/2026) — via «Fuori mappa»
 
 - Giuseppe: tolta la riga «Fuori mappa:» con i tasti ↩ per rimettere le pedine tolte (colonna del master, sotto «Metti sulla mappa»). Il contenitore `#removedBox` resta nascosto (`display:none`), `renderRemoved()` continua a girare senza effetti visibili.
+
+## v235 (11/10/2026) — Teramum torna alla mappa di prima
+
+- Giuseppe: la mappa vecchia (`img/6d46937e6df9.jpg`, veduta dall'alto) era «molto migliore» di quella a volo d'uccello della v228. `scene/teramum.json` ha di nuovo la mappa e le `legacyPosition` di prima (prese da `d1776b1~1`). La mappa Midjourney resta in `03_Compendio/02 Luoghi/Teramum/Luoghi/` e in `img/`, non usata. Non rifare la mappa di Teramum senza che Giuseppe lo chieda.
