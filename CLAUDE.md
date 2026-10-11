@@ -1319,4 +1319,4 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 ## v248 (11/10/2026) — Scudo della fede
 
-- Prima il lancio scriveva solo una riga. Ora `condSu:'scudofede'`: il bersaglio prende la condizione «Scudo della fede» (sigla SDF, scudo con la croce greca… no: scudo con un «+», condizione buona) e la CA conta +2 in `pgAcNow` (personaggi: scheda e attacchi) e in `tokAc` (pedine senza scheda); finisce con la concentrazione di chi lo lancia. Fonte: `Revisioni/Scudo della fede (v248)/applica.py`.
+- Prima il lancio scriveva solo una riga. Ora `condSu:'scudofede'`: il bersaglio prende la condizione «Scudo della fede» (sigla SDF, icona a scudo con un «+», condizione buona) e la CA conta +2 in `pgAcNow` (personaggi: scheda e attacchi) e in `tokAc` (pedine senza scheda); finisce con la concentrazione di chi lo lancia. Fonte: `Revisioni/Scudo della fede (v248)/applica.py`.
