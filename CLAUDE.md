@@ -1256,3 +1256,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v235 (11/10/2026) — Teramum torna alla mappa di prima
 
 - Giuseppe: la mappa vecchia (`img/6d46937e6df9.jpg`, veduta dall'alto) era «molto migliore» di quella a volo d'uccello della v228. `scene/teramum.json` ha di nuovo la mappa e le `legacyPosition` di prima (prese da `d1776b1~1`). La mappa Midjourney resta in `03_Compendio/02 Luoghi/Teramum/Luoghi/` e in `img/`, non usata. Non rifare la mappa di Teramum senza che Giuseppe lo chieda.
+
+## v236 (11/10/2026) — ogni famiglia dei borghi è una casata
+
+- Correzione di Giuseppe: niente voci-elenco per contea, **ogni famiglia dei borghi ha la sua scheda di casata** (formato di Cerullius). 25 casate nel gruppo **«Le casate dei borghi»**, campo nuovo `contea` per ordinarle: Vallescura, Cavatassi, d'Altaria (Costa del Sale); Barbaspina, Melarangelo, Orofalco (Val Vibrata); Ferroalto, Solardente (Terre del Nord); Pietramala, Rosaspina, Spinozzi, Scimitarra (Terre di Mezzo); Ferrastro, Pellanera, d'Avalos (Cuore); De Sterlix, Azzurravena, Fulminis, Roccaspina, Biancone (Calanchi); Mazzaferri, Ferramonte (Montagna); Ammazzalorso, Malandra, Corvanera (Terre Selvagge). Le vecchie id sono riusate dove c'erano (le fazioni della Crociata puntano di nuovo lì). Le 8 voci-elenco `faz-famiglie-*` sono in archivio (`_ARCHIVIO_2026-10-07/Voci-elenco delle famiglie (v236)/`, sorgenti in `_ARCHIVIO_2026-10-11/…`).
+- **Stemmi** Midjourney per le 14 casate che non avevano uno scudo (Ferroalto e Barbaspina avevano lo stendardo della loro compagnia): `Revisioni/Compendio - immagini v149/mj/simboli-fazioni-5-job.json`, scelte `simboli-fazioni-5-scelte.json`, fogli `Stemmi delle casate dei borghi - foglio 1-2.jpg`, script `stemmi_casate_borghi.py`. **Illustrazione** della pagina «Le casate del Ducato d'Aprutium» (la sala degli stendardi), stesso giro.
+- La pagina indice divide «Le casate dei borghi» contea per contea (`CONTEE`).
