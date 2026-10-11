@@ -2579,7 +2579,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v255</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v256</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10235,4 +10235,102 @@ const S3_COIN_NOMI={mp:'platino',mo:'oro',ma:'argento',mr:'rame'};
   window.__v254={menteTattica,compagnoSelvatico,fxTick,aidFix,runaFuoco,runaPietra,sceltaGratis,steedSweep,ALIAS};
 })();
 /* ===== FINE ABILITÀ DI CLASSE, TALENTI E OGGETTI (v254) ===== */
+/* ===== AREE CHE DURANO, SPINTE E MALEDIZIONE (v256) — 11-10-2026 =====
+   Giuseppe: «se Adamus lancia Crescita di spine non succede nulla». Vero: gli incantesimi che creano un'area che resta (Crescita di
+   spine, Nube di nebbia, Silenzio, Tempesta di nevischio, Intralciare) scrivevano una riga. Ora:
+   - al lancio si sceglie il CENTRO (un personaggio, un mostro, l'area segnata sulla mappa, o «vicino a te») e sulla mappa compare
+     l'AREA come pedina rotonda (o quadrata) tratteggiata, sotto le creature, col nome dell'incantesimo; sparisce con la concentrazione.
+     Lo stesso menu del centro vale per Raggio di luna, Sfera infuocata ed Evoca animali (v253), che prima comparivano accanto a chi lancia.
+   - il tavolo (quello del master) guarda i MOVIMENTI delle pedine: chi entra o si muove dentro Crescita di spine prende 2d4 perforanti
+     per ogni 1,5 m percorsi dentro; chi entra in Tempesta di nevischio tira il TS Destrezza (prono e perde la concentrazione) una volta
+     per turno, e anche chi vi comincia il turno; dentro Silenzio si è assordati (condizione messa e tolta da sola).
+   - SPINTE: Onda tonante (3 m), Folata di vento (4,5 m) e Punizione tonante (3 m) spostano davvero la pedina di chi fallisce, lontano
+     da chi lancia, fermandosi davanti a muri e pedine.
+   - SCAGLIARE MALEDIZIONE: si sceglie l'effetto al lancio (svantaggio a prove e TS di una caratteristica; svantaggio ai tiri per colpire
+     contro chi lancia; TS Sag a ogni inizio turno o solo Schivata; +1d8 necrotici dai colpi di chi lancia) e il tavolo lo applica.
+   Prova rigiocabile in Revisioni/Aree che durano (v256)/. */
+(function(){
+  if(!CONDS.some(c=>c[0]==='maledetto')) CONDS.push(['maledetto','Maledetto']); CONDS_ABBR.maledetto='MAL';
+  UI_ICO.c_maledetto='<path d="M12 3v6M12 9c-3 0-5 2-5 5v4h10v-4c0-3-2-5-5-5z"/><path d="M9 21h6M10 14h.5M13.5 14h.5"/>';
+  const R=SPELL_RULES, nemici=(a,b)=>(a.kind==='nemico')!==(b.kind==='nemico'), md=v=>Math.floor((v-10)/2);
+  const AREE={'Spike Growth':{r:()=>6,col:'#6E8E3B',nome:'Crescita di spine',forma:'sfera',nota:'terreno difficile; chi entra o si muove dentro: 2d4 perforanti per ogni 1,5 m (li toglie il tavolo)'},
+    'Fog Cloud':{r:L=>6+6*Math.max(0,L-1),col:'#9AA3B0',nome:'Nube di nebbia',forma:'sfera',nota:'pesantemente oscurata: niente linea di vista attraverso la nebbia'},
+    'Silence':{r:()=>6,col:'#5A5F7A',nome:'Silenzio',forma:'sfera',nota:'nessun suono: dentro si è assordati (lo segna il tavolo), immuni ai danni da tuono, niente incantesimi con componente verbale'},
+    'Sleet Storm':{r:()=>6,col:'#B8C8E0',nome:'Tempesta di nevischio',forma:'sfera',nota:'oscurata, terreno difficile; chi entra o comincia il turno dentro: TS Des o prono e perde la concentrazione (lo fa il tavolo)'},
+    'Entangle':{r:()=>3,col:'#4E7A3B',nome:'Intralciare',forma:'quadrato',nota:'quadrato di 6 m, terreno difficile; chi era dentro al lancio ha fatto il TS For'}};
+  R['Spike Growth']={m:'effetto',se:true,areaSu:true,nota:'scegli il centro: l’area di 6 m di raggio compare sulla mappa; chi ci si muove dentro prende 2d4 ogni 1,5 m da solo'};
+  R['Fog Cloud']={m:'effetto',se:true,areaSu:true,nota:'scegli il centro: la nebbia (6 m di raggio, +6 per livello di slot) compare sulla mappa'};
+  R['Silence']={m:'effetto',se:true,areaSu:true,nota:'scegli il centro: la sfera di 6 m compare sulla mappa; chi è dentro è assordato'};
+  R['Sleet Storm'].areaSu=true; R['Sleet Storm'].nota='al lancio TS Des per chi è già dentro (prono e perde la concentrazione); poi l’area resta sulla mappa e chi entra o vi comincia il turno tira da solo';
+  R['Entangle'].areaSu=true; R['Entangle'].nota='chi è nel quadrato di 6 m al lancio: TS For o trattenuto; l’area resta sulla mappa (terreno difficile); per liberarsi prova di Atletica contro la tua CD';
+  R['Bestow Curse'].scelta={k:'eff',n:'Maledizione',v:['For','Des','Cos','Int','Sag','Car','svantaggio ai tiri per colpire contro di te','TS Sag a ogni inizio turno o solo Schivata','+1d8 necrotici dai tuoi colpi'],et:v=>v.length===3?'svantaggio a prove e TS di '+ABIL_IT[v]:v};
+  R['Bestow Curse'].cond=['maledetto']; R['Bestow Curse'].rounds=10; R['Bestow Curse'].nota='chi fallisce il TS Sag è maledetto con l’effetto scelto (applicato dal tavolo) finché dura la concentrazione';
+  R['Thunderwave'].nota='chi fallisce subisce tutto ed è spinto di 3 m lontano da te (la pedina si sposta da sola)';
+  R['Gust of Wind'].nota='chi fallisce è spinto di 4,5 m lontano da te (la pedina si sposta da sola); a fine turno nella linea ripete il TS';
+  R['Thunderous Smite'].nota='se fallisce il TS For è spinto di 3 m (la pedina si sposta) e cade prono';
+  const spOf=id=>((SHEETS[id]||{}).spell)||{dc:13,atk:5}; const dcOf=id=>spOf(id).dc+(fxOn(S.tokens[id],'innata')?1:0);
+  const pxM=()=>S.grid.size/SQUARE_M; /* px per metro */
+  const CENTRO_SPELLS=new Set([...Object.keys(AREE),'Moonbeam','Flaming Sphere','Conjure Animals']);
+
+  /* ----- menu del centro nella finestra di lancio ----- */
+  { const _cs=castSpell; castSpell=function(id,name){ const r=_cs.apply(this,arguments); try{ const box=document.getElementById('modal'), t=S.tokens[id]; if(!box||!t||!CENTRO_SPELLS.has(name)||!box.querySelector('#cGo')||box.querySelector('#cCentro')||box.querySelector('#cCentro2')) return r;
+        const list=[{id,label:t.name+' (tu)',dist:0},...targetsFor(id)]; const go=box.querySelector('#cGo').closest('.row');
+        go.insertAdjacentHTML('beforebegin',`<label style="display:block;margin:8px 0 4px">Centro <select id="cCentro2" data-sp="${name}"><option value="_me">vicino a te</option>${S.aoe?'<option value="_aoe" selected>l’area segnata sulla mappa</option>':''}${list.slice(1).map(o=>`<option value="${o.id}">${poiText(o.label)}${o.dist?' — a '+o.dist.toLocaleString('it-IT')+' m':''}</option>`).join('')}</select></label>`); }catch(e){ console.warn('v255 centro',e); } return r; }; }
+  function centroScelto(id,name){ const box=document.getElementById('modal'); let v=null; const s2=box&&box.querySelector('#cCentro2'); if(s2&&s2.dataset.sp===name) v=s2.value; else { const s1=box&&box.querySelector('#cCentro'); if(s1&&s1.value) v=s1.value; }
+    if(window.__v256&&__v256.CENTRO_FORZATO) v=__v256.CENTRO_FORZATO; const t=S.tokens[id];
+    if(v==='_aoe'&&S.aoe) return {x:S.aoe.x,y:S.aoe.y}; if(v&&v!=='_me'&&v!=='_aoe'&&S.tokens[v]) return {x:S.tokens[v].x,y:S.tokens[v].y}; return null; }
+
+  /* ----- pedine delle aree ----- */
+  function creaArea(id,name,slot,c){ const t=S.tokens[id], A=AREE[name]; if(!t||!A) return; const L=Math.max(+SPELLS[name].l||1,+slot||0), r=A.r(L), key='area_'+name.toLowerCase().replace(/[^a-z]+/g,'')+'_'+id, p=c||{x:t.x,y:t.y};
+    for(const [k,x] of Object.entries(S.tokens)) if(x&&x.spellTok===name&&x.owner===id) delete S.tokens[k];
+    S.tokens[key]={custom:true,name:A.nome,short:A.nome.slice(0,2),kind:'alleato',owner:id,spellTok:name,evLvl:L,area:true,areaR:r,areaForma:A.forma,color:A.col,img:'',x:p.x,y:p.y,hp:1,hpMax:1,ac:30,speed:0,size:Math.max(1,Math.round(r*2/SQUARE_M)),noInit:true,init:null,hidden:false,movedM:0,dash:false,conds:[],mods:{},actions:[],note:`${A.nome} di ${t.name} (slot di ${L}°) · ${A.forma==='quadrato'?'quadrato di '+(r*2)+' m':'raggio '+r+' m'} · ${A.nota} · svanisce con la concentrazione`};
+    log({kind:'sys',txt:`${t.name}: ${A.nome} — l’area (${A.forma==='quadrato'?'quadrato di '+(r*2)+' m':'raggio '+r+' m'}) è sulla mappa`}); }
+  const dentro=(a,t)=>{ const r=a.areaR||1.5, d=Math.hypot(t.x-a.x,t.y-a.y)/pxM(); return a.areaForma==='quadrato'?(Math.abs(t.x-a.x)/pxM()<=r+0.01&&Math.abs(t.y-a.y)/pxM()<=r+0.01):d<=r+0.01; };
+  /* lunghezza (in metri) del segmento A→B dentro il cerchio di centro C e raggio r (metri); quadrato: approssimato col cerchio */
+  function dentroLung(a,b,c,r){ const k=pxM(); const ax=a.x/k,ay=a.y/k,bx=b.x/k,by=b.y/k,cx=c.x/k,cy=c.y/k; const dx=bx-ax,dy=by-ay, L=Math.hypot(dx,dy); if(L<1e-6) return 0;
+    const fx=ax-cx,fy=ay-cy; const A=dx*dx+dy*dy, B=2*(fx*dx+fy*dy), C=fx*fx+fy*fy-r*r; const disc=B*B-4*A*C; if(disc<0) return 0; const s=Math.sqrt(disc); let t1=(-B-s)/(2*A), t2=(-B+s)/(2*A); t1=Math.max(0,t1); t2=Math.min(1,t2); return t2>t1?(t2-t1)*L:0; }
+  { const _rt=renderTokens; renderTokens=function(){ const r=_rt.apply(this,arguments); try{ const s=S.grid.size; [...tokensEl.querySelectorAll('.tok')].forEach(el=>{ const t=S.tokens[el.dataset.id]; if(!t||!t.area||!t.areaR) return; el.classList.add('tokarea'); if(t.areaForma==='quadrato') el.classList.add('quad'); const px=(t.areaR*2/SQUARE_M)*s; el.style.width=el.style.height=px+'px'; el.style.fontSize='11px'; tokensEl.prepend(el); }); }catch(e){} return r; }; }
+  const st=document.createElement('style'); st.textContent=`.tok.tokarea{border-style:dashed;border-width:2px!important;background:rgba(255,255,255,.07)!important;box-shadow:none;cursor:default;z-index:0}.tok.tokarea.quad{border-radius:8px}.tok.tokarea .hpr,.tok.tokarea .condrow{display:none}.tok.tokarea .lbl{opacity:.85}`; document.head.appendChild(st);
+
+  /* ----- lancio: area al centro scelto, Scagliare maledizione, spinte ----- */
+  const esc=s=>String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  function spingi(from,tg,metri){ if(!tg||!from) return 0; const s=S.grid.size, n=Math.round(metri/SQUARE_M); let dx=tg.x-from.x, dy=tg.y-from.y; if(!dx&&!dy) dx=s; const ux=Math.abs(dx)>=Math.abs(dy)/2?Math.sign(dx):0, uy=Math.abs(dy)>=Math.abs(dx)/2?Math.sign(dy):0; let fatti=0, x=tg.x, y=tg.y;
+    for(let i=0;i<n;i++){ const q=snap({x:x+ux*s,y:y+uy*s}); if((!walkable(q.x,q.y)&&walkable(x,y))||Object.values(S.tokens).some(o=>o!==tg&&!o.area&&Math.hypot(o.x-q.x,o.y-q.y)<s*.7)) break; x=q.x; y=q.y; fatti++; }
+    if(fatti){ tg.x=x; tg.y=y; } return fatti*SQUARE_M; }
+  { const _rc=resolveCast; resolveCast=function(id,name,slot,ids){ const t=S.tokens[id], centro=CENTRO_SPELLS.has(name)?centroScelto(id,name):null, l0=new Set(S.log);
+      const r=_rc.apply(this,arguments); if(!t) return r; let n=0; const nuovi=S.log.filter(e=>!l0.has(e)), fallito=tg=>nuovi.some(e=>new RegExp('^'+esc(tg.name)+' fallisce il TS').test(e.txt||''));
+      if(AREE[name]){ creaArea(id,name,slot,centro); n++; }
+      if(centro&&(name==='Moonbeam'||name==='Flaming Sphere'||name==='Conjure Animals')){ for(const x of Object.values(S.tokens)) if(x&&x.spellTok===name&&x.owner===id){ const q=snap(centro); x.x=q.x; x.y=q.y; n++; } }
+      if(name==='Sleet Storm') for(const i of ids||[]){ const tg=S.tokens[i]; if(tg&&fallito(tg)) SLEET_T[i]=fxTurnKey(); }
+      if(name==='Bestow Curse'){ const box=document.getElementById('modal'), sel=box&&box.querySelector('#cScelta'), eff=(window.__v256&&__v256.SCELTA_FORZATA)||(sel&&sel.dataset.sp===name?sel.value:'For'); for(const i of ids||[]){ const c=((S.tokens[i]||{}).conds||[]).find(c=>c&&c.n==='maledetto'&&c.source===id); if(c){ c.eff=eff; if(slot>=4) c.r=null; log({kind:'sys',txt:`${S.tokens[i].name} è maledetto: ${eff.length===3?'svantaggio a prove e TS di '+ABIL_IT[eff]:eff}`}); n++; } } }
+      const spinta={'Thunderwave':3,'Gust of Wind':4.5,'Thunderous Smite':3}[name]; if(spinta) for(const i of ids||[]){ const tg=S.tokens[i]; if(!tg||tg===t) continue; const giu=name==='Thunderous Smite'?(tg.conds||[]).some(c=>c&&c.n==='prono'&&c.source===id&&c.spell===name):fallito(tg); if(!giu) continue; const m=spingi(t,tg,spinta); log({kind:'sys',txt:m>0?`${tg.name} è spinto di ${m.toLocaleString('it-IT')} m lontano da ${t.name}${m<spinta?' (si ferma contro un ostacolo)':''}`:`${tg.name} non può essere spinto: è bloccato`}); n++; }
+      if(n) save(true); return r; }; }
+
+  /* ----- movimenti dentro le aree (tavolo del master) ----- */
+  const POS={}, SLEET_T={};
+  function tsArea(ownerId,tg,ab,label){ const dc=dcOf(ownerId), mod=(tg.kind==='pg'||tg.kind==='alleato')?(tg.mods?.['TS '+ab]??0):monsterSaveMod(tg,ab); let r=d20(); if(hasCondition(tg,'anatema')){ const x=rollExpr('1d4').total; r-=x; } const tot=r+mod, ok=tot>=dc; log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · ${label}`,skill:'TS '+ab,r,mod,tot,dc}); return ok; }
+  function nevischio(a,tg,k){ const key=fxTurnKey(); if(SLEET_T[k]===key) return 0; SLEET_T[k]=key; const ok=tsArea(a.owner,tg,'Des','Tempesta di nevischio'); if(ok){ log({kind:'sys',txt:`${tg.name} supera il TS Destrezza nel nevischio`}); return 1; } tg.conds=(tg.conds||[]).filter(c=>c.n!=='prono'); tg.conds.push({n:'prono',r:null,source:a.owner,spell:'Sleet Storm'}); log({kind:'sys',txt:`${tg.name} scivola nel nevischio: cade prono${concOf(tg)?' e perde la concentrazione':''}`}); if(concOf(tg)) concEnd(k,'Tempesta di nevischio'); return 1; }
+  function areeSweep(){ let n=0; const aree=Object.entries(S.tokens).filter(([k,x])=>x&&x.area&&x.areaR&&AREE[x.spellTok]&&tokInScene(k));
+    for(const [k,t] of Object.entries(S.tokens)){ if(!t||t.area||typeof t.x!=='number') continue; const prev=POS[k]; POS[k]={x:t.x,y:t.y}; if(!prev||(prev.x===t.x&&prev.y===t.y)) continue; if(!aree.length||!tokInScene(k)||t.hp<=0) continue; const salto=Math.hypot(t.x-prev.x,t.y-prev.y)/pxM(); if(salto>36) continue;
+      for(const [ak,a] of aree){ const len=a.areaForma==='quadrato'?(dentro(a,t)?Math.min(salto,a.areaR*2):0):dentroLung(prev,t,a,a.areaR); const ora=dentro(a,t), prima=dentro(a,prev);
+        if(a.spellTok==='Spike Growth'&&len>0){ const passi=Math.max(1,Math.floor(len/1.5+1e-6)), x=fxRoll(`${2*passi}d4`); applyDamage(t,x.total); log({kind:'hit',tid:k,hpNow:t.hp,hpTop:t.hpMax,txt:`${t.name} si muove per ${(passi*1.5).toLocaleString('it-IT')} m fra le spine di ${a.name}: ${x.total} danni perforanti (${x.txt})`}); if(t.hp<=0) log({kind:'hit',txt:`${t.name} cade a 0 PF`}); n++; }
+        if(a.spellTok==='Sleet Storm'&&ora&&!prima){ n+=nevischio(a,t,k); }
+        if(a.spellTok==='Silence'){ const ha=(t.conds||[]).some(c=>c&&c.n==='assordato'&&c.spell==='Silence'); if(ora&&!ha){ t.conds=(t.conds||[]).filter(c=>c.n!=='assordato'); t.conds.push({n:'assordato',r:null,source:a.owner,spell:'Silence'}); log({kind:'sys',txt:`${t.name} entra nel Silenzio: assordato`}); n++; } else if(!ora&&ha){ t.conds=t.conds.filter(c=>!(c.n==='assordato'&&c.spell==='Silence')); log({kind:'sys',txt:`${t.name} esce dal Silenzio`}); n++; } } } }
+    /* aree sparite → via l'assordato del Silenzio */
+    if(!aree.some(([,a])=>a.spellTok==='Silence')) for(const t of Object.values(S.tokens)){ if(t&&(t.conds||[]).some(c=>c&&c.n==='assordato'&&c.spell==='Silence')){ t.conds=t.conds.filter(c=>!(c.n==='assordato'&&c.spell==='Silence')); n++; } }
+    return n>0; }
+  { const _r=render; render=function(){ const out=_r.apply(this,arguments); try{ if(READY&&(TEST_MODE||FB_LOADED)&&IS_GM&&!dragging&&!pending&&areeSweep()) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0); }catch(e){ console.warn('v255',e); } return out; }; }
+  /* inizio turno: nevischio; maledizione «Schivata» */
+  { const _tk=tickConds; tickConds=function(id){ const r=_tk.apply(this,arguments); try{ if(S.mode==='scontro'&&S.order&&S.order[S.turn]===id){ const t=S.tokens[id]; if(t&&!t.area&&t.hp>0){ for(const [ak,a] of Object.entries(S.tokens)) if(a&&a.area&&a.spellTok==='Sleet Storm'&&tokInScene(ak)&&dentro(a,t)) nevischio(a,t,id);
+          const c=(t.conds||[]).find(c=>c&&c.n==='maledetto'&&/^TS Sag/.test(c.eff||'')); if(c&&c.source&&S.tokens[c.source]){ const ok=tsArea(c.source,t,'Sag','Scagliare maledizione'); log({kind:'sys',txt:ok?`${t.name} resiste alla maledizione: agisce normalmente`:`${t.name} fallisce: in questo turno può solo compiere l’azione Schivata`}); } } } }catch(e){ console.warn('v255 tick',e); } return r; }; }
+
+  /* ----- maledizione nei tiri ----- */
+  const abilOf=skill=>{ const k=skillKey(skill); let ab=k?SKILLS[k]:null; if(!ab||ab==='Iniziativa') ab=abilAbbr(skill); return ab; };
+  { const _fd=fxD20; fxD20=function(t,kind,skill){ let why=null; if(t&&!t.adv&&(kind==='prova'||kind==='ts')){ const c=(t.conds||[]).find(c=>c&&c.n==='maledetto'&&c.eff&&c.eff.length===3); if(c){ const ab=kind==='ts'?String(skill).replace(/^TS\s+/,''):abilOf(skill); if(ab===c.eff){ t.adv='s'; why='Maledetto'; } } }
+      const r=_fd.apply(this,arguments); if(why&&r) r.why=r.why?r.why+', '+why:why; return r; }; }
+  { const _ra=resolveAttack; resolveAttack=function(tokId,a,targetId){ const t=S.tokens[tokId]; const c=t&&(t.conds||[]).find(c=>c&&c.n==='maledetto'&&/tiri per colpire/.test(c.eff||'')); if(c&&c.source===targetId&&!t.adv) t.adv='s'; return _ra.apply(this,arguments); }; }
+  { const _fdm=fxDamage; fxDamage=function(t,a,crit){ const r=_fdm.apply(this,arguments); const tg=typeof ATK_TG!=='undefined'?ATK_TG:null, id=t&&fxIdOf(t); if(tg&&id&&(tg.conds||[]).some(c=>c&&c.n==='maledetto'&&c.source===id&&/1d8/.test(c.eff||''))){ const x=fxRoll('1d8',{crit}); r.total+=x.total; r.txt+=` + Maledizione ${x.txt} necrotici`; } return r; }; }
+  window.__v256={creaArea,areeSweep,spingi,dentroLung,dentro,AREE,CENTRO_FORZATO:null,SCELTA_FORZATA:null,POS,setCentro:v=>{ __v256.CENTRO_FORZATO=v; },setScelta:v=>{ __v256.SCELTA_FORZATA=v; }};
+})();
+/* ===== FINE AREE CHE DURANO, SPINTE E MALEDIZIONE (v256) ===== */
 </script>
