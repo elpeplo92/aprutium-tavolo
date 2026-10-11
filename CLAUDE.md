@@ -1316,3 +1316,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v247 (11/10/2026) — Protezione dal bene e dal male
 
 - Prima il lancio scriveva solo una riga nel Registro (e la concentrazione a chi lancia). Ora (`SPELL_RULES` con `condSu:'protetto'`) il bersaglio prende la condizione **Protetto dal male** (icona a scudo, condizione «buona», sigla PRO), che finisce da sola con la concentrazione di chi l'ha lanciata. Nella finestra d'attacco dei mostri chi è protetto ha l'etichetta «protetto dal male»; scegliendolo, il tavolo mette lo svantaggio e lo scrive (il master rimette «Normale» se l'attaccante non è aberrazione, celestiale, elementale, folletto, immondo o non morto: il tavolo non conosce i tipi dei mostri). Fonte: `Revisioni/Protezione dal bene e dal male (v247)/applica.py`.
+
+## v248 (11/10/2026) — Scudo della fede
+
+- Prima il lancio scriveva solo una riga. Ora `condSu:'scudofede'`: il bersaglio prende la condizione «Scudo della fede» (sigla SDF, scudo con la croce greca… no: scudo con un «+», condizione buona) e la CA conta +2 in `pgAcNow` (personaggi: scheda e attacchi) e in `tokAc` (pedine senza scheda); finisce con la concentrazione di chi lo lancia. Fonte: `Revisioni/Scudo della fede (v248)/applica.py`.
