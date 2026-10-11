@@ -5,7 +5,7 @@
  "citta": "Teramum",
  "ordine": 10,
  "mappa": {
-  "img": "Battlemap — Teramum — La Porta de lu Sole.jpg",
+  "img": "Battlemap — Teramum — La Porta della Madre.jpg",
   "larghezza": 1448,
   "altezza": 1086,
   "griglia": true
@@ -18,14 +18,14 @@
   "segnaposto": false
  },
  "intro": {
-  "leggi": "La strada scende da Colleatterato fra gli ulivi.\n\nIn fondo alla valle, il Tordinum. Di là dal fiume, le mura bianche di Teramum, le torri, i tetti fitti che salgono a gradoni. Dietro, così vicino che sembra appoggiato alla città, il Gigante.\n\nIl sole è ancora alto sulle colline alle vostre spalle. Su Teramum, invece, è già sera.",
-  "note": "Scena di attrito, non di combattimento: attesa, carte, occhi. La colonna (39 persone, 5 carri, 23 bestie) arriva da levante, dalla strada di Colleatterato, e trova per prima la Porta de lu Solë, la porta delle processioni. Nessuno le dà il lasciapassare in giornata: si accampa fuori, sul tratturo, col permesso del Mastro-Pastore. I PG possono ottenere dal capitano di entrare in sei, fino a sera, con scorta (scena «Teramum — la città»).\n\nChi li fa aspettare: il sergente Iaco (conta), il capitano Guarnerio (decide dove aspettano), Ser Eutichio di Casa Clavax (la procedura dei tre sigilli). Chi li accoglie: Menca la contadina, Ottorino il servitore dei Cerullius (solo i due fratelli), il Mastro-Pastore Venanzio (la colonna). Chi li guarda: l’uomo col lillà, l’osservatore di Clavax sulla torre, il messo della Rocca.\n\nIl Bando è arrivato prima di loro: la Guardia sa chi sono, quanti sono e da dove vengono. Non li arresta: li conta.\n\nDa decidere: il padre di Maximus (CC-02) cambia chi manda il biglietto «Non entrare stasera. — G.»; tre sigilli (lasciapassare) contro cinque voti su otto (decisioni del Consiglio): la scena usa entrambe, per cose diverse; l’araldica delle otto Casate nel cofanetto; la gabella dell’erba (proposta mia); il nome del maestro di casa dei Cerullius (Ottorino, proposta); le distanze fra le porte.",
+  "leggi": "La strada scende da Colleatterrato fra gli ulivi.\n\nIn fondo alla valle, il Tordinum. Di là dal fiume, le mura di Teramum, chiare di travertino e rosse di mattone, le torri, i tetti fitti che salgono a gradoni. Dietro, così vicino che sembra appoggiato alla città, il Gigante.\n\nIl sole è ancora alto sulle colline alle vostre spalle. Su Teramum, invece, è già sera.",
+  "note": "Scena di attrito, non di combattimento: attesa, carte, occhi. La colonna (39 persone, 5 carri, 23 bestie) arriva da levante, dalla strada della costa che passa sotto Colleatterrato, e trova per prima la Porta Reale, che tutti chiamano Porta della Madre: la porta della strada della costa e delle processioni. Nessuno le dà il lasciapassare in giornata: si accampa fuori, sul tratturo, col permesso del Mastro-Pastore. I PG possono ottenere dal capitano di entrare in sei, fino a sera, con scorta (scena «Teramum — la città»).\n\nChi li fa aspettare: il sergente Iaco (conta), il capitano Guarnerio (decide dove aspettano), Ser Eutichio di Casa Chiodi (la procedura dei tre sigilli). Chi li accoglie: Menca la contadina, Ottorino il servitore dei Cerullius (solo i due fratelli), il Mastro-Pastore Venanzio (la colonna). Chi li guarda: l’uomo col lillà, l’osservatore dei Chiodi sulla torre. Chi li cerca: Vitale lu Messo, col biglietto per Maximus, se non li ha già trovati a Colleatterrato.\n\nIl Bando è arrivato prima di loro: la Guardia sa chi sono, quanti sono e da dove vengono. Non li arresta: li conta.\n\nDeciso: il padre di Maximus è Lucius Grazianus, lo Stratega; il «G.» del biglietto e il secondo ordine al sergente vengono da lui.\n\nDa decidere: un atto vale con tre sigilli (il lasciapassare), una decisione grande del Consiglio ne vuole cinque (proposta della voce del Ducato); l’araldica del cofanetto viene dalle schede delle Casate, ma lì è quasi tutta proposta; la gabella dell’erba (proposta mia); il nome del custode del palazzo Cerullius (Ottorino, proposta); ⟦l’emblema della porta (la Vecchia Madre di pietra), il carattere delle porte e le distanze fra loro⟧.",
   "ingressi": [
    {
-    "da": "Dalla strada di Colleatterato (levante)",
+    "da": "Dalla strada della costa, sotto Colleatterrato (levante)",
     "primo": "teramum_porta_discesa",
     "poi": "teramum_porta_seiporte",
-    "note": "L’ordine normale: discesa → cippo delle sei porte → ponte → dazio → arco → tavolo del sergente → scrivano → tratturo."
+    "note": "L’ordine normale: discesa → cippo delle sette porte → ponte → dazio → arco → tavolo del sergente → scrivano → tratturo."
    },
    {
     "da": "Se vanno dritti ai pastori per accamparsi",
@@ -40,15 +40,15 @@
    "schemaVersion": 3,
    "id": "teramum_porta_discesa",
    "kind": "scena",
-   "title": "La discesa da Colleatterato",
+   "title": "La discesa da Colleatterrato",
    "image": "PDI — Teramum — La discesa da Colleatterato.jpg",
    "legacyPosition": {
     "x": 1250,
     "y": 190
    },
-   "text": "La strada scende da Colleatterato fra gli ulivi, a tornanti stretti. Le ruote dei carri stridono sui sassi. I muli puntano gli zoccoli e sbuffano.\n\nA ogni curva la città è più grande.\n\nIn fondo alla valle corre il Tordinum, largo, color del fango, con un ponte di pietra a tre archi. Di là dal ponte, le mura: bianche in alto, grigie in basso. E proprio davanti al ponte, una porta che non sembra una porta. Un arco alto come una chiesa, con un sole di bronzo sopra la volta.\n\nSulla strada, davanti a voi, c’è la fila. Carri di fieno, un gregge, donne con le ceste in testa, un frate su un asino. Tutti fermi.\n\nSulla riva di qua, a destra, un prato lungo e verde segue il fiume. Ci pascolano pecore bianche, e fra le pecore si muovono cani ancora più bianchi.\n\nIl sole è alto alle vostre spalle. Sulla città, invece, è già sera.",
-   "breve": "La colonna scende l’ultima lega verso Teramum e vede tutto: il ponte, la Porta de lu Solë, la fila, il tratturo coi cani bianchi. Da qui si va al cippo delle sei porte (se vogliono scegliere un’altra porta) o dritti al ponte.",
-   "gm": "Primo pomeriggio del secondo giorno di viaggio. Il picchetto di Colleatterato ha già contato la colonna (39 persone, 5 carri, 23 bestie, più chi si è unito per strada): il registro è arrivato alla porta prima di loro, portato da un cavaliere.\nChi arriva da levante, dalla strada di Colleatterato, finisce davanti alla Porta de lu Solë: è la porta di levante, quella delle processioni. È anche la peggiore per una colonna con uno stendardo (vedi il punto dell’arco).\nLa luce: il Gigante blocca il sole del pomeriggio. Le colline alle spalle dei PG sono al sole; Teramum è già in ombra. A Teramum non si vedono i tramonti.\nLegami da far scattare qui: Alessandros e Vicarus hanno studiato in città; Maximus ci è nato. Un dettaglio che riconoscono a testa (una torre, un campanile, il tetto di una scuola).",
+   "text": "La strada scende da Colleatterrato fra gli ulivi, a tornanti stretti. Le ruote dei carri stridono sui sassi. I muli puntano gli zoccoli e sbuffano.\n\nA ogni curva la città è più grande.\n\nIn fondo alla valle corre il Tordinum, largo, color del fango, con un ponte di pietra a tre archi. Di là dal ponte, le mura: chiare in alto, grigie in basso. E proprio davanti al ponte, una porta che non sembra una porta. Un arco alto come un solario, con una figura di pietra sopra la volta e, dietro la sua testa, un cerchio di raggi di bronzo.\n\nSulla strada, davanti a voi, c’è la fila. Carri di fieno, un gregge, donne con le ceste in testa, un votato su un asino. Tutti fermi.\n\nSulla riva di qua, a destra, un prato lungo e verde segue il fiume. Ci pascolano pecore bianche, e fra le pecore si muovono cani ancora più bianchi.\n\nIl sole è alto alle vostre spalle. Sulla città, invece, è già sera.",
+   "breve": "La colonna scende l’ultima lega verso Teramum e vede tutto: il ponte, la Porta Reale (la Porta della Madre), la fila, il tratturo coi cani bianchi. Da qui si va al cippo delle sette porte (se vogliono scegliere un’altra porta) o dritti al ponte.",
+   "gm": "Primo pomeriggio del secondo giorno di viaggio. Il picchetto di Colleatterrato ha già contato la colonna (39 persone, 5 carri, 23 bestie, più chi si è unito per strada): il registro è arrivato alla porta prima di loro, portato da un cavaliere.\nChi arriva da levante, dalla strada della costa, finisce davanti alla Porta Reale, che tutti chiamano Porta della Madre per la Lunaria delle Grazie che sta appena fuori (voce «Teramum»). È la porta grande della città, quella delle processioni. È anche la peggiore per una colonna con uno stendardo (vedi il punto dell’arco).\nLa luce: il Gigante, a sud-ovest, blocca il sole del pomeriggio. Le colline alle spalle dei PG sono al sole; Teramum è già in ombra. A Teramum non si vedono i tramonti, solo le albe.\nLegami da far scattare qui: Alessandros e Vicarus hanno studiato in città; Maximus ci è nato. Un dettaglio che riconoscono a testa (una torre, il campanile della Basilica Aurea, il tetto di una scuola).",
    "nota": {
     "cd": 0
    },
@@ -60,7 +60,7 @@
      "parte": "indizio",
      "seme": "A ogni curva la città è più grande.",
      "innesco": "Qualcuno si ferma a una curva e guarda la città, invece della strada.",
-     "leggi": "Da qui si vede quasi tutta. Le mura girano intorno alla collina come una cintura bianca. Le torri: tante, sottili, quadrate. Sopra i tetti, a metà della città, una grande piazza chiara. Più in là, dall’altra parte di una gola scura, un castello con le torri quadrate.",
+     "leggi": "Da qui si vede quasi tutta. La città sta su una lingua di terra alta fra due fiumi, e le mura la stringono come una cintura chiara. Le torri: tante, sottili, quadrate. Sopra i tetti, a metà della città, una grande piazza chiara e un campanile più alto di tutto. In fondo, all’altro capo della città, dove le mura si allargano, una rocca tozza con le torri quadrate, sopra una piazza larga.",
      "prove": [
       {
        "id": "vista",
@@ -85,7 +85,7 @@
          "fascia": "fullSuccess",
          "min": 16,
          "max": 19,
-         "leggi": "Sulle mura sopra l’arco ci sono più elmi di quanti ne servano in un giorno qualunque. Quando la testa della colonna è comparsa in cima alla collina, qualcuno è partito di corsa dalla porta verso il castello oltre la gola."
+         "leggi": "Sulle mura sopra l’arco ci sono più elmi di quanti ne servano in un giorno qualunque. Quando la testa della colonna è comparsa in cima alla collina, qualcuno è uscito di corsa dalla porticina ed è sparito fra i tetti, verso l’altro capo della città. Verso la rocca."
         },
         {
          "fascia": "natural20",
@@ -94,7 +94,7 @@
        ]
       }
      ],
-     "dopo": "Il drappo nero (proposta): sulla torre del Palazzo Ducale si appende quando il Consiglio siede a porte chiuse. Il messo partito di corsa va alla Rocca dei Grazianus (vedi il punto del tavolo del sergente). L’uomo col mantello è l’agente col lillà (punto del ponte).",
+     "dopo": "Il drappo nero: sulla torre del Palazzo Ducale si appende quando il Consiglio siede a porte chiuse (scheda di Casa Mazzarelli). Il ragazzo partito di corsa va alla Rocca dei Grazianus, su Piazza Garibaldi, all’ingresso ovest della città (vedi il punto del tavolo del sergente). L’uomo col mantello è l’agente col lillà (punto del ponte).",
      "rilancio": "La fila non si muove. Il sole vi scalda la schiena; davanti a voi è già sera. Che cosa fate?",
      "daqui": [
       "mura",
@@ -140,7 +140,8 @@
      "rilancio": "Le mura si fanno più alte a ogni passo. Che cosa fate?",
      "daqui": [
       "fila"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — Le due pietre delle mura.jpg"
     },
     {
      "id": "fila",
@@ -148,8 +149,8 @@
      "titolo": "In coda",
      "parte": "evento",
      "innesco": "La colonna arriva in fondo alla discesa, dove la strada tocca il fiume.",
-     "leggi": "Il frate sull’asino si gira, guarda lo stendardo arrotolato sul vostro primo carro, e si fa il segno del sole.\n\nUna donna con due galline legate per le zampe vi squadra da capo a piedi. «Hanno chiuso la porta grande da stamattina», dice a nessuno in particolare. «Aspettano qualcuno.»\n\nVi guarda ancora. «Aspettano voi, mi sa.»",
-     "dopo": "Da qui: il cippo delle sei porte, all’imbocco del ponte, se vogliono entrare da un’altra parte; oppure il ponte e la fila.",
+     "leggi": "Il votato sull’asino si gira, guarda lo stendardo arrotolato sul vostro primo carro, e si fa il segno del sole.\n\nUna donna con due galline legate per le zampe vi squadra da capo a piedi. «Hanno chiuso la porta grande da stamattina», dice a nessuno in particolare. «Aspettano qualcuno.»\n\nVi guarda ancora. «Aspettano voi, mi sa.»",
+     "dopo": "Da qui: il cippo delle sette porte, all’imbocco del ponte, se vogliono entrare da un’altra parte; oppure il ponte e la fila.",
      "rilancio": "Davanti a voi il ponte; a sinistra un cippo di pietra e due carrarecce; a destra il prato dei pastori. Che cosa fate?",
      "daqui": [
       "teramum_porta_seiporte",
@@ -163,15 +164,15 @@
    "schemaVersion": 3,
    "id": "teramum_porta_seiporte",
    "kind": "dettaglio",
-   "title": "Le sei porte",
-   "image": "PDI — Teramum — Il cippo delle sei porte.jpg",
+   "title": "Le sette porte",
+   "image": "PDI — Porta della Madre — Le sette porte.jpg",
    "legacyPosition": {
-    "x": 930,
-    "y": 640
+    "x": 1050,
+    "y": 215
    },
-   "text": "Dove la strada tocca il fiume, prima del ponte, c’è un cippo di pietra alto fino al petto. Sopra, scolpite a scalpello e ripassate col nero, sei frecce e sei nomi.\n\nDue carrarecce si staccano dalla strada. Una segue il fiume verso sud, fra gli orti, sotto le mura. L’altra risale il fiume verso nord, sotto i salici.\n\nDa sud arriva, portato dal vento, il vociare di una folla.\n\nDietro la città, a ovest, la strada sale verso la montagna e sparisce nell’ombra.\n\nLontano, verso nord-ovest, suona una campanella a morto.\n\nUn vecchio seduto sul cippo sgrana fave e vi guarda i carri. «Sei porte, sei modi d’entrare», dice senza che nessuno glielo chieda. «E cinque modi di restare fuori.»",
-   "breve": "Il cippo all’imbocco del ponte: qui si sceglie la porta. Zi’ Berardino lu Sgranafave commenta ogni porta. La porta di levante è la Porta de lu Solë (davanti al ponte); le altre cinque costano tempo, e ognuna ha un prezzo diverso.",
-   "gm": "Le sei porte del canone (Manuale §4.1.3): Porta Realë (ovest, verso la montagna), Porta Meridianë (sud, verso la costa, la più trafficata), Porta de lu Solë (est, per le processioni), Porta de lu Fiumë (nord), Porta Piccòla (sud-est, contadini e bestiame), Pustèrla de li Mortë (nord-ovest, solo funerali).\nChi arriva da levante trova per prima la Porta de lu Solë. Qualunque porta scelgano, il lasciapassare d’armi serve lo stesso: la regola dei tre sigilli vale a tutte le porte. Cambia chi li vede entrare, quanto aspettano e chi lo viene a sapere prima di sera.\nDistanze (proposta): Porta Piccòla, mezz’ora di carri lungo le mura; Porta Meridianë, un’ora; Porta de lu Fiumë, mezz’ora a nord; Pustèrla de li Mortë, un’ora e mezza a piedi (i carri non passano); Porta Realë, mezza giornata di giro sotto le mura.\nZi’ Berardino è un vecchio contadino di Colleatterato che passa i pomeriggi al cippo: non è nessuno, e sa tutto quello che si dice sulla strada. Non ha scheda.",
+   "text": "Dove la strada tocca il fiume, prima del ponte, c’è un cippo di pietra alto fino al petto. Sopra, scolpite a scalpello e ripassate col nero, sette frecce e sette nomi.\n\nDue carrarecce si staccano dalla strada. Una segue il fiume verso sud, fra gli orti, sotto le mura. L’altra risale il fiume verso nord, sotto i salici.\n\nDa sud arriva, portato dal vento, il vociare di una folla.\n\nDietro la città, a ovest, la strada sale verso la montagna e sparisce nell’ombra.\n\nLontano, verso nord-ovest, suona una campanella a morto.\n\nUn vecchio seduto sul cippo sgrana fave e vi guarda i carri. «Sette porte, sette modi d’entrare», dice senza che nessuno glielo chieda. «E sei modi di restare fuori.»",
+   "breve": "Il cippo all’imbocco del ponte: qui si sceglie la porta. Zi’ Berardino lu Sgranafave commenta ogni porta. La porta di levante è la Porta Reale, la Porta della Madre (davanti al ponte); le altre sei costano tempo, e ognuna ha un prezzo diverso.",
+   "gm": "Le sette porte della voce «Teramum»: Porta Reale, detta Porta della Madre (est: la strada della costa; appena fuori la Lunaria delle Grazie e il campo della fiera); Porta Melatina (nord, sul Tordinum: la porta dei Melatino, dove si benedicono le bestie); Porta Romana (sud, sopra la Vezzola, nel rione dei teatri antichi); Porta del Lucente Giorgio (ovest, in fondo al Corso, verso i campi e la strada della montagna); Porta Carrese (sud-est, la porta dei carri); Porta delle Recluse (sotto la Casa dei Folli); Porta Due di Coppe (su Piazza Garibaldi, la piazza della fiera, accanto alla Rocca dei Grazianus).\n⟦Il carattere delle porte nella scena è in parte proposta: la Romana la più trafficata e la più burocratica; la Porta delle Recluse a nord-ovest, la porta da cui escono i morti; le guardie migliori alla Melatina.⟧\nChi arriva da levante trova per prima la Porta della Madre. Qualunque porta scelgano, il lasciapassare d’armi serve lo stesso: la regola dei tre sigilli vale a tutte le porte. Cambia chi li vede entrare, quanto aspettano e chi lo viene a sapere prima di sera.\nDistanze (proposta): Porta Carrese, mezz’ora di carri lungo le mura; Porta Romana, un’ora; Porta Melatina, mezz’ora a nord; Porta delle Recluse, un’ora e mezza a piedi (i carri non passano); Porta del Lucente Giorgio e Porta Due di Coppe, mezza giornata di giro sotto le mura.\nZi’ Berardino è un vecchio contadino di Colleatterrato che passa i pomeriggi al cippo: non è nessuno, e sa tutto quello che si dice sulla strada. Non ha scheda.",
    "nota": {
     "cd": 0
    },
@@ -181,31 +182,33 @@
      "tipo": "dettaglio",
      "titolo": "Il cippo",
      "parte": "indizio",
-     "seme": "sei frecce e sei nomi",
+     "seme": "sette frecce e sette nomi",
      "innesco": "Qualcuno legge il cippo.",
-     "leggi": "Le frecce sono scolpite in Aureo Antico, e sotto qualcuno ha ripassato i nomi in dialetto, col carbone:\n\n↑ davanti a voi, oltre il ponte: PORTA DE LU SOLË\n↘ lungo le mura, verso sud: PORTA PICCÒLA\n↓ più a sud, oltre gli orti: PORTA MERIDIANË\n↖ risalendo il fiume: PORTA DE LU FIUMË\n← dietro la città, verso la montagna: PORTA REALË\n↖↖ per il sentiero dei cipressi: PUSTÈRLA DE LI MORTË\n\nSotto l’ultima freccia qualcuno ha inciso una piccola croce, e sopra la croce una mano ha disegnato, più di recente, un cerchio.",
-     "dopo": "Il cerchio sopra la croce è un segno di devozione a Mortus fatto da qualcuno di passaggio: nessuna prova, solo un dettaglio per Mattheus. Se lo nota e ne chiede, nessuno sa chi l’abbia fatto.",
-     "rilancio": "Sei nomi, sei strade. Che cosa fate?",
+     "leggi": "Le frecce sono scolpite in Aureo Antico, e sotto qualcuno ha ripassato i nomi col carbone, come li dice la gente:\n\n↑ davanti a voi, oltre il ponte: PORTA REALE (e col carbone: «de la Madrë»)\n↘ lungo le mura, verso sud: PORTA CARRESE\n↓ più a sud, oltre gli orti, sopra l’altro fiume: PORTA ROMANA\n↖ risalendo il fiume: PORTA MELATINA\n← dietro la città, in fondo al Corso: PORTA DEL LUCENTE GIORGIO\n← dietro la città, sotto la Rocca: PORTA DUE DI COPPE\n↖↖ per il sentiero dei cipressi: PORTA DELLE RECLUSE\n\nSotto l’ultima freccia qualcuno ha inciso un piccolo sole, il segno della Fiamma, e intorno al sole una mano ha disegnato, più di recente, un cerchio.",
+     "dopo": "Il cerchio intorno al sole è un segno di devozione a Mortus fatto da qualcuno di passaggio: nessuna prova, solo un dettaglio per Mattheus. Se lo nota e ne chiede, nessuno sa chi l’abbia fatto.",
+     "rilancio": "Sette nomi, sette strade. Che cosa fate?",
      "daqui": [
       "vecchio"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — Il cippo delle sette porte.jpg"
     },
     {
      "id": "vecchio",
      "tipo": "dettaglio",
      "titolo": "Zi’ Berardino lu Sgranafave",
      "parte": "indizio",
-     "seme": "«Sei porte, sei modi d’entrare»",
+     "seme": "«Sette porte, sette modi d’entrare»",
      "innesco": "Qualcuno gli rivolge la parola, o chiede quale porta conviene.",
-     "leggi": "Il vecchio non smette di sgranare. Butta i baccelli nel fiume, le fave in un cappello.\n\n«Lu Solë?» Indica l’arco col mento. «Quella si apre per i santi e per i Duchi. Voi siete santi? No. Duchi? Manco. E allora vi fanno aspettare davanti al sole di bronzo finché non vi viene la barba bianca come la mia.»\n\n«La Piccòla è per le pecore. Entri, nessuno ti guarda. Ma poi in città ridono che la Crociata è entrata dalla porta delle pecore.»\n\n«La Meridianë è la più grossa. Quattro scrivani, quattro timbri, e mezza città che guarda. Se volete che vi vedano, andate là.»\n\n«Lu Fiumë è stretta. Il ponte è lungo e non si torna indietro. Le guardie là sono gente seria.»\n\n«La Realë sta dall’altra parte. Mezza giornata di giro. E là sotto ci sono gli uomini del Marchese, quello di Tussëcië, che pattugliano la strada della montagna.» Sputa una buccia. «Io non ci andrei.»\n\n«E la Pustèrla…» Si ferma. Ascolta la campanella. «Da là passano i morti. Chi li porta non lo guarda nessuno sotto il telo.» Vi guarda sotto il cappello. «Ma voi morti non ne avete. Spero.»",
+     "leggi": "Il vecchio non smette di sgranare. Butta i baccelli nel fiume, le fave in un cappello.\n\n«La Reale?» Indica l’arco col mento. «La Porta de la Madrë. Quella si apre per la Madre e per i Duchi. Voi siete la Madre? No. Duchi? Manco. E allora vi fanno aspettare sotto la Madre de pietra finché non vi viene la barba bianca come la mia.»\n\n«La Carrese è per i carri e per le pecore. Entri, nessuno ti guarda. Ma poi in città ridono che la Crociata è entrata dalla porta delle pecore.»\n\n«La Romana è la più grossa. Quattro scrivani, quattro timbri, e mezza città che guarda. Se volete che vi vedano, andate là.»\n\n«La Melatina è stretta. Il ponte è lungo e non si torna indietro. È la porta dei Melatino: le guardie là sono gente seria, e quelli della Lega pure.»\n\n«Lu Lucente Giorgio sta dall’altra parte. Mezza giornata di giro. E là sotto ci sono gli uomini del Marchese, quello di Tussëcië, che pattugliano la strada della montagna.» Sputa una buccia. «Io non ci andrei.»\n\n«La Due di Coppe sta là pure lei, sotto la Rocca. Entri dalla Due di Coppe, entri in casa della Guardia.» Ride coi tre denti. «Sapete perché si chiama così? Perché alla Rocca uno beve e l’altro paga. Mio cugino dice che è per una partita a carte. Ognuno ha la sua.»\n\n«E le Recluse…» Si ferma. Ascolta la campanella. «Da là passano i morti. Chi li porta non lo guarda nessuno sotto il telo.» Vi guarda sotto il cappello. «Ma voi morti non ne avete. Spero.»",
      "note": "Zi’ Berardino non chiede soldi. Se gli si dà qualcosa (un pezzo di pane, un sorso, un quattrino) aggiunge: «Stanotte, contate i fuochi vostri prima della Guardia. Loro li contano due volte.»",
-     "dopo": "Sanno cosa si dice delle sei porte. Nessuna prova: è il vecchio della strada.",
+     "dopo": "Sanno cosa si dice delle sette porte. Nessuna prova: è il vecchio della strada.",
      "rilancio": "Il vecchio torna alle sue fave. Che cosa fate?",
      "daqui": [
       "piccola",
       "meridiane",
       "fiume",
       "reale",
+      "duecoppe",
       "pusterla",
       "scelta"
      ]
@@ -213,12 +216,12 @@
     {
      "id": "piccola",
      "tipo": "dettaglio",
-     "titolo": "Porta Piccòla (sud-est)",
+     "titolo": "Porta Carrese (sud-est)",
      "parte": "indizio",
      "seme": "Una segue il fiume verso sud, fra gli orti, sotto le mura.",
-     "innesco": "Scelgono di andare alla Porta Piccòla, o mandano qualcuno a guardare.",
-     "leggi": "Mezz’ora di carraia fra gli orti, con le mura sempre alla vostra destra. Poi una porta bassa, il selciato sporco di letame e paglia. Pecore, carri di fieno, donne con le ceste in testa. Un banco del dazio, un uomo che pesa i formaggi.\n\nNessuno vi aspetta. Nessuno fa caso a voi, per i primi dieci passi.\n\nPoi qualcuno vede lo stendardo arrotolato sul carro, e la fila si ferma.",
-     "note": "Qui passano in pochi senza stendardo e senza armi da guerra in vista. La colonna intera non passa: il lasciapassare serve anche qui, e la guardia ha lo stesso registro di Colleatterato. Se entrano in pochi, travestiti da contadini, nessuno li conta: si va alla scena «Teramum — la città», punto Porta Piccòla.",
+     "innesco": "Scelgono di andare alla Porta Carrese, la porta dei carri, o mandano qualcuno a guardare.",
+     "leggi": "Mezz’ora di carraia fra gli orti, con le mura sempre alla vostra destra. Poi una porta bassa e larga, fatta per i carri, il selciato sporco di letame e paglia. Pecore, carri di fieno, donne con le ceste in testa. Un banco del dazio, un uomo che pesa i formaggi.\n\nNessuno vi aspetta. Nessuno fa caso a voi, per i primi dieci passi.\n\nPoi qualcuno vede lo stendardo arrotolato sul carro, e la fila si ferma.",
+     "note": "Qui passano in pochi senza stendardo e senza armi da guerra in vista. La colonna intera non passa: il lasciapassare serve anche qui, e la guardia ha lo stesso registro di Colleatterrato. Se entrano in pochi, travestiti da contadini, nessuno li conta: si va alla scena «Teramum — la città», dalla Porta Carrese (in quella scena il punto si chiama ancora «Porta Piccòla»).",
      "prove": [
       {
        "id": "piccola",
@@ -232,7 +235,7 @@
         {
          "fascia": "failure",
          "max": 11,
-         "leggi": "La guardia vi guarda le mani: troppo pulite, o troppo segnate dalla spada, per essere di contadini. «Voi aspettate là.» E manda un ragazzo verso la Porta de lu Solë."
+         "leggi": "La guardia vi guarda le mani: troppo pulite, o troppo segnate dalla spada, per essere di contadini. «Voi aspettate là.» E manda un ragazzo verso la Porta della Madre."
         },
         {
          "fascia": "baseSuccess",
@@ -251,13 +254,13 @@
     {
      "id": "meridiane",
      "tipo": "dettaglio",
-     "titolo": "Porta Meridianë (sud)",
+     "titolo": "Porta Romana (sud)",
      "parte": "indizio",
      "seme": "Da sud arriva, portato dal vento, il vociare di una folla.",
-     "innesco": "Scelgono la porta della costa, o chiedono da dove venga il vociare.",
-     "leggi": "Un’ora di strada lungo le mura, poi la porta della costa, e si vede. Carri di sale, di pesce secco, di stoffe. Mercanti con le carte in mano, sensali, mendicanti, un banditore.\n\nSotto la volta, un bancone lungo con quattro scrivani e quattro timbri. La fila arriva fino al ponte della Vezzola.\n\nQui vi vedranno tutti. E tutti, entro stasera, sapranno che siete arrivati.",
-     "note": "I quattro timbri (proposta): Savinellus per i dazi, Clavax per la legge, Grazianus per le armi, Mazzarellus per l’amministrazione. È la porta più burocratica: la pratica si apre qui come alla Porta de lu Solë, ma in pubblico. Anche gli agenti di Iuvenza lo sanno entro sera.\nLo scrivano della Porta Meridianë: «Crociata? Scrivo “colonna armata”. Se volete “Crociata”, serve Impalox. E Impalox, per una parola così, vuole sapere chi l’ha benedetta.»",
-     "dopo": "Massima visibilità, attesa uguale. Se scelgono questa porta, usa per lo scrivano di Clavax lo stesso Ser Eutichio Quattrocchi (lo mandano apposta).",
+     "innesco": "Scelgono la porta del sud, o chiedono da dove venga il vociare.",
+     "leggi": "Un’ora di strada lungo le mura, poi la porta del sud, sopra l’altro fiume, e si vede. Carri di sale, di pesce secco, di stoffe. Mercanti con le carte in mano, sensali, mendicanti, un banditore. Oltre la volta, fra le case, affiorano le gradinate di un teatro antico.\n\nSotto la volta, un bancone lungo con quattro scrivani e quattro timbri. La fila arriva fino al ponte della Vezzola.\n\nQui vi vedranno tutti. E tutti, entro stasera, sapranno che siete arrivati.",
+     "note": "I quattro timbri (proposta): Melatino per i dazi, Chiodi per la legge, Grazianus per le armi, Mazzarelli per l’amministrazione. ⟦È la porta più trafficata e più burocratica: la voce «Teramum» dice solo che sta a sud, sopra la Vezzola, nel rione dei teatri antichi.⟧ La pratica si apre qui come alla Porta della Madre, ma in pubblico. Anche gli agenti di Iuvenza lo sanno entro sera.\nLo scrivano della Porta Romana: «Crociata? Scrivo “colonna armata”. Se volete “Crociata”, serve Impaloni. E Impaloni, per una parola così, vuole sapere chi l’ha benedetta.»",
+     "dopo": "Massima visibilità, attesa uguale. Se scelgono questa porta, usa per lo scrivano dei Chiodi lo stesso Ser Eutichio Quattrocchi (lo mandano apposta).",
      "rilancio": "La folla vi ha visto. Che cosa fate?",
      "daqui": [
       "scelta"
@@ -266,12 +269,12 @@
     {
      "id": "fiume",
      "tipo": "dettaglio",
-     "titolo": "Porta de lu Fiumë (nord)",
+     "titolo": "Porta Melatina (nord)",
      "parte": "indizio",
      "seme": "L’altra risale il fiume verso nord, sotto i salici.",
      "innesco": "Scelgono di risalire il fiume verso la porta del nord.",
-     "leggi": "Mezz’ora sotto i salici, fra i lavatoi e le ruote dei mulini. Ragazzi che pescano. Poi un ponte di pietra lungo e stretto, e in fondo al ponte la porta, stretta fra due torri.\n\nChi è sul ponte non può tornare indietro in fretta, e non può uscire dai lati.\n\nLe guardie lo sanno. Vi lasciano arrivare fino a metà ponte prima di muoversi.",
-     "note": "Nessuna folla, nessun testimone: è la porta per trattare con calma. Le guardie sono le migliori della città. La pratica è la stessa; l’attesa si fa sul ponte, e la colonna non ci sta: resta sulla riva.",
+     "leggi": "Mezz’ora sotto i salici, fra i lavatoi e le ruote dei mulini. Ragazzi che pescano. Poi un ponte di pietra lungo e stretto, e in fondo al ponte la porta, stretta fra due torri. Sopra l’arco, dipinta e scolorita, una galea d’oro su campo rosso.\n\nChi è sul ponte non può tornare indietro in fretta, e non può uscire dai lati.\n\nLe guardie lo sanno. Vi lasciano arrivare fino a metà ponte prima di muoversi.",
+     "note": "È la porta dei Melatino (voce «Teramum»; la galea è lo stemma della casata, proposto nella sua scheda). Nessuna folla, nessun testimone: è la porta per trattare con calma. ⟦Le guardie sono le migliori della città, e al banco del ponte siede un sensale della Lega dei Sensali: il Decano Maccabeo Melatino saprà prima di sera chi è passato.⟧ La pratica è la stessa; l’attesa si fa sul ponte, e la colonna non ci sta: resta sulla riva. Oggi il convoglio del Loto è entrato da qui senza aspettare (lo si vede dal belvedere di Colleatterrato). Al ponte di questa porta aspettano i messi a pagamento: da qui è partito Vitale.",
      "dopo": "Utile se vogliono parlare con la Guardia senza pubblico. Il capitano Guarnerio viene anche qui, se lo chiedono per nome.",
      "rilancio": "Il ponte è lungo, e le guardie aspettano. Che cosa fate?",
      "daqui": [
@@ -281,11 +284,11 @@
     {
      "id": "reale",
      "tipo": "dettaglio",
-     "titolo": "Porta Realë (ovest)",
+     "titolo": "Porta del Lucente Giorgio (ovest)",
      "parte": "indizio",
      "seme": "Dietro la città, a ovest, la strada sale verso la montagna e sparisce nell’ombra.",
      "innesco": "Scelgono di girare intorno alla città fino alla porta della montagna.",
-     "leggi": "Mezza giornata di giro, sotto le mura, fin dove la strada comincia a salire verso la montagna.\n\nÈ la porta più alta e più fredda. Pochi carri, qualche mulattiere, legna, ferro.\n\nLe guardie qui sono più anziane. Guardano chi scende dalla montagna, non chi arriva dalla valle. Vi guardano come si guarda qualcosa che ha sbagliato strada.",
+     "leggi": "Mezza giornata di giro, sotto le mura, fin dove la strada comincia a salire verso la montagna.\n\nÈ la porta in fondo al Corso, la più alta e la più fredda. Pochi carri, qualche mulattiere, legna, ferro.\n\nLe guardie qui sono più anziane. Guardano chi scende dalla montagna, non chi arriva dalla valle. Vi guardano come si guarda qualcosa che ha sbagliato strada.",
      "note": "Arrivano a sera, col buio e la campana del coprifuoco. È la porta verso Tussëcië e la strada montana pattugliata dal Marchese Rodrigo d’Avalos, uomo di Iuvenza: una pattuglia a cavallo del Marchese li incrocia e li conta. Chi la sceglie viene notato da chi non dovrebbe.",
      "dopo": "Mezza giornata persa, la colonna ancora fuori, e Iuvenza informata per una terza via.",
      "rilancio": "Il sole è sparito dietro il Gigante. Che cosa fate?",
@@ -294,14 +297,28 @@
      ]
     },
     {
+     "id": "duecoppe",
+     "tipo": "dettaglio",
+     "titolo": "Porta Due di Coppe (ovest, sotto la Rocca)",
+     "parte": "indizio",
+     "innesco": "Scelgono la porta sotto la Rocca, o chiedono perché si chiami Due di Coppe.",
+     "leggi": "Mezza giornata di giro, sotto le mura, fino all’altro capo della città. Là la porta si apre su una piazza larga, la piazza della fiera, e sopra la piazza sta la Rocca: torri quadrate, un tabarro grigio a ogni finestra, un falco che gira in tondo.\n\nLe guardie della porta non vi chiedono niente. Vi guardano. Poi una di loro entra nella Rocca, senza correre.",
+     "note": "Porta Due di Coppe sta su Piazza Garibaldi, la piazza della fiera, con la Rocca di Casa Grazianus, che è anche la caserma della Guardia Ducale (voce «Teramum» e scheda della casata). Perché si chiami così non lo sa più nessuno: tutti hanno una versione. Entrare di qui è entrare in casa della Guardia: niente folla, niente Lega, ma lo Stratega lo sa prima che siano scesi dai carri. Per Maximus è la porta della casa di suo padre, Lucius Grazianus; e il biglietto di suo padre diceva «Non entrare stasera». La pratica è la stessa; l’attesa si fa sulla piazza, e il capitano Guarnerio qui non c’è: ⟦c’è un ufficiale della Rocca, più freddo (Persuasione con svantaggio)⟧.",
+     "dopo": "Mezza giornata persa e la colonna ancora fuori, ma tutto sotto gli occhi dei Grazianus. Se è questo che cerca Maximus, è la porta giusta.",
+     "rilancio": "La Rocca vi guarda da tutte le finestre. Che cosa fate?",
+     "daqui": [
+      "scelta"
+     ]
+    },
+    {
      "id": "pusterla",
      "tipo": "dettaglio",
-     "titolo": "Pustèrla de li Mortë (nord-ovest)",
+     "titolo": "Porta delle Recluse (nord-ovest)",
      "parte": "indizio",
      "seme": "Lontano, verso nord-ovest, suona una campanella a morto.",
      "innesco": "Scelgono la porta dei morti, o qualcuno propone di fingere un funerale.",
-     "leggi": "Un’ora e mezza a piedi, per un sentiero fra i cipressi. I carri non ci passano.\n\nUna porta stretta, un solo battente, niente insegne. Fuori, un campo di cipressi e di croci.\n\nUna guardia sola, seduta. Si alza quando vi vede. Non per fermarvi: per togliersi il cappello, finché non capisce che non portate nessuno.",
-     "note": "Da qui entrano solo i morti e chi li accompagna. Un corteo funebre passa senza lasciapassare d’armi: chi porta un morto non si perquisisce. Per Mattheus è la porta più vicina alla sua fede. Fingere un funerale è sacrilegio se scoperto.",
+     "leggi": "Un’ora e mezza a piedi, per un sentiero fra i cipressi. I carri non ci passano.\n\nUna porta stretta, un solo battente, niente insegne. Sopra, sulle mura, un edificio alto e cieco, con le finestre murate. Fuori, un campo di cipressi e di pietre basse, senza nomi.\n\nUna guardia sola, seduta. Si alza quando vi vede. Non per fermarvi: per togliersi il cappello, finché non capisce che non portate nessuno.",
+     "note": "Sta sotto la Casa dei Folli, l’ospizio del Lucente Antonio, e si chiama così per le donne rinchiuse lassù (voce «Teramum»). ⟦Che stia a nord-ovest e che sia la porta dei morti è proposta della scena.⟧ Da qui entrano solo i morti e chi li accompagna. Un corteo funebre passa senza lasciapassare d’armi: chi porta un morto non si perquisisce. Per Mattheus è la porta più vicina alla sua fede. Fingere un funerale è sacrilegio se scoperto.",
      "prove": [
       {
        "id": "corteo",
@@ -330,12 +347,12 @@
         },
         {
          "fascia": "natural20",
-         "leggi": "La guardia si toglie il cappello, vi fa passare, e vi dice anche dove si trova la cappella dei morti più vicina. «Pe’ la veglia», dice. «Là nessuno vi disturba fino a domattina.»"
+         "leggi": "La guardia si toglie il cappello, vi fa passare, e vi dice anche dove si trova l’ara dei morti più vicina. «Pe’ la veglia», dice. «Là nessuno vi disturba fino a domattina.»"
         }
        ]
       }
      ],
-     "dopo": "Se riesce: entrano in pochi, senza armi da guerra in vista, alla Pustèrla (scena «Teramum — la città»). Se fallisce: la voce della «Crociata che profana i morti» arriva a Casa Impalox entro sera; tutte le prove sociali con la Basilica a svantaggio finché non si rimedia.",
+     "dopo": "Se riesce: entrano in pochi, senza armi da guerra in vista, dalla Porta delle Recluse (scena «Teramum — la città», dove il punto si chiama ancora «Pustèrla»). Se fallisce: la voce della «Crociata che profana i morti» arriva a Casa Impaloni entro sera; tutte le prove sociali con la Basilica a svantaggio finché non si rimedia.",
      "rilancio": "La guardia aspetta, col cappello in mano. Che cosa fate?",
      "daqui": [
       "scelta"
@@ -348,7 +365,7 @@
      "parte": "evento",
      "innesco": "Il gruppo decide dove andare.",
      "leggi": "Il vecchio butta l’ultimo baccello nel fiume. «Comunque andate», dice, «la carta ve la chiedono lo stesso. Qua dentro, senza carta, non entra manco la pioggia.»",
-     "dopo": "Porta de lu Solë → il ponte, il dazio, l’arco, il tavolo del sergente. Le altre porte → la pratica si apre lo stesso (Ser Eutichio arriva dove sono loro); se entrano in pochi e di nascosto → scena «Teramum — la città», dalla porta scelta. La colonna, in ogni caso, si accampa fuori: il posto migliore è il tratturo.",
+     "dopo": "Porta della Madre → il ponte, il dazio, l’arco, il tavolo del sergente. Le altre porte → la pratica si apre lo stesso (Ser Eutichio arriva dove sono loro); se entrano in pochi e di nascosto → scena «Teramum — la città», dalla porta scelta. La colonna, in ogni caso, si accampa fuori: il posto migliore è il tratturo.",
      "rilancio": "Che cosa fate?",
      "daqui": [
       "teramum_porta_ponte",
@@ -364,8 +381,8 @@
    "title": "Il ponte sul Tordinum",
    "image": "PDI — Teramum — Il ponte sul Tordinum.jpg",
    "legacyPosition": {
-    "x": 725,
-    "y": 545
+    "x": 700,
+    "y": 440
    },
    "text": "Il ponte è vecchio, largo quanto due carri, con tre archi che affondano le zampe nel fiume. Sotto, l’acqua corre marrone e veloce, e sbatte contro i piloni con un rumore sordo.\n\nLa fila comincia qui e arriva fino alla porta. Carri, bestie, gente a piedi. Si va avanti di un passo ogni tanto, poi ci si ferma.\n\nUna contadina impreca contro il suo mulo: la ruota del carretto è finita nella fessura fra due lastre, e il carretto è piegato su un fianco, carico di cesti di ricotta.\n\nDietro di lei, un uomo vestito da mercante, con un bel mantello, non guarda né il mulo né la porta. Guarda i vostri carri.\n\nPiù avanti, un ragazzino scalzo corre lungo la fila, sguscia fra le ruote, e si ferma di colpo a guardarvi.",
    "breve": "La fila sul ponte. Tre cose: una contadina col carretto incastrato (aiutarla dà voci e simpatia), un finto mercante che conta i carri (agente di Iuvenza, profuma di lillà), un ragazzino che porta un nome a Mattheus. Poi il dazio in fondo al ponte.",
@@ -381,7 +398,7 @@
      "parte": "indizio",
      "seme": "la ruota del carretto è finita nella fessura fra due lastre",
      "innesco": "Qualcuno aiuta la contadina, o la fila si blocca per colpa sua e bisogna sbloccarla.",
-     "leggi": "La donna è piccola, larga, col fazzoletto nero in testa. Si chiama Menca, dice, e viene da Colleatterato come ogni giovedì, e ogni giovedì questa lastra maledetta.\n\nIl mulo tira dalla parte sbagliata. Tre cesti di ricotta stanno per finire nel Tordinum.",
+     "leggi": "La donna è piccola, larga, col fazzoletto nero in testa. Si chiama Menca, dice, e viene da Colleatterrato come ogni giovedì, e ogni giovedì questa lastra maledetta.\n\nIl mulo tira dalla parte sbagliata. Tre cesti di ricotta stanno per finire nel Tordinum.",
      "note": "Se l’aiutano, Menca racconta cosa si dice in coda (modulo «Le voci della fila») e dice chi comanda la porta oggi: «Lu Cuntatùre», il sergente Iaco, «che conta pure le mosche». Se non l’aiutano, la fila resta bloccata un quarto d’ora e qualcuno vi dà la colpa ad alta voce.",
      "prove": [
       {
@@ -412,7 +429,7 @@
        ]
       }
      ],
-     "dopo": "Una contadina di Colleatterato che si ricorda di loro. Può tornare utile: ogni giovedì porta la ricotta al mercato del Sestiere del Fiume.",
+     "dopo": "Una contadina di Colleatterrato che si ricorda di loro. Può tornare utile: ogni giovedì porta la ricotta al mercato, in Piazza del Mercato, davanti alla Basilica Aurea.",
      "rilancio": "Il carretto riparte, la fila fa un passo. Che cosa fate?",
      "daqui": [
       "fila"
@@ -437,7 +454,7 @@
      "titolo": "Le voci della fila",
      "parte": "evento",
      "innesco": "Mentre aspettano sul ponte, o se chiedono a qualcuno cosa succede.",
-     "leggi": "La fila parla. Sottovoce, ad alta voce, un po’ in dialetto e un po’ no.\n\n«Il Consiglio non si riunisce da un mese. E quando si riunisce, litiga e se ne va.»\n\n«La Guardia raddoppia i turni da una settimana. Dicono per i terremoti. Nessuno ci crede.»\n\n«Una signora forestiera ha preso casa ai Tigli. Paga tutto in oro, e le Casate le mandano i figli a cena.»\n\n«Sotto la Basilica si sente suonare di notte. Il sacrestano dice che sono le campane che si assestano.»\n\n«Nelle cripte c’è uno con la maschera di mille colori. Chi lo incontra non muore. Dimentica.»\n\n«Hanno murato il tempio di Mortus. Ma i morti, a Teramum, trovano sempre chi li accompagna.»",
+     "leggi": "La fila parla. Sottovoce, ad alta voce, un po’ in dialetto e un po’ no.\n\n«Il Consiglio non si riunisce da un mese. E quando si riunisce, litiga e se ne va.»\n\n«La Guardia raddoppia i turni da una settimana. Dicono per i terremoti. Nessuno ci crede.»\n\n«Una signora forestiera ha preso casa ai Tigli. Paga tutto in oro, e le Casate le mandano i figli a cena.»\n\n«Sotto la Basilica si sente suonare di notte. Il campanaro dice che sono le campane che si assestano.»\n\n«Nelle cripte c’è uno con la maschera di mille colori. Chi lo incontra non muore. Dimentica.»\n\n«Hanno murato il tempio di Mortus. Ma i morti, a Teramum, trovano sempre chi li accompagna.»",
      "note": "Sono voci: alcune vere, alcune gonfiate. Vere: il Consiglio paralizzato; i turni raddoppiati; la signora forestiera (Iuvenza, sotto altro nome, se decidi che è già in città); il tempio murato. Da non confermare: la Basilica, l’Arlecchino.",
      "dopo": "Nessuna prova. Servono a far entrare la città nelle orecchie prima che negli occhi.",
      "rilancio": "Qualcuno nella fila vi sta indicando. Che cosa fate?",
@@ -454,7 +471,7 @@
      "seme": "Guarda i vostri carri.",
      "innesco": "Qualcuno osserva il finto mercante, o gli si avvicina.",
      "leggi": "Guarda i carri uno per uno, e muove le labbra. Poi guarda le bestie. Poi voi.\n\nQuando gli passate vicino, un odore dolce. Fiori.",
-     "note": "Se lo affrontano: sorride, dice di commerciare in lana e si scusa. Se lo toccano, grida alle guardie («Aiuto! Mi derubano!»): è la cosa peggiore che possa succedere alla colonna in quel momento. Se lo lasciano andare, esce dalla fila e se ne va a piedi lungo le mura, verso sud.\nSeguirlo: Furtività CD 15 contro la sua attenzione. Riuscita: arriva alla Porta Piccòla, dice una parola alla guardia, entra senza che nessuno guardi le sue carte. Fallita: si gira, vi saluta con la mano, e si mette a parlare con due guardie indicandovi.",
+     "note": "Se lo affrontano: sorride, dice di commerciare in lana e si scusa. Se lo toccano, grida alle guardie («Aiuto! Mi derubano!»): è la cosa peggiore che possa succedere alla colonna in quel momento. Se lo lasciano andare, esce dalla fila e se ne va a piedi lungo le mura, verso sud.\nSeguirlo: Furtività CD 15 contro la sua attenzione. Riuscita: arriva alla Porta Carrese, dice una parola alla guardia, entra senza che nessuno guardi le sue carte. Fallita: si gira, vi saluta con la mano, e si mette a parlare con due guardie indicandovi.",
      "prove": [
       {
        "id": "mercante",
@@ -489,13 +506,14 @@
        ]
       }
      ],
-     "dopo": "È un agente di Iuvenza (odore di lillà). Riferirà stasera numeri, armi, e se Silvanus è con la colonna. Se lo seguono fino alla Porta Piccòla, sanno che a Teramum qualcuno entra senza carte.",
+     "dopo": "È un agente di Iuvenza (odore di lillà). Riferirà stasera numeri, armi, e se Silvanus è con la colonna. Se lo seguono fino alla Porta Carrese, sanno che a Teramum qualcuno entra senza carte.",
      "rilancio": "L’uomo col mantello si allontana lungo la fila. Che cosa fate?",
      "daqui": [
       "ragazzino",
       "prosecuzione"
      ],
-     "pe": 150
+     "pe": 150,
+     "immagine": "PDI — Porta della Madre — La spilla a ragno.jpg"
     },
     {
      "id": "ragazzino",
@@ -505,12 +523,13 @@
      "seme": "un ragazzino scalzo corre lungo la fila",
      "innesco": "Il ragazzino arriva fino alla colonna. Va dritto da Mattheus, anche se Mattheus non si fa vedere.",
      "leggi": "Avrà dieci anni. Scalzo, con le ginocchia sbucciate e i capelli pieni di polvere. Si ferma davanti a Mattheus, lo guarda dal basso, e gli tira la manica.\n\n«Frate Davide», dice.\n\nGli mette in mano un rametto di lavanda secca.\n\nPoi scappa fra le ruote, e prima che qualcuno possa chiamarlo è già dall’altra parte del ponte.",
-     "note": "Nessuna prova per fermarlo: è piccolo, veloce, e la fila è fitta. Se qualcuno lo insegue (Atletica o Acrobazia CD 15), lo prende all’arco: il ragazzo non sa altro. «Mi ha dato un quattrino e mi ha detto: quello col viso stanco e le mani che odorano di terra.» Chi gliel’ha detto? «Un frate. Piccolo. Coi sandali rotti.»",
-     "dopo": "Un nome e un rametto di lavanda. La lavanda secca è la stessa lasciata sulla porta murata del tempio di Mortus, nel Sestiere del Fiume: chi ci passa la riconosce (scena «Teramum — la città»).",
+     "note": "Nessuna prova per fermarlo: è piccolo, veloce, e la fila è fitta. Se qualcuno lo insegue (Atletica o Acrobazia CD 15), lo prende all’arco: il ragazzo non sa altro. «Mi ha dato un quattrino e mi ha detto: quello col viso stanco e le mani che odorano di terra.» Chi gliel’ha detto? «Un votato. Piccolo. Coi sandali rotti.»",
+     "dopo": "Un nome e un rametto di lavanda. La lavanda secca è la stessa lasciata sulla porta murata del tempio di Mortus, ⟦alla Lunaria a Bitetto, nel vicolo che scende dal rione dei poveri verso il fiume⟧: chi ci passa la riconosce (scena «Teramum — la città»).",
      "rilancio": "Mattheus ha in mano un rametto di lavanda. Che cosa fate?",
      "daqui": [
       "prosecuzione"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — Il rametto di lavanda.jpg"
     },
     {
      "id": "prosecuzione",
@@ -534,12 +553,12 @@
    "title": "Il banco del dazio",
    "image": "PDI — Teramum — Il banco del dazio.jpg",
    "legacyPosition": {
-    "x": 560,
-    "y": 615
+    "x": 465,
+    "y": 560
    },
    "text": "In fondo al ponte, sotto una tettoia di coppi, c’è un banco di legno con una stadera appesa a una trave. Due garzoni scaricano forme di pecorino, le pesano, le ricaricano.\n\nDietro il banco siede una donna robusta, con le maniche arrotolate e una borsa di cuoio legata in vita. Ha una tavoletta di tariffe inchiodata al palo, e un dito che scorre le righe mentre parla.\n\n«Ponte, un quattrino a testa. Bestie, due. Carri, secondo il carico.» Alza gli occhi sui vostri cinque carri. «Secondo il carico», ripete, più contenta.",
    "breve": "Donna Rosalba Pesafino, gabelliera della Lega dei Sensali, fa pagare il ponte e il dazio sulle merci. Le armi da guerra pagano cara oppure restano in deposito. Si può contrattare; chi guarda bene la stadera scopre che il contrappeso è limato.",
-   "gm": "Il dazio del ponte è della Lega dei Sensali (Casa Savinellus), non della Guardia: la Guardia controlla le persone e le armi, la Lega le merci. Sono due file diverse, e nessuna delle due lo dice.\nConto della Crociata (proposta): 39 persone = 39 quattrini; 23 bestie = 46 quattrini; 5 carri carichi = un ventesimo del valore del carico (Rosalba stima a occhio: 2 fiorini). Totale sui 2 fiorini e 4 grossi. Le armi da guerra (spade, lance, balestre, asce oltre le armi da fianco): 10 grossi il pezzo per entrare, oppure in deposito sigillato al campo per un grosso al giorno. Per una colonna armata diventano decine di fiorini: è fatto apposta.\nIl dazio si paga solo per entrare. Chi si accampa fuori paga solo il ponte (e solo se lo attraversa).\nDonna Rosalba: scheda PNG «Rosalba Pesafino».",
+   "gm": "Il dazio del ponte è della Lega dei Sensali (Casa Melatino), non della Guardia: la Guardia controlla le persone e le armi, la Lega le merci. Sono due file diverse, e nessuna delle due lo dice.\nConto della Crociata (proposta): 39 persone = 39 quattrini; 23 bestie = 46 quattrini; 5 carri carichi = un ventesimo del valore del carico (Rosalba stima a occhio: 2 fiorini). Totale sui 2 fiorini e 4 grossi. Le armi da guerra (spade, lance, balestre, asce oltre le armi da fianco): 10 grossi il pezzo per entrare, oppure in deposito sigillato al campo per un grosso al giorno. Per una colonna armata diventano decine di fiorini: è fatto apposta.\nIl dazio si paga solo per entrare. Chi si accampa fuori paga solo il ponte (e solo se lo attraversa).\nDonna Rosalba: scheda PNG «Rosalba Pesafino».",
    "nota": {
     "cd": 0
    },
@@ -566,7 +585,7 @@
      "titolo": "Parlare con Donna Rosalba",
      "parte": "evento",
      "innesco": "Qualcuno parla con la gabelliera.",
-     "note": "QUANTO FA? — Conta ad alta voce, con le dita, senza sbagliare mai. «Trentanove teste, trentanove quattrini. Ventitré bestie, quarantasei. Cinque carri, e di carico…» Si alza, guarda sotto i teli senza chiedere. «Due fiorini, a occhio. A occhio mio, che è buono. Più le armi.» Si risiede. «Le armi le contiamo dopo. Con calma.»\n\nLE ARMI — «Dieci grossi il pezzo. Venti per voi, che siete in colonna: c’è scritto. Oppure le lasciate in deposito: le chiudo in cassa, ci metto il sigillo della Lega, e un grosso al giorno. Nessuno ve le tocca.» Pausa. «La Lega non ruba. La Lega pesa.»\n\nCHI HA SCRITTO LA RIGA NUOVA? — «Il Fondaco. Tre giorni fa. È arrivato il Bando della Guardia, e il Fondaco ha fatto i conti prima di tutti. È il mestiere nostro, fare i conti prima.»\n\nCHI È LA LEGA? — «La Lega dei Sensali. Pesiamo, cambiamo, prestiamo. Il Decano Savinellus ci guida.» Sorride. «Da voi, a Julia Nova, ci chiamano Pesa-Aneme. Pure qua. Non ci offendiamo: pesiamo pure quelle.»\n\nNAVIGANTI GRIGI / ADAMUS — Se riconosce Adamus o sente il nome dei Grigi, smette di sorridere. «Ah. I Grigi.» Scrive qualcosa sul margine della tavoletta. «Per i Grigi la tariffa è quella. Uguale. La Lega è giusta.» Poi, più piano: «Ma il Fondaco lo saprà stasera che siete qui.»\n\nLA CITTÀ — «I prezzi salgono di ora in ora. La notizia della Crociata ha fatto nascondere il grano. Chi ha soldi a Julia Nova, qui non li ritira più: il Fondaco ha chiuso le lettere di cambio verso la costa.»\n\nLA GUARDIA — «La Guardia conta le teste, io conto le cose. Loro vi fanno aspettare, io vi faccio pagare. Alla fine, chi dei due è più gentile?»\n\nSE LA MINACCIANO — Non si muove dalla sedia. Batte due volte la stadera con l’unghia: i due garzoni lasciano il pecorino e si mettono dietro di lei, e dall’arco una guardia si gira. «Mi volete toccare? Toccate la Lega. La Lega ha memoria lunga e braccia corte, ma ne ha tante.»\n\nSE LA CORROMPONO — Accetta con naturalezza. «Un fiorino per me, e i carri li stimo più leggeri.» Funziona: il conto dei carri scende a metà. Le armi no: «Le armi sono della Guardia. Io le conto e basta, ma le conto giuste, perché loro ricontano.»\n\nSE LE MENTONO — Pesa le parole come i formaggi (Intuizione +4). «Carri vuoti? E le ruote chi le ha abbassate, i santi?»\n\nBATTUTE PRONTE — «La Lega non ruba. La Lega pesa.» · «A occhio mio, che è buono.» · «Pagare subito costa meno che pagare dopo. Sempre.» · «Qua dentro tutto ha un prezzo. Anche aspettare.»",
+     "note": "QUANTO FA? — Conta ad alta voce, con le dita, senza sbagliare mai. «Trentanove teste, trentanove quattrini. Ventitré bestie, quarantasei. Cinque carri, e di carico…» Si alza, guarda sotto i teli senza chiedere. «Due fiorini, a occhio. A occhio mio, che è buono. Più le armi.» Si risiede. «Le armi le contiamo dopo. Con calma.»\n\nLE ARMI — «Dieci grossi il pezzo. Venti per voi, che siete in colonna: c’è scritto. Oppure le lasciate in deposito: le chiudo in cassa, ci metto il sigillo della Lega, e un grosso al giorno. Nessuno ve le tocca.» Pausa. «La Lega non ruba. La Lega pesa.»\n\nCHI HA SCRITTO LA RIGA NUOVA? — «Il Fondaco. Tre giorni fa. È arrivato il Bando della Guardia, e il Fondaco ha fatto i conti prima di tutti. È il mestiere nostro, fare i conti prima.»\n\nCHI È LA LEGA? — «La Lega dei Sensali. Pesiamo, cambiamo, prestiamo. Il Decano Maccabeo Melatino ci guida.» Sorride. «Da voi, a Julia Nova, ci chiamano Pesa-Aneme. Pure qua. Non ci offendiamo: pesiamo pure quelle.»\n\nNAVIGANTI GRIGI / ADAMUS — Se riconosce Adamus o sente il nome dei Grigi, smette di sorridere. «Ah. I Grigi.» Scrive qualcosa sul margine della tavoletta. «Per i Grigi la tariffa è quella. Uguale. La Lega è giusta.» Poi, più piano: «Ma il Fondaco lo saprà stasera che siete qui.»\n\nLA CITTÀ — «I prezzi salgono di ora in ora. La notizia della Crociata ha fatto nascondere il grano. Chi ha soldi a Julia Nova, qui non li ritira più: il Fondaco ha chiuso le lettere di cambio verso la costa.»\n\nLA GUARDIA — «La Guardia conta le teste, io conto le cose. Loro vi fanno aspettare, io vi faccio pagare. Alla fine, chi dei due è più gentile?»\n\nSE LA MINACCIANO — Non si muove dalla sedia. Batte due volte la stadera con l’unghia: i due garzoni lasciano il pecorino e si mettono dietro di lei, e dall’arco una guardia si gira. «Mi volete toccare? Toccate la Lega. La Lega ha memoria lunga e braccia corte, ma ne ha tante.»\n\nSE LA CORROMPONO — Accetta con naturalezza. «Un fiorino per me, e i carri li stimo più leggeri.» Funziona: il conto dei carri scende a metà. Le armi no: «Le armi sono della Guardia. Io le conto e basta, ma le conto giuste, perché loro ricontano.»\n\nSE LE MENTONO — Pesa le parole come i formaggi (Intuizione +4). «Carri vuoti? E le ruote chi le ha abbassate, i lucenti?»\n\nBATTUTE PRONTE — «La Lega non ruba. La Lega pesa.» · «A occhio mio, che è buono.» · «Pagare subito costa meno che pagare dopo. Sempre.» · «Qua dentro tutto ha un prezzo. Anche aspettare.»",
      "dopo": "Rosalba sa poco della politica e molto dei soldi. È la prima persona di Teramum che li tratta come clienti, non come un problema.",
      "rilancio": "Rosalba ha già la penna in mano. Che cosa fate?",
      "daqui": [
@@ -657,7 +676,8 @@
      "daqui": [
       "teramum_porta_arco",
       "teramum_porta_tratturo"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — La stadera del dazio.jpg"
     }
    ]
   },
@@ -665,15 +685,15 @@
    "schemaVersion": 3,
    "id": "teramum_porta_arco",
    "kind": "porta",
-   "title": "La Porta de lu Solë",
-   "image": "PDI — Teramum — La Porta de lu Sole.jpg",
+   "title": "La Porta della Madre",
+   "image": "PDI — Porta della Madre — La Porta della Madre.jpg",
    "legacyPosition": {
-    "x": 185,
-    "y": 540
+    "x": 290,
+    "y": 250
    },
-   "text": "Da vicino non è una porta. È un arco trionfale incastrato nelle mura, alto il doppio delle torri che lo stringono. Sopra la volta, un sole di bronzo con i raggi consumati dalle intemperie, verde dove la pioggia è colata.\n\nIl lastricato davanti è largo, pulito, fatto per le processioni. Qualcuno lo spazza ancora.\n\nI battenti sono chiusi: legno nero, borchie grandi come pugni. È aperta solo la porticina di servizio, ricavata in un battente, bassa, che obbliga a chinare la testa.\n\nSulle mura, sopra l’arco, gli elmi si muovono piano. Si fermano. Ripartono.\n\nDavanti alla porticina, sotto una tenda, c’è un tavolo.",
-   "breve": "La porta di levante, quella delle processioni: battenti chiusi, solo la porticina aperta. Entrarci con lo stendardo spiegato è una dichiarazione contro la Basilica. Il tavolo del sergente è davanti alla porticina.",
-   "gm": "Per consuetudine la Porta de lu Solë si apre per intero solo per le processioni della Fiamma e per chi porta la benedizione della Basilica Aurea. La Guardia non la apre senza ordine. La notizia di una «Crociata» davanti alla porta dei santi arriva a Casa Impalox prima di sera, comunque vada.\nSulle mura: dodici guardie invece di sei, sei con la balestra. Non puntano niente contro nessuno.\nForzare la porta: impossibile e disastroso. Se qualcuno ci prova davvero, dal Bestiario «Guardia Ducale» (quante ne servono: sono centinaia) e «Sergente della Guardia Ducale». La Crociata diventa, per legge, una banda armata in rivolta: nessuna Casata potrà più mettere un sigillo per loro.",
+   "text": "Da vicino non è una porta. È un arco trionfale incastrato nelle mura, alto il doppio delle torri che lo stringono. Sopra la volta, una donna di pietra, vecchia, velata, con le mani aperte; dietro la sua testa un cerchio di raggi di bronzo, verde dove la pioggia è colata.\n\nIl lastricato davanti è largo, pulito, fatto per le processioni. Qualcuno lo spazza ancora.\n\nI battenti sono chiusi: legno nero, borchie grandi come pugni. È aperta solo la porticina di servizio, ricavata in un battente, bassa, che obbliga a chinare la testa.\n\nSulle mura, sopra l’arco, gli elmi si muovono piano. Si fermano. Ripartono.\n\nDavanti alla porticina, sotto una tenda, c’è un tavolo.",
+   "breve": "La Porta Reale, che tutti chiamano Porta della Madre: la porta di levante, quella delle processioni. Battenti chiusi, solo la porticina aperta. Entrarci con lo stendardo spiegato è una dichiarazione contro la Basilica. Il tavolo del sergente è davanti alla porticina.",
+   "gm": "È la Porta Reale della voce «Teramum»: la porta grande, da cui arriva la strada della costa. Tutti la chiamano Porta della Madre per la Lunaria delle Grazie, che sta appena fuori col chiostro delle votate; nel campo davanti si fa la fiera (oggi non è giorno di mercato).\n⟦Per consuetudine si apre per intero solo per le processioni (la Vecchia Madre che scende dalla Basilica Aurea alla Lunaria delle Grazie, il Lucente Berardo il 19 dicembre) e per chi porta la benedizione della Basilica Aurea. La Vecchia Madre di pietra sopra la volta, con l’aureola di raggi di bronzo, è proposta della scena.⟧ La Guardia non la apre senza ordine. La notizia di una «Crociata» davanti alla porta della Madre arriva a Casa Impaloni prima di sera, comunque vada.\nSulle mura: dodici guardie invece di sei, sei con la balestra. Non puntano niente contro nessuno.\nForzare la porta: impossibile e disastroso. Se qualcuno ci prova davvero, dal Bestiario «Guardia Ducale» (quante ne servono: sono centinaia) e «Sergente della Guardia Ducale». La Crociata diventa, per legge, una banda armata in rivolta: nessuna Casata potrà più mettere un sigillo per loro.",
    "nota": {
     "cd": 0
    },
@@ -681,11 +701,11 @@
     {
      "id": "sole",
      "tipo": "dettaglio",
-     "titolo": "Il sole di bronzo",
+     "titolo": "La Vecchia Madre sull’arco",
      "parte": "indizio",
-     "seme": "un sole di bronzo con i raggi consumati dalle intemperie",
-     "innesco": "Qualcuno guarda il sole sopra la volta, o chiede perché la porta grande è chiusa.",
-     "leggi": "Il sole ha un volto: occhi chiusi, bocca serena. I raggi sono dodici, e tre sono spezzati. Sotto, sull’architrave, un’iscrizione in Aureo Antico mezza cancellata.",
+     "seme": "dietro la sua testa un cerchio di raggi di bronzo",
+     "innesco": "Qualcuno guarda la figura sopra la volta, o chiede perché la porta grande è chiusa.",
+     "leggi": "È la Vecchia Madre: un volto di donna anziana, gli occhi chiusi, la bocca serena, le mani aperte verso chi arriva. Dietro la testa i raggi di bronzo sono dodici, e tre sono spezzati. Sotto, sull’architrave, un’iscrizione in Aureo Antico mezza cancellata.",
      "prove": [
       {
        "id": "religione",
@@ -699,28 +719,29 @@
         {
          "fascia": "failure",
          "max": 11,
-         "leggi": "Una porta monumentale, la più bella delle sei. Sembra fatta apposta per chi arriva in colonna."
+         "leggi": "Una porta monumentale, la più bella delle sette. Sembra fatta apposta per chi arriva in colonna."
         },
         {
          "fascia": "baseSuccess",
          "min": 12,
          "max": 16,
-         "leggi": "L’iscrizione dice: «Per questa porta entra solo la Luce». Per consuetudine si apre solo per le processioni della Fiamma e per chi porta la benedizione della Basilica Aurea. Entrarci con uno stendardo che non è della Fiamma è un gesto che la Basilica leggerà come sfida, qualunque cosa voi intendiate."
+         "leggi": "L’iscrizione dice: «Per questa porta entra chi la Madre accoglie». Per consuetudine si apre per intero solo per le processioni e per chi porta la benedizione della Basilica Aurea. Entrarci con uno stendardo che la Basilica non ha benedetto è un gesto che la Basilica leggerà come sfida, qualunque cosa voi intendiate."
         },
         {
          "fascia": "fullSuccess",
          "min": 17,
-         "leggi": "E i raggi spezzati sono tre, come le tre forze del Trittico dei vecchi: qualcuno, tanto tempo fa, ha voluto che il sole avesse tre ferite. Oppure è la grandine. Nessuno lo ha mai aggiustato."
+         "leggi": "E i raggi spezzati sono tre, come le tre forze del Trittico dei vecchi: qualcuno, tanto tempo fa, ha voluto che la Madre portasse il sole con tre ferite. Oppure è la grandine. Nessuno lo ha mai aggiustato."
         }
        ]
       }
      ],
      "dopo": "Con 12 o più capiscono che la porta non è neutrale. Con 17 o più, un seme per Mattheus e per chi pensa al Sole Tramortito: niente di più.",
-     "rilancio": "Il sole di bronzo vi guarda a occhi chiusi. Che cosa fate?",
+     "rilancio": "La Vecchia Madre vi guarda a occhi chiusi. Che cosa fate?",
      "daqui": [
       "stendardo",
       "tavolo"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — La Vecchia Madre sull’arco.jpg"
     },
     {
      "id": "stendardo",
@@ -728,9 +749,9 @@
      "titolo": "Lo stendardo",
      "parte": "evento",
      "innesco": "Qualcuno spiega lo stendardo della Crociata davanti alla porta, o lo alza sul carro.",
-     "leggi": "Un mormorio corre lungo la fila, dal ponte all’arco. Il frate sull’asino si copre gli occhi. Sulle mura, gli elmi smettono di muoversi.\n\nIl sergente al tavolo si alza in piedi. Non dice niente. Guarda lo stendardo. Poi guarda il sole di bronzo sopra la propria testa. Poi di nuovo lo stendardo.\n\n«Quella la tenete arrotolata», dice. «Qui le bandiere le alza il Consiglio.»",
-     "note": "Se lo arrotolano subito: nessuna conseguenza oltre al mormorio. Se lo tengono alzato: il sergente manda un secondo ragazzo, stavolta verso la Basilica; la pratica di Ser Eutichio avrà bisogno anche del sigillo di Impalox (quattro sigilli invece di tre); il capitano Guarnerio arriva più freddo (Persuasione con svantaggio).",
-     "dopo": "Lo stendardo spiegato davanti alla Porta de lu Solë è una dichiarazione. La Basilica la saprà in ogni caso; alzarlo la rende una sfida.",
+     "leggi": "Un mormorio corre lungo la fila, dal ponte all’arco. Il votato sull’asino si copre gli occhi. Sulle mura, gli elmi smettono di muoversi.\n\nIl sergente al tavolo si alza in piedi. Non dice niente. Guarda lo stendardo. Poi guarda la Vecchia Madre sopra la propria testa. Poi di nuovo lo stendardo.\n\n«Quella la tenete arrotolata», dice. «Qui le bandiere le alza il Consiglio.»",
+     "note": "Se lo arrotolano subito: nessuna conseguenza oltre al mormorio. Se lo tengono alzato: il sergente manda un secondo ragazzo, stavolta verso la Basilica; la pratica di Ser Eutichio avrà bisogno anche del sigillo degli Impaloni (quattro sigilli invece di tre); il capitano Guarnerio arriva più freddo (Persuasione con svantaggio).",
+     "dopo": "Lo stendardo spiegato davanti alla Porta della Madre è una dichiarazione. La Basilica la saprà in ogni caso; alzarlo la rende una sfida.",
      "rilancio": "Tutti guardano lo stendardo. Che cosa fate?",
      "daqui": [
       "tavolo"
@@ -742,7 +763,7 @@
      "titolo": "Gli elmi sulle mura",
      "parte": "nascosto",
      "innesco": "Qualcuno conta le guardie sulle mura o guarda le balestre.",
-     "note": "L’uomo sulla torre è un osservatore di Casa Clavax, mandato da Ser Eutichio per vedere la colonna con i suoi occhi prima di scendere col cofanetto. Non è un nemico: è la procedura.",
+     "note": "L’uomo sulla torre è un osservatore di Casa Chiodi, mandato da Ser Eutichio per vedere la colonna con i suoi occhi prima di scendere col cofanetto. Non è un nemico: è la procedura.",
      "prove": [
       {
        "id": "mura",
@@ -798,12 +819,12 @@
    "title": "Il tavolo del sergente",
    "image": "PDI — Teramum — Il tavolo del sergente.jpg",
    "legacyPosition": {
-    "x": 395,
-    "y": 465
+    "x": 330,
+    "y": 370
    },
    "text": "Il sergente è un uomo magro, pelato, con le orecchie a sventola e le dita macchiate di cera. Il tabarro grigio ha una torre e un lupo ricamati sul petto, e il ricamo è consumato dove ci appoggia la tavoletta.\n\nNon si alza. Vi guarda, conta sottovoce, scrive.\n\n«Nome, provenienza, numero, armi», dice. «In quest’ordine, e senza discorsi.»\n\nAccanto al tavolo, un ragazzo con le gambe lunghe aspetta, pronto a correre.\n\nDietro, attraverso la porticina, si vede un pezzo di strada in salita, lastricata, e la gente che passa. La città.",
-   "breve": "Il sergente Iaco Pennacchia «lu Cuntatùre» registra la colonna e la fa aspettare. Dopo un’ora arriva il capitano Guarnerio da Mëndurjë: decide dove possono aspettare, non se possono entrare. Con Persuasione possono ottenere di entrare in sei, disarmati tranne le armi da fianco, con scorta, fino a sera. Nell’attesa arrivano un messo senza insegne e un servitore dei Cerullius.",
-   "gm": "Il sergente ha due ordini. Il primo, scritto: nessun gruppo armato entra senza lasciapassare con i sigilli di tre Casate. Il secondo, a voce: appena la colonna arriva, mandare subito un messo alla Rocca dei Grazianus. Il ragazzo con le gambe lunghe parte appena il sergente scrive il primo segno: il messo arriva prima della fine della prima domanda.\nIl capitano Guarnerio arriva dopo un’ora («L’attesa»). Il capitano non può dare il lasciapassare; può dare una tessera di passo per pochi, fino a sera, con scorta. È la cosa migliore che si possa ottenere oggi alla porta.\nSchede PNG: «Iaco Pennacchia», «Guarnerio da Mëndurjë». Statistiche da combattimento se servono: Bestiario «Sergente della Guardia Ducale» (Guarnerio e Iaco), «Guardia Ducale».",
+   "breve": "Il sergente Iaco Pennacchia «lu Cuntatùre» registra la colonna e la fa aspettare. Dopo un’ora arriva il capitano Guarnerio da Mëndurjë: decide dove possono aspettare, non se possono entrare. Con Persuasione possono ottenere di entrare in sei, disarmati tranne le armi da fianco, con scorta, fino a sera. Nell’attesa arrivano un servitore dei Cerullius e, se non l’hanno già incontrato a Colleatterrato, Vitale lu Messo col biglietto per Maximus.",
+   "gm": "Il sergente ha due ordini. Il primo, scritto: nessun gruppo armato entra senza lasciapassare con i sigilli di tre Casate. Il secondo, a voce: appena la colonna arriva, mandare subito un messo alla Rocca dei Grazianus, su Piazza Garibaldi, all’altro capo della città. L’ordine viene da Lucius Grazianus, lo Stratega, il padre di Maximus: Iaco non lo sa, lo immagina. Il ragazzo con le gambe lunghe parte appena il sergente scrive il primo segno: il messo arriva prima della fine della prima domanda.\nIl capitano Guarnerio arriva dopo un’ora («L’attesa»). Il capitano non può dare il lasciapassare; può dare una tessera di passo per pochi, fino a sera, con scorta. È la cosa migliore che si possa ottenere oggi alla porta.\nSchede PNG: «Iaco Pennacchia», «Guarnerio da Mëndurjë». Statistiche da combattimento se servono: Bestiario «Sergente della Guardia Ducale» (Guarnerio; Iaco con 22 PF), «Guardia Ducale».",
    "nota": {
     "cd": 0
    },
@@ -844,11 +865,14 @@
        ]
       }
      ],
-     "dopo": "Se il picchetto di Colleatterato ha scritto «colonna di pellegrini», questa prova ha vantaggio. Da qui parte l’attesa.",
+     "dopo": "Se il picchetto di Colleatterrato ha scritto «colonna di pellegrini», questa prova ha vantaggio. Da qui parte l’attesa.",
      "rilancio": "«Aspettate qui.» Il sergente torna alla sua cera. Che cosa fate?",
      "daqui": [
       "dialogo_iaco",
       "attesa"
+     ],
+     "pedine": [
+      "porta"
      ]
     },
     {
@@ -857,7 +881,7 @@
      "titolo": "Parlare con il sergente Iaco",
      "parte": "evento",
      "innesco": "Qualcuno fa domande al sergente mentre aspettano.",
-     "note": "PERCHÉ CI FATE ASPETTARE? — «Perché siete armati, siete tanti, e non avete carta. Tre cose. Ne basterebbe una.»\n\nQUANTO? — «Quanto ci mette il capitano. Il capitano ci mette quanto ci mette.» Scrive. «Di solito un’ora.»\n\nCHI È IL CAPITANO? — «Il capitano Guarnerio. Della porta. È un uomo giusto.» Pausa. «Giusto non vuol dire comodo.»\n\nDOVE È ANDATO IL RAGAZZO? — Non alza la testa. «A portare un messaggio.» A chi? «A chi lo deve ricevere.» Se insistono (Intuizione CD 13): ha due ordini e il secondo gli pesa; il ragazzo è andato verso il castello oltre la gola.\n\nCOSA C’È SCRITTO SULLA TAVOLETTA? — «Quello che siete.» La gira: COLONNA ARMATA PRIVA DI MANDATO. «Non l’ho scritto io. Era già scritto quando sono arrivato stamattina.»\n\nIL BANDO — «Tre giorni fa. La Guardia deve contare una colonna che viene da levante, con carri, con uno stendardo. Contare, non fermare. Io conto.» Si ferma. «E vi ho contati bene: trentanove, cinque carri, ventitré bestie. Uno zoppica.»\n\nPERCHÉ TI CHIAMANO LU CUNTATÙRE? — Per la prima volta quasi sorride. «Perché conto. Pure le mosche. Ce ne sono diciassette su quel mulo.»\n\nSE LO MINACCIANO — Non alza la testa. «Scrivo anche questo?» E lo scrive. Le due guardie abbassano le picche di un palmo.\n\nSE LO CORROMPONO — «Metti via.» Senza guardare la moneta. «Qua la Guardia non si compra. Si comprano gli scrivani. Vicino alla porta ne arriva uno fra poco: provate con lui.»\n\nSE GLI MENTONO — Scrive la bugia. Poi scrive, accanto, un piccolo segno. Nessuno sa cosa voglia dire.\n\nBATTUTE PRONTE — «Nome, provenienza, numero, armi. In quest’ordine, e senza discorsi.» · «Questa porta si apre per i santi. Voi siete santi?» · «Contare non è decidere. Io conto.» · «Diciassette. Ora diciotto.»",
+     "note": "PERCHÉ CI FATE ASPETTARE? — «Perché siete armati, siete tanti, e non avete carta. Tre cose. Ne basterebbe una.»\n\nQUANTO? — «Quanto ci mette il capitano. Il capitano ci mette quanto ci mette.» Scrive. «Di solito un’ora.»\n\nCHI È IL CAPITANO? — «Il capitano Guarnerio. Della porta. È un uomo giusto.» Pausa. «Giusto non vuol dire comodo.»\n\nDOVE È ANDATO IL RAGAZZO? — Non alza la testa. «A portare un messaggio.» A chi? «A chi lo deve ricevere.» Se insistono (Intuizione CD 13): ha due ordini e il secondo gli pesa; il ragazzo è andato alla Rocca dei Grazianus, su Piazza Garibaldi, all’altro capo della città.\n\nCOSA C’È SCRITTO SULLA TAVOLETTA? — «Quello che siete.» La gira: COLONNA ARMATA PRIVA DI MANDATO. «Non l’ho scritto io. Era già scritto quando sono arrivato stamattina.»\n\nIL BANDO — «Tre giorni fa. La Guardia deve contare una colonna che viene da levante, con carri, con uno stendardo. Contare, non fermare. Io conto.» Si ferma. «E vi ho contati bene: trentanove, cinque carri, ventitré bestie. Uno zoppica.»\n\nPERCHÉ TI CHIAMANO LU CUNTATÙRE? — Per la prima volta quasi sorride. «Perché conto. Pure le mosche. Ce ne sono diciassette su quel mulo.»\n\nSE LO MINACCIANO — Non alza la testa. «Scrivo anche questo?» E lo scrive. Le due guardie abbassano le picche di un palmo.\n\nSE LO CORROMPONO — «Metti via.» Senza guardare la moneta. «Qua la Guardia non si compra. Si comprano gli scrivani. Vicino alla porta ne arriva uno fra poco: provate con lui.»\n\nSE GLI MENTONO — Scrive la bugia. Poi scrive, accanto, un piccolo segno. Nessuno sa cosa voglia dire.\n\nBATTUTE PRONTE — «Nome, provenienza, numero, armi. In quest’ordine, e senza discorsi.» · «Questa porta si apre per la Madre e per i lucenti. Voi siete lucenti?» · «Contare non è decidere. Io conto.» · «Diciassette. Ora diciotto.»",
      "dopo": "Iaco non decide niente e non nasconde niente di quello che può dire. Il segreto che porta (il secondo ordine) lo si legge in faccia, non nelle parole.",
      "rilancio": "Il sergente conta le mosche. Che cosa fate?",
      "daqui": [
@@ -871,7 +895,7 @@
      "parte": "evento",
      "innesco": "Appena il sergente ha finito di scrivere. Dura un’ora: in quell’ora succedono tre cose, in quest’ordine.",
      "leggi": "Passa un quarto d’ora. Poi mezz’ora.\n\nLa fila dietro di voi si allunga e mormora. Le bestie hanno sete. Il fiume è lì sotto, e nessuno vi dice che potete scendere.\n\nL’ombra della montagna sale sulle mura, poi sul ponte, poi sui vostri carri. Fa fresco, all’improvviso.",
-     "note": "Nell’ora d’attesa: (1) il servitore dei Cerullius, se Alessandros o Vicarus si sono fatti riconoscere; (2) il messo senza insegne, per Maximus; (3) il capitano. Se i PG vanno via prima (al tratturo, a un’altra porta), il capitano li raggiunge dov’è la colonna: la Guardia sa sempre dove sono.",
+     "note": "Nell’ora d’attesa: (1) il servitore dei Cerullius, se Alessandros o Vicarus si sono fatti riconoscere; (2) Vitale lu Messo, per Maximus, se non l’hanno già incontrato a Colleatterrato; (3) il capitano. Se i PG vanno via prima (al tratturo, a un’altra porta), il capitano li raggiunge dov’è la colonna: la Guardia sa sempre dove sono.",
      "dopo": "L’attesa è la scena. Lasciate che i giocatori la riempiano: domande al sergente, alla fila, fra di loro.",
      "rilancio": "L’ombra vi è arrivata ai piedi. Che cosa fate?",
      "daqui": [
@@ -887,7 +911,7 @@
      "parte": "evento",
      "innesco": "Durante l’attesa, se Alessandros o Vicarus hanno detto il loro nome al sergente.",
      "leggi": "Dalla porticina esce un uomo anziano in livrea azzurra e argento, un po’ lisa ai gomiti. Si ferma, si guarda intorno, vede Alessandros e Vicarus.\n\nFa un inchino profondo, lento, di quelli che non si fanno più.\n\n«Signorini.» Ha la voce che trema. «Il palazzo è pronto. Le vostre stanze sono pronte. Si è acceso il fuoco.» Guarda la colonna. Guarda gli altri. «Per… per voi due.»",
-     "note": "È Ottorino, il maestro di casa del palazzo Cerullius ai Tigli (proposta di nome; il palazzo è nel canone). L’offerta è per i due fratelli, non per gli altri: così vuole l’etichetta, e così vuole chi gli ha dato l’ordine (il Reggente Rodolfo Cerullius? Da decidere). Se i fratelli chiedono che vengano anche gli altri, Ottorino si fa rosso: «Non ho l’ordine, signorino. Ma le stanze sono tante.» Non può farli entrare lui: può solo aspettare con loro.",
+     "note": "È Ottorino, il custode del palazzo Cerullius ai Tigli (proposta di nome; il palazzo è nella scheda della casata: metà delle stanze chiuse, un custode). L’offerta è per i due fratelli, non per gli altri: così vuole l’etichetta, e così vuole chi gli ha dato l’ordine (Iohannes «Nanni» Cerullius, lo zio che regge la casata mentre Alessandros è via? O il cugino, il figlio di Nanni, che sta più a Teramum che a Canzañë? Da decidere). Se i fratelli chiedono che vengano anche gli altri, Ottorino si fa rosso: «Non ho l’ordine, signorino. Ma le stanze sono tante.» Non può farli entrare lui: può solo aspettare con loro.",
      "dopo": "Un posto dove dormire in città per due PG, se entrano. Una prova di etichetta: i fratelli lasciano la colonna fuori?",
      "rilancio": "Ottorino resta inchinato. Che cosa fate?",
      "daqui": [
@@ -898,16 +922,17 @@
     {
      "id": "messo",
      "tipo": "dettaglio",
-     "titolo": "Il messo senza insegne",
+     "titolo": "Vitale lu Messo",
      "parte": "evento",
-     "innesco": "Durante l’attesa, poco prima che arrivi il capitano.",
-     "leggi": "Un uomo a piedi, vestito di grigio, senza insegne, si fa largo fra le guardie della porticina. Le guardie lo lasciano passare senza chiedere niente.\n\nChiede di Maximus. Per nome.\n\nGli consegna un biglietto piegato in quattro, chiuso con una goccia di cera senza sigillo. Poi se ne va, senza aspettare risposta.",
-     "note": "Dentro, poche parole: «Non entrare stasera. — G.»\nChi lo manda dipende dal conflitto CC-02 (padre di Maximus): figlio dello Stratega Lucius Grazianus → è il padre, che vuole vederlo prima che lo veda il Consiglio; figlio di commercianti → è qualcuno di Casa Grazianus che vuole Maximus fuori dai giochi stasera. Finché non decidi, il biglietto dice solo questo. Il messo è un uomo della Rocca: se qualcuno lo segue (Furtività CD 14), va dritto al castello oltre la gola.",
+     "innesco": "Durante l’attesa, poco prima che arrivi il capitano. Solo se il messo non li ha già trovati a Colleatterrato.",
+     "leggi": "Lungo il ponte, contro la fila, arriva un mulo schiumato, e sopra un ragazzo in camicia, senza insegne, coperto di polvere fino ai capelli. Salta giù davanti alla tenda. Le guardie lo conoscono: non gli chiedono niente.\n\nAnsima. Guarda i cavalieri uno per uno. Poi dice un nome.\n\n«Maximus Grazianus.»\n\nGli tende un biglietto piegato in quattro, chiuso con una goccia di cera senza sigillo, e non lo lascia finché Maximus non lo prende. «In mano vostra. A nessun altro.»",
+     "note": "Dentro, poche parole: «Non entrare stasera. — G.»\nÈ Vitale lu Messo (scheda PNG, ritratto già fatto): diciassette anni, non sa leggere, porta le lettere per chi paga. Nella scena «Colleatterrato» è lui il messo. Se l’hanno già incontrato lassù, qui non porta niente: lo vedono ripassare sul ponte col mulo, verso nord, e fare a Maximus un cenno col mento. Se non l’hanno incontrato (un’altra strada, o il punto saltato), lo porta qui: era salito a cercarli e li ha mancati per un tornante.\nNon sa chi l’ha mandato: un uomo col mantello scuro e il grigio della Guardia sotto, capelli grigi corti, al ponte prima dell’alba. «G.» è Lucius Grazianus, lo Stratega, il padre di Maximus: vuole vederlo prima che lo veda il Consiglio, e l’uomo al ponte era lui o un suo fedele. Le domande a Vitale e le sue risposte sono nella sua scheda. Se qualcuno lo segue (Furtività CD 14), non va alla Rocca: torna al ponte della Porta Melatina, da dove è partito, ad aspettare un’altra lettera (nella sua scheda la porta si chiama ancora «Porta de lu Fiumë»).",
      "dopo": "Maximus ha un biglietto e una scelta. Se entra lo stesso stasera, niente di male succede: solo, la persona che lo aspettava non si fa trovare.",
      "rilancio": "Maximus ha in mano il biglietto. Che cosa fate?",
      "daqui": [
       "capitano"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — Il biglietto di Vitale.jpg"
     },
     {
      "id": "capitano",
@@ -929,7 +954,7 @@
      "titolo": "Parlare con il capitano Guarnerio",
      "parte": "evento",
      "innesco": "Qualcuno parla con il capitano.",
-     "note": "PERCHÉ NON CI FATE ENTRARE? — «Perché siete una colonna armata e non avete il lasciapassare. È la legge del Consiglio. Tre sigilli di tre Casate, e io apro. Senza, io non apro. Non la porta dei santi, non la porta delle pecore, nessuna.» Si gratta la cicatrice. «Non è una cosa contro di voi. È una cosa contro tutti.»\n\nCHI HA DATO L’ORDINE? — «Il Consiglio Reggente fa la legge. La Guardia la fa rispettare. La Guardia è di Casa Grazianus, e lo Stratega comanda la Guardia.» Vi guarda. «Io comando questa porta. E questa porta oggi dice aspettate.»\n\nCOS’È IL BANDO? — «Un ordine alle porte e ai picchetti, arrivato tre giorni fa. Una colonna da levante, con carri e stendardo. Contarla, scriverla, non farla entrare senza carta. Non dice arrestatela. Non dice cacciatela.» Pausa. «Non dice nemmeno perché.»\n\nCOSA SERVE PER ENTRARE? — «Il lasciapassare d’armi. Lo dà la Camera dei Cavillatori, con tre sigilli sopra. Lo scrivano di Clavax dovrebbe essere già qui intorno: lui sa la procedura meglio di me. Io so solo che è lunga.»\n\nDOVE POSSIAMO ASPETTARE? — Indica il prato lungo il fiume, di là dal ponte. «Là. Sul tratturo. Quella è terra dei pastori: se il Mastro-Pastore vi dà il permesso, nemmeno la Guardia vi può spostare. E io non ci tengo a spostarvi.» Pausa. «Andate a chiederlo con il cappello in mano. Il vecchio Venanzio non ama le spade.»\n\nPOSSIAMO ENTRARE NOI, SENZA LA COLONNA? — Ci pensa. A lungo. «Sei. Non uno di più. Armi da fianco e basta: le altre restano al campo. Due dei miei vi accompagnano, e a sera siete fuori, prima della campana.» Solo con la prova «Entrare in sei» riuscita; altrimenti: «Domani. Forse.»\n\nGRAZIANUS / MAXIMUS — Se Maximus dice il suo nome, Guarnerio lo guarda a lungo. Se hai deciso che Maximus è figlio dello Stratega: «Vi ho visto l’ultima volta che eravate alto così. Tirate di spada come vostro padre? Speriamo di no, per voi.» Non gli cambia l’ordine, ma gli abbassa la voce: «Vostro padre sa che siete qui. Da un’ora.» Se hai deciso che Maximus è figlio di commercianti: «Grazianus. È un nome grosso, per un figlio di bottega. Portatelo con attenzione, qui dentro: c’è chi lo porta davvero.»\n\nI CERULLIUS — «Il palazzo Cerullius è ai Tigli. Mezzo vuoto, da anni. Il vecchio Ottorino tiene acceso il fuoco per nessuno.» Se il servitore è già arrivato: «Visto? Per voi due c’è un letto. Per la colonna, c’è un prato.»\n\nCOSA SUCCEDE IN CITTÀ? — «Il Consiglio siede e non decide. La Guardia fa i turni doppi da una settimana. Dicono per i terremoti.» Vi guarda. «I terremoti non si fermano coi turni doppi.» Non dice altro: non sa altro di sicuro, e non dice quello che non sa.\n\nLA CROCIATA / JULIA NOVA — «Si dice che a Julia Nova avete combattuto i morti che camminano. Si dice pure che avete bruciato un uomo che si era arreso.» Nessuna espressione. «Si dicono tante cose. Io credo a quello che vedo alla mia porta.»\n\nPERCHÉ LA PORTA GRANDE È CHIUSA? — «Si apre per le processioni. Per il Duca, quando c’era un Duca. Per chi porta la benedizione della Basilica.» Guarda lo stendardo. «Voi portate quella. Non è la stessa cosa.»\n\nIL DRAPPO NERO SULLA TORRE — «Il Consiglio siede a porte chiuse. Quando c’è il drappo, nessuno sale al Palazzo, nessuno scende. Oggi c’è il drappo da stamattina.» Pausa. «Da quando è arrivato il vostro registro da Colleatterato.»\n\nSE LO MINACCIANO — Non mette la mano sulla spada. Alza due dita: sulle mura, sei balestre si alzano dal merlo. «Io sono la porta. La porta nen se spaventa.» Da quel momento niente concessioni oggi; la pratica si aggrava.\n\nSE LO CORROMPONO — Si offende davvero. «Rimettetelo in tasca prima che lo veda qualcuno. La Guardia di Teramum è l’unica cosa in questa città che non si vende. Lasciatecela.» Da quel momento Persuasione con svantaggio.\n\nSE GLI MENTONO — Intuizione +4. Se se ne accorge, non lo dice: scrive un segno sulla tavoletta del sergente, e diventa un po’ più formale.\n\nBATTUTE PRONTE — «Non siete prigionieri. Non siete ospiti. Siete una pratica. Le pratiche aspettano.» · «Io sono la porta.» · «Prima della campana, fuori. Non mi fate venire a cercarvi.» · «La legge è stupida, ma è l’unica che abbiamo.»",
+     "note": "PERCHÉ NON CI FATE ENTRARE? — «Perché siete una colonna armata e non avete il lasciapassare. È la legge del Consiglio. Tre sigilli di tre Casate, e io apro. Senza, io non apro. Non la porta della Madre, non la porta delle pecore, nessuna.» Si gratta la cicatrice. «Non è una cosa contro di voi. È una cosa contro tutti.»\n\nCHI HA DATO L’ORDINE? — «Il Consiglio Reggente fa la legge. La Guardia la fa rispettare. La Guardia è di Casa Grazianus, e lo Stratega comanda la Guardia.» Vi guarda. «Io comando questa porta. E questa porta oggi dice aspettate.»\n\nCOS’È IL BANDO? — «Un ordine alle porte e ai picchetti, arrivato tre giorni fa. Una colonna da levante, con carri e stendardo. Contarla, scriverla, non farla entrare senza carta. Non dice arrestatela. Non dice cacciatela.» Pausa. «Non dice nemmeno perché.»\n\nCOSA SERVE PER ENTRARE? — «Il lasciapassare d’armi. Lo dà la Camera dei Cavillatori, con tre sigilli sopra. Lo scrivano dei Chiodi dovrebbe essere già qui intorno: lui sa la procedura meglio di me. Io so solo che è lunga.»\n\nDOVE POSSIAMO ASPETTARE? — Indica il prato lungo il fiume, di là dal ponte. «Là. Sul tratturo. Quella è terra dei pastori: se il Mastro-Pastore vi dà il permesso, nemmeno la Guardia vi può spostare. E io non ci tengo a spostarvi.» Pausa. «Andate a chiederlo con il cappello in mano. Il vecchio Venanzio non ama le spade.»\n\nPOSSIAMO ENTRARE NOI, SENZA LA COLONNA? — Ci pensa. A lungo. «Sei. Non uno di più. Armi da fianco e basta: le altre restano al campo. Due dei miei vi accompagnano, e a sera siete fuori, prima della campana.» Solo con la prova «Entrare in sei» riuscita; altrimenti: «Domani. Forse.»\n\nGRAZIANUS / MAXIMUS — Se Maximus dice il suo nome, Guarnerio lo guarda a lungo. «Vi ho visto l’ultima volta che eravate alto così. Tirate di spada come vostro padre? Speriamo di no, per voi.» Non gli cambia l’ordine, ma gli abbassa la voce: «Vostro padre sa che siete qui. Da un’ora.»\n\nI CERULLIUS — «Il palazzo Cerullius è ai Tigli. Mezzo vuoto, da anni. Il vecchio Ottorino tiene acceso il fuoco per nessuno.» Se il servitore è già arrivato: «Visto? Per voi due c’è un letto. Per la colonna, c’è un prato.»\n\nCOSA SUCCEDE IN CITTÀ? — «Il Consiglio siede e non decide. La Guardia fa i turni doppi da una settimana. Dicono per i terremoti.» Vi guarda. «I terremoti non si fermano coi turni doppi.» Non dice altro: non sa altro di sicuro, e non dice quello che non sa.\n\nLA CROCIATA / JULIA NOVA — «Si dice che a Julia Nova avete combattuto i morti che camminano. Si dice pure che avete bruciato un uomo che si era arreso.» Nessuna espressione. «Si dicono tante cose. Io credo a quello che vedo alla mia porta.»\n\nPERCHÉ LA PORTA GRANDE È CHIUSA? — «Si apre per le processioni. Per il Duca, quando c’era un Duca. Per chi porta la benedizione della Basilica.» Guarda lo stendardo. «Voi portate quella. Non è la stessa cosa.»\n\nIL DRAPPO NERO SULLA TORRE — «Il Consiglio siede a porte chiuse. Quando c’è il drappo, nessuno sale al Palazzo, nessuno scende. Oggi c’è il drappo da stamattina.» Pausa. «Da quando è arrivato il vostro registro da Colleatterrato.»\n\nSE LO MINACCIANO — Non mette la mano sulla spada. Alza due dita: sulle mura, sei balestre si alzano dal merlo. «Io sono la porta. La porta nen se spaventa.» Da quel momento niente concessioni oggi; la pratica si aggrava.\n\nSE LO CORROMPONO — Si offende davvero. «Rimettetelo in tasca prima che lo veda qualcuno. La Guardia di Teramum è l’unica cosa in questa città che non si vende. Lasciatecela.» Da quel momento Persuasione con svantaggio.\n\nSE GLI MENTONO — Intuizione +4. Se se ne accorge, non lo dice: scrive un segno sulla tavoletta del sergente, e diventa un po’ più formale.\n\nBATTUTE PRONTE — «Non siete prigionieri. Non siete ospiti. Siete una pratica. Le pratiche aspettano.» · «Io sono la porta.» · «Prima della campana, fuori. Non mi fate venire a cercarvi.» · «La legge è stupida, ma è l’unica che abbiamo.»",
      "dopo": "Guarnerio è un soldato onesto in una città che non lo è. Rispetta chi rispetta la porta. Può diventare un alleato: non contro la legge, ma dentro la legge.",
      "rilancio": "Il capitano aspetta. Che cosa fate?",
      "daqui": [
@@ -976,7 +1001,7 @@
        ]
       }
      ],
-     "dopo": "Riuscita: sei PG in città fino al coprifuoco, con due guardie di scorta (scena «Teramum — la città», dalla Porta de lu Solë); la tessera vale anche nei giorni seguenti finché non arriva il lasciapassare. Fallimento: la colonna e i PG al tratturo; si riprova domattina.",
+     "dopo": "Riuscita: sei PG in città fino al coprifuoco, con due guardie di scorta (scena «Teramum — la città», dalla Porta della Madre); la tessera vale anche nei giorni seguenti finché non arriva il lasciapassare. Fallimento: la colonna e i PG al tratturo; si riprova domattina.",
      "rilancio": "Il capitano ha deciso. Che cosa fate?",
      "daqui": [
       "teramum_porta_scrivano",
@@ -985,7 +1010,7 @@
      "pe": 450,
      "bottino": [
       {
-       "n": "Mezza tessera di passo della Porta de lu Solë",
+       "n": "Mezza tessera di passo della Porta della Madre",
        "q": 1,
        "cat": "Missione",
        "peso": "—",
@@ -1002,15 +1027,15 @@
    "schemaVersion": 3,
    "id": "teramum_porta_scrivano",
    "kind": "persona",
-   "title": "Lo scrivano di Casa Clavax",
+   "title": "Lo scrivano di Casa Chiodi",
    "image": "PDI — Teramum — Lo scrivano di Casa Clavax.jpg",
    "legacyPosition": {
-    "x": 330,
-    "y": 655
+    "x": 165,
+    "y": 410
    },
    "text": "Sotto la loggetta accanto all’arco, dove d’estate si siedono le guardie, qualcuno ha sistemato un leggio, una sedia e una lanterna già accesa.\n\nArriva un uomo vestito di nero, con un cofanetto di legno sotto il braccio e un paio di occhiali sul naso, legati dietro la testa con un nastro. Ha le dita nere d’inchiostro fino alla seconda falange.\n\nSi siede. Apre il cofanetto. Dentro ci sono sigilli. Tanti. Impronte di cera di ogni colore, in fila, ognuna nel suo scomparto.\n\nNe prende uno, lo guarda, lo rimette a posto.\n\n«Per questo ne servono tre», dice. «Voi quanti ne avete?»",
-   "breve": "Ser Eutichio Quattrocchi, scrivano della Camera dei Cavillatori (Casa Clavax), apre la pratica del lasciapassare d’armi: tre sigilli, tre Casate, tre giorni se va bene. Grazianus e Clavax sono obbligatori; il terzo si sceglie. Non decide niente, sa tutto. Qualcuno ha già tirato fuori la loro pratica dal mucchio.",
-   "gm": "La regola (lore del Ducato): niente si muove senza il sigillo di almeno tre Casate Reggenti. Per un lasciapassare d’armi servono tre sigilli; per una decisione del Consiglio, cinque voti su otto (Manuale). Le due regole convivono: vedi «Da decidere» in fondo alla scena.\nPercorso (proposta): Grazianus (le armi: la Guardia è loro) e Clavax (la legge: la Camera dei Cavillatori) sono obbligatori. Il terzo a scelta: Mazzarellus (l’amministrazione, lentissimi), Impalox (obbligatorio se insistono sulla parola «Crociata»: vuole sapere chi l’ha benedetta), Tancredus (se portano un documento storico), Savinellus (se portano merci da vendere), de Spina (se un PG di sangue pretuziano antico, un Cerullius, chiede di persona: la Matriarca rispetta il Sangue Antico), Mellitius (firma per chi paga).\nIl cofanetto è il campionario dei sigilli veri delle otto Casate e delle Casate maggiori: serve a riconoscere i falsi. Il segno del Sigillo di Stratega che Maximus ha mostrato a Julia Nova (Atto IX), se lo mostrano qui: Ser Eutichio lo confronta e lo riconosce (Da decidere cosa vale).\nSegreto: Ser Eutichio passa copia di ogni pratica «sensibile» a un uomo incappucciato con accento aristocratico, lo stesso del Cristallo di Memoria di Altavia. Non sa chi sia: sa che paga bene e che parla come uno del Colle.\nScheda PNG: «Eutichio Quattrocchi».",
+   "breve": "Ser Eutichio Quattrocchi, scrivano della Camera dei Cavillatori (Casa Chiodi), apre la pratica del lasciapassare d’armi: tre sigilli, tre Casate, tre giorni se va bene. Grazianus e Chiodi sono obbligatori; il terzo si sceglie. Non decide niente, sa tutto. Qualcuno ha già tirato fuori la loro pratica dal mucchio.",
+   "gm": "La regola (lore del Ducato): un atto vale con i sigilli di tre Casate Reggenti; una decisione grande del Consiglio ne vuole cinque (proposta della voce del Ducato). Per un lasciapassare d’armi bastano tre sigilli.\nPercorso (proposta): Grazianus (le armi: la Guardia è loro) e Chiodi (la legge: la Camera dei Cavillatori) sono obbligatori. Il terzo a scelta: Mazzarelli (il Sigillo Ducale e l’amministrazione, lentissimi), Impaloni (obbligatorio se insistono sulla parola «Crociata»: vuole sapere chi l’ha benedetta), Savini (la Memoria: se portano un documento antico), Melatino (la Lega dei Sensali: se portano merci da vendere), Malavolta (se un PG di sangue antico, un Cerullius, chiede di persona: la Matriarca Tarsilla, nata de Spina, rispetta il Sangue Antico), Thaulero (firma per chi paga).\nIl cofanetto è il campionario dei sigilli veri delle otto Casate e delle Casate maggiori: serve a riconoscere i falsi. Il segno del Sigillo di Stratega che Maximus ha mostrato a Julia Nova (Atto IX), se lo mostrano qui: Ser Eutichio lo confronta e lo riconosce (Da decidere cosa vale).\nSegreto: Ser Eutichio passa copia di ogni pratica «sensibile» a un uomo incappucciato con accento aristocratico, lo stesso del Cristallo di Memoria di Altavia. Non sa chi sia: sa che paga bene e che parla come uno del Colle.\nScheda PNG: «Eutichio Quattrocchi».",
    "nota": {
     "cd": 0
    },
@@ -1022,14 +1047,15 @@
      "parte": "indizio",
      "seme": "Dentro ci sono sigilli. Tanti.",
      "innesco": "Qualcuno guarda dentro il cofanetto, o chiede cosa siano.",
-     "leggi": "Sono impronte di cera, non sigilli veri. Ognuna nel suo scomparto foderato di panno, con un cartellino scritto piccolo.\n\nUna torre e un lupo. Una bilancia. Una chiave con un chiodo. Un libro aperto. Una rosa con le spine. Un’ape. Una fiamma. Una corona senza testa.\n\nE altre, più in basso, più piccole: casate minori, conti, abati.\n\nAl posto dello scomparto degli Aurex, il panno è vuoto e scolorito, come se qualcosa ci fosse stato per tanto tempo e poi l’avessero tolto.",
-     "note": "Le otto (proposta di araldica per il tavolo, da ratificare): torre e lupo = Grazianus; bilancia = Savinellus; chiave e chiodo = Clavax («La Legge è un Chiodo»); libro aperto = Tancredus; rosa con le spine = de Spina («Ogni Rosa ha le Sue»); ape = Mellitius (il miele); fiamma = Impalox; corona senza testa = Mazzarellus (il Trono Vacante). Lo scomparto vuoto degli Aurex è la linea imperiale di Silvanus: non commentarlo.",
+     "leggi": "Sono impronte di cera, non sigilli veri. Ognuna nel suo scomparto foderato di panno, con un cartellino scritto piccolo.\n\nUna torre e un lupo. Una galea coi remi armati. Un chiodo. Un leone che artiglia un serpente. Una rosa con le spine. Tre api, e sotto una data. Una fiamma chiusa in un anello. Una mazza d’arme.\n\nE altre, più in basso, più piccole: casate minori, conti, abati.\n\nAl posto dello scomparto degli Aurex, il panno è vuoto e scolorito, come se qualcosa ci fosse stato per tanto tempo e poi l’avessero tolto.",
+     "note": "Le otto, come nelle schede delle Casate (lì l’araldica è quasi tutta proposta): torre e lupo = Grazianus («La Torre e il Lupo»); galea coi remi armati = Melatino; chiodo = Chiodi («La legge è un chiodo, non un cuscino»); leone che artiglia un serpente = Savini; rosa con le spine = Malavolta («Ogni rosa ha le sue»: la rosa dei Malavolta, le spine dei de Spina); tre api con una data sotto = Thaulero, i nuovi ricchi («Il lavoro fa il nome»: l’unico stemma del Ducato con una data); fiamma chiusa in un anello di ferro = Impaloni; mazza d’arme = Mazzarelli. Lo scomparto vuoto degli Aurex è la linea imperiale di Silvanus: non commentarlo.",
      "dopo": "Sanno riconoscere gli otto sigilli. Lo scomparto vuoto è un seme per chi pensa a Silvanus: nessuno lo spiega.",
      "rilancio": "Lo scrivano chiude il cofanetto con due dita. Che cosa fate?",
      "daqui": [
       "dialogo",
       "procedura"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — Il cofanetto dei sigilli.jpg"
     },
     {
      "id": "dialogo",
@@ -1037,7 +1063,7 @@
      "titolo": "Parlare con Ser Eutichio",
      "parte": "evento",
      "innesco": "Qualcuno parla con lo scrivano.",
-     "note": "CHI SEI? — «Eutichio Quattrocchi, scrivano di terza classe della Camera dei Cavillatori, per grazia del Sommo Giudice Clavax.» Si sistema gli occhiali. «Quattrocchi è il cognome, non l’insulto. L’insulto me lo fanno lo stesso.»\n\nCOSA SERVE? — «Un lasciapassare d’armi. Un’istanza scritta, che vi scrivo io, per un grosso. Poi tre sigilli: la Casa della Spada, perché siete armati; la Casa della Legge, perché io devo dire che è legale; e una terza, a vostra scelta, purché abbia un motivo. Il motivo lo scrivo io, per un altro grosso.»\n\nQUALE TERZO SIGILLO? — Li conta sulle dita. «Mazzarellus è l’amministrazione: fanno tutto, lentamente. Impalox: se volete che sulla carta ci sia scritto “Crociata”, ci vuole la Fiamma, e la Fiamma vi chiederà chi vi ha benedetti. Tancredus: se avete un documento antico che vi dia ragione. Savinellus: se portate merci. Mellitius: se portate soldi. de Spina…» Guarda i fratelli Cerullius, se ci sono. «de Spina, se avete sangue vecchio. La Matriarca non riceve nessuno. Ma il sangue vecchio, a volte, lo riceve.»\n\nQUANTO CI VUOLE? — «Tre giorni, se va bene. Una settimana, se va come va di solito. E se il Consiglio siede a porte chiuse, come oggi, nessuno mette sigilli finché non si alza.»\n\nPOSSIAMO FARE PRIMA? — «Un nome che pesa accorcia l’attesa, non la procedura. Una carta giusta accorcia la procedura, non l’attesa.» Pausa. «Entrare disarmati non richiede niente. Le armi restano al campo sotto custodia, voi entrate come privati. Nessun sigillo.» Vi guarda sopra gli occhiali. «Ma voi non volete entrare come privati, vero?»\n\nLA PRATICA È GIÀ APERTA? — Tira fuori un foglio. «Colonna armata priva di mandato. Pratica milleottocentododici dell’anno millequattrocentotrentasette.» Lo guarda. «Aperta tre giorni fa. Prima che arrivaste.»\n\nCHI L’HA APERTA? — «La Camera, d’ufficio. Col Bando.» Se glielo chiedono bene (vedi «Il mucchio»), aggiunge che qualcuno l’ha già richiesta in copia.\n\nCHE COS’È LA CAMERA DEI CAVILLATORI? — «Li Caccia-Vizie. Tribunali, prigioni, contratti. Noi non decidiamo chi ha ragione: decidiamo se una cosa si può fare. Di solito no.»\n\nIL SOMMO GIUDICE — «Giannix Clavax. Un uomo d’ordine.» Una pausa troppo lunga. «Molto d’ordine.»\n\nIL SIGILLO DI STRATEGA / DOCUMENTI — Se gli mostrano un sigillo o una lettera, lo confronta col campionario, a lungo, con la lente. Se è vero, lo dice: «Vero.» Poi: «Vero non vuol dire valido. Valido lo dice la Camera.»\n\nSE LO MINACCIANO — Scrive. «Minacce a pubblico ufficiale durante l’istruttoria.» Alza gli occhi. «Adesso ne servono quattro, di sigilli. Continuiamo?»\n\nSE LO CORROMPONO — «Questo accorcia l’attesa della mia cena, non della vostra pratica.» Ma lo prende. E per un fiorino vero risponde a una domanda in più (vedi «Il mucchio»).\n\nSE GLI MENTONO — «Lo scrivo come l’avete detto. Se è falso, è falso vostro, non mio.» Controlla ogni carta; le bugie a voce non gli interessano.\n\nBATTUTE PRONTE — «Tre sigilli. Non due e mezzo, non tre domani: tre. Io non decido niente, messeri. Io conto.» · «A Teramum, pe’ movë ’na pëtra ce volënë ottë fìrmë, novë cavìlli e diecë bicchièri de vinë.» · «Vero non vuol dire valido.» · «La legge è un chiodo, non un cuscino. Lo dice il motto. Io ci dormo sopra da vent’anni.»",
+     "note": "CHI SEI? — «Eutichio Quattrocchi, scrivano di terza classe della Camera dei Cavillatori, per grazia del Sommo Giudice Chiodi.» Si sistema gli occhiali. «Quattrocchi è il cognome, non l’insulto. L’insulto me lo fanno lo stesso.»\n\nCOSA SERVE? — «Un lasciapassare d’armi. Un’istanza scritta, che vi scrivo io, per un grosso. Poi tre sigilli: la Casa della Spada, perché siete armati; la Casa della Legge, perché io devo dire che è legale; e una terza, a vostra scelta, purché abbia un motivo. Il motivo lo scrivo io, per un altro grosso.»\n\nQUALE TERZO SIGILLO? — Li conta sulle dita. «Mazzarelli è il Sigillo Ducale e l’amministrazione: fanno tutto, lentamente. Impaloni: se volete che sulla carta ci sia scritto “Crociata”, ci vuole la Fiamma, e la Fiamma vi chiederà chi vi ha benedetti. Savini: se avete un documento antico che vi dia ragione. Melatino: se portate merci. Thaulero: se portate soldi. Malavolta…» Guarda i fratelli Cerullius, se ci sono. «Malavolta, se avete sangue vecchio. La Matriarca è nata de Spina, e non riceve nessuno. Ma il sangue vecchio, a volte, lo riceve.»\n\nQUANTO CI VUOLE? — «Tre giorni, se va bene. Una settimana, se va come va di solito. E se il Consiglio siede a porte chiuse, come oggi, nessuno mette sigilli finché non si alza.»\n\nPOSSIAMO FARE PRIMA? — «Un nome che pesa accorcia l’attesa, non la procedura. Una carta giusta accorcia la procedura, non l’attesa.» Pausa. «Entrare disarmati non richiede niente. Le armi restano al campo sotto custodia, voi entrate come privati. Nessun sigillo.» Vi guarda sopra gli occhiali. «Ma voi non volete entrare come privati, vero?»\n\nLA PRATICA È GIÀ APERTA? — Tira fuori un foglio. «Colonna armata priva di mandato. Pratica milleottocentododici dell’anno millequattrocentotrentasette.» Lo guarda. «Aperta tre giorni fa. Prima che arrivaste.»\n\nCHI L’HA APERTA? — «La Camera, d’ufficio. Col Bando.» Se glielo chiedono bene (vedi «Il mucchio»), aggiunge che qualcuno l’ha già richiesta in copia.\n\nCHE COS’È LA CAMERA DEI CAVILLATORI? — «Li Caccia-Vizie. Tribunali, prigioni, contratti. Noi non decidiamo chi ha ragione: decidiamo se una cosa si può fare. Di solito no.»\n\nIL SOMMO GIUDICE — «Severino Chiodi. Un uomo d’ordine.» Una pausa troppo lunga. «Molto d’ordine.»\n\nIL SIGILLO DI STRATEGA / DOCUMENTI — Se gli mostrano un sigillo o una lettera, lo confronta col campionario, a lungo, con la lente. Se è vero, lo dice: «Vero.» Poi: «Vero non vuol dire valido. Valido lo dice la Camera.»\n\nSE LO MINACCIANO — Scrive. «Minacce a pubblico ufficiale durante l’istruttoria.» Alza gli occhi. «Adesso ne servono quattro, di sigilli. Continuiamo?»\n\nSE LO CORROMPONO — «Questo accorcia l’attesa della mia cena, non della vostra pratica.» Ma lo prende. E per un fiorino vero risponde a una domanda in più (vedi «Il mucchio»).\n\nSE GLI MENTONO — «Lo scrivo come l’avete detto. Se è falso, è falso vostro, non mio.» Controlla ogni carta; le bugie a voce non gli interessano.\n\nBATTUTE PRONTE — «Tre sigilli. Non due e mezzo, non tre domani: tre. Io non decido niente, messeri. Io conto.» · «A Teramum, pe’ movë ’na pëtra ce volënë ottë fìrmë, novë cavìlli e diecë bicchièri de vinë.» · «Vero non vuol dire valido.» · «La legge è un chiodo, non un cuscino. Lo dice il motto. Io ci dormo sopra da vent’anni.»",
      "dopo": "Ser Eutichio è la porta vera della città: quella di carta. Sa esattamente cosa serve e non ha alcun potere di darlo.",
      "rilancio": "Ser Eutichio intinge la penna. Che cosa fate?",
      "daqui": [
@@ -1051,7 +1077,7 @@
      "titolo": "La procedura",
      "parte": "evento",
      "innesco": "Fanno domande precise sulla procedura, o chiedono di compilare l’istanza.",
-     "note": "Compilare l’istanza costa due grossi (uno per scriverla, uno per il motivo). Ser Eutichio la scrive lì, in bella grafia, e la consegna: è il bottino di questo modulo. Da lì la corsa ai sigilli è un’avventura cittadina (scena «Teramum — la città»: Rocca dei Grazianus, San Giorgio, Tigli).",
+     "note": "Compilare l’istanza costa due grossi (uno per scriverla, uno per il motivo). Ser Eutichio la scrive lì, in bella grafia, e la consegna: è il bottino di questo modulo. Da lì la corsa ai sigilli è un’avventura cittadina (scena «Teramum — la città»: Rocca dei Grazianus, Lucente Giorgio, Tigli).",
      "prove": [
       {
        "id": "procedura",
@@ -1070,7 +1096,7 @@
          "fascia": "baseSuccess",
          "min": 13,
          "max": 17,
-         "leggi": "Dalle domande giuste capite la strada più corta: Grazianus e Clavax sono obbligatori, il terzo si può scegliere, e ogni Casata ha un ufficio diverso, in un palazzo diverso, con un orario diverso. L’istanza si porta a mano."
+         "leggi": "Dalle domande giuste capite la strada più corta: Grazianus e Chiodi sono obbligatori, il terzo si può scegliere, e ogni Casata ha un ufficio diverso, in un palazzo diverso, con un orario diverso. L’istanza si porta a mano."
         },
         {
          "fascia": "fullSuccess",
@@ -1095,7 +1121,7 @@
        "peso": "—",
        "valore": "2 grossi",
        "stats": "",
-       "desc": "Un foglio di carta buona in bella grafia, con tre spazi vuoti in fondo per tre sigilli di tre Casate Reggenti. Il primo spazio porta scritto, piccolo: «Grazianus». Il secondo: «Clavax». Il terzo è vuoto.",
+       "desc": "Un foglio di carta buona in bella grafia, con tre spazi vuoti in fondo per tre sigilli di tre Casate Reggenti. Il primo spazio porta scritto, piccolo: «Grazianus». Il secondo: «Chiodi». Il terzo è vuoto.",
        "a": "crociata"
       }
      ]
@@ -1150,12 +1176,12 @@
    "title": "Il tratturo e il Mastro-Pastore",
    "image": "PDI — Teramum — Il tratturo e il Mastro-Pastore.jpg",
    "legacyPosition": {
-    "x": 1200,
+    "x": 1150,
     "y": 900
    },
    "text": "Il prato lungo il fiume non è un prato. È una strada d’erba, larga quanto una piazza, che segue il Tordinum e sparisce verso sud, fra le colline. Ai bordi, ogni cento passi, un cippo di pietra bianca con un segno inciso: un bastone e una stella.\n\nLe pecore sono tante. Brucano senza alzare la testa.\n\nIn fondo, dove il fiume fa un’ansa, c’è uno stazzo di pietre a secco, una capanna col tetto di paglia e un fuoco. Seduto davanti al fuoco, un vecchio con un bastone lungo e la barba bianca.\n\nE i cani. Due. Bianchi come la neve vecchia, grandi come vitelli.\n\nVi hanno visti prima del vecchio. Si alzano insieme, senza abbaiare, e vi vengono incontro.",
    "breve": "Il tratturo lungo il Tordinum, terra sacra dell’Ordine dei Tratturi: se il Mastro-Pastore Venanzio Collepietra dà il permesso, la Guardia non può spostare la Crociata. Venanzio non chiede sigilli: chiede rispetto. Qui la colonna passa la notte; la ronda conta i fuochi due volte.",
-   "gm": "I Tratturi sono vie sacre dell’Ordine dei Tratturi («Li Re de la Pécora», centro a Crognaleto, guidati da un consiglio di Mastri-Pastori anziani): nessun signore osa bloccarli. La Guardia non può sgomberare chi ci sta col permesso dei pastori. Questo tratto è la stazione del Tordinum, fuori da Teramum; Venanzio è il Mastro-Pastore che la tiene (proposta).\nI due Mastini d’Aprutium (Ciaùla e Tempèsta) sono creature spirituali, un dono del Gigante (segreto dell’Ordine: nessun Mastro-Pastore ne parla con un forestiero). Adamus, con la sua magia druidica, può guadagnarsi la fiducia necessaria (Manuale §7.1.6).\nCosa hanno fatto per i tratturi prima: a Mushanè l’Abate aveva chiuso i tratturi con catene (Atto XII, Narduccio lu pecuràre). Se la Crociata ha aiutato Narduccio o riaperto il passo, Venanzio lo sa già: vantaggio al permesso. Se hanno ignorato la cosa, lo sa lo stesso.\nScheda PNG: «Venanzio Collepietra». Alternative se Venanzio rifiuta: il campo dei pellegrini di una chiesa fuori le mura (serve un prete amico), o un casale dei Cerullius nella campagna (serve che Alessandros lo chieda a Ottorino).",
+   "gm": "I Tratturi sono vie sacre dell’Ordine dei Tratturi («Li Re de la Pécora», centro a Crognaleto, guidati da un consiglio di Mastri-Pastori anziani): nessun signore osa bloccarli. La Guardia non può sgomberare chi ci sta col permesso dei pastori. Questo tratto è la stazione del Tordinum, fuori da Teramum; Venanzio è il Mastro-Pastore che la tiene (proposta).\nI due Mastini d’Aprutium (Ciaùla e Tempèsta) sono creature spirituali, un dono del Gigante (segreto dell’Ordine: nessun Mastro-Pastore ne parla con un forestiero). Adamus, con la sua magia druidica, può guadagnarsi la fiducia necessaria (Manuale §7.1.6).\nCosa hanno fatto per i tratturi prima: a Mushanë l’Abate aveva chiuso i tratturi con catene (Atto XII, Narduccio lu pecuràre). Se la Crociata ha aiutato Narduccio o riaperto il passo, Venanzio lo sa già: vantaggio al permesso. Se hanno ignorato la cosa, lo sa lo stesso.\nScheda PNG: «Venanzio Collepietra». Alternative se Venanzio rifiuta: il campo dei viandanti di un solario fuori le mura (serve un sacerdote amico), o un casale dei Cerullius nella campagna (serve che Alessandros lo chieda a Ottorino).",
    "nota": {
     "cd": 0
    },
@@ -1174,7 +1200,8 @@
      "daqui": [
       "dialogo",
       "permesso"
-     ]
+     ],
+     "immagine": "PDI — Porta della Madre — I Mastini bianchi.jpg"
     },
     {
      "id": "dialogo",
@@ -1182,7 +1209,7 @@
      "titolo": "Parlare con Mastro Venanzio",
      "parte": "evento",
      "innesco": "Qualcuno va al fuoco e parla col Mastro-Pastore.",
-     "note": "CHI SEI? — «Venanzio. Collepietra, di casato, ma i casati li lasciamo a voi.» Batte il bastone per terra. «Mastro-Pastore di questa stazione. Da quarant’anni. Prima di me mio padre.»\n\nPOSSIAMO ACCAMPARCI QUI? — «L’erba è di Valerus, la strada è delle pecore. Voi potete stare in mezzo, se non pestate nessuno dei due.» Vi guarda. «Ma prima parliamo. La strada non si presta a chi non si conosce.»\n\nLA GUARDIA CI PUÒ CACCIARE? — Ride, e la risata diventa tosse. «La Guardia qui non mette piede senza togliersi il cappello. Il tratturo c’era prima delle mura. Prima dell’Impero. Prima dei Duchi.» Pausa. «Ci vengono a contare i fuochi, questo sì. Contare non costa niente.»\n\nCOSA VUOI IN CAMBIO? — «Tre cose. Il fuoco solo nei cerchi di pietra che vi faccio vedere io. Le vostre bestie pascolano a valle, dopo l’ansa, non a monte, dove pascolano le mie. E i salici non si tagliano: sono del fiume.» Pausa. «E una quarta cosa, che non è un prezzo. Se domani entrate in città e vi fanno parlare coi signori, dite al Consiglio che la gabella dell’erba è un furto.»\n\nLA GABELLA DELL’ERBA — «Da quest’anno chi porta le greggi a meno di una lega dalle mura paga un tanto a capo. L’ha messa il Consiglio. L’ha voluta la Lega. Le pecore pagano per mangiare l’erba che era loro prima che nascesse il primo Savinellus.» Sputa nel fuoco. «Quando le pecore non scendono più, i signori mangiano sassi.»\n\nMUSHANË / I TRATTURI CHIUSI — Se l’hanno aiutato: «So cosa avete fatto a Mushanë. Narduccio l’ha detto a tutta la montagna.» Vi dà la mano. Se non l’hanno fatto: «So anche di Mushanë. Le catene sul tratturo. Voi siete passati.» Non dice altro, e non serve.\n\nI CANI — «Ciaùla e Tempèsta.» Basta. Se insistono su cosa siano: «Cani. Bianchi. Buoni con chi è buono.» Se è Adamus a chiedere, e gli ha mostrato di sentire la terra, guarda a lungo il fuoco. «Non sono miei. Sono della montagna. Noi li teniamo, finché la montagna ce li lascia.» Nient’altro, mai.\n\nLA CITTÀ — «Là dentro non ci entro da sei anni. Troppa pietra, troppa gente che parla e non ascolta.» Guarda le mura. «Ma da qui vedo. La Guardia ha raddoppiato le ronde. Di notte la terra trema più di prima. Le pecore non vogliono pascolare vicino alla porta dei morti: si fermano, e tornano indietro.»\n\nIL GIGANTE — Guarda la montagna. «Dorme.» Pausa. «Dorme male.»\n\nLA PORTA DEL SOLE, I SIGILLI — «Carte.» Scuote la testa. «Io ho una carta sola: questa.» Batte il bastone. «E vale da qui a Crognaleto, e da Crognaleto fino al mare.»\n\nSE LO MINACCIANO — Non si alza. I due cani si alzano. «Andate via», dice piano. «Adesso.» Da quel momento il tratturo è chiuso per la Crociata, e tutti i Mastri-Pastori del Ducato lo sapranno entro la luna nuova.\n\nSE LO PAGANO — Guarda le monete senza toccarle. «I soldi li mangiate voi.» Accetta invece in natura: sale, un coltello buono, una forma di pecorino di un’altra montagna, una bottiglia di Montepulciano. «Questo sì. Questo è rispetto.»\n\nSE GLI MENTONO — Non lo sa. Lo sanno i cani: uno dei due si alza e va a sedersi dietro al bugiardo. Venanzio lo nota. Non dice niente, ma il permesso si fa più corto (una notte sola).\n\nBATTUTE PRONTE — «L’erba è di Valerus, la strada è delle pecore. Voi potete stare in mezzo, se non pestate nessuno dei due.» · «I nobili vanno e vengono. Le pecore restano.» · «Se si siedono, venite avanti. Se si alzano, andate via.» · «Contare non costa niente. Per questo lo fanno tutti.»",
+     "note": "CHI SEI? — «Venanzio. Collepietra, di casato, ma i casati li lasciamo a voi.» Batte il bastone per terra. «Mastro-Pastore di questa stazione. Da quarant’anni. Prima di me mio padre.»\n\nPOSSIAMO ACCAMPARCI QUI? — «L’erba è di Valerus, la strada è delle pecore. Voi potete stare in mezzo, se non pestate nessuno dei due.» Vi guarda. «Ma prima parliamo. La strada non si presta a chi non si conosce.»\n\nLA GUARDIA CI PUÒ CACCIARE? — Ride, e la risata diventa tosse. «La Guardia qui non mette piede senza togliersi il cappello. Il tratturo c’era prima delle mura. Prima dell’Impero. Prima dei Duchi.» Pausa. «Ci vengono a contare i fuochi, questo sì. Contare non costa niente.»\n\nCOSA VUOI IN CAMBIO? — «Tre cose. Il fuoco solo nei cerchi di pietra che vi faccio vedere io. Le vostre bestie pascolano a valle, dopo l’ansa, non a monte, dove pascolano le mie. E i salici non si tagliano: sono del fiume.» Pausa. «E una quarta cosa, che non è un prezzo. Se domani entrate in città e vi fanno parlare coi signori, dite al Consiglio che la gabella dell’erba è un furto.»\n\nLA GABELLA DELL’ERBA — «Da quest’anno chi porta le greggi a meno di una lega dalle mura paga un tanto a capo. L’ha messa il Consiglio. L’ha voluta la Lega. Le pecore pagano per mangiare l’erba che era loro prima che nascesse il primo Melatino.» Sputa nel fuoco. «Quando le pecore non scendono più, i signori mangiano sassi.»\n\nMUSHANË / I TRATTURI CHIUSI — Se l’hanno aiutato: «So cosa avete fatto a Mushanë. Narduccio l’ha detto a tutta la montagna.» Vi dà la mano. Se non l’hanno fatto: «So anche di Mushanë. Le catene sul tratturo. Voi siete passati.» Non dice altro, e non serve.\n\nI CANI — «Ciaùla e Tempèsta.» Basta. Se insistono su cosa siano: «Cani. Bianchi. Buoni con chi è buono.» Se è Adamus a chiedere, e gli ha mostrato di sentire la terra, guarda a lungo il fuoco. «Non sono miei. Sono della montagna. Noi li teniamo, finché la montagna ce li lascia.» Nient’altro, mai.\n\nLA CITTÀ — «Là dentro non ci entro da sei anni. Troppa pietra, troppa gente che parla e non ascolta.» Guarda le mura. «Ma da qui vedo. La Guardia ha raddoppiato le ronde. Di notte la terra trema più di prima. Le pecore non vogliono pascolare vicino alla porta dei morti: si fermano, e tornano indietro.»\n\nIL GIGANTE — Guarda la montagna. «Dorme.» Pausa. «Dorme male.»\n\nLA PORTA, I SIGILLI — «Carte.» Scuote la testa. «Io ho una carta sola: questa.» Batte il bastone. «E vale da qui a Crognaleto, e da Crognaleto fino al mare.»\n\nSE LO MINACCIANO — Non si alza. I due cani si alzano. «Andate via», dice piano. «Adesso.» Da quel momento il tratturo è chiuso per la Crociata, e tutti i Mastri-Pastori del Ducato lo sapranno entro la luna nuova.\n\nSE LO PAGANO — Guarda le monete senza toccarle. «I soldi li mangiate voi.» Accetta invece in natura: sale, un coltello buono, una forma di pecorino di un’altra montagna, una bottiglia di Montepulciano. «Questo sì. Questo è rispetto.»\n\nSE GLI MENTONO — Non lo sa. Lo sanno i cani: uno dei due si alza e va a sedersi dietro al bugiardo. Venanzio lo nota. Non dice niente, ma il permesso si fa più corto (una notte sola).\n\nBATTUTE PRONTE — «L’erba è di Valerus, la strada è delle pecore. Voi potete stare in mezzo, se non pestate nessuno dei due.» · «I nobili vanno e vengono. Le pecore restano.» · «Se si siedono, venite avanti. Se si alzano, andate via.» · «Contare non costa niente. Per questo lo fanno tutti.»",
      "dopo": "Venanzio è il primo PNG di Teramum che non vuole sigilli. Vuole rispetto, e un favore politico da portare in città (la gabella dell’erba).",
      "rilancio": "Venanzio attizza il fuoco. Che cosa fate?",
      "daqui": [
@@ -1195,7 +1222,7 @@
      "titolo": "Il permesso del tratturo",
      "parte": "evento",
      "innesco": "Chiedono di accamparsi sul tratturo.",
-     "note": "Vantaggio: chi mostra rispetto per le bestie e la terra (Adamus quasi sempre), chi porta un dono in natura, chi ha denunciato la stadera limata del dazio, chi ha aiutato i tratturi a Mushanè. Svantaggio: chi ha toccato i cani, chi offre denaro, chi parla da signore.",
+     "note": "Vantaggio: chi mostra rispetto per le bestie e la terra (Adamus quasi sempre), chi porta un dono in natura, chi ha denunciato la stadera limata del dazio, chi ha aiutato i tratturi a Mushanë. Svantaggio: chi ha toccato i cani, chi offre denaro, chi parla da signore.",
      "prove": [
       {
        "id": "tratturo",
@@ -1251,12 +1278,387 @@
      "titolo": "La prima notte al tratturo",
      "parte": "evento",
      "innesco": "La colonna si accampa e viene buio.",
-     "leggi": "La campana della sera suona dalla città, lunga, grave. Poi un’altra, più piccola. Poi tutte.\n\nLe porte si chiudono: si sente il rumore dei battenti, lontano, uno dopo l’altro.\n\nSulle mura si accendono i fuochi delle sentinelle. Sul tratturo si accendono i vostri. Le pecore si stringono. I cani si mettono uno a monte e uno a valle, e non dormono.\n\nA mezzanotte, dalla porticina della Porta de lu Solë esce una lanterna. Poi quattro. Attraversano il ponte, arrivano al bordo del prato e si fermano.\n\nContano i vostri fuochi.\n\nTornano indietro.\n\nDue ore dopo, tornano.",
+     "leggi": "La campana della sera suona dalla città, lunga, grave. Poi un’altra, più piccola. Poi tutte.\n\nLe porte si chiudono: si sente il rumore dei battenti, lontano, uno dopo l’altro.\n\nSulle mura si accendono i fuochi delle sentinelle. Sul tratturo si accendono i vostri. Le pecore si stringono. I cani si mettono uno a monte e uno a valle, e non dormono.\n\nA mezzanotte, dalla porticina della Porta della Madre esce una lanterna. Poi quattro. Attraversano il ponte, arrivano al bordo del prato e si fermano.\n\nContano i vostri fuochi.\n\nTornano indietro.\n\nDue ore dopo, tornano.",
      "note": "La ronda: un sergente e quattro guardie (Bestiario «Sergente della Guardia Ducale», «Guardia Ducale»). Non entrano nel tratturo. Contano i fuochi e tornano. Due volte (tre se il capitano è stato offeso).\nNella notte, a scelta del master: (1) un biglietto per Maximus portato da un ragazzo di Castronia, da Martinella Lezzia (proposta: arriva la prima sera, non alla porta; testo da decidere); (2) dal buio del ponte, un profumo di lillà: qualcuno ha contato anche i cavalli; (3) la terra trema, piano, per il tempo di un respiro. Le pecore si alzano tutte insieme. I cani guardano la montagna.",
      "dopo": "La prima notte a Teramum: fuori dalle mura, ma sotto gli occhi di tutti. Domattina si riprova alla porta (con la tessera, se l’hanno ottenuta) e comincia la corsa ai sigilli.",
-     "rilancio": "Le lanterne della ronda tornano verso il ponte. Che cosa fate?"
+     "rilancio": "Le lanterne della ronda tornano verso il ponte. Che cosa fate?",
+     "immagine": "PDI — Porta della Madre — La ronda conta i fuochi.jpg"
     }
    ]
+  }
+ ],
+ "pedine": [
+  {
+   "id": "tp_iaco",
+   "nome": "Sergente Iaco «lu Cuntatùre», al tavolo",
+   "short": "I",
+   "best": "te_sergente_ducale",
+   "x": 320,
+   "y": 390,
+   "gruppo": "porta",
+   "tac": "PF 22 (scheda PNG). Non si alza dal tavolo; se lo minacciano scrive.",
+   "img": "TOKEN — iaco-pennacchia.png",
+   "ritratto": "Ritratto pedina — iaco-pennacchia.jpg"
+  },
+  {
+   "id": "tp_g_tav1",
+   "nome": "Guardia con la picca, a sinistra del tavolo",
+   "short": "G1",
+   "best": "te_guardia_ducale",
+   "x": 285,
+   "y": 395,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale.png",
+   "ritratto": "Ritratto pedina — guardia-ducale.jpg"
+  },
+  {
+   "id": "tp_g_tav2",
+   "nome": "Guardia con la picca, a destra del tavolo",
+   "short": "G2",
+   "best": "te_guardia_ducale",
+   "x": 360,
+   "y": 395,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale 2.png",
+   "ritratto": "Ritratto pedina — guardia-ducale 2.jpg"
+  },
+  {
+   "id": "tp_corriere",
+   "nome": "Il ragazzo con le gambe lunghe (corriere)",
+   "short": "R",
+   "kind": "alleato",
+   "x": 250,
+   "y": 425,
+   "gruppo": "porta",
+   "img": "TOKEN — ragazzo-gambe-lunghe.png",
+   "ritratto": "Ritratto pedina — ragazzo-gambe-lunghe.jpg"
+  },
+  {
+   "id": "tp_guarnerio",
+   "nome": "Capitano Guarnerio da Mëndurjë (esce dalla porticina dopo un’ora)",
+   "short": "C",
+   "best": "te_sergente_ducale",
+   "x": 300,
+   "y": 320,
+   "gruppo": "porta",
+   "tac": "Non mette mano alla spada: alza due dita e sei balestre si alzano dal merlo.",
+   "img": "TOKEN — guarnerio-da-mendurje.png",
+   "ritratto": "Ritratto pedina — guarnerio-da-mendurje.jpg"
+  },
+  {
+   "id": "tp_m1",
+   "nome": "Guardia sulle mura, con la picca",
+   "short": "M1",
+   "best": "te_guardia_ducale",
+   "x": 45,
+   "y": 150,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale 3.png",
+   "ritratto": "Ritratto pedina — guardia-ducale 3.jpg"
+  },
+  {
+   "id": "tp_m2",
+   "nome": "Guardia sulle mura, con la picca",
+   "short": "M2",
+   "best": "te_guardia_ducale",
+   "x": 45,
+   "y": 330,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale 4.png",
+   "ritratto": "Ritratto pedina — guardia-ducale 4.jpg"
+  },
+  {
+   "id": "tp_m3",
+   "nome": "Guardia sulle mura, con la picca",
+   "short": "M3",
+   "best": "te_guardia_ducale",
+   "x": 45,
+   "y": 520,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale.png",
+   "ritratto": "Ritratto pedina — guardia-ducale.jpg"
+  },
+  {
+   "id": "tp_m4",
+   "nome": "Guardia sulle mura, con la picca",
+   "short": "M4",
+   "best": "te_guardia_ducale",
+   "x": 45,
+   "y": 700,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale 2.png",
+   "ritratto": "Ritratto pedina — guardia-ducale 2.jpg"
+  },
+  {
+   "id": "tp_m5",
+   "nome": "Guardia sulle mura, con la picca",
+   "short": "M5",
+   "best": "te_guardia_ducale",
+   "x": 150,
+   "y": 150,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale 3.png",
+   "ritratto": "Ritratto pedina — guardia-ducale 3.jpg"
+  },
+  {
+   "id": "tp_m6",
+   "nome": "Guardia sulle mura, con la picca",
+   "short": "M6",
+   "best": "te_guardia_ducale",
+   "x": 440,
+   "y": 165,
+   "gruppo": "porta",
+   "img": "TOKEN — guardia-ducale 4.png",
+   "ritratto": "Ritratto pedina — guardia-ducale 4.jpg"
+  },
+  {
+   "id": "tp_b1",
+   "nome": "Guardia sulle mura, con la balestra",
+   "short": "B1",
+   "best": "te_guardia_ducale",
+   "x": 180,
+   "y": 185,
+   "gruppo": "porta",
+   "tac": "Balestra carica appoggiata al merlo, puntata a terra (usa la balestra leggera: 1d8 perforanti).",
+   "img": "TOKEN — balestriere.png",
+   "ritratto": "Ritratto pedina — balestriere.jpg"
+  },
+  {
+   "id": "tp_b2",
+   "nome": "Guardia sulle mura, con la balestra",
+   "short": "B2",
+   "best": "te_guardia_ducale",
+   "x": 245,
+   "y": 170,
+   "gruppo": "porta",
+   "tac": "Balestra carica appoggiata al merlo, puntata a terra (usa la balestra leggera: 1d8 perforanti).",
+   "img": "TOKEN — balestriere 2.png",
+   "ritratto": "Ritratto pedina — balestriere 2.jpg"
+  },
+  {
+   "id": "tp_b3",
+   "nome": "Guardia sulle mura, con la balestra",
+   "short": "B3",
+   "best": "te_guardia_ducale",
+   "x": 335,
+   "y": 170,
+   "gruppo": "porta",
+   "tac": "Balestra carica appoggiata al merlo, puntata a terra (usa la balestra leggera: 1d8 perforanti).",
+   "img": "TOKEN — balestriere 3.png",
+   "ritratto": "Ritratto pedina — balestriere 3.jpg"
+  },
+  {
+   "id": "tp_b4",
+   "nome": "Guardia sulle mura, con la balestra",
+   "short": "B4",
+   "best": "te_guardia_ducale",
+   "x": 405,
+   "y": 185,
+   "gruppo": "porta",
+   "tac": "Balestra carica appoggiata al merlo, puntata a terra (usa la balestra leggera: 1d8 perforanti).",
+   "img": "TOKEN — balestriere 4.png",
+   "ritratto": "Ritratto pedina — balestriere 4.jpg"
+  },
+  {
+   "id": "tp_b5",
+   "nome": "Guardia sulle mura, con la balestra",
+   "short": "B5",
+   "best": "te_guardia_ducale",
+   "x": 165,
+   "y": 300,
+   "gruppo": "porta",
+   "tac": "Balestra carica appoggiata al merlo, puntata a terra (usa la balestra leggera: 1d8 perforanti).",
+   "img": "TOKEN — balestriere.png",
+   "ritratto": "Ritratto pedina — balestriere.jpg"
+  },
+  {
+   "id": "tp_b6",
+   "nome": "Guardia sulle mura, con la balestra",
+   "short": "B6",
+   "best": "te_guardia_ducale",
+   "x": 420,
+   "y": 300,
+   "gruppo": "porta",
+   "tac": "Balestra carica appoggiata al merlo, puntata a terra (usa la balestra leggera: 1d8 perforanti).",
+   "img": "TOKEN — balestriere 2.png",
+   "ritratto": "Ritratto pedina — balestriere 2.jpg"
+  },
+  {
+   "id": "tp_osservatore",
+   "nome": "L’uomo senza elmo sulla torre di sinistra",
+   "short": "O",
+   "kind": "alleato",
+   "x": 140,
+   "y": 160,
+   "gruppo": "porta",
+   "tac": "Osservatore di Casa Chiodi, mandato da Ser Eutichio: guarda e scrive. Non è della Guardia.",
+   "img": "TOKEN — guardia-ducale.png",
+   "ritratto": "Ritratto pedina — guardia-ducale.jpg"
+  },
+  {
+   "id": "tp_eutichio",
+   "nome": "Ser Eutichio Quattrocchi, sotto la loggetta",
+   "short": "E",
+   "kind": "alleato",
+   "x": 175,
+   "y": 430,
+   "gruppo": "porta",
+   "img": "TOKEN — eutichio-quattrocchi.png",
+   "ritratto": "Ritratto pedina — eutichio-quattrocchi.jpg"
+  },
+  {
+   "id": "tp_rosalba",
+   "nome": "Donna Rosalba Pesafino, al banco del dazio",
+   "short": "D",
+   "kind": "alleato",
+   "x": 465,
+   "y": 520,
+   "gruppo": "porta",
+   "img": "TOKEN — rosalba-pesafino.png",
+   "ritratto": "Ritratto pedina — rosalba-pesafino.jpg"
+  },
+  {
+   "id": "tp_garzone1",
+   "nome": "Garzone del dazio",
+   "short": "g1",
+   "best": "te_bravo_teramano",
+   "x": 465,
+   "y": 600,
+   "gruppo": "porta",
+   "img": "TOKEN — garzone.png",
+   "ritratto": "Ritratto pedina — garzone.jpg"
+  },
+  {
+   "id": "tp_garzone2",
+   "nome": "Garzone del dazio",
+   "short": "g2",
+   "best": "te_bravo_teramano",
+   "x": 425,
+   "y": 610,
+   "gruppo": "porta",
+   "img": "TOKEN — garzone 2.png",
+   "ritratto": "Ritratto pedina — garzone 2.jpg"
+  },
+  {
+   "id": "tp_menca",
+   "nome": "Menca la contadina, col mulo e il carretto incastrato",
+   "short": "Me",
+   "kind": "alleato",
+   "x": 760,
+   "y": 440,
+   "gruppo": "porta",
+   "img": "TOKEN — menca.png",
+   "ritratto": "Ritratto pedina — menca.jpg"
+  },
+  {
+   "id": "tp_mercante",
+   "nome": "L’uomo col bel mantello (dietro la contadina)",
+   "short": "L",
+   "kind": "alleato",
+   "x": 800,
+   "y": 440,
+   "gruppo": "porta",
+   "img": "TOKEN — uomo-col-mantello.png",
+   "ritratto": "Ritratto pedina — uomo-col-mantello.jpg"
+  },
+  {
+   "id": "tp_ragazzino",
+   "nome": "Il ragazzino scalzo",
+   "short": "r",
+   "kind": "alleato",
+   "x": 725,
+   "y": 470,
+   "gruppo": "porta",
+   "img": "TOKEN — ragazzino-del-ponte.png",
+   "ritratto": "Ritratto pedina — ragazzino-del-ponte.jpg"
+  },
+  {
+   "id": "tp_frate",
+   "nome": "Il votato sull’asino, in coda",
+   "short": "F",
+   "kind": "alleato",
+   "x": 845,
+   "y": 430,
+   "gruppo": "porta"
+  },
+  {
+   "id": "tp_galline",
+   "nome": "La donna con le due galline",
+   "short": "Dg",
+   "kind": "alleato",
+   "x": 880,
+   "y": 470,
+   "gruppo": "porta",
+   "img": "TOKEN — donna-galline.png",
+   "ritratto": "Ritratto pedina — donna-galline.jpg"
+  },
+  {
+   "id": "tp_berardino",
+   "nome": "Zi’ Berardino «lu Sgranafave», sul cippo",
+   "short": "Z",
+   "kind": "alleato",
+   "x": 1050,
+   "y": 245,
+   "gruppo": "porta",
+   "img": "TOKEN — zi-berardino.png",
+   "ritratto": "Ritratto pedina — zi-berardino.jpg"
+  },
+  {
+   "id": "tp_venanzio",
+   "nome": "Mastro Venanzio Collepietra, al fuoco dello stazzo",
+   "short": "V",
+   "kind": "alleato",
+   "x": 1100,
+   "y": 955,
+   "gruppo": "porta",
+   "img": "TOKEN — venanzio-collepietra.png",
+   "ritratto": "Ritratto pedina — venanzio-collepietra.jpg"
+  },
+  {
+   "id": "tp_ciaula",
+   "nome": "Ciaùla, Mastino d’Aprutium",
+   "short": "M",
+   "kind": "alleato",
+   "x": 1000,
+   "y": 880,
+   "gruppo": "porta",
+   "tac": "Non combatte se non attaccato. Se si siede: venite avanti; se si alza: andate via.",
+   "img": "TOKEN — Ciaùla.png",
+   "ritratto": "Ritratto pedina — Ciaùla.jpg"
+  },
+  {
+   "id": "tp_tempesta",
+   "nome": "Tempèsta, Mastino d’Aprutium",
+   "short": "T",
+   "kind": "alleato",
+   "x": 1060,
+   "y": 855,
+   "gruppo": "porta",
+   "tac": "Non combatte se non attaccato.",
+   "img": "TOKEN — Tempèsta.png",
+   "ritratto": "Ritratto pedina — Tempèsta.jpg"
+  },
+  {
+   "id": "tp_ottorino",
+   "nome": "Ottorino, il maestro di casa dei Cerullius (esce durante l’attesa)",
+   "short": "Ot",
+   "kind": "alleato",
+   "x": 240,
+   "y": 440,
+   "gruppo": "porta",
+   "img": "TOKEN — ottorino.png",
+   "ritratto": "Ritratto pedina — ottorino.jpg"
+  },
+  {
+   "id": "tp_messo",
+   "nome": "Vitale lu Messo, col mulo (solo se non l’hanno incontrato a Colleatterrato)",
+   "short": "Ms",
+   "kind": "alleato",
+   "x": 905,
+   "y": 445,
+   "gruppo": "porta",
+   "img": "TOKEN — Vitale lu Messo.png",
+   "ritratto": "Ritratto pedina — Vitale lu Messo.jpg"
   }
  ]
 }
