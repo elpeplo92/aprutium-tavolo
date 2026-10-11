@@ -799,11 +799,6 @@
       "txt": "La Dama sedeva nel Concilio. Oggi il seggio è vuoto, e in piazza la chiamano la Serpe."
      },
      {
-      "fz": "castemar",
-      "rel": "nemici",
-      "txt": "A Julia Nova si dice che le due casate si odiassero, e che ora Aulo Dernas dorma meglio."
-     },
-     {
       "fz": "fonteviva",
       "rel": "nemici",
       "txt": "Il Duca Giosia di Atrë odia Iuvenza, e non lo nasconde."
@@ -872,11 +867,6 @@
       "fz": "fonteviva",
       "rel": "nemici",
       "txt": "Giosia la odia. Ma Dama Violante Rosaspina, che tiene Nutaròschë per lui, è una sua spia."
-     },
-     {
-      "fz": "castemar",
-      "rel": "nemici",
-      "txt": "Gli «incidenti» che hanno decimato i Castemar sono opera sua. Aulo lo sospetta da anni e non lo ha mai potuto provare."
      },
      {
       "fz": "bardalino",
@@ -3503,11 +3493,6 @@
       "txt": "Le macchine di Torvus hanno spezzato l’assedio insieme alla Guardia di Fenix. Senza le Fucine la città non si rialza."
      },
      {
-      "fz": "castemar",
-      "rel": "amici",
-      "txt": "La casata che ricostruì la città ha il suo seggio da sempre, e Aulo Dernas ci tiene."
-     },
-     {
       "fz": "naviganti",
       "rel": "amici",
       "txt": "Sotto Domina la Gilda aveva venduto la città. Sotto Adamus ha salvato il magazzino, riaperto una taverna e fatto di Altavia un lazzaretto. Il Concilio non l’ha dimenticato, né l’una né l’altra cosa."
@@ -4263,7 +4248,7 @@
    "Lucente protettore": "Il Lucente Biagio, patrono di Canzañë",
    "Membri": "⟪pg:alessandros|Alessandros Cerullius⟫, ⟪pg:vicarus|Vicarus Cerullius⟫, Iohannes «Nanni» Cerullius",
    "Popolo": "Umani pretuziani",
-   "Alleanze": "[[Gli Spinozzi|faz-spinozzi]] (vassalli), [[Casa Grazianus|faz-casa-grazianus]], [[Casa Castemar|faz-casa-castemar]]"
+   "Alleanze": "[[Gli Spinozzi|faz-spinozzi]] (vassalli), [[Casa Grazianus|faz-casa-grazianus]]"
   },
   "pub": [
    {
@@ -4350,11 +4335,6 @@
       "fz": "grazianus",
       "rel": "amici",
       "txt": "Vicini alla casata per via di Maximus."
-     },
-     {
-      "fz": "castemar",
-      "rel": "amici",
-      "txt": "A Julia Nova [[Aulo Dernas|jn-aulo-dernas]] riceve volentieri un Cerullius."
      },
      {
       "fz": "spinozzi",
@@ -6300,11 +6280,11 @@
    "Sedi": "Le ville sulla strada lunga di Alba Argentea, in [[Alba e Tërtëratë|borgo-alba-tortoscuro]]; la Casa del Gattopardo e il Banco della Fortuna",
    "Capo": "Donna Clelia Bardalino",
    "Titolo": "Signori di Alba Argentea",
-   "Origine": "Un ramo cadetto dei [[Castemar|faz-casa-castemar]] di Julia Nova",
+   "Origine": "Un ramo cadetto dei Castemar di Julia Nova",
    "Lucente protettore": "La Lucente Eufemia, patrona di Alba",
    "Membri": "Donna Clelia, il fratello Gaetano «lu Biscazziere»",
    "Popolo": "Umani",
-   "Alleanze": "[[Casa Castemar|faz-casa-castemar]] (il ramo maggiore)"
+   "Alleanze": "Casa Castemar (il ramo maggiore)"
   },
   "pub": [
    {
@@ -6370,11 +6350,6 @@
     "t": "Amici e nemici",
     "relazioni": [
      {
-      "fz": "castemar",
-      "rel": "amici",
-      "txt": "Il ramo da cui vengono. Stesso sangue, altra vita."
-     },
-     {
       "fz": "cavatassi",
       "rel": "rivali",
       "txt": "Alba e Tortoscuro si disprezzano e si sposano fra loro da sempre."
@@ -6413,11 +6388,6 @@
       "voce": "faz-compagnie-vesperiane",
       "rel": "fedeli",
       "txt": "I banchieri di Vesperia sono la mano del creditore: tengono le carte del debito."
-     },
-     {
-      "fz": "castemar",
-      "rel": "rivali",
-      "txt": "Aulo Dernas non sa quanto sono indebitati, né con chi. Se lo scoprisse, li rinnegherebbe."
      },
      {
       "fz": "cerullius",
@@ -6497,246 +6467,6 @@
    }
   },
   "fz": "bardalino",
-  "indice": null,
-  "blocchi": true
- },
- {
-  "id": "faz-casa-castemar",
-  "cat": "fazione",
-  "city": null,
-  "group": "Casate e signori del Ducato",
-  "img": "img/2d2167fdace9.jpg",
-  "state": "noto",
-  "status": null,
-  "atti": [
-   4,
-   9
-  ],
-  "links": [
-   "borgo-giglie",
-   "jn-aulo-dernas",
-   "jn-tenuta-castemar",
-   "jn-quartiere-nobiliare",
-   "borgo-alba-tortoscuro"
-  ],
-  "title": "Casa Castemar",
-  "sub": "I Fondatori Caduti, la casata che ricostruì Julia Nova",
-  "epigrafe": {
-   "txt": "«Rinati dalle Ceneri.»",
-   "cite": "Motto di Casa Castemar"
-  },
-  "scheda": {
-   "Stemma": "Un’aquila d’oro a due teste, una rivolta al sole e una alla luna, su campo diviso di rosso e di blu",
-   "Sedi": "[[La Tenuta Castemar|jn-tenuta-castemar]], nel [[Quartiere Nobiliare|jn-quartiere-nobiliare]] di [[Julia Nova|borgo-giglie]]",
-   "Capo": "[[Aulo Dernas di Castemar|jn-aulo-dernas]], consigliere del Concilio Ristretto",
-   "Titolo": "Nessun titolo di corte: in città li chiamano i Fondatori",
-   "Origine": "Mercanti di Julia Nova, che ricostruirono la città dopo la Guerra delle Due Lune",
-   "Lucente protettore": "Il Lucente Flaviano, patrono di Julia Nova",
-   "Membri": "[[Aulo Dernas|jn-aulo-dernas]] e i suoi nipoti",
-   "Popolo": "Umani",
-   "Alleanze": "[[Casa Bardalino|faz-casa-bardalino]] (il ramo cadetto), [[Casa Cerullius|faz-casa-cerullius]]"
-  },
-  "pub": [
-   {
-    "t": "",
-    "capo": true,
-    "txt": "Casa Castemar è la sola casata nobile che siede nel Concilio Ristretto di Julia Nova. Furono i Castemar a rimettere in piedi la città dopo la Guerra delle Due Lune, quando erano mercanti ricchissimi e il porto era un cumulo di pietre. Per questo in città li chiamano i Fondatori, e il loro motto è «Rinati dalle Ceneri».\n\nPoi la loro ascesa si è spezzata. La famiglia è stata decimata da «incidenti» su cui nessuno ha mai indagato abbastanza, e quello che resta è schiacciato dai debiti con le Gilde. I Castemar hanno ancora case e botteghe in mezza Città Alta, ma quasi tutte sono ipotecate: la rendita entra dagli affittuari e se ne va alle Gilde.\n\nLo stemma è un’aquila d’oro a due teste, una rivolta al sole e una alla luna, su un campo diviso di rosso e di blu. Le guardie della casata vestono una livrea rossa e blu, e si riconoscono in tutta la Città Alta.\n\nOggi la casata è Aulo Dernas, la sua tenuta grande quanto un isolato e un nome che in città tutti rispettano e pochi temono. Al Concilio Aulo grida più forte di tutti."
-   },
-   {
-    "t": "Dove sono",
-    "txt": "La Tenuta Castemar, nel Quartiere Nobiliare, è una villa fortificata grande quanto un isolato, chiusa da mura alte tre metri. L’aquila a due teste è scolpita sull’arco d’ingresso. Aulo ci riceve quasi ogni pomeriggio, e le guardie in livrea stanno alle porte.\n\nNella Torre del Sole la casata ha il suo seggio nel Concilio, da quando esiste il Concilio. Nella Città Alta ha molte case e botteghe, quasi tutte ipotecate alle Gilde. E su ogni pietra posata dai Castemar dopo la guerra c’è un piccolo segno inciso, un’aquila grande come un pollice: chi la cerca la trova sulle mura, sui moli vecchi e sulla base della Torre del Sole.\n\nFuori da Julia Nova i Castemar contano poco: per il nome, per la parentela con i Bardalino di Alba Argentea, e per il seggio della città alla Grande Convocazione."
-   },
-   {
-    "t": "La storia",
-    "txt": "Nella Guerra delle Due Lune, due secoli fa, Julia Nova fu assediata tre volte e in parte distrutta. Quando le flotte se ne andarono, a rimetterla in piedi furono i Castemar: pagarono le mura, i moli e le case. Per questo li chiamano i Fondatori, anche se la città esisteva prima di loro e il fondatore vero, Julius, riposa nel suo mausoleo fuori dalla Porta dei Morti.\n\nPer due secoli i Castemar sono stati la prima casa della città. Un figlio cadetto, che a Julia Nova non aveva niente da ereditare, comprò le terre sulla spiaggia di Alba Argentea: da lui vengono i Bardalino. Poi è cominciata la discesa. Le Gilde si sono arricchite con il porto franco, e i Castemar hanno chiesto prestiti alle Gilde. Uno dopo l’altro gli eredi sono morti: una caduta da cavallo, una febbre, una barca che non è tornata. In città li chiamano «incidenti», con la voce bassa.\n\nNell’anno 1437 del Calare della Fiamma, quando la corruzione entrò in Julia Nova, Aulo Dernas mostrò furioso al Concilio un simbolo del Sole trovato addosso a un Forgiato caduto nella Caserma Est: la corruzione era già dentro le mura, forse persino fra i preti. Più tardi, sulla Terrazza dei Venti, gridò alla sedizione, finché Maximus, col sigillo dello Stratega, ribaltò le cose: non si attacca il Duca, lo si libera. Silvanus aveva avvertito i personaggi: «Dernas vuole sentirsi generale.» Alla fine Aulo ha votato con gli altri e Julia Nova ha dato il suo mandato alla Crociata. Oggi, con Iuvenza fuggita, Domina Syel morta e Silvanus partito, nel Concilio ci sono tre seggi vuoti, e quello dei Castemar pesa più di prima."
-   },
-   {
-    "t": "Membri",
-    "membri": [
-     {
-      "nome": "Aulo Dernas di Castemar",
-      "voce": "jn-aulo-dernas",
-      "chi": "il capo della casata e il suo seggio al Concilio. A vederlo sembra giovane."
-     },
-     {
-      "nome": "I nipoti",
-      "chi": "due ragazzi e una cugina vedova: tutto quello che resta della linea diretta."
-     }
-    ],
-    "txt": "Ad Alba Argentea vive il ramo cadetto, i [[Bardalino|faz-casa-bardalino]]: stesso sangue, altra vita."
-   },
-   {
-    "t": "Vassalli e uomini",
-    "txt": "La casata non ha un esercito. Ha le guardie della Tenuta, in livrea rossa e blu, e il denaro per pagarne altre, quando ce l’ha.",
-    "tabella": {
-     "head": [
-      "Chi",
-      "Quanti",
-      "Chi li guida",
-      "Cosa devono"
-     ],
-     "rows": [
-      [
-       "Le guardie della Tenuta",
-       "Una ventina",
-       "Il capitano di casa",
-       "La Tenuta, la famiglia, la scorta di Aulo al Concilio"
-      ],
-      [
-       "I servitori e gli amministratori",
-       "Una trentina",
-       "Il maggiordomo",
-       "La casa, le proprietà in città, i conti"
-      ],
-      [
-       "Le guardie a giornata",
-       "Quante ne servono, quando c’è denaro",
-       "—",
-       "Cacciare dalla Città Alta chi non ha l’aria del nobile"
-      ]
-     ]
-    }
-   },
-   {
-    "t": "Amici e nemici",
-    "relazioni": [
-     {
-      "fz": "concilio-ristretto",
-      "rel": "alleati",
-      "txt": "La casata che ricostruì la città ha il suo seggio da sempre."
-     },
-     {
-      "fz": "cerullius",
-      "rel": "amici",
-      "txt": "Aulo Dernas riceve volentieri un Cerullius: due casate antiche che hanno conosciuto giorni migliori."
-     },
-     {
-      "fz": "bardalino",
-      "rel": "fedeli",
-      "txt": "Il ramo cadetto di Alba. Sangue dei Castemar, anche se vive di case da gioco."
-     },
-     {
-      "fz": "naviganti",
-      "rel": "rivali",
-      "txt": "La casata deve denaro alle Gilde, e le Gilde se lo ricordano."
-     },
-     {
-      "fz": "velthuria",
-      "rel": "nemici",
-      "txt": "Castemar e Velthuria si odiavano. Ora che Iuvenza è fuggita, dicono in città, Aulo dorme meglio."
-     }
-    ]
-   }
-  ],
-  "gm": [
-   {
-    "t": "Cosa sta succedendo oggi",
-    "txt": "Con Iuvenza fuggita e tre seggi vuoti, Aulo vede la sua occasione: tornare a essere la prima voce del Concilio. Ha già offerto a Fenix le sue guardie per la città, in cambio del titolo di comandante delle mura. Ma le Gilde tengono le sue carte: se chiedono indietro il denaro, la casata cade."
-   },
-   {
-    "t": "Cosa vogliono davvero",
-    "txt": "Aulo vuole sentirsi generale: comandare uomini, non conti. Vuole che la casata torni la prima della città, sopra le Gilde. E custodisce una cosa che non usa: è l’unico nobile che sa della stirpe Aurex. Lo ha scoperto decenni fa, e lo conserva."
-   },
-   {
-    "t": "Come agiscono",
-    "txt": "Aulo grida al Concilio e tratta in privato. Non chiede mai denaro di persona: lo fa chiedere ai Bardalino. Riceve chi ha un nome antico, e con un Cerullius l’udienza è più facile. Non dimentica un torto: lo mette da parte."
-   },
-   {
-    "t": "Le relazioni che i giocatori non conoscono",
-    "relazioni": [
-     {
-      "fz": "velthuria",
-      "rel": "nemici",
-      "txt": "Gli «incidenti» che hanno decimato la casata sono opera dei Velthuria. Aulo lo sospetta da anni e non lo ha mai potuto provare."
-     },
-     {
-      "fz": "naviganti",
-      "rel": "rivali",
-      "txt": "La parte più grossa dei debiti della casata è con i Naviganti Grigi: oggi, quindi, con Adamus."
-     },
-     {
-      "fz": "fonteviva",
-      "rel": "rivali",
-      "txt": "Julius, il fondatore, era un Fonteviva: Giosia di Atrë ha sulla città un diritto più vecchio di quello dei Castemar. Aulo lo sa, e il testamento sigillato nel Mausoleo gli fa paura."
-     },
-     {
-      "fz": "bardalino",
-      "rel": "rivali",
-      "txt": "Aulo non sa quanto sono indebitati i Bardalino, né con chi. Se lo scoprisse, li rinnegherebbe."
-     }
-    ]
-   },
-   {
-    "t": "Segreti",
-    "txt": "Aulo Dernas ha novantadue anni. «Ho visto cadere tre imperatori e costruire due solari», dice a chi lo conosce davvero. Ma a guardarlo sembra giovane: è un mistero che i giocatori devono scoprire. La verità: nella Guerra i Castemar ebbero un dono dagli Aurex in cambio della ricostruzione, ed è per questo che la loro aquila guarda il sole e la luna. Aulo porta un anello d’oro con un sole fra due lune: finché lo porta, non invecchia. È così che sa della stirpe Aurex, e che il sangue solare non era finito.\n\nIl simbolo del Sole mostrato al Concilio Aulo lo ha davvero preso dal corpo di un Forgiato, ma non ha detto tutto: sul retro c’era inciso il segno della Basilica."
-   }
-  ],
-  "tavolo": {
-   "obiettivo": {
-    "t": "Aulo Dernas generale",
-    "tacche": 6,
-    "fatte": 1,
-    "avanza": "Ogni settimana in cui Fenix è solo a tenere la città e il Concilio ha paura: Aulo prende un pezzo di comando, le mura, una porta, una compagnia.",
-    "ferma": "Fenix che non cede; le Gilde che chiedono indietro i debiti; uno scandalo sui Bardalino.",
-    "se_riesce": "Il Concilio affida ad Aulo la difesa della città e una compagnia sotto l’aquila a due teste. La manda alla Crociata, se la Crociata gli dà un posto da comandante; se no, la tiene per sé, e Castemar torna sopra le Gilde."
-   },
-   "tratta": {
-    "con": "Aulo Dernas, nella Tenuta; con un Cerullius l’udienza è più facile",
-    "abilita": [
-     [
-      "Storia",
-      -2,
-      "i Fondatori, la ricostruzione, il nome della casata"
-     ],
-     [
-      "Persuasione",
-      0,
-      "offrirgli un posto da comandante"
-     ],
-     [
-      "Intuizione",
-      0,
-      ""
-     ],
-     [
-      "Inganno",
-      2,
-      "ha visto passare molti bugiardi"
-     ],
-     [
-      "Intimidire",
-      5,
-      "non si fa spaventare in casa sua"
-     ]
-    ],
-    "irrita": [
-     "Ricordargli i debiti con le Gilde",
-     "Trattarlo come un ragazzo"
-    ],
-    "debole": [
-     "Un comando nella Crociata",
-     "Un Cerullius che chiede udienza"
-    ],
-    "soglie": [
-     [
-      4,
-      "Udienza, ospitalità nella Tenuta e il voto di Castemar al Concilio"
-     ],
-     [
-      6,
-      "Le guardie in livrea e il denaro della casata per la Crociata; e quello che sa, se gli date un motivo"
-     ]
-    ]
-   },
-   "effetti": {
-    "2": "Il voto di Castemar al Concilio e alla Convocazione; denaro per la cassa; venti guardie in livrea con la Crociata, sotto un comandante che Aulo sceglie.",
-    "1": "Ospitalità nella Città Alta e il voto di Castemar al Concilio.",
-    "0": "Aulo aspetta, e grida.",
-    "-1": "Aulo grida alla sedizione al Concilio e vota contro ogni aiuto alla Crociata.",
-    "-2": "Aulo si allea con chi gli promette il comando: apre la Città Alta agli uomini di Teramum."
-   }
-  },
-  "fz": "castemar",
   "indice": null,
   "blocchi": true
  },
