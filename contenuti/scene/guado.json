@@ -365,7 +365,8 @@
      "titolo": "Silvanus: che cosa dice",
      "parte": "evento",
      "innesco": "Silvanus, comanda la colonna della Crociata. Quando i giocatori gli parlano (mai durante lo scontro).",
-     "note": "Voce: Parla poco, fa i conti. Vuole sapere cosa si è guadagnato, cosa si è perso e quanto costa.\nVuole: Arrivare all'osteria prima di notte, con tutti i carri.\n\n«Chi erano questi contadini?» — «Gente dei casali di Sant'Atto. A Teramum si diceva da settimane che la valle si stava svuotando. Nessuno è venuto a vedere.»\n   → Porta a: «Chi doveva venire?»\n\n«Chi doveva venire a vedere?» — «Queste sono terre del Barone di Cashtalladdë. Se qui sparisce gente, lui lo sa per primo. Chiedetevi perché non ha fatto niente.»\n   → Porta al pagliaio: il berretto di Gerardo Tosti.\n\n«Quanto tempo abbiamo?» — «Un'ora. Poi si riparte, con voi o senza. Stanotte voglio un tetto: l'osteria de lu Passe.»\n\n«Del Brak» — «Se lo vede un flamine, la Crociata finisce qui. Che cammini dietro, fra gli alberi.»\n   → Porta a Vhaerun: cosa ne pensa lui?\n\n«Se fanno i cazzoni» — «Ridete pure. Ma ridete camminando.»\n\n«Perché ci avete mandati avanti?» — «Perché una colonna con cinque carri in mezzo a un fiume non si difende. Voi sì. E avevo ragione.»\n   → Se sono feriti: «Il dottore. Subito. Poi mi raccontate.»"
+     "note": "Voce: Parla poco, fa i conti. Vuole sapere cosa si è guadagnato, cosa si è perso e quanto costa.\nVuole: Arrivare all'osteria prima di notte, con tutti i carri.\n\n«Chi erano questi contadini?» — «Gente dei casali di Sant'Atto. A Teramum si diceva da settimane che la valle si stava svuotando. Nessuno è venuto a vedere.»\n   → Porta a: «Chi doveva venire?»\n\n«Chi doveva venire a vedere?» — «Queste sono terre del Barone di Cashtalladdë. Se qui sparisce gente, lui lo sa per primo. Chiedetevi perché non ha fatto niente.»\n   → Porta al pagliaio: il berretto di Gerardo Tosti.\n\n«Quanto tempo abbiamo?» — «Un'ora. Poi si riparte, con voi o senza. Stanotte voglio un tetto: l'osteria de lu Passe.»\n\n«Del Brak» — «Se lo vede un flamine, la Crociata finisce qui. Che cammini dietro, fra gli alberi.»\n   → Porta a Vhaerun: cosa ne pensa lui?\n\n«Se fanno i cazzoni» — «Ridete pure. Ma ridete camminando.»\n\n«Perché ci avete mandati avanti?» — «Perché una colonna con cinque carri in mezzo a un fiume non si difende. Voi sì. E avevo ragione.»\n   → Se sono feriti: «Il dottore. Subito. Poi mi raccontate.»",
+     "png": "jn-silvanus"
     },
     {
      "id": "dlg_vhaerun",
@@ -374,7 +375,8 @@
      "parte": "evento",
      "innesco": "Vhaerun, un Brak, liberato sotto Bëllindë da Maximus. Quando i giocatori gli parlano (mai durante lo scontro).",
      "note": "Voce: Bassa, con un accento che nessuno ha mai sentito. Frasi corte, da soldato. Ogni tanto una frase più leggera: la voce di prima.\nVuole: Non ricevere più ordini. Che gli chiedano le cose invece di comandargliele.\n\n«Dei Forgiati» — «Vuoti. In guerra li mandavano avanti. Non scappano, non urlano.» Guarda i corpi. «Ma quelli avevano qualcuno dentro che li guidava. Questi no.»\n   → Porta a: «Chi li guidava?»\n\n«Chi li guidava?» — «Una voce. Come la mia, laggiù sotto la città. Solo che la loro cantava.»\n   → Aggancio alla Forgiatura: chi canta, oggi?\n\n«Del medaglione» — «Non tenetelo in mano a lungo. Il freddo entra.»\n\n«Del fiume» — «Duecento anni senza acqua che corre.» Si inginocchia. «Lasciatemi un momento.»\n\n«Con Maximus, una volta sola» — «Tu. Quando ti danno un ordine, come fai a sapere se è tuo?»\n\n«Se fanno i cazzoni» — «Ridi. Laggiù nessuno rideva.» Poi, quasi sorpreso, ride anche lui.",
-     "immagine": "PNG — Vhaerun.jpg"
+     "immagine": "PNG — Vhaerun.jpg",
+     "png": "png-vhaerun"
     },
     {
      "id": "dlg_albino",
@@ -390,7 +392,8 @@
        "desc": "Le regala il Dottor Albino ai feriti del guado. 2d4+2 punti ferita ciascuna.",
        "prompt": "two small medieval glass vials with red liquid, wax-sealed corks, on a wet wooden wagon board, river light"
       }
-     ]
+     ],
+     "png": "png-dottor-albino"
     },
     {
      "id": "dlg_micuccio",
@@ -399,7 +402,8 @@
      "parte": "evento",
      "innesco": "Micuccio, il ragazzo del Borgo Vecchio, in coda alla Crociata: arriva col convoglio. Quando i giocatori gli parlano.",
      "note": "Voce: Piano, frasi corte, pause lunghe. Quando qualcuno alza la voce si irrigidisce.\nVuole: Imparare a dire di no.\n\n«Dei corpi» — Li guarda a lungo. «Stavano fermi. Fra gli alberi. Come me, laggiù.»\n   → Porta a: «Chi ti chiamava, laggiù?»\n\n«Chi lo chiamava sotto la città?» — «La voce. Quella che conta.» Si guarda le mani. «Questi la sentivano anche loro? Sembrava.»\n\n«Se fanno i cazzoni» — Non capisce lo scherzo e risponde sul serio. Poi, dopo un po', sorride: «Era una battuta?»",
-     "immagine": "PNG — Micuccio.jpg"
+     "immagine": "PNG — Micuccio.jpg",
+     "png": "png-micuccio"
     }
    ]
   },

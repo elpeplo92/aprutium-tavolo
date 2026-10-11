@@ -183,9 +183,11 @@ def scene():
     d = os.path.join(CONT, "scene")
     scene, errori, visti, senza_img = [], [], {}, []
     alias = json.load(open(os.path.join(CONT, "_immagini.json"), encoding="utf-8"))
+    _dlg = _dialoghi_tutti()
     for fn in sorted(os.listdir(d)):
         if not fn.endswith(".json") or fn.startswith("_"): continue
         s = json.load(open(os.path.join(d, fn), encoding="utf-8"))
+        _dialoghi_prove(s, _dlg)
         sid = s.get("id")
         if sid != fn[:-5]: errori.append(f"{fn}: l'id deve essere il nome del file")
         m = s.get("mappa") or {}
@@ -298,6 +300,44 @@ def icone():
     open(SRC, "w", encoding="utf-8").write(html)
     print(f"ok: immagini di oggetti e abilità — {len(voci['oggetti'])} oggetti, {len(voci['abilita'])} abilità")
 
+DLG_START, DLG_END = "/*@DIALOGHI*/", "/*@/DIALOGHI*/"
+def _dialoghi_tutti():
+    """v238: i dialoghi dei PNG (canone di Giuseppe, 11-10-2026): campo «dialogo» di contenuti/png/*.json + contenuti/_dialoghi/<id>.json."""
+    import json
+    out = {}
+    d = os.path.join(CONT, "png")
+    for fn in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if fn.endswith(".json"):
+            v = json.load(open(os.path.join(d, fn), encoding="utf-8"))
+            if v.get("dialogo"): out[v["id"]] = v["dialogo"]
+    d = os.path.join(CONT, "_dialoghi")
+    for fn in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if fn.endswith(".json"): out[fn[:-5]] = json.load(open(os.path.join(d, fn), encoding="utf-8"))
+    return out
+def _dialoghi_prove(s, dlg):
+    """Le prove degli argomenti del dialogo diventano prove del modulo (id dlgN, campo dlg = indice): così funziona «Chiedi la prova…»."""
+    for p in s.get("punti") or []:
+        for m in p.get("moduli") or []:
+            d = dlg.get(m.get("png") or "")
+            if not d: continue
+            m["prove"] = [pv for pv in (m.get("prove") or []) if pv.get("dlg") is None]
+            for i, a in enumerate(d.get("argomenti") or []):
+                pv = a.get("prova")
+                if not pv or not pv.get("cd"): continue
+                if a.get("scena") and a["scena"] != s.get("id"): continue
+                cd = int(pv["cd"])
+                m["prove"].append({"id": f"dlg{i}", "dlg": i, "abilita": pv.get("abilita") or ["Persuasione"], "cd": cd, "gruppo": "chi",
+                                   "esiti": [{"fascia": "failure", "max": cd - 1, "leggi": pv.get("no") or ""},
+                                             {"fascia": "baseSuccess", "min": cd, "leggi": pv.get("si") or ""}]})
+def dialoghi():
+    import json
+    out = _dialoghi_tutti()
+    html = open(SRC, encoding="utf-8").read()
+    a = html.index(DLG_START); b = html.index(DLG_END) + len(DLG_END)
+    html = html[:a] + DLG_START + "const DIALOGHI_DATA=" + json.dumps(out, ensure_ascii=False, separators=(",", ":")) + ";" + DLG_END + html[b:]
+    open(SRC, "w", encoding="utf-8").write(html)
+    print(f"ok: dialoghi dei PNG — {len(out)}")
+
 CRO_START, CRO_END = "/*@CROCIATA*/", "/*@/CROCIATA*/"
 def crociata():
     """La Crociata (v136): contenuti/_crociata.json (membri, carri, città e tappe della mappa del Ducato,
@@ -332,6 +372,7 @@ def build():
     pg()
     incantesimi()
     icone()
+    dialoghi()
     shutil.copyfile(SRC, OUT)
     html = open(SRC, encoding="utf-8").read()
     used = set(re.findall(r"img/[0-9a-f]{12}\.[a-z]+", html))
