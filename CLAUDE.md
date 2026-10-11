@@ -1237,3 +1237,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v231 (11/10/2026) — Guida della scena più asciutta
 
 - Richiesta di Giuseppe (selezionati sulla pagina, «completamente inutili»): nella Guida della scena del master non ci sono più il pannello dello scontro (`scRender` non lo disegna più; la logica `S.fronti` e gli eventi restano nel codice), l'etichetta «Copione» sopra i testi (introduzione e punti), il riquadro «In breve» e le «Note per il Master» dei punti d'interesse. La scheda del punto (`openPoi`) è invariata.
+
+## v232 (11/10/2026) — le casate nella struttura di Giuseppe
+
+- Struttura decisa da Giuseppe (`Revisioni/Schede delle fazioni (10-10-2026)/Struttura delle casate (Giuseppe, 11-10-2026).md`): **Teramum** (gruppo «Le Otto Casate di Teramum»: «Il Consiglio Reggente e le Otto Casate» come voce d'apertura con la tabella dei seggi, `faz-casa-pretutia` nuova, le otto casate; nell'Impaloni l'Ordine d'Acciaio è una riga col rimando); **Le grandi casate del Ducato** (Cerullius, Barbus, Fonteviva, Melacera, Pompizius, Velthuria); **Le famiglie dei borghi**, una voce per contea (`faz-famiglie-<contea>`: un blocco per famiglia con simbolo e riquadro, al master «cosa vogliono e cosa nascondono»).
+- **Tolte** le schede di Bardalino, Fiore, Taraschi, Pergameno, Portocenere, Guardiano della Valle (restano come fazioni del gioco della Crociata, senza voce) e **fuse** nelle voci di contea quelle di Vallescura, Cavatassi, d'Altaria, Orofalco, Pietramala, Spinozzi, Signore del Ponte, d'Avalos, De Sterlix, Azzurravena, Malandra (le loro fazioni ora hanno `voce` = la voce di contea). Voci in `_ARCHIVIO_2026-10-07/Schede delle famiglie (v232)/` e sorgenti in `_ARCHIVIO_2026-10-11/Schede delle famiglie (v231)/`.
+- **Nomi**: De Sterlich → **De Sterlix** in tutto il sito; **Casa Barbus** (non più Barbas) nelle schede delle fazioni. de Galitis e Luex non esistono (Luex era De Sterlix).
+- **Codice**: pagina «Le casate del Ducato d'Aprutium» divisa nei tre gruppi, nell'ordine di Giuseppe (`ORDINE`); una voce di contea mostra in alto la tabella delle statistiche di tutte le sue famiglie (`fzStat`).
