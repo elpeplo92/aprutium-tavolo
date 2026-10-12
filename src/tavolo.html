@@ -122,7 +122,7 @@ header .spacer{flex:1}
 #stage.fogtool .tok,#stage.measuring .tok,#stage.fogtool .poi,#stage.measuring .poi{pointer-events:none}
 .tok{touch-action:none;position:absolute;border-radius:50%;border:3px solid var(--c);background:#0B0F18 center/cover;display:grid;place-items:center;font-family:var(--display);font-weight:700;color:var(--ink);cursor:grab;transform:translate(-50%,-50%);box-shadow:0 2px 8px rgba(0,0,0,.7);transition:box-shadow .15s}
 .tok.mine,.tok.gm{cursor:grab}
-.tok.hastok{border-color:transparent;background-color:transparent;box-shadow:none}
+.tok.hastok{border-color:transparent;background-color:transparent;box-shadow:none;background-repeat:no-repeat;background-clip:padding-box;background-origin:padding-box}   /* v262: niente ripetizione sotto il bordo */
 .tok.hastok.active{box-shadow:0 0 0 4px rgba(201,162,74,.55),0 0 22px rgba(201,162,74,.7)}
 .tok.locked{cursor:default}
 .tok.active{box-shadow:0 0 0 4px rgba(201,162,74,.5),0 0 22px rgba(201,162,74,.6)}
@@ -2588,7 +2588,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v261</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v262</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -2695,9 +2695,10 @@ const SCENE_DEFAULT=SCENE_DATA.find(s=>s.id==='sotto')||SCENE_DATA[0];
 const MAP_SRC=SCENE_DEFAULT.mappa.img;
 let MAP_W=SCENE_DEFAULT.mappa.larghezza, MAP_H=SCENE_DEFAULT.mappa.altezza;
 const MASK=SCENE_DEFAULT.mappa.muri||[];
-function curMask(){ return (typeof CUR!=='undefined'&&CUR&&CUR.mask)||MASK; }
-function sceneFromData(d){ const m=d.mappa||{}, r=d.regole||{}; return {id:d.id,name:d.nome,menu:d.menu||d.nome,src:m.img,w:m.larghezza,h:m.altezza,grid:!!m.griglia,mask:m.muri||null,fog:!!r.nebbia,walls:!!r.muri,tokens:r.token==='gruppo'?'party':r.token==='nessuno'?false:true,dungeon:!!r.strumentiDungeon,places:!!r.segnaposto,pois:!!(d.punti&&d.punti.length),crusade:!!r.crociata,stemmi:!!r.stemmi}; }
-function walkable(x,y){ if(typeof CUR!=='undefined'&&CUR&&!CUR.walls) return true; const cx=Math.floor(x/30), cy=Math.floor(y/30); const k=cx+','+cy; if(typeof S!=='undefined'&&S){ if(S.doors&&(S.doors[k]==='c'||S.doors[k]==='s')) return false; if(S.walls&&S.walls[k]!==undefined) return !!S.walls[k]; } return cy>=0&&cy<curMask().length&&cx>=0&&cx<(curMask()[0]||'').length&&curMask()[cy][cx]==='1'; }
+function curMask(){ if(typeof CUR==='undefined'||!CUR) return MASK; return CUR.mask||[]; }   /* v262: una scena senza maschera non prende quella di Sotto Bëllindë */
+function maskAt(x,y){ const M=curMask(); if(!M.length) return '1'; return (M[Math.floor(y/30)]||'')[Math.floor(x/30)]||'0'; }
+function sceneFromData(d){ const m=d.mappa||{}, r=d.regole||{}; return {id:d.id,name:d.nome,menu:d.menu||d.nome,src:m.img,w:m.larghezza,h:m.altezza,grid:!!m.griglia,mask:m.muri||null,fog:!!r.nebbia||!!r.strumentiDungeon,walls:!!r.muri||!!r.strumentiDungeon,tokens:r.token==='gruppo'?'party':r.token==='nessuno'?false:true,dungeon:!!r.strumentiDungeon,places:!!r.segnaposto,pois:!!(d.punti&&d.punti.length),crusade:!!r.crociata,stemmi:!!r.stemmi}; }
+function walkable(x,y){ if(typeof CUR!=='undefined'&&CUR&&!CUR.walls) return true; const cx=Math.floor(x/30), cy=Math.floor(y/30); const k=cx+','+cy; if(typeof S!=='undefined'&&S){ if(S.doors&&(S.doors[k]==='c'||S.doors[k]==='s')) return false; if(S.walls&&S.walls[k]!==undefined) return !!S.walls[k]; } if(!curMask().length) return true; return cy>=0&&cy<curMask().length&&cx>=0&&cx<(curMask()[0]||'').length&&curMask()[cy][cx]==='1'; }
 function lineClear(x0,y0,x1,y1){ const n=Math.ceil(Math.hypot(x1-x0,y1-y0)/10); for(let i=1;i<=n;i++){ const x=x0+(x1-x0)*i/n, y=y0+(y1-y0)*i/n; if(!walkable(x,y)) return false; } return true; }
 function pathClear(a,b){ // percorso a L: prima orizzontale poi verticale, oppure il contrario
   const okA=lineClear(a.x,a.y,b.x,a.y)&&lineClear(b.x,a.y,b.x,b.y); const okB=lineClear(a.x,a.y,a.x,b.y)&&lineClear(a.x,b.y,b.x,b.y); return okA||okB||lineClear(a.x,a.y,b.x,b.y); }
@@ -2879,7 +2880,7 @@ roleSel.onchange=async()=>{ const want=roleSel.value; if(want==='master'&&fbAuth
    di loro va in errore — il che spegneva la nebbia, i tasti muri/porte e
    "Rivela intorno al gruppo". Qui la forma viene ricostruita a ogni lettura. */
 const SHAPE_ARR=['order','log','removed','archive','met','visited','comp','comp2'];
-const SHAPE_OBJ=['doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti'];
+const SHAPE_OBJ=['fogS','wallsS','doorsS','doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti'];
 function normalize(s){
   if(!s||typeof s!=='object') s={};
   for(const k of SHAPE_ARR) if(!Array.isArray(s[k])) s[k]=[];
@@ -2949,7 +2950,7 @@ const LIVE=['hd','sc','light','xs','ich','res','fx','adv','fxT','x','y','hp','hp
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
+  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
   const rt=remote.tokens||{};
   for(const [id,t] of Object.entries(rt)){
     if(s.tokens[id]){ for(const k of LIVE) if(t[k]!==undefined) s.tokens[id][k]=t[k]; }
@@ -2960,7 +2961,7 @@ function merge(remote){
 }
 function toRemote(s){
   const out={};
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti']) if(s[k]!==undefined) out[k]=s[k];
+  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig']) if(s[k]!==undefined) out[k]=s[k];
   out.tokens={};
   for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,img:t.img||'',mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
   return out;
@@ -3080,6 +3081,7 @@ function drawFog(){
   fogCtx.clearRect(0,0,MAP_W,MAP_H);
   const smoke=document.getElementById('fogsmoke'); if(smoke) smoke.style.display='none';
   if(!f.on||(typeof CUR!=='undefined'&&CUR&&!CUR.fog)){ return; }
+  if(typeof gmPeeking==='function'&&gmPeeking()) return;   /* v262: in anteprima la nebbia è quella di un'altra scena */
   if(IS_GM&&typeof editTool!=='undefined'&&editTool==='wall') return;
   /* 1. maschera delle zone svelate (nero = si vede) */
   const m=fogMaskCtx; m.clearRect(0,0,MAP_W,MAP_H);
@@ -3583,6 +3585,7 @@ function announcePlayerRequest(q){
   document.getElementById('requestDis').onclick=()=>{ t.adv='s'; closeModal(); doRoll(q.skill,q.dc,q.id); };
 }
 function render(){
+  if(IS_GM&&S&&!S.fogMig&&typeof FB_LOADED!=='undefined'&&FB_LOADED){ fogMigra(); save(true); }   /* v262 */
   if(!READY) return;
   if(IS_GM&&(TEST_MODE||FB_LOADED)&&spotScan()) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0);
   if(IS_GM&&(TEST_MODE||FB_LOADED)&&!dragging&&!pending&&bondCheck()) setTimeout(()=>{ if(TEST_MODE||FB_LOADED) save(true); },0);
@@ -5800,7 +5803,8 @@ function drawWalls(){
   wallsCtx.clearRect(0,0,MAP_W,MAP_H); if(!CUR.walls) return;
   const G=30;
   if(IS_GM&&editTool==='wall'){
-    for(let cy=0;cy<curMask().length;cy++) for(let cx=0;cx<curMask()[0].length;cx++){ const ok=walkable(cx*G+15,cy*G+15); wallsCtx.fillStyle=ok?'rgba(110,158,91,.22)':'rgba(181,57,44,.28)'; wallsCtx.fillRect(cx*G,cy*G,G,G); }
+    const RY=curMask().length||Math.ceil(MAP_H/G), RX=(curMask()[0]||'').length||Math.ceil(MAP_W/G);   /* v262: senza maschera, tutta la mappa */
+    for(let cy=0;cy<RY;cy++) for(let cx=0;cx<RX;cx++){ const ok=walkable(cx*G+15,cy*G+15); wallsCtx.fillStyle=ok?'rgba(110,158,91,.22)':'rgba(181,57,44,.28)'; wallsCtx.fillRect(cx*G,cy*G,G,G); }
   }
   const doors=S.doors||{};
   for(const [k,v] of Object.entries(doors)){ const [cx,cy]=k.split(',').map(Number); const closed=v==='c', secret=v==='s';
@@ -5815,7 +5819,8 @@ document.getElementById('wallTool').onclick=()=>setEditTool('wall');
 document.getElementById('doorTool').onclick=()=>setEditTool('door');
 function editAt(x,y,first){
   const k=cellKey(x,y);
-  if(editTool==='wall'){ S.walls=S.walls||{}; if(first) paintVal=walkable(x,y)?0:1; if(paintVal===1&&curMask()[Math.floor(y/30)]?.[Math.floor(x/30)]==='1') delete S.walls[k]; else if(paintVal===0&&curMask()[Math.floor(y/30)]?.[Math.floor(x/30)]!=='1') delete S.walls[k]; else S.walls[k]=paintVal; }
+  if(gmPeeking()){ toast('Stai guardando un’altra scena: muri e porte si dipingono dove sta il gruppo'); return; }   /* v262 */
+  if(editTool==='wall'){ S.walls=S.walls||{}; if(first) paintVal=walkable(x,y)?0:1; if(paintVal===1&&maskAt(x,y)==='1') delete S.walls[k]; else if(paintVal===0&&maskAt(x,y)!=='1') delete S.walls[k]; else S.walls[k]=paintVal; }
   else if(editTool==='door'&&first){ S.doors=S.doors||{}; const cur=S.doors[k]; if(!cur) S.doors[k]='c'; else if(cur==='c'||cur==='o') S.doors[k]='s'; else delete S.doors[k]; toast(S.doors[k]==='c'?'Porta chiusa':S.doors[k]==='s'?'Passaggio segreto (invisibile ai giocatori)':'Porta tolta'); }
   drawWalls(); drawFog();
 }
@@ -6054,11 +6059,17 @@ function sceneStart(key){
   for(let r=1;r<8&&out.length<8;r++) for(let dy=-r;dy<=r&&out.length<8;dy++) for(let dx=-r;dx<=r&&out.length<8;dx++){ if(Math.max(Math.abs(dx),Math.abs(dy))!==r) continue; const x=sn(primo.x)+dx*g, y=sn(primo.y)+dy*g; if(libero(x,y)) out.push({x,y}); }
   return out.length?out:[{x:sn(W/2),y:sn(H/2)}];
 }
-function sceneLeave(from){ const sc=SCENES[from]; if(!sc) return; S.pos=S.pos||{}; const o={};
+/* v262: nebbia, muri e porte per scena. La prima volta quelli di oggi vanno a Sotto Bëllindë (l'unica scena dove si usavano). */
+function fogMigra(){ if(S.fogMig) return; S.fogS=S.fogS||{}; S.wallsS=S.wallsS||{}; S.doorsS=S.doorsS||{};
+  const f=S.fog||{on:false,ops:[]}; S.fogS.sotto={on:!!f.on,ops:(f.ops||[]).slice()}; S.wallsS.sotto=Object.assign({},S.walls||{}); S.doorsS.sotto=Object.assign({},S.doors||{});
+  if(S.scene!=='sotto'){ S.fog={on:false,ops:[]}; S.walls={}; S.doors={}; } S.fogMig=1; }
+function fogStash(id){ fogMigra(); if(!id) return; const f=S.fog||{on:false,ops:[]}; S.fogS[id]={on:!!f.on,ops:(f.ops||[]).slice()}; S.wallsS[id]=Object.assign({},S.walls||{}); S.doorsS[id]=Object.assign({},S.doors||{}); }
+function fogRestore(id){ fogMigra(); const f=(S.fogS||{})[id]; S.fog=f?{on:!!f.on,ops:Array.isArray(f.ops)?f.ops.slice():[]}:{on:false,ops:[]}; S.walls=Object.assign({},(S.wallsS||{})[id]||{}); S.doors=Object.assign({},(S.doorsS||{})[id]||{}); }
+function sceneLeave(from){ const sc=SCENES[from]; if(!sc) return; fogStash(from); S.pos=S.pos||{}; const o={};
   if(sc.tokens===true){ for(const id of sceneParty()){ const t=S.tokens[id]; o[id]={x:t.x,y:t.y}; } }
   else if(sc.tokens==='party'&&S.party) o.__party={x:S.party.x,y:S.party.y};
   if(Object.keys(o).length) S.pos[from]=o; }
-function sceneEnter(to){ const sc=SCENES[to]; if(!sc) return; const saved=(S.pos||{})[to]||{};
+function sceneEnter(to){ const sc=SCENES[to]; if(!sc) return; fogRestore(to); const saved=(S.pos||{})[to]||{};
   if(sc.tokens===true){ const start=sceneStart(to); sceneParty().forEach((id,i)=>{ const t=S.tokens[id], p=saved[id]||start[i%Math.max(1,start.length)]; if(p){ t.x=p.x; t.y=p.y; } t.movedM=0; t.dash=false; }); }
   else if(sc.tokens==='party'){ if(saved.__party) S.party={x:saved.__party.x,y:saved.__party.y}; else { const d=SCENE_DATA.find(s=>s.id===to), p=((d&&d.punti)||[]).map(q=>poiPosition(q)).find(Boolean); S.party=(to==='bellinde'||!p)?{x:765,y:640}:{x:Math.round(p.x),y:Math.round(p.y+50)}; } } }
 function gotoScene(key){
