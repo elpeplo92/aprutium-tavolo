@@ -1,0 +1,102 @@
+{
+ "apertura": "*Gira il bicchiere d’un quarto, beve, lo posa. Non si alza.* «Dite. Ho la bocca piena e le orecchie libere.»",
+ "voce": "Italiano popolare con un accento che non è di qui, frasi corte, nessuna parola in più. · Tic: gira il bicchiere d’un quarto prima di ogni sorso; quando lo gira senza bere sta per dire la cosa importante; «Fate voi il conto.» · Ritmo: lento, ogni risposta dopo un sorso; non alza mai la voce.",
+ "argomenti": [
+  {
+   "tema": "Chi è quello con le trecce",
+   "domanda": "«Chi è quello? Lo conosci?»",
+   "risposta": "«Tanush Dushmàni. Aquila, come me. Cugino di Lekë, dalla parte della madre.» *Gira il bicchiere, beve.* «Dieci anni fa facevamo la guardia alle stesse strade. È uno che consegna. Sempre. Anche quando il carico puzza.»",
+   "insistono": "«Che ci fa qui? Scorta. Dodici uomini e quattro carri per un mercante di vino.» *Un mezzo sorriso, dalla parte della barba.* «Dodici uomini per del vino. Fate voi il conto.»",
+   "mai": "Non dice da solo che cosa c’è nei carri né della lista di Teramum: aspetta che glielo chiedano, e anche allora prima la prova (argomento «Cosa ti ha detto»)."
+  },
+  {
+   "tema": "Cosa ti ha detto",
+   "domanda": "«Che cosa vi siete detti? Sei tornato con una faccia…»",
+   "risposta": "*Gira il bicchiere senza bere.* «Cose fra Aquile. Chi è morto, chi è vivo, chi paga.» *Pausa lunga.* «Mi ha detto di stare attento a Teramum. Questo ve lo dico gratis.»",
+   "insistono": "«Va bene.» *Posa il bicchiere.* «Nei carri ci sono casse da armatura. Le ho portate anch’io, una volta, per una donna che pagava bene e non voleva domande. Dodici casse. E a Teramum c’è una lista: i nomi dei vesperiani che sono passati con voi dopo Mushanë. Chi li consegna prende oro. Tanush ha detto: non entrate in città coi carri.» *Beve.* «Nomi. Ha detto nomi.»",
+   "prova": {
+    "abilita": [
+     "Persuasione",
+     "Intimidire"
+    ],
+    "cd": 13,
+    "si": "Racconta tutto (la risposta «se insistono»), ma con una parola cambiata: Tanush ha detto «teste», lui dice «nomi», per non spaventare i suoi. Vantaggio se glielo chiede Vasco o Maximus da solo, senza gli altri.",
+    "no": "«Cose fra Aquile.» Cambia discorso: parla della paglia, delle bestie, del vino. Ci riprova chi non ha ancora tirato, o dopo la sepoltura promessa a Tanush."
+   },
+   "mai": "Non dice «teste». Non dice dell’offerta della paga doppia finché non la fanno ai suoi uomini (argomento «I tuoi uomini e la paga»). Non sa che cosa ci sia dentro le armature né che cantino."
+  },
+  {
+   "tema": "I tuoi uomini e la paga",
+   "domanda": "«I tuoi stanno bene? Nessuno vuole andarsene?»",
+   "risposta": "«I miei mangiano. Quando un soldato mangia sta bene.» *Gira il bicchiere, beve.* «La paga della Crociata è corta e arriva tardi. Lo sapete voi, lo sanno loro.»",
+   "insistono": "«Qualcuno, stanotte, offrirà il doppio. Non ho detto chi. Non ho detto di sì.» *Posa il bicchiere.* «Se volete che restino, parlate con loro voi, non con me. Al fuoco, dopo cena. E non promettete quello che non pagate: un’Aquila si ricorda le promesse più dei debiti.»",
+   "prova": {
+    "abilita": [
+     "Intuizione"
+    ],
+    "cd": 14,
+    "si": "Ha già ricevuto l’offerta (da Tanush, per conto del messere) e non l’ha rifiutata: aspetta di vedere che padroni siete. Lo ammette se glielo dicono in faccia.",
+    "no": "Un sergente stanco che chiede la paga. Nient’altro."
+   },
+   "mai": "Non fa i nomi dei suoi che vorrebbero andarsene. Non tratta la paga al posto di Silvanus."
+  },
+  {
+   "tema": "Lekë e i morti di Mushanë",
+   "domanda": "«Tanush ti ha parlato di Lekë?»",
+   "risposta": "«Lekë era suo cugino e il mio capitano. L’avete ucciso voi. Lo sapevamo tutti e due quando ci siamo presi il braccio.» *Beve.* «Non è questo che gli importa. Chiede dei morti in piazza, a Mushanë. Se li abbiamo messi in terra col viso verso il mare, con la moneta nel pugno. Io gli ho detto che non lo so.»",
+   "insistono": "«Se glielo dite voi, e se è vero, Tanush parla. Se non è vero, non diteglielo: sente le bugie come i cani sentono la paura.» *Gira il bicchiere senza bere.* «E se nessuno l’ha fatto, si può ancora fare. Mattheus sa come.»",
+   "mai": "Non chiede vendetta per Lekë. Non racconta com’è morto."
+  },
+  {
+   "tema": "Di chi sei",
+   "domanda": "«Di chi sei, Kostandìn? Dei Velthuria, di Lekë, nostro?»",
+   "risposta": "«Della paga. Prima dei Velthuria, ora vostra.» *Gira il bicchiere d’un quarto e questa volta non beve.* «Ma ho cambiato bandiera una volta. Chi la cambia due volte, alla terza la bandiera gliela cuciono addosso. Lo dicevo io, a Mushanë.»",
+   "insistono": "«Se la Crociata mi tratta da soldato e non da bestia comprata, io resto. I miei restano con me. Questo vale una parola mia. Non di più, non di meno.»",
+   "mai": "Non giura su niente. Non parla male di Lekë davanti a Tanush."
+  },
+  {
+   "tema": "Cosa faresti tu",
+   "domanda": "«Che facciamo con quei carri?»",
+   "risposta": "«Niente, stanotte. Dodici balestre al buio sono dodici balestre.» *Beve.* «Se volete sapere cosa c’è dentro: guardate i solchi, andate nella stalla, parlate con l’oste. Non aprite niente finché Tanush è sveglio.»",
+   "insistono": "«E se proprio volete, fatelo quando cambia la guardia, verso mezzanotte. Due restano sulle stanghe, gli altri dormono con le dita nelle orecchie.» *Posa il bicchiere.* «Fate voi il conto del perché.»",
+   "mai": "Non partecipa a un’azione contro Tanush e i suoi finché non attaccano loro. Non apre una cassa con le sue mani."
+  }
+ ],
+ "reazioni": {
+  "minaccia": "*Non si muove, non alza la voce.* «Minacciate uno che ha già cambiato padrone una volta? State attenti a come finisce la storia.»",
+  "soldi": "*Prende, senza contare, e mette via.* «Per i miei. La parola mia l’ho già data, quella non si compra.»",
+  "lusinga": "«Mi lusingate come si lusinga un mulo prima di caricarlo.» *Beve.* «Caricate.»",
+  "bugia": "*Gira il bicchiere senza bere e vi guarda a lungo.* «Non vi conviene. Non con me, non stanotte.»"
+ },
+ "battute": [
+  "«Il vino dell’oste è onesto. È l’oste che non lo è.»",
+  "«Un’Aquila non dorme mai con tutte e due le orecchie.»",
+  "«Fate voi il conto.»",
+  "«A Mushanë ho visto morire gente migliore di me. Per questo bevo con metodo.»",
+  "«Dodici uomini per del vino. Chi ci crede, paga il vino.»",
+  "«Non chiedetemi di Lekë davanti a lui. Dopo, se volete.»"
+ ],
+ "uscita": {
+  "frase": "«Vado a vedere che i miei dormano con una mano sulla spada.»",
+  "dopo": "Dorme vicino ai suoi, al fuoco del campo, non sotto il pergolato. Se nella notte arriva l’offerta della paga doppia, non la ferma: aspetta di vedere cosa fa il gruppo («Paga doppia»).",
+  "aggancio": "«A Teramum non entrate coi carri. Questo l’ho capito anche senza tradurre.»"
+ },
+ "ottenuto": [
+  {
+   "info": "Tanush Dushmàni è cugino di Lekë e capo della scorta; i dodici sono vesperiani.",
+   "via": "gratis"
+  },
+  {
+   "info": "Nei carri ci sono dodici casse da armatura; a Teramum c’è una lista dei vesperiani passati con la Crociata, chi li consegna prende oro.",
+   "via": "prova"
+  },
+  {
+   "info": "Qualcuno stanotte offrirà ai vesperiani della Crociata paga doppia per andarsene.",
+   "via": "prova"
+  },
+  {
+   "info": "Tanush ha detto «teste», non «nomi»: a Teramum pagano per le teste.",
+   "via": "mai"
+  }
+ ]
+}

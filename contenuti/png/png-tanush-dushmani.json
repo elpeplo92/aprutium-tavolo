@@ -20,14 +20,30 @@
     "domanda": "«Chi sei? Sei uno del Loto, come quelli di Mushanë?»",
     "risposta": "«Tanush. Dushmàni.» *Batte due dita sul petto.* «Aquile. Come lui.» *Indica Kostandìn col mento.* «Loto, no. Loto è fiore su contratto. Io non sono fiore. Io sono spada che qualcuno paga. Oggi paga uno, domani altro. Spada non cambia. Cambia mano.» *Fa girare la moneta.* «Dodici uomini, quattro carri, una strada. Questo sono io, stanotte.»",
     "insistono": "*Se gli chiedono della cicatrice o della sua gente:* «Vesperia è lontana. Mare in mezzo. Io ho tre figlie là e un tetto che cade.» *Ferma la moneta.* «Il mare è largo e la paga è corta.»",
-    "mai": "Non dice chi gli ha dato il contratto di persona (il messere). Non parla dei suoi uomini uno per uno."
+    "mai": "Non dice chi gli ha dato il contratto di persona (il messere). Non parla dei suoi uomini uno per uno.",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "Parla delle figlie, della cicatrice e del tetto che cade (la risposta «se insistono»).",
+     "no": "«Tanush. Dushmàni.» E basta: torna a guardare Kostandìn."
+    }
    },
    {
     "tema": "Chi paga",
     "domanda": "«Chi vi paga? Il mercante?»",
     "risposta": "«Paga V. Sempre V. Oro pulito, passato per banchi di mare.» *Una smorfia che la cicatrice rende storta.* «Come a Mushanë. Stessa mano, stessa borsa. Messere porta borsa. Messere non è V. Messere è…» *Cerca la parola.* «…cane che porta osso. Io sono altro cane. Voi siete lepre.» *Quasi ride.* «Lepre con spada. Strano.»",
     "insistono": "«Chi è V.? Non so. Io giuro. Nessuno sa. Lekë sapeva forse. Lekë è morto.» «Lekë teneva libro paga. Tutto scritto, ogni moneta. Chi ha libro sa più di me.»",
-    "mai": "Non sa chi sia V. (non lo sa davvero). Non sa cosa sia il lillà né chi sia la signora dai capelli bianchi."
+    "mai": "Non sa chi sia V. (non lo sa davvero). Non sa cosa sia il lillà né chi sia la signora dai capelli bianchi.",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "Dice il vero: non sa chi sia V. e non gli importa; sa solo che l’oro passa per banchi di mare, come a Mushanë.",
+     "no": "Resta il dubbio che stia coprendo qualcuno."
+    }
    },
    {
     "tema": "Lekë e i morti di Mushanë",
@@ -80,7 +96,15 @@
     "domanda": "«Eri anche tu contro di noi, a Mushanë? Perché lavori per questa gente?»",
     "risposta": "«Io ero sulla Via Salaria, col Loto. A guardare strada che nessuno voleva passare. Voi siete passati dal bosco. Bravi. Lupi non pagano pedaggio.» *Quasi un sorriso.* «Così io non vi ho visti, e voi non avete visto me. Io sono vivo per questo. Lekë no.» *Ferma la moneta.* «Perché lo faccio? Tre figlie e un tetto che cade. Il mare è largo e la paga è corta.»",
     "insistono": "«E un’Aquila che prende oro lo porta a destinazione. Sempre. Anche se oro è sporco. Anche se carico canta. Poi è libera.» *Batte due dita sul petto.* «Poi.»",
-    "mai": "Non rinnega la sua regola: finché non ha consegnato, non tradisce il contratto, nemmeno per il doppio."
+    "mai": "Non rinnega la sua regola: finché non ha consegnato, non tradisce il contratto, nemmeno per il doppio.",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 13,
+     "si": "Spiega la sua regola (la risposta «se insistono»): consegna sempre, poi è libero.",
+     "no": "«Perché pagano.» Ferma la moneta col dito e non dice altro."
+    }
    },
    {
     "tema": "L’offerta del messere",
@@ -102,7 +126,15 @@
     "domanda": "«Dove porterete le casse? E dopo, che farai?»",
     "risposta": "«Portiamo casse a Teramum, alla porta sul fiume. Là le prende gente dei Tigli. Messere firma, io prendo resto della paga.» *Beve.* «Poi sono libero. Poi, forse, cerco lavoro.» *Vi guarda, uno per uno, come si guarda un cavallo prima di comprarlo.* «Pagate voi?»",
     "insistono": "*Se si fida e se Kostandìn garantisce per la Crociata:* «Dopo consegna, io e quattro miei. Quelli che dormono con dita nelle orecchie. Venite a cercarci a Teramum, dove si beve birra nera e si comprano spade.» *Ferma la moneta col dito.* «Prima consegna. Poi parliamo. Questa è regola. Se rompo regola stanotte, domani rompo con voi.»",
-    "mai": "Non dice chi riceve le casse ai Tigli (non lo sa: «gente dei Tigli»). Non passa con la Crociata prima della consegna, per nessuna cifra. (Decisione: dopo la consegna, a Teramum, si unisce con quattro uomini se la Crociata ha onorato o promesso la sepoltura dei caduti di Mushanë e se Kostandìn garantisce; si trova alla taverna di Livarpola.)"
+    "mai": "Non dice chi riceve le casse ai Tigli (non lo sa: «gente dei Tigli»). Non passa con la Crociata prima della consegna, per nessuna cifra. (Decisione: dopo la consegna, a Teramum, si unisce con quattro uomini se la Crociata ha onorato o promesso la sepoltura dei caduti di Mushanë e se Kostandìn garantisce; si trova alla taverna di Livarpola.)",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 14,
+     "si": "Solo se si fida e se Kostandìn garantisce: l’offerta di lavoro dopo la consegna (la risposta «se insistono»).",
+     "no": "«Prima consegna. Poi, forse.» Non promette niente."
+    }
    }
   ],
   "reazioni": {
