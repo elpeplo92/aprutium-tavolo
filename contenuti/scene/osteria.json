@@ -1069,6 +1069,26 @@
             "round2",
             "round4"
           ]
+        },
+        {
+          "id": "fuoco",
+          "tipo": "scontro",
+          "titolo": "Il fuoco ai carri",
+          "parte": "evento",
+          "innesco": "Qualcuno dà fuoco ai carri chiusi (giocato il 12-10: Adamus dietro i carri, Alessandros che gira il cortile a cavallo con la spada infiammata inneggiando a Valerus). «Tirate tutti per l’iniziativa.»",
+          "leggi": "I teloni incerati prendono in un respiro. Fiammate alte, odore di pece, i buoi che urlano e tirano le corde.\n\nTanush è in piedi prima di tutti. Urla una parola sola, e i suoi dodici si alzano dal pergolato con le spade in mano. Non guardano voi. Guardano i carri.\n\nDal terzo carro, un suono di legno che si spacca. Il telone in fiamme si gonfia.\n\nQualcosa si alza, in piedi dentro il fuoco. Argento annerito. Un fiore sul petto.",
+          "note": "Tutti i dodici sono svegli: metti subito «I nemici dell’inizio», «Chi arriva al round 2» e «Chi arriva al round 4» (la scorta all’arrivo sparisce da sola). A Tanush importano i carri, non la Crociata: sei corrono a staccare i buoi e a tirare fuori le casse, sei coprono con le balestre; attaccano chi si mette fra loro e i carri o chi li attacca. I vesperiani di Kostandìn tengono la linea e caricano solo se lo dice lui; Vasco sta coi PG. Silvanus arriva al round 2 e ordina di spegnere, non di combattere.\nIl fuoco: round 1 i teloni; round 2 saltano i chiodi delle casse e dal terzo e dal quarto carro si alzano DUE Armature del Loto (2d6 da fuoco all’inizio del loro turno finché stanno nel carro); round 3 altre due dal primo e dal secondo; round 5 i carri crollano e dalle altre otto casse salgono otto voci, una parola ciascuna, poi niente: otto anime libere (Mattheus le sente passare). Senza il messere a comandarle, le Armature attaccano chi è più vicino, vesperiani compresi; distrutta, ognuna dice «grazie» e il nome di un paese della valle.\nAnsaldo: al primo colpo va al cavallo nella stalla (ammaliato, fa quello che gli dice Maximus finché l’incanto dura); poi scappa verso Teramum. Fermarlo: Atletica contro Atletica, o un tiro al cavallo.\nL’osteria: i carri bruciano dalla parte della stalla; al round 4 prende il tetto se nessuno fa la catena dal pozzo (tre persone, due round, azione piena, Forza o Atletica CD 10 a testa). Nicola urla, Ninetta e Pasqualino tirano fuori le bestie.\nTanush a metà PF si arrende e chiede Kostandìn: «Il carico è perso. Ora voglio solo i miei vivi.»",
+          "dopo": "Il bottino dei carri è cenere, ma dodici anime sono libere e Iuvenza ha perso dodici armature. Il prezzo è politico: un convoglio con tre sigilli incendiato sulla strada del Barone è l’accusa del Bando. Il castaldo lo sa all’alba, Colleatterrato domani, Teramum entro sera. PE: 1.100 per Armatura abbattuta, 350 per ciascuna delle otto liberate dal fuoco, 450 per vesperiano caduto, 700 per Tanush.",
+          "rilancio": "Il fuoco sale sopra il tetto della stalla. Le Armature camminano fuori dalle fiamme. Che cosa fate?",
+          "pedine": [
+            "inizio",
+            "round2",
+            "round4"
+          ],
+          "daqui": [
+            "scontro",
+            "osteria_notte"
+          ]
         }
       ]
     },

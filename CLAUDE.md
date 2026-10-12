@@ -1450,3 +1450,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v266 (12/10/2026) — gli averi di Ansaldo Morigi
 
 - Al tavolo Maximus ha ammaliato il messere e gli ha fatto consegnare borsa e averi. Nel modulo `osteria_sala/tasche` («Le carte del messere») il bottino ha ora anche la borsa (40 mo e 15 ma, `monete`), la boccetta di essenza di lillà, il coltellino d'argento (pugnale) e i quattro anelli, con la nota sul rapporto che Ansaldo scrive all'alba. Lasciapassare, taccuino e sigillo d'osso nero erano già lì.
+
+## v267 (12/10/2026) — il fuoco ai carri (giocato al tavolo)
+
+- Al tavolo Adamus ha dato fuoco ai carri chiusi e Alessandros ha fatto il paladino infervorato a cavallo; la scorta ha sguainato. Modulo nuovo `osteria_convoglio/fuoco` («Il fuoco ai carri», scontro): sequenza round per round (teloni, due Armature del Loto al round 2 e due al round 3 dentro il fuoco, le altre otto anime liberate quando i carri crollano al round 5), Tanush che pensa ai carri, Ansaldo al cavallo, la stalla che prende al round 4 senza catena dal pozzo, resa di Tanush, conseguenze e PE. Tasti delle pedine dei tre gruppi dello scontro.
