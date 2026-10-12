@@ -23,22 +23,9 @@
     "segnaposto": false
   },
   "intro": {
-    "leggi": "Oltre il guado la strada corre dritta lungo il fiume, fra campi mietuti e file di pioppi. Sulle colline a mezzogiorno, borghi appollaiati sui crinali. Campanili. Mura.\n\nIl caldo pesa. I muli tengono la testa bassa.\n\nQuando il sole tocca le colline, la valle si stringe. Sulla strada, un’insegna di legno col disegno di una sbarra.\n\nL’osteria de lu Passe.",
-    "note": "Scena di presagio, non di battaglia: si può chiudere senza tirare un’arma. Tre fili: il convoglio di Iuvenza (casse, lillà, loto raschiato, anime nel ferro), la rete che conta la Crociata (Ansaldo, Nicola comprato, il cavaliere di Nutaròschë), il terremoto e il colpo da occidente.\nSulla mappa: strada in alto; osteria in alto a sinistra, pergolato davanti; stalla in alto a destra; cortile in basso, pozzo al centro; i quattro carri del convoglio sul lato destro del cortile; lo spazio in basso a sinistra per i carri della Crociata; la collina con la quercia in alto a destra oltre la strada.\nOrdine dei punti: cortile (arrivo) → sala (cena, Nicola, Ansaldo) → pergolato (Tanush, Kostandìn) → stalla → carri chiusi (di giorno e di notte) → la notte del terremoto → la collina.\nPNG: Nicola «Lu Passe», Messer Ansaldo Morigi, Tanush Dushmàni (schede nel Compendio, città «strada»). Bestiario: «Sergente mercenario», «Mercenario vesperiano», «Armatura del Loto».",
-    "ingressi": [
-      {
-        "da": "Dalla strada di valle, al tramonto",
-        "primo": "osteria_cortile",
-        "poi": "osteria_sala",
-        "note": "L’ordine normale della lista."
-      },
-      {
-        "da": "Se la colonna si accampa fuori, sul prato oltre la strada",
-        "primo": "osteria_collina",
-        "poi": "osteria_notte",
-        "note": "Niente cena all’osteria: Nicola non parla e Ansaldo va lui al campo, a contare, con la scusa di vendere vino. Il cavaliere sulla collina è a cento passi dal campo e si nota con CD 12 invece di 15."
-      }
-    ]
+    "leggi": "Oltre il guado la strada corre dritta lungo il fiume, fra campi mietuti e file di pioppi. Sulle colline, borghi in cima ai crinali: campanili, mura, qualche torre.\n\nPiù avanti la valle si stringe. Sulla strada, un’insegna di legno con il disegno di una sbarra.\n\nL’osteria de lu Passe.",
+    "note": "Scena di presagio, non di battaglia: si può chiudere senza tirare un’arma.\nChe cosa succede: la colonna si ferma per la notte all’osteria, dove c’è già un convoglio di quattro carri chiusi con dodici armati senza insegne. Tre fili da tirare: il convoglio di Iuvenza (casse, odore di lillà, il loto raschiato, le anime nel ferro); la rete che conta la Crociata (Ansaldo, Nicola che si è fatto comprare, il cavaliere sulla collina mandato da Nutaròschë); il terremoto nella notte e il colpo che arriva da occidente.\nOrdine dei punti: il cortile (arrivo) → la sala (cena, Nicola, Ansaldo) → il pergolato (Tanush, Kostandìn) → la stalla → i carri chiusi → la notte del terremoto → la collina. La notte e la collina non si notano passando: li sveli tu quando è il momento.\nSulla mappa: strada in alto; osteria in alto a sinistra col pergolato davanti; stalla in alto a destra; cortile in basso col pozzo al centro; i quattro carri del convoglio a destra; i carri della Crociata in basso a sinistra; la collina con la quercia in alto a destra, oltre la strada.\nPNG: Nicola «Lu Passe», Messer Ansaldo Morigi, Tanush Dushmàni (schede nel Compendio). Bestiario: Sergente mercenario, Mercenario vesperiano, Armatura del Loto.",
+    "img": "Luogo — 2. L’osteria de lu Passe.jpg"
   },
   "punti": [
     {
@@ -51,8 +38,8 @@
         "x": 620,
         "y": 830
       },
-      "text": "L’osteria sta dove la valle si stringe: un lungo edificio basso di sasso, il tetto di coppi, un pergolato di vite davanti. Accanto, una stalla grande quanto la casa.\n\nIl sole è già dietro le colline. L’aria sa di fieno, di fumo, di pane. E di maiale sullo spiedo.\n\nL’oste vi aspetta sulla porta, col grembiule di cuoio e le braccia incrociate. Ha già contato i carri. Lo vedete muovere le labbra.\n\nNel cortile ci sono già altri carri. Quattro, chiusi, coperti da teloni neri incerati, cerchiati di ferro. I buoi staccati ruminano accanto. Intorno, uomini armati che non portano insegne.\n\nIl fango secco del cortile è segnato da solchi profondi. Ruote pesanti. Più pesanti delle vostre.",
-      "breve": "Arrivo al tramonto del primo giorno. Nicola «Lu Passe» ha già contato i carri; nel cortile c’è un convoglio chiuso con dodici armati senza insegne. Si contratta l’alloggio, si leggono i solchi, si guarda la scorta.",
+      "text": "L’osteria sta dove la valle si stringe: un lungo edificio basso di sasso, il tetto di coppi, un pergolato di vite davanti. Accanto, una stalla grande quanto la casa.\n\nL’aria sa di fieno, di fumo, di pane. E di maiale sullo spiedo.\n\nL’oste vi aspetta sulla porta, col grembiule di cuoio e le braccia incrociate. Ha già contato i carri. Lo vedete muovere le labbra.\n\nNel cortile ci sono già altri carri. Quattro, chiusi, coperti da teloni neri incerati, cerchiati di ferro. I buoi staccati ruminano accanto. Intorno, uomini armati che non portano insegne.\n\nIl fango secco del cortile è segnato da solchi profondi. Ruote pesanti. Più pesanti delle vostre.",
+      "breve": "Arrivo del primo giorno. Nicola «Lu Passe» ha già contato i carri; nel cortile c’è un convoglio chiuso con dodici armati senza insegne. Si contratta l’alloggio, si leggono i solchi, si guarda la scorta.",
       "gm": "L’osteria de lu Passe è a due leghe da Bëllindë (tavoletta della Porta di Levante), sulla strada di valle, in terra del Barone Pietramala di Cashtalladdë. Qui arriva la notizia del Bando: il castaldo è passato tre giorni fa a leggerlo.\nIl convoglio: quattro carri chiusi, arrivati ieri al tramonto dalla strada di Nutaròschë (da mezzogiorno), fermi un giorno per una ruota rotta. Ripartono domattina prima dell’alba. Portano a Teramum le armature nuove di Veneranda Iuvenza (vedi «I carri chiusi»). Li accompagna Messer Ansaldo Morigi, agente di Iuvenza che si fa passare per mercante di vini, con una scorta di dodici vesperiani comandata da Tanush Dushmàni.\nSulla mappa: strada in alto, osteria in alto a sinistra col pergolato davanti, stalla in alto a destra, cortile in basso col pozzo al centro; i carri del convoglio in fila sul lato destro del cortile; lo spazio in basso a sinistra è per i cinque carri della Crociata.",
       "nota": {
         "cd": 0
@@ -990,7 +977,8 @@
       "breve": "Notte fonda: un terremoto di tre respiri, poi da occidente un colpo sordo, lontanissimo. Il presagio. Il Filatterio di Mattheus si fa freddo per un battito; le armature nelle casse si muovono tutte insieme; Ansaldo esce con la lanterna e dice «Non ancora». Chi è di guardia vede il cavaliere sulla collina. All’alba il convoglio è già partito.",
       "gm": "Canone: il Gigante è inquieto e i terremoti sono sempre più frequenti. Il colpo da occidente è il presagio: sotto la Basilica Aurea di Teramum c’è un Sigillo Lunare, disturbato. I PG non devono saperlo.\nProposta (Da decidere): in città, nello stesso momento, la campana grande della Basilica Aurea ha suonato un colpo da sola. Lo racconta il sergente a Colleatterrato.\nChi è sveglio: chiedi al tavolo chi fa la guardia e in che turno. Il terremoto arriva nel terzo turno, quello prima dell’alba.",
       "nota": {
-        "cd": 0
+        "cd": 0,
+        "auto": false
       },
       "moduli": [
         {
@@ -1085,7 +1073,8 @@
       "breve": "Il cavaliere che segue la colonna da Bëllindë (il finocchio all’ara di Sant’Atto). È un uomo di Dama Violante Rosaspina di Nutaròschë, la spia di Iuvenza. Se lo si insegue, fugge verso sud-est; le tracce, all’alba, hanno i chiodi dei ferri a forma di rosa.",
       "gm": "Il rapporto sulla Crociata arriva a Teramum per due vie: quella ufficiale (il Barone, la Guardia di Colleatterrato) e quella segreta di Nutaròschë (questo cavaliere, poi Rosaspina, poi Iuvenza). Ansaldo è la terza.\nIl cavaliere si chiama Guelfo (proposta), scudiero di Rosaspina. Non combatte: fugge. Ha un buon cavallo e un vantaggio di cento metri.\nSi vede solo da chi è sveglio e guarda verso levante, o da chi ha scurovisione: nota.cd 15 (buio).",
       "nota": {
-        "cd": 15
+        "cd": 15,
+        "auto": false
       },
       "moduli": [
         {

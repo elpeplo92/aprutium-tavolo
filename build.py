@@ -222,6 +222,8 @@ def scene():
             senza_img.append(f"{who}: «{v}»"); return None
         mp = s.get("mappa") or {}
         if mp.get("img"): mp["img"] = res(mp["img"], sid) or mp["img"]
+        it = s.get("intro") or {}   # v261: l'immagine dell'introduzione (intro.img), mostrata ai giocatori con il testo
+        if it.get("img"): it["img"] = res(it["img"], sid + "/intro") or it["img"]
         for pd in s.get("pedine") or []:   # v214: il token della pedina col nome leggibile («TOKEN — …png»)
             for k in ("img", "ritratto"):   # v219: «ritratto» = l'immagine per la colonna dei personaggi
                 if pd.get(k): pd[k] = res(pd[k], f"{sid}/{pd.get('id')}") or ""
