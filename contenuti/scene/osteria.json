@@ -528,7 +528,7 @@
           "parte": "nascosto",
           "innesco": "Qualcuno prova a leggere, rubare o copiare le carte che il messere tiene sotto il velluto (a tavola, o di notte nella sua camera sopra la cucina).",
           "leggi": "Sotto il velluto, una cartella di cuoio sottile. Dentro: un lasciapassare piegato in tre, un taccuino, e un sigillo da viaggio d’osso nero, levigato, con un fiore inciso.",
-          "note": "Di giorno, a tavola: Rapidità di mano CD 17 (lui è attento). Di notte, nella camera sopra la cucina (dorme vestito, Tanush alla porta fino a mezzanotte): Furtività CD 14 per arrivarci, Rapidità di mano CD 14 per prendere o copiare senza svegliarlo.\nIl lasciapassare: «Quattro carri di vino e botti per le cantine del Quartiere dei Tigli.» Tre sigilli: Melatino (dazi e gilde: la Lega dei Sensali), Chiodi (la Legge), Mazzarelli (la Reggenza) (proposta: sono i tre più comprabili). Prova che il convoglio ha già le carte che alla Crociata mancano.\nIl taccuino: il conto della Crociata già fatto, giusto al numero, e una riga: «capitano col cappuccio — non visto il volto — mangia il doppio». E una seconda: «l’oste è comprato».\nIl sigillo d’osso nero è identico a quello di Ottavio Ceruso a Bëllindë (era nella sua borsa) e, secondo le voci del Compendio, a quello di Lu Grise: la rete di Iuvenza, che firma «V.». Negli Atti il sigillo di Lu Grise non compare: i giocatori non possono fare il confronto da soli, quindi la descrizione nell’inventario dice solo quello che si vede. Rubarlo è rubare una prova; se se ne accorge all’alba, lo scrive, e Iuvenza lo saprà.",
+          "note": "Di giorno, a tavola: Rapidità di mano CD 17 (lui è attento). Di notte, nella camera sopra la cucina (dorme vestito, Tanush alla porta fino a mezzanotte): Furtività CD 14 per arrivarci, Rapidità di mano CD 14 per prendere o copiare senza svegliarlo.\nIl lasciapassare: «Quattro carri di vino e botti per le cantine del Quartiere dei Tigli.» Tre sigilli: Melatino (dazi e gilde: la Lega dei Sensali), Chiodi (la Legge), Mazzarelli (la Reggenza) (proposta: sono i tre più comprabili). Prova che il convoglio ha già le carte che alla Crociata mancano.\nIl taccuino: il conto della Crociata già fatto, giusto al numero, e una riga: «capitano col cappuccio — non visto il volto — mangia il doppio». E una seconda: «l’oste è comprato».\nIl sigillo d’osso nero è identico a quello di Ottavio Ceruso a Bëllindë (era nella sua borsa) e, secondo le voci del Compendio, a quello di Lu Grise: la rete di Iuvenza, che firma «V.». Negli Atti il sigillo di Lu Grise non compare: i giocatori non possono fare il confronto da soli, quindi la descrizione nell’inventario dice solo quello che si vede. Rubarlo è rubare una prova; se se ne accorge all’alba, lo scrive, e Iuvenza lo saprà.\nSe il messere consegna tutto da solo (ammaliato, o convinto): oltre alla cartella, la borsa (40 fiorini d’oro e 15 gofferine), la boccetta del lillà, il coltellino d’argento e i quattro anelli. Lui annota anche questo: all’alba, passato l’incanto, nel rapporto scrive che una compagnia armata ha derubato un mercante col sigillo di tre Casate sulla strada del Barone, e Iuvenza lo saprà.",
           "prove": [
             {
               "id": "mani",
@@ -573,6 +573,50 @@
               "valore": "—",
               "stats": "",
               "desc": "Il conto della Crociata al numero giusto; «capitano col cappuccio — mangia il doppio»; «l’oste è comprato».",
+              "a": "crociata"
+            },
+            {
+              "n": "Borsa di Ansaldo Morigi",
+              "q": 1,
+              "cat": "Altro",
+              "peso": "1 lb",
+              "valore": "40 mo",
+              "stats": "",
+              "desc": "Borsa di pelle nera con oro nuovo e pulito, «passato per banchi di mare», e una manciata di gofferine d’argento. Non è roba sua: è la cassa di viaggio della sua signora.",
+              "a": "crociata",
+              "monete": {
+                "mo": 40,
+                "ma": 15
+              }
+            },
+            {
+              "n": "Boccetta di essenza di lillà",
+              "q": 1,
+              "cat": "Altro",
+              "peso": "—",
+              "valore": "5 mo",
+              "stats": "",
+              "desc": "Boccetta di vetro col tappo di sughero. Dentro, un’essenza dolce e pesante: lillà, e sotto un fondo di cenere. È il profumo che il messere si mette apposta.",
+              "a": "crociata"
+            },
+            {
+              "n": "Coltellino d’argento",
+              "q": 1,
+              "cat": "Armi",
+              "peso": "0,5 lb",
+              "valore": "8 mo",
+              "stats": "Pugnale: 1d4 perforanti, Leggera, Accurata, Lancio 6/18 m",
+              "desc": "Il coltellino con cui il messere taglia il pane. Manico d’argento lavorato, lama corta e lucida.",
+              "a": "crociata"
+            },
+            {
+              "n": "Anelli del messere",
+              "q": 4,
+              "cat": "Altro",
+              "peso": "—",
+              "valore": "30 mo in tutto",
+              "stats": "",
+              "desc": "Quattro anelli d’oro, troppi per due mani. Uno porta una pietra scura, senza stemma.",
               "a": "crociata"
             }
           ],
