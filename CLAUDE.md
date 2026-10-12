@@ -1454,3 +1454,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v267 (12/10/2026) — il fuoco ai carri (giocato al tavolo)
 
 - Al tavolo Adamus ha dato fuoco ai carri chiusi e Alessandros ha fatto il paladino infervorato a cavallo; la scorta ha sguainato. Modulo nuovo `osteria_convoglio/fuoco` («Il fuoco ai carri», scontro): sequenza round per round (teloni, due Armature del Loto al round 2 e due al round 3 dentro il fuoco, le altre otto anime liberate quando i carri crollano al round 5), Tanush che pensa ai carri, Ansaldo al cavallo, la stalla che prende al round 4 senza catena dal pozzo, resa di Tanush, conseguenze e PE. Tasti delle pedine dei tre gruppi dello scontro.
+
+## v268 (12/10/2026) — Kostandìn, Vasco e i vesperiani passano con Tanush (giocato)
+
+- Al tavolo Kostandìn coi suoi undici, Vasco e i suoi tre sono passati dalla parte della scorta. Gruppo di pedine `voltagabbana` (13 nemici con scheda: Kostandìn `sergente`, Vasco `te_veterano_ducale`, gli altri `mercenario`) in `osteria.json`; campo nuovo delle pedine **`togli`** (id di altre pedine della scena): quando la pedina entra, quelle vengono tolte dalla mappa (`pedineMetti` avvolta, blocco v263) — così le copie alleate della colonna spariscono. Nota del modulo «Il fuoco ai carri» aggiornata (muro attorno ai carri, offerta di Kostandìn, coesione −2).
