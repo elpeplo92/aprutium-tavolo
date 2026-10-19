@@ -1458,3 +1458,27 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v268 (12/10/2026) — Kostandìn, Vasco e i vesperiani passano con Tanush (giocato)
 
 - Al tavolo Kostandìn coi suoi undici, Vasco e i suoi tre sono passati dalla parte della scorta. Gruppo di pedine `voltagabbana` (13 nemici con scheda: Kostandìn `sergente`, Vasco `te_veterano_ducale`, gli altri `mercenario`) in `osteria.json`; campo nuovo delle pedine **`togli`** (id di altre pedine della scena): quando la pedina entra, quelle vengono tolte dalla mappa (`pedineMetti` avvolta, blocco v263) — così le copie alleate della colonna spariscono. Nota del modulo «Il fuoco ai carri» aggiornata (muro attorno ai carri, offerta di Kostandìn, coesione −2).
+
+## v269 (19/10/2026) — «Il PNG parla»: il banco di regia, fase 1
+
+- Giuseppe (19-10) ha scelto, fra le proposte di `Revisioni/Proposte per il sito (14-10-2026)/`, il **gestore del dialogo**: i giocatori
+  parlano con un PNG e l'AI genera la battuta, con la voce. Progetto in `A3 - Il gestore del dialogo (bot vocale dei PNG).md`.
+- **Il programma** sta in `7_Aprutium/Regia/` (fuori dal repo del sito): `regia.mjs` (Node, `avvia.bat` per accenderlo), `config.json`
+  (`ambiente`: `partita` = tavolo vero, `prova` = pagine con `?prova=1`), `chiavi.json` (chiave API Anthropic, non c'è ancora: senza chiave
+  risponde col copione del dialogo, cioè l'argomento più vicino alla domanda), `voci.json` (casting: voci italiane di edge-tts, gratuite),
+  `modi.json` (PNG in modo «controllato»: la battuta aspetta il sì del master; gli altri sono «liberi»). Legge i PNG da `Sito/contenuti/png`
+  e `_dialoghi`, le scene da `contenuti/scene`, il Registro e la scena aperta da `partita/stato` (sola lettura).
+- **Firebase**: tutto in `partita/regia/<ambiente>/` (le regole permettono le scritture anonime solo sotto `partita/`): `stato` (battito ogni
+  15 s: se manca da più di un minuto il sito considera l'assistente spento e ai giocatori non mostra nulla), `dialoghi/<did>` con le
+  `battute` (stati: giocatore `nuova → presa`; PNG `attesa → approvata → pronta` con l'audio mp3 in base64, oppure `rifiutata`),
+  `sussurro` del master, `chiuso`, `riassunto` (scritto dal programma), `registrato` (la pagina del master ha messo il riassunto nel Registro).
+- **Il sito**: blocco «IL PNG PARLA (v269)» in fondo a `src/tavolo.html` (fonte rigiocabile `Revisioni/Proposte per il sito (14-10-2026)/v269/`,
+  `applica.py`). Riquadro `#regiaBox` in testa a `#guideTop`, per tutti i ruoli. Si apre col proprio collegamento Firebase (`firebase.app('regia')`,
+  anonimo) così funziona anche in `?prova=1`, dove lo stato della partita è solo in memoria. Il giocatore clicca la pedina di un PNG con
+  dialogo (`tokPng`, come la v263), «Parla», scrive o detta col microfono del browser (`webkitSpeechRecognition`, it-IT, manda da solo a fine
+  frase), «Basta». L'audio si sente su tutte le pagine della stessa scena, in coda, una volta sola; se il browser blocca l'audio compare
+  «Attiva l'audio». Il master: elenco dei dialoghi aperti, modo libero/controllato, «Vai»/«Scarta» con testo correggibile, «Sussurra»,
+  «Parlo io», «Chiudi», e può aprire lui un dialogo scegliendo il PG. Alla chiusura: `Dialogo · <riassunto>` nel Registro.
+- Provato in locale con il programma in modo `prova`: pagina del master (dialogo libero e controllato, correzione, voce pronta, Registro) e
+  pagina di Luigis (Parla, domanda, risposta, Basta). `prova-tavolo.js` verde nei due ruoli. Manca la prova con Claude vero (serve la chiave).
+- Prossimi passi: chiave API; sentire le voci al tavolo e fare il casting; fase 2 = bot Discord che ascolta e parla nel canale; memoria dei PNG.

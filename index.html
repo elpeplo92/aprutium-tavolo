@@ -2588,7 +2588,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v268</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v269</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10767,4 +10767,181 @@ window.RICETTE={
   window.__v257={suona,animaEvento,sorveglia,segna,attivi:()=>EFF.length,azzera:()=>{ EFF=[]; },visti:FX_VISTI,t:()=>FX_T};
 })();
 /* ===== FINE ANIMAZIONI DEGLI INCANTESIMI (v257) ===== */
+/* ===== IL PNG PARLA (v269) — banco di regia, fase 1 =====
+   Giuseppe (19-10-2026): «un gestore del dialogo: quando i giocatori parlano con un PNG, l'AI genera il dialogo, meglio se con la voce».
+   Come funziona: sul PC del master gira il programma `7_Aprutium/Regia/regia.mjs` (il «banco di regia»). Il sito e il programma si
+   parlano su Firebase in `partita/regia/<ambiente>/` (ambiente = `prova` con ?prova=1, `partita` sul tavolo vero):
+   - `stato` {online, attore}: il programma lo scrive ogni 15 s; se manca da più di un minuto, l'assistente è «spento» e il riquadro non si mostra ai giocatori.
+   - `dialoghi/<did>` {png, nome, tid, pg, modo: libero|controllato, aperto, chiuso, sussurro, riassunto, registrato, battute:{<bid>:{chi: pg|png, pg, testo, azione, avviso, t, stato, audio}}}.
+     Stati di una battuta del giocatore: nuova → presa (il programma la sta leggendo). Del PNG: attesa (modo controllato: aspetta il master) →
+     approvata (il master ha detto «Vai», o modo libero) → pronta (c'è l'audio, base64 mp3, lo sentono tutti) · rifiutata.
+   Il giocatore: clicca la pedina di un PNG che ha un dialogo (campo `png` della pedina, come il dialogo del master della v263), preme «Parla»,
+   scrive o detta (microfono del browser, italiano); la battuta del PNG compare sotto la pedina e si sente. «Basta» chiude.
+   Il master: vede i dialoghi aperti nella Guida; in modo controllato approva, corregge o scarta ogni battuta prima che parta; può sussurrare
+   un'indicazione al PNG, dire lui una battuta («Parlo io»), chiudere. Alla chiusura il riassunto va nel Registro (lo scrive la pagina del master).
+   Senza programma acceso il sito è identico a prima. Fonte: Revisioni/Proposte per il sito (14-10-2026)/v269/. */
+(function(){
+  const AMB=(new URLSearchParams(location.search).get('regia'))||(TEST_MODE?'prova':'partita');
+  const BASE='partita/regia/'+AMB;
+  const PGN={alessandros:'Alessandros',vicarus:'Vicarus',adamus:'Adamus',maximus:'Maximus',mattheus:'Mattheus',luigis:'Luigis'};
+  let rdb=null, DLGS={}, STATO={}, ONLINE=false, OPEN=null, played=new Set(), audioQ=[], audioBusy=false, audioBlocked=false, listening=false, lastKey='';
+  const esc=s=>poiText(s);
+  const st=document.createElement('style'); st.textContent=`
+#regiaBox{border:1px solid var(--gold-dim);border-radius:6px;padding:10px 12px;background:rgba(0,0,0,.28);font-size:14px;line-height:1.45}
+#regiaBox h2{margin:0 0 6px;font-size:18px}
+#regiaBox .rhead{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+#regiaBox .rhead img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1px solid var(--gold-dim)}
+#regiaBox .rhead b{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:19px;letter-spacing:.03em;color:var(--gold)}
+#regiaBox .rstato{font-size:12px;color:var(--ink-dim)}
+#regiaBox .rconv{display:flex;flex-direction:column;gap:6px;max-height:300px;overflow-y:auto;padding:4px 2px;margin:6px 0}
+#regiaBox .rb{max-width:92%;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(201,162,74,.25)}
+#regiaBox .rb.pg{align-self:flex-end;background:rgba(201,162,74,.14)}
+#regiaBox .rb.png{align-self:flex-start;font-family:"Bookinsanity",Georgia,serif;font-size:15px}
+#regiaBox .rb small{display:block;font-size:11px;color:var(--ink-dim);margin-bottom:2px}
+#regiaBox .rb i.az{display:block;font-size:12.5px;color:var(--ink-dim)}
+#regiaBox .rb.wait{opacity:.7;font-style:italic}
+#regiaBox .rb.att{border-color:var(--gold);background:rgba(201,162,74,.08)}
+#regiaBox textarea{width:100%;box-sizing:border-box;min-height:54px;font:inherit;font-size:14px;background:rgba(0,0,0,.3);color:var(--ink);border:1px solid var(--gold-dim);border-radius:4px;padding:6px}
+#regiaBox input[type=text]{flex:1;min-width:0;font:inherit;font-size:14px;background:rgba(0,0,0,.3);color:var(--ink);border:1px solid var(--gold-dim);border-radius:4px;padding:6px 8px}
+#regiaBox .rrow{display:flex;gap:6px;align-items:center;margin-top:6px;flex-wrap:wrap}
+#regiaBox button{font-size:13px;padding:5px 10px}
+#regiaBox button.mic.on{background:#7a2a1a;border-color:#c25a3a;color:#fff;animation:rpulse 1s infinite}
+@keyframes rpulse{0%,100%{box-shadow:0 0 0 0 rgba(194,90,58,.6)}50%{box-shadow:0 0 0 7px rgba(194,90,58,0)}}
+#regiaBox .ravv{font-size:12.5px;color:#E8C27A;border-left:2px solid var(--gold);padding-left:8px;margin:4px 0}
+#regiaBox .rlist{display:flex;flex-direction:column;gap:4px;margin-bottom:6px}
+#regiaBox .rlist button{text-align:left}
+#regiaBox .rtog{display:inline-flex;border:1px solid var(--gold-dim);border-radius:4px;overflow:hidden}
+#regiaBox .rtog button{border:0;border-radius:0;padding:3px 8px;font-size:12px}
+#regiaBox .rtog button.on{background:var(--gold);color:#1A1207}
+#regiaBox .rsmall{font-size:12px;color:var(--ink-dim)}
+`; document.head.appendChild(st);
+
+  function box(){ let b=document.getElementById('regiaBox'); if(b) return b; const top=document.getElementById('guideTop'); if(!top) return null; b=document.createElement('div'); b.id='regiaBox'; b.className='sec hidden'; top.insertBefore(b,top.firstChild); return b; }
+  async function connect(){
+    if(typeof firebase==='undefined'||!window.FIREBASE_CONFIG) return;
+    try{
+      let app; try{ app=firebase.app('regia'); }catch(e){ app=firebase.initializeApp(window.FIREBASE_CONFIG,'regia'); }
+      const auth=app.auth(); if(!auth.currentUser) await auth.signInAnonymously();
+      rdb=app.database();
+      rdb.ref(BASE+'/stato').on('value',s=>{ STATO=s.val()||{}; checkOnline(); paint(); });
+      rdb.ref(BASE+'/dialoghi').on('value',s=>{ DLGS=s.val()||{}; onDlgs(); paint(); });
+      setInterval(()=>{ const o=ONLINE; checkOnline(); if(o!==ONLINE) paint(); },20000);
+    }catch(e){ console.warn('regia: collegamento non riuscito',e); }
+  }
+  function checkOnline(){ ONLINE=!!(STATO.online&&Date.now()-STATO.online<70000); }
+  const now=()=>Date.now();
+  function tokOf(did){ const d=DLGS[did]; return d&&S.tokens[d.tid]||null; }
+  function miei(){ return Object.entries(DLGS).filter(([id,d])=>d&&!d.chiuso&&(IS_GM||d.pg===me)).sort((a,b)=>(a[1].aperto||0)-(b[1].aperto||0)); }
+  function apri(tid,png,pg){
+    const t=S.tokens[tid]; if(!t||!rdb) return;
+    const did='d'+now().toString(36)+Math.random().toString(36).slice(2,6);
+    rdb.ref(BASE+'/dialoghi/'+did).set({png,nome:String(t.name||png),tid,pg:pg||me||'master',sc:(CUR&&CUR.id)||'',aperto:now(),battute:{}});
+    OPEN=did;
+  }
+  function dici(did,testo,pg){
+    testo=String(testo||'').trim(); if(!testo||!rdb) return;
+    rdb.ref(BASE+'/dialoghi/'+did+'/battute/b'+now().toString(36)).set({chi:'pg',pg:pg||DLGS[did].pg,testo,t:now(),stato:'nuova'});
+  }
+  function chiudi(did){ if(rdb) rdb.ref(BASE+'/dialoghi/'+did).update({chiuso:now()}); if(OPEN===did) OPEN=null; }
+  function setB(did,bid,patch){ if(rdb) rdb.ref(BASE+'/dialoghi/'+did+'/battute/'+bid).update(patch); }
+  function parloIo(did,testo){ testo=String(testo||'').trim(); if(!testo||!rdb) return; rdb.ref(BASE+'/dialoghi/'+did+'/battute/m'+now().toString(36)).set({chi:'png',testo,azione:'',avviso:'',t:now(),stato:'approvata',master:true}); }
+
+  /* audio: una battuta pronta si sente una volta sola, in coda */
+  function onDlgs(){
+    for(const [did,d] of Object.entries(DLGS)){
+      if(!d||d.chiuso) continue;
+      if(d.sc&&CUR&&CUR.id&&d.sc!==CUR.id) continue; /* si sente solo nella scena dove si parla */
+      for(const [bid,b] of Object.entries(d.battute||{})){ const k=did+'|'+bid; if(b.chi==='png'&&b.stato==='pronta'&&!played.has(k)){ played.add(k); if(b.audio&&(now()-(b.t2||b.t))<120000) audioQ.push(b.audio); } }
+    }
+    pump();
+    if(IS_GM){ for(const [did,d] of Object.entries(DLGS)){ if(d&&d.chiuso&&d.riassunto!=null&&!d.registrato&&(FB_LOADED||TEST_MODE)){ if(d.riassunto) { log({kind:'sys',txt:`Dialogo · ${d.riassunto}`}); save(); } rdb.ref(BASE+'/dialoghi/'+did).update({registrato:true}); } } }
+  }
+  function pump(){
+    if(audioBusy||!audioQ.length) return; audioBusy=true; const src=audioQ.shift(); const a=new Audio(src);
+    a.onended=a.onerror=()=>{ audioBusy=false; pump(); };
+    a.play().then(()=>{ audioBlocked=false; }).catch(()=>{ audioBlocked=true; audioQ.unshift(src); audioBusy=false; paint(); });
+  }
+  function sblocca(){ audioBlocked=false; pump(); paint(); }
+
+  /* microfono del browser (Chrome): italiano, una frase, poi manda da solo */
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  function detta(did,inp,btn,pg){
+    if(!SR) { toast('Il microfono non è disponibile in questo browser: scrivi'); return; }
+    if(listening){ try{ listening.stop(); }catch(e){} return; }
+    const r=new SR(); r.lang='it-IT'; r.interimResults=true; r.continuous=false; listening=r; btn.classList.add('on');
+    r.onresult=e=>{ let s=''; for(const res of e.results) s+=res[0].transcript; inp.value=s; if(e.results[e.results.length-1].isFinal){ dici(did,s,pg); inp.value=''; } };
+    r.onerror=e=>{ if(e.error!=='no-speech'&&e.error!=='aborted') toast('Microfono: '+e.error); };
+    r.onend=()=>{ listening=false; btn.classList.remove('on'); };
+    try{ r.start(); }catch(e){ listening=false; btn.classList.remove('on'); }
+  }
+
+  function battute(d){ return Object.entries(d.battute||{}).map(([id,b])=>({id,...b})).sort((a,b)=>a.t-b.t); }
+  function convHtml(d,did){
+    const B=battute(d); let h='';
+    for(const b of B){
+      if(b.stato==='rifiutata'&&!IS_GM) continue;
+      if(b.chi==='pg'){ h+=`<div class="rb pg"><small>${esc(PGN[b.pg]||b.pg||'')}</small>${esc(b.testo)}</div>`; if((b.stato==='nuova'||b.stato==='presa')&&!B.some(x=>x.risponde===b.id)) h+=`<div class="rb png wait">${esc(d.nome)} ci pensa…</div>`; if(b.stato==='errore') h+=`<div class="rb png wait">L’attore non ha risposto${IS_GM&&b.errore?': '+esc(b.errore):''}.</div>`; continue; }
+      if(b.stato==='attesa'){ if(!IS_GM){ h+=`<div class="rb png wait">${esc(d.nome)} sta per parlare…</div>`; continue; }
+        h+=`<div class="rb png att"><small>In attesa del tuo sì</small><textarea data-rt="${b.id}">${esc(b.testo)}</textarea>${b.azione?`<i class="az">${esc(b.azione)}</i>`:''}${b.avviso?`<div class="ravv">${esc(b.avviso)}</div>`:''}<div class="rrow"><button class="primary" data-rvai="${b.id}">Vai</button><button data-rno="${b.id}">Scarta</button></div></div>`; continue; }
+      if(b.stato==='rifiutata'){ h+=`<div class="rb png wait"><small>Scartata</small>${esc(b.testo)}</div>`; continue; }
+      h+=`<div class="rb png"><small>${esc(d.nome)}${b.master?' · detta dal master':''}${b.stato==='approvata'?' · la voce arriva…':''}</small>${esc(b.testo)}${b.azione?`<i class="az">${esc(b.azione)}</i>`:''}${IS_GM&&b.avviso?`<div class="ravv">${esc(b.avviso)}</div>`:''}</div>`;
+    }
+    return h||`<div class="rsmall">Nessuno ha ancora parlato. ${IS_GM?'':'Scrivi o premi il microfono.'}</div>`;
+  }
+  function paint(){
+    const b=box(); if(!b) return;
+    const sel=selected&&S.tokens[selected]?selected:null; const png=sel&&typeof tokPng==='function'?tokPng(sel):null;
+    const aperti=miei();
+    let did=OPEN&&DLGS[OPEN]&&!DLGS[OPEN].chiuso?OPEN:null;
+    if(!did&&sel){ const m=aperti.find(([id,d])=>d.tid===sel); if(m) did=m[0]; }
+    if(!did&&!IS_GM&&aperti.length) did=aperti[0][0];
+    const mostra=rdb&&((IS_GM&&(ONLINE||aperti.length))||(!IS_GM&&ONLINE&&(png||did)));
+    if(!mostra){ b.classList.add('hidden'); lastKey=''; return; }
+    b.classList.remove('hidden');
+    const d=did?DLGS[did]:null;
+    const dk=d?{...d,battute:Object.fromEntries(Object.entries(d.battute||{}).map(([k,x])=>[k,{...x,audio:x.audio?1:0}]))}:null;
+    const key=JSON.stringify([did,dk,sel,png,ONLINE,audioBlocked,listening?1:0,IS_GM,aperti.map(a=>a[0])]);
+    if(key===lastKey) return; lastKey=key;
+    const stato=`<span class="rstato">${ONLINE?`assistente acceso${IS_GM&&STATO.attore?' · '+esc(STATO.attore):''}`:'assistente spento'}</span>`;
+    let h=`<h2>Il PNG parla</h2>`;
+    if(IS_GM&&aperti.length>1) h+=`<div class="rlist">${aperti.map(([id,x])=>`<button data-ropen="${id}" class="${id===did?'primary':''}">${esc(x.nome)} ← ${esc(PGN[x.pg]||x.pg)}</button>`).join('')}</div>`;
+    if(d){
+      const t=S.tokens[d.tid]; const img=t&&((typeof railImg==='function'&&railImg(t))||t.img)||'';
+      h+=`<div class="rhead">${img?`<img src="${esc(img)}" alt="">`:''}<div><b>${esc(d.nome)}</b><br>${stato}${IS_GM?` · <span class="rtog"><button data-rmodo="libero" class="${(d.modo||'libero')==='libero'?'on':''}">libero</button><button data-rmodo="controllato" class="${d.modo==='controllato'?'on':''}">controllato</button></span>`:''}</div></div>`;
+      h+=`<div class="rconv" id="rconv">${convHtml(d,did)}</div>`;
+      if(audioBlocked) h+=`<div class="rrow"><button class="primary" id="rsblocca">🔊 Attiva l’audio</button></div>`;
+      if(IS_GM){
+        h+=`<div class="rrow"><input type="text" id="rsus" placeholder="Sussurra al PNG (es. «sii più ostile», «non parlare del Sigillo»)" value="${esc(d.sussurro||'')}"><button id="rsusGo">Sussurra</button></div>`;
+        h+=`<div class="rrow"><input type="text" id="rio" placeholder="Parlo io: la battuta del PNG con le tue parole"><button id="rioGo">Parlo io</button></div>`;
+        h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}" ${k===d.pg?'selected':''}>${v}</option>`).join('')}</select><input type="text" id="rtxt" placeholder="Domanda del giocatore (se la scrivi tu)"><button id="rgo">Di’</button><button id="rmic" class="mic" title="Detta">🎤</button><button id="rfine">Chiudi</button></div>`;
+      } else {
+        h+=`<div class="rrow"><input type="text" id="rtxt" placeholder="Cosa dici a ${esc(d.nome.split(',')[0])}?"><button id="rgo" class="primary">Di’</button><button id="rmic" class="mic ${listening?'on':''}" title="Parla col microfono">🎤</button><button id="rfine">Basta</button></div>`;
+      }
+    } else if(png&&sel){
+      const t=S.tokens[sel]; const img=(typeof railImg==='function'&&railImg(t))||t.img||'';
+      h+=`<div class="rhead">${img?`<img src="${esc(img)}" alt="">`:''}<div><b>${esc(t.name)}</b><br>${stato}</div></div>`;
+      if(IS_GM) h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="primary" id="rparla">Parla</button><span class="rsmall">apre un dialogo per quel personaggio</span></div>`;
+      else h+=`<div class="rrow"><button class="primary" id="rparla">Parla con ${esc(t.name.split(',')[0])}</button></div>`;
+    } else if(IS_GM){ h+=`<div class="rhead"><div>${stato}<br><span class="rsmall">Nessun dialogo aperto. I giocatori cliccano la pedina di un PNG e premono «Parla».</span></div></div>`; }
+    b.innerHTML=h;
+    const q=s=>b.querySelector(s);
+    if(q('#rparla')) q('#rparla').onclick=()=>{ apri(sel,png,IS_GM?q('#rchi').value:me); };
+    if(q('#rgo')) { const go=()=>{ dici(did,q('#rtxt').value,IS_GM?q('#rchi').value:undefined); q('#rtxt').value=''; }; q('#rgo').onclick=go; q('#rtxt').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); go(); } }); setTimeout(()=>{ try{ if(!IS_GM) q('#rtxt').focus({preventScroll:true}); }catch(e){} },30); }
+    if(q('#rmic')) q('#rmic').onclick=()=>detta(did,q('#rtxt'),q('#rmic'),IS_GM?q('#rchi').value:undefined);
+    if(q('#rfine')) q('#rfine').onclick=()=>chiudi(did);
+    if(q('#rsblocca')) q('#rsblocca').onclick=sblocca;
+    if(q('#rsusGo')) q('#rsusGo').onclick=()=>{ rdb.ref(BASE+'/dialoghi/'+did).update({sussurro:q('#rsus').value.trim()}); toast('Sussurrato: vale per la prossima battuta'); };
+    if(q('#rioGo')) q('#rioGo').onclick=()=>{ parloIo(did,q('#rio').value); q('#rio').value=''; };
+    b.querySelectorAll('[data-ropen]').forEach(x=>x.onclick=()=>{ OPEN=x.dataset.ropen; lastKey=''; paint(); });
+    b.querySelectorAll('[data-rmodo]').forEach(x=>x.onclick=()=>rdb.ref(BASE+'/dialoghi/'+did).update({modo:x.dataset.rmodo}));
+    b.querySelectorAll('[data-rvai]').forEach(x=>x.onclick=()=>{ const ta=b.querySelector(`textarea[data-rt="${x.dataset.rvai}"]`); setB(did,x.dataset.rvai,{stato:'approvata',testo:ta?ta.value.trim():undefined}); });
+    b.querySelectorAll('[data-rno]').forEach(x=>x.onclick=()=>setB(did,x.dataset.rno,{stato:'rifiutata'}));
+    const c=q('#rconv'); if(c) c.scrollTop=c.scrollHeight;
+  }
+  const _rg=renderGuide; renderGuide=function(){ _rg.apply(this,arguments); try{ paint(); }catch(e){ console.warn('regia',e); } };
+  window.addEventListener('pointerdown',()=>{ if(audioBlocked) sblocca(); },{once:false});
+  connect();
+  window.__regia={apri,dici,chiudi,stato:()=>({ONLINE,DLGS,AMB})};
+})();
+/* ===== FINE IL PNG PARLA (v269) ===== */
 </script>
