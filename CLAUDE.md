@@ -1498,3 +1498,4 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
   elenco delle voci con `node voci-eleven.mjs`, `_eleven_default` per chi non ce l'ha); se manca la chiave o fallisce, edge-tts come prima.
   Le voci gratuite di edge-tts restano meccaniche: non si migliorano con i parametri.
 - **Copione** (senza chiave di Claude): le risposte si tagliano alla frase, al massimo ~320 caratteri, così la prova non dura un minuto.
+- Attenzione: v270 e il primo commit della v271 erano usciti con l'etichetta «v269» (il cambio di versione in `applica.py` non aveva preso); corretto nel secondo commit della v271.
