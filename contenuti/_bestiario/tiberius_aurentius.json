@@ -1,0 +1,32 @@
+{
+ "id": "tiberius_aurentius",
+ "name": "Tiberius Aurentius",
+ "short": "Tib",
+ "color": "#3E7A5A",
+ "hp": 27,
+ "ac": 16,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Stocco",
+   "atk": 5,
+   "dmg": "1d8+3"
+  },
+  {
+   "n": "Pugnale",
+   "atk": 5,
+   "dmg": "1d4+3"
+  },
+  {
+   "n": "Parata (reazione): +2 alla CA contro un colpo in mischia"
+  }
+ ],
+ "note": "Nobile (MM 2024) · GS 1/8 adattato · 50 PE · velocità 9 m · Des +3 · cotta di maglia sotto la sopravveste Aurentius; giovane, guida il Carro I.",
+ "src": "La Crociata",
+ "tac": "Resta al Carro I con le insegne. Tira di stocco a chi si avvicina al carro; non lascia mai lo stendardo.",
+ "lines": [
+  "Il carro non si tocca.",
+  "Aurentius!"
+ ]
+}

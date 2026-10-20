@@ -988,63 +988,55 @@
     },
     {
       "id": "g_v2",
-      "nome": "Mèmmo Chiòdi, con la falce",
+      "nome": "Mèmmo Chiòdi",
       "short": "V2",
-      "best": "forgiato_veterano",
+      "best": "popolano_tornato",
       "x": 956,
       "y": 467,
       "gruppo": "inizio",
-      "img": "TOKEN — Forgiato — fratelli Chiòdi 2.png",
-      "ritratto": "Ritratto pedina — Forgiato — fratelli Chiòdi 2.jpg",
-      "dopo": {
-        "nome": "Mèmmo Chiòdi (tornato persona)",
-        "tac": "Il più giovane dei Chiòdi. Cerca il fratello Berardo fra i corpi: lo trova. Non parla più per tutta la giornata."
-      }
+      "img": "TOKEN — Mèmmo Chiòdi.png",
+      "ritratto": "Ritratto pedina — Mèmmo Chiòdi.jpg",
+      "kind": "alleato",
+      "tac": "Il più giovane dei Chiòdi, tornato persona. Ha trovato il fratello Berardo fra i corpi del guado e non parla. Tiene la falce."
     },
     {
       "id": "g_g",
-      "nome": "Gerardo Tosti, soldato di Cashtalladdë",
+      "nome": "Gerardo Tosti",
       "short": "G",
-      "best": "forgiato_capo",
+      "best": "gerardo_tosti",
       "x": 1202,
       "y": 217,
       "gruppo": "round2",
-      "img": "TOKEN — Forgiato — Gerardo Tosti.png",
-      "ritratto": "Ritratto pedina — Forgiato — Gerardo Tosti.jpg",
-      "dopo": {
-        "nome": "Gerardo Tosti, soldato di Cashtalladdë (tornato persona)",
-        "tac": "Soldato della guarnigione di Cashtalladdë, mandato di scorta al mulino. Ricorda la nebbia e una mano fredda sul collo; poi niente. Vuole tornare al suo posto e dire al suo sergente che cosa è successo."
-      }
+      "img": "TOKEN — Gerardo Tosti.png",
+      "ritratto": "Ritratto pedina — Gerardo Tosti.jpg",
+      "kind": "alleato",
+      "tac": "Soldato di Cashtalladdë tornato persona: si mette in fila coi miliziani senza che nessuno glielo chieda. Vuole tornare dal suo sergente a raccontare."
     },
     {
       "id": "g_v3",
-      "nome": "Cola lu vaccaro, del casale accanto",
+      "nome": "Cola lu vaccaro",
       "short": "V3",
-      "best": "forgiato_veterano",
+      "best": "popolano_tornato",
       "x": 1072,
       "y": 98,
       "gruppo": "round4",
-      "img": "TOKEN — Forgiato — Cola lu vaccaro.png",
-      "ritratto": "Ritratto pedina — Forgiato — Cola lu vaccaro.jpg",
-      "dopo": {
-        "nome": "Cola lu vaccaro, del casale accanto (tornato persona)",
-        "tac": "Si guarda le mani. Chiede delle vacche. Se gliele riportano, piange."
-      }
+      "img": "TOKEN — Cola lu vaccaro.png",
+      "ritratto": "Ritratto pedina — Cola lu vaccaro.jpg",
+      "kind": "alleato",
+      "tac": "Il vaccaro del casale del guado, tornato persona. Si guarda le mani, chiede delle vacche. Sta vicino ai buoi."
     },
     {
       "id": "g_z",
-      "nome": "Zi' Pasquale lu mulinaro",
+      "nome": "Zi’ Pasquale lu mulinaro",
       "short": "Z",
-      "best": "forgiato_marcio",
+      "best": "popolano_tornato",
       "x": 72,
       "y": 825,
       "gruppo": "round3",
-      "img": "TOKEN — Forgiato — Zi' Pasquale.png",
-      "ritratto": "Ritratto pedina — Forgiato — Zi' Pasquale.jpg",
-      "dopo": {
-        "nome": "Zi' Pasquale lu mulinaro (tornato persona)",
-        "tac": "Il mugnaio del guado. È il primo a capire: «È stata la nebbia della notte, è venuta su dal fiume». Sa chi è passato al mulino negli ultimi giorni (aggancio per il master)."
-      }
+      "img": "TOKEN — Zi’ Pasquale lu mulinaro.png",
+      "ritratto": "Ritratto pedina — Zi’ Pasquale lu mulinaro.jpg",
+      "kind": "alleato",
+      "tac": "Il mugnaio del guado, tornato persona. Sa chi è passato al mulino negli ultimi giorni (aggancio per il master). Non combatte: si ripara."
     },
     {
       "id": "g_w1",
@@ -1062,16 +1054,14 @@
       "id": "g_w2",
       "nome": "Lucia",
       "short": "W2",
-      "best": "forgiato_ferale",
+      "best": "popolano_tornato",
       "x": 87,
       "y": 967,
       "gruppo": "round3",
-      "img": "TOKEN — Forgiato — Rosa 2.png",
-      "ritratto": "Ritratto pedina — Forgiato — Rosa 2.jpg",
-      "dopo": {
-        "nome": "Lucia (tornata persona)",
-        "tac": "Giovane, dei campi della riva di qua. Chiede di Sabatino e di Giuvanne: erano con lei. Sono fra i corpi."
-      }
+      "img": "TOKEN — Lucia.png",
+      "ritratto": "Ritratto pedina — Lucia.jpg",
+      "kind": "alleato",
+      "tac": "Ragazza dei campi di Sant’Atto, tornata persona. Chiede di Sabatino e Giuvanne, che erano con lei. Sta con Cuncetta e Micuccio."
     },
     {
       "id": "g_w7",
@@ -1094,7 +1084,8 @@
       "gruppo": "vhaerun",
       "img": "TOKEN — Vhaerun.png",
       "best": "vhaerun",
-      "ritratto": "Ritratto pedina — Vhaerun.jpg"
+      "ritratto": "Ritratto pedina — Vhaerun.jpg",
+      "tac": "Fra i pioppi della riva di qua, fuori dalla colonna. Carica chi attacca i personaggi."
     },
     {
       "id": "g_c0",
@@ -1105,11 +1096,12 @@
       "y": 456,
       "gruppo": "colonna",
       "img": "TOKEN — Capitan Silvanus Ardentus.png",
-      "tac": "Arriva per primo a cavallo, guarda i corpi sui sassi e poi i personaggi: «Quanti?». Fa fermare i carri sulla riva di qua."
+      "tac": "Arriva per primo a cavallo, guarda i corpi sui sassi e poi i personaggi: «Quanti?». Fa fermare i carri sulla riva di qua.",
+      "best": "capitan_silvanus"
     },
     {
       "id": "g_c1",
-      "nome": "Kostandìn, sergente vesperiano",
+      "nome": "Kostandìn",
       "short": "Kos",
       "kind": "alleato",
       "x": 927,
@@ -1119,13 +1111,14 @@
     },
     {
       "id": "g_c2",
-      "nome": "Tiberius Aurentius (guida il Carro I)",
+      "nome": "Tiberius Aurentius",
       "short": "Tib",
       "kind": "alleato",
       "x": 854,
       "y": 532,
       "gruppo": "colonna",
-      "img": "TOKEN — Tiberius Aurentius.png"
+      "img": "TOKEN — Tiberius Aurentius.png",
+      "best": "tiberius_aurentius"
     },
     {
       "id": "g_c3",
@@ -1139,7 +1132,7 @@
     },
     {
       "id": "g_c4",
-      "nome": "Uno dei tre di Vasco",
+      "nome": "Uomo di Vasco",
       "short": "V",
       "kind": "alleato",
       "x": 782,
@@ -1149,7 +1142,7 @@
     },
     {
       "id": "g_c5",
-      "nome": "Uno dei tre di Vasco",
+      "nome": "Uomo di Vasco",
       "short": "V",
       "kind": "alleato",
       "x": 796,
@@ -1159,7 +1152,7 @@
     },
     {
       "id": "g_c6",
-      "nome": "Uno dei tre di Vasco",
+      "nome": "Uomo di Vasco",
       "short": "V",
       "kind": "alleato",
       "x": 956,
@@ -1169,7 +1162,7 @@
     },
     {
       "id": "g_c7",
-      "nome": "Civile Pompizius (guida il Carro II)",
+      "nome": "Civile Pompizius",
       "short": "Po",
       "kind": "alleato",
       "x": 724,
@@ -1179,7 +1172,7 @@
     },
     {
       "id": "g_c8",
-      "nome": "Vesperiano",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 767,
@@ -1189,7 +1182,7 @@
     },
     {
       "id": "g_c9",
-      "nome": "Vesperiano",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 710,
@@ -1199,7 +1192,7 @@
     },
     {
       "id": "g_c10",
-      "nome": "Mastro Colangelo (guida il Carro III)",
+      "nome": "Mastro Colangelo",
       "short": "Col",
       "kind": "alleato",
       "x": 608,
@@ -1209,7 +1202,7 @@
     },
     {
       "id": "g_c11",
-      "nome": "Vesperiano",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 652,
@@ -1219,7 +1212,7 @@
     },
     {
       "id": "g_c12",
-      "nome": "Vesperiano",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 594,
@@ -1229,7 +1222,7 @@
     },
     {
       "id": "g_c13",
-      "nome": "Mastro Giustino (guida il Carro IV)",
+      "nome": "Mastro Giustino",
       "short": "Giu",
       "kind": "alleato",
       "x": 492,
@@ -1269,67 +1262,73 @@
     },
     {
       "id": "g_c17",
-      "nome": "Brizio «Lu Spada Secca» (retroguardia)",
+      "nome": "Brizio «Lu Spada Secca»",
       "short": "Bri",
       "kind": "alleato",
       "x": 290,
       "y": 912,
       "gruppo": "colonna",
-      "img": "TOKEN — Brizio «Lu Spada Secca».png"
+      "img": "TOKEN — Brizio «Lu Spada Secca».png",
+      "best": "brizio_lu_spada_secca"
     },
     {
       "id": "g_c18",
-      "nome": "Pippo «Lu Scudo» (retroguardia)",
+      "nome": "Pippo «Lu Scudo»",
       "short": "Pip",
       "kind": "alleato",
       "x": 319,
       "y": 956,
       "gruppo": "colonna",
-      "img": "TOKEN — Pippo «Lu Scudo».png"
+      "img": "TOKEN — Pippo «Lu Scudo».png",
+      "best": "pippo_lu_scudo"
     },
     {
       "id": "g_c19",
-      "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+      "nome": "Miliziano Aurentius",
       "short": "Mi",
       "kind": "alleato",
       "x": 246,
       "y": 891,
       "gruppo": "colonna",
-      "img": "TOKEN — Miliziano.png"
+      "img": "TOKEN — Miliziano.png",
+      "best": "miliziano_aurentius"
     },
     {
       "id": "g_c20",
-      "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+      "nome": "Miliziano Aurentius",
       "short": "Mi",
       "kind": "alleato",
       "x": 261,
       "y": 956,
       "gruppo": "colonna",
-      "img": "TOKEN — Miliziano 2.png"
+      "img": "TOKEN — Miliziano 2.png",
+      "best": "miliziano_aurentius"
     },
     {
       "id": "g_c21",
-      "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+      "nome": "Miliziano Aurentius",
       "short": "Mi",
       "kind": "alleato",
       "x": 217,
       "y": 923,
       "gruppo": "colonna",
-      "img": "TOKEN — Miliziano 3.png"
+      "img": "TOKEN — Miliziano 3.png",
+      "best": "miliziano_aurentius"
     },
     {
       "id": "g_c22",
-      "nome": "Miliziano Aurentius–Serventius (retroguardia)",
+      "nome": "Miliziano Aurentius",
       "short": "Mi",
       "kind": "alleato",
       "x": 304,
       "y": 999,
       "gruppo": "colonna",
-      "img": "TOKEN — Miliziano 4.png"
+      "img": "TOKEN — Miliziano 4.png",
+      "best": "miliziano_aurentius"
     },
     {
       "id": "g_c23",
-      "nome": "Vesperiano (retroguardia)",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 188,
@@ -1339,7 +1338,7 @@
     },
     {
       "id": "g_c24",
-      "nome": "Vesperiano (retroguardia)",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 203,
@@ -1349,7 +1348,7 @@
     },
     {
       "id": "g_c25",
-      "nome": "Vesperiano (retroguardia)",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 348,
@@ -1359,7 +1358,7 @@
     },
     {
       "id": "g_c26",
-      "nome": "Vesperiano (retroguardia)",
+      "nome": "Vesperiano di Kostandìn",
       "short": "Ve",
       "kind": "alleato",
       "x": 159,
@@ -1379,7 +1378,7 @@
     },
     {
       "id": "g_c28",
-      "nome": "La madre di Micuccio",
+      "nome": "Cuncetta, la madre di Micuccio",
       "short": "Ma",
       "kind": "alleato",
       "x": 449,
@@ -1389,7 +1388,7 @@
     },
     {
       "id": "g_c29",
-      "nome": "Il padre di Micuccio, il funaio",
+      "nome": "Mastro Nicola lu Funare, il padre di Micuccio",
       "short": "Pa",
       "kind": "alleato",
       "x": 391,
@@ -1405,7 +1404,8 @@
       "x": 478,
       "y": 923,
       "gruppo": "colonna",
-      "img": "TOKEN — Cecco.png"
+      "img": "TOKEN — Cecco.png",
+      "best": "cecco"
     },
     {
       "id": "g_c31",

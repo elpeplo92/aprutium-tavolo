@@ -1,0 +1,29 @@
+{
+ "id": "cecco",
+ "name": "Cecco",
+ "short": "Cec",
+ "color": "#3E7A5A",
+ "hp": 11,
+ "ac": 16,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Lancia",
+   "atk": 3,
+   "dmg": "1d6+1"
+  },
+  {
+   "n": "Lancia a due mani",
+   "atk": 3,
+   "dmg": "1d8+1"
+  }
+ ],
+ "note": "Guardia (MM 2024) · GS 1/8 · 25 PE · velocità 9 m · ex guardia di Bëllindë, cotta corta e lancia.",
+ "src": "La Crociata",
+ "tac": "Resta vicino a Micuccio e ai suoi: li porta dietro i carri prima di combattere. Combatte solo se gli arrivano addosso.",
+ "lines": [
+  "Micuccio, giù!",
+  "Dietro i carri, forza."
+ ]
+}

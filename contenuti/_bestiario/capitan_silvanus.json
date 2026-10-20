@@ -1,0 +1,45 @@
+{
+ "id": "capitan_silvanus",
+ "name": "Capitan Silvanus Ardentus",
+ "short": "Sil",
+ "color": "#3E7A5A",
+ "hp": 52,
+ "ac": 18,
+ "init": 0,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco (due colpi di spada)"
+  },
+  {
+   "n": "Spada lunga",
+   "atk": 5,
+   "dmg": "1d8+3"
+  },
+  {
+   "n": "Spada lunga a due mani",
+   "atk": 5,
+   "dmg": "1d10+3"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 2,
+   "dmg": "1d10"
+  },
+  {
+   "n": "Comando (1/giorno, azione bonus): un alleato entro 9 m che lo sente fa subito un attacco con l’arma"
+  },
+  {
+   "n": "Parata (reazione): +2 alla CA contro un colpo in mischia, se impugna la spada"
+  }
+ ],
+ "note": "Cavaliere (MM 2024) · GS 3 · 700 PE · velocità 9 m (a cavallo 18) · For +3, Cos +2 · TS Cos +4, Sag +2 · armatura completa, cappuccio sempre su; occhi con un riflesso d’oro.",
+ "src": "La Crociata",
+ "tac": "Non si butta nella mischia per primo: comanda, conta, mette i miliziani in linea e tiene i carri alle spalle. Carica solo per coprire un ferito. A metà PF arretra verso i carri e chiama la ritirata ordinata.",
+ "lines": [
+  "Linea. Linea, ho detto.",
+  "Quanti ne vedete? Contateli.",
+  "Nessuno insegue. Si tiene."
+ ],
+ "img": "Ritratto pedina — Capitan Silvanus Ardentus.jpg"
+}

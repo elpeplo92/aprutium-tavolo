@@ -1,0 +1,37 @@
+{
+ "id": "brizio_lu_spada_secca",
+ "name": "Brizio «Lu Spada Secca»",
+ "short": "Bri",
+ "color": "#3E7A5A",
+ "hp": 58,
+ "ac": 17,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco (due colpi)"
+  },
+  {
+   "n": "Spada lunga",
+   "atk": 5,
+   "dmg": "1d8+3"
+  },
+  {
+   "n": "Spada corta",
+   "atk": 5,
+   "dmg": "1d6+3"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 3,
+   "dmg": "1d10+1"
+  }
+ ],
+ "note": "Veterano (MM 2024) · GS 3 · 700 PE · velocità 9 m · For +3, Des +1 · TS For +5 · brigantina, spada lunga e spada corta; soldato di Julia Nova.",
+ "src": "La Crociata",
+ "tac": "Va dove c’è il buco nella linea. Due colpi secchi, poi si rimette in fila. Protegge Pippo come Pippo protegge lui.",
+ "lines": [
+  "Secca. Così.",
+  "Pippo, scudo!"
+ ]
+}

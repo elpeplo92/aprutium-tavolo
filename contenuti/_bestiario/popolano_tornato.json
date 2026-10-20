@@ -1,0 +1,29 @@
+{
+ "id": "popolano_tornato",
+ "name": "Popolano tornato persona",
+ "short": "Pop",
+ "color": "#3E7A5A",
+ "hp": 4,
+ "ac": 10,
+ "init": 0,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Randello",
+   "atk": 2,
+   "dmg": "1d4"
+  },
+  {
+   "n": "Falce o forca",
+   "atk": 2,
+   "dmg": "1d6"
+  }
+ ],
+ "note": "Popolano (MM 2024) · GS 0 · 10 PE · velocità 9 m · tornato persona dopo il rituale di Mattheus al guado: ancora debole.",
+ "src": "La Crociata",
+ "tac": "Non cerca lo scontro: si ripara dietro i carri. Se qualcuno lo attacca, si difende con quello che ha.",
+ "lines": [
+  "Non so manco dove sto.",
+  "Mamma mia, mamma mia."
+ ]
+}

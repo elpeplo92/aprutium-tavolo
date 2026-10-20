@@ -1,0 +1,30 @@
+{
+ "id": "pippo_lu_scudo",
+ "name": "Pippo «Lu Scudo»",
+ "short": "Pip",
+ "color": "#3E7A5A",
+ "hp": 22,
+ "ac": 18,
+ "init": 0,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Mazza",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Colpo di scudo: Atletica +4 contro Atletica o Acrobazia, il bersaglio è prono o spinto di 1,5 m"
+  },
+  {
+   "n": "Muro (reazione): +2 alla CA a un alleato adiacente contro un colpo"
+  }
+ ],
+ "note": "Guardia robusta (adattata, MM 2024) · GS 1/2 · 100 PE · velocità 9 m · scudo grande dipinto di rosso e oro, mazza; soldato di Julia Nova.",
+ "src": "La Crociata",
+ "tac": "Sta davanti a Brizio e ai feriti. Non attacca quasi mai: para, spinge, tiene. Prende i colpi destinati agli altri.",
+ "lines": [
+  "Dietro di me.",
+  "Lu Scudo tiene."
+ ]
+}
