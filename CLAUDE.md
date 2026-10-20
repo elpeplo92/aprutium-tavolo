@@ -1505,3 +1505,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
   Attenzione: `pkill` su Git Bash non spegne i processi Node: usare PowerShell (`Stop-Process`), altrimenti restano copie vecchie che
   rispondono per prime. Manca ElevenLabs (Giuseppe sta facendo l'account, piano Creator).
 - 20-10, sera: **ElevenLabs attivo** (piano Creator, chiave in `Regia/chiavi.json`; la chiave non può aggiungere voci alla libreria, ma le voci del catalogo si usano lo stesso per id). Casting fatto da Claude su delega di Giuseppe per i 14 PNG con dialogo dell'osteria e della colonna (`Regia/voci.json`: Corrado per l'oste, Luca Brasi per Kostandìn, Brian per Tanush, Antonio Farina per Ansaldo, Danilo per Vasco…), riserve Marco (uomini) e Samanta (donne). Campioni dell'oste in `Revisioni/Proposte per il sito (14-10-2026)/v269/casting/`.
+
+## v272 (20/10/2026) — i voltagabbana con la cornice rossa e il ritratto
+
+- Giuseppe: le pedine di Kostandìn, Vasco e dei vesperiani passati con Tanush devono avere la cornice rossa dei nemici, e nella colonna dei turni si vedeva il token invece del ritratto. Script `Revisioni/Feedback di Giuseppe (12-10-2026)/v272/voltagabbana.py <sito>`: token «(nemico)» con `fai_token` (Sergente Kostandìn da Mushanè, Vasco e Vesperiano 1-4 dalla Crociata; varianti Midjourney del job v218 se il CDN risponde, altrimenti il ritratto del Compendio), «Ritratto pedina — …» a 600 px, chiavi in `_immagini.json`, `img`/`ritratto` sulle pedine `voltagabbana` di `osteria.json`.
+- Codice: al primo disegno il master aggiorna da sé `img` e `ritratto` dei token già sulla mappa che vengono da una pedina del file della scena (blocco dopo «DIALOGO DALLA PEDINA»); `ritratto` aggiunto a `LIVE` così arriva anche ai giocatori.
