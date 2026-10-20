@@ -1488,3 +1488,13 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Giuseppe ha ricaricato il sito e non vedeva nulla: il riquadro compariva solo con il programma acceso, e nessuno l'aveva avviato.
   Ora il master vede sempre «Il PNG parla» con «assistente acceso» o «assistente spento» e, da spento, l'istruzione (doppio clic su
   `Regia/avvia.bat`). Per i giocatori niente cambia: da spento non vedono nulla. `applica.py` prende la versione come argomento.
+
+## v271 (20/10/2026) — «Zitto», voci migliori, battute corte
+
+- Giuseppe (20-10, dopo la prima prova sul sito vero: «funziona»): non sapeva come interrompere Nicola e la voce è «pessima, meccanica».
+- **Zitto**: tasto in entrambe le righe dei comandi (giocatore e master). Ferma la voce sulla pagina e scrive `stop` sul dialogo, così la
+  fermano tutte le pagine e scartano le battute in coda più vecchie dello stop. «Basta»/«Chiudi» zittiscono prima di chiudere.
+- **Voci**: in `Regia/regia.mjs` c'è ElevenLabs (chiave `elevenlabs` in `chiavi.json`, voce per PNG col campo `eleven` in `voci.json`,
+  elenco delle voci con `node voci-eleven.mjs`, `_eleven_default` per chi non ce l'ha); se manca la chiave o fallisce, edge-tts come prima.
+  Le voci gratuite di edge-tts restano meccaniche: non si migliorano con i parametri.
+- **Copione** (senza chiave di Claude): le risposte si tagliano alla frase, al massimo ~320 caratteri, così la prova non dura un minuto.

@@ -10784,7 +10784,7 @@ window.RICETTE={
   const AMB=(new URLSearchParams(location.search).get('regia'))||(TEST_MODE?'prova':'partita');
   const BASE='partita/regia/'+AMB;
   const PGN={alessandros:'Alessandros',vicarus:'Vicarus',adamus:'Adamus',maximus:'Maximus',mattheus:'Mattheus',luigis:'Luigis'};
-  let rdb=null, DLGS={}, STATO={}, ONLINE=false, OPEN=null, played=new Set(), audioQ=[], audioBusy=false, audioBlocked=false, listening=false, lastKey='';
+  let rdb=null, DLGS={}, STATO={}, ONLINE=false, OPEN=null, played=new Set(), audioQ=[], audioBusy=false, audioBlocked=false, listening=false, lastKey='', cur=null, curDid=null, STOPS={};
   const esc=s=>poiText(s);
   const st=document.createElement('style'); st.textContent=`
 #regiaBox{border:1px solid var(--gold-dim);border-radius:6px;padding:10px 12px;background:rgba(0,0,0,.28);font-size:14px;line-height:1.45}
@@ -10842,7 +10842,7 @@ window.RICETTE={
     testo=String(testo||'').trim(); if(!testo||!rdb) return;
     rdb.ref(BASE+'/dialoghi/'+did+'/battute/b'+now().toString(36)).set({chi:'pg',pg:pg||DLGS[did].pg,testo,t:now(),stato:'nuova'});
   }
-  function chiudi(did){ if(rdb) rdb.ref(BASE+'/dialoghi/'+did).update({chiuso:now()}); if(OPEN===did) OPEN=null; }
+  function chiudi(did){ zitto(did); if(rdb) rdb.ref(BASE+'/dialoghi/'+did).update({chiuso:now()}); if(OPEN===did) OPEN=null; }
   function setB(did,bid,patch){ if(rdb) rdb.ref(BASE+'/dialoghi/'+did+'/battute/'+bid).update(patch); }
   function parloIo(did,testo){ testo=String(testo||'').trim(); if(!testo||!rdb) return; rdb.ref(BASE+'/dialoghi/'+did+'/battute/m'+now().toString(36)).set({chi:'png',testo,azione:'',avviso:'',t:now(),stato:'approvata',master:true}); }
 
@@ -10851,17 +10851,20 @@ window.RICETTE={
     for(const [did,d] of Object.entries(DLGS)){
       if(!d||d.chiuso) continue;
       if(d.sc&&CUR&&CUR.id&&d.sc!==CUR.id) continue; /* si sente solo nella scena dove si parla */
-      for(const [bid,b] of Object.entries(d.battute||{})){ const k=did+'|'+bid; if(b.chi==='png'&&b.stato==='pronta'&&!played.has(k)){ played.add(k); if(b.audio&&(now()-(b.t2||b.t))<120000) audioQ.push(b.audio); } }
+      if(d.stop&&d.stop!==STOPS[did]){ STOPS[did]=d.stop; zitto(did,false); }
+      for(const [bid,b] of Object.entries(d.battute||{})){ const k=did+'|'+bid; if(b.chi==='png'&&b.stato==='pronta'&&!played.has(k)){ played.add(k); if(b.audio&&(now()-(b.t2||b.t))<120000&&!(d.stop&&(b.t2||b.t)<d.stop)) audioQ.push({src:b.audio,did}); } }
     }
     pump();
     if(IS_GM){ for(const [did,d] of Object.entries(DLGS)){ if(d&&d.chiuso&&d.riassunto!=null&&!d.registrato&&(FB_LOADED||TEST_MODE)){ if(d.riassunto) { log({kind:'sys',txt:`Dialogo · ${d.riassunto}`}); save(); } rdb.ref(BASE+'/dialoghi/'+did).update({registrato:true}); } } }
   }
   function pump(){
-    if(audioBusy||!audioQ.length) return; audioBusy=true; const src=audioQ.shift(); const a=new Audio(src);
-    a.onended=a.onerror=()=>{ audioBusy=false; pump(); };
-    a.play().then(()=>{ audioBlocked=false; }).catch(()=>{ audioBlocked=true; audioQ.unshift(src); audioBusy=false; paint(); });
+    if(audioBusy||!audioQ.length) return; audioBusy=true; const it=audioQ.shift(); const a=new Audio(it.src); cur=a; curDid=it.did;
+    a.onended=a.onerror=()=>{ if(cur===a){ cur=null; curDid=null; } audioBusy=false; pump(); };
+    a.play().then(()=>{ audioBlocked=false; }).catch(()=>{ audioBlocked=true; audioQ.unshift(it); audioBusy=false; if(cur===a){ cur=null; curDid=null; } paint(); });
   }
   function sblocca(){ audioBlocked=false; pump(); paint(); }
+  /* v271: «Zitto» ferma la voce su tutte le pagine (scrive `stop` sul dialogo); scrivi=false quando arriva dagli altri */
+  function zitto(did,scrivi=true){ if(cur&&(!did||curDid===did)){ try{ cur.pause(); }catch(e){} cur=null; curDid=null; audioBusy=false; } audioQ=audioQ.filter(x=>did&&x.did!==did); if(scrivi&&did&&rdb){ STOPS[did]=now(); rdb.ref(BASE+'/dialoghi/'+did).update({stop:STOPS[did]}); } pump(); }
 
   /* microfono del browser (Chrome): italiano, una frase, poi manda da solo */
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
@@ -10913,9 +10916,9 @@ window.RICETTE={
       if(IS_GM){
         h+=`<div class="rrow"><input type="text" id="rsus" placeholder="Sussurra al PNG (es. «sii più ostile», «non parlare del Sigillo»)" value="${esc(d.sussurro||'')}"><button id="rsusGo">Sussurra</button></div>`;
         h+=`<div class="rrow"><input type="text" id="rio" placeholder="Parlo io: la battuta del PNG con le tue parole"><button id="rioGo">Parlo io</button></div>`;
-        h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}" ${k===d.pg?'selected':''}>${v}</option>`).join('')}</select><input type="text" id="rtxt" placeholder="Domanda del giocatore (se la scrivi tu)"><button id="rgo">Di’</button><button id="rmic" class="mic" title="Detta">🎤</button><button id="rfine">Chiudi</button></div>`;
+        h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}" ${k===d.pg?'selected':''}>${v}</option>`).join('')}</select><input type="text" id="rtxt" placeholder="Domanda del giocatore (se la scrivi tu)"><button id="rgo">Di’</button><button id="rmic" class="mic" title="Detta">🎤</button><button id="rzitto" title="Ferma la voce del PNG">Zitto</button><button id="rfine">Chiudi</button></div>`;
       } else {
-        h+=`<div class="rrow"><input type="text" id="rtxt" placeholder="Cosa dici a ${esc(d.nome.split(',')[0])}?"><button id="rgo" class="primary">Di’</button><button id="rmic" class="mic ${listening?'on':''}" title="Parla col microfono">🎤</button><button id="rfine">Basta</button></div>`;
+        h+=`<div class="rrow"><input type="text" id="rtxt" placeholder="Cosa dici a ${esc(d.nome.split(',')[0])}?"><button id="rgo" class="primary">Di’</button><button id="rmic" class="mic ${listening?'on':''}" title="Parla col microfono">🎤</button><button id="rzitto" title="Ferma la voce del PNG">Zitto</button><button id="rfine">Basta</button></div>`;
       }
     } else if(png&&sel){
       const t=S.tokens[sel]; const img=(typeof railImg==='function'&&railImg(t))||t.img||'';
@@ -10929,6 +10932,7 @@ window.RICETTE={
     if(q('#rgo')) { const go=()=>{ dici(did,q('#rtxt').value,IS_GM?q('#rchi').value:undefined); q('#rtxt').value=''; }; q('#rgo').onclick=go; q('#rtxt').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); go(); } }); setTimeout(()=>{ try{ if(!IS_GM) q('#rtxt').focus({preventScroll:true}); }catch(e){} },30); }
     if(q('#rmic')) q('#rmic').onclick=()=>detta(did,q('#rtxt'),q('#rmic'),IS_GM?q('#rchi').value:undefined);
     if(q('#rfine')) q('#rfine').onclick=()=>chiudi(did);
+    if(q('#rzitto')) q('#rzitto').onclick=()=>zitto(did);
     if(q('#rsblocca')) q('#rsblocca').onclick=sblocca;
     if(q('#rsusGo')) q('#rsusGo').onclick=()=>{ rdb.ref(BASE+'/dialoghi/'+did).update({sussurro:q('#rsus').value.trim()}); toast('Sussurrato: vale per la prossima battuta'); };
     if(q('#rioGo')) q('#rioGo').onclick=()=>{ parloIo(did,q('#rio').value); q('#rio').value=''; };
@@ -10941,7 +10945,7 @@ window.RICETTE={
   const _rg=renderGuide; renderGuide=function(){ _rg.apply(this,arguments); try{ paint(); }catch(e){ console.warn('regia',e); } };
   window.addEventListener('pointerdown',()=>{ if(audioBlocked) sblocca(); },{once:false});
   connect();
-  window.__regia={apri,dici,chiudi,stato:()=>({ONLINE,DLGS,AMB})};
+  window.__regia={apri,dici,chiudi,zitto,stato:()=>({ONLINE,DLGS,AMB,suona:!!cur})};
 })();
 /* ===== FINE IL PNG PARLA (v269) ===== */
 </script>
