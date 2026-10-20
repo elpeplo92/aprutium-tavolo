@@ -10895,7 +10895,7 @@ window.RICETTE={
     let did=OPEN&&DLGS[OPEN]&&!DLGS[OPEN].chiuso?OPEN:null;
     if(!did&&sel){ const m=aperti.find(([id,d])=>d.tid===sel); if(m) did=m[0]; }
     if(!did&&!IS_GM&&aperti.length) did=aperti[0][0];
-    const mostra=rdb&&((IS_GM&&(ONLINE||aperti.length))||(!IS_GM&&ONLINE&&(png||did)));
+    const mostra=rdb&&(IS_GM||(ONLINE&&(png||did))); /* v270: il master vede sempre il riquadro, con scritto se l'assistente è acceso o spento */
     if(!mostra){ b.classList.add('hidden'); lastKey=''; return; }
     b.classList.remove('hidden');
     const d=did?DLGS[did]:null;
@@ -10922,7 +10922,7 @@ window.RICETTE={
       h+=`<div class="rhead">${img?`<img src="${esc(img)}" alt="">`:''}<div><b>${esc(t.name)}</b><br>${stato}</div></div>`;
       if(IS_GM) h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="primary" id="rparla">Parla</button><span class="rsmall">apre un dialogo per quel personaggio</span></div>`;
       else h+=`<div class="rrow"><button class="primary" id="rparla">Parla con ${esc(t.name.split(',')[0])}</button></div>`;
-    } else if(IS_GM){ h+=`<div class="rhead"><div>${stato}<br><span class="rsmall">Nessun dialogo aperto. I giocatori cliccano la pedina di un PNG e premono «Parla».</span></div></div>`; }
+    } else if(IS_GM){ h+=`<div class="rhead"><div>${stato}<br><span class="rsmall">${ONLINE?'Nessun dialogo aperto. Clicca la pedina di un PNG (l’oste, Kostandìn…) e premi «Parla», o aspetta che lo faccia un giocatore.':'Per accenderlo: sul PC del master, doppio clic su Regia/avvia.bat e lascia aperta la finestra.'}</span></div></div>`; }
     b.innerHTML=h;
     const q=s=>b.querySelector(s);
     if(q('#rparla')) q('#rparla').onclick=()=>{ apri(sel,png,IS_GM?q('#rchi').value:me); };

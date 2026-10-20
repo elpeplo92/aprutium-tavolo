@@ -1482,3 +1482,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Provato in locale con il programma in modo `prova`: pagina del master (dialogo libero e controllato, correzione, voce pronta, Registro) e
   pagina di Luigis (Parla, domanda, risposta, Basta). `prova-tavolo.js` verde nei due ruoli. Manca la prova con Claude vero (serve la chiave).
 - Prossimi passi: chiave API; sentire le voci al tavolo e fare il casting; fase 2 = bot Discord che ascolta e parla nel canale; memoria dei PNG.
+
+## v270 (20/10/2026) — «Il PNG parla»: il master vede sempre il riquadro
+
+- Giuseppe ha ricaricato il sito e non vedeva nulla: il riquadro compariva solo con il programma acceso, e nessuno l'aveva avviato.
+  Ora il master vede sempre «Il PNG parla» con «assistente acceso» o «assistente spento» e, da spento, l'istruzione (doppio clic su
+  `Regia/avvia.bat`). Per i giocatori niente cambia: da spento non vedono nulla. `applica.py` prende la versione come argomento.
