@@ -1499,3 +1499,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
   Le voci gratuite di edge-tts restano meccaniche: non si migliorano con i parametri.
 - **Copione** (senza chiave di Claude): le risposte si tagliano alla frase, al massimo ~320 caratteri, così la prova non dura un minuto.
 - Attenzione: v270 e il primo commit della v271 erano usciti con l'etichetta «v269» (il cambio di versione in `applica.py` non aveva preso); corretto nel secondo commit della v271.
+- 20-10, sera: **chiave di Claude messa** (`Regia/chiavi.json`, a consumo). L'attore chiama Sonnet 5.5 con lo strumento `battuta`
+  (tool_choice `auto`: la scelta forzata non è ammessa dal modello), `thinking: between_tools` e system in cache: la battuta arriva in
+  3-4 s, la voce (edge-tts) 2-3 s dopo. Provato sull'oste: risposte in carattere, segreti tenuti, avvisi al master con le prove (CD).
+  Attenzione: `pkill` su Git Bash non spegne i processi Node: usare PowerShell (`Stop-Process`), altrimenti restano copie vecchie che
+  rispondono per prime. Manca ElevenLabs (Giuseppe sta facendo l'account, piano Creator).
