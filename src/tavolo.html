@@ -2588,7 +2588,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v278</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v279</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -2880,7 +2880,7 @@ roleSel.onchange=async()=>{ const want=roleSel.value; if(want==='master'&&fbAuth
    di loro va in errore — il che spegneva la nebbia, i tasti muri/porte e
    "Rivela intorno al gruppo". Qui la forma viene ricostruita a ogni lettura. */
 const SHAPE_ARR=['order','log','removed','archive','met','visited','comp','comp2'];
-const SHAPE_OBJ=['fogS','wallsS','doorsS','doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti'];
+const SHAPE_OBJ=['poiRevT','fogS','wallsS','doorsS','doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti'];
 function normalize(s){
   if(!s||typeof s!=='object') s={};
   for(const k of SHAPE_ARR) if(!Array.isArray(s[k])) s[k]=[];
@@ -2950,7 +2950,7 @@ const LIVE=['hd','sc','light','xs','ich','res','fx','adv','fxT','x','y','hp','hp
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
+  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig','poiRevT']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
   const rt=remote.tokens||{};
   for(const [id,t] of Object.entries(rt)){
     if(s.tokens[id]){ for(const k of LIVE) if(t[k]!==undefined) s.tokens[id][k]=t[k]; }
@@ -2961,7 +2961,7 @@ function merge(remote){
 }
 function toRemote(s){
   const out={};
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig']) if(s[k]!==undefined) out[k]=s[k];
+  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig','poiRevT']) if(s[k]!==undefined) out[k]=s[k];
   out.tokens={};
   for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,img:t.img||'',mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
   return out;
@@ -11086,6 +11086,93 @@ window.RICETTE={
   setTimeout(applica,0);
 })();
 /* ===== FINE v278 ===== */
+
+/* ===== PANNELLI A SCOMPARSA, CRONACA, RIGHE DEL REGISTRO (v279) =====
+   Maximus e Mattheus (22-10): i pannelli devono SPARIRE, non solo chiudersi, con un simbolo da qualche parte per riaprirli; Guida della
+   scena e Registro vanno fusi in un racconto cronologico («recap dinamico») in cui il master mostra i punti e i moduli al momento giusto;
+   il master deve poter cancellare singole righe del Registro.
+   - Striscia di simboli in alto a destra sulla mappa (#pannelli): un simbolo per pannello; spento = il pannello sparisce; se una colonna
+     resta vuota, sparisce anche lei e la mappa si allarga. Stato per schermo (localStorage aprutium.pan.<id>).
+   - Cronaca (giocatori, al posto di «Guida della scena»): le righe del Registro e, al loro momento, l'introduzione mostrata, i punti svelati
+     (S.poiRevT, nuovo) e i copioni mostrati (S.poiSeen), dal più vecchio al più nuovo, con lo scorrimento in fondo.
+   - Registro del master: × su ogni riga. */
+(function(){
+  const css=document.createElement('style'); css.textContent=`
+#pannelli{position:absolute;top:52px;right:10px;z-index:7;display:flex;flex-direction:column;gap:6px}
+#pannelli button{width:36px;height:36px;padding:0;border-radius:8px;border:1px solid rgba(201,162,74,.5);background:rgba(10,13,20,.85);color:#C9A24A;display:grid;place-items:center;cursor:pointer}
+#pannelli button svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#pannelli button.off{opacity:.45;border-style:dashed}
+#pannelli button:hover{border-color:#F6E3A8;color:#F6E3A8;opacity:1}
+.pan-off{display:none!important}
+#guide.col-off,#side.col-off{visibility:hidden;overflow:hidden;padding:0!important;border:0!important}
+#sceneGuide .cronaca{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+#sceneGuide .cronaca .ev{font-size:15px;line-height:1.4;padding:5px 8px;border-left:2px solid rgba(110,82,48,.35);background:rgba(255,250,236,.35);border-radius:3px}
+#sceneGuide .cronaca .ev .who{font-weight:700;color:#4A2F10}
+#sceneGuide .cronaca .carta{border:1px solid rgba(110,82,48,.45);border-radius:5px;background:rgba(255,250,236,.55);padding:8px 10px}
+#sceneGuide .cronaca .carta h4{margin:0 0 4px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:19px;letter-spacing:.04em;color:#6B3F12}
+#sceneGuide .cronaca .carta img{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:4px;border:1px solid rgba(110,82,48,.5);margin:4px 0 6px}
+#sceneGuide .cronaca .carta p{margin:4px 0}
+#sceneGuide .cronaca .quando{font-size:12px;color:#8A6A3A;letter-spacing:.04em}
+#log .ev{position:relative}
+#log .ev .evx{position:absolute;top:2px;right:2px;width:18px;height:18px;line-height:16px;text-align:center;font-size:13px;border:1px solid rgba(201,162,74,.4);border-radius:50%;background:rgba(0,0,0,.4);color:#C9A24A;cursor:pointer;opacity:0}
+#log .ev:hover .evx{opacity:1}`; document.head.appendChild(css);
+
+  /* ---- 1. pannelli a scomparsa ---- */
+  const ICO={guida:'<path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5z"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20"/><path d="M9 7.5h7M9 10.5h7"/>',
+             cronaca:'<path d="M5 3h11l4 4v14H5z"/><path d="M8 8h5M8 12h8M8 16h8"/>',
+             png:'<path d="M4 5h16v10H9l-5 4z"/><path d="M8 8.5h8M8 11.5h5"/>',
+             me:'<circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-4 3.4-6 7-6s6.2 2 7 6"/>',
+             regia:'<path d="M5 4h14l-3 8 3 8H5z"/><path d="M8 10h8M8 14h6"/>',
+             registro:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/>'};
+  function PAN(){ const L=[];
+    if(IS_GM){ L.push(['guida','Guida della scena',()=>document.getElementById('sceneGuide'),'guide']); L.push(['png','Il PNG parla',()=>document.getElementById('regiaBox'),'guide']); L.push(['regia','Scontro, Selezione e strumenti',()=>[...document.querySelectorAll('#side > .sec.gm:not(#secLog)')],'side']); }
+    else { L.push(['cronaca','Cronaca (Registro e Guida della scena insieme)',()=>document.getElementById('sceneGuide'),'guide']); L.push(['png','Il PNG parla',()=>document.getElementById('regiaBox'),'guide']); L.push(['me','Il tuo personaggio',()=>document.querySelector('#side > .sec.pl'),'side']); }
+    L.push(['registro','Registro',()=>document.getElementById('secLog'),'side']); return L; }
+  function panOn(id){ try{ return localStorage.getItem('aprutium.pan.'+id)!=='0'; }catch(e){ return true; } }
+  function applicaPannelli(){
+    const cols={guide:[],side:[]};
+    for(const [id,,el,col] of PAN()){ const on=panOn(id); const els=[].concat(el()||[]).filter(Boolean); els.forEach(e=>e.classList.toggle('pan-off',!on)); cols[col].push(on); }
+    for(const [col,ons] of Object.entries(cols)){ const c=document.getElementById(col); if(!c) continue; c.classList.toggle('col-off',ons.length>0&&!ons.some(Boolean)); }
+    const app=document.getElementById('app'); if(!app) return; app.style.gridTemplateColumns='';
+    const g=getComputedStyle(app).gridTemplateColumns.split(' '); const idx={guide:2,side:3};
+    if(g.length>=4){ let ch=false; for(const col of ['guide','side']){ const c=document.getElementById(col); if(c&&c.classList.contains('col-off')){ g[idx[col]]='0px'; ch=true; } } if(ch) app.style.gridTemplateColumns=g.join(' '); }
+    const strip=document.getElementById('pannelli'); if(strip) strip.querySelectorAll('button').forEach(b=>b.classList.toggle('off',!panOn(b.dataset.pan)));
+  }
+  function striscia(){ const st=document.getElementById('stage'); if(!st||document.getElementById('pannelli')) return; const d=document.createElement('div'); d.id='pannelli';
+    d.innerHTML=PAN().map(([id,tit])=>`<button data-pan="${id}" title="${tit}: mostra o nascondi"><svg viewBox="0 0 24 24">${ICO[id]||ICO.guida}</svg></button>`).join(''); st.appendChild(d);
+    d.querySelectorAll('button').forEach(b=>b.onclick=()=>{ const on=!panOn(b.dataset.pan); try{ localStorage.setItem('aprutium.pan.'+b.dataset.pan,on?'1':'0'); }catch(e){} applicaPannelli(); setTimeout(()=>{ try{ fit(); }catch(e){} },30); }); }
+  window.addEventListener('resize',()=>applicaPannelli());
+
+  /* ---- 2. il momento dello svelamento ---- */
+  { const _pr=poiReveal; poiReveal=function(p,on){ const r=_pr.apply(this,arguments); if(IS_GM&&p){ S.poiRevT=S.poiRevT||{}; if(on) S.poiRevT[p.id]=Date.now(); else delete S.poiRevT[p.id]; save(true); } return r; }; }
+
+  /* ---- 3. la Cronaca dei giocatori ---- */
+  function quando(t){ if(!t) return ''; const d=new Date(t); return d.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'}); }
+  function cronaca(box){
+    const d=CUR&&SCENE_DATA.find(x=>x.id===CUR.id); const items=[];
+    const vis=S.log.filter(ev=>!(ev.gm&&!IS_GM)); const L=document.getElementById('log'); const kids=L?[...L.children]:[];
+    vis.forEach((ev,i)=>{ const k=kids[i]; if(k) items.push({t:ev.t||0,html:`<div class="${k.className}">${k.innerHTML}</div>`}); });
+    if(d&&d.intro&&d.intro.leggi){ const v=(S.poiSeen||{})['_intro__'+d.id+'__leggi']; if(v&&(v.to==='*'||(v.to&&v.to[me]))) items.push({t:v.t||0,html:`<div class="carta"><span class="quando">${quando(v.t)}</span><h4>${poiText(d.menu||d.nome)}</h4>${d.intro.img&&/^(img\/|https?:)/.test(d.intro.img)?`<img src="${poiText(d.intro.img)}" alt="">`:''}<p class="lore">${poiText(d.intro.leggi).split(String.fromCharCode(10)).join('<br>')}</p></div>`}); }
+    const pts=(POI_ORDER[CUR.id]||[]).map(id=>POIS.find(p=>p.id===id)).filter(p=>p&&poiRevealed(p));
+    pts.forEach((p,n)=>{ const t=(S.poiRevT||{})[p.id]||0; items.push({t,html:`<div class="carta"><span class="quando">${quando(t)}</span><h4>${n+1}. ${poiText(p.title)}</h4>${poiImage(p)?`<img src="${poiText(poiImage(p))}" alt="">`:''}<p class="lore">${p.schemaVersion>=2?poiParagraphs(p.text):p.text}</p></div>`});
+      for(const x of (p.schemaVersion===3?v3Seen(p):[])) items.push({t:x.t||0,html:`<div class="carta"><span class="quando">${quando(x.t)}</span><h4>${poiText(p.title)} · ${poiText(x.title)}</h4>${x.img?`<img src="${poiText(x.img)}" alt="">`:''}<p class="lore">${poiParagraphs(x.text)}</p></div>`}); });
+    items.sort((a,b)=>a.t-b.t);
+    const key='cron|'+(CUR?CUR.id:'')+'|'+items.length+'|'+(items.length?items[items.length-1].t:0)+'|'+v3Hash(items.map(x=>x.t).join(','));
+    if(box.dataset.key===key) return; box.dataset.key=key;
+    box.innerHTML=`<h2>Cronaca</h2><p class="note" style="margin:0 0 6px"><b>${poiText(CUR?CUR.name:'')}</b> · il Registro e quello che il master vi mostra, in ordine di tempo</p><div class="cronaca">${items.length?items.map(x=>x.html).join(''):'<p class="note">Ancora niente: quando succede qualcosa, o il master vi mostra un luogo, lo trovate qui.</p>'}</div>`;
+    const c=box.querySelector('.cronaca'); const sc=box.closest('#guideTop')||box; setTimeout(()=>{ try{ sc.scrollTop=sc.scrollHeight; }catch(e){} },0);
+  }
+  { const _pg=renderPlayerGuide; renderPlayerGuide=function(box){ if(IS_GM||!CUR||CUR.id==='luogo'||CUR.crusade) return _pg.apply(this,arguments); box.classList.remove('hidden'); try{ cronaca(box); }catch(e){ console.warn('cronaca',e); return _pg.apply(this,arguments); } }; }
+
+  /* ---- 4. righe del Registro cancellabili (master) ---- */
+  function croci(){ if(!IS_GM) return; const L=document.getElementById('log'); if(!L) return; const kids=[...L.children]; kids.forEach((k,i)=>{ if(k.querySelector('.evx')) return; const x=document.createElement('span'); x.className='evx'; x.textContent='×'; x.title='Cancella questa riga del Registro';
+      x.onclick=ev=>{ ev.stopPropagation(); const e=S.log[i]; if(!e) return; S.log.splice(i,1); save(true); toast('Riga cancellata'); render(); }; k.appendChild(x); }); }
+
+  const _r=render; render=function(){ const out=_r.apply(this,arguments); try{ striscia(); applicaPannelli(); croci(); if(!IS_GM&&CUR&&CUR.pois){ const box=document.getElementById('sceneGuide'); if(box) renderPlayerGuide(box); } }catch(e){ console.warn('pannelli',e); } return out; };
+  setTimeout(()=>{ try{ striscia(); applicaPannelli(); }catch(e){} },0);
+})();
+/* ===== FINE v279 ===== */
+
 
 
 </script>
