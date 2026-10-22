@@ -2588,7 +2588,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v275</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v276</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10983,6 +10983,8 @@ window.RICETTE={
     }
     return h||`<div class="rsmall">Nessuno ha ancora parlato. ${IS_GM?'':'Scrivi o premi il microfono.'}</div>`;
   }
+  function pngInScena(){ /* v276: le pedine della scena con cui si può parlare */ if(typeof tokPng!=='function') return []; return Object.entries(S.tokens).filter(([id,t])=>t&&!t.hidden&&t.kind!=='pg'&&!t.owner&&(typeof tokInScene!=='function'||tokInScene(id))&&tokPng(id)).map(([id,t])=>({id,t,png:tokPng(id)})); }
+  window.__regiaParlaCon=function(tid){ const png=typeof tokPng==='function'?tokPng(tid):null; if(!png) return; selected=tid; apri(tid,png,me); lastKey=''; render(); const g=document.getElementById('regiaBox'); if(g) g.scrollIntoView({block:'start',behavior:'smooth'}); };
   function paint(){
     const b=box(); if(!b) return;
     const sel=selected&&S.tokens[selected]?selected:null; const png=sel&&typeof tokPng==='function'?tokPng(sel):null;
@@ -10990,12 +10992,13 @@ window.RICETTE={
     let did=OPEN&&DLGS[OPEN]&&!DLGS[OPEN].chiuso?OPEN:null;
     if(!did&&sel){ const m=aperti.find(([id,d])=>d.tid===sel); if(m) did=m[0]; }
     if(!did&&!IS_GM&&aperti.length) did=aperti[0][0];
-    const mostra=rdb&&(IS_GM||(ONLINE&&(png||did))); /* v270: il master vede sempre il riquadro, con scritto se l'assistente è acceso o spento */
+    const lista=!IS_GM&&!did&&!png?pngInScena():[];
+    const mostra=rdb&&(IS_GM||(ONLINE&&(png||did||lista.length))); /* v270: il master vede sempre il riquadro · v276: il giocatore lo vede anche senza pedina scelta, con l'elenco di chi può parlare */
     if(!mostra){ b.classList.add('hidden'); lastKey=''; return; }
     b.classList.remove('hidden');
     const d=did?DLGS[did]:null;
     const dk=d?{...d,battute:Object.fromEntries(Object.entries(d.battute||{}).map(([k,x])=>[k,{...x,audio:x.audio?1:0}]))}:null;
-    const key=JSON.stringify([did,dk,sel,png,ONLINE,audioBlocked,listening?1:0,IS_GM,aperti.map(a=>a[0])]);
+    const key=JSON.stringify([did,dk,sel,png,ONLINE,audioBlocked,listening?1:0,IS_GM,aperti.map(a=>a[0]),lista.map(x=>x.id)]);
     if(key===lastKey) return; lastKey=key;
     const stato=`<span class="rstato">${ONLINE?`assistente acceso${IS_GM&&STATO.attore?' · '+esc(STATO.attore):''}`:'assistente spento'}</span>`;
     let h=`<h2>Il PNG parla</h2>`;
@@ -11017,6 +11020,8 @@ window.RICETTE={
       h+=`<div class="rhead">${img?`<img src="${esc(img)}" alt="">`:''}<div><b>${esc(t.name)}</b><br>${stato}</div></div>`;
       if(IS_GM) h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="primary" id="rparla">Parla</button><span class="rsmall">apre un dialogo per quel personaggio</span></div>`;
       else h+=`<div class="rrow"><button class="primary" id="rparla">Parla con ${esc(t.name.split(',')[0])}</button></div>`;
+    } else if(lista.length){ /* v276 */
+      h+=`<div class="rhead"><div>${stato}<br><span class="rsmall">Con chi vuoi parlare?</span></div></div><div class="rlist">${lista.map(x=>{ const img=(typeof railImg==='function'&&railImg(x.t))||x.t.img||''; return `<button data-rcon="${esc(x.id)}">${img?`<img src="${esc(img)}" alt="" style="width:22px;height:22px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:5px">`:''}${esc(String(x.t.name).split(',')[0])}</button>`; }).join('')}</div>`;
     } else if(IS_GM){ h+=`<div class="rhead"><div>${stato}<br><span class="rsmall">${ONLINE?'Nessun dialogo aperto. Clicca la pedina di un PNG (l’oste, Kostandìn…) e premi «Parla», o aspetta che lo faccia un giocatore.':'Per accenderlo: sul PC del master, doppio clic su Regia/avvia.bat e lascia aperta la finestra.'}</span></div></div>`; }
     b.innerHTML=h;
     const q=s=>b.querySelector(s);
@@ -11029,6 +11034,7 @@ window.RICETTE={
     if(q('#rsusGo')) q('#rsusGo').onclick=()=>{ rdb.ref(BASE+'/dialoghi/'+did).update({sussurro:q('#rsus').value.trim()}); toast('Sussurrato: vale per la prossima battuta'); };
     if(q('#rioGo')) q('#rioGo').onclick=()=>{ parloIo(did,q('#rio').value); q('#rio').value=''; };
     b.querySelectorAll('[data-ropen]').forEach(x=>x.onclick=()=>{ OPEN=x.dataset.ropen; lastKey=''; paint(); });
+    b.querySelectorAll('[data-rcon]').forEach(x=>x.onclick=()=>window.__regiaParlaCon(x.dataset.rcon));
     b.querySelectorAll('[data-rmodo]').forEach(x=>x.onclick=()=>rdb.ref(BASE+'/dialoghi/'+did).update({modo:x.dataset.rmodo}));
     b.querySelectorAll('[data-rvai]').forEach(x=>x.onclick=()=>{ const ta=b.querySelector(`textarea[data-rt="${x.dataset.rvai}"]`); setB(did,x.dataset.rvai,{stato:'approvata',testo:ta?ta.value.trim():undefined}); });
     b.querySelectorAll('[data-rno]').forEach(x=>x.onclick=()=>setB(did,x.dataset.rno,{stato:'rifiutata'}));
@@ -11040,4 +11046,26 @@ window.RICETTE={
   window.__regia={apri,dici,chiudi,zitto,stato:()=>({ONLINE,DLGS,AMB,suona:!!cur})};
 })();
 /* ===== FINE IL PNG PARLA (v269) ===== */
+
+/* ===== RICARICO SULLA SCENA GIUSTA E «PARLA CON…» (v276) =====
+   Mattheus (21-10): «ogni volta che si ricarica ricompare il dungeon sotto Bëllindë». Era la scena di partenza, mostrata finché la partita
+   non arrivava da Firebase. Ora la pagina ricorda l'ultima scena vista e parte da quella, con un velo finché lo stato vero non è arrivato.
+   Maximus: «dal mio personaggio voglio poter dire “parla con…” e scrivere o dire cosa dico». Tasto nel riquadro «Il tuo personaggio». */
+(function(){
+  const K='aprutium.scena';
+  try{ const sv=localStorage.getItem(K); if(sv&&!TEST_MODE&&!FB_LOADED&&typeof SCENES!=='undefined'&&SCENES[sv]&&S&&S.scene!==sv){ S.scene=sv; const sc=SCENES[sv]; const im=document.getElementById('mapimg'); if(im&&sc.src){ im.src=sc.src; im.style.width=sc.w+'px'; im.style.height=sc.h+'px'; } } }catch(e){}
+  const _r=render; render=function(){ const out=_r.apply(this,arguments); try{ if(FB_LOADED&&S&&S.scene) localStorage.setItem(K,S.scene); }catch(e){} return out; };
+  if(!TEST_MODE){ const st=document.getElementById('stage'); if(st){ const v=document.createElement('div'); v.id='veloApertura'; v.innerHTML='<div><span class="rombo">◆</span> Il tavolo si sta aprendo…</div>'; st.appendChild(v);
+    const css=document.createElement('style'); css.textContent='#veloApertura{position:absolute;inset:0;z-index:40;background:rgba(7,10,17,.92);display:flex;align-items:center;justify-content:center;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:26px;letter-spacing:.06em;color:var(--gold,#D9B15C);transition:opacity .5s}#veloApertura .rombo{opacity:.7;margin-right:8px}'; document.head.appendChild(css);
+    const t0=Date.now(); const via=()=>{ v.style.opacity='0'; setTimeout(()=>v.remove(),500); }; const iv=setInterval(()=>{ if(FB_LOADED||Date.now()-t0>8000){ clearInterval(iv); via(); } },150); } }
+  /* «Parla con…» nel riquadro del giocatore */
+  const bs=document.getElementById('btnSpells'); if(bs&&!IS_GM){ const b=document.createElement('button'); b.id='btnParla'; b.textContent='Parla con…'; bs.insertAdjacentElement('afterend',b);
+    b.onclick=()=>{ const st=window.__regia&&window.__regia.stato(); if(!st||!st.ONLINE){ toast('L’assistente dei personaggi è spento: il master deve accendere il banco di regia (Regia/avvia.bat)'); return; }
+      const L=Object.entries(S.tokens).filter(([id,t])=>t&&!t.hidden&&t.kind!=='pg'&&!t.owner&&(typeof tokInScene!=='function'||tokInScene(id))&&typeof tokPng==='function'&&tokPng(id));
+      if(!L.length){ toast('Qui non c’è nessuno con cui parlare'); return; }
+      openModal(`<div class="eyebrow">${poiText((S.tokens[me]||{}).name||'')}</div><h2 class="big">Parla con…</h2><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px">${L.map(([id,t])=>{ const img=(typeof railImg==='function'&&railImg(t))||t.img||''; return `<button data-parla="${poiText(id)}" style="display:flex;align-items:center;gap:8px">${img?`<img src="${poiText(img)}" alt="" style="width:34px;height:34px;border-radius:50%;object-fit:cover">`:''}${poiText(String(t.name).split(',')[0])}</button>`; }).join('')}</div><p class="note" style="margin-top:10px">Poi scrivi nel riquadro «Il PNG parla», o premi il microfono e parla.</p>`,'poibox');
+      document.querySelectorAll('#modal [data-parla]').forEach(x=>x.onclick=()=>{ closeModal(); window.__regiaParlaCon(x.dataset.parla); }); }; }
+})();
+/* ===== FINE v276 ===== */
+
 </script>
