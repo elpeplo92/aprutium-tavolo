@@ -1542,3 +1542,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v277 (22/10/2026) — via il blocco «Azioni» ai giocatori; al master solo per PNG e mostri
 
 - Giuseppe (dai giocatori): il blocco «Azioni» nella colonna destra (schede Azione / Azione bonus / Reazione / Gratuite e i gruppi Attacchi, Capacità, Incantesimi, Oggetti, Azioni comuni) è «estremamente inutile»: hanno la barra rapida sopra il dock e la scheda. Ai giocatori `#azioniTitolo` e `#actions` sono nascosti e non si disegnano più; al master `#gmActions` nella Selezione si riempie solo se la pedina scelta non è un PG. Script `Revisioni/Feedback di Giuseppe (12-10-2026)/v277/applica.py`. `prova-tavolo.js` verde (69 e 40).
+
+## v278 (22/10/2026) — sezioni richiudibili nella Guida, Registro più grande, le battute dei dialoghi nel Registro
+
+- Maximus e Mattheus: «Il PNG parla», «Guida della scena», «Registro» e «Il tuo personaggio» devono aprirsi e chiudersi; il Registro è troppo piccolo; il dialogo coi PNG si perde, meglio seguirlo dal Registro.
+- Blocco «SEZIONI RICHIUDIBILI NELLA GUIDA (v278)»: le sezioni di `#guide` (`#regiaBox`, `#sceneGuide`, `#luogoGM`) si chiudono col clic sul titolo (clic delegato al documento, perché si ridisegnano; stato in `localStorage aprutium.sec.<id>`, per schermo; `renderGuide` avvolta per rimettere classe e stato). Quelle della colonna destra lo facevano già.
+- Registro: `#side>#secLog` fino all'85% della colonna (70% sotto gli 800 px di altezza; era 48/36), maniglia fino al 90% dello schermo.
+- Dialoghi: nel blocco v269 (`onDlgs`) la pagina del master scrive nel Registro ogni battuta (`Dialogo · Mattheus a Vhaerun: «…»`, `Dialogo · Vhaerun: «…» (gesto)`) una volta sola (campo `reg` sulla battuta in Firebase), oltre al riassunto alla chiusura. Script `Revisioni/Feedback di Giuseppe (12-10-2026)/v278/applica.py`; `prova-tavolo.js` verde.

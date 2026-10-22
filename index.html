@@ -996,8 +996,8 @@ select,input[type=text],input[type=number],textarea,.shpanel .invsearch{backgrou
    scheda che scorre invece di schiacciarsi. I caratteri del testo non si rimpiccioliscono. */
 #app>*{min-height:0}
 #railWrap{overflow-y:auto;overflow-x:hidden}
-#side>#secLog{max-height:48%}
-@media (max-height:800px){#side>#secLog{max-height:36%}}
+#side>#secLog{max-height:85%} /* v278: era 48% */
+@media (max-height:800px){#side>#secLog{max-height:70%}}
 .shtabs{flex-wrap:wrap}
 @media (max-width:1700px){
   body #app,body.isgm #app{grid-template-columns:200px minmax(0,1fr) clamp(260px,20vw,340px) 300px}
@@ -2588,7 +2588,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v277</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v278</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -2855,7 +2855,7 @@ let me = IS_GM ? null : ROLE;
 function logResizerInit(){
   const lg=document.getElementById('secLog'); if(!lg||lg.querySelector('.loggrip')) return;
   const grip=document.createElement('div'); grip.className='loggrip'; grip.title='Trascina per allargare o stringere il registro'; lg.prepend(grip);
-  const setH=h=>{ const max=Math.round(window.innerHeight*0.8); h=Math.max(120,Math.min(max,Math.round(h))); lg.style.height=h+'px'; return h; };
+  const setH=h=>{ const max=Math.round(window.innerHeight*0.9); h=Math.max(120,Math.min(max,Math.round(h))); lg.style.height=h+'px'; return h; };
   let saved=null; try{ saved=+localStorage.getItem('aprutium.logH'); }catch(e){} setH(saved||Math.min(260,Math.round(window.innerHeight*0.3)));
   grip.addEventListener('pointerdown',e=>{ e.preventDefault(); const y0=e.clientY, h0=lg.getBoundingClientRect().height; grip.setPointerCapture(e.pointerId);
     const mv=ev=>setH(h0+(y0-ev.clientY)); const up=ev=>{ grip.removeEventListener('pointermove',mv); grip.removeEventListener('pointerup',up); try{ localStorage.setItem('aprutium.logH',String(setH(h0+(y0-ev.clientY)))); }catch(err){} };
@@ -10947,6 +10947,12 @@ window.RICETTE={
       for(const [bid,b] of Object.entries(d.battute||{})){ const k=did+'|'+bid; if(b.chi==='png'&&b.stato==='pronta'&&!played.has(k)){ played.add(k); if(b.audio&&(now()-(b.t2||b.t))<120000&&!(d.stop&&(b.t2||b.t)<d.stop)) audioQ.push({src:b.audio,did}); } }
     }
     pump();
+    if(IS_GM&&(FB_LOADED||TEST_MODE)){ /* v278: ogni battuta va nel Registro, così tutti seguono il dialogo da lì */
+      let n=0; for(const [did,d] of Object.entries(DLGS)){ if(!d) continue; const nome=String(d.nome||'').split(' (')[0];
+        for(const [bid,b] of Object.entries(d.battute||{})){ if(!b||b.reg) continue;
+          if(b.chi==='pg'&&b.testo){ log({kind:'sys',txt:`Dialogo · ${PGN[b.pg]||b.pg||'?'} a ${nome}: «${b.testo}»`}); setB(did,bid,{reg:1}); n++; }
+          else if(b.chi==='png'&&(b.stato==='approvata'||b.stato==='pronta')&&b.testo){ log({kind:'sys',txt:`Dialogo · ${nome}: «${b.testo}»${b.azione?' ('+b.azione+')':''}`}); setB(did,bid,{reg:1}); n++; } } }
+      if(n) save(); }
     if(IS_GM){ for(const [did,d] of Object.entries(DLGS)){ if(d&&d.chiuso&&d.riassunto!=null&&!d.registrato&&(FB_LOADED||TEST_MODE)){ if(d.riassunto) { log({kind:'sys',txt:`Dialogo · ${d.riassunto}`}); save(); } rdb.ref(BASE+'/dialoghi/'+did).update({registrato:true}); } } }
   }
   function pump(){
@@ -11067,5 +11073,19 @@ window.RICETTE={
       document.querySelectorAll('#modal [data-parla]').forEach(x=>x.onclick=()=>{ closeModal(); window.__regiaParlaCon(x.dataset.parla); }); }; }
 })();
 /* ===== FINE v276 ===== */
+
+/* ===== SEZIONI RICHIUDIBILI NELLA GUIDA (v278) =====
+   Maximus e Mattheus: «Il PNG parla», «Guida della scena», «Registro» e «Il tuo personaggio» devono aprirsi e chiudersi. Le sezioni
+   della colonna destra lo facevano già (setupCollapsibles); quelle della Guida si ridisegnano da capo a ogni render, quindi qui il clic
+   è delegato al documento e lo stato sta in localStorage (aprutium.sec.<id>), per schermo. */
+(function(){
+  const css=document.createElement('style'); css.textContent='#guide .sec>h2{cursor:pointer;user-select:none} #guide .sec.closed>h2{opacity:.78}'; document.head.appendChild(css);
+  function applica(){ document.querySelectorAll('#guide .sec').forEach(sec=>{ const h=sec.querySelector(':scope > h2'); if(!h) return; h.classList.add('collh'); const key='aprutium.sec.'+(sec.id||'guida'); let closed=false; try{ closed=localStorage.getItem(key)==='1'; }catch(e){} sec.classList.toggle('closed',closed); }); }
+  document.addEventListener('click',e=>{ const h=e.target.closest('#guide .sec > h2'); if(!h||e.target.closest('button,select,input,a')) return; const sec=h.parentElement; sec.classList.toggle('closed'); try{ localStorage.setItem('aprutium.sec.'+(sec.id||'guida'),sec.classList.contains('closed')?'1':'0'); }catch(err){} });
+  const _rg=renderGuide; renderGuide=function(){ const r=_rg.apply(this,arguments); try{ applica(); }catch(e){} return r; };
+  setTimeout(applica,0);
+})();
+/* ===== FINE v278 ===== */
+
 
 </script>
