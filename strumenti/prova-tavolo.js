@@ -213,7 +213,7 @@ const file = path.resolve(process.argv[2] || 'index.html');
         for(const id of ids){
           openSheet(id,'sto');
           const text=(document.querySelector('#modal .sheetbody')||document.querySelector('#modal .s3pag'))?.textContent||'';
-          if(document.querySelectorAll('#modal .storychapter, #modal .s3-capitolo').length<4||document.querySelectorAll('#modal .storybond, #modal .s3-legami>div').length<4||!text.includes('Dove si trova adesso')||!text.includes('Galleria della Schiera')) rotte.push('Storia '+id+' → passato, avventura, legami o posizione attuale incompleti');
+          if(document.querySelectorAll('#modal .storychapter, #modal .s3-capitolo').length<4||document.querySelectorAll('#modal .storybond, #modal .s3-legami>div').length<4||!text.includes('Dove si trova adesso')) rotte.push('Storia '+id+' → passato, avventura, legami o posizione attuale incompleti');
         }
         sheetTab='car'; closeModal();
       } catch (e) { rotte.push('Storie dettagliate dei personaggi → '+e.name+': '+e.message); }

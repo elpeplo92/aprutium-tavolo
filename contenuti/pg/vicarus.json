@@ -803,7 +803,7 @@
  "progressione": "Al 7° livello di stregone ottiene sempre preparati Occhio arcano e Charme sui mostri; al 9° Leggende e tradizioni ed Evoca drago (Incantesimi draconici). Nuovi talenti ai livelli 8, 12, 16. Nuove opzioni di Metamagia al 10° e al 17°.",
  "note": "La scheda contiene segnaposto vuoti di Roll20: un trucchetto «New Spell» (livello 0) e un'arma «New Item» (+4, 1d8+1, 1,5 m) che corrisponde al Bastone usato a due mani. Allineamento Caotico Buono.",
  "differenze": [
-  "CA: sito 11, scheda 11 — ma per le regole 2024 la Resilienza draconica dà CA 10 + Des 1 + Car 4 = 15 senza armatura; la scheda Roll20 non la applica. Da decidere col master.",
+  "CA: sito 11, scheda 11 — ma per le regole 2024 la Resilienza draconica dà CA 10 + Des 1 + Car 4 = 15 senza armatura; la scheda Roll20 non la applica. Deciso da Giuseppe: CA 15 (vedi l’ultima riga).",
   "Attacco con incantesimo: il sito usa +11 nelle azioni (PLAYER_V85) ma +9 in SHEETS.spell. La scheda è incoerente: riquadro Incantesimi +9/CD 17, tabella Attacchi +11/CD 15. Il valore coerente è +9 (competenza 3 + Car 4 + Bastone +2); +11 conta due volte il +2. Senza il bonus del bastone sarebbe +7/CD 15.",
   "CD degli incantesimi: sito 17 (azioni e SPELLS), scheda 17 nel riquadro incantesimi ma CD 15 in tutta la tabella attacchi (Onda di tuono, Comando, Soffio del drago, Frantumare, Controincantesimo, Palla di fuoco, Paura). Il sito deve chiarire che 17 include il bastone e che con Stregoneria innata diventa 18.",
   "SPELLS['Fire Bolt'].dmg è '1d10' (il testo dice 2d10 al 5°): per Vicarus al 5° livello il danno è 2d10.",
@@ -882,7 +882,7 @@
   "verifica": [
    "Abilità: 7 competenti ma le fonti ne concedono 8 (Stregone 2 + Nobile 2 + Abile 1 + Skilled 3): manca una competenza (abilità o strumento) di Abile (Skilled) non scelta o non segnata sulla scheda.",
    "TS (Cos, Car), nessuna armatura, armi semplici e Set di dadi (Nobile) tornano.",
-   "Lingue: Draconico ok come lingua standard 2024 (non viene dalla sottoclasse); Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: probabile concessione di campagna, da confermare.",
+   "Lingue: Draconico ok come lingua standard 2024 (non viene dalla sottoclasse); Sottocomune: nel PHB 2024 è una lingua rara, non selezionabile fra le 2 lingue standard iniziali (Comune + 2 dalla tabella delle lingue standard) e nessuna fonte di specie/classe/background la concede. È presente su tutti e sei i PG: è una concessione di campagna.",
    "Nome del talento: nei talenti del file è 'Esperto (Skilled)', nel PHB 2024 italiano è Abile."
   ]
  }

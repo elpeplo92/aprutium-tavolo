@@ -16,7 +16,7 @@
  "dialogo": {
   "apertura": "*Non mangia. Accanto al piatto, un coltello e una moneta messa dritta sul taglio. Vi guarda con gli occhi chiari, quasi bianchi, poi guarda Kostandìn, poi di nuovo voi.* «Parlate. Io capisco più di quello che dico.»",
   "voce": "Italiano duro, a pezzi, senza articoli; con Kostandìn parla vesperiano (se nessuno traduce, Kostandìn riassume a modo suo). · Tic: «Io ho detto. Tu fai.», «Poi.», batte due dita sul petto quando dice una cosa vera; fa girare la moneta e la ferma col dito prima di rispondere. · Ritmo: pochissime parole, lunghe pause, mai una bugia: quando non vuole dire, tace.",
-  "argomenti": [
+  "argomenti": [{"tema": "Perché Kostandìn e Vasco sono passati con te", "domanda": "«Perché ti sei preso i nostri vesperiani?»", "risposta": "*Batte due dita sul petto.* «Io non ho preso. Io ho detto vero. A Teramum c’è lista: quelli passati con voi dopo Mushanë. Chi li consegna prende oro.» *Fa girare la moneta.* «Con voi, Aquile entrano in città e muoiono. Con me entrano coi carri, e io parlo per loro. Io ho detto. Loro hanno fatto.»", "insistono": "«Voi non siete cattivi padroni. Siete padroni con Bando sopra.» *Ferma la moneta col dito.* «Volete Aquile indietro? Toglietele dalla lista. Io non so chi la tiene. Voi siete signori: cercate.»", "mai": "Non sa chi tenga la lista né chi abbia messo la taglia. Non tradisce la consegna.", "scena": "osteria"},
    {
     "tema": "Chi sei",
     "domanda": "«Chi sei? Sei uno del Loto, come quelli di Mushanë?»",
@@ -79,7 +79,7 @@
     "mai": "Non sa cosa siano le armature né perché cantino; non sa chi ci sia dentro. Non aiuta mai ad aprire le casse: «Ho preso oro. Porto casse.» Se le aprono di notte e lui li scopre, arriva in un minuto, stanco, e vuole parlare prima di combattere."
    },
    {
-    "tema": "Kostandìn e la lista",
+    "tema": "Kostandìn e la lista (prima del fuoco)",
     "domanda": "«Che cosa hai detto a Kostandìn? È tornato con la faccia di uno che ha bevuto aceto.»",
     "risposta": "*Guarda Kostandìn, non voi.* «Cosa fra Aquile. Chiedete a lui.» *Pausa.* «Lui vi dirà. Lui è vostro, adesso. Io ho visto da come cammina: cammina come uno che ha padrone nuovo e non sa se è buono.» *Fa girare la moneta.* «È buono? Voi siete buoni padroni?»",
     "insistono": "*Solo se si fida, e solo se Kostandìn è presente o glielo chiede:* «A Teramum c’è lista. Quelli rimasti vivi a Mushanë e passati dall’altra parte. Chi paga per loro paga per…» *batte due dita sul collo* «…teste. Non nomi. Teste. Io ho detto a lui: non entrare in città coi carri. Ora ho detto a voi.»",
@@ -126,9 +126,9 @@
    {
     "tema": "Teramum, la consegna, il dopo",
     "domanda": "«Dove porterete le casse? E dopo, che farai?»",
-    "risposta": "«Portiamo casse a Teramum, alla porta sul fiume. Là le prende gente dei Tigli. Messere firma, io prendo resto della paga.» *Beve.* «Poi sono libero. Poi, forse, cerco lavoro.» *Vi guarda, uno per uno, come si guarda un cavallo prima di comprarlo.* «Pagate voi?»",
+    "risposta": "«Portiamo casse a Teramum, alla Porta Melatina, sul fiume. Là le prende gente dei Tigli. Messere firma, io prendo resto della paga.» *Beve.* «Poi sono libero. Poi, forse, cerco lavoro.» *Vi guarda, uno per uno, come si guarda un cavallo prima di comprarlo.* «Pagate voi?»",
     "insistono": "*Se si fida e se Kostandìn garantisce per la Crociata:* «Dopo consegna, io e quattro miei. Quelli che dormono con dita nelle orecchie. Venite a cercarci a Teramum, dove si beve birra nera e si comprano spade.» *Ferma la moneta col dito.* «Prima consegna. Poi parliamo. Questa è regola. Se rompo regola stanotte, domani rompo con voi.»",
-    "mai": "Non dice chi riceve le casse ai Tigli (non lo sa: «gente dei Tigli»). Non passa con la Crociata prima della consegna, per nessuna cifra. (Decisione: dopo la consegna, a Teramum, si unisce con quattro uomini se la Crociata ha onorato o promesso la sepoltura dei caduti di Mushanë e se Kostandìn garantisce; si trova alla taverna di Livarpola.)",
+    "mai": "Non dice chi riceve le casse ai Tigli (non lo sa: «gente dei Tigli»). Non passa con la Crociata prima della consegna, per nessuna cifra. (All’osteria de lu Passe è andata al contrario: è lui che si è preso Kostandìn e Vasco. Dopo la consegna, a Teramum, si può ancora trattare con lui: si trova alla taverna di Livarpola.)",
     "prova": {
      "abilita": [
       "Persuasione"

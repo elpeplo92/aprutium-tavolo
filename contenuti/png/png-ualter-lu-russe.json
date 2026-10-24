@@ -33,7 +33,7 @@
     "tema": "I bravi del ponte",
     "domanda": "«Chi sono quelli al tavolo in fondo?»",
     "risposta": "*Smette di ridere. Pulisce un boccale che è già pulito.* «Clienti. Carrettieri di Porta Romana, mercenari di passaggio, gente che non fa domande e paga. Qui si assoldano spade, compare: chi cerca un braccio per una scorta, per un lavoro, viene da Lu Russe e chiede. Io non chiedo per cosa.» *Abbassa la voce di poco.* «Quelli in fondo lavorano al ponte. Il Ponte degli Impiccati, qua sotto. Di giorno portano i sacchi. La sera fanno altro. Non ce l’ho con loro. Bevono, pagano, e fuori di qui sono affari della vostra città.»",
-    "insistono": "*Si sporge sul banco, la voce sotto la canzone.* «Stasera hanno soldi nuovi. Fiorini lucidi, ne hanno pagati tre per un giro che ne valeva uno. E uno di loro puzza di lillà, come se ci avesse dormito dentro. Parlavano di un lavoro sul ponte, al tramonto. Cinque fiorini a testa per ognuno di voi. Venti per un Cerullius.» *Si raddrizza.* «Non ce l’ho con voi. Non ce l’ho con loro. Ma nella mia taverna niente sangue. Fuori, è la vostra città.»",
+    "insistono": "*Si sporge sul banco, la voce sotto la canzone.* «Stasera hanno soldi nuovi. Fiorini lucidi, ne hanno pagati tre per un giro che ne valeva uno. E uno di loro puzza di lillà, come se ci avesse dormito dentro. Parlavano di un lavoro sul ponte, al tramonto. Cinque fiorini per ognuno di voi. Venti per un Cerullius.» *Si raddrizza.* «Non ce l’ho con voi. Non ce l’ho con loro. Ma nella mia taverna niente sangue. Fuori, è la vostra città.»",
     "prova": {
      "abilita": [
       "Persuasione"
@@ -42,21 +42,21 @@
      "si": "Lu Russe vi avvisa: i quattro in fondo lavorano al ponte, stasera hanno soldi nuovi, uno puzza di lillà, e c’è un prezzo sulle vostre teste (5 fiorini a testa, 20 per un Cerullius). Si ottiene anche senza prova offrendo una birra a tutto il tavolo dei cantori.",
      "no": "«Clienti, compare. Bevono e pagano.» Vi riempie il boccale e va a cantare con gli altri."
     },
-    "mai": "mai: non sa chi li paga davvero né chi sia la persona col lillà; non aiuterà mai i PG a prenderli dentro la taverna."
+    "mai": "Non sa chi li paga davvero né chi sia la persona col lillà; non aiuterà mai i PG a prenderli dentro la taverna."
    },
    {
     "tema": "Assoldare spade",
     "domanda": "«Se ci servissero uomini? Spade?»",
     "risposta": "*Vi squadra, poi guarda lo stendardo, se l’avete.* «La Crociata cerca braccia? Allora siete nel posto giusto e nel momento sbagliato.» *Conta sulle dita.* «Un mercenario buono a Terme costa un grosso al giorno e il vitto, due se deve vedere sangue. Ce ne sono, qua, la sera: soldati senza paga dalla montagna, marinai a terra, ragazzi di Porta Romana. Ma adesso c’è qualcuno che paga di più. Da due settimane le spade migliori le compra qualcuno che non si fa vedere, e quelle che restano sono quelle che nessuno vuole.»",
     "insistono": "«Se volete, vi trovo tre o quattro uomini onesti. Onesti per il prezzo, intendo: restano finché li pagate. Ditemelo stasera, e domattina sono al vostro accampamento. Ma non quelli del tavolo in fondo. Quelli li ha già comprati qualcun altro.»",
-    "mai": "mai: non procura mai assassini. Non sa chi stia comprando le spade migliori."
+    "mai": "Non procura mai assassini. Non sa chi stia comprando le spade migliori."
    },
    {
     "tema": "Un posto per dormire",
     "domanda": "«Avete un letto?»",
     "risposta": "«Un letto di paglia nel retro, un grosso a notte.» *Alza un dito.* «Niente domande da nessuna delle due parti. Io non chiedo chi siete, voi non chiedete chi ha dormito lì prima di voi. Il retro dà sugli orti, e dagli orti si scende alla Vezzola senza passare dalla porta. Chi deve andarsene di notte, se ne va.» *Ride.* «Non ve l’ho detto io. Io sono un oste onesto di Livarpola.»",
     "insistono": "«La ronda di Porta Romana qui non entra. Il sergente Tavolaccio beve da me il giovedì, e il giovedì da me non succede niente. Un accordo vecchio: lui non vede le mie porte, io non vedo il suo debito.»",
-    "mai": "mai: non nasconde nessuno che abbia ucciso in città."
+    "mai": "Non nasconde nessuno che abbia ucciso in città."
    }
   ],
   "reazioni": {
@@ -76,7 +76,7 @@
    "«Il sole se lo mangia il Gigante. La birra no.»"
   ],
   "uscita": {
-   "frase": "*Vi riempie i boccali un’ultima volta.* «Stasera il ponte lo passate di giorno, compare. O non lo passate.» *Torna dai cantori, e attacca la canzone.*",
+   "frase": "*Vi riempie i boccali un’ultima volta.* «Il ponte, passatelo di giorno, compare. O non passatelo.» *Torna dai cantori, e attacca la canzone.*",
    "dopo": "Se i PG gli sono piaciuti, la sera tiene i bravi al tavolo un giro in più (birra offerta da lui), così l’agguato al ponte comincia più tardi o con un bravo ubriaco.",
    "aggancio": "L’agguato al Ponte degli Impiccati al tramonto, con il prezzo sulle teste: venti fiorini per un Cerullius."
   },

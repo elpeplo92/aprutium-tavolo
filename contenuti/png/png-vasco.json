@@ -14,9 +14,9 @@
  "dialogo": {
   "apertura": "*Arriva al passo con la colonna, la lancia di traverso sulla spalla, e si ferma sulla riva a guardare il guado come si guarda un campo di battaglia finito. Fischia piano fra i denti.* «Sei contro quattordici, e tutti in piedi.» *A Maximus, sottovoce, con mezzo sorriso:* «Padrone, la prossima volta portateci. Mi pagate per stare dietro ai carri a guardare le mosche.»",
   "voce": "Italiano del sud del continente, con una cantilena allegra anche quando dice cose dure. · Tic: «padrone» a Maximus, solo quando nessuno sente; «è il mestiere»; conta i soldi sulle dita. · Ritmo: sciolto, chiacchierone, ride spesso; quando parla di Vicarus o del Ponte la voce si fa piatta e corta.",
-  "argomenti": [
+  "argomenti": [{"tema": "Perché sei passato con Tanush", "domanda": "«Vasco! Perché?»", "risposta": "*Non ride. La lancia è già bassa.* «Perché a Teramum c’è una lista, padrone, e il mio nome ci sta sopra. Chi mi consegna prende oro. Voi mi pagate la giornata. Quelli là mi pagano la pelle.» *Alza le spalle.* «Ve l’avevo detto: se qualcuno offre di più, ci penso. E ve lo dicevo in faccia. È il mestiere.»", "insistono": "«Tanush ha detto che a Teramum parla lui per noi. Voi, a Teramum, chi siete? Gente col Bando sopra.» *Guarda Maximus, solo un attimo.* «Non è per voi, padrone. È per i miei tre.»", "mai": "Non sa chi tenga la lista a Teramum: sa solo quello che Tanush ha detto davanti a tutti. ⟦Nello scontro non cerca Maximus: se può, sceglie un altro.⟧", "scena": "osteria"},
    {
-    "tema": "Chi sei, perché segui Maximus",
+    "tema": "Chi sei, perché segui Maximus (prima dell’osteria)",
     "domanda": "«Vasco, perché sei ancora con noi?»",
     "risposta": "*Si appoggia alla lancia.* «Perché al Ponte dei Frati avevo le mani legate e il vostro amico Maximus me le ha slegate. Non mi ha detto vattene, non mi ha detto inginocchiati. Mi ha detto: adesso sei mio, e ti pago.» *Ride.* «Pagate, e la lancia è vostra. Non pagate, e la lancia è mia. Il padrone paga puntuale, e io gli voglio bene come si vuole bene a uno che paga puntuale.» *Poi, più serio:* «E poi mi piace andare dove vanno quelli che hanno torto per legge e ragione per strada. Si guadagna meno. Si dorme meglio.»",
     "insistono": "«Lo dico chiaro, così nessuno si offende dopo: se la paga salta, io sono il primo ad andarmene. Non tradisco: me ne vado. Con la lancia in spalla, di giorno, salutando. Gli uomini cambiano bandiera, è il mestiere. Io l'ho cambiata una volta. Alla terza te la cuciono addosso.»",
@@ -35,7 +35,7 @@
      "si": "Se qualcuno (non Vicarus) parla per Vicarus e lo fa bene, Vasco concede: «Va bene. Aspetto. Ma ditegli che aspetto.» Se è Vicarus a chiedere scusa davanti alla colonna, non serve la prova: Vasco gli tende la mano bruciata, e da quel giorno lo chiama per nome.",
      "no": "«Le scuse non si mandano per ambasciata. Sennò sono un'altra cosa.»"
     },
-    "mai": "Non attacca mai Vicarus e non lo tradisce: aspetta. Non chiede scuse a Silvanus né a nessun altro al posto di Vicarus."
+    "mai": "Non attacca mai Vicarus per vendetta: aspetta. Non chiede scuse a Silvanus né a nessun altro al posto di Vicarus."
    },
    {
     "tema": "I Forgiati",
