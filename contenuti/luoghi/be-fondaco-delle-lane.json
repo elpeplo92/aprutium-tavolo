@@ -24,28 +24,28 @@
  "scheda": {
   "Tipo": "magazzino e banco di commercio della lana",
   "Luogo": "[LUOGO — Bëllindë], Via Maggiore bassa — due minuti da [LUOGO — Piazza Grande]",
-  "Chi lo occupa": "[PNG — Ottavio Ceruso], in affitto da nove giorni. Il proprietario vero è un lanaiolo di Teramum che non si vede da anni.",
-  "Orari": "banco aperto da terza a vespro",
+  "Chi lo occupa": "[PNG — Ottavio Ceruso] lo aveva in affitto da nove giorni; dal giorno dell’incendio è sparito. Il proprietario vero è un lanaiolo di Teramum che non si vede da anni.",
+  "Orari": "chiuso dalle guardie dopo l’incendio",
   "Collegato a": "[LUOGO — Bëllindë]"
  },
  "pub": [
   {
    "t": "Aspetto esterno",
-   "txt": "Un magazzino a due piani con un portone largo da carri e una porticina laterale. Sull’architrave, l’insegna scolorita di un vello appeso. Dal portone aperto esce odore di lanolina e si vedono balle di lana accatastate fino al soffitto."
+   "txt": "Un magazzino a due piani con un portone largo da carri e una porticina laterale. Sull’architrave, l’insegna scolorita di un vello appeso. Dal giorno dell’incendio la facciata è nera di fumo fin sotto il tetto, e il portone è chiuso, con una guardia davanti e una dietro. Sa ancora di lana bruciata."
   },
   {
    "t": "Entrando",
-   "txt": "Il piano terra è un deposito vero: balle, stadere, un banco con registri e campioni di filato. Tutto in ordine, tutto plausibile. Una scala di legno sale al piano di sopra, dove si intravedono un tavolo, delle brande e una finestra che dà sul retro.\nL’uomo dietro il banco vi accoglie prima ancora che abbiate parlato: «Voi siete quelli delle due lune. Sedete, sedete. Qui il vino è cattivo ma è onesto.»"
+   "txt": "Il piano terra era un deposito vero: balle, stadere, un banco con registri e campioni di filato, e una scala di legno che saliva al piano di sopra.\nPoi il fondaco ha preso fuoco. Guardie e popolani hanno fatto la catena dei secchi, e Adamus, trasformato in toro, ha dato una mano. Dalla porta sul retro è uscito prima Renzo, il manovale, nero di fumo; poi, dalla bottega in fiamme, Cascia, che non ha detto una parola. Il fuoco è stato contenuto: il piano di sopra è rovinato, la scala mezza bruciata, i registri bagnati o anneriti. La cantina, sotto, è intatta, e la botola dietro le balle era aperta."
   },
   {
    "t": "Cosa si vede automaticamente",
-   "txt": "• Un commercio di lana perfettamente normale, a occhio profano.\n• Due manovali che lavorano piano e guardano spesso la porta.\n• La scala per il piano di sopra, e che il piano di sopra è abitato.\n• La botola della cantina, dietro le balle: chiusa con un lucchetto nuovo, l’unica cosa nuova di tutto il magazzino."
+   "txt": "• Il fondaco chiuso, con le guardie di Ruggiero davanti e dietro.\n• I segni del fuoco: il piano di sopra rovinato, la scala mezza bruciata.\n• La botola della cantina, dietro le balle: il giorno dell’incendio era aperta.\n• Renzo è in mano alle guardie. Del padrone, Ottavio Ceruso, nessuna traccia: ha lasciato la locanda subito dopo che le guardie hanno portato via Vicarus, e nessuno sa dove sia."
   }
  ],
  "gm": [
   {
    "t": "Cosa sta succedendo oggi",
-   "txt": "• Il fondaco è il quartier generale della cellula. Ceruso lavora al banco, i due manovali fanno finta di spostare balle, Cascia dorme di giorno al piano di sopra.\n• La lana però c’è davvero — comprata dal precedente affittuario e mai spostata. La copertura si regge su merce vera.\n• Sotto il magazzino c’è una cantina, e la cantina è il motivo per cui Ceruso ha scelto proprio questo edificio."
+   "txt": "• Dopo l’Atto XVI: il fondaco ha preso fuoco ed è chiuso dalle guardie; Renzo è trattenuto, Cascia è stata vista uscire dal fuoco, Ceruso è sparito. Le righe che seguono descrivono il fondaco prima dell’incendio.\n• Il fondaco è il quartier generale della cellula. Ceruso lavora al banco, i due manovali fanno finta di spostare balle, Cascia dorme di giorno al piano di sopra.\n• La lana però c’è davvero — comprata dal precedente affittuario e mai spostata. La copertura si regge su merce vera.\n• Sotto il magazzino c’è una cantina, e la cantina è il motivo per cui Ceruso ha scelto proprio questo edificio."
   },
   {
    "t": "Persone presenti",
@@ -53,11 +53,11 @@
   },
   {
    "t": "Servizi",
-   "txt": "ServizioPrezzoNote\nLana grezza, balla3 fiorinice n’è in abbondanza, e Ceruso vende volentieri: fa scena\nFilato, campionia pesoprezzi corretti — ha studiato\n«Informazioni di mercato»un bicchiereè il suo modo di far sedere la gente e farla parlare"
+   "txt": "Servizio — Prezzo — Note\nLana grezza, balla — 3 fiorini — ce n’è in abbondanza, e Ceruso vende volentieri: fa scena\nFilato, campioni — a peso — prezzi corretti — ha studiato\n«Informazioni di mercato» — un bicchiere — è il suo modo di far sedere la gente e farla parlare"
   },
   {
    "t": "Il luogo nel corso della giornata",
-   "txt": "TerzaCeruso apre il banco. I manovali «lavorano».\nMezzogiornoCeruso va alla [LUOGO — Locanda Lu Deng’ Rott’], al suo tavolo. Il fondaco resta ai manovali: è il momento buono per parlare con Renzo.\nMetà pomeriggioCascia si sveglia. Da qui al buio, il piano di sopra non è più vuoto.\nNotteLa cantina lavora: il varco, le vie sotterranee, i segni di gesso. Chi sorveglia il fondaco di notte vede lume di candela filtrare dalla botola.\nSegreti del luogo\n• Nella borsa che Ceruso non molla mai: la lista in cifra dei volontari di Maximus, 60 fiorini, e il sigillo da viaggio in osso nero identico a quello di Lu Grise — la prova che collega Bëllindë a chi pagava Mushanè.\n• Il varco in cantina sbuca nelle vie sotterranee ed è il percorso da cui la cellula può lasciare Bëllindë senza passare dalle porte. → [ESPLORAZIONE — Sotto Bëllindë]\n• Nessuno della cellula sa cosa ci sia più in profondità. Hanno usato le cisterne perché erano comode. I segni di gesso giallo marcano le vie «sicure» — secondo loro.\nCosa non si scopre qui\n• Il nome di Iuvenza. Ceruso non lo pronuncia e non c’è scritto da nessuna parte: c’è solo «V.» e il sigillo nero. Il collegamento lo fa chi ha visto le carte di Mushanè."
+   "txt": "Terza — Ceruso apre il banco. I manovali «lavorano».\nMezzogiorno — Ceruso va alla [LUOGO — Locanda Lu Deng’ Rott’], al suo tavolo. Il fondaco resta ai manovali: è il momento buono per parlare con Renzo.\nMetà pomeriggio — Cascia si sveglia. Da qui al buio, il piano di sopra non è più vuoto.\nNotte — La cantina lavora: il varco, le vie sotterranee, i segni di gesso. Chi sorveglia il fondaco di notte vede lume di candela filtrare dalla botola.\nSegreti del luogo\n• Nella borsa che Ceruso non molla mai: la lista in cifra dei volontari di Maximus, 60 fiorini, e il sigillo da viaggio in osso nero identico a quello di Lu Grise — la prova che collega Bëllindë a chi pagava Mushanè.\n• Il varco in cantina sbuca nelle vie sotterranee ed è il percorso da cui la cellula può lasciare Bëllindë senza passare dalle porte. → [ESPLORAZIONE — Sotto Bëllindë]\n• Nessuno della cellula sa cosa ci sia più in profondità. Hanno usato le cisterne perché erano comode. I segni di gesso giallo marcano le vie «sicure» — secondo loro.\nCosa non si scopre qui\n• Il nome di Iuvenza. Ceruso non lo pronuncia e non c’è scritto da nessuna parte: c’è solo «V.» e il sigillo nero. Il collegamento lo fa chi ha visto le carte di Mushanè."
   },
   {
    "t": "Collegamenti",

@@ -2,7 +2,7 @@
  "id": "jn-grande-forgia",
  "tipo": "luogo",
  "titolo": "La Grande Forgia — Centro della Gilda e Laboratorio di Torvus",
- "sottotitolo": "Sede del Martello Bianco; nel retrobottega sigillato nasce il Fuoco Verde",
+ "sottotitolo": "Sede del Martello Bianco; nel retrobottega sigillato nasce l'Acido Solare",
  "citta": "julianova",
  "gruppo": "3. Quartiere dei Mantelli Bianchi (Nord)",
  "livello": "luogo",
@@ -24,26 +24,22 @@
    "txt": "Un edificio che sembra fatto di fumo e acciaio. La Grande Forgia non ha finestre, solo aperture per far uscire il calore; la temperatura all'interno è insopportabile per chi non è abituato. Al centro l'incudine principale, alta quanto un uomo: Torvus Halderan ci lavora sopra personalmente quando qualcosa è importante."
   },
   {
-   "t": "Entrando — il laboratorio",
-   "txt": "Il retrobottega di Torvus è vietato a chiunque non sia Elara o un apprendista fidato. Le pareti sono coperte di schizzi, formule, campioni di metallo; al centro un alambicco di rame produce un liquido verde brillante. Il Fuoco Verde non brucia l'organico: brucia solo il ferro animato, ed è questo che ferma i Forgiati."
-  },
-  {
    "t": "Cosa sanno i personaggi",
-   "txt": "Qui Torvus ha esaminato un frammento del nemico (« Roba d'elf'… ma guasta ») e qui, nei tre giorni prima della marcia, ha forgiato per Alessandros. Torvus ve lo ha mostrato sigillato — « Loro parl'. Io… prepare le risposte » — e dalle mura lo avete visto sciogliere tre Navi Rosse in trenta secondi."
+   "txt": "Qui Torvus ha esaminato un frammento del nemico (« Roba d'elf'… ma guasta ») e qui, nei tre giorni prima della marcia, ha forgiato per Alessandros. Torvus vi ha mostrato la sua fucina sigillata — « Loro parl'. Io… prepare le risposte » — e da lontano avete visto il suo Acido Solare sciogliere tre Navi Rosse in trenta secondi."
   }
  ],
  "gm": [
   {
    "t": "Note del master",
-   "txt": "Persuasione o Baratto CD 13: Torvus accetta di forgiare/riparare/potenziare in cambio di un favore futuro o materiale raro (ferro lunare, scaglie di Forgiato), 1-3 giorni. Fallimento: «Torna quando la città non è assediata», si può riprovare con un'offerta migliore."
+   "txt": "Persuasione CD 13: Torvus accetta di forgiare/riparare/potenziare in cambio di un favore futuro o materiale raro (ferro lunare, scaglie di Forgiato), 1-3 giorni. Fallimento: «Torna quando la città non è assediata», si può riprovare con un'offerta migliore."
   },
   {
    "t": "Note del master — il laboratorio",
-   "txt": "Gli appunti contengono informazioni cruciali: i Forgiati sono animati da frammenti di un'anima, schegge; distruggi l'anima-madre e si fermano tutti (Int Arcano CD 15). Se la Chiesa lo scoprisse, Torvus finirebbe sul rogo."
+   "txt": "I PG non sono mai entrati nel retrobottega: è vietato a chiunque non sia Elara o un apprendista fidato. Pareti coperte di schizzi, formule, campioni di metallo; al centro un alambicco di rame che produce un liquido verde brillante. Gli appunti contengono informazioni cruciali: i Forgiati sono animati da frammenti di un'anima, schegge; distruggi l'anima-madre e si fermano tutti (Int Arcano CD 15). Se la Chiesa lo scoprisse, Torvus finirebbe sul rogo."
   },
   {
-   "t": "Da decidere (canon)",
-   "txt": "Il Manuale aggiunge il segreto vero: il Fuoco Verde (« Acido Solare » è depistaggio) è magia lunare, frammenti dell'essenza di Noxtua — conoscenza del Clan Halderan."
+   "t": "Note del master — il segreto",
+   "txt": "Il segreto vero: il Fuoco Verde (« Acido Solare » è depistaggio) è magia lunare, frammenti dell'essenza di Noxtua — conoscenza del Clan Halderan."
   }
  ],
  "prove": [
@@ -59,7 +55,7 @@
    "skill": "Arcano",
    "dc": 15,
    "ok": "i Forgiati sono animati da frammenti di un'anima — schegge, non un'entità completa. Distrutta l'anima-madre, si fermano tutti.",
-   "ko": "formule e schizzi: capite che il Fuoco Verde colpisce solo il ferro animato, niente di più."
+   "ko": "formule e schizzi che non riuscite a leggere."
   }
  ],
  "links": [

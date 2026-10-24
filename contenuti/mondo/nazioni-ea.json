@@ -14,7 +14,7 @@
  "colore": "#8A6E2E",
  "scheda": {
   "Che cos’è": "La mappa politica di Ea oggi, nel 1437 del Calare della Fiamma",
-  "Quante sono": "Ventotto nazioni, più le Terre Neutrali che non sono di nessuno",
+  "Quante sono": "Ventisette nazioni, più le Terre Neutrali che non sono di nessuno",
   "Le schede": "Ogni nazione ha la sua voce in questa sezione. L’Impero Aureo ha una sezione tutta sua"
  },
  "gm": [
@@ -24,7 +24,7 @@
   },
   {
    "t": "Che cosa sanno i personaggi",
-   "txt": "Tutte le nazioni sono note per nome e per fama, tranne la Fratellanza Tepotlanco, di cui quasi nessuno sa l’esistenza, e il Bellicato di Kinarg, di cui si sa che esiste ma non dove si apra. Se un personaggio con Storia chiede di una nazione lontana, mostra la parte pubblica della sua voce."
+   "txt": "Tutte le nazioni sono note per nome e per fama, tranne la Fratellanza Tepotlanco, la ventottesima, di cui quasi nessuno sa l’esistenza (per questo la parte pubblica ne conta ventisette), e il Bellicato di Kinarg, di cui si sa che esiste ma non dove si apra. Se un personaggio con Storia chiede di una nazione lontana, mostra la parte pubblica della sua voce."
   }
  ],
  "id": "nazioni-ea",
@@ -32,12 +32,12 @@
  "parent": "mondo-ea",
  "group": "Le nazioni",
  "title": "Le Nazioni di Ea",
- "sub": "Le ventotto nazioni del mondo, le Terre Neutrali e da che parte stettero nella guerra",
+ "sub": "Le ventisette nazioni del mondo, le Terre Neutrali e da che parte stettero nella guerra",
  "pub": [
   {
    "t": "",
    "capo": true,
-   "txt": "Ventotto nazioni si dividono Ea. Al centro, la Grande Penisola dell’Impero Aureo, protesa verso sud come una lama d’oro. A sud-ovest, oltre il Mare di Vespero, la terra nera di Sylva Noctis. A nord, le terre fredde di Silentia e degli elfi di Elverio; a est, le foreste di Thilmanor, i mercanti di Storestia, l’arco di montagne dei nani e le steppe sconfinate di Krodan. A sud-est, oltre il mare, i deserti del Califfato. Un aprutiano conosce davvero tre o quattro di questi nomi. Degli altri sa la fama, e poco più.\n\nQuasi tutte le nazioni di oggi furono segnate dalla Guerra delle Due Lune, due secoli fa. Alcune combatterono con l’Alleanza del Sole Spezzato, altre con Sylva Noctis. Altre ancora allora non esistevano: le ha fatte nascere la guerra stessa."
+   "txt": "Ventisette nazioni si dividono Ea. Al centro, la Grande Penisola dell’Impero Aureo, protesa verso sud come una lama d’oro. A sud-ovest, oltre il Mare di Vespero, la terra nera di Sylva Noctis. A nord, le terre fredde di Silentia e degli elfi di Elverio; a est, le foreste di Thilmanor, i mercanti di Storestia, l’arco di montagne dei nani e le steppe sconfinate di Krodan. A sud-est, oltre il mare, i deserti del Califfato. Un aprutiano conosce davvero tre o quattro di questi nomi. Degli altri sa la fama, e poco più.\n\nQuasi tutte le nazioni di oggi furono segnate dalla Guerra delle Due Lune, due secoli fa. Alcune combatterono con l’Alleanza del Sole Spezzato, altre con Sylva Noctis. Altre ancora allora non esistevano: le ha fatte nascere la guerra stessa."
   },
   {
    "t": "Con l’Alleanza del Sole Spezzato",
@@ -111,11 +111,6 @@
      [
       "Tetrarchi Kharadun",
       "Le montagne dell’estremo nord",
-      "Nani"
-     ],
-     [
-      "Fratellanza Tepotlanco",
-      "Nessuno sa con certezza",
       "Nani"
      ],
      [

@@ -9,9 +9,7 @@
  "parent": "borgo-bellinde",
  "img": "Luogo — 1. Piazza Grande.jpg",
  "stato": "visitato",
- "atti": [
-  16
- ],
+ "atti": [16, 18],
  "compendio": true,
  "segnaposto": {
   "scena": "bellinde",
@@ -41,6 +39,10 @@
   {
    "t": "Cosa si vede automaticamente",
    "txt": "• Si compra e si vende di tutto tranne armi, medicine e cavalli.\n• Sotto la loggia c’è una stadera pubblica e un uomo che la usa tutto il giorno.\n• Sulla parete della loggia ci sono i bandi affissi, e l’ultimo è fresco.\n• C’è una gogna, e non la usa nessuno da anni.\n• I carri arrivano fin qui e non oltre.\n• Nessuno è armato, tranne due guardie del Conte che stanno ferme agli imbocchi."
+  },
+  {
+   "t": "Cosa è successo qui",
+   "txt": "Qui Mimì lu Bannitòre ha letto dal murello il proclama di Teramum, e nessuno della Crociata gli ha risposto.\nLa mattina della partenza, mentre la Crociata attraversava Bëllindë, Mattheus ha parlato alla gente in Piazza Grande, e il discorso è andato come non poteva andare meglio: tutta la città lo ha sentito."
   }
  ],
  "gm": [
@@ -54,19 +56,19 @@
   },
   {
    "t": "Servizi",
-   "txt": "ServizioPrezzoTempo\nPesata pubblica e bollo1 gofferina a pesatapochi minuti\nConsultare il registro delle pesategratisun’ora, o una prova riuscita\nAnnuncio del banditore5 gofferine per tre giri di piazzamezz’ora\nFacchini per caricare i carri2 gofferine a testamezza giornata\nDeposito merce sotto la loggia1 gofferina al giorno—\nL’annuncio del banditore è lo strumento più utile della piazza. Cinque gofferine comprano la voce più forte di Bëllindë per mezz’ora: è il modo per convocare qualcuno, far sapere che si cerca gente, o smentire qualcosa in pubblico. → [SCENA — La chiamata in piazza]"
+   "txt": "Servizio — Prezzo — Tempo\nPesata pubblica e bollo — 1 gofferino a pesata — pochi minuti\nConsultare il registro delle pesate — gratis — un’ora, o una prova riuscita\nAnnuncio del banditore — 5 gofferini per tre giri di piazza — mezz’ora\nFacchini per caricare i carri — 2 gofferini a testa — mezza giornata\nDeposito merce sotto la loggia — 1 gofferino al giorno\nL’annuncio del banditore è lo strumento più utile della piazza. Cinque gofferini comprano la voce più forte di Bëllindë per mezz’ora: è il modo per convocare qualcuno, far sapere che si cerca gente, o smentire qualcosa in pubblico. → [SCENA — La chiamata in piazza]"
   },
   {
    "t": "Inventario",
-   "txt": "Disponibile oggi\nPrezzi già al netto del −25% concesso dal Conte. Una razione = una persona per un giorno.\nMerceQuantitàPrezzoResa\nSacco di grano26 sacchi1 fiorino e 5 gofferine20 razioni l’uno\nFarro e ceci, sacco141 fiorino16 razioni l’uno\nCarne salata, barile63 fiorini30 razioni l’uno\nFormaggio, formauna trentina4 gofferine8 razioni l’una\nOlio, orcio92 fiorini—\nForaggio, balla403 gofferine1 giorno per 4 bestie\nVino, botticellaquante ne vogliono1 fiorino—\nMuli26 fiorini l’uno (ne valgono 4)—\nCarro a due ruote, usato112 fiorini—\nPer la Crociata, in pratica: trentanove bocche consumano 39 razioni al giorno. Dodici sacchi di grano — 18 fiorini — sono sei giorni di autonomia in più. Quaranta balle di foraggio coprono dieci giorni per ventitré bestie. Tutto il magazzino della piazza non basta comunque ad arrivare a Teramum senza ricomprare per strada. → [HANDOUT — Registro della Crociata]\nSu ordinazione\nDonna Egidia fa arrivare dai casali quello che oggi non ha: altro grano in due giorni, un terzo carro in tre, buoi in una settimana. Chiede metà in anticipo.\nNon disponibile\nArmi, armature, munizioni, cavalli da sella, medicine oltre gli infusi delle erbaiole, componenti per incantesimi, pergamene, nulla di magico. Per il ferro c’è [LUOGO — Fucina di Bëllindë], per i cavalli [LUOGO — Stazione di Posta], per le cure [LUOGO — Pieve di San Vincenzo]."
+   "txt": "Disponibile oggi\nPrezzi già al netto del −25% concesso dal Conte. Una razione = una persona per un giorno.\nMerce — Quantità — Prezzo — Resa\nSacco di grano — 26 sacchi — 1 fiorino e 5 gofferini — 20 razioni l’uno\nFarro e ceci, sacco — 14 — 1 fiorino — 16 razioni l’uno\nCarne salata, barile — 6 — 3 fiorini — 30 razioni l’uno\nFormaggio, forma — una trentina — 4 gofferini — 8 razioni l’una\nOlio, orcio — 9 — 2 fiorini\nForaggio, balla — 40 — 3 gofferini — 1 giorno per 4 bestie\nVino, botticella — quante ne vogliono — 1 fiorino\nMuli — 2 — 6 fiorini l’uno (ne valgono 4)\nCarro a due ruote, usato — 1 — 12 fiorini\nPer la Crociata, in pratica: trentanove bocche consumano 39 razioni al giorno. Dodici sacchi di grano — 18 fiorini — sono sei giorni di autonomia in più. Quaranta balle di foraggio coprono sette giorni per ventitré bestie. Tutto il magazzino della piazza non basta comunque ad arrivare a Teramum senza ricomprare per strada. → [HANDOUT — Registro della Crociata]\nSu ordinazione\nDonna Egidia fa arrivare dai casali quello che oggi non ha: altro grano in due giorni, un terzo carro in tre, buoi in una settimana. Chiede metà in anticipo.\nNon disponibile\nArmi, armature, munizioni, cavalli da sella, medicine oltre gli infusi delle erbaiole, componenti per incantesimi, pergamene, nulla di magico. Per il ferro c’è [LUOGO — Fucina di Bëllindë], per i cavalli [LUOGO — Stazione di Posta], per le cure [LUOGO — Pieve di San Vincenzo]."
   },
   {
    "t": "Se chiedono informazioni",
-   "txt": "La piazza è il posto dove si sa tutto e non si dice niente di preciso. Nessun tiro per il primo livello; Persuasione CD 12 o un acquisto per il secondo.\nDa chiCosa si ottiene\nMastro BerardoChi ha pesato cosa e quando, per chiunque, senza fare domande sul perché. Se gli si chiede del mercante di lane: «Quello? Viene, pesa poco e paga subito. Un cliente perfetto e un mercante scarso.»\nDonna EgidiaQuanto può permettersi la città, chi paga in ritardo, e che il Conte in vent’anni non le ha mai chiesto uno sconto per nessuno — fino a ieri sera.\n[PNG — Mimì lu Bannitòre]Tutti i bandi degli ultimi mesi, a memoria. E che negli ultimi nove giorni due forestieri gli hanno pagato un annuncio a testa: uno cercava lana, l’altro cercava «chiunque abbia lavorato nelle cisterne vecchie».\nLa gente ai banchiLe voci correnti → tabella in [LUOGO — Bëllindë]. Sul bando di Teramum tutti hanno un’opinione e nessuno l’ha letto per intero."
+   "txt": "La piazza è il posto dove si sa tutto e non si dice niente di preciso. Nessun tiro per il primo livello; Persuasione CD 12 o un acquisto per il secondo.\nDa chi — Cosa si ottiene\nMastro Berardo — Chi ha pesato cosa e quando, per chiunque, senza fare domande sul perché. Se gli si chiede del mercante di lane: «Quello? Viene, pesa poco e paga subito. Un cliente perfetto e un mercante scarso.»\nDonna Egidia — Quanto può permettersi la città, chi paga in ritardo, e che il Conte in vent’anni non le ha mai chiesto uno sconto per nessuno — fino a ieri sera.\n[PNG — Mimì lu Bannitòre] — Tutti i bandi degli ultimi mesi, a memoria. E che negli ultimi nove giorni due forestieri gli hanno pagato un annuncio a testa: uno cercava lana, l’altro cercava «chiunque abbia lavorato nelle cisterne vecchie».\nLa gente ai banchi — Le voci correnti → tabella in [LUOGO — Bëllindë]. Sul bando di Teramum tutti hanno un’opinione e nessuno l’ha letto per intero."
   },
   {
    "t": "La piazza nel corso della giornata",
-   "txt": "Prima luceArrivano i carri dai casali. Per un’ora la piazza è solo mercanti: è il momento in cui si contratta sul serio.\nTerzaIl banditore legge i bandi. Oggi legge quello di Teramum, e mentre lo legge la piazza si zittisce.\nMezzogiornoI banchi restano, le botteghe della Via Maggiore chiudono. La piazza diventa il posto dove si mangia in piedi.\nNonaIl peso pubblico chiude e Mastro Berardo porta il registro a casa. Da qui a domani, quella prova non si può fare.\nVesproSi smonta. In venti minuti la piazza si svuota e restano solo le bucce.\nSe pioveTutta la città si sposta sotto la loggia. Diventa impossibile parlare senza essere sentiti, e impossibile passare inosservati.\nSegreti del luogo\n• I due uomini sotto la loggia lavorano per [PNG — Ottavio Ceruso]. Contano chi entra e chi esce dalla piazza e, da oggi, chi parla con voi. Non sono armati e non attaccano.\n• Il registro delle pesate è la prova che smonta la copertura di Ceruso, e sta lì da nove giorni alla luce del sole perché nessuno ha pensato di guardarla.\n• Il secondo annuncio pagato al banditore — chiunque abbia lavorato nelle cisterne vecchie — è stato pagato quattro giorni prima che Rocco Serrafredda venisse trovato morto.\nCosa non si scopre qui\n• Per chi lavora Ceruso. Il registro prova che non è un mercante. Non dice altro.\n• Chi ha pagato il secondo annuncio. Mimì non ricorda la faccia: «Uno che pagava. Mica li guardo.»\n• Se il bando sia autentico. Qui c’è solo la copia notarile. Il confronto si fa alla [LUOGO — Rocca dei Melacera] o alla [LUOGO — Casa del Notaio]."
+   "txt": "Prima luce — Arrivano i carri dai casali. Per un’ora la piazza è solo mercanti: è il momento in cui si contratta sul serio.\nTerza — Il banditore legge i bandi. Oggi legge quello di Teramum, e mentre lo legge la piazza si zittisce.\nMezzogiorno — I banchi restano, le botteghe della Via Maggiore chiudono. La piazza diventa il posto dove si mangia in piedi.\nNona — Il peso pubblico chiude e Mastro Berardo porta il registro a casa. Da qui a domani, quella prova non si può fare.\nVespro — Si smonta. In venti minuti la piazza si svuota e restano solo le bucce.\nSe piove — Tutta la città si sposta sotto la loggia. Diventa impossibile parlare senza essere sentiti, e impossibile passare inosservati.\nSegreti del luogo\n• I due uomini sotto la loggia lavorano per [PNG — Ottavio Ceruso]. Contano chi entra e chi esce dalla piazza e, da oggi, chi parla con voi. Non sono armati e non attaccano.\n• Il registro delle pesate è la prova che smonta la copertura di Ceruso, e sta lì da nove giorni alla luce del sole perché nessuno ha pensato di guardarla. È una prova materiale nel senso che intende Ruggiero: non un sospetto, una scrittura pubblica.\n• Il secondo annuncio pagato al banditore — chiunque abbia lavorato nelle cisterne vecchie — è stato pagato quattro giorni prima che Rocco Serrafredda venisse trovato morto.\nCosa non si scopre qui\n• Per chi lavora Ceruso. Il registro prova che non è un mercante. Non dice altro.\n• Chi ha pagato il secondo annuncio. Mimì non ricorda la faccia: «Uno che pagava. Mica li guardo.»\n• Se il bando sia autentico. Qui c’è solo la copia notarile. Il confronto si fa alla [LUOGO — Rocca dei Melacera] o alla [LUOGO — Casa del Notaio]."
   },
   {
    "t": "Scene collegate",
@@ -90,7 +92,7 @@
    "skill": "Indagare",
    "dc": 13,
    "ok": "negli ultimi nove giorni Ottavio Ceruso, mercante di lane, ha fatto pesare lana due volte per un totale di undici libbre. Un mercante di lane vero, in nove giorni, ne pesa qualche centinaio. Ha comprato quel tanto che basta perché il suo nome comparisse sul registro.",
-   "ko": "il registro è fitto, scritto male e in ordine di pesata, non di nome. Ci vuole più tempo: torna con un’ora libera, oppure con qualcuno che sappia leggere in fretta, e la prova riesce automaticamente.\nÈ una prova materiale nel senso che intende [PNG — Ruggiero de’ Santi]: non un sospetto, una scrittura pubblica."
+   "ko": "il registro è fitto, scritto male e in ordine di pesata, non di nome. Ci vuole più tempo: torna con un’ora libera, oppure con qualcuno che sappia leggere in fretta, e la prova riesce automaticamente."
   },
   {
    "t": "Storia CD 12 — la loggia e i bandi",
@@ -110,7 +112,7 @@
    "t": "Rapidità di mano CD 13 — contro chi ha una borsa",
    "skill": "Rapidità di mano",
    "dc": 13,
-   "ok": "spariscono con 2d10 gofferine. Se vengono inseguiti, corrono verso il [LUOGO — Borgo Vecchio] e nessuno li segue.",
+   "ok": "spariscono con 2d10 gofferini. Se vengono inseguiti, corrono verso il [LUOGO — Borgo Vecchio] e nessuno li segue.",
    "ko": "vengono presi per il polso. La piazza guarda, e cosa succede dopo dipende da quello che decide chi li ha presi — a Bëllindë per il furto si paga una multa, non si perde una mano."
   }
  ],

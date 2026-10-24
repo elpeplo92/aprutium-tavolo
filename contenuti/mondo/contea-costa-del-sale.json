@@ -1,6 +1,6 @@
 {
  "cat": "mondo",
- "state": "noto",
+ "state": "visitato",
  "atti": [],
  "links": [
   "ducato-aprutium",
@@ -19,7 +19,7 @@
  "mappa": null,
  "colore": "#3E6E9E",
  "scheda": {
-  "Nome": "La Costa del Sale; in dialetto, Li Côtë",
+  "Nome": "La Costa del Sale; in dialetto, La Marinë",
   "Contea": "La prima delle otto",
   "Il borgo che conta": "Julia Nova, il porto maggiore del Ducato",
   "Chi comanda": "Nessuno da solo. Le Gilde a Julia Nova, i Cavatassi a Tortoscuro, i Bardalino ad Alba, un doganiere a Martëncëcurë, gli d’Altaria a Rosetum, i Barbas a Pënëtë, i Fonteviva ad Atrë",
@@ -42,14 +42,6 @@
   {
    "t": "Sotto la costa",
    "txt": "· Pietraluna è il filatterio di Lyaras (Atto VII): l’isola è morta, ma non è vuota.\n· ⟦Il passaggio verso il Sottosuolo profondo, che il vecchio canone metteva nelle «miniere d’oro» di Atrë, sta nelle grotte e nei cunicoli sotto la città, dove finiscono i calanchi. Vedi la voce di Atrë.⟧\n· ⟦I Fiori di Luna Pallida crescono dove la Frattura ha toccato la terra: se ne trovano a Rosetum, e il loro profumo era nella cripta di Pietraluna (Atto VIII).⟧\n· ⟦Sotto la sabbia di Martëncëcurë c’è la città dell’Impero sepolta: vie lastricate, magazzini, un porto interrato. È il posto dove i contrabbandieri tengono quello che non deve passare la dogana.⟧"
-  },
-  {
-   "t": "Da sapere",
-   "txt": "· Tolti i trabocchi: sulla costa di Teramo non ci sono, stanno più a sud. Nessun Atto li nomina. Il «Trabocco Maledetto» di Alba diventa lo Specchio del Mare (vedi la voce del borgo).\n· Tolta la frase «le Navi Rosse si sono solo allontanate»: sono tornate, Atti I e VII. Dopo la sconfitta a Julia Nova non hanno più mandato navi, per ora (decisione del 10-10).\n· Julia Nova nella Guerra delle Due Lune fu assediata tre volte e in parte distrutta, non rasa al suolo (decisione del 10-10).\n· Atrë non sta sul mare: sta su tre colli a una decina di miglia dalla costa. Ad Atrë c’è Casa Fonteviva, non Giosia d’Acquaviva né i da Fiorforte (decisione del 10-10).\n· La casata di Luigis è Barbas, non Barbus (decisione del 10-10). Negli Atti IX e X la gente dice ancora «lu giovine Barbus»: è il modo di dire della gente.\n· Tortoscuro sta a nord di Julia Nova, come Tortoreto vera rispetto a Giulianova. La voce della Guerra delle Due Lune e la Porta del Sale di Julia Nova la mettono a sud: vanno corrette.\n· Colleventoso è Cologna, frazione di Roseto: lo dice l’Atto III («Culognè, frazione di Rosetum, nella Contea de Li Cotè»).\n· Fonti nuove di Giuseppe (sera del 10-10): Lessico di Ea, Nomi delle casate, Studio dei paesi veri, Folklore, Dialetti. Da qui vengono: il confine nord sul Luminor Meridionale; il peso dei Fonteviva su quasi tutta la costa (gli Acquaviva tennero Tortoreto, Giulianova, Silvi, Mutignano, Roseto); l’unico porto vero a Julia Nova; i predoni del mare come filo vero della costa; le vasche del sale romane; paranze, vele dipinte, sciabica, corona d’alloro e brodetto; Cavatassi al posto di Cavatassus.\n· La voce del Ducato mette a nord «le Marche Picenorum»; lo Studio di Giuseppe dice che oltre il Tronto c’è il Luminor Meridionale. Va allineata.\n· Niente nomi latini: Casa Florius diventa Casa Fiore, Nerius Scavafondo diventa Nerio Scavafondo."
-  },
-  {
-   "t": "Da decidere",
-   "txt": "· Se il Volpone è il doganiere del Consiglio di Teramum (come propone la voce di Martëncëcurë) o di qualcun altro.\n· Che cosa vuole Giosia di Fonteviva in cambio dell’aiuto contro Iuvenza.\n· Che cosa fa la costa se la Crociata cade: chi apre le porte a Teramum per primo.\n· Quanti abitanti ha la contea.\n· Se vanno bene i nomi Fiore (al posto di Florius) e Nerio (al posto di Nerius)."
   }
  ],
  "id": "contea-costa-del-sale",
@@ -57,7 +49,7 @@
  "parent": "ducato-aprutium",
  "group": "Le otto contee",
  "title": "La Costa del Sale",
- "sub": "Li Côtë · prima contea: il volto ricco, aperto e ferito del Ducato",
+ "sub": "La Marinë · prima contea: il volto ricco, aperto e ferito del Ducato",
  "pub": [
   {
    "t": "",
@@ -181,7 +173,7 @@
   },
   {
    "t": "Quello che avete visto",
-   "txt": "· Le Navi Rosse sono tornate: tre all’assalto della spiaggia di Julia Nova, la notte del compleanno di Mattheus (Atto I), e poi una flotta intera che ha chiuso il porto e bruciato la città, finché l’Acido Solare di Maestro Torvus non l’ha spezzata (Atto VII).\n· Colleventoso, che i suoi chiamano Culognè, frazione di Rosetum: il villaggio svuotato, la gente forgiata nell’Abbazia di Biancosale, Padre Elvirius venuto da Teramum ad avvelenare i pozzi (Atti II e III).\n· Le Scogliere del Silenzio, a nord di Julia Nova, dove di notte si scaricava «pesce guasto» che non era pesce (Atti V e VIII).\n· L’isola di Pietraluna, dove avete strappato Silvanus all’altare (Atto VII).\n· La Tenuta di Altavia, sulla collina sopra Julia Nova: la residenza estiva degli Aurex, che i Velthuria avevano preso e voi avete ripreso (Atto XI).\n· Adamus è diventato capo dei Naviganti Grigi, e il loro covo si chiama ora il Covo della Conchiglia (Atto V).\n· I carri dei Barbas, con la Spiga e il Pesce, al guado del Vomanum: Zio Nando, Titta il Fornaio e gli sfollati; poi il grano, l’olio e il vino di Secernium entrati in Julia Nova (Atto X)."
+   "txt": "· Le Navi Rosse sono tornate: tre all’assalto della spiaggia di Julia Nova, la notte del compleanno di Mattheus (Atto I), e poi una flotta intera che ha chiuso il porto e bruciato la città, finché l’Acido Solare di Maestro Torvus non l’ha spezzata (Atto VII).\n· Colleventoso, che i suoi chiamano Culognè, frazione di Rosetum: il villaggio svuotato, la gente forgiata nell’Abbazia di Biancosale, Padre Elvirius venuto da Teramum ad avvelenare i pozzi (Atti II e III).\n· Le Scogliere del Silenzio, a nord di Julia Nova, dove di notte si scaricava «pesce guasto» che non era pesce (Atti VII e VIII).\n· L’isola di Pietraluna, dove avete strappato Silvanus all’altare (Atto VII).\n· La Tenuta di Altavia, sulla collina sopra Julia Nova: la residenza estiva degli Aurex, che i Velthuria avevano preso e voi avete ripreso (Atto XI).\n· Adamus è diventato capo dei Naviganti Grigi, e il loro covo si chiama ora il Covo della Conchiglia (Atto V).\n· I carri dei Barbas, con la Spiga e il Pesce, al guado del Vomanum: Zio Nando, Titta il Fornaio e gli sfollati; poi il grano, l’olio e il vino di Secernium entrati in Julia Nova (Atto X)."
   }
  ],
  "epigrafe": {

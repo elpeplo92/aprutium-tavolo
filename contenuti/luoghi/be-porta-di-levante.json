@@ -8,8 +8,8 @@
  "livello": "luogo",
  "parent": "borgo-bellinde",
  "img": "Luogo — 12. Porta di Levante.jpg",
- "stato": "noto",
- "atti": [],
+ "stato": "visitato",
+ "atti": [18],
  "compendio": true,
  "segnaposto": {
   "scena": "bellinde",
@@ -38,20 +38,24 @@
   {
    "t": "Cosa si vede automaticamente",
    "txt": "• La strada per Teramum, e chiunque ci si muova sopra nella prima lega.\n• La [LUOGO — Stazione di Posta], a cinquanta passi dentro le mura.\n• La tavoletta delle distanze: quattro leghe. Un giorno di carri, mezza giornata a cavallo."
+  },
+  {
+   "t": "Cosa è successo qui",
+   "txt": "Dopo la risalita dal pozzo del Borgo Vecchio, Ruggiero è tornato qui, alla sua porta. La mattina della partenza, attraversata la città, la Crociata ha parlato con lui sotto questa volta."
   }
  ],
  "gm": [
   {
    "t": "Cosa sta succedendo oggi",
-   "txt": "• Da qui è uscito ieri sera il quarto forestiero, a cavallo, dopo il tramonto — cosa che richiede che qualcuno gli abbia aperto. La guardia del turno serale ha annotato l’uscita e non ha fatto domande: aveva un permesso scritto, e nessuno ha ancora chiesto di vederlo.\n• Il corriere ordinario passa di qui nel pomeriggio, diretto a levante."
+   "txt": "• Da qui è uscito ieri sera il quarto forestiero, a cavallo, dopo il tramonto — cosa che richiede che qualcuno gli abbia aperto. La guardia del turno serale ha annotato l’uscita e non ha fatto domande: aveva un permesso scritto, e nessuno ha ancora chiesto di vederlo.\n• Il corriere ordinario passa di qui nel pomeriggio, diretto a Teramum."
   },
   {
    "t": "Persone presenti",
-   "txt": "[PNG — Le guardie di Levante] — due anziani tranquilli.\nQui e ora: registrano poco e chiacchierano molto: da questa porta passa la noia. Sulla strada per Teramum sono un almanacco: osterie, guadi, pedaggi, e dove «è meglio nen fermarse doppo lu scure» (?)."
+   "txt": "[PNG — Le guardie di Levante] — due anziani tranquilli.\nQui e ora: registrano poco e chiacchierano molto: da questa porta passa la noia. Sulla strada per Teramum sono un almanacco: osterie, guadi, pedaggi, e dove «è meglio nen fermarse doppo lu scure»."
   },
   {
    "t": "Il luogo nel corso della giornata",
-   "txt": "AlbaEntra la posta da Teramum.\nPomeriggioEsce il corriere ordinario. È il momento in cui fermare qualcuno che parte, se c’è da fermarlo.\nTerzo rintoccoRuggiero chiude questa porta di persona, ogni sera, da nove anni. Chi vuole parlargli da solo e senza testimoni, lo aspetta qui.\nSegreti del luogo\n• Il permesso scritto falso di ieri sera è il primo documento contraffatto che la cellula ha speso a Bëllindë — e ricalca le forme giuste, come il bando. Se i PG lo recuperano (la guardia del turno l’ha trattenuto e infilato nel registro), Ilderico Panzalonga può confrontarlo col bando: stessa mano. → [LUOGO — Casa del Notaio]\n• La sera, mentre chiude, Ruggiero è l’uomo più avvicinabile della città: stanco, solo, e con la giornata addosso. I discorsi che di giorno non fa, qui qualche volta li fa."
+   "txt": "Alba — Entra la posta da Teramum.\nPomeriggio — Esce il corriere ordinario. È il momento in cui fermare qualcuno che parte, se c’è da fermarlo.\nTerzo rintocco — Ruggiero chiude questa porta di persona, ogni sera, da nove anni. Chi vuole parlargli da solo e senza testimoni, lo aspetta qui.\nSegreti del luogo\n• Il permesso scritto falso di ieri sera è il primo documento contraffatto che la cellula ha speso a Bëllindë — e ricalca le forme giuste, come il bando. Se i PG lo recuperano (la guardia del turno l’ha trattenuto e infilato nel registro), Ilderico Panzalonga può confrontarlo col bando: stessa mano. → [LUOGO — Casa del Notaio]\n• La sera, mentre chiude, Ruggiero è l’uomo più avvicinabile della città: stanco, solo, e con la giornata addosso. I discorsi che di giorno non fa, qui qualche volta li fa."
   },
   {
    "t": "Collegamenti",

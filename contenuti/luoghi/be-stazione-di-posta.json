@@ -4,7 +4,7 @@
  "titolo": "10. Stazione di Posta",
  "sottotitolo": "stalla di posta e rimonte — il collo di bottiglia di ogni notizia che parte da Bëllindë",
  "citta": "bellinde",
- "gruppo": "Fuori le mura",
+ "gruppo": "Guardia e porte",
  "livello": "luogo",
  "parent": "borgo-bellinde",
  "img": "Luogo — 10. Stazione di Posta.jpg",
@@ -26,7 +26,7 @@
   "Luogo": "[LUOGO — Bëllindë], subito dentro la Porta di Levante — sette minuti da [LUOGO — Piazza Grande]",
   "Chi la tiene": "Cola Sciacquapiè, mastro di stalla",
   "Orari": "dall’alba al coprifuoco. Un ragazzo dorme nella stalla, per le urgenze.",
-  "Prezzi": "cavallo a nolo 2 fiorini al giorno più cauzione; stallaggio 3 gofferine a notte",
+  "Prezzi": "cavallo a nolo 2 fiorini al giorno più cauzione; stallaggio 3 gofferini a notte",
   "Collegato a": "[LUOGO — Bëllindë]"
  },
  "pub": [
@@ -46,19 +46,19 @@
  "gm": [
   {
    "t": "Cosa sta succedendo oggi",
-   "txt": "• Un cavallo manca: il settimo. È quello preso ieri sera, dopo il tramonto, dall’uomo partito verso Teramum — il quarto forestiero. Cola se lo aspetta indietro dalla posta successiva fra due giorni, «se va tutte bone» (?).\n• Nel pomeriggio parte il corriere ordinario verso levante, con la borsa dei dispacci e delle lettere private. Chiunque può affidargli una lettera — e chiunque, volendo, può contare su questo.\n• Due bestie della Crociata sono qui per una ferratura."
+   "txt": "• Un cavallo manca: il settimo. È quello preso ieri sera, dopo il tramonto, dall’uomo partito verso Teramum — il quarto forestiero. Cola se lo aspetta indietro dalla posta successiva fra due giorni, «se va tutte bone».\n• Nel pomeriggio parte il corriere ordinario per Teramum, con la borsa dei dispacci e delle lettere private. Chiunque può affidargli una lettera — e chiunque, volendo, può contare su questo.\n• Due bestie della Crociata sono qui per una ferratura."
   },
   {
    "t": "Persone presenti",
-   "txt": "[PNG — Cola Sciacquapiè] — mastro di stalla, cinquant’anni, un’anca rotta da un calcio vent’anni fa.\nQui e ora: di buon umore perché ha clienti. Parla ai cavalli e attraverso i cavalli: se vuoi sapere qualcosa da lui, fatti trovare a strigliare una bestia. Non è omertoso — è solo convinto che i fatti dei viaggiatori non siano affari suoi, finché qualcuno non gli spiega perché dovrebbero esserlo.\n[PNG — Il ragazzo di stalla] — dodici anni, dorme nella paglia.\nQui e ora: ha visto in faccia l’uomo partito ieri sera: «Une che nen guardave nisciune.» (?) Uno che non guardava nessuno."
+   "txt": "[PNG — Cola Sciacquapiè] — mastro di stalla, cinquant’anni, un’anca rotta da un calcio vent’anni fa.\nQui e ora: di buon umore perché ha clienti. Parla ai cavalli e attraverso i cavalli: se vuoi sapere qualcosa da lui, fatti trovare a strigliare una bestia. Non è omertoso — è solo convinto che i fatti dei viaggiatori non siano affari suoi, finché qualcuno non gli spiega perché dovrebbero esserlo.\n[PNG — Il ragazzo di stalla] — dodici anni, dorme nella paglia.\nQui e ora: ha visto in faccia l’uomo partito ieri sera: «Une che nen guardave nisciune.» Uno che non guardava nessuno."
   },
   {
    "t": "Servizi",
-   "txt": "ServizioPrezzoNote\nCavallo a nolo fino alla posta successiva2 fiorini + 5 di cauzionesi rende alla posta, la cauzione torna con la bestia\nStallaggio con biada3 gofferine a notte—\nFerraturala fa [LUOGO — Fucina di Bëllindë]Cola porta e riporta le bestie: 2 gofferine\nLettera col corriere ordinario2 gofferineparte nel pomeriggio, a Teramum in un giorno e mezzo\nCorriere espresso1 fiorino + il noloparte subito, a Teramum in un giorno"
+   "txt": "Servizio — Prezzo — Note\nCavallo a nolo fino alla posta successiva — 2 fiorini + 5 di cauzione — si rende alla posta, la cauzione torna con la bestia\nStallaggio con biada — 3 gofferini a notte\nFerratura — la fa [LUOGO — Fucina di Bëllindë] — Cola porta e riporta le bestie: 2 gofferini\nLettera col corriere ordinario — 2 gofferini — parte nel pomeriggio, a Teramum in un giorno e mezzo\nCorriere espresso — 1 fiorino + il nolo — parte subito, a Teramum in un giorno"
   },
   {
    "t": "Il luogo nel corso della giornata",
-   "txt": "AlbaArriva la posta da Teramum: dispacci, lettere, voci fresche della capitale.\nMattinaÈ l’ora in cui i «senza livrea» hanno sempre preso i cavalli, tutta la settimana.\nPomeriggioParte il corriere ordinario. Dal [LUOGO — Il Balcone] lo si vede sparire dietro le colline.\nCoprifuocoCola chiude e consegna le chiavi della selleria al [LUOGO — Corpo di Guardia]. Di notte nessuno parte da Bëllindë a cavallo — in teoria.\nSegreti del luogo\n• Questo cortile è il punto dove si ferma il corriere della cellula. Se l’orologio arriva alla tacca 4, l’uomo che parte per Teramum passa da qui, e chi ha messo qualcuno di guardia lo intercetta. Ruggiero, con un nome e una ragione, lo ferma lui. → [PNG — Ruggiero de’ Santi]\n• Cola ha fatto partire l’uomo di ieri sera fuori orario per il triplo della tariffa, e lo sa che non si fa. Se ne parla, minimizza — ma se Ruggiero lo viene a sapere da altri, per Cola sono guai, e questo lo rende ricattabile con dolcezza."
+   "txt": "Alba — Arriva la posta da Teramum: dispacci, lettere, voci fresche della capitale.\nMattina — È l’ora in cui i «senza livrea» hanno sempre preso i cavalli, tutta la settimana.\nPomeriggio — Parte il corriere ordinario. Dal [LUOGO — Il Balcone] lo si vede sparire dietro le colline.\nCoprifuoco — Cola chiude e consegna le chiavi della selleria al [LUOGO — Corpo di Guardia]. Di notte nessuno parte da Bëllindë a cavallo — in teoria.\nSegreti del luogo\n• Questo cortile è il punto dove si ferma il corriere della cellula. Se l’orologio arriva alla tacca 4, l’uomo che parte per Teramum passa da qui, e chi ha messo qualcuno di guardia lo intercetta. Ruggiero, con un nome e una ragione, lo ferma lui. → [PNG — Ruggiero de’ Santi]\n• Cola ha fatto partire l’uomo di ieri sera fuori orario per il triplo della tariffa, e lo sa che non si fa. Se ne parla, minimizza — ma se Ruggiero lo viene a sapere da altri, per Cola sono guai, e questo lo rende ricattabile con dolcezza."
   },
   {
    "t": "Collegamenti",
@@ -67,11 +67,11 @@
  ],
  "prove": [
   {
-   "t": "Persuasione CD 13, o due gofferine — il registro delle rimonte",
+   "t": "Persuasione CD 13, o due gofferini — il registro delle rimonte",
    "skill": "Persuasione",
    "dc": 13,
    "ok": "nell’ultima settimana quattro cavalli sono stati presi da uomini senza livrea, sempre nella stessa ora del mattino, e resi alla posta successiva. Nessun nome vero: firmano con segni. E ieri sera, dopo il tramonto — orario in cui Cola di norma non dà bestie — un uomo ha pagato il triplo per partire subito.",
-   "ko": "Cola mette la mano sul registro senza sgarbo: «Chiste è de lu servizie. Ce vo’ na parola de lu sergente.» (?) — la strada resta aperta passando da [PNG — Ruggiero de’ Santi], che la parola la dà."
+   "ko": "Cola mette la mano sul registro senza sgarbo: «Chiste è de lu servizie. Ce vo’ na parola de lu sergente.» — la strada resta aperta passando da [PNG — Ruggiero de’ Santi], che la parola la dà."
   },
   {
    "t": "Addestrare animali o Sopravvivenza CD 12 — i cavalli",
