@@ -62,189 +62,23 @@
  "punti": [
   {
    "schemaVersion": 3,
-   "id": "teramum_sole",
-   "kind": "porta",
-   "title": "Dentro la Porta della Madre",
-   "image": "PDI — Teramum — Dentro la Porta della Madre.jpg",
-   "legacyPosition": {
-    "x": 1262,
-    "y": 272
-   },
-   "text": "Si china la testa sotto la porticina, e dall’altra parte il rumore cambia. Dentro l’arco c’è freddo e c’è l’eco: i vostri passi tornano indietro due volte. Poi l’arco finisce e la città vi arriva addosso tutta insieme.\n\nDavanti a voi sale una strada larga, lastricata, con due solchi consumati nel mezzo: ci passano i carri delle processioni, sempre nello stesso punto. La chiamano Via dei Lucenti: lo dice una lapide murata all’angolo. A destra e a sinistra le botteghe hanno il banco sulla strada, e dietro ogni banco una porta nera da cui esce fumo. Martelli, tanti, mai a tempo fra loro. Un cane dorme in mezzo alla strada e nessuno lo sposta.\n\nPiù in alto, sopra i tetti rossi che salgono a gradoni, c’è il campanile della Basilica Aurea, con i merli in cima come una torre di guardia. Da qui sembra vicino. Non lo è.\n\nSulla sinistra c’è una fontana di pietra con un solo getto. Sul bordo è seduto un ragazzo magro, scalzo, con un berretto troppo grande. Si alza appena vi vede. Si pulisce le mani sui calzoni. Sorride con tutti i denti che ha.",
-   "breve": "L’ingresso da levante. I PG entrano (in sei, con due guardie di scorta, se hanno la tessera del capitano). Cenzino Mezzalingua si offre come guida. La Via dei Lucenti sale fra le botteghe del Lucente Leonardo verso la Basilica Aurea; la Rocca dei Grazianus sta all’altro capo della città, in fondo al Corso.",
-   "gm": "Le due guardie di scorta (se c’è la tessera): Lallo e Mariotto, giovani, annoiati, del Lucente Leonardo. Seguono il gruppo a dieci passi; non impediscono niente di legale; al primo rintocco della campana della sera li riportano alla porta. Si possono seminare (Furtività CD 13 di gruppo), ma la tessera allora è bruciata e il capitano lo saprà.\nCenzino è una guida di strada: si offre a tutti i forestieri. Lavora anche per l’uomo col lillà, per un grosso al giorno: riferisce dove vanno i forestieri. Non sa per chi lavori davvero. Scheda PNG «Cenzino Mezzalingua».\nRegole della città (quelle che la scorta ripete, o che dice Cenzino): armi da fianco sì, armi da guerra no; niente incantesimi in pubblico senza permesso scritto (vale per i Tigli e per le piazze della Basilica); coprifuoco alla campana della sera.\n⟦La Via dei Lucenti è la strada delle processioni fra la Basilica Aurea e la Porta della Madre.⟧",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": [
-    {
-     "id": "via",
-     "tipo": "dettaglio",
-     "titolo": "La Via dei Lucenti",
-     "parte": "indizio",
-     "seme": "La chiamano Via dei Lucenti: lo dice una lapide murata all’angolo.",
-     "innesco": "Qualcuno legge la lapide o guarda la strada.",
-     "leggi": "La lapide è vecchia e nuova insieme: la pietra è grigia, le lettere dorate di fresco. «PER QUESTA VIA SALIRONO I LUCENTI ALLA LUCE». Sotto, più piccolo: «Il Consiglio Reggente restaurò».\n\nI solchi nel lastricato sono profondi un dito. Da quanto tempo passano i carri delle processioni, per scavare la pietra così?",
-     "prove": [
-      {
-       "id": "via",
-       "abilita": [
-        "Storia",
-        "Religione"
-       ],
-       "cd": 12,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 11,
-         "leggi": "Una strada vecchia, rifatta. Sale dritta al centro della città, alla Basilica."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 12,
-         "max": 16,
-         "leggi": "Una volta l’anno la processione della Vecchia Madre scende dalla Basilica Aurea per questa via, esce dalla Porta della Madre e va alla Lunaria delle Grazie, appena fuori. Poi risale. I solchi sono di mille anni di carri."
-        },
-        {
-         "fascia": "fullSuccess",
-         "min": 17,
-         "leggi": "E i solchi sono più vecchi dei lucenti: la strada c’era già, con gli stessi solchi, al tempo dei Pretuziani. La Fiamma ci ha messo sopra il nome dei suoi lucenti."
-        }
-       ]
-      }
-     ],
-     "dopo": "Sanno dove porta la via: il Lucente Leonardo, la Basilica Aurea e le sue piazze, poi il Corso fino alla Rocca.",
-     "rilancio": "La strada sale davanti a voi. Che cosa fate?",
-     "daqui": [
-      "cenzino"
-     ],
-     "immagine": "PDI — Teramum — La Via dei Lucenti.jpg"
-    },
-    {
-     "id": "cenzino",
-     "tipo": "dettaglio",
-     "titolo": "Il ragazzo della fontana",
-     "parte": "indizio",
-     "seme": "Sorride con tutti i denti che ha.",
-     "innesco": "Il ragazzo si avvicina, o qualcuno lo guarda.",
-     "leggi": "Quattordici anni, forse. Magro, scalzo, un cappello di feltro troppo grande tenuto su dalle orecchie. Si toglie il cappello e fa un inchino che ha visto fare ai signori, esagerato.\n\n«Cenzino, per servirvi. Guida. La migliore di Teramum.» Rimette il cappello. «Due quattrini a strada, un grosso tutto il giorno. Vi porto dove volete, vi dico chi è chi, vi faccio evitare la Guardia.» Guarda le due guardie di scorta. «Be’. Quasi tutta.»",
-     "dopo": "Se lo prendono come guida, Cenzino li accompagna per tutta la scena: usa il suo dialogo ogni volta che chiedono «dov’è» o «chi è».",
-     "rilancio": "Cenzino tende la mano. Che cosa fate?",
-     "daqui": [
-      "dialogo_cenzino"
-     ]
-    },
-    {
-     "id": "dialogo_cenzino",
-     "tipo": "dialogo",
-     "titolo": "Parlare con Cenzino",
-     "parte": "evento",
-     "innesco": "Qualcuno fa domande a Cenzino.",
-     "note": "CHI SEI? — «Cenzino. Vincenzo, per il sacerdote. Mezzalingua per tutti gli altri.» Perché? «Perché dico metà di quello che so. L’altra metà costa di più.»\n\nDOVE SIAMO? — «Lucente Leonardo. Lu Bòrghe. Qui si martella.» Indica il campanile. «Là c’è la Basilica, con le due piazze: da una parte la Piazza Grande, dall’altra la Piazza del Mercato, col Palazzo e i signori che non decidono. Poi il Corso, dritto, fino a Piazza Garibaldi: là c’è la Rocca, Casa Grazianus e la Guardia. E i Tigli, dove i signori passeggiano. Giù verso il fiume la Lunaria a Bitetto: chi non ha niente sta lì. E a Porta Romana i teatri vecchi, l’Arena e Sor Paolo.»\n\nDOVE SI DORME? — «Dipende quanto pagate. Pavimento di stalla, due quattrini. Dormitorio, cinque. Una stanza per bene: al Cane Bianco, alla Lunaria a Bitetto. Za’ Carmela non vi fa domande e non vi fa pulci.» Pausa. «Poche.»\n\nDOVE SONO GLI UFFICI DEI SIGILLI? — Conta sulle dita. «Grazianus, alla Rocca: la Cancelleria della Spada, porta a sinistra del cortile. Chiodi: il Tribunale, sulla Piazza del Mercato, accanto al Palazzo. Mazzarelli: dentro il Palazzo, e buona fortuna. Impaloni: dall’Arciflamine, oltre l’Arco di Monsignore. Savini: alla Biblioteca, in via Delfico. Melatino: al Fondaco della Lega, sotto i portici del mercato. Malavolta e Thaulero: nei loro palazzi, ai Tigli. Ma lì non si entra senza invito.»\n\nIL COPRIFUOCO — «Alla campana della sera. È l’Aprutina, la grossa della Basilica: la sentite, ve lo giuro, vi entra nei denti. Dopo, per strada ci si va con la lanterna e con una scusa buona. I forestieri armati li portano alla Rocca a dormire.» Sorride. «Io so dove passano le ronde. Quello costa un grosso a parte.»\n\nLA RONDA — «Un sergente e quattro. Ogni rione ha la sua. Intorno alla Basilica passano ogni mezz’ora. Da noi al Lucente Leonardo ogni ora, e i fabbri gli offrono da bere. Alla Lunaria a Bitetto passano quando gli pare. E al Ponte degli Impiccati, sotto Porta Romana, si fermano sempre: è lì che si prende la gente.»\n\nLA SIGNORA FORESTIERA — «Ai Tigli. Capelli bianchi, bella, paga in oro. Tutti ci vanno a cena.» Si fa serio per un momento. «Io no. Non mi hanno invitato.»\n\nIL TEMPIO MURATO — Se glielo chiede Mattheus, o se vede la lavanda: «Alla Lunaria a Bitetto, in un vicolo che scende al fiume. L’hanno murato l’Arciflamine e i suoi. Ma ci lasciano i fiori lo stesso.» Abbassa la voce. «Di notte ci passa un votato piccolo. Io non l’ho visto.»\n\nL’ARLECCHINO — Il sorriso gli si spegne. «Non si nomina.» Se insistono: «Uno con la maschera di tutti i colori. Sta sotto. Chi lo vede si scorda. Mio cugino l’ha visto, e adesso non si ricorda più come si chiamava sua moglie.» Non ride.\n\nSE LO MINACCIANO — Scappa. È velocissimo, e conosce ogni vicolo. Torna il giorno dopo, come se niente fosse, ma col prezzo raddoppiato.\n\nSE LO PAGANO BENE — Un fiorino (esagerato): gli brillano gli occhi. Da quel momento dice anche l’altra metà: «C’è un signore che profuma di fiori. Mi dà un grosso al giorno se gli dico dove vanno i forestieri. Stasera… stasera gli dico quello che volete voi.» Diventa loro.\n\nSE GLI MENTONO — Lo capisce sempre (Intuizione +4): è un ragazzo di strada. Ride. «Va bene, messere. Anch’io sono un principe.»\n\nBATTUTE PRONTE — «Due quattrini a strada. Un grosso tutto il giorno. Un fiorino e vi dico pure la verità.» · «Mezzalingua: metà la dico, metà la vendo.» · «Di là la Guardia, di qua i ladri. Io passo in mezzo.» · «Alla campana si sparisce. È la regola.»",
-     "dopo": "Cenzino è la guida e il rischio: un ragazzo simpatico che riferisce all’agente di Iuvenza. Se lo pagano bene, cambia parte.",
-     "rilancio": "Cenzino aspetta la destinazione. Che cosa fate?",
-     "daqui": [
-      "teramum_san_leonardo",
-      "teramum_rocca"
-     ],
-     "png": "png-cenzino-mezzalingua"
-    }
-   ]
-  },
-  {
-   "schemaVersion": 3,
    "id": "teramum_san_leonardo",
    "kind": "scena",
-   "title": "Rione del Lucente Leonardo",
+   "title": "Il Lucente Leonardo",
    "image": "PDI — Teramum — Rione del Lucente Leonardo.jpg",
    "legacyPosition": {
-    "x": 1090,
-    "y": 400
+    "x": 1085,
+    "y": 320
    },
-   "text": "Case basse, una addosso all’altra, con le botteghe aperte sulla strada e le insegne di ferro battuto che cigolano sopra la testa: un martello, una chiave, una tenaglia. Il fumo delle forge resta basso fra i tetti e fa bruciare gli occhi.\n\nIl suono è quello dei martelli: decine, cento, mai a tempo fra loro. Sotto, il soffio dei mantici. Ogni tanto uno sfrigolio: un ferro rosso che va nell’acqua.\n\nSi cammina fra carri di carbone e blocchi di travertino appena cavato. Sui banchi: coltelli, fibbie, serrature, scalpelli, catene a mucchi. Un garzone con le braccia nere fino al gomito vi squadra, poi guarda le vostre armi prima delle vostre facce.\n\nIn una vetrina, dietro una grata, armature da parata smaltate a disegni azzurri e gialli, come i piatti di Li Cashtillë. Costano più di una casa.\n\nIn fondo alla strada, davanti a un portone grande come un solario, un carro della Forgia è fermo di traverso, con le guardie intorno. Una ruota è uscita dal solco. Gli uomini armati spingono, il carrettiere urla, e sotto il telo qualcosa di pesante batte contro le sponde.",
-   "breve": "Il rione degli artigiani, appena dentro la Porta della Madre: forge, martelli e la Forgia del Gigante di Casa Grazianus. Le forge lavorano anche di notte. Un carro della Forgia bloccato fa vedere per un istante un metallo grigio freddo al tatto. Da qui: la Basilica e le sue piazze, il Corso fino alla Rocca.",
+   "text": "Oltre il burrone, sull’altra metà della città, le mura girano attorno a un colle più alto e più vecchio. Case basse addossate le une alle altre, botteghe aperte sulla strada, insegne di ferro battuto che cigolano. Sopra i tetti, il moncone nero della Torre Bruciata, e accanto una cappella che una volta era la cattedrale.\n\nDalla Porta della Madre si sale per la Via dei Lucenti, larga, con due solchi consumati nel mezzo. Si cammina fra carri di sale e di carbone. Un garzone con le braccia nere fino al gomito vi squadra, poi guarda le vostre armi prima delle vostre facce. Più su le strade si stringono, girano attorno alla Torre, scendono a gradini verso il burrone e il ponte della Porta Melatina.",
+   "breve": "Il quartiere delle forge e della città vecchia, oltre il burrone: Porta della Madre, Torre Bruciata, i Melatino, Lu Cantinone, la Forgia del Gigante.",
    "gm": "Canone: la Forgia del Gigante («Li Martille de Pietre») è di Casa Grazianus e batte le armi e le armature da parata della Guardia (scheda della casata). Segreto: produce armi per il colpo di stato di Lucius Grazianus. Le nuove armature di Iuvenza «aspettano a Teramum» (Atto XI): qualcuno in città le fabbrica. Il «fabbro» di Teramum dell’Atto IX (pagamenti della Gilda di Julia Nova per armi non contrassegnate).\nIl capo della Forgia, Mastro Oreste Ferrante (scheda PNG), è il «fabbro» del libro mastro: batte il metallo grigio nelle lame della Guardia e carica armi per l’uomo col lillà, e lo Stratega non lo sa. Le armature grigie fredde al tatto sono le stesse dei Forgiati (Torvus parlava di metalli che non dovrebbero esistere).\nCollocazione: il Lucente Leonardo è uno dei quattro rioni vecchi (voce «Teramum»), a nord-est, fra la Porta della Madre e la Basilica. La Forgia sta qui. L’Arena invece sta a Porta Romana, accanto al teatro antico.",
    "nota": {
     "cd": 0
    },
-   "moduli": [
-    {
-     "id": "oggi",
-     "tipo": "dettaglio",
-     "titolo": "Cosa succede oggi",
-     "parte": "evento",
-     "innesco": "Appena entrano nel rione, o se chiedono in giro.",
-     "leggi": "Si preparano i banchi per la Fiera del Lucente Leonardo, anche se manca ancora tanto: qualcuno pianta pali, qualcuno misura la strada. Le locande hanno già alzato i prezzi.\n\nLe forge grandi non si fermano. Un garzone, a una fontana, si lava la faccia e sbadiglia: «Anche stanotte», dice a un altro. «Tutta la notte. Per la Guardia.»",
-     "note": "Le forge grandi lavorano di notte da due settimane. I garzoni dicono che è per la Guardia, ma nessuno ha visto le commesse.",
-     "rilancio": "I martelli non si fermano. Che cosa fate?",
-     "daqui": [
-      "voci",
-      "carro"
-     ]
-    },
-    {
-     "id": "voci",
-     "tipo": "dettaglio",
-     "titolo": "Voci del Lucente Leonardo",
-     "parte": "evento",
-     "innesco": "Parlano con un bottegaio, un garzone, un’ostessa del rione.",
-     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «Alla Forgia del Gigante c’è un reparto dove i garzoni non entrano. Manco i maestri, certi.»\n2. «Un fabbro è morto con la pelle diventata grigia come il ferro. L’hanno seppellito in fretta, di notte, fuori dalla Porta delle Recluse.»\n3. «Le armature nuove della Guardia pesano la metà e non arrugginiscono. Nen è cose bbone.»\n4. «Nell’Arena, giù a Porta Romana, di notte si sente scavare da sotto.»\n5. «Gli spaccapietre di Cullëdarë non portano più pietre: vogliono essere pagati prima. Il Consiglio non paga.»\n6. «Chi lascia un Bocconotto sulla soglia della bottega non si trova gli attrezzi spostati la mattina. Li Mazzamarelli sono dispettosi, ma si comprano.»",
-     "note": "Vere: 1, 2, 3 (la Forgia e il metallo), 5 (Cullëdarë incitabile alla rivolta, lore del Ducato). La 4 è vera a metà (vedi la scena dell’Arena). La 6 è folklore.",
-     "rilancio": "Che cosa fate?",
-     "daqui": [
-      "carro",
-      "teramum_arena"
-     ]
-    },
-    {
-     "id": "carro",
-     "tipo": "dettaglio",
-     "titolo": "Il carro della Forgia",
-     "parte": "indizio",
-     "seme": "un carro della Forgia è fermo di traverso, con le guardie intorno",
-     "innesco": "Il gruppo passa vicino al carro, o si ferma a guardare.",
-     "leggi": "Una ruota è uscita dall’asse. Il carro è inclinato, e una delle casse sopra si è spaccata sull’angolo.\n\nDalla fessura si vede un pezzo di metallo grigio. Non lucido: opaco, come la pietra bagnata. La scorta, quattro uomini della Guardia, si mette davanti alla cassa appena vi vede guardare.\n\n«Circolare», dice uno. «Qui non c’è niente da vedere.»",
-     "note": "Se un PG tocca il metallo (serve distrarre la scorta: Inganno o Rapidità di mano CD 14): è freddo come il ghiaccio anche sotto il sole, e sotto le dita pulsa appena. Stessa sensazione delle armature dei Forgiati. Se lo scoprono a toccarlo: la scorta li porta dal sergente di rione, e la cosa arriva alla Rocca.\nIndagare CD 15 (in seguito, chiedendo ai garzoni): i carri della Forgia escono di notte verso la Rocca e verso un magazzino senza insegna a Lucente Anna, vicino alla Torre Bruciata (⟦è il magazzino del sale da cui si scende nella Città Sepolta⟧); su ogni cassa, un marchio diverso da quello della Forgia.",
-     "prove": [
-      {
-       "id": "carro",
-       "abilita": [
-        "Percezione",
-        "Arcano"
-       ],
-       "cd": 15,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 14,
-         "leggi": "Una piastra d’armatura, forse. Ferro grezzo."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 15,
-         "max": 19,
-         "leggi": "È un pezzo di spallaccio. Sul bordo, un marchio che non è quello della Forgia: un cerchio chiuso da una linea sottile. E l’aria, vicino alla cassa, è più fredda."
-        },
-        {
-         "fascia": "natural20",
-         "leggi": "Lo avete già sentito, questo freddo. A Julia Nova. Sulle armature dei Forgiati."
-        }
-       ]
-      }
-     ],
-     "dopo": "Primo indizio del «fabbro» di Teramum e delle armature di Iuvenza. Non spiegare: lasciare il freddo.",
-     "rilancio": "La scorta vi guarda fisso. Che cosa fate?",
-     "daqui": [
-      "teramum_rocca",
-      "teramum_arena",
-      "teramum_ponte_gola"
-     ],
-     "pe": 200,
-     "immagine": "PDI — Teramum — Il carro della Forgia.jpg"
-    }
-   ]
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Entra nel quartiere",
+   "moduli": []
   },
   {
    "schemaVersion": 3,
@@ -253,8 +87,8 @@
    "title": "La Rocca dei Grazianus",
    "image": "PDI — Teramum — La Rocca dei Grazianus.jpg",
    "legacyPosition": {
-    "x": 985,
-    "y": 290
+    "x": 268,
+    "y": 528
    },
    "text": "La Rocca sta all’altro capo della città, dove finisce il Corso: su Piazza Garibaldi, la piazza larga della fiera, dentro un recinto di mura tutto suo. Non ha niente di bello. Mura di ciottoli e mattone come quelle della città, ma più grosse; torri quadrate, feritoie strette, una guardia che passa in cima.\n\nSopra il portone, scolpiti nella pietra, una torre e un lupo.\n\nDavanti al portone, due guardie con il tabarro grigio e l’alabarda. Dentro il cortile, che si vede dall’arco, un via vai di uomini in tabarro: ferri dei cavalli sulle pietre, ordini gridati, un sergente che conta le teste con il dito. Nessuno cammina piano.\n\nAccanto alla Rocca, nelle mura della città, si apre una porta piccola, con una guardia per lato: la chiamano Porta Due di Coppe, e se chiedete perché, ognuno vi dà una risposta diversa. Dall’altra parte della piazza cominciano i tigli.\n\nA sinistra del portone grande c’è una porta più piccola con una lanterna sempre accesa, e una fila di persone con un foglio in mano. La fila non si muove. Qualcuno si è portato uno sgabello.",
    "breve": "La fortezza di Casa Grazianus e caserma della Guardia Ducale, su Piazza Garibaldi, con Porta Due di Coppe accanto. Qui si chiede il sigillo della Spada (la Cancelleria, porta a sinistra) e da qui partono le ronde della notte. Per Maximus è la casa di suo padre.",
@@ -654,8 +488,7 @@
      "rilancio": "Che cosa fate?",
      "daqui": [
       "contrattare",
-      "teramum_mortus",
-      "teramum_sepolta"
+      "teramum_mortus"
      ]
     },
     {
@@ -797,52 +630,6 @@
      "daqui": [
       "teramum_sestiere",
       "teramum_locanda"
-     ]
-    }
-   ]
-  },
-  {
-   "schemaVersion": 3,
-   "id": "teramum_sepolta",
-   "kind": "porta",
-   "title": "La Città Sepolta",
-   "image": "PDI — Teramum — La Città Sepolta.jpg",
-   "legacyPosition": {
-    "x": 880,
-    "y": 395
-   },
-   "text": "Fra i vicoli di Lucente Anna, dove le case sono le più vecchie della città e si tengono in piedi una con l’altra, c’è un magazzino di sale. Sta all’ombra di un campanile vecchio e nero, come bruciato: la gente lo chiama la Torre Bruciata, e nessuno ci suona più.\n\nLa porta del magazzino è a mezzo piano, con una rampa di legno, ed è aperta. Un facchino scarica sacchi da un carro e li butta dentro, uno dopo l’altro, senza guardare dove cadono. Ha il sale nelle sopracciglia. Il mulo del carro tiene le orecchie basse e non si muove.\n\nDentro, botti, sacchi a cataste fino al soffitto, bilance appese a catene. Odore di salamoia e di pietra bagnata, forte, che prende il naso. Il pavimento è di mattoni, e in un punto suona vuoto sotto i piedi.\n\nIn fondo, dietro le botti, dove la luce della porta non arriva, c’è una porta bassa con il chiavistello rotto. Qualcuno ci ha messo davanti due sacchi. Non abbastanza.",
-   "breve": "L’ingresso ai sotterranei (Città Vecchia e Città Sepolta) da un magazzino di Lucente Anna, sotto la Torre Bruciata. Ingresso alla scena dedicata.",
-   "gm": "Scena: La Città Sepolta (id «te_sepolta»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nCollocazione (voce «Teramum», tabella delle scene): sotto la Torre Bruciata e i palazzi antichi, a Lucente Anna, il cuore più vecchio verso la punta orientale. Le domus coi mosaici stanno a tre-sei braccia sotto le case.\nIl facchino non sa niente della porta; il padrone del magazzino (un uomo della Lega dei Sensali: la casa dei Melatino è a due vicoli) dice che «è la cantina vecchia, crollata». Non è vero.",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": [
-    {
-     "id": "soglia",
-     "tipo": "dettaglio",
-     "titolo": "Dalla strada",
-     "parte": "indizio",
-     "seme": "una porta bassa con il chiavistello rotto",
-     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
-     "leggi": "Il chiavistello non è rotto: è stato tagliato, di netto, e rimesso al suo posto perché sembri chiuso.\n\nDalla fessura sotto la porta viene un’aria fredda, che sa di cantina e di qualcos’altro. Più vecchio.",
-     "dopo": "Se entrano: Scena: La Città Sepolta.",
-     "rilancio": "Che cosa fate?",
-     "daqui": [
-      "entrare"
-     ]
-    },
-    {
-     "id": "entrare",
-     "tipo": "prosecuzione",
-     "titolo": "Entrare",
-     "parte": "evento",
-     "innesco": "Il gruppo decide di entrare.",
-     "note": "Apri la scena «La Città Sepolta» dal menu Scena (Teramum). Quando escono, tornano qui, a Lucente Anna.",
-     "dopo": "Scena: La Città Sepolta.",
-     "rilancio": "Che cosa fate?",
-     "daqui": [
-      "teramum_sestiere"
      ]
     }
    ]
@@ -1522,89 +1309,9 @@
      "dopo": "Una pianta delle cantine sotto Lucente Anna: vantaggio a orientarsi nella Città Sepolta.",
      "rilancio": "Nicolino tiene il rotolo stretto. Che cosa fate?",
      "daqui": [
-      "teramum_sepolta",
       "teramum_biblioteca"
      ],
      "pe": 100
-    }
-   ]
-  },
-  {
-   "schemaVersion": 3,
-   "id": "teramum_cantinone",
-   "kind": "persona",
-   "title": "Lu Cantinone",
-   "legacyPosition": {
-    "x": 905,
-    "y": 445
-   },
-   "text": "A Lucente Anna, fra la Torre Bruciata e la casa dei Melatino, quella con le finestre a serpente, una scala di pietra scende sotto la strada. In cima, una lanterna e una lavagnetta scritta col gesso: «OGGI: CHITARRA, TIMBALLO, SCRIPPELLE». Dai gradini sale odore di brodo e di sugo che cuoce da ore.\n\nSotto c’è una cantina a volta di mattoni, lunga come una navata, con le botti lungo i muri e le tovaglie bianche. Bianche davvero. È l’unico posto della città, forse, dove le tovaglie sono bianche. Ai tavoli, gente vestita bene che mangia piano: mercanti, un notaio con i suoi, due signore con il cappello. Nessuno grida. Si sente il rumore delle posate e poco altro.\n\nUn vecchio con la giacca nera e il tovagliolo sul braccio vi viene incontro. Vi guarda le scarpe, le armi, le mani. Poi sorride.\n\n«Quanti siete? Sedetevi. Prima si mangia, poi si parla.»\n\nDalla cucina, dietro una tenda, il colpo secco e regolare di qualcuno che stende la pasta sulla chitarra, e una voce di donna che chiama i piatti. In fondo, un tavolo apparecchiato per uno solo, e nessuno seduto.",
-   "breve": "L’osteria più vecchia della città, in una cantina sotto Lucente Anna: la cucina teramana (chitarra, scrippelle, timballo), Zi’ Mimì, e il giovedì il Cancelliere della Spada, a cena da solo.",
-   "gm": "È l’Antico Cantinone della Teramo vera: osteria del centro storico aperta nel 1906, «un’istituzione della città», l’ultimo punto fermo della cucina teramana vera; ha chiuso. Qui è aperta, e vecchia di cento anni: la cucina buona di Teramum, per chi può pagare.\nL’oste: Mastro Domenico Castorano, detto Zi’ Mimì (scheda PNG). Suo nonno, dice lui, ha inventato le scrippelle ’mbusse: era garzone alla tavola dei capitani, gli caddero le crespelle nel brodo, e le servì così.\nMenù e prezzi: maccheroni alla chitarra con le pallottine (le polpettine piccole come ceci) 4 quattrini; scrippelle ’mbusse 5; timballo 8; mazzarelle (interiora d’agnello avvolte nella lattuga) 4; agnello allo spiedo 10; bocconotti e neole (le cialde col ferro) 2; vino cotto e Montepulciano 2 il boccale. Le virtù solo il primo maggio, e chi le chiede in un altro giorno viene compatito.\nChi viene: la gente bene che non è nobile, notai, mercanti, qualche flamine in borghese. Il tavolo in fondo è sempre riservato: ci mangia, da solo, il Cancelliere della Spada di Casa Grazianus, una volta alla settimana.\nCibo: un pasto completo qui conta come un banchetto (chi lo fa ottiene 1d4 PF temporanei che durano fino al riposo lungo successivo).",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": [
-    {
-     "id": "dialogo_mimi",
-     "tipo": "dialogo",
-     "titolo": "Parlare con Zi’ Mimì",
-     "parte": "evento",
-     "innesco": "Qualcuno parla con l’oste.",
-     "note": "CHI SEI? — «Domenico Castorano. Zi’ Mimì da quando avevo trent’anni. Questa cantina l’ha aperta mio padre, e prima c’era una cantina e basta.»\n\nLE SCRIPPELLE — Si illumina. «Mio nonno. Garzone alla mensa dei capitani. Gli cascano le crespelle nella pentola del brodo, tutte. Lui non si perde d’animo: le arrotola, ci mette il formaggio, e le serve così. ’Mbusse. Bagnate. Il capitano ne chiede altre tre.» Pausa. «Lo racconta tutta la città. Ma era mio nonno.»\n\nLE VIRTÙ — «Il primo maggio. Sette legumi, sette verdure, sette paste, sette ore. Chi le mangia un altro giorno porta sfortuna alla casa. Volete la sfortuna? No. Allora prendete la chitarra.»\n\nCHI MANGIA QUI? — «Chi paga e sta zitto.» Poi, piano: «Il tavolo in fondo, il giovedì, è del Cancelliere della Rocca. Mangia da solo, beve poco, lascia la mancia giusta. Un signore.»\n\nLA CITTÀ — «Una volta qui sotto c’era la fila. Adesso c’è la crisi, il Banco caduto, il Corso vuoto. E la gente mangia la pizza in piedi per strada.» Scuote la testa. «La pizza in piedi. Come i cavalli.»\n\nSE CHIEDONO DI FORESTIERI STRANI — «Una signora coi capelli bianchi è venuta due volte. Ha mangiato poco, ha pagato in oro, e ha chiesto chi c’era al tavolo del giovedì.»\n\nBATTUTE PRONTE — «Prima si mangia, poi si parla.» · «Trase, aijaccete.» · «La pizza in piedi. Come i cavalli.» · «Stà ben Rocc, stà ben tutt la rocc.»",
-     "dopo": "Il Cantinone è il posto per incontrare con discrezione chi conta senza essere nobile, e per arrivare al Cancelliere della Spada (il sigillo di Grazianus) fuori dalla fila.",
-     "rilancio": "Zi’ Mimì vi porta il vino. Che cosa fate?",
-     "daqui": [
-      "giovedi"
-     ],
-     "png": "png-zi-mimi-castorano"
-    },
-    {
-     "id": "giovedi",
-     "tipo": "dettaglio",
-     "titolo": "Il tavolo del giovedì",
-     "parte": "evento",
-     "innesco": "Il gruppo è al Cantinone il giovedì sera, o chiede di incontrare il Cancelliere fuori dalla Rocca.",
-     "leggi": "Il tavolo in fondo, sotto l’ultima botte, ha una candela sola. L’uomo che ci siede è anziano, magro, con il tabarro grigio piegato sulla sedia accanto. Mangia la chitarra con una lentezza da notaio.\n\nQuando vi vede guardarlo, posa la forchetta.\n\n«Sedetevi pure. Ma non parlate di lavoro prima del timballo.»",
-     "note": "È il Cancelliere della Spada, quello che appone il sigillo di Grazianus alla Rocca. Qui non è in servizio: parla da uomo. Se lo lasciano mangiare in pace e gli offrono il vino buono, ascolta. Persuasione CD 13 (vantaggio se Maximus c’è e si comporta da figlio di suo padre, non da soldato): il sigillo della Spada arriva domattina, senza fila. Se lo disturbano prima del timballo: CD 17.\nAvvertimento che dà a chi gli piace: «Lo Stratega firma tutto quello che rinforza la Guardia. Non firma niente che la indebolisca. Pensate a come scrivete la vostra istanza.»",
-     "prove": [
-      {
-       "id": "giovedi",
-       "abilita": [
-        "Persuasione"
-       ],
-       "cd": 13,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 12,
-         "leggi": "«Ne parliamo alla Rocca. In fila.»"
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 13,
-         "leggi": "«Portatemi l’istanza domattina. Entrate dalla porta piccola e chiedete di me.» Il sigillo della Spada senza aspettare."
-        }
-       ]
-      }
-     ],
-     "dopo": "Una scorciatoia per il sigillo di Grazianus.",
-     "rilancio": "Il Cancelliere aspetta il timballo. Che cosa fate?",
-     "daqui": [
-      "teramum_rocca"
-     ],
-     "pe": 150
-    },
-    {
-     "id": "dlg_cancelliere_della_spada",
-     "tipo": "dialogo",
-     "titolo": "Parlare con il Cancelliere della Spada",
-     "parte": "evento",
-     "png": "png-cancelliere-della-spada",
-     "innesco": "Qualcuno parla con il Cancelliere della Spada.",
-     "rilancio": "Che cosa fate?",
-     "daqui": []
     }
    ]
   },
@@ -1686,9 +1393,7 @@
      "note": "Ci dormono una decina di poveri, fra cui «Pascale de Parigge», un vecchio matto che dice di essere stato a Parigge (una città che nessuno conosce) e parla una lingua inventata: è innocuo, e vede tutto. Per un pasto racconta che «di notte quelli col mantello scendono dalla porta, e tornano con le mani bianche di polvere». La porta bassa dà su una scala murata a metà, che scende verso le cantine di Lucente Anna e la Città Sepolta (Atletica CD 12 per passare).",
      "dopo": "Un altro ingresso verso la Città Sepolta, sotto la piazza.",
      "rilancio": "Che cosa fate?",
-     "daqui": [
-      "teramum_sepolta"
-     ],
+     "daqui": [],
      "pe": 100
     }
    ]
@@ -2015,8 +1720,8 @@
    "kind": "persona",
    "title": "Il sergente della piazza",
    "legacyPosition": {
-    "x": 1035,
-    "y": 330
+    "x": 305,
+    "y": 548
    },
    "text": "In mezzo alla piazza della fiera, dove si incrociano il Corso, il viale dei Tigli e la strada della Rocca, c’è un piedistallo di legno dipinto a strisce rosse e bianche. Sopra, un sergente della Guardia dirige il traffico. Carri, muli, pecore, portantine, ragazzi che corrono: tutto passa sotto il suo braccio teso e il suo fischietto d’osso. Un fischio corto: fermi. Due: avanti. Tre: guai.\n\nHa il tabarro grigio stirato con la riga, gli stivali lucidi come specchi, il cappello con la piuma messa dritta. In mano, una tavoletta di cera e uno stilo. Non si muove un capello.\n\nIntorno a lui la piazza fa come vuole: i carrettieri gridano, le pecore passano dove capita, un mulo si ferma a mangiare il fieno dal carro davanti. Ma vicino al piedistallo tutti rallentano, e chi ha un carro si raddrizza la schiena.\n\nUn carrettiere si è fermato un passo troppo avanti. Il sergente fischia, scende dal piedistallo con calma, un gradino alla volta, e comincia a scrivere sulla tavoletta. Non alza la voce. Chiede il nome, il carico, da dove viene. Il carrettiere si mette le mani nei capelli. La gente intorno guarda e non ride: a ognuno è già toccato.\n\nPoi il sergente alza gli occhi dalla tavoletta e guarda voi. Le vostre armi. I vostri cavalli, se li avete. Conta.",
    "breve": "Sulla piazza della fiera, il Sergente Marcozzi «Punti Perfetti» multa tutto e tutti e non si fa corrompere. «E chi se n’arcord?» Ha contato diciotto carri notturni della Rocca senza registro.",
@@ -2035,43 +1740,9 @@
      "dopo": "Marcozzi ha contato i carri notturni della Rocca verso Lucente Anna: diciotto in quindici notti. È un testimone onesto.",
      "rilancio": "Il sergente vi tende la tavoletta da firmare. Che cosa fate?",
      "daqui": [
-      "teramum_rocca",
-      "teramum_sepolta"
+      "teramum_rocca"
      ],
      "png": "png-sergente-marcozzi"
-    }
-   ]
-  },
-  {
-   "schemaVersion": 3,
-   "id": "teramum_strillone",
-   "kind": "persona",
-   "title": "Giornalino, lo strillone",
-   "legacyPosition": {
-    "x": 780,
-    "y": 385
-   },
-   "text": "All’imbocco del ponte, dove passano tutti, seduto su una cassetta rovesciata, c’è un uomo magro con un cappello di paglia sfondato. Tiene sulle ginocchia un mazzo di fogli scritti a mano, con la calligrafia stretta di chi scrive tanto e in fretta. Accanto a lui, appoggiata al muro, una lavagna con le notizie del giorno scritte col gesso, in righe storte: il Bando della Guardia, il prezzo del grano, una riga sul Reggente, una sulla colonna armata ferma al tratturo.\n\n«Fogli! Fogli! Il Consiglio non decide! Il ponte non si finisce! La Crociata è alle porte!» Ride da solo. «Le prime due sono vecchie. La terza è nuova!»\n\nI passanti si fermano, leggono la lavagna gratis, e vanno via senza comprare. Lui li saluta tutti per nome, e a ognuno dice una cattiveria diversa: al facchino, alla guardia, al votato. Nessuno si offende. Qualcuno torna indietro apposta per sentirne un’altra. Un ragazzino gli porta un foglio nuovo, ancora umido d’inchiostro, e lui lo legge, ride, e lo mette in cima al mazzo.\n\nCosta un quattrino il foglio. Dicono che una cosa detta a lui, il giorno dopo, la sa tutta Teramum. Quando vi vede, smette di gridare. Vi guarda, conta quanti siete, e prende il gesso.",
-   "breve": "Lo strillone del ponte, con la lavagna e i fogli scritti a mano: una notizia data a lui la sa tutta Teramum il giorno dopo. Ironia cattiva, e sempre una cosa vera.",
-   "gm": "Nella Teramo vera, «Giornalino», lo storico edicolante del ponte, ricordato per la sua ironia, figlio del «primo e unico strillone teramano» che vendeva il giornale strada per strada. Qui: Giornalino (Gianni Recchia, ma nessuno lo chiama così; scheda PNG), che copia a mano i bandi, le notizie e le chiacchiere e le vende a un quattrino il foglio.\nA cosa serve al tavolo: è la voce della città e il modo più veloce per far girare una notizia. Le Cronache del Ducato (il gioco della Crociata) a Teramum passano da lui: se i PG gli danno una notizia (e un grosso), domani la sa tutta la città, come la scrive lui (cioè con una cattiveria in più).\nCosa c’è oggi sui fogli: il Bando della Guardia; «la Crociata al tratturo: cinquanta, cento, mille? Chi lo sa»; i prezzi del grano; «il Reggente sta bene, dice il Reggente»; la satira di Sor Paolo della mattina.",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": [
-    {
-     "id": "dialogo_giornalino",
-     "tipo": "dialogo",
-     "titolo": "Parlare con Giornalino",
-     "parte": "evento",
-     "innesco": "Qualcuno compra un foglio o si ferma alla lavagna.",
-     "note": "CHI SEI? — «Giornalino. Mio padre era lo strillone, il primo e l’unico. Io sono il secondo e l’ultimo: dopo di me la gente le notizie se le inventa da sola. Già lo fa.»\n\nCHE NOTIZIE CI SONO? — Batte la mano sulla lavagna. «Il Consiglio non decide. Il ponte non si finisce. Il Corso si svuota. E arrivate voi.» Vi squadra. «Voi siete la notizia. Ditemi qualcosa, che domani vi vendo bene.»\n\nSE GLI DANNO UNA NOTIZIA — «Un grosso, e domattina lo sa tutta Terme. Due grossi, e lo sa pure come volete voi.» Ride. «Tre, e non lo scrivo.»\n\nLA SATIRA DI SOR PAOLO — «Stamattina Sor Paolo diceva: “A Terme ci stanno otto Casate e nessuna casa.”» Ride fino a tossire.\n\nSE CHIEDONO DI QUALCUNO — Sa tutti i nomi, e per ognuno ha una battuta. Dice sempre una cosa vera, mascherata da cattiveria.\n\nBATTUTE PRONTE — «Fogli! Fogli!» · «Un quattrino la verità, gratis la bugia.» · «Le prime due sono vecchie. La terza è nuova!»",
-     "dopo": "Giornalino fa girare le notizie: è il canale per le Cronache del Ducato a Teramum e per la Fama della Crociata in città.",
-     "rilancio": "Giornalino vi porge un foglio. Che cosa fate?",
-     "daqui": [
-      "teramum_meridiane",
-      "teramum_san_giorgio"
-     ],
-     "png": "png-giornalino"
     }
    ]
   },
@@ -2189,40 +1860,6 @@
   },
   {
    "schemaVersion": 3,
-   "id": "teramum_fiume",
-   "kind": "porta",
-   "title": "Porta Melatina",
-   "image": "PDI — Teramum — Porta Melatina.jpg",
-   "legacyPosition": {
-    "x": 862,
-    "y": 318
-   },
-   "text": "A nord, dove le mura scendono verso il Tordinum, la porta è stretta fra due torri tonde, in fondo a un ponte di pietra lungo e stretto, con tanti archi, che passa il fiume dove è più largo. Il ponte ha il parapetto basso e ci passa un carro alla volta: chi arriva aspetta che l’altro sia uscito. Sopra l’arco della porta, dipinta e scolorita, una galea d’oro su campo rosso.\n\nSotto il ponte, lungo la riva, i lavatoi: lastre di pietra inclinate verso l’acqua, sotto una tettoia di coppi. Donne che battono i panni sulle pietre e cantano. La canzone è una sola, a turni, e chi arriva la riprende da dove la lascia l’altra. Più a valle, le ruote dei mulini girano piano e si sente il grano macinato. Odore di sapone, di acqua e di farina.\n\nQui c’è poca gente, e nessuno grida. Un carro di lana, un mulattiere, un uomo con una gabbia di galline. Sotto l’arco, un banco con un registro grande e un uomo in abito scuro che scrive senza fretta e non alza la testa per nessuno.\n\nLe guardie qui sono poche, e le migliori. Tabarro pulito, alabarda dritta, e gli occhi che vi hanno già contati prima che arrivaste a metà ponte. Oltre la porta, i vicoli salgono verso le case alte e vecchie della punta della città.",
-   "breve": "La porta del nord, sul Tordinum, in fondo al ponte lungo: la porta dei Melatino. Poca folla, guardie serie, un sensale della Lega al banco. La più vicina a Lucente Anna e alla casa dei Melatino.",
-   "gm": "Voce «Teramum»: Porta Melatina, a nord, sul Tordinum: la porta dei Melatino, e alla Benedizione delle Bestie qui si benedicono le bestie. La galea è lo stemma dei Melatino (scheda della casata). ⟦Il sensale della Lega al banco del ponte e le guardie migliori della città sono come nella scena della porta.⟧ Il convoglio del Loto doveva entrare da qui senza aspettare; i suoi carri sono bruciati all’osteria de lu Passe (Atto XIX).\nIl «Ponte a Due Archi» delle carte di Pietraluna non è questo, che ha molti archi: è il Ponte degli Impiccati sulla Vezzola.",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": [
-    {
-     "id": "lavatoi",
-     "tipo": "dettaglio",
-     "titolo": "I lavatoi",
-     "parte": "indizio",
-     "seme": "Donne che battono i panni sulle pietre e cantano.",
-     "innesco": "Qualcuno scende ai lavatoi o ascolta le lavandaie.",
-     "leggi": "Cantano una cosa vecchia, lenta, con le parole in dialetto stretto. Parla di una città sotto la città, dove si va a dormire e non si torna. Il ritornello è sempre lo stesso: «e lu sonne je dicette: resta».\n\nUna ragazza vi vede ascoltare e smette. Le altre continuano.",
-     "note": "La canzone è folklore della Città Sepolta, che sta sotto Lucente Anna, qui vicino. «Resta» è un’eco dell’ordine di Micuccio sotto Bëllindë: nessuno qui lo sa, ma i giocatori potrebbero sentire il brivido. Non spiegare.",
-     "rilancio": "Le lavandaie cantano. Che cosa fate?",
-     "daqui": [
-      "teramum_sepolta",
-      "teramum_ponte_gola"
-     ]
-    }
-   ]
-  },
-  {
-   "schemaVersion": 3,
    "id": "teramum_reale",
    "kind": "porta",
    "title": "Porta del Lucente Giorgio",
@@ -2291,24 +1928,12 @@
  ],
  "pedine": [
   {
-   "id": "tc_cenzino",
-   "nome": "Cenzino Mezzalingua",
-   "short": "Ce",
-   "kind": "alleato",
-   "x": 1236,
-   "y": 290,
-   "gruppo": "citta",
-   "png": "png-cenzino-mezzalingua",
-   "img": "TOKEN — Città — Cenzino Mezzalingua.png",
-   "ritratto": "Ritratto pedina — Città — Cenzino Mezzalingua.jpg"
-  },
-  {
    "id": "tc_tobia",
    "nome": "Tobia lo stalliere",
    "short": "To",
    "kind": "alleato",
-   "x": 959,
-   "y": 306,
+   "x": 258,
+   "y": 546,
    "gruppo": "citta",
    "png": "png-tobia-stalliere",
    "img": "TOKEN — Città — Tobia, lo stalliere della Rocca.png",
@@ -2319,8 +1944,8 @@
    "nome": "Ser Ottaviano Rapino",
    "short": "Ra",
    "kind": "alleato",
-   "x": 931,
-   "y": 461,
+   "x": 284,
+   "y": 512,
    "gruppo": "citta",
    "png": "png-cancelliere-della-spada",
    "img": "TOKEN — Città — Ser Ottaviano Rapino.png",
@@ -2405,16 +2030,6 @@
    "png": "png-sabatino-lupone"
   },
   {
-   "id": "tc_mimi",
-   "nome": "Zi’ Mimì",
-   "short": "Mi",
-   "kind": "alleato",
-   "x": 879,
-   "y": 461,
-   "gruppo": "citta",
-   "png": "png-zi-mimi-castorano"
-  },
-  {
    "id": "tc_adriano",
    "nome": "Ser Adriano Remigio",
    "short": "Ad",
@@ -2479,20 +2094,10 @@
    "nome": "Sergente Marcozzi",
    "short": "Mz",
    "kind": "alleato",
-   "x": 1059,
-   "y": 344,
+   "x": 318,
+   "y": 560,
    "gruppo": "citta",
    "png": "png-sergente-marcozzi"
-  },
-  {
-   "id": "tc_giornalino",
-   "nome": "Giornalino",
-   "short": "Gi",
-   "kind": "alleato",
-   "x": 758,
-   "y": 399,
-   "gruppo": "citta",
-   "png": "png-giornalino"
   }
  ]
 }

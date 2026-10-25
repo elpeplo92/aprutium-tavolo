@@ -1,0 +1,148 @@
+{
+ "id": "te_l_lucenti",
+ "nome": "Lucente Leonardo — la Via dei Lucenti",
+ "menu": "Lucente Leonardo — la Via dei Lucenti",
+ "citta": "Teramum",
+ "ordine": 9.12,
+ "mappa": {
+  "img": "PDI — Teramum — Dentro la Porta della Madre.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "Si china la testa sotto la porticina, e dall’altra parte il rumore cambia. Dentro l’arco c’è freddo e c’è l’eco: i vostri passi tornano indietro due volte. Poi l’arco finisce e la città vi arriva addosso tutta insieme.\n\nDavanti a voi sale una strada larga, lastricata, con due solchi consumati nel mezzo: ci passano i carri delle processioni, sempre nello stesso punto. La chiamano Via dei Lucenti: lo dice una lapide murata all’angolo. A destra e a sinistra le botteghe hanno il banco sulla strada, e dietro ogni banco una porta nera da cui esce fumo. Martelli, tanti, mai a tempo fra loro. Un cane dorme in mezzo alla strada e nessuno lo sposta.",
+  "img": "PDI — Teramum — Dentro la Porta della Madre.jpg",
+  "note": "Il primo passo dentro Teramum. Cenzino è alla fontana e si offre a tutti i forestieri; lavora anche per l’uomo col lillà. Da qui la Via dei Lucenti sale fra le forge verso la Basilica: si torna alla mappa del quartiere col punto «La Via dei Lucenti»."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "lucenti_via",
+   "kind": "scena",
+   "title": "La Via dei Lucenti",
+   "legacyPosition": {
+    "x": 1080,
+    "y": 960
+   },
+   "text": "Si china la testa sotto la porticina, e dall’altra parte il rumore cambia. Dentro l’arco c’è freddo e c’è l’eco: i vostri passi tornano indietro due volte. Poi l’arco finisce e la città vi arriva addosso tutta insieme.\n\nDavanti a voi sale una strada larga, lastricata, con due solchi consumati nel mezzo: ci passano i carri delle processioni, sempre nello stesso punto. La chiamano Via dei Lucenti: lo dice una lapide murata all’angolo. A destra e a sinistra le botteghe hanno il banco sulla strada, e dietro ogni banco una porta nera da cui esce fumo. Martelli, tanti, mai a tempo fra loro. Un cane dorme in mezzo alla strada e nessuno lo sposta.\n\nPiù in alto, sopra i tetti rossi che salgono a gradoni, c’è il campanile della Basilica Aurea, con i merli in cima come una torre di guardia. Da qui sembra vicino. Non lo è.\n\nSulla sinistra c’è una fontana di pietra con un solo getto. Sul bordo è seduto un ragazzo magro, scalzo, con un berretto troppo grande. Si alza appena vi vede. Si pulisce le mani sui calzoni. Sorride con tutti i denti che ha.",
+   "gm": "Le due guardie di scorta (se c’è la tessera): Lallo e Mariotto, giovani, annoiati, del Lucente Leonardo. Seguono il gruppo a dieci passi; non impediscono niente di legale; al primo rintocco della campana della sera li riportano alla porta. Si possono seminare (Furtività CD 13 di gruppo), ma la tessera allora è bruciata e il capitano lo saprà.\nCenzino è una guida di strada: si offre a tutti i forestieri. Lavora anche per l’uomo col lillà, per un grosso al giorno: riferisce dove vanno i forestieri. Non sa per chi lavori davvero. Scheda PNG «Cenzino Mezzalingua».\nRegole della città (quelle che la scorta ripete, o che dice Cenzino): armi da fianco sì, armi da guerra no; niente incantesimi in pubblico senza permesso scritto (vale per i Tigli e per le piazze della Basilica); coprifuoco alla campana della sera.\n⟦La Via dei Lucenti è la strada delle processioni fra la Basilica Aurea e la Porta della Madre.⟧",
+   "breve": "La strada larga delle processioni, appena dentro la porta: botteghe, fumo, martelli.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "via",
+     "tipo": "dettaglio",
+     "titolo": "La Via dei Lucenti",
+     "parte": "indizio",
+     "seme": "La chiamano Via dei Lucenti: lo dice una lapide murata all’angolo.",
+     "innesco": "Qualcuno legge la lapide o guarda la strada.",
+     "leggi": "La lapide è vecchia e nuova insieme: la pietra è grigia, le lettere dorate di fresco. «PER QUESTA VIA SALIRONO I LUCENTI ALLA LUCE». Sotto, più piccolo: «Il Consiglio Reggente restaurò».\n\nI solchi nel lastricato sono profondi un dito. Da quanto tempo passano i carri delle processioni, per scavare la pietra così?",
+     "prove": [
+      {
+       "id": "via",
+       "abilita": [
+        "Storia",
+        "Religione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Una strada vecchia, rifatta. Sale dritta al centro della città, alla Basilica."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "max": 16,
+         "leggi": "Una volta l’anno la processione della Vecchia Madre scende dalla Basilica Aurea per questa via, esce dalla Porta della Madre e va alla Lunaria delle Grazie, appena fuori. Poi risale. I solchi sono di mille anni di carri."
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "E i solchi sono più vecchi dei lucenti: la strada c’era già, con gli stessi solchi, al tempo dei Pretuziani. La Fiamma ci ha messo sopra il nome dei suoi lucenti."
+        }
+       ]
+      }
+     ],
+     "dopo": "Sanno dove porta la via: il Lucente Leonardo, la Basilica Aurea e le sue piazze, poi il Corso fino alla Rocca.",
+     "rilancio": "La strada sale davanti a voi. Che cosa fate?",
+     "daqui": [],
+     "immagine": "PDI — Teramum — La Via dei Lucenti.jpg"
+    }
+   ],
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "lucenti_fontana",
+   "kind": "persona",
+   "title": "La fontana e il ragazzo",
+   "legacyPosition": {
+    "x": 1700,
+    "y": 900
+   },
+   "text": "Sulla sinistra c’è una fontana di pietra con un solo getto. Sul bordo è seduto un ragazzo magro, scalzo, con un berretto troppo grande. Si alza appena vi vede. Si pulisce le mani sui calzoni. Sorride con tutti i denti che ha.",
+   "breve": "Cenzino Mezzalingua si offre come guida.",
+   "gm": "Scheda PNG «Cenzino Mezzalingua». Lavora anche per l’uomo col lillà: riferisce dove vanno i forestieri.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "cenzino",
+     "tipo": "dettaglio",
+     "titolo": "Il ragazzo della fontana",
+     "parte": "indizio",
+     "seme": "Sorride con tutti i denti che ha.",
+     "innesco": "Il ragazzo si avvicina, o qualcuno lo guarda.",
+     "leggi": "Quattordici anni, forse. Magro, scalzo, un cappello di feltro troppo grande tenuto su dalle orecchie. Si toglie il cappello e fa un inchino che ha visto fare ai signori, esagerato.\n\n«Cenzino, per servirvi. Guida. La migliore di Teramum.» Rimette il cappello. «Due quattrini a strada, un grosso tutto il giorno. Vi porto dove volete, vi dico chi è chi, vi faccio evitare la Guardia.» Guarda le due guardie di scorta. «Be’. Quasi tutta.»",
+     "dopo": "Se lo prendono come guida, Cenzino li accompagna per tutta la scena: usa il suo dialogo ogni volta che chiedono «dov’è» o «chi è».",
+     "rilancio": "Cenzino tende la mano. Che cosa fate?",
+     "daqui": [
+      "dialogo_cenzino"
+     ]
+    },
+    {
+     "id": "dialogo_cenzino",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Cenzino",
+     "parte": "evento",
+     "innesco": "Qualcuno fa domande a Cenzino.",
+     "note": "CHI SEI? — «Cenzino. Vincenzo, per il sacerdote. Mezzalingua per tutti gli altri.» Perché? «Perché dico metà di quello che so. L’altra metà costa di più.»\n\nDOVE SIAMO? — «Lucente Leonardo. Lu Bòrghe. Qui si martella.» Indica il campanile. «Là c’è la Basilica, con le due piazze: da una parte la Piazza Grande, dall’altra la Piazza del Mercato, col Palazzo e i signori che non decidono. Poi il Corso, dritto, fino a Piazza Garibaldi: là c’è la Rocca, Casa Grazianus e la Guardia. E i Tigli, dove i signori passeggiano. Giù verso il fiume la Lunaria a Bitetto: chi non ha niente sta lì. E a Porta Romana i teatri vecchi, l’Arena e Sor Paolo.»\n\nDOVE SI DORME? — «Dipende quanto pagate. Pavimento di stalla, due quattrini. Dormitorio, cinque. Una stanza per bene: al Cane Bianco, alla Lunaria a Bitetto. Za’ Carmela non vi fa domande e non vi fa pulci.» Pausa. «Poche.»\n\nDOVE SONO GLI UFFICI DEI SIGILLI? — Conta sulle dita. «Grazianus, alla Rocca: la Cancelleria della Spada, porta a sinistra del cortile. Chiodi: il Tribunale, sulla Piazza del Mercato, accanto al Palazzo. Mazzarelli: dentro il Palazzo, e buona fortuna. Impaloni: dall’Arciflamine, oltre l’Arco di Monsignore. Savini: alla Biblioteca, in via Delfico. Melatino: al Fondaco della Lega, sotto i portici del mercato. Malavolta e Thaulero: nei loro palazzi, ai Tigli. Ma lì non si entra senza invito.»\n\nIL COPRIFUOCO — «Alla campana della sera. È l’Aprutina, la grossa della Basilica: la sentite, ve lo giuro, vi entra nei denti. Dopo, per strada ci si va con la lanterna e con una scusa buona. I forestieri armati li portano alla Rocca a dormire.» Sorride. «Io so dove passano le ronde. Quello costa un grosso a parte.»\n\nLA RONDA — «Un sergente e quattro. Ogni rione ha la sua. Intorno alla Basilica passano ogni mezz’ora. Da noi al Lucente Leonardo ogni ora, e i fabbri gli offrono da bere. Alla Lunaria a Bitetto passano quando gli pare. E al Ponte degli Impiccati, sotto Porta Romana, si fermano sempre: è lì che si prende la gente.»\n\nLA SIGNORA FORESTIERA — «Ai Tigli. Capelli bianchi, bella, paga in oro. Tutti ci vanno a cena.» Si fa serio per un momento. «Io no. Non mi hanno invitato.»\n\nIL TEMPIO MURATO — Se glielo chiede Mattheus, o se vede la lavanda: «Alla Lunaria a Bitetto, in un vicolo che scende al fiume. L’hanno murato l’Arciflamine e i suoi. Ma ci lasciano i fiori lo stesso.» Abbassa la voce. «Di notte ci passa un votato piccolo. Io non l’ho visto.»\n\nL’ARLECCHINO — Il sorriso gli si spegne. «Non si nomina.» Se insistono: «Uno con la maschera di tutti i colori. Sta sotto. Chi lo vede si scorda. Mio cugino l’ha visto, e adesso non si ricorda più come si chiamava sua moglie.» Non ride.\n\nSE LO MINACCIANO — Scappa. È velocissimo, e conosce ogni vicolo. Torna il giorno dopo, come se niente fosse, ma col prezzo raddoppiato.\n\nSE LO PAGANO BENE — Un fiorino (esagerato): gli brillano gli occhi. Da quel momento dice anche l’altra metà: «C’è un signore che profuma di fiori. Mi dà un grosso al giorno se gli dico dove vanno i forestieri. Stasera… stasera gli dico quello che volete voi.» Diventa loro.\n\nSE GLI MENTONO — Lo capisce sempre (Intuizione +4): è un ragazzo di strada. Ride. «Va bene, messere. Anch’io sono un principe.»\n\nBATTUTE PRONTE — «Due quattrini a strada. Un grosso tutto il giorno. Un fiorino e vi dico pure la verità.» · «Mezzalingua: metà la dico, metà la vendo.» · «Di là la Guardia, di qua i ladri. Io passo in mezzo.» · «Alla campana si sparisce. È la regola.»",
+     "dopo": "Cenzino è la guida e il rischio: un ragazzo simpatico che riferisce all’agente di Iuvenza. Se lo pagano bene, cambia parte.",
+     "rilancio": "Cenzino aspetta la destinazione. Che cosa fate?",
+     "daqui": [],
+     "png": "png-cenzino-mezzalingua"
+    }
+   ]
+  }
+ ],
+ "pedine": [
+  {
+   "id": "l_cenzino",
+   "nome": "Cenzino Mezzalingua",
+   "short": "Ce",
+   "kind": "alleato",
+   "x": 1610,
+   "y": 905,
+   "gruppo": "luogo",
+   "png": "png-cenzino-mezzalingua",
+   "img": "TOKEN — Città — Cenzino Mezzalingua.png",
+   "ritratto": "Ritratto pedina — Città — Cenzino Mezzalingua.jpg"
+  }
+ ]
+}
