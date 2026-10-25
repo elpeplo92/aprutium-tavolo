@@ -115,5 +115,167 @@
     "via": "mai"
    }
   ]
+ },
+ "negozio": {
+  "banco": "La spezieria del Ceraso",
+  "dove": "il Corso, Teramum",
+  "apertura": "«Voi invece avete l’aria di quelli che comprano bende a dozzine. Avanti.»",
+  "battute": {
+   "compra": "«E usatele bene!»",
+   "vende": "«Mi state simpatici fino a prova contraria.»",
+   "rifiuta": "«Qui la ricetta sono io.»",
+   "contro": "«Lo dica più forte.»",
+   "sconto": "«Per voi, e solo per voi.»",
+   "nonbasta": "«Cura tutto, tranne chi la beve.»",
+   "armi": "«Le armi le vende la Forgia. Io curo i buchi che fanno.»",
+   "inutile": "«Questo a me non serve.»",
+   "senzavalore": "«Prima ditemi quanto vale. Poi vi dico quanto vale per me.»",
+   "esaurito": "«Finito.»"
+  },
+  "compra": [
+   "Consumabili",
+   "Pozioni",
+   "Erbe",
+   "Liquori",
+   "Attrezzi",
+   "Strumenti"
+  ],
+  "compraNomi": [
+   "Profumo",
+   "Boccetta di essenza di lillà",
+   "Kit da guaritore",
+   "Kit da erborista"
+  ],
+  "rifiuta": "Armi, armature e il metallo grigio della Forgia: «è pentito di essere un metallo».",
+  "cd": 14,
+  "cassa": "120 mo",
+  "filtri": [
+   "Pozioni",
+   "Erbe",
+   "Liquori",
+   "Attrezzi"
+  ],
+  "merce": [
+   {
+    "n": "Pozione di guarigione",
+    "q": 3,
+    "prezzo": "50 mo",
+    "cat": "Pozioni",
+    "desc": "«Rosse, buone, fatte da me. Le ultime le ha comprate la Rocca. Queste tre le ho nascoste per i clienti che mi stanno simpatici.»",
+    "uso": {
+     "tipo": "cura",
+     "dadi": "2d4+2"
+    },
+    "stats": "Recupera 2d4+2 PF · berla è un’azione bonus"
+   },
+   {
+    "n": "Antitossina",
+    "q": 4,
+    "prezzo": "50 mo",
+    "cat": "Pozioni",
+    "desc": "Una fiala d’erbe amare e di carbone. Si beve prima di un pasto di cui non ci si fida.",
+    "uso": {
+     "tipo": "effetto",
+     "testo": "vantaggio ai tiri salvezza contro il veleno",
+     "durata": "1 ora",
+     "consuma": true
+    },
+    "stats": "Vantaggio ai TS contro il veleno per 1 ora"
+   },
+   {
+    "n": "Kit da guaritore",
+    "q": 2,
+    "prezzo": "5 mo",
+    "cat": "Attrezzi",
+    "desc": "Bende, unguenti e stecche in una borsa di cuoio. «Dieci volte, poi tornate.»",
+    "stats": "10 usi · azione: stabilizzi una creatura a 0 PF senza prova di Medicina"
+   },
+   {
+    "n": "Centerba",
+    "q": 6,
+    "prezzo": "6 ma",
+    "cat": "Liquori",
+    "desc": "«Cento erbe della montagna. Cura tutto, tranne chi la beve.» Verde come l’erba di maggio, e brucia uguale.",
+    "uso": {
+     "tipo": "effetto",
+     "testo": "⟦vantaggio ai TS di Costituzione contro il freddo; poi svantaggio a Percezione per 10 minuti⟧",
+     "durata": "1 ora",
+     "consuma": true
+    }
+   },
+   {
+    "n": "Genziana",
+    "q": 5,
+    "prezzo": "4 ma",
+    "cat": "Liquori",
+    "desc": "Amara come un debito. Si beve dopo mangiato, a Teramum, anche quando il pranzo non era pesante.",
+    "uso": {
+     "tipo": "effetto",
+     "testo": "⟦finisce la condizione Avvelenato data da cibo o vino guasti⟧",
+     "consuma": true
+    }
+   },
+   {
+    "n": "Ratafià",
+    "q": 4,
+    "prezzo": "5 ma",
+    "cat": "Liquori",
+    "desc": "Liquore d’amarene e vino rosso, dolce, da offrire. Le nonne del Corso lo tengono per gli ospiti.",
+    "uso": {
+     "tipo": "effetto",
+     "testo": "⟦offerto e bevuto insieme: +1d4 alla prossima prova di Persuasione con chi beve con te⟧",
+     "consuma": true
+    }
+   },
+   {
+    "n": "Camomilla",
+    "q": 10,
+    "prezzo": "2 mr",
+    "cat": "Erbe",
+    "desc": "Un pugno di fiori secchi in un cartoccio. Bollita, la sera.",
+    "uso": {
+     "tipo": "effetto",
+     "testo": "una notte di sonno tranquillo",
+     "consuma": true
+    }
+   },
+   {
+    "n": "Ruta",
+    "q": 6,
+    "prezzo": "1 ma",
+    "cat": "Erbe",
+    "desc": "Un rametto d’erba dall’odore forte. «Contro il malocchio, dicono. Io dico contro le pulci.»"
+   },
+   {
+    "n": "Mirra",
+    "q": 2,
+    "prezzo": "1 mo",
+    "cat": "Erbe",
+    "desc": "Grani di resina che bruciano con un fumo dolce. Si usa sulle are e sui morti."
+   },
+   {
+    "n": "Polvere di corno",
+    "q": 1,
+    "prezzo": "10 mo",
+    "cat": "Erbe",
+    "desc": "Una polvere grigia in un vasetto col tappo di cera. Il Ceraso non dice a cosa serve, e la vende cara."
+   },
+   {
+    "n": "Bende",
+    "q": 0,
+    "prezzo": "1 ma",
+    "cat": "Attrezzi",
+    "desc": "Rotoli di lino pulito.",
+    "nota": "«Le ha comprate tutte la Rocca, il mese scorso. E l’aceto. Come chi si aspetta una guerra.»"
+   },
+   {
+    "n": "Aceto",
+    "q": 0,
+    "prezzo": "1 mr",
+    "cat": "Attrezzi",
+    "desc": "Per lavare le ferite.",
+    "nota": "Lo ha comprato la Rocca."
+   }
+  ]
  }
 }
