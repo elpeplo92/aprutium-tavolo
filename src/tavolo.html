@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v305</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v306</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -2882,7 +2882,7 @@ roleSel.onchange=async()=>{ const want=roleSel.value; if(want==='master'&&fbAuth
    di loro va in errore — il che spegneva la nebbia, i tasti muri/porte e
    "Rivela intorno al gruppo". Qui la forma viene ricostruita a ogni lettura. */
 const SHAPE_ARR=['order','log','removed','archive','met','visited','comp','comp2'];
-const SHAPE_OBJ=['poiRevT','fogS','wallsS','doorsS','doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti'];
+const SHAPE_OBJ=['pgSc','poiRevT','fogS','wallsS','doorsS','doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti'];
 function normalize(s){
   if(!s||typeof s!=='object') s={};
   for(const k of SHAPE_ARR) if(!Array.isArray(s[k])) s[k]=[];
@@ -2952,7 +2952,7 @@ const LIVE=['hd','sc','light','xs','ich','res','fx','adv','fxT','x','y','hp','hp
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig','poiRevT']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
+  for(const k of ['mode','round','turn','order','request','log','scene','pgSc','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig','poiRevT']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
   const rt=remote.tokens||{};
   for(const [id,t] of Object.entries(rt)){
     if(s.tokens[id]){ for(const k of LIVE) if(t[k]!==undefined) s.tokens[id][k]=t[k]; }
@@ -2963,7 +2963,7 @@ function merge(remote){
 }
 function toRemote(s){
   const out={};
-  for(const k of ['mode','round','turn','order','request','log','scene','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig','poiRevT']) if(s[k]!==undefined) out[k]=s[k];
+  for(const k of ['mode','round','turn','order','request','log','scene','pgSc','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','fogS','wallsS','doorsS','fogMig','poiRevT']) if(s[k]!==undefined) out[k]=s[k];
   out.tokens={};
   for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,img:t.img||'',mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
   return out;
@@ -9988,6 +9988,80 @@ function dlgPanel(box,png,tid){
     e.preventDefault(); e.stopPropagation();
     if(a.dataset.qentra) gotoScene(a.dataset.qentra); else sceneView(a.dataset.qguarda);
   },true);
+})();
+
+/* ===== IL GRUPPO DIVISO (v305) =====
+   Ogni personaggio può stare in una scena diversa (Giuseppe, 25-10: i giocatori si dividono, uno qui e uno là).
+   · S.pgSc[id] = scena del personaggio. Vuoto = tutti nella scena del gruppo (S.scene), come prima. Appena il gruppo si divide,
+     ogni personaggio prende la sua scena esplicita; i compagni (Zenith, il cannone, il destriero) seguono il padrone.
+   · t.x / t.y di un personaggio sono la sua posizione nella SUA scena; S.pos[scena][id] ricorda le altre.
+   · Ogni giocatore vede la scena del suo personaggio, con nebbia, muri e porte di quella scena (S.fogS / wallsS / doorsS).
+   · Il master guarda S.scene (o una scena in anteprima): ci vede i personaggi che stanno lì. Riquadro «Il gruppo» nella Guida:
+     dove sta ognuno, «Manda qui» (nella scena che il master sta guardando), «Vai lì» (il master passa al gruppo di quella scena
+     senza spostare nessuno), «Riunisci tutti qui».
+   · Scontro, punti notati da soli e richieste di prova valgono nella scena dove sta il master. */
+(function(){
+  const party=()=>Object.keys(S.tokens).filter(id=>S.tokens[id].kind==='pg');
+  window.pgScene=function(id){ const t=S.tokens[id]; if(!t) return S.scene; if(t.kind!=='pg'&&t.owner) return pgScene(t.owner); return (S.pgSc&&S.pgSc[id])||S.scene; };
+  window.diviso=()=>!!(S.pgSc&&Object.keys(S.pgSc).length);
+  const qui=()=>(typeof CUR!=='undefined'&&CUR&&CUR.id)||S.scene;
+  const vecchioView=viewKey;
+  viewKey=function(){ if(!IS_GM&&me&&S.tokens&&S.tokens[me]&&S.tokens[me].kind==='pg') return pgScene(me); return vecchioView(); };
+  tokScene=function(id){ const t=S.tokens[id]; if(!t) return null; if(t.kind==='pg'||t.owner) return pgScene(id); return t.sc||SCENE_DEFAULT.id; };
+  tokInScene=function(id){ const s=tokScene(id); if(s==null) return false; return qui()===s; };
+  sceneParty=function(){ return Object.keys(S.tokens).filter(id=>(S.tokens[id].kind==='pg'||S.tokens[id].owner)&&pgScene(id)===S.scene); };
+  const salvaPos=(id)=>{ const t=S.tokens[id], sc=pgScene(id); if(!t||!SCENES[sc]||SCENES[sc].tokens!==true) return; S.pos=S.pos||{}; (S.pos[sc]=S.pos[sc]||{})[id]={x:t.x,y:t.y}; };
+  const metti=(ids,key)=>{ const start=sceneStart(key), saved=(S.pos||{})[key]||{}; ids.forEach((id,i)=>{ const t=S.tokens[id], p=saved[id]||start[i%Math.max(1,start.length)]; if(t&&p){ t.x=p.x; t.y=p.y; t.movedM=0; t.dash=false; } }); };
+  const compagni=id=>Object.keys(S.tokens).filter(k=>S.tokens[k].owner===id&&S.tokens[k].kind!=='pg');
+  /* riunire tutti (= «Porta qui il gruppo», «Entra»): ogni personaggio lascia la sua posizione nella sua scena */
+  const vecchioGoto=gotoScene;
+  gotoScene=function(key){
+    if(diviso()){ for(const id of Object.keys(S.tokens)) if(S.tokens[id].kind==='pg'||S.tokens[id].owner) salvaPos(id);
+      const from=S.scene; fogStash(from); S.pgSc={};
+      if(from===key){ sceneEnter(key); GM_VIEW=null; log({kind:'sys',txt:`Il gruppo si riunisce in: ${sceneOf(key).name}`}); save(true); return; }
+      S.scene='__riunione__'; /* così vecchioGoto non risalva le posizioni sopra quelle giuste */ }
+    const from=S.scene; if(from==='__riunione__'){ S.scene=key; sceneEnter(key); GM_VIEW=null; S.aoe=null; selected=null;
+      if(S.mode==='scontro'){ S.mode='esplorazione'; S.order=[]; for(const t of Object.values(S.tokens)){ t.init=null; t.movedM=0; t.dash=false; } }
+      log({kind:'sys',txt:`Il master riunisce il gruppo a: ${sceneOf(key).name}`}); save(true); return; }
+    return vecchioGoto(key); };
+  /* mandare alcuni personaggi in un'altra scena */
+  window.mandaQui=function(ids,key){ if(!IS_GM||!key||!SCENES[key]) return;
+    S.pgSc=S.pgSc||{}; for(const id of party()) if(!S.pgSc[id]) S.pgSc[id]=S.scene;
+    const tutti=[]; for(const id of ids){ if(!S.tokens[id]) continue; tutti.push(id,...compagni(id)); }
+    tutti.forEach(salvaPos); ids.forEach(id=>{ S.pgSc[id]=key; }); metti(tutti,key);
+    const sc=new Set(party().map(id=>S.pgSc[id]));
+    if(sc.size===1){ const unica=[...sc][0]; S.pgSc={}; if(unica!==S.scene){ fogStash(S.scene); S.scene=unica; fogRestore(unica); } }
+    log({kind:'sys',txt:`${ids.map(id=>S.tokens[id].name.split(' ')[0]).join(', ')} → ${sceneOf(key).name}`}); save(true); render(); };
+  /* il master passa al gruppo di un'altra scena, senza spostare nessuno */
+  window.vaiDa=function(key){ if(!IS_GM||!key||key===S.scene) return;
+    S.pgSc=S.pgSc||{}; for(const id of party()) if(!S.pgSc[id]) S.pgSc[id]=S.scene;
+    fogStash(S.scene); S.scene=key; fogRestore(key); GM_VIEW=null; selected=null; S.aoe=null;
+    if(S.mode==='scontro'){ S.mode='esplorazione'; S.order=[]; for(const t of Object.values(S.tokens)){ t.init=null; } }
+    save(true); render(); };
+  /* «Porta i personaggi all'ingresso» e «Vai dai personaggi»: solo quelli della scena */
+  const vecchioIng=pgIngresso; pgIngresso=function(){ if(!diviso()) return vecchioIng(); if(!IS_GM||gmPeeking()||!CUR||CUR.tokens!==true) return; const ids=Object.keys(S.tokens).filter(id=>(S.tokens[id].kind==='pg'||S.tokens[id].owner)&&pgScene(id)===CUR.id); metti(ids,CUR.id); save(true); render(); };
+  const vecchioVai=pgVai; pgVai=function(){ if(!diviso()) return vecchioVai(); const ts=Object.keys(S.tokens).filter(id=>S.tokens[id].kind==='pg'&&pgScene(id)===qui()).map(id=>S.tokens[id]); if(ts.length) centerOn(ts.reduce((a,t)=>a+t.x,0)/ts.length, ts.reduce((a,t)=>a+t.y,0)/ts.length); };
+  /* nebbia, muri e porte della scena del giocatore, quando non è quella del gruppo */
+  const altrove=()=>!IS_GM&&typeof viewKey==='function'&&viewKey()!==S.scene;
+  const conLaSua=(fn,scrivi)=>{ const k=viewKey(), F=S.fog, W=S.walls, D=S.doors; const f=(S.fogS||{})[k];
+    S.fog=f?{on:!!f.on,ops:Array.isArray(f.ops)?f.ops.slice():[]}:{on:false,ops:[]}; S.walls=Object.assign({},(S.wallsS||{})[k]||{}); S.doors=Object.assign({},(S.doorsS||{})[k]||{});
+    try{ return fn(); } finally { if(scrivi){ S.fogS=S.fogS||{}; S.fogS[k]={on:!!S.fog.on,ops:S.fog.ops.slice()}; } S.fog=F; S.walls=W; S.doors=D; } };
+  const vecchioRender=render; render=function(){ if(altrove()) return conLaSua(()=>vecchioRender.apply(this,arguments)); return vecchioRender.apply(this,arguments); };
+  const vecchioFogOp=fogOp; fogOp=function(){ if(altrove()) return conLaSua(()=>vecchioFogOp.apply(this,arguments),true); return vecchioFogOp.apply(this,arguments); };
+  const vecchioWalk=walkable; walkable=function(x,y){ if(altrove()) return conLaSua(()=>vecchioWalk(x,y)); return vecchioWalk(x,y); };
+  const vecchioFV=fogVisible; fogVisible=function(x,y){ if(altrove()) return conLaSua(()=>vecchioFV(x,y)); return vecchioFV(x,y); };
+  /* il riquadro «Il gruppo» del master, in testa a «Pedine sulla mappa» */
+  const nome=id=>{ const t=S.tokens[id]; return t?t.name.split(' ')[0]:id; };
+  window.gruppoHtml=function(){ if(!IS_GM) return ''; const k=viewKey(), ids=party(); if(!ids.length) return '';
+    const per={}; for(const id of ids){ const sc=pgScene(id); (per[sc]=per[sc]||[]).push(id); }
+    const righe=Object.entries(per).map(([sc,l])=>`<div class="row" style="gap:6px;flex-wrap:wrap;align-items:center;margin:3px 0"><b>${poiText(sceneOf(sc).name)}</b>${sc===S.scene?' <i>(il master è qui)</i>':''}: ${l.map(nome).join(', ')} ${sc!==S.scene?`<button class="mini" data-gvai="${poiText(sc)}">Vai lì</button>`:''}</div>`).join('');
+    const fuori=ids.filter(id=>pgScene(id)!==k);
+    const manda=SCENES[k]&&SCENES[k].tokens!==false&&fuori.length?`<div class="row" style="gap:6px;flex-wrap:wrap;margin-top:4px">Manda in <b>${poiText(sceneOf(k).name)}</b>: ${fuori.map(id=>`<button class="mini primary" data-gmanda="${id}">${poiText(nome(id))}</button>`).join('')}${fuori.length<ids.length||diviso()?`<button class="mini" data-griunisci="${poiText(k)}">Riunisci tutti qui</button>`:''}</div>`:'';
+    return `<div class="gruppoBox" style="margin:0 0 8px"><h5 style="margin:0 0 4px">Il gruppo${diviso()?' (diviso)':''}</h5>${righe}${manda}</div>`; };
+  const vecchioSig=pedSig; pedSig=function(){ return vecchioSig()+'|'+S.scene+'|'+JSON.stringify(S.pgSc||{}); };  /* la Guida si ridisegna quando il gruppo si muove */
+  const vecchioPed=pedineSceneHtml; pedineSceneHtml=function(){ const h=vecchioPed.apply(this,arguments)||''; return IS_GM?gruppoHtml()+h:h; };
+  document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('[data-gmanda],[data-gvai],[data-griunisci]'); if(!b||!IS_GM) return; e.preventDefault(); e.stopPropagation();
+    if(b.dataset.gmanda) mandaQui([b.dataset.gmanda],viewKey()); else if(b.dataset.gvai) vaiDa(b.dataset.gvai); else gotoScene(b.dataset.griunisci); },true);
 })();
 
 /* ===== INCANTESIMI E CONCENTRAZIONE (v252) — audit dell'11-10-2026 =====
