@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v289</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v290</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11137,7 +11137,7 @@ window.RICETTE={
     for(const [col,ons] of Object.entries(cols)){ const c=document.getElementById(col); if(!c) continue; c.classList.toggle('col-off',ons.length>0&&!ons.some(Boolean)); }
     const app=document.getElementById('app'); if(!app) return; app.style.gridTemplateColumns='';
     const g=getComputedStyle(app).gridTemplateColumns.split(' '); const idx={guide:2,side:3};
-    if(g.length>=4){ let ch=false; for(const col of ['guide','side']){ const c=document.getElementById(col); if(c&&c.classList.contains('col-off')){ g[idx[col]]='0px'; ch=true; } } if(ch) app.style.gridTemplateColumns=g.join(' '); }
+    if(g.length>=4){ let ch=false; for(const col of ['guide','side']){ const c=document.getElementById(col); if(c&&c.classList.contains('col-off')){ g[idx[col]]='0px'; ch=true; } } if(ch){ g[1]='minmax(0,1fr)'; app.style.gridTemplateColumns=g.join(' '); } }   /* v290: la mappa prende lo spazio dei pannelli spenti */
     const strip=document.getElementById('pannelli'); if(strip) strip.querySelectorAll('button').forEach(b=>b.classList.toggle('off',!panOn(b.dataset.pan)));
   }
   function striscia(){ const st=document.getElementById('stage'); if(!st||document.getElementById('pannelli')) return; const d=document.createElement('div'); d.id='pannelli';
@@ -11194,10 +11194,11 @@ html body #sceneGuide img.gpoiimg,html body #sceneGuide img.poiimg,html body img
 html body #dock,html body #zoomlbl{border-color:rgba(176,140,82,.16)!important}
 html body #side .sec{background:transparent!important;border-radius:0!important}
 html body #side #secLog{box-shadow:none!important}
-html body #pannelli button,html body #fxToggle{border-color:transparent!important;background:rgba(10,13,20,.55)!important}
-html body #pannelli button:hover{background:rgba(10,13,20,.85)!important}
+html body #fxToggle{border-color:transparent!important;background:rgba(10,13,20,.55)!important}
+html body #pannelli button.off{opacity:.75!important;border-style:dashed!important;border-color:rgba(201,162,74,.7)!important;background:rgba(10,13,20,.9)!important}
 html body #side>#secLog,html body #side #secLog{border:0!important;border-top:1px solid rgba(217,177,92,.18)!important;border-radius:0!important}
-html body #side>#secLog{background:transparent!important}`;
+html body #side>#secLog{background:transparent!important}
+html body #pannelli button.off{pointer-events:auto!important;cursor:pointer!important}`;
   const metti=()=>{ let st=document.getElementById('menoCornici'); if(!st){ st=document.createElement('style'); st.id='menoCornici'; st.textContent=CSS; } document.body.appendChild(st); };
   if(document.body) metti(); window.addEventListener('load',()=>setTimeout(metti,0));
 })();
