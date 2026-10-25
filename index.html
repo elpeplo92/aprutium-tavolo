@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v307</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v308</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11386,7 +11386,7 @@ html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro res
              registro:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/>'};
   function PAN(){ const L=[];
     if(IS_GM){ L.push(['guida','Guida della scena',()=>document.getElementById('sceneGuide'),'guide']); L.push(['regia','Scontro, Selezione e strumenti',()=>[...document.querySelectorAll('#side > .sec.gm:not(#secLog)')],'side']); }
-    else { L.push(['cronaca','Cronaca (Registro e Guida della scena insieme)',()=>document.getElementById('sceneGuide'),'guide']); L.push(['me','Il tuo personaggio',()=>document.querySelector('#side > .sec.pl'),'side']); }
+    else { L.push(['cronaca','Guida della scena',()=>document.getElementById('sceneGuide'),'guide']); L.push(['me','Il tuo personaggio',()=>document.querySelector('#side > .sec.pl'),'side']); }
     L.push(['registro','Registro',()=>document.getElementById('secLog'),'side']); return L; }
   function panOn(id){ try{ return localStorage.getItem('aprutium.pan.'+id)!=='0'; }catch(e){ return true; } }
   function applicaPannelli(){
@@ -11422,7 +11422,7 @@ html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro res
     box.innerHTML=`<h2>Cronaca</h2><p class="note" style="margin:0 0 6px"><b>${poiText(CUR?CUR.name:'')}</b> · il Registro e quello che il master vi mostra, in ordine di tempo</p><div class="cronaca">${items.length?items.map(x=>x.html).join(''):'<p class="note">Ancora niente: quando succede qualcosa, o il master vi mostra un luogo, lo trovate qui.</p>'}</div>`;
     const c=box.querySelector('.cronaca'); const sc=box.closest('#guideTop')||box; setTimeout(()=>{ try{ sc.scrollTop=sc.scrollHeight; }catch(e){} },0);
   }
-  { const _pg=renderPlayerGuide; renderPlayerGuide=function(box){ if(IS_GM||!CUR||CUR.id==='luogo'||CUR.crusade) return _pg.apply(this,arguments); box.classList.remove('hidden'); try{ cronaca(box); }catch(e){ console.warn('cronaca',e); return _pg.apply(this,arguments); } }; }
+  { const _pg=renderPlayerGuide; renderPlayerGuide=function(box){ if(IS_GM||!CUR||CUR.id==='luogo'||CUR.crusade) return _pg.apply(this,arguments); return _pg.apply(this,arguments); /* v308: Cronaca spenta, ai giocatori torna la Guida a punti (Revisioni/Cronaca come la Guida (25-10-2026)) */ }; }
 
   /* ---- 4. righe del Registro cancellabili (master) ---- */
   function croci(){ if(!IS_GM) return; const L=document.getElementById('log'); if(!L) return; const kids=[...L.children]; kids.forEach((k,i)=>{ if(k.querySelector('.evx')) return; const x=document.createElement('span'); x.className='evx'; x.textContent='×'; x.title='Cancella questa riga del Registro';
