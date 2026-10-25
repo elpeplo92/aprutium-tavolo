@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v316</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v317</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -12100,7 +12100,7 @@ html body .tok.active::after{content:'';position:absolute;inset:-22%;border-radi
 window.CANNONE_IMG={tok:'img/tok-00fa529da4cc.png',rit:'img/6290fc19f1cd.jpg'};
 (function(){ const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ let n=0; for(const [id,t] of Object.entries(S.tokens)){ if(!t||!/^cannone_/.test(id)) continue; if(t.img!==window.CANNONE_IMG.tok){ t.img=window.CANNONE_IMG.tok; t.ritratto=window.CANNONE_IMG.rit; n++; } } if(n&&IS_GM) save(true); }catch(e){} return o; }; })();
 /* ===== FINE GELSOMINA, RITRATTO E TOKEN (v315) ===== */
-/* ===== ARTEFICE: GELSOMINA DAL GIOCATORE (v316) =====
+/* ===== ARTEFICE: GELSOMINA DAL GIOCATORE (v316, v317) =====
    Luigi (via Giuseppe, 25-10): «non funzionano le abilità da artefice, tra cui la balista di Gelsomina». Prova dalla sua pagina:
    - «Comanda il cannone» selezionava la pedina e diceva di usare le azioni sulla pedina, ma dalla v277 i giocatori non hanno più il riquadro
      delle azioni: la Balista, il Lanciafiamme e il Protettore non si potevano usare. Ora «Comanda il cannone» (barra rapida, azione bonus)
@@ -12113,6 +12113,8 @@ window.CANNONE_IMG={tok:'img/tok-00fa529da4cc.png',rit:'img/6290fc19f1cd.jpg'};
 (function(){
   const L='luigis', C='cannone_'+L;
   const cdDi=()=>(((SHEETS[L]||{}).spell)||{}).dc||15;
+  /* v317: alla creazione non si sceglie più la bocca (si sceglie a ogni sparo) */
+  { const st=document.createElement('style'); st.textContent='#modal label:has(#cnMode){display:none!important}'; document.head.appendChild(st); }
   function ripara(){ const c=S.tokens[C]; if(!c) return false; const x=rollExpr('2d6'); const h=Math.min(c.hpMax-c.hp,x.total); c.hp+=h;
     log({kind:'sys',txt:`${S.tokens[L].name} lancia Riparare su Gelsomina: +${h} PF (${x.parts}) → ${c.hp}/${c.hpMax}`}); save(true); render(); return true; }
   function lanciafiamme(){
@@ -12132,13 +12134,22 @@ window.CANNONE_IMG={tok:'img/tok-00fa529da4cc.png',rit:'img/6290fc19f1cd.jpg'};
   }
   function comanda(){
     const c=S.tokens[C]; if(!c){ toast('Prima crea il cannone («Crea il cannone arcano» o la risorsa «Cannone arcano»)'); return; }
-    const az=(c.actions||[])[0]||{}; const lf=/^Lanciafiamme/i.test(az.n||''), pr=/^Protettore/i.test(az.n||'');
+    /* v317, Giuseppe: Luigi sceglie lo sparo a ogni turno (prima la bocca si fissava alla creazione e le altre due non si potevano usare) */
+    const atk=(((SHEETS[L]||{}).spell)||{}).atk||7;
+    const balista={n:'Balista di forza',tipo:'incantesimo',eco:'bonus',atk,dmg:'2d8',note:'attacco con incantesimo a distanza, 36 m · forza · il bersaglio è spinto di 1,5 m lontano dal cannone'};
     openModal(`<div class="eyebrow">${poiText(S.tokens[L].name)} · azione bonus</div><h2 class="big">Gelsomina</h2>
-      <p class="note">${poiText(c.name)} · ${c.hp}/${c.hpMax} PF · CA ${c.ac}. Prima o dopo lo sparo può muoversi di 4,5 m: trascina la sua pedina.</p>
-      <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px"><button class="primary" id="gsFuoco">${lf?'Lanciafiamme (cono 4,5 m)':pr?'Protettore (PF temporanei entro 3 m)':'Balista di forza (+7, 36 m, 2d8 forza)'}</button><button id="gsSel">Seleziona Gelsomina per muoverla</button><button id="gsNo">Chiudi</button></div>`,'poibox');
+      <p class="note">${c.hp}/${c.hpMax} PF · CA ${c.ac}. Scegli lo sparo di questo turno. Prima o dopo può muoversi di 4,5 m: trascina la sua pedina.</p>
+      <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px">
+        <button class="primary" data-gs="balista">Balista di forza (+${atk}, 36 m, 2d8 forza)</button>
+        <button class="primary" data-gs="lancia">Lanciafiamme (cono 4,5 m, TS Des CD ${cdDi()}, 2d8 fuoco)</button>
+        <button class="primary" data-gs="protettore">Protettore (1d8+4 PF temporanei entro 3 m)</button></div>
+      <div class="row" style="margin-top:10px"><button id="gsSel">Seleziona Gelsomina per muoverla</button><button id="gsNo">Chiudi</button></div>`,'poibox');
     document.getElementById('gsNo').onclick=closeModal;
     document.getElementById('gsSel').onclick=()=>{ closeModal(); selected=C; render(); };
-    document.getElementById('gsFuoco').onclick=()=>{ closeModal(); log({kind:'sys',txt:`${S.tokens[L].name} comanda Gelsomina (azione bonus)`}); if(lf) lanciafiamme(); else doAction(C,az); };
+    document.querySelectorAll('#modal [data-gs]').forEach(b=>b.onclick=()=>{ const k=b.dataset.gs; closeModal();
+      const nomi={balista:'Balista di forza',lancia:'Lanciafiamme',protettore:'Protettore'}; c.name='Gelsomina, il cannone arcano ('+nomi[k]+')';
+      log({kind:'sys',txt:`${S.tokens[L].name} comanda Gelsomina (azione bonus): ${nomi[k]}`});
+      if(k==='lancia') lanciafiamme(); else if(k==='protettore') doAction(C,{n:'Protettore: 1d8+4 PF temporanei al cannone e alle creature entro 3 m',tipo:'speciale',eco:'bonus'}); else doAction(C,balista); });
   }
   { const _da=doAction; doAction=function(tokId,a){
       if(tokId===L&&a&&/^Comanda il cannone/i.test(a.n)){ comanda(); return; }
