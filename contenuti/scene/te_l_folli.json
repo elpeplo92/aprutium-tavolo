@@ -1,0 +1,209 @@
+{
+ "id": "te_l_folli",
+ "nome": "Lucente Leonardo — la Casa dei Folli",
+ "menu": "Lucente Leonardo — la Casa dei Folli",
+ "citta": "Teramum",
+ "ordine": 9.18,
+ "mappa": {
+  "img": "Battlemap — Teramum — La Casa dei Folli.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": true,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Sopra le mura, sul lato nord, un edificio lungo e cieco: poche finestre alte con le grate, un portone con lo spioncino. Da dentro, ogni tanto, una voce che canta sempre la stessa strofa.",
+  "img": "Battlemap — Teramum — La Casa dei Folli.jpg",
+  "note": "L’ospizio del Lucente Antonio sulle mura. Le Casate ci fanno sparire chi dà fastidio. Nella cella in fondo c’è Ninuccio Cardone, il figlio del fabbro morto grigio (scheda). Ingressi: il portone coi frati, la postierla con la catena (Porta delle Recluse), il cammino di ronda dalle mura."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "folli_portone",
+   "kind": "porta",
+   "title": "Il portone",
+   "legacyPosition": {
+    "x": 250,
+    "y": 1010
+   },
+   "text": "Un portone basso di quercia con lo spioncino, sotto due lanterne. Una campanella appesa a una catena.",
+   "gm": "Fra’ Tommaso, il portinaio, apre solo di giorno.",
+   "breve": "Il portone con lo spioncino.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "folli_celle",
+   "kind": "stanza",
+   "title": "Le celle",
+   "legacyPosition": {
+    "x": 560,
+    "y": 250
+   },
+   "text": "Una fila di celle piccole sotto le mura, con le porte di legno a sbarre. Dentro paglia e un secchio. Da una viene un canto, da un’altra niente. In fondo, una porta più robusta delle altre.",
+   "gm": "⟦Nella cella in fondo, Ninuccio Cardone.⟧ Le chiavi stanno nella stanza dei frati.",
+   "breve": "Paglia, secchi, porte a sbarre.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo_ninuccio",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Ninuccio",
+     "parte": "evento",
+     "innesco": "Qualcuno si avvicina alla cella in fondo.",
+     "png": "png-ninuccio-cardone"
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "folli_dormitorio",
+   "kind": "stanza",
+   "title": "Il dormitorio",
+   "legacyPosition": {
+    "x": 190,
+    "y": 620
+   },
+   "text": "Uno stanzone lungo con le brande in fila, ognuna con una coperta grigia piegata. Qualcuno ci dorme anche di giorno, girato verso il muro.",
+   "gm": "I matti tranquilli dormono qui, liberi di girare.",
+   "breve": "Le brande in fila.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "folli_refettorio",
+   "kind": "stanza",
+   "title": "Il refettorio",
+   "legacyPosition": {
+    "x": 470,
+    "y": 480
+   },
+   "text": "Tre tavole lunghe e le panche. In fondo, un leggio con un libro aperto, dove un frate legge durante i pasti.",
+   "gm": "",
+   "breve": "Le tavole lunghe.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "folli_chiavi",
+   "kind": "dettaglio",
+   "title": "La stanza dei frati",
+   "legacyPosition": {
+    "x": 850,
+    "y": 760
+   },
+   "text": "Una stanza piccola con un tavolo, un registro aperto e, sul muro, una fila di chiavi grandi appese ai chiodi.",
+   "gm": "Il registro dice chi paga per chi: Casa Melatino per due reclusi, la Guardia per Ninuccio. Indagare CD 13.",
+   "breve": "Il registro e le chiavi.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "folli_cortile",
+   "kind": "dettaglio",
+   "title": "Il cortile col pozzo",
+   "legacyPosition": {
+    "x": 850,
+    "y": 860
+   },
+   "text": "Un cortile chiuso, col pozzo in mezzo e un lavatoio. I frati ci fanno girare i matti un’ora al giorno.",
+   "gm": "",
+   "breve": "Il pozzo.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "folli_postierla",
+   "kind": "porta",
+   "title": "La postierla (Porta delle Recluse)",
+   "legacyPosition": {
+    "x": 1120,
+    "y": 920
+   },
+   "text": "Nel muro di cinta, una porticina chiusa da una catena grossa come un braccio.",
+   "gm": "La catena si apre con una chiave della stanza dei frati, o con Atletica CD 18. Fuori, il sentiero giù per la ripa verso la Fonte della Noce.",
+   "breve": "La porta con la catena.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "folli_ronda",
+   "kind": "dettaglio",
+   "title": "Il cammino di ronda",
+   "legacyPosition": {
+    "x": 700,
+    "y": 140
+   },
+   "text": "Sopra l’ospizio corre il cammino di ronda delle mura. Una guardia passa ogni tanto, con la lanterna.",
+   "gm": "Dal cammino di ronda si scende nel cortile dalla torre: Furtività CD 14 per non farsi vedere dalla guardia.",
+   "breve": "La guardia con la lanterna.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": [
+  {
+   "id": "fr1",
+   "nome": "Fra’ Tommaso",
+   "short": "FT",
+   "kind": "alleato",
+   "x": 300,
+   "y": 960,
+   "gruppo": "frati",
+   "png": "png-frati-della-casa-dei-folli",
+   "tac": "Suona la campanella e chiama gli altri."
+  },
+  {
+   "id": "fr2",
+   "nome": "Frate guardiano",
+   "short": "Fr",
+   "kind": "alleato",
+   "x": 820,
+   "y": 800,
+   "gruppo": "frati",
+   "png": "png-frati-della-casa-dei-folli",
+   "tac": "Non combatte: chiude le porte."
+  },
+  {
+   "id": "ninuccio",
+   "nome": "Ninuccio Cardone",
+   "short": "Ni",
+   "kind": "alleato",
+   "x": 980,
+   "y": 250,
+   "gruppo": "frati",
+   "png": "png-ninuccio-cardone",
+   "tac": "Resta in cella."
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "id": "te_l_forge",
+ "nome": "Lucente Leonardo — la strada delle forge",
+ "menu": "Lucente Leonardo — la strada delle forge",
+ "citta": "Teramum",
+ "ordine": 9.13,
+ "mappa": {
+  "img": "Luogo — Teramum — La strada delle forge.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "Case basse, una addosso all’altra, con le botteghe aperte sulla strada e le insegne di ferro battuto che cigolano sopra la testa: un martello, una chiave, una tenaglia. Il fumo delle forge resta basso fra i tetti e fa bruciare gli occhi.\n\nIl suono è quello dei martelli: decine, cento, mai a tempo fra loro. Sotto, il soffio dei mantici. Ogni tanto uno sfrigolio: un ferro rosso che va nell’acqua.",
+  "img": "Luogo — Teramum — La strada delle forge.jpg",
+  "note": "La strada dei fabbri, fra la Porta della Madre e la Forgia del Gigante. In fondo il carro della Forgia con la cassa spaccata: il primo indizio delle armature grigie."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "forge_strada",
+   "kind": "scena",
+   "title": "La strada",
+   "legacyPosition": {
+    "x": 900,
+    "y": 900
+   },
+   "text": "Case basse, una addosso all’altra, con le botteghe aperte sulla strada e le insegne di ferro battuto che cigolano sopra la testa: un martello, una chiave, una tenaglia. Il fumo delle forge resta basso fra i tetti e fa bruciare gli occhi.\n\nIl suono è quello dei martelli: decine, cento, mai a tempo fra loro. Sotto, il soffio dei mantici. Ogni tanto uno sfrigolio: un ferro rosso che va nell’acqua.\n\nSi cammina fra carri di carbone e blocchi di travertino appena cavato. Sui banchi: coltelli, fibbie, serrature, scalpelli, catene a mucchi. Un garzone con le braccia nere fino al gomito vi squadra, poi guarda le vostre armi prima delle vostre facce.\n\nIn una vetrina, dietro una grata, armature da parata smaltate a disegni azzurri e gialli, come i piatti di Li Cashtillë. Costano più di una casa.\n\nIn fondo alla strada, davanti a un portone grande come un solario, un carro della Forgia è fermo di traverso, con le guardie intorno. Una ruota è uscita dal solco. Gli uomini armati spingono, il carrettiere urla, e sotto il telo qualcosa di pesante batte contro le sponde.",
+   "gm": "Canone: la Forgia del Gigante («Li Martille de Pietre») è di Casa Grazianus e batte le armi e le armature da parata della Guardia (scheda della casata). Segreto: produce armi per il colpo di stato di Lucius Grazianus. Le nuove armature di Iuvenza «aspettano a Teramum» (Atto XI): qualcuno in città le fabbrica. Il «fabbro» di Teramum dell’Atto IX (pagamenti della Gilda di Julia Nova per armi non contrassegnate).\nIl capo della Forgia, Mastro Oreste Ferrante (scheda PNG), è il «fabbro» del libro mastro: batte il metallo grigio nelle lame della Guardia e carica armi per l’uomo col lillà, e lo Stratega non lo sa. Le armature grigie fredde al tatto sono le stesse dei Forgiati (Torvus parlava di metalli che non dovrebbero esistere).\nCollocazione: il Lucente Leonardo è uno dei quattro rioni vecchi (voce «Teramum»), a nord-est, fra la Porta della Madre e la Basilica. La Forgia sta qui. L’Arena invece sta a Porta Romana, accanto al teatro antico.",
+   "breve": "Il rione degli artigiani, appena dentro la Porta della Madre: forge, martelli e la Forgia del Gigante di Casa Grazianus. Le forge lavorano anche di notte. Un carro della Forgia bloccato fa vedere per un istante un metallo grigio freddo al tatto. Da qui: la Basilica e le sue piazze, il Corso fino alla Rocca.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "oggi",
+     "tipo": "dettaglio",
+     "titolo": "Cosa succede oggi",
+     "parte": "evento",
+     "innesco": "Appena entrano nel rione, o se chiedono in giro.",
+     "leggi": "Si preparano i banchi per la Fiera del Lucente Leonardo, anche se manca ancora tanto: qualcuno pianta pali, qualcuno misura la strada. Le locande hanno già alzato i prezzi.\n\nLe forge grandi non si fermano. Un garzone, a una fontana, si lava la faccia e sbadiglia: «Anche stanotte», dice a un altro. «Tutta la notte. Per la Guardia.»",
+     "note": "Le forge grandi lavorano di notte da due settimane. I garzoni dicono che è per la Guardia, ma nessuno ha visto le commesse.",
+     "rilancio": "I martelli non si fermano. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "forge_carro"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Voci del Lucente Leonardo",
+     "parte": "evento",
+     "innesco": "Parlano con un bottegaio, un garzone, un’ostessa del rione.",
+     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «Alla Forgia del Gigante c’è un reparto dove i garzoni non entrano. Manco i maestri, certi.»\n2. «Un fabbro è morto con la pelle diventata grigia come il ferro. L’hanno seppellito in fretta, di notte, fuori dalla Porta delle Recluse.»\n3. «Le armature nuove della Guardia pesano la metà e non arrugginiscono. Nen è cose bbone.»\n4. «Nell’Arena, giù a Porta Romana, di notte si sente scavare da sotto.»\n5. «Gli spaccapietre di Cullëdarë non portano più pietre: vogliono essere pagati prima. Il Consiglio non paga.»\n6. «Chi lascia un Bocconotto sulla soglia della bottega non si trova gli attrezzi spostati la mattina. Li Mazzamarelli sono dispettosi, ma si comprano.»",
+     "note": "Vere: 1, 2, 3 (la Forgia e il metallo), 5 (Cullëdarë incitabile alla rivolta, lore del Ducato). La 4 è vera a metà (vedi la scena dell’Arena). La 6 è folklore.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "forge_carro"
+     ]
+    }
+   ],
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "forge_carro",
+   "kind": "dettaglio",
+   "title": "Il carro della Forgia",
+   "legacyPosition": {
+    "x": 1450,
+    "y": 620
+   },
+   "text": "In fondo alla strada, davanti a un portone grande come un solario, un carro della Forgia è fermo di traverso, con le guardie intorno. Una ruota è uscita dal solco. Gli uomini armati spingono, il carrettiere urla, e sotto il telo qualcosa di pesante batte contro le sponde.",
+   "gm": "La cassa spaccata: il metallo grigio delle armature (scheda di Mastro Oreste).",
+   "breve": "La cassa spaccata e il metallo grigio.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "carro",
+     "tipo": "dettaglio",
+     "titolo": "Il carro della Forgia",
+     "parte": "indizio",
+     "seme": "un carro della Forgia è fermo di traverso, con le guardie intorno",
+     "innesco": "Il gruppo passa vicino al carro, o si ferma a guardare.",
+     "leggi": "Una ruota è uscita dall’asse. Il carro è inclinato, e una delle casse sopra si è spaccata sull’angolo.\n\nDalla fessura si vede un pezzo di metallo grigio. Non lucido: opaco, come la pietra bagnata. La scorta, quattro uomini della Guardia, si mette davanti alla cassa appena vi vede guardare.\n\n«Circolare», dice uno. «Qui non c’è niente da vedere.»",
+     "note": "Se un PG tocca il metallo (serve distrarre la scorta: Inganno o Rapidità di mano CD 14): è freddo come il ghiaccio anche sotto il sole, e sotto le dita pulsa appena. Stessa sensazione delle armature dei Forgiati. Se lo scoprono a toccarlo: la scorta li porta dal sergente di rione, e la cosa arriva alla Rocca.\nIndagare CD 15 (in seguito, chiedendo ai garzoni): i carri della Forgia escono di notte verso la Rocca e verso un magazzino senza insegna a Lucente Anna, vicino alla Torre Bruciata (⟦è il magazzino del sale da cui si scende nella Città Sepolta⟧); su ogni cassa, un marchio diverso da quello della Forgia.",
+     "prove": [
+      {
+       "id": "carro",
+       "abilita": [
+        "Percezione",
+        "Arcano"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "Una piastra d’armatura, forse. Ferro grezzo."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "È un pezzo di spallaccio. Sul bordo, un marchio che non è quello della Forgia: un cerchio chiuso da una linea sottile. E l’aria, vicino alla cassa, è più fredda."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Lo avete già sentito, questo freddo. A Julia Nova. Sulle armature dei Forgiati."
+        }
+       ]
+      }
+     ],
+     "dopo": "Primo indizio del «fabbro» di Teramum e delle armature di Iuvenza. Non spiegare: lasciare il freddo.",
+     "rilancio": "La scorta vi guarda fisso. Che cosa fate?",
+     "daqui": [],
+     "pe": 200,
+     "immagine": "PDI — Teramum — Il carro della Forgia.jpg"
+    }
+   ]
+  }
+ ],
+ "pedine": []
+}

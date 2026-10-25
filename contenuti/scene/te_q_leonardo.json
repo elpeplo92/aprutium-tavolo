@@ -5,9 +5,9 @@
  "citta": "Teramum",
  "ordine": 9.11,
  "mappa": {
-  "img": "Mappa — Teramum — Il Lucente Leonardo.jpg",
-  "larghezza": 1500,
-  "altezza": 930,
+  "img": "Mappa — Teramum — Il Lucente Leonardo (Midjourney).jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
   "griglia": false
  },
  "regole": {
@@ -21,7 +21,7 @@
  "intro": {
   "leggi": "Oltre il burrone, sull’altra metà della città, le mura girano attorno a un colle più alto e più vecchio. Case basse addossate le une alle altre, botteghe aperte sulla strada, insegne di ferro battuto che cigolano. Sopra i tetti, il moncone nero della Torre Bruciata, e accanto una cappella che una volta era la cattedrale.\n\nDalla Porta della Madre si sale per la Via dei Lucenti, larga, con due solchi consumati nel mezzo. Si cammina fra carri di sale e di carbone. Un garzone con le braccia nere fino al gomito vi squadra, poi guarda le vostre armi prima delle vostre facce. Più su le strade si stringono, girano attorno alla Torre, scendono a gradini verso il burrone e il ponte della Porta Melatina.",
   "img": "Rione — 2. San Leonardo.jpg",
-  "note": "Il quartiere delle forge e della città vecchia (Compendio: «2. Il Lucente Leonardo»). I personaggi entrano dalla Porta della Madre: ognuno può andare dove vuole. Ogni luogo con una scena ha «Entra»; gli altri si giocano dal punto. La Forgia del Gigante e la Casa dei Folli avranno la mappa da battaglia. Il giovedì sera al Cantinone c’è il Cancelliere della Spada (gruppo «Il giovedì sera»)."
+  "note": "Il quartiere delle forge e della città vecchia (Compendio: «2. Il Lucente Leonardo»). I personaggi entrano dalla Porta della Madre: ognuno può andare dove vuole. Ogni luogo con una scena ha «Entra»; gli altri si giocano dal punto. La Forgia del Gigante e la Casa dei Folli sono mappe da battaglia; strada delle forge, Torre Bruciata, casa dei Melatino e Lu Cantinone sono scene illustrate."
  },
  "punti": [
   {
@@ -30,8 +30,8 @@
    "kind": "porta",
    "title": "1. Dentro la Porta della Madre",
    "legacyPosition": {
-    "x": 1266,
-    "y": 366
+    "x": 1490,
+    "y": 660
    },
    "text": "Si china la testa sotto la porticina, e dall’altra parte il rumore cambia. Dentro l’arco c’è freddo e c’è l’eco: i vostri passi tornano indietro due volte. Poi l’arco finisce e la città vi arriva addosso tutta insieme.",
    "gm": "Le due guardie di scorta (se c’è la tessera): Lallo e Mariotto, giovani, annoiati, del Lucente Leonardo. Seguono il gruppo a dieci passi; non impediscono niente di legale; al primo rintocco della campana della sera li riportano alla porta. Si possono seminare (Furtività CD 13 di gruppo), ma la tessera allora è bruciata e il capitano lo saprà.\nCenzino è una guida di strada: si offre a tutti i forestieri. Lavora anche per l’uomo col lillà, per un grosso al giorno: riferisce dove vanno i forestieri. Non sa per chi lavori davvero. Scheda PNG «Cenzino Mezzalingua».\nRegole della città (quelle che la scorta ripete, o che dice Cenzino): armi da fianco sì, armi da guerra no; niente incantesimi in pubblico senza permesso scritto (vale per i Tigli e per le piazze della Basilica); coprifuoco alla campana della sera.\n⟦La Via dei Lucenti è la strada delle processioni fra la Basilica Aurea e la Porta della Madre.⟧",
@@ -49,88 +49,18 @@
    "kind": "scena",
    "title": "2. La strada delle forge",
    "legacyPosition": {
-    "x": 930,
-    "y": 555
+    "x": 1450,
+    "y": 430
    },
-   "text": "Case basse, una addosso all’altra, con le botteghe aperte sulla strada e le insegne di ferro battuto che cigolano sopra la testa: un martello, una chiave, una tenaglia. Il fumo delle forge resta basso fra i tetti e fa bruciare gli occhi.\n\nIl suono è quello dei martelli: decine, cento, mai a tempo fra loro. Sotto, il soffio dei mantici. Ogni tanto uno sfrigolio: un ferro rosso che va nell’acqua.\n\nSi cammina fra carri di carbone e blocchi di travertino appena cavato. Sui banchi: coltelli, fibbie, serrature, scalpelli, catene a mucchi. Un garzone con le braccia nere fino al gomito vi squadra, poi guarda le vostre armi prima delle vostre facce.\n\nIn una vetrina, dietro una grata, armature da parata smaltate a disegni azzurri e gialli, come i piatti di Li Cashtillë. Costano più di una casa.\n\nIn fondo alla strada, davanti a un portone grande come un solario, un carro della Forgia è fermo di traverso, con le guardie intorno. Una ruota è uscita dal solco. Gli uomini armati spingono, il carrettiere urla, e sotto il telo qualcosa di pesante batte contro le sponde.",
+   "text": "Case basse, una addosso all’altra, con le botteghe aperte sulla strada e le insegne di ferro battuto che cigolano sopra la testa: un martello, una chiave, una tenaglia. Il fumo delle forge resta basso fra i tetti e fa bruciare gli occhi.",
    "gm": "Canone: la Forgia del Gigante («Li Martille de Pietre») è di Casa Grazianus e batte le armi e le armature da parata della Guardia (scheda della casata). Segreto: produce armi per il colpo di stato di Lucius Grazianus. Le nuove armature di Iuvenza «aspettano a Teramum» (Atto XI): qualcuno in città le fabbrica. Il «fabbro» di Teramum dell’Atto IX (pagamenti della Gilda di Julia Nova per armi non contrassegnate).\nIl capo della Forgia, Mastro Oreste Ferrante (scheda PNG), è il «fabbro» del libro mastro: batte il metallo grigio nelle lame della Guardia e carica armi per l’uomo col lillà, e lo Stratega non lo sa. Le armature grigie fredde al tatto sono le stesse dei Forgiati (Torvus parlava di metalli che non dovrebbero esistere).\nCollocazione: il Lucente Leonardo è uno dei quattro rioni vecchi (voce «Teramum»), a nord-est, fra la Porta della Madre e la Basilica. La Forgia sta qui. L’Arena invece sta a Porta Romana, accanto al teatro antico.",
    "breve": "Il rione degli artigiani, appena dentro la Porta della Madre: forge, martelli e la Forgia del Gigante di Casa Grazianus. Le forge lavorano anche di notte. Un carro della Forgia bloccato fa vedere per un istante un metallo grigio freddo al tatto. Da qui: la Basilica e le sue piazze, il Corso fino alla Rocca.",
    "nota": {
     "cd": 0
    },
-   "moduli": [
-    {
-     "id": "oggi",
-     "tipo": "dettaglio",
-     "titolo": "Cosa succede oggi",
-     "parte": "evento",
-     "innesco": "Appena entrano nel rione, o se chiedono in giro.",
-     "leggi": "Si preparano i banchi per la Fiera del Lucente Leonardo, anche se manca ancora tanto: qualcuno pianta pali, qualcuno misura la strada. Le locande hanno già alzato i prezzi.\n\nLe forge grandi non si fermano. Un garzone, a una fontana, si lava la faccia e sbadiglia: «Anche stanotte», dice a un altro. «Tutta la notte. Per la Guardia.»",
-     "note": "Le forge grandi lavorano di notte da due settimane. I garzoni dicono che è per la Guardia, ma nessuno ha visto le commesse.",
-     "rilancio": "I martelli non si fermano. Che cosa fate?",
-     "daqui": [
-      "voci",
-      "carro"
-     ]
-    },
-    {
-     "id": "voci",
-     "tipo": "dettaglio",
-     "titolo": "Voci del Lucente Leonardo",
-     "parte": "evento",
-     "innesco": "Parlano con un bottegaio, un garzone, un’ostessa del rione.",
-     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «Alla Forgia del Gigante c’è un reparto dove i garzoni non entrano. Manco i maestri, certi.»\n2. «Un fabbro è morto con la pelle diventata grigia come il ferro. L’hanno seppellito in fretta, di notte, fuori dalla Porta delle Recluse.»\n3. «Le armature nuove della Guardia pesano la metà e non arrugginiscono. Nen è cose bbone.»\n4. «Nell’Arena, giù a Porta Romana, di notte si sente scavare da sotto.»\n5. «Gli spaccapietre di Cullëdarë non portano più pietre: vogliono essere pagati prima. Il Consiglio non paga.»\n6. «Chi lascia un Bocconotto sulla soglia della bottega non si trova gli attrezzi spostati la mattina. Li Mazzamarelli sono dispettosi, ma si comprano.»",
-     "note": "Vere: 1, 2, 3 (la Forgia e il metallo), 5 (Cullëdarë incitabile alla rivolta, lore del Ducato). La 4 è vera a metà (vedi la scena dell’Arena). La 6 è folklore.",
-     "rilancio": "Che cosa fate?",
-     "daqui": [
-      "carro"
-     ]
-    },
-    {
-     "id": "carro",
-     "tipo": "dettaglio",
-     "titolo": "Il carro della Forgia",
-     "parte": "indizio",
-     "seme": "un carro della Forgia è fermo di traverso, con le guardie intorno",
-     "innesco": "Il gruppo passa vicino al carro, o si ferma a guardare.",
-     "leggi": "Una ruota è uscita dall’asse. Il carro è inclinato, e una delle casse sopra si è spaccata sull’angolo.\n\nDalla fessura si vede un pezzo di metallo grigio. Non lucido: opaco, come la pietra bagnata. La scorta, quattro uomini della Guardia, si mette davanti alla cassa appena vi vede guardare.\n\n«Circolare», dice uno. «Qui non c’è niente da vedere.»",
-     "note": "Se un PG tocca il metallo (serve distrarre la scorta: Inganno o Rapidità di mano CD 14): è freddo come il ghiaccio anche sotto il sole, e sotto le dita pulsa appena. Stessa sensazione delle armature dei Forgiati. Se lo scoprono a toccarlo: la scorta li porta dal sergente di rione, e la cosa arriva alla Rocca.\nIndagare CD 15 (in seguito, chiedendo ai garzoni): i carri della Forgia escono di notte verso la Rocca e verso un magazzino senza insegna a Lucente Anna, vicino alla Torre Bruciata (⟦è il magazzino del sale da cui si scende nella Città Sepolta⟧); su ogni cassa, un marchio diverso da quello della Forgia.",
-     "prove": [
-      {
-       "id": "carro",
-       "abilita": [
-        "Percezione",
-        "Arcano"
-       ],
-       "cd": 15,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 14,
-         "leggi": "Una piastra d’armatura, forse. Ferro grezzo."
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 15,
-         "max": 19,
-         "leggi": "È un pezzo di spallaccio. Sul bordo, un marchio che non è quello della Forgia: un cerchio chiuso da una linea sottile. E l’aria, vicino alla cassa, è più fredda."
-        },
-        {
-         "fascia": "natural20",
-         "leggi": "Lo avete già sentito, questo freddo. A Julia Nova. Sulle armature dei Forgiati."
-        }
-       ]
-      }
-     ],
-     "dopo": "Primo indizio del «fabbro» di Teramum e delle armature di Iuvenza. Non spiegare: lasciare il freddo.",
-     "rilancio": "La scorta vi guarda fisso. Che cosa fate?",
-     "daqui": [],
-     "pe": 200,
-     "immagine": "PDI — Teramum — Il carro della Forgia.jpg"
-    }
-   ],
-   "image": "PDI — Teramum — Rione del Lucente Leonardo.jpg"
+   "moduli": [],
+   "image": "Luogo — Teramum — La strada delle forge.jpg",
+   "scena": "te_l_forge"
   },
   {
    "schemaVersion": 3,
@@ -138,8 +68,8 @@
    "kind": "dettaglio",
    "title": "3. La vetrina delle armature",
    "legacyPosition": {
-    "x": 1065,
-    "y": 450
+    "x": 1410,
+    "y": 300
    },
    "text": "Dietro una grata di ferro battuto, in una bottega più pulita delle altre, tre armature da parata stanno in piedi sui loro manichini di legno. Sono smaltate a disegni azzurri e gialli, fiori e girali, come i piatti di Li Cashtillë. Brillano anche col fumo che c’è.\n\nSul banco, un ragazzo lucida un elmo con uno straccio e non alza la testa. Un cartello scritto a mano dice soltanto: «Per la Guardia. Non si vende.»\n\nChi si avvicina alla grata sente un freddo strano, come davanti a una cantina aperta. Le armature non hanno un filo di ruggine.",
    "gm": "⟦Una delle tre è già battuta col metallo grigio: chi la tocca (il ragazzo non lo permette) la sente fredda come il ghiaccio e leggera; Arcano CD 14: «non è ferro di questo mondo».⟧",
@@ -155,25 +85,17 @@
    "kind": "stanza",
    "title": "4. La Forgia del Gigante",
    "legacyPosition": {
-    "x": 750,
-    "y": 765
+    "x": 1290,
+    "y": 560
    },
-   "text": "In fondo alla strada il portone della Forgia è grande come quello di un solario, con due battenti di quercia rinforzati di ferro e, sopra, una torre e un lupo battuti nel rame. È aperto a metà. Dentro c’è un cortile nero di carbone e, tutt’intorno, le bocche delle forge una accanto all’altra, rosse.\n\nIl rumore qui è un muro. Trenta martelli, i mantici che soffiano, un ragazzo che grida un numero e un altro che lo ripete. Si respira fumo e ferro.\n\nIn mezzo al cortile, su un ceppo, un uomo basso e largo come un’incudine batte da solo una lama lunga. Ha la faccia rossa del fuoco, niente sopracciglia, i baffi gialli di fumo. Ogni colpo è uguale all’altro.\n\nIn fondo al cortile c’è una porta più piccola, di ferro, chiusa con una sbarra. Davanti, seduto su uno sgabello, un garzone non fa niente. Guarda chi guarda la porta.",
+   "text": "In fondo alla strada il portone della Forgia è grande come quello di un solario, con due battenti di quercia rinforzati di ferro e, sopra, una torre e un lupo battuti nel rame. È aperto a metà. Dentro c’è un cortile nero di carbone e, tutt’intorno, le bocche delle forge una accanto all’altra, rosse.",
    "gm": "Mastro Oreste Ferrante (scheda PNG) è il «fabbro» del libro mastro della Gilda: nel reparto chiuso, di notte, batte il metallo grigio dei Forgiati e carica armi senza marchio per l’uomo col lillà. Lo Stratega non lo sa. ⟦Il garzone sullo sgabello è Mingo, uno dei tre fidati: un grosso d’argento lo fa distrarre, Intuizione CD 12 si capisce che ha paura.⟧ Da fare: la mappa da battaglia del cortile e del reparto chiuso.",
    "breve": "La bottega di Casa Grazianus. Mastro Oreste batte nel cortile; il reparto chiuso in fondo lavora di notte.",
    "nota": {
     "cd": 0
    },
-   "moduli": [
-    {
-     "id": "dialogo_oreste",
-     "tipo": "dialogo",
-     "titolo": "Parlare con Mastro Oreste",
-     "parte": "evento",
-     "innesco": "Qualcuno entra nel cortile e chiede del capo.",
-     "png": "png-mastro-oreste"
-    }
-   ]
+   "moduli": [],
+   "scena": "te_l_forgia"
   },
   {
    "schemaVersion": 3,
@@ -181,16 +103,18 @@
    "kind": "scena",
    "title": "5. La Torre Bruciata e la Lucente Anna",
    "legacyPosition": {
-    "x": 450,
-    "y": 405
+    "x": 930,
+    "y": 300
    },
-   "text": "In cima al colle, dentro un recinto di mura tutto suo, sta la parte più vecchia della città. Il campanile è un moncone quadrato di pietra annerita, alto, senza campane: il fuoco gli ha mangiato la cima e nessuno l’ha mai rifatta. Accanto c’è una cappella bassa, con il portale di travertino consumato e due leoni senza muso sui gradini. La gente la chiama la Lucente Anna.\n\nDentro è buio e freddo. Il pavimento è rotto in più punti, e dai buchi si vedono, un braccio più sotto, pezzi di mosaico: tessere bianche e nere, un pesce, una foglia. Sulle pareti, resti di pitture che il fumo ha reso marroni.\n\nUna vecchia accende una candela davanti a un altare spoglio e se ne va senza guardarvi. Fuori, nel recinto, i bambini giocano a chi tocca per primo la torre e scappano.",
+   "text": "In cima al colle, dentro un recinto di mura tutto suo, sta la parte più vecchia della città. Il campanile è un moncone quadrato di pietra annerita, alto, senza campane: il fuoco gli ha mangiato la cima e nessuno l’ha mai rifatta. Accanto c’è una cappella bassa, con il portale di travertino consumato e due leoni senza muso sui gradini. La gente la chiama la Lucente Anna.",
    "gm": "Era la cattedrale prima della Basilica Aurea: la bruciarono i cavalieri del nord quando presero Teramum. ⟦Il Lucente Berardo fu sepolto qui prima di essere portato alla Basilica: le vecchie del rione dicono che la sua cassa vuota è ancora sotto l’altare.⟧ Dal recinto, dietro la cappella, una scala murata scende verso la Città Sepolta (scena «te_sepolta»), che ha l’ingresso vero nel magazzino del sale.",
    "breve": "Il campanile nero e la cappella della cattedrale vecchia.",
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "image": "Luogo — Teramum — La Torre Bruciata e la Lucente Anna.jpg",
+   "scena": "te_l_torre"
   },
   {
    "schemaVersion": 3,
@@ -199,8 +123,8 @@
    "title": "6. Il magazzino del sale (la Città Sepolta)",
    "image": "PDI — Teramum — La Città Sepolta.jpg",
    "legacyPosition": {
-    "x": 345,
-    "y": 555
+    "x": 1140,
+    "y": 470
    },
    "text": "Fra i vicoli di Lucente Anna, dove le case sono le più vecchie della città e si tengono in piedi una con l’altra, c’è un magazzino di sale. Sta all’ombra di un campanile vecchio e nero, come bruciato: la gente lo chiama la Torre Bruciata, e nessuno ci suona più.\n\nLa porta del magazzino è a mezzo piano, con una rampa di legno, ed è aperta. Un facchino scarica sacchi da un carro e li butta dentro, uno dopo l’altro, senza guardare dove cadono. Ha il sale nelle sopracciglia. Il mulo del carro tiene le orecchie basse e non si muove.\n\nDentro, botti, sacchi a cataste fino al soffitto, bilance appese a catene. Odore di salamoia e di pietra bagnata, forte, che prende il naso. Il pavimento è di mattoni, e in un punto suona vuoto sotto i piedi.\n\nIn fondo, dietro le botti, dove la luce della porta non arriva, c’è una porta bassa con il chiavistello rotto. Qualcuno ci ha messo davanti due sacchi. Non abbastanza.",
    "breve": "L’ingresso ai sotterranei (Città Vecchia e Città Sepolta) da un magazzino di Lucente Anna, sotto la Torre Bruciata. Ingresso alla scena dedicata.",
@@ -242,16 +166,18 @@
    "kind": "scena",
    "title": "7. La casa dei Melatino e i portici",
    "legacyPosition": {
-    "x": 270,
-    "y": 735
+    "x": 1000,
+    "y": 620
    },
-   "text": "Il largo si apre all’improvviso fra le case basse. Da una parte, una casa-torre alta e stretta: il piano terra ha archi acuti di travertino, quello di sopra è di mattone, con finestre a due luci incorniciate da fregi scolpiti che si attorcigliano come serpenti. Sopra il portone, una galea d’oro su campo rosso. Alle finestre, tende di velluto tirate.\n\nDi fronte corrono i portici dei Savini: archi bassi, colonne tozze, e sotto i banchi dei sensali con le bilance d’ottone, un cambiavalute, un venditore di lumi. Si compra, si pesa, si chiacchiera all’ombra.\n\nDue uomini col nastro rosso e oro al braccio stanno appoggiati a una colonna e guardano chi passa. Uno di loro sputa per terra quando vede un nastro di un altro colore.",
+   "text": "Il largo si apre all’improvviso fra le case basse. Da una parte, una casa-torre alta e stretta: il piano terra ha archi acuti di travertino, quello di sopra è di mattone, con finestre a due luci incorniciate da fregi scolpiti che si attorcigliano come serpenti. Sopra il portone, una galea d’oro su campo rosso. Alle finestre, tende di velluto tirate.",
    "gm": "Casa Melatino, la casata più antica di Teramum (scheda): qui c’è la casa del Decano Maccabeo Melatino e i conti della Lega dei Sensali li tiene il nipote Iacopo. I due col nastro sono Spennati, quelli dei Melatino: cercano rissa coi Mazzaclocchi. Il Decano non riceve forestieri senza un invito; Iacopo sì, se c’è da guadagnare.",
    "breve": "La casa con le finestre a serpente e i portici dei sensali.",
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "image": "Luogo — Teramum — La casa dei Melatino e i portici.jpg",
+   "scena": "te_l_melatino"
   },
   {
    "schemaVersion": 3,
@@ -259,76 +185,18 @@
    "kind": "persona",
    "title": "8. Lu Cantinone",
    "legacyPosition": {
-    "x": 195,
-    "y": 885
+    "x": 880,
+    "y": 560
    },
-   "text": "A Lucente Anna, fra la Torre Bruciata e la casa dei Melatino, quella con le finestre a serpente, una scala di pietra scende sotto la strada. In cima, una lanterna e una lavagnetta scritta col gesso: «OGGI: CHITARRA, TIMBALLO, SCRIPPELLE». Dai gradini sale odore di brodo e di sugo che cuoce da ore.\n\nSotto c’è una cantina a volta di mattoni, lunga come una navata, con le botti lungo i muri e le tovaglie bianche. Bianche davvero. È l’unico posto della città, forse, dove le tovaglie sono bianche. Ai tavoli, gente vestita bene che mangia piano: mercanti, un notaio con i suoi, due signore con il cappello. Nessuno grida. Si sente il rumore delle posate e poco altro.\n\nUn vecchio con la giacca nera e il tovagliolo sul braccio vi viene incontro. Vi guarda le scarpe, le armi, le mani. Poi sorride.\n\n«Quanti siete? Sedetevi. Prima si mangia, poi si parla.»\n\nDalla cucina, dietro una tenda, il colpo secco e regolare di qualcuno che stende la pasta sulla chitarra, e una voce di donna che chiama i piatti. In fondo, un tavolo apparecchiato per uno solo, e nessuno seduto.",
+   "text": "A Lucente Anna, fra la Torre Bruciata e la casa dei Melatino, quella con le finestre a serpente, una scala di pietra scende sotto la strada. In cima, una lanterna e una lavagnetta scritta col gesso: «OGGI: CHITARRA, TIMBALLO, SCRIPPELLE». Dai gradini sale odore di brodo e di sugo che cuoce da ore.",
    "breve": "L’osteria più vecchia della città, in una cantina sotto Lucente Anna: la cucina teramana (chitarra, scrippelle, timballo), Zi’ Mimì, e il giovedì il Cancelliere della Spada, a cena da solo.",
    "gm": "È l’Antico Cantinone della Teramo vera: osteria del centro storico aperta nel 1906, «un’istituzione della città», l’ultimo punto fermo della cucina teramana vera; ha chiuso. Qui è aperta, e vecchia di cento anni: la cucina buona di Teramum, per chi può pagare.\nL’oste: Mastro Domenico Castorano, detto Zi’ Mimì (scheda PNG). Suo nonno, dice lui, ha inventato le scrippelle ’mbusse: era garzone alla tavola dei capitani, gli caddero le crespelle nel brodo, e le servì così.\nMenù e prezzi: maccheroni alla chitarra con le pallottine (le polpettine piccole come ceci) 4 quattrini; scrippelle ’mbusse 5; timballo 8; mazzarelle (interiora d’agnello avvolte nella lattuga) 4; agnello allo spiedo 10; bocconotti e neole (le cialde col ferro) 2; vino cotto e Montepulciano 2 il boccale. Le virtù solo il primo maggio, e chi le chiede in un altro giorno viene compatito.\nChi viene: la gente bene che non è nobile, notai, mercanti, qualche flamine in borghese. Il tavolo in fondo è sempre riservato: ci mangia, da solo, il Cancelliere della Spada di Casa Grazianus, una volta alla settimana.\nCibo: un pasto completo qui conta come un banchetto (chi lo fa ottiene 1d4 PF temporanei che durano fino al riposo lungo successivo).",
    "nota": {
     "cd": 0
    },
-   "moduli": [
-    {
-     "id": "dialogo_mimi",
-     "tipo": "dialogo",
-     "titolo": "Parlare con Zi’ Mimì",
-     "parte": "evento",
-     "innesco": "Qualcuno parla con l’oste.",
-     "note": "CHI SEI? — «Domenico Castorano. Zi’ Mimì da quando avevo trent’anni. Questa cantina l’ha aperta mio padre, e prima c’era una cantina e basta.»\n\nLE SCRIPPELLE — Si illumina. «Mio nonno. Garzone alla mensa dei capitani. Gli cascano le crespelle nella pentola del brodo, tutte. Lui non si perde d’animo: le arrotola, ci mette il formaggio, e le serve così. ’Mbusse. Bagnate. Il capitano ne chiede altre tre.» Pausa. «Lo racconta tutta la città. Ma era mio nonno.»\n\nLE VIRTÙ — «Il primo maggio. Sette legumi, sette verdure, sette paste, sette ore. Chi le mangia un altro giorno porta sfortuna alla casa. Volete la sfortuna? No. Allora prendete la chitarra.»\n\nCHI MANGIA QUI? — «Chi paga e sta zitto.» Poi, piano: «Il tavolo in fondo, il giovedì, è del Cancelliere della Rocca. Mangia da solo, beve poco, lascia la mancia giusta. Un signore.»\n\nLA CITTÀ — «Una volta qui sotto c’era la fila. Adesso c’è la crisi, il Banco caduto, il Corso vuoto. E la gente mangia la pizza in piedi per strada.» Scuote la testa. «La pizza in piedi. Come i cavalli.»\n\nSE CHIEDONO DI FORESTIERI STRANI — «Una signora coi capelli bianchi è venuta due volte. Ha mangiato poco, ha pagato in oro, e ha chiesto chi c’era al tavolo del giovedì.»\n\nBATTUTE PRONTE — «Prima si mangia, poi si parla.» · «Trase, aijaccete.» · «La pizza in piedi. Come i cavalli.» · «Stà ben Rocc, stà ben tutt la rocc.»",
-     "dopo": "Il Cantinone è il posto per incontrare con discrezione chi conta senza essere nobile, e per arrivare al Cancelliere della Spada (il sigillo di Grazianus) fuori dalla fila.",
-     "rilancio": "Zi’ Mimì vi porta il vino. Che cosa fate?",
-     "daqui": [
-      "giovedi"
-     ],
-     "png": "png-zi-mimi-castorano"
-    },
-    {
-     "id": "giovedi",
-     "tipo": "dettaglio",
-     "titolo": "Il tavolo del giovedì",
-     "parte": "evento",
-     "innesco": "Il gruppo è al Cantinone il giovedì sera, o chiede di incontrare il Cancelliere fuori dalla Rocca.",
-     "leggi": "Il tavolo in fondo, sotto l’ultima botte, ha una candela sola. L’uomo che ci siede è anziano, magro, con il tabarro grigio piegato sulla sedia accanto. Mangia la chitarra con una lentezza da notaio.\n\nQuando vi vede guardarlo, posa la forchetta.\n\n«Sedetevi pure. Ma non parlate di lavoro prima del timballo.»",
-     "note": "È il Cancelliere della Spada, quello che appone il sigillo di Grazianus alla Rocca. Qui non è in servizio: parla da uomo. Se lo lasciano mangiare in pace e gli offrono il vino buono, ascolta. Persuasione CD 13 (vantaggio se Maximus c’è e si comporta da figlio di suo padre, non da soldato): il sigillo della Spada arriva domattina, senza fila. Se lo disturbano prima del timballo: CD 17.\nAvvertimento che dà a chi gli piace: «Lo Stratega firma tutto quello che rinforza la Guardia. Non firma niente che la indebolisca. Pensate a come scrivete la vostra istanza.»",
-     "prove": [
-      {
-       "id": "giovedi",
-       "abilita": [
-        "Persuasione"
-       ],
-       "cd": 13,
-       "gruppo": "chi",
-       "esiti": [
-        {
-         "fascia": "failure",
-         "max": 12,
-         "leggi": "«Ne parliamo alla Rocca. In fila.»"
-        },
-        {
-         "fascia": "baseSuccess",
-         "min": 13,
-         "leggi": "«Portatemi l’istanza domattina. Entrate dalla porta piccola e chiedete di me.» Il sigillo della Spada senza aspettare."
-        }
-       ]
-      }
-     ],
-     "dopo": "Una scorciatoia per il sigillo di Grazianus.",
-     "rilancio": "Il Cancelliere aspetta il timballo. Che cosa fate?",
-     "daqui": [],
-     "pe": 150
-    },
-    {
-     "id": "dlg_cancelliere_della_spada",
-     "tipo": "dialogo",
-     "titolo": "Parlare con il Cancelliere della Spada",
-     "parte": "evento",
-     "png": "png-cancelliere-della-spada",
-     "innesco": "Qualcuno parla con il Cancelliere della Spada.",
-     "rilancio": "Che cosa fate?",
-     "daqui": []
-    }
-   ]
+   "moduli": [],
+   "image": "Luogo — Teramum — Lu Cantinone.jpg",
+   "scena": "te_l_cantinone"
   },
   {
    "schemaVersion": 3,
@@ -336,8 +204,8 @@
    "kind": "dettaglio",
    "title": "9. Il solario del Lucente Antonio",
    "legacyPosition": {
-    "x": 615,
-    "y": 630
+    "x": 640,
+    "y": 560
    },
    "text": "Un convento basso, con un chiostro di colonne storte e un orto dove crescono cavoli e malva. Sulla porta, un frate col saio di sacco distribuisce minestra da un pentolone a una fila di gente che tiene la ciotola con due mani. Le campane qui sono piccole e suonano fuori tempo con quelle della Basilica.",
    "gm": "I frati del Lucente Antonio tengono anche la Casa dei Folli. ⟦Fra’ Tommaso, il portinaio, sa chi è stato rinchiuso lassù nell’ultimo mese: lo dice solo a chi lo aiuta a servire la minestra.⟧",
@@ -345,7 +213,8 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "image": "Luogo — Teramum — Il solario del Lucente Antonio.jpg"
   },
   {
    "schemaVersion": 3,
@@ -353,8 +222,8 @@
    "kind": "dettaglio",
    "title": "10. La Domus del Leone",
    "legacyPosition": {
-    "x": 480,
-    "y": 810
+    "x": 1120,
+    "y": 700
    },
    "text": "In un vicolo che si chiama dei Mosaici, una donna con le braccia incrociate sta davanti a una porta bassa. Dietro, una scala di sei gradini scende in una stanza fresca: il pavimento è intero, a pietruzze bianche, nere e rosse, e al centro c’è un leone che azzanna un toro, con gli occhi di pasta di vetro che brillano alla luce della lucerna.",
    "gm": "⟦La padrona fa entrare chi paga un quattrino. Sotto il mosaico si sente l’aria che passa: la stanza è appoggiata su un vuoto, uno dei cunicoli della Città Sepolta.⟧",
@@ -362,7 +231,8 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "image": "Luogo — Teramum — La Domus del Leone.jpg"
   },
   {
    "schemaVersion": 3,
@@ -370,8 +240,8 @@
    "kind": "stanza",
    "title": "11. La Casa dei Folli",
    "legacyPosition": {
-    "x": 930,
-    "y": 165
+    "x": 300,
+    "y": 520
    },
    "text": "Sopra le mura, sul lato nord, un edificio lungo e cieco: poche finestre alte con le grate, un portone con lo spioncino, un muro di cinta dove i ragazzi non si avvicinano. Da dentro, ogni tanto, una voce che canta sempre la stessa strofa. Sotto, nel muro di cinta, una porticina chiusa con una catena: la Porta delle Recluse.",
    "gm": "L’ospizio del Lucente Antonio, dove si chiudono i matti e chi è scomodo. Le Casate ci fanno sparire chi dà fastidio: qualcuno che sa troppo, lì dentro, c’è (voce Teramum). Da fare: la mappa da battaglia per entrarci.",
@@ -379,7 +249,9 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "image": "Luogo — Teramum — La Casa dei Folli.jpg",
+   "scena": "te_l_folli"
   },
   {
    "schemaVersion": 3,
@@ -387,8 +259,8 @@
    "kind": "dettaglio",
    "title": "12. La Fonte della Noce",
    "legacyPosition": {
-    "x": 540,
-    "y": 105
+    "x": 330,
+    "y": 300
    },
    "text": "Fuori da una pusterla, un sentiero scende ripido per la ripa fino a una fontana coperta da un arco di pietra. Tre lavandaie battono i panni sui lavatoi e cantano a turno. Sopra l’arco, un noce vecchio piega i rami sull’acqua.",
    "gm": "Chi ne beve, dicono, non se ne va più da Teramum: il detto è nell’epigrafe della voce. ⟦Le lavandaie sanno tutto dei panni sporchi della città, compresi quelli col sangue.⟧",
@@ -396,7 +268,8 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "image": "Luogo — Teramum — La Fonte della Noce.jpg"
   },
   {
    "schemaVersion": 3,
@@ -405,8 +278,8 @@
    "title": "13. La Porta Melatina e il ponte",
    "image": "PDI — Teramum — Porta Melatina.jpg",
    "legacyPosition": {
-    "x": 105,
-    "y": 525
+    "x": 200,
+    "y": 960
    },
    "text": "A nord, dove le mura scendono verso il Tordinum, la porta è stretta fra due torri tonde, in fondo a un ponte di pietra lungo e stretto, con tanti archi, che passa il fiume dove è più largo. Il ponte ha il parapetto basso e ci passa un carro alla volta: chi arriva aspetta che l’altro sia uscito. Sopra l’arco della porta, dipinta e scolorita, una galea d’oro su campo rosso.\n\nSotto il ponte, lungo la riva, i lavatoi: lastre di pietra inclinate verso l’acqua, sotto una tettoia di coppi. Donne che battono i panni sulle pietre e cantano. La canzone è una sola, a turni, e chi arriva la riprende da dove la lascia l’altra. Più a valle, le ruote dei mulini girano piano e si sente il grano macinato. Odore di sapone, di acqua e di farina.\n\nQui c’è poca gente, e nessuno grida. Un carro di lana, un mulattiere, un uomo con una gabbia di galline. Sotto l’arco, un banco con un registro grande e un uomo in abito scuro che scrive senza fretta e non alza la testa per nessuno.\n\nLe guardie qui sono poche, e le migliori. Tabarro pulito, alabarda dritta, e gli occhi che vi hanno già contati prima che arrivaste a metà ponte. Oltre la porta, i vicoli salgono verso le case alte e vecchie della punta della città.",
    "breve": "La porta del nord, sul Tordinum, in fondo al ponte lungo: la porta dei Melatino. Poca folla, guardie serie, un sensale della Lega al banco. La più vicina a Lucente Anna e alla casa dei Melatino.",
@@ -437,8 +310,8 @@
    "kind": "persona",
    "title": "Giornalino, all’imbocco del ponte",
    "legacyPosition": {
-    "x": 54,
-    "y": 864
+    "x": 280,
+    "y": 930
    },
    "text": "All’imbocco del ponte, dove passano tutti, seduto su una cassetta rovesciata, c’è un uomo magro con un cappello di paglia sfondato. Tiene sulle ginocchia un mazzo di fogli scritti a mano, con la calligrafia stretta di chi scrive tanto e in fretta. Accanto a lui, appoggiata al muro, una lavagna con le notizie del giorno scritte col gesso, in righe storte: il Bando della Guardia, il prezzo del grano, una riga sul Reggente, una sulla colonna armata ferma al tratturo.\n\n«Fogli! Fogli! Il Consiglio non decide! Il ponte non si finisce! La Crociata è alle porte!» Ride da solo. «Le prime due sono vecchie. La terza è nuova!»\n\nI passanti si fermano, leggono la lavagna gratis, e vanno via senza comprare. Lui li saluta tutti per nome, e a ognuno dice una cattiveria diversa: al facchino, alla guardia, al votato. Nessuno si offende. Qualcuno torna indietro apposta per sentirne un’altra. Un ragazzino gli porta un foglio nuovo, ancora umido d’inchiostro, e lui lo legge, ride, e lo mette in cima al mazzo.\n\nCosta un quattrino il foglio. Dicono che una cosa detta a lui, il giorno dopo, la sa tutta Teramum. Quando vi vede, smette di gridare. Vi guarda, conta quanti siete, e prende il gesso.",
    "breve": "Lo strillone del ponte, con la lavagna e i fogli scritti a mano: una notizia data a lui la sa tutta Teramum il giorno dopo. Ironia cattiva, e sempre una cosa vera.",
@@ -464,60 +337,28 @@
  ],
  "pedine": [
   {
-   "id": "q_oreste",
-   "nome": "Mastro Oreste",
-   "short": "Or",
-   "kind": "alleato",
-   "x": 756,
-   "y": 786,
-   "gruppo": "quartiere",
-   "png": "png-mastro-oreste",
-   "img": "TOKEN — Città — Mastro Oreste Ferrante.png",
-   "ritratto": "Ritratto pedina — Città — Mastro Oreste Ferrante.jpg"
-  },
-  {
-   "id": "q_mimi",
-   "nome": "Zi’ Mimì",
-   "short": "Mi",
-   "kind": "alleato",
-   "x": 174,
-   "y": 906,
-   "gruppo": "quartiere",
-   "png": "png-zi-mimi-castorano"
-  },
-  {
    "id": "q_giornalino",
    "nome": "Giornalino",
    "short": "Gi",
    "kind": "alleato",
-   "x": 36,
-   "y": 846,
+   "x": 300,
+   "y": 950,
    "gruppo": "quartiere",
-   "png": "png-giornalino"
+   "png": "png-giornalino",
+   "img": "TOKEN — Città — Giornalino.png",
+   "ritratto": "Ritratto pedina — Città — Giornalino.jpg"
   },
   {
    "id": "q_guarnerio",
    "nome": "Capitano Guarnerio",
    "short": "Gu",
    "kind": "alleato",
-   "x": 1230,
-   "y": 390,
+   "x": 1470,
+   "y": 640,
    "gruppo": "quartiere",
    "png": "png-guarnerio-da-mendurje",
    "img": "TOKEN — guarnerio-da-mendurje.png",
    "ritratto": "Ritratto pedina — guarnerio-da-mendurje.jpg"
-  },
-  {
-   "id": "q_rapino",
-   "nome": "Ser Ottaviano Rapino",
-   "short": "Ra",
-   "kind": "alleato",
-   "x": 216,
-   "y": 906,
-   "gruppo": "giovedi",
-   "png": "png-cancelliere-della-spada",
-   "img": "TOKEN — Città — Ser Ottaviano Rapino.png",
-   "ritratto": "Ritratto pedina — Città — Ser Ottaviano Rapino.jpg"
   }
  ]
 }

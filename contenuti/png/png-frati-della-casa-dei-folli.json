@@ -1,0 +1,66 @@
+{
+ "id": "png-frati-della-casa-dei-folli",
+ "cat": "png",
+ "city": "teramum",
+ "group": "Il Lucente Leonardo",
+ "title": "I frati della Casa dei Folli",
+ "sub": "i frati del Lucente Antonio che tengono l’ospizio dei matti, sulle mura",
+ "pub": "I frati del Lucente Antonio che tengono la Casa dei Folli: sai di sacco, mazzo di chiavi alla cintura, facce stanche.",
+ "gm": "Statistiche: popolani (Manuale dei Mostri 2024). Il portinaio è Fra’ Tommaso. Le Casate pagano l’ospizio per tenere chiusi «i loro matti»: i frati prendono i soldi e non fanno domande, ma non tutti sono contenti.",
+ "dialogo": {
+  "apertura": "*Lo spioncino si apre, poi una voce stanca.* «Qui non si entra. Se cercate un parente, ditemi il nome.»",
+  "voce": "Piano, da corridoio · Tic: tocca il mazzo di chiavi a ogni frase, per contarle",
+  "argomenti": [
+   {
+    "tema": "Chi c’è dentro",
+    "domanda": "«Chi tenete qui?»",
+    "risposta": "«Matti, e chi la sua famiglia non vuole più vedere. Li curiamo come si può.»",
+    "insistono": "«Le famiglie pagano. Noi teniamo la porta chiusa.»",
+    "mai": "Non dicono mai chi paga per chi."
+   },
+   {
+    "tema": "Ninuccio",
+    "domanda": "«C’è un ragazzo, Ninuccio Cardone?»",
+    "risposta": "*Silenzio.* «C’è.»",
+    "insistono": "«Lo ha portato la Guardia. Grida di notte che il ferro gli ha ucciso il padre.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Religione"
+     ],
+     "cd": 14,
+     "si": "*Fra’ Tommaso apre la porta di un palmo.* «Cinque minuti. E non gli date ragione: lo agitate.»",
+     "no": "«Tornate con un ordine della Rocca.»"
+    },
+    "mai": "Non apre mai la porta di notte."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Chiude lo spioncino e suona la campanella: arrivano altri frati e, dopo un po’, la Guardia.",
+   "soldi": "Prende l’offerta per la minestra, e diventa più gentile; non basta per aprire.",
+   "lusinga": "«Il Lucente Antonio vede tutto. Anche voi.»"
+  },
+  "battute": [
+   "«Qui non si entra.»",
+   "«Il Lucente vi accompagni.»",
+   "«Fate piano: dormono.»"
+  ],
+  "uscita": {
+   "frase": "«Il Lucente vi accompagni.» *Lo spioncino si chiude.*",
+   "dopo": "Se hanno chiesto di Ninuccio, la mattina dopo il ragazzo è stato spostato nella cella in fondo.",
+   "aggancio": "«Se volete fare del bene, la minestra si serve al convento, a mezzogiorno.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Le Casate pagano per tenere chiusi i loro matti.",
+    "via": "insistono"
+   },
+   {
+    "info": "Ninuccio Cardone è dentro: lo ha portato la Guardia.",
+    "via": "insistono"
+   }
+  ]
+ },
+ "state": "segreto",
+ "img": null
+}

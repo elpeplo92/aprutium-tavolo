@@ -1,0 +1,65 @@
+{
+ "id": "te_l_torre",
+ "nome": "Lucente Leonardo — la Torre Bruciata",
+ "menu": "Lucente Leonardo — la Torre Bruciata",
+ "citta": "Teramum",
+ "ordine": 9.14,
+ "mappa": {
+  "img": "Luogo — Teramum — La Torre Bruciata e la Lucente Anna.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "In cima al colle, dentro un recinto di mura tutto suo, sta la parte più vecchia della città. Il campanile è un moncone quadrato di pietra annerita, alto, senza campane: il fuoco gli ha mangiato la cima e nessuno l’ha mai rifatta. Accanto c’è una cappella bassa, con il portale di travertino consumato e due leoni senza muso sui gradini. La gente la chiama la Lucente Anna.",
+  "img": "Luogo — Teramum — La Torre Bruciata e la Lucente Anna.jpg",
+  "note": "La cattedrale vecchia bruciata dai cavalieri del nord. Dal recinto, dietro la cappella, una scala murata scende verso la Città Sepolta."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "torre_torre",
+   "kind": "scena",
+   "title": "La Torre Bruciata",
+   "legacyPosition": {
+    "x": 1000,
+    "y": 650
+   },
+   "text": "In cima al colle, dentro un recinto di mura tutto suo, sta la parte più vecchia della città. Il campanile è un moncone quadrato di pietra annerita, alto, senza campane: il fuoco gli ha mangiato la cima e nessuno l’ha mai rifatta. Accanto c’è una cappella bassa, con il portale di travertino consumato e due leoni senza muso sui gradini. La gente la chiama la Lucente Anna.",
+   "gm": "Era la cattedrale prima della Basilica Aurea: la bruciarono i cavalieri del nord quando presero Teramum. ⟦Il Lucente Berardo fu sepolto qui prima di essere portato alla Basilica: le vecchie del rione dicono che la sua cassa vuota è ancora sotto l’altare.⟧ Dal recinto, dietro la cappella, una scala murata scende verso la Città Sepolta (scena «te_sepolta»), che ha l’ingresso vero nel magazzino del sale.",
+   "breve": "Il campanile nero e la cappella della cattedrale vecchia.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "torre_cappella",
+   "kind": "stanza",
+   "title": "La Lucente Anna",
+   "legacyPosition": {
+    "x": 1350,
+    "y": 760
+   },
+   "text": "Dentro è buio e freddo. Il pavimento è rotto in più punti, e dai buchi si vedono, un braccio più sotto, pezzi di mosaico: tessere bianche e nere, un pesce, una foglia. Sulle pareti, resti di pitture che il fumo ha reso marroni.\n\nUna vecchia accende una candela davanti a un altare spoglio e se ne va senza guardarvi. Fuori, nel recinto, i bambini giocano a chi tocca per primo la torre e scappano.",
+   "gm": "Era la cattedrale prima della Basilica Aurea: la bruciarono i cavalieri del nord quando presero Teramum. ⟦Il Lucente Berardo fu sepolto qui prima di essere portato alla Basilica: le vecchie del rione dicono che la sua cassa vuota è ancora sotto l’altare.⟧ Dal recinto, dietro la cappella, una scala murata scende verso la Città Sepolta (scena «te_sepolta»), che ha l’ingresso vero nel magazzino del sale.",
+   "breve": "Dentro la cappella: il pavimento rotto e i mosaici sotto.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": []
+}

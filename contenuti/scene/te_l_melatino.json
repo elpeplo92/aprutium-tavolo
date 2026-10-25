@@ -1,0 +1,65 @@
+{
+ "id": "te_l_melatino",
+ "nome": "Lucente Leonardo — la casa dei Melatino",
+ "menu": "Lucente Leonardo — la casa dei Melatino",
+ "citta": "Teramum",
+ "ordine": 9.15,
+ "mappa": {
+  "img": "Luogo — Teramum — La casa dei Melatino e i portici.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "Il largo si apre all’improvviso fra le case basse. Da una parte, una casa-torre alta e stretta: il piano terra ha archi acuti di travertino, quello di sopra è di mattone, con finestre a due luci incorniciate da fregi scolpiti che si attorcigliano come serpenti. Sopra il portone, una galea d’oro su campo rosso. Alle finestre, tende di velluto tirate.",
+  "img": "Luogo — Teramum — La casa dei Melatino e i portici.jpg",
+  "note": "La casa del Decano Maccabeo Melatino e i portici dei sensali. I due col nastro rosso e oro sono Spennati: cercano rissa coi Mazzaclocchi."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "mela_casa",
+   "kind": "scena",
+   "title": "La casa dei Melatino",
+   "legacyPosition": {
+    "x": 520,
+    "y": 620
+   },
+   "text": "Il largo si apre all’improvviso fra le case basse. Da una parte, una casa-torre alta e stretta: il piano terra ha archi acuti di travertino, quello di sopra è di mattone, con finestre a due luci incorniciate da fregi scolpiti che si attorcigliano come serpenti. Sopra il portone, una galea d’oro su campo rosso. Alle finestre, tende di velluto tirate.",
+   "gm": "Casa Melatino, la casata più antica di Teramum (scheda): qui c’è la casa del Decano Maccabeo Melatino e i conti della Lega dei Sensali li tiene il nipote Iacopo. I due col nastro sono Spennati, quelli dei Melatino: cercano rissa coi Mazzaclocchi. Il Decano non riceve forestieri senza un invito; Iacopo sì, se c’è da guadagnare.",
+   "breve": "La casa con le finestre a serpente e i portici dei sensali.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "mela_portici",
+   "kind": "dettaglio",
+   "title": "I portici dei Savini e gli Spennati",
+   "legacyPosition": {
+    "x": 1450,
+    "y": 700
+   },
+   "text": "Di fronte corrono i portici dei Savini: archi bassi, colonne tozze, e sotto i banchi dei sensali con le bilance d’ottone, un cambiavalute, un venditore di lumi. Si compra, si pesa, si chiacchiera all’ombra.\n\nDue uomini col nastro rosso e oro al braccio stanno appoggiati a una colonna e guardano chi passa. Uno di loro sputa per terra quando vede un nastro di un altro colore.",
+   "gm": "Casa Melatino, la casata più antica di Teramum (scheda): qui c’è la casa del Decano Maccabeo Melatino e i conti della Lega dei Sensali li tiene il nipote Iacopo. I due col nastro sono Spennati, quelli dei Melatino: cercano rissa coi Mazzaclocchi. Il Decano non riceve forestieri senza un invito; Iacopo sì, se c’è da guadagnare.",
+   "breve": "I banchi dei sensali e i due col nastro.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": []
+}

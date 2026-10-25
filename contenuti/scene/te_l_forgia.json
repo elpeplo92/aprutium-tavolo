@@ -1,0 +1,205 @@
+{
+ "id": "te_l_forgia",
+ "nome": "Lucente Leonardo — la Forgia del Gigante",
+ "menu": "Lucente Leonardo — la Forgia del Gigante",
+ "citta": "Teramum",
+ "ordine": 9.17,
+ "mappa": {
+  "img": "Battlemap — Teramum — La Forgia del Gigante.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": true,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "In fondo alla strada il portone della Forgia è grande come quello di un solario, con due battenti di quercia rinforzati di ferro e, sopra, una torre e un lupo battuti nel rame. È aperto a metà. Dentro c’è un cortile nero di carbone e, tutt’intorno, le bocche delle forge una accanto all’altra, rosse.\n\nIl rumore qui è un muro. Trenta martelli, i mantici che soffiano, un ragazzo che grida un numero e un altro che lo ripete. Si respira fumo e ferro.",
+  "img": "Battlemap — Teramum — La Forgia del Gigante.jpg",
+  "note": "La bottega di Casa Grazianus. Di giorno: trenta garzoni, Mastro Oreste nel cortile. Di notte: solo Oreste e i tre fidati nel reparto chiuso, dietro la porta a grata; i lingotti grigi stanno nel cortile delle casse dietro il cancello. Se si arriva alle mani: gruppo «Se si arriva alle mani»."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "forgia_portone",
+   "kind": "porta",
+   "title": "Il portone",
+   "legacyPosition": {
+    "x": 1180,
+    "y": 830
+   },
+   "text": "In fondo alla strada il portone della Forgia è grande come quello di un solario, con due battenti di quercia rinforzati di ferro e, sopra, una torre e un lupo battuti nel rame. È aperto a metà. Dentro c’è un cortile nero di carbone e, tutt’intorno, le bocche delle forge una accanto all’altra, rosse.",
+   "gm": "Il portone sulla strada delle forge: di notte è sbarrato da dentro; il cancello delle casse si apre con la chiave che Oreste tiene al collo.",
+   "breve": "Il portone grande dei carri.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "forgia_cortile",
+   "kind": "stanza",
+   "title": "Il cortile delle forge",
+   "legacyPosition": {
+    "x": 420,
+    "y": 470
+   },
+   "text": "Il rumore qui è un muro. Trenta martelli, i mantici che soffiano, un ragazzo che grida un numero e un altro che lo ripete. Si respira fumo e ferro.\n\nIn mezzo al cortile, su un ceppo, un uomo basso e largo come un’incudine batte da solo una lama lunga. Ha la faccia rossa del fuoco, niente sopracciglia, i baffi gialli di fumo. Ogni colpo è uguale all’altro.",
+   "gm": "Mastro Oreste Ferrante (scheda PNG) è il «fabbro» del libro mastro della Gilda: nel reparto chiuso, di notte, batte il metallo grigio dei Forgiati e carica armi senza marchio per l’uomo col lillà. Lo Stratega non lo sa. ⟦Il garzone sullo sgabello è Mingo, uno dei tre fidati: un grosso d’argento lo fa distrarre, Intuizione CD 12 si capisce che ha paura.⟧ Da fare: la mappa da battaglia del cortile e del reparto chiuso.",
+   "breve": "La bottega di Casa Grazianus. Mastro Oreste batte nel cortile; il reparto chiuso in fondo lavora di notte.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo_oreste",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Mastro Oreste",
+     "parte": "evento",
+     "innesco": "Qualcuno entra nel cortile e chiede del capo.",
+     "png": "png-mastro-oreste"
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "forgia_reparto",
+   "kind": "stanza",
+   "title": "Il reparto chiuso",
+   "legacyPosition": {
+    "x": 850,
+    "y": 470
+   },
+   "text": "In fondo al cortile c’è una porta più piccola, di ferro, chiusa con una sbarra. Davanti, seduto su uno sgabello, un garzone non fa niente. Guarda chi guarda la porta.\n\nDietro la grata, un fuoco più basso degli altri, che fa poca luce. Un odore dolce e marcio, di lillà andato a male.",
+   "gm": "Il reparto chiuso: di notte Oreste e i tre fidati battono il metallo grigio. Sul banco, lame senza marchio. Arcano CD 14: il metallo è lo stesso delle armature dei Forgiati.",
+   "breve": "La porta di ferro in fondo al cortile.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "forgia_casse",
+   "kind": "dettaglio",
+   "title": "Il cortile delle casse",
+   "legacyPosition": {
+    "x": 1200,
+    "y": 220
+   },
+   "text": "Dietro un cancello di ferro, un cortile lastricato con delle casse di legno chiaro impilate e dei massi grigi coperti da una tela. Le casse non hanno marchio.",
+   "gm": "Le casse senza marchio sono per l’uomo col lillà; sotto la tela, i lingotti grigi arrivati dal guado: freddi anche al sole.",
+   "breve": "Casse senza marchio e lingotti sotto la tela.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "forgia_carri",
+   "kind": "dettaglio",
+   "title": "I carri",
+   "legacyPosition": {
+    "x": 860,
+    "y": 900
+   },
+   "text": "Due carri pesanti, coi teloni tirati, aspettano davanti al portone. Le ruote sono nuove.",
+   "gm": "Il carro che parte stanotte porta le armi senza marchio fuori da Porta Carrese.",
+   "breve": "Due carri pronti a partire.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": [
+  {
+   "id": "f_oreste",
+   "nome": "Mastro Oreste",
+   "short": "Or",
+   "kind": "alleato",
+   "best": "te_bravo_teramano",
+   "x": 440,
+   "y": 420,
+   "gruppo": "giorno",
+   "png": "png-mastro-oreste",
+   "img": "TOKEN — Città — Mastro Oreste Ferrante.png",
+   "ritratto": "Ritratto pedina — Città — Mastro Oreste Ferrante.jpg",
+   "tac": "Non scappa: alza il martello e aspetta."
+  },
+  {
+   "id": "g1",
+   "nome": "Garzone della Forgia",
+   "short": "G1",
+   "best": "te_bravo_teramano",
+   "x": 320,
+   "y": 330,
+   "gruppo": "mani",
+   "png": "png-garzoni-della-forgia",
+   "tac": "Difendono il mastro coi martelli; scappano se ne cadono tre."
+  },
+  {
+   "id": "g2",
+   "nome": "Garzone della Forgia",
+   "short": "G2",
+   "best": "te_bravo_teramano",
+   "x": 560,
+   "y": 470,
+   "gruppo": "mani",
+   "png": "png-garzoni-della-forgia",
+   "tac": "Difendono il mastro coi martelli; scappano se ne cadono tre."
+  },
+  {
+   "id": "g3",
+   "nome": "Garzone della Forgia",
+   "short": "G3",
+   "best": "te_bravo_teramano",
+   "x": 300,
+   "y": 560,
+   "gruppo": "mani",
+   "png": "png-garzoni-della-forgia",
+   "tac": "Difendono il mastro coi martelli; scappano se ne cadono tre."
+  },
+  {
+   "id": "g4",
+   "nome": "Garzone della Forgia",
+   "short": "G4",
+   "best": "te_bravo_teramano",
+   "x": 520,
+   "y": 640,
+   "gruppo": "mani",
+   "png": "png-garzoni-della-forgia",
+   "tac": "Difendono il mastro coi martelli; scappano se ne cadono tre."
+  },
+  {
+   "id": "g5",
+   "nome": "Garzone della Forgia",
+   "short": "G5",
+   "best": "te_bravo_teramano",
+   "x": 600,
+   "y": 300,
+   "gruppo": "mani",
+   "png": "png-garzoni-della-forgia",
+   "tac": "Difendono il mastro coi martelli; scappano se ne cadono tre."
+  },
+  {
+   "id": "g6",
+   "nome": "Garzone della Forgia",
+   "short": "G6",
+   "best": "te_bravo_teramano",
+   "x": 380,
+   "y": 720,
+   "gruppo": "mani",
+   "png": "png-garzoni-della-forgia",
+   "tac": "Difendono il mastro coi martelli; scappano se ne cadono tre."
+  }
+ ]
+}

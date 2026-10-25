@@ -1,0 +1,69 @@
+{
+ "id": "png-ninuccio-cardone",
+ "cat": "png",
+ "city": "teramum",
+ "group": "Il Lucente Leonardo",
+ "title": "Ninuccio Cardone",
+ "sub": "il figlio del fabbro morto grigio, chiuso alla Casa dei Folli",
+ "pub": "Un ragazzo di diciassette anni, chiuso alla Casa dei Folli del Lucente Leonardo. Grida di notte.",
+ "gm": "⟦Figlio di Tittë Cardone, il mastro della Forgia morto con la pelle grigia (scheda di Mastro Oreste). Ha gridato per strada che il ferro della Forgia gli ha ucciso il padre; la Guardia lo ha portato ai frati su richiesta di Oreste, che ha paura. Sa che il padre lavorava di notte nel reparto chiuso, che i lingotti arrivano «da giù al guado», e che l’uomo che li paga profuma di lillà. Ha nascosto sotto il pagliericcio una scaglia del metallo grigio, fredda, presa dalle mani del padre morto.⟧ Statistiche: popolano.",
+ "dialogo": {
+  "apertura": "*Dalla grata, due occhi rossi di pianto.* «Siete della Guardia? No. La Guardia non ha quella faccia.»",
+  "voce": "Veloce, rotta, a volte grida · Tic: si guarda le mani, le gira, controlla che non diventino grigie",
+  "argomenti": [
+   {
+    "tema": "Il padre",
+    "domanda": "«Cos’è successo a tuo padre?»",
+    "risposta": "«Il ferro. Il ferro grigio. Freddo anche nel fuoco. Lui lo batteva di notte, e diventava grigio, le dita, poi le mani. Alla fine non sentiva più niente.»",
+    "insistono": "«Oreste lo sapeva. Lo sapeva e lo mandava di là lo stesso.»",
+    "mai": "Non sa che cosa sia il metallo."
+   },
+   {
+    "tema": "Il ferro",
+    "domanda": "«Da dove viene quel ferro?»",
+    "risposta": "«Da giù, dal guado. Di notte, sui carri senza insegna. E lo paga uno che puzza di fiori.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intuizione"
+     ],
+     "cd": 12,
+     "si": "*Infila la mano sotto il pagliericcio e tira fuori una scaglia grigia, fredda come il ghiaccio.* «Era nelle mani di mio padre, quando è morto. Prendetela. Io non la voglio più.»",
+     "no": "«Andatevene. Siete come loro.»"
+    },
+    "mai": "Non lascia la cella senza qualcuno che lo protegga da Oreste."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Grida, e i frati arrivano.",
+   "soldi": "«Non me ne faccio niente. Tiratemi fuori.»",
+   "lusinga": "Piange."
+  },
+  "battute": [
+   "«Il ferro è freddo nel fuoco!»",
+   "«Guardate le vostre mani.»",
+   "«Tiratemi fuori.»"
+  ],
+  "uscita": {
+   "frase": "«Tornate. Vi prego, tornate.»",
+   "dopo": "Se gli hanno promesso di tirarlo fuori e non tornano, la notte dopo grida i loro nomi.",
+   "aggancio": "«Il prossimo carico arriva al guado. Fra tre notti.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Tittë Cardone è morto lavorando il ferro grigio, di notte, nel reparto chiuso.",
+    "via": "gratis"
+   },
+   {
+    "info": "I lingotti arrivano dal guado e li paga l’uomo col lillà.",
+    "via": "gratis"
+   },
+   {
+    "info": "Una scaglia del metallo grigio, fredda come il ghiaccio.",
+    "via": "prova"
+   }
+  ]
+ },
+ "state": "segreto",
+ "img": null
+}

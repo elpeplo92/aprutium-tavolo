@@ -1,0 +1,151 @@
+{
+ "id": "te_l_cantinone",
+ "nome": "Lucente Leonardo — Lu Cantinone",
+ "menu": "Lucente Leonardo — Lu Cantinone",
+ "citta": "Teramum",
+ "ordine": 9.16,
+ "mappa": {
+  "img": "Luogo — Teramum — Lu Cantinone.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "A Lucente Anna, fra la Torre Bruciata e la casa dei Melatino, quella con le finestre a serpente, una scala di pietra scende sotto la strada. In cima, una lanterna e una lavagnetta scritta col gesso: «OGGI: CHITARRA, TIMBALLO, SCRIPPELLE». Dai gradini sale odore di brodo e di sugo che cuoce da ore.\n\nSotto c’è una cantina a volta di mattoni, lunga come una navata, con le botti lungo i muri e le tovaglie bianche. Bianche davvero. È l’unico posto della città, forse, dove le tovaglie sono bianche. Ai tavoli, gente vestita bene che mangia piano: mercanti, un notaio con i suoi, due signore con il cappello. Nessuno grida. Si sente il rumore delle posate e poco altro.",
+  "img": "Luogo — Teramum — Lu Cantinone.jpg",
+  "note": "L’osteria più vecchia di Teramum, sottoterra. Il giovedì sera, al tavolo in fondo, cena il Cancelliere della Spada (gruppo «Il giovedì sera»)."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "cant_sala",
+   "kind": "scena",
+   "title": "La sala",
+   "legacyPosition": {
+    "x": 900,
+    "y": 820
+   },
+   "text": "A Lucente Anna, fra la Torre Bruciata e la casa dei Melatino, quella con le finestre a serpente, una scala di pietra scende sotto la strada. In cima, una lanterna e una lavagnetta scritta col gesso: «OGGI: CHITARRA, TIMBALLO, SCRIPPELLE». Dai gradini sale odore di brodo e di sugo che cuoce da ore.\n\nSotto c’è una cantina a volta di mattoni, lunga come una navata, con le botti lungo i muri e le tovaglie bianche. Bianche davvero. È l’unico posto della città, forse, dove le tovaglie sono bianche. Ai tavoli, gente vestita bene che mangia piano: mercanti, un notaio con i suoi, due signore con il cappello. Nessuno grida. Si sente il rumore delle posate e poco altro.\n\nUn vecchio con la giacca nera e il tovagliolo sul braccio vi viene incontro. Vi guarda le scarpe, le armi, le mani. Poi sorride.\n\n«Quanti siete? Sedetevi. Prima si mangia, poi si parla.»\n\nDalla cucina, dietro una tenda, il colpo secco e regolare di qualcuno che stende la pasta sulla chitarra, e una voce di donna che chiama i piatti. In fondo, un tavolo apparecchiato per uno solo, e nessuno seduto.",
+   "gm": "È l’Antico Cantinone della Teramo vera: osteria del centro storico aperta nel 1906, «un’istituzione della città», l’ultimo punto fermo della cucina teramana vera; ha chiuso. Qui è aperta, e vecchia di cento anni: la cucina buona di Teramum, per chi può pagare.\nL’oste: Mastro Domenico Castorano, detto Zi’ Mimì (scheda PNG). Suo nonno, dice lui, ha inventato le scrippelle ’mbusse: era garzone alla tavola dei capitani, gli caddero le crespelle nel brodo, e le servì così.\nMenù e prezzi: maccheroni alla chitarra con le pallottine (le polpettine piccole come ceci) 4 quattrini; scrippelle ’mbusse 5; timballo 8; mazzarelle (interiora d’agnello avvolte nella lattuga) 4; agnello allo spiedo 10; bocconotti e neole (le cialde col ferro) 2; vino cotto e Montepulciano 2 il boccale. Le virtù solo il primo maggio, e chi le chiede in un altro giorno viene compatito.\nChi viene: la gente bene che non è nobile, notai, mercanti, qualche flamine in borghese. Il tavolo in fondo è sempre riservato: ci mangia, da solo, il Cancelliere della Spada di Casa Grazianus, una volta alla settimana.\nCibo: un pasto completo qui conta come un banchetto (chi lo fa ottiene 1d4 PF temporanei che durano fino al riposo lungo successivo).",
+   "breve": "L’osteria più vecchia della città, in una cantina sotto Lucente Anna: la cucina teramana (chitarra, scrippelle, timballo), Zi’ Mimì, e il giovedì il Cancelliere della Spada, a cena da solo.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo_mimi",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Zi’ Mimì",
+     "parte": "evento",
+     "innesco": "Qualcuno parla con l’oste.",
+     "note": "CHI SEI? — «Domenico Castorano. Zi’ Mimì da quando avevo trent’anni. Questa cantina l’ha aperta mio padre, e prima c’era una cantina e basta.»\n\nLE SCRIPPELLE — Si illumina. «Mio nonno. Garzone alla mensa dei capitani. Gli cascano le crespelle nella pentola del brodo, tutte. Lui non si perde d’animo: le arrotola, ci mette il formaggio, e le serve così. ’Mbusse. Bagnate. Il capitano ne chiede altre tre.» Pausa. «Lo racconta tutta la città. Ma era mio nonno.»\n\nLE VIRTÙ — «Il primo maggio. Sette legumi, sette verdure, sette paste, sette ore. Chi le mangia un altro giorno porta sfortuna alla casa. Volete la sfortuna? No. Allora prendete la chitarra.»\n\nCHI MANGIA QUI? — «Chi paga e sta zitto.» Poi, piano: «Il tavolo in fondo, il giovedì, è del Cancelliere della Rocca. Mangia da solo, beve poco, lascia la mancia giusta. Un signore.»\n\nLA CITTÀ — «Una volta qui sotto c’era la fila. Adesso c’è la crisi, il Banco caduto, il Corso vuoto. E la gente mangia la pizza in piedi per strada.» Scuote la testa. «La pizza in piedi. Come i cavalli.»\n\nSE CHIEDONO DI FORESTIERI STRANI — «Una signora coi capelli bianchi è venuta due volte. Ha mangiato poco, ha pagato in oro, e ha chiesto chi c’era al tavolo del giovedì.»\n\nBATTUTE PRONTE — «Prima si mangia, poi si parla.» · «Trase, aijaccete.» · «La pizza in piedi. Come i cavalli.» · «Stà ben Rocc, stà ben tutt la rocc.»",
+     "dopo": "Il Cantinone è il posto per incontrare con discrezione chi conta senza essere nobile, e per arrivare al Cancelliere della Spada (il sigillo di Grazianus) fuori dalla fila.",
+     "rilancio": "Zi’ Mimì vi porta il vino. Che cosa fate?",
+     "daqui": [
+      "cant_fondo"
+     ],
+     "png": "png-zi-mimi-castorano"
+    }
+   ],
+   "scena": "te_q_leonardo",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "cant_fondo",
+   "kind": "persona",
+   "title": "Il tavolo in fondo",
+   "legacyPosition": {
+    "x": 1500,
+    "y": 640
+   },
+   "text": "In fondo alla cantina, sotto l’ultima volta, c’è un tavolo un po’ appartato, con una tovaglia più bella delle altre e un candeliere d’ottone. È vuoto, e apparecchiato.",
+   "gm": "È l’Antico Cantinone della Teramo vera: osteria del centro storico aperta nel 1906, «un’istituzione della città», l’ultimo punto fermo della cucina teramana vera; ha chiuso. Qui è aperta, e vecchia di cento anni: la cucina buona di Teramum, per chi può pagare.\nL’oste: Mastro Domenico Castorano, detto Zi’ Mimì (scheda PNG). Suo nonno, dice lui, ha inventato le scrippelle ’mbusse: era garzone alla tavola dei capitani, gli caddero le crespelle nel brodo, e le servì così.\nMenù e prezzi: maccheroni alla chitarra con le pallottine (le polpettine piccole come ceci) 4 quattrini; scrippelle ’mbusse 5; timballo 8; mazzarelle (interiora d’agnello avvolte nella lattuga) 4; agnello allo spiedo 10; bocconotti e neole (le cialde col ferro) 2; vino cotto e Montepulciano 2 il boccale. Le virtù solo il primo maggio, e chi le chiede in un altro giorno viene compatito.\nChi viene: la gente bene che non è nobile, notai, mercanti, qualche flamine in borghese. Il tavolo in fondo è sempre riservato: ci mangia, da solo, il Cancelliere della Spada di Casa Grazianus, una volta alla settimana.\nCibo: un pasto completo qui conta come un banchetto (chi lo fa ottiene 1d4 PF temporanei che durano fino al riposo lungo successivo).",
+   "breve": "Il tavolo del giovedì.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "giovedi",
+     "tipo": "dettaglio",
+     "titolo": "Il tavolo del giovedì",
+     "parte": "evento",
+     "innesco": "Il gruppo è al Cantinone il giovedì sera, o chiede di incontrare il Cancelliere fuori dalla Rocca.",
+     "leggi": "Il tavolo in fondo, sotto l’ultima botte, ha una candela sola. L’uomo che ci siede è anziano, magro, con il tabarro grigio piegato sulla sedia accanto. Mangia la chitarra con una lentezza da notaio.\n\nQuando vi vede guardarlo, posa la forchetta.\n\n«Sedetevi pure. Ma non parlate di lavoro prima del timballo.»",
+     "note": "È il Cancelliere della Spada, quello che appone il sigillo di Grazianus alla Rocca. Qui non è in servizio: parla da uomo. Se lo lasciano mangiare in pace e gli offrono il vino buono, ascolta. Persuasione CD 13 (vantaggio se Maximus c’è e si comporta da figlio di suo padre, non da soldato): il sigillo della Spada arriva domattina, senza fila. Se lo disturbano prima del timballo: CD 17.\nAvvertimento che dà a chi gli piace: «Lo Stratega firma tutto quello che rinforza la Guardia. Non firma niente che la indebolisca. Pensate a come scrivete la vostra istanza.»",
+     "prove": [
+      {
+       "id": "giovedi",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "«Ne parliamo alla Rocca. In fila.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "«Portatemi l’istanza domattina. Entrate dalla porta piccola e chiedete di me.» Il sigillo della Spada senza aspettare."
+        }
+       ]
+      }
+     ],
+     "dopo": "Una scorciatoia per il sigillo di Grazianus.",
+     "rilancio": "Il Cancelliere aspetta il timballo. Che cosa fate?",
+     "daqui": [],
+     "pe": 150
+    },
+    {
+     "id": "dlg_cancelliere_della_spada",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il Cancelliere della Spada",
+     "parte": "evento",
+     "png": "png-cancelliere-della-spada",
+     "innesco": "Qualcuno parla con il Cancelliere della Spada.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ]
+  }
+ ],
+ "pedine": [
+  {
+   "id": "l_mimi",
+   "nome": "Zi’ Mimì",
+   "short": "Mi",
+   "kind": "alleato",
+   "x": 1380,
+   "y": 820,
+   "gruppo": "luogo",
+   "png": "png-zi-mimi-castorano",
+   "img": "TOKEN — Città — Zi’ Mimì Castorano.png",
+   "ritratto": "Ritratto pedina — Città — Zi’ Mimì Castorano.jpg"
+  },
+  {
+   "id": "l_rapino",
+   "nome": "Ser Ottaviano Rapino",
+   "short": "Ra",
+   "kind": "alleato",
+   "x": 1560,
+   "y": 660,
+   "gruppo": "giovedi",
+   "png": "png-cancelliere-della-spada",
+   "img": "TOKEN — Città — Ser Ottaviano Rapino.png",
+   "ritratto": "Ritratto pedina — Città — Ser Ottaviano Rapino.jpg"
+  }
+ ]
+}

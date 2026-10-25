@@ -1,0 +1,66 @@
+{
+ "id": "png-garzoni-della-forgia",
+ "cat": "png",
+ "city": "teramum",
+ "group": "Il Lucente Leonardo",
+ "title": "I garzoni della Forgia",
+ "sub": "una trentina di ragazzi e uomini coi martelli, alla Forgia del Gigante",
+ "pub": "I garzoni della Forgia del Gigante, al Lucente Leonardo: braccia nere fino al gomito, grembiuli di cuoio, martelli e tenaglie. Lavorano giorno e notte per la Guardia.",
+ "gm": "Statistiche: popolani robusti (Bruto o Guardia del Manuale dei Mostri 2024, coi martelli come mazze). Difendono Mastro Oreste senza chiedere perché. Tre di loro (Mingo e due altri) sono i fidati del reparto chiuso: sanno del metallo grigio e hanno paura.",
+ "dialogo": {
+  "apertura": "*Non smette di battere.* «Se cercate il mastro, è quello là in mezzo. Se cercate guai, siamo trenta.»",
+  "voce": "Dialetto stretto, a scatti, gridato sopra i martelli · Tic: si asciuga il sudore col braccio e lascia una striscia nera sulla fronte",
+  "argomenti": [
+   {
+    "tema": "Il lavoro",
+    "domanda": "«Per chi lavorate?»",
+    "risposta": "«Per la Guardia. Giorno e notte, mo’. Ordini della Rocca.»",
+    "insistono": "«Di notte? Di notte lavorano quelli là dietro.» *Indica la porta di ferro col mento, poi se ne pente.*",
+    "mai": "Non entrano nel reparto chiuso e non ne parlano, tranne i tre fidati."
+   },
+   {
+    "tema": "Il morto",
+    "domanda": "«È vero che uno di voi è morto grigio?»",
+    "risposta": "*Si fa il segno del sole.* «Tittë. Nen ne parlamo.»",
+    "insistono": "«Il figlio l’hanno chiuso alla Casa dei Folli, perché gridava per strada. Contenti?»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intimidire"
+     ],
+     "cd": 13,
+     "si": "«Tittë stava sempre di là, al reparto. Alla fine non sentiva il fuoco sulle mani. Il figlio, Ninuccio, gridava che è stato il ferro. Lo hanno portato ai frati.»",
+     "no": "*Riprende a battere più forte.*"
+    },
+    "mai": "Non dicono niente davanti al mastro."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Si avvicinano in cinque, martelli in mano. Ne arrivano altri.",
+   "soldi": "Un grosso fa parlare uno di loro, lontano dal mastro, all’osteria de Lu Martellë.",
+   "lusinga": "Ridono. «Le spade più belle del Ducato, sì. Ma la paga è sempre quella.»"
+  },
+  "battute": [
+   "«Ferro caldo, testa fredda.»",
+   "«Mastro! Forestieri!»",
+   "«Qua si lavora, eh.»"
+  ],
+  "uscita": {
+   "frase": "«Andate, andate, che il ferro non aspetta.»",
+   "dopo": "Se hanno parlato del morto, la sera un garzone li aspetta all’osteria de Lu Martellë.",
+   "aggancio": "«Ninuccio sta dai frati, alla Casa dei Folli.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Di notte lavorano solo i fidati, nel reparto chiuso.",
+    "via": "insistono"
+   },
+   {
+    "info": "Tittë Cardone è morto grigio; il figlio Ninuccio è chiuso alla Casa dei Folli.",
+    "via": "prova"
+   }
+  ]
+ },
+ "state": "segreto",
+ "img": null
+}
