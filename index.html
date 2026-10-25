@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v309</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v310</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11925,4 +11925,51 @@ html body button.danger,html body #colFine,html body #btnEnd,html body #fogReset
   aggiorna();
 })();
 /* ===== FINE LA BARRA IN BASSO ===== */
+/* ===== COLONNA UNICA PER I GIOCATORI E SCHERMI PICCOLI (v310) =====
+   Giuseppe (25-10, dai giocatori): «si sono sputtanate le dimensioni per schermi diversi dal mio, con lo zoom la mappa è impossibile da
+   vedere» e «la Guida della scena va nel menu di destra, così per i giocatori non c'è quello spazio nero vuoto: un menu unico, solo per loro».
+   - Giocatori: la colonna della Guida (#guide, con la sua pergamena) diventa l'ultima a destra e sotto prende il Registro (#secLog spostato
+     dentro #guide); la colonna #side, che per loro restava vuota, va a 0 e la mappa prende lo spazio. Il master non cambia.
+   - Schermi piccoli: la riga del personaggio dei giocatori (#qbInfo) resta su una riga (nome nascosto se non c'entra, tasti più piccoli);
+     la barra del master (#selBar), se è stretta, mette i danni sotto il ritratto invece di schiacciare le informazioni in colonna.
+   Fonte: Revisioni/Schermi e colonna unica (25-10-2026)/ (blocco.js + applica.py + ris.js per le foto a sei risoluzioni). */
+(function(){
+  const css=document.createElement('style'); css.id='colonnaUnica'; css.textContent=`
+body:not(.isgm) #app{grid-template-columns:224px minmax(0,1fr) clamp(340px,23vw,460px) 0px!important}
+@media (max-width:1700px){ body:not(.isgm) #app{grid-template-columns:200px minmax(0,1fr) clamp(300px,22vw,380px) 0px!important} }
+@media (max-width:1440px){ body:not(.isgm) #app{grid-template-columns:190px minmax(0,1fr) clamp(280px,23vw,320px) 0px!important} }
+body:not(.isgm) #side{visibility:hidden;overflow:hidden;padding:0!important;border:0!important;min-width:0}
+body:not(.isgm) #guide{display:flex;flex-direction:column;min-height:0}
+body:not(.isgm) #guide>#guideTop{flex:1 1 auto;min-height:0;overflow-y:auto}
+body:not(.isgm) #guide>#secLog{flex:0 0 auto;max-height:36%;min-height:110px;display:flex;flex-direction:column;overflow:hidden;margin:0;padding:12px 12px 10px!important;border-top:1px solid rgba(217,177,92,.3)!important;background:#090B10!important}
+body:not(.isgm) #guide>#secLog #log{flex:1 1 auto;overflow-y:auto;min-height:0}
+#qbInfo{flex-wrap:nowrap!important;overflow:hidden;container-type:inline-size}
+#qbInfo .sbChips{flex-wrap:nowrap}
+#qbInfo .qbBtn{flex-wrap:nowrap;min-width:0}
+@container (max-width:980px){
+  #qbInfo>b{display:none}
+  #qbInfo .sbChips span i{margin-right:2px}
+  #qbInfo .qbBtn button{font-size:12px!important;padding:3px 7px!important}
+  #qbInfo .qbBtn select{max-width:104px;font-size:12px!important}
+  #qbInfo .qbBtn button svg{display:none}
+}
+@container (max-width:720px){ #qbInfo .sbChips span i{display:none} #qbInfo img{width:28px!important;height:28px!important} }
+#selBar{width:min(1100px,calc(100% - 170px))!important}
+#selBar.stretta{grid-template-columns:minmax(0,1fr);grid-template-areas:'id' 'cmd' 'az'}
+#selBar.stretta .sbId{padding:6px 10px 2px}
+#selBar.stretta .sbChips{flex-wrap:nowrap;overflow:hidden}
+#selBar.stretta .sbCmd{flex-direction:row;flex-wrap:wrap;padding:2px 10px 6px}
+#selBar.stretta .sbCmd .row{flex-wrap:wrap}
+`; document.head.appendChild(css);
+  function sposta(){
+    if(IS_GM) return;
+    const g=document.getElementById('guide'), log=document.getElementById('secLog');
+    if(g&&log&&log.parentElement!==g){ g.appendChild(log); setTimeout(()=>{ try{ fit(); }catch(e){} },50); }
+  }
+  function stretta(){ const b=document.getElementById('selBar'); if(b) b.classList.toggle('stretta',b.offsetWidth>0&&b.offsetWidth<760); }
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ sposta(); stretta(); }catch(e){ console.warn('colonna unica',e); } return o; };
+  window.addEventListener('resize',()=>{ try{ stretta(); }catch(e){} });
+  sposta();
+})();
+/* ===== FINE COLONNA UNICA PER I GIOCATORI E SCHERMI PICCOLI (v310) ===== */
 </script>
