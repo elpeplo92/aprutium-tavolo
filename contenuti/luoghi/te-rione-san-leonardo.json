@@ -1,10 +1,10 @@
 {
  "id": "te-rione-san-leonardo",
  "tipo": "luogo",
- "titolo": "2. Porta Romana",
- "sottotitolo": "« Lu Bòrghe » — il rione dei teatri antichi e delle botteghe",
+ "titolo": "2. Il Lucente Leonardo",
+ "sottotitolo": "« Lu Bòrghe » — le forge, la Torre Bruciata, i Melatino, Porta Melatina e Porta Reale",
  "citta": "teramum",
- "gruppo": "2. Porta Romana",
+ "gruppo": "2. Il Lucente Leonardo",
  "livello": "quartiere",
  "parent": "borgo-teramum",
  "img": "Rione — 2. San Leonardo.jpg",
@@ -14,16 +14,18 @@
  "scheda": {
   "Zona": "2",
   "Nome in dialetto": "Lu Bòrghe",
-  "Posizione": "a sud, sopra la Vezzola, intorno alla Porta Romana",
-  "Atmosfera": "carri, botteghe, martelli, e fra le case le pietre dei teatri antichi",
-  "Gilde": "le botteghe che lavorano per la Forgia del Gigante («Li Martille de Pietre», Casa Grazianus), che sta al Lucente Leonardo",
+  "Posizione": "il nord e la punta est della città: dalla Basilica a Porta Reale, sopra la Vezzola",
+  "Atmosfera": "carri, botteghe, martelli, il fumo delle forge e le pietre più vecchie della città",
+  "Gilde": "la Forgia del Gigante («Li Martille de Pietre», Casa Grazianus) e le botteghe che lavorano per lei",
   "Festa": "Fiera del Lucente Leonardo, 15 Octobris, tre giorni",
-  "Luoghi": "L’Arena Sprofondata · il teatro antico · Sor Paolo · la scuola dei Delfico · la casa dei votati del Lucente Domenico"
+  "Luoghi": "la strada delle forge e la Forgia del Gigante · la Torre Bruciata e la Lucente Anna · la casa dei Melatino e i portici dei Savini · il solario del Lucente Antonio · la Domus del Leone · la Casa dei Folli · la Fonte della Noce · Porta Melatina · Porta Reale",
+  "Altro nome": "Lucente Anna, per il solario della cattedrale vecchia",
+  "Gonfalone": "rosso, con la galea d’oro"
  },
  "pub": [
   {
    "t": "Aspetto esterno",
-   "txt": "Case basse addossate le une alle altre, botteghe aperte sulla strada, insegne di ferro battuto che cigolano. Fra le case, all’improvviso, affiorano le gradinate di un teatro dell’Impero, coi panni stesi sopra.\nIl suono è quello della porta: carri, bestie, martelli, gente che grida i prezzi."
+   "txt": "Case basse addossate le une alle altre, botteghe aperte sulla strada, insegne di ferro battuto che cigolano. Fra le case, all’improvviso, il moncone nero della Torre Bruciata, e accanto una cappella che una volta era la cattedrale.\nIl suono è quello della porta: carri, bestie, martelli, gente che grida i prezzi."
   },
   {
    "t": "Entrando",
@@ -31,7 +33,7 @@
   },
   {
    "t": "Cosa si vede subito",
-   "txt": "• Una statua antica senza naso, che tutti chiamano Sor Paolo. Ha la mano piena di biglietti.\n• Le armature cerimoniali in vetrina sono smaltate a disegni che ricordano la ceramica di Li Cashtillë.\n• La gente parla solo dialetto, e parla forte, per coprire i carri.\n• Poco più in là il terreno sprofonda in una grande conca di archi: l’Arena."
+   "txt": "• Le armature cerimoniali in vetrina sono smaltate a disegni che ricordano la ceramica di Li Cashtillë.\n• Sul largo dei Melatino, la casa con le finestre a serpente e, di fronte, i portici dei Savini.\n• La gente parla solo dialetto, e parla forte, per coprire i carri.\n• Verso nord le strade scendono alla Vezzola e a Porta Melatina; sopra le mura, il muro cieco della Casa dei Folli."
   },
   {
    "t": "Cosa sanno i personaggi",
@@ -45,7 +47,7 @@
   },
   {
    "t": "Voci e dicerie (d6)",
-   "txt": "1. Alla Forgia del Gigante c’è un reparto dove i garzoni non entrano.\n2. Un fabbro è morto con la pelle diventata grigia come il ferro. L’hanno seppellito in fretta.\n3. Le armature nuove della Guardia pesano la metà e non arrugginiscono. «Nen è cose bbone.»\n4. Nell’Arena, di notte, si sente scavare da sotto.\n5. Gli spaccapietre di Cullëdarë non portano più pietre: vogliono essere pagati prima.\n6. Chi lascia un Bocconotto sulla soglia della bottega non si trova gli attrezzi spostati la mattina."
+   "txt": "1. Alla Forgia del Gigante c’è un reparto dove i garzoni non entrano.\n2. Un fabbro è morto con la pelle diventata grigia come il ferro. L’hanno seppellito in fretta.\n3. Le armature nuove della Guardia pesano la metà e non arrugginiscono. «Nen è cose bbone.»\n4. Sotto la Torre Bruciata, di notte, si sente scavare.\n5. Gli spaccapietre di Cullëdarë non portano più pietre: vogliono essere pagati prima.\n6. Chi lascia un Bocconotto sulla soglia della bottega non si trova gli attrezzi spostati la mattina."
   },
   {
    "t": "Segreti",
@@ -53,7 +55,7 @@
   },
   {
    "t": "Per il master",
-   "txt": "• Questa voce è Porta Romana: qui stanno il teatro antico e l’Arena, come nella voce Teramum. ⟦I quattro rioni dei vecchi (Lucente Giorgio, Lucente Leonardo, Spirito Lucente, la Lunaria a Bitetto) non hanno confini segnati: la gente li nomina per le chiese.⟧\n• La Forgia del Gigante sta al Lucente Leonardo, appena dentro la Porta della Madre (scena «Teramum — la città»). ⟦Qui nel Bòrghe ci sono le botteghe che lavorano per lei; i forni grandi stanno alla Gammarana, fuori le mura.⟧\n• Il «fabbro» di Teramum del libro mastro (Atto IX) è Mastro Oreste Ferrante, capo della Forgia: di notte batte armi senza marchio per la rete di Iuvenza, all’insaputa di Lucius Grazianus.\n• ⟦La Crociata arriva prima della Fiera del Lucente Leonardo (15 Octobris): i banchi si stanno montando.⟧\n• La Rocca dei Grazianus sta su Piazza Garibaldi, non qui (voce Teramum).\n• Il carro della Forgia con la cassa spaccata (scena «Teramum — la città») è il primo indizio delle armature grigie."
+   "txt": "• Questa voce è il Lucente Leonardo (nella Teramo vera San Leonardo, detto anche Sant’Anna): forge, Torre Bruciata, Melatino, Porta Melatina e Porta Reale. Il teatro antico, l’Arena e Sor Paolo stanno nello Spirito Lucente.\n• La Forgia del Gigante sta qui, appena dentro la Porta della Madre (scena «Teramum — il Lucente Leonardo»). ⟦I forni grandi stanno alla Gammarana, fuori le mura.⟧\n• Il «fabbro» di Teramum del libro mastro (Atto IX) è Mastro Oreste Ferrante, capo della Forgia: di notte batte armi senza marchio per la rete di Iuvenza, all’insaputa di Lucius Grazianus.\n• ⟦La Crociata arriva prima della Fiera del Lucente Leonardo (15 Octobris): i banchi si stanno montando.⟧\n• La Rocca dei Grazianus sta su Piazza Garibaldi, nel Lucente Giorgio.\n• Il carro della Forgia con la cassa spaccata è il primo indizio delle armature grigie."
   }
  ],
  "prove": [
