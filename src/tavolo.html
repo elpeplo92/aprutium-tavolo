@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v310</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v311</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11828,7 +11828,7 @@ html body button.danger,html body #colFine,html body #btnEnd,html body #fogReset
 (function(){
   const st=document.getElementById('stage'); if(!st||document.getElementById('selBar')) return;
   const css=document.createElement('style'); css.id='selBarCss'; css.textContent=`
-#selBar{position:absolute;left:50%;transform:translateX(-50%);bottom:78px;z-index:9;width:min(1100px,calc(100% - 110px));display:grid;grid-template-columns:1fr auto;grid-template-areas:'id cmd' 'az az';gap:0;align-items:stretch;
+#selBar{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;z-index:9;width:min(1100px,calc(100% - 110px));display:grid;grid-template-columns:1fr auto;grid-template-areas:'id cmd' 'az az';gap:0;align-items:stretch;
   background:#090B10;border:1px solid rgba(217,177,92,.45);border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.6);color:#EADFC8;font-size:14px}
 #selBar.vuota{display:none}
 #selBar .sbId{grid-area:id;display:flex;align-items:center;gap:10px;padding:7px 12px;min-width:0}
@@ -11911,7 +11911,7 @@ html body button.danger,html body #colFine,html body #btnEnd,html body #fogReset
     if(qi&&qb){ const r=qb.getBoundingClientRect(), sr=st.getBoundingClientRect(); const vis=r.width>0&&r.height>0; qi.classList.toggle('vuota',!vis);
       if(vis){ qi.style.left=(qb.offsetLeft-(qb.offsetWidth&&getComputedStyle(qb).transform!=='none'?qb.offsetWidth/2:0))+'px'; const r2=qb.getBoundingClientRect(); qi.style.left=(r2.left-sr.left)+'px'; qi.style.width=r2.width+'px'; qi.style.bottom=(sr.bottom-r2.top-1)+'px'; } }
     /* v305: col PG selezionato il master vede anche la barra rapida del personaggio (le abilità): la barra sale sopra, non la copre */
-    if(IS_GM&&qb){ const r=qb.getBoundingClientRect(), sr=st.getBoundingClientRect(); bar.style.bottom=(r.width>0&&r.height>0?Math.round(sr.bottom-r.top+8):78)+'px'; }
+    if(IS_GM&&qb){ const r=qb.getBoundingClientRect(), sr=st.getBoundingClientRect(); bar.style.bottom=(r.width>0&&r.height>0?Math.round(sr.bottom-r.top+8):12)+'px'; }
     const id=IS_GM?selected:me; const t=id&&S.tokens[id];
     bar.classList.toggle('vuota',!t||(!IS_GM&&!t));
     if(!t) return;
@@ -11972,4 +11972,37 @@ body:not(.isgm) #guide>#secLog #log{flex:1 1 auto;overflow-y:auto;min-height:0}
   sposta();
 })();
 /* ===== FINE COLONNA UNICA PER I GIOCATORI E SCHERMI PICCOLI (v310) ===== */
+/* ===== ATTREZZI A SINISTRA (v311) =====
+   I giocatori (via Giuseppe, 25-10): «spostare Muovi, Misura, Tira dadi e Ping nella barra a sinistra, così è più visibile e meno
+   fastidioso, e si può abbassare la barra». I quattro tasti del dock (#dkMove, #dkMeasure, #dkDice, #dkPing: stessi id, stesse funzioni)
+   vanno in testa alla barra degli attrezzi a sinistra (#zoomctl), con l'etichetta piccola sotto il simbolo; il vecchio «Misura» della barra
+   (#btnMeasure) si nasconde perché è lo stesso; lo zoom (− % +) va in fondo alla stessa barra, in colonna; il dock sparisce e la barra rapida (#quickbar) scende fino al bordo (la barra del master,
+   #selBar, scende con lei: vedi «LA BARRA IN BASSO»). Per tutti, master compreso.
+   Fonte: Revisioni/Attrezzi a sinistra (25-10-2026)/ (blocco.js + applica.py). */
+(function(){
+  const css=document.createElement('style'); css.id='attrezziSinistra'; css.textContent=`
+#zoomctl #dockSx{display:flex;flex-direction:column;gap:4px;padding-bottom:6px;margin-bottom:4px;border-bottom:1px solid rgba(217,177,92,.28)}
+#zoomctl #dockSx button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;min-height:48px;padding:5px 2px!important;font-size:10.5px!important;line-height:1.1;letter-spacing:.02em;color:#D9C9A6}
+#zoomctl #dockSx button svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#zoomctl #dockSx button.on{color:#F6E3A8;background:rgba(217,177,92,.18)!important;box-shadow:inset 0 0 0 1px rgba(217,177,92,.55)!important}
+#zoomctl #btnMeasure{display:none!important}
+#dock{display:none!important}
+#zoomctl #zoomlbl{position:static!important;transform:none!important;display:flex!important;flex-direction:column;align-items:center;gap:2px;width:100%;margin-top:4px;padding:6px 0 0!important;border:0!important;border-top:1px solid rgba(217,177,92,.28)!important;background:transparent!important;box-shadow:none!important;font-size:12px;color:#D9C9A6}
+#zoomctl #zoomlbl>*{margin:0!important}
+#zoomctl #zoomlbl button{width:100%;min-height:30px;padding:2px!important}
+html body #quickbar{bottom:12px!important}
+#zoomctl{max-height:calc(100% - 24px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
+@media (max-height:920px){ #zoomctl #dockSx button{min-height:36px}#zoomctl #dockSx button span{display:none} #zoomctl #zoomlbl button{min-height:26px} }
+`; document.head.appendChild(css);
+  function sposta(){
+    const z=document.getElementById('zoomctl'), d=document.getElementById('dock'); if(!z||!d) return;
+    let g=document.getElementById('dockSx'); if(!g){ g=document.createElement('div'); g.id='dockSx'; z.insertBefore(g,z.firstChild); }
+    for(const id of ['dkMove','dkMeasure','dkDice','dkPing']){ const b=document.getElementById(id); if(b&&b.parentElement!==g) g.appendChild(b); }
+    /* lo zoom (− % +) in fondo alla stessa barra: in basso a destra lo copriva la barra rapida */
+    const zl=document.getElementById('zoomlbl'); if(zl&&zl.parentElement!==z){ z.appendChild(zl); const k=[...zl.children]; if(k.length===3&&k[0].tagName==='BUTTON') zl.insertBefore(k[2],k[0]); }
+  }
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ sposta(); }catch(e){ console.warn('attrezzi a sinistra',e); } return o; };
+  sposta();
+})();
+/* ===== FINE ATTREZZI A SINISTRA (v311) ===== */
 </script>
