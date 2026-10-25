@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v311</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v312</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10313,7 +10313,7 @@ function dlgPanel(box,png,tid){
     /* Colpo intrappolante */
     for(const c of (tg.conds||[])){ if(c&&c.n==='trattenuto'&&c.spell==='Ensnaring Strike'&&c.source){ const x=fxRoll(c.dmg||'1d6'); applyDamage(tg,x.total); log({kind:'hit',tid:id,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} subisce ${x.total} danni perforanti dai viticci di Colpo intrappolante (${x.txt})`}); n++; } }
     /* Guardiani spirituali: chi si concentra entro 4,5 m */
-    for(const [oid,o] of Object.entries(S.tokens)){ if(oid===id||!o||!nemici(o,tg)) continue; const c=concOf(o); if(!c||c.spell!=='Spirit Guardians'||!tokInScene(oid)||o.hp<=0) continue; if(distM(o,tg)>4.5) continue; const L=c.slot||3; tsDanno(oid,tg,'Sag',`${3+Math.max(0,L-3)}d8`,true,'Guardiani spirituali','radiosi'); n++; }
+    /* v312: i Guardiani spirituali seguono la regola 2024 (entra, l'aura raggiunge, finisce il turno): blocco «GUARDIANI SPIRITUALI COME NEL 2024» */
     /* pedine delle aree: branco, raggio, sfera */
     for(const [k,x] of Object.entries(S.tokens)){ if(!x||!x.spellTok||!x.area||x.owner===id||!tokInScene(k)) continue; const o=S.tokens[x.owner]; if(!o||!nemici(o,tg)) continue; const L=x.evLvl||2, d=distM(x,tg);
       if(x.spellTok==='Conjure Animals'&&d<=3){ tsDanno(x.owner,tg,'Des',`${3+Math.max(0,L-3)}d10`,false,'Evoca animali','taglienti'); n++; }
@@ -12005,4 +12005,60 @@ html body #quickbar{bottom:12px!important}
   sposta();
 })();
 /* ===== FINE ATTREZZI A SINISTRA (v311) ===== */
+/* ===== GUARDIANI SPIRITUALI COME NEL 2024 (v312) =====
+   Giuseppe (25-10): «ogni volta che Mattheus si muove con Guardiani spirituali, l'aura infligge danno al nemico». Regola 2024 (Spirit Guardians):
+   l'emanazione di 4,5 m fa fare un TS Saggezza (3d8 radiosi, metà se riesce; +1d8 per slot oltre il 3°) quando entra nello spazio di una
+   creatura, quando una creatura ci entra e quando una creatura ci finisce il turno; una volta per turno per creatura.
+   Prima il sito applicava solo la regola vecchia (all'inizio del turno del nemico, nel blocco v253): quella riga è spenta (applica.py).
+   - mossa confermata (#mvYes) in scontro: se si muove chi si concentra sui Guardiani, i nemici che ora sono entro 4,5 m e prima no fanno il TS;
+     se si muove un nemico e entra nell'aura, fa il TS;
+   - «Prossimo» (#btnNext): chi finisce il turno dentro l'aura di un nemico fa il TS.
+   Resta a mano: la velocità dimezzata dentro l'aura. Fonte: Revisioni/Guardiani spirituali 2024 (25-10-2026)/ (blocco.js + applica.py). */
+(function(){
+  const spOf=id=>((SHEETS[id]||{}).spell)||{dc:13,atk:5};
+  const dcOf=id=>spOf(id).dc+(fxOn(S.tokens[id],'innata')?1:0);
+  const nemici=(a,b)=>(a.kind==='nemico')!==(b.kind==='nemico');
+  const fatti=new Set();
+  const chiave=(oid,tid)=>`${S.round||0}|${S.turn||0}|${oid}|${tid}`;
+  const R=4.5;
+  function guardiani(){ return Object.entries(S.tokens).filter(([oid,o])=>{ if(!o||o.hp<=0||!tokInScene(oid)) return false; const c=concOf(o); return !!(c&&c.spell==='Spirit Guardians'); }); }
+  function ts(oid,tid,perche){
+    const k=chiave(oid,tid); if(fatti.has(k)) return false; const o=S.tokens[oid], tg=S.tokens[tid];
+    if(!o||!tg||tg.hp<=0||(typeof isDead==='function'&&isDead(tg))) return false; fatti.add(k);
+    const L=(concOf(o)||{}).slot||3, dc=dcOf(oid);
+    const mod=(tg.kind==='pg'||tg.kind==='alleato')?(tg.mods?.['TS Sag']??0):monsterSaveMod(tg,'Sag');
+    let r=d20(); if(hasCondition(tg,'anatema')){ const x=rollExpr('1d4').total; log({kind:'sys',txt:`${tg.name}: Anatema, −${x} al tiro salvezza`}); r-=x; }
+    const tot=r+mod, ok=tot>=dc;
+    log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · Guardiani spirituali`,skill:'TS Sag',r,mod,tot,dc});
+    const x=fxRoll(`${3+Math.max(0,L-3)}d8`), v=ok?Math.floor(x.total/2):x.total;
+    if(v>0){ applyDamage(tg,v); log({kind:'hit',tid:fxIdOf(tg),hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} ${ok?'supera':'fallisce'} il TS Saggezza e subisce ${v} danni radiosi dai Guardiani spirituali di ${String(o.name).split(' ')[0]} (${perche}; ${x.txt})`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); }
+    return true;
+  }
+  function dopoMossa(id,prima){
+    const t=S.tokens[id], p0=prima[id]; if(!t||!p0||(p0.x===t.x&&p0.y===t.y)) return 0; let n=0;
+    const c=concOf(t);
+    if(c&&c.spell==='Spirit Guardians'&&t.hp>0){ /* si muove chi ha l'aura: l'aura entra nello spazio dei nemici */
+      for(const [eid,e] of Object.entries(S.tokens)){ if(eid===id||!e||e.hp<=0||!tokInScene(eid)||!nemici(t,e)) continue; const pe=prima[eid]||e;
+        if(distM(t,e)<=R&&distM(p0,pe)>R&&ts(id,eid,'l’aura lo raggiunge')) n++; } }
+    for(const [oid,o] of guardiani()){ if(oid===id||!nemici(o,t)) continue; /* si muove una creatura: entra nell'aura */
+      const po=prima[oid]||o; if(distM(o,t)<=R&&distM(po,p0)>R&&ts(oid,id,'entra nell’aura')) n++; }
+    return n;
+  }
+  function fineTurno(){
+    if(S.mode!=='scontro'||!S.order||!S.order.length) return 0; const id=S.order[S.turn], t=S.tokens[id]; if(!t) return 0; let n=0;
+    for(const [oid,o] of guardiani()){ if(oid===id||!nemici(o,t)) continue; if(distM(o,t)<=R&&ts(oid,id,'finisce il turno nell’aura')) n++; }
+    return n;
+  }
+  const yes=document.getElementById('mvYes');
+  if(yes){ const _on=yes.onclick; yes.onclick=function(){
+    if(!pending||S.mode!=='scontro') return _on.apply(this,arguments);
+    const id=pending.id, prima={}; for(const [k,t] of Object.entries(S.tokens)) if(t) prima[k]={x:t.x,y:t.y};
+    const r=_on.apply(this,arguments);
+    try{ if(dopoMossa(id,prima)) save(true); }catch(e){ console.warn('guardiani spirituali',e); }
+    return r; }; }
+  const nx=document.getElementById('btnNext');
+  if(nx){ const _n=nx.onclick; nx.onclick=function(){ try{ fineTurno(); }catch(e){ console.warn('guardiani spirituali',e); } return _n.apply(this,arguments); }; }
+  window.__guardiani={dopoMossa,fineTurno,ts};
+})();
+/* ===== FINE GUARDIANI SPIRITUALI COME NEL 2024 (v312) ===== */
 </script>
