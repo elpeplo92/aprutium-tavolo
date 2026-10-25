@@ -1613,3 +1613,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Codice: blocco «MENO CORNICI (v288)» in fondo allo script: il CSS (ogni selettore prefissato `html body` perché vinca sulle regole `!important` dei blocchi vecchi) va in un `<style id="menoCornici">` in fondo al `body`, rimesso in fondo anche al `load`. Per cambiarlo: modificare `meno-cornici.css` e rifare il blocco (la trasformazione è nello script Python della sessione: selettori separati per virgola, prefisso `html body `).
 - Nello stesso commit (lasciati pronti da un'altra conversazione): Atto XIX, voce di Ansaldo e scena osteria: il messere avvelenato dalla sua bottiglia (racconto di Giuseppe del 25-10).
 - Attenzione per le prove: nel riquadro del browser nascosto le transizioni non avanzano (i tasti della barra sembrano ancora bordati): verificare con Playwright.
+
+## v289 (25/10/2026) — l'Atto XIX e Ansaldo avvelenato, davvero nella pagina
+
+- La v288 aveva nel commit i tre JSON (Atto XIX, voce di Ansaldo, scena osteria) ma `index.html` era stato costruito prima: nella pagina c'era ancora il testo vecchio. Solo `py build.py` e versione alzata. Lezione: dopo aver toccato `contenuti/`, rifare sempre il build prima del commit, anche se il JSON è di un'altra conversazione.
+- Contenuto (racconto di Giuseppe del 25-10): Maximus ammalia Ansaldo e gli fa bere la sua bottiglia, che contiene il liquido nero della forgiatura; lo mette a letto quasi morente, gli prende tutto e dice alla scorta che «ha bevuto troppo». Adamus dà fuoco ai carri e si nasconde nel fienile; i vesperiani incolpano la spada di Alessandros. ⟦Il liquido lo forgia da dentro: Ristorare inferiore o Medicina CD 15 lo salvano, senza cure all'alba è morto col petto di ferro⟧.
