@@ -1321,7 +1321,9 @@ select option{background:#0C0F15;color:#EFE6D0}
 #roleSel{border:0!important;background-color:transparent!important;color:#EFE6D0;font-size:16px!important;padding:3px 30px 3px 6px!important;height:30px}
 #roleSel:focus-visible{outline:none}
 /* — titoli delle sezioni — */
-.sec h2.collh,.shpanel h2{display:flex;align-items:center;gap:10px;background:linear-gradient(180deg,#FCE9AE,#DDB863 55%,#A97B2E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec h2.collh,.shpanel h2{display:flex;align-items:center;gap:10px;background:none;-webkit-text-fill-color:currentColor;color:#E6C67A;text-shadow:0 1px 0 rgba(0,0,0,.55)}
+/* v287: titoli sempre leggibili (prima oro «ritagliato» col testo trasparente: spariva dove il fondo dorato non si disegnava, e sempre nella Guida della scena) */
+#guide #sceneGuide>h2.collh{color:#E6C67A;text-shadow:0 1px 0 rgba(0,0,0,.6);background:linear-gradient(180deg,#2B1E11,#3A2915);margin:-16px -16px 10px;padding:10px 16px;border-bottom:1px solid #8A6A3A}
 .sec h2.collh::before,.shpanel h2::before{content:''!important;flex:none;width:8px!important;height:8px;margin:0 2px 0 3px!important;transform:rotate(45deg)!important;background:linear-gradient(135deg,#FCE9AE,#B98C3C);box-shadow:0 0 6px rgba(212,174,92,.55);font-size:0!important;transition:background .15s,box-shadow .15s}
 .sec h2.collh::after,.shpanel h2::after{content:'';flex:1;min-width:12px;height:1px;background:linear-gradient(90deg,rgba(212,174,92,.55),rgba(212,174,92,0));-webkit-text-fill-color:initial}
 .sec.closed h2.collh{opacity:.78}
@@ -2588,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v286</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v287</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
