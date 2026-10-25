@@ -1,0 +1,29 @@
+{
+ "id": "accolito",
+ "name": "Accolito",
+ "short": "Acc",
+ "color": "#3E7A5A",
+ "hp": 11,
+ "ac": 13,
+ "init": 0,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Mazza (+1d4 radiosi)",
+   "atk": 2,
+   "dmg": "1d6"
+  },
+  {
+   "n": "Fiamma radiosa (18 m)",
+   "atk": 4,
+   "dmg": "2d6"
+  }
+ ],
+ "note": "Accolito (Priest Acolyte, MM 2024) · GS 1/4 · 50 PE · velocità 9 m · Medicina +4, Religione +2 · Percezione passiva 12 · incantesimi: Luce, Taumaturgia; 1/giorno Benedizione, Santuario.",
+ "src": "La Crociata",
+ "tac": "Sta coi feriti e coi civili: benedice chi combatte e protegge chi non può farlo. Attacca solo per difendersi.",
+ "lines": [
+  "Il Signore vi guardi.",
+  "Coraggio, figlioli."
+ ]
+}

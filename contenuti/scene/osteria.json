@@ -1088,7 +1088,8 @@
       "tac": "Dietro il banco. Conta i carri dalla finestra prima di contare gli avventori. Offre la prima brocca «per la Crociata».",
       "img": "TOKEN — Nicola «Lu Passe».png",
       "ritratto": "Ritratto pedina — Nicola «Lu Passe».jpg",
-      "png": "png-nicola-lu-passe"
+      "png": "png-nicola-lu-passe",
+      "best": "popolano"
     },
     {
       "id": "o_g2",
@@ -1101,7 +1102,8 @@
       "tac": "Porta le brocche ai tavoli del pergolato. Guarda i quattro carri chiusi e abbassa gli occhi.",
       "img": "TOKEN — Ninetta, la figlia dell’oste.png",
       "ritratto": "Ritratto pedina — Ninetta, la figlia dell’oste.jpg",
-      "png": "png-ninetta-de-lu-passe"
+      "png": "png-ninetta-de-lu-passe",
+      "best": "popolano"
     },
     {
       "id": "o_g3",
@@ -1114,7 +1116,8 @@
       "tac": "A un tavolo della sala, col bastone e la conchiglia. Va alla Basilica Aurea. Ha visto passare i carri chiusi.",
       "img": "TOKEN — Ghita la pellegrina.png",
       "ritratto": "Ritratto pedina — Ghita la pellegrina.jpg",
-      "png": "png-ghita-la-pellegrina"
+      "png": "png-ghita-la-pellegrina",
+      "best": "popolano"
     },
     {
       "id": "o_g4",
@@ -1127,7 +1130,8 @@
       "tac": "Carrettiere di Bbashanë, col fieno. Parla per due. Quest’anno ha sentito tremare la terra più di una volta.",
       "img": "TOKEN — Zi’ Brunone e suo cognato.png",
       "ritratto": "Ritratto pedina — Zi’ Brunone e suo cognato.jpg",
-      "png": "png-zi-brunone"
+      "png": "png-zi-brunone",
+      "best": "popolano"
     },
     {
       "id": "o_g5",
@@ -1139,7 +1143,9 @@
       "gruppo": "osteria",
       "tac": "Non parla. Annuisce a tutto quello che dice Brunone.",
       "img": "TOKEN — Zi’ Brunone e suo cognato.png",
-      "ritratto": "Ritratto pedina — Zi’ Brunone e suo cognato.jpg"
+      "ritratto": "Ritratto pedina — Zi’ Brunone e suo cognato.jpg",
+      "best": "popolano",
+      "png": "png-zi-brunone"
     },
     {
       "id": "o_g6",
@@ -1152,7 +1158,8 @@
       "tac": "Nella stalla grande. Ha visto che cosa c’era nella cassa caduta. Ha paura di Tanush.",
       "img": "TOKEN — Pasqualino.png",
       "ritratto": "Ritratto pedina — Pasqualino.jpg",
-      "png": "png-pasqualino"
+      "png": "png-pasqualino",
+      "best": "popolano"
     },
     {
       "id": "o_g7",
@@ -1165,7 +1172,8 @@
       "tac": "Fermo sulla collina a nord-est, senza stemma. Guarda il cortile. Se qualcuno sale, non c’è più.",
       "img": "TOKEN — Il cavaliere sulla collina.png",
       "ritratto": "Ritratto pedina — Il cavaliere sulla collina.jpg",
-      "png": "png-cavaliere-sulla-collina"
+      "png": "png-cavaliere-sulla-collina",
+      "best": "esploratore"
     },
     {
       "id": "g_c0",
@@ -1181,17 +1189,6 @@
       "best": "capitan_silvanus"
     },
     {
-      "id": "g_c1",
-      "nome": "Kostandìn",
-      "short": "Kos",
-      "kind": "alleato",
-      "x": 600,
-      "y": 560,
-      "gruppo": "colonna",
-      "img": "TOKEN — Sergente Kostandìn.png",
-      "png": "mu-sergente-kostandin"
-    },
-    {
       "id": "g_c2",
       "nome": "Tiberius Aurentius",
       "short": "Tib",
@@ -1205,47 +1202,6 @@
       "tac": "Resta al Carro I con le insegne; stocco a chi si avvicina al carro."
     },
     {
-      "id": "g_c3",
-      "nome": "Vasco",
-      "short": "Vas",
-      "kind": "alleato",
-      "x": 640,
-      "y": 700,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vasco.png",
-      "png": "png-vasco"
-    },
-    {
-      "id": "g_c4",
-      "nome": "Uomo di Vasco",
-      "short": "V",
-      "kind": "alleato",
-      "x": 690,
-      "y": 660,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano.png"
-    },
-    {
-      "id": "g_c5",
-      "nome": "Uomo di Vasco",
-      "short": "V",
-      "kind": "alleato",
-      "x": 760,
-      "y": 700,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 2.png"
-    },
-    {
-      "id": "g_c6",
-      "nome": "Uomo di Vasco",
-      "short": "V",
-      "kind": "alleato",
-      "x": 700,
-      "y": 780,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 3.png"
-    },
-    {
       "id": "g_c7",
       "nome": "Civile Pompizius",
       "short": "Po",
@@ -1253,27 +1209,9 @@
       "x": 270,
       "y": 730,
       "gruppo": "colonna",
-      "img": "TOKEN — Civile Pompizius.png"
-    },
-    {
-      "id": "g_c8",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 330,
-      "y": 690,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 4.png"
-    },
-    {
-      "id": "g_c9",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 330,
-      "y": 790,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano.png"
+      "img": "TOKEN — Civile Pompizius.png",
+      "best": "popolano",
+      "png": "png-civili-pompizius"
     },
     {
       "id": "g_c10",
@@ -1283,27 +1221,9 @@
       "x": 270,
       "y": 870,
       "gruppo": "colonna",
-      "img": "TOKEN — Mastro Colangelo.png"
-    },
-    {
-      "id": "g_c11",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 330,
-      "y": 930,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 2.png"
-    },
-    {
-      "id": "g_c12",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 200,
-      "y": 960,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 3.png"
+      "img": "TOKEN — Mastro Colangelo.png",
+      "best": "popolano",
+      "png": "png-mastro-colangelo"
     },
     {
       "id": "g_c13",
@@ -1314,7 +1234,9 @@
       "y": 650,
       "gruppo": "colonna",
       "img": "TOKEN — Mastro Giustino.png",
-      "tac": "Al Carro IV: tiene i buoi fermi mentre il piazzale brucia. Bestemmia."
+      "tac": "Al Carro IV: tiene i buoi fermi mentre il piazzale brucia. Bestemmia.",
+      "best": "popolano",
+      "png": "png-mastro-giustino"
     },
     {
       "id": "g_c14",
@@ -1326,7 +1248,8 @@
       "gruppo": "colonna",
       "img": "TOKEN — Dottor Albino.png",
       "png": "png-dottor-albino",
-      "tac": "Dietro il Carro IV coi feriti: non combatte, cura. Due pozioni in borsa."
+      "tac": "Dietro il Carro IV coi feriti: non combatte, cura. Due pozioni in borsa.",
+      "best": "dottor_albino"
     },
     {
       "id": "g_c15",
@@ -1336,7 +1259,8 @@
       "x": 440,
       "y": 760,
       "gruppo": "colonna",
-      "img": "TOKEN — Frate Martino.png"
+      "img": "TOKEN — Frate Martino.png",
+      "best": "accolito"
     },
     {
       "id": "g_c16",
@@ -1346,7 +1270,9 @@
       "x": 460,
       "y": 900,
       "gruppo": "colonna",
-      "img": "TOKEN — Iosephus Pompizius.png"
+      "img": "TOKEN — Iosephus Pompizius.png",
+      "best": "popolano",
+      "png": "png-civili-pompizius"
     },
     {
       "id": "g_c17",
@@ -1421,46 +1347,6 @@
       "tac": "In fila coi compagni davanti ai carri, scudo verso il pergolato."
     },
     {
-      "id": "g_c23",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 480,
-      "y": 1030,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 4.png"
-    },
-    {
-      "id": "g_c24",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 900,
-      "y": 1000,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano.png"
-    },
-    {
-      "id": "g_c25",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 960,
-      "y": 1040,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 2.png"
-    },
-    {
-      "id": "g_c26",
-      "nome": "Vesperiano di Kostandìn",
-      "short": "Ve",
-      "kind": "alleato",
-      "x": 420,
-      "y": 1000,
-      "gruppo": "colonna",
-      "img": "TOKEN — Vesperiano 3.png"
-    },
-    {
       "id": "g_c27",
       "nome": "Micuccio",
       "short": "Mic",
@@ -1469,7 +1355,8 @@
       "y": 840,
       "gruppo": "colonna",
       "img": "TOKEN — Micuccio.png",
-      "png": "png-micuccio"
+      "png": "png-micuccio",
+      "best": "popolano"
     },
     {
       "id": "g_c28",
@@ -1479,7 +1366,9 @@
       "x": 560,
       "y": 880,
       "gruppo": "colonna",
-      "img": "TOKEN — Cuncetta de lu Funare.png"
+      "img": "TOKEN — Cuncetta de lu Funare.png",
+      "best": "popolano",
+      "png": "png-cuncetta"
     },
     {
       "id": "g_c29",
@@ -1489,7 +1378,9 @@
       "x": 580,
       "y": 820,
       "gruppo": "colonna",
-      "img": "TOKEN — Mastro Nicola lu Funare.png"
+      "img": "TOKEN — Mastro Nicola lu Funare.png",
+      "best": "popolano",
+      "png": "png-mastro-nicola-lu-funare"
     },
     {
       "id": "g_c30",
@@ -1511,7 +1402,8 @@
       "x": 660,
       "y": 950,
       "gruppo": "colonna",
-      "img": "TOKEN — Mimì lu Bannitòre.png"
+      "img": "TOKEN — Mimì lu Bannitòre.png",
+      "best": "popolano"
     },
     {
       "id": "g_carroI",
@@ -1521,7 +1413,8 @@
       "x": 200,
       "y": 640,
       "gruppo": "colonna",
-      "carro": true
+      "carro": true,
+      "best": "carro"
     },
     {
       "id": "g_carroII",
@@ -1531,7 +1424,8 @@
       "x": 200,
       "y": 780,
       "gruppo": "colonna",
-      "carro": true
+      "carro": true,
+      "best": "carro"
     },
     {
       "id": "g_carroIII",
@@ -1541,7 +1435,8 @@
       "x": 200,
       "y": 920,
       "gruppo": "colonna",
-      "carro": true
+      "carro": true,
+      "best": "carro"
     },
     {
       "id": "g_carroIV",
@@ -1551,7 +1446,8 @@
       "x": 380,
       "y": 700,
       "gruppo": "colonna",
-      "carro": true
+      "carro": true,
+      "best": "carro"
     },
     {
       "id": "g_carroV",
@@ -1561,7 +1457,8 @@
       "x": 390,
       "y": 850,
       "gruppo": "colonna",
-      "carro": true
+      "carro": true,
+      "best": "carro"
     },
     {
       "id": "v_k",
@@ -1773,71 +1670,6 @@
       "ritratto": "Ritratto pedina — Vhaerun.jpg",
       "png": "png-vhaerun",
       "tac": "Nel piazzale, fra i carri della Crociata e il pozzo. Carica solo chi attacca i personaggi o i civili; contro le Armature del Loto va per primo. Se Silvanus urla di tenere, tiene."
-    },
-    {
-      "id": "g_g",
-      "nome": "Gerardo Tosti",
-      "short": "Ger",
-      "best": "gerardo_tosti",
-      "kind": "alleato",
-      "x": 420,
-      "y": 660,
-      "gruppo": "colonna",
-      "img": "TOKEN — Gerardo Tosti.png",
-      "ritratto": "Ritratto pedina — Gerardo Tosti.jpg",
-      "tac": "Soldato di Cashtalladdë tornato persona: si mette in fila coi miliziani senza che nessuno glielo chieda. Vuole tornare dal suo sergente a raccontare."
-    },
-    {
-      "id": "g_v2",
-      "nome": "Mèmmo Chiòdi",
-      "short": "Mèm",
-      "best": "popolano_tornato",
-      "kind": "alleato",
-      "x": 460,
-      "y": 660,
-      "gruppo": "colonna",
-      "img": "TOKEN — Mèmmo Chiòdi.png",
-      "ritratto": "Ritratto pedina — Mèmmo Chiòdi.jpg",
-      "tac": "Il più giovane dei Chiòdi, tornato persona. Ha trovato il fratello Berardo fra i corpi del guado e non parla. Tiene la falce."
-    },
-    {
-      "id": "g_v3",
-      "nome": "Cola lu vaccaro",
-      "short": "Col",
-      "best": "popolano_tornato",
-      "kind": "alleato",
-      "x": 500,
-      "y": 660,
-      "gruppo": "colonna",
-      "img": "TOKEN — Cola lu vaccaro.png",
-      "ritratto": "Ritratto pedina — Cola lu vaccaro.jpg",
-      "tac": "Il vaccaro del casale del guado, tornato persona. Si guarda le mani, chiede delle vacche. Sta vicino ai buoi."
-    },
-    {
-      "id": "g_w2",
-      "nome": "Lucia",
-      "short": "Luc",
-      "best": "popolano_tornato",
-      "kind": "alleato",
-      "x": 420,
-      "y": 700,
-      "gruppo": "colonna",
-      "img": "TOKEN — Lucia.png",
-      "ritratto": "Ritratto pedina — Lucia.jpg",
-      "tac": "Ragazza dei campi di Sant’Atto, tornata persona. Chiede di Sabatino e Giuvanne, che erano con lei, e di sua sorella ⟦Rosina⟧. Sta con Cuncetta e Micuccio."
-    },
-    {
-      "id": "g_z",
-      "nome": "Zi’ Pasquale lu mulinaro",
-      "short": "Zi’",
-      "best": "popolano_tornato",
-      "kind": "alleato",
-      "x": 460,
-      "y": 700,
-      "gruppo": "colonna",
-      "img": "TOKEN — Zi’ Pasquale lu mulinaro.png",
-      "ritratto": "Ritratto pedina — Zi’ Pasquale lu mulinaro.jpg",
-      "tac": "Il mugnaio del guado, tornato persona. Sa chi è passato al mulino negli ultimi giorni (aggancio per il master). Non combatte: si ripara."
     },
     {
       "id": "o_l2",

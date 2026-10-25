@@ -1,0 +1,29 @@
+{
+ "id": "esploratore",
+ "name": "Esploratore",
+ "short": "Esp",
+ "color": "#5A5A3E",
+ "hp": 16,
+ "ac": 13,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 attacchi"
+  },
+  {
+   "n": "Spada corta",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Arco lungo (45/180 m)",
+   "atk": 4,
+   "dmg": "1d8+2"
+  }
+ ],
+ "note": "Esploratore (Scout, MM 2024) · GS 1/2 · 100 PE · velocità 9 m · Natura +4, Percezione +5, Furtività +6, Sopravvivenza +5 · Percezione passiva 15.",
+ "src": "La Crociata",
+ "tac": "Non combatte: guarda e scappa. Ha un buon cavallo e un vantaggio di cento metri.",
+ "lines": []
+}
