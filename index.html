@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v291</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v292</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -9864,7 +9864,7 @@ function dlgPanel(box,png,tid){
 }
 (function(){ const _rg=renderGuide; renderGuide=function(){
   const box=document.getElementById('sceneGuide');
-  if(IS_GM&&box&&CUR&&CUR.id!=='luogo'&&!CUR.crusade&&selected&&selected!==DLG_OFF&&S.tokens[selected]){ const png=tokPng(selected); if(png){ dlgPanel(box,png,selected); return; } }
+  /* v291: il dialogo della pedina si apre nel colloquio, a sinistra della mappa, non più qui */
   if(selected!==DLG_OFF) DLG_OFF=null;
   _rg(); }; })();
 (function(){ const _m=pedineMetti; pedineMetti=function(sid,g){ const d=SCENE_DATA.find(x=>x.id===sid); for(const g2 of ((d&&d.pedineSostituisce)||{})[g]||[]) if(pedineOf(sid).some(x=>x.gruppo===g2&&S.tokens['p_'+sid+'_'+x.id])) pedineTogli(sid,g2);
@@ -10863,199 +10863,277 @@ window.RICETTE={
   window.__v257={suona,animaEvento,sorveglia,segna,attivi:()=>EFF.length,azzera:()=>{ EFF=[]; },visti:FX_VISTI,t:()=>FX_T};
 })();
 /* ===== FINE ANIMAZIONI DEGLI INCANTESIMI (v257) ===== */
-/* ===== IL PNG PARLA (v269) — banco di regia, fase 1 =====
-   Giuseppe (19-10-2026): «un gestore del dialogo: quando i giocatori parlano con un PNG, l'AI genera il dialogo, meglio se con la voce».
-   Come funziona: sul PC del master gira il programma `7_Aprutium/Regia/regia.mjs` (il «banco di regia»). Il sito e il programma si
-   parlano su Firebase in `partita/regia/<ambiente>/` (ambiente = `prova` con ?prova=1, `partita` sul tavolo vero):
-   - `stato` {online, attore}: il programma lo scrive ogni 15 s; se manca da più di un minuto, l'assistente è «spento» e il riquadro non si mostra ai giocatori.
-   - `dialoghi/<did>` {png, nome, tid, pg, modo: libero|controllato, aperto, chiuso, sussurro, riassunto, registrato, battute:{<bid>:{chi: pg|png, pg, testo, azione, avviso, t, stato, audio}}}.
-     Stati di una battuta del giocatore: nuova → presa (il programma la sta leggendo). Del PNG: attesa (modo controllato: aspetta il master) →
-     approvata (il master ha detto «Vai», o modo libero) → pronta (c'è l'audio, base64 mp3, lo sentono tutti) · rifiutata.
-   Il giocatore: clicca la pedina di un PNG che ha un dialogo (campo `png` della pedina, come il dialogo del master della v263), preme «Parla»,
-   scrive o detta (microfono del browser, italiano); la battuta del PNG compare sotto la pedina e si sente. «Basta» chiude.
-   Il master: vede i dialoghi aperti nella Guida; in modo controllato approva, corregge o scarta ogni battuta prima che parta; può sussurrare
-   un'indicazione al PNG, dire lui una battuta («Parlo io»), chiudere. Alla chiusura il riassunto va nel Registro (lo scrive la pagina del master).
-   Senza programma acceso il sito è identico a prima. Fonte: Revisioni/Proposte per il sito (14-10-2026)/v269/. */
+/* ===== IL COLLOQUIO (v291) =====
+   Giuseppe (25-10-2026): via «Il PNG parla» (voce sintetica, i giocatori che parlano col token: «non ha senso, i PNG li recito io»).
+   Al suo posto il colloquio, come nei giochi di ruolo (Pathfinder, Neverwinter Nights):
+   - Il giocatore clicca la pedina di un altro (non la sua) e gli si apre un menù con quello che può fare: con un PNG o un nemico
+     Parla, Persuadi, Intimidisci, Inganna, Leggi le intenzioni, Osserva; con un alleato o un altro PG Parla, Aiuta, Passa un oggetto,
+     Cura o stabilizza, Osserva. «Parla» e le azioni sociali aprono il colloquio; le altre vanno nel Registro.
+   - Il colloquio è un pannello a sinistra della mappa, accanto agli attrezzi del master: ritratto del PNG, chi parla con chi, le battute.
+     Lo vedono tutti i giocatori della scena; chiunque può scrivere (o dettare col microfono) cosa dice.
+   - Il master ha nello stesso pannello il COPIONE del PNG (il dialogo a sette blocchi): clicca una frase fra «» e la mostra ai giocatori.
+     Per le domande fuori copione: il suggeritore (banco di regia, `7_Aprutium/Regia/regia.mjs`, Claude Haiku) propone tre battute;
+     il master le legge, le corregge e le mostra. Può anche scrivere lui la risposta. Il master apre il pannello cliccando la pedina del PNG.
+   - Ogni battuta mostrata va nel Registro; alla chiusura il riassunto (lo scrive il banco di regia).
+   Dati su Firebase in `partita/regia/<ambiente>/colloqui/<cid>` (collegamento anonimo `regia`, come la v269):
+   {png, nome, tid, sc, pg, pgs:{pg:1}, aperto, chiuso, righe:{rid:{chi:'pg'|'png', pg, testo, azione, tipo:'azione', t, reg, chiesta}},
+    richiesta:{testo, chi, nota, t}, proposte:{req, stato, lista:[{tono,battuta,azione}], avviso}, riassunto, registrato}.
+   Fonte: 7_Aprutium/Revisioni/Il colloquio (v291)/ (colloquio.js + applica.py). */
 (function(){
   const AMB=(new URLSearchParams(location.search).get('regia'))||(TEST_MODE?'prova':'partita');
   const BASE='partita/regia/'+AMB;
-  const PGN={alessandros:'Alessandros',vicarus:'Vicarus',adamus:'Adamus',maximus:'Maximus',mattheus:'Mattheus',luigis:'Luigis'};
-  let rdb=null, DLGS={}, STATO={}, ONLINE=false, OPEN=null, played=new Set(), audioQ=[], audioBusy=false, audioBlocked=false, listening=false, lastKey='', cur=null, curDid=null, STOPS={};
-  const esc=s=>poiText(s);
-  const st=document.createElement('style'); st.textContent=`
-#regiaBox{border:1px solid var(--gold-dim);border-radius:6px;padding:10px 12px;background:rgba(0,0,0,.28);font-size:14px;line-height:1.45}
-#regiaBox h2{margin:0 0 6px;font-size:18px}
-#regiaBox .rhead{display:flex;align-items:center;gap:10px;margin-bottom:6px}
-#regiaBox .rhead img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1px solid var(--gold-dim)}
-#regiaBox .rhead b{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:19px;letter-spacing:.03em;color:var(--gold)}
-#regiaBox .rstato{font-size:12px;color:var(--ink-dim)}
-#regiaBox .rconv{display:flex;flex-direction:column;gap:6px;max-height:300px;overflow-y:auto;padding:4px 2px;margin:6px 0}
-#regiaBox .rb{max-width:92%;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(201,162,74,.25)}
-#regiaBox .rb.pg{align-self:flex-end;background:rgba(201,162,74,.14)}
-#regiaBox .rb.png{align-self:flex-start;font-family:"Bookinsanity",Georgia,serif;font-size:15px}
-#regiaBox .rb small{display:block;font-size:11px;color:var(--ink-dim);margin-bottom:2px}
-#regiaBox .rb i.az{display:block;font-size:12.5px;color:var(--ink-dim)}
-#regiaBox .rb.wait{opacity:.7;font-style:italic}
-#regiaBox .rb.att{border-color:var(--gold);background:rgba(201,162,74,.08)}
-#regiaBox textarea{width:100%;box-sizing:border-box;min-height:54px;font:inherit;font-size:14px;background:rgba(0,0,0,.3);color:var(--ink);border:1px solid var(--gold-dim);border-radius:4px;padding:6px}
-#regiaBox input[type=text]{flex:1;min-width:0;font:inherit;font-size:14px;background:rgba(0,0,0,.3);color:var(--ink);border:1px solid var(--gold-dim);border-radius:4px;padding:6px 8px}
-#regiaBox .rrow{display:flex;gap:6px;align-items:center;margin-top:6px;flex-wrap:wrap}
-#regiaBox button{font-size:13px;padding:5px 10px}
-#regiaBox button.mic.on{background:#7a2a1a;border-color:#c25a3a;color:#fff;animation:rpulse 1s infinite}
-@keyframes rpulse{0%,100%{box-shadow:0 0 0 0 rgba(194,90,58,.6)}50%{box-shadow:0 0 0 7px rgba(194,90,58,0)}}
-#regiaBox .ravv{font-size:12.5px;color:#E8C27A;border-left:2px solid var(--gold);padding-left:8px;margin:4px 0}
-#regiaBox .rlist{display:flex;flex-direction:column;gap:4px;margin-bottom:6px}
-#regiaBox .rlist button{text-align:left}
-#regiaBox .rtog{display:inline-flex;border:1px solid var(--gold-dim);border-radius:4px;overflow:hidden}
-#regiaBox .rtog button{border:0;border-radius:0;padding:3px 8px;font-size:12px}
-#regiaBox .rtog button.on{background:var(--gold);color:#1A1207}
-#regiaBox .rsmall{font-size:12px;color:var(--ink-dim)}
-`; document.head.appendChild(st);
+  const PGN={alessandros:'Alessandros',vicarus:'Vicarus',adamus:'Adamus',maximus:'Maximus',mattheus:'Mattheus',luigis:'Luigis',gruppo:'Il gruppo'};
+  let rdb=null, COLS={}, STATO={}, ONLINE=false, APERTO=null, SOLO=null, CHIUSO_QUI=new Set(), VISTI=new Set(), lastKey='', ascolto=null, pronto=false;
+  const esc=s=>poiText(s==null?'':s);
+  const now=()=>Date.now();
+  const breve=n=>String(n||'').split(',')[0].replace(/\s*\(.*?\)\s*/g,' ').trim();
+  const imgDi=t=>t?((typeof railImg==='function'&&railImg(t))||t.ritratto||t.img||''):'';
+  const pgTok=pg=>S.tokens[pg]||null;
 
-  function box(){ let b=document.getElementById('regiaBox'); if(b) return b; const top=document.getElementById('guideTop'); if(!top) return null; b=document.createElement('div'); b.id='regiaBox'; b.className='sec hidden'; top.insertBefore(b,top.firstChild); return b; }
+  const css=document.createElement('style'); css.textContent=`
+#colloquio{position:absolute;z-index:8;top:12px;bottom:64px;width:clamp(340px,32vw,470px);display:flex;flex-direction:column;background:#0B0E15;border:1px solid rgba(217,177,92,.55);border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.65);overflow:hidden;color:#EADFC8}
+#colloquio.hidden{display:none}
+#colloquio .colh{display:flex;align-items:center;gap:12px;padding:12px 14px;background:linear-gradient(180deg,#1A1610,#0F0D0A);border-bottom:1px solid rgba(217,177,92,.35)}
+#colloquio .colr{width:76px;height:76px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 25%;border:2px solid #C9A24A;box-shadow:0 0 0 3px rgba(0,0,0,.6)}
+#colloquio .colt{flex:1;min-width:0}
+#colloquio .colt .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A88A4E}
+#colloquio .colt b{display:block;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:25px;line-height:1.05;letter-spacing:.03em;color:#E6C67A}
+#colloquio .colt .chi{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:5px;font-size:13px;color:#B8A98C}
+#colloquio .colt .chi img{width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid rgba(217,177,92,.6)}
+#colloquio .colx{flex:none;align-self:flex-start;width:30px;height:30px;padding:0;border-radius:50%;font-size:18px;line-height:1;background:transparent;border:1px solid rgba(217,177,92,.4);color:#C9A24A}
+#colloquio .colb{flex:1;overflow-y:auto;padding:10px 12px 12px;display:flex;flex-direction:column;gap:10px}
+#colloquio .colb>*{flex:none}
+#colloquio .colconv{display:flex;flex-direction:column;gap:7px;min-height:40px}
+#colloquio .cb{max-width:88%;padding:7px 11px;border-radius:12px;font-size:15px;line-height:1.42}
+#colloquio .cb small{display:block;font-size:11.5px;letter-spacing:.04em;color:#A88A4E;margin-bottom:2px}
+#colloquio .cb.pg{align-self:flex-end;background:rgba(201,162,74,.16);border:1px solid rgba(201,162,74,.3);border-bottom-right-radius:3px}
+#colloquio .cb.png{align-self:flex-start;background:linear-gradient(rgb(227,204,156),rgb(214,186,132));color:#2E2116;font-family:"Bookinsanity",Georgia,serif;font-size:16px;border-bottom-left-radius:3px}
+#colloquio .cb.png small{color:#7A5420}
+#colloquio .cb.png i{display:block;font-size:13.5px;color:#5C4426;margin-top:3px}
+#colloquio .cb.az{align-self:center;max-width:95%;background:none;border:1px dashed rgba(201,162,74,.35);font-style:italic;font-size:14px;color:#CDBB97;text-align:center}
+#colloquio .cvuoto{font-size:14px;color:#9C8E74;font-style:italic;text-align:center;padding:6px}
+#colloquio .colsez{border-top:1px solid rgba(217,177,92,.22);padding-top:9px}
+#colloquio .colsez>h6{margin:0 0 6px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:#C9A24A}
+#colloquio .colsez>h6 .st{float:right;font-family:inherit;font-size:12px;letter-spacing:0;text-transform:none;color:#9C8E74}
+#colloquio .crow{display:flex;gap:6px;align-items:center;margin-top:6px}
+#colloquio .crow input,#colloquio .crow select{flex:1;min-width:0;font:inherit;font-size:14px;background:rgba(0,0,0,.35);color:#EADFC8;border:1px solid rgba(217,177,92,.4);border-radius:6px;padding:7px 9px}
+#colloquio .crow button{flex:none;font-size:13.5px;padding:7px 11px}
+#colloquio .cchips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+#colloquio .cchips button{font-size:12.5px;padding:4px 9px;border-radius:14px}
+#colloquio button.mic.on{background:#7a2a1a;border-color:#c25a3a;color:#fff}
+#colloquio .cprop{border:1px solid rgba(217,177,92,.3);border-radius:8px;padding:7px 9px;margin-top:6px;background:rgba(255,255,255,.03)}
+#colloquio .cprop small{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#A88A4E}
+#colloquio .cprop textarea{display:block;width:100%;box-sizing:border-box;min-height:48px;margin:4px 0;font-family:"Bookinsanity",Georgia,serif;font-size:15px;line-height:1.4;background:rgba(0,0,0,.3);color:#F1E6CF;border:1px solid rgba(217,177,92,.25);border-radius:5px;padding:6px 8px;resize:vertical}
+#colloquio .cprop .caz{font-size:13px;color:#B8A98C;font-style:italic}
+#colloquio .cprop .crow{justify-content:flex-end}
+#colloquio .cavv{font-size:13px;color:#E8C27A;border-left:2px solid #C9A24A;padding:2px 0 2px 8px;margin-top:6px}
+#colloquio .cattesa{font-size:13.5px;color:#9C8E74;font-style:italic;margin-top:4px}
+#colloquio .ccop{background:linear-gradient(rgb(227,204,156),rgb(210,180,124));color:#2E2116;border-radius:8px;padding:8px 11px;font-size:15px}
+#colloquio .ccop .dlg h6{color:#6B3F12}
+#colloquio .ccop q.dlgq{cursor:pointer;border-radius:3px;padding:0 2px;transition:background .15s}
+#colloquio .ccop q.dlgq:hover{background:rgba(201,140,40,.35)}
+#colloquio .ccop q.dlgq::after{content:" ▸";font-size:.8em;color:#8A5A1A;opacity:.55}
+#colloquio .ccop q.dlgq.mostrata{background:rgba(110,140,60,.22)}
+#colloquio .ccop .cnota{font-size:12.5px;color:#6B4E2A;font-style:italic;margin:0 0 4px}
+#colloquio .colf{display:flex;gap:6px;justify-content:space-between;padding:8px 12px;border-top:1px solid rgba(217,177,92,.25);background:#0F0D0A}
+html body #side>#secLog{background:#090B10!important}  /* il Registro resta fermo in fondo alla colonna: senza fondo (v288) si leggeva sopra «Selezione» */
+#tokMenu{position:fixed;z-index:60;min-width:210px;background:#0F0D0A;border:1px solid rgba(217,177,92,.6);border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.7);padding:6px;color:#EADFC8}
+#tokMenu .tmh{display:flex;align-items:center;gap:8px;padding:4px 6px 7px;border-bottom:1px solid rgba(217,177,92,.25);margin-bottom:4px}
+#tokMenu .tmh img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid #C9A24A}
+#tokMenu .tmh b{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:18px;color:#E6C67A}
+#tokMenu button{display:block;width:100%;text-align:left;border:0;background:transparent;color:#EADFC8;font-size:14.5px;padding:7px 9px;border-radius:5px;cursor:pointer}
+#tokMenu button:hover{background:rgba(201,162,74,.18);color:#F6E3A8}
+#tokMenu button small{color:#9C8E74;margin-left:4px}`;
+  document.head.appendChild(css);
+
+  /* ---------- collegamento ---------- */
   async function connect(){
     if(typeof firebase==='undefined'||!window.FIREBASE_CONFIG) return;
     try{
       let app; try{ app=firebase.app('regia'); }catch(e){ app=firebase.initializeApp(window.FIREBASE_CONFIG,'regia'); }
       const auth=app.auth(); if(!auth.currentUser) await auth.signInAnonymously();
       rdb=app.database();
-      rdb.ref(BASE+'/stato').on('value',s=>{ STATO=s.val()||{}; checkOnline(); paint(); });
-      rdb.ref(BASE+'/dialoghi').on('value',s=>{ DLGS=s.val()||{}; onDlgs(); paint(); });
-      setInterval(()=>{ const o=ONLINE; checkOnline(); if(o!==ONLINE) paint(); },20000);
-    }catch(e){ console.warn('regia: collegamento non riuscito',e); }
+      rdb.ref(BASE+'/stato').on('value',s=>{ STATO=s.val()||{}; ONLINE=!!(STATO.online&&now()-STATO.online<70000); paint(); });
+      rdb.ref(BASE+'/colloqui').on('value',s=>{ COLS=s.val()||{}; arrivi(); paint(); });
+      setInterval(()=>{ const o=ONLINE; ONLINE=!!(STATO.online&&now()-STATO.online<70000); if(o!==ONLINE) paint(); },20000);
+    }catch(e){ console.warn('colloquio: collegamento non riuscito',e); }
   }
-  function checkOnline(){ ONLINE=!!(STATO.online&&Date.now()-STATO.online<70000); }
-  const now=()=>Date.now();
-  function tokOf(did){ const d=DLGS[did]; return d&&S.tokens[d.tid]||null; }
-  function miei(){ return Object.entries(DLGS).filter(([id,d])=>d&&!d.chiuso&&(IS_GM||d.pg===me)).sort((a,b)=>(a[1].aperto||0)-(b[1].aperto||0)); }
-  function apri(tid,png,pg){
-    const t=S.tokens[tid]; if(!t||!rdb) return;
-    const did='d'+now().toString(36)+Math.random().toString(36).slice(2,6);
-    rdb.ref(BASE+'/dialoghi/'+did).set({png,nome:String(t.name||png),tid,pg:pg||me||'master',sc:(CUR&&CUR.id)||'',aperto:now(),battute:{}});
-    OPEN=did;
-  }
-  function dici(did,testo,pg){
-    testo=String(testo||'').trim(); if(!testo||!rdb) return;
-    rdb.ref(BASE+'/dialoghi/'+did+'/battute/b'+now().toString(36)).set({chi:'pg',pg:pg||DLGS[did].pg,testo,t:now(),stato:'nuova'});
-  }
-  function chiudi(did){ zitto(did); if(rdb) rdb.ref(BASE+'/dialoghi/'+did).update({chiuso:now()}); if(OPEN===did) OPEN=null; }
-  function setB(did,bid,patch){ if(rdb) rdb.ref(BASE+'/dialoghi/'+did+'/battute/'+bid).update(patch); }
-  function parloIo(did,testo){ testo=String(testo||'').trim(); if(!testo||!rdb) return; rdb.ref(BASE+'/dialoghi/'+did+'/battute/m'+now().toString(36)).set({chi:'png',testo,azione:'',avviso:'',t:now(),stato:'approvata',master:true}); }
+  const scena=()=>(CUR&&CUR.id)||S.scene||'';
+  const righe=c=>Object.entries((c&&c.righe)||{}).map(([id,r])=>({id,...r})).sort((a,b)=>a.t-b.t);
+  const aperti=()=>Object.entries(COLS).filter(([id,c])=>c&&!c.chiuso&&(!c.sc||c.sc===scena())).sort((a,b)=>(a[1].aperto||0)-(b[1].aperto||0));
+  const diTok=tid=>aperti().find(([id,c])=>c.tid===tid);
+  const nomeTok=tid=>{ const t=S.tokens[tid]; return t?String(t.name||''):''; };
 
-  /* audio: una battuta pronta si sente una volta sola, in coda */
-  function onDlgs(){
-    for(const [did,d] of Object.entries(DLGS)){
-      if(!d||d.chiuso) continue;
-      if(d.sc&&CUR&&CUR.id&&d.sc!==CUR.id) continue; /* si sente solo nella scena dove si parla */
-      if(d.stop&&d.stop!==STOPS[did]){ STOPS[did]=d.stop; zitto(did,false); }
-      for(const [bid,b] of Object.entries(d.battute||{})){ const k=did+'|'+bid; if(b.chi==='png'&&b.stato==='pronta'&&!played.has(k)){ played.add(k); if(b.audio&&(now()-(b.t2||b.t))<120000&&!(d.stop&&(b.t2||b.t)<d.stop)) audioQ.push({src:b.audio,did}); } }
-    }
-    pump();
-    if(IS_GM&&(FB_LOADED||TEST_MODE)){ /* v278: ogni battuta va nel Registro, così tutti seguono il dialogo da lì */
-      let n=0; for(const [did,d] of Object.entries(DLGS)){ if(!d) continue; const nome=String(d.nome||'').split(' (')[0];
-        for(const [bid,b] of Object.entries(d.battute||{})){ if(!b||b.reg) continue;
-          if(b.chi==='pg'&&b.testo){ log({kind:'sys',txt:`Dialogo · ${PGN[b.pg]||b.pg||'?'} a ${nome}: «${b.testo}»`}); setB(did,bid,{reg:1}); n++; }
-          else if(b.chi==='png'&&(b.stato==='approvata'||b.stato==='pronta')&&b.testo){ log({kind:'sys',txt:`Dialogo · ${nome}: «${b.testo}»${b.azione?' ('+b.azione+')':''}`}); setB(did,bid,{reg:1}); n++; } } }
-      if(n) save(); }
-    if(IS_GM){ for(const [did,d] of Object.entries(DLGS)){ if(d&&d.chiuso&&d.riassunto!=null&&!d.registrato&&(FB_LOADED||TEST_MODE)){ if(d.riassunto) { log({kind:'sys',txt:`Dialogo · ${d.riassunto}`}); save(); } rdb.ref(BASE+'/dialoghi/'+did).update({registrato:true}); } } }
+  function apri(tid,pg){
+    if(!rdb) { toast('Il colloquio non è collegato: ricarica la pagina'); return null; }
+    const g=diTok(tid); if(g){ if(pg&&!(g[1].pgs||{})[pg]) rdb.ref(BASE+'/colloqui/'+g[0]+'/pgs/'+pg).set(1); return g[0]; }
+    const t=S.tokens[tid]; if(!t) return null;
+    const png=typeof tokPng==='function'?tokPng(tid):null;
+    const cid='c'+now().toString(36)+Math.random().toString(36).slice(2,5);
+    rdb.ref(BASE+'/colloqui/'+cid).set({png:png||'',nome:breve(t.name),tid,sc:scena(),pg:pg||'gruppo',pgs:{[pg||'gruppo']:1},aperto:now()});
+    return cid;
   }
-  function pump(){
-    if(audioBusy||!audioQ.length) return; audioBusy=true; const it=audioQ.shift(); const a=new Audio(it.src); cur=a; curDid=it.did;
-    a.onended=a.onerror=()=>{ if(cur===a){ cur=null; curDid=null; } audioBusy=false; pump(); };
-    a.play().then(()=>{ audioBlocked=false; }).catch(()=>{ audioBlocked=true; audioQ.unshift(it); audioBusy=false; if(cur===a){ cur=null; curDid=null; } paint(); });
-  }
-  function sblocca(){ audioBlocked=false; pump(); paint(); }
-  /* v271: «Zitto» ferma la voce su tutte le pagine (scrive `stop` sul dialogo); scrivi=false quando arriva dagli altri */
-  function zitto(did,scrivi=true){ if(cur&&(!did||curDid===did)){ try{ cur.pause(); }catch(e){} cur=null; curDid=null; audioBusy=false; } audioQ=audioQ.filter(x=>did&&x.did!==did); if(scrivi&&did&&rdb){ STOPS[did]=now(); rdb.ref(BASE+'/dialoghi/'+did).update({stop:STOPS[did]}); } pump(); }
+  function scrivi(cid,riga){ if(!rdb||!cid) return; const c=COLS[cid]; if(riga.pg&&c&&!(c.pgs||{})[riga.pg]) rdb.ref(BASE+'/colloqui/'+cid+'/pgs/'+riga.pg).set(1); rdb.ref(BASE+'/colloqui/'+cid+'/righe/r'+now().toString(36)+Math.random().toString(36).slice(2,4)).set({...riga,t:now()}); }
+  function chiedi(cid,testo,chi,nota){ if(!rdb||!cid) return; rdb.ref(BASE+'/colloqui/'+cid+'/richiesta').set({testo:String(testo||'').trim(),chi:chi||'',nota:String(nota||'').trim(),t:now()}); }
+  function mostra(cid,testo,azione){ testo=String(testo||'').replace(/^«|»$/g,'').trim(); if(!testo) return; scrivi(cid,{chi:'png',testo,azione:String(azione||'').trim()}); }
+  function chiudi(cid){ if(rdb&&cid) rdb.ref(BASE+'/colloqui/'+cid).update({chiuso:now()}); if(APERTO===cid) APERTO=null; SOLO=null; lastKey=''; paint(); }
 
-  /* microfono del browser (Chrome): italiano, una frase, poi manda da solo */
+  /* ---------- cosa succede quando arriva qualcosa ---------- */
+  function arrivi(){
+    for(const [cid,c] of aperti()){
+      if(!VISTI.has(cid)){ VISTI.add(cid);
+        if(pronto&&now()-(c.aperto||0)<60000){ const chi=Object.keys(c.pgs||{}).map(k=>PGN[k]||k).join(', ');
+          if(IS_GM||!CHIUSO_QUI.has(cid)){ if(!APERTO||!COLS[APERTO]||COLS[APERTO].chiuso) APERTO=cid; toast(`${chi} parla con ${c.nome}`); } } } }
+    pronto=true;
+    if(!IS_GM||!(FB_LOADED||TEST_MODE)) return;
+    /* il master: le battute nel Registro, le domande al suggeritore, i riassunti */
+    let n=0;
+    for(const [cid,c] of Object.entries(COLS)){ if(!c) continue;
+      for(const r of righe(c)){
+        if(!r.reg&&r.testo){ log({kind:'sys',txt:r.chi==='png'?`${c.nome}: «${r.testo}»${r.azione?' ('+r.azione+')':''}`:r.tipo==='azione'?`${PGN[r.pg]||r.pg} · ${r.testo} (${c.nome})`:`${PGN[r.pg]||r.pg} a ${c.nome}: «${r.testo}»`}); rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+r.id+'/reg').set(1); n++; }
+        if(r.chi==='pg'&&!r.chiesta&&!c.chiuso){ rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+r.id+'/chiesta').set(1); if(ONLINE&&now()-r.t<120000) chiedi(cid,r.testo,r.pg,''); } }
+      if(c.chiuso&&c.riassunto!=null&&!c.registrato){ if(c.riassunto){ log({kind:'sys',txt:`Colloquio con ${c.nome} · ${c.riassunto}`}); n++; } rdb.ref(BASE+'/colloqui/'+cid+'/registrato').set(true); } }
+    if(n) save();
+  }
+
+  /* ---------- microfono: detta nel campo, non manda da solo ---------- */
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  function detta(did,inp,btn,pg){
-    if(!SR) { toast('Il microfono non è disponibile in questo browser: scrivi'); return; }
-    if(listening){ try{ listening.stop(); }catch(e){} return; }
-    const r=new SR(); r.lang='it-IT'; r.interimResults=true; r.continuous=false; listening=r; btn.classList.add('on');
-    r.onresult=e=>{ let s=''; for(const res of e.results) s+=res[0].transcript; inp.value=s; if(e.results[e.results.length-1].isFinal){ dici(did,s,pg); inp.value=''; } };
+  function detta(inp,btn){
+    if(!SR){ toast('Il microfono non c’è in questo browser: scrivi'); return; }
+    if(ascolto){ try{ ascolto.stop(); }catch(e){} return; }
+    const r=new SR(); r.lang='it-IT'; r.interimResults=true; r.continuous=false; ascolto=r; btn.classList.add('on'); const base=inp.value?inp.value+' ':'';
+    r.onresult=e=>{ let s=''; for(const x of e.results) s+=x[0].transcript; inp.value=base+s; };
     r.onerror=e=>{ if(e.error!=='no-speech'&&e.error!=='aborted') toast('Microfono: '+e.error); };
-    r.onend=()=>{ listening=false; btn.classList.remove('on'); };
-    try{ r.start(); }catch(e){ listening=false; btn.classList.remove('on'); }
+    r.onend=()=>{ ascolto=null; btn.classList.remove('on'); inp.focus(); };
+    try{ r.start(); }catch(e){ ascolto=null; btn.classList.remove('on'); }
   }
 
-  function battute(d){ return Object.entries(d.battute||{}).map(([id,b])=>({id,...b})).sort((a,b)=>a.t-b.t); }
-  function convHtml(d,did){
-    const B=battute(d); let h='';
-    for(const b of B){
-      if(b.stato==='rifiutata'&&!IS_GM) continue;
-      if(b.chi==='pg'){ h+=`<div class="rb pg"><small>${esc(PGN[b.pg]||b.pg||'')}</small>${esc(b.testo)}</div>`; if((b.stato==='nuova'||b.stato==='presa')&&!B.some(x=>x.risponde===b.id)) h+=`<div class="rb png wait">${esc(d.nome)} ci pensa…</div>`; if(b.stato==='errore') h+=`<div class="rb png wait">L’attore non ha risposto${IS_GM&&b.errore?': '+esc(b.errore):''}.</div>`; continue; }
-      if(b.stato==='attesa'){ if(!IS_GM){ h+=`<div class="rb png wait">${esc(d.nome)} sta per parlare…</div>`; continue; }
-        h+=`<div class="rb png att"><small>In attesa del tuo sì</small><textarea data-rt="${b.id}">${esc(b.testo)}</textarea>${b.azione?`<i class="az">${esc(b.azione)}</i>`:''}${b.avviso?`<div class="ravv">${esc(b.avviso)}</div>`:''}<div class="rrow"><button class="primary" data-rvai="${b.id}">Vai</button><button data-rno="${b.id}">Scarta</button></div></div>`; continue; }
-      if(b.stato==='rifiutata'){ h+=`<div class="rb png wait"><small>Scartata</small>${esc(b.testo)}</div>`; continue; }
-      h+=`<div class="rb png"><small>${esc(d.nome)}${b.master?' · detta dal master':''}${b.stato==='approvata'?' · la voce arriva…':''}</small>${esc(b.testo)}${b.azione?`<i class="az">${esc(b.azione)}</i>`:''}${IS_GM&&b.avviso?`<div class="ravv">${esc(b.avviso)}</div>`:''}</div>`;
-    }
-    return h||`<div class="rsmall">Nessuno ha ancora parlato. ${IS_GM?'':'Scrivi o premi il microfono.'}</div>`;
+  /* ---------- il pannello ---------- */
+  function box(){ let b=document.getElementById('colloquio'); if(b) return b; const st=document.getElementById('stage'); if(!st) return null; b=document.createElement('div'); b.id='colloquio'; b.className='hidden'; b.addEventListener('pointerdown',e=>e.stopPropagation()); b.addEventListener('wheel',e=>e.stopPropagation(),{passive:true}); st.appendChild(b); return b; }
+  function posiziona(b){ const z=document.getElementById('zoomctl'), st=document.getElementById('stage'); let left=12; if(z&&st&&z.offsetWidth){ const zr=z.getBoundingClientRect(), sr=st.getBoundingClientRect(); left=Math.round(zr.right-sr.left+10); } b.style.left=left+'px'; }
+  function convHtml(c){
+    const L=righe(c); if(!L.length) return `<div class="cvuoto">${IS_GM?'Nessuno ha ancora parlato.':'Scrivi qui sotto cosa dici.'}</div>`;
+    return L.map(r=>{
+      if(r.chi==='png') return `<div class="cb png"><small>${esc(c.nome)}</small>${esc(r.testo)}${r.azione?`<i>${esc(r.azione)}</i>`:''}</div>`;
+      if(r.tipo==='azione') return `<div class="cb az">${esc(PGN[r.pg]||r.pg)} ${esc(r.testo)}</div>`;
+      return `<div class="cb pg"><small>${esc(PGN[r.pg]||r.pg)}</small>${esc(r.testo)}</div>`; }).join('');
   }
-  function pngInScena(){ /* v276: le pedine della scena con cui si può parlare */ if(typeof tokPng!=='function') return []; return Object.entries(S.tokens).filter(([id,t])=>t&&!t.hidden&&t.kind!=='pg'&&!t.owner&&(typeof tokInScene!=='function'||tokInScene(id))&&tokPng(id)).map(([id,t])=>({id,t,png:tokPng(id)})); }
-  window.__regiaParlaCon=function(tid){ const png=typeof tokPng==='function'?tokPng(tid):null; if(!png) return; selected=tid; apri(tid,png,me); lastKey=''; render(); const g=document.getElementById('regiaBox'); if(g) g.scrollIntoView({block:'start',behavior:'smooth'}); };
+  function chiHtml(c){ return Object.keys(c.pgs||{}).map(k=>{ const t=pgTok(k); const im=imgDi(t); return `${im?`<img src="${esc(im)}" alt="">`:''}${esc(PGN[k]||k)}`; }).join(' · '); }
+  function copioneHtml(png){
+    const d=png&&typeof DIALOGHI_DATA!=='undefined'?DIALOGHI_DATA[png]:null;
+    if(!d) return `<div class="ccop"><p class="cnota">Questo personaggio non ha ancora un copione: usa il suggeritore qui sopra.</p></div>`;
+    let p=null,m=null; for(const q of POIS){ if(!poiInScene(q)) continue; const mm=(q.moduli||[]).find(x=>x.png===png); if(mm){ p=q; m=mm; break; } }
+    return `<div class="ccop"><p class="cnota">Clicca una frase fra «» per mostrarla ai giocatori.${p?` Le prove si registrano nel punto «${esc(p.title)}».`:''}</p>${dlgHtml(d,p?{p,m}:{p:{scene:scena()}})}</div>`;
+  }
+  const SOCIALI=[['persuadi','Persuadi','prova a convincerlo (Persuasione)'],['intimidisci','Intimidisci','prova a intimidirlo (Intimidire)'],['inganna','Inganna','prova a ingannarlo (Inganno)'],['intuizione','Leggi le intenzioni','lo studia per capire se mente (Intuizione)']];
   function paint(){
     const b=box(); if(!b) return;
-    const sel=selected&&S.tokens[selected]?selected:null; const png=sel&&typeof tokPng==='function'?tokPng(sel):null;
-    const aperti=miei();
-    let did=OPEN&&DLGS[OPEN]&&!DLGS[OPEN].chiuso?OPEN:null;
-    if(!did&&sel){ const m=aperti.find(([id,d])=>d.tid===sel); if(m) did=m[0]; }
-    if(!did&&!IS_GM&&aperti.length) did=aperti[0][0];
-    const lista=!IS_GM&&!did&&!png?pngInScena():[];
-    const mostra=rdb&&(IS_GM||(ONLINE&&(png||did||lista.length))); /* v270: il master vede sempre il riquadro · v276: il giocatore lo vede anche senza pedina scelta, con l'elenco di chi può parlare */
-    if(!mostra){ b.classList.add('hidden'); lastKey=''; return; }
-    b.classList.remove('hidden');
-    const d=did?DLGS[did]:null;
-    const dk=d?{...d,battute:Object.fromEntries(Object.entries(d.battute||{}).map(([k,x])=>[k,{...x,audio:x.audio?1:0}]))}:null;
-    const key=JSON.stringify([did,dk,sel,png,ONLINE,audioBlocked,listening?1:0,IS_GM,aperti.map(a=>a[0]),lista.map(x=>x.id)]);
-    if(key===lastKey) return; lastKey=key;
-    const stato=`<span class="rstato">${ONLINE?`assistente acceso${IS_GM&&STATO.attore?' · '+esc(STATO.attore):''}`:'assistente spento'}</span>`;
-    let h=`<h2>Il PNG parla</h2>`;
-    if(IS_GM&&aperti.length>1) h+=`<div class="rlist">${aperti.map(([id,x])=>`<button data-ropen="${id}" class="${id===did?'primary':''}">${esc(x.nome)} ← ${esc(PGN[x.pg]||x.pg)}</button>`).join('')}</div>`;
-    if(d){
-      const t=S.tokens[d.tid]; const img=t&&((typeof railImg==='function'&&railImg(t))||t.img)||'';
-      h+=`<div class="rhead">${img?`<img src="${esc(img)}" alt="">`:''}<div><b>${esc(d.nome)}</b><br>${stato}${IS_GM?` · <span class="rtog"><button data-rmodo="libero" class="${(d.modo||'libero')==='libero'?'on':''}">libero</button><button data-rmodo="controllato" class="${d.modo==='controllato'?'on':''}">controllato</button></span>`:''}</div></div>`;
-      h+=`<div class="rconv" id="rconv">${convHtml(d,did)}</div>`;
-      if(audioBlocked) h+=`<div class="rrow"><button class="primary" id="rsblocca">🔊 Attiva l’audio</button></div>`;
-      if(IS_GM){
-        h+=`<div class="rrow"><input type="text" id="rsus" placeholder="Sussurra al PNG (es. «sii più ostile», «non parlare del Sigillo»)" value="${esc(d.sussurro||'')}"><button id="rsusGo">Sussurra</button></div>`;
-        h+=`<div class="rrow"><input type="text" id="rio" placeholder="Parlo io: la battuta del PNG con le tue parole"><button id="rioGo">Parlo io</button></div>`;
-        h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}" ${k===d.pg?'selected':''}>${v}</option>`).join('')}</select><input type="text" id="rtxt" placeholder="Domanda del giocatore (se la scrivi tu)"><button id="rgo">Di’</button><button id="rmic" class="mic" title="Detta">🎤</button><button id="rzitto" title="Ferma la voce del PNG">Zitto</button><button id="rfine">Chiudi</button></div>`;
-      } else {
-        h+=`<div class="rrow"><input type="text" id="rtxt" placeholder="Cosa dici a ${esc(d.nome.split(',')[0])}?"><button id="rgo" class="primary">Di’</button><button id="rmic" class="mic ${listening?'on':''}" title="Parla col microfono">🎤</button><button id="rzitto" title="Ferma la voce del PNG">Zitto</button><button id="rfine">Basta</button></div>`;
-      }
-    } else if(png&&sel){
-      const t=S.tokens[sel]; const img=(typeof railImg==='function'&&railImg(t))||t.img||'';
-      h+=`<div class="rhead">${img?`<img src="${esc(img)}" alt="">`:''}<div><b>${esc(t.name)}</b><br>${stato}</div></div>`;
-      if(IS_GM) h+=`<div class="rrow"><select id="rchi">${Object.entries(PGN).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="primary" id="rparla">Parla</button><span class="rsmall">apre un dialogo per quel personaggio</span></div>`;
-      else h+=`<div class="rrow"><button class="primary" id="rparla">Parla con ${esc(t.name.split(',')[0])}</button></div>`;
-    } else if(lista.length){ /* v276 */
-      h+=`<div class="rhead"><div>${stato}<br><span class="rsmall">Con chi vuoi parlare?</span></div></div><div class="rlist">${lista.map(x=>{ const img=(typeof railImg==='function'&&railImg(x.t))||x.t.img||''; return `<button data-rcon="${esc(x.id)}">${img?`<img src="${esc(img)}" alt="" style="width:22px;height:22px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:5px">`:''}${esc(String(x.t.name).split(',')[0])}</button>`; }).join('')}</div>`;
-    } else if(IS_GM){ h+=`<div class="rhead"><div>${stato}<br><span class="rsmall">${ONLINE?'Nessun dialogo aperto. Clicca la pedina di un PNG (l’oste, Kostandìn…) e premi «Parla», o aspetta che lo faccia un giocatore.':'Per accenderlo: sul PC del master, doppio clic su Regia/avvia.bat e lascia aperta la finestra.'}</span></div></div>`; }
-    b.innerHTML=h;
+    let cid=APERTO&&COLS[APERTO]&&!COLS[APERTO].chiuso&&(!COLS[APERTO].sc||COLS[APERTO].sc===scena())?APERTO:null;
+    if(!cid&&!IS_GM){ const a=aperti().filter(([id])=>!CHIUSO_QUI.has(id)); if(a.length) cid=a[a.length-1][0]; }
+    if(!cid&&SOLO){ const g=diTok(SOLO); if(g) cid=g[0]; }
+    const c=cid?COLS[cid]:null;
+    const solo=!c&&IS_GM&&SOLO&&S.tokens[SOLO]?SOLO:null;
+    if(!c&&!solo){ b.classList.add('hidden'); lastKey=''; return; }
+    const key=JSON.stringify([cid,c,solo,ONLINE,IS_GM,aperti().map(x=>x[0]),imgDi(S.tokens[c?c.tid:solo])]);
+    if(key===lastKey&&!b.classList.contains('hidden')) return; lastKey=key;
+    /* i campi scritti a metà non si perdono quando il pannello si ridisegna */
+    const keep={}; b.querySelectorAll('input[id],textarea[id]').forEach(x=>keep[x.id]=x.value); const foc=document.activeElement&&b.contains(document.activeElement)?document.activeElement.id:null;
+    const tid=c?c.tid:solo, t=S.tokens[tid]; const nome=c?c.nome:breve(t&&t.name); const im=imgDi(t);
+    let h=`<div class="colh">${im?`<img class="colr" src="${esc(im)}" alt="">`:''}<div class="colt"><div class="eyebrow">Colloquio</div><b>${esc(nome)}</b><div class="chi">${c?'con '+chiHtml(c):'nessuno gli sta parlando'}</div></div><button class="colx" id="colX" title="Nascondi il pannello">×</button></div><div class="colb">`;
+    if(IS_GM&&aperti().length>1) h+=`<div class="cchips">${aperti().map(([id,x])=>`<button data-capri="${id}" class="${id===cid?'primary':''}">${esc(x.nome)}</button>`).join('')}</div>`;
+    if(c) h+=`<div class="colconv" id="colConv">${convHtml(c)}</div>`;
+    if(IS_GM){
+      if(!c) h+=`<div class="colsez"><h6>Apri il colloquio</h6><div class="crow"><select id="colPg"><option value="gruppo">Tutto il gruppo</option>${Object.entries(PGN).filter(([k])=>k!=='gruppo').map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="primary" id="colApri">Apri</button></div></div>`;
+      const P=c&&c.proposte, req=c&&c.richiesta;
+      h+=`<div class="colsez"><h6>Risposta fuori copione <span class="st">${ONLINE?'suggeritore acceso':'suggeritore spento: Regia/avvia.bat'}</span></h6>`;
+      if(P&&req&&P.req===req.t){
+        if(P.stato==='in corso') h+=`<div class="cattesa">Il suggeritore pensa a «${esc(req.testo)}»…</div>`;
+        else if(P.stato==='errore') h+=`<div class="cavv">Il suggeritore non ha risposto${P.errore?': '+esc(P.errore):''}. Scrivi tu la risposta.</div>`;
+        else { h+=`<div class="cattesa">Per: «${esc(req.testo)}»</div>`+(P.lista||[]).map((p,i)=>`<div class="cprop"><small>${esc(p.tono||'proposta '+(i+1))}</small><textarea id="colP${i}">${esc(p.battuta)}</textarea>${p.azione?`<div class="caz">${esc(p.azione)}</div>`:''}<div class="crow"><button class="primary" data-cmostra="${i}">Mostra</button></div></div>`).join('')+(P.avviso?`<div class="cavv">${esc(P.avviso)}</div>`:''); }
+      } else if(req&&req.t&&ONLINE) h+=`<div class="cattesa">In attesa del suggeritore…</div>`;
+      h+=`<div class="crow"><input id="colQ" placeholder="Domanda dei giocatori (scrivi o incolla)"><button id="colChiedi" title="Chiedi tre risposte al suggeritore">Proposte</button></div>`;
+      h+=`<div class="crow"><input id="colNota" placeholder="Indicazione (facoltativa): «è spaventato», «vuole soldi»"></div>`;
+      h+=`<div class="crow"><input id="colIo" placeholder="Oppure scrivi tu la risposta del PNG"><button id="colIoGo">Mostra</button></div></div>`;
+      h+=`<div class="colsez"><h6>Copione</h6>${copioneHtml(c?c.png:(typeof tokPng==='function'?tokPng(tid):null))}</div>`;
+    }
+    h+=`</div>`;
+    if(IS_GM) h+=c?`<div class="colf"><span></span><button class="danger" id="colFine">Chiudi il colloquio</button></div>`:'';
+    else h+=`<div class="colf" style="flex-direction:column;align-items:stretch"><div class="crow" style="margin:0"><input id="colTxt" placeholder="Cosa dici a ${esc(nome)}?"><button id="colMic" class="mic" title="Detta col microfono">🎤</button><button class="primary" id="colDi">Di’</button></div><div class="cchips">${SOCIALI.map(([k,l])=>`<button data-csoc="${k}">${l}</button>`).join('')}<button id="colEsci" style="margin-left:auto">Esci</button></div></div>`;
+    b.innerHTML=h; b.classList.remove('hidden'); posiziona(b);
+    for(const [id,v] of Object.entries(keep)){ const x=b.querySelector('#'+id); if(x&&!/^colP\d$/.test(id)) x.value=v; }
+    if(foc){ const x=b.querySelector('#'+foc); if(x) try{ x.focus({preventScroll:true}); }catch(e){} }
     const q=s=>b.querySelector(s);
-    if(q('#rparla')) q('#rparla').onclick=()=>{ apri(sel,png,IS_GM?q('#rchi').value:me); };
-    if(q('#rgo')) { const go=()=>{ dici(did,q('#rtxt').value,IS_GM?q('#rchi').value:undefined); q('#rtxt').value=''; }; q('#rgo').onclick=go; q('#rtxt').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); go(); } }); setTimeout(()=>{ try{ if(!IS_GM) q('#rtxt').focus({preventScroll:true}); }catch(e){} },30); }
-    if(q('#rmic')) q('#rmic').onclick=()=>detta(did,q('#rtxt'),q('#rmic'),IS_GM?q('#rchi').value:undefined);
-    if(q('#rfine')) q('#rfine').onclick=()=>chiudi(did);
-    if(q('#rzitto')) q('#rzitto').onclick=()=>zitto(did);
-    if(q('#rsblocca')) q('#rsblocca').onclick=sblocca;
-    if(q('#rsusGo')) q('#rsusGo').onclick=()=>{ rdb.ref(BASE+'/dialoghi/'+did).update({sussurro:q('#rsus').value.trim()}); toast('Sussurrato: vale per la prossima battuta'); };
-    if(q('#rioGo')) q('#rioGo').onclick=()=>{ parloIo(did,q('#rio').value); q('#rio').value=''; };
-    b.querySelectorAll('[data-ropen]').forEach(x=>x.onclick=()=>{ OPEN=x.dataset.ropen; lastKey=''; paint(); });
-    b.querySelectorAll('[data-rcon]').forEach(x=>x.onclick=()=>window.__regiaParlaCon(x.dataset.rcon));
-    b.querySelectorAll('[data-rmodo]').forEach(x=>x.onclick=()=>rdb.ref(BASE+'/dialoghi/'+did).update({modo:x.dataset.rmodo}));
-    b.querySelectorAll('[data-rvai]').forEach(x=>x.onclick=()=>{ const ta=b.querySelector(`textarea[data-rt="${x.dataset.rvai}"]`); setB(did,x.dataset.rvai,{stato:'approvata',testo:ta?ta.value.trim():undefined}); });
-    b.querySelectorAll('[data-rno]').forEach(x=>x.onclick=()=>setB(did,x.dataset.rno,{stato:'rifiutata'}));
-    const c=q('#rconv'); if(c) c.scrollTop=c.scrollHeight;
+    q('#colX').onclick=()=>{ if(IS_GM){ APERTO=null; SOLO=null; } else if(cid) CHIUSO_QUI.add(cid); b.classList.add('hidden'); lastKey=''; };
+    b.querySelectorAll('[data-capri]').forEach(x=>x.onclick=()=>{ APERTO=x.dataset.capri; lastKey=''; paint(); });
+    const conv=q('#colConv');
+    if(IS_GM){
+      const assicura=()=>cid||(APERTO=apri(tid,(q('#colPg')||{}).value||'gruppo'));
+      if(q('#colApri')) q('#colApri').onclick=()=>{ APERTO=apri(tid,q('#colPg').value); lastKey=''; };
+      const chiediGo=()=>{ const v=q('#colQ').value.trim(); if(!v){ toast('Scrivi la domanda dei giocatori'); return; } if(!ONLINE) toast('Il suggeritore è spento: sul PC del master doppio clic su Regia/avvia.bat'); const id=assicura(); setTimeout(()=>{ chiedi(id,v,'',q('#colNota')?q('#colNota').value:''); },60); q('#colQ').value=''; };
+      q('#colChiedi').onclick=chiediGo; q('#colQ').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); chiediGo(); } });
+      const ioGo=()=>{ const v=q('#colIo').value; if(!v.trim()) return; const id=assicura(); setTimeout(()=>mostra(id,v,''),60); q('#colIo').value=''; };
+      q('#colIoGo').onclick=ioGo; q('#colIo').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); ioGo(); } });
+      b.querySelectorAll('[data-cmostra]').forEach(x=>x.onclick=()=>{ const i=+x.dataset.cmostra; const p=((c&&c.proposte&&c.proposte.lista)||[])[i]||{}; mostra(cid,q('#colP'+i).value,p.azione); });
+      const cop=q('.ccop'); if(cop){ if(typeof v3Bind==='function') try{ v3Bind(cop); }catch(e){}
+        const gia=new Set(righe(c||{}).filter(r=>r.chi==='png').map(r=>r.testo));
+        cop.querySelectorAll('q.dlgq').forEach(el=>{ if(el.closest('summary')) return; const testo=el.textContent.replace(/^«|»$/g,'').trim(); if(gia.has(testo)) el.classList.add('mostrata'); el.title='Mostra ai giocatori';
+          el.onclick=e=>{ e.preventDefault(); e.stopPropagation(); const id=assicura(); setTimeout(()=>mostra(id,testo,''),60); el.classList.add('mostrata'); }; }); }
+      if(q('#colFine')) q('#colFine').onclick=()=>chiudi(cid);
+    } else {
+      const go=()=>{ const v=q('#colTxt').value.trim(); if(!v) return; scrivi(cid,{chi:'pg',pg:me,testo:v}); q('#colTxt').value=''; };
+      q('#colDi').onclick=go; q('#colTxt').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); go(); } });
+      q('#colMic').onclick=()=>detta(q('#colTxt'),q('#colMic'));
+      b.querySelectorAll('[data-csoc]').forEach(x=>x.onclick=()=>{ const s=SOCIALI.find(y=>y[0]===x.dataset.csoc); scrivi(cid,{chi:'pg',pg:me,tipo:'azione',testo:s[2]}); });
+      q('#colEsci').onclick=()=>{ CHIUSO_QUI.add(cid); b.classList.add('hidden'); lastKey=''; };
+    }
+    const cb=q('.colb'); if(cb&&conv&&!foc) cb.scrollTop=0;
   }
-  const _rg=renderGuide; renderGuide=function(){ _rg.apply(this,arguments); try{ paint(); }catch(e){ console.warn('regia',e); } };
-  window.addEventListener('pointerdown',()=>{ if(audioBlocked) sblocca(); },{once:false});
+
+  /* ---------- il menù delle azioni dei giocatori sulle pedine degli altri ---------- */
+  function menuChiudi(){ const m=document.getElementById('tokMenu'); if(m) m.remove(); }
+  function menu(tid){
+    menuChiudi(); const t=S.tokens[tid]; if(!t||IS_GM||!me) return;
+    const el=document.querySelector(`#tokens .tok[data-id="${CSS.escape(tid)}"]`)||document.querySelector(`.tok[data-id="${CSS.escape(tid)}"]`); if(!el) return;
+    const r=el.getBoundingClientRect(); const amico=t.kind==='pg'||t.kind==='alleato'||!!t.owner;
+    const io=PGN[me]||me, lui=breve(t.name);
+    const voci=[['parla','Parla con '+lui]];
+    if(amico) voci.push(['aiuta','Aiuta','dà vantaggio alla sua prossima prova'],['passa','Passa un oggetto'],['cura',t.hp<=0?'Stabilizza':'Cura','Medicina'],['osserva','Osserva','Percezione']);
+    else voci.push(...SOCIALI.map(([k,l])=>[k,l]),['osserva','Osserva','Percezione']);
+    const m=document.createElement('div'); m.id='tokMenu';
+    m.innerHTML=`<div class="tmh">${imgDi(t)?`<img src="${esc(imgDi(t))}" alt="">`:''}<b>${esc(lui)}</b></div>`+voci.map(([k,l,s])=>`<button data-tm="${k}">${esc(l)}${s?`<small>${esc(s)}</small>`:''}</button>`).join('');
+    document.body.appendChild(m);
+    const W=m.offsetWidth, H=m.offsetHeight; m.style.left=Math.min(innerWidth-W-8,r.right+8)+'px'; m.style.top=Math.max(8,Math.min(innerHeight-H-8,r.top))+'px';
+    m.addEventListener('pointerdown',e=>e.stopPropagation());
+    m.querySelectorAll('[data-tm]').forEach(b=>b.onclick=()=>{ const k=b.dataset.tm; menuChiudi();
+      if(k==='parla'||SOCIALI.some(s=>s[0]===k)){ const cid=apri(tid,me); if(!cid) return; CHIUSO_QUI.delete(cid); APERTO=cid; lastKey='';
+        if(k!=='parla'){ const s=SOCIALI.find(y=>y[0]===k); setTimeout(()=>scrivi(cid,{chi:'pg',pg:me,tipo:'azione',testo:s[2]}),80); }
+        setTimeout(()=>{ paint(); const x=document.getElementById('colTxt'); if(x) x.focus(); },120); return; }
+      const txt={aiuta:`${io} aiuta ${lui}: vantaggio alla sua prossima prova`,passa:`${io} vuole passare un oggetto a ${lui}`,cura:`${io} vuole ${t.hp<=0?'stabilizzare':'curare'} ${lui} (Medicina)`,osserva:`${io} osserva ${lui} con attenzione (Percezione)`}[k];
+      log({kind:'sys',txt}); save(); toast('Detto al master: '+txt); });
+    setTimeout(()=>window.addEventListener('pointerdown',menuChiudi,{once:true}),0);
+  }
+  window.addEventListener('keydown',e=>{ if(e.key==='Escape') menuChiudi(); });
+
+  /* il clic su una pedina (senza trascinarla): il giocatore apre il menù sulle pedine degli altri, il master il colloquio del PNG */
+  const _sel=select; select=function(id){
+    const t=S.tokens[id], x0=t&&t.x, y0=t&&t.y;
+    _sel.apply(this,arguments);
+    if(!t) return;
+    const mio=!IS_GM&&((t.kind==='pg'&&id===me)||t.owner===me);
+    if(mio) return;
+    window.addEventListener('pointerup',()=>setTimeout(()=>{
+      const t2=S.tokens[id]; if(!t2||t2.x!==x0||t2.y!==y0||(typeof pending!=='undefined'&&pending)) return;
+      if(IS_GM){ const g=diTok(id); if(g){ APERTO=g[0]; SOLO=null; lastKey=''; paint(); } else if(typeof tokPng==='function'&&tokPng(id)){ SOLO=id; APERTO=null; lastKey=''; paint(); } }
+      else if(t2.kind!=='pg'||id!==me) menu(id);
+    },30),{once:true});
+  };
+
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ paint(); }catch(e){ console.warn('colloquio',e); } return o; };
+  window.addEventListener('resize',()=>{ const b=document.getElementById('colloquio'); if(b&&!b.classList.contains('hidden')) posiziona(b); });
   connect();
-  window.__regia={apri,dici,chiudi,zitto,stato:()=>({ONLINE,DLGS,AMB,suona:!!cur})};
+  window.__colloquio={apri,scrivi,chiedi,mostra,chiudi,menu,parla:tid=>{ const cid=apri(tid,me); if(cid){ CHIUSO_QUI.delete(cid); APERTO=cid; lastKey=''; setTimeout(paint,120); } },stato:()=>({ONLINE,COLS,AMB,APERTO,SOLO})};
 })();
-/* ===== FINE IL PNG PARLA (v269) ===== */
+/* ===== FINE IL COLLOQUIO (v291) ===== */
 
 /* ===== RICARICO SULLA SCENA GIUSTA E «PARLA CON…» (v276) =====
    Mattheus (21-10): «ogni volta che si ricarica ricompare il dungeon sotto Bëllindë». Era la scena di partenza, mostrata finché la partita
@@ -11070,11 +11148,10 @@ window.RICETTE={
     const t0=Date.now(); const via=()=>{ v.style.opacity='0'; setTimeout(()=>v.remove(),500); }; const iv=setInterval(()=>{ if(FB_LOADED||Date.now()-t0>8000){ clearInterval(iv); via(); } },150); } }
   /* «Parla con…» nel riquadro del giocatore */
   const bs=document.getElementById('btnSpells'); if(bs&&!IS_GM){ const b=document.createElement('button'); b.id='btnParla'; b.textContent='Parla con…'; bs.insertAdjacentElement('afterend',b);
-    b.onclick=()=>{ const st=window.__regia&&window.__regia.stato(); if(!st||!st.ONLINE){ toast('L’assistente dei personaggi è spento: il master deve accendere il banco di regia (Regia/avvia.bat)'); return; }
-      const L=Object.entries(S.tokens).filter(([id,t])=>t&&!t.hidden&&t.kind!=='pg'&&!t.owner&&(typeof tokInScene!=='function'||tokInScene(id))&&typeof tokPng==='function'&&tokPng(id));
+    b.onclick=()=>{ const L=Object.entries(S.tokens).filter(([id,t])=>t&&!t.hidden&&t.kind!=='pg'&&!t.owner&&(typeof tokInScene!=='function'||tokInScene(id))&&visible(id));
       if(!L.length){ toast('Qui non c’è nessuno con cui parlare'); return; }
-      openModal(`<div class="eyebrow">${poiText((S.tokens[me]||{}).name||'')}</div><h2 class="big">Parla con…</h2><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px">${L.map(([id,t])=>{ const img=(typeof railImg==='function'&&railImg(t))||t.img||''; return `<button data-parla="${poiText(id)}" style="display:flex;align-items:center;gap:8px">${img?`<img src="${poiText(img)}" alt="" style="width:34px;height:34px;border-radius:50%;object-fit:cover">`:''}${poiText(String(t.name).split(',')[0])}</button>`; }).join('')}</div><p class="note" style="margin-top:10px">Poi scrivi nel riquadro «Il PNG parla», o premi il microfono e parla.</p>`,'poibox');
-      document.querySelectorAll('#modal [data-parla]').forEach(x=>x.onclick=()=>{ closeModal(); window.__regiaParlaCon(x.dataset.parla); }); }; }
+      openModal(`<div class="eyebrow">${poiText((S.tokens[me]||{}).name||'')}</div><h2 class="big">Parla con…</h2><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px">${L.map(([id,t])=>{ const img=(typeof railImg==='function'&&railImg(t))||t.img||''; return `<button data-parla="${poiText(id)}" style="display:flex;align-items:center;gap:8px">${img?`<img src="${poiText(img)}" alt="" style="width:34px;height:34px;border-radius:50%;object-fit:cover">`:''}${poiText(String(t.name).split(',')[0])}</button>`; }).join('')}</div><p class="note" style="margin-top:10px">Si apre il colloquio a sinistra della mappa: lì scrivi cosa dici.</p>`,'poibox');
+      document.querySelectorAll('#modal [data-parla]').forEach(x=>x.onclick=()=>{ closeModal(); window.__colloquio.parla(x.dataset.parla); }); }; }
 })();
 /* ===== FINE v276 ===== */
 
@@ -11129,8 +11206,8 @@ window.RICETTE={
              regia:'<path d="M5 4h14l-3 8 3 8H5z"/><path d="M8 10h8M8 14h6"/>',
              registro:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/>'};
   function PAN(){ const L=[];
-    if(IS_GM){ L.push(['guida','Guida della scena',()=>document.getElementById('sceneGuide'),'guide']); L.push(['png','Il PNG parla',()=>document.getElementById('regiaBox'),'guide']); L.push(['regia','Scontro, Selezione e strumenti',()=>[...document.querySelectorAll('#side > .sec.gm:not(#secLog)')],'side']); }
-    else { L.push(['cronaca','Cronaca (Registro e Guida della scena insieme)',()=>document.getElementById('sceneGuide'),'guide']); L.push(['png','Il PNG parla',()=>document.getElementById('regiaBox'),'guide']); L.push(['me','Il tuo personaggio',()=>document.querySelector('#side > .sec.pl'),'side']); }
+    if(IS_GM){ L.push(['guida','Guida della scena',()=>document.getElementById('sceneGuide'),'guide']); L.push(['regia','Scontro, Selezione e strumenti',()=>[...document.querySelectorAll('#side > .sec.gm:not(#secLog)')],'side']); }
+    else { L.push(['cronaca','Cronaca (Registro e Guida della scena insieme)',()=>document.getElementById('sceneGuide'),'guide']); L.push(['me','Il tuo personaggio',()=>document.querySelector('#side > .sec.pl'),'side']); }
     L.push(['registro','Registro',()=>document.getElementById('secLog'),'side']); return L; }
   function panOn(id){ try{ return localStorage.getItem('aprutium.pan.'+id)!=='0'; }catch(e){ return true; } }
   function applicaPannelli(){
