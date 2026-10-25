@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v315</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v316</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -12100,4 +12100,52 @@ html body .tok.active::after{content:'';position:absolute;inset:-22%;border-radi
 window.CANNONE_IMG={tok:'img/tok-00fa529da4cc.png',rit:'img/6290fc19f1cd.jpg'};
 (function(){ const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ let n=0; for(const [id,t] of Object.entries(S.tokens)){ if(!t||!/^cannone_/.test(id)) continue; if(t.img!==window.CANNONE_IMG.tok){ t.img=window.CANNONE_IMG.tok; t.ritratto=window.CANNONE_IMG.rit; n++; } } if(n&&IS_GM) save(true); }catch(e){} return o; }; })();
 /* ===== FINE GELSOMINA, RITRATTO E TOKEN (v315) ===== */
+/* ===== ARTEFICE: GELSOMINA DAL GIOCATORE (v316) =====
+   Luigi (via Giuseppe, 25-10): «non funzionano le abilità da artefice, tra cui la balista di Gelsomina». Prova dalla sua pagina:
+   - «Comanda il cannone» selezionava la pedina e diceva di usare le azioni sulla pedina, ma dalla v277 i giocatori non hanno più il riquadro
+     delle azioni: la Balista, il Lanciafiamme e il Protettore non si potevano usare. Ora «Comanda il cannone» (barra rapida, azione bonus)
+     apre la finestra «Gelsomina» con lo sparo della bocca montata e il promemoria del movimento di 4,5 m.
+   - Lanciafiamme: cono di 4,5 m dal cannone; si scelgono le creature, ognuna fa il TS Destrezza contro la CD di Luigis (15), 2d8 fuoco
+     tirati una volta, metà se riesce (prima: danni pieni senza TS).
+   - Riparare (Mending) dalla barra rapida: se Gelsomina è sulla mappa le ridà 2d6 PF (prima: solo l'incantesimo, senza effetto).
+   La Balista usa la scelta del bersaglio di sempre (tiro per colpire +7, 2d8 forza); il Protettore il codice della v275.
+   Fonte: Revisioni/Luigis artefice (25-10-2026)/ (blocco.js + applica.py). */
+(function(){
+  const L='luigis', C='cannone_'+L;
+  const cdDi=()=>(((SHEETS[L]||{}).spell)||{}).dc||15;
+  function ripara(){ const c=S.tokens[C]; if(!c) return false; const x=rollExpr('2d6'); const h=Math.min(c.hpMax-c.hp,x.total); c.hp+=h;
+    log({kind:'sys',txt:`${S.tokens[L].name} lancia Riparare su Gelsomina: +${h} PF (${x.parts}) → ${c.hp}/${c.hpMax}`}); save(true); render(); return true; }
+  function lanciafiamme(){
+    const c=S.tokens[C]; if(!c) return; const g=S.grid.size||30, R=4.5;
+    const L2=Object.entries(S.tokens).filter(([id,t])=>id!==C&&id!==L&&t&&t.hp>0&&tokInScene(id)&&!(t.hidden&&!IS_GM)&&(IS_GM||fogVisible(t.x,t.y))&&distM(c,t)<=R+0.01).sort((a,b)=>(a[1].kind!=='nemico')-(b[1].kind!=='nemico')||distM(c,a[1])-distM(c,b[1]));
+    if(!L2.length){ toast('Nessuno entro 4,5 m da Gelsomina'); return; }
+    openModal(`<div class="eyebrow">Gelsomina · Lanciafiamme</div><h2 class="big">Cono di 4,5 m</h2><p class="note">Scegli chi è nel cono. Ognuno fa il tiro salvezza su Destrezza (CD ${cdDi()}): 2d8 danni da fuoco, la metà se lo supera.</p>
+      ${L2.map(([id,t])=>`<label class="tgt"><input type="checkbox" value="${id}" ${t.kind==='nemico'?'checked':''}> <span class="tn">${poiText(t.name)}</span> <span class="note">${distM(c,t).toLocaleString('it-IT')} m</span></label>`).join('')}
+      <div class="row" style="margin-top:10px"><button id="lfNo">Annulla</button><button class="primary" id="lfGo">Fuoco</button></div>`,'poibox');
+    document.getElementById('lfNo').onclick=closeModal;
+    document.getElementById('lfGo').onclick=()=>{ const ids=[...document.querySelectorAll('#modal input[type=checkbox]:checked')].map(x=>x.value); closeModal(); if(!ids.length) return;
+      const dmg=fxRoll('2d8'), dc=cdDi(); log({kind:'sys',txt:`Gelsomina sputa fuoco (Lanciafiamme): ${dmg.total} danni da fuoco (${dmg.txt}), TS Destrezza CD ${dc}`});
+      for(const id of ids){ const tg=S.tokens[id]; if(!tg) continue; const mod=(tg.kind==='pg'||tg.kind==='alleato')?(tg.mods?.['TS Des']??0):monsterSaveMod(tg,'Des');
+        const r=d20(), tot=r+mod, ok=tot>=dc; log({kind:'roll',gm:tg.kind==='nemico'&&!S.publicRolls,who:`${tg.name} · Lanciafiamme`,skill:'TS Des',r,mod,tot,dc});
+        const v=ok?Math.floor(dmg.total/2):dmg.total; applyDamage(tg,v); log({kind:'hit',tid:fxIdOf(tg),hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} ${ok?'supera':'fallisce'} il TS Destrezza e subisce ${v} danni da fuoco dal Lanciafiamme di Gelsomina`}); if(tg.hp<=0) log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); }
+      save(true); render(); };
+  }
+  function comanda(){
+    const c=S.tokens[C]; if(!c){ toast('Prima crea il cannone («Crea il cannone arcano» o la risorsa «Cannone arcano»)'); return; }
+    const az=(c.actions||[])[0]||{}; const lf=/^Lanciafiamme/i.test(az.n||''), pr=/^Protettore/i.test(az.n||'');
+    openModal(`<div class="eyebrow">${poiText(S.tokens[L].name)} · azione bonus</div><h2 class="big">Gelsomina</h2>
+      <p class="note">${poiText(c.name)} · ${c.hp}/${c.hpMax} PF · CA ${c.ac}. Prima o dopo lo sparo può muoversi di 4,5 m: trascina la sua pedina.</p>
+      <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px"><button class="primary" id="gsFuoco">${lf?'Lanciafiamme (cono 4,5 m)':pr?'Protettore (PF temporanei entro 3 m)':'Balista di forza (+7, 36 m, 2d8 forza)'}</button><button id="gsSel">Seleziona Gelsomina per muoverla</button><button id="gsNo">Chiudi</button></div>`,'poibox');
+    document.getElementById('gsNo').onclick=closeModal;
+    document.getElementById('gsSel').onclick=()=>{ closeModal(); selected=C; render(); };
+    document.getElementById('gsFuoco').onclick=()=>{ closeModal(); log({kind:'sys',txt:`${S.tokens[L].name} comanda Gelsomina (azione bonus)`}); if(lf) lanciafiamme(); else doAction(C,az); };
+  }
+  { const _da=doAction; doAction=function(tokId,a){
+      if(tokId===L&&a&&/^Comanda il cannone/i.test(a.n)){ comanda(); return; }
+      if(tokId===C&&a&&/^Lanciafiamme/i.test(a.n)){ lanciafiamme(); return; }
+      return _da.apply(this,arguments); }; }
+  { const _cs=castSpell; castSpell=function(id,name){ if(id===L&&name==='Mending'&&S.tokens[C]){ ripara(); return; } return _cs.apply(this,arguments); }; }
+  window.__gelsomina={comanda,lanciafiamme,ripara};
+})();
+/* ===== FINE ARTEFICE: GELSOMINA DAL GIOCATORE (v316) ===== */
 </script>
