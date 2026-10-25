@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v306</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v307</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10980,6 +10980,10 @@ window.RICETTE={
   const BASE='partita/regia/'+AMB;
   const PGN={alessandros:'Alessandros',vicarus:'Vicarus',adamus:'Adamus',maximus:'Maximus',mattheus:'Mattheus',luigis:'Luigis',gruppo:'Il gruppo'};
   let rdb=null, COLS={}, STATO={}, ONLINE=false, APERTO=null, SOLO=null, CHIUSO_QUI=new Set(), VISTI=new Set(), lastKey='', ascolto=null, pronto=false;
+  /* v307: «Esci» vale anche dopo un ricarico (per questo schermo) */
+  { const K='aprutium.colloquiChiusi'; try{ for(const x of JSON.parse(localStorage.getItem(K)||'[]')) CHIUSO_QUI.add(x); }catch(e){}
+    const salva=()=>{ try{ localStorage.setItem(K,JSON.stringify([...CHIUSO_QUI].slice(-50))); }catch(e){} }, _a=CHIUSO_QUI.add.bind(CHIUSO_QUI), _d=CHIUSO_QUI.delete.bind(CHIUSO_QUI);
+    CHIUSO_QUI.add=x=>{ const r=_a(x); salva(); return r; }; CHIUSO_QUI.delete=x=>{ const r=_d(x); salva(); return r; }; }
   const esc=s=>poiText(s==null?'':s);
   const now=()=>Date.now();
   const breve=n=>String(n||'').split(',')[0].replace(/\s*\(.*?\)\s*/g,' ').trim();
@@ -11114,8 +11118,11 @@ html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro res
     for(const [cid,c] of aperti()){
       if(!VISTI.has(cid)){ VISTI.add(cid);
         if(pronto&&now()-(c.aperto||0)<60000){ const chi=Object.keys(c.pgs||{}).map(k=>PGN[k]||k).join(', ');
-          if(IS_GM||!CHIUSO_QUI.has(cid)){ if(!APERTO||!COLS[APERTO]||COLS[APERTO].chiuso) APERTO=cid; toast(`${chi} parla con ${c.nome}`); } } } }
+          if(IS_GM||((c.pgs||{})[me]&&!CHIUSO_QUI.has(cid))){ if(!APERTO||!COLS[APERTO]||COLS[APERTO].chiuso) APERTO=cid; }
+          toast(`${chi} parla con ${c.nome}`); } } }
     pronto=true;
+    /* v307: il master chiude da sé i colloqui fermi da più di tre ore (uno lasciato aperto si ripresentava ai giocatori) */
+    if(IS_GM&&rdb) for(const [cid,c] of Object.entries(COLS)){ if(!c||c.chiuso) continue; const ult=Math.max(c.aperto||0,...righe(c).map(r=>r.t||0)); if(now()-ult>3*3600e3) rdb.ref(BASE+'/colloqui/'+cid).update({chiuso:now()}); }
     if(!IS_GM||!(FB_LOADED||TEST_MODE)) return;
     /* il master: le battute nel Registro, le domande al suggeritore, i riassunti */
     let n=0;
@@ -11193,7 +11200,8 @@ html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro res
   function paint(){
     const b=box(); if(!b) return;
     let cid=APERTO&&COLS[APERTO]&&!COLS[APERTO].chiuso&&(!COLS[APERTO].sc||COLS[APERTO].sc===scena())?APERTO:null;
-    if(!cid&&!IS_GM){ const a=aperti().filter(([id])=>!CHIUSO_QUI.has(id)); if(a.length) cid=a[a.length-1][0]; }
+    /* v307: al giocatore si riapre da solo solo un colloquio dove c'è il suo personaggio (prima: l'ultimo aperto, anche quello del gruppo lasciato aperto dal master) */
+    if(!cid&&!IS_GM){ const a=aperti().filter(([id,c])=>!CHIUSO_QUI.has(id)&&(c.pgs||{})[me]); if(a.length) cid=a[a.length-1][0]; }
     if(!cid&&SOLO){ const g=diTok(SOLO); if(g) cid=g[0]; }
     const c=cid?COLS[cid]:null;
     const solo=!c&&IS_GM&&SOLO&&S.tokens[SOLO]?SOLO:null;
