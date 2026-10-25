@@ -1777,3 +1777,8 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v313 (25/10/2026) — «I combattenti della carovana»
 
 - Giuseppe: aggiungere i membri della carovana che combattono (miliziani, Tiberius, Pippo, Brizio, Vhaerun, Cecco). Gruppo di pedine nuovo **`combattenti`** («I combattenti della carovana», 9) nella scena `osteria`: Tiberius, i quattro miliziani Aurentius, Pippo, Brizio, Vhaerun, Cecco, presi dal gruppo `colonna` (che resta con Silvanus, i civili e i carri: 16). Tutti con la scheda del Bestiario; in scontro tirano l'iniziativa da soli. Etichetta in `PEDINE_GRUPPI`. Script `7_Aprutium/Revisioni/Alleati e carri (25-10-2026)/combattenti.py <versione> [cartella del sito]`.
+
+## v314 (25/10/2026) — la pedina di turno brilla e la mappa la segue
+
+- Giuseppe: «illuminare i token quando tocca a loro, e ricentrare sul personaggio al suo turno». Blocco «TURNO IN EVIDENZA (v314)» dopo «GUARDIANI SPIRITUALI»; fonte `7_Aprutium/Revisioni/Turno in evidenza (25-10-2026)/` (`blocco.js`, `applica.py <versione> [cartella del sito]`).
+- La pedina di turno (`.tok.active`, già messa da `renderTokens`) ha un anello d'oro che pulsa (`::after`, animazione `turnoAnello`): si vede anche a zoom basso. Quando il turno passa a un'altra pedina (chiave round|turno|id; vale anche se il turno l'ha cambiato un'altra pagina) la mappa scorre fino a lei in mezzo secondo (`view` + `applyView`, come `centerOn`). Su ogni pagina solo se la pedina è visibile lì e nella scena aperta: un nemico nella nebbia non sposta la vista dei giocatori.

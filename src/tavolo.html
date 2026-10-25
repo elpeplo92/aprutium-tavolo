@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v313</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v314</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -12061,4 +12061,38 @@ html body #quickbar{bottom:12px!important}
   window.__guardiani={dopoMossa,fineTurno,ts};
 })();
 /* ===== FINE GUARDIANI SPIRITUALI COME NEL 2024 (v312) ===== */
+/* ===== TURNO IN EVIDENZA (v314) =====
+   Giuseppe (25-10): «i token si devono illuminare quando tocca a loro, e la mappa si deve ricentrare sul personaggio al suo turno».
+   - In scontro la pedina di turno (.tok.active, già messa da renderTokens) ha un anello d'oro che pulsa e un alone: si vede anche a zoom basso.
+   - Quando il turno passa a un'altra pedina (round|turno|id cambia, anche se l'ha cambiato un'altra pagina via Firebase) la mappa scorre
+     fino a lei in mezzo secondo (centerOn con un'animazione). Ogni pagina lo fa se la pedina è visibile su quella pagina (un nemico nella
+     nebbia non sposta la vista dei giocatori) e se è nella scena aperta.
+   Fonte: Revisioni/Turno in evidenza (25-10-2026)/ (blocco.js + applica.py). */
+(function(){
+  const css=document.createElement('style'); css.id='turnoEvidenza'; css.textContent=`
+@keyframes turnoAnello{0%,100%{transform:scale(1);opacity:.95;box-shadow:0 0 10px 3px rgba(246,227,168,.75),0 0 30px 10px rgba(217,177,92,.45),inset 0 0 8px rgba(246,227,168,.6)}
+  50%{transform:scale(1.12);opacity:1;box-shadow:0 0 16px 6px rgba(255,240,190,.95),0 0 48px 18px rgba(217,177,92,.6),inset 0 0 12px rgba(255,240,190,.8)}}
+html body .tok.active{z-index:6}
+html body .tok.active::after{content:'';position:absolute;inset:-22%;border-radius:50%;border:3px solid #F6E3A8;pointer-events:none;animation:turnoAnello 1.5s ease-in-out infinite}
+`; document.head.appendChild(css);
+  let ultimo='', anim=null;
+  function scorri(x,y){
+    if(typeof view==='undefined'||typeof applyView!=='function'){ centerOn(x,y); return; }
+    const r=stage.getBoundingClientRect(), tx=r.width/2-x*view.k, ty=r.height/2-y*view.k, x0=view.x, y0=view.y, t0=performance.now(), D=500;
+    if(anim) cancelAnimationFrame(anim);
+    const passo=t=>{ const k=Math.min(1,(t-t0)/D), e=1-Math.pow(1-k,3); view.x=x0+(tx-x0)*e; view.y=y0+(ty-y0)*e; applyView(); if(k<1) anim=requestAnimationFrame(passo); else anim=null; };
+    anim=requestAnimationFrame(passo);
+  }
+  function controlla(){
+    if(S.mode!=='scontro'||!S.order||!S.order.length){ ultimo=''; return; }
+    const id=S.order[S.turn], t=id&&S.tokens[id]; if(!t) return;
+    const k=`${S.round}|${S.turn}|${id}`; if(k===ultimo) return; ultimo=k;
+    if(!Number.isFinite(t.x)||!Number.isFinite(t.y)) return;
+    if(typeof tokInScene==='function'&&!tokInScene(id)) return;
+    if(typeof visible==='function'&&!visible(id)) return;
+    scorri(t.x,t.y);
+  }
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ controlla(); }catch(e){ console.warn('turno in evidenza',e); } return o; };
+})();
+/* ===== FINE TURNO IN EVIDENZA (v314) ===== */
 </script>
