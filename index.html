@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v301</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v302</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11420,4 +11420,108 @@ html body button.danger,html body #colFine,html body #btnEnd,html body #fogReset
   const metti=()=>{ let st=document.getElementById('tavolozzaUnica'); if(!st){ st=document.createElement('style'); st.id='tavolozzaUnica'; st.textContent=CSS; } document.body.appendChild(st); };
   metti(); window.addEventListener('load',()=>setTimeout(metti,0)); })();
 /* ===== FINE TAVOLOZZA UNICA ===== */
+/* ===== LA BARRA IN BASSO (richiesta dei giocatori, riportata da Giuseppe il 25-10-2026).
+   «La Selezione a destra ha informazioni importanti, ma per la pagina è meglio portarla nella barra in basso, con le azioni rapide.
+    Non i PF (i giocatori li leggono a sinistra): CA, taglia, percezione passiva. Per il master: danni, cure, condizioni, PF temporanei,
+    nascondi, imposta PF, rimuovi, iniziativa, scheda, prova. Per tutti: PG, PNG e mostri si comandano dalla barra in basso.»
+   Il prototipo NON rifà i comandi: sposta quelli che ci sono già (stessi id, stessi tasti), così funzionano come prima.
+   Si prova iniettandolo nella pagina (foto.js). */
+(function(){
+  const st=document.getElementById('stage'); if(!st||document.getElementById('selBar')) return;
+  const css=document.createElement('style'); css.id='selBarCss'; css.textContent=`
+#selBar{position:absolute;left:50%;transform:translateX(-50%);bottom:78px;z-index:9;width:min(1100px,calc(100% - 110px));display:grid;grid-template-columns:1fr auto;grid-template-areas:'id cmd' 'az az';gap:0;align-items:stretch;
+  background:#090B10;border:1px solid rgba(217,177,92,.45);border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.6);color:#EADFC8;font-size:14px}
+#selBar.vuota{display:none}
+#selBar .sbId{grid-area:id;display:flex;align-items:center;gap:10px;padding:7px 12px;min-width:0}
+#selBar .sbId img{width:50px;height:50px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:2px solid #C9A24A}
+#selBar .sbId b{display:block;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:19px;color:#E6C67A;line-height:1.05;max-width:190px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#selBar .sbChips{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap}
+#selBar .sbChips span{background:#12161D;border:1px solid rgba(217,177,92,.25);border-radius:5px;padding:2px 7px;font-size:12.5px;white-space:nowrap}
+#selBar .sbChips span i{font-style:normal;color:#A88A4E;font-size:11px;letter-spacing:.05em;margin-right:4px;text-transform:uppercase}
+#selBar .sbAz{grid-area:az;padding:6px 10px 8px;border-top:1px solid rgba(217,177,92,.2);min-width:0}
+#selBar .sbAz:empty,#selBar .sbAz:has(#gmActions:empty){display:none}
+#selBar .sbAz #gmActions{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;overflow-y:hidden;margin:0;align-items:stretch;scrollbar-width:thin}
+#selBar .sbAz #gmActions>*{margin:0!important;flex:none}
+#selBar .sbAz #gmActions .eyebrow.actgrp,#selBar .sbAz #gmActions .acttabs{display:none!important}
+#selBar .sbAz #gmActions .act{max-width:230px;min-height:0!important;height:46px;padding:4px 8px!important;font-size:13.5px!important;line-height:1.2!important;gap:7px!important;overflow:hidden}
+#selBar .sbAz #gmActions .act *{font-size:inherit!important;line-height:inherit!important}
+#selBar .sbAz #gmActions .act img,#selBar .sbAz #gmActions .act svg{width:30px!important;height:30px!important;flex:none}
+#selBar .sbAz #gmActions .act b,#selBar .sbAz #gmActions .act span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#selBar .sbCmd{grid-area:cmd;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:6px 10px}
+#selBar .sbCmd .row{display:flex;gap:4px;align-items:center;flex-wrap:nowrap;margin:0}
+#selBar .sbCmd button{padding:4px 7px;font-size:12.5px}
+#selBar .sbCmd input{width:46px!important}
+#selBar .sbCmd .eyebrow{display:none}
+#selBar .sbAltroBtn{align-self:stretch}
+#sbAltro{position:absolute;right:0;bottom:calc(100% + 8px);width:520px;max-height:60vh;overflow-y:auto;background:#090B10;border:1px solid rgba(217,177,92,.45);border-radius:10px;padding:10px 12px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+#sbAltro.hidden{display:none}
+#sbAltro>*{margin:0 0 10px!important}
+#sbAltro h6{margin:0 0 4px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#C9A24A}
+#qbInfo{position:absolute;z-index:9;display:flex;align-items:center;gap:8px;padding:6px 10px;flex-wrap:wrap;background:#090B10;border:1px solid rgba(217,177,92,.45);border-bottom:0;border-radius:10px 10px 0 0}
+#qbInfo.vuota{display:none}
+#qbInfo img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:1px solid #C9A24A}
+#qbInfo b{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:17px;color:#E6C67A}
+#qbInfo .sbChips{display:flex;gap:5px}
+#qbInfo .sbChips span{background:#12161D;border:1px solid rgba(217,177,92,.25);border-radius:5px;padding:2px 7px;font-size:12.5px;white-space:nowrap;color:#EADFC8}
+#qbInfo .sbChips span i{font-style:normal;color:#A88A4E;font-size:11px;letter-spacing:.05em;margin-right:4px;text-transform:uppercase}
+#qbInfo .qbBtn{margin-left:auto;display:flex;gap:5px;align-items:center}
+#qbInfo .qbBtn button{padding:4px 9px;font-size:13px;white-space:nowrap}
+#qbInfo .qbBtn>.row,#qbInfo .qbBtn>div{display:flex;gap:5px;margin:0}
+#qbInfo .qbBtn .hidden{display:none!important}
+#qbInfo .qbBtn select{font-size:13px;padding:3px 6px;max-width:140px}
+#quickbar .qbhelp{display:none}
+#sbAltro h6:has(+ .hidden),#sbAltro h6:has(+ [style*="display: none"]),#sbAltro h6:has(+ :empty){display:none}
+/* la colonna di destra resta a Scontro e Registro */
+#side>.sec.sel-spostata{display:none!important}
+`; document.head.appendChild(css);
+  const bar=document.createElement('div'); bar.id='selBar'; bar.className='vuota';
+  bar.innerHTML=`<div class="sbId"><img id="sbImg" alt=""><div><b id="sbNome"></b><div class="sbChips" id="sbChips"></div></div></div><div class="sbAz" id="sbAz"></div><div class="sbCmd" id="sbCmd"></div><div id="sbAltro" class="hidden"></div>`;
+  bar.addEventListener('pointerdown',e=>e.stopPropagation()); bar.addEventListener('wheel',e=>e.stopPropagation(),{passive:true});
+  st.appendChild(bar);
+  const q=s=>document.querySelector(s);
+  const sec=[...document.querySelectorAll('#side > .sec')].find(s=>s.querySelector('#selBox'));
+  if(IS_GM&&sec){
+    sec.classList.add('sel-spostata');
+    const box=q('#selBox');
+    const danni=[...box.children].find(k=>k.querySelector('[data-hp]'));
+    const az=q('#gmActions'), cond=q('#condBox'), tac=q('#selTac'), init=q('#initRow'), ask=q('#askRow');
+    const rows=[...box.children].filter(k=>k.classList.contains('row')&&k!==danni&&k!==az&&k!==init&&k!==ask);
+    if(az) q('#sbAz').appendChild(az);
+    if(danni) q('#sbCmd').appendChild(danni);
+    const altro=document.createElement('button'); altro.className='sbAltroBtn'; altro.textContent='Condizioni, prove e altro ▴'; q('#sbCmd').appendChild(altro);
+    const A=q('#sbAltro'); const titolo=t=>{ const h=document.createElement('h6'); h.textContent=t; return h; };
+    if(cond){ A.appendChild(titolo('Condizioni')); A.appendChild(cond); }
+    if(rows.length){ A.appendChild(titolo('Punti ferita temporanei, nascondi, rimuovi')); rows.forEach(r=>A.appendChild(r)); }
+    if(init){ A.appendChild(titolo('Iniziativa e scheda')); A.appendChild(init); }
+    if(ask){ A.appendChild(titolo('Chiedi una prova')); A.appendChild(ask); }
+    if(tac){ A.appendChild(titolo('Tiri salvezza e come combatte')); A.appendChild(tac); }
+    altro.onclick=()=>A.classList.toggle('hidden');
+  }
+  /* giocatori: la barra rapida c'è già; in testa una riga col personaggio (CA, taglia, percezione passiva) e i suoi tasti,
+     presi da «Il tuo personaggio», che lascia la colonna di destra */
+  if(!IS_GM){
+    const qb=q('#quickbar'), pl=q('#side > .sec.pl');
+    if(qb&&pl){ bar.remove(); pl.classList.add('sel-spostata');
+      const r=document.createElement('div'); r.className='qbInfo'; r.innerHTML=`<img id="sbImg" alt=""><b id="sbNome"></b><div class="sbChips" id="sbChips"></div><div class="qbBtn"></div>`;
+      r.id='qbInfo'; st.appendChild(r); r.addEventListener('pointerdown',e=>e.stopPropagation()); const dest=r.querySelector('.qbBtn');
+      for(const s of ['#btnDeath','#btnRoll']){ const x=q(s); if(!x) continue; const box=x.parentElement&&x.parentElement!==pl&&x.parentElement.parentElement===pl?x.parentElement:x; dest.appendChild(box); }   /* con la loro riga, che si mostra solo quando serve */
+      for(const s of ['#btnSheet','#btnSpells','#btnParla']){ const x=q(s); if(x) dest.appendChild(x); }
+      const fr=q('#btnFree'), fs=q('#freeSkill'); if(fs) dest.appendChild(fs); if(fr) dest.appendChild(fr); } }
+  function aggiorna(){
+    const qi=q('#qbInfo'), qb=q('#quickbar');
+    if(qi&&qb){ const r=qb.getBoundingClientRect(), sr=st.getBoundingClientRect(); const vis=r.width>0&&r.height>0; qi.classList.toggle('vuota',!vis);
+      if(vis){ qi.style.left=(qb.offsetLeft-(qb.offsetWidth&&getComputedStyle(qb).transform!=='none'?qb.offsetWidth/2:0))+'px'; const r2=qb.getBoundingClientRect(); qi.style.left=(r2.left-sr.left)+'px'; qi.style.width=r2.width+'px'; qi.style.bottom=(sr.bottom-r2.top-1)+'px'; } }
+    const id=IS_GM?selected:me; const t=id&&S.tokens[id];
+    bar.classList.toggle('vuota',!t||(!IS_GM&&!t));
+    if(!t) return;
+    const img=(typeof railImg==='function'&&railImg(t))||t.ritratto||t.img||''; const im=q('#sbImg'); if(im.getAttribute('src')!==img) im.src=img; im.style.display=img?'':'none';
+    q('#sbNome').textContent=String(t.name||'').split(',')[0];
+    const ac=typeof tokAc==='function'?tokAc(t):t.ac; const tag=(t.size||1)>2?'Enorme':(t.size||1)>1?'Grande':'Media'; const pp=typeof spotPassiva==='function'?spotPassiva(t):'';
+    q('#sbChips').innerHTML=`<span><i>CA</i>${ac??'—'}</span><span><i>Taglia</i>${tag}</span><span><i>Perc. passiva</i>${pp}</span>`+(IS_GM?`<span><i>PF</i>${t.hp}/${t.hpMax}${t.thp?' +'+t.thp:''}</span>`:'');
+  }
+  { const qb=q('#quickbar'); if(qb&&window.ResizeObserver) new ResizeObserver(()=>{ try{ aggiorna(); }catch(e){} }).observe(qb); }
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ aggiorna(); }catch(e){ console.warn('selBar',e); } return o; };
+  aggiorna();
+})();
+/* ===== FINE LA BARRA IN BASSO ===== */
 </script>
