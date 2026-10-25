@@ -1658,3 +1658,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v295 (25/10/2026) — le prove leggibili nel colloquio
 
 - Giuseppe: nel colloquio la prova di un argomento (il riquadro `v3RenderProva` del modulo di scena, con «Chiedi la prova…» ed esiti) aveva il fondo quasi nero e il testo scuro: non si leggeva. Ora, dentro la carta del copione, la prova sta su carta chiara (`#FBF4E2`), con il nome dell'abilità e la CD in nero, gli esiti con un filo verde (successo) o rosso (fallimento) e chi ha tirato in evidenza. Solo CSS nel blocco «IL COLLOQUIO» (`#colloquio .ccarta .v3prova…`). «Chiedi la prova…» apre la solita finestra per scegliere chi tira.
+
+## v296 (25/10/2026) — la scheda del cattivo: Lyaras Vel'Quoril
+
+- Secondo cattivo col formato della v294, scelto da Claude su delega di Giuseppe: **Lyaras Vel'Quoril, il Lich in pausa** (il filatterio nello zaino di Mattheus, la voce nel Bastone di Vicarus, i Forgiati che lo sentono). Voce nuova `contenuti/png/png-lyaras-vel-quoril.json` (prima non aveva una voce: c'erano solo oggetti e imprese), `city:"julianova"`, gruppo «Sylva Noctis e Pietraluna», stato incontrato, Atti VII-XIV. Senza ritratto (iniziale): da fare con Midjourney.
+- Il suo piano non avanza col tempo, come quello di Iuvenza: avanza quando Vicarus usa il Bastone in un momento forte e quando la scatola si avvicina a Silvanus o a un Sigillo. Statistiche solo «se torna» (Lich ridotto, GS 7, fra ⟦…⟧); oggi si gioca col TS Saggezza CD 15 di Vicarus.
+- Prova: da giocatore nessuna parte master (foto in `Revisioni/Scheda del cattivo (v293)/Lyaras - *.png`); `prova-tavolo.js` verde.
