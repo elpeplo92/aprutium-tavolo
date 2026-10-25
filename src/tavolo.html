@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v297</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v298</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11364,4 +11364,36 @@ html body #pannelli button.off{pointer-events:auto!important;cursor:pointer!impo
   if(document.body) metti(); window.addEventListener('load',()=>setTimeout(metti,0));
 })();
 /* ===== FINE v288 ===== */
+/* ===== TAVOLOZZA UNICA (v298) — Giuseppe 25-10: «ci sono 50 colori differenti per gli sfondi». Sei sfondi in tutto: fondo, riquadro, pergamena, oro, rosso, cuoio.
+   Fonte: Revisioni/Tavolozza unica (25-10-2026)/tavolozza.css (+ applica.py, foto.js per le foto prima/dopo). Va in fondo al body, dopo «MENO CORNICI». ===== */
+(()=>{ const CSS=`/* ===== TAVOLOZZA UNICA — prova del 25-10-2026 =====
+   Giuseppe: «ci sono 50 colori differenti per gli sfondi, una volta blu, una volta marrone, una volta marroncino scuro».
+   Non è un tema nuovo: restano i colori approvati. Si tolgono le sfumature inutili: ogni sfondo è uno di questi sei.
+   1 FONDO      #090B10  pagina, colonne, barre, pannelli sopra la mappa
+   2 RIQUADRO   #12161D  tasti, campi, testate dei pannelli, caselle della colonna dei personaggi
+   3 PERGAMENA  una sola, la più chiara (quella della Scheda), per tutto ciò che si legge (Guida, copione, battute dei PNG, Scheda)
+   4 ORO        i tasti principali (com'è ora)
+   5 ROSSO      #2A1210 i tasti di pericolo (Termina, Chiudi il colloquio…)
+   6 CUOIO      i tasti sopra la pergamena (com'è ora nella Guida) */
+:root{--t-fondo:#090B10;--t-riquadro:#12161D;--t-perg:linear-gradient(rgb(239,227,198),rgb(221,201,161))}
+/* 1. fondo */
+html body,html body #app,html body header,html body #rail,html body #railWrap,html body #guide,html body #side,html body #side>#secLog#secLog,html body #stage,
+html body #dock,html body #zoomlbl,html body #zoomctl,html body #turnBanner,html body #fxToggle,html body #colloquio,html body #colloquio .colf,html body #pannelli button,html body #tokMenu,html body #modal#modal .box,
+html body #modal#modal .box.comp,html body #modal#modal .box.sheet2,html body #c3nav
+{background-color:var(--t-fondo)!important;background-image:none!important}
+/* 2. riquadro: tasti e campi fuori dalla pergamena (solo il colore: le immagini e i fregi dei tasti restano) */
+html body button:not(.primary):not(.danger):not(.on):not(.navb):not(.csay):not(.colx):not(.cbx):not(.c4cap):not(#sceneGuide *):not(.ccarta *):not(#tokMenu *):not(#pannelli *):not(#zoomctl *),
+html body #side input:not([type=checkbox]):not([type=radio]):not([type=range]),html body #side select,html body #colloquio input,html body #colloquio select,html body #colloquio textarea,
+html body #rail .med,html body #rail button,html body .rail-sheet,html body span.init,html body .pic,html body .vav,html body .hcoin,html body .fmed
+{background-color:var(--t-riquadro)!important}
+/* superfici piatte: via le sfumature */
+html body #colloquio .colh,html body #nav,html body #nav label.pill,html body #phaseBtn,html body #dkMove{background-color:var(--t-riquadro)!important;background-image:none!important}
+/* 3. pergamena: una sola, quella della Guida */
+html body #colloquio .ccarta,html body #colloquio .cb.png,html body #guide #sceneGuide,html body .s3-lettura{background:var(--t-perg)!important}
+html body #colloquio .ccarta .v3prova{background:transparent!important}
+/* 5. rosso: uno solo */
+html body button.danger,html body #colFine,html body #btnEnd,html body #fogReset,html body #dmgGo{background-color:#2A1210!important;background-image:none!important}`;
+  const metti=()=>{ let st=document.getElementById('tavolozzaUnica'); if(!st){ st=document.createElement('style'); st.id='tavolozzaUnica'; st.textContent=CSS; } document.body.appendChild(st); };
+  metti(); window.addEventListener('load',()=>setTimeout(metti,0)); })();
+/* ===== FINE TAVOLOZZA UNICA ===== */
 </script>
