@@ -1344,7 +1344,13 @@
    "peso": "0,2 lb",
    "valore": "",
    "stats": "Come una pozione di resistenza ai danni psichici per 1 ora",
-   "desc": ""
+   "desc": "",
+   "uso": {
+    "tipo": "effetto",
+    "testo": "ha resistenza ai danni psichici",
+    "durata": "1 ora",
+    "consuma": true
+   }
   },
   {
    "n": "Pacco dell'esploratore",
@@ -1387,9 +1393,13 @@
    "q": 10,
    "cat": "Consumabili",
    "peso": "20 lb (totale)",
-   "valore": "",
+   "valore": "5 ma ciascuna",
    "stats": "1 giorno di cibo ciascuna",
-   "desc": "Carne secca, frutta secca, gallette e noci."
+   "desc": "Carne secca, frutta secca, gallette e noci.",
+   "uso": {
+    "tipo": "cibo",
+    "testo": "mangia una razione: è sfamato per un giorno"
+   }
   },
   {
    "n": "Corda",

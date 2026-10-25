@@ -612,7 +612,11 @@
    "peso": "14 lb (2 lb ciascuna)",
    "valore": "5 ma ciascuna",
    "stats": "1 giorno di cibo ciascuna",
-   "desc": "Carne secca, frutta secca, gallette e noci. Vedi «Malnutrizione» nel glossario."
+   "desc": "Carne secca, frutta secca, gallette e noci. Vedi «Malnutrizione» nel glossario.",
+   "uso": {
+    "tipo": "cibo",
+    "testo": "mangia una razione: è sfamato per un giorno"
+   }
   },
   {
    "n": "Acciarino",
@@ -648,7 +652,13 @@
    "peso": "0,25 lb",
    "valore": "5 mo",
    "stats": "Per 1 ora: vantaggio alle prove di Carisma (Persuasione) per influenzare un umanoide Indifferente entro 1,5 m",
-   "desc": "Fiala da 4 once."
+   "desc": "Fiala da 4 once.",
+   "uso": {
+    "tipo": "effetto",
+    "testo": "vantaggio alle prove di Persuasione per influenzare un umanoide indifferente entro 1,5 m",
+    "durata": "1 ora",
+    "consuma": true
+   }
   }
  ],
  "carico": "113,71 lb",

@@ -527,6 +527,17 @@
           "pe": 400,
           "bottino": [
             {
+              "n": "Il lasciapassare dei tre sigilli",
+              "q": 1,
+              "cat": "Missione",
+              "peso": "—",
+              "valore": "Non vendibile",
+              "stats": "",
+              "desc": "Pergamena piegata in tre: «Quattro carri di vino e botti per le cantine del Quartiere dei Tigli.» Tre sigilli di cera di tre colori.",
+              "a": "crociata",
+              "voce": "ogg-lasciapassare-dei-tre-sigilli"
+            },
+            {
               "n": "Sigillo da viaggio d’osso nero",
               "q": 1,
               "cat": "Missione",
@@ -534,7 +545,8 @@
               "valore": "—",
               "stats": "",
               "desc": "Sigillo da viaggio d’osso nero, levigato, piatto, con un fiore inciso. Era nella cartella di cuoio del messere.",
-              "a": "crociata"
+              "a": "crociata",
+              "voce": "ogg-sigillo-da-viaggio-d-osso-nero"
             },
             {
               "n": "Taccuino di Ansaldo Morigi",
@@ -544,12 +556,13 @@
               "valore": "—",
               "stats": "",
               "desc": "Il conto della Crociata al numero giusto; «capitano col cappuccio — mangia il doppio»; «l’oste è comprato».",
-              "a": "crociata"
+              "a": "crociata",
+              "voce": "ogg-taccuino-di-ansaldo-morigi"
             },
             {
               "n": "Borsa di Ansaldo Morigi",
               "q": 1,
-              "cat": "Altro",
+              "cat": "Monete e preziosi",
               "peso": "1 lb",
               "valore": "40 mo",
               "stats": "",
@@ -558,7 +571,8 @@
               "monete": {
                 "mo": 40,
                 "ma": 15
-              }
+              },
+              "voce": "ogg-borsa-di-ansaldo-morigi"
             },
             {
               "n": "Boccetta di essenza di lillà",
@@ -568,7 +582,14 @@
               "valore": "5 mo",
               "stats": "",
               "desc": "Boccetta di vetro col tappo di sughero. Dentro, un’essenza dolce e pesante: lillà, e sotto un fondo di cenere. È il profumo che il messere si mette apposta.",
-              "a": "crociata"
+              "a": "crociata",
+              "voce": "ogg-boccetta-di-essenza-di-lilla",
+              "uso": {
+                "tipo": "effetto",
+                "testo": "si mette il profumo del Loto d’Ombra: chi lavora per la Dama lo prende per uno dei suoi (vantaggio alla prossima prova di Inganno con loro)",
+                "durata": "fino al prossimo bagno",
+                "consuma": true
+              }
             },
             {
               "n": "Coltellino d’argento",
@@ -578,17 +599,19 @@
               "valore": "8 mo",
               "stats": "Pugnale: 1d4 perforanti, Leggera, Accurata, Lancio 6/18 m",
               "desc": "Il coltellino con cui il messere taglia il pane. Manico d’argento lavorato, lama corta e lucida.",
-              "a": "crociata"
+              "a": "crociata",
+              "voce": "ogg-coltellino-d-argento"
             },
             {
               "n": "Anelli del messere",
               "q": 4,
-              "cat": "Altro",
+              "cat": "Monete e preziosi",
               "peso": "—",
               "valore": "30 mo in tutto",
               "stats": "",
               "desc": "Quattro anelli d’oro, troppi per due mani. Uno porta una pietra scura, senza stemma.",
-              "a": "crociata"
+              "a": "crociata",
+              "voce": "ogg-anelli-del-messere"
             }
           ],
           "immagine": "PDI — Osteria — Le carte del messere.jpg"

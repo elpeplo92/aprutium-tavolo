@@ -578,9 +578,13 @@
    "q": 10,
    "cat": "Consumabili",
    "peso": "20 lb (2 lb ciascuna)",
-   "valore": "",
+   "valore": "5 ma ciascuna",
    "stats": "Cibo da viaggio: carne secca, frutta secca, gallette e noci",
-   "desc": ""
+   "desc": "",
+   "uso": {
+    "tipo": "cibo",
+    "testo": "mangia una razione: è sfamato per un giorno"
+   }
   },
   {
    "n": "Corda",
@@ -679,7 +683,13 @@
    "peso": "0 lb",
    "valore": "",
    "stats": "Respiri sott'acqua per 24 ore dopo averla bevuta",
-   "desc": "Liquido verde torbido che sa di mare, con una bolla simile a una medusa che vi galleggia."
+   "desc": "Liquido verde torbido che sa di mare, con una bolla simile a una medusa che vi galleggia.",
+   "uso": {
+    "tipo": "effetto",
+    "testo": "respira sott'acqua",
+    "durata": "24 ore",
+    "consuma": true
+   }
   },
   {
    "n": "Pozione di guarigione maggiore",
