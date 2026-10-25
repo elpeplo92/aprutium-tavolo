@@ -45,7 +45,7 @@
   "state": "noto",
   "status": null,
   "pub": "Per Julia Nova era il Capitano Silvanus Ardentus, comandante della Caserma Est, l'uomo che è sceso in spiaggia con Fenix la notte dei Forgiati. Per voi è stato l'uomo febbrile che vi ha detto « non fidatevi di nessuno, nemmeno del Concilio »; quello che Therxil ha trascinato via nel buio; quello incatenato all'altare di ossidiana con il sangue solare risucchiato dalla melma, che lottava — « Io… ricordo… il mio nome… è… Ardentus… No… non è il mio… ». Quando ha riaperto gli occhi era un altro: sangue venato d'oro, occhi d'oro screziato d'argento, rune d'incoronazione sulla pelle. Aurelius, figlio dell'Imperatore, fuggito bambino da Solaria in fiamme. « Il mio nome è morto vent'anni fa. Da questo momento io sono solo Silvanus. Un capitano scomparso. » Poi, sulla Terrazza dei Venti, si è tagliato il palmo e l'ha detto lui a tutti.\n\nLo conoscete come stratega — le sparizioni erano punti ciechi nelle rotte della Gilda, il rapimento un'estrazione chirurgica — e come uomo: quello che non beve al Pozzo dell'Addio ma tocca le Due Lune sotto la tunica; che ha chiesto la mano di sua madre e la ninna nanna; che a Vicarus, dopo la palla di fuoco su Vasco arreso, ha detto « Spero che il fuoco ti abbia scaldato l'anima, perché ci ha lasciato il vento »; che ha parlato di redenzione a Gofferio in catene; che davanti a Gisulfo era la prova, e la prova non è bastata — « un uomo si uccide, si tradisce, si perde in una battaglia ». Cavalca al centro col cappuccio alzato anche sotto il sole. Vuole Teramum non per uccidere Iuvenza nel buio, ma per il sigillo che convoca la Grande Convocazione. « Non andiamo a fare la guerra. Andiamo a riportare a casa quello che ci hanno rubato. » E vi ha detto una cosa che non dirà al Concilio: « Forse possiamo smettere di bruciare e iniziare a guarire. »\n\nAl Guado di Sant'Atto vi ha mandati avanti in sei; poi ha contato i corpi, e voi: « Quattordici loro. Sei voi. Bene. »",
-  "gm": "Silvanus Aurelius Lux. Il « secondo segreto di Silvanus » — oltre il sangue — è dichiarato « ancora da sviluppare » in tutte le fonti: NON improvvisarlo. Segreti §7: il sangue d'oro è il garante biologico del Patto; il suo sangue riconosce Sole e Lune come UGUALI. Non deve avvicinarsi al filatterio (Meren). Iuvenza lo vuole vivo, nella sua tana. Chi lo vuole morto: Mazzarelli (insabbia), l'Alto Celomante (se sa del fallimento « brucerà Aprutium fino al Gran Sasso »), Impaloni (eresia delle Due Lune). Chi lo vuole per sé: Odilon (Eroe del Sole), Grazianus (il Duca che aspettava?), la Lama Ardente (un Imperatore-fantoccio, ancora). Fili aperti: la frattura con Vicarus mai ricomposta; il « peso di Pietraluna » di Vicarus e Mattheus che non gli hanno mostrato (il filatterio? il Bastone?); non compare negli Atti XIII-XIV (dov'era durante le campane? (proposta) ai Campi dei Pellegrini col grosso della colonna, per non farsi vedere dai vesperiani). Conflitto Tiberion III / Aurelius Lux Aurax: vedi faz-impero-aureo. Coesione: se sconfessato in pubblico −1. Il corpo « recupera ancora le energie del rituale »: mangia il doppio.",
+  "gm": "Silvanus Aurelius Lux. Il « secondo segreto di Silvanus » — oltre il sangue — è dichiarato « ancora da sviluppare » in tutte le fonti: NON improvvisarlo. Segreti §7: il sangue d'oro è il garante biologico del Patto; il suo sangue riconosce Sole e Lune come UGUALI. Non deve avvicinarsi al filatterio (Meren). Iuvenza lo vuole vivo, nella sua tana. Chi lo vuole morto: Mazzarelli (insabbia), l'Alto Celomante (se sa del fallimento « brucerà Aprutium fino al Gran Sasso »), Impaloni (eresia delle Due Lune). Chi lo vuole per sé: Odilon (Eroe del Sole), Grazianus (il Duca che aspettava?), la Lama Ardente (un Imperatore-fantoccio, ancora). Fili aperti: la frattura con Vicarus mai ricomposta; il « peso di Pietraluna » di Vicarus e Mattheus che non gli hanno mostrato (il filatterio? il Bastone?); non compare negli Atti XIII-XIV (durante le campane ⟦era ai Campi dei Pellegrini col grosso della colonna, per non farsi vedere dai vesperiani⟧). Conflitto Tiberion III / Aurelius Lux Aurax: vedi impero-aureo. Coesione: se sconfessato in pubblico −1. Il corpo « recupera ancora le energie del rituale »: mangia il doppio.",
   "atti": [
    1,
    2,
@@ -64,8 +64,8 @@
   "links": [
    "jn-silvanus",
    "mito-stirpe-aurex",
-   "faz-impero-aureo",
-   "mito-sole-fra-due-lune",
+   "impero-aureo",
+   "mito-pantheon",
    "jn-fenix",
    "faz-crociata-due-lune"
   ]
@@ -127,11 +127,11 @@
    "faz-crociata-due-lune",
    "jn-porta-delle-colline",
    "jn-tenuta-di-altavia",
-   "mito-pozzo-dell-addio",
+   "borgo-giglie",
    "faz-abbazia-mushane",
    "faz-melacera",
    "faz-consiglio-reggente-teramum",
-   "mito-gigante-dormiente",
+   "mito-pantheon",
    "faz-ordine-dei-tratturi",
    "faz-loto-nero"
   ]
@@ -185,7 +185,7 @@
   "links": [
    "ogg-stendardo-aldric-aurex",
    "ogg-stendardi-crociata",
-   "mito-sole-fra-due-lune",
+   "mito-pantheon",
    "ogg-anelli-con-sigillo",
    "jn-ciccillo-lu-sorce",
    "faz-casa-barbus"
@@ -232,7 +232,7 @@
   "state": "noto",
   "status": null,
   "pub": "Tonio e Marco, Naviganti Grigi, uccisi al Covo della Conchiglia dagli assassini di Iuvenza — « costi operativi », ha detto lei. Le dodici guardie della Caserma Est, la notte di Therxil. I morti dell'assedio di Julia Nova, in file coperte da lenzuola grigie sulla Scala dei Venti. Le due milizie di Mushanè e i due della carovana caduti a Lu Vallòne sotto i lupi: due tumuli e croci di legno legate in fretta, e all'alba qualcuno ci aveva posato fiori di campo. Gofferio, che ha scelto la morte come espiazione, e che la piazza già chiama « màrtere ». I vesperiani stesi sul sagrato di San Pietro, « in un borgo di montagna molto lontano da casa, per una paga che nessuno verrà più a ritirare ». Lekë Muzàka e Lu Grise, decapitati nello stesso giorno davanti alla stessa chiesa — il secondo a mani legate.",
-  "gm": "Coesione: morti sepolti secondo il rito dei loro +1. I vesperiani caduti a Mushanè: Kostandìn e i suoi si aspettano che siano sepolti secondo l'uso delle Aquile (non fissato: (proposta) col volto verso il mare da cui vennero i loro avi, e una moneta nel pugno). Non risulta fatto, e dopo l'osteria de lu Passe Kostandìn e i suoi non sono più con la Crociata. I quattro di Lu Vallòne non hanno nome: darglielo se qualcuno chiede. Lu Grise ucciso a mani legate: Corrado e i frati l'hanno visto; è materia per il proclama (« aggressione contro autorità ecclesiastiche » è Gofferio; l'esecuzione di un prigioniero è ciò che Impaloni userà dopo). La sezione « I nostri morti » del Registro è vuota: lasciarla compilare ai giocatori.",
+  "gm": "Coesione: morti sepolti secondo il rito dei loro +1. I vesperiani caduti a Mushanè: Kostandìn e i suoi si aspettano che siano sepolti secondo l'uso delle Aquile (⟦col volto verso il mare da cui vennero i loro avi, e una moneta nel pugno⟧). Non risulta fatto, e dopo l'osteria de lu Passe Kostandìn e i suoi non sono più con la Crociata. I quattro di Lu Vallòne non hanno nome: darglielo se qualcuno chiede. Lu Grise ucciso a mani legate: Corrado e i frati l'hanno visto; è materia per il proclama (« aggressione contro autorità ecclesiastiche » è Gofferio; l'esecuzione di un prigioniero è ciò che Impaloni userà dopo). La sezione « I nostri morti » del Registro è vuota: lasciarla compilare ai giocatori.",
   "atti": [
    4,
    6,
@@ -243,13 +243,12 @@
    16
   ],
   "links": [
-   "jn-tonio-e-marco",
    "jn-caserma-est",
    "mu-abate-gofferio",
    "mu-kapitan-leke-muzaka",
    "mu-osservatore-lu-grise",
    "mu-frate-giustino",
-   "be-rocco-serrafredda"
+   "be-rocco-serrafredda-il-morto"
   ]
  }
 ]
