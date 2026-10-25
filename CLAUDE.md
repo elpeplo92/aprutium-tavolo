@@ -1595,3 +1595,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v285 (25/10/2026) — i vesperiani passati con Tanush sono tredici
 
 - Giuseppe: valgono registro e pedine (13), si corregge l'Atto XIX. **Kostandìn coi suoi otto e Vasco coi suoi tre** (prima «i suoi undici», 16). Torna anche con l'Atto XVI («dodici vesperiani, più Kostandìn»: gli otto, Vasco e i suoi tre). Cambiato in `02_Diario/Atti/Aprutium - Atto XIX.md`, `contenuti/diario/atto-19.json`, scene osteria/Colleatterrato/porta, fazioni e Crociata (anche nei sorgenti delle fazioni); nella parte master dell'osteria la scorta di Tanush è ora di ventisei (non ventinove).
+
+## v286 (25/10/2026) — l'osteria pronta per la sessione del 25-10 (si riparte dallo scontro)
+
+- Controllo della scena `osteria` in locale: i gruppi `inizio` (Tanush, Ansaldo, dodici), `voltagabbana` (13) e `colonna` si mettono, 27 nemici e 15 alleati con scheda; schede del Bestiario tutte presenti (Sergente mercenario, Mercenario vesperiano, Osservatore, Veterano, Armatura del Loto).
+- Correzioni: «Dove eravamo rimasti» e l'Atto XIX (anche in `02_Diario`) dicono **ventisei** spade con Tanush (non trenta); il modulo «Il fuoco ai carri» conta **tredici** combattenti persi dalla Crociata (non sedici). Pedine `voltagabbana` spostate davanti ai carri, accanto alla fila di Tanush (come dice il testo), gli uomini di Vasco vicino a lui; due vesperiani di Tanush non più sovrapposti (`o_v1`, `o_v2`).
+- Schede: via il **Randello pesante +1** da Maximus (regalato a Vhaerun, Atto XVIII); **Vhaerun** (`_bestiario/vhaerun.json`) combatte col randello +1 (+9, 1d8+6) invece dell'ascia restituita; **Luigis**: «Focus druidico» → «Attrezzi da inventore (focus da artefice)». Nota: i token già sulla mappa vera tengono la scheda che avevano quando sono stati messi (Vhaerun ha ancora l'ascia, a meno di rimetterlo).
