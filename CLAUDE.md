@@ -1647,3 +1647,10 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - **Voce**: «Come parla» in piccolo fra «Risposta fuori copione» e il copione.
 - **Le battute del PNG vanno nel Registro** (`mostra` → `log({col, rid, say})`): clic su una frase = scritta nel Registro; di nuovo = tolta (`togli`), anche con la × sulla bolla del PNG nel pannello del master o col × del Registro. Nei pannelli (master e giocatori) le bolle del PNG si leggono dal Registro, quindi spariscono quando la riga si toglie. In `colloqui/<cid>/righe` restano per il suggeritore. I tasti delle proposte e della risposta scritta dicono «Nel Registro».
 - Il fondo del Registro della v292 non prendeva: la regola di «MENO CORNICI» con lo stesso selettore arrivava dopo. Ora `html body #side>#secLog#secLog`.
+
+## v294 (25/10/2026) — la scheda del cattivo: Iuvenza
+
+- Giuseppe: la scheda di ogni cattivo sta nella **voce del PNG nel Compendio**, parte master, non in un documento a parte. Formato (ricerca e campi): `7_Aprutium/Revisioni/Cattivi - ricerca e formato (25-10-2026)/Ricerca.md`: statistiche ridotte, chi è, fazione, cosa vuole e perché, su chi conta, piano in 3-5 passi (cosa fa / cosa vedono i giocatori / se lo fermano / se riesce), a che punto è, come reagisce, debolezza, legami, movimenti. «A che punto è» e «Movimenti» li aggiorna Claude dopo ogni sessione.
+- Prima voce: `contenuti/png/jn-veneranda-iuvenza.json` (stesso id della voce vecchia di `comp/out/julianova.json`, che ora è sostituita; un file per voce). Campi `blocchi:true`, `riquadro:true`, `cattivo:true`; `pub` e `gm` a blocchi, passi del piano come sottoblocchi `liv:3`. Invenzioni fra ⟦…⟧.
+- Codice: blocco «SCHEDA DEL CATTIVO (v293)» (nome della fonte; pubblicato come v294) prima di MENO CORNICI: `c2Voce` vale anche per le voci `png` con `blocchi:true` e `pub` a elenco. Fonte: `Revisioni/Scheda del cattivo (v293)/` (`blocco.js`, `py -I applica.py [sito]`, foto master e giocatore).
+- Prova: da giocatore nessuna parte master; `prova-tavolo.js` verde (69 e 40). Noto, già da prima: «Marco» (di Tonio e Marco) nel testo per i giocatori si collega da solo al Sergente Marco.
