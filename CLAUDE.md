@@ -1654,3 +1654,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Prima voce: `contenuti/png/jn-veneranda-iuvenza.json` (stesso id della voce vecchia di `comp/out/julianova.json`, che ora è sostituita; un file per voce). Campi `blocchi:true`, `riquadro:true`, `cattivo:true`; `pub` e `gm` a blocchi, passi del piano come sottoblocchi `liv:3`. Invenzioni fra ⟦…⟧.
 - Codice: blocco «SCHEDA DEL CATTIVO (v293)» (nome della fonte; pubblicato come v294) prima di MENO CORNICI: `c2Voce` vale anche per le voci `png` con `blocchi:true` e `pub` a elenco. Fonte: `Revisioni/Scheda del cattivo (v293)/` (`blocco.js`, `py -I applica.py [sito]`, foto master e giocatore).
 - Prova: da giocatore nessuna parte master; `prova-tavolo.js` verde (69 e 40). Noto, già da prima: «Marco» (di Tonio e Marco) nel testo per i giocatori si collega da solo al Sergente Marco.
+
+## v295 (25/10/2026) — le prove leggibili nel colloquio
+
+- Giuseppe: nel colloquio la prova di un argomento (il riquadro `v3RenderProva` del modulo di scena, con «Chiedi la prova…» ed esiti) aveva il fondo quasi nero e il testo scuro: non si leggeva. Ora, dentro la carta del copione, la prova sta su carta chiara (`#FBF4E2`), con il nome dell'abilità e la CD in nero, gli esiti con un filo verde (successo) o rosso (fallimento) e chi ha tirato in evidenza. Solo CSS nel blocco «IL COLLOQUIO» (`#colloquio .ccarta .v3prova…`). «Chiedi la prova…» apre la solita finestra per scegliere chi tira.

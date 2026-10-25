@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v294</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v295</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10941,6 +10941,20 @@ window.RICETTE={
 #colloquio .ccarta h5{margin:10px 0 2px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#7A4E1C}
 #colloquio .ccarta .cmai{margin-top:8px;font-size:12.5px;line-height:1.4;color:#7A6345;border-top:1px dashed rgba(122,78,28,.35);padding-top:6px}
 #colloquio .ccarta .cmai b{color:#7A4E1C}
+/* v295: la prova del modulo di scena dentro la carta del copione (prima: fondo quasi nero e testo scuro, illeggibile) */
+#colloquio .ccarta .v3prova{background:#FBF4E2!important;border:1px solid rgba(122,78,28,.4)!important;border-radius:6px!important;padding:8px 10px!important;margin:10px 0 0!important;box-shadow:none!important;color:#24190E!important}
+#colloquio .ccarta .v3prova .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+#colloquio .ccarta .v3prova b{font-size:15px;color:#24190E!important}
+#colloquio .ccarta .v3prova .note,#colloquio .ccarta .v3prova .v3sum{font-size:12.5px;color:#6A5435!important;font-style:normal}
+#colloquio .ccarta .v3esito{background:transparent!important;border:0!important;border-left:3px solid #7FA65E!important;border-radius:0!important;padding:4px 0 4px 9px!important;margin:8px 0 0!important}
+#colloquio .ccarta .v3esito.fail{border-left-color:#B5533C!important}
+#colloquio .ccarta .v3esito.on{background:rgba(127,166,94,.16)!important}
+#colloquio .ccarta .v3esito.fail.on{background:rgba(181,83,60,.12)!important}
+#colloquio .ccarta .v3esito .lbl{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:14px;letter-spacing:.05em;color:#3F6B2A!important}
+#colloquio .ccarta .v3esito.fail .lbl{color:#8A2E1E!important}
+#colloquio .ccarta .v3esito p{margin:3px 0;font-size:14.5px;line-height:1.4;color:#24190E!important}
+#colloquio .ccarta .v3esito .chip{background:#24190E!important;color:#F1E4C4!important;border-radius:10px;padding:1px 7px;font-size:12px;margin-left:6px}
+#colloquio .ccarta .v3prova button:not(.primary){background:transparent!important;color:#5C3E16!important;border:1px solid rgba(122,78,28,.45)!important;box-shadow:none!important}
 #colloquio .cdom{border-top:1px solid rgba(217,177,92,.18)}
 #colloquio .cdom>summary{list-style:none;cursor:pointer;padding:9px 4px 9px 22px;position:relative;font-size:15px;line-height:1.35;color:#EADFC8}
 #colloquio .cdom>summary::-webkit-details-marker{display:none}
