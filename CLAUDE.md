@@ -1664,3 +1664,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 - Secondo cattivo col formato della v294, scelto da Claude su delega di Giuseppe: **Lyaras Vel'Quoril, il Lich in pausa** (il filatterio nello zaino di Mattheus, la voce nel Bastone di Vicarus, i Forgiati che lo sentono). Voce nuova `contenuti/png/png-lyaras-vel-quoril.json` (prima non aveva una voce: c'erano solo oggetti e imprese), `city:"julianova"`, gruppo «Sylva Noctis e Pietraluna», stato incontrato, Atti VII-XIV. Senza ritratto (iniziale): da fare con Midjourney.
 - Il suo piano non avanza col tempo, come quello di Iuvenza: avanza quando Vicarus usa il Bastone in un momento forte e quando la scatola si avvicina a Silvanus o a un Sigillo. Statistiche solo «se torna» (Lich ridotto, GS 7, fra ⟦…⟧); oggi si gioca col TS Saggezza CD 15 di Vicarus.
 - Prova: da giocatore nessuna parte master (foto in `Revisioni/Scheda del cattivo (v293)/Lyaras - *.png`); `prova-tavolo.js` verde.
+
+## v297 (25/10/2026) — il ritratto di Lyaras
+
+- Midjourney, scelta di Giuseppe: variante 4 del job `4d3563b1-f668-404e-b785-c6f61439e4d4` (prompt in `Revisioni/Compendio - immagini v149/mj/ritratto-lyaras.json`, foglio `Ritratto di Lyaras - foglio.jpg`). Originale in `03_Compendio/03 Personaggi/Julia Nova/Ritratti/Lyaras Vel'Quoril.png`; sul sito «Ritratto — Lyaras Vel'Quoril.jpg» (900 px) nella voce `png-lyaras-vel-quoril`. Token non fatto: serve solo se diventa una pedina.
