@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v287</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v288</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11177,4 +11177,29 @@ window.RICETTE={
 
 
 
+/* ===== MENO CORNICI (v288) — Giuseppe 25-10: «troppe cornici». Fonte: Revisioni/Meno cornici (25-10-2026)/meno-cornici.css.
+   Il foglio va in fondo al body dopo il caricamento, così vince sulle regole vecchie (anche quelle messe dagli altri blocchi). ===== */
+(()=>{ const CSS=`html body #side .sec,html body #guide .sec:not(#sceneGuide){border:0!important;border-radius:0!important;box-shadow:none!important}
+html body #side .sec+.sec{border-top:1px solid rgba(217,177,92,.18)!important}
+html body #regiaBox{border:0!important;border-bottom:1px solid rgba(217,177,92,.18)!important}
+html body #zoomctl button,html body #zoomctl input{border-color:transparent!important;box-shadow:none!important;background:transparent!important}
+html body #zoomctl button:hover,html body #zoomctl button.on{background:rgba(217,177,92,.14)!important}
+html body button.mini:not(.primary):not(.danger),html body #side button:not(.primary):not(.danger):not(.on):not(.navb){border-color:transparent!important;box-shadow:none!important}
+html body #guide #sceneGuide button:not(.primary):not(.danger){border-color:transparent!important;background:rgba(110,82,48,.12)!important}
+html body #guide #sceneGuide button:not(.primary):not(.danger):hover{background:rgba(110,82,48,.22)!important}
+html body #sceneGuide .gped,html body #sceneGuide .gintro,html body #sceneGuide .gnota,html body #guide #sceneGuide .v3mod,html body #guide #sceneGuide .v3prova,html body #guide #sceneGuide .spotbox,html body #sceneGuide .gingr{border:0!important;border-left:2px solid rgba(110,82,48,.28)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+html body #guide #sceneGuide .v3mod[open]{border-left-color:rgba(138,90,34,.6)!important}
+html body #sceneGuide .v3b{border:0!important}
+html body #sceneGuide img.gpoiimg,html body #sceneGuide img.poiimg,html body img.poiimg{border:0!important;border-radius:3px!important}
+html body #dock,html body #zoomlbl{border-color:rgba(176,140,82,.16)!important}
+html body #side .sec{background:transparent!important;border-radius:0!important}
+html body #side #secLog{box-shadow:none!important}
+html body #pannelli button,html body #fxToggle{border-color:transparent!important;background:rgba(10,13,20,.55)!important}
+html body #pannelli button:hover{background:rgba(10,13,20,.85)!important}
+html body #side>#secLog,html body #side #secLog{border:0!important;border-top:1px solid rgba(217,177,92,.18)!important;border-radius:0!important}
+html body #side>#secLog{background:transparent!important}`;
+  const metti=()=>{ let st=document.getElementById('menoCornici'); if(!st){ st=document.createElement('style'); st.id='menoCornici'; st.textContent=CSS; } document.body.appendChild(st); };
+  if(document.body) metti(); window.addEventListener('load',()=>setTimeout(metti,0));
+})();
+/* ===== FINE v288 ===== */
 </script>
