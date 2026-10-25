@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v292</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v293</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10928,15 +10928,31 @@ window.RICETTE={
 #colloquio .cprop .crow{justify-content:flex-end}
 #colloquio .cavv{font-size:13px;color:#E8C27A;border-left:2px solid #C9A24A;padding:2px 0 2px 8px;margin-top:6px}
 #colloquio .cattesa{font-size:13.5px;color:#9C8E74;font-style:italic;margin-top:4px}
-#colloquio .ccop{background:linear-gradient(rgb(227,204,156),rgb(210,180,124));color:#2E2116;border-radius:8px;padding:8px 11px;font-size:15px}
-#colloquio .ccop .dlg h6{color:#6B3F12}
-#colloquio .ccop q.dlgq{cursor:pointer;border-radius:3px;padding:0 2px;transition:background .15s}
-#colloquio .ccop q.dlgq:hover{background:rgba(201,140,40,.35)}
-#colloquio .ccop q.dlgq::after{content:" ▸";font-size:.8em;color:#8A5A1A;opacity:.55}
-#colloquio .ccop q.dlgq.mostrata{background:rgba(110,140,60,.22)}
-#colloquio .ccop .cnota{font-size:12.5px;color:#6B4E2A;font-style:italic;margin:0 0 4px}
+#colloquio .cnota{font-size:13px;color:#9C8E74;margin:0 0 8px}
+#colloquio .cvoce{font-size:13px;line-height:1.45;color:#A99C82;margin:0}
+#colloquio .cvoce b{color:#C9A24A;font-weight:600}
+#colloquio .ccarta{background:#F1E4C4;color:#24190E;border-radius:8px;padding:10px 12px}
+#colloquio .ccarta .cdid{display:block;font-family:"Bookinsanity",Georgia,serif;font-style:italic;font-size:14px;line-height:1.4;color:#6A5435;margin:2px 0 6px}
+#colloquio .ccarta .cnar{display:block;font-size:13px;line-height:1.4;color:#6A5435;margin:6px 0 2px}
+#colloquio .ccarta .csay{display:block;width:100%;text-align:left;margin:4px 0;padding:7px 10px 7px 12px;border:0;border-left:3px solid #B98A3C;border-radius:0 6px 6px 0;background:rgba(185,138,60,.12);color:#24190E;font-family:"Bookinsanity",Georgia,serif;font-size:16.5px;font-weight:400;line-height:1.42;cursor:pointer;box-shadow:none}
+#colloquio .ccarta .csay:hover{background:rgba(185,138,60,.26)}
+#colloquio .ccarta .csay.on{border-left-color:#4E7A34;background:rgba(78,122,52,.14)}
+#colloquio .ccarta .csay.on::after{content:"nel Registro ✓ · clic per togliere";display:block;font-family:"Scaly Sans","Source Sans 3",sans-serif;font-size:11.5px;letter-spacing:.03em;color:#4E7A34;margin-top:3px}
+#colloquio .ccarta h5{margin:10px 0 2px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#7A4E1C}
+#colloquio .ccarta .cmai{margin-top:8px;font-size:12.5px;line-height:1.4;color:#7A6345;border-top:1px dashed rgba(122,78,28,.35);padding-top:6px}
+#colloquio .ccarta .cmai b{color:#7A4E1C}
+#colloquio .cdom{border-top:1px solid rgba(217,177,92,.18)}
+#colloquio .cdom>summary{list-style:none;cursor:pointer;padding:9px 4px 9px 22px;position:relative;font-size:15px;line-height:1.35;color:#EADFC8}
+#colloquio .cdom>summary::-webkit-details-marker{display:none}
+#colloquio .cdom>summary::before{content:"▸";position:absolute;left:5px;top:9px;color:#C9A24A}
+#colloquio .cdom[open]>summary::before{content:"▾"}
+#colloquio .cdom>summary small{display:block;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#A88A4E;margin-bottom:1px}
+#colloquio .cdom>summary:hover{color:#F6E3A8}
+#colloquio .cdom>summary .gia{color:#7FA65E;font-size:12px;margin-left:6px}
+#colloquio .cdom>.ccarta{margin:0 0 10px}
+#colloquio .cb.png .cbx{float:right;margin:-2px -4px 0 6px;width:20px;height:20px;padding:0;border-radius:50%;font-size:13px;line-height:1;background:transparent;border:1px solid rgba(92,68,38,.4);color:#5C4426;cursor:pointer}
 #colloquio .colf{display:flex;gap:6px;justify-content:space-between;padding:8px 12px;border-top:1px solid rgba(217,177,92,.25);background:#0F0D0A}
-html body #side>#secLog{background:#090B10!important}  /* il Registro resta fermo in fondo alla colonna: senza fondo (v288) si leggeva sopra «Selezione» */
+html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro resta fermo in fondo alla colonna: senza fondo (v288) si leggeva sopra «Selezione» */
 #tokMenu{position:fixed;z-index:60;min-width:210px;background:#0F0D0A;border:1px solid rgba(217,177,92,.6);border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.7);padding:6px;color:#EADFC8}
 #tokMenu .tmh{display:flex;align-items:center;gap:8px;padding:4px 6px 7px;border-bottom:1px solid rgba(217,177,92,.25);margin-bottom:4px}
 #tokMenu .tmh img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid #C9A24A}
@@ -10975,7 +10991,12 @@ html body #side>#secLog{background:#090B10!important}  /* il Registro resta ferm
   }
   function scrivi(cid,riga){ if(!rdb||!cid) return; const c=COLS[cid]; if(riga.pg&&c&&!(c.pgs||{})[riga.pg]) rdb.ref(BASE+'/colloqui/'+cid+'/pgs/'+riga.pg).set(1); rdb.ref(BASE+'/colloqui/'+cid+'/righe/r'+now().toString(36)+Math.random().toString(36).slice(2,4)).set({...riga,t:now()}); }
   function chiedi(cid,testo,chi,nota){ if(!rdb||!cid) return; rdb.ref(BASE+'/colloqui/'+cid+'/richiesta').set({testo:String(testo||'').trim(),chi:chi||'',nota:String(nota||'').trim(),t:now()}); }
-  function mostra(cid,testo,azione){ testo=String(testo||'').replace(/^«|»$/g,'').trim(); if(!testo) return; scrivi(cid,{chi:'png',testo,azione:String(azione||'').trim()}); }
+  /* v293: la battuta del PNG va nel Registro (lì la leggono i giocatori, e il master la toglie quando vuole); in `righe` resta per il suggeritore */
+  const dette=cid=>(S.log||[]).filter(e=>e&&e.col===cid&&e.rid);
+  function mostra(cid,testo,azione){ testo=String(testo||'').replace(/^«|»$/g,'').trim(); if(!testo||!cid||!IS_GM) return; const c=COLS[cid]||{}; const rid='r'+now().toString(36)+Math.random().toString(36).slice(2,4); azione=String(azione||'').trim();
+    log({kind:'sys',txt:`${c.nome||'Il PNG'}: «${testo}»${azione?' ('+azione+')':''}`,col:cid,rid,say:testo}); save();
+    if(rdb) rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+rid).set({chi:'png',testo,azione,t:now(),reg:1}); lastKey=''; paint(); }
+  function togli(cid,rid){ if(!IS_GM) return; S.log=(S.log||[]).filter(e=>!(e&&e.rid===rid)); save(); if(rdb) rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+rid).remove(); lastKey=''; paint(); }
   function chiudi(cid){ if(rdb&&cid) rdb.ref(BASE+'/colloqui/'+cid).update({chiuso:now()}); if(APERTO===cid) APERTO=null; SOLO=null; lastKey=''; paint(); }
 
   /* ---------- cosa succede quando arriva qualcosa ---------- */
@@ -11011,20 +11032,53 @@ html body #side>#secLog{background:#090B10!important}  /* il Registro resta ferm
   /* ---------- il pannello ---------- */
   function box(){ let b=document.getElementById('colloquio'); if(b) return b; const st=document.getElementById('stage'); if(!st) return null; b=document.createElement('div'); b.id='colloquio'; b.className='hidden'; b.addEventListener('pointerdown',e=>e.stopPropagation()); b.addEventListener('wheel',e=>e.stopPropagation(),{passive:true}); st.appendChild(b); return b; }
   function posiziona(b){ const z=document.getElementById('zoomctl'), st=document.getElementById('stage'); let left=12; if(z&&st&&z.offsetWidth){ const zr=z.getBoundingClientRect(), sr=st.getBoundingClientRect(); left=Math.round(zr.right-sr.left+10); } b.style.left=left+'px'; }
-  function convHtml(c){
-    const L=righe(c); if(!L.length) return `<div class="cvuoto">${IS_GM?'Nessuno ha ancora parlato.':'Scrivi qui sotto cosa dici.'}</div>`;
+  function convHtml(c,cid){
+    /* le battute dei giocatori da `righe`; quelle del PNG dal Registro (se il master le toglie lì, spariscono anche qui) */
+    const L=righe(c).filter(r=>r.chi!=='png').concat(dette(cid).map(e=>({chi:'png',testo:e.say,t:e.t,rid:e.rid}))).sort((a,b)=>a.t-b.t);
+    if(!L.length) return `<div class="cvuoto">${IS_GM?'Nessuno ha ancora parlato.':'Scrivi qui sotto cosa dici.'}</div>`;
     return L.map(r=>{
-      if(r.chi==='png') return `<div class="cb png"><small>${esc(c.nome)}</small>${esc(r.testo)}${r.azione?`<i>${esc(r.azione)}</i>`:''}</div>`;
+      if(r.chi==='png') return `<div class="cb png">${IS_GM?`<button class="cbx" data-ctogli="${esc(r.rid)}" title="Togli dal Registro">×</button>`:''}<small>${esc(c.nome)}</small>${esc(r.testo)}</div>`;
       if(r.tipo==='azione') return `<div class="cb az">${esc(PGN[r.pg]||r.pg)} ${esc(r.testo)}</div>`;
       return `<div class="cb pg"><small>${esc(PGN[r.pg]||r.pg)}</small>${esc(r.testo)}</div>`; }).join('');
   }
   function chiHtml(c){ return Object.keys(c.pgs||{}).map(k=>{ const t=pgTok(k); const im=imgDi(t); return `${im?`<img src="${esc(im)}" alt="">`:''}${esc(PGN[k]||k)}`; }).join(' · '); }
-  function copioneHtml(png){
-    const d=png&&typeof DIALOGHI_DATA!=='undefined'?DIALOGHI_DATA[png]:null;
-    if(!d) return `<div class="ccop"><p class="cnota">Questo personaggio non ha ancora un copione: usa il suggeritore qui sopra.</p></div>`;
-    let p=null,m=null; for(const q of POIS){ if(!poiInScene(q)) continue; const mm=(q.moduli||[]).find(x=>x.png===png); if(mm){ p=q; m=mm; break; } }
-    return `<div class="ccop"><p class="cnota">Clicca una frase fra «» per mostrarla ai giocatori.${p?` Le prove si registrano nel punto «${esc(p.title)}».`:''}</p>${dlgHtml(d,p?{p,m}:{p:{scene:scena()}})}</div>`;
+  /* v293, Giuseppe: il copione è solo quello che dice il PNG. In testa come si presenta, poi le domande (clic = si apre la risposta).
+     Le frasi fra «» sono tasti: clic = nel Registro, di nuovo = tolta. Le didascalie fra *…* in piccolo. */
+  function battutaHtml(s){
+    s=String(s||''); let h='', last=0, frasi=0;
+    for(const m of s.matchAll(/\*([^*\n]+)\*|«([^»]*)»/g)){
+      const pre=s.slice(last,m.index).replace(/^[\s.,;:—–-]+|[\s,;:—–-]+$/g,''); if(pre) h+=`<span class="cnar">${esc(pre)}</span>`;
+      if(m[1]) h+=`<span class="cdid">${esc(m[1])}</span>`; else { h+=`<button type="button" class="csay" data-say="${esc(m[2])}">«${esc(m[2])}»</button>`; frasi++; }
+      last=m.index+m[0].length; }
+    const post=s.slice(last).replace(/^[\s.,;:—–-]+|[\s,;:—–-]+$/g,''); if(post) h+=`<span class="cnar">${esc(post)}</span>`;
+    if(!frasi){ /* senza «»: tutto ciò che non è didascalia è la frase */
+      const solo=s.replace(/\*[^*\n]+\*/g,' ').replace(/\s+/g,' ').trim(); const did=[...s.matchAll(/\*([^*\n]+)\*/g)].map(x=>`<span class="cdid">${esc(x[1])}</span>`).join('');
+      return did+(solo?`<button type="button" class="csay" data-say="${esc(solo)}">${esc(solo)}</button>`:''); }
+    return h;
   }
+  const DLG_SE=[['minaccia','Se lo minacciano'],['soldi','Se gli offrono soldi'],['lusinga','Se lo lusingano'],['bugia','Se lo beccano a mentire']];
+  function copioneHtml(png,cid){
+    const d=png&&typeof DIALOGHI_DATA!=='undefined'?DIALOGHI_DATA[png]:null;
+    if(!d) return `<p class="cnota">Questo personaggio non ha ancora un copione: usa il suggeritore qui sopra.</p>`;
+    let p=null,m=null; for(const q of POIS){ if(!poiInScene(q)) continue; const mm=(q.moduli||[]).find(x=>x.png===png); if(mm){ p=q; m=mm; break; } }
+    const sc=scena(); const gia=new Set(dette(cid).map(e=>e.say));
+    const usata=s=>[...String(s||'').matchAll(/«([^»]*)»/g)].some(x=>gia.has(x[1]));
+    const voce=(tit,dom,corpo,detta)=>`<details class="cdom" data-k="${esc(tit+'|'+(dom||''))}"><summary><small>${esc(tit)}</small>${dom?esc(String(dom).replace(/^«|»$/g,'')):''}${detta?'<span class="gia">✓ detta</span>':''}</summary><div class="ccarta">${corpo}</div></details>`;
+    let h=`<p class="cnota">Clicca una frase per scriverla nel Registro, dove la leggono i giocatori. Riclicca per toglierla.</p>`;
+    if(d.apertura) h+=`<div class="ccarta" style="margin-bottom:10px"><h5 style="margin-top:0">Come si presenta</h5>${battutaHtml(d.apertura)}</div>`;
+    (d.argomenti||[]).forEach((a,i)=>{ if(a.scena&&sc&&a.scena!==sc) return;
+      const pv=m?(m.prove||[]).find(x=>x.dlg===i):null;
+      let corpo=battutaHtml(a.risposta);
+      if(a.insistono) corpo+=`<h5>Se insistono</h5>${battutaHtml(a.insistono)}`;
+      if(pv) corpo+=v3RenderProva(p,m,pv); else if(a.prova) corpo+=`<div class="cmai"><b>Prova:</b> ${esc((a.prova.abilita||[]).join(' o '))} CD ${esc(a.prova.cd)} — sì: ${esc(a.prova.si)} · no: ${esc(a.prova.no)}</div>`;
+      if(a.mai) corpo+=`<div class="cmai"><b>Non lo dice mai:</b> ${esc(a.mai)}</div>`;
+      h+=voce(a.tema||('Domanda '+(i+1)),a.domanda||a.tema,corpo,usata(a.risposta)||usata(a.insistono)); });
+    const R=d.reazioni||{}; for(const [k,t] of DLG_SE) if(R[k]) h+=voce(t,'',battutaHtml(R[k]),usata(R[k]));
+    if((d.battute||[]).length) h+=voce('Battute pronte','Frasi da usare quando servono',d.battute.map(battutaHtml).join(''),d.battute.some(usata));
+    const U=d.uscita||{}; if(U.frase) h+=voce('Il congedo','Come chiude il colloquio',battutaHtml(U.frase)+(U.aggancio?`<div class="cmai"><b>Aggancio:</b> ${esc(U.aggancio)}</div>`:''),usata(U.frase));
+    return h;
+  }
+  function voceHtml(png){ const d=png&&typeof DIALOGHI_DATA!=='undefined'?DIALOGHI_DATA[png]:null; return d&&d.voce?`<div class="colsez"><p class="cvoce"><b>Come parla.</b> ${esc(d.voce)}</p></div>`:''; }
   const SOCIALI=[['persuadi','Persuadi','prova a convincerlo (Persuasione)'],['intimidisci','Intimidisci','prova a intimidirlo (Intimidire)'],['inganna','Inganna','prova a ingannarlo (Inganno)'],['intuizione','Leggi le intenzioni','lo studia per capire se mente (Intuizione)']];
   function paint(){
     const b=box(); if(!b) return;
@@ -11034,14 +11088,16 @@ html body #side>#secLog{background:#090B10!important}  /* il Registro resta ferm
     const c=cid?COLS[cid]:null;
     const solo=!c&&IS_GM&&SOLO&&S.tokens[SOLO]?SOLO:null;
     if(!c&&!solo){ b.classList.add('hidden'); lastKey=''; return; }
-    const key=JSON.stringify([cid,c,solo,ONLINE,IS_GM,aperti().map(x=>x[0]),imgDi(S.tokens[c?c.tid:solo])]);
+    const key=JSON.stringify([cid,c,solo,ONLINE,IS_GM,aperti().map(x=>x[0]),imgDi(S.tokens[c?c.tid:solo]),cid?dette(cid).map(e=>e.rid):0]);
     if(key===lastKey&&!b.classList.contains('hidden')) return; lastKey=key;
     /* i campi scritti a metà non si perdono quando il pannello si ridisegna */
-    const keep={}; b.querySelectorAll('input[id],textarea[id]').forEach(x=>keep[x.id]=x.value); const foc=document.activeElement&&b.contains(document.activeElement)?document.activeElement.id:null;
+    const keep={}; b.querySelectorAll('input[id],textarea[id]').forEach(x=>keep[x.id]=x.value);
+    const chiTid=String(c?c.tid:solo); const stesso=b.dataset.tid===chiTid; const apD=new Set([...b.querySelectorAll('details.cdom[open]')].map(x=>x.dataset.k)); const sc0=(b.querySelector('.colb')||{}).scrollTop||0; b.dataset.tid=chiTid;
+    const foc=document.activeElement&&b.contains(document.activeElement)?document.activeElement.id:null;
     const tid=c?c.tid:solo, t=S.tokens[tid]; const nome=c?c.nome:breve(t&&t.name); const im=imgDi(t);
     let h=`<div class="colh">${im?`<img class="colr" src="${esc(im)}" alt="">`:''}<div class="colt"><div class="eyebrow">Colloquio</div><b>${esc(nome)}</b><div class="chi">${c?'con '+chiHtml(c):'nessuno gli sta parlando'}</div></div><button class="colx" id="colX" title="Nascondi il pannello">×</button></div><div class="colb">`;
     if(IS_GM&&aperti().length>1) h+=`<div class="cchips">${aperti().map(([id,x])=>`<button data-capri="${id}" class="${id===cid?'primary':''}">${esc(x.nome)}</button>`).join('')}</div>`;
-    if(c) h+=`<div class="colconv" id="colConv">${convHtml(c)}</div>`;
+    if(c) h+=`<div class="colconv" id="colConv">${convHtml(c,cid)}</div>`;
     if(IS_GM){
       if(!c) h+=`<div class="colsez"><h6>Apri il colloquio</h6><div class="crow"><select id="colPg"><option value="gruppo">Tutto il gruppo</option>${Object.entries(PGN).filter(([k])=>k!=='gruppo').map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="primary" id="colApri">Apri</button></div></div>`;
       const P=c&&c.proposte, req=c&&c.richiesta;
@@ -11049,12 +11105,13 @@ html body #side>#secLog{background:#090B10!important}  /* il Registro resta ferm
       if(P&&req&&P.req===req.t){
         if(P.stato==='in corso') h+=`<div class="cattesa">Il suggeritore pensa a «${esc(req.testo)}»…</div>`;
         else if(P.stato==='errore') h+=`<div class="cavv">Il suggeritore non ha risposto${P.errore?': '+esc(P.errore):''}. Scrivi tu la risposta.</div>`;
-        else { h+=`<div class="cattesa">Per: «${esc(req.testo)}»</div>`+(P.lista||[]).map((p,i)=>`<div class="cprop"><small>${esc(p.tono||'proposta '+(i+1))}</small><textarea id="colP${i}">${esc(p.battuta)}</textarea>${p.azione?`<div class="caz">${esc(p.azione)}</div>`:''}<div class="crow"><button class="primary" data-cmostra="${i}">Mostra</button></div></div>`).join('')+(P.avviso?`<div class="cavv">${esc(P.avviso)}</div>`:''); }
+        else { h+=`<div class="cattesa">Per: «${esc(req.testo)}»</div>`+(P.lista||[]).map((p,i)=>`<div class="cprop"><small>${esc(p.tono||'proposta '+(i+1))}</small><textarea id="colP${i}">${esc(p.battuta)}</textarea>${p.azione?`<div class="caz">${esc(p.azione)}</div>`:''}<div class="crow"><button class="primary" data-cmostra="${i}">Nel Registro</button></div></div>`).join('')+(P.avviso?`<div class="cavv">${esc(P.avviso)}</div>`:''); }
       } else if(req&&req.t&&ONLINE) h+=`<div class="cattesa">In attesa del suggeritore…</div>`;
       h+=`<div class="crow"><input id="colQ" placeholder="Domanda dei giocatori (scrivi o incolla)"><button id="colChiedi" title="Chiedi tre risposte al suggeritore">Proposte</button></div>`;
       h+=`<div class="crow"><input id="colNota" placeholder="Indicazione (facoltativa): «è spaventato», «vuole soldi»"></div>`;
-      h+=`<div class="crow"><input id="colIo" placeholder="Oppure scrivi tu la risposta del PNG"><button id="colIoGo">Mostra</button></div></div>`;
-      h+=`<div class="colsez"><h6>Copione</h6>${copioneHtml(c?c.png:(typeof tokPng==='function'?tokPng(tid):null))}</div>`;
+      h+=`<div class="crow"><input id="colIo" placeholder="Oppure scrivi tu la risposta del PNG"><button id="colIoGo">Nel Registro</button></div></div>`;
+      const png=c?c.png:(typeof tokPng==='function'?tokPng(tid):null);
+      h+=voceHtml(png)+`<div class="colsez" id="colCop"><h6>Copione</h6>${copioneHtml(png,cid)}</div>`;
     }
     h+=`</div>`;
     if(IS_GM) h+=c?`<div class="colf"><span></span><button class="danger" id="colFine">Chiudi il colloquio</button></div>`:'';
@@ -11074,10 +11131,11 @@ html body #side>#secLog{background:#090B10!important}  /* il Registro resta ferm
       const ioGo=()=>{ const v=q('#colIo').value; if(!v.trim()) return; const id=assicura(); setTimeout(()=>mostra(id,v,''),60); q('#colIo').value=''; };
       q('#colIoGo').onclick=ioGo; q('#colIo').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); ioGo(); } });
       b.querySelectorAll('[data-cmostra]').forEach(x=>x.onclick=()=>{ const i=+x.dataset.cmostra; const p=((c&&c.proposte&&c.proposte.lista)||[])[i]||{}; mostra(cid,q('#colP'+i).value,p.azione); });
-      const cop=q('.ccop'); if(cop){ if(typeof v3Bind==='function') try{ v3Bind(cop); }catch(e){}
-        const gia=new Set(righe(c||{}).filter(r=>r.chi==='png').map(r=>r.testo));
-        cop.querySelectorAll('q.dlgq').forEach(el=>{ if(el.closest('summary')) return; const testo=el.textContent.replace(/^«|»$/g,'').trim(); if(gia.has(testo)) el.classList.add('mostrata'); el.title='Mostra ai giocatori';
-          el.onclick=e=>{ e.preventDefault(); e.stopPropagation(); const id=assicura(); setTimeout(()=>mostra(id,testo,''),60); el.classList.add('mostrata'); }; }); }
+      const cop=q('#colCop'); if(cop){ if(typeof v3Bind==='function') try{ v3Bind(cop); }catch(e){}
+        const D=dette(cid);
+        cop.querySelectorAll('.csay').forEach(el=>{ const testo=el.dataset.say; const e0=D.find(e=>e.say===testo); if(e0) el.classList.add('on');
+          el.onclick=e=>{ e.preventDefault(); e.stopPropagation(); if(e0) togli(cid,e0.rid); else { const id=assicura(); setTimeout(()=>mostra(id,testo,''),60); } }; }); }
+      b.querySelectorAll('[data-ctogli]').forEach(x=>x.onclick=()=>togli(cid,x.dataset.ctogli));
       if(q('#colFine')) q('#colFine').onclick=()=>chiudi(cid);
     } else {
       const go=()=>{ const v=q('#colTxt').value.trim(); if(!v) return; scrivi(cid,{chi:'pg',pg:me,testo:v}); q('#colTxt').value=''; };
@@ -11086,7 +11144,8 @@ html body #side>#secLog{background:#090B10!important}  /* il Registro resta ferm
       b.querySelectorAll('[data-csoc]').forEach(x=>x.onclick=()=>{ const s=SOCIALI.find(y=>y[0]===x.dataset.csoc); scrivi(cid,{chi:'pg',pg:me,tipo:'azione',testo:s[2]}); });
       q('#colEsci').onclick=()=>{ CHIUSO_QUI.add(cid); b.classList.add('hidden'); lastKey=''; };
     }
-    const cb=q('.colb'); if(cb&&conv&&!foc) cb.scrollTop=0;
+    /* stesso personaggio: le domande aperte restano aperte e il pannello resta dov'era */
+    if(stesso){ b.querySelectorAll('details.cdom').forEach(x=>{ if(apD.has(x.dataset.k)) x.open=true; }); const cb=q('.colb'); if(cb) cb.scrollTop=sc0; }
   }
 
   /* ---------- il menù delle azioni dei giocatori sulle pedine degli altri ---------- */
