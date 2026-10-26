@@ -1801,3 +1801,9 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v318 (25/10/2026) — i morti fuori dai bersagli e dall'ordine dei turni
 
 - Giuseppe: «ogni volta che un personaggio muore, toglilo dalla possibilità di essere selezionato per un combattimento o per un attacco». Blocco «MORTI FUORI DAI BERSAGLI (v318)» dopo «ARTEFICE: GELSOMINA»; fonte `7_Aprutium/Revisioni/Morti fuori dai bersagli (25-10-2026)/`. Morto (`window.tokMorto`) = non-PG a 0 PF o meno, oppure PG morto davvero (`isDead`); un PG a 0 PF è morente e resta bersaglio. `targetsFor` e `aoeTargets` avvolte (i morti non si propongono); in scontro la pagina del master li toglie da `S.order` (se era di turno il morto, il turno passa al vivo successivo) e scrive una riga solo master. La pedina resta sulla mappa. `spellEnemyTargets` escludeva già chi è a 0 PF.
+
+## v319 (26/10/2026) — la mappa del Lucente Leonardo rifatta
+
+- Giuseppe aveva bocciato la mappa del quartiere (sfocata, poi varianti non fedeli). Rifatta con il **Retexture** dell'Editor di Midjourney (modello v7: la scheda Retexture compare solo con la v7) sul ritaglio esatto della mappa della città (`img/e8ad70fdec66.jpg`): tiene mura, recinto con la torre, strade e ponti e ridipinge nitido. Scelta di Giuseppe: variante 4 (job `174c116a…`), upscale `b562b86f…` (2784×1728, sul CDN è `.webp`, non `.png`). Sul sito 1920×1192, saturazione 0,85 (`Mappa — Teramum — Il Lucente Leonardo (ridipinta).jpg`).
+- Punti della scena `te_q_leonardo` rimessi sulle posizioni della mappa della città (ritaglio 840,150 ×3, poi ×1,28); Compendio `te-rione-san-leonardo` con la mappa nuova. Script `7_Aprutium/Revisioni/Teramum a quartieri (25-10-2026)/leonardo_mappa_nuova.py` (dopo `leonardo_scene.py` e `leonardo_luoghi.py`); la mappa vecchia è in `03_Compendio/…/Il Lucente Leonardo/_archivio/`.
+- Metodo per i prossimi quartieri: ritaglio della mappa della città → Editor → Retexture v7 → upscale.
