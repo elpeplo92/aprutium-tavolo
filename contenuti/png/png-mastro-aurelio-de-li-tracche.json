@@ -5,10 +5,71 @@
  "group": "Popolani e botteghe",
  "title": "Mastro Aurelio de li Tracche",
  "sub": "suonatore e padrone della sala da ballo Lu Shakidù",
- "img": null,
+ "img": "Ritratto — Mastro Aurelio de li Tracche.jpg",
  "state": "segreto",
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: trentacinque. Capelli lunghi, giacca a frange, sorriso da padrone del mondo. Suona la ghironda e grida cose che nessuno capisce.\nLa sua compagnia di musici si chiama «li Tracche». Ha inventato la ruota dei vetri colorati davanti alle candele.\nVuole: suonare alla festa dei Thaulero, dove non lo invitano «perché suona la musica dei poveri».\nAlla festa sarebbe un diversivo perfetto.\nBattute: «Chi balla, paga da bere.» · «Ancora un giro!»"
+ "gm": "Età: trentacinque. Capelli lunghi, giacca a frange, sorriso da padrone del mondo. Suona la ghironda e grida cose che nessuno capisce.\nLa sua compagnia di musici si chiama «li Tracche». Ha inventato la ruota dei vetri colorati davanti alle candele.\nVuole: suonare alla festa dei Thaulero, dove non lo invitano «perché suona la musica dei poveri».\nAlla festa sarebbe un diversivo perfetto.\nBattute: «Chi balla, paga da bere.» · «Ancora un giro!»",
+ "dialogo": {
+  "apertura": "*Salta giù dal palchetto senza smettere di suonare.* «Forestieri! Chi balla paga da bere. Chi non balla, paga da bere lo stesso!»",
+  "voce": "Allegro, a voce alta sopra la musica · Tic: grida parole che nessuno capisce e tutti rispondono in coro; batte il tempo col piede anche da fermo",
+  "argomenti": [
+   {
+    "tema": "Lo Shakidù",
+    "domanda": "«Che posto è questo?»",
+    "risposta": "«Il posto dove la città si dimentica di essere Teramum! La ruota l’ho inventata io: vetri colorati davanti alle candele. Di sopra comandano i signori. Di sotto comando io.»",
+    "insistono": "«Vengono tutti: servette, Diavoli, garzoni. Pure qualche figlio di signori, che paga da bere per farsi voler bene.»",
+    "mai": "Non smette mai di suonare per più di un respiro."
+   },
+   {
+    "tema": "La festa dei Thaulero",
+    "domanda": "«Suonate anche alle feste dei signori?»",
+    "risposta": "*Il sorriso si spegne un momento.* «Non mi invitano. Dicono che suono la musica dei poveri.»",
+    "insistono": "«Se qualcuno mi portasse alla festa dei Thaulero, gliela farei ballare io, la nobiltà. E mentre tutti ballano, nessuno guarda niente.»",
+    "prova": {
+     "abilita": [
+      "Intrattenere",
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "«Affare fatto! Portatemi ai Tigli e vi do un’ora di confusione come non se n’è mai vista.»",
+     "no": "«Belle parole. Le dicono tutti.»"
+    },
+    "mai": "Non suona mai per la Guardia."
+   },
+   {
+    "tema": "Le servette",
+    "domanda": "«Chi sa le cose dei palazzi?»",
+    "risposta": "«Le ragazze col grembiule. Scappano un’ora e tornano prima che la padrona se ne accorga. Balla con una, e ti racconta il palazzo.»",
+    "insistono": "«Ninuccia, quella dei Malavolta. Dice che la padrona scende in cantina di notte.»",
+    "mai": "Non fa nomi davanti alla ragazza."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Ferma la musica. Tutta la sala si gira verso di voi. «Qui non si litiga. Qui si balla.»",
+   "soldi": "Prende e grida: «Da bere per tutti, pagano loro!»",
+   "lusinga": "Suona più forte, e vi dedica una strofa."
+  },
+  "battute": [
+   "«Chi balla, paga da bere!»",
+   "«Ancora un giro!»",
+   "«Di sopra i signori, di sotto io.»"
+  ],
+  "uscita": {
+   "frase": "«Tornate! Lo Shakidù non chiude mai!»",
+   "dopo": "Se i personaggi lo portano alla festa dei Thaulero, Aurelio è il diversivo perfetto.",
+   "aggancio": "«Ninuccia balla qui ogni sera, dopo i vespri.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Aurelio può creare un diversivo alla festa dei Thaulero.",
+    "via": "prova"
+   },
+   {
+    "info": "La Matriarca Malavolta scende in cantina di notte.",
+    "via": "insistono"
+   }
+  ]
+ }
 }

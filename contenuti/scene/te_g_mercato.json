@@ -1,0 +1,239 @@
+{
+ "id": "te_g_mercato",
+ "nome": "Lucente Giorgio — la Piazza del Mercato",
+ "menu": "Lucente Giorgio — la Piazza del Mercato",
+ "citta": "Teramum",
+ "ordine": 9.21,
+ "mappa": {
+  "img": "PDI — Teramum — Piazza del Mercato.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "La piazza davanti alla facciata della Basilica Aurea è un solo mercato, da un muro all’altro. Portici bassi, banchi sotto tende rattoppate, magazzini con le porte a mezzo piano. In mezzo, una fontana con due leoni di pietra che sputano due getti d’acqua in una vasca sola: uno per fiume, dicono.\n\nOdore di arrosticini sulla brace, di pesce salato, di cuoio, di frutta passata. Qualcuno vi mette in mano un assaggio di pecorino prima che possiate dire di no, e poi vi chiede il prezzo. Si grida in dialetto, si paga in fiorini limati, si conta due volte. I cambiavalute pesano ogni moneta, anche la vostra.",
+  "img": "PDI — Teramum — Piazza del Mercato.jpg",
+  "note": "La piazza davanti alla facciata della Basilica: il Palazzo Ducale, il palazzo dell’Arciflamine, la fontana dei due leoni (i due fiumi), il Tribunale dei Chiodi. I sensali della Lega (Melatino) sono ostili ai Naviganti Grigi di Adamus. Gerbino ha il banco sotto i portici."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "merc_piazza",
+   "kind": "scena",
+   "title": "Il mercato",
+   "legacyPosition": {
+    "x": 900,
+    "y": 820
+   },
+   "text": "La piazza davanti alla facciata della Basilica Aurea è un solo mercato, da un muro all’altro. Portici bassi, banchi sotto tende rattoppate, magazzini con le porte a mezzo piano. In mezzo, una fontana con due leoni di pietra che sputano due getti d’acqua in una vasca sola: uno per fiume, dicono.\n\nOdore di arrosticini sulla brace, di pesce salato, di cuoio, di frutta passata. Qualcuno vi mette in mano un assaggio di pecorino prima che possiate dire di no, e poi vi chiede il prezzo. Si grida in dialetto, si paga in fiorini limati, si conta due volte. I cambiavalute pesano ogni moneta, anche la vostra.\n\nSotto i portici, uomini con la tavoletta e il gessetto fanno i prezzi del grano, della lana, dei debiti: parlano a bassa voce e scrivono in fretta.\n\nAi crocevia, piattini con un dito di Ratafià e un Bocconotto. Nessuno li tocca.\n\nDa un lato della piazza, il Palazzo Ducale con la sua torre e le guardie in grigio; accanto, un portone nero con un chiodo di ferro scolpito sopra. Dall’altro lato, un palazzo più basso con il disco del Sole sul portone, e votati che entrano ed escono. Da un angolo, un vicolo scende a gradini fra le case povere verso il fiume, e laggiù si vede un tempietto con la porta murata.",
+   "gm": "La piazza sta davanti alla facciata della Basilica Aurea: da un lato il Palazzo Ducale, dall’altro il palazzo del Flamine, in mezzo la fontana dei due leoni (i due fiumi). Il Tribunale dei Chiodi è accanto al Palazzo.\nCanone: la Lega dei Sensali è dei Melatino (il Decano Maccabeo Melatino), rivale mortale dei Naviganti Grigi di Adamus; la Lega compra e vende grano, cuoio, lana, debiti e dazi. Segreti: la Lega ha stretto patti con i Mazzamarelli per sabotare le carovane rivali, e vuole strangolare Julia Nova.\n⟦Il Fondaco della Lega: un palazzo sotto i portici della piazza, coi magazzini sotto. È l’ufficio del sigillo dei Melatino.⟧ La casa dei Melatino, quella con le finestre a serpente, sta a Lucente Anna.",
+   "breve": "La piazza del mercato davanti alla facciata della Basilica, col Palazzo Ducale, il palazzo del Flamine e la fontana dei due leoni. ⟦Il Fondaco della Lega dei Sensali sotto i portici.⟧ Prezzi in salita, sensali ostili ai Naviganti Grigi, offerte ai Mazzamarelli. Da qui si scende alla Lunaria a Bitetto (il tempio murato di Mortus, la locanda Lu Cane Bianche) e si va a Lucente Anna (la Città Sepolta).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "oggi",
+     "tipo": "dettaglio",
+     "titolo": "Cosa succede oggi",
+     "parte": "evento",
+     "innesco": "Entrano nel mercato.",
+     "leggi": "I prezzi sono scritti col gesso sulle lavagnette, e il gesso è fresco: li hanno cambiati stamattina. Un fornaio discute con una donna. «Ieri tre quattrini, oggi quattro. Domani? Domani, se arriva la Crociata, cinque.»\n\nLa donna vi vede. Il fornaio vi vede. Nessuno dei due finisce la frase.",
+     "note": "La notizia della Crociata ha fatto nascondere il grano. I Sensali hanno chiuso le lettere di cambio verso Julia Nova.",
+     "rilancio": "Il mercato vi guarda. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "contrattare",
+      "merc_sensali"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Voci del mercato",
+     "parte": "evento",
+     "innesco": "Parlano con i venditori, le lavandaie, i facchini.",
+     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «I Sensali pagano i Mazzamarelli per rovesciare i carri dei concorrenti. Ve lo giuro sulla testa di mia madre.»\n2. «Quelli della Lega limano l’oro dei fiorini. Pe’ quesse lu fiorine pese poche.»\n3. «Nelle cantine dei magazzini, giù a Lucente Anna, c’è una porta che nessuno apre. E ogni tanto la trovano aperta.»\n4. «Nel tempio murato, giù alla Lunaria a Bitetto, qualcuno prega ancora. Si sentono voci, la notte.»\n5. «Un tizio con una maschera colorata girava per il mercato all’alba. Chi l’ha visto non si ricorda la faccia. Nemmeno la sua.»\n6. «Il fiume l’anno scorso è salito di colpo senza pioggia. Lu Gigante s’è ggirate.»",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "contrattare"
+     ]
+    },
+    {
+     "id": "contrattare",
+     "tipo": "dettaglio",
+     "titolo": "Comprare al mercato",
+     "parte": "evento",
+     "innesco": "Comprano qualcosa, o cambiano monete.",
+     "leggi": "Prezzi del giorno (più alti del solito): pane bianco 4 quattrini, una fetta di formaggio 6, una decina di arrosticini 5, un boccale di vino 3, un Ratafià 4.",
+     "prove": [
+      {
+       "id": "mercato",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Pagate il doppio, con il sorriso del venditore."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Prezzo giusto, e il venditore vi aggiunge una voce: la porta in cantina di un magazzino di Lucente Anna «ogni tante se trove aperte»."
+        }
+       ]
+      },
+      {
+       "id": "monete",
+       "abilita": [
+        "Percezione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Monete, resto giusto. Almeno così sembra."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "I fiorini ducali che vi danno di resto pesano meno del dovuto: sono limati sul bordo. Una prova da portare al Consiglio contro la Lega dei Sensali."
+        }
+       ]
+      }
+     ],
+     "rilancio": "Il venditore conta il resto, due volte. Che cosa fate?",
+     "daqui": [
+      "merc_sensali"
+     ]
+    }
+   ],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "merc_sensali",
+   "kind": "persona",
+   "title": "I portici dei sensali",
+   "legacyPosition": {
+    "x": 1500,
+    "y": 600
+   },
+   "text": "Sotto i portici, uomini con la tavoletta e il gessetto fanno i prezzi del grano, della lana, dei debiti: parlano a bassa voce e scrivono in fretta.",
+   "gm": "⟦Il Fondaco della Lega: un palazzo sotto i portici, coi magazzini sotto. È l’ufficio del sigillo dei Melatino.⟧ Gerbino il sensale (scheda) ha prestato i fiorini limati ai bravi del Ponte degli Impiccati.",
+   "breve": "Tavolette, gessetti e bilance d’ottone.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "sensale",
+     "tipo": "dettaglio",
+     "titolo": "Il sensale e i Grigi",
+     "parte": "evento",
+     "innesco": "Un sensale riconosce Adamus (o il segno dei Naviganti Grigi su qualcuno del gruppo), o sente parlare di Julia Nova.",
+     "leggi": "Un uomo grasso, vestito di velluto verde, con una bilancia d’ottone appesa alla cintura come una spada, si mette davanti a voi. Sorride.\n\n«I Grigi, a Teramum.» Lo dice abbastanza forte da farsi sentire da tre banchi. «Che onore. Volete cambiare? Vi cambio io. Per voi, un prezzo speciale.»\n\nIntorno, i cambiavalute smettono di pesare.",
+     "note": "Il sensale è un uomo del Fondaco della Lega, nessuna scheda. Vuole far sapere ad Adamus che il mercato è territorio della Lega. Non attacca, non minaccia apertamente. Se Adamus risponde bene (con un gettone grigio, con una battuta, con calma), il sensale se ne va con meno sorriso. Se lo umiliano in pubblico, il Fondaco rifiuterà il sigillo dei Melatino alla pratica.",
+     "prove": [
+      {
+       "id": "sensale",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Un mercante gentile, con un cambio un po’ caro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Il «prezzo speciale» è un insulto: un fiorino di Julia Nova per mezzo fiorino ducale. E non è un’offerta: è un avviso. I Grigi qui non cambiano. Da nessuna parte."
+        }
+       ]
+      }
+     ],
+     "dopo": "Il mercato è della Lega, e la Lega odia i Grigi. Una tensione da portare fino al Consiglio.",
+     "rilancio": "Il sensale aspetta la risposta, con la bilancia in mano. Che cosa fate?",
+     "daqui": [],
+     "pe": 100,
+     "immagine": "PDI — Teramum — Il sensale e i Grigi.jpg"
+    },
+    {
+     "id": "dlg_gerbino_sensale",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Gerbino",
+     "parte": "evento",
+     "png": "png-gerbino-sensale",
+     "innesco": "Qualcuno parla con Gerbino.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "merc_palazzo",
+   "kind": "porta",
+   "title": "Il Palazzo Ducale",
+   "legacyPosition": {
+    "x": 420,
+    "y": 520
+   },
+   "text": "Sulla Piazza del Mercato, davanti alla facciata della Basilica, in mezzo ai banchi e alle grida, sta il Palazzo Ducale. Un blocco quadrato di pietra chiara, alto tre piani, con le finestre a colonnine e una torre d’angolo più alta di tutte le torri dei nobili, che da ogni strada della città spunta sopra i tetti. La facciata è nuova, bianca, con gli stemmi in fila sotto il cornicione; ai fianchi, nei vicoli, si vedono le mura vecchie in pietra grigia che il palazzo si è mangiato.\n\nSul portale, lo stemma ducale: il lupo d’argento e l’aquila d’oro, uno di fronte all’altra. Due guardie per battente, in tabarro grigio, immobili. Le alabarde sono incrociate davanti alla porta. Chi entra la fa aprire con un foglio.\n\nDa sotto il portale parte un corridoio buio e, in fondo, si vede un cortile con una scala di pietra. Si sentono passi di sopra, porte che sbattono, una voce che detta e una penna che gratta. Odore di cera e di inchiostro.\n\nSulla torre, il drappo nero. Da vicino si vede che è stoffa buona, di lana, e che pende fin sotto i merli.",
+   "gm": "Scena: Palazzo Ducale (id «te_palazzo»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nCollocazione (voce «Teramum», tabella delle scene): sulla Piazza del Mercato, davanti alla facciata della Basilica, dove nella Teramo vera c’è il Comune. Interni invariati. È la casa dei Mazzarelli (il Reggente Gualtiero); la guardia del Palazzo è la Guardia Ducale dei Grazianus.\nFinché c’è il drappo nero sulla torre, non si sale.",
+   "breve": "Il Palazzo Ducale sulla Piazza del Mercato, davanti alla facciata della Basilica Aurea: sede del Consiglio Reggente e della Cancelleria dei Sigilli. Ingresso alla scena dedicata.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "Due guardie per battente, in tabarro grigio, immobili.",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "Le guardie hanno lo sguardo fisso sulla piazza. Non guardano chi entra: guardano chi resta. Ogni tanto il portone si socchiude, esce un servitore, rientra.\n\nDa una finestra alta, per un momento, si sentono voci. Tante. Poi qualcuno chiude.",
+     "dopo": "Se entrano: Scena: Palazzo Ducale.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ],
+   "scena": "te_palazzo",
+   "scenaTesto": "Entra nel Palazzo"
+  }
+ ],
+ "pedine": [
+  {
+   "id": "m_gerbino",
+   "nome": "Gerbino il sensale",
+   "short": "Ge",
+   "kind": "alleato",
+   "x": 1560,
+   "y": 700,
+   "gruppo": "luogo",
+   "png": "png-gerbino-sensale",
+   "img": "TOKEN — Città — Gerbino il sensale.png",
+   "ritratto": "Ritratto pedina — Città — Gerbino il sensale.jpg"
+  }
+ ]
+}

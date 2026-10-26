@@ -1,0 +1,173 @@
+{
+ "id": "te_g_mario",
+ "nome": "Lucente Giorgio — Da Mario",
+ "menu": "Lucente Giorgio — Da Mario",
+ "citta": "Teramum",
+ "ordine": 9.26,
+ "mappa": {
+  "img": "Luogo — Teramum — Da Mario.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "In una strada che scende dalla piazza della fiera verso il giardino del Duca c’è una bottega stretta, senza insegna. Non serve: si sente l’odore da cento passi, pane caldo, olio, cipolla, e la gente lo segue a naso.\n\nDentro, un forno a legna grande come un’ara, con la bocca rossa, e davanti un bancone di legno con sopra le teglie. Sono larghe, basse, piene di una pasta cotta, gonfia, coperta di cose: pecorino fuso, cipolla, patate, erbe, una salsa rossa che nessuno sa da dove venga. Un garzone infila la pala nel forno e ne tira fuori un’altra, e il bancone non resta mai vuoto.",
+  "img": "Luogo — Teramum — Da Mario.jpg",
+  "note": "La bottega della pizza al taglio, nella strada fra la piazza della fiera e il giardino del Duca. Mastro Mario è il nipote del primo Mario. La Compagnia dei Diavoli (Tittì lu Diavele) mangia qui ogni sera: arrabbiati col Consiglio, possono diventare amici della Crociata."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "mario_bottega",
+   "kind": "scena",
+   "title": "Il banco e il forno",
+   "legacyPosition": {
+    "x": 700,
+    "y": 760
+   },
+   "text": "In una strada che scende dalla piazza della fiera verso il giardino del Duca c’è una bottega stretta, senza insegna. Non serve: si sente l’odore da cento passi, pane caldo, olio, cipolla, e la gente lo segue a naso.\n\nDentro, un forno a legna grande come un’ara, con la bocca rossa, e davanti un bancone di legno con sopra le teglie. Sono larghe, basse, piene di una pasta cotta, gonfia, coperta di cose: pecorino fuso, cipolla, patate, erbe, una salsa rossa che nessuno sa da dove venga. Un garzone infila la pala nel forno e ne tira fuori un’altra, e il bancone non resta mai vuoto.\n\nUn uomo col grembiule infarinato le taglia a quadretti con un coltello lungo, tac-tac-tac, e le mette sulla carta. Non chiede cosa volete: guarda quanti siete. Nessuno si siede: si mangia in piedi, sulla strada, con la carta in mano e l’olio sulle dita.\n\nSul muro, dipinto col carbone: «DA MARIO».",
+   "gm": "Il posto più amato dai teramani giovani: la pizzeria Da Mario della Teramo vera (dal 1967, «la più antica della città», famosa per la pizza al taglio a cubetti; i ragazzi ci andavano quando facevano cuppo alla Villa). Qui è una bottega col forno, vicino al giardino del Duca, dove si vende «la pizza»: la pasta del forno al taglio, a quadretti.\nPrezzi: un quadretto 1 quattrino; una carta piena (sei quadretti) 5 quattrini; una teglia intera, per una compagnia, 2 grossi. «La rossa» costa il doppio: la salsa è fatta col pomo d’oro, un frutto che arriva dalle navi del sud e che a Teramum quasi nessuno sa coltivare.\nMastro Mario (scheda PNG «Mastro Mario Capecce») non è il fondatore: Mario era suo nonno. Lo dice solo se gli chiedono «Siete voi Mario?», e ogni volta si offende un po’.\nAggancio: la Compagnia dei Diavoli (i giovani del Palio, diavolo rosso sul petto) mangia qui ogni sera. Sono arrabbiati col Consiglio (il Palio tolto) e possono diventare amici della Crociata: braccia, voci, guide per i vicoli. Il loro capo è Tittì lu Diavele (scheda PNG).",
+   "breve": "La bottega della pizza al taglio, vicino al giardino del Duca: Mastro Mario (il nipote), i carri notturni della Forgia, e i ragazzi della Compagnia dei Diavoli, arrabbiati col Consiglio.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "pizza",
+     "tipo": "dettaglio",
+     "titolo": "La pizza di Mario",
+     "parte": "evento",
+     "innesco": "Qualcuno compra, o assaggia.",
+     "leggi": "La pasta è alta un dito, croccante sotto, morbida dentro. Il pecorino fila. La cipolla è dolce. Brucia la lingua, e non vi importa.\n\nMastro Mario vi guarda mangiare con le braccia incrociate, serio come un giudice.\n\n«Eh?»",
+     "note": "Chi mangia una carta piena di Mario prima di un riposo breve recupera 1 Dado Vita in più (una volta al giorno; è la pizza, non magia). Chi dice che «l’impasto non è più quello di una volta» (lo dicono tutti i vecchi della città) si fa un nemico per la vita.",
+     "rilancio": "Mario aspetta il giudizio. Che cosa dite?",
+     "daqui": [
+      "dialogo_mario",
+      "mario_diavoli"
+     ]
+    },
+    {
+     "id": "dialogo_mario",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Mastro Mario",
+     "parte": "evento",
+     "innesco": "Qualcuno parla col fornaio.",
+     "note": "CHI SEI? — «Mario.» Pausa. «Il nipote. Mario era mio nonno. Ma la pizza è la sua, uguale. Chi dice di no, non ci capisce.»\n\nCOS’È LA PIZZA? — Vi guarda come si guarda uno scemo. «È la pizza.» Poi, perché siete forestieri: «Pasta, forno, quello che c’è. Mio nonno l’ha imparata da un marinaio di Julia Nova, ma non ditelo in giro: qui i giuliesi sono pisciarule.»\n\nLA ROSSA — «Pomo d’oro. Arriva dalle navi del sud, a Julia Nova, e da lì su a dorso di mulo. Se la Crociata chiude le strade, niente rossa. Pensateci, prima di fare la guerra.»\n\nLA CONCORRENZA — Si irrigidisce. «Za’ Flaminia, a Porta Romana. La mamma della pizza al taglio, dicono.» Sputa per terra. «La mamma. Io ce l’ho una mamma, e non è lei.»\n\nI DIAVOLI — Indica i ragazzi col diavolo sul petto. «Mangiano qua da quando erano frechini. Fanno casino, pagano poco, ma pagano. Il Palio gliel’hanno rubato, e quelli non dimenticano.»\n\nLA CITTÀ — «Il Corso si svuota. Il Banco è caduto. Il ponte non lo finiscono. E io faccio la pizza. Finché c’è la pizza, Terme non è morta.»\n\nCOSE STRANE — Abbassa la voce. «La notte il forno lo tengo acceso, per la pasta della mattina. E da due settimane, alle tre, passano i carri della Forgia. Pieni. Verso la Rocca. Senza lanterne.»\n\nBATTUTE PRONTE — «Eh?» · «Mio nonno la faceva uguale.» · «In piedi, si mangia. Seduti ci stanno i signori, e mangiano male.» · «Ma zitt!»",
+     "dopo": "Mario è una fonte di voci di quartiere e un testimone dei carri notturni della Forgia.",
+     "rilancio": "Mario torna alle teglie. Che cosa fate?",
+     "daqui": [
+      "mario_diavoli"
+     ],
+     "png": "png-mastro-mario-capecce"
+    }
+   ],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "mario_diavoli",
+   "kind": "persona",
+   "title": "I ragazzi col diavolo rosso",
+   "legacyPosition": {
+    "x": 1450,
+    "y": 720
+   },
+   "text": "Al banco, tre ragazzi con un diavolo rosso cucito sul petto litigano per l’ultimo quadretto. Uno lo vince, gli altri due se lo mangiano lo stesso.",
+   "gm": "La Compagnia dei Diavoli: i giovani del Palio, una ventina. Il capo è Tittì lu Diavele (scheda).",
+   "breve": "Tre ragazzi e l’ultimo quadretto.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "diavoli",
+     "tipo": "dettaglio",
+     "titolo": "I ragazzi col diavolo rosso",
+     "parte": "indizio",
+     "innesco": "Il gruppo guarda i ragazzi, o i ragazzi notano lo stendardo o le armi.",
+     "leggi": "Sono tre, sui diciott’anni. Il più alto ha un orecchino d’osso e i capelli tagliati male, apposta. Smettono di litigare quando vi vedono.\n\n«Siete quelli della Crociata?» Lo dice forte, perché lo senta tutta la strada. «Quelli che hanno preso a calci i Forgiati?»\n\nNon aspettano la risposta. «Allora siete meglio del Consiglio. Quelli ci hanno tolto il Palio per due fiorini.»",
+     "seme": "Al banco, tre ragazzi con un diavolo rosso cucito sul petto litigano per l’ultimo quadretto.",
+     "note": "La Compagnia dei Diavoli: i giovani del Palio delle Contrade, diavolo rosso sul petto. Due estati fa hanno vinto il Palio e la vittoria gli è stata tolta (gara comprata: ha pagato Casa Thaulero perché vincesse la contrada che sponsorizzava). Sono una ventina. Il capo è Tittì lu Diavele (scheda PNG).\nCosa possono dare: guide nei vicoli, una distrazione (rissa a comando), voci dalle osterie, un posto per nascondersi. Cosa vogliono: che qualcuno «importante» dica davanti a tutti che il Palio era loro. Se un PG nobile (un Cerullius, un Grazianus) lo dice in pubblico, al Corso, diventano della Crociata.",
+     "prove": [
+      {
+       "id": "diavoli",
+       "abilita": [
+        "Persuasione",
+        "Intimidire"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "«Belle parole. Le dicono tutti, i signori.» Tornano alla pizza."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Tittì vi dà la mano, sporca di pecorino. «Se vi serve qualcosa in città, chiedete dei Diavoli. Da Mario, la sera.»",
+         "max": 16
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 17,
+         "leggi": "«E se ci serve un favore a noi», aggiunge Tittì, «sappiamo dove trovarvi.» Vi racconta chi ha pagato per il Palio: i Thaulero."
+        }
+       ]
+      }
+     ],
+     "dopo": "Possibili alleati in città: i giovani del Palio.",
+     "rilancio": "I Diavoli aspettano. Che cosa fate?",
+     "daqui": [],
+     "pe": 100
+    },
+    {
+     "id": "dlg_titti_lu_diavele",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Tittì lu Diavele",
+     "parte": "evento",
+     "png": "png-titti-lu-diavele",
+     "innesco": "Qualcuno parla con Tittì lu Diavele.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ]
+  }
+ ],
+ "pedine": [
+  {
+   "id": "ma_mario",
+   "nome": "Mastro Mario",
+   "short": "Ma",
+   "kind": "alleato",
+   "x": 820,
+   "y": 640,
+   "gruppo": "luogo",
+   "png": "png-mastro-mario-capecce",
+   "img": "TOKEN — Città — Mastro Mario Capecce.png",
+   "ritratto": "Ritratto pedina — Città — Mastro Mario Capecce.jpg"
+  },
+  {
+   "id": "ma_titti",
+   "nome": "Tittì lu Diavele",
+   "short": "Ti",
+   "kind": "alleato",
+   "x": 1560,
+   "y": 820,
+   "gruppo": "luogo",
+   "png": "png-titti-lu-diavele",
+   "img": "TOKEN — Città — Tittì lu Diavele.png",
+   "ritratto": "Ritratto pedina — Città — Tittì lu Diavele.jpg"
+  }
+ ]
+}

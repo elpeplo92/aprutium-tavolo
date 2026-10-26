@@ -1,0 +1,132 @@
+{
+ "id": "te_g_giardino",
+ "nome": "Lucente Giorgio — il giardino del Duca",
+ "menu": "Lucente Giorgio — il giardino del Duca",
+ "citta": "Teramum",
+ "ordine": 9.25,
+ "mappa": {
+  "img": "Luogo — Teramum — Il giardino del Duca.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "Accanto alla piazza della fiera, dietro un cancello di ferro sempre aperto, con le punte dorate e la ruggine sotto l’oro, c’è un giardino. Alberi vecchi e grossi, viali di ghiaia, siepi tagliate dritte. Appena dentro, una fontanella di pietra con dieci cannelli: i ragazzini ci bevono con la bocca attaccata al ferro.\n\nIl rumore della piazza resta fuori dal cancello. Qui si sentono la ghiaia, i cigni, e una voce di donna che chiama dei gatti per nome.",
+  "img": "Luogo — Teramum — Il giardino del Duca.jpg",
+  "note": "Il giardino accanto alla piazza della fiera: laghetto, cigni, coppie, ragazzi che fanno cùppe (saltano la scuola dei votati). In fondo la tigre Regina, in una gabbia troppo piccola, e Za’ Maria la Gattara. Di notte la tigre sente passare uomini «come pietre» verso la Porta del Lucente Giorgio: guardie della Forgia."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "giard_viali",
+   "kind": "scena",
+   "title": "I viali e il laghetto",
+   "legacyPosition": {
+    "x": 700,
+    "y": 860
+   },
+   "text": "Accanto alla piazza della fiera, dietro un cancello di ferro sempre aperto, con le punte dorate e la ruggine sotto l’oro, c’è un giardino. Alberi vecchi e grossi, viali di ghiaia, siepi tagliate dritte. Appena dentro, una fontanella di pietra con dieci cannelli: i ragazzini ci bevono con la bocca attaccata al ferro.\n\nIl rumore della piazza resta fuori dal cancello. Qui si sentono la ghiaia, i cigni, e una voce di donna che chiama dei gatti per nome.\n\nIn mezzo, un laghetto verde con i cigni e le tartarughe ferme sui sassi, e un ponticello di legno che scricchiola e si piega sotto i piedi. Sulle panchine di pietra, coppie che si tengono per mano e guardano dall’altra parte quando passa qualcuno.\n\nSul prato, ragazzini con la cartella buttata per terra giocano a campana e a chi sputa più lontano. Dovrebbero essere a scuola dai votati, e lo sanno: ogni tanto uno si alza e guarda il cancello.",
+   "gm": "Nella voce «Teramum» (luogo 7) e nella Teramo vera (la Villa comunale: il laghetto coi cigni e le tartarughe, il ponticello di legno, la fontanella coi cannelli, i primi baci, e i ragazzi che facevano «cuppo», cioè marinavano la scuola; la gabbia della tigre «troppo grande per quel posto troppo piccolo»).\nI ragazzi che «fanno cùppe»: saltano la scuola dei votati. Se un PG li copre con il votato che li cerca, i ragazzini gli devono un favore (ragazzini di Teramum: vedono e sentono tutto).\nLa tigre: l’ha regalata al Duca un capitano venuto dal sud, anni fa. Si chiama Regina. La custode è Za’ Maria la Gattara (scheda PNG), una vecchia che dà da mangiare a tutti i gatti della città e parla alla tigre. Aggancio (per Adamus o un druido): la tigre è malata di gabbia; un Parlare con gli animali o Addestrare animali CD 15 la calma e lei «racconta» degli uomini col mantello che di notte passano dal giardino verso la Porta del Lucente Giorgio, col passo troppo pesante (sono guardie della Forgia: la tigre li odia, sente che non sono vivi del tutto).\nDa qui: Da Mario (cuppe a la villa e la pizzeria Mario), i Tigli, la Porta del Lucente Giorgio.",
+   "breve": "Il giardino accanto alla piazza della fiera: laghetto, cigni, coppie, ragazzi che fanno cùppe, e una tigre in una gabbia troppo piccola che di notte sente passare uomini «come pietre».",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "giard_gabbia",
+   "kind": "persona",
+   "title": "La gabbia di Regina",
+   "legacyPosition": {
+    "x": 1480,
+    "y": 640
+   },
+   "text": "In fondo al giardino, dietro una fila di oleandri, una gabbia di ferro con le sbarre grosse come un braccio. Dentro, una belva striata, arancio e nera, grande come un vitello, va avanti e indietro. Avanti e indietro. Tre passi, giro, tre passi. La gabbia è troppo piccola per lei. Davanti alle sbarre, una vecchia con uno scialle nero e sei gatti intorno alle caviglie le parla a bassa voce. Odore di belva, forte, e di pesce.",
+   "gm": "Za’ Maria la Gattara (scheda) e la tigre Regina.",
+   "breve": "La tigre e la vecchia coi gatti.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "regina",
+     "tipo": "dettaglio",
+     "titolo": "La belva nella gabbia",
+     "parte": "indizio",
+     "innesco": "Qualcuno si avvicina alla gabbia.",
+     "leggi": "Da vicino è più grande di quanto sembrava. La gabbia le arriva appena sopra le orecchie. Ha una zampa con il pelo strappato, a forza di sfregare contro le sbarre.\n\nSi ferma. Vi guarda. Gli occhi sono gialli e non sono cattivi: sono stanchi.\n\nUna vecchia seduta su uno sgabello lì accanto, circondata da sei gatti, dice senza alzare la testa: «Non toccatela. Non morde. Ma si offende.»",
+     "seme": "La gabbia è troppo piccola per lei.",
+     "note": "Za’ Maria la Gattara (scheda PNG). Se un PG parla alla tigre (Parlare con gli animali, Addestrare animali CD 15, o un druido con la sua magia): la tigre si avvicina, e quello che «dice» è un’immagine: uomini in tabarro grigio che passano di notte, che non odorano di niente, «come pietre che camminano». Passano dal giardino verso la Porta del Lucente Giorgio, e tornano prima dell’alba.\nZa’ Maria, se le si parla gentilmente: «Regina li sente. Io no. Ma i gatti, quando passano quelli, scappano tutti sugli alberi.»",
+     "prove": [
+      {
+       "id": "regina",
+       "abilita": [
+        "Addestrare animali",
+        "Natura"
+       ],
+       "cd": 15,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "La tigre torna a camminare avanti e indietro."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "leggi": "La tigre si calma e vi soffia in faccia, piano. Poi guarda verso la Porta del Lucente Giorgio e il pelo le si rizza sulla schiena.",
+         "max": 19
+        },
+        {
+         "fascia": "fullSuccess",
+         "min": 20,
+         "leggi": "Per un momento sentite quello che sente lei: uomini che camminano di notte e che non hanno odore. Come pietre."
+        }
+       ]
+      }
+     ],
+     "dopo": "Un indizio: guardie della Forgia passano di notte dal giardino verso la Porta del Lucente Giorgio.",
+     "rilancio": "Regina vi guarda. Che cosa fate?",
+     "daqui": [],
+     "pe": 150
+    },
+    {
+     "id": "dlg_za_maria",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Za’ Maria",
+     "parte": "evento",
+     "png": "png-za-maria-la-gattara",
+     "innesco": "Qualcuno parla con la vecchia dei gatti.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ]
+  }
+ ],
+ "pedine": [
+  {
+   "id": "gi_maria",
+   "nome": "Za’ Maria",
+   "short": "ZM",
+   "kind": "alleato",
+   "x": 1380,
+   "y": 760,
+   "gruppo": "luogo",
+   "png": "png-za-maria-la-gattara",
+   "img": "TOKEN — Città — Za’ Maria la Gattara.png",
+   "ritratto": "Ritratto pedina — Città — Za’ Maria la Gattara.jpg"
+  }
+ ]
+}

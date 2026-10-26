@@ -5,10 +5,64 @@
  "group": "Popolani e botteghe",
  "title": "Za’ Maria la Gattara",
  "sub": "vecchia che dà da mangiare ai gatti e parla alla tigre del giardino del Duca",
- "img": null,
+ "img": "Ritratto — Za’ Maria la Gattara.jpg",
  "state": "segreto",
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: ottanta. Scialle nero, sei gatti sempre intorno, uno sgabello accanto alla gabbia della tigre.\nDà da mangiare a tutti i gatti di Teramum. Parla alla tigre, Regina, come a una nipote.\nSa: quando passano di notte gli uomini in tabarro grigio «che non odorano», i gatti scappano sugli alberi e Regina ruggisce.\nVuole: che liberino Regina, o almeno che le diano una gabbia più grande.\nBattute: «Non toccatela. Non morde. Ma si offende.» · «I gatti lo sanno prima di noi.»"
+ "gm": "Età: ottanta. Scialle nero, sei gatti sempre intorno, uno sgabello accanto alla gabbia della tigre.\nDà da mangiare a tutti i gatti di Teramum. Parla alla tigre, Regina, come a una nipote.\nSa: quando passano di notte gli uomini in tabarro grigio «che non odorano», i gatti scappano sugli alberi e Regina ruggisce.\nVuole: che liberino Regina, o almeno che le diano una gabbia più grande.\nBattute: «Non toccatela. Non morde. Ma si offende.» · «I gatti lo sanno prima di noi.»",
+ "dialogo": {
+  "apertura": "*Non alza la testa dallo sgabello; un gatto le salta in grembo.* «Non toccatela. Non morde. Ma si offende.»",
+  "voce": "Piano, dialetto stretto, parla ai gatti e alla tigre come a dei nipoti · Tic: chiama ogni gatto per nome mentre parla con voi",
+  "argomenti": [
+   {
+    "tema": "Regina",
+    "domanda": "«Di chi è la tigre?»",
+    "risposta": "«Del Duca. Gliel’ha regalata un capitano del sud, tanti anni fa. Si chiama Regina. Io le porto il pesce, e le parlo. Lei mi ascolta più dei cristiani.»",
+    "insistono": "«La gabbia è piccola. Lei cammina, cammina, e si consuma la zampa. Nessuno la vuole vedere.»",
+    "mai": "Non apre mai la gabbia."
+   },
+   {
+    "tema": "La notte",
+    "domanda": "«Succede qualcosa qui, di notte?»",
+    "risposta": "«Passano uomini in tabarro grigio, verso la Porta del Lucente Giorgio. Io non li sento. Ma i gatti scappano tutti sugli alberi, e Regina ruggisce.»",
+    "insistono": "«Non odorano. Regina li odia: dice che sono come pietre che camminano.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Addestrare animali"
+     ],
+     "cd": 13,
+     "si": "«Tre notti fa. E una settimana prima. Sempre dopo la campana. Tornano prima dell’alba, dalla stessa parte.»",
+     "no": "«I gatti lo sanno prima di noi. Chiedete a loro.»"
+    },
+    "mai": "Non va mai al cancello di notte."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "I gatti soffiano, Regina si getta contro le sbarre. Za’ Maria non si muove.",
+   "soldi": "«Compratele il pesce, se volete fare del bene.»",
+   "lusinga": "Ride senza denti. «Bella? Ero bella. Adesso ho i gatti.»"
+  },
+  "battute": [
+   "«Non toccatela. Non morde. Ma si offende.»",
+   "«I gatti lo sanno prima di noi.»",
+   "«Brava, Regina, brava.»"
+  ],
+  "uscita": {
+   "frase": "«Andate, andate. Regina vi ha visto: si ricorda.»",
+   "dopo": "Se i personaggi promettono di far allargare la gabbia e lo fanno, Za’ Maria diventa la loro sentinella del giardino.",
+   "aggancio": "«Tornate di notte, dopo la campana, e vedete da voi.»"
+  },
+  "ottenuto": [
+   {
+    "info": "Uomini in tabarro grigio che non odorano passano di notte verso la Porta del Lucente Giorgio.",
+    "via": "gratis"
+   },
+   {
+    "info": "Passano dopo la campana e tornano prima dell’alba.",
+    "via": "prova"
+   }
+  ]
+ }
 }

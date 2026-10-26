@@ -5,10 +5,70 @@
  "group": "Mercanti e Casate",
  "title": "Ser Adriano Remigio",
  "sub": "padrone della Bottega Grande sulla Piazza Grande, uomo dei Thaulero",
- "img": null,
+ "img": "Ritratto — Ser Adriano Remigio.jpg",
  "state": "segreto",
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: quaranta. Vestito bene, troppo; anelli; sorriso pronto; profumo di miele (quello dei Thaulero).\nHa comprato all’asta la Bottega Grande quando è caduto il Banco: i soldi erano di Casa Thaulero.\nRiferisce a Ottone Thaulero tutto quello che si dice ai tavoli della pergola.\nCosa vuole: comprare anche i portici di Fumo; che la Crociata si sieda ai suoi tavoli e venga vista lì (i Thaulero cercano eroi da esibire).\nBattute: «Il tavolo migliore è vostro.» · «Il Dominus vi saluta.»"
+ "gm": "Età: quaranta. Vestito bene, troppo; anelli; sorriso pronto; profumo di miele (quello dei Thaulero).\nHa comprato all’asta la Bottega Grande quando è caduto il Banco: i soldi erano di Casa Thaulero.\nRiferisce a Ottone Thaulero tutto quello che si dice ai tavoli della pergola.\nCosa vuole: comprare anche i portici di Fumo; che la Crociata si sieda ai suoi tavoli e venga vista lì (i Thaulero cercano eroi da esibire).\nBattute: «Il tavolo migliore è vostro.» · «Il Dominus vi saluta.»",
+ "dialogo": {
+  "apertura": "*Arriva al tavolo prima del garzone, sposta una sedia, sorride.* «Signori. Il tavolo migliore è vostro. Sempre. Me l’ha detto il Dominus di dirvelo.»",
+  "voce": "Morbido, educato, troppo · Tic: si tocca gli anelli uno per uno mentre parla; chiama tutti «signori», anche i garzoni",
+  "argomenti": [
+   {
+    "tema": "La Bottega",
+    "domanda": "«Da quanto è vostra la Bottega?»",
+    "risposta": "«Da un anno. Prima era di tutti e di nessuno, e infatti è fallita. Il Banco è caduto, e chi aveva i soldi in un posto sicuro ha comprato all’asta.» *Sorride.* «Io li avevo in un posto sicuro.»",
+    "insistono": "«Il Dominus Ottone Thaulero ama le cose belle che gli altri lasciano andare. La Bottega. Gli eroi.»",
+    "mai": "Non dice mai quanto ha pagato, né chi ha messo i soldi."
+   },
+   {
+    "tema": "La Crociata",
+    "domanda": "«Perché tanta gentilezza con noi?»",
+    "risposta": "«Perché a Teramum gli eroi non hanno amici, signori. Il Dominus vorrebbe esserlo. Sedetevi qui il sabato, alla calata: vi vedrà tutta la città.»",
+    "insistono": "«Il Dominus dà una festa ai Tigli. Un invito, per gente come voi, si trova.»",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 13,
+     "si": "Capite che ogni parola detta a questo tavolo arriva ai Thaulero prima di sera.",
+     "no": "Sembra solo un oste ambizioso."
+    },
+    "mai": "Non ammette mai di riferire ai Thaulero."
+   },
+   {
+    "tema": "I portici di Fumo",
+    "domanda": "«Che cosa sono quei portici sbarrati?»",
+    "risposta": "«Una vergogna. Il caffè più vecchio della città. Lo volevo comprare io, ma il Reggente l’ha sbarrato. Sotto ci dormono i pezzenti.»",
+    "insistono": "*Abbassa la voce.* «E di notte certi pezzenti scendono, e non risalgono.»",
+    "mai": "Non ci entra mai."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Fa un cenno: due garzoni grossi si avvicinano coi vassoi vuoti. «Signori, qui si viene per farsi vedere. Non fatevi vedere così.»",
+   "soldi": "Rifiuta ridendo: «Pago io, signori. Sempre.»",
+   "lusinga": "Si illumina, e parla un po’ troppo della festa dei Thaulero."
+  },
+  "battute": [
+   "«Il tavolo migliore è vostro.»",
+   "«Qui si viene per farsi vedere. Il caffè è una scusa.»",
+   "«Il Dominus vi saluta.»"
+  ],
+  "uscita": {
+   "frase": "«Tornate il sabato. Alla calata vi guardano tutti.»",
+   "dopo": "La sera stessa Ottone Thaulero sa quello che i personaggi hanno detto ai tavoli della pergola.",
+   "aggancio": "«Se volete un invito ai Tigli, chiedete di me.»"
+  },
+  "ottenuto": [
+   {
+    "info": "La Bottega è stata comprata coi soldi dei Thaulero.",
+    "via": "insistono"
+   },
+   {
+    "info": "Dai portici di Fumo, di notte, qualcuno scende sottoterra.",
+    "via": "insistono"
+   }
+  ]
+ }
 }

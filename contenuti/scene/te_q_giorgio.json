@@ -1,0 +1,637 @@
+{
+ "id": "te_q_giorgio",
+ "nome": "Teramum — il Lucente Giorgio",
+ "menu": "Teramum — il Lucente Giorgio",
+ "citta": "Teramum",
+ "ordine": 9.2,
+ "mappa": {
+  "img": "Mappa — Teramum — Il Lucente Giorgio (ridipinta).jpg",
+  "larghezza": 1920,
+  "altezza": 1170,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 54
+ },
+ "intro": {
+  "leggi": "La strada sale e si stringe. Le case di pietra grigia lasciano il posto ai palazzi di travertino chiaro, e sopra i tetti le torri dei nobili gareggiano in altezza come dita alzate per chiedere la parola. In cima, sotto il campanile della Basilica Aurea, due piazze una accanto all’altra: il mercato e il potere.\n\nDa lì il Corso scende dritto verso ovest, fra palazzi con le botteghe al piano terra e i portoni chiusi delle Casate, fino alla luce larga di Piazza Garibaldi: la Rocca dei Grazianus, i tigli del passeggio, il giardino del Duca. A ogni imbocco di strada c’è un posto della Guardia Ducale, e ce n’è il doppio di quello che servirebbe.",
+  "img": "Rione — 1. San Giorgio.jpg",
+  "note": "Il quartiere del potere (Compendio: «1. Il Lucente Giorgio»): Basilica, Palazzo Ducale, il Corso, la Rocca dei Grazianus. I personaggi possono arrivare dal ponte della Porta Melatina (Lucente Leonardo) o dalla Porta del Lucente Giorgio. Ogni luogo con una scena ha «Entra»: scene illustrate per le piazze, Da Mario e il giardino; mappe da battaglia per la Rocca e Lu Lupe Bianche; Palazzo, Basilica e Biblioteca hanno le loro scene. Gli altri si giocano dal punto."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "g_mercato",
+   "kind": "scena",
+   "title": "1. La Piazza del Mercato",
+   "legacyPosition": {
+    "x": 1720,
+    "y": 920
+   },
+   "text": "La piazza davanti alla facciata della Basilica Aurea è un solo mercato, da un muro all’altro. Portici bassi, banchi sotto tende rattoppate, magazzini con le porte a mezzo piano. In mezzo, una fontana con due leoni di pietra che sputano due getti d’acqua in una vasca sola: uno per fiume, dicono.",
+   "gm": "La piazza sta davanti alla facciata della Basilica Aurea: da un lato il Palazzo Ducale, dall’altro il palazzo del Flamine, in mezzo la fontana dei due leoni (i due fiumi). Il Tribunale dei Chiodi è accanto al Palazzo.\nCanone: la Lega dei Sensali è dei Melatino (il Decano Maccabeo Melatino), rivale mortale dei Naviganti Grigi di Adamus; la Lega compra e vende grano, cuoio, lana, debiti e dazi. Segreti: la Lega ha stretto patti con i Mazzamarelli per sabotare le carovane rivali, e vuole strangolare Julia Nova.\n⟦Il Fondaco della Lega: un palazzo sotto i portici della piazza, coi magazzini sotto. È l’ufficio del sigillo dei Melatino.⟧ La casa dei Melatino, quella con le finestre a serpente, sta a Lucente Anna.",
+   "breve": "La piazza del mercato davanti alla facciata della Basilica, col Palazzo Ducale, il palazzo del Flamine e la fontana dei due leoni. ⟦Il Fondaco della Lega dei Sensali sotto i portici.⟧ Prezzi in salita, sensali ostili ai Naviganti Grigi, offerte ai Mazzamarelli. Da qui si scende alla Lunaria a Bitetto (il tempio murato di Mortus, la locanda Lu Cane Bianche) e si va a Lucente Anna (la Città Sepolta).",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "PDI — Teramum — Piazza del Mercato.jpg",
+   "scena": "te_g_mercato",
+   "scenaTesto": "Entra"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_palazzo",
+   "kind": "porta",
+   "title": "2. Il Palazzo Ducale",
+   "legacyPosition": {
+    "x": 1850,
+    "y": 800
+   },
+   "text": "Sulla Piazza del Mercato, davanti alla facciata della Basilica, in mezzo ai banchi e alle grida, sta il Palazzo Ducale. Un blocco quadrato di pietra chiara, alto tre piani, con le finestre a colonnine e una torre d’angolo più alta di tutte le torri dei nobili, che da ogni strada della città spunta sopra i tetti. La facciata è nuova, bianca, con gli stemmi in fila sotto il cornicione; ai fianchi, nei vicoli, si vedono le mura vecchie in pietra grigia che il palazzo si è mangiato.",
+   "gm": "Scena: Palazzo Ducale (id «te_palazzo»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nCollocazione (voce «Teramum», tabella delle scene): sulla Piazza del Mercato, davanti alla facciata della Basilica, dove nella Teramo vera c’è il Comune. Interni invariati. È la casa dei Mazzarelli (il Reggente Gualtiero); la guardia del Palazzo è la Guardia Ducale dei Grazianus.\nFinché c’è il drappo nero sulla torre, non si sale.",
+   "breve": "Il Palazzo Ducale sulla Piazza del Mercato, davanti alla facciata della Basilica Aurea: sede del Consiglio Reggente e della Cancelleria dei Sigilli. Ingresso alla scena dedicata.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "PDI — Teramum — Palazzo Ducale.jpg",
+   "scena": "te_palazzo",
+   "scenaTesto": "Entra nel Palazzo"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_basilica",
+   "kind": "porta",
+   "title": "3. La Basilica Aurea",
+   "legacyPosition": {
+    "x": 1560,
+    "y": 740
+   },
+   "text": "La Basilica Aurea sta in mezzo alla città e tutto il resto le gira intorno. La facciata è di travertino chiaro, alta e piatta, e finisce in cima con una fila di merli, come una fortezza. In mezzo, il portale: sopra la porta, scolpiti nella pietra, un angelo e la Vecchia Madre, lei seduta, lui in ginocchio.",
+   "gm": "Scena: Basilica Aurea (id «te_basilica»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nVoce «Teramum»: è il Duomo vero, costruito con le pietre dei teatri antichi dopo il grande incendio; portale con l’angelo e la Vecchia Madre, merli in cima, campanile di cinquanta braccia con la campana grande, l’Aprutina; dentro il paliotto d’argento e d’oro con trentacinque storie, che le dà il nome.\nNon rivelare nulla di ciò che sta sotto la Basilica. Il peso del Filatterio è l’unico segno.",
+   "breve": "La Basilica Aurea, il solario grande della Vecchia Madre e del Lucente Berardo, sede dell’Arciflamine Serafino Impaloni, fra la Piazza Grande e la Piazza del Mercato. Ingresso alla scena dedicata.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "PDI — Teramum — Basilica Aurea.jpg",
+   "scena": "te_basilica",
+   "scenaTesto": "Entra nella Basilica"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_flamine",
+   "kind": "dettaglio",
+   "title": "4. Il palazzo dell’Arciflamine e l’Arco di Monsignore",
+   "legacyPosition": {
+    "x": 1450,
+    "y": 600
+   },
+   "text": "Accanto alla Basilica un arco coperto scavalca la strada e la unisce a un palazzo alto e severo, con un disco d’oro del Sole sopra il portale: l’Arco di Monsignore. Sotto l’arco aspetta una fila di gente con un foglio in mano. Votati in bianco e oro entrano ed escono a passo svelto, con le mani nelle maniche.\n\nDalle finestre del primo piano, ogni tanto, una tenda si sposta.",
+   "gm": "Il palazzo dell’Arciflamine Serafino Impaloni (scheda), che dall’Arco passa in Basilica senza scendere in strada. ⟦L’Arciflamine ha una lista di nomi: nessuno sa chi c’è sopra (dicerie del Colle). La lista è dei «sospetti di fede vecchia»: in cima, chi ha toccato i Sigilli.⟧ Udienze solo con una lettera di un solario.",
+   "breve": "Il palazzo dell’Arciflamine, unito alla Basilica dall’arco.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "Luogo — Teramum — Il palazzo dell'Arciflamine e l'Arco di Monsignore.jpg"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_piazza",
+   "kind": "scena",
+   "title": "5. La Piazza Grande e la Bottega Grande",
+   "legacyPosition": {
+    "x": 1320,
+    "y": 900
+   },
+   "text": "In fondo il Corso si apre, all’improvviso, nella Piazza Grande, sul fianco della Basilica Aurea. Il campanile sale dritto sopra la piazza, a otto facce, coi merli in cima. Un arco scavalca la strada e unisce la Basilica a un palazzo alto: l’Arco di Monsignore. Oltre l’arco, girando intorno alla Basilica, c’è l’altra piazza, quella del mercato.",
+   "gm": "Voce «Teramum»: il Corso è la strada dritta della Terranova, dalla Piazza Grande a Piazza Garibaldi; il Lucente Giorgio è uno dei quattro rioni vecchi; la Piazza Grande sta sul fianco della Basilica, dove finisce il Corso, e l’Arco di Monsignore unisce la Basilica al palazzo dell’Arciflamine; il Palazzo Ducale sta sulla Piazza del Mercato, davanti alla facciata della Basilica. Il sabato pomeriggio tutta Teramum fa la calata sul Corso: la scena per vedere tutte le Casate insieme.\nOggi: il centro è in allarme per la notizia della Crociata (posti di guardia raddoppiati, borse dei forestieri perquisite); il Consiglio siede e non decide; ogni Casata ha qualcuno ad ascoltare nelle anticamere.\nSegreti: ⟦le piazze della Basilica stanno sopra l’antico cerchio rituale dei Pretuziani⟧. Iuvenza vuole farsi nominare Reggente («il fumo coprirà la mia ascesa al Colle»: nelle fonti vecchie «il Colle» è il centro del potere, cioè queste piazze). Nel Consiglio c’è un traditore incappucciato con l’accento della capitale (Cristallo di Memoria, Atto XI).\nIl Tribunale di Casa Chiodi e la Camera dei Cavillatori: accanto al Palazzo Ducale (scheda della casata).",
+   "breve": "Il fianco della Basilica, l’Arco, la Bottega Grande e i portici di Fumo.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "Luogo — Teramum — La Bottega Grande e i portici di Fumo.jpg",
+   "scena": "te_g_piazza",
+   "scenaTesto": "Entra"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_varvire",
+   "kind": "persona",
+   "title": "6. La barberia di Mastro Remo",
+   "legacyPosition": {
+    "x": 1250,
+    "y": 620
+   },
+   "text": "In via dell’Arco, all’ombra della Basilica, c’è una porta a vetri con una tenda a strisce bianche e rosse. Sul vetro, un rasoio dipinto e due parole mezze cancellate. Si apre con un campanello che suona due volte.\n\nDentro, due poltrone di cuoio crepato, uno specchio grande con le macchie nere ai bordi, un lavabo di marmo e una fila di boccette colorate. Profumo di sapone, d’allume e di acqua di lavanda. Sul pavimento, i capelli di mezza città, spazzati in un angolo e mai buttati.\n\nSulle pareti, cento ritratti a carboncino di uomini con la barba appena fatta, uno accanto all’altro, fino al soffitto. Sotto ognuno, una data. Qualche faccia la riconoscete: l’avete vista in piazza, dietro un banco o sotto un elmo.\n\nUn ometto vecchio, piccolo, coi baffi bianchi curati come un giardino, affila il rasoio sulla striscia di cuoio, avanti e indietro, e parla, parla, parla. Il cliente sulla poltrona, con la faccia piena di schiuma, non può rispondere. Annuisce. Il rasoio non si ferma mai e non taglia mai.\n\nSulla panca d’attesa, tre uomini. Uno ha la barba già fatta. Nessuno ha fretta. Nessuno, forse, ha davvero bisogno della barba. Quando entrate, il rasoio si ferma per un attimo e tutti vi guardano nello specchio.",
+   "breve": "La barberia più vecchia della città, all’ombra della Basilica: Mastro Remo sa tutto di tutti. Una barba, una notizia; e le guardie nuove della Rocca non si fanno più la barba.",
+   "gm": "È la barberia più antica della città (nella Teramo vera, il salone di via Carducci di un barbiere arrivato a piedi da un paese vicino, che aveva imparato dal barbiere di via dell’Arco; ci andava un politico famoso che gli chiedeva «le novità della città»). Qui: Mastro Remo lu Varvìre (scheda PNG), sessant’anni di rasoio.\nA cosa serve al tavolo: è il miglior informatore della città. Chi passa sulla sua poltrona gli racconta tutto, e lui racconta tutto a chi passa dopo. Sa chi ha debiti, chi tradisce chi, chi è arrivato in città, quali guardie bevono.\nUn tribuno di Julia Nova (o chi per lui: un uomo importante che i PG potrebbero conoscere) quando passa da Teramum si fa la barba solo qui e lo chiama «Remuccio».\nPrezzi: barba 1 quattrino; barba e capelli 2; un dente tolto 4 (fa anche il cavadenti, e male); una notizia: «la notizia è gratis, la barba no».",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "poltrona",
+     "tipo": "dettaglio",
+     "titolo": "Sulla poltrona di Remo",
+     "parte": "evento",
+     "innesco": "Un PG si fa fare la barba (o i capelli), o si siede ad aspettare.",
+     "leggi": "Il rasoio è freddo e veloce. Mastro Remo vi tiene la testa con due dita, come si tiene un melone al mercato.\n\n«Forestiero. Si vede dalla barba. A Terme la barba si fa a contropelo.» Zac. «Allora. Che si dice in giro? No, aspetta, ve lo dico io, che voi non sapete niente.»",
+     "note": "Una barba (1 quattrino) = una notizia vera dalla tabella delle voci di un altro punto della città (scegli tu quella che serve) più una di Remo:\n• «Il Reggente ha le mani che tremano. Me l’ha detto il suo barbiere, che sono io la domenica.» (vero: Gualtiero Mazzarelli è malato, e ha paura)\n• «Lucius Grazianus si è fatto radere la testa. Tutta. Un uomo che si rade la testa ha deciso qualcosa.» (vero, e Maximus capisce)\n• «Al ponte degli Impiccati di notte ci sono bravi pagati. Da chi? Da uno che profuma di fiori.»\n• «Le guardie nuove della Rocca non vengono più a farsi la barba. Nessuna. Da due settimane. Come se non gli crescesse più.»\nL’ultima è un indizio forte sui Forgiati della Guardia (Indagare CD 14 per pensarci sopra: le armature della Forgia stanno cambiando chi le porta).",
+     "prove": [
+      {
+       "id": "barba",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Remo parla tanto. Una parte sarà vera."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Fra cento chiacchiere, Remo dice una cosa che lo spaventa davvero: le guardie nuove che non si fanno più la barba. Ne parla ridendo, ma il rasoio gli si ferma un attimo."
+        }
+       ]
+      }
+     ],
+     "dopo": "Le voci della città, e un indizio sulle guardie nuove della Rocca.",
+     "rilancio": "Remo vi porge lo specchio. Che cosa fate?",
+     "daqui": [],
+     "pe": 100
+    },
+    {
+     "id": "dlg_mastro_remo_lu_varvire",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Mastro Remo",
+     "parte": "evento",
+     "png": "png-mastro-remo-lu-varvire",
+     "innesco": "Qualcuno parla con Mastro Remo.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ],
+   "image": "Luogo — Teramum — La barberia di Mastro Remo.jpg"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_corso",
+   "kind": "scena",
+   "title": "7. Il Corso",
+   "legacyPosition": {
+    "x": 1060,
+    "y": 830
+   },
+   "text": "Il Corso è una strada dritta, larga, lastricata: la Terranova, la parte nuova della città, dove le case sono palazzi. Cornici di travertino, insegne dipinte, balconi di ferro. Sopra i tetti, le torri dei nobili gareggiano in altezza come dita alzate per chiedere la parola.",
+   "gm": "Il Corso è la strada dritta della Terranova, dalla Piazza Grande a Piazza Garibaldi. Il sabato pomeriggio tutta Teramum fa la calata: la scena per vedere tutte le Casate insieme. Lungo il Corso: la Stanna, la spezieria del Ceraso; verso nord via Delfico (Biblioteca, Lu Lupe Bianche).",
+   "breve": "La strada dritta dei palazzi, fra le due piazze.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "calata",
+     "tipo": "dettaglio",
+     "titolo": "La calata del sabato",
+     "parte": "evento",
+     "innesco": "È sabato pomeriggio, o il gruppo si siede alla pergola.",
+     "leggi": "Verso sera il Corso si riempie. Tutta Teramum lo percorre su e giù, a passo lento, dalla piazza della fiera fino a qui, e indietro. Ragazze a braccetto, giovani col cappello storto, vecchi coi bastoni, madri che portano le figlie come si porta una merce.\n\nNessuno va da nessuna parte. Tutti guardano tutti.\n\nI tavoli della pergola sono il palco: chi ci siede, viene guardato.",
+     "note": "La «calata»: il giro del sabato sul Corso (nella Teramo vera, da largo San Matteo a piazza Martiri). Se i PG si siedono alla pergola il sabato, metà città li vede: la notizia della Crociata gira più in fretta (bene per la fama, male per chi vuole passare inosservato). Un PG che fa una figura memorabile (Intrattenere o Persuasione CD 14 davanti a tutti) dà alla Crociata 1 punto di Fama col popolo di Teramum.",
+     "prove": [
+      {
+       "id": "calata",
+       "abilita": [
+        "Intrattenere",
+        "Persuasione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Vi guardano, ridono, passano."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Si fermano. Alla seconda calata la gente vi indica, alla terza vi saluta. «Quelli della Crociata.»"
+        }
+       ]
+      }
+     ],
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ],
+   "image": "PDI — Teramum — Il Corso e la Piazza Grande.jpg"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_stanna",
+   "kind": "persona",
+   "title": "8. La Stanna",
+   "legacyPosition": {
+    "x": 900,
+    "y": 760
+   },
+   "text": "A metà del Corso, dove una volta c’era il teatro vecchio, c’è un edificio lungo e nuovo, di mattone rosso. Sei porte larghe, tutte aperte, e le vetrine piene fino in alto. Sopra le porte, un’insegna dipinta: un cerchio rosso con dentro una S. I bottegai del Corso, dalle loro porte, la guardano come si guarda un cane che ha rubato il pranzo.\n\nDentro, sotto il soffitto alto del teatro, con ancora un pezzo di balconata dorata in fondo, banconi a file, uno dietro l’altro. Commesse tutte vestite uguali, in grigio col colletto bianco, dritte dietro ogni bancone. Su ogni cosa, un cartellino col prezzo. Scritto. Fisso. Nessuno grida.\n\nCalze, quaderni, candele, corde, coltelli da cucina, pentole, lanterne, scarpe, sacchi, zaini, acciarini. Tutto in un posto solo, e tutto allo stesso prezzo per tutti. Odore di stoffa nuova, di cuoio e di cera. Sul bancone degli attrezzi c’è un vuoto: dove dovrebbero stare i picconi, solo un cartellino girato.\n\nLa gente guarda, tocca, e non contratta. Un vecchio contadino prova a contrattare lo stesso. La commessa non risponde: indica il cartellino, e lo indica sempre più forte. In fondo, dietro il bancone dei quaderni, una donna anziana con gli occhiali al collo guarda tutta la sala come un capitano guarda il cortile.",
+   "breve": "Il fondaco dei prezzi fissi sul Corso, al posto del teatro vecchio: l’equipaggiamento comune al prezzo del Manuale. È della Lega dei Sensali, che da due settimane compra tutti i picconi.",
+   "gm": "È la Standa della Teramo vera: il grande magazzino del Corso, costruito nel 1961 al posto del teatro comunale demolito, famoso per «calze, quaderni e regali di Natale», banconi, commesse in divisa, prezzi fissi; chiuso, «l’ex Standa» è rimasto un punto di riferimento della calata. Qui: «la Stanna», il fondaco dei prezzi fissi, una novità che scandalizza i bottegai (che nel Corso chiudono uno dopo l’altro).\nUtile al tavolo: qui i PG comprano l’equipaggiamento comune del Manuale al prezzo del Manuale, senza contrattare (in fiorini e grossi al cambio della città). Non vende armi da guerra né armature (vietato in città), né oggetti magici. Pozioni: no (vedi lo speziale).\nChi la tiene: Donna Assunta Scolastico, la capocommessa (scheda PNG), da cinquantasei anni dietro il bancone dei quaderni. È di proprietà della Lega dei Sensali (Casa Melatino): per questo i bottegai del Lucente Giorgio odiano la Lega.\nAggancio: i bottegai incatenati davanti al Palazzo Ducale protestano anche contro la Stanna.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo_assunta_s",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Donna Assunta",
+     "parte": "evento",
+     "innesco": "Qualcuno chiede qualcosa a una commessa: arriva la capocommessa.",
+     "note": "CHI SEI? — «Assunta. Cinquantasei anni ai quaderni. Ho visto passare tre padroni e due incendi. I quaderni sono sempre gli stessi.»\n\nSI PUÒ CONTRATTARE? — Indica il cartellino. Non dice niente. Lo indica ancora.\n\nCHI È IL PADRONE? — «La Lega.» Una smorfia. «Io servo la merce, non i padroni.»\n\nI BOTTEGAI — «Dicono che li facciamo chiudere noi. Sarà. Ma la gente viene qui perché sa quanto paga. Dai bottegai paghi quanto pensa lui che hai in tasca.»\n\nCOSE STRANE — «Da due settimane la Lega compra tutte le corde, tutte le lanterne e tutti i picconi che arrivano. Tutti. E non li mette sui banconi.» Lo dice come una cosa che non le va giù: a lei piace che la merce stia sui banconi.\n\nBATTUTE PRONTE — «Il prezzo è quello.» · «Cinquantasei anni.» · «Non si tocca se non si compra. Si tocca lo stesso. Va be’.»",
+     "dopo": "Indizio: la Lega fa incetta di attrezzi da scavo (corde, lanterne, picconi). Sono per gli scavi sotto la città.",
+     "rilancio": "Donna Assunta torna al bancone. Che cosa fate?",
+     "daqui": [],
+     "png": "png-assunta-scolastico"
+    }
+   ],
+   "image": "Luogo — Teramum — La Stanna.jpg"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_speziale",
+   "kind": "persona",
+   "title": "9. La spezieria del Ceraso",
+   "legacyPosition": {
+    "x": 1000,
+    "y": 680
+   },
+   "text": "Sul Corso, una porta stretta con sopra un mortaio di bronzo appeso a una catena, lucido come un elmo nuovo. Dalla porta esce un odore che si sente dal marciapiede: erbe secche, alcol, cera, e qualcosa di dolce sotto.\n\nDentro, scaffali di legno scuro fino al soffitto, con una scala a pioli che scorre su una guida. Sugli scaffali, vasi di ceramica di Li Cashtillë, bianchi e azzurri, uno accanto all’altro, ognuno con un nome scritto a pennello: Genziana, Centerba, Camomilla, Ruta, Mirra, Polvere di corno, e in alto nomi che non sapete leggere. Sul banco, una bilancia di ottone piccola come una mano, un mortaio e una fila di bottigliette con il tappo di cera.\n\nDietro il banco, uno speziale alto, magro, con gli occhiali sulla punta del naso e un camice nero abbottonato fino al collo. Vi guarda arrivare da sopra le lenti, dalla testa ai piedi, e poi torna a pesare una polvere gialla. Ha l’aria di chi sa già cosa siete venuti a comprare, e non ve lo dirà.\n\nIn un angolo, un ragazzo arrossisce, paga in fretta qualcosa avvolto nella carta e scappa senza aspettare il resto. Lo speziale, senza alzare la testa, gli dice dietro una cosa ad alta voce. I due clienti in attesa ridono. Il ragazzo è già in strada.\n\nDietro lo speziale, una tenda verde copre una porta. Da lì arriva un rumore di vetro contro vetro.",
+   "breve": "La spezieria del Corso: pozioni di guarigione (tre, nascoste), antitossine, Genziana e Centerba. Ser Ottavio Ceraso ha la lingua tagliente; la Rocca ha comprato tutte le altre pozioni.",
+   "gm": "Nella Teramo vera, la Farmacia Cerasani del Corso, ricordata per «l’imbarazzo di comprare certe cose» e per le battute del farmacista. Qui: lo speziale Ser Ottavio Ceraso (scheda PNG), battuta pronta e lingua tagliente; il ragazzo che scappa ha comprato «budelli d’agnello» (sapete per cosa) e Ceraso gli ha detto qualcosa ad alta voce.\nCosa vende (prezzi della città): Pozione di guarigione 50 mo (in fiorini al cambio; ne ha 3); Antitossina 50 mo (2); kit da guaritore 5 mo; olio, unguenti, bende. Liquori d’erbe del Gigante: Genziana (amara, «per lo stomaco e per i dispiaceri»), Centerba (cento erbe, verde, fortissima: chi la beve fa un TS su Costituzione CD 12 o è avvelenato per 1 minuto, per ridere), Ratafià (di amarene, dolce, per le signore e per chi mente).\nAggancio: Ceraso analizza le cose strane, a pagamento (2 grossi). Se gli portano un frammento del metallo grigio della Forgia o qualcosa dei Forgiati: «Questo non è un metallo. È… pentito di essere un metallo. Non lo voglio in bottega.» Restituisce i soldi.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo_ceraso",
+     "tipo": "dialogo",
+     "titolo": "Parlare con lo speziale",
+     "parte": "evento",
+     "innesco": "Qualcuno chiede qualcosa al banco.",
+     "note": "CHI SEI? — «Ceraso. Ottavio. Speziale. Il terzo di quel nome in questa bottega.» Vi squadra. «Voi invece avete l’aria di quelli che comprano bende a dozzine.»\n\nPOZIONI? — «Tre. Rosse, buone, fatte da me. Cinquanta a testa, in oro. Le ultime le ha comprate la Rocca, tutte, il mese scorso. Queste tre le ho nascoste per i clienti che mi stanno simpatici.» Pausa. «Mi state simpatici fino a prova contraria.»\n\nLA CENTERBA — «Cento erbe della montagna. Cura tutto, tranne chi la beve.»\n\nIL RAGAZZO CHE È SCAPPATO — «Ha comprato una cosa che si compra in silenzio. Io gliel’ho detto ad alta voce. È un servizio che faccio alla città: così i ragazzi imparano a vergognarsi.»\n\nLA ROCCA HA COMPRATO TUTTE LE POZIONI — «Tutte. E le bende. E l’aceto. Come chi si aspetta una guerra.» Si toglie gli occhiali. «O come chi la vuole fare.»\n\nBATTUTE PRONTE — «Cura tutto, tranne chi la beve.» · «Lo dica più forte, che il cliente dietro non ha sentito.» · «Ricetta? Qui la ricetta sono io.»",
+     "dopo": "Dove comprare pozioni e antitossine; e un indizio: la Rocca ha fatto incetta di pozioni e bende, come chi prepara un colpo di mano.",
+     "rilancio": "Ceraso vi guarda sopra gli occhiali. Che cosa fate?",
+     "daqui": [],
+     "png": "png-ottavio-ceraso"
+    }
+   ],
+   "image": "Luogo — Teramum — La spezieria del Ceraso.jpg"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_biblioteca",
+   "kind": "porta",
+   "title": "10. La Biblioteca Incompiuta",
+   "legacyPosition": {
+    "x": 800,
+    "y": 560
+   },
+   "text": "In via Delfico, a due passi dai Tigli, la strada si allarga davanti a un palazzo enorme che non è mai stato finito. La facciata di travertino si ferma a metà del secondo piano, netta, come tagliata con un coltello. Sopra, le impalcature di legno sono diventate grigie e storte, e ci hanno fatto il nido i colombi e le rondini. Un’ala intera non ha il tetto: dalle finestre vuote si vede il cielo, e dentro cresce un fico.",
+   "gm": "Scena: Biblioteca Incompiuta (id «te_biblioteca»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nCollocazione (voce «Teramum», tabella delle scene): via Delfico, nella Terranova. È di Casa Savini, l’Archivista Beltramo Savini.",
+   "breve": "La Biblioteca di Casa Savini (la Memoria), in via Delfico, nella Terranova, vicino ai Tigli. Ingresso alla scena dedicata. Qui si chiede il sigillo dei Savini.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "PDI — Teramum — Biblioteca Incompiuta.jpg",
+   "scena": "te_biblioteca",
+   "scenaTesto": "Entra nella Biblioteca"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_lupe",
+   "kind": "stanza",
+   "title": "11. Lu Lupe Bianche",
+   "legacyPosition": {
+    "x": 680,
+    "y": 640
+   },
+   "text": "In via Delfico, a due passi dal cantiere della Biblioteca, fra un portone e l’altro, c’è un portone verde, scrostato, con un lupo bianco dipinto sopra, a bocca aperta. È sempre socchiuso. Da fuori si sente già il rumore.",
+   "gm": "È il White Wolf della Teramo vera: la birreria di via Delfico «dietro un portone verde», aperta da tre soci (due uscirono negli anni ’90), ritrovo di migliaia di teramani per trent’anni, chiusa un giorno senza avvisare nessuno. Nella voce «Teramum» è la taverna dove «si fa notte e si finisce sempre a parlare troppo».\nL’oste: Sabatino Lupone, detto Lu Lupe (scheda PNG). Ha aperto con due soci; se ne sono andati tutti e due, e i loro grembiuli sono ancora sul chiodo. Non ne parla.\nChi c’è: gli scrivani e gli studenti della Biblioteca dei Savini, i Diavoli, giovani della Guardia fuori servizio, qualche votato che non dovrebbe esserci. È il posto dove i PG sentono le voci di chi lavora per le Casate.\nPrezzi: boccale di birra scura 2 quattrini; vino cotto 3; pane, salsiccia e cipolla 4; la «pizza di Lupe» (imitazione di quella di Mario: lui lo nega) 4. Una stanza no: «Qui si beve. Si dorme a casa.»\nRegola della casa: chi si addormenta al tavolo si sveglia col nome inciso sul tavolo da qualcun altro.",
+   "breve": "La birreria di via Delfico, dietro il portone verde: studenti, scrivani, guardie senza tabarro. Lu Lupe, le voci della città e un copista che vende la pianta delle cantine sotto Lucente Anna.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_g_lupe",
+   "scenaTesto": "Entra"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_agostino",
+   "kind": "dettaglio",
+   "title": "12. Il solario del Lucente Agostino",
+   "legacyPosition": {
+    "x": 1060,
+    "y": 240
+   },
+   "text": "In cima alla città, dove il colle cade a picco nel bosco, c’è un convento sobrio: un solario di pietra nuda con un rosone tondo e il disco del Sole sul portale, un chiostro, e una scuola con le finestre aperte. Dentro, ragazzi col grembiule grigio copiano lettere sulle tavolette di cera, sotto gli occhi di un frate col saio nero.\n\nIn fondo all’orto, due ragazzi scavalcano il muro e scappano giù per la costa.",
+   "gm": "I frati neri del Lucente Agostino tengono la scuola dei votati: i ragazzi che «fanno cùppe» al giardino del Duca scappano da qui. ⟦Il priore, Fra’ Celestino, tiene le cronache della città da duecento anni: chi le legge trova chi stava nel Consiglio quando bruciò la cattedrale vecchia.⟧ Dalla costa sotto il convento si scende verso Colleparco e lo Studio.",
+   "breve": "Il convento della scuola dei votati, in cima alla città.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "Luogo — Teramum — Il solario del Lucente Agostino.jpg"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_garibaldi",
+   "kind": "scena",
+   "title": "13. Piazza Garibaldi",
+   "legacyPosition": {
+    "x": 640,
+    "y": 880
+   },
+   "text": "In mezzo alla piazza della fiera, dove si incrociano il Corso, il viale dei Tigli e la strada della Rocca, c’è un piedistallo di legno dipinto a strisce rosse e bianche. Sopra, un sergente della Guardia dirige il traffico. Carri, muli, pecore, portantine, ragazzi che corrono: tutto passa sotto il suo braccio teso e il suo fischietto d’osso. Un fischio corto: fermi. Due: avanti. Tre: guai.",
+   "gm": "Nella Teramo vera, «Marco il Vigile» (vigile dal 1993 al 2025, terribile fama in tutta la provincia per le multe, dirigeva il traffico in piazza Garibaldi, in prima fila alle cerimonie; soprannomi «Punti Perfetti», «Ciccio Colonna»; frase: «E chi se n’arcord?»). Qui: il Sergente Marcozzi «Punti Perfetti» (scheda PNG), della Guardia Ducale, la multa fatta uomo.\nA cosa serve al tavolo: un incontro comico e un pericolo vero. Se il gruppo passa dalla piazza con carri, cavalli, armi in vista o lo stendardo, Marcozzi li ferma e li multa (1 grosso per il cavallo «fuori fila», 2 per lo stendardo «non registrato», 5 per l’arma lunga senza fodero). Non si corrompe: è l’unico onesto della Guardia, ed è per questo che lo tengono sulla piazza a fare multe e non alla Rocca.\nSe gli chiedono qualcosa che non vuole dire, o qualcuno che non vuole ricordare: «E chi se n’arcord?»\nAggancio forte: Marcozzi è onesto e vede tutto quello che passa dalla piazza della Rocca. Sa che da due settimane escono di notte carri dalla Rocca senza registro, e la cosa lo fa impazzire (non per la congiura: per il registro). Se i PG lo convincono che stanno cercando di far rispettare le regole (Persuasione CD 15, vantaggio se rispettano una sua multa senza discutere), dà loro le ore e il numero dei carri.",
+   "breve": "La piazza della fiera: il sergente Marcozzi, la Rocca, Porta Due di Coppe.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "Luogo — Teramum — Piazza Garibaldi e la Rocca.jpg",
+   "scena": "te_g_garibaldi",
+   "scenaTesto": "Entra"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_rocca",
+   "kind": "stanza",
+   "title": "14. La Rocca dei Grazianus",
+   "legacyPosition": {
+    "x": 330,
+    "y": 620
+   },
+   "text": "La Rocca sta all’altro capo della città, dove finisce il Corso: su Piazza Garibaldi, la piazza larga della fiera, dentro un recinto di mura tutto suo. Non ha niente di bello. Mura di ciottoli e mattone come quelle della città, ma più grosse; torri quadrate, feritoie strette, una guardia che passa in cima.",
+   "gm": "Canone (voce «Teramum» e scheda di Casa Grazianus): la Rocca dei Grazianus sta su Piazza Garibaldi, all’ingresso ovest, ed è anche la caserma della Guardia Ducale. Sulla piazza c’è Porta Due di Coppe, la settima porta: nessuno sa più perché si chiami così, e tutti hanno una versione. Entrare di lì è entrare in casa della Guardia. Dalla piazza partono i Tigli.\nQui abita lo Stratega Lucius Grazianus, padre di Maximus. Siede nel Consiglio Reggente, in piedi dietro il suo seggio. Ha scritto a Maximus «Non entrare stasera»: farlo apparire qui è una scelta grossa, da tenere per dopo.\nIl sigillo di Grazianus: lo appone il Cancelliere della Spada, su ordine dello Stratega. Senza l’ordine, la fila dura giorni. Con il nome giusto (Maximus), il foglio passa in cima.\nLe celle della Rocca: i forestieri armati trovati dopo il coprifuoco ci passano la notte.\nLa Cancelleria della Spada è l’ufficio dei sigilli della casata: la tiene il Cancelliere, Ser Ottaviano Rapino (scheda PNG).",
+   "breve": "La fortezza di Casa Grazianus e caserma della Guardia Ducale, su Piazza Garibaldi, con Porta Due di Coppe accanto. Qui si chiede il sigillo della Spada (la Cancelleria, porta a sinistra) e da qui partono le ronde della notte. Per Maximus è la casa di suo padre.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "PDI — Teramum — La Rocca dei Grazianus.jpg",
+   "scena": "te_g_rocca",
+   "scenaTesto": "Entra nella Rocca"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_coppe",
+   "kind": "porta",
+   "title": "15. Porta Due di Coppe",
+   "legacyPosition": {
+    "x": 230,
+    "y": 780
+   },
+   "text": "Accanto alla Rocca, nelle mura della città, si apre una porta piccola, con una guardia per lato: la chiamano Porta Due di Coppe, e se chiedete perché, ognuno vi dà una risposta diversa. Dall’altra parte della piazza cominciano i tigli.",
+   "gm": "La settima porta, accanto alla Rocca: è la porta della Guardia.",
+   "breve": "La porta piccola accanto alla Rocca.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_tigli",
+   "kind": "scena",
+   "title": "16. I Tigli",
+   "legacyPosition": {
+    "x": 520,
+    "y": 720
+   },
+   "text": "Da Piazza Garibaldi parte un viale largo, lastricato, con due file di tigli potati tutti alla stessa altezza, come soldati. Fra un albero e l’altro, busti di pietra di teramani illustri, col naso consumato dalle mani dei ragazzi. Sotto gli alberi, banchetti e tavoli di osteria.",
+   "gm": "Per la voce «Teramum» i Tigli sono un viale del passeggio vicino a Piazza Garibaldi, non un rione, coi busti dei teramani illustri, i banchetti e i tavoli delle osterie. I palazzi delle casate sul viale vengono dalle schede delle casate (Malavolta, Thaulero).\nOggi: Casa Thaulero dà una festa (inviti in carta dorata, musici da fuori; la vecchia nobiltà ci va per disprezzarli da vicino). Si parla solo della Crociata. Il palazzo Cerullius non è qui: sta dietro la Basilica Aurea, sugli archi dell’anfiteatro (punto «Il palazzo Cerullius»).\nSegreti: ⟦la fortuna dei Thaulero viene dal contrabbando di frammenti di Sigilli Lunari, e Iuvenza li ricatta⟧; ⟦Casa Malavolta (la Matriarca è nata de Spina) finanzia scavi nelle cripte per trovare l’Atto di Fondazione⟧; la Gilda della Presentosa è ricattata da Iuvenza. La «signora forestiera dai capelli bianchi»: Iuvenza, già in città sotto altro nome.",
+   "breve": "Il viale del passeggio dei signori, accanto a Piazza Garibaldi: le Casate, le loro feste, i loro creditori. Si legge il Consiglio dai saluti; si può ottenere un invito alla festa dei Thaulero. Qui ci sono i palazzi dei Malavolta e dei Thaulero; a due passi, in via Delfico, la Biblioteca Incompiuta.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "PDI — Teramum — I Tigli.jpg",
+   "scena": "te_g_tigli",
+   "scenaTesto": "Entra"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_shakidu",
+   "kind": "scena",
+   "title": "17. Lu Shakidù",
+   "legacyPosition": {
+    "x": 640,
+    "y": 1060
+   },
+   "text": "Sotto i Tigli, dove una scalinata scende verso le mura, c’è una porta di cantina con due lanterne di vetro colorato, una rossa e una blu. Dalla cantina sale musica: un tamburo, un piffero, una ghironda, e piedi che battono a tempo. Qui si balla sempre.\n\nSulla porta, un ragazzo con un berretto storto prende un quattrino a testa e vi guarda le armi. Poi alza le spalle e vi fa passare.\n\nDentro si scende in una sala bassa e calda, a volta, con le pareti che sudano. L’aria sa di vino, di sudore e di cera. Un ragazzo in piedi su uno sgabello fa girare davanti alle candele una ruota di vetri colorati, e la luce salta sui muri e sulle facce: rossa, verde, gialla, rossa.\n\nSi balla in cerchio, a coppie, da soli. Ragazze con il grembiule ancora addosso, come se fossero scappate da una cucina. Ragazzi con un diavolo rosso cucito sul petto. Giovani vestiti troppo bene, che pagano da bere a tutti e ridono troppo forte.\n\nSul palchetto in fondo, un suonatore coi capelli lunghi e la giacca a frange tiene il tempo col piede e sorride come se fosse il padrone del mondo. Dietro di lui, quattro musici che non alzano mai la testa.",
+   "breve": "La sala da ballo in cantina sotto i Tigli, dove si balla anche di pomeriggio, con la ruota dei vetri colorati e Mastro Aurelio: servette dei palazzi, Diavoli, e le voci dei Tigli.",
+   "gm": "È lo Shakidu della Teramo vera (viale Bovio): la discoteca dei teramani degli anni ’70-’80, famosa per le luci stroboscopiche, dove si ballava anche il pomeriggio e i ragazzini andavano la domenica di nascosto dai genitori; il dj storico era Aurelio, che aveva un gruppo, i «Traks». Qui: una sala da ballo in cantina sotto i Tigli, con la ruota dei vetri colorati. Il suonatore è Mastro Aurelio de li Tracche (scheda PNG), con la sua compagnia di musici.\nChi c’è: ragazzi e ragazze di tutte le contrade, i Diavoli, servette dei palazzi dei Tigli scappate per un’ora, giovani di Casa Thaulero che pagano da bere per farsi accettare.\nUtile al tavolo: posto per incontrare servitori dei palazzi dei Tigli (una servetta dei Malavolta o dei Thaulero parla, dopo due balli: Persuasione o Intrattenere CD 13 = una voce dalla tabella dei Tigli, scelta da te). Ingresso 1 quattrino; vino 2.\nAggancio: Aurelio cerca un posto per suonare alla festa dei Thaulero, e non lo invitano «perché suona la musica dei poveri». Se i PG vanno alla festa, possono portarlo: alla festa, Aurelio è un diversivo perfetto.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "ballo",
+     "tipo": "dettaglio",
+     "titolo": "Ballare allo Shakidù",
+     "parte": "evento",
+     "innesco": "Qualcuno balla, o si mette a parlare in sala.",
+     "leggi": "La ruota dei vetri gira più in fretta. Il tamburo accelera. Aurelio grida qualcosa che nessuno capisce, e tutti rispondono in coro.\n\nUna ragazza col grembiule ancora addosso vi prende per mano e vi tira nel cerchio. «Chi balla, paga da bere. Chi non balla, paga da bere lo stesso.»",
+     "note": "È una servetta del palazzo Malavolta, Ninuccia. Dopo un ballo e un bicchiere (Intrattenere o Persuasione CD 13): «La padrona non dorme mai. Di notte scende in cantina con due uomini che non parlano. Tornano con le mani piene di fango. E lei sorride.» (vero: gli scavi dei Malavolta sotto la città). Poi scappa: è l’ora di tornare.",
+     "prove": [
+      {
+       "id": "ballo",
+       "abilita": [
+        "Intrattenere",
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Ballate, sudate, e la ragazza scappa prima di dire niente."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Fra un giro e l’altro, la ragazza parla della padrona che scende in cantina di notte."
+        }
+       ]
+      }
+     ],
+     "dopo": "Una voce dai palazzi dei Tigli.",
+     "rilancio": "La musica non si ferma. Che cosa fate?",
+     "daqui": [],
+     "pe": 50
+    },
+    {
+     "id": "dlg_aurelio",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Mastro Aurelio",
+     "parte": "evento",
+     "png": "png-mastro-aurelio-de-li-tracche",
+     "innesco": "Qualcuno parla col suonatore.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ],
+   "image": "Luogo — Teramum — Lu Shakidù.jpg"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_giardino",
+   "kind": "scena",
+   "title": "18. Il giardino del Duca",
+   "legacyPosition": {
+    "x": 230,
+    "y": 380
+   },
+   "text": "Accanto alla piazza della fiera, dietro un cancello di ferro sempre aperto, con le punte dorate e la ruggine sotto l’oro, c’è un giardino. Alberi vecchi e grossi, viali di ghiaia, siepi tagliate dritte. Appena dentro, una fontanella di pietra con dieci cannelli: i ragazzini ci bevono con la bocca attaccata al ferro.",
+   "gm": "Nella voce «Teramum» (luogo 7) e nella Teramo vera (la Villa comunale: il laghetto coi cigni e le tartarughe, il ponticello di legno, la fontanella coi cannelli, i primi baci, e i ragazzi che facevano «cuppo», cioè marinavano la scuola; la gabbia della tigre «troppo grande per quel posto troppo piccolo»).\nI ragazzi che «fanno cùppe»: saltano la scuola dei votati. Se un PG li copre con il votato che li cerca, i ragazzini gli devono un favore (ragazzini di Teramum: vedono e sentono tutto).\nLa tigre: l’ha regalata al Duca un capitano venuto dal sud, anni fa. Si chiama Regina. La custode è Za’ Maria la Gattara (scheda PNG), una vecchia che dà da mangiare a tutti i gatti della città e parla alla tigre. Aggancio (per Adamus o un druido): la tigre è malata di gabbia; un Parlare con gli animali o Addestrare animali CD 15 la calma e lei «racconta» degli uomini col mantello che di notte passano dal giardino verso la Porta del Lucente Giorgio, col passo troppo pesante (sono guardie della Forgia: la tigre li odia, sente che non sono vivi del tutto).\nDa qui: Da Mario (cuppe a la villa e la pizzeria Mario), i Tigli, la Porta del Lucente Giorgio.",
+   "breve": "Il giardino accanto alla piazza della fiera: laghetto, cigni, coppie, ragazzi che fanno cùppe, e una tigre in una gabbia troppo piccola che di notte sente passare uomini «come pietre».",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "Luogo — Teramum — Il giardino del Duca.jpg",
+   "scena": "te_g_giardino",
+   "scenaTesto": "Entra"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "g_mario",
+   "kind": "scena",
+   "title": "19. Da Mario",
+   "legacyPosition": {
+    "x": 830,
+    "y": 950
+   },
+   "text": "In una strada che scende dalla piazza della fiera verso il giardino del Duca c’è una bottega stretta, senza insegna. Non serve: si sente l’odore da cento passi, pane caldo, olio, cipolla, e la gente lo segue a naso.",
+   "gm": "Il posto più amato dai teramani giovani: la pizzeria Da Mario della Teramo vera (dal 1967, «la più antica della città», famosa per la pizza al taglio a cubetti; i ragazzi ci andavano quando facevano cuppo alla Villa). Qui è una bottega col forno, vicino al giardino del Duca, dove si vende «la pizza»: la pasta del forno al taglio, a quadretti.\nPrezzi: un quadretto 1 quattrino; una carta piena (sei quadretti) 5 quattrini; una teglia intera, per una compagnia, 2 grossi. «La rossa» costa il doppio: la salsa è fatta col pomo d’oro, un frutto che arriva dalle navi del sud e che a Teramum quasi nessuno sa coltivare.\nMastro Mario (scheda PNG «Mastro Mario Capecce») non è il fondatore: Mario era suo nonno. Lo dice solo se gli chiedono «Siete voi Mario?», e ogni volta si offende un po’.\nAggancio: la Compagnia dei Diavoli (i giovani del Palio, diavolo rosso sul petto) mangia qui ogni sera. Sono arrabbiati col Consiglio (il Palio tolto) e possono diventare amici della Crociata: braccia, voci, guide per i vicoli. Il loro capo è Tittì lu Diavele (scheda PNG).",
+   "breve": "La bottega della pizza al taglio, vicino al giardino del Duca: Mastro Mario (il nipote), i carri notturni della Forgia, e i ragazzi della Compagnia dei Diavoli, arrabbiati col Consiglio.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "image": "Luogo — Teramum — Da Mario.jpg",
+   "scena": "te_g_mario",
+   "scenaTesto": "Entra"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_reale",
+   "kind": "porta",
+   "title": "20. La Porta del Lucente Giorgio",
+   "image": "PDI — Teramum — Porta del Lucente Giorgio.jpg",
+   "legacyPosition": {
+    "x": 470,
+    "y": 940
+   },
+   "text": "In fondo al Corso, dopo la piazza della fiera, la strada finisce contro la porta più alta della città, e la più fredda: qui tira sempre un’aria che viene dalla montagna. Due torri quadrate, un arco profondo, e una catena di ferro grossa come un braccio appesa di lato, per chiudere la strada ai carri.\n\nPochi carri, qualche mulattiere con la legna o col ferro, un pastore con cinque pecore e un cane. Le guardie sono anziane e parlano poco: due stanno sedute su una panca di pietra, una in piedi con la mano sull’alabarda. Vi guardano passare e non chiedono niente. Hanno l’aria di chi ha fatto la guardia a questa porta per tutta la vita. Sul muro, dentro l’arco, segni di coltello: nomi, tacche, un sole.\n\nDa qui la strada esce dalla città e sale, fra i campi e poi fra i castagni, verso la montagna. Si vede allontanarsi a curve, sempre più stretta, finché gli alberi se la mangiano.\n\nOltre la porta, il Gigante. Così vicino che bisogna alzare la testa, e poi alzarla ancora. La parete grigia, le creste, la neve che resta negli spacchi. Copre mezzo cielo. Sotto l’arco le voci si fanno basse da sole, come dentro un solario.",
+   "breve": "La porta dell’ovest, in fondo al Corso, verso la montagna e Tussëcië. Guardie anziane. Fuori pattugliano gli uomini del Marchese d’Avalos.",
+   "gm": "Porta del Lucente Giorgio della voce «Teramum»: a ovest, in fondo al Corso, verso i campi e la strada della montagna; Piazza Garibaldi e la Rocca sono lì vicino. Chi esce da qui va verso la montagna: Mëndurjë, Tussëcië (il Marchese Rodrigo d’Avalos, uomo di Iuvenza, pattuglia la strada montana), e più su Lésënë e la Convocazione. Il capitano Guarnerio è di Mëndurjë: ha fatto la guardia qui per dieci anni.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "montagna",
+     "tipo": "dettaglio",
+     "titolo": "La strada della montagna",
+     "parte": "indizio",
+     "seme": "Oltre la porta, il Gigante.",
+     "innesco": "Qualcuno guarda fuori dalla porta, verso la montagna.",
+     "leggi": "La montagna occupa tutto il cielo. Le nuvole si fermano a metà, come se non osassero salire.\n\nSulla strada, lontano, tre cavalieri scendono al passo. Hanno i mantelli rossi e un pennacchio giallo sull’elmo. Le guardie della porta li guardano arrivare, e uno sputa per terra.",
+     "note": "I cavalieri sono uomini del Marchese d’Avalos di Tussëcië. Portano posta per i Tigli. Le guardie della porta non li amano.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ]
+  }
+ ],
+ "pedine": [
+  {
+   "id": "q_remo",
+   "nome": "Mastro Remo",
+   "short": "Re",
+   "kind": "alleato",
+   "x": 1290,
+   "y": 650,
+   "gruppo": "quartiere",
+   "png": "png-mastro-remo-lu-varvire",
+   "img": "TOKEN — Città — Mastro Remo lu Varvìre.png",
+   "ritratto": "Ritratto pedina — Città — Mastro Remo lu Varvìre.jpg"
+  },
+  {
+   "id": "q_ceraso",
+   "nome": "Ser Ottavio Ceraso",
+   "short": "Ce",
+   "kind": "alleato",
+   "x": 1040,
+   "y": 700,
+   "gruppo": "quartiere",
+   "png": "png-ottavio-ceraso",
+   "img": "TOKEN — Città — Ser Ottavio Ceraso.png",
+   "ritratto": "Ritratto pedina — Città — Ser Ottavio Ceraso.jpg"
+  },
+  {
+   "id": "q_assunta",
+   "nome": "Donna Assunta",
+   "short": "As",
+   "kind": "alleato",
+   "x": 940,
+   "y": 790,
+   "gruppo": "quartiere",
+   "png": "png-assunta-scolastico",
+   "img": "TOKEN — Città — Donna Assunta Scolastico.png",
+   "ritratto": "Ritratto pedina — Città — Donna Assunta Scolastico.jpg"
+  },
+  {
+   "id": "q_aurelio",
+   "nome": "Mastro Aurelio",
+   "short": "Au",
+   "kind": "alleato",
+   "x": 690,
+   "y": 1080,
+   "gruppo": "quartiere",
+   "png": "png-mastro-aurelio-de-li-tracche",
+   "img": "TOKEN — Città — Mastro Aurelio de li Tracche.png",
+   "ritratto": "Ritratto pedina — Città — Mastro Aurelio de li Tracche.jpg"
+  },
+  {
+   "id": "q_marcozzi",
+   "nome": "Sergente Marcozzi",
+   "short": "Mz",
+   "kind": "alleato",
+   "x": 680,
+   "y": 900,
+   "gruppo": "quartiere",
+   "png": "png-sergente-marcozzi",
+   "img": "TOKEN — Città — Sergente Marcozzi «Punti Perfetti».png",
+   "ritratto": "Ritratto pedina — Città — Sergente Marcozzi «Punti Perfetti».jpg"
+  }
+ ]
+}

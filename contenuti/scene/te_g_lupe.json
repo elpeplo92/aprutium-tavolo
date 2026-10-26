@@ -1,0 +1,207 @@
+{
+ "id": "te_g_lupe",
+ "nome": "Lucente Giorgio — Lu Lupe Bianche",
+ "menu": "Lucente Giorgio — Lu Lupe Bianche",
+ "citta": "Teramum",
+ "ordine": 9.28,
+ "mappa": {
+  "img": "Battlemap — Teramum — Lu Lupe Bianche.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": true,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "In via Delfico, a due passi dal cantiere della Biblioteca, fra un portone e l’altro, c’è un portone verde, scrostato, con un lupo bianco dipinto sopra, a bocca aperta. È sempre socchiuso. Da fuori si sente già il rumore.\n\nDentro si scende di tre gradini e si entra nel fumo. Una sala lunga, bassa, a volta, con i tavoli di quercia incisi da cent’anni di coltelli: nomi, cuori, versi, insulti, uno stemma graffiato via. Candele di sego sui tavoli, botti lungo il muro, un cane sotto una panca. Odore di birra scura, di pane bruciato, di cipolla.",
+  "img": "Battlemap — Teramum — Lu Lupe Bianche.jpg",
+  "note": "La birreria di via Delfico, dietro il portone verde: studenti, scrivani dei Savini, Diavoli, giovani della Guardia senza tabarro. Lu Lupe sa tutto e non sorride. All’ultimo tavolo lo scrivano che vende la pianta delle cantine sotto Lucente Anna. Se scoppia una rissa: tutti contro tutti, e Lu Lupe chiude il portone."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "lupe_ingresso",
+   "kind": "porta",
+   "title": "Il portone verde",
+   "legacyPosition": {
+    "x": 590,
+    "y": 960
+   },
+   "text": "In via Delfico, a due passi dal cantiere della Biblioteca, fra un portone e l’altro, c’è un portone verde, scrostato, con un lupo bianco dipinto sopra, a bocca aperta. È sempre socchiuso. Da fuori si sente già il rumore.",
+   "gm": "Sempre socchiuso. Tre gradini scendono nella sala.",
+   "breve": "Il lupo bianco dipinto sul portone.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "lupe_sala",
+   "kind": "stanza",
+   "title": "La sala",
+   "legacyPosition": {
+    "x": 700,
+    "y": 500
+   },
+   "text": "Dentro si scende di tre gradini e si entra nel fumo. Una sala lunga, bassa, a volta, con i tavoli di quercia incisi da cent’anni di coltelli: nomi, cuori, versi, insulti, uno stemma graffiato via. Candele di sego sui tavoli, botti lungo il muro, un cane sotto una panca. Odore di birra scura, di pane bruciato, di cipolla.\n\nÈ pieno di ragazzi con le dita macchiate d’inchiostro e di giovani della Guardia senza il tabarro. Si parla forte, si canta male, si gioca a dadi su un tavolo e a carte su un altro. All’ultimo tavolo, in fondo, uno sta da solo con dei fogli davanti e la candela più vicina di tutti.",
+   "gm": "È il White Wolf della Teramo vera: la birreria di via Delfico «dietro un portone verde», aperta da tre soci (due uscirono negli anni ’90), ritrovo di migliaia di teramani per trent’anni, chiusa un giorno senza avvisare nessuno. Nella voce «Teramum» è la taverna dove «si fa notte e si finisce sempre a parlare troppo».\nL’oste: Sabatino Lupone, detto Lu Lupe (scheda PNG). Ha aperto con due soci; se ne sono andati tutti e due, e i loro grembiuli sono ancora sul chiodo. Non ne parla.\nChi c’è: gli scrivani e gli studenti della Biblioteca dei Savini, i Diavoli, giovani della Guardia fuori servizio, qualche votato che non dovrebbe esserci. È il posto dove i PG sentono le voci di chi lavora per le Casate.\nPrezzi: boccale di birra scura 2 quattrini; vino cotto 3; pane, salsiccia e cipolla 4; la «pizza di Lupe» (imitazione di quella di Mario: lui lo nega) 4. Una stanza no: «Qui si beve. Si dorme a casa.»\nRegola della casa: chi si addormenta al tavolo si sveglia col nome inciso sul tavolo da qualcun altro.",
+   "breve": "La birreria di via Delfico, dietro il portone verde: studenti, scrivani, guardie senza tabarro. Lu Lupe, le voci della città e un copista che vende la pianta delle cantine sotto Lucente Anna.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Voci del Lupe",
+     "parte": "evento",
+     "innesco": "Si siedono, bevono, ascoltano.",
+     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. Uno scrivano dei Savini, ubriaco: «Il Magister Celino ha fatto murare la scala delle cantine della Biblioteca. Da dentro.»\n2. «Le guardie nuove della Rocca hanno le armature che non fanno rumore. Nen se sente manco nu passe.»\n3. «La signora dei Tigli ha comprato tutto il lillà del mercato. Tutto. Che ci fa?»\n4. «L’Arciflamine ha una lista. Ci sta scritto pure un nome che conoscete.» (guarda Alessandros o Vicarus)\n5. «Sor Paolo stamattina diceva: “I Cerullius tornano a casa e il Consiglio si caca addosso.”»\n6. «Lu Lupe chiuderà. Un giorno, senza dire niente a nessuno. Lo dicono da vent’anni.»",
+     "note": "Vere: 1 (Celino Savini ha murato l’accesso alle cantine per paura di quello che sta sotto), 2 (le armature della Forgia), 3 (la signora forestiera è Iuvenza, sotto altro nome), 4 (la lista dell’Arciflamine: Cerullius e de Caelis). La 5 è satira, ma gira. La 6 è vera e non c’entra niente: è Teramum.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "lupe_banco",
+      "lupe_scrivano"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "lupe_banco",
+   "kind": "persona",
+   "title": "Il banco",
+   "legacyPosition": {
+    "x": 650,
+    "y": 230
+   },
+   "text": "Dietro il banco, un uomo grosso con la barba grigia spilla la birra da una botte e non sorride a nessuno. Dietro di lui, appesi al muro, due grembiuli vuoti a un chiodo. Nessuno li tocca, nessuno ci appoggia niente sopra.",
+   "gm": "Lu Lupe (scheda): i due grembiuli al chiodo sono dei soci che se ne sono andati. Non ne parla.",
+   "breve": "Lu Lupe e i due grembiuli vuoti.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo_lupe",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Lu Lupe",
+     "parte": "evento",
+     "innesco": "Qualcuno parla con l’oste.",
+     "note": "CHI SEI? — «Sabatino. Lupone di cognome, Lupe per tutti. La birra è mia, il lupo è mio, il portone è verde perché la vernice costava meno.»\n\nI DUE GREMBIULI — Si irrigidisce. «Eravamo in tre. Adesso sono io.» Fine. Se insistono: «Uno si è sposato. L’altro si è messo coi signori. Quale dei due è peggio, decidetelo voi.»\n\nCHI VIENE QUI? — «Tutti quelli che non hanno un palazzo. Studenti, scrivani, guardie senza tabarro, i Diavoli. I signori no.» Pausa. «Qualche volta un signore vestito da poveraccio. Si riconoscono dalle scarpe.»\n\nLA BIRRA — «Scura. Orzo del Piano della Lenta, acqua della Fonte della Noce. Chi la beve non se ne va più dalla città: lo dicono della fonte, io lo dico della birra.»\n\nSE CHIEDONO DELLE CANTINE O DELLA CITTÀ SEPOLTA — Lu Lupe smette di spillare. «Qui sotto c’è la mia cantina. Sotto la mia cantina c’è un pavimento a mosaico, con un leone. Sotto il leone non ci vado.» Si asciuga le mani. «Una volta ci sono andato.» Non dice altro.\n\nSE LI VEDE PARLARE COI DIAVOLI — «Bravi ragazzi. Scemi, ma bravi. Non fateli ammazzare.»\n\nBATTUTE PRONTE — «Qui si beve. Si dorme a casa.» · «Chi rompe, paga. Chi paga, rompe pure.» · «T’ puzz’ n’om ambenn’.» (detto ridendo: si dice fra amici) · «Ultimo giro. Lo dico tutte le sere, e tutte le sere mento.»",
+     "dopo": "Lu Lupe sa molto e dice poco; è un posto sicuro per parlare, finché si paga.",
+     "rilancio": "Lu Lupe spilla un’altra birra. Che cosa fate?",
+     "daqui": [
+      "lupe_scrivano"
+     ],
+     "png": "png-sabatino-lupone"
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "lupe_scrivano",
+   "kind": "persona",
+   "title": "L’ultimo tavolo",
+   "legacyPosition": {
+    "x": 300,
+    "y": 640
+   },
+   "text": "È pieno di ragazzi con le dita macchiate d’inchiostro e di giovani della Guardia senza il tabarro. Si parla forte, si canta male, si gioca a dadi su un tavolo e a carte su un altro. All’ultimo tavolo, in fondo, uno sta da solo con dei fogli davanti e la candela più vicina di tutti.\n\nAll’ultimo tavolo, da solo, un ragazzo magro con gli occhiali di vetro spesso copia qualcosa su un foglio, con la lingua fra i denti.",
+   "gm": "Lo scrivano dei Savini che vende copie della pianta delle cantine.",
+   "breve": "Il ragazzo che copia.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "scrivano",
+     "tipo": "dettaglio",
+     "titolo": "Lo scrivano che vende copie",
+     "parte": "indizio",
+     "innesco": "Qualcuno nota il ragazzo all’ultimo tavolo, o chiede di carte e mappe.",
+     "leggi": "All’ultimo tavolo, da solo, un ragazzo magro con gli occhiali di vetro spesso copia qualcosa su un foglio, con la lingua fra i denti. Accanto al boccale, un rotolo legato con lo spago.\n\nQuando si accorge che lo guardate, copre il foglio col braccio. Poi ci ripensa, e vi fa segno di avvicinarvi.",
+     "seme": "È pieno di ragazzi con le dita macchiate d’inchiostro e di giovani della Guardia senza il tabarro.",
+     "note": "È Nicolino «Quattrocchi», copista della Biblioteca dei Savini (scheda PNG). Vende di nascosto copie di carte dell’archivio per pagarsi i debiti di gioco. Oggi ha una copia della pianta delle cantine sotto Lucente Anna e la Torre Bruciata: utile per la Città Sepolta. Prezzo: 3 fiorini; con Persuasione CD 13, 1 fiorino e una birra. Se i PG la comprano, Nicolino chiede di non dire a nessuno da dove viene: se il Magister Celino lo scopre, lo caccia.",
+     "dopo": "Una pianta delle cantine sotto Lucente Anna: vantaggio a orientarsi nella Città Sepolta.",
+     "rilancio": "Nicolino tiene il rotolo stretto. Che cosa fate?",
+     "daqui": [],
+     "pe": 100
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "lupe_dadi",
+   "kind": "stanza",
+   "title": "La stanza dei dadi",
+   "legacyPosition": {
+    "x": 1100,
+    "y": 520
+   },
+   "text": "Una stanza di dietro, separata da un tramezzo di legno. Un tavolo solo, coi dadi d’osso, e quattro giovani della Guardia senza tabarro che giocano la paga.",
+   "gm": "Le guardie, se vincono, parlano: dei carri notturni, delle armature nuove «che non fanno rumore».",
+   "breve": "I dadi e le guardie senza tabarro.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "lupe_botola",
+   "kind": "dettaglio",
+   "title": "La botola della cantina",
+   "legacyPosition": {
+    "x": 1180,
+    "y": 760
+   },
+   "text": "Dietro il banco della stanza di fondo, una botola con un anello di ferro. Sotto, le botti.",
+   "gm": "La cantina è piccola e chiusa: niente cunicoli qui. Buona per nascondersi durante una retata.",
+   "breve": "La botola delle botti.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "lupe_vicolo",
+   "kind": "porta",
+   "title": "La porta sul vicolo",
+   "legacyPosition": {
+    "x": 170,
+    "y": 600
+   },
+   "text": "Una porta stretta, a sinistra, con tre gradini che salgono in un vicolo buio.",
+   "gm": "Da qui si scappa quando arriva la ronda.",
+   "breve": "La porta per scappare.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": [
+  {
+   "id": "lu_lupe",
+   "nome": "Lu Lupe",
+   "short": "LL",
+   "kind": "alleato",
+   "x": 700,
+   "y": 200,
+   "gruppo": "locale",
+   "png": "png-sabatino-lupone",
+   "img": "TOKEN — Città — Sabatino Lupone, Lu Lupe.png",
+   "ritratto": "Ritratto pedina — Città — Sabatino Lupone, Lu Lupe.jpg"
+  }
+ ]
+}

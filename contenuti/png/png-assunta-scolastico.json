@@ -5,10 +5,70 @@
  "group": "Popolani e botteghe",
  "title": "Donna Assunta Scolastico",
  "sub": "capocommessa della Stanna, da cinquantasei anni ai quaderni",
- "img": null,
+ "img": "Ritratto — Donna Assunta Scolastico.jpg",
  "state": "segreto",
  "atti": [],
  "links": [],
  "pub": "",
- "gm": "Età: settantacinque. Piccola, dritta, vestito grigio col colletto bianco, occhiali con la catenella.\nCinquantasei anni dietro il bancone dei quaderni. Ha visto tre padroni e due incendi.\nSa: che la Lega dei Sensali (Melatino), padrona della Stanna, da due settimane compra tutte le corde, le lanterne e i picconi e non li mette in vendita.\nBattute: indica il cartellino. · «Cinquantasei anni.» · «Il prezzo è quello.»"
+ "gm": "Età: settantacinque. Piccola, dritta, vestito grigio col colletto bianco, occhiali con la catenella.\nCinquantasei anni dietro il bancone dei quaderni. Ha visto tre padroni e due incendi.\nSa: che la Lega dei Sensali (Melatino), padrona della Stanna, da due settimane compra tutte le corde, le lanterne e i picconi e non li mette in vendita.\nBattute: indica il cartellino. · «Cinquantasei anni.» · «Il prezzo è quello.»",
+ "dialogo": {
+  "apertura": "*Arriva da dietro i banconi senza far rumore, si mette gli occhiali appesi alla catenella.* «Desiderate. Il prezzo è sul cartellino.»",
+  "voce": "Secca, precisa, poche parole · Tic: indica il cartellino col dito, sempre; conta gli anni ad alta voce",
+  "argomenti": [
+   {
+    "tema": "Chi è",
+    "domanda": "«Da quanto lavorate qui?»",
+    "risposta": "«Cinquantasei anni ai quaderni. Ho visto passare tre padroni e due incendi. I quaderni sono sempre gli stessi.»",
+    "insistono": "«Prima qui c’era il teatro. Io ci venivo da ragazza. Adesso vendo calze dove cantavano.»",
+    "mai": "Non si lamenta mai davanti alle commesse."
+   },
+   {
+    "tema": "Il padrone",
+    "domanda": "«Di chi è la Stanna?»",
+    "risposta": "«La Lega.» *Una smorfia.* «Io servo la merce, non i padroni.»",
+    "insistono": "«I bottegai dicono che li facciamo chiudere noi. Sarà. Ma qui la gente sa quanto paga.»",
+    "mai": "Non parla male della Lega con nome e cognome."
+   },
+   {
+    "tema": "Le cose strane",
+    "domanda": "«Manca qualcosa sui banconi?»",
+    "risposta": "«Picconi. Da due settimane la Lega compra tutte le corde, tutte le lanterne e tutti i picconi che arrivano. E non li mette sui banconi.»",
+    "insistono": "«La merce deve stare sui banconi. Quella va giù da un portone dei Melatino, a Lucente Anna.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "«I carri li carica di sera un garzone dei sensali. Vanno verso il magazzino del sale, sotto la Torre Bruciata.»",
+     "no": "*Indica il cartellino.*"
+    },
+    "mai": "Non dà la merce senza pagare, a nessuno."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Non si muove. «Cinquantasei anni. Ho visto di peggio.» E chiama la guardia dalla porta.",
+   "soldi": "«Il prezzo è quello.» Rifiuta la mancia.",
+   "lusinga": "Si raddrizza ancora di più. Quasi sorride."
+  },
+  "battute": [
+   "«Il prezzo è quello.»",
+   "«Cinquantasei anni.»",
+   "«Non si tocca se non si compra. Si tocca lo stesso. Va be’.»"
+  ],
+  "uscita": {
+   "frase": "«Avanti un altro.»",
+   "dopo": "Se i personaggi hanno comprato senza contrattare, la prossima volta Donna Assunta tiene da parte per loro quello che serve.",
+   "aggancio": "«Se cercate picconi, chiedete ai Melatino. Li hanno tutti loro.»"
+  },
+  "ottenuto": [
+   {
+    "info": "La Lega compra tutte le corde, le lanterne e i picconi della città.",
+    "via": "gratis"
+   },
+   {
+    "info": "La merce va al magazzino del sale, sotto la Torre Bruciata.",
+    "via": "prova"
+   }
+  ]
+ }
 }

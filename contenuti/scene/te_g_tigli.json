@@ -1,0 +1,168 @@
+{
+ "id": "te_g_tigli",
+ "nome": "Lucente Giorgio — i Tigli",
+ "menu": "Lucente Giorgio — i Tigli",
+ "citta": "Teramum",
+ "ordine": 9.24,
+ "mappa": {
+  "img": "PDI — Teramum — I Tigli.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "Da Piazza Garibaldi parte un viale largo, lastricato, con due file di tigli potati tutti alla stessa altezza, come soldati. Fra un albero e l’altro, busti di pietra di teramani illustri, col naso consumato dalle mani dei ragazzi. Sotto gli alberi, banchetti e tavoli di osteria.\n\nDietro i tigli, palazzi con i portoni chiusi e le finestre alte, ognuno con la sua torre, ogni torre alzata per superare quella del vicino. Uno è di pietra ancora bianca, nuovo, con lo stemma troppo grande; davanti, i servitori scaricano da un carro sedie, lanterne e casse di vino.\n\nL’odore dei tigli copre tutto, anche la polvere della piazza della fiera. Il rumore si abbassa di colpo: niente carri, niente martelli. Si sentono i passi, le gonne, un liuto da un cortile, e una parola sola che gira da un tavolo all’altro: la Crociata.",
+  "img": "PDI — Teramum — I Tigli.jpg",
+  "note": "Il viale del passeggio dei signori, accanto a Piazza Garibaldi: i palazzi dei Malavolta e dei Thaulero. Oggi i Thaulero danno una festa (inviti in carta dorata). Si legge il Consiglio dai saluti. In fondo, in via Delfico, la Biblioteca e Lu Lupe Bianche; sotto, la scalinata dello Shakidù."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "tigli_viale",
+   "kind": "scena",
+   "title": "Il viale",
+   "legacyPosition": {
+    "x": 900,
+    "y": 820
+   },
+   "text": "Da Piazza Garibaldi parte un viale largo, lastricato, con due file di tigli potati tutti alla stessa altezza, come soldati. Fra un albero e l’altro, busti di pietra di teramani illustri, col naso consumato dalle mani dei ragazzi. Sotto gli alberi, banchetti e tavoli di osteria.\n\nDietro i tigli, palazzi con i portoni chiusi e le finestre alte, ognuno con la sua torre, ogni torre alzata per superare quella del vicino. Uno è di pietra ancora bianca, nuovo, con lo stemma troppo grande; davanti, i servitori scaricano da un carro sedie, lanterne e casse di vino.\n\nL’odore dei tigli copre tutto, anche la polvere della piazza della fiera. Il rumore si abbassa di colpo: niente carri, niente martelli. Si sentono i passi, le gonne, un liuto da un cortile, e una parola sola che gira da un tavolo all’altro: la Crociata.\n\nLe persone passeggiano piano, a coppie, e si salutano con inchini misurati al dito.\n\nPoco più in là, dove comincia via Delfico, si vede un palazzo che non è finito: impalcature di legno, un’ala senza tetto, gente con i libri sotto il braccio che entra ed esce.",
+   "gm": "Per la voce «Teramum» i Tigli sono un viale del passeggio vicino a Piazza Garibaldi, non un rione, coi busti dei teramani illustri, i banchetti e i tavoli delle osterie. I palazzi delle casate sul viale vengono dalle schede delle casate (Malavolta, Thaulero).\nOggi: Casa Thaulero dà una festa (inviti in carta dorata, musici da fuori; la vecchia nobiltà ci va per disprezzarli da vicino). Si parla solo della Crociata. Il palazzo Cerullius non è qui: sta dietro la Basilica Aurea, sugli archi dell’anfiteatro (punto «Il palazzo Cerullius»).\nSegreti: ⟦la fortuna dei Thaulero viene dal contrabbando di frammenti di Sigilli Lunari, e Iuvenza li ricatta⟧; ⟦Casa Malavolta (la Matriarca è nata de Spina) finanzia scavi nelle cripte per trovare l’Atto di Fondazione⟧; la Gilda della Presentosa è ricattata da Iuvenza. La «signora forestiera dai capelli bianchi»: Iuvenza, già in città sotto altro nome.",
+   "breve": "Il viale del passeggio dei signori, accanto a Piazza Garibaldi: le Casate, le loro feste, i loro creditori. Si legge il Consiglio dai saluti; si può ottenere un invito alla festa dei Thaulero. Qui ci sono i palazzi dei Malavolta e dei Thaulero; a due passi, in via Delfico, la Biblioteca Incompiuta.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "passeggio",
+     "tipo": "dettaglio",
+     "titolo": "Leggere il passeggio",
+     "parte": "indizio",
+     "seme": "Le persone passeggiano piano, a coppie, e si salutano con inchini misurati al dito.",
+     "innesco": "Qualcuno si ferma a osservare chi saluta chi.",
+     "prove": [
+      {
+       "id": "passeggio",
+       "abilita": [
+        "Intuizione"
+       ],
+       "cd": 14,
+       "gruppo": "migliore",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Inchini, sorrisi, ventagli. Sembra tutto cordiale."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "max": 18,
+         "leggi": "Chi saluta chi è una mappa del Consiglio. Un giovane vestito d’oro, con un’ape ricamata sul petto, saluta tutti, e nessuno gli risponde. I servitori in tabarro grigio con la torre e il lupo e quelli vestiti di nero col chiodo sul petto si fermano insieme, ogni volta che si incrociano, e parlano fitto."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "E tutti, anche quelli che non si salutano fra loro, si inchinano profondamente davanti a un portone: quello di un palazzo appena ridipinto, con le finestre chiuse e un odore dolce che arriva fino alla strada. Lillà."
+        }
+       ]
+      }
+     ],
+     "dopo": "Grazianus e Chiodi sono d’accordo (segreto: il colpo di stato). I Thaulero sono disprezzati. Il palazzo col lillà è quello della signora forestiera.",
+     "rilancio": "Il liuto smette. Qualcuno vi ha notati. Che cosa fate?",
+     "daqui": [
+      "voci",
+      "tigli_festa"
+     ]
+    },
+    {
+     "id": "voci",
+     "tipo": "dettaglio",
+     "titolo": "Voci dei Tigli",
+     "parte": "evento",
+     "innesco": "Parlano con un servitore, un maestro di casa, una dama al caffè.",
+     "leggi": "Tira un d6, o leggi quella che ti serve.\n\n1. «I Thaulero pagano le feste con soldi che puzzano di mare.»\n2. «La Matriarca Malavolta non esce più dal palazzo. Dicono che scavi in cantina.»\n3. «La Maestra della Presentosa lavora di notte e non parla con nessuno. Impazzita, dicono.»\n4. «I Savini hanno smesso di costruire la Biblioteca cent’anni fa. Perché? Chiedetelo a loro.»\n5. «Lu Reggente e l’Arciflamine nen se saluta cchiù.»\n6. «C’è un erede. Nessuno dice di chi.»",
+     "note": "Un bicchiere seduti ai tavoli delle osterie del viale costa 8 quattrini: il prezzo per stare seduti ad ascoltare.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [
+      "tigli_festa"
+     ]
+    }
+   ],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "tigli_festa",
+   "kind": "persona",
+   "title": "Il palazzo dei Thaulero",
+   "legacyPosition": {
+    "x": 1450,
+    "y": 520
+   },
+   "text": "Dietro i tigli, palazzi con i portoni chiusi e le finestre alte, ognuno con la sua torre, ogni torre alzata per superare quella del vicino. Uno è di pietra ancora bianca, nuovo, con lo stemma troppo grande; davanti, i servitori scaricano da un carro sedie, lanterne e casse di vino.",
+   "gm": "Casa Thaulero, i nuovi ricchi: tre api d’oro su azzurro. La festa di stasera: musici da fuori, la vecchia nobiltà ci va per disprezzarli da vicino.",
+   "breve": "Lo stemma troppo grande e i servitori col carro.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "festa",
+     "tipo": "dettaglio",
+     "titolo": "La festa dei Thaulero",
+     "parte": "evento",
+     "innesco": "Chiedono di essere invitati, o incontrano l’araldo dei Thaulero.",
+     "leggi": "Un araldo in livrea d’oro e azzurro, con tre api d’oro sul petto, passa di portone in portone con un cestino di biglietti dorati. Vi vede. Si ferma. Vi guarda le scarpe, poi le armi, poi le facce.",
+     "note": "CD 12 se si presentano come «gli eroi di Julia Nova» e c’è un nobile fra loro (i Thaulero cercano legittimità). La festa è una scena possibile: lì c’è mezzo Consiglio, e la signora forestiera. Il sigillo dei Thaulero si ottiene lì.",
+     "prove": [
+      {
+       "id": "festa",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "L’araldo vi guarda le scarpe e passa oltre."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "leggi": "Un invito in carta dorata, a nome vostro. «Il Dominus Ottone Thaulero sarà felice di vedere da vicino gli eroi di Julia Nova.» Domani sera."
+        }
+       ]
+      }
+     ],
+     "dopo": "Un invito dorato: la porta di servizio per il Consiglio.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [],
+     "pe": 150,
+     "bottino": [
+      {
+       "n": "Invito dorato di Casa Thaulero",
+       "q": 1,
+       "cat": "Missione",
+       "peso": "—",
+       "valore": "—",
+       "stats": "",
+       "desc": "Carta pesante, bordo d’oro, tre api in rilievo. «Il Dominus Ottone Thaulero invita gli eroi di Julia Nova a onorare la sua casa.» Profuma di miele.",
+       "a": "crociata"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "pedine": []
+}

@@ -2,7 +2,7 @@
  "id": "te-rione-san-giorgio",
  "tipo": "luogo",
  "titolo": "1. Il Lucente Giorgio",
- "sottotitolo": "« Lu Còllë de lu Potérë » e la Terranova — la Basilica, le piazze, il Corso, Piazza Garibaldi",
+ "sottotitolo": "« Lu Cìllë de lu Potérë » e la Terranova — la Basilica, il Palazzo, il Corso, Piazza Garibaldi e la Rocca",
  "citta": "teramum",
  "gruppo": "1. Il Lucente Giorgio",
  "livello": "quartiere",
@@ -13,11 +13,16 @@
  "compendio": true,
  "scheda": {
   "Zona": "1",
-  "Nome in dialetto": "Lu Còllë de lu Potérë",
-  "Posizione": "la metà ovest della città: dalla Basilica Aurea e dalle sue due piazze, lungo il Corso, fino a Piazza Garibaldi e ai Tigli",
-  "Atmosfera": "campane, travertino e oro, guardie a ogni angolo",
-  "Luoghi": "Basilica Aurea · Piazza del Mercato e Palazzo Ducale · Piazza Grande e Arco di Monsignore · il Tribunale di Casa Chiodi · il Corso · Piazza Garibaldi e la Rocca dei Grazianus · i Tigli · il giardino del Duca · il solario del Lucente Agostino · la Biblioteca Incompiuta dei Savini",
-  "Gonfalone": "bianco e rosso, col drago alato"
+  "Nome in dialetto": "Lu Cìllë de lu Potérë",
+  "Altro nome": "la Terranova, la parte nuova della città",
+  "Gonfalone": "bianco e rosso, col drago alato",
+  "Posizione": "la metà ovest della città: dalla Basilica Aurea e dalle sue due piazze, lungo il Corso, fino a Piazza Garibaldi, ai Tigli e al giardino del Duca",
+  "Porte": "la Porta del Lucente Giorgio, a ovest, verso la montagna · Porta Due di Coppe, accanto alla Rocca, la porta della Guardia",
+  "Chi conta": "il Consiglio Reggente (Palazzo Ducale) · l’Arciflamine (Basilica e palazzo dell’Arco) · Casa Grazianus e la Guardia Ducale (la Rocca) · Casa Chiodi (il Tribunale) · Casa Savini (la Biblioteca) · Casa Thaulero e Casa Malavolta (i Tigli)",
+  "Gente": "notai, scrivani, servitori dei palazzi, bottegai del Corso, guardie, supplicanti, studenti; la sera i ragazzi della Compagnia dei Diavoli",
+  "Atmosfera": "campane, travertino e oro, guardie a ogni angolo; il sabato la calata sul Corso",
+  "Lucente": "il Lucente Giorgio, col drago alato",
+  "Luoghi": "1. La Piazza del Mercato · 2. Il Palazzo Ducale · 3. La Basilica Aurea · 4. Il palazzo dell’Arciflamine e l’Arco di Monsignore · 5. La Piazza Grande e la Bottega Grande · 6. La barberia di Mastro Remo · 7. Il Corso · 8. La Stanna · 9. La spezieria del Ceraso · 10. La Biblioteca Incompiuta · 11. Lu Lupe Bianche · 12. Il solario del Lucente Agostino · 13. Piazza Garibaldi · 14. La Rocca dei Grazianus · 15. Porta Due di Coppe · 16. I Tigli · 17. Lu Shakidù · 18. Il giardino del Duca · 19. Da Mario · 20. La Porta del Lucente Giorgio"
  },
  "pub": [
   {
@@ -26,21 +31,41 @@
   },
   {
    "t": "Entrando",
-   "txt": "Le campane della Basilica qui non si sentono: si portano addosso. Ogni rintocco passa nel selciato e sale per le gambe.\nA ogni imbocco di strada c’è un posto della Guardia Ducale: elmi lucidi, alabarde, lo sguardo di chi conta i forestieri. Sui tabarri grigi, una torre e un lupo: i colori di Casa Grazianus."
+   "txt": "Le campane della Basilica qui non si sentono: si portano addosso. Ogni rintocco passa nel selciato e sale per le gambe.\nA ogni imbocco di strada c’è un posto della Guardia Ducale: elmi lucidi, alabarde, lo sguardo di chi conta i forestieri. Sui tabarri grigi, una torre e un lupo: i colori di Casa Grazianus.\nDalla Piazza Grande il Corso scende dritto verso ovest fino alla luce larga di Piazza Garibaldi: la Rocca, i tigli del passeggio, il giardino del Duca."
   },
   {
    "t": "Cosa si vede subito",
    "txt": "• Code di supplicanti davanti ai portoni, ognuno con un foglio in mano e l’aria di chi aspetta da giorni.\n• Notai e scrivani che parlano fra loro in Aureo Antico, e passano al dialetto solo per insultarsi.\n• Sopra il portone del Tribunale, accanto al Palazzo, è piantato un chiodo di ferro enorme.\n• Nel primo pomeriggio la piazza finisce già in ombra: il Gigante Dormiente si mangia il sole. Qui non si vedono tramonti.\n• Alla base di molti palazzi la pietra cambia: sopra chiara e squadrata, sotto grigia, più vecchia, a blocchi enormi."
   },
   {
-   "t": "Il Corso e Piazza Garibaldi",
-   "txt": "Dalla Piazza Grande il Corso scende dritto verso ovest, fra palazzi con le botteghe al piano terra e i portoni chiusi delle Casate. Ogni tanto si apre un largo, o un vicolo che porta un nome da mercato: della Verdura, del Mercato, della Banca. In fondo, la luce si allarga di colpo su Piazza Garibaldi: la Rocca dei Grazianus col suo recinto di mura, Porta Due di Coppe, i tigli del viale del passeggio."
+   "t": "La storia",
+   "txt": "Quando i cavalieri del nord bruciarono la cattedrale vecchia, al Lucente Leonardo, la città si spostò a ovest. La Basilica Aurea fu costruita con le pietre dei teatri antichi, e attorno alle sue due piazze crebbe la Terranova: palazzi di travertino, torri delle Casate, il Corso dritto fino alla piazza della fiera.\nSulla Piazza del Mercato i Duchi alzarono il loro palazzo, mangiandosi le mura vecchie. All’altro capo del Corso Casa Grazianus costruì la Rocca, che è anche la caserma della Guardia. In mezzo, i bottegai del Corso, i notai, gli scrivani: la città che decide.\nOggi il Duca non c’è più a decidere: siede il Consiglio Reggente, e il drappo nero sulla torre del Palazzo dice quando siede a porte chiuse."
+  },
+  {
+   "t": "La gente",
+   "txt": "Notai con la penna dietro l’orecchio, scrivani, servitori in livrea, bottegai che chiudono uno dopo l’altro, guardie dappertutto. La mattina i supplicanti, la sera i ragazzi. Il sabato pomeriggio tutta Teramum fa la calata sul Corso: su e giù, a passo lento, a guardarsi.\nI vecchi del rione si sentono la città vera, «ché qui c’è il Duca e la Basilica»; quelli del Lucente Leonardo rispondono che la città è nata da loro."
+  },
+  {
+   "t": "Le fazioni",
+   "txt": "· [[Il Consiglio Reggente e le Otto Casate]]. Siede nel Palazzo Ducale, sulla Piazza del Mercato.\n· [[Casa Mazzarelli]]. Il Reggente: il Palazzo è casa loro.\n· [[Casa Grazianus]]. La Rocca su Piazza Garibaldi e la Guardia Ducale; la Cancelleria della Spada dà il sigillo della casata.\n· [[Casa Chiodi]]. Il Tribunale col chiodo sopra il portone, accanto al Palazzo.\n· [[Casa Impaloni]]. L’Arciflamine, la Basilica e il palazzo dell’Arco.\n· [[Casa Savini]]. La Biblioteca Incompiuta, in via Delfico.\n· [[Casa Thaulero]] e [[Casa Malavolta]]. I palazzi dei Tigli: i nuovi ricchi e la nobiltà vecchia.\n· [[Casa Melatino e la Lega dei Sensali]]. I sensali sotto i portici del mercato; la Stanna è loro.\n· La Compagnia dei Diavoli. I giovani del Palio, col diavolo rosso sul petto: mangiano Da Mario e ballano allo Shakidù."
+  },
+  {
+   "t": "I luoghi",
+   "txt": "· 1. La Piazza del Mercato. Davanti alla facciata della Basilica: banchi, sensali, la fontana dei due leoni.\n· 2. [[1. Palazzo Ducale]]. Il Consiglio Reggente e la Cancelleria dei Sigilli.\n· 3. [[2. La Basilica Aurea]]. Il solario grande, col paliotto d’oro e la campana Aprutina.\n· 4. Il palazzo dell’Arciflamine e l’Arco di Monsignore. Un arco coperto unisce la Basilica al palazzo dell’Arciflamine.\n· 5. La Piazza Grande e la Bottega Grande. Il fianco della Basilica, il caffè dei signori e i portici di Fumo sbarrati.\n· 6. La barberia di Mastro Remo. In via dell’Arco: una barba, una notizia.\n· 7. Il Corso. La strada dritta dei palazzi e della calata del sabato.\n· 8. La Stanna. Il fondaco dei prezzi fissi, al posto del teatro vecchio.\n· 9. La spezieria del Ceraso. Pozioni, Genziana e Centerba.\n· 10. [[4. Biblioteca Incompiuta dei Savini]]. In via Delfico, mai finita.\n· 11. Lu Lupe Bianche. La birreria dietro il portone verde.\n· 12. Il solario del Lucente Agostino. In cima alla città: la scuola dei votati.\n· 13. Piazza Garibaldi. La piazza della fiera, col sergente sul piedistallo.\n· 14. La Rocca dei Grazianus. La fortezza della Guardia.\n· 15. Porta Due di Coppe. La porta piccola accanto alla Rocca.\n· 16. [[I Tigli]]. Il viale del passeggio dei signori.\n· 17. Lu Shakidù. La sala da ballo in cantina.\n· 18. Il giardino del Duca. Il laghetto, i cigni e la tigre in gabbia.\n· 19. Da Mario. La pizza al taglio.\n· 20. La Porta del Lucente Giorgio. La porta dell’ovest, verso la montagna."
+  },
+  {
+   "t": "Dove dormire e mangiare",
+   "txt": "· Da Mario: la pizza al taglio, in piedi sulla strada. Un quadretto un quattrino.\n· La Bottega Grande: paste, vino caldo e l’infuso nero di Saladax, per chi vuole farsi vedere.\n· Lu Lupe Bianche: birra scura, pane e salsiccia. «Qui si beve. Si dorme a casa.»\n· Per dormire, i forestieri scendono alla Lunaria a Bitetto, a [[Lu Cane Bianche]]: nel rione dei palazzi le stanze si affittano solo a chi ha una lettera."
+  },
+  {
+   "t": "Cosa sanno i personaggi",
+   "txt": "Ser Eutichio ha dato alla Crociata un’istanza che ha bisogno dei sigilli delle Casate: qui ci sono gli uffici. Il padre di Maximus, lo Stratega Lucius Grazianus, abita alla Rocca.La famiglia di Alessandros e Vicarus ha il palazzo dietro la Basilica, sugli archi dell’anfiteatro."
   }
  ],
  "gm": [
   {
    "t": "Cosa sta succedendo oggi",
-   "txt": "• Il Colle è in allarme per la notizia della Crociata: raddoppiati i posti di guardia, perquisite le borse dei forestieri.\n• Davanti al Palazzo la coda dei supplicanti non si muove: il Consiglio siede, ma non decide.\n• Ogni Casata ha mandato qualcuno ad ascoltare nelle anticamere: servitori, scrivani, cugini poveri."
+   "txt": "• Il Colle è in allarme per la notizia della Crociata: raddoppiati i posti di guardia, perquisite le borse dei forestieri.\n• Davanti al Palazzo la coda dei supplicanti non si muove: il Consiglio siede, ma non decide (drappo nero sulla torre).\n• Ogni Casata ha mandato qualcuno ad ascoltare nelle anticamere: servitori, scrivani, cugini poveri.\n• Ai Tigli Casa Thaulero dà una festa: inviti in carta dorata.\n• Di notte, dalla Rocca escono carri senza registro verso Lucente Anna (il sergente Marcozzi ne ha contati diciotto)."
   },
   {
    "t": "Voci e dicerie (d6)",
@@ -48,11 +73,19 @@
   },
   {
    "t": "Segreti",
-   "txt": "• La piazza del potere (il «Forum Ducale» delle carte vecchie), nell’Era della Pietra Sovrapposta, fu costruita sopra l’antico cerchio rituale dei Pretuziani.\n• Iuvenza a Pietraluna ha scritto: «Quando il porto brucia, il fumo coprirà la mia ascesa al Colle.» Il Colle è questo: qui vuole farsi nominare Reggente.\n• Nel Consiglio c’è un traditore incappucciato con accento aristocratico di Teramum (Cristallo di Memoria, Atto XI)."
+   "txt": "• La piazza del potere (il «Forum Ducale» delle carte vecchie), nell’Era della Pietra Sovrapposta, fu costruita sopra l’antico cerchio rituale dei Pretuziani.\n• Iuvenza a Pietraluna ha scritto: «Quando il porto brucia, il fumo coprirà la mia ascesa al Colle.» Il Colle è questo: qui vuole farsi nominare Reggente.\n• Nel Consiglio c’è un traditore incappucciato con accento aristocratico di Teramum (Cristallo di Memoria, Atto XI).\n• Le armature nuove della Guardia, nelle casse sigillate dell’armeria della Rocca, vengono dalla Forgia del Gigante: metallo dei Forgiati.\n• Sotto i portici di Fumo una scala murata scende verso la Città Sepolta; i Malavolta scavano sotto i Tigli e l’anfiteatro per trovare l’Atto di Fondazione."
   },
   {
-   "t": "Note del master — le cose decise",
-   "txt": "• Il Forum Ducale delle carte vecchie è la Piazza del Mercato, fra il Palazzo Ducale e la Basilica Aurea.\n• Il Tribunale di Casa Chiodi sta accanto al Palazzo Ducale; la Camera dei Cavillatori è nello stesso palazzo.\n• Il «Ponte a Due Archi» delle carte di Pietraluna (Atto IX) è il ponte sul Tordinum davanti alla Porta Melatina; quello davanti alla Porta della Madre ha tre archi.\n• Teramum ha circa 55.000 abitanti; la Guardia Ducale circa 600 uomini in servizio e 1.500 di riserva: tremila, se Grazianus richiama tutti.\n• La città non ha gole: è una lingua di terra alta fra due fiumi. La Rocca dei Grazianus sta su Piazza Garibaldi, all’altro capo della città.\n• I vecchi contano quattro rioni (Lucente Giorgio, Lucente Leonardo, Spirito Lucente, Lunaria a Bitetto), senza confini precisi; Basilica e Palazzo stanno nel Lucente Giorgio.\n• Il drappo nero sulla torre del Palazzo Ducale vuol dire che il Consiglio siede a porte chiuse (scheda di Casa Mazzarelli); non è un lutto."
+   "t": "Agganci",
+   "txt": "• La corsa ai sigilli (istanza di Ser Eutichio): Cancelleria dei Sigilli al Palazzo, Cancelleria della Spada alla Rocca, Tribunale dei Chiodi, Biblioteca dei Savini.\n• Il sergente Marcozzi è un testimone onesto dei carri notturni della Rocca.\n• Za’ Maria e la tigre Regina sentono passare di notte uomini «come pietre» verso la Porta del Lucente Giorgio.\n• Tittì lu Diavele e la Compagnia dei Diavoli possono diventare braccia e occhi della Crociata.\n• Mastro Aurelio, portato alla festa dei Thaulero, è un diversivo perfetto.\n• Ser Adriano Remigio riferisce ai Thaulero tutto quello che si dice alla Bottega Grande."
+  },
+  {
+   "t": "Chi si incontra",
+   "txt": "Gerbino il sensale (Piazza del Mercato) · Ser Adriano Remigio (la Bottega Grande) · Mastro Remo lu Varvìre (la barberia) · Donna Assunta Scolastico (la Stanna) · Ser Ottavio Ceraso (la spezieria) · Lu Lupe (Lu Lupe Bianche) · il sergente Marcozzi (Piazza Garibaldi) · Tobia lo stalliere e Ser Ottaviano Rapino (la Rocca) · Mastro Mario e Tittì lu Diavele (Da Mario) · Mastro Aurelio (Lu Shakidù) · Za’ Maria la Gattara (il giardino del Duca). Tutti hanno il loro dialogo nella scheda."
+  },
+  {
+   "t": "Per il master",
+   "txt": "• Questa voce è il Lucente Giorgio (nella Teramo vera San Giorgio, detto Terranova): Duomo e Piazza Martiri, Piazza Orsini col Comune, l’Arco di Monsignore, il Corso San Giorgio, Piazza Garibaldi, la Villa comunale, viale Bovio. Il palazzo Cerullius e l’anfiteatro stanno al confine con lo Spirito Lucente; la Porta delle Recluse sta sotto la Casa dei Folli (Lucente Leonardo).\n• Scene: Palazzo Ducale, Basilica e Biblioteca hanno le loro mappe; la Rocca e Lu Lupe Bianche sono mappe da battaglia; la Piazza del Mercato, la Piazza Grande, Piazza Garibaldi, i Tigli, il giardino e Da Mario sono scene illustrate con le pedine; gli altri luoghi sono punti sulla mappa del quartiere.\n• Il Forum Ducale delle carte vecchie è la Piazza del Mercato, fra il Palazzo Ducale e la Basilica Aurea.\n• Il Tribunale di Casa Chiodi sta accanto al Palazzo Ducale; la Camera dei Cavillatori è nello stesso palazzo.\n• Il «Ponte a Due Archi» delle carte di Pietraluna (Atto IX) è il ponte sul Tordinum davanti alla Porta Melatina; quello davanti alla Porta della Madre ha tre archi.\n• Teramum ha circa 55.000 abitanti; la Guardia Ducale circa 600 uomini in servizio e 1.500 di riserva: tremila, se Grazianus richiama tutti.\n• La città non ha gole: è una lingua di terra alta fra due fiumi. La Rocca dei Grazianus sta su Piazza Garibaldi, all’altro capo della città.\n• I vecchi contano quattro rioni (Lucente Giorgio, Lucente Leonardo, Spirito Lucente, Lunaria a Bitetto), senza confini precisi; Basilica e Palazzo stanno nel Lucente Giorgio.\n• Il drappo nero sulla torre del Palazzo Ducale vuol dire che il Consiglio siede a porte chiuse (scheda di Casa Mazzarelli); non è un lutto."
   }
  ],
  "prove": [
@@ -72,5 +105,6 @@
   }
  ],
  "links": [],
- "tavolo": "teramum"
+ "tavolo": "teramum",
+ "mappa": "Mappa — Teramum — Il Lucente Giorgio (ridipinta).jpg"
 }

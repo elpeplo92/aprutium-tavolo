@@ -1,0 +1,110 @@
+{
+ "id": "te_g_garibaldi",
+ "nome": "Lucente Giorgio — Piazza Garibaldi",
+ "menu": "Lucente Giorgio — Piazza Garibaldi",
+ "citta": "Teramum",
+ "ordine": 9.23,
+ "mappa": {
+  "img": "Luogo — Teramum — Piazza Garibaldi e la Rocca.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "In mezzo alla piazza della fiera, dove si incrociano il Corso, il viale dei Tigli e la strada della Rocca, c’è un piedistallo di legno dipinto a strisce rosse e bianche. Sopra, un sergente della Guardia dirige il traffico. Carri, muli, pecore, portantine, ragazzi che corrono: tutto passa sotto il suo braccio teso e il suo fischietto d’osso. Un fischio corto: fermi. Due: avanti. Tre: guai.\n\nLa Rocca sta all’altro capo della città, dove finisce il Corso: su Piazza Garibaldi, la piazza larga della fiera, dentro un recinto di mura tutto suo. Non ha niente di bello. Mura di ciottoli e mattone come quelle della città, ma più grosse; torri quadrate, feritoie strette, una guardia che passa in cima.",
+  "img": "Luogo — Teramum — Piazza Garibaldi e la Rocca.jpg",
+  "note": "La piazza della fiera all’altro capo della città, dove finisce il Corso: la Rocca dei Grazianus (caserma della Guardia Ducale), Porta Due di Coppe, i Tigli. In mezzo il sergente Marcozzi «Punti Perfetti» multa tutto e tutti: ha contato diciotto carri notturni della Rocca senza registro."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "gari_piazza",
+   "kind": "scena",
+   "title": "La piazza della fiera",
+   "legacyPosition": {
+    "x": 760,
+    "y": 860
+   },
+   "text": "In mezzo alla piazza della fiera, dove si incrociano il Corso, il viale dei Tigli e la strada della Rocca, c’è un piedistallo di legno dipinto a strisce rosse e bianche. Sopra, un sergente della Guardia dirige il traffico. Carri, muli, pecore, portantine, ragazzi che corrono: tutto passa sotto il suo braccio teso e il suo fischietto d’osso. Un fischio corto: fermi. Due: avanti. Tre: guai.\n\nHa il tabarro grigio stirato con la riga, gli stivali lucidi come specchi, il cappello con la piuma messa dritta. In mano, una tavoletta di cera e uno stilo. Non si muove un capello.\n\nIntorno a lui la piazza fa come vuole: i carrettieri gridano, le pecore passano dove capita, un mulo si ferma a mangiare il fieno dal carro davanti. Ma vicino al piedistallo tutti rallentano, e chi ha un carro si raddrizza la schiena.\n\nUn carrettiere si è fermato un passo troppo avanti. Il sergente fischia, scende dal piedistallo con calma, un gradino alla volta, e comincia a scrivere sulla tavoletta. Non alza la voce. Chiede il nome, il carico, da dove viene. Il carrettiere si mette le mani nei capelli. La gente intorno guarda e non ride: a ognuno è già toccato.\n\nPoi il sergente alza gli occhi dalla tavoletta e guarda voi. Le vostre armi. I vostri cavalli, se li avete. Conta.",
+   "gm": "Nella Teramo vera, «Marco il Vigile» (vigile dal 1993 al 2025, terribile fama in tutta la provincia per le multe, dirigeva il traffico in piazza Garibaldi, in prima fila alle cerimonie; soprannomi «Punti Perfetti», «Ciccio Colonna»; frase: «E chi se n’arcord?»). Qui: il Sergente Marcozzi «Punti Perfetti» (scheda PNG), della Guardia Ducale, la multa fatta uomo.\nA cosa serve al tavolo: un incontro comico e un pericolo vero. Se il gruppo passa dalla piazza con carri, cavalli, armi in vista o lo stendardo, Marcozzi li ferma e li multa (1 grosso per il cavallo «fuori fila», 2 per lo stendardo «non registrato», 5 per l’arma lunga senza fodero). Non si corrompe: è l’unico onesto della Guardia, ed è per questo che lo tengono sulla piazza a fare multe e non alla Rocca.\nSe gli chiedono qualcosa che non vuole dire, o qualcuno che non vuole ricordare: «E chi se n’arcord?»\nAggancio forte: Marcozzi è onesto e vede tutto quello che passa dalla piazza della Rocca. Sa che da due settimane escono di notte carri dalla Rocca senza registro, e la cosa lo fa impazzire (non per la congiura: per il registro). Se i PG lo convincono che stanno cercando di far rispettare le regole (Persuasione CD 15, vantaggio se rispettano una sua multa senza discutere), dà loro le ore e il numero dei carri.",
+   "breve": "Sulla piazza della fiera, il Sergente Marcozzi «Punti Perfetti» multa tutto e tutti e non si fa corrompere. «E chi se n’arcord?» Ha contato diciotto carri notturni della Rocca senza registro.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "dialogo_marcozzi",
+     "tipo": "dialogo",
+     "titolo": "Parlare col sergente Marcozzi",
+     "parte": "evento",
+     "innesco": "Il sergente li ferma, o loro si fermano da lui.",
+     "note": "CHI SEI? — «Sergente Marcozzi, Guardia Ducale, piazza della fiera, turno di giorno, turno di sera, turno di festa.» Alza gli occhi dalla tavoletta. «E voi siete in multa.»\n\nPERCHÉ? — Legge: «Cavallo fuori fila. Stendardo non registrato. Arma lunga senza fodero.» Alza lo stilo. «E quello lì ha guardato male il piedistallo.»\n\nSI PUÒ AGGIUSTARE? (soldi) — Diventa rosso. «Un altro grosso. Tentata corruzione di pubblico ufficiale.» Scrive.\n\nCHI È IL CAPITANO TAL DEI TALI? / VI RICORDATE DI…? — «E chi se n’arcord?»\n\nI CARRI DI NOTTE — Se li ha presi in simpatia (hanno pagato la multa senza discutere): si guarda intorno. «Escono dalla Rocca. Tre, quattro a notte, dopo la campana. Senza registro.» Batte lo stilo sulla tavoletta. «Senza. Registro. Io li ho segnati lo stesso. Diciotto carri in quindici notti. Verso Lucente Anna.» Pausa. «Non è affar mio dove vanno. È affar mio che non sono registrati.»\n\nBATTUTE PRONTE — «In multa.» · «E chi se n’arcord?» · «La regola è la regola, pure per lo Stratega.» · fischio, lungo.",
+     "dopo": "Marcozzi ha contato i carri notturni della Rocca verso Lucente Anna: diciotto in quindici notti. È un testimone onesto.",
+     "rilancio": "Il sergente vi tende la tavoletta da firmare. Che cosa fate?",
+     "daqui": [],
+     "png": "png-sergente-marcozzi"
+    }
+   ],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "gari_rocca",
+   "kind": "porta",
+   "title": "La Rocca dei Grazianus",
+   "legacyPosition": {
+    "x": 1350,
+    "y": 420
+   },
+   "text": "La Rocca sta all’altro capo della città, dove finisce il Corso: su Piazza Garibaldi, la piazza larga della fiera, dentro un recinto di mura tutto suo. Non ha niente di bello. Mura di ciottoli e mattone come quelle della città, ma più grosse; torri quadrate, feritoie strette, una guardia che passa in cima.\n\nSopra il portone, scolpiti nella pietra, una torre e un lupo.\n\nDavanti al portone, due guardie con il tabarro grigio e l’alabarda. Dentro il cortile, che si vede dall’arco, un via vai di uomini in tabarro: ferri dei cavalli sulle pietre, ordini gridati, un sergente che conta le teste con il dito. Nessuno cammina piano.",
+   "gm": "Canone (voce «Teramum» e scheda di Casa Grazianus): la Rocca dei Grazianus sta su Piazza Garibaldi, all’ingresso ovest, ed è anche la caserma della Guardia Ducale. Sulla piazza c’è Porta Due di Coppe, la settima porta: nessuno sa più perché si chiami così, e tutti hanno una versione. Entrare di lì è entrare in casa della Guardia. Dalla piazza partono i Tigli.\nQui abita lo Stratega Lucius Grazianus, padre di Maximus. Siede nel Consiglio Reggente, in piedi dietro il suo seggio. Ha scritto a Maximus «Non entrare stasera»: farlo apparire qui è una scelta grossa, da tenere per dopo.\nIl sigillo di Grazianus: lo appone il Cancelliere della Spada, su ordine dello Stratega. Senza l’ordine, la fila dura giorni. Con il nome giusto (Maximus), il foglio passa in cima.\nLe celle della Rocca: i forestieri armati trovati dopo il coprifuoco ci passano la notte.\nLa Cancelleria della Spada è l’ufficio dei sigilli della casata: la tiene il Cancelliere, Ser Ottaviano Rapino (scheda PNG).",
+   "breve": "La fortezza di Casa Grazianus e caserma della Guardia Ducale, su Piazza Garibaldi, con Porta Due di Coppe accanto. Qui si chiede il sigillo della Spada (la Cancelleria, porta a sinistra) e da qui partono le ronde della notte. Per Maximus è la casa di suo padre.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_g_rocca",
+   "scenaTesto": "Entra nella Rocca"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "gari_coppe",
+   "kind": "porta",
+   "title": "Porta Due di Coppe",
+   "legacyPosition": {
+    "x": 300,
+    "y": 560
+   },
+   "text": "Accanto alla Rocca, nelle mura della città, si apre una porta piccola, con una guardia per lato: la chiamano Porta Due di Coppe, e se chiedete perché, ognuno vi dà una risposta diversa. Dall’altra parte della piazza cominciano i tigli.",
+   "gm": "La settima porta: nessuno sa più perché si chiami così, e ognuno ha la sua versione (⟦una partita a carte vinta da un Grazianus; due coppe di vino per le guardie; due fontanelle che non ci sono più⟧). Entrare di lì è entrare in casa della Guardia.",
+   "breve": "La porta piccola accanto alla Rocca.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": [
+  {
+   "id": "ga_marcozzi",
+   "nome": "Sergente Marcozzi",
+   "short": "Mz",
+   "kind": "alleato",
+   "x": 900,
+   "y": 780,
+   "gruppo": "luogo",
+   "png": "png-sergente-marcozzi",
+   "img": "TOKEN — Città — Sergente Marcozzi «Punti Perfetti».png",
+   "ritratto": "Ritratto pedina — Città — Sergente Marcozzi «Punti Perfetti».jpg"
+  }
+ ]
+}

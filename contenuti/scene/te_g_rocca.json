@@ -1,0 +1,345 @@
+{
+ "id": "te_g_rocca",
+ "nome": "Lucente Giorgio — la Rocca dei Grazianus",
+ "menu": "Lucente Giorgio — la Rocca dei Grazianus",
+ "citta": "Teramum",
+ "ordine": 9.27,
+ "mappa": {
+  "img": "Battlemap — Teramum — La Rocca dei Grazianus.jpg",
+  "larghezza": 1448,
+  "altezza": 1086,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": true,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "La Rocca sta all’altro capo della città, dove finisce il Corso: su Piazza Garibaldi, la piazza larga della fiera, dentro un recinto di mura tutto suo. Non ha niente di bello. Mura di ciottoli e mattone come quelle della città, ma più grosse; torri quadrate, feritoie strette, una guardia che passa in cima.\n\nSopra il portone, scolpiti nella pietra, una torre e un lupo.\n\nDavanti al portone, due guardie con il tabarro grigio e l’alabarda. Dentro il cortile, che si vede dall’arco, un via vai di uomini in tabarro: ferri dei cavalli sulle pietre, ordini gridati, un sergente che conta le teste con il dito. Nessuno cammina piano.",
+  "img": "Battlemap — Teramum — La Rocca dei Grazianus.jpg",
+  "note": "La fortezza di Casa Grazianus e caserma della Guardia Ducale, su Piazza Garibaldi. Di giorno: la fila della Cancelleria, Tobia nel cortile, il cambio delle ronde alla campana della sera. Lo Stratega Lucius Grazianus abita qui: farlo apparire è una scelta grossa, da tenere per dopo. Se si arriva alle armi: gruppo «guardia» (sei Guardie Ducali, altre ne arrivano dalle camerate)."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "rocca_portone",
+   "kind": "porta",
+   "title": "Il portone",
+   "legacyPosition": {
+    "x": 700,
+    "y": 1000
+   },
+   "text": "Sopra il portone, scolpiti nella pietra, una torre e un lupo.",
+   "gm": "Due guardie col tabarro grigio e l’alabarda. Di giorno si entra con un motivo (la Cancelleria); di notte il portone è chiuso e la saracinesca abbassata.",
+   "breve": "La torre e il lupo sopra il portone.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "rocca_cortile",
+   "kind": "stanza",
+   "title": "Il cortile",
+   "legacyPosition": {
+    "x": 700,
+    "y": 620
+   },
+   "text": "Davanti al portone, due guardie con il tabarro grigio e l’alabarda. Dentro il cortile, che si vede dall’arco, un via vai di uomini in tabarro: ferri dei cavalli sulle pietre, ordini gridati, un sergente che conta le teste con il dito. Nessuno cammina piano.",
+   "gm": "Canone (voce «Teramum» e scheda di Casa Grazianus): la Rocca dei Grazianus sta su Piazza Garibaldi, all’ingresso ovest, ed è anche la caserma della Guardia Ducale. Sulla piazza c’è Porta Due di Coppe, la settima porta: nessuno sa più perché si chiami così, e tutti hanno una versione. Entrare di lì è entrare in casa della Guardia. Dalla piazza partono i Tigli.\nQui abita lo Stratega Lucius Grazianus, padre di Maximus. Siede nel Consiglio Reggente, in piedi dietro il suo seggio. Ha scritto a Maximus «Non entrare stasera»: farlo apparire qui è una scelta grossa, da tenere per dopo.\nIl sigillo di Grazianus: lo appone il Cancelliere della Spada, su ordine dello Stratega. Senza l’ordine, la fila dura giorni. Con il nome giusto (Maximus), il foglio passa in cima.\nLe celle della Rocca: i forestieri armati trovati dopo il coprifuoco ci passano la notte.\nLa Cancelleria della Spada è l’ufficio dei sigilli della casata: la tiene il Cancelliere, Ser Ottaviano Rapino (scheda PNG).",
+   "breve": "Uomini in tabarro, ferri dei cavalli, ordini gridati.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "nome",
+     "tipo": "dettaglio",
+     "titolo": "Maximus alla Rocca",
+     "parte": "evento",
+     "innesco": "Maximus entra nel cortile o si fa riconoscere.",
+     "leggi": "Nel cortile, un vecchio soldato che striglia un cavallo si ferma con la striglia a mezz’aria. Guarda Maximus. Guarda meglio.\n\nPoi riprende a strigliare, più piano.",
+     "note": "Il vecchio soldato è Tobia, stalliere della Rocca (scheda PNG). Ha visto crescere Maximus. Se Maximus gli parla: «Signorino. Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.» Non aggiunge altro, e torna al cavallo.",
+     "dopo": "Legame personale di Maximus con la città. Non risolve niente: apre.",
+     "rilancio": "Il vecchio striglia il cavallo e non vi guarda più. Che cosa fate?",
+     "daqui": [
+      "campana"
+     ]
+    },
+    {
+     "id": "campana",
+     "tipo": "dettaglio",
+     "titolo": "Il cambio della sera",
+     "parte": "evento",
+     "innesco": "Il gruppo è vicino alla Rocca quando viene sera.",
+     "leggi": "Dalla Basilica, in fondo al Corso, parte un rintocco lungo, grave. Lo sentite nel petto prima che nelle orecchie.\n\nNel cortile della Rocca si fa silenzio. Poi un ordine, uno solo, e le porte si aprono: escono le ronde. Sei, otto, dieci gruppi di cinque, con le lanterne già accese. Ognuno prende una strada diversa.\n\nIl portone si chiude dietro l’ultimo.",
+     "note": "È la campana della sera, l’Aprutina: il coprifuoco (vedi le note dell’introduzione). Se i PG hanno la tessera del capitano, le due guardie di scorta li riportano adesso alla Porta della Madre, all’altro capo della città: tutto il Corso a passo svelto.",
+     "dopo": "Da ora in città si gira con la lanterna e con una scusa buona.",
+     "rilancio": "Le lanterne si sparpagliano per la città. Che cosa fate?",
+     "daqui": [],
+     "immagine": "PDI — Teramum — Il cambio della sera.jpg"
+    },
+    {
+     "id": "dlg_tobia_stalliere",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Tobia",
+     "parte": "evento",
+     "png": "png-tobia-stalliere",
+     "innesco": "Qualcuno parla con Tobia.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "rocca_cancelleria",
+   "kind": "persona",
+   "title": "La Cancelleria della Spada",
+   "legacyPosition": {
+    "x": 960,
+    "y": 280
+   },
+   "text": "A sinistra del portone grande c’è una porta più piccola con una lanterna sempre accesa, e una fila di persone con un foglio in mano. La fila non si muove. Qualcuno si è portato uno sgabello.",
+   "gm": "La Cancelleria della Spada: l’ufficio dei sigilli di Casa Grazianus, tenuto da Ser Ottaviano Rapino (scheda). Senza l’ordine dello Stratega la fila dura giorni; col nome di Maximus il foglio passa in cima.",
+   "breve": "La fila con i fogli in mano.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "fila",
+     "tipo": "dettaglio",
+     "titolo": "La fila della Cancelleria",
+     "parte": "indizio",
+     "seme": "una fila di persone con un foglio in mano",
+     "innesco": "Il gruppo porta l’istanza per il sigillo di Grazianus.",
+     "leggi": "La porta piccola dà in una stanza lunga con un bancone. Dietro il bancone, tre scrivani in tabarro grigio. Davanti, una ventina di persone: mercanti, un sacerdote, due soldati con una lettera, una vedova che piange piano.\n\nSul muro, dipinta, la torre col lupo. Sotto, a lettere nere: LA TORRE E IL LUPO.\n\nUno scrivano vi guarda entrare, guarda le vostre armi, guarda il foglio che avete in mano. Si alza e sparisce da una porta interna.",
+     "note": "CD 12 se è Maximus a presentarla e si chiama Grazianus davanti al Cancelliere: è il figlio dello Stratega, e il nome pesa. Svantaggio se hanno spiegato lo stendardo alla Porta della Madre. Lo scrivano sparito dalla porta interna è andato ad avvisare qualcuno che la Crociata è alla Rocca.",
+     "prove": [
+      {
+       "id": "cancelleria",
+       "abilita": [
+        "Persuasione",
+        "Storia"
+       ],
+       "cd": 15,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 14,
+         "leggi": "«In fila, come tutti.» Il sigillo della Spada, forse, fra tre giorni. «Se lo Stratega firma.»"
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 15,
+         "max": 19,
+         "leggi": "Lo scrivano torna con un uomo più anziano, il Cancelliere. Legge l’istanza, la gira, la rilegge. «Lo Stratega la vedrà stasera.» Il foglio passa in cima al mucchio."
+        },
+        {
+         "fascia": "natural20",
+         "leggi": "Il Cancelliere legge l’istanza e, senza dire niente, prende il sigillo dal cassetto. Lo guarda. Lo rimette nel cassetto. «Domattina», dice. «Ma sarà qui. Parola della Torre.»"
+        }
+       ]
+      }
+     ],
+     "dopo": "Il sigillo della Spada, in ogni caso, non arriva oggi: arriva domattina (con 15 o più) o fra tre giorni. Decidi tu se lo Stratega lo usa per trattare.",
+     "rilancio": "Il Cancelliere vi guarda sopra l’istanza. Che cosa fate?",
+     "daqui": [
+      "rocca_cortile"
+     ],
+     "pe": 300,
+     "immagine": "PDI — Teramum — La fila della Cancelleria.jpg"
+    },
+    {
+     "id": "dlg_cancelliere_della_spada",
+     "tipo": "dialogo",
+     "titolo": "Parlare con il Cancelliere della Spada",
+     "parte": "evento",
+     "png": "png-cancelliere-della-spada",
+     "innesco": "Qualcuno parla con il Cancelliere della Spada.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "rocca_camerate",
+   "kind": "stanza",
+   "title": "Le camerate",
+   "legacyPosition": {
+    "x": 380,
+    "y": 600
+   },
+   "text": "Uno stanzone lungo col pavimento di legno, le brande in fila e le cassapanche ai piedi. Tabarri grigi appesi ai chiodi. Odore di cuoio, di sudore e di sego.",
+   "gm": "Di giorno ci dormono le ronde della notte: una ventina di uomini che si svegliano al primo rumore.",
+   "breve": "Le brande della Guardia.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "rocca_armeria",
+   "kind": "stanza",
+   "title": "L’armeria",
+   "legacyPosition": {
+    "x": 300,
+    "y": 260
+   },
+   "text": "Rastrelliere di alabarde, scudi grigi con la torre e il lupo, elmi in fila sulle mensole. In un angolo, casse chiuse con un sigillo di cera grigia.",
+   "gm": "⟦Nelle casse col sigillo grigio, armature nuove leggere che non arrugginiscono: vengono dalla Forgia del Gigante. Arcano CD 14: lo stesso metallo dei Forgiati.⟧",
+   "breve": "Alabarde, scudi e casse sigillate.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "rocca_mensa",
+   "kind": "stanza",
+   "title": "La mensa",
+   "legacyPosition": {
+    "x": 950,
+    "y": 600
+   },
+   "text": "Tavole lunghe, panche, una botte di vino annacquato. Un cuoco grasso grida contro un garzone.",
+   "gm": "Qui le guardie parlano: Intuizione o Persuasione CD 13 per sentire dei carri che escono di notte senza registro.",
+   "breve": "Le tavole della Guardia.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "rocca_celle",
+   "kind": "stanza",
+   "title": "Le celle",
+   "legacyPosition": {
+    "x": 130,
+    "y": 880
+   },
+   "text": "Nella torre d’angolo, una scala scende a tre celle con le porte di quercia e lo spioncino. Paglia, un secchio, una catena al muro.",
+   "gm": "I forestieri armati trovati dopo il coprifuoco ci passano la notte. Le chiavi le ha il sergente di guardia.",
+   "breve": "Tre celle nella torre.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "rocca_mura",
+   "kind": "dettaglio",
+   "title": "Il cammino di ronda",
+   "legacyPosition": {
+    "x": 1300,
+    "y": 560
+   },
+   "text": "Una scala di pietra sale al cammino di ronda. Da lassù si vede tutta Piazza Garibaldi, i Tigli e la strada che esce dalla Porta del Lucente Giorgio.",
+   "gm": "Da qui una sentinella vede chi entra e chi esce dalla piazza: chi aspetta i carri notturni li vede partire.",
+   "breve": "La scala per le mura.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": [
+  {
+   "id": "ro_tobia",
+   "nome": "Tobia lo stalliere",
+   "short": "To",
+   "kind": "alleato",
+   "x": 760,
+   "y": 700,
+   "gruppo": "rocca",
+   "png": "png-tobia-stalliere",
+   "img": "TOKEN — Città — Tobia, lo stalliere della Rocca.png",
+   "ritratto": "Ritratto pedina — Città — Tobia, lo stalliere della Rocca.jpg"
+  },
+  {
+   "id": "ro_rapino",
+   "nome": "Ser Ottaviano Rapino",
+   "short": "Ra",
+   "kind": "alleato",
+   "x": 960,
+   "y": 220,
+   "gruppo": "rocca",
+   "png": "png-cancelliere-della-spada",
+   "img": "TOKEN — Città — Ser Ottaviano Rapino.png",
+   "ritratto": "Ritratto pedina — Città — Ser Ottaviano Rapino.jpg"
+  },
+  {
+   "id": "rg1",
+   "nome": "Guardia Ducale",
+   "short": "G1",
+   "best": "te_guardia_ducale",
+   "x": 640,
+   "y": 940,
+   "gruppo": "guardia",
+   "tac": "Danno l’allarme col corno; in cortile combattono in fila con le alabarde."
+  },
+  {
+   "id": "rg2",
+   "nome": "Guardia Ducale",
+   "short": "G2",
+   "best": "te_guardia_ducale",
+   "x": 760,
+   "y": 940,
+   "gruppo": "guardia",
+   "tac": "Danno l’allarme col corno; in cortile combattono in fila con le alabarde."
+  },
+  {
+   "id": "rg3",
+   "nome": "Guardia Ducale",
+   "short": "G3",
+   "best": "te_guardia_ducale",
+   "x": 560,
+   "y": 560,
+   "gruppo": "guardia",
+   "tac": "Danno l’allarme col corno; in cortile combattono in fila con le alabarde."
+  },
+  {
+   "id": "rg4",
+   "nome": "Guardia Ducale",
+   "short": "G4",
+   "best": "te_guardia_ducale",
+   "x": 850,
+   "y": 560,
+   "gruppo": "guardia",
+   "tac": "Danno l’allarme col corno; in cortile combattono in fila con le alabarde."
+  },
+  {
+   "id": "rg5",
+   "nome": "Guardia Ducale",
+   "short": "G5",
+   "best": "te_guardia_ducale",
+   "x": 1300,
+   "y": 520,
+   "gruppo": "guardia",
+   "tac": "Danno l’allarme col corno; in cortile combattono in fila con le alabarde."
+  },
+  {
+   "id": "rg6",
+   "nome": "Guardia Ducale",
+   "short": "G6",
+   "best": "te_guardia_ducale",
+   "x": 130,
+   "y": 130,
+   "gruppo": "guardia",
+   "tac": "Danno l’allarme col corno; in cortile combattono in fila con le alabarde."
+  }
+ ]
+}

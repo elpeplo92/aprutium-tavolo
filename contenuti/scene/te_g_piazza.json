@@ -1,0 +1,295 @@
+{
+ "id": "te_g_piazza",
+ "nome": "Lucente Giorgio — la Piazza Grande e la Bottega Grande",
+ "menu": "Lucente Giorgio — la Piazza Grande e la Bottega Grande",
+ "citta": "Teramum",
+ "ordine": 9.22,
+ "mappa": {
+  "img": "Luogo — Teramum — La Bottega Grande e i portici di Fumo.jpg",
+  "larghezza": 1920,
+  "altezza": 1075,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 150
+ },
+ "intro": {
+  "leggi": "Dove il Corso sbuca nella Piazza Grande, sotto i portici all’angolo, c’è una bottega con quattro porte spalancate e i tavoli fuori. Sopra i tavoli, una pergola di legno enorme, piena di lanterne di vetro. La gente la chiama la Bottega Grande.\n\nSul banco di marmo, dietro un vetro, le paste: ciambelle con lo zucchero, bocconotti, sfogliatelle, neole croccanti impilate come tegole. Garzoni in grembiule bianco corrono fra i tavoli coi vassoi alti sopra la testa. Si beve vino caldo, latte di mandorla, e un infuso nero e amaro che arriva da oltre il mare e costa quanto un pranzo.",
+  "img": "Luogo — Teramum — La Bottega Grande e i portici di Fumo.jpg",
+  "note": "La Piazza Grande sul fianco della Basilica, dove finisce il Corso: posti di guardia, la coda dei supplicanti, il drappo nero sulla torre del Palazzo (il Consiglio siede a porte chiuse). Alla Bottega Grande Ser Adriano Remigio fa sedere i forestieri importanti e riferisce tutto ai Thaulero. Di fronte, i portici di Fumo sbarrati: una scala scende verso la Città Sepolta."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "piaz_piazza",
+   "kind": "scena",
+   "title": "La Piazza Grande",
+   "legacyPosition": {
+    "x": 980,
+    "y": 860
+   },
+   "text": "In fondo il Corso si apre, all’improvviso, nella Piazza Grande, sul fianco della Basilica Aurea. Il campanile sale dritto sopra la piazza, a otto facce, coi merli in cima. Un arco scavalca la strada e unisce la Basilica a un palazzo alto: l’Arco di Monsignore. Oltre l’arco, girando intorno alla Basilica, c’è l’altra piazza, quella del mercato.\n\nLe campane qui non si sentono: si portano addosso. Ogni rintocco passa nel selciato e sale per le gambe.\n\nA ogni imbocco di strada c’è un posto di guardia, e ce n’è il doppio di quello che servirebbe. Elmi lucidi, alabarde, lo sguardo di chi conta i forestieri. Due guardie rovesciano la borsa di un mercante su un banco e ci guardano dentro.\n\nSotto l’arco, una coda di gente con un foglio in mano, che arriva fin qui dalla porta del Palazzo. Nessuno si muove.\n\nSulla torre del Palazzo, accanto allo stendardo, pende un drappo nero. La gente ci passa sotto e non lo guarda.",
+   "gm": "Voce «Teramum»: il Corso è la strada dritta della Terranova, dalla Piazza Grande a Piazza Garibaldi; il Lucente Giorgio è uno dei quattro rioni vecchi; la Piazza Grande sta sul fianco della Basilica, dove finisce il Corso, e l’Arco di Monsignore unisce la Basilica al palazzo dell’Arciflamine; il Palazzo Ducale sta sulla Piazza del Mercato, davanti alla facciata della Basilica. Il sabato pomeriggio tutta Teramum fa la calata sul Corso: la scena per vedere tutte le Casate insieme.\nOggi: il centro è in allarme per la notizia della Crociata (posti di guardia raddoppiati, borse dei forestieri perquisite); il Consiglio siede e non decide; ogni Casata ha qualcuno ad ascoltare nelle anticamere.\nSegreti: ⟦le piazze della Basilica stanno sopra l’antico cerchio rituale dei Pretuziani⟧. Iuvenza vuole farsi nominare Reggente («il fumo coprirà la mia ascesa al Colle»: nelle fonti vecchie «il Colle» è il centro del potere, cioè queste piazze). Nel Consiglio c’è un traditore incappucciato con l’accento della capitale (Cristallo di Memoria, Atto XI).\nIl Tribunale di Casa Chiodi e la Camera dei Cavillatori: accanto al Palazzo Ducale (scheda della casata).",
+   "breve": "Posti di guardia, coda dei supplicanti, drappo nero.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "posto",
+     "tipo": "dettaglio",
+     "titolo": "Il posto di guardia",
+     "parte": "evento",
+     "innesco": "Il gruppo arriva alle piazze della Basilica.",
+     "leggi": "All’imbocco della piazza, una sbarra e sei guardie. Un sergente con la barba bianca tende la mano. «Borse aperte. Armi al fianco, non in mano. Da dove venite, dove andate.»",
+     "note": "Vantaggio con la tessera del capitano Guarnerio. Con la scorta, la perquisizione è rapida e nessuno scrive niente.",
+     "prove": [
+      {
+       "id": "posto",
+       "abilita": [
+        "Persuasione"
+       ],
+       "cd": 13,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 12,
+         "leggi": "Perquisizione completa, nomi scritti su un registro. Entro sera qualcuno a Palazzo sa che siete passati."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 13,
+         "leggi": "Il sergente vi lascia passare senza perquisire, e vi dice pure che oggi il Consiglio siede: «Ma tante nen decide niente.»"
+        }
+       ]
+      }
+     ],
+     "rilancio": "La sbarra si alza. Che cosa fate?",
+     "daqui": [
+      "drappo",
+      "sigilli",
+      "supplicanti"
+     ]
+    },
+    {
+     "id": "drappo",
+     "tipo": "dettaglio",
+     "titolo": "Il drappo nero",
+     "parte": "indizio",
+     "seme": "Sulla torre del Palazzo, accanto allo stendardo, pende un drappo nero.",
+     "innesco": "Qualcuno chiede cosa significa il drappo.",
+     "leggi": "Un notaio con la penna dietro l’orecchio si ferma, guarda in su, sospira.\n\n«Il Consiglio siede a porte chiuse. Quando c’è il drappo, al Palazzo non sale nessuno e non scende nessuno. Niente udienze, niente sigilli, niente di niente.» Guarda la coda. «E quelli aspettano lo stesso. Da stamattina.»",
+     "note": "Consuetudine (scheda di Casa Mazzarelli). Finché c’è il drappo, il sigillo dei Mazzarelli (il Palazzo) non si può chiedere. Gli altri uffici lavorano.",
+     "dopo": "Il Consiglio sta discutendo. Probabilmente anche di loro.",
+     "rilancio": "Il drappo si muove appena nel vento. Che cosa fate?",
+     "daqui": [
+      "sigilli"
+     ]
+    },
+    {
+     "id": "sigilli",
+     "tipo": "dettaglio",
+     "titolo": "La corsa ai sigilli",
+     "parte": "evento",
+     "innesco": "Il gruppo ha l’istanza di Ser Eutichio e cerca gli uffici.",
+     "leggi": "Oltre la Basilica, sulla Piazza del Mercato, il Tribunale di Casa Chiodi è il palazzo accanto al Palazzo Ducale, con le finestre strette come feritoie e un chiodo di ferro enorme piantato sopra il portone.\n\nDentro, una sala con dodici scrivani, dodici leggii, e un silenzio che si sente.",
+     "note": "Riepilogo per il master:\n• CHIODI — il Tribunale, sulla Piazza del Mercato, accanto al Palazzo. Serve per primo: Ser Eutichio registra l’istanza. Due giorni, o uno se Ser Eutichio è stato trattato bene. Indagare o Persuasione CD 13.\n• GRAZIANUS — la Cancelleria della Spada, alla Rocca, su Piazza Garibaldi (punto della Rocca).\n• TERZO SIGILLO, a scelta: Mazzarelli (dentro il Palazzo; bloccato finché c’è il drappo); Impaloni (il palazzo dell’Arciflamine, oltre l’Arco di Monsignore; chiede chi ha benedetto la «Crociata»: Religione CD 16, o la parola «Crociata» tolta dall’istanza); Savini (la Biblioteca Incompiuta, in via Delfico; serve un documento antico); Melatino (⟦il Fondaco della Lega, sotto i portici della Piazza del Mercato⟧; serve non aver umiliato i sensali); Malavolta (il palazzo ai Tigli; solo un Cerullius, di persona, per il Sangue Antico); Thaulero (il palazzo ai Tigli; firma per chi paga: 20 fiorini, o un invito accettato alla festa).\nOgni sigillo è una piccola scena sociale: 150 PE ciascuno quando lo ottengono (non inclusi qui).",
+     "dopo": "Il lasciapassare completo richiede almeno due o tre giorni di città. È il motore delle giornate a Teramum.",
+     "rilancio": "Dodici penne grattano la carta. Che cosa fate?",
+     "daqui": [],
+     "immagine": "PDI — Teramum — La corsa ai sigilli.jpg"
+    },
+    {
+     "id": "supplicanti",
+     "tipo": "dettaglio",
+     "titolo": "La coda dei supplicanti",
+     "parte": "indizio",
+     "seme": "Sotto l’arco, una coda di gente con un foglio in mano, che arriva fin qui dalla porta del Palazzo.",
+     "innesco": "Qualcuno si avvicina alla coda o parla con un supplicante.",
+     "leggi": "Una vedova con un bambino. Un mugnaio. Due fratelli che litigano sottovoce su un campo. Un vecchio con una cassetta di legno sulle ginocchia, seduto sul gradino, che non ha più la forza di stare in piedi.\n\nIl vecchio vi vede. Si alza a fatica. «Voi siete quelli della Crociata?» Vi mostra il foglio. «Sei settimane. Sei settimane che aspetto un sigillo per seppellire mio figlio nella tomba di famiglia. Il Consiglio non decide.»",
+     "note": "Gancio: il figlio del vecchio (Ercole) è morto in un crollo nelle cantine: uno dei tanti «incidenti» sotto la città. Aiutare il vecchio (portare la sua pratica insieme alla loro, parlarne al Tribunale) vale 100 PE e la gratitudine del quartiere. Per Mattheus: l’ara dei morti fuori dalla Porta delle Recluse.",
+     "prove": [
+      {
+       "id": "supplicanti",
+       "abilita": [
+        "Intuizione",
+        "Medicina"
+       ],
+       "cd": 12,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 11,
+         "leggi": "Un vecchio stanco. Ce ne sono tanti."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 12,
+         "leggi": "Dice la verità. Il figlio è morto in un crollo, in una cantina di Lucente Anna, sei settimane fa. Il corpo è ancora nell’ara dei morti fuori dalla Porta delle Recluse, perché la tomba di famiglia è dentro le mura e ci vuole un sigillo."
+        }
+       ]
+      }
+     ],
+     "dopo": "La città vera, sotto il potere: gente che aspetta.",
+     "rilancio": "Il vecchio vi tende il foglio. Che cosa fate?",
+     "daqui": [],
+     "pe": 100,
+     "immagine": "PDI — Teramum — La coda dei supplicanti.jpg"
+    }
+   ],
+   "scena": "te_q_giorgio",
+   "scenaTesto": "Torna al quartiere"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "piaz_bottega",
+   "kind": "persona",
+   "title": "La Bottega Grande",
+   "legacyPosition": {
+    "x": 1400,
+    "y": 620
+   },
+   "text": "Dove il Corso sbuca nella Piazza Grande, sotto i portici all’angolo, c’è una bottega con quattro porte spalancate e i tavoli fuori. Sopra i tavoli, una pergola di legno enorme, piena di lanterne di vetro. La gente la chiama la Bottega Grande.\n\nSul banco di marmo, dietro un vetro, le paste: ciambelle con lo zucchero, bocconotti, sfogliatelle, neole croccanti impilate come tegole. Garzoni in grembiule bianco corrono fra i tavoli coi vassoi alti sopra la testa. Si beve vino caldo, latte di mandorla, e un infuso nero e amaro che arriva da oltre il mare e costa quanto un pranzo.\n\nAi tavoli, signori con il mantello buono e signore con le mani in grembo. Parlano piano e guardano forte. Tutta la piazza si vede da qui, e tutta la piazza vede chi siede qui. Un uomo in panciotto di velluto gira fra i tavoli, saluta, sposta una sedia, e ogni tanto fa sedere qualcuno al tavolo davanti, quello migliore.\n\nOdore di zucchero bruciato, di cera e di quell’infuso nero. Dai tavoli arriva sempre la stessa parola, a mezza voce: Crociata.",
+   "gm": "La Bottega Grande è il Caffè Grande Italia della Teramo vera (Piazza Martiri, sotto i portici all’angolo col Corso, famoso per le paste e per il «gazebone» tolto nel 2016; fallito, comprato all’asta, riaperto). Qui: il caffè dei signori e di chi vuole farsi vedere, sulla Piazza Grande, al fondo del Corso, dove si fa la «calata» del sabato.\nOggi: la Bottega è fallita l’anno scorso col Banco, e l’ha comprata all’asta per due soldi un uomo di Casa Thaulero (i nuovi ricchi). I vecchi clienti nobili ci vengono lo stesso, ma pagano senza salutare. Il padrone nuovo è Ser Adriano Remigio (scheda PNG), che fa sedere i forestieri importanti ai tavoli migliori e riferisce tutto ai Thaulero.\nI portici di Fumo: i portici più vecchi della piazza, dove c’era il caffè più antico della città, quello delle «paste da Fumo». Chiusi e lasciati andare (zezzi, dicono i vecchi), poi sbarrati con un’ordinanza del Reggente perché cadono a pezzi. Sotto, di notte, ci dormono i poveri. Aggancio: sotto i portici di Fumo c’è una scala murata verso le cantine di Lucente Anna.\nPrezzi: una pasta 1 quattrino; vino caldo 2; latte di mandorla 2; l’infuso nero «di Saladax» 1 grosso la tazza; sedersi ai tavoli della pergola il sabato: 1 grosso a testa, «per il posto».",
+   "breve": "Il caffè dei signori sulla Piazza Grande (paste, la pergola, la calata del sabato), comprato all’asta da un uomo dei Thaulero; di fronte, i portici di Fumo sbarrati, con una scala verso le cantine.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "calata",
+     "tipo": "dettaglio",
+     "titolo": "La calata del sabato",
+     "parte": "evento",
+     "innesco": "È sabato pomeriggio, o il gruppo si siede alla pergola.",
+     "leggi": "Verso sera il Corso si riempie. Tutta Teramum lo percorre su e giù, a passo lento, dalla piazza della fiera fino a qui, e indietro. Ragazze a braccetto, giovani col cappello storto, vecchi coi bastoni, madri che portano le figlie come si porta una merce.\n\nNessuno va da nessuna parte. Tutti guardano tutti.\n\nI tavoli della pergola sono il palco: chi ci siede, viene guardato.",
+     "note": "La «calata»: il giro del sabato sul Corso (nella Teramo vera, da largo San Matteo a piazza Martiri). Se i PG si siedono alla pergola il sabato, metà città li vede: la notizia della Crociata gira più in fretta (bene per la fama, male per chi vuole passare inosservato). Un PG che fa una figura memorabile (Intrattenere o Persuasione CD 14 davanti a tutti) dà alla Crociata 1 punto di Fama col popolo di Teramum.",
+     "prove": [
+      {
+       "id": "calata",
+       "abilita": [
+        "Intrattenere",
+        "Persuasione"
+       ],
+       "cd": 14,
+       "gruppo": "chi",
+       "esiti": [
+        {
+         "fascia": "failure",
+         "max": 13,
+         "leggi": "Vi guardano, ridono, passano."
+        },
+        {
+         "fascia": "baseSuccess",
+         "min": 14,
+         "leggi": "Si fermano. Alla seconda calata la gente vi indica, alla terza vi saluta. «Quelli della Crociata.»"
+        }
+       ]
+      }
+     ],
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    },
+    {
+     "id": "dialogo_remigio",
+     "tipo": "dialogo",
+     "titolo": "Parlare con Ser Adriano",
+     "parte": "evento",
+     "innesco": "Il padrone viene al tavolo, come fa coi forestieri che contano.",
+     "note": "CHI SEI? — «Adriano Remigio, per servirvi. La Bottega è mia da un anno. Prima era di tutti e di nessuno, e infatti è fallita.»\n\nCOM’È CHE L’AVETE PRESA? — «All’asta. Il Banco è caduto, e chi aveva i soldi in un posto sicuro ha comprato.» Sorride. «Io li avevo in un posto sicuro.» (Ha dietro i Thaulero.)\n\nLA CROCIATA — «Siete i benvenuti. Il tavolo migliore è vostro, sempre. Il Dominus Ottone Thaulero mi ha detto di dirvelo.» Se gli chiedono perché: «Il Dominus ama gli eroi. E gli eroi, si sa, a Teramum non hanno amici.»\n\nI PORTICI DI FUMO — «Una vergogna. Il caffè più vecchio della città. Lo volevo comprare io, ma il Reggente l’ha sbarrato. Sotto ci dormono i pezzenti.» Abbassa la voce. «E di notte certi pezzenti scendono, e non risalgono.»\n\nBATTUTE PRONTE — «Il tavolo migliore è vostro.» · «Qui si viene per farsi vedere. Il caffè è una scusa.» · «Il Dominus vi saluta.»",
+     "dopo": "Remigio è gli occhi dei Thaulero sulla Piazza Grande: tutto quello che i PG dicono ai suoi tavoli, Ottone lo sa la sera stessa.",
+     "rilancio": "Remigio sorride e non se ne va. Che cosa fate?",
+     "daqui": [
+      "piaz_fumo"
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "piaz_fumo",
+   "kind": "dettaglio",
+   "title": "I portici di Fumo",
+   "legacyPosition": {
+    "x": 260,
+    "y": 620
+   },
+   "text": "Dall’altra parte della piazza, di fronte, ci sono altri portici, più bassi e più vecchi, con le colonne mangiate. Sono chiusi da assi inchiodate di traverso, e fra un’asse e l’altra si vede il buio di una scala che scende. Sulle assi, un foglio col sigillo del Reggente.",
+   "gm": "I portici più vecchi della piazza, sbarrati dal Reggente. Sotto ci dormono i poveri; dietro il bancone, una scala murata verso la Città Sepolta.",
+   "breve": "Le assi inchiodate e il buio di una scala.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "fumo",
+     "tipo": "dettaglio",
+     "titolo": "I portici di Fumo",
+     "parte": "indizio",
+     "innesco": "Qualcuno guarda i portici sbarrati, o ci passa di notte.",
+     "leggi": "Le assi sono inchiodate male. Dietro, nel buio, colonne sporche, un bancone di marmo spaccato, l’insegna caduta di un caffè: un cerchio con dentro una tazza e una scritta che il fumo ha mangiato.\n\nPer terra, coperte, stracci, una pentola. Ci dorme qualcuno.\n\nIn fondo, dietro il bancone, una porta bassa. Davanti, la polvere è smossa.",
+     "seme": "Sulle assi, un foglio col sigillo del Reggente.",
+     "note": "Ci dormono una decina di poveri, fra cui «Pascale de Parigge», un vecchio matto che dice di essere stato a Parigge (una città che nessuno conosce) e parla una lingua inventata: è innocuo, e vede tutto. Per un pasto racconta che «di notte quelli col mantello scendono dalla porta, e tornano con le mani bianche di polvere». La porta bassa dà su una scala murata a metà, che scende verso le cantine di Lucente Anna e la Città Sepolta (Atletica CD 12 per passare).",
+     "dopo": "Un altro ingresso verso la Città Sepolta, sotto la piazza.",
+     "rilancio": "Che cosa fate?",
+     "daqui": [],
+     "pe": 100
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "piaz_basilica",
+   "kind": "porta",
+   "title": "La Basilica Aurea",
+   "legacyPosition": {
+    "x": 640,
+    "y": 300
+   },
+   "text": "La Basilica Aurea sta in mezzo alla città e tutto il resto le gira intorno. La facciata è di travertino chiaro, alta e piatta, e finisce in cima con una fila di merli, come una fortezza. In mezzo, il portale: sopra la porta, scolpiti nella pietra, un angelo e la Vecchia Madre, lei seduta, lui in ginocchio.\n\nAlla base della facciata corre un basamento di pietra grigia a blocchi grossi, consumati: pietre più vecchie della Basilica. Su uno si vedono ancora lettere di un alfabeto vecchio, tagliate a metà.\n\nAccanto sale il campanile, alto cinquanta braccia, a otto facce, coi merli anche lui, e con la campana grande, l’Aprutina, che da sotto si vede come una bocca nera. Quando suona, la piazza vibra.\n\nLa porta è aperta. In fondo alla navata scura, sull’altare, brilla qualcosa: argento e oro. Per quello la chiamano Aurea. Dall’interno esce odore d’incenso e di cera, e canti, tanti uomini insieme, bassi.\n\nSui gradini, mendicanti con la mano tesa, viandanti con il sacco, una vecchia che vende candele da un cestino.",
+   "gm": "Scena: Basilica Aurea (id «te_basilica»). Questo punto è solo l’ingresso visto dalla strada: tutto quello che succede dentro sta nella scena dedicata.\nVoce «Teramum»: è il Duomo vero, costruito con le pietre dei teatri antichi dopo il grande incendio; portale con l’angelo e la Vecchia Madre, merli in cima, campanile di cinquanta braccia con la campana grande, l’Aprutina; dentro il paliotto d’argento e d’oro con trentacinque storie, che le dà il nome.\nNon rivelare nulla di ciò che sta sotto la Basilica. Il peso del Filatterio è l’unico segno.",
+   "breve": "La Basilica Aurea, il solario grande della Vecchia Madre e del Lucente Berardo, sede dell’Arciflamine Serafino Impaloni, fra la Piazza Grande e la Piazza del Mercato. Ingresso alla scena dedicata.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "soglia",
+     "tipo": "dettaglio",
+     "titolo": "Dalla strada",
+     "parte": "indizio",
+     "seme": "Alla base della facciata corre un basamento di pietra grigia a blocchi grossi, consumati: pietre più vecchie della Basilica.",
+     "innesco": "Il gruppo si ferma davanti all’ingresso e guarda.",
+     "leggi": "Il basamento grigio è la stessa pietra delle mura di sotto, quella senza malta. Qualcuno ha provato a coprirla d’intonaco, e l’intonaco è caduto.",
+     "note": "Se Mattheus porta il Filatterio, qui la custodia gli pesa un po’ di più sul petto: diglielo in privato. Niente di più.",
+     "dopo": "Se entrano: Scena: Basilica Aurea.",
+     "rilancio": "Che cosa fate?",
+     "daqui": []
+    }
+   ],
+   "scena": "te_basilica",
+   "scenaTesto": "Entra nella Basilica"
+  }
+ ],
+ "pedine": [
+  {
+   "id": "p_adriano",
+   "nome": "Ser Adriano Remigio",
+   "short": "Ad",
+   "kind": "alleato",
+   "x": 1300,
+   "y": 760,
+   "gruppo": "luogo",
+   "png": "png-adriano-remigio",
+   "img": "TOKEN — Città — Ser Adriano Remigio.png",
+   "ritratto": "Ritratto pedina — Città — Ser Adriano Remigio.jpg"
+  }
+ ]
+}
