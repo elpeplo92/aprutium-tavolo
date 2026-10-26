@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v319</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v320</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11073,7 +11073,9 @@ html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro res
 #tokMenu .tmh b{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:18px;color:#E6C67A}
 #tokMenu button{display:block;width:100%;text-align:left;border:0;background:transparent;color:#EADFC8;font-size:14.5px;padding:7px 9px;border-radius:5px;cursor:pointer}
 #tokMenu button:hover{background:rgba(201,162,74,.18);color:#F6E3A8}
-#tokMenu button small{color:#9C8E74;margin-left:4px}`;
+#tokMenu button small{color:#9C8E74;margin-left:4px}
+#tokMenu button.tmatk{color:#F1D9A0}
+#tokMenu button.tmatk+button:not(.tmatk){border-top:1px solid rgba(217,177,92,.25);border-radius:0 0 5px 5px;margin-top:3px}`;
   document.head.appendChild(css);
 
   /* ---------- collegamento ---------- */
@@ -11276,11 +11278,17 @@ html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro res
     const voci=[['parla','Parla con '+lui]];
     if(amico) voci.push(['aiuta','Aiuta','dà vantaggio alla sua prossima prova'],['passa','Passa un oggetto'],['cura',t.hp<=0?'Stabilizza':'Cura','Medicina'],['osserva','Osserva','Percezione']);
     else voci.push(...SOCIALI.map(([k,l])=>[k,l]),['osserva','Osserva','Percezione']);
+    /* v319, i giocatori: dalla pedina nemica si sceglie l'attacco e la finestra del tiro si apre con quel bersaglio già scelto */
+    const mioT=S.tokens[me]; const attacchi=!amico&&mioT&&t.hp>0?(mioT.actions||[]).map((a,i)=>({a,i})).filter(({a})=>a&&(a.atk!=null||/^Multiattacco/.test(a.n))).slice(0,8):[];
     const m=document.createElement('div'); m.id='tokMenu';
-    m.innerHTML=`<div class="tmh">${imgDi(t)?`<img src="${esc(imgDi(t))}" alt="">`:''}<b>${esc(lui)}</b></div>`+voci.map(([k,l,s])=>`<button data-tm="${k}">${esc(l)}${s?`<small>${esc(s)}</small>`:''}</button>`).join('');
+    m.innerHTML=`<div class="tmh">${imgDi(t)?`<img src="${esc(imgDi(t))}" alt="">`:''}<b>${esc(lui)}</b></div>`
+      +attacchi.map(({a,i})=>`<button data-tatk="${i}" class="tmatk">⚔ ${esc(a.n)}<small>${a.atk!=null?'+'+a.atk:''}${a.dmg?' · '+esc(a.dmg):''}</small></button>`).join('')
+      +voci.map(([k,l,s])=>`<button data-tm="${k}">${esc(l)}${s?`<small>${esc(s)}</small>`:''}</button>`).join('');
     document.body.appendChild(m);
     const W=m.offsetWidth, H=m.offsetHeight; m.style.left=Math.min(innerWidth-W-8,r.right+8)+'px'; m.style.top=Math.max(8,Math.min(innerHeight-H-8,r.top))+'px';
     m.addEventListener('pointerdown',e=>e.stopPropagation());
+    m.querySelectorAll('[data-tatk]').forEach(b=>b.onclick=()=>{ const a=(mioT.actions||[])[+b.dataset.tatk]; menuChiudi(); if(!a) return; doAction(me,a);
+      setTimeout(()=>{ const inp=document.querySelector(`#modal input[value="${CSS.escape(tid)}"]`); if(inp){ if(inp.type==='checkbox') document.querySelectorAll('#modal input[type=checkbox][name="tgt"]').forEach(x=>{ if(x!==inp) x.checked=false; }); inp.checked=true; inp.dispatchEvent(new Event('change',{bubbles:true})); inp.closest('label')?.scrollIntoView({block:'center'}); } },180); });
     m.querySelectorAll('[data-tm]').forEach(b=>b.onclick=()=>{ const k=b.dataset.tm; menuChiudi();
       if(k==='parla'||SOCIALI.some(s=>s[0]===k)){ const cid=apri(tid,me); if(!cid) return; CHIUSO_QUI.delete(cid); APERTO=cid; lastKey='';
         if(k!=='parla'){ const s=SOCIALI.find(y=>y[0]===k); setTimeout(()=>scrivi(cid,{chi:'pg',pg:me,tipo:'azione',testo:s[2]}),80); }
@@ -12184,4 +12192,31 @@ window.CANNONE_IMG={tok:'img/tok-00fa529da4cc.png',rit:'img/6290fc19f1cd.jpg'};
   const _r=render; let dentro=false; render=function(){ const o=_r.apply(this,arguments); if(!dentro){ try{ if(pulisciOrdine()){ dentro=true; save(true); dentro=false; } }catch(e){ dentro=false; console.warn('morti',e); } } return o; };
 })();
 /* ===== FINE MORTI FUORI DAI BERSAGLI (v318) ===== */
+/* ===== INIZIATIVA DEGLI ALLEATI (v320) =====
+   Giuseppe (26-10): «Silvanus non c'era nelle iniziative». «Inizia scontro» tirava l'iniziativa solo ai nemici: gli alleati già sulla mappa
+   restavano senza (init null) e fuori dall'ordine dei turni; entravano solo quelli messi a scontro iniziato (pedineMetti).
+   - All'avvio dello scontro tirano anche gli alleati che combattono: nella scena, visibili, non noInit, vivi, con almeno un attacco e più di
+     9 PF (popolani, carri e civili restano fuori).
+   - Tasto «Entra nell'iniziativa» nella barra in basso del master (#selBar), in scontro, per la pedina scelta che non è nell'ordine:
+     tira d20 + iniziativa e la mette al suo posto (per un PG chiede l'iniziativa al giocatore, come «Chiedi iniziativa»).
+   Fonte: Revisioni/Iniziativa degli alleati (26-10-2026)/ (blocco.js + applica.py). */
+(function(){
+  const combatte=(id,t)=>t&&t.kind==='alleato'&&!t.hidden&&!t.noInit&&(t.hp||0)>0&&(t.hpMax||0)>9&&(t.actions||[]).some(a=>a&&a.atk!=null)&&tokInScene(id);
+  function entra(id){ const t=S.tokens[id]; if(!t) return;
+    if(t.kind==='pg'){ askInitiative([id]); return; }
+    const r=d20(); t.init=r+((t.mods||{}).Iniziativa||0); sortOrder(); log({kind:'sys',txt:`${t.name} entra nello scontro: iniziativa ${t.init} (d20 ${r})`}); save(true); }
+  const bs=document.getElementById('btnStart');
+  if(bs){ const _s=bs.onclick; bs.onclick=function(){ const o=_s.apply(this,arguments); try{ if(S.mode==='scontro'){ let n=[];
+      for(const [id,t] of Object.entries(S.tokens)){ if(combatte(id,t)){ const r=d20(); t.init=r+((t.mods||{}).Iniziativa||0); n.push(t.name.split(',')[0]); } }
+      if(n.length){ sortOrder(); log({kind:'sys',gm:true,txt:`Iniziativa degli alleati: ${n.join(', ')}`}); save(true); } } }catch(e){ console.warn('iniziativa alleati',e); } return o; }; }
+  function tasto(){
+    const cmd=document.getElementById('sbCmd'); if(!IS_GM||!cmd) return;
+    let b=document.getElementById('btnEntraInit'); if(!b){ b=document.createElement('button'); b.id='btnEntraInit'; b.textContent='Entra nell’iniziativa'; b.title='Tira l’iniziativa per questa pedina e la mette nell’ordine dei turni'; b.onclick=()=>{ if(selected) entra(selected); }; cmd.appendChild(b); }
+    const t=selected&&S.tokens[selected]; const fuori=S.mode==='scontro'&&t&&(t.hp||0)>0&&!t.noInit&&!(S.order||[]).includes(selected);
+    b.style.display=fuori?'':'none';
+  }
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ tasto(); }catch(e){} return o; };
+  window.__entraIniziativa=entra;
+})();
+/* ===== FINE INIZIATIVA DEGLI ALLEATI (v320) ===== */
 </script>
