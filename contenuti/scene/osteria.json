@@ -86,6 +86,216 @@
             "osteria_stalla",
             "osteria_sala"
           ]
+        },
+        {
+          "id": "bottino",
+          "tipo": "bottino",
+          "titolo": "Il bottino dello scontro",
+          "parte": "evento",
+          "innesco": "Lo scontro è finito: i personaggi frugano i corpi, i carri salvi e quello che resta dei due bruciati.",
+          "leggi": "Il fuoco del terzo e del quarto carro è ridotto a brace. Nel piazzale, fra la paglia bruciata e le balestre a terra, i vesperiani sono dove sono caduti. Le armature d'argento giacciono a pezzi, aperte, e dentro non c'è niente.\n\nIl primo e il secondo carro sono ancora in piedi. I cavalli tirano le corde e sbuffano. Sotto i teloni, le casse lunghe sono chiuse.\n\nNicola esce dalla porta con la lanterna e guarda il suo cortile come si guarda una casa dopo un terremoto.",
+          "note": "PE dello scontro (totale del gruppo, da dividere fra i presenti): Tanush 700 (sergente, GS 3), Kostandìn 700 (sergente, GS 3), Vasco 700 (veterano, GS 3), 23 vesperiani × 450 (GS 2) = 10.350, quattro Armature del Loto × 1.100 (GS 4) = 4.400. Totale 16.850 se cadono tutti: togli 450 per ogni vesperiano che scappa e 1.100 per ogni Armatura che resta in piedi.\nDove sta il bottino: le borse, le armi e le cotte sui corpi; la lista cucita nel colletto di Tanush (Indagare o Percezione CD 13 a chi lo perquisisce; senza la prova la trovano solo se scuciono il colletto); Becco d'Aquila nella mano di Kostandìn; la mezza armatura e la pozione superiore addosso a Vasco; le piastre dalle Armature abbattute (Arcano CD 13: «è stata forgiata con una persona dentro; ora è vuota»); carri, cavalli, botti e razioni sui due carri salvi. Le sei casse chiuse: vedi «Dentro la cassa» e «Lasciarla andare» nel punto del convoglio.\n⟦La lista: ventidue nomi di vesperiani passati con la Crociata o con le compagnie del Ducato, ognuno con la taglia; Kostandìn 40 fiorini, Vasco 25. Il fiore nella cera è il sigillo della rete di V., lo stesso del sigillo d'osso nero del messere: chi paga le taglie a Teramum è Iuvenza.⟧\n⟦Kostandìn a 0 PF non è morto: è morente. Chi arriva da lui entro un minuto e riesce in Medicina CD 10 lo stabilizza; altrimenti muore. Se vive, svenuto, all'alba chiede di Maximus e di Vasco, e dice solo: «Mi avevano detto che eravate già morti tutti.» Se muore, Becco d'Aquila va a chi lo ha vegliato.⟧\nI vesperiani a terra senza Kostandìn: due o tre sono solo svenuti (Medicina CD 10). Se li si lascia vivi, all'alba spariscono verso Teramum: Iuvenza saprà tutto.",
+          "dopo": "Hanno la paga di V. in mano, la lista dei ricercati e due carri del convoglio: a Teramum qualcuno se ne accorgerà. La Crociata ha armi, cotte e cavalli in più, e il conto dei suoi morti da fare.",
+          "rilancio": "Il cortile è vostro, e la notte è ancora lunga. Che cosa fate?",
+          "pe": 16850,
+          "bottino": [
+            {
+              "n": "Lista dei vesperiani ricercati",
+              "q": 1,
+              "cat": "Missione",
+              "peso": "—",
+              "valore": "Non vendibile",
+              "stats": "",
+              "desc": "Un foglio piegato in quattro, cucito dentro il colletto di Tanush. Due colonne di nomi di vesperiani, ognuno con una cifra in fiorini accanto. In cima, sottolineati, Kostandìn e Vasco. In fondo, impresso nella cera nera, un fiore.",
+              "a": "crociata"
+            },
+            {
+              "n": "Borsa di Tanush",
+              "q": 1,
+              "cat": "Monete e preziosi",
+              "peso": "1 lb",
+              "valore": "25 mo e 40 ma",
+              "stats": "",
+              "desc": "Borsa di cuoio unta. Dentro, oro nuovo e pulito, lo stesso della borsa del messere: «passato per banchi di mare».",
+              "a": "crociata",
+              "monete": {
+                "mo": 25,
+                "ma": 40
+              }
+            },
+            {
+              "n": "Borse dei vesperiani",
+              "q": 1,
+              "cat": "Monete e preziosi",
+              "peso": "3 lb",
+              "valore": "46 mo, 184 ma, 230 mr",
+              "stats": "",
+              "desc": "Le borse dei vesperiani caduti, messe insieme: la paga anticipata del viaggio, qualche dado d'osso, un santino di Sant'Atto, un dente di lupo forato.",
+              "a": "crociata",
+              "monete": {
+                "mo": 46,
+                "ma": 184,
+                "mr": 230
+              }
+            },
+            {
+              "n": "Becco d’Aquila, la spada di Kostandìn",
+              "q": 1,
+              "cat": "Armi magiche",
+              "peso": "3 lb",
+              "valore": "400 mo",
+              "rar": "Non comune",
+              "stats": "Spada lunga +1: +1 ai tiri per colpire e ai danni · 1d8+1 taglienti, Versatile (1d10+1) · Maestria: Fiaccare",
+              "desc": "Una spada lunga senza fregi, con il pomo a forma d'aquila a due teste, d'argento consumato dalle dita. Kostandìn la portava già a Mushanë. La lama non prende ruggine e taglia più di quanto dovrebbe.",
+              "a": "crociata"
+            },
+            {
+              "n": "Mezza armatura di Vasco",
+              "q": 1,
+              "cat": "Armature",
+              "peso": "40 lb",
+              "valore": "750 mo",
+              "stats": "CA 15 + Des (massimo 2) · svantaggio a Furtività",
+              "desc": "Piastre sul petto e sulle spalle, maglia sotto, cinghie rifatte più volte. Dentro il pettorale qualcuno ha inciso a punta di coltello una V storta.",
+              "a": "crociata"
+            },
+            {
+              "n": "Pozione di guarigione superiore",
+              "q": 1,
+              "cat": "Consumabili",
+              "peso": "0,5 lb",
+              "valore": "150 mo",
+              "rar": "Non comune",
+              "stats": "Bevi: recuperi 4d4+4 PF",
+              "desc": "Fialetta rossa scura con un tappo di cera, nella sacca di Vasco.",
+              "a": "crociata",
+              "uso": {
+                "tipo": "cura",
+                "dadi": "4d4+4",
+                "consuma": true
+              }
+            },
+            {
+              "n": "Pozione di guarigione",
+              "q": 3,
+              "cat": "Consumabili",
+              "peso": "0,5 lb",
+              "valore": "50 mo",
+              "rar": "Comune",
+              "stats": "Bevi: recuperi 2d4+2 PF",
+              "desc": "Tre fialette rosse, nelle sacche dei sergenti.",
+              "a": "crociata",
+              "uso": {
+                "tipo": "cura",
+                "dadi": "2d4+2",
+                "consuma": true
+              }
+            },
+            {
+              "n": "Spada lunga dei vesperiani",
+              "q": 12,
+              "cat": "Armi",
+              "peso": "3 lb",
+              "valore": "15 mo",
+              "stats": "1d8 taglienti, Versatile (1d10) · Maestria: Fiaccare",
+              "desc": "Spade da compagnia, buone e senza nome. Le altre sono rotte o finite nel fuoco.",
+              "a": "crociata"
+            },
+            {
+              "n": "Balestra leggera dei vesperiani",
+              "q": 10,
+              "cat": "Armi",
+              "peso": "5 lb",
+              "valore": "25 mo",
+              "stats": "1d8 perforanti · Munizioni (24/96 m), Caricamento, Due mani · Maestria: Rallentare",
+              "desc": "Le balestre del muro attorno ai carri. Corde nuove, calci segnati con l'aquila a due teste.",
+              "a": "crociata"
+            },
+            {
+              "n": "Quadrelli",
+              "q": 120,
+              "cat": "Armi",
+              "peso": "1,5 lb ogni 20",
+              "valore": "1 mo ogni 20",
+              "stats": "Munizioni per balestra",
+              "desc": "Sei faretre di quadrelli dalla punta quadra.",
+              "a": "crociata"
+            },
+            {
+              "n": "Cotta di maglia dei vesperiani",
+              "q": 6,
+              "cat": "Armature",
+              "peso": "55 lb",
+              "valore": "75 mo",
+              "stats": "CA 16 · Forza 13 · svantaggio a Furtività",
+              "desc": "Le cotte intere; le altre sono squarciate o bruciate. Ognuna ha all'altezza del cuore un anellino di rame: le Aquile se lo fanno cucire alla prima paga.",
+              "a": "crociata"
+            },
+            {
+              "n": "Fibbie con l’aquila a due teste",
+              "q": 23,
+              "cat": "Altro",
+              "peso": "—",
+              "valore": "1 ma l’una",
+              "stats": "",
+              "desc": "Le fibbie delle cinture dei vesperiani: un'aquila a due teste di ottone. Il segno delle Aquile di Vesperia, quelle di Lekë e di Kostandìn.",
+              "a": "crociata"
+            },
+            {
+              "n": "Corno di Tanush",
+              "q": 1,
+              "cat": "Equipaggiamento",
+              "peso": "2 lb",
+              "valore": "2 mo",
+              "stats": "Si sente fino a mezza lega",
+              "desc": "Corno di bue cerchiato di ferro. Tanush lo usava per chiamare i suoi.",
+              "a": "crociata"
+            },
+            {
+              "n": "Piastra del Loto Nero",
+              "q": 4,
+              "cat": "Missione",
+              "peso": "12 lb",
+              "valore": "Non vendibile",
+              "stats": "",
+              "desc": "Il pettorale delle Armature del Loto abbattute: argento annerito, col Loto Nero inciso al centro. Dentro è vuoto e freddo, come una stanza appena lasciata.",
+              "a": "crociata"
+            },
+            {
+              "n": "Due carri del convoglio e otto cavalli da tiro",
+              "q": 1,
+              "cat": "Altro",
+              "peso": "—",
+              "valore": "70 mo i carri, 400 mo i cavalli",
+              "stats": "",
+              "desc": "Il primo e il secondo carro del convoglio, rimasti in piedi, con i loro cavalli, spaventati ma interi. Sotto i teloni ci sono ancora le sei casse chiuse.",
+              "a": "crociata"
+            },
+            {
+              "n": "Botti di rosso di Nutaròschë",
+              "q": 2,
+              "cat": "Viveri",
+              "peso": "un carro",
+              "valore": "20 mo l’una",
+              "stats": "",
+              "desc": "Il vino vero, messo davanti alle casse per passare i dazi. È buono davvero.",
+              "a": "crociata"
+            },
+            {
+              "n": "Razioni del convoglio",
+              "q": 40,
+              "cat": "Viveri",
+              "peso": "2 lb",
+              "valore": "5 ma",
+              "stats": "Sfama per un giorno",
+              "desc": "Pane biscotto, formaggio duro, fichi secchi, carne salata: le provviste della scorta fino a Teramum.",
+              "a": "crociata",
+              "uso": {
+                "tipo": "cibo",
+                "consuma": true
+              }
+            }
+          ]
         }
       ],
       "uscite": [
