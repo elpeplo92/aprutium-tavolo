@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v322</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v323</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -10340,7 +10340,7 @@ function dlgPanel(box,png,tid){
       if(name==='Sorcerous Burst'){ const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name); const tg=ev&&ev.tid&&S.tokens[ev.tid]; if(ev&&ev.hit&&tg&&ev.dmgTxt){ const m=String(ev.dmgTxt).match(/\dd8\[([^\]]*)\]/); let otto=m?m[1].split(',').filter(v=>parseInt(v)===8).length:0; const cap=Math.max(0,modCalc(sh.abil?.Car||10)); let extra=0, rs=[]; while(otto>0&&rs.length<cap){ otto--; const v=rollExpr('1d8').total; rs.push(v); extra+=v; if(v===8) otto++; }
           if(extra){ applyDamage(tg,extra); ev.dmg=(+ev.dmg||0)+extra; ev.dmgTxt+=` + esplosione [${rs.join(',')}]`; ev.hpAfter=tg.hp; log({kind:'hit',tid:ev.tid,hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name}: gli 8 esplodono, altri ${extra} danni (${rs.join(', ')})`}); if(tg.hp<=0&&!ev.down){ ev.down=true; log({kind:'hit',txt:`${tg.name} cade a 0 PF`}); } n++; } } }
       /* Sfera cromatica: due d8 uguali → balza */
-      if(name==='Chromatic Orb'){ const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name); if(ev&&ev.hit&&ev.dmgTxt){ const m=String(ev.dmgTxt).match(/\dd8\[([^\]]*)\]/); const vs=m?m[1].split(',').map(v=>parseInt(v)):[]; if(new Set(vs).size<vs.length){ log({kind:'sys',txt:`${t.name}: due d8 uguali (${vs.join(', ')}): la sfera balza su un altro bersaglio entro 9 m — rilanciala «Senza slot» su di lui`}); toast('La sfera balza: scegli un altro bersaglio (rilancio senza slot)'); } } }
+      if(name==='Chromatic Orb'){ const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name); if(ev&&ev.hit&&ev.dmgTxt){ const m=String(ev.dmgTxt).match(/\dd8\[([^\]]*)\]/); const vs=m?m[1].split(',').map(v=>parseInt(v)):[]; if(new Set(vs).size<vs.length){ log({kind:'sys',txt:`${t.name}: due d8 uguali (${vs.join(', ')}): la sfera balza`}); } } }
       /* Punizione divina contro immondi e non morti */
       if(name==='Divine Smite'&&sc&&/immondo/.test(sc)&&list.length){ const tg=list[0][1], x=fxRoll('1d8'); applyDamage(tg,x.total); log({kind:'hit',tid:list[0][0],hpNow:tg.hp,hpTop:tg.hpMax,txt:`${tg.name} (immondo o non morto) subisce altri ${x.total} danni radiosi da Punizione divina (${x.txt})`}); n++; }
       /* Faro di speranza su tutti i bersagli */
@@ -12219,4 +12219,50 @@ window.CANNONE_IMG={tok:'img/tok-00fa529da4cc.png',rit:'img/6290fc19f1cd.jpg'};
   window.__entraIniziativa=entra;
 })();
 /* ===== FINE INIZIATIVA DEGLI ALLEATI (v320) ===== */
+/* ===== SFERA CROMATICA CHE BALZA (v323) =====
+   Giuseppe (26-10): «quando Vicarus fa un doppio con la Sfera cromatica non tira in automatico l'altro colpo: deve solo selezionare su chi
+   rimbalzare». Prima il sito avvisava e chiedeva di rilanciare «Senza slot».
+   Regola 2024: con due o più d8 uguali la sfera balza su un'altra creatura scelta entro 9 m dal bersaglio colpito: nuovo tiro per colpire,
+   nuovi danni dello stesso tipo e dello stesso livello; balza al massimo tante volte quanto il livello dello slot, e ogni creatura
+   è bersaglio una volta sola per lancio.
+   - Dopo il colpo col doppio si apre la finestra «La sfera balza» con le creature entro 9 m (prima i nemici): un clic e parte il balzo,
+     senza spendere slot (si rimette quello che resolveCast toglie), col tipo di danno scelto al lancio. «Non balza» chiude.
+   - I balzi si incatenano finché escono doppi e restano balzi.
+   Fonte: Revisioni/Sfera cromatica che balza (26-10-2026)/ (blocco.js + applica.py). */
+(function(){
+  let BALZO=null; /* {id, slot, tipo, presi:[ids], balzi, max} durante un lancio */
+  function candidati(id,daId,presi){ const o=S.tokens[daId]; if(!o) return [];
+    return Object.entries(S.tokens).filter(([k,x])=>x&&k!==id&&!presi.includes(k)&&tokInScene(k)&&(x.hp||0)>0&&!isDead(x)&&(IS_GM||!x.hidden)&&distM(o,x)<=9)
+      .sort((a,b)=>(a[1].kind==='nemico'?0:1)-(b[1].kind==='nemico'?0:1)||distM(o,a[1])-distM(o,b[1])); }
+  function finestra(B,daId){ const lista=candidati(B.id,daId,B.presi), da=S.tokens[daId];
+    if(!lista.length){ log({kind:'sys',txt:`La sfera di ${S.tokens[B.id]?.name||''} vorrebbe balzare, ma non c’è nessun altro entro 9 m da ${da?.name||'il bersaglio'}`}); save(true); return; }
+    openModal(`<h2>La sfera balza</h2><p class="note">Due d8 uguali: la sfera${B.tipo?' di '+poiText(B.tipo):''} balza da ${poiText(da?.name||'')} su un’altra creatura entro 9 m. Nuovo tiro per colpire e nuovi danni, senza slot. Balzo ${B.balzi+1} di ${B.max}.</p>
+      <div style="display:flex;flex-direction:column;gap:6px;margin:10px 0">${lista.map(([k,x])=>`<button class="btn" data-balza="${poiText(k)}" style="text-align:left">${poiText(x.name)} <span class="note">· ${distM(da,x)} m${x.kind==='nemico'?'':' · alleato'}</span></button>`).join('')}</div>
+      <button class="btn" id="balzaNo">Non balza</button>`);
+    const box=document.getElementById('modal');
+    box.querySelectorAll('[data-balza]').forEach(b=>b.onclick=()=>{ closeModal(); balza(B,b.dataset.balza); });
+    const no=box.querySelector('#balzaNo'); if(no) no.onclick=()=>{ closeModal(); log({kind:'sys',txt:`${S.tokens[B.id]?.name||''}: la sfera non balza`}); save(true); }; }
+  function balza(B,tid){ const t=S.tokens[B.id]; if(!t||!S.tokens[tid]) return;
+    const used=JSON.stringify(t.used||{}), xs=JSON.stringify(t.xs||{});
+    B.balzi++; B.presi.push(tid); log({kind:'sys',txt:`La sfera di ${t.name} balza su ${S.tokens[tid].name}`});
+    const v=window.__v253; if(v&&B.tipo) v.setScelta(B.tipo);
+    BALZO=B; try{ resolveCast(B.id,'Chromatic Orb',B.slot,[tid]); } finally{ BALZO=null; if(v) v.setScelta(null); t.used=JSON.parse(used); t.xs=JSON.parse(xs); save(true); }
+    dopo(B); }
+  /* dopo un colpo: se c'è un doppio e restano balzi, chiede il prossimo bersaglio */
+  function dopo(B){ const t=S.tokens[B.id]; if(!t) return; const ev=S.log.find(e=>e.kind==='atk'&&e.who===t.name);
+    if(!ev||!ev.hit||!ev.dmgTxt) return; const m=String(ev.dmgTxt).match(/\dd8\[([^\]]*)\]/); const vs=m?m[1].split(',').map(x=>parseInt(x)):[];
+    if(new Set(vs).size===vs.length) return;
+    if(B.balzi>=B.max){ log({kind:'sys',txt:`${t.name}: due d8 uguali, ma la sfera ha già balzato ${B.max} ${B.max===1?'volta':'volte'} (il massimo per lo slot di ${B.max}°)`}); save(true); return; }
+    setTimeout(()=>finestra(B,ev.tid),60); }
+  const _rc=resolveCast; resolveCast=function(id,name,slot,ids,meta){
+    if(name!=='Chromatic Orb'||BALZO) return _rc.apply(this,arguments);
+    const sel=document.querySelector('#modal #cScelta'), tipo=sel&&sel.dataset.sp===name?sel.value:null;
+    const o=_rc.apply(this,arguments);
+    try{ const ev=S.log.find(e=>e.kind==='atk'&&e.who===S.tokens[id]?.name), m=ev&&String(ev.name).match(/\((acido|freddo|fuoco|fulmine|tuono|veleno)\)/);
+      const B={id,slot:slot||0,tipo:tipo||(m&&m[1])||null,presi:[...(ids||[])],balzi:0,max:Math.max(1,slot||(+(SPELLS[name]||{}).l||1))}; dopo(B); }catch(e){ console.warn('sfera cromatica',e); }
+    return o; };
+  if(SPELL_RULES&&SPELL_RULES['Chromatic Orb']) SPELL_RULES['Chromatic Orb'].nota='con due d8 uguali la sfera balza: scegli tu su chi, entro 9 m (al massimo tante volte quanto il livello dello slot)';
+  window.__sferaBalza={finestra,balza,candidati};
+})();
+/* ===== FINE SFERA CROMATICA CHE BALZA (v323) ===== */
 </script>
