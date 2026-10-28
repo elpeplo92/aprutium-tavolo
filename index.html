@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v325</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v326</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -12265,4 +12265,88 @@ window.CANNONE_IMG={tok:'img/tok-00fa529da4cc.png',rit:'img/6290fc19f1cd.jpg'};
   window.__sferaBalza={finestra,balza,candidati};
 })();
 /* ===== FINE SFERA CROMATICA CHE BALZA (v323) ===== */
+/* ===== VISTA DEL MASTER COME I GIOCATORI (v326) =====
+   Giuseppe (28-10, dopo la prima sessione con Claude master): «la vista del master simile alla vista dei giocatori, con la Guida della
+   scena a destra, al posto della sezione Scontro». I tasti non cambiano funzione, cambiano posto (sono gli stessi elementi, spostati):
+   - Inizia scontro, Prossimo, Termina e «Tiri dei nemici» subito sopra il tasto della fase («Fermi tutti») e i ritratti dei personaggi
+     (fuori da #rail, che si ridisegna da capo: dentro, i tasti spostati sparivano);
+     il Bestiario («Metti sulla mappa») in un riquadro apribile subito sotto;
+   - Nebbia attiva, Rivela intorno al gruppo, Rivela tutto, Copri tutto nella barra degli attrezzi a sinistra, sotto quelli della nebbia;
+   - la colonna Scontro/Selezione sparisce (la selezione è già nella barra in basso), la Guida va all'ultima colonna e sotto prende il
+     Registro, come per i giocatori.
+   E i punti che lampeggiavano tutti insieme: le «notate» (S.poiSpot) restavano salvate dalle visite precedenti alla scena, con le pedine
+   dei personaggi in altri posti (a Colleatterrato la fontana era «notata» dal 12-10). Ora, quando il gruppo entra in una scena o il master
+   lo porta all'ingresso, le notate e i «passati senza notarlo» dei punti non ancora svelati di quella scena si azzerano: si notano di nuovo
+   solo andandoci vicino.
+   Fonte: Revisioni/Vista del master come i giocatori (v326)/ (blocco.js + applica.py). */
+(function(){
+  const css=document.createElement('style'); css.id='vistaMaster'; css.textContent=`
+body.isgm #app{grid-template-columns:224px minmax(0,1fr) clamp(340px,23vw,460px) 0px!important}
+@media (max-width:1700px){ body.isgm #app{grid-template-columns:200px minmax(0,1fr) clamp(300px,22vw,380px) 0px!important} }
+@media (max-width:1440px){ body.isgm #app{grid-template-columns:190px minmax(0,1fr) clamp(280px,23vw,320px) 0px!important} }
+body.isgm #side{visibility:hidden;overflow:hidden;padding:0!important;border:0!important;min-width:0}
+body.isgm #guide{display:flex;flex-direction:column;min-height:0}
+body.isgm #guide>#guideTop{flex:1 1 auto;min-height:0;overflow-y:auto}
+body.isgm #guide>#secLog{flex:0 0 auto;max-height:36%;min-height:110px;display:flex;flex-direction:column;overflow:hidden;margin:0;padding:12px 12px 10px!important;border-top:1px solid rgba(217,177,92,.3)!important;background:#090B10!important}
+body.isgm #guide>#secLog #log{flex:1 1 auto;overflow-y:auto;min-height:0}
+#vmScontro{display:none;flex-direction:column;gap:6px;padding:8px 8px 10px;border-bottom:1px solid var(--line);background:var(--panel)}
+body.isgm #vmScontro{display:flex}
+#vmScontro .vmRow{display:flex;flex-wrap:wrap;gap:5px}
+#vmScontro .vmRow>#btnStart{flex:1 1 100%}
+#vmScontro .vmRow>button{flex:1 1 0;min-width:0;padding:5px 4px;font-size:14px;display:flex;align-items:center;justify-content:center;gap:4px;white-space:nowrap}
+#vmScontro .vmRow>button .uico{width:16px;height:16px;flex:none}
+#vmScontro .vmTiri{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:13px;color:var(--ink-dim)}
+#vmScontro .vmTiri>button{padding:3px 8px;font-size:13px}
+#vmScontro details{border-top:1px solid var(--line);padding-top:6px}
+#vmScontro summary{cursor:pointer;font-family:var(--caps);font-size:15px;letter-spacing:.06em;color:var(--gold)}
+#vmScontro details[open]>div{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+#vmScontro #bestSel{max-width:none!important;width:100%;font-size:14px}
+#vmScontro #btnAddBest{font-size:14px}
+#vmNebbia{display:none;flex-direction:column;gap:4px;margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
+body.isgm #vmNebbia{display:flex}
+#vmNebbia>button{display:flex;flex-direction:column;align-items:center;gap:2px;width:100%;padding:5px 2px;font-size:11px;line-height:1.1;white-space:normal;text-align:center}
+#vmNebbia>button .uico{width:18px;height:18px;margin:0}
+`; document.head.appendChild(css);
+
+  const $=id=>document.getElementById(id);
+  function costruisci(){
+    if(!IS_GM) return;
+    const rail=$('rail');
+    if(rail&&!$('vmScontro')){
+      /* fuori da #rail, che si ridisegna da capo a ogni render: subito sopra il tasto della fase */
+      const box=document.createElement('div'); box.id='vmScontro';
+      box.innerHTML='<div class="vmRow"></div><div class="vmTiri"><span>Tiri dei nemici</span></div><details><summary>Bestiario di Ea</summary><div></div></details>';
+      rail.before(box);
+      const riga=box.querySelector('.vmRow'); ['btnStart','btnNext','btnEnd'].forEach(id=>{ const b=$(id); if(b) riga.appendChild(b); });
+      const pub=$('btnPublic'); if(pub) box.querySelector('.vmTiri').appendChild(pub);
+      const det=box.querySelector('details>div'); ['bestSel','btnAddBest'].forEach(id=>{ const b=$(id); if(b) det.appendChild(b); });
+    }
+    const zc=$('zoomctl');
+    if(zc&&!$('vmNebbia')){
+      const neb=document.createElement('div'); neb.id='vmNebbia';
+      ['fogOn','fogParty','fogAll','fogReset'].forEach(id=>{ const b=$(id); if(b) neb.appendChild(b); });
+      const dopo=$('fogHide')||$('fogReveal'); if(dopo&&dopo.parentElement===zc) dopo.after(neb); else zc.appendChild(neb);
+    }
+    const g=$('guide'), log=$('secLog');
+    if(g&&log&&log.parentElement!==g){ g.appendChild(log); setTimeout(()=>{ try{ fit(); }catch(e){} },50); }
+  }
+
+  /* le notate dei punti non ancora svelati valgono solo per questa visita alla scena */
+  function azzeraNotate(sid){
+    if(!IS_GM||!sid) return;
+    const ids=new Set(POIS.filter(p=>p.scene===sid&&!poiRevealed(p)).map(p=>p.id));
+    let n=0;
+    for(const k of Object.keys(S.poiSpot||{})) if(ids.has(k)){ delete S.poiSpot[k]; n++; }
+    for(const k of Object.keys(S.poiMiss||{})){ const pid=k.split('__')[0]; if(ids.has(pid)){ delete S.poiMiss[k]; n++; } }
+    return n;
+  }
+  const _enter=sceneEnter;
+  sceneEnter=function(to){ const o=_enter.apply(this,arguments); try{ azzeraNotate(to); }catch(e){ console.warn('notate',e); } return o; };
+  if(typeof pgIngresso==='function'){ const _ing=pgIngresso; pgIngresso=function(){ try{ azzeraNotate(CUR&&CUR.id); }catch(e){} return _ing.apply(this,arguments); }; }
+  window.azzeraNotate=azzeraNotate;
+
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ costruisci(); }catch(e){ console.warn('vista master',e); } return o; };
+  costruisci();
+})();
+/* ===== FINE VISTA DEL MASTER COME I GIOCATORI (v326) ===== */
 </script>
