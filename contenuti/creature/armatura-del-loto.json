@@ -5,8 +5,8 @@
  "group": "Le armature di ferro",
  "num": 304,
  "title": "Armatura del Loto",
- "sub": "La cosa che si muove sotto il telone del quarto carro",
- "state": "noto",
+ "sub": "Le «botti di ferro» di Messer Ansaldo: armature nuove, con un’anima dentro",
+ "state": "incontrato",
  "atti": [
   19
  ],
@@ -15,6 +15,7 @@
   "png-ansaldo-morigi",
   "jn-veneranda-iuvenza",
   "comandante-di-ferro",
+  "tanush-dushmani",
   "atto-19"
  ],
  "blocchi": true,
@@ -23,15 +24,19 @@
  "scheda": {
   "Che cos’è": "Costrutto con un’anima vincolata, Medio",
   "Grado di sfida": "4",
-  "Dove": "Nella cassa sul quarto carro di Ansaldo, all’osteria de lu Passe",
-  "Com’è finita": "Lo scontro è in corso"
+  "Dove": "Nelle casse sui carri di Ansaldo, all’osteria de lu Passe",
+  "Com’è finita": "Abbattute nel piazzale dell’osteria"
  },
  "best": "armatura_del_loto",
  "pub": [
   {
    "t": "",
-   "txt": "Dei quattro carri chiusi di Messer Ansaldo tre si sono spenti e il quarto brucia. Da sotto il telone qualcosa si muove.",
+   "txt": "Armature d’argento annerito col Loto Nero sulla corazza, come quelle di Altavia ma più nuove e più forti: le «botti di ferro» che Ansaldo portava a Teramum sotto i teloni neri. Vuote, e non vuote: dentro c’è qualcuno, e quando cadono parla per un respiro.",
    "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "Dei quattro carri tre si sono spenti e il quarto bruciava; da sotto il telone qualcosa si è mosso. Le avete abbattute nel piazzale, nella notte dei carri in fiamme, mentre Adamus spegneva il fuoco con la pioggia. Tendevano a proteggere Mattheus, come i Forgiati al guado, e Mattheus per un momento si è convinto di poterle comandare: Alessandros lo ha fatto tornare in sé a schiaffi. I carri sono bruciati tutti. Ansaldo lo avete trovato al secondo piano con la gola tagliata."
   }
  ],
  "gm": [
@@ -46,7 +51,7 @@
   },
   {
    "t": "Chi c’è dentro",
-   "txt": "Un bambino. «Che ore so’? Mamma m’aspetta pe’ la cena.» Una ninna nanna, piano, da dentro l’elmo. ⟦È uno dei figli di Colleventoso, portato via l’anno scorso; sua madre è fra le persone tornate col rituale di Mattheus e lo cerca ancora⟧."
+   "txt": "Un bambino. «Che ore so’? Mamma m’aspetta pe’ la cena.» Una ninna nanna, piano, da dentro l’elmo. ⟦È uno dei figli di Colleventoso, portato via l’anno scorso; sua madre è fra le persone tornate col rituale di Mattheus e lo cerca ancora⟧. Proteggevano Mattheus perché sentono il filatterio di Lyaras che porta addosso: non era la sua magia, era quella della scatola. Il «delirio divino» di Mattheus è un filo da riprendere: Mortus non c’entra, Lyaras sì."
   },
   {
    "t": "Cosa lascia",

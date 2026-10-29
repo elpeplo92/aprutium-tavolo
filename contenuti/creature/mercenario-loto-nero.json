@@ -2,20 +2,22 @@
  "id": "mercenario-loto-nero",
  "cat": "creatura",
  "sez": "bestiario",
- "group": "Mercenari, bravi e soldati",
- "num": 503,
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 801,
  "title": "Mercenario del Loto Nero",
- "sub": "I pesanti di Casa Velthuria sulla Via Salaria",
+ "sub": "I pesanti di Casa Velthuria sulla Via Salaria, al campo delle Aquile",
  "state": "noto",
  "atti": [
   10,
-  11
+  11,
+  19
  ],
  "links": [
   "faz-loto-nero",
   "faz-casa-velthuria",
   "jn-veneranda-iuvenza",
   "jn-tenuta-di-altavia",
+  "mercenario-vesperiano",
   "atto-10"
  ],
  "blocchi": true,
@@ -24,8 +26,8 @@
  "scheda": {
   "Che cos’è": "Umanoide (vesperiano o straniero del sud), Medio",
   "Grado di sfida": "3",
-  "Dove": "Il blocco sulla Via Salaria, il Passo dei Frati; le guardie silenziose di Altavia",
-  "Quanti": "Venti pesanti e quattro balestrieri sulle barricate"
+  "Dove": "Il campo delle Aquile sulla Via Salaria, dove la strada è chiusa; il Passo dei Frati; le guardie silenziose di Altavia",
+  "Quanti": "Venti pesanti e quattro balestrieri sulle barricate, più i vesperiani scampati all’osteria"
  },
  "best": "mercenario_loto_nero",
  "pub": [
@@ -40,7 +42,7 @@
   },
   {
    "t": "Con voi",
-   "txt": "Maximus li ha visti dal confine, senza farsi vedere, con l’ordine di Fenix di non ingaggiare: venti mercenari pesanti, quattro balestrieri sulle barricate. Al Passo dei Frati le vedette ne hanno contati altri venti. Alla Tenuta di Altavia le guardie silenziose di Iuvenza, «immobili come statue», vi hanno aperto il cancello come un picchetto d’onore. Non avete mai incrociato le spade."
+   "txt": "Maximus li ha visti dal confine, senza farsi vedere, con l’ordine di Fenix di non ingaggiare: venti mercenari pesanti, quattro balestrieri sulle barricate. Al Passo dei Frati le vedette ne hanno contati altri venti. Alla Tenuta di Altavia le guardie silenziose di Iuvenza, «immobili come statue», vi hanno aperto il cancello come un picchetto d’onore. Non avete mai incrociato le spade. Ansaldo, da morto, ha detto dove si pagava la sua scorta: «ai Tigli, poi la Salaria, il campo delle Aquile, dove la strada è chiusa». I vesperiani scampati all’osteria sono andati lì."
   }
  ],
  "gm": [

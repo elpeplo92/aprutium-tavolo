@@ -2,10 +2,10 @@
  "id": "mercenario-vesperiano",
  "cat": "creatura",
  "sez": "bestiario",
- "group": "Mercenari, bravi e soldati",
- "num": 501,
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 800,
  "title": "Mercenario vesperiano",
- "sub": "Le compagnie di Vesperia: professionisti, senza contratto non combattono",
+ "sub": "Quel che rimane delle compagnie: al campo delle Aquile, sulla Salaria",
  "state": "incontrato",
  "atti": [
   12,
@@ -16,10 +16,10 @@
   "faz-compagnie-vesperiane",
   "prov-vesperia",
   "mu-kapitan-leke-muzaka",
-  "mu-sergente-kostandin",
-  "png-vasco",
-  "png-tanush-dushmani",
-  "sergente-mercenario",
+  "kostandin",
+  "vasco",
+  "tanush-dushmani",
+  "mercenario-loto-nero",
   "st-2-osteria-de-lu-passe"
  ],
  "blocchi": true,
@@ -27,9 +27,9 @@
  "img": "Ritratto — I mercenari Velthuria.jpg",
  "scheda": {
   "Che cos’è": "Umanoide (vesperiano), Medio",
-  "Grado di sfida": "1",
-  "Dove": "Il Ponte dei Frati, Mushanè, l’osteria de lu Passe",
-  "Chi conoscete": "Lekë Muzàka, Kostandìn, Vasco, Tanush Dushmàni"
+  "Grado di sfida": "1 (il sergente: 3)",
+  "Dove": "Erano al Ponte dei Frati, a Mushanè, all’osteria de lu Passe; i superstiti al campo delle Aquile sulla Via Salaria",
+  "Chi conoscevate": "Lekë Muzàka, Kostandìn, Vasco, Tanush Dushmàni: tutti morti"
  },
  "best": "mercenario",
  "pub": [
@@ -48,7 +48,7 @@
   },
   {
    "t": "Con voi",
-   "txt": "Al Ponte dei Frati erano i mercenari senza insegne di Vasco, con la trappola dei barili d’olio sotto le assi: molti caduti, Vasco arreso e investito dalla palla di fuoco di Vicarus, poi passato al soldo di Maximus coi suoi tre. A Mushanè la compagnia di Lekë Muzàka è entrata armata in chiesa il giorno della campana: si è combattuto fra le panche, in piazza e nei vicoli, e Alessandros ha decapitato Lekë sul sagrato. I superstiti, con Kostandìn, sono passati alla Crociata. All’osteria de lu Passe Tanush Dushmàni, cugino di Lekë, ha parlato a Kostandìn della lista di Teramum con le taglie sui disertori: Kostandìn e i suoi otto, Vasco e i suoi tre sono tornati dall’altra parte. «Ventisei spade contro di voi.»"
+   "txt": "Al Ponte dei Frati erano i mercenari senza insegne di Vasco, con la trappola dei barili d’olio sotto le assi: molti caduti, Vasco arreso e investito dalla palla di fuoco di Vicarus, poi passato al soldo di Maximus coi suoi tre. A Mushanè la compagnia di Lekë Muzàka è entrata armata in chiesa il giorno della campana: si è combattuto fra le panche, in piazza e nei vicoli, e Alessandros ha decapitato Lekë sul sagrato. I superstiti, con Kostandìn, sono passati alla Crociata. All’osteria de lu Passe Tanush Dushmàni, cugino di Lekë, ha parlato a Kostandìn della lista di Teramum con le taglie sui disertori: Kostandìn e i suoi otto, Vasco e i suoi tre sono tornati dall’altra parte. «Ventisei spade contro di voi.» Lo scontro nel piazzale è stato lungo e brutto: Tanush, Kostandìn e Vasco sono morti lì, e i carri sono bruciati tutti. Chi è scampato è sparito nella notte. Ansaldo, da morto, ha detto dove la scorta si sarebbe riunita a fine contratto: «ai Tigli, poi la Salaria, il campo delle Aquile, dove la strada è chiusa». Cioè dal Loto Nero."
   }
  ],
  "gm": [
@@ -56,6 +56,15 @@
    "t": "Statistiche",
    "txt": "Picchiatore (Tough, SRD 5.2.1) con l’armatura del mercenario: ⟦cotta di maglia e scudo⟧ · Umanoide Medio · grado di sfida 1 ⟦per l’armatura⟧ (200 PE)\n\n· CA 16 (cotta di maglia e scudo) · PF 32 (5d8+10) · Velocità 9 m · Iniziativa +1\n· For 15 (+2) · Des 12 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 10 (+0) · Car 11 (+0)\n· Percezione passiva 10\n· Lingue: vesperiano, pretuziano\n\nTratti\n\n· Tattiche del branco. Vantaggio al tiro per colpire se un alleato non Incapacitato è entro 1,5 m dal bersaglio.\n\nAzioni\n\n· Spada lunga. Attacco in mischia +4, portata 1,5 m: 6 (1d8+2) danni taglienti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 6 (1d10+1) danni perforanti.",
    "lato": true
+  },
+  {
+   "t": "Sergente mercenario",
+   "liv": 3,
+   "txt": "Capitano dei banditi (Bandit Captain, SRD 5.2.1, verificato) con l’armatura del sergente: CA 17 (cotta di maglia e scudo), PF 52 (8d8+16), Iniziativa +3; For 15 (+2), Des 16 (+3), Cos 14 (+2), Int 14 (+2), Sag 11 (+0), Car 14 (+2); TS For +4, Des +5; Atletica +4, Inganno +4; Multiattacco: due attacchi di Spada lunga (+5, 1d8+3 taglienti) o di Balestra pesante (+5, gittata 30/120 m, 1d10+3 perforanti); ⟦Comando (azione bonus): un alleato entro 9 m che lo sente fa subito un attacco⟧; Parata (reazione: +2 CA contro un attacco in mischia che vede). Grado di sfida 3 (700 PE). È la scheda di Kostandìn, Vasco e Tanush (vedi le loro voci) e di chi comanderà i superstiti. Scheda del tavolo: `sergente`.",
+   "scheda": {
+    "Base": "Capitano dei banditi",
+    "Grado di sfida": "3"
+   }
   },
   {
    "t": "Kapitàn Lekë Muzàka",
@@ -70,40 +79,8 @@
    }
   },
   {
-   "t": "Sergente Kostandìn",
-   "liv": 3,
-   "txt": "La scheda del [[Sergente mercenario|sergente-mercenario]]. All’osteria de lu Passe è tornato nemico, coi suoi otto: a Teramum i disertori sono su una lista con taglia, e lui ha fatto i suoi conti. Tell: gira il bicchiere d’un quarto prima di ogni sorso.",
-   "ritratto": "Ritratto — Sergente Kostandìn.jpg",
-   "voce": "mu-sergente-kostandin",
-   "scheda": {
-    "Base": "Sergente mercenario",
-    "Grado di sfida": "3",
-    "Oggi": "Nemico, all’osteria, con otto uomini"
-   }
-  },
-  {
-   "t": "Vasco",
-   "liv": 3,
-   "txt": "La scheda del [[Sergente mercenario|sergente-mercenario]], ⟦con le ustioni: PF 40⟧. Si era arreso al Ponte dei Frati e Vicarus lo ha bruciato lo stesso; Maximus lo ha preso al suo soldo coi suoi tre; all’osteria è passato con Tanush. Conosce i PG meglio di chiunque altro dall’altra parte.",
-   "ritratto": "Ritratto — Vasco.jpg",
-   "voce": "png-vasco",
-   "scheda": {
-    "Base": "Sergente mercenario",
-    "Grado di sfida": "3",
-    "Oggi": "Nemico, all’osteria, con tre uomini"
-   }
-  },
-  {
-   "t": "Tanush Dushmàni",
-   "liv": 3,
-   "txt": "La scheda del [[Sergente mercenario|sergente-mercenario]]. Trecce grigie, una cicatrice che chiude mezzo labbro; cugino di Lekë. Scorta Ansaldo con dodici uomini senza insegne. ⟦Vuole la testa di Alessandros per il clan, non per la paga: non tratta⟧.",
-   "ritratto": "Ritratto — Tanush Dushmàni.jpg",
-   "voce": "png-tanush-dushmani",
-   "scheda": {
-    "Base": "Sergente mercenario",
-    "Grado di sfida": "3",
-    "Oggi": "All’osteria, con dodici uomini"
-   }
+   "t": "Quel che rimane",
+   "txt": "⟦Dei ventisei dell’osteria ne sono scampati nove: sei di Tanush, due di Kostandìn, uno di Vasco. Senza sergenti, hanno fatto quello che Ansaldo aveva pagato: la Salaria, il campo delle Aquile, al soldo del Loto Nero. Lì li comanda l’ufficiale del blocco (un Capitano della Guardia dell’SRD, GS 4), che li tiene in una tenda a parte: a Teramum sono su una lista, e lui lo sa. Chi li incontra di nuovo trova facce conosciute: e qualcuno, fra i due di Kostandìn, ricorda ancora che il sergente «trattava sempre»⟧."
   },
   {
    "t": "Come combatte",
@@ -115,7 +92,7 @@
   },
   {
    "t": "Legami",
-   "txt": "[[Le compagnie vesperiane|faz-compagnie-vesperiane]], pagate da [[Casa Velthuria|faz-casa-velthuria]] col sigillo del [[Loto Nero|faz-loto-nero]]. Il contratto di Lekë è nella sua casa a Mushanè."
+   "txt": "[[Le compagnie vesperiane|faz-compagnie-vesperiane]], pagate da [[Casa Velthuria|faz-casa-velthuria]] col sigillo del [[Loto Nero|faz-loto-nero]]. Il contratto di Lekë è nella sua casa a Mushanè. I caduti: [[Kostandìn|kostandin]], [[Vasco|vasco]], [[Tanush|tanush-dushmani]]."
   }
  ]
 }

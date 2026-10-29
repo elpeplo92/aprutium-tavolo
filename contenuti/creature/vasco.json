@@ -1,0 +1,64 @@
+{
+ "id": "vasco",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Mercenari, bravi e soldati",
+ "num": 502,
+ "title": "Vasco",
+ "sub": "Il sergente del Ponte dei Frati, passato di qua e di là",
+ "state": "incontrato",
+ "atti": [
+  12,
+  13,
+  14,
+  19
+ ],
+ "links": [
+  "png-vasco",
+  "mercenario-vesperiano",
+  "kostandin",
+  "tanush-dushmani",
+  "st-2-osteria-de-lu-passe",
+  "atto-12"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Vasco.jpg",
+ "scheda": {
+  "Chi era": "Vesperiano, sergente mercenario",
+  "Grado di sfida": "3",
+  "Dove": "Il Ponte dei Frati; poi con voi; poi l’osteria de lu Passe",
+  "Com’è finita": "Ucciso nello scontro nel piazzale dell’osteria"
+ },
+ "best": "sergente",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Il sergente dei mercenari senza insegne al Ponte dei Frati: la trappola dei barili d’olio sotto le assi, il pugnale a Frate Giustino. Si era arreso, e la palla di fuoco di Vicarus lo ha preso lo stesso. Maximus lo ha voluto al suo soldo coi suoi tre, e per un pezzo di strada ha marciato con la Crociata. All’osteria de lu Passe, quando Tanush ha parlato della lista di Teramum, è passato dall’altra parte.",
+   "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "È morto nel piazzale dell’osteria, la notte dei carri in fiamme, con la spada in mano e dalla parte sbagliata. Vi conosceva meglio di chiunque altro fra i nemici: sapeva chi tiene la linea e chi no."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Capitano dei banditi (Bandit Captain, SRD 5.2.1, verificato) con l’armatura del sergente: CA 17 (cotta di maglia e scudo), PF 52 (8d8+16), Iniziativa +3; For 15 (+2), Des 16 (+3), Cos 14 (+2), Int 14 (+2), Sag 11 (+0), Car 14 (+2); TS For +4, Des +5; Atletica +4, Inganno +4; Multiattacco: due attacchi di Spada lunga (+5, 1d8+3 taglienti) o di Balestra pesante (+5, gittata 30/120 m, 1d10+3 perforanti); ⟦Comando (azione bonus): un alleato entro 9 m che lo sente fa subito un attacco⟧; Parata (reazione: +2 CA contro un attacco in mischia che vede). Grado di sfida 3 (700 PE). ⟦All’osteria combatteva con le ustioni del Ponte: PF 40⟧.",
+   "lato": true
+  },
+  {
+   "t": "Com’è andata",
+   "txt": "Tradito due volte in un mese: prima la Crociata lo ha bruciato arreso, poi lui ha cambiato bandiera. Non tratta mai del tutto e non si fida mai del tutto: è morto così. ⟦Addosso aveva il lasciapassare di Maximus, mai strappato: a Teramum, in mano sbagliata, è la prova che la Crociata arruola mercenari vesperiani⟧."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "La cotta, la spada lunga, la balestra, una borsa con la paga di Maximus e quella di Tanush insieme (3d6 × 10 mo). 700 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "La voce in Personaggi: [[Vasco|png-vasco]]. Con lui [[Kostandìn|kostandin]] e [[Tanush|tanush-dushmani]]; i suoi tre: uno scampato, al campo delle Aquile ([[Mercenario vesperiano|mercenario-vesperiano]])."
+  }
+ ]
+}

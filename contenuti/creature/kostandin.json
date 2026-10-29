@@ -1,0 +1,65 @@
+{
+ "id": "kostandin",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Mercenari, bravi e soldati",
+ "num": 503,
+ "title": "Sergente Kostandìn",
+ "sub": "Chi cambia bandiera due volte, alla terza la bandiera gliela cuciono addosso",
+ "state": "incontrato",
+ "atti": [
+  13,
+  14,
+  15,
+  16,
+  19
+ ],
+ "links": [
+  "mu-sergente-kostandin",
+  "mu-kapitan-leke-muzaka",
+  "mercenario-vesperiano",
+  "vasco",
+  "tanush-dushmani",
+  "st-2-osteria-de-lu-passe"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Sergente Kostandìn.jpg",
+ "scheda": {
+  "Chi era": "Vesperiano, sergente della compagnia di Lekë",
+  "Grado di sfida": "3",
+  "Dove": "Mushanè; poi nella Crociata coi suoi dodici; poi l’osteria de lu Passe",
+  "Com’è finita": "Ucciso nello scontro nel piazzale dell’osteria"
+ },
+ "best": "sergente",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Basso e largo come una botte messa di traverso, il collo che non c’è, la barba di tre giorni da anni. A Mushanè vi guardava dal tavolo in fondo della Locanda del Frate, schiena al muro; dopo la morte di Lekë ha fatto i suoi conti ed è passato alla Crociata coi suoi. Beveva con metodo e girava il bicchiere d’un quarto prima di ogni sorso. Lo diceva lui: «chi cambia bandiera due volte, alla terza la bandiera gliela cuciono addosso».",
+   "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "All’osteria de lu Passe Tanush gli ha detto della lista di Teramum, coi nomi dei vesperiani passati con la Crociata e l’oro per chi li consegna. Ha girato il bicchiere senza bere, lo ha posato, ed è passato con Tanush, coi suoi otto e con Vasco. È morto nel piazzale, la notte dei carri in fiamme."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Capitano dei banditi (Bandit Captain, SRD 5.2.1, verificato) con l’armatura del sergente: CA 17 (cotta di maglia e scudo), PF 52 (8d8+16), Iniziativa +3; For 15 (+2), Des 16 (+3), Cos 14 (+2), Int 14 (+2), Sag 11 (+0), Car 14 (+2); TS For +4, Des +5; Atletica +4, Inganno +4; Multiattacco: due attacchi di Spada lunga (+5, 1d8+3 taglienti) o di Balestra pesante (+5, gittata 30/120 m, 1d10+3 perforanti); ⟦Comando (azione bonus): un alleato entro 9 m che lo sente fa subito un attacco⟧; Parata (reazione: +2 CA contro un attacco in mischia che vede). Grado di sfida 3 (700 PE).",
+   "lato": true
+  },
+  {
+   "t": "Com’è andata",
+   "txt": "Il sergente perfetto, fino all’ultimo: ha scelto la parte che gli sembrava riportare a casa la pelle, e stavolta ha sbagliato i conti. Sapeva dov’è il contratto di Lekë con Casa Velthuria (la Casa di Lekë, a Mushanè) e come funzionava la catena Teramum→compagnia: quel testimone contro Iuvenza è morto con lui. ⟦Il contratto però è ancora nella casa di Lekë: chi torna a Mushanè lo trova⟧."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "La cotta buona, la spada, il bicchiere di stagno che girava. ⟦In tasca, la lista di Teramum che gli ha mostrato Tanush: dodici nomi vesperiani, il sigillo di una casata di Teramum, la taglia⟧. 700 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "La voce in Personaggi: [[Sergente Kostandìn|mu-sergente-kostandin]]. Era di [[Lekë|mu-kapitan-leke-muzaka]]; con lui [[Vasco|vasco]] e [[Tanush|tanush-dushmani]]. Dei suoi otto, ⟦due⟧ sono scampati ([[Mercenario vesperiano|mercenario-vesperiano]])."
+  }
+ ]
+}
