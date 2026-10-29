@@ -2590,7 +2590,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v329</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v330</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -12477,4 +12477,100 @@ body.isgm #vmNebbia{display:flex}
 `; document.head.appendChild(st);
 })();
 /* ===== FINE IL MANUALE DELL'AVVENTURA (v328) ===== */
+/* ===== IL LIBRO DEL MANUALE (v330) — Giuseppe 29-10: «non me l'aspettavo come voci singole del Compendio, ma come un gigantesco libro da sfogliare».
+   Nella sezione «Il Manuale dell'avventura» le voci non sono più schede in griglia: sono le pagine di un libro.
+   · Indice a sinistra (i capitoli, e le sezioni del capitolo aperto), capitolo intero a destra in ordine di lettura,
+     «‹ capitolo precedente» e «capitolo successivo ›» in fondo, ricerca dentro il Manuale, segnalibro (ultimo capitolo e punto letto).
+   · Le voci restano quelle di converti_manuale.py (gruppo = capitolo, `ordine` = posto nel libro). Un risultato della ricerca
+     di tutto il Compendio che è una sezione del Manuale apre il libro a quella sezione (non il pannello di dettaglio).
+   Fonte: Revisioni/Il Manuale dell'avventura (29-10-2026)/sito/ (libro.js, applica_libro.py). */
+(function(){
+  if(typeof renderCompendio!=='function') return;
+  const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+  const isMan=e=>!!e&&e.cat==='manuale';
+  const voci=()=>c2All().filter(e=>isMan(e)&&c2Visible(e)).sort((a,b)=>(a.ordine||0)-(b.ordine||0));
+  function capitoli(){ const out=[]; for(const v of voci()){ let c=out.find(x=>x.t===v.group); if(!c){ c={t:v.group||'—',voci:[]}; out.push(c); } c.voci.push(v); } return out; }
+  const pos=v=>{ try{ return v===undefined?(JSON.parse(localStorage.getItem('aprutium.libro')||'null')||{}):(localStorage.setItem('aprutium.libro',JSON.stringify(v)),v); }catch(_){ return {}; } };
+  let cap=null, ancora=null, q='';
+  const testo=e=>(e.title+' '+JSON.stringify(e.pub||[])).toLowerCase();
+  function etichetta(t){ const m=/^(Capitolo\s+\S+|Appendice\s+\S+)[:\s—-]+(.*)$/i.exec(t||''); return m?{n:m[1],t:m[2]}:{n:'',t:t||''}; }
+  function render(body){
+    const C=capitoli(); if(!C.length){ body.innerHTML='<p class="c3empty">Il Manuale non è ancora caricato.</p>'; return; }
+    if(!cap||!C.some(c=>c.t===cap)){ const p=pos(); cap=(p.cap&&C.some(c=>c.t===p.cap))?p.cap:C[0].t; }
+    const i=C.findIndex(c=>c.t===cap), c=C[i], prev=C[i-1], next=C[i+1];
+    const tot=(C[0].voci[0]&&C[0].voci[0].title===C[0].t&&C[0].voci[0].sub)||'';   /* la voce d'apertura porta il titolo del libro in `sub` */
+    const qq=q.trim().toLowerCase();
+    const trovate=qq?voci().filter(e=>testo(e).includes(qq)):null;
+    const indice=trovate?`<ol class="lib-ris">${trovate.length?trovate.map(e=>{ const l=etichetta(e.group); return `<li><a data-lib-va="${esc(e.id)}"><small>${esc(l.n||l.t)}</small>${esc(e.title)}</a></li>`; }).join(''):'<li class="lib-nulla">Niente, con queste parole.</li>'}</ol>`
+      :`<ol class="lib-capi">${C.map((x,k)=>{ const l=etichetta(x.t); const on=k===i; return `<li class="${on?'on':''}"><a data-lib-cap="${esc(x.t)}">${l.n?`<small>${esc(l.n)}</small>`:''}${esc(l.t)}</a>${on&&x.voci.length>1?`<ol class="lib-sez">${x.voci.filter(v=>v.title!==x.t).map(v=>`<li><a data-lib-va="${esc(v.id)}">${esc(v.title)}</a></li>`).join('')}</ol>`:''}</li>`; }).join('')}</ol>`;
+    const l=etichetta(c.t);
+    const pagine=c.voci.map(v=>{ const LNK=c2LnkBuild(v.id); const apertura=v.title===c.t; return `<section class="lib-voce" id="lib-${esc(v.id)}">${apertura?'':`<h2 class="lib-h2">${esc(v.title)}</h2>`}${c2Blocchi(v.pub||[],LNK)}</section>`; }).join('');
+    body.innerHTML=`<div class="lib">
+      <aside class="lib-ind"><div class="lib-tit">Il Manuale dell’avventura</div>${tot?`<div class="lib-sub">${esc(tot)}</div>`:''}
+        <label class="lib-cerca"><input id="libQ" placeholder="Cerca nel Manuale…" value="${esc(q)}"></label>${indice}</aside>
+      <article class="lib-pag"><header class="lib-testa"><small>${esc(l.n||('Parte '+(i+1)))} · ${i+1} di ${C.length}</small><h1>${esc(l.t)}</h1></header>${pagine}
+        <nav class="lib-nav">${prev?`<button data-lib-cap="${esc(prev.t)}"><small>‹ precedente</small>${esc(etichetta(prev.t).t)}</button>`:'<span></span>'}${next?`<button data-lib-cap="${esc(next.t)}" class="avanti"><small>successivo ›</small>${esc(etichetta(next.t).t)}</button>`:'<span></span>'}</nav>
+      </article></div>`;
+    body.querySelectorAll('[data-lib-cap]').forEach(b=>b.onclick=()=>{ cap=b.dataset.libCap; ancora=null; q=''; pos({cap,y:0}); render(body); body.scrollTop=0; });
+    body.querySelectorAll('[data-lib-va]').forEach(a=>a.onclick=()=>{ const v=voci().find(x=>x.id===a.dataset.libVa); if(!v) return; cap=v.group; ancora=v.id; q=''; render(body); });
+    body.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{ c2Back.push(c2Open); c2Open=b.dataset.go; c3Recent(c2Open); c3Tab='pan'; renderCompendio(); });
+    body.querySelectorAll('.c2v-tav img, .c2v-ritr').forEach(im=>im.onclick=()=>{ const z=document.getElementById('c3zoom'); if(!z) return; z.querySelector('img').src=im.src; z.style.display='flex'; });
+    const inp=body.querySelector('#libQ'); inp.oninput=()=>{ q=inp.value; render(body); const i2=body.querySelector('#libQ'); if(i2){ i2.focus(); i2.setSelectionRange(i2.value.length,i2.value.length); } };
+    if(ancora){ const el=body.querySelector('#lib-'+CSS.escape(ancora)); if(el){ el.scrollIntoView({block:'start'}); el.classList.add('lib-qui'); } ancora=null; }
+    else { const p=pos(); if(p.cap===cap&&p.y) body.scrollTop=p.y; }
+    pos({cap,y:body.scrollTop});
+    body.onscroll=()=>{ clearTimeout(body._libT); body._libT=setTimeout(()=>{ if(body.querySelector('.lib')) pos({cap,y:body.scrollTop}); },300); };
+  }
+  const _r=renderCompendio;
+  renderCompendio=function(){
+    /* una sezione del Manuale aperta dalla ricerca o dalle voci recenti: il libro, non il pannello di dettaglio */
+    if(c2Open){ const e=c2All().find(x=>x.id===c2Open); if(isMan(e)){ cap=e.group; ancora=e.id; c2Open=null; c2Sec='manuale'; c2Q=''; c3Racc=''; if(typeof window.c4Home!=='undefined') window.c4Home=false; } }
+    const out=_r.apply(this,arguments);
+    try{ const body=document.getElementById('compBody'); if(body&&IS_GM&&c2Sec==='manuale'&&!c2Q&&!c3Racc&&!window.c4Home&&!c2Open){ body.classList.add('lib-corpo'); render(body); } else if(body) body.classList.remove('lib-corpo'); }catch(e){ console.warn('libro',e); }
+    return out;
+  };
+  const st=document.createElement('style'); st.id='libro'; st.textContent=`
+#modal .c4box .c3main.lib-corpo{padding:0 34px 40px!important}
+.lib{display:grid;grid-template-columns:280px minmax(0,1fr);gap:34px;align-items:start;padding-top:22px}
+.lib-ind{position:sticky;top:0;max-height:calc((100vh - 110px)/var(--z,1));overflow:auto;padding:14px 14px 18px 0;border-right:1px solid rgba(217,177,92,.25);scrollbar-width:thin;scrollbar-color:#4a3e26 transparent}
+.lib-tit{font:400 26px/1.05 'Mr Eaves Small Caps',Georgia,serif;color:#F6E3A8}
+.lib-sub{font:italic 15px/1.3 'Bookinsanity',Georgia,serif;color:#A69C88;margin:4px 0 10px}
+.lib-cerca{display:block;margin:6px 0 12px}
+.lib-cerca input{width:100%;box-sizing:border-box;background:rgba(0,0,0,.4)!important;border:1px solid rgba(217,177,92,.35)!important;border-radius:8px;padding:7px 10px;color:#ECE4D2!important;font:italic 15px 'Bookinsanity',Georgia,serif!important;box-shadow:none!important}
+.lib-capi,.lib-sez,.lib-ris{list-style:none;margin:0;padding:0}
+.lib-capi>li{margin:2px 0}
+.lib-capi a,.lib-ris a{display:block;padding:6px 10px;border-radius:8px;cursor:pointer;color:#D9CFB8;font:400 17px/1.15 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.02em;border:1px solid transparent}
+.lib-capi a small,.lib-ris a small{display:block;font-size:12px;letter-spacing:.14em;color:#9A7330;text-transform:uppercase}
+.lib-capi a:hover,.lib-ris a:hover{color:#FFF3D6;border-color:rgba(246,227,168,.35)}
+.lib-capi>li.on>a{color:#F6E3A8;background:linear-gradient(90deg,rgba(217,177,92,.16),rgba(217,177,92,.02));border-color:rgba(217,177,92,.5)}
+.lib-sez{margin:4px 0 8px 12px;border-left:1px solid rgba(217,177,92,.25)}
+.lib-sez a{padding:4px 10px;font:15px/1.25 'Bookinsanity',Georgia,serif;color:#B9AE97}
+.lib-sez a:hover{color:#F6E3A8}
+.lib-nulla{color:#A69C88;font:italic 15px 'Bookinsanity',Georgia,serif;padding:6px 10px}
+.lib-pag{max-width:900px;font:18px/1.65 'Bookinsanity',Georgia,serif;color:#ECE4D2}
+.lib-testa{margin:0 0 26px;padding-bottom:16px;border-bottom:1px solid rgba(217,177,92,.35)}
+.lib-testa small{font:15px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.28em;color:#9A7330;text-transform:uppercase}
+.lib-testa h1{margin:4px 0 0;font:400 52px/1.02 'Mr Eaves Small Caps',Georgia,serif;background:linear-gradient(180deg,#fff4cf,#F6E3A8 35%,#D9B15C 70%,#9A7330);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 rgba(0,0,0,.9))}
+.lib-voce{margin:0 0 30px}
+.lib-voce.lib-qui{animation:libqui 2.4s ease-out}
+@keyframes libqui{0%{box-shadow:0 0 0 4px rgba(246,227,168,.5)}100%{box-shadow:0 0 0 4px transparent}}
+.lib-h2{font:400 34px/1.1 'Mr Eaves Small Caps',Georgia,serif;color:#F6E3A8;margin:38px 0 10px;padding-bottom:6px;border-bottom:1px solid rgba(217,177,92,.3)}
+.lib-pag .c2v-blocco{margin:0}
+.lib-pag .c3bt{font:400 25px/1.15 'Mr Eaves Small Caps',Georgia,serif!important;color:#D9B15C!important;margin:26px 0 6px!important}
+.lib-pag .c2v-nome{font:400 20px/1.15 'Mr Eaves Small Caps',Georgia,serif!important;color:#E7C980!important;margin:18px 0 4px!important}
+.lib-pag .lore,.lib-pag .c2v-lore{max-width:none!important;font:inherit!important;color:inherit!important}
+.lib-pag .lore p,.lib-pag .c2v-lore p{margin:0 0 12px;font:inherit}
+.lib-pag .c2v-ul{margin:0 0 12px 22px;padding:0}
+.lib-pag .c2v-ul li{margin:3px 0}
+.lib-pag .man-leggi{font-size:17px;line-height:1.55}
+.lib-pag .c2v-tab table{font:16px/1.4 'Bookinsanity',Georgia,serif}
+.lib-nav{display:flex;justify-content:space-between;gap:16px;margin:46px 0 10px;padding-top:18px;border-top:1px solid rgba(217,177,92,.35)}
+.lib-nav button{flex:1;max-width:46%;text-align:left;padding:12px 16px!important;border-radius:10px!important;border:1px solid rgba(217,177,92,.35)!important;background:linear-gradient(90deg,rgba(255,255,255,.02),transparent)!important;color:#F6E3A8!important;font:400 20px/1.1 'Mr Eaves Small Caps',Georgia,serif!important;text-transform:none!important;letter-spacing:.02em!important;box-shadow:none!important;cursor:pointer}
+.lib-nav button.avanti{text-align:right}
+.lib-nav button small{display:block;font-size:13px;letter-spacing:.18em;color:#9A7330;text-transform:uppercase;margin-bottom:3px}
+.lib-nav button:hover{border-color:#F6E3A8!important;color:#FFF3D6!important}
+@media (max-width:1100px){.lib{grid-template-columns:1fr}.lib-ind{position:static;max-height:none;border-right:0;border-bottom:1px solid rgba(217,177,92,.25)}}
+`; document.head.appendChild(st);
+})();
+/* ===== FINE IL LIBRO DEL MANUALE (v330) ===== */
 </script>
