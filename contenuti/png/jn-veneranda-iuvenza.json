@@ -1,100 +1,163 @@
 {
-  "id": "jn-veneranda-iuvenza",
-  "cat": "png",
-  "city": "julianova",
-  "group": "Concilio Ristretto",
-  "title": "Veneranda Iuvenza di Velthuria",
-  "sub": "La Dama Ragno — matriarca di Casa Velthuria, l'Ombra di Julia Nova",
-  "img": "Ritratto — Veneranda Iuvenza di Velthuria.jpg",
-  "state": "incontrato",
-  "status": "Viva. Fuggita da Julia Nova verso Teramum per farsi nominare Reggente. Vi aspetta lì: « Come la serpe che aspetta il topo. »",
-  "atti": [4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 19],
-  "links": ["faz-casa-velthuria", "faz-loto-nero", "jn-tenuta-di-altavia", "mu-osservatore-lu-grise", "ogg-diario-di-iuvenza", "ogg-lettera-gofferio", "q-velthuria-iuvenza"],
-  "blocchi": true,
-  "riquadro": true,
-  "cattivo": true,
-  "scheda": {
-    "Casata": "[[Casa Velthuria|faz-casa-velthuria]], di cui è la matriarca",
-    "Il suo esercito": "[[Il Loto Nero|faz-loto-nero]]",
-    "Dove sta": "A [[Teramum|borgo-teramum]], in una casa che nessuno sa indicare",
-    "Come la chiamano": "La Dama Ragno, la Serpe, «la signora»"
+ "id": "jn-veneranda-iuvenza",
+ "cat": "png",
+ "city": "julianova",
+ "group": "Concilio Ristretto",
+ "title": "Veneranda Iuvenza di Velthuria",
+ "sub": "La Dama Ragno — matriarca di Casa Velthuria, l'Ombra di Julia Nova",
+ "img": "Ritratto — Veneranda Iuvenza di Velthuria.jpg",
+ "state": "incontrato",
+ "atti": [
+  4,
+  5,
+  6,
+  7,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  19
+ ],
+ "links": [
+  "faz-casa-velthuria",
+  "faz-loto-nero",
+  "jn-tenuta-di-altavia",
+  "mu-osservatore-lu-grise",
+  "ogg-diario-di-iuvenza",
+  "ogg-lettera-gofferio",
+  "q-velthuria-iuvenza"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "cattivo": true,
+ "scheda": {
+  "Casata": "[[Casa Velthuria|faz-casa-velthuria]], di cui è la matriarca",
+  "Il suo esercito": "[[Il Loto Nero|faz-loto-nero]]",
+  "Dove sta": "A [[Teramum|borgo-teramum]], in una casa che nessuno sa indicare",
+  "Come la chiamano": "La Dama Ragno, la Serpe, «la signora»"
+ },
+ "pub": [
+  {
+   "t": "",
+   "capo": true,
+   "txt": "Veneranda Iuvenza è la matriarca di [[Casa Velthuria|faz-casa-velthuria]], la casata che a Julia Nova teneva la cassa più piena del porto. Capelli bianchi, occhi neri come pozzi, la voce bassa e fredda. Non alza mai la voce e non ha mai preso in mano una spada. Presta denaro, ascolta, aspetta.\n\nIn città la chiamano la Dama Ragno, o la Serpe. Della sua famiglia non si vede nessun altro, e chi lavora per lei non dice il suo nome: dice «la signora». I suoi inviti si chiudono con una goccia d’ambra. Le sue guardie stanno immobili come statue, i suoi Osservatori vestono di grigio, e dove passano i suoi uomini resta un profumo di lillà e cenere: il Loto d’Ombra, il fiore che cresce solo nei suoi giardini.\n\nSedeva nel Concilio Ristretto di Julia Nova e parlava di rado. Ha prestato a mezza città: mercanti, armatori, consiglieri. Per questo in tanti le devono qualcosa, e pochi hanno il coraggio di dirlo ad alta voce. Quando il Concilio ha provato a chiamarla nemica, gli hanno risposto coi registri: «È la banca della città.»"
   },
-  "pub": [
-    {
-      "t": "",
-      "capo": true,
-      "txt": "Capelli bianchi, occhi neri come pozzi. Al Concilio ha rotto il silenzio solo per indicare « le serpi del porto ». Nei suoi vigneti vi ha dato la mappa del covo di Domina: « Avete disturbato molti equilibri. Questo vi rende pericolosi. Ma anche… inevitabili. »\n\nPoi ha fatto uccidere Tonio e Marco, vi ha rubato Lyraeth e vi ha rispediti a Pietraluna a fare il suo lavoro sporco: « Voi siete martelli. E lui è una chiave. » Ha venduto la vostra missione a Lyaras. Ha lasciato Altavia con i cancelli spalancati e un elmo bruciato della Guardia su una picca alla Via Salaria: « Il tuo confine finisce qui. »\n\nIl suo esercito, il Loto Nero, blocca la strada per Teramum; l'Abate Gofferio era comprato con le sue monete; il suo Comandante di ferro vi ha promesso « altri giocattoli, più nuovi, più forti » a Teramum. Vuole Silvanus vivo."
-    }
-  ],
-  "gm": [
-    {
-      "t": "Statistiche",
-      "txt": "Non combatte: quando c'è uno scontro, lei non c'è. Questi numeri servono se i personaggi la mettono all'angolo. ⟦Nobile del Manuale dei Mostri 2024, rafforzata⟧, grado di sfida 3.\n\n· CA 13 · PF 52 · Velocità 9 m · Iniziativa +2\n· For 9 · Des 14 · Cos 12 · Int 18 · Sag 17 · Car 18\n· Tiri salvezza: Int +7, Sag +6, Car +7\n· Abilità: Inganno +10, Intuizione +9, Persuasione +7, Storia +7; Percezione passiva 15\n· Stiletto: +5 al colpire, 1d4+2 perforanti più 2d6 da veleno (TS Costituzione CD 14, metà)\n· ⟦Sempre un passo avanti⟧ (reazione): quando un attacco la colpisce, una sua guardia entro 1,5 m prende il colpo al suo posto\n· ⟦Lascia la stanza⟧ (azione bonus): Disimpegno; chi la insegue ha svantaggio alla prima prova per trovarla"
-    },
-    {
-      "t": "Chi è",
-      "txt": "La matriarca di Casa Velthuria, la banca di Julia Nova. Ha comprato, venduto e aspettato; non ha mai preso una spada. Adesso è a Teramum, al Colle, e prepara la sua nomina a Reggente. Sapeva del Sigillo della Marea Nera sotto il Palazzo di Julia Nova. Il suo Osservatore, Lu Grise, ha seguito i personaggi fino a Mushanë: lì Maximus lo ha decapitato a mani legate (Atti XIV-XV). Oswald sa qualcosa dei Velthuria: un incidente di anni fa."
-    },
-    {
-      "t": "Fazione",
-      "txt": "Capo di [[Casa Velthuria|faz-casa-velthuria]], la casata «Ciò che la Luna Nasconde», legata a culti lunari oscuri. Paga [[Il Loto Nero|faz-loto-nero]], cioè le compagnie vesperiane del sud, in oro straniero. Usa i Celomanti di Sylva Noctis ma non si fida di loro: nel suo diario lo scrive. Iuvenza e Sylva Noctis non sono la stessa cosa."
-    },
-    {
-      "t": "Cosa vuole e perché",
-      "txt": "Farsi nominare Reggente del Ducato al posto del Consiglio che c'è adesso: è la sua «ascesa al Colle». Poi aprire il passaggio sotto la Basilica Aurea, quello che nel diario chiama «la chiave vera».\n\nPerché: « Voi siete ossessionati dal fare. Io sono ossessionata dal sapere. Perché chi sa, controlla. » ⟦Crede che il Ducato cadrà comunque, nella prossima guerra delle lune, e che si salverà solo chi tiene in mano ciò che dorme sotto Teramum. Lei non si sente malvagia: si sente l'unica sveglia in una casa che brucia.⟧"
-    },
-    {
-      "t": "Su chi conta",
-      "txt": "· I luogotenenti: [[Messer Ansaldo Morigi|png-ansaldo-morigi]], il suo agente col convoglio dei carri chiusi; [[Tanush Dushmàni|png-tanush-dushmani]], il capo della scorta; [[Beltramo Savini|png-ponzio-tancredus]], l'incappucciato di Teramum, con cui complotta contro [[Lucius Grazianus|png-lucius-grazianus]]. Prima di loro Lu Grise e il Kapitàn Lekë, tutti e due morti.\n· Le forze: il Loto Nero sulla strada di Teramum; i vesperiani di Tanush, ventisei, e dall'osteria anche Kostandìn coi suoi otto e Vasco coi suoi tre; le Armature del Loto, «servitori che non chiedono paga»; ⟦i Forgiati: il liquido nero della forgiatura viaggia con i suoi uomini⟧.\n· I luoghi: la casa di Teramum che nessuno sa indicare; ⟦il Quartiere dei Tigli, dove dovevano arrivare le casse⟧. Altavia è persa.\n· Chi la aiuta senza saperlo, o per denaro: Dama Violante Rosaspina, i Thaulero ricattati, la Gilda della Presentosa, il Marchese d'Avalos (l'elenco cifrato del diario)."
-    },
-    {
-      "t": "Il piano",
-      "txt": "Cinque passi. Ognuno dice cosa fa lei, cosa vedono i giocatori, cosa fa se la fermano e cosa cambia se ci riesce. Il passo avanza di uno a ogni settimana di marcia della Crociata, o quando i personaggi si fermano a lungo."
-    },
-    {
-      "t": "Passo 1 — Chiudere la strada di Teramum (fatto in parte)",
-      "liv": 3,
-      "txt": "· Cosa fa: il Loto Nero chiude la Via Salaria e il Passo dei Frati, tiene Mushanë con Lekë, compra l'Abate.\n· Cosa vedono i giocatori: barricate col fiore nero, l'elmo bruciato sulla picca, i mercenari sui muri dei contadini.\n· Se la fermano: rinuncia ai passi e manda le forze dove la Crociata deve per forza passare, il guado e l'osteria. È già successo dopo Mushanë.\n· Se riesce: la Crociata arriva a Teramum tardi e stanca, quando i voti sono già comprati."
-    },
-    {
-      "t": "Passo 2 — Portare le Armature a Teramum (in corso)",
-      "liv": 3,
-      "txt": "· Cosa fa: Ansaldo porta in città dodici casse di Armature del Loto, con Tanush di scorta. Entrano dalla Porta Melatina con tre sigilli.\n· Cosa vedono i giocatori: il convoglio dei carri chiusi all'osteria de lu Passe, la scorta di vesperiani, il profumo di lillà e cenere del messere.\n· Se la fermano: le casse salve arrivano lo stesso con Tanush; se arriva poco, lei ⟦compra le armature dalla Forgia del Gigante al Lucente Leonardo⟧.\n· Se riesce: a Teramum ha «servitori che non chiedono paga» per la Guardia, per la Convocazione e contro chi le dice di no."
-    },
-    {
-      "t": "Passo 3 — Comprare il Consiglio",
-      "liv": 3,
-      "txt": "· Cosa fa: chiude i debiti dell'elenco cifrato (Thaulero, Rosaspina, la Presentosa, d'Avalos) e, con Beltramo Savini, prepara la caduta di Lucius Grazianus.\n· Cosa vedono i giocatori: in città un consigliere cambia idea di colpo; i Thaulero pagano un debito che nessuno sapeva; contro Lucius gira una voce di tradimento.\n· Se la fermano: se un nome dell'elenco viene scoperto, lo lascia cadere da solo («costi operativi») e ne compra un altro.\n· Se riesce: alla Convocazione i voti sono suoi prima che si cominci a parlare."
-    },
-    {
-      "t": "Passo 4 — Avere Silvanus vivo",
-      "liv": 3,
-      "txt": "· Cosa fa: vuole il capitano col cappuccio, «quello col sangue che brilla». « Portatelo a me. »\n· Cosa vedono i giocatori: domande su Silvanus da gente che non dovrebbe conoscerlo; un'offerta di salvacondotto solo per lui; un tentativo di prenderlo di notte.\n· Se la fermano: offre alla Crociata un patto: l'entrata in città in cambio di lui.\n· Se riesce: ⟦ha il sangue che serve per aprire il passaggio sotto la Basilica⟧, e la Crociata perde il suo erede."
-    },
-    {
-      "t": "Passo finale — La Grande Convocazione",
-      "liv": 3,
-      "txt": "· Cosa fa: si fa nominare Reggente davanti a tutti; poi apre il passaggio sotto la Basilica Aurea.\n· Cosa vedono i giocatori: la convocazione annunciata, la sua faccia in pubblico per la prima volta dopo Julia Nova.\n· Se la fermano: è il posto dove si può farla rispondere in pubblico, non in un vicolo. Con le prove giuste cade lì.\n· Se riesce: il Ducato è suo, la Crociata diventa una banda di ribelli fuori dalle mura, e sotto la Basilica si sveglia ciò che la cattedrale tiene «tappato»."
-    },
-    {
-      "t": "A che punto è",
-      "txt": "Passo 2, dopo l'Atto XIX. All'osteria de lu Passe il convoglio è stato bruciato in parte: due carri salvi, il quarto in fiamme. Ansaldo è a letto, avvelenato dal liquido nero della sua stessa bottiglia, senza carte (le ha Maximus). Tanush tiene i carri salvi e ha guadagnato Kostandìn e Vasco coi loro uomini. Lei non sa ancora niente: lo saprà ⟦dal rapporto che Ansaldo doveva scrivere all'alba, o dal suo silenzio⟧."
-    },
-    {
-      "t": "Come reagisce ai personaggi",
-      "txt": "· Se la ostacolano: non si arrabbia. Paga di più, cambia uomini, scrive una lettera. Chi ha fallito diventa un «costo operativo».\n· Se la scoprono: nega con calma e manda avanti qualcun altro che giura il contrario; ⟦ricatta chi l'accusa con ciò che sa di lui⟧.\n· Se la affrontano: in un posto pubblico parla, sorride e offre un patto; in privato non ci arriveranno mai, perché lei se ne va prima. Fugge sempre: la casa di Teramum ha ⟦una porta sulle cantine della Lunaria⟧."
-    },
-    {
-      "t": "La debolezza",
-      "txt": "Nessuno ha ancora legato il Loto Nero al nome Velthuria davanti a un tribunale: Kostandìn era l'unico testimone possibile, ed è passato con Tanush. Le prove che i personaggi hanno già: il libro mastro cifrato di Domina, la lettera con le duecento monete per Gofferio, il Cristallo di Memoria (lo ha Meren), il diario, il Sigillo da Contratto del Loto Nero, il libro paga di Lekë. Le piste nuove: le carte di Ansaldo, il sigillo d'osso nero col fiore e il taccuino col conto della colonna.\n\nIl suo difetto: non si fida di nessuno, e dei Celomanti meno di tutti. È un cuneo. ⟦Non muove un passo se non sa: una cosa che non sa la ferma più di una spada.⟧"
-    },
-    {
-      "t": "Legami",
-      "txt": "· Con i personaggi: vuole Silvanus; Maximus ha decapitato il suo Osservatore; complotta contro Lucius, il padre di Maximus; ha usato il gruppo contro Domina e poi lo ha venduto a Lyaras. Ha Lyraeth, e i personaggi non sanno cosa ne ha fatto.\n· Con le fazioni: Casa Velthuria e il Loto Nero sono suoi; i Celomanti di Sylva Noctis sono alleati di cui ha paura; il Consiglio Reggente è il premio.\n· Con gli altri cattivi: ⟦Ceruso, in fuga a Teramum, le deve la vita e non lo sa⟧."
-    },
-    {
-      "t": "Movimenti",
-      "txt": "· Atti IV-VII: a Julia Nova dà la mappa del covo di Domina, poi fa uccidere Tonio e Marco e ruba Lyraeth.\n· Atti IX-XI: lascia Altavia vuota; i personaggi trovano il diario e la lettera per Gofferio.\n· Atti XIII-XV: perde Mushanë; Lu Grise è preso e decapitato.\n· Atto XIX: il convoglio all'osteria; Ansaldo avvelenato e derubato, i carri bruciati, Kostandìn e Vasco passano con Tanush."
-    }
-  ]
+  {
+   "t": "Con voi",
+   "txt": "· Al Concilio di Julia Nova ha rotto il silenzio una volta sola, per indicare «le serpi del porto».\n· Nel padiglione dei suoi vigneti vi ha dato la mappa del covo di Domina: «Avete disturbato molti equilibri. Questo vi rende pericolosi. Ma anche… inevitabili.»\n· Poi i suoi uomini hanno ucciso Tonio e Marco, due Naviganti Grigi, e hanno preso Lyraeth. Ad Altavia vi ha ricevuti su uno scranno d’ebano: «Voi siete martelli. E lui è una chiave.» Vi ha mandati a Pietraluna contro Lyaras, il suo rivale, e intanto vi aveva venduti a lui.\n· Ha lasciato Altavia vuota, e un elmo bruciato della Guardia su una picca alla Via Salaria: «Il tuo confine finisce qui.» Il suo esercito, il Loto Nero, ha chiuso la Via Salaria e il Passo dei Frati.\n· Ad Altavia l’ultima armatura ha parlato con la sua voce: «Ne ho altri. Più nuovi. Più forti. Vi aspettano a Teramum.» E ha chiesto di Silvanus, «quello con il sangue che brilla».\n· Nello studio di Altavia avete trovato il Cristallo di Memoria: lei e un incappucciato di Teramum che passano in rassegna il Consiglio Ducale e decidono di isolare Lucius Grazianus. E il suo diario, che parla di un passaggio sotto la Basilica Aurea, «la chiave vera».\n· Il suo Osservatore, Lu Grise, vi ha seguiti fino a Mushanë. Lì Maximus lo ha decapitato.\n· All’osteria de lu Passe le Armature del Loto scortavano il convoglio di Messer Ansaldo Morigi. Ansaldo è morto con la gola tagliata. Interrogato da morto, ha detto di lei: «Lei non compra cose. Compra il tempo. Sta sul Colle. Aspetta che il Consiglio cada da solo. Poi si siede.» E del capitano: «Lei lo cerca da prima della Crociata. Lo vuole vivo. Intero.»"
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Non combatte: quando c'è uno scontro, lei non c'è. Questi numeri servono se i personaggi la mettono all'angolo. ⟦Nobile del Manuale dei Mostri 2024, rafforzata⟧, grado di sfida 3.\n\n· CA 13 · PF 52 · Velocità 9 m · Iniziativa +2\n· For 9 · Des 14 · Cos 12 · Int 18 · Sag 17 · Car 18\n· Tiri salvezza: Int +7, Sag +6, Car +7\n· Abilità: Inganno +10, Intuizione +9, Persuasione +7, Storia +7; Percezione passiva 15\n· Stiletto: +5 al colpire, 1d4+2 perforanti più 2d6 da veleno (TS Costituzione CD 14, metà)\n· ⟦Sempre un passo avanti⟧ (reazione): quando un attacco la colpisce, una sua guardia entro 1,5 m prende il colpo al suo posto\n· ⟦Lascia la stanza⟧ (azione bonus): Disimpegno; chi la insegue ha svantaggio alla prima prova per trovarla",
+   "lato": true
+  },
+  {
+   "t": "Chi è",
+   "txt": "⟦Ha passato i sessant’anni e ne dimostra meno: non ha mai lavorato al sole.⟧ È l’unica dei Velthuria che si fa vedere. ⟦La famiglia c’è, sparsa fra Teramum e i porti del sud, ma non compare mai: decide lei per tutti.⟧\n\nHa costruito la sua forza sui debiti degli altri. Ogni prestito, per lei, è una cosa che sa di qualcuno: chi ha perso una nave, chi paga una donna, chi ha un figlio che gioca. Non chiede mai indietro i soldi. Chiede un favore, una firma, un voto.\n\nSapeva del Sigillo della Marea Nera sotto il Palazzo di Julia Nova. Ha tenuto Lyraeth, il Celomante prigioniero dei Naviganti,e lo ha svuotato di tutto quello che sapeva: l’assedio, il rito, Pietraluna. ⟦Lyraeth è ancora vivo, in una cantina della sua casa di Teramum: è la sua biblioteca dei Celomanti.⟧\n\nNon è una fanatica. Non prega e non serve nessuno: usa i Celomanti di Sylva Noctis, e nel suo diario scrive che non si fida di loro. ⟦Crede che il Ducato cadrà comunque, nella prossima guerra delle lune, e che si salverà solo chi tiene in mano ciò che dorme sotto Teramum. Non si sente malvagia: si sente l’unica sveglia in una casa che brucia.⟧"
+  },
+  {
+   "t": "Fazione",
+   "txt": "Capo di [[Casa Velthuria|faz-casa-velthuria]], la casata «Ciò che la Luna Nasconde». A Julia Nova era la banca: il porto, il grano, il vino passavano dai suoi registri. Teneva la Tenuta di Altavia, che non era sua: secondo Yuri «è de li Padroni Veri», la casa della famiglia di Silvanus, e i Velthuria «je l’hanno rubata».\n\nIl braccio armato è [[Il Loto Nero|faz-loto-nero]]: compagnie di mercenari del sud, con armature alla maniera di Vesperia, pagate in oro straniero. Non sono suoi per fede, sono suoi per contratto: alla scadenza si vendono al rialzo. Fra loro valgono le regole delle Aquile.\n\nGli occhi sono gli Osservatori, uomini in grigio che seguono e riferiscono e non combattono. Lu Grise era uno di loro. ⟦Ne ha altri, almeno uno per ogni porta di Teramum.⟧\n\nIl ferro sono le Armature del Loto: «servitori che non chiedono paga». Le ha usate ad Altavia e all’osteria de lu Passe. ⟦Le forgia qualcuno nella valle del Tordinum: al guado di Sant’Atto l’acqua sapeva di lillà.⟧\n\nGli alleati di cui ha paura sono i Celomanti di Sylva Noctis. Li paga, li usa, li tiene lontani: ha venduto Lyaras ai suoi nemici per prendere tempo, e lo rifarebbe con chiunque di loro."
+  },
+  {
+   "t": "Cosa vuole e perché",
+   "txt": "Vuole il vuoto che resterà dopo la guerra, ed essere l’unica a sapere come riempirlo. «Voi siete ossessionati dal fare. Io sono ossessionata dal sapere. Perché chi sa, controlla.»\n\n· **La Reggenza del Ducato.** Con il Sigillo Ducale decide lei se, quando e come si fa la Grande Convocazione, e chi ci arriva. Perché: chi tiene il Sigillo tiene la legge, e lei non vuole regnare, vuole che nessuno possa regnare senza di lei.\n· **«La chiave vera».** Il passaggio sotto la Basilica Aurea, che nel suo diario porta a ciò che la cattedrale tiene chiuso. ⟦Porta al Sigillo Lunare di Teramum dal basso, senza passare dalla Fiamma.⟧ Perché: è l’unica cosa che vale più dell’oro nella guerra che viene.\n· **Silvanus vivo, intero.** Lo cerca da prima della Crociata. Perché: ⟦il suo sangue è quello che serve per aprire il passaggio⟧, e un erede vivo nelle sue mani vale più di un erede morto in quelle di chiunque.\n· **Sapere.** Ogni segreto dei personaggi è una moneta. Non vuole ucciderli finché sono utili: vuole sapere cosa portano."
+  },
+  {
+   "t": "Su chi conta",
+   "txt": "· **Dentro il Consiglio:** [[Beltramo Savini|png-ponzio-tancredus]], l’incappucciato del Cristallo, con cui prepara la caduta di [[Lucius Grazianus|png-lucius-grazianus]]. I consiglieri del Cristallo: Mazzarellus «è cieco», Savinellus «si compra», De Spina «si distrae».\n· **Chi le deve qualcosa:** Dama Violante [[Rosaspina|faz-casa-rosaspina]] di Nutaròschë, i Thaulero, la Gilda della Presentosa, il Marchese d’Avalos (l’elenco cifrato del diario). L’Abate Gofferio di Mushanë era comprato con duecento monete d’oro.\n· **Gli uomini sulla strada:** Guelfo, lo scudiero di Rosaspina, che segue la Crociata da Bëllindë e porta il conto della colonna a Teramum, per mano di Rosaspina. Il Loto Nero sulla Via Salaria e verso Teramum.\n· **Chi non c’è più:** Lu Grise (decapitato a Mushanë), il Kapitàn Lekë (morto a Mushanë), Messer Ansaldo Morigi, Tanush Dushmàni, Kostandìn e Vasco coi loro uomini (morti all’osteria de lu Passe). In pochi giorni ha perso i suoi uomini migliori sulla strada.\n· **Le cose:** le Armature del Loto («ne ho altri»), il liquido nero della forgiatura, ⟦la casa di Teramum che nessuno sa indicare, con una porta sulle cantine della Lunaria⟧."
+  },
+  {
+   "t": "Obiettivi e mosse",
+   "txt": "Non è un copione. Sono le cose che vuole e quello che può fare per averle. Si sceglie la mossa che risponde a quello che fanno i personaggi; se i personaggi non fanno niente, lei va avanti di una mossa ogni pochi giorni di marcia. Quando una mossa riesce o fallisce, si scrive in «A che punto è»."
+  },
+  {
+   "t": "La Reggenza",
+   "txt": "· Comprare un voto alla volta, coi debiti dell’elenco: un consigliere che cambia idea di colpo, una casata che paga un debito che nessuno sapeva.\n· Far cadere Lucius Grazianus: una voce di tradimento in città, una lettera trovata «per caso», un incidente sulla strada.\n· Far tardare la Convocazione finché i voti non sono suoi: un lutto, un’epidemia nei quartieri bassi, una festa religiosa.\n· Se scoprono un nome dell’elenco, lo lascia cadere da solo («costi operativi») e ne compra un altro.",
+   "liv": 3
+  },
+  {
+   "t": "Silvanus vivo",
+   "txt": "· Domande su Silvanus da gente che non dovrebbe conoscerlo.\n· Un salvacondotto offerto solo per lui: «Il capitano può entrare come mio ospite.»\n· Un tentativo di prenderlo di notte, col cappuccio o senza, quando la Crociata è accampata.\n· Un patto alla luce del sole: l’entrata in città per tutti, in cambio di lui.",
+   "liv": 3
+  },
+  {
+   "t": "La chiave vera",
+   "txt": "· Cercare il passaggio sotto la Basilica: scavi, operai pagati per tacere, un canonico comprato.\n· ⟦Le serve il sangue di Silvanus per aprirlo: senza di lui scava, ma non apre.⟧\n· Se i personaggi si avvicinano alla Basilica, lei lo sa prima di loro.",
+   "liv": 3
+  },
+  {
+   "t": "Contro la Crociata a Teramum",
+   "txt": "· Farla entrare dalla parte del torto, come ha fatto Lu Grise a Mushanë: una denuncia per la strage dell’osteria, «un mercante con tre sigilli sgozzato dalla Crociata».\n· Usare le carte di Ansaldo contro chi le porta: chi si presenta alla Porta Melatina col suo lasciapassare viene lasciato entrare e seguito.\n· La lista dei vesperiani con la taglia: i vesperiani della Crociata non sono al sicuro in città.\n· Offrire. Prima di colpire, offre sempre qualcosa: denaro, un palazzo, una verità.",
+   "liv": 3
+  },
+  {
+   "t": "A che punto è",
+   "txt": "Al giorno in cui la Crociata sale a Colleatterrato, dopo l’osteria de lu Passe (sessione del 26-10).\n\n· Il convoglio è perso tutto: i carri e le casse di armature sono bruciati, le Armature del Loto abbattute, Tanush, Kostandìn, Vasco e i loro uomini morti.\n· Ansaldo è morto con la gola tagliata da Guelfo, lo scudiero di Rosaspina. ⟦È un suo ordine di sempre: chi fallisce e sa troppo non deve parlare.⟧ Non sa che Mattheus lo ha fatto parlare lo stesso.\n· Guelfo corre verso Nutaròschë con la lettera alla rosa: il conto della colonna, il capitano col cappuccio. ⟦Lei saprà dell’osteria fra due giorni.⟧\n· Non sa ancora che Maximus ha il lasciapassare coi tre sigilli, il taccuino e il sigillo d’osso nero. ⟦Quando lo saprà, cambia la parola d’ordine della Porta Melatina e fa del lasciapassare una trappola.⟧\n· ⟦Non sa che le Armature all’osteria si sono piegate davanti a Mattheus. Se lo viene a sapere, Mattheus le interessa quanto Silvanus.⟧\n· È a Teramum, sul Colle. Il Consiglio non è ancora suo."
+  },
+  {
+   "t": "Come reagisce ai personaggi",
+   "txt": "· **Se la ostacolano:** non si arrabbia. Paga di più, cambia uomini, scrive una lettera. Chi ha fallito diventa un «costo operativo».\n· **Se la scoprono:** nega con calma e manda avanti qualcun altro che giura il contrario. ⟦Ricatta chi l’accusa con ciò che sa di lui.⟧\n· **Se la affrontano:** in un posto pubblico parla, sorride e offre un patto. In privato non ci arriveranno mai: se ne va prima.\n\nCon ognuno dei personaggi ha un conto diverso."
+  },
+  {
+   "t": "Con Alessandros",
+   "txt": "Per lei Alessandros è la spada della Chiesa: porta il Dito di San Berardo, e la Chiesa parla con la sua bocca. La Chiesa è fra lei e il passaggio sotto la Basilica. ⟦Casa Cerullius ha un palazzo a Teramum e debiti col suo banco: il grano di Canzañë è pagato in anticipo col suo oro.⟧ Non lo attacca in faccia: prova a legargli le mani attraverso la famiglia.",
+   "liv": 3
+  },
+  {
+   "t": "Con Vicarus",
+   "txt": "Vicarus è un Cerullius anche lui, e porta una magia che lei non conosce. A Pietraluna Silvanus ha capito che Vicarus e Mattheus portano qualcosa che non mostrano: ⟦lei lo sa da Lyraeth⟧. Lui è l’unico che potrebbe capire la sua frase «chi sa, controlla». ⟦Lo tenta invece di minacciarlo: libri, lo Studio di Teramum, una risposta su cosa è.⟧",
+   "liv": 3
+  },
+  {
+   "t": "Con Adamus",
+   "txt": "Tonio e Marco erano uomini di Adamus, dei Naviganti Grigi, e li ha fatti uccidere lei. Ad Altavia Adamus ha salvato Lu Biondo e Storto dai suoi uomini. Per lei la Gilda è una concorrente sul mare: le sue rotte valgono quanto il suo banco. ⟦Una mossa possibile: offrire ad Adamus gli assassini di Tonio e Marco, legati, come regalo. Un costo operativo, al contrario.⟧",
+   "liv": 3
+  },
+  {
+   "t": "Con Maximus",
+   "txt": "Suo padre, Lucius Grazianus, è il vero bersaglio del suo piano a Teramum: «Isolatelo. E il figlio? Tenetelo distratto.» Maximus ha decapitato il suo Osservatore e ha in mano le carte di Ansaldo. Lei lo teme più degli altri, perché è l’unico che può mettere insieme il complotto e un nome. Sa che è fedele e che si arrabbia: lo vuole lontano dal padre, o arrabbiato nel posto sbagliato.",
+   "liv": 3
+  },
+  {
+   "t": "Con Mattheus",
+   "txt": "Mattheus porta la scatola di Lyaras, il suo vecchio rivale. ⟦Lei non lo sa ancora. Quando sente che le Armature dell’osteria si sono piegate davanti a lui, lo vuole: un uomo a cui il ferro obbedisce vale quanto un erede.⟧ Con lui non userebbe la forza: gli parlerebbe di Mortus, e di quello che il ferro gli ha detto.",
+   "liv": 3
+  },
+  {
+   "t": "Con Luigis",
+   "txt": "⟦Lei fa «giocattoli», e Luigis è uno che i giocattoli li costruisce e li smonta: il suo cannone, Gelsomina, è la prova. Un artefice che capisce come sono fatte le Armature del Loto è un pericolo, o un acquisto. A Teramum gli offrirebbe una bottega, il ferro migliore e nessuna domanda.⟧",
+   "liv": 3
+  },
+  {
+   "t": "Come parla",
+   "txt": "· **Voce:** bassa, fredda, lenta. Non la alza mai. Fa pause lunghe, e nelle pause guarda le mani di chi ha davanti.\n· **Tono:** cortese e un po’ divertita, come chi parla a ragazzi bravi ma ingenui. Li chiama «piccoli eroi».\n· **Parole:** parla delle persone come di conti: «costi operativi», «un debito», «un investimento». Ama le immagini brevi: martelli e chiavi, la serpe e il topo, i giocattoli.\n· **Cosa vuole ottenere parlando:** sapere. Fa domande più di quante ne riceva, e ogni risposta la paga con mezza verità.\n· **Non minaccia mai apertamente.** Offre. La minaccia è nell’offerta."
+  },
+  {
+   "t": "Gli argomenti",
+   "txt": "· **Tonio e Marco:** «Costi operativi. Li ho pagati più di quanto valessero.» Mai: chiedere scusa.\n· **Lyraeth:** «È al sicuro. Più al sicuro di quanto lo sarebbe con voi.» Mai: dove si trova.\n· **Silvanus:** «Il vostro capitano ha un sangue raro. Io colleziono cose rare.» Mai: perché le serve.\n· **Lucius Grazianus:** «Un uomo onesto. Al Consiglio è una rarità pericolosa.» Mai: che il complotto è suo.\n· **Ansaldo e l’osteria:** «Messer Ansaldo ringraziava sempre. Era il suo difetto.» Mai: chi gli ha tagliato la gola.\n· **La Reggenza:** «Qualcuno deve tenere la casa, quando tutti gridano al fuoco.»\n· **La Basilica:** cambia discorso. È l’unico argomento su cui non sorride.",
+   "liv": 3
+  },
+  {
+   "t": "Cosa la fa cedere",
+   "txt": "Non cede alle minacce: chi la minaccia ha già perso, perché le ha detto cosa teme. Cede a una cosa che non sa. Se i personaggi le offrono un’informazione vera che le manca (la scatola di Lyaras, cosa è successo davvero all’osteria, dov’è lo stendardo del Sole e delle Due Lune), lei paga: con una verità, un prigioniero, una porta aperta. Cede anche in pubblico, se la prova è davanti a tutti: lì deve restare la banchiera rispettabile, e preferisce perdere una partita che la faccia."
+  },
+  {
+   "t": "Battute pronte",
+   "txt": "· «Sedetevi. Chi resta in piedi ha fretta, e chi ha fretta sbaglia i conti.»\n· «Non vi ho mai mentito. Vi ho detto meno di quello che sapevo. È diverso.»\n· «Siete venuti a uccidermi o a chiedermi qualcosa? Nel primo caso, siete in ritardo.»\n· «Tutti hanno un prezzo, piccoli eroi. Il vostro è solo più caro.»",
+   "liv": 3
+  },
+  {
+   "t": "Debolezze",
+   "txt": "· **Non si fida di nessuno.** Per questo è sola: i suoi uomini la servono per denaro, e chi serve per denaro si vende. I vesperiani rimasti senza paga sono una porta aperta sul suo giro.\n· **Deve sapere.** Una cosa che non sa la ferma più di una spada. Una notizia falsa ben piantata la fa muovere nella direzione sbagliata.\n· **Il pubblico.** In piazza, al Consiglio, alla Convocazione deve restare la banchiera rispettabile. Davanti a tutti, con le prove giuste, cade.\n· **Le prove che i personaggi hanno già:** il libro mastro cifrato di Domina, la lettera con le duecento monete per Gofferio, il Cristallo di Memoria (lo ha Meren), il diario, il Sigillo da Contratto del Loto Nero, il libro paga di Lekë, e dall’osteria il taccuino e il lasciapassare di Ansaldo e il sigillo d’osso nero.\n· **Le prove che potrebbero prendere:** Guelfo e la sua lettera alla rosa, che porta da Rosaspina a lei; Lyraeth, testimone vivo; ⟦i vesperiani di Tanush rimasti senza capo⟧.\n· **Altavia rubata.** Se a Teramum si prova che Altavia era della famiglia di Silvanus, il suo nome diventa quello di una ladra di case nobili.\n· **Il corpo.** È vecchia e non combatte. Se la prendono da sola, è finita: per questo non è mai sola, e ha sempre una porta alle spalle."
+  },
+  {
+   "t": "Legami",
+   "txt": "· **Con i personaggi:** vedi «Come reagisce ai personaggi». In breve: vuole Silvanus, teme Maximus, tenta Vicarus, deve qualcosa ad Adamus, non sa ancora di Mattheus.\n· **Con [[Silvanus|jn-silvanus]]:** lo vuole vivo da prima della Crociata. Altavia era della sua famiglia.\n· **Con gli altri cattivi:** ha usato Domina e poi l’ha tradita; ha venduto Lyaras ai personaggi; ⟦Ceruso, in fuga a Teramum, le deve la vita e non lo sa⟧. Dei Celomanti ha paura.\n· **Con Julia Nova:** Fenix è la sua nemica dichiarata («Il tuo confine finisce qui»). Severian Altherion l’ha difesa al Concilio coi registri: le deve troppo per dirle di no.\n· **Con Teramum:** Beltramo Savini è il suo uomo nel Consiglio; Lucius Grazianus il suo bersaglio; Rosaspina, i Thaulero, la Presentosa e d’Avalos i suoi debitori."
+  }
+ ]
 }
