@@ -1,0 +1,48 @@
+{
+ "id": "bravo-teramano",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 804,
+ "title": "Bravo teramano",
+ "sub": "Gente della Lunaria pagata a giornata per una rissa",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "borgo-teramum",
+  "capo-dei-bravi",
+  "balestriere-dei-tetti"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Teramum — Bravo teramano.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "1/2",
+  "Dove": "Il ponte sulla gola, i vicoli della Lunaria",
+  "Cosa vogliono": "Una rissa lunga e rumorosa, non morti"
+ },
+ "best": "te_bravo_teramano",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Camicia di cuoio, mazza, coltello, la balestra pesante per chi ce l’ha. Picchiano in due sullo stesso bersaglio e spingono verso il parapetto. «Crociati! Ce l’avete con la gente di Teramum?» Scappano tutti insieme al fischio della ronda, o quando cade il capo.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Picchiatore (Tough, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1/2 (100 PE)\n\n· CA 12 · PF 32 (5d8+10) · Velocità 9 m · Iniziativa +1\n· For 15 (+2) · Des 12 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 10 (+0) · Car 11 (+0)\n· Percezione passiva 10\n· Lingue: pretuziano (teramano stretto)\n\nTratti\n\n· Tattiche del branco. Vantaggio al tiro per colpire se un alleato non Incapacitato è entro 1,5 m dal bersaglio.\n\nAzioni\n\n· Mazza. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni contundenti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 6 (1d10+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "In due sullo stesso bersaglio, verso il parapetto. Vogliono che le finestre sentano. Gridano «Aiuto! Ci ammazzano!» per la ronda."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Lu Spaccapreta|capo-dei-bravi]] li paga; chi paga lui è un’altra storia."
+  }
+ ]
+}

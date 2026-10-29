@@ -1,0 +1,47 @@
+{
+ "id": "capo-dei-bravi",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 805,
+ "title": "Lu Spaccapreta, capo dei bravi",
+ "sub": "Un omone con una lancia corta dalle quarantuno tacche",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "bravo-teramano",
+  "borgo-teramum"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Teramum — Lu Spaccapreta.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "5",
+  "Dove": "Il ponte sulla gola",
+  "Chi è": "Ex lottatore delle fiere di San Leonardo"
+ },
+ "best": "te_capo_dei_bravi",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un omone con una lancia corta piena di tacche, quarantuno, e uno scudo tondo. Sbarra il ponte e parla forte perché le finestre sentano. «Quarantuno. Ne faccio quarantadue.» Quando arriva il fischio della ronda, butta lo scudo e scappa per primo.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Gladiatore (Gladiator, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 5 (1800 PE)\n\n· CA 16 · PF 112 (15d8+45) · Velocità 9 m · Iniziativa +5\n· For 18 (+4) · Des 15 (+2) · Cos 16 (+3) · Int 10 (+0) · Sag 12 (+1) · Car 15 (+2)\n· Tiri salvezza: For +7, Des +5, Cos +6 · Abilità: Atletica +10, Intrattenere +5 · Percezione passiva 11\n· Lingue: pretuziano\n\nAzioni\n\n· Multiattacco. Fa tre attacchi di Lancia; può sostituirne uno con un Colpo di scudo.\n· Lancia. Attacco in mischia o a distanza +7, portata 1,5 m o gittata 6/18 m: 11 (2d6+4) danni perforanti.\n· Colpo di scudo. Una creatura entro 1,5 m che vede fa un tiro salvezza su Forza con CD 15: se fallisce subisce 9 (2d4+4) danni contundenti e, se è Media o più piccola, è Prona.\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 3 alla sua CA contro quell’attacco.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Spinge il più grosso verso il parapetto: chi viene spinto oltre fa un TS Destrezza CD 13 o cade nella gola (4d6 contundenti). «Mica dovevamo ammazzare nessuno!»"
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Bravo teramano|bravo-teramano]]."
+  }
+ ]
+}

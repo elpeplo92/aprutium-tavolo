@@ -1,0 +1,47 @@
+{
+ "id": "strisciante-carogna",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Sotto Teramum",
+ "num": 902,
+ "title": "Strisciante carogna",
+ "sub": "Un rumore bagnato di tante zampe, dalle gabbie dell’ipogeo",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-arena-sprofondata",
+  "campione-dell-arena"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Mostro — Strisciante carogna.jpg",
+ "scheda": {
+  "Che cos’è": "Mostruosità, Grande",
+  "Grado di sfida": "2",
+  "Dove": "Le gabbie sotto l’Arena Sprofondata",
+  "Come arrivano": "Al secondo round, dalle aperture tonde"
+ },
+ "best": "te_strisciante_carogna",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un verme grosso come un bue con dieci zampe e otto tentacoli attorno alla bocca, che cammina sui muri e sul soffitto. I tentacoli paralizzano; poi trascina chi è a terra verso le gabbie.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Strisciante carogna (Carrion Crawler, Manuale dei Mostri 2024: non è nell’SRD, cifre a memoria del manuale) · Mostruosità Grande · senza allineamento · grado di sfida 2 (450 PE)\n\n· CA 13 · PF 51 (6d10+18) · Velocità 9 m, scalare 9 m · Iniziativa +1\n· For 14 (+2) · Des 13 (+1) · Cos 16 (+3) · Int 1 (−5) · Sag 12 (+1) · Car 5 (−3)\n· Abilità: Percezione +3 · Percezione passiva 13\n· Sensi: scurovisione 18 m · Lingue: nessuna\n\nTratti\n\n· Scalare come un ragno. Cammina sulle pareti e sui soffitti senza prove.\n\nAzioni\n\n· Multiattacco. Un attacco di Tentacoli e uno di Morso.\n· Tentacoli. Attacco in mischia +8, portata 3 m: 4 (1d4+2) danni da veleno, e il bersaglio fa un tiro salvezza su Costituzione con CD 13: se fallisce è Avvelenato per 1 minuto e, finché è Avvelenato così, è anche Paralizzato; ripete il tiro alla fine di ogni suo turno.\n· Morso. Attacco in mischia +4, portata 1,5 m: 7 (2d4+2) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Entrano al secondo round dalle aperture tonde in fondo alle gabbie. Puntano chi è a terra o paralizzato e lo trascinano verso le gabbie. Fuggono sotto i 10 PF."
+  },
+  {
+   "t": "Legami",
+   "txt": "L’[[Arena Sprofondata|te-arena-sprofondata]]."
+  }
+ ]
+}

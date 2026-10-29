@@ -1,0 +1,38 @@
+{
+ "id": "guardiano_forgiato",
+ "name": "Guardiano forgiato",
+ "short": "G",
+ "color": "#4A4A5A",
+ "hp": 52,
+ "ac": 18,
+ "init": 0,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Spadone o Balestra pesante"
+  },
+  {
+   "n": "Spadone",
+   "atk": 5,
+   "dmg": "2d6+3"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 2,
+   "dmg": "2d10"
+  },
+  {
+   "n": "Parata (reazione): +2 CA contro un attacco in mischia"
+  },
+  {
+   "n": "Sentinella: immobile finché qualcuno non passa la soglia"
+  }
+ ],
+ "note": "Cavaliere (Knight, MM 2024, SRD 5.2.1, verificato il 29-10-2026) senza i danni radiosi, coi tratti del Forgiato · GS 3 · 700 PE · Vel 9 m · TS Cos +4, Sag +2 · immune: Affascinato, Spaventato · Le guardie di Colleventoso in armatura pesante.",
+ "src": "Le catacombe di Biancosale",
+ "tac": "Non si muovono finché qualcuno non passa l’arco. Poi spalla a spalla nel corridoio: due colpi a testa, parata sul primo attacco. Non inseguono fuori dal corridoio.",
+ "lines": [
+  "(nessun respiro, solo il ferro che si muove)"
+ ],
+ "img": "Bestiario — Guardiano forgiato.jpg"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "osservatore",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Mercenari, bravi e soldati",
+ "num": 504,
+ "title": "L’Osservatore",
+ "sub": "Chi guarda e basta: le spie di Casa Velthuria",
+ "state": "incontrato",
+ "atti": [
+  12,
+  14,
+  15
+ ],
+ "links": [
+  "mu-osservatore-lu-grise",
+  "q-lu-grise",
+  "faz-casa-velthuria",
+  "jn-veneranda-iuvenza",
+  "ogg-pugnale-osservatore"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — L'Osservatore « Lu Grise ».jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "1",
+  "Dove": "Dove passa la Crociata",
+  "Chi conoscete": "Lu Grise, decapitato a Mushanè"
+ },
+ "best": "osservatore",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un uomo vestito di grigio, con una faccia che il giorno dopo non si riesce a descrivere: né bello né brutto, la faccia di tutti e di nessuno. Sta appoggiato a un albero, o seduto in fondo a una locanda, e «guarda e basta». Non combatte: raccoglie, segue, riferisce. Il pugnale che porta è stretto, senza guardia, con una scanalatura per il veleno.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Il pastore Ndònie, al Ponte: «Quello guarda e basta». A Mushanè bisbigliavano di un viandante ferito arrivato prima della Crociata, e qualcuno l’ha chiamato lu Grise."
+  },
+  {
+   "t": "I segni prima di vederlo",
+   "txt": "Qualcuno che era alla locanda ieri sera e oggi è alla fontana, e domani sarà al mercato. Un pagamento in oro dove si paga in rame."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Lu Grise era al Ponte dei Frati accanto ai mercenari di Vasco; è fuggito verso Mushanè bruciato dal globo di Vicarus; è ricomparso in chiesa a parlare piano e ad aizzare i vesperiani; un incantesimo lo ha inchiodato mentre scappava. L’interrogatorio ha dato quel che poteva: pagato da Velthuria per guardare, seguire, riferire. Maximus gli ha tagliato la testa a mani legate."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Spia (Spy, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1 (200 PE)\n\n· CA 12 · PF 27 (6d8) · Velocità 9 m, scalare 9 m · Iniziativa +4\n· For 10 (+0) · Des 15 (+2) · Cos 10 (+0) · Int 12 (+1) · Sag 14 (+2) · Car 16 (+3)\n· Abilità: Inganno +5, Intuizione +4, Indagare +5, Percezione +6, Rapidità di mano +4, Furtività +6 · Percezione passiva 16\n· Lingue: pretuziano, vesperiano\n\nAzioni\n\n· Balestra a mano. Attacco a distanza +4, gittata 9/36 m: 5 (1d6+2) danni perforanti più 7 (2d6) da veleno.\n· Spada corta (o il pugnale scanalato). Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni perforanti più 7 (2d6) da veleno.\n\nAzioni bonus\n\n· Azione scaltra. Scatto, Disimpegno o Nascondersi.",
+   "lato": true
+  },
+  {
+   "t": "Lu Grise",
+   "liv": 3,
+   "txt": "La scheda della Spia, a metà PF per le ustioni di Vicarus (PF 13) e col pugnale avvelenato. ⟦Sapeva tre cose che non sono uscite: l’accordo dell’Abate (200 monete, la Vox Solis); il Palazzo della Notte di Iuvenza a Teramum, dove arrivavano i suoi rapporti; e che Iuvenza vuole Mattheus vivo. Il master le recupera per altre vie: la lettera nel cassetto di Gofferio, le carte della camera 9, un rapporto non spedito, Fratel Mario⟧. Una spia decapitata a mani legate dopo un Abate morto: Teramum ne farà un capo d’accusa.",
+   "ritratto": "Ritratto — L'Osservatore « Lu Grise ».jpg",
+   "voce": "mu-osservatore-lu-grise",
+   "scheda": {
+    "Base": "Spia",
+    "Grado di sfida": "1",
+    "Com’è finita": "Decapitato a Mushanè"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non combatte se può: si nasconde, osserva, scappa. Se costretto, un colpo avvelenato e Azione scaltra per sparire. Catturato, dice poco e vero: «pagato per guardare». Sa più di quello che dice, sempre."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Il [[Pugnale dell’Osservatore|ogg-pugnale-osservatore]]: non magico, vale per quello che racconta. Un taccuino cifrato (Indagare CD 15: nomi, orari, distanze della colonna). 200 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Gli occhi di [[Iuvenza|jn-veneranda-iuvenza]] e di [[Casa Velthuria|faz-casa-velthuria]]. ⟦Ce n’è un altro nella colonna, oggi: la «presenza non registrata» di cui parla Silvanus⟧."
+  }
+ ]
+}

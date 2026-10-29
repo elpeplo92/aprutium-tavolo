@@ -1,0 +1,70 @@
+{
+ "id": "forgiato-ferale",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Forgiati",
+ "num": 102,
+ "title": "Forgiato ferale",
+ "sub": "Il contadino che il vuoto ha fatto marcire in fretta",
+ "state": "incontrato",
+ "atti": [
+  19
+ ],
+ "links": [
+  "st-1-guado-di-sant-atto",
+  "forgiato",
+  "atto-19"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Forgiato ferale.jpg",
+ "scheda": {
+  "Che cos’è": "Non morto, Medio",
+  "Grado di sfida": "1",
+  "Dove": "Il guado di Sant’Atto e la valle del Tordino",
+  "Quanti": "Otto al guado, fra le canne e nei campi"
+ },
+ "best": "forgiato_ferale",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un Forgiato che la magia della luna ha lasciato troppo a lungo senza una voce da seguire. La pelle è grigia e tirata, le unghie nere di terra, la bocca sempre un po’ aperta. Non cantano più: ringhiano piano. Corrono curvi, a quattro zampe quando devono, e mordono.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Nella valle li chiamano «li spirdate», gli spiritati. Dicono che la nebbia della notte è salita dal fiume e che la mattina dopo mezzo casale era così. Dicono che chi viene morso prende la febbre nera. Il Barone di Cashtalladdë sapeva delle sparizioni e non ha detto niente."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Il bestiame sgozzato e lasciato lì, non mangiato. Orme di piedi nudi nel fango del guado, a gruppi, che vanno e vengono dal pagliaio. Un odore dolciastro nelle canne. I cani che non vogliono passare."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Sono sbucati dalle canne e dai campi al guado di Sant’Atto, mentre la colonna era nell’acqua: Zi’ Anselmo, Rosa, Panfilo, Emidio, Settimio, Assunta, Sabatino, Giuvanne. Volevano le bestie e i carri. Li avete abbattuti tutti."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Ghoul (Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Non morto Medio · caotico malvagio · grado di sfida 1 (200 PE)\n\n· CA 12 · PF 22 (5d8) · Velocità 9 m · Iniziativa +2\n· For 13 (+1) · Des 15 (+2) · Cos 10 (+0) · Int 7 (−2) · Sag 10 (+0) · Car 6 (−2)\n· Percezione passiva 10\n· Immunità: veleno; Affascinato, Avvelenato, Sfinimento\n· Sensi: scurovisione 18 m · Lingue: capisce il pretuziano, non parla\n\nTratti\n\n· ⟦Richiamo del Filatterio. Non attacca chi porta addosso il Filatterio di Lyaras: gli si stringe intorno e colpisce chi si mette in mezzo⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi di Morso.\n· Morso. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni perforanti più 3 (1d6) danni necrotici.\n· Artiglio. Attacco in mischia +4, portata 1,5 m: 4 (1d4+2) danni taglienti. Se il bersaglio non è un Non morto né un elfo, fa un tiro salvezza su Costituzione con CD 10: se fallisce è Paralizzato fino alla fine del suo turno successivo.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Attaccano le bestie e i carri per fermare la colonna, poi chi li difende. Non fuggono. Uno che paralizza e due che mordono: è così che ammazzano un miliziano in un round. Usa l’Artiglio su chi tiene fermi i muli, il Morso su chi è a terra."
+  },
+  {
+   "t": "Tornare persona",
+   "txt": "Un ferale è già oltre: il rituale inverso non lo riporta (Mattheus ha riportato solo i cinque ancora «interi»). Scacciare non morti funziona. Quando cade, per un istante la faccia torna quella di prima."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "La falce o la forca. Al collo di uno, un santino di San Berardo. 200 PE l’uno."
+  },
+  {
+   "t": "Legami",
+   "txt": "I Forgiati del guado sono stati forgiati due settimane fa, dopo la caduta di Lyaras: il liquido è passato da un pozzo e l’acqua sapeva di lillà. Vedi [[Forgiato|forgiato]] e [[Casa Velthuria|faz-casa-velthuria]]."
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "lupo",
+ "name": "Lupo",
+ "short": "L",
+ "color": "#6A6A5A",
+ "hp": 11,
+ "ac": 12,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Morso (Media o più piccola: Prona)",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Tattiche del branco: vantaggio se un alleato è entro 1,5 m dal bersaglio"
+  },
+  {
+   "n": "Percezione +5, Furtività +4"
+  }
+ ],
+ "note": "Lupo (Wolf, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · Bestia Media · GS 1/4 · 50 PE · Vel 12 m · scurovisione 18 m · Percezione passiva 15.",
+ "src": "Lu Vallòne",
+ "tac": "Di notte, in cerchio, sulle bestie e sui feriti: il primo butta giù, il secondo morde chi è a terra. Se il capobranco muore o perdono un terzo del branco, se ne vanno.",
+ "lines": [
+  "(occhi che prendono la luce del fuoco)"
+ ],
+ "img": "Bestiario — Lupo.jpg"
+}

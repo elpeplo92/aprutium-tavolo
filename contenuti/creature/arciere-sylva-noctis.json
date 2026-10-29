@@ -1,0 +1,67 @@
+{
+ "id": "arciere-sylva-noctis",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 207,
+ "title": "Arciere di Sylva Noctis",
+ "sub": "Quelli sui bastioni, la notte della Caserma Est",
+ "state": "incontrato",
+ "atti": [
+  4
+ ],
+ "links": [
+  "jn-caserma-est",
+  "faz-sylva-noctis",
+  "kaelen",
+  "atto-4"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Arciere di Sylva Noctis.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (elfo drukarro), Medio",
+  "Grado di sfida": "1/2",
+  "Dove": "I bastioni della Caserma Est",
+  "Quanti": "Non li avete contati: tiravano dal buio"
+ },
+ "best": "arciere_sylva",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Leggeri, in cuoio scuro, senza scudo; un arco lungo e una spada corta. Non scendono mai a combattere da vicino se possono: stanno in alto, al buio, e tirano su chi fa luce.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che la notte della Caserma le frecce «venivano dal cielo»."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Frecce con le penne nere piantate nelle imposte. Un tetto dove i piccioni non si posano."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Durante l’assalto alla Caserma Est tiravano dai bastioni, sopra l’orda dei Forgiati, mentre i sacerdoti stavano nelle retrovie. Non ne avete preso nessuno."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Esploratore (Scout, Manuale dei Mostri 2024, SRD 5.2.1, verificato) con le frecce intinte · Umanoide Medio · grado di sfida 1/2 (100 PE)\n\n· CA 13 · PF 16 (3d8+3) · Velocità 9 m · Iniziativa +2\n· For 11 (+0) · Des 14 (+2) · Cos 12 (+1) · Int 11 (+0) · Sag 13 (+1) · Car 11 (+0)\n· Abilità: Natura +4, Percezione +5, Furtività +6, Sopravvivenza +5 · Percezione passiva 15\n· Sensi: scurovisione 18 m · Lingue: elfico, pretuziano\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con la Spada corta o con l’Arco lungo.\n· Spada corta. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni perforanti.\n· Arco lungo. Attacco a distanza +4, gittata 45/180 m: 6 (1d8+2) danni perforanti ⟦più 2 (1d4) da veleno⟧.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Dall’alto, in copertura (+2 CA dietro un merlo), su chi fa luce o lancia incantesimi. Due frecce a round. Quando qualcuno sale, si sposta: non resta mai dove l’hanno visto. Se è ferito sparisce nel buio e non torna."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "L’arco, un turcasso con le frecce nere. 100 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Sylva Noctis e i Celomanti|faz-sylva-noctis]]. [[Kaelen|kaelen]] era il migliore di loro."
+  }
+ ]
+}

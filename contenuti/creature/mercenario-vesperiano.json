@@ -1,0 +1,121 @@
+{
+ "id": "mercenario-vesperiano",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Mercenari, bravi e soldati",
+ "num": 501,
+ "title": "Mercenario vesperiano",
+ "sub": "Le compagnie di Vesperia: professionisti, senza contratto non combattono",
+ "state": "incontrato",
+ "atti": [
+  12,
+  14,
+  19
+ ],
+ "links": [
+  "faz-compagnie-vesperiane",
+  "prov-vesperia",
+  "mu-kapitan-leke-muzaka",
+  "mu-sergente-kostandin",
+  "png-vasco",
+  "png-tanush-dushmani",
+  "sergente-mercenario",
+  "st-2-osteria-de-lu-passe"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — I mercenari Velthuria.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (vesperiano), Medio",
+  "Grado di sfida": "1",
+  "Dove": "Il Ponte dei Frati, Mushanè, l’osteria de lu Passe",
+  "Chi conoscete": "Lekë Muzàka, Kostandìn, Vasco, Tanush Dushmàni"
+ },
+ "best": "mercenario",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Uomini delle Genti dell’Aquila, a sud: cotta di maglia lucidata, scudo, spada lunga e balestra pesante, la barba tagliata da campo. Combattono bene e senza odio, sempre in due contro uno, e quando il capo cade o la paga manca chiedono quartiere: «Nessuno ci paga per morire qui».",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Una donna del lavatoio di Mushanè: «Lu Kapitàne nun strìlle ma’. È pègge: cùnte.» A Vesperia i clan contano, e un capitano d’Aquila decapitato in una chiesa d’Aprutium è un conto che qualcuno, a sud, potrebbe voler chiudere."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Case requisite, botteghe che vendono «a credito», uno sgabello da campo sotto il portico della chiesa. Un elmo bruciato su una picca."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Al Ponte dei Frati erano i mercenari senza insegne di Vasco, con la trappola dei barili d’olio sotto le assi: molti caduti, Vasco arreso e investito dalla palla di fuoco di Vicarus, poi passato al soldo di Maximus coi suoi tre. A Mushanè la compagnia di Lekë Muzàka è entrata armata in chiesa il giorno della campana: si è combattuto fra le panche, in piazza e nei vicoli, e Alessandros ha decapitato Lekë sul sagrato. I superstiti, con Kostandìn, sono passati alla Crociata. All’osteria de lu Passe Tanush Dushmàni, cugino di Lekë, ha parlato a Kostandìn della lista di Teramum con le taglie sui disertori: Kostandìn e i suoi otto, Vasco e i suoi tre sono tornati dall’altra parte. «Ventisei spade contro di voi.»"
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Picchiatore (Tough, SRD 5.2.1) con l’armatura del mercenario: ⟦cotta di maglia e scudo⟧ · Umanoide Medio · grado di sfida 1 ⟦per l’armatura⟧ (200 PE)\n\n· CA 16 (cotta di maglia e scudo) · PF 32 (5d8+10) · Velocità 9 m · Iniziativa +1\n· For 15 (+2) · Des 12 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 10 (+0) · Car 11 (+0)\n· Percezione passiva 10\n· Lingue: vesperiano, pretuziano\n\nTratti\n\n· Tattiche del branco. Vantaggio al tiro per colpire se un alleato non Incapacitato è entro 1,5 m dal bersaglio.\n\nAzioni\n\n· Spada lunga. Attacco in mischia +4, portata 1,5 m: 6 (1d8+2) danni taglienti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 6 (1d10+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Kapitàn Lekë Muzàka",
+   "liv": 3,
+   "txt": "Guerriero veterano (Warrior Veteran, SRD 5.2.1, verificato): CA 17, PF 65 (10d8+20), Iniziativa +3; For 16 (+3), Des 13 (+1), Cos 14 (+2), Int 10, Sag 11, Car 10; Atletica +5, Percezione +2; Multiattacco: due attacchi di Spada lunga (+5, 1d8+3; 1d10+3 a due mani) o di Balestra pesante (+3, 2d10+1); Parata (reazione, +2 CA). ⟦Comando (azione bonus, 3/giorno): un alleato entro 9 m che lo sente fa un attacco⟧. Grado di sfida 3. Decapitato da Alessandros sul sagrato di Mushanè.",
+   "ritratto": "Ritratto — Kapitàn Lekë Muzàka.jpg",
+   "voce": "mu-kapitan-leke-muzaka",
+   "scheda": {
+    "Base": "Guerriero veterano",
+    "Grado di sfida": "3",
+    "Com’è finita": "Morto a Mushanè"
+   }
+  },
+  {
+   "t": "Sergente Kostandìn",
+   "liv": 3,
+   "txt": "La scheda del [[Sergente mercenario|sergente-mercenario]]. All’osteria de lu Passe è tornato nemico, coi suoi otto: a Teramum i disertori sono su una lista con taglia, e lui ha fatto i suoi conti. Tell: gira il bicchiere d’un quarto prima di ogni sorso.",
+   "ritratto": "Ritratto — Sergente Kostandìn.jpg",
+   "voce": "mu-sergente-kostandin",
+   "scheda": {
+    "Base": "Sergente mercenario",
+    "Grado di sfida": "3",
+    "Oggi": "Nemico, all’osteria, con otto uomini"
+   }
+  },
+  {
+   "t": "Vasco",
+   "liv": 3,
+   "txt": "La scheda del [[Sergente mercenario|sergente-mercenario]], ⟦con le ustioni: PF 40⟧. Si era arreso al Ponte dei Frati e Vicarus lo ha bruciato lo stesso; Maximus lo ha preso al suo soldo coi suoi tre; all’osteria è passato con Tanush. Conosce i PG meglio di chiunque altro dall’altra parte.",
+   "ritratto": "Ritratto — Vasco.jpg",
+   "voce": "png-vasco",
+   "scheda": {
+    "Base": "Sergente mercenario",
+    "Grado di sfida": "3",
+    "Oggi": "Nemico, all’osteria, con tre uomini"
+   }
+  },
+  {
+   "t": "Tanush Dushmàni",
+   "liv": 3,
+   "txt": "La scheda del [[Sergente mercenario|sergente-mercenario]]. Trecce grigie, una cicatrice che chiude mezzo labbro; cugino di Lekë. Scorta Ansaldo con dodici uomini senza insegne. ⟦Vuole la testa di Alessandros per il clan, non per la paga: non tratta⟧.",
+   "ritratto": "Ritratto — Tanush Dushmàni.jpg",
+   "voce": "png-tanush-dushmani",
+   "scheda": {
+    "Base": "Sergente mercenario",
+    "Grado di sfida": "3",
+    "Oggi": "All’osteria, con dodici uomini"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Professionista: prima la balestra da lontano, poi spada e scudo. Cerca sempre il compagno accanto: due contro uno. Sotto la metà dei PF chiede quartiere: senza paga non muore per nessuno. Con un sergente vivo tengono la linea; senza, si sbandano in tre round."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Cotta di maglia, scudo, spada lunga, balestra pesante e venti quadrelli, qualche moneta vesperiana. A Mushanè: 14 spade, 6 scimitarre, 8 balestre, 120 quadrelli, 9 lance, 11 scudi, 7 cotte, 8 cuoi borchiati. 200 PE l’uno."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Le compagnie vesperiane|faz-compagnie-vesperiane]], pagate da [[Casa Velthuria|faz-casa-velthuria]] col sigillo del [[Loto Nero|faz-loto-nero]]. Il contratto di Lekë è nella sua casa a Mushanè."
+  }
+ ]
+}

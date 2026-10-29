@@ -1,0 +1,27 @@
+{
+ "id": "armatura_animata",
+ "name": "Armatura animata",
+ "short": "AA",
+ "color": "#5A5A6A",
+ "hp": 33,
+ "ac": 18,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Colpo"
+  },
+  {
+   "n": "Colpo",
+   "atk": 4,
+   "dmg": "1d6+2"
+  }
+ ],
+ "note": "Armatura animata (Animated Armor, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · Costrutto Medio · GS 1 · 200 PE · Vel 7,5 m · immune: veleno, psichico; Affascinato, Assordato, Sfinimento, Spaventato, Paralizzato, Pietrificato, Avvelenato · vista cieca 18 m (cieca oltre).",
+ "src": "Pietraluna",
+ "tac": "Fa la ronda. Attacca chi le capita a tiro e lo segue finché lo vede; perso di vista, torna al giro.",
+ "lines": [
+  "(cerniere, e un passo di ferro)"
+ ],
+ "img": "Bestiario — Armatura animata.jpg"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "forgiato-marcio",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Forgiati",
+ "num": 103,
+ "title": "Forgiato marcio",
+ "sub": "Quello che guida gli altri senza parlare",
+ "state": "incontrato",
+ "atti": [
+  19
+ ],
+ "links": [
+  "st-1-guado-di-sant-atto",
+  "forgiato-ferale"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Forgiato marcio.jpg",
+ "scheda": {
+  "Che cos’è": "Non morto, Medio",
+  "Grado di sfida": "2",
+  "Dove": "Il guado di Sant’Atto",
+  "Quanti": "Due: Berardo Chiòdi e Zi’ Pasquale lu mulinaro"
+ },
+ "best": "forgiato_marcio",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Come il ferale, ma più grosso e più guasto: la pelle che si stacca, un tanfo che si sente da dieci passi, e una cosa che fa venire i brividi: ripete l’ultima parola che sente, con la voce di chi l’ha detta. Dove va lui, gli altri lo seguono.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che fra gli spiritati ce n’è sempre uno «che comanda», e che quello puzza di cimitero. Che se gli parli ti risponde con la tua voce."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Il tanfo, prima di tutto. E le orme degli altri che convergono tutte verso lo stesso punto."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Al guado erano due: il fratello Chiòdi più grande e Zi’ Pasquale il mugnaio. Zi’ Pasquale Mattheus lo ha riportato indietro in tempo; Berardo no."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Ghast (Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Non morto Medio · caotico malvagio · grado di sfida 2 (450 PE)\n\n· CA 13 · PF 36 (8d8) · Velocità 9 m · Iniziativa +3\n· For 16 (+3) · Des 17 (+3) · Cos 10 (+0) · Int 11 (+0) · Sag 10 (+0) · Car 8 (−1)\n· Percezione passiva 10\n· Immunità: veleno; Affascinato, Avvelenato, Sfinimento · Resistenze: necrotico\n· Sensi: scurovisione 18 m · Lingue: pretuziano (solo l’eco)\n\nTratti\n\n· Tanfo. Chi inizia il suo turno entro 1,5 m dal marcio fa un tiro salvezza su Costituzione con CD 10: se fallisce è Avvelenato fino all’inizio del suo turno successivo; se riesce è immune al tanfo di questo marcio per 24 ore.\n· ⟦Eco. Ripete l’ultima parola che sente, con la voce di chi l’ha detta⟧\n· ⟦Richiamo del Filatterio. Non attacca chi porta addosso il Filatterio di Lyaras: gli si stringe intorno e colpisce chi si mette in mezzo⟧\n\nAzioni\n\n· Morso. Attacco in mischia +5, portata 1,5 m: 7 (1d8+3) danni perforanti più 9 (2d8) danni necrotici.\n· Artiglio. Attacco in mischia +5, portata 1,5 m: 10 (2d6+3) danni taglienti. Se il bersaglio non è un Non morto, fa un tiro salvezza su Costituzione con CD 10: se fallisce è Paralizzato fino alla fine del suo turno successivo.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Guida gli altri senza parlare: dove va lui, vanno loro. Punta le bestie e chi le tiene, poi chi è a terra. Il tanfo lo fa stare in mezzo ai nemici, non ai bordi. Non fugge."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Niente. 450 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Vedi [[Forgiato ferale|forgiato-ferale]] e [[Forgiato|forgiato]]."
+  }
+ ]
+}

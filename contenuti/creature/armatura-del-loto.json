@@ -1,0 +1,60 @@
+{
+ "id": "armatura-del-loto",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Le armature di ferro",
+ "num": 304,
+ "title": "Armatura del Loto",
+ "sub": "La cosa che si muove sotto il telone del quarto carro",
+ "state": "noto",
+ "atti": [
+  19
+ ],
+ "links": [
+  "st-2-osteria-de-lu-passe",
+  "png-ansaldo-morigi",
+  "jn-veneranda-iuvenza",
+  "comandante-di-ferro",
+  "atto-19"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Armatura del Loto.jpg",
+ "scheda": {
+  "Che cos’è": "Costrutto con un’anima vincolata, Medio",
+  "Grado di sfida": "4",
+  "Dove": "Nella cassa sul quarto carro di Ansaldo, all’osteria de lu Passe",
+  "Com’è finita": "Lo scontro è in corso"
+ },
+ "best": "armatura_del_loto",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Dei quattro carri chiusi di Messer Ansaldo tre si sono spenti e il quarto brucia. Da sotto il telone qualcosa si muove.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Orrore elmato (Helmed Horror, Manuale dei Mostri 2024: non è nell’SRD, cifre a memoria del manuale) adattato · Costrutto Medio · grado di sfida 4 (1100 PE)\n\n· CA 20 · PF 60 (8d8+24) · Velocità 9 m, volo 9 m (fluttua) · Iniziativa +1\n· For 18 (+4) · Des 13 (+1) · Cos 16 (+3) · Int 10 (+0) · Sag 10 (+0) · Car 10 (+0)\n· Percezione passiva 10\n· Immunità: forza, necrotico, veleno; Accecato, Affascinato, Assordato, Avvelenato, Paralizzato, Pietrificato, Sfinimento, Spaventato\n· Sensi: vista cieca 18 m · Lingue: pretuziano (la voce del bambino dentro)\n\nTratti\n\n· Immunità agli incantesimi. Immune a Palla di fuoco, Fulmine e Scaldare il metallo.\n· Anima vincolata. Dentro c’è una persona: a 0 PF l’anima è libera e parla per un respiro. Mentre dorme nella cassa, un rito di Mortus o Scacciare non morti (Religione CD 15, dieci minuti) la libera senza combattere.\n· ⟦Il ferro che risponde. Le armi senza marchio della Forgia di Julia Nova hanno vantaggio contro di lei⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi di Spada lunga.\n· Spada lunga. Attacco in mischia +6, portata 1,5 m: 8 (1d8+4) danni taglienti, o 9 (1d10+4) a due mani.\n\nAzioni bonus\n\n· Voce dal ferro. Una creatura entro 9 m che la sente fa un tiro salvezza su Saggezza con CD 12: se fallisce è Spaventata fino alla fine del suo turno successivo.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Si sveglia solo per ordine del messere o se la cassa viene aperta del tutto e la si colpisce. Difende il messere; se il messere è fuggito o a terra, attacca il più vicino, vesperiani compresi. Vola sopra i carri e scende su chi è isolato. Non fugge."
+  },
+  {
+   "t": "Chi c’è dentro",
+   "txt": "Un bambino. «Che ore so’? Mamma m’aspetta pe’ la cena.» Una ninna nanna, piano, da dentro l’elmo. ⟦È uno dei figli di Colleventoso, portato via l’anno scorso; sua madre è fra le persone tornate col rituale di Mattheus e lo cerca ancora⟧."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Un’armatura d’argento annerito col Loto Nero. La cassa foderata di piombo. 1.100 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Opera di [[Iuvenza|jn-veneranda-iuvenza]], «più nuova, più forte» di quelle di Altavia. La portava [[Ansaldo Morigi|png-ansaldo-morigi]] a Teramum. Il [[Comandante di ferro|comandante-di-ferro]] era la prova."
+  }
+ ]
+}

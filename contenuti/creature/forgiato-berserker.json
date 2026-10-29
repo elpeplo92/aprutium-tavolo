@@ -1,0 +1,83 @@
+{
+ "id": "forgiato-berserker",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Forgiati",
+ "num": 106,
+ "title": "Forgiato berserker",
+ "sub": "Il campione forgiato: una guardia a cui hanno versato il nero in gola",
+ "state": "incontrato",
+ "atti": [
+  1,
+  3,
+  4
+ ],
+ "links": [
+  "jn-umbrax",
+  "jn-spiaggia-della-battaglia",
+  "jn-caserma-est",
+  "q-colleventoso",
+  "therxil",
+  "forgiato"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Forgiato berserker.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide forgiato, Medio",
+  "Grado di sfida": "2 (Umbrax: 4)",
+  "Dove": "Alla testa delle orde: la spiaggia, la caserma; forgiati nelle catacombe di Biancosale",
+  "Chi conoscete": "Umbrax, il Forgiato Antico, prigioniero a Julia Nova"
+ },
+ "best": "forgiato_berserker",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un Forgiato fatto apposta per combattere. Lo prendono fra le guardie o fra i soldati e gli versano in gola il liquido nero, denso, che è il sangue distillato della gente del paese. Ne esce una cosa con gli occhi bianchi, le vene nere sul collo, che urla una nota sola e carica senza sentire i colpi. Guida le orde: gli altri lo seguono come una muta segue il cane più grosso.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "A Julia Nova chi era sulla spiaggia racconta del «gigante con gli occhi di latte» che guidava lo sbarco. Nessuno sa che si fanno così."
+  },
+  {
+   "t": "I segni prima di vederlo",
+   "txt": "Fiale vuote, armature strappate ammucchiate in una grotta, un odore di sangue cotto. Dove ne stanno facendo uno si sente un canto basso che cresce."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Umbrax guidava lo sbarco dei Forgiati Lunari sulla spiaggia di Julia Nova: lo avete catturato vivo e Maximus e Alessandros lo hanno interrogato nelle prigioni, cercando qualcosa nella sua mente spezzata. Nelle catacombe di Biancosale Luigis ne ha visto fare uno davanti ai suoi occhi. Alla Caserma Est un altro guidava l’assalto, con Therxil."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Berserker (Manuale dei Mostri 2024, SRD 5.2.1, verificato) con i tratti del Forgiato · Umanoide Medio · grado di sfida 2 (450 PE)\n\n· CA 13 · PF 67 (9d8+27) · Velocità 9 m · Iniziativa +1\n· For 16 (+3) · Des 12 (+1) · Cos 17 (+3) · Int 9 (−1) · Sag 11 (+0) · Car 9 (−1)\n· Percezione passiva 10\n· Immunità: ⟦Affascinato, Spaventato⟧\n· Lingue: pretuziano (non parla)\n\nTratti\n\n· Furia del sangue. Finché è Sanguinante (metà PF o meno) ha vantaggio ai tiri per colpire e ai tiri salvezza.\n· Noi. Ha vantaggio al tiro per colpire contro una creatura se un altro Forgiato non Incapacitato è entro 1,5 m da lei (Tattiche del branco).\n· ⟦Richiamo del Filatterio. Non attacca chi porta addosso il Filatterio di Lyaras: gli si stringe intorno e colpisce chi si mette in mezzo⟧\n\nAzioni\n\n· Ascia bipenne (o spadone, o quello che ha). Attacco in mischia +5, portata 1,5 m: 9 (1d12+3) danni taglienti.",
+   "lato": true
+  },
+  {
+   "t": "Umbrax, il Forgiato Antico",
+   "liv": 3,
+   "txt": "⟦Come il berserker, ma più vecchio e più grosso: PF 97 (15d8+30), Multiattacco (due colpi di Ascia bipenne), grado di sfida 4 (1.100 PE)⟧. Oggi è nelle prigioni di Julia Nova, vivo. Ha una mente spezzata, non vuota: ogni tanto dice un nome che non è il suo. ⟦Dopo la caduta di Lyaras gli altri Forgiati sono rimasti senza voce; Umbrax no: lui sente ancora qualcuno. Chi lo interroga con pazienza (Intuizione CD 15, tre tentativi) capisce che la voce nuova è di una donna, e che sa di lillà⟧.",
+   "ritratto": "Umbrax, il Forgiato Antico.jpg",
+   "voce": "jn-umbrax",
+   "scheda": {
+    "Base": "Berserker, rafforzato",
+    "Grado di sfida": "4",
+    "Dov’è": "Prigioni di Julia Nova"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Carica il primo che vede e non lo molla: usa la Furia del sangue, non si ritira mai, non si copre. Le orde si muovono dietro di lui: se cade, i Forgiati comuni restano un round fermi a riprendere la nota (perdono il turno), poi tornano ad avanzare per conto loro."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "L’arma. Addosso a Therxil, che era un berserker, una chiave di ferro nero e un diario. 450 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Li fanno i Celomanti nelle loro forge: Biancosale, Pietraluna. [[Therxil|therxil]] era uno di loro. Vedi [[Forgiato|forgiato]]."
+  }
+ ]
+}

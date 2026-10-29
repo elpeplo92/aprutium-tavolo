@@ -1,0 +1,62 @@
+{
+ "id": "padre-elvirius",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 212,
+ "title": "Padre Elvirius",
+ "sub": "Il prete di Teramum che ha avvelenato i pozzi di Colleventoso",
+ "state": "incontrato",
+ "atti": [
+  3
+ ],
+ "links": [
+  "q-colleventoso",
+  "faz-sylva-noctis",
+  "sacerdote-lunare",
+  "atto-3"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Padre Elvirius.jpg",
+ "scheda": {
+  "Chi è": "Umano, sacerdote della Fiamma venduto ai Celomanti",
+  "Grado di sfida": "1/4",
+  "Dove": "Colleventoso; le catacombe di Biancosale",
+  "Com’è finita": "Vostro prigioniero"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un prete di mezza età, grasso di viso e magro di mani, la tonaca bianca con il sole d’oro sporca di terra. Arrivato a Colleventoso da Teramum un anno prima, con la scusa di una «nuova benedizione» ha convinto i paesani a bere l’acqua benedetta del pozzo. Era veleno, e ha aperto le porte ai Celomanti.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "A Colleventoso il suo nome non lo dicono più. Il Sindaco Berardo ha raccontato tutto: fu lui a convincerli, uno a uno, e lui ad avvelenare i pozzi."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Nelle catacombe teneva Vicarus prigioniero e ha tentato di abusare di lui. L’avete preso vivo. È vostro prigioniero."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Accolito (Priest Acolyte, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1/4 (50 PE)\n\n· CA 13 · PF 11 (2d8+2) · Velocità 9 m · Iniziativa +0\n· For 14 (+2) · Des 10 (+0) · Cos 12 (+1) · Int 10 (+0) · Sag 14 (+2) · Car 11 (+0)\n· Abilità: Medicina +4, Religione +2 · Percezione passiva 12\n· Lingue: pretuziano, aureo antico\n\nAzioni\n\n· Mazza. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni contundenti più 2 (1d4) danni radiosi.\n· Fiamma radiosa. Attacco a distanza +4, gittata 18 m: 7 (2d6) danni radiosi.\n· Incantesimi (Saggezza). A volontà: Luce, Taumaturgia.\n\nAzioni bonus\n\n· Aiuto divino (1/giorno). Lancia Benedizione, Parola guaritrice o Santuario.",
+   "lato": true
+  },
+  {
+   "t": "Dov’è adesso",
+   "txt": "⟦Nelle celle della Caserma Est, in mano a Fenix, che lo tiene per il processo. Il Cardinale Virellius lo vuole per sé: un prete della Fiamma venduto agli elfi è uno scandalo da seppellire, non da processare. Chi lo interroga di nuovo (Intimidire o Persuasione CD 13) scopre chi lo ha mandato da Teramum: un «fratello» della Basilica Aurea che gli ha promesso una parrocchia in città, e il nome che fa è quello di un questore dell’Arciflamine⟧."
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non combatte: implora, promette, piange. Se costretto, Santuario su sé stesso e via."
+  },
+  {
+   "t": "Legami",
+   "txt": "La porta che ha aperto ai [[Celomanti|faz-sylva-noctis]] a Colleventoso. ⟦Il filo che lo lega a Teramum passa per la Basilica Aurea⟧."
+  }
+ ]
+}

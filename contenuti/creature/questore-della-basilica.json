@@ -1,0 +1,50 @@
+{
+ "id": "questore-della-basilica",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 808,
+ "title": "Questore della Basilica",
+ "sub": "Tonaca bianca col sole d’oro: cerca di prendere vivi e di vedere facce",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-tempio-di-mortus",
+  "te-basilica-aurea",
+  "milite-della-fiamma",
+  "guardia-della-basilica",
+  "padre-elvirius"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Mostro — Inquisitore della Basilica.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "2",
+  "Dove": "Il tempio sigillato di Mortus, la Biblioteca Incompiuta",
+  "Attenzione": "Uccidere un questore a Teramum è una guerra con l’Arciflamine"
+ },
+ "best": "te_inquisitore",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un sacerdote della Fiamma con la tonaca bianca e il sole d’oro, la mazza e una voce che legge la formula ad alta voce. Non cerca di uccidere: cerca di prendere vivi e di vedere facce, e guarda soprattutto chi fa luce. «In nome della Fiamma e dell’Arciflamine del Ducato…»",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Sacerdote (Priest, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 2 (450 PE)\n\n· CA 13 · PF 38 (7d8+7) · Velocità 9 m · Iniziativa +0\n· For 16 (+3) · Des 10 (+0) · Cos 12 (+1) · Int 13 (+1) · Sag 16 (+3) · Car 13 (+1)\n· Abilità: Medicina +7, Percezione +5, Religione +5 · Percezione passiva 15\n· Lingue: pretuziano, aureo antico\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con la Mazza o con la Fiamma radiosa.\n· Mazza. Attacco in mischia +5, portata 1,5 m: 6 (1d6+3) danni contundenti più 5 (2d4) danni radiosi.\n· Fiamma radiosa. Attacco a distanza +5, gittata 18 m: 11 (2d10) danni radiosi.\n· Incantesimi (Saggezza, CD 13). A volontà: Luce, Taumaturgia. 1/giorno: Guardiani spirituali.\n\nAzioni bonus\n\n· Aiuto divino (3/giorno). Lancia Benedizione, Dissolvi magie, Parola guaritrice o Ristorare inferiore.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Guardiani spirituali al primo round se sono in tanti; poi la Fiamma radiosa su chi scappa, e i militi a fare muro. Benedizione sui militi. Legge la formula ad alta voce: vuole testimoni."
+  },
+  {
+   "t": "Legami",
+   "txt": "L’[[Arciflamine|te-basilica-aurea]]. ⟦È uno di loro che ha mandato [[Padre Elvirius|padre-elvirius]] a Colleventoso⟧."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "id": "ragno-tessitore",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Bestie e cose della strada",
+ "num": 603,
+ "title": "Ragno tessitore",
+ "sub": "Le ragnatele del Bosco dei Noci Vecchi, spesse come corde di liuto",
+ "state": "noto",
+ "atti": [
+  9,
+  10,
+  11
+ ],
+ "links": [
+  "atto-10",
+  "mercenario-loto-nero",
+  "q-navi-rosse-forgiati"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Ragno tessitore.jpg",
+ "scheda": {
+  "Che cos’è": "Bestia, Grande",
+  "Grado di sfida": "1",
+  "Dove": "Il Bosco dei Noci Vecchi, a est della Via Salaria",
+  "Cosa avete visto": "Solo le ragnatele"
+ },
+ "best": "ragno_tessitore",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Nessuno li ha visti. Fra i rami bassi del Bosco dei Noci Vecchi luccicano fili bianchi, spessi come corde di liuto, tesi da un albero all’altro. I mercenari del Loto Nero non osano avvicinarsi all’ombra degli alberi, e il lato est del blocco è sguarnito.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "A Julia Nova i boscaioli chiamano quel bosco «lu Tessetóre» e non ci vanno da due inverni. Dicono che i noci sono «avvolti» e che ci hanno trovato un cinghiale appeso, vuoto."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Le ragnatele. Il silenzio degli uccelli. Bozzoli bianchi grandi come un uomo, in alto."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Ragno gigante (Giant Spider, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Bestia Grande · senza allineamento · grado di sfida 1 (200 PE)\n\n· CA 14 · PF 26 (4d10+4) · Velocità 9 m, scalare 9 m · Iniziativa +3\n· For 14 (+2) · Des 16 (+3) · Cos 12 (+1) · Int 2 (−4) · Sag 11 (+0) · Car 4 (−3)\n· Abilità: Percezione +4, Furtività +7 · Percezione passiva 14\n· Sensi: scurovisione 18 m · Lingue: nessuna\n\nTratti\n\n· Scalare come un ragno. Scala le superfici difficili, anche i soffitti, senza prove.\n· Camminare sulla tela. Ignora le ragnatele e sa dov’è ogni creatura che tocca la stessa tela.\n\nAzioni\n\n· Morso. Attacco in mischia +5, portata 1,5 m: 7 (1d8+3) danni perforanti più 7 (2d6) da veleno.\n· Tela (ricarica 5-6). Una creatura entro 18 m che il ragno vede fa un tiro salvezza su Destrezza con CD 13: se fallisce è Trattenuta finché la tela non viene distrutta (CA 10, PF 5, vulnerabile al fuoco, immune a veleno e psichico).",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Dall’alto, al buio, col primo che si stacca dal gruppo: la Tela, poi il morso su chi è trattenuto. Sono ⟦quattro⟧, e un bozzolo in alto contiene ⟦un mercenario del Loto Nero, ancora vivo, che sa dov’è l’ufficiale del blocco⟧. Il fuoco li fa arretrare: un Mani brucianti su una tela li toglie di mezzo per un round."
+  },
+  {
+   "t": "La rotta del bosco",
+   "txt": "È la via non sorvegliata per Teramum quando la Salaria è chiusa: ⟦un giorno di marcia in più, il bosco si attraversa in tre ore col fuoco acceso, e dall’altra parte c’è la mulattiera di Pòggio⟧."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Veleno di ragno (una fiala per ragno, Natura CD 12 per estrarlo: 2d6 da veleno su una lama per un’ora). 200 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Il blocco del [[Loto Nero|mercenario-loto-nero]] sulla Via Salaria finisce dove cominciano le ragnatele."
+  }
+ ]
+}

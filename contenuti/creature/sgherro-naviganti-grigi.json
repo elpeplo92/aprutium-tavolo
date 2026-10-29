@@ -1,0 +1,64 @@
+{
+ "id": "sgherro-naviganti-grigi",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Naviganti Grigi",
+ "num": 401,
+ "title": "Sgherro dei Grigi",
+ "sub": "Il mezzelfo del porto col fazzoletto grigio e il coltello",
+ "state": "incontrato",
+ "atti": [
+  4
+ ],
+ "links": [
+  "faz-naviganti-grigi",
+  "jn-domina-syel",
+  "jn-vicoli-grigi",
+  "jn-yuri",
+  "atto-4"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Sgherro dei Grigi.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (mezzelfo), Medio",
+  "Grado di sfida": "1/8",
+  "Dove": "Il porto e i Vicoli Grigi di Julia Nova",
+  "Oggi": "Sono la Gilda di Adamus"
+ },
+ "best": "sgherro_grigio",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Marinai, contrabbandieri, informatori: quasi tutti mezzelfi dalla pelle grigia, «li Grigie» del porto, col fazzoletto grigio al collo e un coltello curvo nella cintura. Non cercano la rissa, ma quando viene la fanno in otto contro sei.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che tengono il Labirinto e una parte del porto, che sanno chi entra e chi parte, e che chi li tradisce non si trova più. Chi porta il fazzoletto annodato al contrario è un informatore."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Fuori dall’ufficio doganale un insulto in zingaresco, un pugno, e la rissa con otto sgherri della Gilda: quattro mezzelfi morti, tre privi di sensi, l’ultimo con la lama di Maximus alla gola. Fenix ha messo la scena sotto indagine. Poi Domina è morta, e la Gilda è passata ad Adamus: oggi i Grigi sono i vostri."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Bandito (Bandit, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1/8 (25 PE)\n\n· CA 12 · PF 11 (2d8+2) · Velocità 9 m · Iniziativa +1\n· For 11 (+0) · Des 12 (+1) · Cos 12 (+1) · Int 10 (+0) · Sag 10 (+0) · Car 10 (+0)\n· Percezione passiva 10\n· Sensi: scurovisione 18 m (mezzelfo) · Lingue: pretuziano, zingaresco, il Codice dei Grigi\n\nAzioni\n\n· Scimitarra (o coltello curvo). Attacco in mischia +3, portata 1,5 m: 4 (1d6+1) danni taglienti.\n· Balestra leggera. Attacco a distanza +3, gittata 24/96 m: 5 (1d8+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "In gruppo, in un vicolo stretto, con qualcuno sul tetto. Prima insulta, poi colpisce. Sotto la metà dei PF scappa nel Labirinto: lo conosce meglio di chiunque. Fenix ha ancora aperta l’indagine sui quattro morti del vicolo."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Un coltello, un fazzoletto grigio (chi lo porta passa per un Grigio: Inganno CD 12), gettoni di legno grigio. 25 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[I Naviganti Grigi|faz-naviganti-grigi]]. Sotto [[Domina|jn-domina-syel]] facevano il lavoro sporco; sotto Adamus e [[Yuri|jn-yuri]] fanno la Gilda. ⟦Fra i vecchi qualcuno non ha cambiato lealtà e aspetta⟧."
+  }
+ ]
+}

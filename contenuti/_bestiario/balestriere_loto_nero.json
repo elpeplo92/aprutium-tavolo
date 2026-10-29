@@ -1,0 +1,29 @@
+{
+ "id": "balestriere_loto_nero",
+ "name": "Balestriere del Loto Nero",
+ "short": "Bl",
+ "color": "#3A3A3A",
+ "hp": 11,
+ "ac": 16,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 3,
+   "dmg": "1d10+1"
+  },
+  {
+   "n": "Spada corta",
+   "atk": 3,
+   "dmg": "1d6+1"
+  }
+ ],
+ "note": "Guardia (Guard, MM 2024, SRD 5.2.1, verificato il 29-10-2026) con la balestra pesante · GS 1/8 · 25 PE · Vel 9 m · Percezione +2 · Sulle barricate, in copertura a metà (+2 CA).",
+ "src": "La Via Salaria",
+ "tac": "Tira da dietro la barricata su chi si avvicina al blocco. Se i pesanti cedono, scappa verso il Passo.",
+ "lines": [
+  "«Alt! Nessuno passa!»"
+ ],
+ "img": "Bestiario — Mercenario del Loto Nero.jpg"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "forgiato-veterano",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Forgiati",
+ "num": 104,
+ "title": "Forgiato veterano",
+ "sub": "Il miliziano svuotato che sa ancora tenere la falce",
+ "state": "incontrato",
+ "atti": [
+  19
+ ],
+ "links": [
+  "st-1-guado-di-sant-atto",
+  "forgiato"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Forgiato veterano.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide forgiato, Medio",
+  "Grado di sfida": "3",
+  "Dove": "Il guado di Sant’Atto",
+  "Quanti": "Due: Gerardo Tosti, soldato di Cashtalladdë, e Cola lu vaccaro"
+ },
+ "best": "forgiato_veterano",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un uomo che ha fatto il soldato, e il corpo se lo ricorda anche se lui no. Tiene la falce a due mani come una spada grande, para, aspetta. Non urla e non si affanna: la falce si alza senza un grido.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che i miliziani della valle sono spariti uno alla volta, e che uno l’hanno visto nel pagliaio «fermo come un palo» per tre giorni."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Un pagliaio con la porta socchiusa. Un elmo della guarnigione nel fango."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Uno aspettava nel pagliaio ed è uscito quando eravate in acqua. Gerardo Tosti, soldato di Cashtalladdë, lo ha riportato Mattheus: oggi marcia con voi. Cola lu vaccaro pure."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guerriero veterano (Warrior Veteran, Manuale dei Mostri 2024, SRD 5.2.1, verificato: lo spadone è la falce, stessi danni) · Umanoide Medio · grado di sfida 3 (700 PE)\n\n· CA 17 · PF 65 (10d8+20) · Velocità 9 m · Iniziativa +3\n· For 16 (+3) · Des 13 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Abilità: Atletica +5, Percezione +2 · Percezione passiva 12\n· Immunità: ⟦Affascinato, Spaventato⟧\n· Lingue: pretuziano (non parla)\n\nTratti\n\n· Noi. Ha vantaggio al tiro per colpire contro una creatura se un altro Forgiato non Incapacitato è entro 1,5 m da lei (Tattiche del branco).\n· ⟦Richiamo del Filatterio. Non attacca chi porta addosso il Filatterio di Lyaras: gli si stringe intorno e colpisce chi si mette in mezzo⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con la Falce o con la Balestra pesante.\n· Falce a due mani. Attacco in mischia +5, portata 1,5 m: 10 (2d6+3) danni taglienti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 12 (2d10+1) danni perforanti.\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 2 alla sua CA contro quell’attacco, che può così mancarlo.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Uno aspetta nel pagliaio e esce quando i PG sono in acqua. Colpiscono chi tiene fermi i muli. Tengono la posizione come una linea di fanti, e parano il primo colpo."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Una falce buona, una cotta di maglia (CA 16 per chi la porta), a volte una balestra. 700 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Vedi [[Forgiato|forgiato]]. Gerardo Tosti tornato: scheda «Gerardo Tosti» del tavolo."
+  }
+ ]
+}

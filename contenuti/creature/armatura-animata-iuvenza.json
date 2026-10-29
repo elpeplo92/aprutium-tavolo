@@ -1,0 +1,48 @@
+{
+ "id": "armatura-animata-iuvenza",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Le armature di ferro",
+ "num": 306,
+ "title": "Armatura animata di Iuvenza",
+ "sub": "Pezzi di armatura vecchia rimessi insieme col fumo: scavano e fanno da scudo",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-basilica-aurea",
+  "armatura-di-iuvenza",
+  "fanatica-di-velthuria"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Armatura animata di Iuvenza.jpg",
+ "scheda": {
+  "Che cos’è": "Costrutto, Medio",
+  "Grado di sfida": "1",
+  "Dove": "Sotto la Basilica Aurea di Teramum",
+  "Cosa fanno": "Scavano la «chiave vera»"
+ },
+ "best": "te_armatura_animata_iuvenza",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Pezzi di armature diverse, arrugginite, tenute insieme da un fumo nero che ogni tanto esce dalle giunture. Scavano con le mani di ferro, senza fermarsi, e quando qualcuno si avvicina si mettono in mezzo.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Armatura animata (Animated Armor, SRD 5.2.1, verificato) · Costrutto Medio · grado di sfida 1 (200 PE)\n\n· CA 18 · PF 33 (6d8+6) · Velocità 7,5 m · Iniziativa +2\n· For 14 (+2) · Des 11 (+0) · Cos 13 (+1) · Int 1 (−5) · Sag 3 (−4) · Car 1 (−5)\n· Percezione passiva 6\n· Immunità: veleno, psichico; Affascinato, Assordato, Sfinimento, Spaventato, Paralizzato, Pietrificato, Avvelenato\n· Sensi: vista cieca 18 m (cieca oltre) · Lingue: nessuna\n\nAzioni\n\n· Multiattacco. Fa due attacchi di Pugno di ferro.\n· Pugno di ferro. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni contundenti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Scavano finché non vengono disturbate, poi si mettono in mezzo. Afferrano e trattengono chi prova a passare verso la fanatica (Atletica +2 contro Atletica o Acrobazia)."
+  },
+  {
+   "t": "Legami",
+   "txt": "Vedi [[Armatura di Iuvenza|armatura-di-iuvenza]]."
+  }
+ ]
+}

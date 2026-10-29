@@ -1,0 +1,80 @@
+{
+ "id": "sacerdote-lunare",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 202,
+ "title": "Sacerdote lunare",
+ "sub": "Chi guida il canto e tiene la lama del patto",
+ "state": "incontrato",
+ "atti": [
+  2,
+  4,
+  7
+ ],
+ "links": [
+  "faz-sylva-noctis",
+  "q-colleventoso",
+  "q-pietraluna",
+  "jn-caserma-est",
+  "cultista-celomante"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Sacerdote lunare.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (elfo drukarro), Medio",
+  "Grado di sfida": "2",
+  "Dove": "Biancosale, le retrovie della Caserma Est, Pietraluna",
+  "Chi conoscete": "Il Sacerdote di Biancosale, quello che vi ha deriso e che è fuggito dalla botola"
+ },
+ "best": "sacerdote_lunare",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Una tonaca viola con sette lune d’argento intrecciate, una lama corta e nera, gli occhi viola che non battono. Parla bene il pretuziano, con calma, come un prete che spiega. È lui che guida il canto dei Forgiati, che legge la formula, che decide chi va sul tavolo per primo.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che a Colleventoso un prete nuovo «parlava dolce» e dopo di lui il paese ha smesso di parlare. Che i Celomanti hanno dei sacerdoti e che quelli non muoiono: si sciolgono in cenere d’argento."
+  },
+  {
+   "t": "I segni prima di vederlo",
+   "txt": "Il canto a bocca chiusa che cresce e cala a comando. Uno specchio d’ossidiana appoggiato a un muro."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Nell’Abbazia di Biancosale il Sacerdote Lunare guidava il canto di tutto il paese. Quando vi ha scoperti vi ha deriso per aver interrotto «la pace del non ricordare», ha aizzato la folla come scudo e si è calato da una botola sotto l’altare: «Io sono solo un messaggero!». Alla Caserma Est i sacerdoti stavano nelle retrovie a sostenere l’assalto. A Pietraluna, nello scriptorium bruciato, avete trovato il diario delirante del sacerdote di Biancosale: «La memoria è una prigione. L’Ardentus deve essere il primo.»"
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Fanatico del culto (Cultist Fanatic, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 2 (450 PE)\n\n· CA 13 · PF 44 (8d8+8) · Velocità 9 m · Iniziativa +2\n· For 11 (+0) · Des 14 (+2) · Cos 12 (+1) · Int 10 (+0) · Sag 14 (+2) · Car 13 (+1)\n· Tiri salvezza: Sag +4 · Abilità: Inganno +3, Persuasione +3, Religione +2 · Percezione passiva 12\n· Sensi: scurovisione 18 m · Lingue: pretuziano, elfico, vesperiano\n\nTratti\n\n· ⟦Cenere d’argento. Quando muore il corpo si dissolve in cenere d’argento: niente da seppellire, niente da riconoscere⟧\n\nAzioni\n\n· Lama del patto. Attacco in mischia +4, portata 1,5 m: 6 (1d8+2) danni taglienti più 7 (2d6) danni necrotici.\n· Incantesimi (Saggezza, CD 12, +4 al colpire). A volontà: Luce, Taumaturgia. 1/giorno: Blocca persone. 2/giorno: Comando.\n\nAzioni bonus\n\n· Arma spirituale (2/giorno). Lancia Arma spirituale: una falce di luna d’argento, +4 al colpire, 1d8+2 danni da forza.",
+   "lato": true
+  },
+  {
+   "t": "Il Sacerdote di Biancosale",
+   "liv": 3,
+   "txt": "È fuggito dalla botola (Atto II) ed è arrivato a Pietraluna: il diario nello scriptorium era il suo. ⟦È morto lì, nella Sala della Forgia, uno degli otto sacerdoti «batterie» del rito: quando Lyaras è caduto, le batterie si sono spente con lui. Il suo nome drukarro era Veshán⟧. Non è Padre Elvirius: Elvirius è il prete di Teramum che ha avvelenato i pozzi, questo è l’elfo che è venuto dopo.",
+   "scheda": {
+    "Base": "Fanatico del culto",
+    "Grado di sfida": "2",
+    "Dov’è": "⟦Morto a Pietraluna⟧"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Da dietro: Comando («Fuggi», «Inginocchiati») sul guerriero più grosso, Blocca persone sul chierico, l’Arma spirituale sul ferito. Tiene i Forgiati fra sé e i PG. Se resta solo scappa, e un sacerdote sa sempre da dove: una botola, uno specchio, una scala. Non si fa prendere vivo: la lama del patto è anche per lui."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "La lama del patto (una spada corta nera: non magica, ma chi la tiene in mano per un minuto sente il canto; vale come prova davanti a Fenix o al Concilio), un medaglione con le sette lune, un diario. 450 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Sylva Noctis e i Celomanti|faz-sylva-noctis]]. Risponde agli emissari e, sopra tutti, all’[[Alto Celomante|alto-celomante]]. [[Padre Elvirius|padre-elvirius]] gli ha aperto Colleventoso."
+  }
+ ]
+}

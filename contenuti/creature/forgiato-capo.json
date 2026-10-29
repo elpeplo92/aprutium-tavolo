@@ -1,0 +1,65 @@
+{
+ "id": "forgiato-capo",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Forgiati",
+ "num": 105,
+ "title": "Capo forgiato",
+ "sub": "Quello che cammina come se facesse la ronda",
+ "state": "incontrato",
+ "atti": [
+  19
+ ],
+ "links": [
+  "st-1-guado-di-sant-atto",
+  "forgiato"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Capo forgiato.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide forgiato, Medio",
+  "Grado di sfida": "4",
+  "Dove": "Il guado di Sant’Atto",
+  "Quanti": "Uno, in riva al fiume, col martello"
+ },
+ "best": "forgiato_capo",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Più grosso degli altri, con un martello da guerra e una cotta rubata a un morto. Cammina come chi fa la ronda, guarda i carri uno a uno, e quando sceglie non cambia più idea.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che fra gli spiritati «ce n’è uno che pare un caporale». Che li mette in fila."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Orme più profonde, a passo regolare, su e giù per la riva."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Al guado ha puntato chi difendeva un carro e ha provato a buttarlo in acqua col martello. È caduto lì."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Capo dei picchiatori (Tough Boss, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 4 (1100 PE)\n\n· CA 16 · PF 82 (11d8+33) · Velocità 9 m · Iniziativa +2\n· For 17 (+3) · Des 14 (+2) · Cos 16 (+3) · Int 11 (+0) · Sag 10 (+0) · Car 11 (+0)\n· Tiri salvezza: For +5, Cos +5, Car +2 · Percezione passiva 10\n· Immunità: ⟦Affascinato, Spaventato⟧\n· Lingue: pretuziano (non parla)\n\nTratti\n\n· Noi. Ha vantaggio al tiro per colpire contro una creatura se un altro Forgiato non Incapacitato è entro 1,5 m da lei (Tattiche del branco).\n· ⟦Richiamo del Filatterio. Non attacca chi porta addosso il Filatterio di Lyaras: gli si stringe intorno e colpisce chi si mette in mezzo⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con il Martello da guerra o con la Balestra pesante.\n· Martello da guerra. Attacco in mischia +5, portata 1,5 m: 12 (2d8+3) danni contundenti. Se il bersaglio è una creatura Grande o più piccola, la spinge di 3 m in linea retta lontano da sé.\n· Balestra pesante. Attacco a distanza +4, gittata 30/120 m: 13 (2d10+2) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Punta chi difende un carro e prova a buttarlo in acqua col martello (la spinta di 3 m, nel fiume, vale una prova di Atletica CD 12 per non andare sotto). Si mette dove i ferali gli danno il vantaggio."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Il martello da guerra e una cotta di maglia. 1.100 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Vedi [[Forgiato|forgiato]]."
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "id": "armatura-di-iuvenza",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Le armature di ferro",
+ "num": 305,
+ "title": "Armatura di Iuvenza",
+ "sub": "Le «armature nuove»: ferro smaltato, dentro il fumo",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-basilica-aurea",
+  "jn-veneranda-iuvenza",
+  "fanatica-di-velthuria",
+  "armatura-animata-iuvenza",
+  "comandante-di-ferro"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Armatura di Iuvenza.jpg",
+ "scheda": {
+  "Che cos’è": "Costrutto, Medio",
+  "Grado di sfida": "4",
+  "Dove": "Sotto la Basilica Aurea di Teramum, la porta con la luna",
+  "Quante": "Tre, davanti alla porta murata"
+ },
+ "best": "te_armatura_iuvenza",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un’armatura smaltata di scuro, vuota: dentro c’è fumo nero che sa di lillà e di marcio. Nessuna voce, solo il rumore del metallo. Quando cade, il fumo esce dall’elmo e per un istante prende la forma di una donna dai capelli bianchi.",
+   "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "Le avete trovate nel corridoio davanti alla porta murata, sotto la Basilica Aurea, a coprire la gente di Velthuria che scavava."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Orrore elmato (Helmed Horror, Manuale dei Mostri 2024: non è nell’SRD, cifre a memoria del manuale) adattato · Costrutto Medio · grado di sfida 4 (1100 PE)\n\n· CA 20 · PF 60 (8d8+24) · Velocità 9 m, volo 9 m (fluttua; qui il soffitto è basso) · Iniziativa +1\n· For 18 (+4) · Des 13 (+1) · Cos 16 (+3) · Int 10 (+0) · Sag 10 (+0) · Car 10 (+0)\n· Percezione passiva 10\n· Immunità: forza, necrotico, veleno; Accecato, Affascinato, Assordato, Avvelenato, Paralizzato, Pietrificato, Sfinimento, Spaventato\n· Sensi: vista cieca 18 m · Lingue: nessuna\n\nTratti\n\n· Immunità agli incantesimi. Immune a Palla di fuoco, Fulmine e Scaldare il metallo.\n· Non respira, non dorme.\n· ⟦Il ferro che risponde. Le armi senza marchio della Forgia di Julia Nova hanno vantaggio contro di lei; le lame sporche hanno svantaggio e fanno metà danni⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi di Spada lunga.\n· Spada lunga. Attacco in mischia +6, portata 1,5 m: 9 (1d10+4) danni taglienti.\n· Dardo del fumo. Attacco a distanza +6, gittata 18 m: 7 (2d6) danni necrotici.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Tengono il corridoio davanti alla porta murata, due davanti e una che copre la fanatica. Non inseguono oltre la cripta."
+  },
+  {
+   "t": "Legami",
+   "txt": "Le «armature nuove» promesse ad Altavia. Vedi [[Fanatica di Velthuria|fanatica-di-velthuria]] e [[Iuvenza|jn-veneranda-iuvenza]]."
+  }
+ ]
+}

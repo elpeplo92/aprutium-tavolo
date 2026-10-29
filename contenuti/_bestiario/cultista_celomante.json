@@ -1,0 +1,25 @@
+{
+ "id": "cultista_celomante",
+ "name": "Cultista celomante",
+ "short": "C",
+ "color": "#5A3A6A",
+ "hp": 9,
+ "ac": 12,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Falcetto rituale (+1 necrotico)",
+   "atk": 3,
+   "dmg": "1d4+1+1"
+  }
+ ],
+ "note": "Cultista (Cultist, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · GS 1/8 · 25 PE · Vel 9 m · TS Sag +2 · Inganno +2, Religione +2 · Chi tiene le fiale e canta.",
+ "src": "Le catacombe di Biancosale",
+ "tac": "Non combatte se può: tiene il prigioniero, scappa a chiamare, lancia la fiala per terra. Fugge sotto la metà dei PF.",
+ "lines": [
+  "(un canto a bocca chiusa)",
+  "«Non è finita. Non è mai finita.»"
+ ],
+ "img": "Bestiario — Cultista celomante.jpg"
+}

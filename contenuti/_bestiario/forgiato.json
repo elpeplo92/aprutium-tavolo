@@ -1,0 +1,33 @@
+{
+ "id": "forgiato",
+ "name": "Forgiato",
+ "short": "F",
+ "color": "#6B6B5A",
+ "hp": 32,
+ "ac": 12,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Colpo (forca, falce, randello)",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Balestra pesante (30/120 m, se armato)",
+   "atk": 3,
+   "dmg": "1d10+1"
+  },
+  {
+   "n": "Noi: vantaggio se un altro Forgiato è entro 1,5 m dal bersaglio"
+  }
+ ],
+ "note": "Picchiatore (Tough, MM 2024, SRD 5.2.1, verificato il 29-10-2026) coi tratti del Forgiato · GS 1/2 · 100 PE · Vel 9 m · immune: Affascinato, Spaventato · vulnerabile: tuono · Uomini svuotati dalla Forgiatura: la spiaggia, Colleventoso, la caserma, Pietraluna.",
+ "src": "Atto Secondo",
+ "tac": "Senza paura e senza iniziativa propria: avanza dritto sul bersaglio più vicino, in due o tre sullo stesso uomo. Un Frantumare o un Onda tonante li disorienta un round.",
+ "lines": [
+  "Un canto a bocca chiusa, sempre la stessa nota.",
+  "Non dicono «io». Dicono «noi»."
+ ],
+ "img": "Bestiario — Forgiato.jpg"
+}

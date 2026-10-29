@@ -1,0 +1,48 @@
+{
+ "id": "campione-dell-arena",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Sotto Teramum",
+ "num": 905,
+ "title": "Campione dell’Arena",
+ "sub": "L’ultimo combattente che teneva la porta dell’ipogeo",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-arena-sprofondata",
+  "ombra-del-pubblico",
+  "strisciante-carogna"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Mostro — Campione dell’Arena.jpg",
+ "scheda": {
+  "Che cos’è": "Non morto, Medio",
+  "Grado di sfida": "5",
+  "Dove": "Fra la sala delle ossa e la trincea dell’Arena Sprofondata",
+  "La regola": "Non attacca chi tiene il tubo di piombo e parla pretuziano o fa il segno del lupo"
+ },
+ "best": "te_campione_arena",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Le ossa scricchiolano e prende la lancia. Un gladiatore morto da secoli, con l’elmo di bronzo e lo scudo, che tiene il passaggio come chi difende una porta: non avanza oltre. Quando cade si inginocchia e si sbriciola.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Gladiatore (Gladiator, SRD 5.2.1, verificato) adattato a Non morto · Non morto Medio · grado di sfida 5 (1800 PE)\n\n· CA 16 · PF 112 (15d8+45) · Velocità 9 m · Iniziativa +5\n· For 18 (+4) · Des 15 (+2) · Cos 16 (+3) · Int 10 (+0) · Sag 12 (+1) · Car 15 (+2)\n· Tiri salvezza: For +7, Des +5, Cos +6 · Abilità: Atletica +10, Intrattenere +5 · Percezione passiva 11\n· Immunità: veleno; Avvelenato, Sfinimento · Resistenze: necrotico\n· Sensi: scurovisione 18 m · Lingue: pretuziano antico\n\nAzioni\n\n· Multiattacco. Fa tre attacchi di Lancia; può sostituirne uno con un Colpo di scudo.\n· Lancia. Attacco in mischia o a distanza +7, portata 1,5 m o gittata 6/18 m: 11 (2d6+4) danni perforanti.\n· Colpo di scudo. Una creatura entro 1,5 m che vede fa un tiro salvezza su Forza con CD 15: se fallisce subisce 9 (2d4+4) danni contundenti e, se è Media o più piccola, è Prona.\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 3 alla sua CA contro quell’attacco.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Tiene il passaggio fra la sala delle ossa e la trincea: non avanza oltre. Colpisce chi prova a passare, butta a terra con lo scudo chi sta per raggiungere il tubo."
+  },
+  {
+   "t": "Legami",
+   "txt": "L’[[Arena Sprofondata|te-arena-sprofondata]], le [[Ombre del pubblico|ombra-del-pubblico]]."
+  }
+ ]
+}

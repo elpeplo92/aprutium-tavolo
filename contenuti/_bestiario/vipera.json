@@ -1,0 +1,24 @@
+{
+ "id": "vipera",
+ "name": "Vipera",
+ "short": "v",
+ "color": "#5A6A3A",
+ "hp": 5,
+ "ac": 12,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Morso (+1d6 veleno)",
+   "atk": 4,
+   "dmg": "1d4+2+1d6"
+  }
+ ],
+ "note": "Serpente velenoso (Venomous Snake, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · Bestia Minuscola · GS 1/8 · 25 PE · Vel 9 m, nuotare 9 m · vista cieca 3 m.",
+ "src": "La strada",
+ "tac": "Morde chi la calpesta e scappa fra i sassi. Un mulo morso si imbizzarrisce (Addestrare animali CD 12).",
+ "lines": [
+  "(ferma al sole, sui sassi)"
+ ],
+ "img": "Bestiario — Vipera.jpg"
+}

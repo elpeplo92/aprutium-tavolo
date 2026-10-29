@@ -1,0 +1,27 @@
+{
+ "id": "spettro",
+ "name": "Spettro della Guerra",
+ "short": "Sp",
+ "color": "#6A7A8A",
+ "hp": 22,
+ "ac": 12,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Risucchio vitale (riduce il massimo dei PF)",
+   "atk": 4,
+   "dmg": "2d6"
+  },
+  {
+   "n": "Movimento incorporeo: passa attraverso muri e creature (terreno difficile)"
+  }
+ ],
+ "note": "Spettro (Specter, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · Non morto Medio · GS 1 · 200 PE · Vel 9 m, volo 15 m (fluttua) · immune: necrotico, veleno; Affascinato, Afferrato, Avvelenato, Paralizzato, Pietrificato, Prono, Privo di sensi, Sfinimento, Trattenuto · resistente: acido, freddo, fuoco, fulmine, tuono · svantaggio alla luce del sole.",
+ "src": "Camera delle Memorie",
+ "tac": "Passa attraverso i muri e attacca da dietro chi porta luce. Si ritira nel muro dopo il colpo se ferito.",
+ "lines": [
+  "Un nome ripetuto: quello di un commilitone morto due secoli fa."
+ ],
+ "img": "Bestiario — Spettro della Guerra.jpg"
+}

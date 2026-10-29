@@ -1,0 +1,36 @@
+{
+ "id": "mercenario_loto_nero",
+ "name": "Mercenario del Loto Nero",
+ "short": "LN",
+ "color": "#2A2A2A",
+ "hp": 65,
+ "ac": 17,
+ "init": 3,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Spadone o Balestra pesante"
+  },
+  {
+   "n": "Spadone",
+   "atk": 5,
+   "dmg": "2d6+3"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 3,
+   "dmg": "2d10+1"
+  },
+  {
+   "n": "Parata (reazione): +2 CA contro un attacco in mischia"
+  }
+ ],
+ "note": "Guerriero veterano (Warrior Veteran, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · GS 3 · 700 PE · Vel 9 m · Atletica +5, Percezione +2 · I pesanti di Casa Velthuria, armature del sud, Loto Nero su campo grigio.",
+ "src": "La Via Salaria",
+ "tac": "In linea, come soldati veri: i balestrieri in copertura, i pesanti a due a due con lo spadone. Non inseguono nel Bosco dei Noci Vecchi.",
+ "lines": [
+  "«Il confine finisce qui.»",
+  "«Fermo il carretto. Nomi.»"
+ ],
+ "img": "Bestiario — Mercenario del Loto Nero.jpg"
+}

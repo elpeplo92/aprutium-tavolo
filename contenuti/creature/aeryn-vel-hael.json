@@ -1,0 +1,62 @@
+{
+ "id": "aeryn-vel-hael",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 204,
+ "title": "Aeryn Vel’hael",
+ "sub": "L’arcanista della Forgia dell’Identità",
+ "state": "incontrato",
+ "atti": [
+  3
+ ],
+ "links": [
+  "q-colleventoso",
+  "ogg-tomo-ricordo-spezzato",
+  "faz-sylva-noctis",
+  "atto-3"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Aeryn Vel’hael.jpg",
+ "scheda": {
+  "Chi era": "Elfo drukarro, arcanista dei Celomanti",
+  "Grado di sfida": "6",
+  "Dove": "La Sala della Forgia dell’Identità, sotto Biancosale",
+  "Com’è finita": "Ucciso da voi; il corpo si è sciolto in cenere d’argento"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "L’arcanista che stava per forgiare Berardo, il Sindaco di Colleventoso, nella sala più profonda delle catacombe. Alto, i capelli bianchi raccolti, le dita lunghe piene di anelli neri; una voce bassa che non alzava mai. Combatteva con le illusioni e con lame che non si vedevano arrivare, e con una magia che provava a riscrivere chi siete: a togliervi il nome da dentro.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Di lui nessuno sa niente. A Colleventoso lo chiamano «quello di sotto»."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Lo avete interrotto un istante prima che cominciasse il lavoro sul Sindaco. Avete combattuto contro le sue illusioni, le sue lame e i suoi tentativi di cancellare la vostra identità, fino a sconfiggerlo. Il corpo si è dissolto in cenere d’argento e le ultime parole sono state un sussurro di rimpianto: «Non volevo… dimenticare…». Fra i resti c’era il Tomo del Ricordo Spezzato, con nomi illeggibili e uno chiaro: Ardentus."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Mago (Mage, Manuale dei Mostri 2024, SRD 5.2.1) con gli incantesimi cambiati per la Forgia · Umanoide Medio · grado di sfida 6 (2300 PE)\n\n· CA 15 (Armatura magica) · PF 81 (18d8) · Velocità 9 m · Iniziativa +2\n· For 9 (−1) · Des 14 (+2) · Cos 11 (+0) · Int 17 (+3) · Sag 12 (+1) · Car 11 (+0)\n· Tiri salvezza: Int +6, Sag +4 · Abilità: Arcano +6, Storia +6, Percezione +4 · Percezione passiva 14\n· Sensi: scurovisione 18 m · Lingue: pretuziano, elfico, aureo antico, vesperiano\n\nTratti\n\n· ⟦Retaggio fatato. Vantaggio ai tiri salvezza contro Affascinato; la magia non lo addormenta⟧\n· ⟦Cenere d’argento⟧\n\nAzioni\n\n· Multiattacco. Fa tre attacchi di Esplosione arcana.\n· Esplosione arcana. Attacco in mischia o a distanza +6, portata 1,5 m o gittata 36 m: 16 (3d8+3) danni da forza.\n· Incantesimi (Intelligenza, CD 14). A volontà: Individuazione del magico, Luce, Armatura magica, Mano magica, Prestidigitazione. 2/giorno: ⟦Immagine speculare, Suggestione⟧ (al posto di Palla di fuoco e Invisibilità). 1/giorno: ⟦Volare⟧.\n· ⟦Cancellare il nome (1/giorno). Una creatura entro 18 m che lo vede fa un tiro salvezza su Intelligenza con CD 14. Se fallisce, per un minuto non ricorda chi è: è Incapacitata fino alla fine del suo turno successivo, poi ha svantaggio a tutte le prove e ai tiri per colpire finché un alleato non le dice il suo nome ad alta voce (un’azione). È la Forgiatura fatta in fretta: non dura⟧\n\nAzioni bonus\n\n· Passo velato (3/giorno).\n\nReazioni\n\n· Magia protettiva (3/giorno). Lancia Controincantesimo o Scudo.",
+   "lato": true
+  },
+  {
+   "t": "Come combatteva",
+   "txt": "Da lontano, dietro le immagini speculari, coi guardiani davanti. Prima Cancellare il nome sul più pericoloso, poi tre esplosioni a turno su chi arriva. Non è morto come un soldato: le ultime parole dicono che la Forgiatura, un tempo, l’aveva subita anche lui."
+  },
+  {
+   "t": "Cosa ha lasciato",
+   "txt": "Il [[Tomo del Ricordo Spezzato|ogg-tomo-ricordo-spezzato]]. ⟦Gli anelli neri, otto, non magici ma tutti uguali: sono il segno dei maestri della Forgia, e a Teramum qualcuno li riconoscerebbe⟧. 2.300 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Era il maestro di forgia dei [[Celomanti|faz-sylva-noctis]] in Aprutium, prima di Lyaras. ⟦«Non volevo dimenticare»: Aeryn era stato forgiato lui stesso, da giovane, e la Forgia gli aveva restituito la mente a pezzi; per questo sapeva farla così bene. Lyaras lo considerava un fallimento riuscito⟧."
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "id": "emissario_celomante",
+ "name": "Emissario d’élite",
+ "short": "E",
+ "color": "#3A2A5A",
+ "hp": 65,
+ "ac": 17,
+ "init": 3,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Lama lunare o Balestra a mano"
+  },
+  {
+   "n": "Lama lunare (+1d6 necrotici)",
+   "atk": 5,
+   "dmg": "1d8+3+1d6"
+  },
+  {
+   "n": "Balestra a mano (9/36 m, +1d6 veleno)",
+   "atk": 3,
+   "dmg": "1d6+1+1d6"
+  },
+  {
+   "n": "Passo d’ombra (azione bonus, 1/giorno): Passo velato"
+  },
+  {
+   "n": "Parata (reazione): +2 CA contro un attacco in mischia"
+  }
+ ],
+ "note": "Guerriero veterano (Warrior Veteran, MM 2024, SRD 5.2.1, verificato il 29-10-2026) adattato all’elfo drukarro · GS 3 · 700 PE · Vel 9 m · Atletica +5, Furtività +5 · scurovisione 18 m · vantaggio ai TS contro Affascinato.",
+ "src": "Le catacombe di Biancosale",
+ "tac": "In due: uno tiene la linea e para, l’altro usa il Passo d’ombra per arrivare alle spalle dell’incantatore. Sotto un terzo dei PF arretra verso la via di fuga.",
+ "lines": [
+  "(parlano elfico fra loro, mai pretuziano davanti a voi)"
+ ],
+ "img": "Bestiario — Emissario celomante.jpg"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "armatura-animata",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Le armature di ferro",
+ "num": 301,
+ "title": "Armatura animata",
+ "sub": "Le sentinelle vuote di Pietraluna",
+ "state": "incontrato",
+ "atti": [
+  7,
+  8
+ ],
+ "links": [
+  "q-pietraluna",
+  "png-lyaras-vel-quoril",
+  "armatura-di-altavia"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Armatura animata.jpg",
+ "scheda": {
+  "Che cos’è": "Costrutto, Medio",
+  "Grado di sfida": "1",
+  "Dove": "Il giardino profanato del santuario di Maia, a Pietraluna",
+  "Com’è finita": "Ridotte a ferraglia quando Lyaras è caduto"
+ },
+ "best": "armatura_animata",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un’armatura completa, vecchia e ammaccata, che cammina senza nessuno dentro. Fa il giro del giardino sempre uguale, con un rumore di cerniere, e non si ferma mai davanti a niente: se c’è qualcosa sulla strada, lo colpisce.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che nei vecchi santuari e nei palazzi dei maghi «le armature camminano». Favole per bambini, finché non si sente il rumore."
+  },
+  {
+   "t": "I segni prima di vederle",
+   "txt": "Un solco regolare nell’erba nera, sempre lo stesso giro. Il rumore di ferro contro ferro, a passo d’uomo, dove non c’è nessuno."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Pattugliavano il giardino dell’abbazia di Pietraluna, fra l’erba nera e le pozze morte, sotto il ronzio del rito. Quando siete risaliti, dopo la caduta di Lyaras, erano ferraglia a terra."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Armatura animata (Animated Armor, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Costrutto Medio · grado di sfida 1 (200 PE)\n\n· CA 18 · PF 33 (6d8+6) · Velocità 7,5 m · Iniziativa +2\n· For 14 (+2) · Des 11 (+0) · Cos 13 (+1) · Int 1 (−5) · Sag 3 (−4) · Car 1 (−5)\n· Percezione passiva 6\n· Immunità: veleno, psichico; Affascinato, Assordato, Sfinimento, Spaventato, Paralizzato, Pietrificato, Avvelenato\n· Sensi: vista cieca 18 m (cieca oltre) · Lingue: nessuna\n\nAzioni\n\n· Multiattacco. Fa due attacchi di Colpo.\n· Colpo. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni contundenti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Fa la ronda. Attacca chi le capita a tiro e lo segue finché lo vede; perso di vista, torna al giro. Non ha tattica: due colpi e avanti. Una per volta non è un problema, tre insieme in uno spazio stretto sì."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Un’armatura completa rovinata: rimessa in sesto da un fabbro (50 mo, una settimana) vale come armatura completa normale. 200 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Le ha animate [[Lyaras|png-lyaras-vel-quoril]], e sono cadute con lui. Quelle di Iuvenza sono un’altra cosa: vedi [[Armatura d’Argento e Ombra|armatura-di-altavia]]."
+  }
+ ]
+}

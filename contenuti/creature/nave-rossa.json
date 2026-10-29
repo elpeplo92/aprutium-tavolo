@@ -1,0 +1,60 @@
+{
+ "id": "nave-rossa",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Bestie e cose della strada",
+ "num": 604,
+ "title": "Nave Rossa",
+ "sub": "Le navi dalle vele cremisi, silenziose e apparentemente vive",
+ "state": "incontrato",
+ "atti": [
+  1,
+  7
+ ],
+ "links": [
+  "faz-navi-rosse-forgiati",
+  "q-navi-rosse-forgiati",
+  "jn-laboratorio-torvus",
+  "jn-spiaggia-della-battaglia",
+  "forgiato"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Nave Rossa.jpg",
+ "scheda": {
+  "Che cos’è": "Una nave, o qualcosa che le somiglia: Mastodontica",
+  "Grado di sfida": "Non si combatte con la spada",
+  "Dove": "Al largo di Julia Nova; poi scomparse",
+  "Quante": "Tre allo sbarco; una flotta all’assedio, tre sciolte dall’Acido Solare"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "Immense, silenziose, con le vele cremisi; sembrano vive. Non si sentono remi né ordini, escono dalla nebbia di notte e dove passano le coste restano mute. Dalla cima della Torre di Ombretra ne avete viste tre apparire al largo: l’Assalto Silenzioso. All’assedio la flotta ha chiuso il porto a semicerchio e ha bombardato la città col fuoco.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che rapiscono da sempre lungo la costa, e che quello che portano via a volte torna, ma non è più lui. Che nella Guerra delle Due Lune hanno bruciato la costa di Aprutium. Al porto nessuno crede fino in fondo che se ne siano andate: «le Navi Rosse non se ne vanno, aspettano»."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Lo sbarco sulla spiaggia lo avete respinto con Silvanus e Fenix. All’assedio, l’Acido Solare di Torvus ne ha sciolte tre in trenta secondi, e la flotta ha rotto l’assedio. Da allora non sono più tornate."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Non è una creatura da scheda: è una nave, e si combatte come una nave. ⟦Oggetto Mastodontico di legno nero e di qualcos’altro: CA 15, PF 400, soglia di danno 15 (un colpo sotto i 15 danni non la scalfisce); immune a veleno e psichico; vulnerabile all’Acido Solare di Torvus (triplo danno: è per questo che si sono sciolte). Le vele: CA 12, PF 60 ciascuna, vulnerabili al fuoco; con le vele bruciate la nave si ferma. Equipaggio: 40 Forgiati e 2 sacerdoti lunari per nave; un berserker sulla nave ammiraglia⟧.\n\n⟦Sono «vive» nel senso dei Forgiati: lo scafo è legno di Sylva Noctis innestato con lo stesso rito, e ascolta una voce sola. Senza Lyaras aspettano in un porto nascosto, nelle grotte della costa a sud (lo sa Zi’ Mènne, a Julia Nova)⟧.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non abborda: scarica Forgiati sulla spiaggia e tira fuoco sulla città. In mare, la Perla Silenziosa non può affrontarne una: può solo seguirla. Da terra, le baliste e l’Acido Solare."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Le Navi Rosse e i Forgiati|faz-navi-rosse-forgiati]], [[Torvus|jn-laboratorio-torvus]] e il suo acido, [[Sylva Noctis|faz-sylva-noctis]]."
+  }
+ ]
+}

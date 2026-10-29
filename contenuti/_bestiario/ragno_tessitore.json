@@ -1,0 +1,33 @@
+{
+ "id": "ragno_tessitore",
+ "name": "Ragno tessitore",
+ "short": "R",
+ "color": "#3A3A2A",
+ "hp": 26,
+ "ac": 14,
+ "init": 3,
+ "size": 2,
+ "actions": [
+  {
+   "n": "Morso (+2d6 veleno)",
+   "atk": 5,
+   "dmg": "1d8+3+2d6"
+  },
+  {
+   "n": "Tela (ricarica 5-6, 18 m): TS Des CD 13 o Trattenuto; la tela ha CA 10, PF 5, vulnerabile al fuoco"
+  },
+  {
+   "n": "Scalare come un ragno; Camminare sulla tela"
+  },
+  {
+   "n": "Furtività +7"
+  }
+ ],
+ "note": "Ragno gigante (Giant Spider, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · Bestia Grande · GS 1 · 200 PE · Vel 9 m, scalare 9 m · scurovisione 18 m · Il Bosco dei Noci Vecchi.",
+ "src": "Il Bosco dei Noci Vecchi",
+ "tac": "Dall’alto, al buio, col primo che si stacca dal gruppo: la Tela, poi il morso su chi è trattenuto. Il fuoco li fa arretrare.",
+ "lines": [
+  "(un filo bianco, spesso come una corda di liuto, che si tende)"
+ ],
+ "img": "Bestiario — Ragno tessitore.jpg"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "frate_armato",
+ "name": "Frate armato di Mushanè",
+ "short": "Fr",
+ "color": "#6A5A3A",
+ "hp": 11,
+ "ac": 16,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Mazza ferrata",
+   "atk": 3,
+   "dmg": "1d6+1"
+  },
+  {
+   "n": "Lancia (lancio 6/18 m)",
+   "atk": 3,
+   "dmg": "1d6+1"
+  }
+ ],
+ "note": "Guardia (Guard, MM 2024, SRD 5.2.1, verificato il 29-10-2026) con la mazza ferrata · GS 1/8 · 25 PE · Vel 9 m · Percezione +2 · La milizia dell’Abbazia, gli uomini di Corrado «Lu Mazzòle».",
+ "src": "Mushanè",
+ "tac": "Dietro Corrado, in fila, fra le panche. Senza Corrado in piedi, dopo un round depongono le armi.",
+ "lines": [
+  "«Per l’Abate!»",
+  "«Corrado, che facciamo?»"
+ ],
+ "img": "Bestiario — Frate armato.jpg"
+}

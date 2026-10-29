@@ -1,0 +1,50 @@
+{
+ "id": "fanatica-di-velthuria",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 810,
+ "title": "Fanatica di Velthuria",
+ "sub": "Sorella Nerina, che scava la «chiave vera» sotto la Basilica",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-basilica-aurea",
+  "jn-veneranda-iuvenza",
+  "faz-casa-velthuria",
+  "armatura-di-iuvenza",
+  "armatura-animata-iuvenza"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Fanatica di Velthuria.jpg",
+ "scheda": {
+  "Chi è": "Umana, di Casa Velthuria",
+  "Grado di sfida": "2",
+  "Dove": "Sotto la Basilica Aurea, la porta con la luna",
+  "Cosa fa": "Comanda la squadra che scava la «chiave vera»"
+ },
+ "best": "te_fanatica_velthuria",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Giovane, calma, occhi viola chiaro. Porta la mappa dei tunnel e un medaglione con una scheggia lunare, e comanda da dietro i mattoni. «Voi cercate un sigillo per chiamare dei vecchi. Noi cerchiamo quello che fa tacere il mondo.» «La Signora è una signora.»",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Fanatico del culto (Cultist Fanatic, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 2 (450 PE)\n\n· CA 13 · PF 44 (8d8+8) · Velocità 9 m · Iniziativa +2\n· For 11 (+0) · Des 14 (+2) · Cos 12 (+1) · Int 10 (+0) · Sag 14 (+2) · Car 13 (+1)\n· Tiri salvezza: Sag +4 · Abilità: Inganno +3, Persuasione +3, Religione +2 · Percezione passiva 12\n· Lingue: pretuziano, vesperiano\n\nAzioni\n\n· Lama del patto. Attacco in mischia +4, portata 1,5 m: 6 (1d8+2) danni taglienti più 7 (2d6) danni necrotici.\n· Incantesimi (Saggezza, CD 12, +4). A volontà: Luce, Taumaturgia. 1/giorno: Blocca persone. 2/giorno: Comando.\n\nAzioni bonus\n\n· Arma spirituale (2/giorno).",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Da dietro i mattoni (copertura tre quarti). Blocca persone sul primo che fa luce forte o su Mattheus. Se resta sola, fugge giù per la scala pretuziana. Catturata, non tradisce Iuvenza."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Iuvenza|jn-veneranda-iuvenza]], [[Casa Velthuria|faz-casa-velthuria]], le [[armature|armatura-di-iuvenza]] che la coprono."
+  }
+ ]
+}

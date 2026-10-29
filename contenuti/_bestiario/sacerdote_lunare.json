@@ -1,0 +1,39 @@
+{
+ "id": "sacerdote_lunare",
+ "name": "Sacerdote lunare",
+ "short": "SL",
+ "color": "#6A2A7A",
+ "hp": 44,
+ "ac": 13,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Lama del patto (+2d6 necrotici)",
+   "atk": 4,
+   "dmg": "1d8+2+2d6"
+  },
+  {
+   "n": "Blocca persone (1/giorno, TS Sag CD 12, concentrazione)"
+  },
+  {
+   "n": "Comando (2/giorno, TS Sag CD 12)"
+  },
+  {
+   "n": "Arma spirituale (azione bonus, 2/giorno)",
+   "atk": 4,
+   "dmg": "1d8+2"
+  },
+  {
+   "n": "Luce, Taumaturgia (a volontà)"
+  }
+ ],
+ "note": "Fanatico del culto (Cultist Fanatic, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · GS 2 · 450 PE · Vel 9 m · TS Sag +4 · Inganno +3, Persuasione +3 · scurovisione 18 m · quando muore si dissolve in cenere d’argento.",
+ "src": "L’Abbazia di Biancosale",
+ "tac": "Da dietro: Comando sul guerriero più grosso, Blocca persone sul chierico, l’Arma spirituale sul ferito. Tiene i Forgiati fra sé e i PG. Se resta solo scappa da una botola.",
+ "lines": [
+  "«Avete interrotto la pace del non ricordare.»",
+  "«Io sono solo un messaggero!»"
+ ],
+ "img": "Bestiario — Sacerdote lunare.jpg"
+}

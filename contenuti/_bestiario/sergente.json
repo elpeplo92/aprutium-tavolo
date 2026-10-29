@@ -1,0 +1,39 @@
+{
+ "id": "sergente",
+ "name": "Sergente mercenario",
+ "short": "Sg",
+ "color": "#8A4A2A",
+ "hp": 52,
+ "ac": 17,
+ "init": 3,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Spada lunga o Balestra pesante"
+  },
+  {
+   "n": "Spada lunga",
+   "atk": 5,
+   "dmg": "1d8+3"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 5,
+   "dmg": "1d10+3"
+  },
+  {
+   "n": "Comando (azione bonus): un alleato entro 9 m che lo sente fa un attacco"
+  },
+  {
+   "n": "Parata (reazione): +2 CA contro un attacco in mischia che vede"
+  }
+ ],
+ "note": "Capitano dei banditi (Bandit Captain, MM 2024, SRD 5.2.1, verificato il 29-10-2026) con cotta di maglia e scudo, spada lunga e Comando · GS 3 · 700 PE · Vel 9 m · TS For +4, Des +5 · Atletica +4, Inganno +4 · Vale per Kostandìn, Vasco e Tanush.",
+ "src": "Mushanè",
+ "tac": "Comanda: ogni round usa Comando per far attaccare un alleato, e attacca due volte chi sembra il capo del gruppo. Se resta solo, tratta.",
+ "lines": [
+  "«Tenete la linea!»",
+  "«Quanto vi pagano, per questo?»"
+ ],
+ "img": "Bestiario — Sergente mercenario.jpg"
+}

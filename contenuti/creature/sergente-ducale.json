@@ -1,0 +1,50 @@
+{
+ "id": "sergente-ducale",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 802,
+ "title": "Sergente della Guardia Ducale",
+ "sub": "«Io sono la porta»",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "borgo-teramum",
+  "guardia-ducale",
+  "png-guarnerio-da-mendurje",
+  "png-morico-tavolaccio",
+  "png-iaco-pennacchia"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Teramum — Sergente della Guardia Ducale.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "4",
+  "Dove": "Le porte di Teramum, le ronde",
+  "Chi è": "Vale per il capitano Guarnerio, il sergente Iaco (con meno PF) e il sergente della ronda Morico Tavolaccio"
+ },
+ "best": "te_sergente_ducale",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Armatura a piastre ridotta, scudo con la torre e il lupo, spada lunga e giavellotti. Comanda e non si getta nella mischia: mette le guardie in cerchio e si prende il più pericoloso. «Mi fate fare le carte, e io odio le carte.»",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Capitano della Guardia (Guard Captain, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 4 (1100 PE)\n\n· CA 18 · PF 75 (10d8+30) · Velocità 9 m · Iniziativa +4\n· For 18 (+4) · Des 14 (+2) · Cos 16 (+3) · Int 12 (+1) · Sag 14 (+2) · Car 13 (+1)\n· Abilità: Atletica +6, Percezione +4 · Percezione passiva 14\n· Lingue: pretuziano, vesperiano\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con la Spada lunga o con il Giavellotto.\n· Spada lunga. Attacco in mischia +6, portata 1,5 m: 15 (2d10+4) danni taglienti.\n· Giavellotto. Attacco in mischia o a distanza +6, portata 1,5 m o gittata 9/36 m: 14 (3d6+4) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Se la ronda è in svantaggio, ordina la ritirata e fischia per i rinforzi. Non uccide chi si arrende: «Arrendetevi, e domattina ridiamo tutti»."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Guardia Ducale|guardia-ducale]], [[Guarnerio da Mëndurjë|png-guarnerio-da-mendurje]]."
+  }
+ ]
+}

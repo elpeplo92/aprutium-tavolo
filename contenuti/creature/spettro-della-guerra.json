@@ -1,0 +1,48 @@
+{
+ "id": "spettro-della-guerra",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Sotto Bëllindë",
+ "num": 703,
+ "title": "Spettro della Guerra",
+ "sub": "Un nome ripetuto: quello di un commilitone morto due secoli fa",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "be-dopo-il-quarto-sigillo",
+  "mito-guerra-due-lune",
+  "ultimo-custode"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Spettro della Guerra.jpg",
+ "scheda": {
+  "Che cos’è": "Non morto, Medio",
+  "Grado di sfida": "1",
+  "Dove": "La Camera delle Memorie, sotto Bëllindë",
+  "Quanti": "Due o tre"
+ },
+ "best": "spettro",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un soldato trasparente della Guerra delle Due Lune, con la ferita ancora addosso, che passa attraverso i muri e ripete un nome: quello di un compagno morto due secoli fa. Cerca chi porta la luce.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Spettro (Specter, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Non morto Medio · caotico malvagio · grado di sfida 1 (200 PE)\n\n· CA 12 · PF 22 (5d8) · Velocità 9 m, volo 15 m (fluttua) · Iniziativa +2\n· For 1 (−5) · Des 14 (+2) · Cos 11 (+0) · Int 10 (+0) · Sag 10 (+0) · Car 11 (+0)\n· Percezione passiva 10\n· Immunità: necrotico, veleno; Affascinato, Afferrato, Avvelenato, Paralizzato, Pietrificato, Prono, Privo di sensi, Sfinimento, Trattenuto · Resistenze: acido, freddo, fuoco, fulmine, tuono\n· Sensi: scurovisione 18 m · Lingue: capisce l’aureo antico, non parla (ripete)\n\nTratti\n\n· Movimento incorporeo. Passa attraverso creature e oggetti come se fossero terreno difficile; se finisce il turno dentro un oggetto subisce 5 (1d10) danni da forza.\n· Sensibilità alla luce del sole. Alla luce del sole ha svantaggio alle prove e ai tiri per colpire.\n\nAzioni\n\n· Risucchio vitale. Attacco in mischia +4, portata 1,5 m: 7 (2d6) danni necrotici; il massimo dei PF del bersaglio si riduce dello stesso valore.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Passa attraverso i muri e attacca da dietro chi porta luce. Si ritira nel muro dopo il colpo se ferito. Chi dice il nome che ripete (Storia CD 14 per trovarlo nei registri della Rocca) lo ferma per un round."
+  },
+  {
+   "t": "Legami",
+   "txt": "I caduti della [[Guerra delle Due Lune|mito-guerra-due-lune]] rimasti sotto Bëllindë."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "id": "picchiatore-del-covo",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Naviganti Grigi",
+ "num": 402,
+ "title": "Picchiatore del Covo",
+ "sub": "Le guardie di Domina nella grotta della Serpe",
+ "state": "incontrato",
+ "atti": [
+  5
+ ],
+ "links": [
+  "q-covo-della-serpe",
+  "jn-domina-syel",
+  "faz-naviganti-grigi",
+  "lyraeth"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Picchiatore del Covo.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (mezzelfo o umano), Medio",
+  "Grado di sfida": "1/2",
+  "Dove": "Il Covo della Serpe, la grotta sulle scogliere a nord",
+  "Chi li comandava": "Domina Syel Faredan"
+ },
+ "best": "picchiatore_grigio",
+ "pub": [
+  {
+   "t": "",
+   "txt": "I più grossi della Gilda, quelli che Domina teneva alla grotta: mazza, giaco di cuoio, una balestra pesante appoggiata alla roccia. Picchiano in due sullo stesso uomo e non hanno fretta.",
+   "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "Avete superato le prime guardie del Covo della Serpe nell’avvicinamento furtivo, che è fallito, e poi nella battaglia: Alessandros avvolto nella luce d’argento, Adamus orso, Luigis e Gelsomina come arieti, Vicarus col fuoco. Dei superstiti, Yuri, Anacleto e Achilluc seguono Adamus."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Picchiatore (Tough, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1/2 (100 PE)\n\n· CA 12 · PF 32 (5d8+10) · Velocità 9 m · Iniziativa +1\n· For 15 (+2) · Des 12 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 10 (+0) · Car 11 (+0)\n· Percezione passiva 10\n· Sensi: scurovisione 18 m se mezzelfo · Lingue: pretuziano, zingaresco\n\nTratti\n\n· Tattiche del branco. Vantaggio al tiro per colpire se un alleato non Incapacitato è entro 1,5 m dal bersaglio.\n\nAzioni\n\n· Mazza. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni contundenti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 6 (1d10+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Domina Syel Faredan",
+   "liv": 3,
+   "txt": "Capitana dei banditi (Bandit Captain, SRD 5.2.1, verificato): CA 15, PF 52 (8d8+16), Iniziativa +3; For 15 (+2), Des 16 (+3), Cos 14 (+2), Int 14 (+2), Sag 11 (+0), Car 14 (+2); TS For +4, Des +5; Atletica +4, Inganno +4; Multiattacco: due attacchi di Scimitarra (+5, 1d6+3 taglienti) o di ⟦Coltello da lancio⟧ (+5, gittata 6/18 m, 1d4+3 perforanti); Parata (reazione: +2 CA contro un attacco in mischia che vede). ⟦Sciacquativ’: una volta, rovescia un braciere su una catasta di barili: fiamme verdi in un quadrato di 6 m, 2d6 da fuoco (TS Des CD 12, metà), il fuoco resta per 1 minuto⟧. Grado di sfida 2. Morta sulla sabbia del Covo, con la maledizione del liquore nei pozzi.",
+   "ritratto": "Domina Syel Faredan.jpg",
+   "voce": "jn-domina-syel",
+   "scheda": {
+    "Base": "Capitana dei banditi",
+    "Grado di sfida": "2",
+    "Com’è finita": "Morta al Covo della Serpe"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Due su uno, con lo scudo di roccia della grotta alle spalle. La balestra la usa chi sta in alto. Se Domina cade, chi resta in piedi tratta: Adamus l’ha capito prima degli altri."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Mazza, cuoio, balestra pesante. Il tesoro del Covo lo avete già preso: la Perla Silenziosa, il libro mastro, la mappa dei covi. 100 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Domina|jn-domina-syel]], [[i Naviganti Grigi|faz-naviganti-grigi]], gli [[emissari di Sylva Noctis|lyraeth]] che Domina riceveva nella grotta."
+  }
+ ]
+}

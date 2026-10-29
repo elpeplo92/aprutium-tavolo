@@ -1,0 +1,30 @@
+{
+ "id": "brigante",
+ "name": "Brigante / sciacallo",
+ "short": "Br",
+ "color": "#5A4A3A",
+ "hp": 11,
+ "ac": 12,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Spranga o scimitarra",
+   "atk": 3,
+   "dmg": "1d6+1"
+  },
+  {
+   "n": "Balestra leggera (24/96 m)",
+   "atk": 3,
+   "dmg": "1d8+1"
+  }
+ ],
+ "note": "Bandito (Bandit, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · GS 1/8 · 25 PE · Vel 9 m · Sciacalli del porto, briganti della strada, gente con la fame addosso.",
+ "src": "Il porto di Julia Nova",
+ "tac": "In folla, finché la folla regge: al primo morto scappano tutti. Un Intimidire CD 12 o un pugno di monete li ferma prima.",
+ "lines": [
+  "«È roba di nessuno!»",
+  "«Via, via!»"
+ ],
+ "img": "Bestiario — Sciacalli del porto.jpg"
+}

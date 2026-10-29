@@ -1,0 +1,31 @@
+{
+ "id": "forgiato_berserker",
+ "name": "Forgiato berserker",
+ "short": "B",
+ "color": "#5A2E2E",
+ "hp": 67,
+ "ac": 13,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Ascia bipenne",
+   "atk": 5,
+   "dmg": "1d12+3"
+  },
+  {
+   "n": "Furia del sangue: sotto metà PF, vantaggio ai tiri per colpire e ai TS"
+  },
+  {
+   "n": "Noi: vantaggio se un altro Forgiato è entro 1,5 m dal bersaglio"
+  }
+ ],
+ "note": "Berserker (MM 2024, SRD 5.2.1, verificato il 29-10-2026) coi tratti del Forgiato · GS 2 · 450 PE · Vel 9 m · immune: Affascinato, Spaventato · Una guardia a cui hanno versato il nero in gola; guida le orde. Umbrax: PF 97, due colpi, GS 4.",
+ "src": "La spiaggia di Julia Nova",
+ "tac": "Carica il primo che vede e non lo molla. Se cade, i Forgiati comuni restano un round fermi a riprendere la nota.",
+ "lines": [
+  "Una nota sola, urlata.",
+  "(gli occhi bianchi, le vene nere sul collo)"
+ ],
+ "img": "Bestiario — Forgiato berserker.jpg"
+}

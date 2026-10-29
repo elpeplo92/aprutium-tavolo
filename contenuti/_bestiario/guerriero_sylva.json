@@ -1,0 +1,32 @@
+{
+ "id": "guerriero_sylva",
+ "name": "Guerriero di Sylva Noctis",
+ "short": "Sy",
+ "color": "#2A3A5A",
+ "hp": 11,
+ "ac": 18,
+ "init": 3,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Spada lunga",
+   "atk": 3,
+   "dmg": "2d10+1"
+  },
+  {
+   "n": "Arco lungo (45/180 m, +3d4 veleno)",
+   "atk": 3,
+   "dmg": "1d8+1+3d4"
+  },
+  {
+   "n": "Tattiche del branco: vantaggio se un alleato è entro 1,5 m dal bersaglio"
+  }
+ ],
+ "note": "Guerriero hobgoblin (Hobgoblin Warrior, MM 2024, SRD 5.2.1, verificato il 29-10-2026): le cifre sono quelle, la pelle è drukarra · GS 1/2 · 100 PE · Vel 9 m · scurovisione 18 m.",
+ "src": "Il Covo della Serpe",
+ "tac": "In coppia, sempre: prima le frecce avvelenate da lontano, poi la spada. Se il capo cade si arrendono.",
+ "lines": [
+  "(un ordine secco in elfico)"
+ ],
+ "img": "Bestiario — Guerriero di Sylva Noctis.jpg"
+}

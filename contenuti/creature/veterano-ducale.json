@@ -1,0 +1,48 @@
+{
+ "id": "veterano-ducale",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 803,
+ "title": "Veterano della Guardia Ducale",
+ "sub": "La ronda di notte del Palazzo: gli uomini di Lucius Grazianus",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-palazzo-ducale",
+  "png-lucius-grazianus",
+  "guardia-ducale"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Veterano della Guardia Ducale.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "3",
+  "Dove": "Il Palazzo Ducale, la porta di servizio, i vicoli intorno",
+  "Come vanno": "Dai due lati del vicolo"
+ },
+ "best": "te_veterano_ducale",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Mezza armatura e tabarro grigio, alabarda o spada lunga, la balestra pesante a tracolla. Vogliono arrestare, non uccidere: colpiscono per stordire chi è a terra. «Lo Stratega vorrà vedervi. Vivi.»",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guerriero veterano (Warrior Veteran, SRD 5.2.1, verificato) con l’alabarda · Umanoide Medio · grado di sfida 3 (700 PE)\n\n· CA 17 · PF 65 (10d8+20) · Velocità 9 m · Iniziativa +3\n· For 16 (+3) · Des 13 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Abilità: Atletica +5, Percezione +2 · Percezione passiva 12\n· Lingue: pretuziano\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con l’Alabarda, la Spada lunga o la Balestra pesante.\n· Alabarda. Attacco in mischia +5, portata 3 m: 8 (1d10+3) danni taglienti.\n· Spada lunga. Attacco in mischia +5, portata 1,5 m: 7 (1d8+3) danni taglienti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 12 (2d10+1) danni perforanti.\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 2 alla sua CA contro quell’attacco.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Arrivano dai due lati del vicolo. Se qualcuno mostra il lasciapassare dello Stratega o Maximus si fa riconoscere, il sergente abbassa la spada."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Lucius Grazianus|png-lucius-grazianus]], il [[Palazzo Ducale|te-palazzo-ducale]]."
+  }
+ ]
+}

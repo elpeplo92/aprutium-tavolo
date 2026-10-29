@@ -1,0 +1,47 @@
+{
+ "id": "balestriere-dei-tetti",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 806,
+ "title": "Balestriere dei tetti",
+ "sub": "Sui comignoli ai due capi del ponte",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "bravo-teramano",
+  "capo-dei-bravi"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Teramum — Balestriere dei tetti.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "1/2",
+  "Dove": "I tetti attorno al ponte sulla gola",
+  "Cosa fanno": "Tirano su chi lancia incantesimi"
+ },
+ "best": "te_balestriere_dei_tetti",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Ragazzi leggeri che sanno salire sui tetti, con la balestra leggera e una spada corta. Tirano dai comignoli su chi fa luce con le mani: «Quello con le mani che brillano!». Spariscono sui tetti appena i bravi scappano.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Esploratore (Scout, SRD 5.2.1, verificato) con la balestra leggera · Umanoide Medio · grado di sfida 1/2 (100 PE)\n\n· CA 13 · PF 16 (3d8+3) · Velocità 9 m, scalare 9 m sui tetti · Iniziativa +2\n· For 11 (+0) · Des 14 (+2) · Cos 12 (+1) · Int 11 (+0) · Sag 13 (+1) · Car 11 (+0)\n· Abilità: Natura +4, Percezione +5, Furtività +6, Sopravvivenza +5 · Percezione passiva 15\n· Lingue: pretuziano\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con la Spada corta o con la Balestra leggera.\n· Spada corta. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni perforanti.\n· Balestra leggera. Attacco a distanza +4, gittata 24/96 m: 6 (1d8+2) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Copertura dei comignoli (+2 CA). Due dardi a round su chi lancia incantesimi."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Bravo teramano|bravo-teramano]]."
+  }
+ ]
+}

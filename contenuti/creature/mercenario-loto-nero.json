@@ -1,0 +1,83 @@
+{
+ "id": "mercenario-loto-nero",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Mercenari, bravi e soldati",
+ "num": 503,
+ "title": "Mercenario del Loto Nero",
+ "sub": "I pesanti di Casa Velthuria sulla Via Salaria",
+ "state": "noto",
+ "atti": [
+  10,
+  11
+ ],
+ "links": [
+  "faz-loto-nero",
+  "faz-casa-velthuria",
+  "jn-veneranda-iuvenza",
+  "jn-tenuta-di-altavia",
+  "atto-10"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Mercenario del Loto Nero.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (vesperiano o straniero del sud), Medio",
+  "Grado di sfida": "3",
+  "Dove": "Il blocco sulla Via Salaria, il Passo dei Frati; le guardie silenziose di Altavia",
+  "Quanti": "Venti pesanti e quattro balestrieri sulle barricate"
+ },
+ "best": "mercenario_loto_nero",
+ "pub": [
+  {
+   "t": "",
+   "txt": "L’esercito privato di Casa Velthuria: il Loto Nero su campo grigio, armature in stile straniero, dal sud, pesanti e lucide. Fermano ogni carretto sulla Via Salaria e cercano voi. All’ingresso del blocco, su una picca, un elmo della Guardia Cittadina di Julia Nova, ammaccato e bruciato: il messaggio di Iuvenza a Fenix, «il tuo confine finisce qui».",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che Iuvenza li ha pagati in oro straniero. Che evitano il lato del Bosco dei Noci Vecchi come se avessero paura di qualcosa."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Maximus li ha visti dal confine, senza farsi vedere, con l’ordine di Fenix di non ingaggiare: venti mercenari pesanti, quattro balestrieri sulle barricate. Al Passo dei Frati le vedette ne hanno contati altri venti. Alla Tenuta di Altavia le guardie silenziose di Iuvenza, «immobili come statue», vi hanno aperto il cancello come un picchetto d’onore. Non avete mai incrociato le spade."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guerriero veterano (Warrior Veteran, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 3 (700 PE)\n\n· CA 17 (mezza armatura del sud) · PF 65 (10d8+20) · Velocità 9 m · Iniziativa +3\n· For 16 (+3) · Des 13 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Abilità: Atletica +5, Percezione +2 · Percezione passiva 12\n· Lingue: vesperiano, pretuziano\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con lo Spadone o con la Balestra pesante.\n· Spadone. Attacco in mischia +5, portata 1,5 m: 10 (2d6+3) danni taglienti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 12 (2d10+1) danni perforanti.\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 2 alla sua CA contro quell’attacco.",
+   "lato": true
+  },
+  {
+   "t": "Balestriere del Loto Nero",
+   "liv": 3,
+   "txt": "Guardia (Guard, SRD 5.2.1, verificato) con la balestra: CA 16, PF 11 (2d8+2), Iniziativa +1; For 13 (+1), Des 12 (+1), Cos 12 (+1); Percezione +2; Balestra pesante (+3, gittata 30/120 m, 1d10+1 perforanti), Spada corta (+3, 1d6+1). Grado di sfida 1/8. Quattro sulle barricate della Salaria, dietro copertura a metà (+2 CA).",
+   "scheda": {
+    "Base": "Guardia",
+    "Grado di sfida": "1/8"
+   }
+  },
+  {
+   "t": "Guardia silenziosa di Altavia",
+   "liv": 3,
+   "txt": "Guardia (Guard, SRD 5.2.1, verificato): CA 16, PF 11, Lancia (+3, 1d6+1; 1d8+1 a due mani; lancio 6/18 m). ⟦Non parlano mai e non battono le palpebre: sono Forgiati di Iuvenza in livrea grigia, i primi del suo esperimento, e hanno i tratti del [[Forgiato|forgiato]]. Quando la Tenuta è diventata lazzaretto se ne sono andate di notte, tutte insieme, verso Teramum⟧.",
+   "scheda": {
+    "Base": "Guardia (⟦forgiata⟧)",
+    "Grado di sfida": "1/8"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "In linea, come soldati veri: i balestrieri in copertura sulle barricate, i pesanti a due a due con lo spadone. Hanno un ufficiale ⟦un Capitano della Guardia dell’SRD, GS 4⟧ che non si fa vedere. Non inseguono nel Bosco dei Noci Vecchi: hanno visto cosa c’è dentro."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Mezza armatura di fattura meridionale (CA 15), spadone, balestra. Addosso, il sigillo da contratto del Loto Nero come quello preso a Mushanè. 700 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Il Loto Nero|faz-loto-nero]], [[Casa Velthuria|faz-casa-velthuria]], [[Iuvenza|jn-veneranda-iuvenza]]. Sono i cugini di mestiere dei [[mercenari vesperiani|mercenario-vesperiano]], pagati meglio."
+  }
+ ]
+}

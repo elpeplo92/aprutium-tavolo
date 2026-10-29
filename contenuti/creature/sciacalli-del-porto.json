@@ -1,0 +1,55 @@
+{
+ "id": "sciacalli-del-porto",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Mercenari, bravi e soldati",
+ "num": 506,
+ "title": "Sciacalli del porto",
+ "sub": "Chi voleva saccheggiare il magazzino della Gilda dopo l’assedio",
+ "state": "incontrato",
+ "atti": [
+  9
+ ],
+ "links": [
+  "jn-magazzino-gilda",
+  "jn-yuri",
+  "faz-naviganti-grigi",
+  "atto-9"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Sciacalli del porto.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "1/8",
+  "Dove": "Il porto di Julia Nova, dopo il fuoco",
+  "Com’è finita": "Respinti da Adamus e Yuri l’Amaro"
+ },
+ "best": "brigante",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Non banditi: gente del porto con la fame addosso e una spranga in mano, che dopo il fuoco delle Navi Rosse ha pensato che un magazzino chiuso fosse un magazzino di nessuno. Dieci, quindici, con le facce coperte dalla fuliggine.",
+   "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "Volevano il magazzino della Gilda. Adamus e Yuri l’Amaro li hanno respinti senza ammazzare nessuno: il Capo della Gilda ha bisogno del porto vivo."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Bandito (Bandit, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1/8 (25 PE)\n\n· CA 12 · PF 11 (2d8+2) · Velocità 9 m · Iniziativa +1\n· For 11 (+0) · Des 12 (+1) · Cos 12 (+1) · Int 10 (+0) · Sag 10 (+0) · Car 10 (+0)\n· Percezione passiva 10\n· Lingue: pretuziano\n\nAzioni\n\n· Spranga o scimitarra. Attacco in mischia +3, portata 1,5 m: 4 (1d6+1) danni contundenti o taglienti.\n· Balestra leggera (uno su tre ce l’ha). Attacco a distanza +3, gittata 24/96 m: 5 (1d8+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "In folla, finché la folla regge: al primo morto scappano tutti. Un Intimidire CD 12 o un pugno di monete li ferma prima."
+  },
+  {
+   "t": "Legami",
+   "txt": "Il porto ferito di [[Julia Nova|q-navi-rosse-forgiati]]; [[Yuri|jn-yuri]] li conosce per nome."
+  }
+ ]
+}

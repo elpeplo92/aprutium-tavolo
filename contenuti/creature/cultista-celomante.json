@@ -1,0 +1,68 @@
+{
+ "id": "cultista-celomante",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 201,
+ "title": "Cultista celomante",
+ "sub": "La mano bassa dei Celomanti: chi tiene le fiale e canta",
+ "state": "incontrato",
+ "atti": [
+  3,
+  7
+ ],
+ "links": [
+  "faz-sylva-noctis",
+  "q-colleventoso",
+  "q-pietraluna",
+  "sacerdote-lunare"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Cultista celomante.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (elfo drukarro o umano comprato), Medio",
+  "Grado di sfida": "1/8",
+  "Dove": "Le catacombe di Biancosale, il laboratorio di Pietraluna",
+  "Quanti": "Due a Biancosale; a Pietraluna i sacerdoti delle gabbie"
+ },
+ "best": "cultista_celomante",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Vestiti di grigio e di viola, il cappuccio basso, un falcetto da rito alla cintura. Sono quelli che tengono le fiale, che tengono fermo il prigioniero, che cantano la nota bassa mentre il sacerdote lavora. Alcuni sono elfi dalla pelle cinerea; altri sono gente di qui che ha venduto il paese.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Nel Ducato non li chiamano col nome del popolo: si dice «i Celomanti», e si abbassa la voce. Si riconoscono dai segni che lasciano: la falce di luna rovesciata sulle porte, le tracce di stivali elfici, i corpi trascinati."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Un canto a bocca chiusa da sotto terra. Fiale vuote. Un odore di ozono e di sangue cotto."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Due cultisti tenevano Luigis sul tavolo della Forgiatura, con due emissari: li avete affrontati nelle catacombe di Biancosale. A Pietraluna i sacerdoti del laboratorio forgiavano i prigionieri uno a uno nelle gabbie, e otto stavano immobili nella Sala della Forgia a fare da «batterie» al rito."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Cultista (Cultist, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1/8 (25 PE)\n\n· CA 12 · PF 9 (2d8) · Velocità 9 m · Iniziativa +1\n· For 11 (+0) · Des 12 (+1) · Cos 10 (+0) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Tiri salvezza: Sag +2 · Abilità: Inganno +2, Religione +2 · Percezione passiva 10\n· Sensi: scurovisione 18 m se elfo · Lingue: pretuziano, elfico\n\nAzioni\n\n· Falcetto rituale. Attacco in mischia +3, portata 1,5 m: 3 (1d4+1) danni taglienti più 1 danno necrotico.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non combatte se può: tiene il prigioniero, scappa a chiamare, lancia la fiala per terra. In quattro contro uno osano. Fugge sotto la metà dei PF. Se ne catturate uno parla subito, ma sa poco: nomi di copertura, un luogo d’incontro."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Il falcetto, una fiala (piena: vale come il liquido nero, un sorso forgia chi non supera un TS Costituzione CD 15 in un’ora), un medaglione con la falce rovesciata. 25 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Sylva Noctis e i Celomanti|faz-sylva-noctis]]. Sopra di loro il [[Sacerdote lunare|sacerdote-lunare]] e gli [[emissari|emissario-celomante]]."
+  }
+ ]
+}

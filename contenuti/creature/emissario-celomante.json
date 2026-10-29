@@ -1,0 +1,70 @@
+{
+ "id": "emissario-celomante",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 203,
+ "title": "Emissario d’élite",
+ "sub": "Il soldato scelto di Sylva Noctis: lama lunare e passo d’ombra",
+ "state": "incontrato",
+ "atti": [
+  3,
+  6,
+  7
+ ],
+ "links": [
+  "faz-sylva-noctis",
+  "q-colleventoso",
+  "q-pietraluna",
+  "therxil",
+  "lyraeth"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Emissario celomante.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (elfo drukarro), Medio",
+  "Grado di sfida": "3",
+  "Dove": "Le catacombe di Biancosale; l’anello interno di Pietraluna",
+  "Quanti": "Due a Biancosale; la guardia scelta di Therxil a Pietraluna"
+ },
+ "best": "emissario_celomante",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Alti, magri, la pelle cinerea e gli occhi viola; una mezza armatura elfica scura, leggera come cuoio, e una lama lunga e sottile che alla luce sembra bagnata. Si muovono senza rumore e, quando serve, spariscono per un passo e riappaiono alle spalle. Iuvenza li chiamava «i Celomanti d’élite» dell’anello interno di Pietraluna.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che i «diplomatici» e i «mercanti di vini rari» che per mesi sono entrati e usciti dalla Torre del Sole erano loro. Che uscivano all’alba dalle tenute di Velthuria."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Stivali elfici nel fango: suola sottile, passo lungo. Una porta chiusa dall’interno senza una chiave."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Due emissari tenevano Luigis sul tavolo della Forgiatura, nelle catacombe di Biancosale: una battaglia disperata per strapparglielo. A Pietraluna la guardia scelta di Therxil è caduta con lui, nella sala delle colonne."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guerriero veterano (Warrior Veteran, Manuale dei Mostri 2024, SRD 5.2.1) adattato all’elfo drukarro · Umanoide Medio · grado di sfida 3 (700 PE)\n\n· CA 17 · PF 65 (10d8+20) · Velocità 9 m · Iniziativa +3\n· For 16 (+3) · Des 13 (+1) · Cos 14 (+2) · Int 12 (+1) · Sag 11 (+0) · Car 12 (+1)\n· Abilità: Atletica +5, Percezione +2, ⟦Furtività +5⟧ · Percezione passiva 12\n· Sensi: scurovisione 18 m · Lingue: pretuziano, elfico\n\nTratti\n\n· ⟦Retaggio fatato. Ha vantaggio ai tiri salvezza per non essere Affascinato, e la magia non può addormentarlo⟧\n· ⟦Cenere d’argento. Quando muore il corpo si dissolve in cenere d’argento⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi con la Lama lunare o con la Balestra a mano.\n· Lama lunare. Attacco in mischia +5, portata 1,5 m: 7 (1d8+3) danni taglienti ⟦più 3 (1d6) danni necrotici⟧.\n· Balestra a mano. Attacco a distanza +3, gittata 9/36 m: 4 (1d6+1) danni perforanti ⟦più 3 (1d6) da veleno⟧.\n\nAzioni bonus\n\n· ⟦Passo d’ombra (1/giorno). Lancia Passo velato: sparisce in una nebbia viola e riappare entro 9 m⟧\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 2 alla sua CA contro quell’attacco.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "In due: uno tiene la linea e para, l’altro usa il Passo d’ombra per arrivare alle spalle dell’incantatore. Due colpi di lama a testa. Sotto un terzo dei PF arretra verso la via di fuga che ha già scelto; se non c’è, combatte fino alla cenere."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Una lama lunare (spada lunga di fattura elfica, non magica: +1 alle prove di Persuasione con chi sa cos’è), la mezza armatura elfica (CA 15, senza svantaggio a Furtività), una balestra a mano con sei dardi avvelenati (1d6 da veleno, un’ora dall’apertura). 700 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Sylva Noctis e i Celomanti|faz-sylva-noctis]]. [[Lyraeth|lyraeth]] e [[Kaelen|kaelen]] erano emissari; [[Therxil|therxil]] la loro lama."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "id": "milite-della-fiamma",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 807,
+ "title": "Milite della Fiamma",
+ "sub": "Gli armigeri dell’Arciflamine: sopravveste nera col sole d’oro",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-biblioteca-incompiuta",
+  "te-basilica-aurea",
+  "questore-della-basilica",
+  "guardia-della-basilica"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Milite della Fiamma.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "3",
+  "Dove": "Le ispezioni del questore: la Biblioteca Incompiuta",
+  "Come vanno": "A muro nei corridoi stretti"
+ },
+ "best": "te_milite_fiamma",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Mezza armatura e sopravveste nera con il sole d’oro, mazza d’arme e balestra pesante. Accompagnano il questore nelle ispezioni e fanno muro nei corridoi mentre lui cerca i libri. «Nessuno tocchi un foglio!»",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guerriero veterano (Warrior Veteran, SRD 5.2.1, verificato) con la mazza d’arme · Umanoide Medio · grado di sfida 3 (700 PE)\n\n· CA 17 · PF 65 (10d8+20) · Velocità 9 m · Iniziativa +3\n· For 16 (+3) · Des 13 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Abilità: Atletica +5, Percezione +2 · Percezione passiva 12\n· Lingue: pretuziano, aureo antico\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con la Mazza d’arme o con la Balestra pesante.\n· Mazza d’arme. Attacco in mischia +5, portata 1,5 m: 7 (1d8+3) danni contundenti.\n· Balestra pesante. Attacco a distanza +3, gittata 30/120 m: 12 (2d10+1) danni perforanti.\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 2 alla sua CA contro quell’attacco.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Nel corridoio dei sigilli le loro lanterne si spengono al primo round. Non inseguono oltre il cancello."
+  },
+  {
+   "t": "Legami",
+   "txt": "Il [[questore|questore-della-basilica]] e la [[Basilica Aurea|te-basilica-aurea]]."
+  }
+ ]
+}

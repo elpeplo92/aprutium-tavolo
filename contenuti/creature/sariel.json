@@ -1,0 +1,67 @@
+{
+ "id": "sariel",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 210,
+ "title": "Sariel",
+ "sub": "La falsa disertrice: la mano dell’Alto Celomante",
+ "state": "incontrato",
+ "atti": [
+  7
+ ],
+ "links": [
+  "q-sariel",
+  "ogg-medaglione-di-sariel",
+  "alto-celomante",
+  "q-pietraluna",
+  "faz-sylva-noctis"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Sariel.jpg",
+ "scheda": {
+  "Chi è": "Drow (elfa drukarra), agente dell’Alto Celomante",
+  "Grado di sfida": "4",
+  "Dove l’avete vista": "Sotto le Scogliere del Silenzio, sul cutter nero",
+  "Com’è finita": "Virata a est «per un diversivo»; non è tornata"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "Pelle cinerea, occhi viola, i capelli bianchi tagliati corti da marinaio; un cutter nero dalla vela che prendeva un vento che non c’era. Si è detta disertrice di Sylva Noctis e aveva ragione su tutto: su Iuvenza, sul tunnel sotto la scogliera, sulla trappola all’approdo. Ha dato a Mattheus un medaglione che pulsava avvicinandosi a Pietraluna.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Niente. Nessuno l’ha vista tranne voi e l’equipaggio della Perla."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Vi ha affiancati sotto le Scogliere del Silenzio e vi ha guidati al tunnel di contrabbando con l’ingresso sott’acqua; poi ha virato a est. Lyaras morente ha riso: Sariel non è una disertrice, è un’agente dell’Alto Celomante, e vi ha portati lì per eliminare il suo tenente impazzito. Avete fatto il lavoro. Il medaglione è ancora con voi."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "⟦Spia scelta dell’Alto Celomante: una Spia con due gradi in più e la magia dei drow⟧ · Umanoide Medio · grado di sfida 4 (1100 PE)\n\n· CA 15 (cuoio borchiato nero) · PF 71 (13d8+13) · Velocità 9 m, nuotare 9 m · Iniziativa +6\n· For 11 (+0) · Des 18 (+4) · Cos 12 (+1) · Int 14 (+2) · Sag 15 (+2) · Car 16 (+3)\n· Tiri salvezza: Des +6, Sag +4 · Abilità: Acrobazia +6, Inganno +7, Intuizione +4, Percezione +4, Furtività +8 · Percezione passiva 14\n· Sensi: scurovisione 36 m · Lingue: pretuziano, elfico, vesperiano, sottocomune\n\nTratti\n\n· Retaggio fatato. Vantaggio ai tiri salvezza contro Affascinato; la magia non la addormenta.\n· Sensibilità alla luce del sole. Alla luce del sole ha svantaggio ai tiri per colpire e alle prove di Percezione basate sulla vista.\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con la Spada corta o con la Balestra a mano.\n· Spada corta. Attacco in mischia +6, portata 1,5 m: 7 (1d6+4) danni perforanti più 7 (2d6) da veleno.\n· Balestra a mano. Attacco a distanza +6, gittata 9/36 m: 7 (1d6+4) danni perforanti più 7 (2d6) da veleno.\n· Incantesimi (Carisma, CD 13). A volontà: Luci danzanti. 1/giorno: Fuoco fatuo, Oscurità.\n\nAzioni bonus\n\n· Azione scaltra. Scatto, Disimpegno o Nascondersi.",
+   "lato": true
+  },
+  {
+   "t": "Dov’è adesso",
+   "txt": "Sparita dopo il diversivo a est. ⟦Il medaglione è uno strumento di localizzazione a doppio senso: l’Alto Celomante sa dove sono i PG. Sariel ricompare a Teramum, come «diplomatica» presso una casata o come chi vuole il filatterio di Lyaras: il Lich in pausa è un affare non chiuso per il suo padrone⟧ (vedi la scheda [[Sariel, la falsa disertrice|q-sariel]])."
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non combatte: se deve, Oscurità sul gruppo, due colpi avvelenati sul più fragile, Azione scaltra e via. Preferisce dire la verità che le conviene: è il suo vero attacco."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Niente di suo. Il [[medaglione|ogg-medaglione-di-sariel]] è già vostro."
+  },
+  {
+   "t": "Legami",
+   "txt": "Agente dell’[[Alto Celomante|alto-celomante]]. Ha venduto [[Lyaras|png-lyaras-vel-quoril]]; [[Iuvenza|jn-veneranda-iuvenza]] sapeva. ⟦[[Kaelen|kaelen]] è con lei⟧."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "id": "ultimo-custode",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Sotto Bëllindë",
+ "num": 701,
+ "title": "L’Ultimo Custode",
+ "sub": "Il Praefectus che non muore finché resta laggiù",
+ "state": "incontrato",
+ "atti": [
+  17
+ ],
+ "links": [
+  "be-dopo-il-quarto-sigillo",
+  "atto-17",
+  "q-sigilli-lunari",
+  "png-vhaerun",
+  "faz-custodi-del-ciclo"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "img/monster-ultimo-custode.png",
+ "scheda": {
+  "Che cos’è": "Un uomo dell’Impero Aureo, custode del Quarto Sigillo; Grande per l’armatura",
+  "Grado di sfida": "8",
+  "Dove": "La stanza del Quarto Sigillo, sotto Bëllindë",
+  "Com’è finita": "Sconfitto e lasciato vivo al suo posto, con una promessa"
+ },
+ "best": "custode",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un uomo in un’armatura d’ordinanza dell’Impero, che da secoli sta davanti al Quarto Sigillo perché gliel’ha ordinato Cyrius Meren e perché poi ha scelto di restare. «Alt. Identificatevi. Ordine di accesso?». Non è cattivo: è un soldato a cui nessuno ha mai dato il cambio. Finché resta laggiù non muore.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "A Bëllindë nessuno sa che c’è. I vecchi dicono che sotto il borgo «ci sta la schiera», e che la notte si sente il passo."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Prima ci avete parlato, poi lo avete combattuto: tre piloni di rame attorno a lui gridavano gli ordini (FERMO, INDIETRO, COLPISCI) e la sua lama andava dove andavano i piloni. Lo avete sconfitto e non lo avete ucciso. Gli avete promesso che un giorno qualcuno scenderà a dargli il cambio, un nuovo Praefectus, e lui vi ha affidato per quello la sua armatura, la lama d’ordinanza e uno stendardo. Vhaerun è libero da quel giorno."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "⟦Creatura unica di Aprutium: un Capitano della Guardia dell’Impero tenuto in vita dal Sigillo, con le azioni leggendarie di un capo⟧ · Umanoide Grande · grado di sfida 8 (3900 PE)\n\n· CA 18 (armatura d’ordinanza) · PF 125 (14d10+48) · Velocità 9 m · Iniziativa +2\n· For 18 (+4) · Des 14 (+2) · Cos 16 (+3) · Int 12 (+1) · Sag 15 (+2) · Car 14 (+2)\n· Tiri salvezza: For +7, Cos +6, Sag +5 · Abilità: Atletica +7, Percezione +5, Storia +4 · Percezione passiva 15\n· Immunità: Affascinato, Spaventato, Sfinimento\n· Lingue: aureo antico, pretuziano\n\nTratti\n\n· ⟦Giuramento. Finché resta nella stanza del Sigillo non muore di vecchiaia, di fame né di ferite: a 0 PF cade e si rialza all’alba. Fuori dalla stanza è un uomo di duemila anni⟧\n· ⟦I piloni. Ha tre Piloni del Comando (vedi sotto); con almeno uno attivo recupera 10 PF all’inizio del suo turno quando è Sanguinante⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi con la Lama d’ordinanza.\n· Lama d’ordinanza. Attacco in mischia +7, portata 1,5 m: 9 (1d10+4) danni taglienti.\n\nAzioni leggendarie\n\n· Tre azioni leggendarie per round, una alla fine del turno di un’altra creatura.\n· Attacco. Un attacco con la Lama d’ordinanza.\n· Comando di un pilone. Un pilone attivo grida: FERMO (una creatura entro 9 m, TS Sag CD 14 o velocità 0 fino alla fine del suo turno seguente), INDIETRO (TS Sag CD 14 o spinta di 6 m), COLPISCI (TS Sag CD 14 o usa la reazione per attaccare un alleato adiacente).\n· Passo. Si muove di 6 m senza provocare attacchi di opportunità.",
+   "lato": true
+  },
+  {
+   "t": "Pilone del Comando",
+   "liv": 3,
+   "txt": "Oggetto Grande di rame e pietra: CA 15, PF 20; immune a veleno e psichico. Si spegne con i danni oppure ruotando il rame: Arcano CD 14 o Arnesi da scasso CD 14. Spegnerne uno toglie quell’ordine al Custode. A 63 PF (Fase II) gli ordini rimasti scattano gratis a inizio round.",
+   "scheda": {
+    "Che cos’è": "Oggetto Grande",
+    "CA / PF": "15 / 20"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Primo round: attacca l’armatura più pesante e usa FERMO sull’incantatore più lontano. Si muove poco: la stanza è sua. Lo scontro può sempre fermarsi: se il gruppo esce dal cerchio dei piloni, lui torna al suo posto. Non insegue mai."
+  },
+  {
+   "t": "La promessa",
+   "txt": "Un nuovo Praefectus con la sua armatura, la lama d’ordinanza e lo stendardo. ⟦Quando qualcuno scenderà con le tre cose e dirà la formula dell’ordine di accesso (che il Custode non ha detto: è nei registri della Rocca di Bëllindë), il Custode sarà libero, e morirà entro l’alba, contento. Il Quarto Sigillo resterà a chi prende il suo posto⟧."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Il Quarto Sigillo|q-sigilli-lunari]], [[Vhaerun|png-vhaerun]] che teneva la porta davanti a lui, [[i Custodi del Ciclo|faz-custodi-del-ciclo]]. Non è il Custode della Torre di Ombretra."
+  }
+ ]
+}

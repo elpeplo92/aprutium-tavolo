@@ -9,26 +9,31 @@
  "size": 1,
  "actions": [
   {
-   "n": "Multiattacco: 2 × Mazza"
+   "n": "Multiattacco: 2 × Mazza o Fiamma radiosa"
   },
   {
-   "n": "Mazza (+1d6 radiosi)",
+   "n": "Mazza (+2d4 radiosi)",
    "atk": 5,
-   "dmg": "1d6+3"
+   "dmg": "1d6+3+2d4"
   },
   {
-   "n": "Fiamma sacra (TS Des CD 13, 2d8 radiosi, 18 m)"
+   "n": "Fiamma radiosa (18 m)",
+   "atk": 5,
+   "dmg": "2d10"
   },
   {
-   "n": "Blocca persone (TS Sag CD 13, concentrazione)"
+   "n": "Guardiani spirituali (1/giorno, concentrazione)"
   },
   {
-   "n": "Cura ferite / Parola guaritrice"
+   "n": "Aiuto divino (azione bonus, 3/giorno): Benedizione, Dissolvi magie, Parola guaritrice o Ristorare inferiore"
+  },
+  {
+   "n": "Luce, Taumaturgia (a volontà)"
   }
  ],
- "note": "Sacerdote (Manuale dei Mostri 2024, statistiche a memoria: verificare nell’SRD), GS 2 · 450 PE · Vel 9 m · Incantatore della Fiamma: Luce, Fiamma sacra, Cura ferite, Parola guaritrice, Blocca persone, Arma spirituale. Tonaca bianca con il sole d’oro. Uccidere un questore a Teramum è una guerra con l’Arciflamine.",
+ "note": "Sacerdote (Priest, MM 2024, SRD 5.2.1, verificato il 29-10-2026), GS 2 · 450 PE · Vel 9 m · Medicina +7, Percezione +5, Religione +5 · Tonaca bianca con il sole d’oro. Uccidere un questore a Teramum è una guerra con l’Arciflamine.",
  "src": "Il tempio sigillato di Mortus",
- "tac": "Non cerca di uccidere: cerca di prendere vivi e di vedere facce. Usa Blocca persone sul primo che scappa, legge ad alta voce la formula, e guarda soprattutto chi fa luce.",
+ "tac": "Non cerca di uccidere: cerca di prendere vivi e di vedere facce. Guardiani spirituali al primo round se sono in tanti, poi la Fiamma radiosa su chi scappa; legge ad alta voce la formula, e guarda soprattutto chi fa luce.",
  "lines": [
   "«In nome della Fiamma e dell’Arciflamine del Ducato…»",
   "«La luce d’argento. Eccola.»",

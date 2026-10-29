@@ -1,0 +1,49 @@
+{
+ "id": "guardia-ducale",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 801,
+ "title": "Guardia Ducale",
+ "sub": "Tabarro grigio con la torre e il lupo: la ronda di Teramum",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "borgo-teramum",
+  "te-palazzo-ducale",
+  "sergente-ducale",
+  "veterano-ducale"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Ritratto — Teramum — Guardia Ducale.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "1/8",
+  "Dove": "Le porte e le strade di Teramum",
+  "Come vanno": "In coppia, o in ronda da quattro con un sergente"
+ },
+ "best": "te_guardia_ducale",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Cotta di maglia, scudo, lancia e balestra leggera, il tabarro grigio con la torre e il lupo di Casa Grazianus. Non attaccano per primi: circondano, intimano, fischiano. Un fischio lungo e due corti, e in tre minuti arrivano altre due ronde. «Lanterna, nome, motivo.»",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guardia (Guard, SRD 5.2.1, verificato) con la balestra leggera · Umanoide Medio · grado di sfida 1/8 (25 PE)\n\n· CA 16 · PF 11 (2d8+2) · Velocità 9 m · Iniziativa +1\n· For 13 (+1) · Des 12 (+1) · Cos 12 (+1) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Abilità: Percezione +2 · Percezione passiva 12\n· Lingue: pretuziano\n\nAzioni\n\n· Lancia. Attacco in mischia +3, portata 1,5 m: 4 (1d6+1) danni perforanti, o 5 (1d8+1) a due mani; lancio 6/18 m.\n· Balestra leggera. Attacco a distanza +3, gittata 24/96 m: 5 (1d8+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Contro chi usa la magia, la balestra. Non uccide chi si arrende: ogni guardia uccisa è un nome sul verbale della Crociata."
+  },
+  {
+   "t": "Legami",
+   "txt": "Gli uomini di [[Lucius Grazianus|png-lucius-grazianus]] e del [[Palazzo Ducale|te-palazzo-ducale]]."
+  }
+ ]
+}

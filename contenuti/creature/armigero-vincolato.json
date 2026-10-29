@@ -1,0 +1,48 @@
+{
+ "id": "armigero-vincolato",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Sotto Bëllindë",
+ "num": 702,
+ "title": "Armigero Vincolato",
+ "sub": "La schiera di pietra e ferro che batte le lance insieme",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "be-dopo-il-quarto-sigillo",
+  "ultimo-custode",
+  "atto-16"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "img/monster-armigero-vincolato.png",
+ "scheda": {
+  "Che cos’è": "Costrutto (l’antica guarnigione, legata al Sigillo), Medio",
+  "Grado di sfida": "1",
+  "Dove": "La caserma sotto Bëllindë, oltre la Galleria della Schiera",
+  "Quanti": "Sei"
+ },
+ "best": "armigero",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Sei soldati dell’Impero di pietra grigia e ferro, con lancia e scudo, fermi contro il muro della caserma. Non parlano. Quando qualcuno supera la linea si muovono come un corpo solo: si allineano, avanzano insieme, e le sei lance battono il pavimento allo stesso tempo.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "⟦Creatura di Aprutium: una Guardia (Guard, SRD 5.2.1) di pietra, con la Formazione⟧ · Costrutto Medio · grado di sfida 1 (200 PE)\n\n· CA 17 (corazza di pietra e scudo) · PF 22 (4d8+4) · Velocità 9 m · Iniziativa +1\n· For 14 (+2) · Des 12 (+1) · Cos 14 (+2) · Int 3 (−4) · Sag 10 (+0) · Car 1 (−5)\n· Percezione passiva 10\n· Immunità: veleno, psichico; Affascinato, Spaventato, Avvelenato, Sfinimento; il sonno magico\n· Sensi: vista cieca 18 m · Lingue: capisce l’aureo antico\n\nTratti\n\n· Formazione. Con almeno tre armigeri adiacenti fra loro, ognuno ha +2 alla CA e la Lancia fa 1d4 danni in più.\n· Riallineamento. Se viene spinto fuori dalla formazione, nel suo turno rientra invece di attaccare.\n\nAzioni\n\n· Lancia. Attacco in mischia +4, portata 1,5 m: 6 (1d8+2) danni perforanti, o 7 (1d10+2) a due mani.\n· Spinta con lo scudo. Atletica +4 contro Atletica o Acrobazia: il bersaglio è spinto di 1,5 m o Prono.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Inerti finché qualcuno supera la linea. Al primo round si allineano (tre adiacenti) e avanzano insieme di 7,5 m; dal secondo attaccano di lancia il bersaglio più vicino alla schiera, mai sparpagliandosi. Non inseguono fuori dalla caserma: sulla soglia si fermano e tornano al muro."
+  },
+  {
+   "t": "Legami",
+   "txt": "La guarnigione dell’[[Ultimo Custode|ultimo-custode]]. Se il Custode viene liberato, si sbriciolano."
+  }
+ ]
+}

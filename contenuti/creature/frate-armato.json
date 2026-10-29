@@ -1,0 +1,77 @@
+{
+ "id": "frate-armato",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Mercenari, bravi e soldati",
+ "num": 505,
+ "title": "Frate armato di Mushanè",
+ "sub": "I frati con la mazza ferrata di Corrado «Lu Mazzòle»",
+ "state": "incontrato",
+ "atti": [
+  13,
+  14
+ ],
+ "links": [
+  "mu-corrado-lu-mazzole",
+  "mu-abate-gofferio",
+  "faz-abbazia-mushane",
+  "mu-01-cattedrale-san-pietro",
+  "atto-14"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Frate armato.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "1/8",
+  "Dove": "La Cattedrale di San Pietro e la piazza di Mushanè",
+  "Chi li comanda": "Corrado «Lu Mazzòle»"
+ },
+ "best": "frate_armato",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Frati con il saio rimboccato sopra una cotta corta, la mazza ferrata in mano e il cappuccio giù. Sono la milizia dell’Abbazia: gente del borgo che ha preso i voti perché l’Abate dava da mangiare, e che fa quello che dice Corrado.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che l’Abate è un uomo di libri, non di miracoli, e che le sue «balestre» sono i frati di Corrado. Che Corrado, davanti a Gofferio, di solito resta fuori dalla porta."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Il giorno della campana Corrado è sceso in navata con dodici frati armati e la mazza ferrata: uno scontro brutale fra le panche, mentre i vesperiani entravano. È finito in ginocchio e si è tirato da parte. I frati di Giustino «Lu Mastìne», al Ponte, erano dall’altra parte: con voi."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guardia (Guard, Manuale dei Mostri 2024, SRD 5.2.1, verificato) con la mazza ferrata · Umanoide Medio · grado di sfida 1/8 (25 PE)\n\n· CA 16 (cotta corta e scudo) · PF 11 (2d8+2) · Velocità 9 m · Iniziativa +1\n· For 13 (+1) · Des 12 (+1) · Cos 12 (+1) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Abilità: Percezione +2 · Percezione passiva 12\n· Lingue: pretuziano, un po’ di aureo antico\n\nAzioni\n\n· Mazza ferrata. Attacco in mischia +3, portata 1,5 m: 4 (1d6+1) danni contundenti.\n· Lancia (lancio). Attacco a distanza +3, gittata 6/18 m: 4 (1d6+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Corrado «Lu Mazzòle»",
+   "liv": 3,
+   "txt": "Capo dei picchiatori (Tough Boss, SRD 5.2.1, verificato): CA 16, PF 82 (11d8+33), Iniziativa +2; For 17 (+3), Des 14 (+2), Cos 16 (+3), Int 11, Sag 10, Car 11; TS For +5, Cos +5, Car +2; Tattiche del branco; Multiattacco: due attacchi di Mazza ferrata grande (+5, 2d8+3 contundenti; una creatura Grande o più piccola viene spinta di 3 m) o di Balestra pesante (+4, 2d10+2). Grado di sfida 4. Vivo, neutrale: trattato da capo militare vero, ragiona.",
+   "ritratto": "Ritratto — Corrado « Lu Mazzòle ».jpg",
+   "voce": "mu-corrado-lu-mazzole",
+   "scheda": {
+    "Base": "Capo dei picchiatori",
+    "Grado di sfida": "4",
+    "Oggi": "Vivo, a Mushanè, neutrale"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Dietro Corrado, in fila, fra le panche: la mazza sul primo che arriva. Senza Corrado in piedi, dopo un round depongono le armi: sono frati prima che soldati."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Una mazza ferrata, una cotta corta. 25 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[L’Abbazia di San Pietro|faz-abbazia-mushane]], [[Corrado|mu-corrado-lu-mazzole]], l’[[Abate Gofferio|mu-abate-gofferio]] comprato da Iuvenza con duecento monete."
+  }
+ ]
+}

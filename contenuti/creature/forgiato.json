@@ -1,0 +1,79 @@
+{
+ "id": "forgiato",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Forgiati",
+ "num": 101,
+ "title": "Forgiato",
+ "sub": "La gente svuotata: resta il corpo, non la persona",
+ "state": "incontrato",
+ "atti": [
+  1,
+  2,
+  3,
+  4,
+  7,
+  19
+ ],
+ "links": [
+  "faz-navi-rosse-forgiati",
+  "faz-sylva-noctis",
+  "q-colleventoso",
+  "q-pietraluna",
+  "jn-spiaggia-della-battaglia",
+  "st-1-guado-di-sant-atto",
+  "ogg-tomo-ricordo-spezzato"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Forgiato.jpg",
+ "scheda": {
+  "Che cos’è": "Una persona forgiata: umanoide, Medio",
+  "Grado di sfida": "1/2",
+  "Dove": "Dove sono passati le Navi Rosse o i Celomanti: la spiaggia di Julia Nova, Colleventoso, Pietraluna, il guado di Sant’Atto",
+  "Quanti ne avete visti": "Centinaia: l’orda della spiaggia, un villaggio intero, la caserma, le pozze di Pietraluna, quattordici al guado"
+ },
+ "best": "forgiato",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un uomo, una donna, un ragazzo: la faccia è la loro, i vestiti sono i loro, le mani sanno ancora tenere la forca o la falce. Ma gli occhi sono vuoti e vitrei, e si muovono a scatti, tutti insieme, come un corpo solo. Non dicono «io»: dicono «noi». A bocca chiusa tengono una nota sola, sempre la stessa, e quando muoiono gli occhi si sciolgono «come cera».",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che le Navi Rosse portano via la gente di notte e che a volte la gente torna, ma non è più lei. Che sulle porte dei paesi svuotati c’è una falce di luna rovesciata, incisa di fresco. Che chi beve l’acqua sbagliata, o il «liquore» che girava nei pozzi e nelle taverne di Julia Nova, è già a metà strada. A Tortoscuro il primo del mese lasciano fiori sulle mura vecchie, per quelli che non sono tornati."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Un paese troppo silenzioso. Un ronzio basso, a bocca chiusa, che arriva da una chiesa o da un pagliaio. Una pozza di liquido nero e denso, che sa di ferro e di lillà. Campi lavorati male, bestie lasciate sciolte. Nessuno che urli."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Li avete incontrati per primi sulla spiaggia di Julia Nova, un’orda sbarcata dalle Navi Rosse, e li avete respinti con Silvanus e Fenix. A Colleventoso era forgiato tutto il paese, in piedi nell’Abbazia di Biancosale a cantare: Mattheus e Vicarus hanno restituito la memoria a tutti col rituale inverso. Alla Caserma Est hanno assaltato di notte, in dodici guardie sono morte. A Pietraluna ne avete visti a decine, immersi nelle pozze calde a riempire anfore di veleno: caduto Lyaras, si sono accasciati come marionette senza fili. Al guado di Sant’Atto erano quattordici, contadini della valle con le falci: nove li avete uccisi, cinque li ha riportati indietro Mattheus."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "È il Forgiato «comune»: il contadino, il marinaio, il soldato semplice. Per le guardie in armatura pesante vedi [[Guardiano forgiato|guardiano-forgiato]]; per quelli andati a male, [[Forgiato ferale|forgiato-ferale]] e [[Forgiato marcio|forgiato-marcio]]; per i soldati, [[Forgiato veterano|forgiato-veterano]]; per i capi, [[Capo forgiato|forgiato-capo]] e [[Forgiato berserker|forgiato-berserker]].\n\nPicchiatore (Tough, Manuale dei Mostri 2024, SRD 5.2.1) adattato: stesse cifre, con i tratti del Forgiato · Umanoide Medio · grado di sfida 1/2 (100 PE)\n\n· CA 12 · PF 32 (5d8+10) · Velocità 9 m · Iniziativa +1\n· For 15 (+2) · Des 12 (+1) · Cos 14 (+2) · Int 10 (+0) · Sag 10 (+0) · Car 11 (+0)\n· Percezione passiva 10\n· Immunità: ⟦Affascinato, Spaventato⟧ · Vulnerabilità: ⟦tuono: la nota che tengono si spezza⟧\n· Lingue: capisce il pretuziano, parla solo per ripetere\n\nTratti\n\n· Noi. Ha vantaggio al tiro per colpire contro una creatura se un altro Forgiato non Incapacitato è entro 1,5 m da lei (Tattiche del branco).\n· ⟦Senza un «io». Non fa prove di Carisma e non può essere persuaso, minacciato o ingannato: risponde solo alla voce di chi lo ha forgiato⟧\n· ⟦Richiamo del Filatterio. Non attacca chi porta addosso il Filatterio di Lyaras: gli si stringe intorno e colpisce chi si mette in mezzo⟧\n\nAzioni\n\n· Colpo (forca, falce, randello o pugno). Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni contundenti o taglienti, a seconda dell’attrezzo.\n· Balestra pesante (se armato: i Forgiati delle Navi Rosse e della caserma lo erano). Attacco a distanza +3, gittata 30/120 m: 6 (1d10+1) danni perforanti.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Avanza dritto sul bersaglio più vicino, senza coprirsi e senza fuggire. Due o tre sullo stesso uomo, mai sparpagliati (vale il tratto Noi). Punta prima le bestie e i carri, poi chi li difende. Un Frantumare o un Onda tonante li disorienta: la nota si spezza e per un round si fermano a riprenderla. Descrivili come gente di campagna, con le mani nere di terra: i giocatori devono sentire che stanno colpendo persone."
+  },
+  {
+   "t": "Tornare persona",
+   "txt": "La Forgiatura non uccide: cancella. Il rituale inverso di Mattheus e Vicarus (Colleventoso, Atto III; il guado, Atto XIX) riporta la persona se il corpo è vivo: dieci minuti, Religione o Arcano CD 15, un Forgiato alla volta, e chi torna è debole per giorni (vedi la scheda «Popolano tornato persona» del tavolo). Chi è forgiato da più di un anno torna con i buchi: nomi, facce, l’ultimo inverno. ⟦Chi porta il Filatterio di Lyaras nel posto sbagliato restituisce la mente a tutti i Forgiati insieme: è quello che vuole Lyaras, e il motivo per cui la scatola non va aperta a caso⟧."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Niente che valga: gli attrezzi, i vestiti, a volte una fiala vuota di liquido nero. Sulle guardie e sui marinai, le armi. Addosso a uno dei caduti della caserma c’era un simbolo del Sole: la corruzione era dentro le mura. Esperienza: 100 PE l’uno."
+  },
+  {
+   "t": "Legami",
+   "txt": "Li fanno i [[Celomanti|faz-sylva-noctis]] col Sigillo della Memoria e il liquido nero, il sangue distillato delle vittime. Li portavano le [[Navi Rosse|faz-navi-rosse-forgiati]]. Tutti dipendevano da [[Lyaras|png-lyaras-vel-quoril]], il Primo Forgiato: senza di lui vagano come bestie. Ma al guado qualcuno ha forgiato dopo la sua caduta, e l’acqua sapeva di lillà: [[Casa Velthuria|faz-casa-velthuria]] ha imparato il mestiere. [[Ansaldo Morigi|png-ansaldo-morigi]] portava il liquido nero in bottiglia."
+  }
+ ]
+}

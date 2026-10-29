@@ -1,0 +1,53 @@
+{
+ "id": "vipera",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Bestie e cose della strada",
+ "num": 602,
+ "title": "Vipera",
+ "sub": "«Lu perìcole vère nun fà rumóre»",
+ "state": "incontrato",
+ "atti": [
+  12
+ ],
+ "links": [
+  "atto-12",
+  "jn-brizio"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Vipera.jpg",
+ "scheda": {
+  "Che cos’è": "Bestia, Minuscola",
+  "Grado di sfida": "1/8",
+  "Dove": "Fra i sassi caldi degli uliveti e delle mulattiere",
+  "Com’è finita": "Brizio ha fermato il convoglio in tempo"
+ },
+ "best": "vipera",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Corta, grigia, con la testa a triangolo e il disegno a zig-zag sulla schiena. Sta ferma al sole sui sassi e non si muove finché non la calpesti. Brizio l’ha vista prima dei muli: «Lu perìcole vère nun fà rumóre».",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che la vipera morde il mulo e il mulo rovescia il carro. Che si tiene lontana col rumore dei bastoni e con l’aglio, e che se ti morde devi stare fermo e mandare qualcuno dal cerusico."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Serpente velenoso (Venomous Snake, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Bestia Minuscola · senza allineamento · grado di sfida 1/8 (25 PE)\n\n· CA 12 · PF 5 (2d4) · Velocità 9 m, nuotare 9 m · Iniziativa +2\n· For 2 (−4) · Des 15 (+2) · Cos 11 (+0) · Int 1 (−5) · Sag 10 (+0) · Car 3 (−4)\n· Percezione passiva 10\n· Sensi: vista cieca 3 m · Lingue: nessuna\n\nAzioni\n\n· Morso. Attacco in mischia +4, portata 1,5 m: 4 (1d4+2) danni perforanti più 3 (1d6) da veleno.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non combatte: morde chi la calpesta o chi ci mette la mano, e scappa fra i sassi. Un mulo morso si imbizzarrisce (Addestrare animali CD 12 per tenerlo)."
+  },
+  {
+   "t": "Legami",
+   "txt": "La strada, e [[Brizio|jn-brizio]] che la guarda."
+  }
+ ]
+}

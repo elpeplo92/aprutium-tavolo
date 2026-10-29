@@ -1,0 +1,65 @@
+{
+ "id": "therxil",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 205,
+ "title": "Therxil, la Lama dei Sussurri",
+ "sub": "Il boia della Caserma Est, che ha portato via Silvanus",
+ "state": "incontrato",
+ "atti": [
+  4,
+  7
+ ],
+ "links": [
+  "jn-caserma-est",
+  "q-pietraluna",
+  "jn-silvanus",
+  "forgiato-berserker",
+  "alto-celomante",
+  "atto-7"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Therxil.jpg",
+ "scheda": {
+  "Chi era": "Forgiato berserker scelto, la lama dei Celomanti",
+  "Grado di sfida": "4",
+  "Dove": "La Caserma Est; poi Pietraluna, nella sala delle colonne",
+  "Com’è finita": "Colto di spalle e ucciso da voi a Pietraluna"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "Una figura imponente e sinistra, alta una spanna più di Maximus, con una brigantina nera e una lama lunga quanto una gamba. Non urlava come gli altri berserker: sussurrava, e chi lo sentiva da vicino smetteva di combattere per un istante. È lui che ha sfondato il portone della Caserma Est, ha afferrato Silvanus, lo ha imbavagliato e trascinato nel buio.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "A Julia Nova, dopo quella notte, le guardie lo chiamavano «lu Boje», il boia. Dodici di loro non hanno visto l’alba."
+  },
+  {
+   "t": "Con voi",
+   "txt": "L’avete ritrovato a Pietraluna, nella sala dalle colonne intarsiate, a rapporto davanti a uno specchio d’ossidiana da cui parlava la voce dell’Alto Celomante. L’avete colto di spalle: la vendetta per la Caserma Est si è compiuta lì. Lui e la sua guardia scelta sono caduti; lo specchio si è incrinato e spento. Addosso aveva una chiave di ferro nero e un diario sulla «purificazione» di Julia Nova."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Berserker (Manuale dei Mostri 2024, SRD 5.2.1) rafforzato: un berserker forgiato scelto · Umanoide Medio · grado di sfida 4 (1100 PE)\n\n· CA 15 (brigantina) · PF 97 (15d8+30) · Velocità 9 m · Iniziativa +2\n· For 18 (+4) · Des 14 (+2) · Cos 16 (+3) · Int 10 (+0) · Sag 12 (+1) · Car 12 (+1)\n· Tiri salvezza: For +7, Cos +6 · Abilità: Atletica +7, Furtività +5 · Percezione passiva 11\n· Immunità: ⟦Affascinato, Spaventato⟧\n· Sensi: scurovisione 18 m · Lingue: pretuziano, elfico (sussurrati)\n\nTratti\n\n· Furia del sangue. Finché è Sanguinante ha vantaggio ai tiri per colpire e ai tiri salvezza.\n· ⟦Noi. Tattiche del branco con gli altri Forgiati⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi con la Lama dei Sussurri.\n· La Lama dei Sussurri. Attacco in mischia +7, portata 1,5 m: 10 (1d12+4) danni taglienti.\n· ⟦Presa. Atletica +7 contro Atletica o Acrobazia del bersaglio; chi afferra lo porta via senza rallentare (è così che ha preso Silvanus)⟧\n\nAzioni bonus\n\n· ⟦Sussurro. Una creatura entro 9 m che lo sente fa un tiro salvezza su Saggezza con CD 13: se fallisce è Spaventata fino alla fine del suo turno successivo⟧",
+   "lato": true
+  },
+  {
+   "t": "Come combatteva",
+   "txt": "Sussurro sul più forte, poi due colpi di lama su chi è spaventato. Con una guardia scelta accanto, per il vantaggio. Era un berserker forgiato, ma uno dei pochi a cui era rimasta una lingua: era la voce dell’Alto Celomante che parlava attraverso lui."
+  },
+  {
+   "t": "Cosa ha lasciato",
+   "txt": "La chiave di ferro nero (apre il baule nel dormitorio degli emissari: le mappe dei pozzi di Julia Nova e l’elenco degli infiltrati), il diario sulla «purificazione». ⟦La Lama dei Sussurri: uno spadone a una mano, non magico, con l’elsa avvolta in cuoio nero; chi lo impugna per la prima volta sente un sussurro e deve fare un TS Saggezza CD 10 o lasciarlo cadere. Non fa altro⟧. 1.100 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Era la lama dell’[[Alto Celomante|alto-celomante]], non di Lyaras: a Pietraluna faceva rapporto allo specchio. ⟦Prima di essere forgiato era un ufficiale della Guardia di Julia Nova sparito tre anni fa, Terzio Scarsella: Fenix lo ha riconosciuto dal diario e non lo ha detto a nessuno⟧. Vedi [[Forgiato berserker|forgiato-berserker]]."
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "picchiatore_grigio",
+ "name": "Picchiatore del Covo",
+ "short": "P",
+ "color": "#4A5A5A",
+ "hp": 32,
+ "ac": 12,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Mazza",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 3,
+   "dmg": "1d10+1"
+  },
+  {
+   "n": "Tattiche del branco: vantaggio se un alleato è entro 1,5 m dal bersaglio"
+  }
+ ],
+ "note": "Picchiatore (Tough, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · GS 1/2 · 100 PE · Vel 9 m · Le guardie di Domina al Covo della Serpe.",
+ "src": "Il Covo della Serpe",
+ "tac": "Due su uno, con la roccia alle spalle. Se Domina cade, chi resta in piedi tratta.",
+ "lines": [
+  "«Sciacquativ’!»"
+ ],
+ "img": "Bestiario — Picchiatore del Covo.jpg"
+}

@@ -1,0 +1,47 @@
+{
+ "id": "ombra-del-pubblico",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Sotto Teramum",
+ "num": 904,
+ "title": "Ombra del pubblico",
+ "sub": "Gli spettatori dell’ultima notte dell’Arena",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-arena-sprofondata",
+  "campione-dell-arena"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Mostro — Ombra del pubblico.jpg",
+ "scheda": {
+  "Che cos’è": "Non morto, Medio",
+  "Grado di sfida": "1/2",
+  "Dove": "Le gradinate dell’Arena Sprofondata",
+  "Quante": "Un fruscio lungo, come una folla che si alza dalle panche"
+ },
+ "best": "te_ombra_pubblico",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Si staccano dalle ossa sedute sulle gradinate: ombre senza faccia che cercano chi ha la luce più debole o è isolato nella trincea. Il loro tocco toglie la forza dalle braccia.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Ombra (Shadow, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Non morto Medio · caotico malvagio · grado di sfida 1/2 (100 PE)\n\n· CA 12 · PF 27 (5d8+5) · Velocità 12 m · Iniziativa +2\n· For 6 (−2) · Des 14 (+2) · Cos 13 (+1) · Int 6 (−2) · Sag 10 (+0) · Car 8 (−1)\n· Abilità: Furtività +6 · Percezione passiva 10\n· Immunità: necrotico, veleno; Afferrato, Avvelenato, Paralizzato, Pietrificato, Privo di sensi, Prono, Sfinimento, Spaventato, Trattenuto · Resistenze: acido, freddo, fuoco, fulmine, tuono\n· Sensi: scurovisione 18 m · Lingue: nessuna\n\nTratti\n\n· Amorfa. Passa in uno spazio largo 2,5 cm senza spendere movimento in più.\n· Debolezza alla luce del sole. Alla luce del sole ha svantaggio a tutte le prove del d20.\n\nAzioni\n\n· Colpo prosciugante. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni necrotici, e la Forza del bersaglio scende di 1d4. Se arriva a 0 muore; un umanoide ucciso così si rialza come Ombra dopo 1d4 ore.\n\nAzioni bonus\n\n· Furtività nell’ombra. In luce fioca o al buio fa l’azione Nascondersi.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Chi ha la luce più debole o è isolato. Non seguono nessuno alla luce del giorno. Quando il Campione cade, tornano sulle ossa."
+  },
+  {
+   "t": "Legami",
+   "txt": "Il [[Campione dell’Arena|campione-dell-arena]]."
+  }
+ ]
+}

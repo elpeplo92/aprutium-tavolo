@@ -1,0 +1,69 @@
+{
+ "id": "lyraeth",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 208,
+ "title": "Lyraeth",
+ "sub": "L’emissario di Sylva Noctis che vi ha raccontato il piano",
+ "state": "incontrato",
+ "atti": [
+  5,
+  6
+ ],
+ "links": [
+  "q-covo-della-serpe",
+  "jn-covo-della-conchiglia",
+  "jn-veneranda-iuvenza",
+  "faz-sylva-noctis",
+  "kaelen",
+  "jn-domina-syel"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Lyraeth.jpg",
+ "scheda": {
+  "Chi è": "Elfo drukarro, emissario di Sylva Noctis",
+  "Grado di sfida": "3",
+  "Dove l’avete visto": "Il Covo della Serpe, poi prigioniero al Covo della Conchiglia",
+  "Com’è finita": "Portato via dagli assassini di Iuvenza"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "Alto, elegante, la pelle color cenere e gli occhi viola; parlava il pretuziano meglio di molti di noi, con l’arroganza di chi crede di aver già vinto. Era lui a trattare con Domina Syel nella grotta: «Questa città è solo un guscio che attende di essere riempito».",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Niente: la gente non l’ha mai visto. Al porto si parlava di un «mercante di vini rari» che usciva all’alba dalle tenute di Velthuria."
+  },
+  {
+   "t": "Con voi",
+   "txt": "L’avete sentito litigare con Domina Syel sulla spiaggia interna del Covo della Serpe, con Kaelen accanto. Dopo la battaglia era prigioniero vostro, con due dei suoi guerrieri: spezzata l’arroganza, ha confermato tutto. La Luna Alta fra due notti, il rito su Silvanus a Pietraluna, il liquore nei pozzi, l’assedio come diversivo, Lyaras il Primo Forgiato. Al ritorno al Covo della Conchiglia l’avete trovato sparito: Tonio e Marco morti, le serrature forzate, e dappertutto il profumo di lillà e cenere del Loto d’Ombra. Iuvenza vi ha detto che l’aveva «già interrogato» e non ve l’ha restituito."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "⟦Emissario drukarro: un Fanatico del culto con gli incantesimi dell’ammaliatore, un grado più su⟧ · Umanoide Medio · grado di sfida 3 (700 PE)\n\n· CA 15 (cotta elfica) · PF 58 (9d8+18) · Velocità 9 m · Iniziativa +3\n· For 11 (+0) · Des 16 (+3) · Cos 14 (+2) · Int 15 (+2) · Sag 13 (+1) · Car 17 (+3)\n· Tiri salvezza: Des +5, Car +5 · Abilità: Arcano +4, Inganno +7, Intuizione +3, Persuasione +7 · Percezione passiva 11\n· Sensi: scurovisione 18 m · Lingue: pretuziano, elfico, vesperiano, aureo antico\n\nTratti\n\n· Retaggio fatato. Vantaggio ai tiri salvezza contro Affascinato; la magia non lo addormenta.\n\nAzioni\n\n· Multiattacco. Fa due attacchi con la Lama sottile.\n· Lama sottile. Attacco in mischia +5, portata 1,5 m: 7 (1d8+3) danni perforanti.\n· Incantesimi (Carisma, CD 13, +5). A volontà: Luce, Mano magica, Messaggio. 2/giorno: Charme su persone, Suggestione. 1/giorno: Immagine speculare.\n\nAzioni bonus\n\n· Passo velato (2/giorno).",
+   "lato": true
+  },
+  {
+   "t": "Dov’è adesso",
+   "txt": "Vivo, in una cantina della casa di Iuvenza a Teramum: è la sua «biblioteca dei Celomanti» (vedi la scheda di [[Veneranda Iuvenza|jn-veneranda-iuvenza]]). Sa tutto quello che sapeva a Julia Nova e in più sa cosa gli ha chiesto Iuvenza: quindi sa cosa vuole lei. Liberarlo vale una Mano di carte: Sylva Noctis lo rivorrebbe, Iuvenza non può permetterselo, lui venderebbe entrambe per tornare a casa."
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non combatte se può parlare. Charme sul più ragionevole, Suggestione («deponete le armi, trattiamo»), e intanto Kaelen tira. Se è alle strette si arrende: un emissario vale più vivo, e lo sa."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "La lama sottile elfica, un sigillo con le sette lune (vale come lasciapassare presso qualunque Celomante: una volta), un anello con una scheggia lunare. 700 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Emissario dell’[[Alto Celomante|alto-celomante]] presso [[Domina Syel|jn-domina-syel]]. [[Kaelen|kaelen]] era la sua ombra. Oggi è la merce di [[Iuvenza|jn-veneranda-iuvenza]]."
+  }
+ ]
+}

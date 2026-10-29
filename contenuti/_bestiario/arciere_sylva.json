@@ -1,0 +1,35 @@
+{
+ "id": "arciere_sylva",
+ "name": "Arciere di Sylva Noctis",
+ "short": "Ar",
+ "color": "#2A4A4A",
+ "hp": 16,
+ "ac": 13,
+ "init": 2,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: 2 × Arco lungo o Spada corta"
+  },
+  {
+   "n": "Arco lungo (45/180 m, +1d4 veleno)",
+   "atk": 4,
+   "dmg": "1d8+2+1d4"
+  },
+  {
+   "n": "Spada corta",
+   "atk": 4,
+   "dmg": "1d6+2"
+  },
+  {
+   "n": "Furtività +6, Percezione +5"
+  }
+ ],
+ "note": "Esploratore (Scout, MM 2024, SRD 5.2.1, verificato il 29-10-2026) con le frecce intinte · GS 1/2 · 100 PE · Vel 9 m · scurovisione 18 m · Percezione passiva 15.",
+ "src": "La Caserma Est",
+ "tac": "Dall’alto, in copertura (+2 CA), su chi fa luce o lancia incantesimi. Due frecce a round, poi si sposta. Se è ferito sparisce nel buio.",
+ "lines": [
+  "(una freccia con le penne nere)"
+ ],
+ "img": "Bestiario — Arciere di Sylva Noctis.jpg"
+}

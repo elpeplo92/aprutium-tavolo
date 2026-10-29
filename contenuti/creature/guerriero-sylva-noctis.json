@@ -1,0 +1,67 @@
+{
+ "id": "guerriero-sylva-noctis",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 206,
+ "title": "Guerriero di Sylva Noctis",
+ "sub": "I soldati drukarri: cotta scura, spada lunga, frecce avvelenate",
+ "state": "incontrato",
+ "atti": [
+  5
+ ],
+ "links": [
+  "faz-sylva-noctis",
+  "q-covo-della-serpe",
+  "lyraeth",
+  "popolo-drukarri"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Guerriero di Sylva Noctis.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (elfo drukarro), Medio",
+  "Grado di sfida": "1/2",
+  "Dove": "Il Covo della Serpe, con Lyraeth",
+  "Quanti": "Due, catturati con lui"
+ },
+ "best": "guerriero_sylva",
+ "pub": [
+  {
+   "t": "",
+   "txt": "I soldati semplici di Sylva Noctis. Cotta di maglia scura sotto un mantello grigio, scudo tondo con le sette lune, spada lunga e un arco. Combattono in coppia, uno a coprire l’altro, e non parlano mai la nostra lingua davanti a noi.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che gli elfi scuri non si vedono da due secoli, da quando l’Impero li ha ricacciati oltre il mare. Chi li ha visti ora non lo dice."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Le tracce degli stivali elfici: suola sottile, passo lungo. Frecce con le penne nere."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Erano la scorta di Lyraeth nel Covo della Serpe, la grotta di Domina. Li avete catturati con lui; gli assassini di Iuvenza, al Covo della Conchiglia, hanno portato via Lyraeth e di loro non si è più saputo."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guerriero hobgoblin (Hobgoblin Warrior, Manuale dei Mostri 2024, SRD 5.2.1): le cifre sono quelle, la pelle è drukarra · Umanoide Medio · grado di sfida 1/2 (100 PE)\n\n· CA 18 (cotta di maglia e scudo) · PF 11 (2d8+2) · Velocità 9 m · Iniziativa +3\n· For 13 (+1) · Des 12 (+1) · Cos 12 (+1) · Int 10 (+0) · Sag 10 (+0) · Car 9 (−1)\n· Percezione passiva 10\n· Sensi: scurovisione 18 m · Lingue: elfico, pretuziano (lo capisce)\n\nTratti\n\n· Tattiche del branco. Vantaggio al tiro per colpire se un alleato non Incapacitato è entro 1,5 m dal bersaglio.\n\nAzioni\n\n· Spada lunga. Attacco in mischia +3, portata 1,5 m: 12 (2d10+1) danni taglienti.\n· Arco lungo. Attacco a distanza +3, gittata 45/180 m: 5 (1d8+1) danni perforanti più 7 (3d4) danni da veleno.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "In coppia, sempre: spalla a spalla per il vantaggio. Prima le frecce avvelenate da lontano, poi la spada. Se il capo cade si arrendono: sono soldati, non fanatici."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Cotta di maglia e scudo, spada lunga di buona fattura, un arco e dieci frecce avvelenate (3d4 da veleno, un giorno). 100 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "[[Sylva Noctis e i Celomanti|faz-sylva-noctis]], [[i Drukarri|popolo-drukarri]]. I due del Covo sono spariti con [[Lyraeth|lyraeth]]: ⟦Iuvenza li ha fatti uccidere e gettare in mare, non le servivano⟧."
+  }
+ ]
+}

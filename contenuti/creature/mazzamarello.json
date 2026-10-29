@@ -1,0 +1,47 @@
+{
+ "id": "mazzamarello",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Sotto Teramum",
+ "num": 901,
+ "title": "Mazzamarello",
+ "sub": "Il folletto delle cantine e dei crocevia",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-citta-sepolta",
+  "borgo-teramum"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Mostro — Mazzamarello.jpg",
+ "scheda": {
+  "Che cos’è": "Folletto, Minuscolo",
+  "Grado di sfida": "1/4",
+  "Dove": "La Città Sepolta e le cantine di Teramum",
+  "Come si placa": "Con Ratafià e Bocconotti"
+ },
+ "best": "te_mazzamarello",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Un folletto piccolo col berretto rosso, che non si fa vedere: soffia sulle lanterne, gira le frecce di gesso, fa nodi alle corde, e ride. Una risata piccola, acuta, di bambino, dal buio. Se qualcuno gli lascia un’offerta, diventa il miglior amico del gruppo per una notte.",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Spiritello (Sprite, Manuale dei Mostri 2024, SRD 5.2.1, verificato) con i dispetti del folklore · Folletto Minuscolo · grado di sfida 1/4 (50 PE)\n\n· CA 15 · PF 10 (4d4) · Velocità 3 m, volo 12 m · Iniziativa +4\n· For 3 (−4) · Des 18 (+4) · Cos 10 (+0) · Int 14 (+2) · Sag 13 (+1) · Car 11 (+0)\n· Abilità: Percezione +3, Furtività +8 · Percezione passiva 13\n· Lingue: pretuziano (dialetto stretto), silvano\n\nTratti\n\n· ⟦Passa nei buchi dei muri⟧\n· ⟦La regola del folklore: chi gli ruba il berretto rosso gli toglie i poteri; chi lascia Ratafià e Bocconotti se lo fa amico per una notte⟧\n\nAzioni\n\n· Spillone. Attacco in mischia +6, portata 1,5 m: 6 (1d4+4) danni perforanti.\n· Arco incantato. Attacco a distanza +6, gittata 12/48 m: 1 danno perforante, e il bersaglio è Affascinato fino all’inizio del turno successivo dello spiritello.\n· Vista del cuore. Una creatura entro 1,5 m fa un tiro salvezza su Carisma con CD 10: se fallisce, lo spiritello conosce le sue emozioni e il suo allineamento.\n· Invisibilità. Lancia Invisibilità su sé stesso.\n· ⟦Dispetto. Una creatura entro 9 m fa un tiro salvezza su Destrezza con CD 12: se fallisce è Prona, o la sua lanterna si spegne, o ha un nodo ai lacci (velocità dimezzata finché non lo scioglie)⟧",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non combatte davvero: se attaccato scappa nei muri e si vendica coi dispetti. Con un’offerta aiuta: rimette le frecce, riaccende una lanterna."
+  },
+  {
+   "t": "Legami",
+   "txt": "Le cantine di [[Teramum|borgo-teramum]], la [[Città Sepolta|te-citta-sepolta]]."
+  }
+ ]
+}

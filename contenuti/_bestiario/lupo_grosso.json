@@ -1,0 +1,30 @@
+{
+ "id": "lupo_grosso",
+ "name": "Lupo grosso (capobranco)",
+ "short": "LG",
+ "color": "#4A4A3A",
+ "hp": 22,
+ "ac": 14,
+ "init": 2,
+ "size": 2,
+ "actions": [
+  {
+   "n": "Morso (Grande o più piccola: Prona)",
+   "atk": 5,
+   "dmg": "1d10+3"
+  },
+  {
+   "n": "Tattiche del branco: vantaggio se un alleato è entro 1,5 m dal bersaglio"
+  },
+  {
+   "n": "Percezione +5, Furtività +4"
+  }
+ ],
+ "note": "Lupo crudele (Dire Wolf, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · Bestia Grande · GS 1 · 200 PE · Vel 15 m · scurovisione 18 m · Finché è vivo il branco non fugge; quando cade, il branco se ne va.",
+ "src": "Lu Vallòne",
+ "tac": "Punta il più grosso o chi tiene il fuoco. Butta giù e lascia mordere agli altri.",
+ "lines": [
+  "(un ringhio basso che fa tacere gli altri)"
+ ],
+ "img": "Bestiario — Lupo.jpg"
+}

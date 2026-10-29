@@ -1,0 +1,58 @@
+{
+ "id": "kaelen",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Celomanti e Sylva Noctis",
+ "num": 209,
+ "title": "Kaelen",
+ "sub": "L’arciere silenzioso di Lyraeth",
+ "state": "incontrato",
+ "atti": [
+  5
+ ],
+ "links": [
+  "q-covo-della-serpe",
+  "lyraeth",
+  "arciere-sylva-noctis",
+  "faz-sylva-noctis"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Kaelen.jpg",
+ "scheda": {
+  "Chi è": "Elfo drukarro, arciere scelto",
+  "Grado di sfida": "1",
+  "Dove l’avete visto": "Il Covo della Serpe, accanto a Lyraeth",
+  "Com’è finita": "Non l’avete più visto"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "Stava un passo dietro Lyraeth, con l’arco già incoccato, e in tutta la sera non ha detto una parola. Magro, il viso coperto fino agli occhi, le dita della mano destra nere di pece.",
+   "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "L’avete visto sulla spiaggia interna del Covo della Serpe, mentre Domina litigava con Lyraeth. Nella battaglia Lyraeth e due guerrieri sono stati catturati; di Kaelen nessuna traccia: né fra i morti né fra i prigionieri."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "⟦Arciere scelto: un Esploratore con più mira e più fiato⟧ · Umanoide Medio · grado di sfida 1 (200 PE)\n\n· CA 14 (cuoio borchiato) · PF 27 (6d8) · Velocità 9 m · Iniziativa +4\n· For 11 (+0) · Des 18 (+4) · Cos 10 (+0) · Int 12 (+1) · Sag 14 (+2) · Car 10 (+0)\n· Abilità: Percezione +4, Furtività +8, Sopravvivenza +4 · Percezione passiva 14\n· Sensi: scurovisione 18 m · Lingue: elfico; capisce il pretuziano, non lo parla mai\n\nTratti\n\n· Retaggio fatato. Vantaggio ai tiri salvezza contro Affascinato; la magia non lo addormenta.\n\nAzioni\n\n· Multiattacco. Fa due attacchi con l’Arco lungo.\n· Arco lungo. Attacco a distanza +6, gittata 45/180 m: 8 (1d8+4) danni perforanti più 2 (1d4) da veleno.\n· Spada corta. Attacco in mischia +6, portata 1,5 m: 7 (1d6+4) danni perforanti.\n\nAzioni bonus\n\n· Azione scaltra. Scatto, Disimpegno o Nascondersi.",
+   "lato": true
+  },
+  {
+   "t": "Dov’è adesso",
+   "txt": "⟦È uscito dalla grotta dal cunicolo della marea mentre voi combattevate Domina, e ha raggiunto Sariel: è lui l’altro paio di occhi del cutter nero. Se Sariel ricompare a Teramum, Kaelen è su un tetto lì vicino⟧."
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Da lontano e da nascosto: si nasconde con l’azione bonus, tira due frecce, si sposta. Non entra mai in mischia. Se Lyraeth è in pericolo copre la sua fuga, non la propria."
+  },
+  {
+   "t": "Legami",
+   "txt": "L’ombra di [[Lyraeth|lyraeth]]. ⟦Oggi con [[Sariel|sariel]]⟧."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "mercenario",
+ "name": "Mercenario vesperiano",
+ "short": "M",
+ "color": "#7A5A3A",
+ "hp": 32,
+ "ac": 16,
+ "init": 1,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Spada lunga",
+   "atk": 4,
+   "dmg": "1d8+2"
+  },
+  {
+   "n": "Balestra pesante (30/120 m)",
+   "atk": 3,
+   "dmg": "1d10+1"
+  },
+  {
+   "n": "Tattiche del branco: vantaggio se un alleato è entro 1,5 m dal bersaglio"
+  }
+ ],
+ "note": "Picchiatore (Tough, MM 2024, SRD 5.2.1, verificato il 29-10-2026) con cotta di maglia e scudo · GS 1 · 200 PE · Vel 9 m · Le compagnie di Vesperia: professionisti, senza contratto non combattono.",
+ "src": "Mushanè",
+ "tac": "Professionista: prima la balestra da lontano, poi spada e scudo. Cerca sempre il compagno accanto: due contro uno. Sotto la metà dei PF chiede quartiere: senza paga non muore per nessuno.",
+ "lines": [
+  "«Nessuno ci paga per morire qui.»",
+  "«Kapitàn?» (cerca ordini che non arrivano)"
+ ],
+ "img": "Ritratto — I mercenari Velthuria.jpg"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "comandante-di-ferro",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Le armature di ferro",
+ "num": 303,
+ "title": "Il Comandante di ferro",
+ "sub": "L’armatura che parlava con la voce di Iuvenza",
+ "state": "incontrato",
+ "atti": [
+  11
+ ],
+ "links": [
+  "jn-tenuta-di-altavia",
+  "q-altavia",
+  "jn-veneranda-iuvenza",
+  "armatura-di-altavia",
+  "armatura-del-loto"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Il Comandante di ferro.jpg",
+ "scheda": {
+  "Che cos’è": "Costrutto con un’anima vincolata, Medio",
+  "Grado di sfida": "4",
+  "Dove": "Il cortile della Tenuta di Altavia",
+  "Com’è finita": "Distrutto; dal ferro è uscito fumo nero a forma di donna"
+ },
+ "pub": [
+  {
+   "t": "",
+   "txt": "L’ultima delle armature di Altavia: più grande e più scura, col Loto Nero inciso sulla corazza. Non ha attaccato. Si è voltata verso di voi e ha parlato con la voce di Veneranda Iuvenza: «Ci vediamo a Teramum, piccoli eroi». Quando è crollata, dal metallo è uscito solo fumo nero che per un istante ha preso la forma di una donna dai capelli bianchi e dagli occhi come pozzi, e poi si è dissolto in cenere che puzzava di lillà e di marcio.",
+   "capo": true
+  },
+  {
+   "t": "Con voi",
+   "txt": "L’avete distrutto nel cortile di Altavia. È lì che avete saputo che Iuvenza «ne ha altri, più nuovi, più forti», e che vuole Silvanus vivo nella sua tana."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Orrore elmato (Helmed Horror, Manuale dei Mostri 2024: non è nell’SRD, cifre a memoria del manuale) adattato: la stessa scheda dell’Armatura del Loto · Costrutto Medio · grado di sfida 4 (1100 PE)\n\n· CA 20 · PF 60 (8d8+24) · Velocità 9 m, volo 9 m (fluttua) · Iniziativa +1\n· For 18 (+4) · Des 13 (+1) · Cos 16 (+3) · Int 10 (+0) · Sag 10 (+0) · Car 10 (+0)\n· Percezione passiva 10\n· Immunità: forza, necrotico, veleno; Accecato, Affascinato, Assordato, Avvelenato, Paralizzato, Pietrificato, Sfinimento, Spaventato\n· Sensi: vista cieca 18 m · Lingue: pretuziano (con la voce della Signora)\n\nTratti\n\n· Immunità agli incantesimi. Immune a Palla di fuoco, Fulmine e Scaldare il metallo.\n· ⟦Anima vincolata. Dentro c’è una persona; a 0 PF l’anima è libera e parla per un respiro. Un filo della voce di Iuvenza le passa attraverso: quello che sente il Comandante, lo sente lei⟧\n· ⟦Il ferro che risponde. Le armi senza marchio della Forgia di Julia Nova hanno vantaggio contro di lui⟧\n\nAzioni\n\n· Multiattacco. Fa due attacchi di Spada lunga.\n· Spada lunga. Attacco in mischia +6, portata 1,5 m: 8 (1d8+4) danni taglienti, o 9 (1d10+4) a due mani.\n\nAzioni bonus\n\n· ⟦Voce della Signora. Una creatura entro 9 m che lo sente fa un tiro salvezza su Saggezza con CD 12: se fallisce è Spaventata fino alla fine del suo turno successivo⟧",
+   "lato": true
+  },
+  {
+   "t": "Come combatteva",
+   "txt": "Prima parlava: Iuvenza voleva farsi vedere, non vincere. Poi due colpi di spada sul più vicino e la Voce sul più lontano. Le tre armature gli facevano da scudo. Non fuggiva: non era lì per sopravvivere."
+  },
+  {
+   "t": "Cosa ha lasciato",
+   "txt": "Il fumo. Un’armatura completa d’argento annerito col Loto Nero, inutilizzabile: il metallo è freddo e sa di lillà per sempre. 1.100 PE."
+  },
+  {
+   "t": "Legami",
+   "txt": "Il primo dei «doppi» di [[Iuvenza|jn-veneranda-iuvenza]]: l’[[Armatura del Loto|armatura-del-loto]] dell’osteria e le [[armature di Teramum|armatura-di-iuvenza]] sono le versioni nuove."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "id": "lupo",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Bestie e cose della strada",
+ "num": 601,
+ "title": "Lupo",
+ "sub": "Il branco della collina, la notte de lu Vallòne",
+ "state": "incontrato",
+ "atti": [
+  12
+ ],
+ "links": [
+  "atto-12",
+  "png-mastro-colangelo",
+  "faz-crociata-due-lune"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Lupo.jpg",
+ "scheda": {
+  "Che cos’è": "Bestia, Medio (i grossi: Grande)",
+  "Grado di sfida": "1/4 (il lupo grosso: 1)",
+  "Dove": "Le colline fra Julia Nova e Mushanè, di notte",
+  "Quanti": "«Troppi»: un branco intero, con i lupi grossi"
+ },
+ "best": "lupo",
+ "pub": [
+  {
+   "t": "",
+   "txt": "I lupi dell’Appennino: grigi, magri d’inverno, con gli occhi che prendono la luce del fuoco. Arrivano col buio e sono sempre più di quanti sembrano. Fra loro ce n’erano di grossi come vitelli, e uno aveva al collo un collare di cuoio antichissimo con una stella a otto punte.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "Che a lu Vallòne «li lupe ténne nu patte»: un patto coi pastori di una volta, i lupàre, che nessuno sa più dire. Che se il capobranco cade, il branco se ne va."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Le pecore che si stringono. I cani che tacciono invece di abbaiare. Orme grandi intorno al campo, a cerchio, sempre più vicine."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Hanno colpito la carovana nel buio, a lu Vallòne. Quando l’ultimo colpo è andato a segno e il Mastìne è caduto, qualcosa nel branco si è spezzato: le bestie hanno voltato la coda e il bosco le ha inghiottite. Ciccillo col fianco squarciato, Mastro Colangelo morso al collo, quattro milizie ferite, Maximus in piedi solo per ostinazione. Quattro non hanno visto l’alba. Al collo di uno dei lupi grossi, il collare a otto punte: oggi lo porta Gelsomina."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Lupo (Wolf, Manuale dei Mostri 2024, SRD 5.2.1, verificato) · Bestia Medio · senza allineamento · grado di sfida 1/4 (50 PE)\n\n· CA 12 · PF 11 (2d8+2) · Velocità 12 m · Iniziativa +2\n· For 14 (+2) · Des 15 (+2) · Cos 12 (+1) · Int 3 (−4) · Sag 12 (+1) · Car 6 (−2)\n· Abilità: Percezione +5, Furtività +4 · Percezione passiva 15\n· Sensi: scurovisione 18 m · Lingue: nessuna\n\nTratti\n\n· Tattiche del branco. Vantaggio al tiro per colpire se un alleato non Incapacitato è entro 1,5 m dal bersaglio.\n\nAzioni\n\n· Morso. Attacco in mischia +4, portata 1,5 m: 5 (1d6+2) danni perforanti. Se il bersaglio è una creatura Media o più piccola, è Prona.",
+   "lato": true
+  },
+  {
+   "t": "Lupo grosso",
+   "liv": 3,
+   "txt": "Lupo crudele (Dire Wolf, SRD 5.2.1, verificato): Bestia Grande; CA 14, PF 22 (3d10+6), Velocità 15 m, Iniziativa +2; For 17 (+3), Des 15 (+2), Cos 15 (+2), Int 3, Sag 12 (+1), Car 7; Percezione +5, Furtività +4; scurovisione 18 m; Tattiche del branco; Morso (+5, 1d10+3 perforanti; una creatura Grande o più piccola è Prona). Grado di sfida 1 (200 PE). ⟦Il capobranco: finché è vivo il branco non fugge; quando cade, il branco se ne va⟧. Quello col collare è morto a lu Vallòne.",
+   "scheda": {
+    "Base": "Lupo crudele",
+    "Grado di sfida": "1"
+   }
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Di notte, in cerchio, sulle bestie e sui feriti. Due lupi sullo stesso uomo: il primo lo butta giù, il secondo morde chi è a terra (vantaggio). Se il capobranco muore o se perdono un terzo del branco, se ne vanno. Un fuoco grande e una linea di scudi li tengono a distanza per un round."
+  },
+  {
+   "t": "Il collare a otto punte",
+   "txt": "⟦La stella a otto punte è il segno dei lupàre, i pastori-stregoni della collina che, prima dell’Impero, avevano un patto coi lupi: un capo del branco portava il collare e il branco non toccava le greggi segnate. Il patto si è rotto quando l’ultimo lupàre è morto senza eredi. Chi porta il collare (Gelsomina) non viene attaccata dai lupi della collina, e un druido (Adamus) che lo tiene in mano può parlare col branco una volta, come con Parlare con gli animali⟧."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Le pelli (2 mo l’una, scuoiate bene). Il collare: vedi sopra. 50 PE l’uno, 200 il grosso."
+  },
+  {
+   "t": "Legami",
+   "txt": "Le colline di [[Mushanè|borgo-mushane]]. ⟦I lupàre e il [[gioco della Crociata|faz-crociata-due-lune]]: un borgo che tiene il patto manda avanti la colonna senza perdere bestie⟧."
+  }
+ ]
+}

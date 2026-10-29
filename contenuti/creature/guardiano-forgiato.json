@@ -1,0 +1,67 @@
+{
+ "id": "guardiano-forgiato",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "I Forgiati",
+ "num": 107,
+ "title": "Guardiano forgiato",
+ "sub": "Le guardie di Colleventoso, messe a sentinella in armatura pesante",
+ "state": "incontrato",
+ "atti": [
+  2,
+  3
+ ],
+ "links": [
+  "q-colleventoso",
+  "forgiato",
+  "atto-3"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Bestiario — Guardiano forgiato.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide forgiato, Medio",
+  "Grado di sfida": "3",
+  "Dove": "Le catacombe sotto l’Abbazia di Biancosale",
+  "Quanti": "Due, davanti all’arco antico"
+ },
+ "best": "guardiano_forgiato",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Le due guardie del villaggio, nella loro armatura pesante, messe davanti a un arco di pietra come due statue. Non respirano forte, non si grattano, non si voltano al rumore. Si muovono solo quando qualcuno prova a passare: allora si muovono insieme, e sono veloci.",
+   "capo": true
+  },
+  {
+   "t": "Cosa ne dice la gente",
+   "txt": "A Colleventoso, dopo, nessuno ha voluto dire chi erano. Erano del paese."
+  },
+  {
+   "t": "I segni prima di vederli",
+   "txt": "Il silenzio di un corridoio dove si sente l’acqua gocciolare ma non un respiro."
+  },
+  {
+   "t": "Con voi",
+   "txt": "Vi aspettavano all’ingresso della parte più vecchia delle catacombe, sotto Biancosale. Li avete affrontati e abbattuti."
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Cavaliere (Knight, Manuale dei Mostri 2024, SRD 5.2.1) adattato: senza i danni radiosi, con i tratti del Forgiato · Umanoide Medio · grado di sfida 3 (700 PE)\n\n· CA 18 · PF 52 (8d8+16) · Velocità 9 m · Iniziativa +0\n· For 16 (+3) · Des 11 (+0) · Cos 14 (+2) · Int 11 (+0) · Sag 11 (+0) · Car 15 (+2)\n· Tiri salvezza: Cos +4, Sag +2 · Percezione passiva 10\n· Immunità: ⟦Affascinato, Spaventato⟧\n· Lingue: pretuziano (non parla)\n\nTratti\n\n· ⟦Sentinella. Resta immobile finché una creatura non supera la soglia che custodisce o non lo attacca; fino ad allora ha vantaggio alle prove di Percezione e chi gli passa davanti non lo distingue da una statua senza una prova di Percezione CD 13⟧\n· Noi. Ha vantaggio al tiro per colpire contro una creatura se un altro Forgiato non Incapacitato è entro 1,5 m da lei (Tattiche del branco).\n\nAzioni\n\n· Multiattacco. Fa due attacchi, con lo Spadone o con la Balestra pesante.\n· Spadone. Attacco in mischia +5, portata 1,5 m: 10 (2d6+3) danni taglienti.\n· Balestra pesante. Attacco a distanza +2, gittata 30/120 m: 11 (2d10) danni perforanti.\n\nReazioni\n\n· Parata. Quando un attacco in mischia lo colpisce mentre impugna un’arma, aggiunge 2 alla sua CA contro quell’attacco.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "Non si muovono finché qualcuno non passa l’arco. Poi i due si mettono spalla a spalla nel corridoio e fanno muro: due colpi di spadone a testa, parata sul primo attacco. Non inseguono fuori dal corridoio."
+  },
+  {
+   "t": "Cosa lascia",
+   "txt": "Due armature pesanti da guardia (mezza armatura, CA 15) e due spadoni. 700 PE l’uno."
+  },
+  {
+   "t": "Legami",
+   "txt": "Vedi [[Forgiato|forgiato]] e la [[storia di Colleventoso|q-colleventoso]]."
+  }
+ ]
+}

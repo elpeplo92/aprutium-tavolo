@@ -1,0 +1,35 @@
+{
+ "id": "osservatore",
+ "name": "Osservatore (spia)",
+ "short": "O",
+ "color": "#555A66",
+ "hp": 27,
+ "ac": 12,
+ "init": 4,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Spada corta o pugnale avvelenato (+2d6 veleno)",
+   "atk": 4,
+   "dmg": "1d6+2+2d6"
+  },
+  {
+   "n": "Balestra a mano (9/36 m, +2d6 veleno)",
+   "atk": 4,
+   "dmg": "1d6+2+2d6"
+  },
+  {
+   "n": "Azione scaltra (azione bonus): Scatto, Disimpegno o Nascondersi"
+  },
+  {
+   "n": "Furtività +6, Percezione +6, Inganno +5"
+  }
+ ],
+ "note": "Spia (Spy, MM 2024, SRD 5.2.1, verificato il 29-10-2026) · GS 1 · 200 PE · Vel 9 m, scalare 9 m · Percezione passiva 16 · Come Lu Grise: raccoglie informazioni, non combatte se può.",
+ "src": "Velthuria",
+ "tac": "Non combatte se può: si nasconde, osserva, scappa. Se costretto, un colpo avvelenato e Azione scaltra per sparire.",
+ "lines": [
+  "«Io guardo soltanto.»"
+ ],
+ "img": "Ritratto — L'Osservatore « Lu Grise ».jpg"
+}

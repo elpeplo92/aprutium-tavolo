@@ -1,0 +1,47 @@
+{
+ "id": "guardia-della-basilica",
+ "cat": "creatura",
+ "sez": "bestiario",
+ "group": "Teramum: chi può sbarrarvi la strada",
+ "num": 809,
+ "title": "Guardia della Basilica",
+ "sub": "Armigeri coi colori della Basilica, deboli apposta",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "te-tempio-di-mortus",
+  "questore-della-basilica"
+ ],
+ "blocchi": true,
+ "riquadro": true,
+ "img": "Mostro — Guardia della Basilica.jpg",
+ "scheda": {
+  "Che cos’è": "Umanoide (umano), Medio",
+  "Grado di sfida": "1/8",
+  "Dove": "La retata al tempio sigillato di Mortus",
+  "Quante": "Sei: quattro sfondano, due aspettano nel vicolo"
+ },
+ "best": "te_guardia_basilica",
+ "pub": [
+  {
+   "t": "",
+   "txt": "Armigeri con i colori della Basilica, l’alabarda e una mazza per sfondare. Gridano, fanno luce, chiamano rinforzi. «Aprite, in nome della Fiamma!»",
+   "capo": true
+  }
+ ],
+ "gm": [
+  {
+   "t": "Statistiche",
+   "txt": "Guardia (Guard, SRD 5.2.1, verificato) · Umanoide Medio · grado di sfida 1/8 (25 PE)\n\n· CA 16 · PF 11 (2d8+2) · Velocità 9 m · Iniziativa +1\n· For 13 (+1) · Des 12 (+1) · Cos 12 (+1) · Int 10 (+0) · Sag 11 (+0) · Car 10 (+0)\n· Abilità: Percezione +2 · Percezione passiva 12\n· Lingue: pretuziano\n\nAzioni\n\n· Alabarda (come la lancia). Attacco in mischia +3, portata 1,5 m: 4 (1d6+1) danni perforanti.\n· Mazza per sfondare. Contro porte e mattoni: 1d8+1 all’oggetto.",
+   "lato": true
+  },
+  {
+   "t": "Come combatte",
+   "txt": "La retata è una fuga, non una battaglia: quattro sfondano la porta murata (tre round), due aspettano nel vicolo con l’altro questore. Ogni guardia uccisa è un nome sul verbale della Crociata."
+  },
+  {
+   "t": "Legami",
+   "txt": "Il [[questore|questore-della-basilica]]."
+  }
+ ]
+}
