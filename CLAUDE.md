@@ -1895,3 +1895,9 @@ Giuseppe: un manuale dell'avventura come Waterdeep: Dragon Heist, da Colleatterr
 - Scelte non scritte nel capitolo: la prova di ogni evento usa la caratteristica del suo responsabile; la prova di costruzione è del PG contro la CD scritta (critico 20 naturale; fallimento critico 1 naturale o cinque sotto la CD); le rendite «dalle stanze» sono un numero che mette il master.
 - Contenuti: punto `teramum_cerullius` (breve, note master, modulo «Il palazzo Cerullius»: lo zio Vincenzus in casa, «Che succede in casa mia?», la lettera di Nanni con la seconda parte) e `png-ottorino` (chiave grande, fantasma, seconda parte della lettera; due argomenti nuovi nel dialogo). Prossimo: schede PNG di Vincenzus e Dino, i luoghi P1-P16 con immagini Midjourney, la battlemap del palazzo.
 - `prova-tavolo.js` verde (70 e 40 comandi); provati a mano master e giocatore a 1920 e 1366, giro su Firebase simulato.
+
+## v334 — I sette Forgiati rifatti come una famiglia sola (30-10-2026)
+
+- Giuseppe (29-10 sera): i Forgiati della v331 erano «troppo irregolari l'uno dall'altro», li voleva più mistici e più non morti, coi medaglioni lunari. Rifatti i sette (Forgiato, ferale, marcio, veterano, capo, berserker, guardiano) con un **blocco di descrizione comune** nel prompt (pelle di cera grigia, occhi di latte senza pupille, vene nere, medaglione d'argento a mezzaluna, luce viola-argento): `mj/prompt-forgiati-2.json`, lavori `jobs-forgiati-2.json`, foglio `Forgiati - foglio 2.jpg`, scelte di Giuseppe in `scelte-forgiati-2.json` (3,3,3,3,2,3,2). I vecchi in `_ARCHIVIO_2026-10-30/Ritratti sostituiti (Bestiario)/` col `registro.csv`; le chiavi `Bestiario — <Nome>.jpg` in `_immagini.json` puntano ai file nuovi.
+- Regola imparata: una famiglia di creature si genera con lo stesso blocco di testo, non con prompt scritti uno per uno.
+- Prova: `prova-tavolo.js` verde.
