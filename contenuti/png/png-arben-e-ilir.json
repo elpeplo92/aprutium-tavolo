@@ -1,0 +1,103 @@
+{
+ "id": "png-arben-e-ilir",
+ "cat": "png",
+ "city": "strada",
+ "group": "La Crociata",
+ "title": "Arben e Ilir, i vesperiani prigionieri",
+ "sub": "due uomini di Kostandìn sopravvissuti all’osteria, feriti e legati al Carro IV: vogliono essere lasciati andare prima della città",
+ "img": "Ritratto pedina — Vesperiano 4.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "I due vesperiani di Kostandìn rimasti vivi dopo lo scontro all’osteria de lu Passe. Camminano legati al Carro IV con una fune ai polsi, feriti e fasciati alla buona. Arben è il più vecchio: quaranta anni, la barba grigia a punta, un orecchio tagliato da tempo, parla un italiano stentato e guarda sempre chi comanda. Ilir è giovane, magro, i capelli neri legati dietro, la faccia gonfia da un colpo; non parla con nessuno e quando si arrabbia dice cose nella sua lingua e sputa per terra.",
+ "gm": "ADESSO (1° novembre 1437, Tutti i Lucenti): la Crociata è arrivata a mezzogiorno a Colleatterrato dopo la notte all’osteria de lu Passe. Viveri finiti, freddo la sera, nebbia sul fiume. Domani, il Giorno dei Morti, entra a Teramum. I due camminano legati al Carro IV.\nChi sono: Arben (quarant’anni) e Ilir (ventidue), mercenari vesperiani della compagnia di Kostandìn, i «voltagabbana» che all’osteria hanno fatto muro coi carri del convoglio. Kostandìn, Tanush, Vasco e gli altri sono morti e seppelliti là. Loro due erano feriti e si sono arresi. Arben era con Kostandìn da sei anni; Ilir è il nipote di Arben, al primo contratto.\nStatistiche: mercenari (CA 12 senza armatura, PF ridotti: Arben 9, Ilir 6), disarmati, legati ai polsi. Se liberi e armati, Arben colpisce come un soldato (spada +4, 1d8+2); Ilir scappa.\nAspetto: Arben, barba grigia a punta, un orecchio tagliato, le mani grandi, una fasciatura al braccio; Ilir, magro, capelli neri legati, uno zigomo gonfio, le labbra strette.\nSanno: che Kostandìn era stato pagato per passare dalla parte di Tanush, con la paga doppia; che la paga arrivava «dai Tigli», il quartiere di Teramum dove il convoglio doveva andare; che a Teramum la Guardia ha una lista di nomi vesperiani con la taglia, e che loro due ci sono su («chi ha servito la Crociata ci sta tutto»); che Tanush aveva detto che «dai Tigli» i vesperiani che passavano sarebbero stati cancellati dalla lista. Arben sa dov’è l’osteria dove la scorta si sarebbe riunita a fine contratto (lo diceva anche Ansaldo: i Tigli, poi la Salaria, «il campo delle Aquile»). Ilir sa che una notte, all’osteria, ha sentito le casse parlare, e non lo dice a nessuno.\nNon sanno: chi sia «V.» né la Signora: ne conoscono solo la paura («lei paga, lei sa»); cosa ci fosse davvero nelle casse (per loro «ferro che si muove»); niente di Ansaldo oltre il nome.\nVogliono: vivere; non finire in mano alla Guardia di Teramum («lì ci impiccano, con la lista»); essere lasciati andare prima della città, di notte, verso la costa.\nTemono: la rete di V. più della Crociata: «se lei sa che abbiamo parlato, nen c’è bisogno della Guardia». Ilir teme Arben, un poco.\nCedono: con la promessa, detta chiara da chi comanda, di lasciarli andare prima della città. Arben con Persuasione o Intimidire CD 12; Ilir parla solo se Arben gli fa un cenno.\nVoce: Arben, italiano stentato, lento, con le parole al posto sbagliato («noi nen volere», «lei paga, lei sa»), «signore» a chi comanda; Ilir, silenzio, e parole della sua lingua, sputate, quando si arrabbia.",
+ "dialogo": {
+  "apertura": "*Il più vecchio dei due, con la barba grigia a punta, alza i polsi legati quando vi avvicinate, come per dire: ecco, siamo qui. Il giovane guarda da un’altra parte e sputa per terra.* «Signore. Noi parlare. Lui no.» *Indica il giovane col mento.* «Lui nipote. Giovane. Stupido. Io Arben.»",
+  "voce": "Arben: italiano stentato, lento, le parole al posto sbagliato («noi nen volere», «lei paga, lei sa», «signore»); Ilir: silenzio, e frasi nella sua lingua dette fra i denti quando si arrabbia, con uno sputo. · Tic: Arben alza i polsi legati prima di parlare; Ilir guarda Arben prima di aprire bocca. · Ritmo: lento, con le pause di chi cerca la parola; Arben risponde a tutto, Ilir a niente.",
+  "argomenti": [
+   {
+    "tema": "Kostandìn e la paga doppia",
+    "domanda": "«Perché Kostandìn ci ha traditi? Chi lo pagava?»",
+    "risposta": "*Arben alza le spalle, e la fasciatura gli tira.* «Kostandìn soldato. Soldato va dove paga. Tanush dice: paga doppia, e a Teramum nessuno tocca voi. Kostandìn dice sì. Noi diciamo sì con lui: lui capo.» *Guarda Ilir.* «Soldi veniva dai Tigli. Quartiere di Teramum, dove carri vanno. Tanush dice sempre: dai Tigli, dai Tigli. Come nome di padrone.»",
+    "insistono": "«Tanush nen padrone. Tanush cane di padrone. Padrone sta a Teramum, sui Tigli, e paga. Donna, dicono. Noi mai vista. Lei paga, lei sa.» *Abbassa la voce.* «Se lei sa che Arben parla, nen serve Guardia.»",
+    "prova": {
+     "abilita": [
+      "Intimidire",
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "Dice dei Tigli, della paga doppia e della «donna che paga» (la seconda risposta), e aggiunge dove la scorta doveva riunirsi a fine contratto: «ai Tigli, poi strada Salaria, il campo delle Aquile, dove strada è chiusa».",
+     "no": "«Kostandìn morto. Tanush morto. Io nen so niente di soldi: io so spada.» Ma se gli promettono di lasciarli andare prima della città, parla lo stesso."
+    },
+    "mai": "Non sanno chi sia la donna né come si chiami: ne hanno solo paura. Non sanno cosa fosse nelle casse oltre a «ferro che si muove»."
+   },
+   {
+    "tema": "La lista delle taglie",
+    "domanda": "«Cosa vi succede se vi portiamo a Teramum?»",
+    "risposta": "*Arben scuote la testa piano.* «A Teramum Guardia ha lista. Nomi di vesperiani, con prezzo sopra la testa. Chi ha fatto spada per voi, per Crociata, sta tutto su lista: Kostandìn, Tanush prima, noi. Guardia prende, Guardia impicca, Guardia prende soldi.» *Alza i polsi.* «Voi portare noi legati alla porta, voi regalare noi.»",
+    "insistono": "«Tanush diceva: chi passa coi Tigli esce da lista. Per questo Kostandìn dice sì. Nen per soldi solo. Per nome suo cancellato.» *Ilir, qui, dice una cosa nella sua lingua, fra i denti, e sputa.* «Lui dice che Tanush bugiardo. Forse. Tanush morto, nen possiamo chiedere.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "Se chi comanda promette, chiaro, di lasciarli andare prima della città, Arben dice tutto quello che sa e dà la sua parola che i due spariscono verso la costa senza dire niente a nessuno. Ilir annuisce.",
+     "no": "«Portateci. Impiccate voi, impiccano loro: uguale.» E non parla più finché non arriva la promessa."
+    },
+    "mai": "Non sanno chi scriva la lista né dove sia tenuta: «Guardia» e basta."
+   },
+   {
+    "tema": "Lasciarli andare",
+    "domanda": "«Se vi lasciamo andare, dove andate? E cosa dite?»",
+    "risposta": "«Costa. Di notte. Verso mare, dove barche. Niente Teramum.» *Arben si tocca il petto con i polsi legati.* «Diciamo niente. A chi? Guardia impicca, lei peggio. Noi due vesperiani con niente. Nessuno chiede a noi.» *Guarda Ilir.* «Lui ha madre a casa. Io ho lui.»",
+    "insistono": "*Se glielo chiedono come patto:* «Voi lasciate noi prima della città, di notte, senza spada: va bene, senza spada. Io dico tutto quello che so, adesso. E dico una cosa in più: le casse, di notte, parlavano. Lui ha sentito.» *Ilir lo guarda male.* «Lui ha sentito una voce di donna che cantava. Nen lo dice perché ha paura. Io lo dico per lui.»",
+    "mai": "Non chiedono mai armi né soldi: chiedono la notte e la strada. Se liberi, non tornano."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Arben abbassa la testa: «Signore. Noi già persi.» Intimidire CD 12: parla dei Tigli e della paga. Ilir, minacciato, sputa e dice cose nella sua lingua: non parla, nemmeno colpito.",
+   "soldi": "Arben ride, breve: «Soldi? Noi legati. Soldi per fare che? Date strada, nen soldi.»",
+   "lusinga": "Arben non la capisce; Ilir la capisce e sputa.",
+   "bugia": "Arben la fiuta da soldato («voi nen lasciate noi, voi dite così») e si chiude: da quel momento risponde solo «nen so»."
+  },
+  "battute": [
+   "«Noi parlare. Lui no.»",
+   "«Lei paga, lei sa.»",
+   "«Soldato va dove paga. Kostandìn soldato.»",
+   "«Voi portare noi legati alla porta, voi regalare noi.»",
+   "«Date strada, nen soldi.»",
+   "(Ilir, nella sua lingua, sputando) *Arben traduce:* «Dice che Tanush bugiardo.»"
+  ],
+  "uscita": {
+   "frase": "*Arben abbassa i polsi e si rimette al passo del carro.* «Pensate, signore. Prima della città. Dopo è tardi, per noi e per voi: due impiccati con lista, e la Guardia chiede chi li ha portati.»",
+   "dopo": "Camminano legati al Carro IV. Se li lasciano andare prima di Teramum, spariscono di notte verso la costa e non si rivedono. Se li portano alla Porta della Madre legati, il sergente li scrive nel registro e li consegna alla Guardia: la lista esiste davvero, e la cosa si sa in città il giorno stesso. Se li tengono senza decidere, Arben ci riprova a ogni sosta, sempre con le stesse parole.",
+   "aggancio": "«Le casse, di notte, parlavano. Lui ha sentito.» E «dai Tigli»: il quartiere di Teramum dove il convoglio doveva arrivare e da dove veniva la paga. È la prima volta che i personaggi sentono i Tigli nominati come il posto di «lei»."
+  },
+  "ottenuto": [
+   {
+    "info": "Kostandìn era pagato per passare con Tanush, con la paga doppia; i soldi venivano «dai Tigli», il quartiere di Teramum dove andava il convoglio.",
+    "via": "gratis"
+   },
+   {
+    "info": "A Teramum la Guardia ha una lista di vesperiani con la taglia: chi ha servito la Crociata ci sta; portarli legati alla porta è consegnarli.",
+    "via": "gratis"
+   },
+   {
+    "info": "La paga veniva da «una donna» sui Tigli, mai vista, di cui hanno più paura che della Guardia; la scorta doveva riunirsi ai Tigli, poi sulla Salaria al campo delle Aquile.",
+    "via": "prova"
+   },
+   {
+    "info": "Tanush aveva promesso che chi passava coi Tigli usciva dalla lista.",
+    "via": "gratis"
+   },
+   {
+    "info": "Ilir ha sentito le casse cantare di notte con una voce di donna.",
+    "via": "prova"
+   },
+   {
+    "info": "Chi sia la donna; chi tenga la lista; cosa fosse davvero nelle casse.",
+    "via": "mai"
+   }
+  ]
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "id": "png-peppino-delle-capre",
+ "cat": "png",
+ "city": "strada",
+ "group": "La gente di Colleatterrato",
+ "title": "Peppino, il bambino delle capre",
+ "sub": "otto anni, scalzo, con una camicia da uomo legata con lo spago: ha suonato la campana dell’ara quando ha visto la colonna",
+ "img": null,
+ "img_da_fare": "Ritratto — Peppino, il bambino delle capre.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "Il bambino che porta le capre di Colleatterrato sui tornanti fra gli ulivi. Otto anni, scalzo, una camicia da uomo che gli arriva alle ginocchia legata in vita con uno spago, la faccia sporca e due occhi che non stanno mai fermi. Quando ha visto la colonna sulla salita è corso all’ara bianca e ha suonato la campanella, poi è rimasto lì con la corda in mano a guardare i cavalli. Il cavallo bianco soprattutto.",
+ "gm": "ADESSO (1° novembre 1437, Tutti i Lucenti): la Crociata è arrivata a mezzogiorno a Colleatterrato dopo la notte all’osteria de lu Passe. Viveri finiti, freddo la sera, nebbia sul fiume. Domani, il Giorno dei Morti, entra a Teramum.\nChi è: Peppino, otto anni, il bambino delle capre di Colleatterrato (ventidue fuochi). Figlio di uno dei casali del borgo; di giorno sta coi caproni sui tornanti. Ha suonato la campanella dell’ara perché il sergente Benedetto, alla sbarra sotto il borgo, dà un soldo a chi la suona quando arrivano uomini armati: così la sbarra sa prima. Sa fare le lettere: gliele ha insegnate il sacerdote morto, e Liberata gli ha fatto scrivere «Valerus ve benedica lo stesso» in fondo al Bando inchiodato alla fontana.\nStatistiche: bambino (CA 10, PF 2). Veloce come una capra: Acrobazia +4. Non combatte, scappa e si nasconde fra gli ulivi.\nAspetto: scalzo, camicia da uomo con lo spago, ginocchia sbucciate, un ciuffo dritto in testa, la faccia sporca di terra e di mora. Tiene sempre un bastoncino.\nSa: dove sta Liberata («alla fontana, sempre, pure di notte quasi»); che la forestiera coi bambini, Menica, sta da Liberata e che «nen bisogna dirlo alla Guardia»; che il sergente si chiama Benedetto, beve l’acqua della fontana con la borraccia ogni mattina e dà un soldo per la campana; che il borgo ha chiuso le porte «perché c’è il foglio»; che l’ara è aperta e dentro c’è il Gigante dipinto «con l’omo sopra la testa»; che l’altra notte «ha ballato tutto» e che le capre non hanno dormito. Sa fare le lettere.\nNon sa: cosa sia il Bando (per lui è «il foglio»); chi siano i personaggi; niente di Teramum oltre «la città grande con le campane».\nVuole: il soldo del sergente (e uno in più, se capita); toccare il cavallo bianco; che nessuno dica a Liberata che ha suonato la campana per il soldo.\nTeme: di aver fatto una cosa brutta suonando la campana («mo’ la sbarra lo sa, e la sbarra scrive»); Liberata col bastone; che gli portino via le capre.\nCede: con un soldo, con una salita sul cavallo, con una voce gentile. Dice sempre «nen so niente!» e poi dice tutto.\nVoce: dialetto teramano da bambino, frasi di tre parole («nen so niente!», «lu cavalle», «la zi’», «eh sì»), a raffica, e poi tutto d’un fiato.\n\nSegreto piccolo: la scritta sul Bando l’ha fatta lui, per Liberata. Liberata non lo dirà mai (il sergente scrive); Peppino lo dice solo a chi gli ha dato il soldo e gli giura di non dirlo «né alla Guardia né alla zi’». Se lo sa la Guardia, Liberata finisce nel registro.",
+ "dialogo": {
+  "apertura": "*Un bambino scalzo, con una camicia da uomo legata con lo spago, sta fermo accanto all’ara bianca con la corda della campanella ancora in mano. Vi guarda arrivare, poi guarda il cavallo bianco, poi di nuovo voi.* «Nen so niente!» *Nessuno gli ha chiesto niente.* «Lu cavalle è vostro?»",
+  "voce": "Dialetto teramano da bambino, frasi di tre parole («nen so niente!», «lu cavalle», «la zi’», «eh sì», «mo’»). · Tic: «nen so niente!» e poi dice tutto; si gratta la testa col bastoncino; guarda il cavallo bianco mentre parla di qualsiasi cosa. · Ritmo: a raffica, poi tutto d’un fiato, poi scappa due passi e torna.",
+  "argomenti": [
+   {
+    "tema": "La campana",
+    "domanda": "«Hai suonato tu la campana? Perché?»",
+    "risposta": "«Nen so niente!» *Nasconde la corda dietro la schiena, che tanto è legata alla campana.* «Si suona. Quando viene gente con le lance si suona, così lu sergente lo sa. Lu sergente dà un soldo.» *Allunga la mano, poi la ritira.* «Nen è una cosa brutta. Eh? Nen è brutta?»",
+    "insistono": "«Lu sergente Benedetto. Sta giù alla sbarra, sotto, dove gli ulivi finiscono. Scrive su un libro grosso. Mo’ lo sa che siete arrivati, e scrive pure voi.» *Si gratta la testa col bastoncino.* «Però è bono. Beve l’acqua della zi’ ogni mattina e nen ha mai scritto la zi’.»",
+    "mai": "Non sa cosa scriva il sergente né perché: «scrive» e basta."
+   },
+   {
+    "tema": "Il borgo, la zi’, la forestiera",
+    "domanda": "«Perché nel borgo sono tutti chiusi? Chi comanda qui?»",
+    "risposta": "«C’è il foglio.» *Indica giù, verso la piazza.* «Un omo della Guardia l’ha letto forte e l’ha inchiodato alla fontana. Da allora le mamme chiudono le porte quando passa uno che nen conoscono. Comanda…» *Ci pensa.* «La zi’. Zi’ Liberata. Quella della fontana. Sta sempre là, col bastone. Il bastone fa male: eh sì.»",
+    "insistono": "*Se gli chiedono della donna coi bambini o dei panni stesi:* «La forestiera. Sta dalla zi’. Ha due creature e piange di notte, la sento dalle capre.» *Si tappa la bocca.* «Nen bisogna dirlo alla Guardia. La zi’ ha detto. Voi nen siete la Guardia, eh? Nen avete lu libro.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 8,
+     "si": "Dice tutto d’un fiato: Liberata, Menica «la forestiera», il sergente, l’acqua della fontana che «è di Valerus», l’ara aperta col Gigante dipinto. Basta un soldo, una salita sul cavallo o una voce gentile.",
+     "no": "«Nen so niente!» E scappa due passi. Poi torna a guardare il cavallo, e alla seconda domanda parla comunque."
+    },
+    "mai": "Non porta mai la Guardia dalla forestiera. Non dice a nessuno con «lu libro» niente della zi’."
+   },
+   {
+    "tema": "Le lettere e il foglio",
+    "domanda": "«Sai leggere? Chi ha scritto in fondo al foglio?»",
+    "risposta": "*Si illumina.* «Le lettere le so fare! Me l’ha insegnate il prete, quello morto. Faccio la P, la E, la V…» *Scrive nella polvere col bastoncino una V storta.* «Il foglio nen lo so leggere, è lungo. In fondo c’è scritto una cosa.» *Si ferma.* «Nen so niente.»",
+    "insistono": "*Solo a chi gli ha dato il soldo e gli giura, con la mano sul cuore, di non dirlo né alla Guardia né alla zi’:* «L’ho scritta io. Valerus ve benedica lo stesso. Me l’ha detto la zi’, una lettera alla volta, di notte, con la candela. Ha detto che Valerus il foglio nen l’ha firmato.» *Guarda in giro.* «Se lo sa lu sergente, la zi’ va sul libro. Nen lo dite. Giurate.»",
+    "mai": "Non lo dice a nessuno che abbia un’arma in mano o la faccia della Guardia. Liberata non lo confermerà mai."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Scappa fra gli ulivi come una capra e non torna. Le capre restano, e sono un problema.",
+   "soldi": "Un soldo: parla di tutto, tutto d’un fiato. Lo morde, come ha visto fare ai grandi.",
+   "lusinga": "«Eh sì.» Si gonfia. Se gli dicono che è bravo con le lettere, scrive il suo nome nella polvere: PEPINO, con una P sola.",
+   "bugia": "Ci crede. Tutto. Se gli dicono che il cavallo bianco parla, gli parla."
+  },
+  "battute": [
+   "«Nen so niente!»",
+   "«Lu cavalle è vostro? Posso?»",
+   "«Lu sergente dà un soldo. Nen è brutta, eh?»",
+   "«Il bastone della zi’ fa male. Eh sì.»",
+   "«Le lettere le so fare!»",
+   "(alle capre) «Fermi! Fermi, che questi hanno le lance!»"
+  ],
+  "uscita": {
+   "frase": "*Dà uno strattone alla corda della campanella, che fa un din solo, e si spaventa da solo.* «Mo’ vado, che le capre scendono dalla zi’ e la zi’ col bastone…» *Corre via scalzo. Dopo dieci passi si gira:* «Lu cavalle! Dopo!»",
+   "dopo": "Corre alla sbarra a prendersi il soldo dal sergente Benedetto, poi torna alle capre. Se gli hanno fatto toccare il cavallo bianco, segue la colonna per tutto il borgo a due passi di distanza. Se nessuno gli ha dato il soldo, lo chiede alla fine, con la mano tesa.",
+   "aggancio": "«Me l’ha detto la zi’, una lettera alla volta, di notte.» La scritta in fondo al Bando l’ha dettata Liberata: il borgo non è contro la Crociata, ha solo paura del registro. E il sergente «nen ha mai scritto la zi’»."
+  },
+  "ottenuto": [
+   {
+    "info": "La campana dell’ara avvisa la sbarra: il sergente Benedetto dà un soldo a chi la suona quando arrivano armati.",
+    "via": "gratis"
+   },
+   {
+    "info": "Liberata sta sempre alla fontana e comanda il borgo col bastone; la forestiera coi due bambini (Menica) sta da lei e non va detto alla Guardia.",
+    "via": "prova"
+   },
+   {
+    "info": "Il sergente beve l’acqua della fontana ogni mattina e non ha mai scritto il nome di Liberata.",
+    "via": "gratis"
+   },
+   {
+    "info": "La scritta «Valerus ve benedica lo stesso» in fondo al Bando l’ha fatta Peppino, dettata da Liberata.",
+    "via": "prova"
+   },
+   {
+    "info": "L’ara è aperta e dentro c’è il Gigante dipinto.",
+    "via": "gratis"
+   }
+  ]
+ }
+}

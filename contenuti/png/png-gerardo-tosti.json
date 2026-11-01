@@ -1,0 +1,94 @@
+{
+ "id": "png-gerardo-tosti",
+ "cat": "png",
+ "city": "strada",
+ "group": "I tornati del guado",
+ "title": "Gerardo Tosti",
+ "sub": "milite del Barone di Cashtalladdë, tornato persona al guado: vuole tornare a riferire e si sente in debito con Mattheus",
+ "img": "Ritratto pedina — Gerardo Tosti.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "Un soldato del Barone di Cashtalladdë, uno dei cinque tornati del guado: al fiume era quello col corpetto di cuoio che camminava come chi fa la ronda ed è uscito dal pagliaio col martello da guerra. Trentacinque anni, spalle larghe, la barba di due settimane, una riga bianca sui capelli dove stava il berretto con lo stemma d’ottone. Cammina dritto anche se è debole, e si mette sempre in coda alla colonna, come se la coprisse. Guarda Mattheus come si guarda un prete che ti ha tirato fuori dall’acqua.",
+ "gm": "ADESSO (1° novembre 1437, Tutti i Lucenti): cammina con la colonna, arrivata a mezzogiorno a Colleatterrato dopo la notte all’osteria de lu Passe. Viveri finiti, freddo la sera, nebbia sul fiume. Domani, il Giorno dei Morti, la Crociata entra a Teramum.\nChi è: Gerardo Tosti, trentacinque anni, milite della guarnigione del Barone Pietramala di Cashtalladdë. Un mese fa il castaldo lo ha mandato da solo, a piedi, a vedere perché dai casali di Sant’Atto non arrivavano più né il grano né le tasse. È arrivato al guado, ha dormito nel pagliaio dei Chiòdi, ha bevuto l’acqua del pozzo. Al guado era G, il Capo Forgiato uscito dal pagliaio al secondo round. È tornato persona con Mattheus; i personaggi hanno (o avevano) il suo berretto, trovato nel pagliaio, e il suo martello.\nStatistiche: guardia (CA 12 col corpetto di cuoio, senza il resto dell’armatura; PF 11). Martello da guerra +3 (1d8+1), se glielo rendono. Atletica +3, Percezione +2. Combatte solo se attaccano la colonna o Mattheus.\nAspetto: spalle larghe, barba di due settimane, la riga bianca del berretto sui capelli, il corpetto di cuoio strappato su un fianco. Cammina dritto, come in ronda.\nSa: che il Barone sapeva dei casali che si svuotavano e ha mandato lui, uno solo, a piedi («la balestra la prova sulle pecore, per la gente sua manda me»); che il castaldo del Barone ha letto il Bando sotto il pergolato dell’osteria; che il pozzo dei Chiòdi aveva un odore dolce («come i fiori a un funerale»); che nel pagliaio, l’ultima notte, ha sentito la famiglia Chiòdi alzarsi da tavola tutta insieme, senza parlare. Sa le strade del Barone e come si entra a Cashtalladdë.\nNon sa: cosa ha fatto da ferro al guado (lo sospetta: sa che era «il capo» di quelli, e si vergogna); che il Barone non farà niente neanche adesso; niente di Teramum.\nVuole: tornare a Cashtalladdë a riferire al castaldo e al Barone, con la faccia, «che un rapporto a voce vale più di un foglio»; riavere il berretto e il martello; pagare il debito con Mattheus, in qualunque modo.\nTeme: che il Barone lo faccia impiccare come disertore, per il mese che manca; che qualcuno della colonna lo tratti come «uno di quelli».\nCede: con Mattheus, su tutto, senza prova. Con gli altri: con una parola da soldato a soldato (Maximus), o con il berretto reso.\nVoce: da soldato, frasi corte, «signore» e «sissignore», dialetto di Cashtalladdë quando si arrabbia. Non piange: si gratta la barba.",
+ "dialogo": {
+  "apertura": "*Vi si mette davanti sui tornanti, dritto, e porta la mano alla fronte dove non c’è più il berretto; si accorge del gesto a metà e lo finisce lo stesso.* «Gerardo Tosti, milite del Barone di Cashtalladdë. Signore.» *Guarda Mattheus, se c’è, un attimo di troppo.* «Il mio berretto. Quello con l’ottone. L’ho lasciato nel pagliaio. Ce l’avete voi?»",
+  "voce": "Italiano da soldato, frasi corte, «signore», «sissignore», «agli ordini»; dialetto di Cashtalladdë quando si arrabbia o parla del Barone («lu Barone», «nen», «ècche»). · Tic: la mano alla fronte dove stava il berretto; si gratta la barba invece di piangere; si mette in coda alla colonna come se la coprisse. · Ritmo: un rapporto a voce: fatti, uno dopo l’altro, poi silenzio.",
+  "argomenti": [
+   {
+    "tema": "Cosa facevi al guado",
+    "domanda": "«Che ci faceva un soldato del Barone nel pagliaio dei Chiòdi?»",
+    "risposta": "«Rapporto, signore. Un mese fa dai casali di Sant’Atto nen arrivavano più né il grano né le tasse. Il castaldo mi ha mandato a vedere. Me. Uno. A piedi.» *Si gratta la barba.* «Lu Barone le baliste le prova sulle pecore, signore. Per la gente sua manda Gerardo.» *Guarda il fiume in basso.* «Sono arrivato al guado la sera. I Chiòdi mi hanno dato pane e un posto nel pagliaio. Il vecchio, Zi’ Anselmo, nen parlava. Rosa sì. Mi ha dato l’acqua del pozzo. Era dolce. Come i fiori a un funerale.»",
+    "insistono": "«L’ultima notte, dal pagliaio, li ho sentiti alzarsi da tavola. Tutti insieme. Senza una parola. Le sedie, e poi niente. Io ho pensato: pregano. Ho dormito.» *Pausa lunga.* «Poi so solo che ero il capo di quelli, al fiume. Me lo ha detto il frate. Il capo. Io.»",
+    "mai": "Non racconta cosa ha fatto da ferro: non lo sa, e non vuole saperlo. Non parla male del Barone davanti a chi non è soldato: lo fa solo con Maximus."
+   },
+   {
+    "tema": "Tornare a Cashtalladdë",
+    "domanda": "«Vuoi tornare dal Barone? Per dirgli cosa?»",
+    "risposta": "«Sissignore. A piedi, se serve. Il castaldo mi aspetta da un mese: o mi crede morto o mi crede scappato, e la seconda la paga la corda.» *Si raddrizza.* «Gli dico quello che ho visto: che nella valle del Barone la gente beve e si alza da tavola, e che un votato biondo ha benedetto i pozzi un mese fa, e che lu Barone lo sapeva e ha mandato uno. Glielo dico in faccia. Un rapporto a voce vale più di un foglio: il foglio lo bruciano.»",
+    "insistono": "«Se mi date una riga scritta col vostro sigillo, signore, che dice che Gerardo Tosti era al guado e nen è scappato, al castaldo basta. Il castaldo ha paura dei sigilli. Lu Barone pure.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "Accetta di restare con la colonna fino a Teramum e di tornare a Cashtalladdë dopo, con una lettera della Crociata per il Barone: diventa il messo della Crociata verso Cashtalladdë.",
+     "no": "Riparte stasera stessa da Colleatterrato, a piedi, verso Cashtalladdë. Saluta Mattheus con la mano alla fronte."
+    },
+    "mai": "Non diserta: o torna dal Barone o resta con la Crociata con un ordine scritto. Non dice mai che il Barone è un vigliacco davanti a estranei: lo pensa."
+   },
+   {
+    "tema": "Il debito con Mattheus",
+    "domanda": "(Se Mattheus gli parla, o se qualcuno gli chiede perché lo guarda così.)",
+    "risposta": "*Si gratta la barba e non guarda nessuno.* «Il frate mi ha tirato fuori. Dal ferro. Io stavo dentro e nen potevo niente, e lui ha detto una cosa e il ferro se n’è andato come l’acqua quando si asciuga.» *A Mattheus, dritto:* «Signore, io a voi devo la vita, e un soldato i debiti li paga. Dite cosa. Scorta, ronda, messo. Qualunque cosa, finché nen è pari.»",
+    "insistono": "«E se c’è da fare la guardia di notte a quelle casse, o a quello che resta di quelle casse, la faccio io. Io lo so cosa c’è dentro quella roba. Ci sono stato.»",
+    "mai": "Non chiede niente in cambio a Mattheus, mai. Se Mattheus lo manda via, va via."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Si mette sull’attenti e tace. «Agli ordini.» Non reagisce: è un soldato, le minacce dei superiori le conosce. Ma a chi lo tratta da «uno di quelli» non parla più.",
+   "soldi": "Non li prende. «Il Barone mi paga. Male, ma mi paga.» Se insistono: «Datemi il berretto, se l’avete. Vale di più.»",
+   "lusinga": "Si raddrizza e fa il saluto. Funziona, ma non racconta niente di più: racconta tutto comunque, come un rapporto.",
+   "bugia": "Non la riconosce e non la cerca: «Sissignore.» Un soldato non chiede se il superiore mente."
+  },
+  "battute": [
+   "«Gerardo Tosti, milite del Barone di Cashtalladdë. Signore.»",
+   "«Lu Barone le baliste le prova sulle pecore. Per la gente sua manda Gerardo.»",
+   "«Un rapporto a voce vale più di un foglio: il foglio lo bruciano.»",
+   "«L’acqua del pozzo era dolce. Come i fiori a un funerale.»",
+   "«Il mio berretto. Quello con l’ottone.»",
+   "(a Mattheus) «Dite cosa. Finché nen è pari.»"
+  ],
+  "uscita": {
+   "frase": "*Mano alla fronte, dove non c’è il berretto.* «Agli ordini, signore. Vado in coda, che qualcuno la coda la deve guardare.»",
+   "dopo": "Cammina in coda alla colonna e guarda indietro, verso levante, ogni cento passi. Di notte si offre per il turno di guardia, sempre. Se gli rendono il berretto se lo mette e non se lo toglie più. Se resta con la Crociata, è il primo a presentarsi quando serve qualcuno che sappia marciare; se lo mandano a Cashtalladdë, ci arriva in due giorni.",
+   "aggancio": "«Lu Barone lo sapeva. Ha mandato uno.» Il Barone di Cashtalladdë sapeva dei casali e non ha fatto niente: il filo del Bando letto dal suo castaldo e di cosa il Barone ha scelto di non vedere."
+  },
+  "ottenuto": [
+   {
+    "info": "Il Barone di Cashtalladdë sapeva che i casali si svuotavano e ha mandato un solo milite a piedi, un mese fa.",
+    "via": "gratis"
+   },
+   {
+    "info": "L’acqua del pozzo dei Chiòdi era dolce «come i fiori a un funerale»; l’ultima notte la famiglia si è alzata da tavola tutta insieme, in silenzio.",
+    "via": "gratis"
+   },
+   {
+    "info": "Gerardo vuole tornare a riferire al Barone e rischia la corda come disertore; con una riga sigillata della Crociata è coperto.",
+    "via": "gratis"
+   },
+   {
+    "info": "Si sente in debito con Mattheus e fa qualunque servizio: guardia, scorta, messo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Può restare con la Crociata fino a Teramum e portare poi una lettera al Barone.",
+    "via": "prova"
+   },
+   {
+    "info": "Cosa ha fatto da ferro al guado.",
+    "via": "mai"
+   }
+  ]
+ }
+}

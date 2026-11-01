@@ -1,0 +1,58 @@
+{
+ "id": "png-corriere-della-porta",
+ "cat": "png",
+ "city": "teramum",
+ "group": "La Porta della Madre",
+ "title": "Il ragazzo con le gambe lunghe",
+ "sub": "il corriere della Guardia al tavolo del sergente, alla Porta della Madre: appena il sergente scrive il primo segno, corre al Palazzo con le notizie",
+ "img": null,
+ "img_da_fare": "Ritratto — Il ragazzo con le gambe lunghe.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "Un ragazzo di quattordici anni tutto gambe, in una casacca della Guardia troppo larga, che sta in piedi accanto al tavolo del sergente alla Porta della Madre con le mani sulle ginocchia, pronto a correre. Non ha armi, ha gli zoccoli legati al collo per correre scalzo. Quando il sergente scrive il primo segno sul registro, parte: su per la strada in salita, verso il Palazzo, e torna dopo mezz’ora rosso in faccia.",
+ "gm": "QUANDO (2 novembre 1437, il Giorno dei Morti): la Crociata scende da Colleatterrato e arriva alla Porta Reale di Teramum, quella che tutti chiamano la Porta della Madre, con la fila dei carri sul ponte del Tordinum. Trentaquattro persone, cinque carri, le bestie, due prigionieri legati al Carro IV. In città oggi si suonano le campane per i morti e si accendono le candele alle finestre.\nChi è: il corriere della terza compagnia della Porta Reale, ⟦Nunzio, quattordici anni, figlio di una lavandaia della Lunaria⟧. Lo pagano un quattrino a corsa. Porta le notizie della porta al Capitano della Porta e, se l’ordine lo dice, al Palazzo Ducale; da lì le notizie vanno dove devono andare.\nStatistiche: popolano ragazzo (CA 10, PF 3). Velocità 12 m; Atletica +3. Prenderlo richiede Atletica o Acrobazia CD 15.\nAspetto: gambe lunghe, casacca larga, zoccoli al collo, i piedi neri; capelli a spazzola, le orecchie rosse dal freddo.\nSa: dove deve correre oggi: al Palazzo, dal Capitano della Porta, con quello che il sergente scrive; che c’è un secondo ordine, a voce: se alla porta passa «uno dei Grazianus», corre dritto alla Rocca dei Grazianus in Piazza Garibaldi, prima ancora che il sergente finisca di scrivere. Sa le scorciatoie della città a memoria.\nNon sa: da chi venga il secondo ordine (dal Capitano, gli hanno detto; viene dallo Stratega Lucius Grazianus, il padre di Maximus); cosa ci sia scritto nei fogli che porta: non sa leggere.\nVuole: il quattrino, correre, non farsi prendere.\nTeme: il sergente Iaco, quando conta; la cinghia del Capitano.\nCede: con un quattrino dice dove corre («al Palazzo»); con due dice del secondo ordine, senza capire che è un segreto.\nVoce: una frase, col fiato corto, «signore», e via.",
+ "dialogo": {
+  "apertura": "*Il ragazzo accanto al tavolo del sergente vi guarda con le mani sulle ginocchia, come un cane che aspetta il bastone. Appena la penna del sergente tocca il registro, parte: senza un rumore, scalzo, su per la strada in salita.*",
+  "voce": "Una frase alla volta, col fiato corto, «signore», e via. Dialetto della Lunaria quando corre («mo’ vaje», «aspè»). · Tic: le mani sulle ginocchia; si slega gli zoccoli dal collo prima di partire; guarda la penna del sergente, non le facce. · Ritmo: da fermo zitto; in corsa risponde senza voltarsi.",
+  "argomenti": [
+   {
+    "tema": "Dove corri",
+    "domanda": "«Ehi, ragazzo. Dove corri?»",
+    "risposta": "*Senza fermarsi, girando la testa:* «Dove mi mandano, signore! Oggi al Palazzo!» *Due salti e sparisce dietro le case alte.*",
+    "insistono": "*Se lo fermano prima che parta, o lo prendono (Atletica o Acrobazia CD 15), con un quattrino in mano:* «Al Palazzo, signore. Dal Capitano della Porta, con quello che scrive il sergente. Poi dove dice lui.» *Guarda il quattrino.* «E se passa uno dei Grazianus, alla Rocca. Subito. Prima ancora che il sergente finisce. L’ha detto il Capitano.» *Non sa di aver detto un segreto.*",
+    "mai": "Non sa da chi venga davvero il secondo ordine né cosa sia scritto nei fogli. Non lo si può corrompere per non correre: «Se nen corro, la cinghia.»"
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Scappa. È più veloce di tutti alla porta.",
+   "soldi": "Un quattrino: dice dove corre. Due: dice anche del secondo ordine.",
+   "lusinga": "Non ha tempo.",
+   "bugia": "Non ascolta."
+  },
+  "battute": [
+   "«Dove mi mandano, signore! Oggi al Palazzo!»",
+   "«Mo’ vaje!»",
+   "«Se nen corro, la cinghia.»"
+  ],
+  "uscita": {
+   "frase": "*Riprende fiato con le mani sulle ginocchia e torna al suo posto accanto al tavolo, senza guardarvi.*",
+   "dopo": "Torna dopo mezz’ora, rosso in faccia; dopo un’altra ora, dalla porticina esce il Capitano Guarnerio. Se alla porta c’è un Grazianus, la sua prima corsa va alla Rocca, e il messo della Rocca arriva prima della fine della prima domanda del sergente.",
+   "aggancio": "«Se passa uno dei Grazianus, alla Rocca. Subito.» Qualcuno in città aspetta Maximus per nome."
+  },
+  "ottenuto": [
+   {
+    "info": "Il corriere porta al Palazzo, dal Capitano della Porta, quello che il sergente scrive della colonna.",
+    "via": "gratis"
+   },
+   {
+    "info": "C’è un secondo ordine: se passa un Grazianus, corre subito alla Rocca dei Grazianus.",
+    "via": "prova"
+   },
+   {
+    "info": "Da chi venga il secondo ordine.",
+    "via": "mai"
+   }
+  ]
+ }
+}

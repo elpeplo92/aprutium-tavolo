@@ -1,0 +1,69 @@
+{
+ "id": "png-cola-lu-vaccaro",
+ "cat": "png",
+ "city": "strada",
+ "group": "I tornati del guado",
+ "title": "Cola lu vaccaro",
+ "sub": "il vaccaro grosso e zitto del casale accanto ai Chiòdi, tornato persona al guado: si occupa dei buoi e delle vacche nuove senza che nessuno glielo chieda",
+ "img": "Ritratto pedina — Cola lu vaccaro.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "Il vaccaro del casale accanto ai Chiòdi, uno dei cinque tornati del guado: al fiume era l’uomo grosso, scalzo, con la camicia sporca di terra uscito dall’aia del casale. È ancora scalzo, e ancora grosso. Non parla: tre parole al giorno, e due sono «eh». Da quando è tornato persona sta coi buoi dei carri della Crociata e con le sei vacche prese alla carovana vesperiana, le striglia con le mani e le bestie lo seguono. Pasqualino, il ragazzo di stalla, gli sta dietro come un cane.",
+ "gm": "ADESSO (1° novembre 1437, Tutti i Lucenti): cammina con la colonna, arrivata a mezzogiorno a Colleatterrato dopo la notte all’osteria de lu Passe. Viveri finiti, freddo la sera, nebbia sul fiume. Domani, il Giorno dei Morti, la Crociata entra a Teramum.\nChi è: Cola (Nicola), quarant’anni, vaccaro del casale accanto ai Chiòdi, sul Tordinum. Al guado era V3, il Forgiato veterano uscito dall’aia al quarto round, con la falce. Tornato persona con Mattheus. Da allora si occupa delle bestie della colonna senza che nessuno glielo abbia chiesto: i buoi dei carri e, da stamattina, le sei vacche da soma della carovana vesperiana (Adamus ha parlato con la più vecchia). Pasqualino lo segue.\nStatistiche: popolano tornato, robusto (CA 10, PF 6, Forza alta: Atletica +3). Addestrare animali +4. Non combatte, ma se qualcuno fa del male a una bestia si mette in mezzo.\nAspetto: grosso, scalzo, mani enormi, la camicia ancora sporca di terra fino ai gomiti, i piedi neri. Faccia larga e tonda, occhi piccoli e buoni. Non guarda le persone: guarda le bestie.\nSa: le bestie, tutte: cosa mangiano, quanto bevono, quando una sta male. Che le sei vacche vesperiane «vengono da lontano, hanno le unghie da strada» e che la più vecchia comanda. Che i buoi del convoglio nero, all’osteria, «nen mangiavano e stavano girati»: lui l’ha notato. Del guado, niente: il corpo si ricorda la falce, e lui la falce non la vuole più vedere.\nNon sa: niente del votato (era nei campi col bestiame), niente di Teramum. Non sa parlare con la gente.\nVuole: stare con le bestie. Pane. Che Pasqualino non si faccia male sotto le zampe.\nTeme: la folla; che gli chiedano di raccontare; le armature di ferro: alla parola «ferro» si allontana.\nCede: a chi parla con le bestie (Adamus, Luigis): con loro dice una frase intera.\nVoce: tre parole: «Eh.» «Le bestie.» «Nen parle.» Il resto lo dice con le mani e con la testa. Con Adamus una frase intera, bassa.",
+ "dialogo": {
+  "apertura": "*Un uomo grosso e scalzo, con la camicia sporca di terra, passa la mano sul collo di una delle vacche vesperiane. La vacca abbassa la testa. Lui vi guarda appena, poi torna alla vacca.* «Eh.»",
+  "voce": "Tre parole di dialetto («Eh», «Le bestie», «Nen parle») e i gesti: la testa, le mani, un dito verso una bestia. · Tic: la mano sul collo delle bestie mentre gli parlate; annuisce o scuote la testa invece di rispondere. · Ritmo: lento. Una frase intera solo a chi parla con le bestie.",
+  "argomenti": [
+   {
+    "tema": "Le bestie",
+    "domanda": "«Come stanno le bestie? E le vacche nuove?»",
+    "risposta": "*Indica col mento le sei vacche, poi la più vecchia, quella con la macchia bianca sulla fronte.* «Quella comanda.» *Alza tre dita, poi le abbassa e ne alza due.* «Bevono. Nen mangiano abbastanza. Niente erba, novembre.» *Si stringe nelle spalle: è il discorso più lungo della settimana.*",
+    "insistono": "*A Adamus o a Luigis, piano, guardando la vacca:* «Hanno le unghie da strada. Vengono da lontano. La vecchia dice che va bene qua. Me l’ha detto lei. A voi pure, eh?» *E quasi sorride.*",
+    "mai": "Del guado non parla: alla parola «ferro» o «falce» si allontana con le bestie."
+   },
+   {
+    "tema": "Il ragazzo",
+    "domanda": "«E Pasqualino? Perché ti segue?»",
+    "risposta": "*Guarda il ragazzo con la forca, che gli sta dietro a due passi.* «Lu vagliò.» *Si tocca il petto, poi indica lui, poi le bestie.* «Bbone. Coi muli.» *Fine.*",
+    "mai": "Non manda mai via Pasqualino. Se qualcuno lo tratta male, Cola si mette in mezzo senza dire niente."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Si mette fra chi minaccia e le bestie, grosso com’è, e non dice niente. Non colpisce per primo.",
+   "soldi": "Non capisce. Li guarda. Se glieli mettono in mano li dà a Pasqualino.",
+   "lusinga": "«Eh.» E passa la mano sul collo della vacca.",
+   "bugia": "Non la sente nemmeno."
+  },
+  "battute": [
+   "«Eh.»",
+   "«Le bestie.»",
+   "«Nen parle.»",
+   "(indicando la vacca con la macchia) «Quella comanda.»",
+   "(a Pasqualino) «Vagliò. Piano, sotto le zampe.»"
+  ],
+  "uscita": {
+   "frase": "*Dà due colpetti sul fianco della vacca, che si rimette in fila.* «Eh.» *E va avanti con le bestie.*",
+   "dopo": "Sta coi buoi e con le vacche, le fa bere alla fontana di Colleatterrato (l’acqua di Liberata), le striglia la sera. Di notte dorme in mezzo a loro. Se la Crociata gli chiede di tenere le bestie, lo fa già; se gli chiede altro, scuote la testa.",
+   "aggancio": "«Nen mangiavano e stavano girati»: i buoi del convoglio nero all’osteria. Le bestie sanno prima degli uomini: Cola lo sa, e lo dice solo a chi parla con le bestie."
+  },
+  "ottenuto": [
+   {
+    "info": "Le sei vacche vesperiane bevono ma mangiano poco; la più vecchia, con la macchia bianca, comanda; «hanno le unghie da strada».",
+    "via": "gratis"
+   },
+   {
+    "info": "Cola si occupa delle bestie della colonna senza chiedere niente; Pasqualino gli sta dietro.",
+    "via": "gratis"
+   },
+   {
+    "info": "I buoi del convoglio nero all’osteria non mangiavano e stavano girati dall’altra parte.",
+    "via": "gratis"
+   },
+   {
+    "info": "Cosa ricorda del guado.",
+    "via": "mai"
+   }
+  ]
+ }
+}

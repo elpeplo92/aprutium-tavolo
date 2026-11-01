@@ -1,0 +1,51 @@
+{
+ "id": "png-uomo-senza-elmo",
+ "cat": "png",
+ "city": "teramum",
+ "group": "La Porta della Madre",
+ "title": "L’uomo senza elmo sulla torre",
+ "sub": "sulla torre di sinistra della Porta della Madre, fra le guardie, un uomo in mantello scuro e senza elmo guarda la colonna e scrive: non parla",
+ "img": null,
+ "img_da_fare": "Ritratto — L’uomo senza elmo sulla torre.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "Dietro i merli della torre di sinistra della Porta della Madre, fra le guardie con le picche e le balestre, c’è un uomo senza elmo, in mantello scuro, che guarda la colonna e scrive su una tavoletta. Non è vestito da Guardia. Non si muove quando le guardie si muovono. Se qualcuno dal basso lo chiama, risponde con una frase sola, e poi torna a scrivere.",
+ "gm": "QUANDO (2 novembre 1437, il Giorno dei Morti): la Crociata scende da Colleatterrato e arriva alla Porta Reale di Teramum, quella che tutti chiamano la Porta della Madre, con la fila dei carri sul ponte del Tordinum. Trentaquattro persone, cinque carri, le bestie, due prigionieri legati al Carro IV. In città oggi si suonano le campane per i morti e si accendono le candele alle finestre.\nChi è: lo decide il master. Qui c’è solo quello che si vede dal ponte: un uomo in mantello scuro, senza elmo, che conta e scrive dalla torre di sinistra, e che le guardie lasciano stare.\nStatistiche: lo decide il master.\nAspetto: alto, mantello scuro col cappuccio abbassato, capelli corti, una tavoletta con lo stilo; fermo fra i merli come se la torre fosse sua.\nSa / Non sa / Vuole / Teme: lo decide il master. Dal basso si vede solo che guarda la colonna un pezzo alla volta, e che quando arriva al capitano col cappuccio la mano si ferma.\nCede: a niente, dal basso. Se interpellato risponde con una frase sola e non ne aggiunge un’altra.\nVoce: una frase, ferma, non alta, che arriva lo stesso fino al ponte.",
+ "dialogo": {
+  "apertura": "*Dietro i merli della torre di sinistra, fra gli elmi delle guardie, un uomo senza elmo, in mantello scuro, guarda la colonna e scrive. Quando arriva con lo sguardo al capitano col cappuccio, la mano si ferma. Poi riparte.*",
+  "voce": "Una frase sola, ferma, non alta, che arriva fino al ponte; poi silenzio. Niente dialetto.",
+  "argomenti": [
+   {
+    "tema": "Se lo chiamano dal basso",
+    "domanda": "«Ehi, voi, sulla torre! Chi siete? Cosa scrivete?»",
+    "risposta": "*Alza gli occhi dalla tavoletta, vi guarda un momento, e dice una frase sola:* «Contate pure voi. Io ho già finito.» *Torna a scrivere. Non risponde più, qualunque cosa gli gridino.*",
+    "mai": "Dal basso non si ottiene altro. Chi è e cosa scrive lo decide il master."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Non reagisce. Le guardie sulla torre sì: le balestre si alzano.",
+   "soldi": "Non si può.",
+   "lusinga": "Non si può.",
+   "bugia": "Non risponde."
+  },
+  "battute": [
+   "«Contate pure voi. Io ho già finito.»"
+  ],
+  "uscita": {
+   "frase": "*Chiude la tavoletta e sparisce dietro i merli, verso la scala della torre.*",
+   "dopo": "Lo decide il master.",
+   "aggancio": "Percezione CD 17 (dal ponte) o un cannocchiale: la tavoletta è di cera, e lo stilo non è della Guardia. La mano si è fermata su Silvanus."
+  },
+  "ottenuto": [
+   {
+    "info": "Sulla torre di sinistra qualcuno che non è della Guardia conta la colonna e scrive; si è fermato sul capitano col cappuccio.",
+    "via": "gratis"
+   },
+   {
+    "info": "Chi sia.",
+    "via": "mai"
+   }
+  ]
+ }
+}

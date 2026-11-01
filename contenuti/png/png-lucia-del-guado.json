@@ -1,0 +1,93 @@
+{
+ "id": "png-lucia-del-guado",
+ "cat": "png",
+ "city": "strada",
+ "group": "I tornati del guado",
+ "title": "Lucia",
+ "sub": "giovane contadina dei casali di Sant’Atto, tornata persona al guado: cammina in fondo alla colonna e tiene Zi’ Pasquale per il braccio",
+ "img": "Ritratto pedina — Lucia.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "Una ragazza dei casali di Sant’Atto, una dei cinque tornati del guado: era fra i contadini scesi dai campi con la falce, e Mattheus l’ha fatta tornare persona. Magra, le mani ancora nere di terra fino ai polsi, un fazzoletto di un’altra in testa. Cammina in fondo alla colonna, tiene Zi’ Pasquale per il braccio e guarda per terra. Ha chiesto a Luigis e a Vicarus di un uomo che si chiama Sabatino.",
+ "gm": "ADESSO (1° novembre 1437, Tutti i Lucenti): cammina con la colonna, arrivata a mezzogiorno a Colleatterrato dopo la notte all’osteria de lu Passe. Viveri finiti, freddo la sera, nebbia sul fiume. Domani, il Giorno dei Morti, la Crociata entra a Teramum.\nChi è: Lucia, vent’anni, contadina dei casali di Sant’Atto sul Tordinum; stava nei campi a un tiro di sasso dai Chiòdi e dalla casa di Sabatino e Menica. Tre settimane fa il votato giovane con la botticella ha benedetto il pozzo dei casali, con la luna nuova; poi la gente ha cominciato ad «alzarsi da tavola». Lei è stata presa nei campi, una sera, con Sabatino e Giuvanne, nella nebbia dal fiume. Al guado era W2: con la falce da grano, fra quelli scesi dai campi al terzo round. È tornata persona quando Mattheus ha invertito la forgiatura.\nStatistiche: popolana tornata (CA 10, PF 4), debole per qualche giorno. Non combatte.\nAspetto: magra, giovane, le mani nere di terra, un fazzoletto in testa che le ha dato la pellegrina; i vestiti strappati sotto una coperta della Crociata. Non alza quasi mai gli occhi.\nSa: che era nei campi con Sabatino (il marito di Menica, quello con mezzo orecchio) e con Giuvanne, di sera, con la nebbia che saliva dal fiume; poi più niente fino ai sassi del guado e al sole di mezzogiorno. Che Menica è scappata coi bambini, di notte, prima di lei (lo sa dai casali: «la Menica se n’è andata con le creature»). Che il votato con la botticella ha benedetto il pozzo. Che sua sorella Peppina è sparita un mese fa: «è andata al pozzo e nen è tornata». Conosce la strada per la casa di Menica e Liberata.\nNon sa: che Sabatino e Giuvanne sono morti al guado (Sabatino era W1, l’uomo con l’orecchio sinistro mozzo: lo hanno abbattuto i PG). Non sa cosa ha fatto da ferro. Non sa che Menica è a Colleatterrato da Liberata (lo scopre oggi). Non sa che la voce che cantava nella cassa all’osteria era Peppina, sua sorella: le Armature del Loto sono state abbattute e i carri bruciati, e nessuno gliel’ha detto.\nVuole: sapere di Sabatino. Tornare a casa, ma ha paura. Se scopre che Menica è nel borgo, vuole essere lei a dirglielo.\nTeme: di essere riportata «di là», nei campi; di aver fatto del male a qualcuno, da ferro (le mani le guarda per questo); la Guardia della sbarra, che «conta».\nCede: se le dicono la verità su Sabatino piange senza voce e chiede di dirlo lei a Menica. Con una voce gentile parla; con le armi in vista tace e si stringe a Zi’ Pasquale.\nVoce: contadina, poche parole, dialetto quando non trova le parole («nen lu sacce», «lu sacce», «le creature», «di là»). Guarda per terra. Risponde a chi la guarda negli occhi senza fretta.\n\nLa scena di oggi: a Colleatterrato Menica sta da Liberata, nella casa coi panni stesi. Se Menica vede Lucia nella colonna, lo sa da lei. È il momento più duro del borgo: non forzarlo, lascialo ai giocatori.",
+ "dialogo": {
+  "apertura": "*Rallenta finché non le siete accanto, senza lasciare il braccio del vecchio mugnaio. Guarda per terra. Poi, piano, come chi chiede una cosa che non vuole sapere:* «Sabatino. Quello con mezzo orecchio. Stava con noi, nei campi, quella sera.» *Alza gli occhi un attimo.* «È tornato pure lui? L’avete visto?»",
+  "voce": "Dialetto teramano dei casali, poche parole, quasi senza voce («nen lu sacce», «lu sacce», «le creature», «di là», «sì sì»). · Tic: guarda per terra; si guarda le mani; stringe il braccio di Zi’ Pasquale quando ha paura. · Ritmo: frasi corte, pause lunghe; parla solo a chi la guarda negli occhi senza fretta.",
+  "argomenti": [
+   {
+    "tema": "Sabatino",
+    "domanda": "«Sabatino? Chi è? Cosa vuoi sapere?»",
+    "risposta": "«Il marito della Menica. Lu vicine mio. Stava nei campi con me e con Giuvanne, quella sera che è venuta la nebbia dal fiume.» *Si guarda le mani.* «Al guado, quando mi sono svegliata sui sassi, io ho contato: cinque. Lui nen c’era. Giuvanne nen c’era.» *Pausa.* «Forse sono rimasti nei campi. Forse sono tornati a casa.» *Lo dice come una domanda.*",
+    "insistono": "*Se le dicono la verità, che Sabatino era fra quelli del guado e non si è più alzato:* non grida. Piange senza voce, con le mani sulla bocca, e Zi’ Pasquale le mette la mano sulla testa. Poi: «La Menica. Qualcuno glielo deve dire alla Menica. Nen voi. Io.» *Se le mentono, ci crede e cammina più leggera; ma stasera lo capisce dalla faccia di Menica, e da quel momento non parla più a chi le ha mentito.*",
+    "prova": {
+     "abilita": [
+      "Intuizione"
+     ],
+     "cd": 11,
+     "si": "Ha già capito, e aspetta che qualcuno glielo dica. E ha paura di un’altra cosa, che non chiede: di aver fatto male a qualcuno, da ferro: le mani se le guarda per questo.",
+     "no": "Una ragazza che chiede di un vicino di casa."
+    },
+    "mai": "Non chiede mai se lo hanno ucciso loro. Non lo chiederà mai."
+   },
+   {
+    "tema": "Cosa ricordi",
+    "domanda": "«Cosa ti ricordi, Lucia? Di quella sera, del guado?»",
+    "risposta": "«La nebbia. Veniva su dal fiume, bassa, come un lenzuolo, e noi eravamo nei campi a finire. Sabatino ha detto: andiamo, che fa freddo. Poi…» *Scuote la testa.* «Poi nen lu sacce. Il sole. I sassi del fiume. Freddo. E voi.» *Si stringe nella coperta.* «Zi’ Pasquale dice che camminavamo in fila. Io nen me lo ricordo. Mi ricordo le mani. Che nen erano mie.»",
+    "insistono": "«Il pozzo. Prima della nebbia, tre settimane prima, era venuto un votato giovane, biondo, con la botticella sul mulo. Ha benedetto il pozzo nostro, gratis, con la luna nuova. Noi abbiamo bevuto tutti. Pure Peppina.» *Si ferma.* «Peppina è mia sorella. È andata al pozzo un mese fa e nen è tornata. Prima di tutti.»",
+    "mai": "Non sa cosa sia la forgiatura, né cosa ha fatto da ferro. Non sa che Peppina era la voce nella cassa all’osteria: se qualcuno glielo dice, è una scelta dei giocatori, e il master lascia che il nome faccia il lavoro."
+   },
+   {
+    "tema": "Menica e tornare a casa",
+    "domanda": "«Vuoi tornare a casa? Conosci Menica?»",
+    "risposta": "«La Menica? Sì sì. Stava a un tiro di sasso. È scappata di notte con le creature, dicevano ai casali, prima che prendessero me. Nen so dove.» *Se le dicono che è qui, a Colleatterrato, da Liberata:* si ferma in mezzo alla strada. «Qua? Allora glielo dico io. Di Sabatino. Nen voi.» *Poi, sul tornare a casa:* «Casa. A casa nen c’è nessuno, mo’. Il pozzo sta là. Io a quel pozzo nen ci bevo più.»",
+    "insistono": "«Se mi portate a Teramum, io che faccio a Teramum? Nen so leggere, nen so niente. So zappare.» *Guarda Zi’ Pasquale.* «Lui dice che il mulino aspetta. Forse vado al mulino con lui. Forse.»",
+    "mai": "Non va mai da Menica senza che qualcuno dei personaggi venga con lei: ha paura di dirlo da sola."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Si stringe a Zi’ Pasquale e tace. Non scappa: non ha dove andare. Da quel momento risponde solo con «sì» e «nen lu sacce».",
+   "soldi": "Non li prende. «Che me ne faccio? Datelo alla Menica, per le creature.»",
+   "lusinga": "Non capisce che è una lusinga. Guarda per terra e aspetta la domanda vera.",
+   "bugia": "Ci crede. Ma stasera, a Colleatterrato, dalla faccia di Menica capisce tutto, e da quel momento non parla più a chi le ha mentito."
+  },
+  "battute": [
+   "«Sabatino. Quello con mezzo orecchio. L’avete visto?»",
+   "«Nen lu sacce. Mi ricordo le mani. Che nen erano mie.»",
+   "«A quel pozzo nen ci bevo più.»",
+   "«Glielo dico io, alla Menica. Nen voi.»",
+   "(a Zi’ Pasquale, piano) «Zi’, piano, che c’è la pietra.»"
+  ],
+  "uscita": {
+   "frase": "*Riprende il braccio del vecchio e ricomincia a camminare, un passo dietro gli altri.* «Andiamo, zi’, che la colonna nen aspetta.»",
+   "dopo": "Cammina in fondo alla colonna. A Colleatterrato, se vede Menica alla casa coi panni stesi, lascia il braccio di Zi’ Pasquale e va da lei: Menica lo sa da lei, prima che dai personaggi. Stasera siede vicino al fuoco di Liberata o della colonna, e non mangia.",
+   "aggancio": "«Peppina è andata al pozzo un mese fa e nen è tornata.» La sorella: la voce nella cassa dell’osteria. Il filo del votato con la botticella e dei pozzi dei casali."
+  },
+  "ottenuto": [
+   {
+    "info": "Lucia era nei campi con Sabatino e Giuvanne la sera della nebbia; al guado si è svegliata sui sassi e non li ha più visti.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il votato con la botticella ha benedetto il pozzo dei casali con la luna nuova, tre settimane fa; tutti hanno bevuto.",
+    "via": "gratis"
+   },
+   {
+    "info": "Sua sorella Peppina è sparita un mese fa, andando al pozzo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Ha paura di aver fatto del male da ferro e ha già capito che Sabatino è morto.",
+    "via": "prova"
+   },
+   {
+    "info": "Conosce Menica e vuole dirle lei di Sabatino.",
+    "via": "gratis"
+   },
+   {
+    "info": "Cosa ha fatto da ferro; che la voce nella cassa era Peppina.",
+    "via": "mai"
+   }
+  ]
+ }
+}

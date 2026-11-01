@@ -1,0 +1,130 @@
+{
+ "id": "png-dino-cerullius",
+ "cat": "png",
+ "city": "teramum",
+ "group": "Casa Cerullius",
+ "title": "Berardo «Dino» Cerullius",
+ "sub": "il cugino di Alessandros e Vicarus, trent’anni: gioca e beve da Lu Shakidù, vuole bene ai cugini e ha paura del padre",
+ "img": null,
+ "img_da_fare": "Ritratto — Berardo «Dino» Cerullius.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [],
+ "pub": "Il cugino di Alessandros e di Vicarus, figlio dello zio Vincenzus. Trent’anni, l’età di Vicarus. Bello come i Cerullius non sono mai stati: riccio, scuro, la bocca larga sempre a metà di un sorriso, un orecchino d’argento all’orecchio sinistro. Veste bene e vecchio: la giubba azzurra della casata rivoltata, gli stivali buoni risuolati tre volte. Tiene sempre un dado in mano e lo fa rotolare sul tavolo, sulla ringhiera, sul dorso della mano. In città lo chiamano «Dino lu Conte», e lo dicono ridendo.",
+ "gm": "Chi è: Berardo Cerullius, detto Dino, figlio di Vincenzus, cugino di Alessandros e Vicarus; porta il nome del nonno e dello zio. Da ragazzo stava a Teramum con i cugini: Vicarus leggeva sulle scale e lui rubava le pere nel cortile; Alessandros lo trattava da fratello minore. Da due anni vive a palazzo col padre, dorme fino a mezzogiorno, la sera sta a Lu Shakidù, la sala da ballo di Mastro Aurelio de li Tracche nella Terranova, ai dadi. Ha perso quarantacinque fiorini ai Mazzaclocchi, che gli aspettano fuori dalla porticina delle stalle con un bastone quando perde; la collana della madre è in pegno da loro e scade ai Trionfi. Aurelio non gli fa più credito. Non ha firmato niente: «io perdo ai dadi, che è un’altra cosa».\nStatistiche: nobile (Manuale dei Mostri 2024): CA 15, PF 9; stocco +3 (1d8+1), lo sa tenere ma preferisce correre. Inganno +4, Prestazione +4, Rapidità di mano +4.\nAspetto: riccio e scuro, bocca larga, orecchino d’argento (gliel’ha lasciato una ballerina); giubba azzurra rivoltata, stivali risuolati; il dado sempre in mano. Quando il padre parla guarda il pavimento.\nSa: che il padre ha firmato «un mucchio di carte» con Ser Marcuccio della Lega e le tiene nello studio, nel secondo cassetto a destra della scrivania, con la chiave sotto il calamaio; che la procura del Conte «non c’è mai stata» (l’ha sentito dire da Marcuccio al padre, in cortile, una sera di marzo); che Gerbino, il sensale dei portici, ha firmato come testimone l’atto di possesso; che il Decano ha chiesto a Marcuccio «quanto vale la casa con dentro il vecchio e quanto senza»; chi deve a chi, in mezza Teramum (è la sua scienza); che l’altro Dino di Lu Shakidù è Arduino Malavolta, e che Arduino, ubriaco, gli ha detto che la nonna scava sotto l’Arena e che il cunicolo «arriva fin sotto casa nostra, sotto l’ultimo arco».\nNon sa: che Ottorino ha la chiave grande e ha riaperto le stanze dei fratelli; che il sigillo della Camera sull’atto è falso (sospetta, non sa); niente della Signora, dei Sigilli, del Palazzo della Notte.\nVuole: che il padre smetta di fargli vergogna; riscattare la collana della madre; una vita che non sia aspettare: un posto nella Crociata, anche piccolo, «tenere i cavalli, portare le lettere, fare il morto». Vuole che i cugini non lo mettano nello stesso sacco del padre, e che qualcuno gli dica cosa fare.\nTeme: il padre, quando dice «Berardo»; i Mazzaclocchi col bastone; che i cugini parlino del padre come di un ladro davanti a estranei: allora lo difende, anche se non ci crede.\nCede: coi quarantacinque fiorini pagati al bravo dei Mazzaclocchi (o quaranta subito) e la collana riscattata («mi comprate per riportarmi a casa», e lo dice lui); con una parola gentile di Alessandros; giocando a dadi con lui (perde, ride, e chiama «cugino» anche chi non lo è); con Luigis e Zenith sulla spalla («come si fa a vincere con una bestia che ti dice i numeri?»). Spaventato (Intimidire CD 12) canta tutto piangendo nel bicchiere, ma il giorno dopo si vergogna e difende il padre: spaventarlo serve per una sera, comprarlo per sempre.\nVoce: svelta, da ragazzo di città, mezza teramana («frechì», «mo’», «statte», «Vicà»). Ride prima di dire le cose serie, e le dice lo stesso. Abbraccia i cugini forte appena li vede, poi li tiene a distanza di braccio per guardarli.\n\nQuando compare: il 2 novembre torna da Lu Shakidù verso mezzogiorno, dalla porticina delle stalle, e trova i cugini al portone con il padre. Se un personaggio lo cerca da solo la sera, è al tavolo in fondo da Aurelio, coi dadi, e perde. Se alla cena con lo zio prende le parti dei cugini («Papà. Dillo. Che le carte stanno nel cassetto»), il padre si alza ed esce, e da quel momento è cotto.\n\nBattute pronte:\n• «Vicà! Frechì, ma che t’hanno fatto? Pari nu monaco.»\n• «La casa è vostra. Lo so io, lo sa lu patre, lo sa Ottorino, lo sa la Peppina. Lo sa pure il gatto.»\n• «Io non ho firmato niente. Io perdo ai dadi, che è un’altra cosa.»\n• «Mo’ te dico una cosa, ma non l’ho detta io: le carte stanno nel secondo cassetto a destra. La chiave sta sotto il calamaio.»\n• «L’altro Dino balla meglio di me. Ma io canto meglio di lui. Chiedi a Ninuccia.»\n• «Portatemi con voi. Tengo i cavalli, porto le lettere, faccio il morto. Ma portatemi.»",
+ "dialogo": {
+  "apertura": "*Dalla curva dietro il palazzo, dalla porticina delle stalle, sbuca un ragazzo riccio con la giubba azzurra rivoltata e gli occhi di chi ha dormito poco. Vede la colonna, vede Alessandros, vede Vicarus. Il dado che aveva in mano gli cade e rotola nel vicolo; non lo raccoglie. Corre.* «Vicà! Frechì, ma che t’hanno fatto? Pari nu monaco!» *Abbraccia Vicarus forte, poi Alessandros, poi li tiene a distanza di braccio per guardarli. Poi vede il padre nel vano del portone, e guarda il pavimento.*",
+  "voce": "Italiano svelto da ragazzo di città, mezzo teramano («frechì», «mo’», «statte», «Vicà», «lu patre»). · Tic: il dado, sempre in mano, lo fa rotolare su tutto; ride prima di dire le cose serie; quando il padre parla guarda il pavimento; «cugino» a tutti, dopo tre dadi. · Ritmo: a raffica, con le mani; si ferma solo quando si parla di sua madre.",
+  "argomenti": [
+   {
+    "tema": "Chi sei diventato",
+    "domanda": "«Dino. Che fai, adesso? Che vita fai?»",
+    "risposta": "*Ride, e si fa rotolare il dado sul dorso della mano.* «Che vita faccio? Aspetto, cugino. Dormo fino a mezzogiorno, la sera sto da Aurelio, a Lu Shakidù, che è l’unico posto di Teramum dove suonano e nessuno ti chiede chi è tuo padre. Gioco. Perdo. Mi chiamano Dino lu Conte, e ridono, e io rido pure, che è meglio.» *Il dado si ferma.* «Tu facevi paura alle galline, Vicà. Io alle maestre. Ti ricordi le pere del cortile? Il cortile sta ancora là. Le pere no.»",
+    "insistono": "«In casa mi chiamano Berardo solo quando lu patre è arrabbiato. Quindi sempre.» *Ride.* «Mia madre mi chiamava Dino. È per questo.»",
+    "mai": "Non parla della madre morta più di una frase alla volta. Non dice quanto beve."
+   },
+   {
+    "tema": "Il padre e la casa",
+    "domanda": "«Tuo padre dice che la casa è sua. Tu che dici?»",
+    "risposta": "*Si guarda intorno, se il padre può sentire, poi abbassa la voce e alza le spalle insieme.* «La casa è vostra. Lo so io, lo sa lu patre, lo sa Ottorino, lo sa la Peppina. Lo sa pure il gatto.» *Fa rotolare il dado.* «Lu patre non è cattivo, cugino. È stanco di non essere nessuno. A Canzañë stava in due stanze e leggeva, e quando è morto zio Berardo ha detto: adesso tocca a me. Ha preso tre bauli e siamo venuti qua. Io pensavo che si giocava a fare i signori per un’estate. Sono due anni.»",
+    "insistono": "«Però statte attento: se gli dici ladro davanti a Ottorino o alla Peppina, io sto con lui. Non perché ha ragione. Perché è lu patre mio.» *Lo dice serio, senza ridere prima: è l’unica volta.*",
+    "mai": "Non chiama mai il padre «ladro» e non lascia che lo facciano davanti a estranei. Non dice che il padre, se lo umiliano, corre al Fondaco."
+   },
+   {
+    "tema": "Le carte",
+    "domanda": "«Le carte che ha firmato tuo padre. Dove sono?»",
+    "risposta": "*Ride, e intanto si guarda la punta degli stivali.* «Carte? Lu patre ha firmato un mucchio di carte con Ser Marcuccio, quello della Lega che passa il martedì e sorride come uno che ti misura il cortile coi passi. Non le ho lette. Io non leggo niente che non abbia i numeri sopra.» *Il dado gira.* «Io non ho firmato niente, cugino. Io perdo ai dadi, che è un’altra cosa.»",
+    "insistono": "*Si avvicina, la voce bassissima, come a un tavolo da gioco.* «Mo’ te dico una cosa, ma non l’ho detta io. Le carte stanno nello studio, nella scrivania di noce. Secondo cassetto a destra. La chiave sta sotto il calamaio.» *Si tira indietro.* «E un’altra cosa, che pure questa non l’ho detta io: la procura del Conte non c’è mai stata. L’ho sentito da Marcuccio, a marzo, in cortile. Diceva a lu patre: tanto la procura non c’è, chi la cerca?»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 12,
+     "si": "Dice del cassetto, della chiave e della procura che non c’è mai stata (la seconda risposta). Non serve la prova se un personaggio gli ha già fatto un favore (i dadi, i quarantacinque fiorini, una parola gentile di Alessandros) o se glielo chiede Vicarus da solo.",
+     "no": "«Chiedilo a lu patre. Io le carte le vedo solo quando ci sono i numeri sopra.» Ma la sera, da Aurelio, con un bicchiere in mano, lo dice lo stesso."
+    },
+    "mai": "Non sa che il sigillo della Camera è falso: lo sospetta («Marcuccio rideva troppo») e non lo dice. Non prende le carte lui: «Rubare a lu patre no. Dirvi dove stanno sì.» Non sa cosa c’è nella gabbia della biblioteca."
+   },
+   {
+    "tema": "I suoi debiti e la collana",
+    "domanda": "«Quanto devi, tu? E a chi?»",
+    "risposta": "*Il dado si ferma.* «Quarantacinque fiorini. Ai Mazzaclocchi, quelli col nastro rosso al braccio. Mi aspettano fuori dalla porticina delle stalle quando perdo, con un bastone, e non mi picchiano: mi accompagnano a casa. È peggio.» *Ride, ma gli viene male.* «E la collana di mia madre. Quella con le pietre azzurre. Sta da loro, in pegno. Scade ai Trionfi. Se non la riscatto la vendono a una ballerina, e io la vedo al collo di una che balla con un notaio.»",
+    "insistono": "«Non ve lo sto chiedendo, cugini. Ve lo sto dicendo perché me l’avete chiesto.» *Pausa.* «Va bene. Ve lo sto chiedendo.»",
+    "mai": "Non dice che Aurelio non gli fa più credito. Non sa che la Lega vuole comprare i suoi debiti dai Mazzaclocchi (lo si sente a Lu Shakidù, dal bravo col nastro rosso)."
+   },
+   {
+    "tema": "La città: chi deve a chi",
+    "domanda": "«Tu conosci Teramum. Chi comanda? Chi deve a chi?»",
+    "risposta": "*Si illumina: è la sua scienza.* «Questa sì che è una domanda da cugino. Allora: la Lega dei Sensali compra i debiti di tutti, e chi ha debiti vota come dice il Decano. Il Decano è Melatino, e Marcuccio è il suo cane col sorriso. I Chiodi fanno le leggi e le applicano pure ai loro: il figlio, Gaspare, ha condannato un cugino per tre passi di confine. I Grazianus hanno la Rocca e i soldati, e sul Palazzo c’è ancora il drappo nero. Sui Tigli c’è una signora che non esce mai e che tutti nominano sottovoce, come quando si gioca con un dado truccato e nessuno lo dice.» *Fa rotolare il dado.* «E io devo quarantacinque fiorini. Fine della lezione.»",
+    "insistono": "*Sulla casa:* «Il Decano ha chiesto a Marcuccio quanto vale la casa con dentro il vecchio e quanto senza. L’ho sentito io, da Aurelio: Marcuccio parla quando beve, e beve perché gli piace sentirsi parlare.» *Sull’altro Dino, se lo nominano o se hanno visto il ragazzo in mantello scuro che balla a Lu Shakidù:* vedi la prova.",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 14,
+     "si": "Racconta dell’altro Dino: «È Arduino Malavolta, il nipote della vecchia. La nonna scava sotto l’Arena, e lui una sera, ubriaco, mi ha detto che il cunicolo arriva fin sotto casa nostra. Sotto l’ultimo arco della cantina. Non l’ho detto a lu patre, perché lu patre si sarebbe venduto anche quello.» Non serve la prova se gli hanno già fatto un favore.",
+     "no": "«L’altro Dino balla meglio di me. Ma io canto meglio di lui. Chiedi a Ninuccia.» E cambia discorso."
+    },
+    "mai": "Non sa cosa cerchi la vecchia Malavolta sotto l’Arena né cosa ci sia sotto Teramum. Non sa chi sia la signora dei Tigli: ne sa solo il sottovoce. Non dice mai una cosa che possa far male ad Arduino, che è suo amico."
+   },
+   {
+    "tema": "Venire con la Crociata",
+    "domanda": "«E se venissi con noi?»",
+    "risposta": "*Resta a bocca aperta, poi ride, poi smette di ridere.* «Con voi? A fare che? Io so tenere uno stocco e so correre, e la seconda cosa la so meglio.» *Il dado gira sul dorso della mano, veloce.* «Portatemi con voi. Tengo i cavalli, porto le lettere, faccio il morto. Ma portatemi. Qua aspetto, cugini. Aspetto che lu patre muoia o che muoia io, e nessuno dei due si decide.»",
+    "insistono": "«Non lo faccio per voi. Lo faccio per non vedere più la faccia di Marcuccio il martedì.» *Poi, serio:* «E perché Alessandros, da ragazzo, mi portava a cavallo davanti a lui e mi diceva: tieniti, Dino. Me lo ricordo. Tieniti.»",
+    "mai": "Non chiede mai soldi per venire: chiede il posto. Se lo prendono, non scappa e non ruba; se perde ai dadi i soldi della Crociata, lo confessa il giorno dopo."
+   }
+  ],
+  "reazioni": {
+   "minaccia": "Intimidire CD 12: canta tutto piangendo nel bicchiere (cassetto, chiave, procura, Decano). Ma il giorno dopo, sobrio, si vergogna, e se il padre gli chiede «che cosa hai detto ai tuoi cugini?», difende il padre. Chi lo minaccia lo ha per una sera.",
+   "soldi": "Quarantacinque fiorini al bravo dei Mazzaclocchi (quaranta se subito) e la collana riscattata: «Mi comprate per riportarmi a casa. Va bene. Mi faccio comprare.» Da quel momento dà la chiave del cassetto, testimonia davanti a un giudice che la procura non c’è mai stata, e a cena prende le parti dei cugini. Chiede un posto nella Crociata.",
+   "lusinga": "Ride: «Bello io? Chiedilo alle maestre.» Ma se la parola gentile è di Alessandros, si zittisce e da quel momento lo segue come da ragazzo.",
+   "bugia": "Inganno +4 e una vita ai tavoli da gioco: se ne accorge. «Statte, cugino. A me nen me la cunti: io le facce le leggo per mestiere, e perdo lo stesso.» Non si offende: alza la posta."
+  },
+  "battute": [
+   "«Vicà! Frechì, ma che t’hanno fatto? Pari nu monaco.»",
+   "«La casa è vostra. Lo sa pure il gatto.»",
+   "«Io non ho firmato niente. Io perdo ai dadi, che è un’altra cosa.»",
+   "«Le carte stanno nel secondo cassetto a destra. La chiave sta sotto il calamaio. Non l’ho detta io.»",
+   "«L’altro Dino balla meglio di me. Ma io canto meglio di lui. Chiedi a Ninuccia.»",
+   "«Portatemi con voi. Tengo i cavalli, porto le lettere, faccio il morto.»",
+   "«Dino lu Conte, mi chiamano. E ridono. E io rido pure, che è meglio.»",
+   "(a Luigis, guardando Zenith) «Come si fa a vincere con una bestia che ti dice i numeri? Insegnamelo e ti do la giubba.»"
+  ],
+  "uscita": {
+   "frase": "*Raccoglie il dado dal vicolo, lo soffia, lo guarda come una lettera.* «Stasera sto da Aurelio, a Lu Shakidù, nella Terranova. Tavolo in fondo. Venite, Vicà: lì si parla meglio, e lu patre non entra: dice che è un posto da garzoni. Ha ragione.» *Si infila dalla porticina delle stalle senza passare dal portone.*",
+   "dopo": "Dorme fino a sera, poi va da Aurelio e perde. Se un personaggio lo raggiunge lì, parla; se lo hanno comprato o ci hanno giocato, la sera dopo a cena posa il dado e dice: «Papà. Dillo.» Se il padre lo chiama «Berardo» davanti ai cugini, tace e guarda il pavimento, ma la notte lascia il chiavistello della porticina alzato, come sempre.",
+   "aggancio": "«E se vedete un ragazzo in mantello scuro che balla con la figlia della lavandaia, non guardatelo troppo. È un amico mio. Anche lui si chiama Dino, e anche lui ha una nonna.» È il filo di Arduino Malavolta e di ciò che si scava sotto l’Arena."
+  },
+  "ottenuto": [
+   {
+    "info": "La casa è dei fratelli, lo sanno tutti in palazzo; lo zio «è stanco di non essere nessuno», non cattivo.",
+    "via": "gratis"
+   },
+   {
+    "info": "Le carte stanno nello studio, secondo cassetto a destra, chiave sotto il calamaio; la procura del Conte non è mai esistita (sentito da Marcuccio a marzo).",
+    "via": "prova"
+   },
+   {
+    "info": "Dino deve quarantacinque fiorini ai Mazzaclocchi e la collana della madre scade ai Trionfi; si compra con quelli e vuole un posto nella Crociata.",
+    "via": "gratis"
+   },
+   {
+    "info": "Il Decano della Lega ha chiesto «quanto vale la casa con dentro il vecchio e quanto senza»; Ser Marcuccio passa il martedì.",
+    "via": "gratis"
+   },
+   {
+    "info": "L’altro Dino di Lu Shakidù è Arduino Malavolta; la nonna scava sotto l’Arena e il cunicolo arriva sotto l’ultimo arco della cantina dei Cerullius.",
+    "via": "prova"
+   },
+   {
+    "info": "Chi deve a chi in città: Lega, Chiodi, Grazianus, la signora dei Tigli di cui si parla sottovoce.",
+    "via": "gratis"
+   },
+   {
+    "info": "Se il sigillo è falso e chi lo ha fatto; cosa cerchi la vecchia Malavolta sotto l’Arena.",
+    "via": "mai"
+   }
+  ]
+ }
+}
