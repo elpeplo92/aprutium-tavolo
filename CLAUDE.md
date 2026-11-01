@@ -760,7 +760,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 ## v159 (07/10/2026) — immagini Midjourney: altri dieci borghi
 
-- Curruppjë, Curtënë, Cëllinë, Cëvëtëlla, Fano e La Pròtë, La Pònnë, La Ròcchë, Li Cashtillë, Li Côtë, Lésënë (con `mj/scarica.py scelte-gruppo4.json`). Il Ducato d'Aprutium da rifare (nessuna delle quattro piaciuta).
+- Curruppjë, Curtënë, Cëllinë, Cëvëtëlla, Fano e La Pròtë, La Pònnë, La Ròcchë, Li Cashtillë, Li Côtë, l'Aquila (con `mj/scarica.py scelte-gruppo4.json`). Il Ducato d'Aprutium da rifare (nessuna delle quattro piaciuta).
 
 ## v160 (08/10/2026) — immagini Midjourney: altri dieci borghi
 
@@ -849,7 +849,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 ## v173 (09/10/2026) — strade del Ducato a due livelli: maestre e tratturi
 
 - Richiesta di Giuseppe: mancavano strade (i giocatori sono andati dritti da Mushanë a Bëllindë). Ora ogni città è collegata alle vicine: 103 strade (erano 80), di cui 29 **strade maestre** e 74 **tratturi**.
-- Dati: `CRO.strade` = `[da, a, "m"|"t"]` in `contenuti/_crociata.json`, scritto da `Revisioni/Strade del Ducato (v173)/strade.py` (rigiocabile; anteprima `Anteprima strade.jpg`). Rete = le 80 strade approvate il 04-10 + la triangolazione di Delaunay fra le città (senza i lati più lunghi di 330 px e quelli schiacciati, con angolo opposto ≥ 125°) + `AGGIUNTE` (Mushanë–Bëllindë). Maestre = i percorsi sulla rete lungo gli `ASSI`: la costa da Martëncëcurë ad Atrë; Julia Nova–Mushanë–Bëllindë–Teramum (per le tappe); Teramum–Chimblë–Cëvëtëlla; Cëvëtëlla–Sandiglië–Nnaréta–Alba; Teramum–Mëndurjë–Tussëcië–Lésënë; Teramum–Canzañë–Cashtalladdë–Nutaròschë–Julia Nova; Cashtalladdë–Mòrrë–Atrë; Canzañë–Cirmignanë.
+- Dati: `CRO.strade` = `[da, a, "m"|"t"]` in `contenuti/_crociata.json`, scritto da `Revisioni/Strade del Ducato (v173)/strade.py` (rigiocabile; anteprima `Anteprima strade.jpg`). Rete = le 80 strade approvate il 04-10 + la triangolazione di Delaunay fra le città (senza i lati più lunghi di 330 px e quelli schiacciati, con angolo opposto ≥ 125°) + `AGGIUNTE` (Mushanë–Bëllindë). Maestre = i percorsi sulla rete lungo gli `ASSI`: la costa da Martëncëcurë ad Atrë; Julia Nova–Mushanë–Bëllindë–Teramum (per le tappe); Teramum–Chimblë–Cëvëtëlla; Cëvëtëlla–Sandiglië–Nnaréta–Alba; Teramum–Mëndurjë–Tussëcië–l'Aquila; Teramum–Canzañë–Cashtalladdë–Nutaròschë–Julia Nova; Cashtalladdë–Mòrrë–Atrë; Canzañë–Cirmignanë.
 - Codice: `croRoads` dà a ogni strada `t` e il peso `W` (= lunghezza, ×`marcia.lentezzaTratturo` = 1,5 per i tratturi); Dijkstra sui pesi; `croRoute` restituisce anche `Lw`, usato dalle due `croStima` per leghe e giorni (la colonna preferisce le maestre e sui tratturi va più piano). Disegno: maestre come prima (oro tratteggiato 1,2 px con ombra), tratturi `.crotrat` grigi a puntini, 0,8 px, opacità .5, senza ombra.
 - Prova: Bëllindë → Mushanë diretto (4,8 leghe pesate, 1,5 giorni); Bëllindë → Teramum per guado, osteria, Colleatterato; `prova-tavolo.js` verde.
 
@@ -1278,7 +1278,7 @@ es.js, modali.js): 10 risoluzioni da 2560×1300 a 390×800, master e giocatore; 
 
 ## v239 (11/10/2026) — la madre di Maximus è una Pilos
 
-- Canone di Giuseppe: Donna Ersilia Grazianus è **nata Pilos** (la famiglia di Mattheus Pilos): è la **zia di Mattheus**, ed è stata **sacerdotessa di Valerus**. Tolta l'origine inventata (Lésënë, Casa Fiandrani, ara della Vecchia Madre, la lettera per il cugino) da `png-ersilia-grazianus` e dalla scheda di Casa Grazianus; nuova risposta «Mattheus, suo nipote» fra le domande dei PG.
+- Canone di Giuseppe: Donna Ersilia Grazianus è **nata Pilos** (la famiglia di Mattheus Pilos): è la **zia di Mattheus**, ed è stata **sacerdotessa di Valerus**. Tolta l'origine inventata (L'Aquila, Casa Fiandrani, ara della Vecchia Madre, la lettera per il cugino) da `png-ersilia-grazianus` e dalla scheda di Casa Grazianus; nuova risposta «Mattheus, suo nipote» fra le domande dei PG.
 
 ## v240 (11/10/2026) — Teramum rifatta come la Teramo vera
 
@@ -1901,3 +1901,11 @@ Giuseppe: un manuale dell'avventura come Waterdeep: Dragon Heist, da Colleatterr
 - Giuseppe (29-10 sera): i Forgiati della v331 erano «troppo irregolari l'uno dall'altro», li voleva più mistici e più non morti, coi medaglioni lunari. Rifatti i sette (Forgiato, ferale, marcio, veterano, capo, berserker, guardiano) con un **blocco di descrizione comune** nel prompt (pelle di cera grigia, occhi di latte senza pupille, vene nere, medaglione d'argento a mezzaluna, luce viola-argento): `mj/prompt-forgiati-2.json`, lavori `jobs-forgiati-2.json`, foglio `Forgiati - foglio 2.jpg`, scelte di Giuseppe in `scelte-forgiati-2.json` (3,3,3,3,2,3,2). I vecchi in `_ARCHIVIO_2026-10-30/Ritratti sostituiti (Bestiario)/` col `registro.csv`; le chiavi `Bestiario — <Nome>.jpg` in `_immagini.json` puntano ai file nuovi.
 - Regola imparata: una famiglia di creature si genera con lo stesso blocco di testo, non con prompt scritti uno per uno.
 - Prova: `prova-tavolo.js` verde.
+
+## v335 (01/11/2026) — Lésënë non esiste più: al suo posto l'Aquila
+
+- Decisione di Giuseppe (1-11): il luogo della Grande Convocazione è **l'Aquila** (paese vero L'Aquila), capitale del Ducato per la Legge Antica ma un borgo-santuario intorno a un tempio, oltre il Gigante Dormiente (tre giorni da Teramum per Tussëcië e il valico). Niente città grande.
+- Sostituzione in tutto il progetto (1054 occorrenze in 135 file: `contenuti/`, `comp/`, `src/tavolo.html`, `03_Compendio`, `00_Progetto`, `Revisioni` compreso il Manuale, memoria): «a Lésënë» → «all’Aquila», «di» → «dell’Aquila», «da» → «dall’Aquila», `[[Lésënë]]` → `[[L’Aquila]]`, «lésenesi» → «aquilani». Script rigiocabile nello scratchpad della sessione (`rinomina_lesene.py`). Gli **id restano** (`borgo-lesene`, città `lesene` della Crociata, chiavi immagine «Mondo — Lésënë.jpg», «Stemma — Lésënë.jpg»): sono chiavi di Firebase e di `_immagini.json`.
+- Voce `borgo-lesene` riscritta nei punti geografici (`aquila_voce.py`): oltre la montagna, sull'altopiano; Tempio dell'Aquila Aurea con la Porta del Perdono (al posto del solario dell'Isola), Fontana delle Casate a novantanove cannelle (al posto della Pagliara), cascata del Gigante, casali veri dell'Aquila (Paganica, Bazzano, Assergi…); Carte dell'Aquila; distanze dei borghi vicini aggiornate (Tussëcië una giornata, Li Cashtillë e Cashtagnë una giornata e mezza, Crognaleto due giorni); contea della Montagna del Gigante allineata.
+- Mappa del Ducato: la scritta «LESENE» dipinta sull'immagine Grok è coperta e «L’Aquila» sta sul valico in basso a sinistra (`img/4ce4b550c8c8.jpg`, il vecchio `0ebba2eeaea7.jpg` resta in `img/`); segnaposto della Crociata spostato a (165, 845). La strada Teramum–Mëndurjë–Tussëcië–l'Aquila resta.
+- Da fare: stemma vero dell'Aquila (aquila nera su fondo bianco? da verificare) e veduta nuova con Midjourney; oggi la voce usa ancora le immagini di prima.
