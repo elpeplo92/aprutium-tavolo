@@ -10,7 +10,7 @@
  "atti": [],
  "links": [],
  "pub": "Un vecchio soldato che striglia i cavalli nel cortile della Rocca. Quando ha visto Maximus si è fermato con la striglia a mezz’aria. Poi ha ripreso, più piano.",
- "gm": "Luogo abituale: le stalle e il cortile della Rocca, su Piazza Garibaldi.\nEtà: ⟦sessantotto⟧. ⟦Quarant’anni nella Guardia, gli ultimi quindici alle stalle, per una gamba che non piega⟧.\nStatistiche: Veterano della Guardia Ducale (Bestiario), ma zoppo e stanco. Non combatte.\nAspetto: ⟦magro, curvo, baffi grigi gialli di tabacco, un vecchio tabarro grigio stinto, odore di cavallo⟧.\nSa: che Lucius Grazianus, lo Stratega, è sopra e sa che il figlio è in città; che ha detto di non farlo salire stasera; ⟦com’era Maximus da bambino, quale cavallo gli insegnò a montare⟧.\nNon sa: perché lo Stratega non voglia vedere il figlio. Niente dei piani della Rocca.\nVoce: poche parole, sottovoce, «signorino».\nCosa vuole: che padre e figlio si parlino prima che sia tardi.\nSegreto: ⟦di notte ha visto uscire dalla Rocca carri coperti verso la Forgia, senza lanterne⟧.\n\nSe gli chiedono di…:\n\nDel padre: «Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.»\nDi portare un messaggio allo Stratega: lo fa, la sera, con la biada. La risposta arriva col falco, o non arriva.\nDei carri di notte: Intuizione CD 15 per capire che sa qualcosa; Persuasione CD 14 (solo Maximus) per farselo dire.\n\nBattute pronte:\n«Signorino.»\n«Siete cresciuto. Pure troppo.»\n«Qua dentro le pareti sentono. Pure i cavalli.»",
+ "gm": "Luogo abituale: le stalle e il cortile della Rocca, a Colleparco bassa.\nEtà: ⟦sessantotto⟧. ⟦Quarant’anni nella Guardia, gli ultimi quindici alle stalle, per una gamba che non piega⟧.\nStatistiche: Veterano della Guardia Ducale (Bestiario), ma zoppo e stanco. Non combatte.\nAspetto: ⟦magro, curvo, baffi grigi gialli di tabacco, un vecchio tabarro grigio stinto, odore di cavallo⟧.\nSa: che Lucius Grazianus, lo Stratega, è sopra e sa che il figlio è in città; che ha detto di non farlo salire stasera; ⟦com’era Maximus da bambino, quale cavallo gli insegnò a montare⟧.\nNon sa: perché lo Stratega non voglia vedere il figlio. Niente dei piani della Rocca.\nVoce: poche parole, sottovoce, «signorino».\nCosa vuole: che padre e figlio si parlino prima che sia tardi.\nSegreto: ⟦di notte ha visto uscire dalla Rocca carri coperti verso la Forgia, senza lanterne⟧.\n\nSe gli chiedono di…:\n\nDel padre: «Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.»\nDi portare un messaggio allo Stratega: lo fa, la sera, con la biada. La risposta arriva col falco, o non arriva.\nDei carri di notte: Intuizione CD 15 per capire che sa qualcosa; Persuasione CD 14 (solo Maximus) per farselo dire.\n\nBattute pronte:\n«Signorino.»\n«Siete cresciuto. Pure troppo.»\n«Qua dentro le pareti sentono. Pure i cavalli.»",
  "dialogo": {
   "apertura": "*Nel cortile, la striglia si ferma a mezz’aria. Il vecchio guarda Maximus, poi guarda meglio. Riprende a strigliare, più piano, senza alzare la testa.* «Signorino.» *Il cavallo sbuffa; lui gli batte una mano sul collo.* «Vostro padre è sopra. Sa che siete qui. Ha detto di non salire stasera.»",
   "voce": "Italiano popolare, sottovoce, con qualche parola di dialetto (*frechì*, *nen*, *lu cavalle*) · Tic: «Signorino»; parla al cavallo quando non vuole rispondere («Buono, buono…»); «Qua dentro le pareti sentono. Pure i cavalli.» · Ritmo: lentissimo, pochissime parole, lunghe pause in cui striglia; non guarda mai in faccia mentre parla delle cose importanti.",
@@ -72,13 +72,13 @@
     "tema": "I carri della notte",
     "domanda": "«Che succede di notte, alla Rocca?»",
     "risposta": "«Di notte dormo, signorino. Alla mia età.» *Ma la striglia va più forte, e il cavallo si scansa.*",
-    "insistono": "«Carri. Coperti, senza lanterne, dal portone dietro le stalle. Tre, quattro a notte, da due settimane, dopo la campana. Escono verso levante, verso Lu Bórghe e la Forgia. I cavalli me li riportano prima dell’alba con la fuliggine sugli zoccoli e l’odore di carbone nel pelo, e sudati come se avessero tirato pietre.» *Si guarda intorno.* «Non sono carri di biada. E nessuno li scrive.»",
+    "insistono": "«Carri. Coperti, senza lanterne, dal portone dietro le stalle. Tre, quattro a notte, da due settimane, dopo la campana. Escono verso levante, verso la Gammarana e la Forgia. I cavalli me li riportano prima dell’alba con la fuliggine sugli zoccoli e l’odore di carbone nel pelo, e sudati come se avessero tirato pietre.» *Si guarda intorno.* «Non sono carri di biada. E nessuno li scrive.»",
     "prova": {
      "abilita": [
       "Persuasione"
      ],
      "cd": 14,
-     "si": "Racconta dei carri senza lanterne verso la Forgia e Lu Bórghe (vedi sopra). Solo Maximus può tentarla.",
+     "si": "Racconta dei carri senza lanterne verso la Forgia e la Gammarana (vedi sopra). Solo Maximus può tentarla.",
      "no": "«Di notte dormo.» *E da quel momento non parla più di niente.*"
     },
     "mai": "Non sa che cosa portino i carri né chi li abbia ordinati: li immagina dello Stratega, e non vuole saperne di più. Non sa niente dei piani della Rocca."
@@ -137,7 +137,7 @@
     "via": "prova"
    },
    {
-    "info": "Di notte escono dalla Rocca carri coperti senza lanterne, verso Lu Bórghe e la Forgia, e tornano con odore di carbone.",
+    "info": "Di notte escono dalla Rocca carri coperti senza lanterne, verso la Gammarana e la Forgia, e tornano con odore di carbone.",
     "via": "prova"
    },
    {
