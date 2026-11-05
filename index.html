@@ -2805,7 +2805,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v340</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v341</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -6510,7 +6510,7 @@ function sceneIntroHtml(){ /* v338: l'introduzione è il primo punto dell'elenco
   const d=SCENE_DATA.find(x=>x.id===CUR.id), it=d&&d.intro; if(!it||!it.leggi) return '';
   const img=it.img&&/^(img\/|https?:)/.test(it.img)?it.img:'', vista=(S.poiSeen||{})['_intro__'+d.id+'__leggi'];
   const colonna=[]; for(const x of d.pedine||[]) if(x.png&&x.gruppo==='colonna'&&!colonna.includes(x.png)) colonna.push(x.png);
-  return `<div class="gpoi gp2 gintro2 ${vista?'rev':''}" data-sid="intro:${d.id}"><div class="gp2h"><span class="gnum">✦</span><span class="gt">Introduzione</span><span class="k">${vista?'letta a tutti':'da leggere'}</span></div><div class="gbody">${img?`<img class="gpoiimg" src="${poiText(img)}" alt="" id="introImg" title="Mostra l’immagine ai giocatori">`:''}<div class="gp2leggi">${poiParagraphs(it.leggi)}</div><div class="row gp2tasti"><button class="mini ${vista?'':'primary'}" id="introShow">Mostra ai giocatori</button></div>${guidaChiHtml(colonna,'Con la colonna')}</div></div>`;
+  return `<div class="gpoi gp2 gintro2 ${vista?'rev':''}" data-sid="intro:${d.id}"><div class="gp2h"><span class="gnum">✦</span><span class="gt">Introduzione</span><span class="k">${vista?'letta a tutti':'da leggere'}</span></div><div class="gbody">${img?`<img class="gpoiimg" src="${poiText(img)}" alt="" id="introImg" title="Mostra l’immagine ai giocatori">`:''}<div class="gp2leggi">${poiParagraphs(it.leggi)}</div><div class="row gp2tasti"><button class="mini ${vista?'':'primary'}" id="introShow">Mostra ai giocatori</button></div>${guidaChiHtml(colonna,'Con la colonna',it.incontri)}</div></div>`;
 }
 /* v261: «Per il master» — la nota dell'introduzione (che cosa è la scena, i fili, l'ordine dei punti) in testa alla Guida,
    fra il menu Scena e la striscia «Stai guardando…». */
@@ -13663,14 +13663,18 @@ html body #zoomctl #zin2{order:18!important} html body #zoomctl #zout2{order:19!
    testo da leggere, chi c'è (tasti che aprono la scheda del PNG nel Compendio, col dialogo) e tre tasti: Svela, Sulla mappa, Scheda del punto
    (prove, moduli e note restano nella scheda del punto). Chi c'è = i PNG dei moduli del punto (campo `png`) più il campo `chi` del punto.
    Fonte: Revisioni/La guida del master (novembre 2026)/v338/ (applica.py, intro.js, guida.js) */
-function guidaChiHtml(ids,etichetta){ const L=[]; for(const id of ids||[]){ const e=c2All().find(q=>q.id===id); if(e&&!L.some(x=>x.id===id)) L.push(e); } if(!L.length) return '';
-  return `<div class="gchi"><span class="gchil">${poiText(etichetta||'Chi c’è')}</span>${L.map(e=>{ const im=c2Img(e); return `<button class="gchip" data-gpng="${poiText(e.id)}" title="Apri la scheda: voce, cosa vuole, dialogo">${im?`<i style="background-image:url('${poiText(im)}')"></i>`:'<i></i>'}<span>${poiText(e.title)}</span></button>`; }).join('')}</div>`; }
+function guidaChiHtml(ids,etichetta,incontri){ /* v341: chi c'è; con `incontri` [{png, leggi}] sotto il nome la riga in corsivo da leggere se i giocatori si avvicinano */
+  const leggi={}; for(const x of incontri||[]) if(x&&x.png){ leggi[x.png]=x.leggi||''; }
+  const L=[]; for(const id of [...Object.keys(leggi),...(ids||[])]){ const e=c2All().find(q=>q.id===id); if(e&&!L.some(x=>x.id===id)) L.push(e); } if(!L.length) return '';
+  const chip=e=>{ const im=c2Img(e); return `<button class="gchip" data-gpng="${poiText(e.id)}" title="Apri la scheda: voce, cosa vuole, dialogo">${im?`<i style="background-image:url('${poiText(im)}')"></i>`:'<i></i>'}<span>${poiText(e.title)}</span></button>`; };
+  const con=L.filter(e=>leggi[e.id]), senza=L.filter(e=>!leggi[e.id]);
+  return `<div class="gchi"><span class="gchil">${poiText(etichetta||'Chi c’è')}</span>${con.map(e=>`<div class="ginc">${chip(e)}<div class="ginc-l">${poiParagraphs(leggi[e.id])}</div></div>`).join('')}${senza.map(chip).join('')}</div>`; }
 function guidaChiDi(p){ const L=[]; for(const m of p.moduli||[]) if(m.png&&!L.includes(m.png)) L.push(m.png); for(const id of p.chi||[]) if(!L.includes(id)) L.push(id); return L; }
 function guidaPuntiHtml(){
   const order=(POI_ORDER[CUR.id]||[]).map(id=>POIS.find(p=>p.id===id)).filter(Boolean); if(!order.length) return '';
   return order.map((p,n)=>{ const rev=poiRevealed(p), hid=poiHidden(p), im=poiImage(p);
     const stato=rev?'svelato':spotPending(p)?'<b class="spotk">notato</b>':(p.nota&&p.nota.auto===false)?'lo sveli tu':(hid?'nascosto':'non visto');
-    return `<div class="gpoi gp2 ${rev?'rev':''}" data-pid="${p.id}"><div class="gp2h"><span class="gnum">${n+1}</span><span class="gt">${poiText(p.title)}</span><span class="k">${stato}</span></div><div class="gbody">${im?`<img class="gpoiimg" src="${poiText(im)}" alt="" data-go="${p.id}" title="Apri la scheda del punto">`:''}<div class="gp2leggi">${p.schemaVersion>=2?poiParagraphs(p.text):p.text}</div>${p.breve?`<div class="gp2breve">${poiParagraphs(p.breve)}</div>`:''}${guidaChiHtml(guidaChiDi(p))}<div class="row gp2tasti"><button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button><button class="mini" data-gv="${p.id}">${poiPosition(p)?'Sulla mappa':'Posiziona sulla mappa'}</button><button class="mini" data-go="${p.id}">Scheda del punto</button></div></div></div>`; }).join('');
+    return `<div class="gpoi gp2 ${rev?'rev':''}" data-pid="${p.id}"><div class="gp2h"><span class="gnum">${n+1}</span><span class="gt">${poiText(p.title)}</span><span class="k">${stato}</span></div><div class="gbody">${im?`<img class="gpoiimg" src="${poiText(im)}" alt="" data-go="${p.id}" title="Apri la scheda del punto">`:''}<div class="gp2leggi">${p.schemaVersion>=2?poiParagraphs(p.text):p.text}</div>${p.breve?`<div class="gp2breve">${poiParagraphs(p.breve)}</div>`:''}${guidaChiHtml(guidaChiDi(p),null,p.incontri)}<div class="row gp2tasti"><button class="mini ${rev?'':'primary'}" data-grev="${p.id}">${rev?'Nascondi ai giocatori':'Svela ai giocatori'}</button><button class="mini" data-gv="${p.id}">${poiPosition(p)?'Sulla mappa':'Posiziona sulla mappa'}</button><button class="mini" data-go="${p.id}">Scheda del punto</button></div></div></div>`; }).join('');
 }
 document.addEventListener('click',e=>{ const b=e.target.closest('[data-gpng]'); if(!b) return; e.preventDefault(); e.stopPropagation(); if(window.apriScheda) apriScheda(b.dataset.gpng); else { c2Open=b.dataset.gpng; openCompendio(); } },true);
 (function(){ const css=document.createElement('style'); css.id='guidaDaLeggere'; css.textContent=`
@@ -13686,6 +13690,9 @@ document.addEventListener('click',e=>{ const b=e.target.closest('[data-gpng]'); 
 #sceneGuide .gchil{font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:15px;margin-right:2px;opacity:.85}
 #sceneGuide .gchip{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:2px 10px 2px 2px;border-radius:16px;border:1px solid rgba(217,177,92,.6);background:#1B1F27;color:#F6E3A8;font-size:14px;line-height:1.1;cursor:pointer;text-align:left}
 #sceneGuide .gchip:hover{border-color:#F6E3A8;background:#232833}
+#sceneGuide .ginc{flex-basis:100%;display:flex;flex-direction:column;gap:3px;margin:2px 0 6px}
+#sceneGuide .ginc .gchip{align-self:flex-start}
+#sceneGuide .ginc-l{font-family:'Bookinsanity',Georgia,serif;font-style:italic;font-size:16px;line-height:1.4;padding-left:8px}
 #sceneGuide .gchip i{flex:none;width:26px;height:26px;border-radius:50%;background:#3a3f4a center 20%/cover;border:1px solid rgba(217,177,92,.5)}
 `; document.head.appendChild(css); })();
 /* ===== FINE GUIDA DA LEGGERE (v338) ===== */
@@ -13710,7 +13717,7 @@ document.addEventListener('click',e=>{ const b=e.target.closest('[data-gpng]'); 
     const t=document.createElement('button'); t.className='navb'; t.id='navTorna'; t.title='Torna alla scena dove sono i giocatori'; t.classList.add('nascosto');
     t.innerHTML='<svg viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 010 10h-3"/></svg>Torna dai giocatori';
     t.onclick=()=>{ sceneView(null); };
-    nav.appendChild(t);
+    t.classList.remove('navb'); t.classList.add('cm-torna'); document.body.appendChild(t); /* v341: in basso, accanto al co-master: in alto solo Scene, Tavolo, Scheda, Compendio */
   }
   function torna(){ const t=document.getElementById('navTorna'); if(t) t.classList.toggle('nascosto',!(IS_GM&&gmPeeking())); }
   /* il titolo del riquadro */
@@ -13779,11 +13786,12 @@ document.addEventListener('click',e=>{ const b=e.target.closest('[data-gpng]'); 
     const b=document.createElement('button'); b.className='navb'; b.id='navCm'; b.title='Il co-master: scrivi o detta, ti risponde';
     b.innerHTML='<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>Co-master';
     b.onclick=()=>apri(!aperto);
-    const comp=document.getElementById('btnComp'); nav.insertBefore(b, comp?comp.nextSibling:null);
+    b.classList.remove('navb'); b.classList.add('cm-tasto'); document.body.appendChild(b); /* v341: fuori dalla barra in alto (Giuseppe: lì solo Scene, Tavolo, Scheda, Compendio) */
   }
   const css=document.createElement('style'); css.id='v340css'; css.textContent=`
-#nav #navTorna{color:#F6E3A8;border-color:#D9B15C}
-#nav #navTorna.nascosto{display:none!important}
+#navTorna.cm-torna{position:fixed;z-index:59;left:calc(var(--cmL,250px) + 150px);bottom:14px;display:flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:20px;border:1px solid #F6E3A8;background:#7A2A1E;color:#F6E3A8;font:400 18px 'Mr Eaves Small Caps',Georgia,serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+#navTorna.cm-torna svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
+#navTorna.nascosto{display:none!important}
 body.sc-citta #world .poi{transform:translate(-50%,-50%) scale(2.1)!important;z-index:5}
 body.sc-citta #world .poi.unrev{opacity:1!important}
 #modal .box.lxbox{width:min(1760px,94vw)!important;max-width:min(1760px,94vw)!important}
@@ -13792,6 +13800,9 @@ body.sc-citta #world .poi.unrev{opacity:1!important}
 #sceneGuide .gp2breve{font-family:'Bookinsanity',Georgia,serif;font-style:normal;font-size:15px;line-height:1.35;margin:4px 0 6px;padding:6px 8px;border-left:3px solid rgba(140,100,40,.55);background:rgba(140,100,40,.08)}
 #modal .box.c4sola{background:transparent!important;box-shadow:none!important;border:0!important}
 #modal .box.c4sola .c3nav, #modal .box.c4sola .c3main, #modal .box.c4sola .c3veil, #modal .box.c4sola>.close{display:none!important}
+#navCm.cm-tasto{position:fixed;z-index:59;left:var(--cmL,250px);bottom:14px;display:flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:20px;border:1px solid rgba(217,177,92,.7);background:#12161D;color:#F6E3A8;font:400 18px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+#navCm.cm-tasto svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
+#navCm.cm-tasto.on{background:#D9B15C;color:#12161D}
 #comaster{position:fixed;z-index:60;left:50%;transform:translateX(-50%);bottom:14px;width:min(640px,46vw);height:min(62vh,640px);display:flex;flex-direction:column;background:#12161D;border:1px solid rgba(217,177,92,.55);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.6);color:#EDE3C8}
 #comaster.hidden{display:none}
 #comaster .cm-h{display:flex;align-items:center;gap:8px;padding:8px 10px;border-bottom:1px solid rgba(217,177,92,.3)}
@@ -13807,7 +13818,13 @@ body.sc-citta #world .poi.unrev{opacity:1!important}
 #comaster .cm-b{display:flex;flex-direction:column;gap:6px}
 #comaster #cmMic.on{background:#7A2A1E;color:#fff}
 `; document.head.appendChild(css);
-  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ torna(); document.body.classList.toggle('sc-citta',!!(CUR&&CUR.id==='teramum')); }catch(e){} return o; };
+  /* v341: posizione del tasto: in basso, subito a destra della colonna dei personaggi */
+  function posCm(){ const b=document.getElementById('navCm'), st=document.getElementById('stage'); if(!b||!st) return; const r=st.getBoundingClientRect(); document.body.style.setProperty('--cmL',Math.round(r.left+12)+'px'); }
+  window.addEventListener('resize',posCm); setTimeout(posCm,500);
+  /* v341: in esplorazione le pedine si muovono libere, senza conferma e senza righe nel Registro; in scontro come prima */
+  { const _pm=proposeMove; proposeMove=function(id,from,to,el){ if(S.mode==='scontro') return _pm.apply(this,arguments);
+      const t=S.tokens[id]; if(!t) return; t.x=to.x; t.y=to.y; if(t.kind==='pg'&&S.fog&&S.fog.on) fogOp('r',to.x,to.y,sightPx(t),true); pending=null; confirmEl.style.display='none'; save(); render(); }; }
+  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ posCm(); torna(); document.body.classList.toggle('sc-citta',!!(CUR&&CUR.id==='teramum')); }catch(e){} return o; };
   try{ torna(); }catch(e){}
   connect();
 })();
