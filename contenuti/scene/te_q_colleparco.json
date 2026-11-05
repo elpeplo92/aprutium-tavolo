@@ -1,0 +1,63 @@
+{
+ "id": "te_q_colleparco",
+ "nome": "Teramum — Colleparco",
+ "menu": "Teramum — Colleparco",
+ "citta": "Teramum",
+ "ordine": 9.5,
+ "mappa": {
+  "img": "Mappa — Teramum — Colleparco (HD).jpg",
+  "larghezza": 1920,
+  "altezza": 1081,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 54
+ },
+ "intro": {
+  "leggi": "Colleparco è una collina più tranquilla, dentro le mura ma sopra la città. In basso le mura sono spesse e c’è una rocca con le bandiere sulle torri.\n\nPiù su ci sono ville con giardini, vigne e un grande edificio con un cortile a portici. Le strade sono larghe e pulite. Si sentono passi di soldati e, da qualche finestra aperta, voci che ripetono una lezione.",
+  "note": "Il quartiere Colleparco, visto da vicino. Si arriva dalla mappa della città (punto del quartiere, «Entra»).",
+  "img": "Mondo — Colleparco e la Rocca dei Grazianus.jpg"
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "colleparco_rocca",
+   "kind": "stanza",
+   "title": "La Rocca dei Grazianus",
+   "legacyPosition": {
+    "x": 881,
+    "y": 811
+   },
+   "text": "Una rocca squadrata, con mura spesse e le bandiere della Guardia sulle torri. Davanti al portone c’è un cortile di ghiaia, e soldati in grigio che vanno e vengono.",
+   "breve": "La casa dello Stratega Lucius Grazianus, padre di Maximus, e caserma della Guardia Ducale. Gancio per Maximus.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_g_rocca",
+   "scenaTesto": "Vai alla Rocca dei Grazianus"
+  },
+  {
+   "schemaVersion": 3,
+   "id": "colleparco_studio",
+   "kind": "stanza",
+   "title": "Lo Studio",
+   "legacyPosition": {
+    "x": 1151,
+    "y": 372
+   },
+   "text": "Un edificio lungo con un cortile a portici. Sotto gli archi passano ragazzi con le tavolette e i libri sotto il braccio. Un maestro anziano parla a voce alta in mezzo al cortile.",
+   "breve": "Lo Studio di Teramum, dove hanno studiato Alessandros e Vicarus: qualcuno qui si ricorda di loro. Gancio per i due Cerullius.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": []
+}

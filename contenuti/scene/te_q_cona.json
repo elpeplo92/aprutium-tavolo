@@ -1,0 +1,61 @@
+{
+ "id": "te_q_cona",
+ "nome": "Teramum — la Cona",
+ "menu": "Teramum — la Cona",
+ "citta": "Teramum",
+ "ordine": 9.4,
+ "mappa": {
+  "img": "Mappa — Teramum — Cona (HD).jpg",
+  "larghezza": 1920,
+  "altezza": 1080,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 54
+ },
+ "intro": {
+  "leggi": "La Cona è un quartiere di conventi e di orti, appena fuori dalle mura vecchie. Muri alti e bianchi chiudono i cortili; sopra spuntano campanili bassi e cipressi.\n\nLe strade sono di terra battuta, fangose. Oggi c’è molta gente: famiglie intere con fiori e lumi in mano, dirette tutte dalla stessa parte.",
+  "note": "Il quartiere la Cona, visto da vicino. Si arriva dalla mappa della città (punto del quartiere, «Entra»).",
+  "img": "Mondo — La Cona.jpg"
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "cona_ospedale",
+   "kind": "stanza",
+   "title": "Il convento e l’ospedale",
+   "legacyPosition": {
+    "x": 512,
+    "y": 434
+   },
+   "text": "Un convento grande, con un chiostro e un portico lungo. Sotto il portico, su pagliericci, ci sono malati e vecchi; due frati passano fra loro con le brocche d’acqua. L’aria sa di aceto e di erbe bollite.",
+   "breve": "L’ospedale dei poveri, tenuto dai frati di Mortus. Gancio per Mattheus: qui la sua fede è di casa.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "cona_cimitero",
+   "kind": "scena",
+   "title": "Il cimitero grande",
+   "legacyPosition": {
+    "x": 267,
+    "y": 701
+   },
+   "text": "Oltre un muro basso si apre il cimitero, pieno di lumi accesi sulle tombe. La gente si inginocchia, pulisce le lapidi, lascia pane e fiori. Un frate vestito di nero benedice chi glielo chiede.",
+   "breve": "Oggi, Giorno dei Morti, è il posto più affollato della città. Qui si sentono le voci di Teramum: chi piange chi, cosa si dice del terremoto.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": []
+}

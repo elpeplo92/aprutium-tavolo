@@ -1,0 +1,105 @@
+{
+ "id": "te_q_castello",
+ "nome": "Teramum — il Castello",
+ "menu": "Teramum — il Castello",
+ "citta": "Teramum",
+ "ordine": 9.3,
+ "mappa": {
+  "img": "Mappa — Teramum — Castello (HD).jpg",
+  "larghezza": 1920,
+  "altezza": 1076,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 54
+ },
+ "intro": {
+  "leggi": "Il Castello è il quartiere più vecchio di Teramum, stretto su una rupe sopra il fiume. Le case sono alte e scure, e i vicoli salgono a gradini, girando su sé stessi.\n\nIn cima, sopra i tetti, c’è un castello di pietra annerita. Per strada c’è poca gente; le porte sono chiuse e le finestre piccole.\n\nDal basso sale il rumore dell’acqua.",
+  "note": "Il quartiere il Castello, visto da vicino. Si arriva dalla mappa della città (punto del quartiere, «Entra»).",
+  "img": "Mondo — Il Castello dei Malavolta.jpg"
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "castello_palazzo",
+   "kind": "stanza",
+   "title": "Il palazzo dei Malavolta",
+   "legacyPosition": {
+    "x": 893,
+    "y": 497
+   },
+   "text": "In cima alla rupe c’è un castello di pietra scura, con le torri mozze e un portone di ferro chiuso. Sopra il portone, uno stemma scolpito, consumato dalla pioggia. Due guardie in livrea stanno ferme ai lati. Dalle feritoie non si vede luce.",
+   "breve": "Il palazzo dei Malavolta, la casata più antica della città. Senza un nome che apra la porta, qui non riceve nessuno.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "castello_recluse",
+   "kind": "porta",
+   "title": "La Porta delle Recluse",
+   "legacyPosition": {
+    "x": 960,
+    "y": 303
+   },
+   "text": "Dove le mura sono più alte e più vecchie si apre una porta stretta, con un solo battente di legno rinforzato. Accanto c’è una piccola ara con la porta socchiusa e un lume acceso. Fuori, un sentiero scende ripido verso il fiume.",
+   "breve": "La porta da cui escono i morti e chi non vuole essere visto. Nell’ara accanto si vegliano i corpi.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [
+    {
+     "id": "pusterla_luogo",
+     "tipo": "dettaglio",
+     "titolo": "Porta delle Recluse",
+     "parte": "indizio",
+     "innesco": "I personaggi vanno a: Porta delle Recluse.",
+     "leggi": "A nord-ovest, dove le mura sono più alte e più vecchie, c’è una porta stretta, un solo battente di legno ferrato, niente insegne, niente stemma. Sopra la porta, sulle mura, un edificio alto e cieco, con tutte le finestre murate, una per una, con mattoni di colori diversi. Da dentro, ogni tanto, una voce di donna che canta o grida: non si capisce quale delle due.\n\nDavanti alla porta, una guardia sola, vecchia, seduta su uno sgabello di paglia, con l’alabarda appoggiata al muro e una pipa spenta in bocca. Non chiede le carte. Si alza quando passa un morto. Si toglie il cappello, aspetta che sia passato, e si risiede.\n\nFuori, la strada scende subito in un campo di cipressi e di pietre basse, senza nomi, messe a file storte. Fra le pietre, mazzetti di lavanda secca e qualche candela consumata. In fondo al campo, un’ara bassa con la porta aperta: dentro brilla una fiamma piccola, e c’è sempre qualcuno in ginocchio che non si volta.\n\nOdore di cipresso, di cera e di terra smossa. Qui non passano carri e non si grida. Chi passa di qui cammina piano e non parla. Dicono che di notte sia l’unica porta che si apre, e che la guardia non faccia domande.",
+     "note": "La porta sotto la Casa dei Folli, a nord-ovest: da qui escono i morti; di notte è l’unica che si apre. Fuori, il campo dei cipressi e l’ara dei morti.\nPorta delle Recluse della voce «Teramum»: sta sotto la Casa dei Folli, l’ospizio del Lucente Antonio, e si chiama così per le donne rinchiuse lassù. ⟦Sta a nord-ovest ed è la porta dei morti, come nella scena della porta. Il camposanto della città è a Cartecchio, verso Julia Nova: il campo fuori dalle Recluse è quello dei poveri, dei folli e di chi aspetta.⟧\nDi notte si apre solo questa porta («Di là, i fiumi sono due e le porte sette. Ma di notte ne apre una sola», la vecchia di Colleatterrato): i morti non aspettano l’alba. La guardia della notte è un vecchio, Gnazio, che non fa domande a chi porta un morto.\nNell’ara dei morti fuori dalla porta c’è il figlio del vecchio supplicante delle piazze della Basilica (se usi quel gancio). Per Mattheus è un luogo di fede.",
+     "daqui": [
+      "pusterla_cappella"
+     ],
+     "immagine": "PDI — Teramum — Porta delle Recluse.jpg"
+    },
+    {
+     "id": "pusterla_cappella",
+     "tipo": "dettaglio",
+     "titolo": "Porta delle Recluse: L’ara dei morti",
+     "parte": "indizio",
+     "innesco": "Qualcuno esce dalla Porta delle Recluse e va all’ara.",
+     "leggi": "Dentro fa fresco. Tre catafalchi, tre corpi coperti da teli bianchi. Candele. Una vecchia che prega sottovoce, con un filo di grani di legno fra le dita.\n\nSu uno dei teli, un mazzetto di lavanda secca, legato con un filo nero.",
+     "note": "Il corpo con la lavanda è il figlio del vecchio supplicante (Ercole): morto in un crollo nelle cantine della Gammarana. Qualcuno del culto di Mortus veglia i morti che la città lascia aspettare. Per Mattheus: Medicina o Religione CD 12, il corpo non ha le ferite di un crollo, ma le mani piene di terra fino ai gomiti, come se avesse scavato. Niente di più.",
+     "rilancio": "La vecchia smette di pregare e vi guarda. Che cosa fate?",
+     "daqui": [],
+     "pe": 100
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "castello_rupe",
+   "kind": "porta",
+   "title": "Sotto la rupe",
+   "legacyPosition": {
+    "x": 772,
+    "y": 884
+   },
+   "text": "Ai piedi della rupe, fra rovi e pietre cadute, il muro è pieno di crepe. In un punto una grata di ferro chiude un’apertura bassa e nera. Ne esce un’aria fredda che sa di terra bagnata.",
+   "breve": "Uno degli ingressi alla Città Sepolta. La grata è chiusa.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_sepolta",
+   "scenaTesto": "Scendi nella Città Sepolta"
+  }
+ ],
+ "pedine": []
+}

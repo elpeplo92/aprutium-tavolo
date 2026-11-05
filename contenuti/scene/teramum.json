@@ -5,7 +5,7 @@
  "citta": "Teramum",
  "ordine": 8,
  "mappa": {
-  "img": "img/6a8915b16833.jpg",
+  "img": "img/36cad06e35f2.jpg",
   "larghezza": 1705,
   "altezza": 922,
   "griglia": false
@@ -57,7 +57,8 @@
     "poi": "teramum_tigli",
     "note": "A sera, dopo mezza giornata di giro."
    }
-  ]
+  ],
+  "img": "Mondo — Teramum.jpg"
  },
  "punti": [
   {
@@ -476,8 +477,27 @@
     "y": 395
    },
    "text": "Una collina più tranquilla, sopra la città. In basso, mura spesse e una rocca con le bandiere; più su, ville, giardini e vigne.\n\nLe strade sono più larghe e più pulite. Si sentono passi di soldati e, da qualche finestra, voci che recitano una lezione.",
-   "breve": "Colleparco: in basso la Rocca dei Grazianus, del padre di Maximus (gancio per Maximus); più su lo Studio, dove hanno studiato Alessandros e Vicarus. Qui anche il Ponte degli Impiccati (modulo nella scheda). Scena: «Colleparco — la Rocca dei Grazianus».",
+   "breve": "Colleparco: in basso la Rocca dei Grazianus, del padre di Maximus (gancio per Maximus); più su lo Studio, dove hanno studiato Alessandros e Vicarus. Scena: «Teramum — Colleparco».",
    "gm": "",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": [],
+   "scena": "te_q_colleparco",
+   "scenaTesto": "Entra",
+   "incontri": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_ponte",
+   "kind": "porta",
+   "title": "Il Ponte degli Impiccati",
+   "legacyPosition": {
+    "x": 820,
+    "y": 463
+   },
+   "text": "Un ponte stretto di pietra scavalca il burrone fra il Centro e la Gammarana. Sotto, molto in basso, il torrente corre fra i sassi. A metà ponte c’è una nicchia nel parapetto. Qui il vento soffia sempre.",
+   "breve": "L’unico passaggio diretto fra il Centro e la Gammarana. Di notte passa la ronda; è un buon posto per un agguato (moduli nella scheda).",
    "nota": {
     "cd": 0
    },
@@ -679,8 +699,6 @@
      "daqui": []
     }
    ],
-   "scena": "te_g_rocca",
-   "scenaTesto": "Vai alla Rocca dei Grazianus",
    "incontri": [
     {
      "png": "png-morico-tavolaccio",
@@ -690,7 +708,8 @@
      "png": "png-gerbino-sensale",
      "leggi": "Sotto un portico, un uomo con un banchetto e una bilancina da monete conta denaro e alza gli occhi solo per i clienti."
     }
-   ]
+   ],
+   "image": "PDI — Teramum — Il Ponte degli Impiccati.jpg"
   },
   {
    "schemaVersion": 3,
@@ -703,38 +722,14 @@
     "y": 480
    },
    "text": "Il quartiere più vecchio, su una rupe. Case scure, vicoli in pendenza, e in alto un castello di pietra annerita.\n\nQui c’è poca gente e molto silenzio. Le porte sono chiuse e le finestre piccole.",
-   "breve": "Il Castello: il palazzo dei Malavolta, la casata più antica. Sotto la rupe c’è l’ingresso alla Città Sepolta. Qui anche la Porta delle Recluse (modulo nella scheda). Senza un nome che apra la porta, qui non riceve nessuno.",
+   "breve": "Il Castello: il palazzo dei Malavolta, la casata più antica. Sotto la rupe c’è l’ingresso alla Città Sepolta. Senza un nome che apra la porta, qui non riceve nessuno. Scena: «Teramum — il Castello».",
    "gm": "",
    "nota": {
     "cd": 0
    },
-   "moduli": [
-    {
-     "id": "pusterla_luogo",
-     "tipo": "dettaglio",
-     "titolo": "Porta delle Recluse",
-     "parte": "indizio",
-     "innesco": "I personaggi vanno a: Porta delle Recluse.",
-     "leggi": "A nord-ovest, dove le mura sono più alte e più vecchie, c’è una porta stretta, un solo battente di legno ferrato, niente insegne, niente stemma. Sopra la porta, sulle mura, un edificio alto e cieco, con tutte le finestre murate, una per una, con mattoni di colori diversi. Da dentro, ogni tanto, una voce di donna che canta o grida: non si capisce quale delle due.\n\nDavanti alla porta, una guardia sola, vecchia, seduta su uno sgabello di paglia, con l’alabarda appoggiata al muro e una pipa spenta in bocca. Non chiede le carte. Si alza quando passa un morto. Si toglie il cappello, aspetta che sia passato, e si risiede.\n\nFuori, la strada scende subito in un campo di cipressi e di pietre basse, senza nomi, messe a file storte. Fra le pietre, mazzetti di lavanda secca e qualche candela consumata. In fondo al campo, un’ara bassa con la porta aperta: dentro brilla una fiamma piccola, e c’è sempre qualcuno in ginocchio che non si volta.\n\nOdore di cipresso, di cera e di terra smossa. Qui non passano carri e non si grida. Chi passa di qui cammina piano e non parla. Dicono che di notte sia l’unica porta che si apre, e che la guardia non faccia domande.",
-     "note": "La porta sotto la Casa dei Folli, a nord-ovest: da qui escono i morti; di notte è l’unica che si apre. Fuori, il campo dei cipressi e l’ara dei morti.\nPorta delle Recluse della voce «Teramum»: sta sotto la Casa dei Folli, l’ospizio del Lucente Antonio, e si chiama così per le donne rinchiuse lassù. ⟦Sta a nord-ovest ed è la porta dei morti, come nella scena della porta. Il camposanto della città è a Cartecchio, verso Julia Nova: il campo fuori dalle Recluse è quello dei poveri, dei folli e di chi aspetta.⟧\nDi notte si apre solo questa porta («Di là, i fiumi sono due e le porte sette. Ma di notte ne apre una sola», la vecchia di Colleatterrato): i morti non aspettano l’alba. La guardia della notte è un vecchio, Gnazio, che non fa domande a chi porta un morto.\nNell’ara dei morti fuori dalla porta c’è il figlio del vecchio supplicante delle piazze della Basilica (se usi quel gancio). Per Mattheus è un luogo di fede.",
-     "daqui": [
-      "pusterla_cappella"
-     ],
-     "immagine": "PDI — Teramum — Porta delle Recluse.jpg"
-    },
-    {
-     "id": "pusterla_cappella",
-     "tipo": "dettaglio",
-     "titolo": "Porta delle Recluse: L’ara dei morti",
-     "parte": "indizio",
-     "innesco": "Qualcuno esce dalla Porta delle Recluse e va all’ara.",
-     "leggi": "Dentro fa fresco. Tre catafalchi, tre corpi coperti da teli bianchi. Candele. Una vecchia che prega sottovoce, con un filo di grani di legno fra le dita.\n\nSu uno dei teli, un mazzetto di lavanda secca, legato con un filo nero.",
-     "note": "Il corpo con la lavanda è il figlio del vecchio supplicante (Ercole): morto in un crollo nelle cantine della Gammarana. Qualcuno del culto di Mortus veglia i morti che la città lascia aspettare. Per Mattheus: Medicina o Religione CD 12, il corpo non ha le ferite di un crollo, ma le mani piene di terra fino ai gomiti, come se avesse scavato. Niente di più.",
-     "rilancio": "La vecchia smette di pregare e vi guarda. Che cosa fate?",
-     "daqui": [],
-     "pe": 100
-    }
-   ]
+   "moduli": [],
+   "scena": "te_q_castello",
+   "scenaTesto": "Entra"
   },
   {
    "schemaVersion": 3,
@@ -752,7 +747,9 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "scena": "te_q_cona",
+   "scenaTesto": "Entra"
   },
   {
    "schemaVersion": 3,
@@ -769,7 +766,9 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "scena": "te_q_villamosca",
+   "scenaTesto": "Entra"
   },
   {
    "schemaVersion": 3,
@@ -786,7 +785,9 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
+   "moduli": [],
+   "scena": "te_q_viola",
+   "scenaTesto": "Entra"
   },
   {
    "schemaVersion": 3,
@@ -794,8 +795,8 @@
    "kind": "stanza",
    "title": "Villa Pavone",
    "legacyPosition": {
-    "x": 1268,
-    "y": 168
+    "x": 1500,
+    "y": 215
    },
    "text": "A est, sulla piana, botteghe di artigiani e ville basse. Si sentono seghe e martelli.\n\nDa qui si vede il ponte sul fiume.",
    "breve": "Villa Pavone: botteghe e ville sulla piana a est, vicino al ponte.",
@@ -803,25 +804,9 @@
    "nota": {
     "cd": 0
    },
-   "moduli": []
-  },
-  {
-   "schemaVersion": 3,
-   "id": "teramum_f_accio",
-   "kind": "stanza",
-   "title": "Nepezzano e Piano d’Accio",
-   "image": "Mondo — Piano d’Accio.jpg",
-   "legacyPosition": {
-    "x": 1545,
-    "y": 90
-   },
-   "text": "La pianura lungo il fiume, fuori città. Magazzini grandi, recinti pieni di bestie, carovane ferme lungo la strada.\n\nOdore di stalla e di paglia bagnata.",
-   "breve": "Piano d’Accio e Nepezzano: il grande magazzino dei Melatino sulla Salaria, le carovane, il mercato delle bestie; più in là campagna e poderi.",
-   "gm": "",
-   "nota": {
-    "cd": 0
-   },
-   "moduli": []
+   "moduli": [],
+   "scena": "te_q_villapavone",
+   "scenaTesto": "Entra"
   },
   {
    "schemaVersion": 3,
@@ -889,6 +874,24 @@
    "nota": {
     "cd": 0
    },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "teramum_f_colle",
+   "kind": "scena",
+   "title": "Colleatterrato",
+   "legacyPosition": {
+    "x": 1330,
+    "y": 85
+   },
+   "nota": {
+    "cd": 0
+   },
+   "scena": "colleatterato",
+   "scenaTesto": "Torna a Colleatterrato",
+   "text": "Sulla collina a nord-est, oltre gli ulivi, si vede la cresta di Colleatterrato con le sue case strette e l’ara bianca. La strada che scende di là è quella da cui siete arrivati.",
+   "breve": "Il borgo sulla collina da cui la colonna è scesa. Si torna di là per la strada degli ulivi.",
    "moduli": []
   }
  ],

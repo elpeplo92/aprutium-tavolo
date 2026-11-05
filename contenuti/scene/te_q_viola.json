@@ -1,0 +1,60 @@
+{
+ "id": "te_q_viola",
+ "nome": "Teramum — Viola",
+ "menu": "Teramum — Viola",
+ "citta": "Teramum",
+ "ordine": 9.7,
+ "mappa": {
+  "img": "Mappa — Teramum — Viola (HD).jpg",
+  "larghezza": 1920,
+  "altezza": 1079,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 54
+ },
+ "intro": {
+  "leggi": "A nord, fuori porta, la città finisce in una collina di orti, vigne e ville. Le strade sono di terra, chiuse da muri a secco, e dai cortili abbaiano i cani.\n\nVoltandovi, vedete ancora la città sotto di voi, con il campanile della Basilica sopra i tetti.",
+  "note": "Il quartiere Viola, visto da vicino. Si arriva dalla mappa della città (punto del quartiere, «Entra»)."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "viola_orti",
+   "kind": "dettaglio",
+   "title": "Gli orti e le vigne",
+   "legacyPosition": {
+    "x": 674,
+    "y": 556
+   },
+   "text": "Filari spogli, pali storti, orti coperti di paglia per il freddo. Un vecchio brucia le sterpaglie, e il fumo resta basso sui campi.",
+   "breve": "Campagna fuori porta: qui nessuno fa domande.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "viola_villa",
+   "kind": "stanza",
+   "title": "La villa sul colle",
+   "legacyPosition": {
+    "x": 1197,
+    "y": 229
+   },
+   "text": "In cima alla salita c’è una villa con una torretta e un pergolato senza foglie. Il cancello è aperto. Alle finestre del primo piano c’è luce.",
+   "breve": "Una villa isolata, buona per un incontro segreto o per nascondersi qualche giorno.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": []
+}

@@ -1,0 +1,60 @@
+{
+ "id": "te_q_villapavone",
+ "nome": "Teramum — Villa Pavone",
+ "menu": "Teramum — Villa Pavone",
+ "citta": "Teramum",
+ "ordine": 9.8,
+ "mappa": {
+  "img": "Mappa — Teramum — Villa Pavone (HD).jpg",
+  "larghezza": 1920,
+  "altezza": 1079,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 54
+ },
+ "intro": {
+  "leggi": "A est, sulla piana oltre il fiume, ci sono botteghe di artigiani e ville basse. Si sentono seghe, martelli e il cigolio dei carri. L’aria sa di legno tagliato e di calce.\n\nDa qui si vede il ponte che porta verso la campagna.",
+  "note": "Il quartiere Villa Pavone, visto da vicino. Si arriva dalla mappa della città (punto del quartiere, «Entra»)."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "villapavone_botteghe",
+   "kind": "stanza",
+   "title": "Le botteghe",
+   "legacyPosition": {
+    "x": 946,
+    "y": 369
+   },
+   "text": "Una fila di botteghe aperte sulla strada: falegnami, bottai, un fabbro. Trucioli per terra, carri carichi di assi davanti alle porte.",
+   "breve": "Artigiani che lavorano per chi paga. Il posto per riparare i carri della Crociata e comprare attrezzi.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "villapavone_ponte",
+   "kind": "porta",
+   "title": "Il ponte sul fiume",
+   "legacyPosition": {
+    "x": 1329,
+    "y": 823
+   },
+   "text": "Un ponte di pietra a più archi scavalca il fiume. Sotto, l’acqua è alta e torbida. Sul ponte passano carri e greggi in fila.",
+   "breve": "La strada per Nepezzano e Piano d’Accio: di qui arrivano i carri dalla campagna.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": []
+}

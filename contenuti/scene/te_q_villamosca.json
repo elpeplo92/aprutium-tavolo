@@ -1,0 +1,76 @@
+{
+ "id": "te_q_villamosca",
+ "nome": "Teramum — Villa Mosca",
+ "menu": "Teramum — Villa Mosca",
+ "citta": "Teramum",
+ "ordine": 9.6,
+ "mappa": {
+  "img": "Mappa — Teramum — Villa Mosca (HD).jpg",
+  "larghezza": 1920,
+  "altezza": 1079,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "pedina": 54
+ },
+ "intro": {
+  "leggi": "Fuori dalle mura, sulla collina verde a nord-est, la città si apre in giardini. Ville con cancelli di ferro, viali di cipressi, fontane che non si fermano mai.\n\nDappertutto si sente l’acqua: corre nei canali lungo le strade e scende verso la città. Il rumore di Teramum, qui, arriva da lontano.",
+  "note": "Il quartiere Villa Mosca, visto da vicino. Si arriva dalla mappa della città (punto del quartiere, «Entra»)."
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "villamosca_sorgenti",
+   "kind": "dettaglio",
+   "title": "Le sorgenti",
+   "legacyPosition": {
+    "x": 664,
+    "y": 473
+   },
+   "text": "Casotti di pietra chiudono le sorgenti, uno dopo l’altro lungo il pendio. Da ognuno esce un canale che scende verso la città. Una donna riempie due secchi e se ne va senza alzare gli occhi.",
+   "breve": "Le sorgenti che danno l’acqua a tutta Teramum: chi le controlla, controlla la città.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "villamosca_ville",
+   "kind": "stanza",
+   "title": "Le ville",
+   "legacyPosition": {
+    "x": 960,
+    "y": 739
+   },
+   "text": "Ville basse con le persiane verdi, chiuse da cancelli e siepi alte. Nei giardini ci sono statue coperte di muschio. Davanti a un cancello aspetta una carrozza senza stemmi.",
+   "breve": "Le ville dei ricchi, buone per feste e incontri lontano dagli occhi della città.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  },
+  {
+   "schemaVersion": 3,
+   "id": "villamosca_lazzaretto",
+   "kind": "stanza",
+   "title": "Il vecchio lazzaretto",
+   "legacyPosition": {
+    "x": 1227,
+    "y": 325
+   },
+   "text": "In fondo a un viale c’è un edificio lungo e basso, con le finestre murate. Il cancello è chiuso da una catena arrugginita. Intorno l’erba è alta.",
+   "breve": "Un lazzaretto chiuso da anni. Più in là c’è l’ospedale dei votati.",
+   "nota": {
+    "cd": 0
+   },
+   "moduli": []
+  }
+ ],
+ "pedine": []
+}
