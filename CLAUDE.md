@@ -1938,3 +1938,9 @@ Giuseppe: un manuale dell'avventura come Waterdeep: Dragon Heist, da Colleatterr
 - **Via la serata**: tolto il blocco «LA SERATA NEL REGISTRO (v337)» e il campo `serata` di `colleatterato.json`.
 - Pedine: Pasqualino (`g_pas`) col suo token; Peppino (`c_bam`) passa al gruppo `borgo`. Senza immagine restano i carri, le vacche, Peppino, il votato sull'asino, Lu Russe, Za' Flaminia, i frati e Ninuccio della Casa dei folli: ritratti in lavorazione con Midjourney.
 - Prova: `prova-tavolo.js` verde (71 e 40 comandi).
+
+## v339 (05/11/2026) — ogni pedina ha la sua immagine
+
+- Ritratti Midjourney del 5-11 (scelte di Claude per la fretta della sessione, Giuseppe può cambiarle: `7_Aprutium/Revisioni/Sessione del 02-11-2026/mj/scelte-05-11.json`, foglio `Pedine mancanti 05-11 - foglio.jpg`, token con `token-05-11.py`).
+- Collegati con `Revisioni/La guida del master (novembre 2026)/v338/pedine_v339.py`: carri (guado, osteria, Colleatterrato) → `TOKEN — Carro della Crociata.png`; vacche, Peppino, Pasqualino, votato sull'asino, Lu Russe, Za' Flaminia, Fra' Tommaso, frate guardiano, Ninuccio. Le schede PNG di Peppino, votato, Lu Russe, Za' Flaminia e Ninuccio hanno ora il ritratto (via `img_da_fare`).
+- Controllo: tutte le pedine di tutte le scene hanno un'immagine (propria o dal Bestiario). Prova verde (71 e 40).
