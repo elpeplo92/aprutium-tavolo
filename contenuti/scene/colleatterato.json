@@ -18,7 +18,7 @@
   "segnaposto": false
  },
  "intro": {
-  "leggi": "La nebbia sta bassa sul Tordinum e non si alza. Lasciate l’osteria de lu Passe con la colonna in fila sulla strada di valle. Dietro di voi il cortile sa ancora di fumo e di legna bagnata.\n\nLa strada segue il fiume fra i pioppi spogli. Le foglie gialle sono a terra, fradice, e le ruote dei carri ci affondano. Fa freddo: un freddo umido che entra sotto i mantelli. Stamattina il carro delle vettovaglie è rimasto chiuso. Dentro non c’era più niente da dare.\n\nNessuno parla molto. Davanti, gli stendardi pendono bagnati. In mezzo, i cinque carri cigolano a ogni buca. In fondo alla fila camminano i cinque tornati del guado, stretti l’uno all’altro, come chi non si fida ancora delle proprie gambe. Legati al quarto carro, i due vesperiani prigionieri tengono gli occhi a terra. In coda Pasqualino, il ragazzo di stalla dell’osteria, tira sei vacche bianche cariche di basti.\n\nI casali lungo la strada hanno crepe fresche nei muri. Davanti a uno, una donna raccoglie i cocci di una brocca e non alza gli occhi. Un vecchio seduto sulla soglia vi fa un gesto con la mano. Non è un saluto: vi manda via.\n\nPoi la strada lascia il fiume e comincia a salire fra gli ulivi. Sotto gli alberi le reti sono già stese per la raccolta, ma nessuno raccoglie. Le olive nere cadono da sole e restano lì.\n\nDavanti a voi c’è l’ultima collina. In cima, contro il cielo grigio, una fila di case strette sulla cresta e una macchia bianca che può essere un’ara. Dietro quella collina, lo sapete tutti, c’è Teramum.",
+  "leggi": "La strada lascia il fiume e comincia a salire fra gli ulivi. La nebbia del mattino resta giù, sul Tordinum; quassù l'aria è fredda e pulita, e il fiato fuma.\n\nSotto gli alberi le reti sono stese per la raccolta, ma nessuno raccoglie. Le olive nere cadono da sole e restano a terra.\n\nLungo i tornanti qualche muro a secco è crollato da poco: pietre sulla strada, terra smossa. I carri passano a fatica, uno alla volta.\n\nIn cima alla collina, contro il cielo grigio, c'è un borgo stretto sulla cresta: una fila di case di pietra, i comignoli che fumano, una macchia bianca che può essere una chiesetta.\n\nDietro quella collina c'è Teramum.",
   "note": "Scena d’arrivo, senza scontro: la città appare, e la città conta. Il Bando è arrivato prima di loro; la Guardia Ducale li scrive nel registro; un messo porta a Maximus un biglietto che cambia la sera.\nSulla mappa: la colonna entra in basso a destra, sale i tornanti fra gli ulivi, attraversa il borgo sulla cresta da est a ovest (ara, case, fontana), arriva al belvedere in cima a sinistra, poi scende lungo il lato sinistro fino alla sbarra; il messo arriva dal basso a sinistra.\nOrdine dei punti: salita → ara → casa coi panni stesi → fontana → belvedere → sbarra → messo.\nPNG: Liberata de la Fonte, Menica de li Fiòre, sergente Benedetto Arcioni, Vitale lu Messo (schede nel Compendio, città «strada»).\nDopo l’osteria (sessione del 26-10): Tanush, Kostandìn, Vasco e i loro uomini sono caduti nel piazzale e sono stati sepolti; restano due prigionieri; le quattro Armature del Loto abbattute; Messer Ansaldo è morto con la gola tagliata, al secondo piano, dal cavaliere della collina. I carri del convoglio sono bruciati tutti nel fuoco: non li ha nessuno. Coi carri della Crociata ci sono i cinque tornati del guado. La notte del terremoto c’è stata: le crepe fresche sono vere. Mèmmo Chiòdi e Lucia contano qui: vedi «La fontana» e «La casa coi panni stesi». Maximus ha il lasciapassare e le carte di Ansaldo (vedi «La sbarra»).",
   "ingressi": [
    {
@@ -26,6 +26,28 @@
     "primo": "colle_salita",
     "poi": "colle_cappella",
     "note": "L’ordine normale della lista."
+   }
+  ],
+  "incontri": [
+   {
+    "png": "jn-silvanus",
+    "leggi": "Silvanus cammina in testa alla colonna, col cappuccio tirato sugli occhi. Guarda la strada e il borgo in cima, e tace."
+   },
+   {
+    "png": "png-tiberius-aurentius",
+    "leggi": "Tiberius guida il primo carro, con le insegne arrotolate al suo fianco. Ha un taccuino aperto sulle ginocchia."
+   },
+   {
+    "png": "png-pasqualino",
+    "leggi": "In coda, un ragazzino magro e scalzo tira le sei vacche bianche cariche di basti. Le chiama per nome, una per una."
+   },
+   {
+    "png": "png-arben-e-ilir",
+    "leggi": "I due prigionieri camminano legati al quarto carro, con le fasciature sporche. Tengono gli occhi a terra."
+   },
+   {
+    "png": "png-memmo-chiodi",
+    "leggi": "Uno dei tornati del guado, un giovane con le spalle larghe, cammina in silenzio e guarda il borgo in cima alla salita."
    }
   ]
  },
@@ -40,8 +62,8 @@
     "x": 1150,
     "y": 850
    },
-   "text": "La strada lascia il fiume e sale fra gli ulivi. Due tornanti, poi un terzo. Muri a secco da una parte e dall’altra, così stretti che i carri ci passano con un palmo per lato. Mastro Giustino scende e cammina davanti ai buoi, con la mano sul giogo.\n\nCapre sui terrazzi. Un bambino con un bastone le guarda, poi guarda voi, e scappa su per i sassi. Qua e là una pietra è caduta dai muri sulla strada, e la terra sotto è ancora fresca. Anche qui la terra ha tremato, e da poco.\n\nIn cima, contro il cielo, un’ara bianca col campanile a vela, e le case del borgo strette sulla cresta. Più di un muro ha una crepa nuova. Due case hanno un palo puntato contro la facciata per tenerla su. Odore di pane, di stalla, di legna verde.\n\nLe donne smettono di stendere i panni per guardarvi passare. Nessuno saluta. Le porte si chiudono, una dopo l’altra, piano.",
-   "breve": "Peppino, il bambino delle capre, corre su ad avvisare. Il borgo ha già sentito il Bando: nessuno saluta. Da qui si sale all’ara e alle case; chi vola avanti (Zenith) vede la sbarra in fondo al borgo.",
+   "text": "La strada sale a tornanti fra muri a secco e ulivi. Sui terrazzi pascolano delle capre. In cima, contro il cielo, un’ara bianca col campanile a vela, e intorno le case del borgo, strette sulla cresta.\n\nAl vostro passaggio una campanella suona, poi tace. Le donne smettono di stendere i panni per guardarvi passare. Nessuno saluta.",
+   "breve": "La salita al borgo. Il bambino delle capre ha suonato la campanella dell’ara: il borgo sa che arriva la colonna e ha paura del Bando. Da qui si va all’ara, alle case e alla fontana. Gancio: chi vola o corre avanti (Luigis con Zenith) vede dall’alto la sbarra della Guardia in fondo al borgo.",
    "gm": "1° novembre 1437, Tutti i Lucenti, metà giornata. Colleatterrato (canone, voce Teramum) è un borgo fuori le mura, a est della città sulla strada della costa: case povere costruite in fretta, le più colpite quando la terra trema (stanotte ha tremato: crepe fresche nei muri). La colonna risale la valle del Tordinum da Bëllindë, a nord-est: questa è la strada della costa, e la città si vede dal lato di levante. Da qui alla Porta Reale (la Porta della Madre) è meno di una lega, in discesa, poi il ponte sul Tordinum.\nLa salita di Colleatterrato è la seconda strettoia di Ze’ Cristofano: fra i muri a secco un carro non si gira e una colonna non si schiera.\nIl Bando: due giorni fa un banditore della Guardia l’ha letto sulla fontana, e una copia è inchiodata al pilastro (vedi «La fontana»). Il borgo ha paura di essere visto aiutare la Crociata.\nSulla mappa la colonna entra in basso a destra, sale i tornanti, entra nel borgo da est, passa l’ara e la fontana, arriva al belvedere a ovest, poi scende a sinistra verso la sbarra.",
    "nota": {
     "cd": 0
@@ -104,6 +126,12 @@
    ],
    "chi": [
     "png-peppino-delle-capre"
+   ],
+   "incontri": [
+    {
+     "png": "png-peppino-delle-capre",
+     "leggi": "Un bambino scalzo, con una camicia da uomo legata in vita con lo spago, vi guarda dall’alto di un terrazzo con un bastone in mano. Se vi avvicinate, si tiene a distanza e vi studia."
+    }
    ]
   },
   {
@@ -116,8 +144,8 @@
     "x": 950,
     "y": 270
    },
-   "text": "L’ara è piccola: dieci passi, calce bianca dentro e fuori. Sopra la porta un campanile a vela, con una campana sola e la corda che scende fino a terra.\n\nDentro è fresco e buio, odore di cera. Sull’altare un lumino solo, in una ciotola d’olio. Qualcuno lo tiene acceso ogni giorno.\n\nDietro l’altare, dipinto, un gigante di pietra dorme disteso, e sulla sua fronte sta in piedi un lucente col bastone. È un dipinto di campagna, pochi colori, ma gli occhi del gigante sono chiusi bene.\n\nSulle pareti, i voti: cuori di latta, gambe di cera, una tavoletta con una casa che crolla. In mezzo, appesa a un chiodo, una ciotola di legno nuova. Sotto, graffito nella calce: «PE’ QUILLE CHE S’È ALZATE DA TAVOLA».",
-   "breve": "L’ara del Lucente Berardo, col Gigante dipinto dietro l’altare e la ciotola coi quattro sassi per i Chiòdi. Il Dito del Lucente che porta Alessandros si scalda. Porta alla fontana, da Liberata.",
+   "text": "L’ara è una chiesetta piccola, bianca di calce, con una campana sola. Dentro è buio e fa fresco, e c’è odore di cera e di olio.\n\nSull’altare brucia un lumino. Dietro l’altare, dipinto, un gigante di pietra dorme disteso, e sulla sua fronte sta in piedi un lucente col bastone. Alle pareti sono appesi gli ex voto: cuori di latta, piccole figure di cera. In mezzo, appesa a un chiodo, una ciotola di legno nuova.",
+   "breve": "L’ara del Lucente Berardo che veglia sul Gigante. La ciotola nuova è un voto per i Chiòdi morti al guado: porta a Liberata, alla fontana. Gancio per Alessandros: la reliquia che porta con sé si scalda qui dentro (modulo nella scheda del punto).",
    "gm": "Dedica: il Lucente Berardo, il lucente più amato d’Aprutium e di Teramum, che «unì le tribù pretuziane»; qui dipinto sulla fronte del Gigante addormentato (la «pietra dove il Gigante sogna» del canone). È un dipinto di campagna, e la Fiamma di Teramum non l’ha mai fatto coprire perché nessuno sale fin qui.\nIl Dito del Lucente Berardo (con Alessandros, consegnato da Virellius): nel canone le reliquie «si raffreddano» o «si scaldano» davanti all’Equilibrio. Qui si scalda: il lucente e il Gigante insieme.\nLa campana: suonarla è un segnale che si sente fino alla sbarra. Il sergente manderà un uomo a vedere.",
    "nota": {
     "cd": 0
@@ -240,8 +268,8 @@
     "x": 520,
     "y": 250
    },
-   "text": "Fra due case, sulla strada, le corde dei panni: camicie, lenzuola, fasce da neonato. La cesta col resto dei panni è rimasta per terra, in mezzo alla strada. Chi stendeva non c’è più.\n\nLa casa di sinistra è una stanza sola. Il muro ha una crepa dalla soglia al tetto, e qualcuno ci ha infilato degli stracci. Dalla porta esce odore di minestra di fagioli.\n\nLa porta è socchiusa. Dentro, una culla che dondola. Un bambino piccolo mugola, e qualcuno gli fa «sss».\n\nSulla soglia, due paia di zoccoletti da bambino e un paio di scarpe da uomo, grandi e pulite. Sono le uniche scarpe senza fango in tutta la strada.",
-   "breve": "Menica, scappata dai casali di Sant’Atto coi due figli, ospite di Liberata: ha visto il votato giovane benedire i pozzi con la luna nuova. Apre solo a chi bussa con garbo, o se Liberata garantisce.",
+   "text": "Una casa di pietra come le altre, con le imposte socchiuse e una corda tesa fra due finestre, carica di panni ancora bagnati. Dal comignolo sale un filo di fumo.\n\nSulla soglia, due paia di zoccoletti da bambino e un paio di scarpe da uomo, grandi e pulite. Da dentro si sente piangere un neonato.",
+   "breve": "La casa di Menica, scappata dai casali di Sant’Atto coi due figli e ospitata da Liberata. Ha visto il votato benedire i pozzi: è un indizio sul veleno del guado. Apre solo a chi bussa con garbo, o se Liberata garantisce per voi.",
    "gm": "Menica è ospite di Liberata. È la testimone che mancava: la Forgiatura dei casali è passata per i pozzi benedetti da un votato giovane venuto «da un solario grande di Teramum», con la luna nuova, tre settimane fa (la sera stessa i Chiòdi hanno bevuto: vedi il guado). Chi è il votato: non Padre Elvirius, prigioniero a Julia Nova, ma uno della stessa scuola; il lillà nell’acqua del pozzo porta a Casa Velthuria (vedi «Il pozzo» al guado).\nSabatino, il marito di Menica, contadino dei casali di Sant’Atto, è uno dei Forgiati ferali del guado: W1, fra i contadini che scendono dai campi al round 3, l’uomo alto con l’orecchio sinistro mozzo. È caduto al guado: non è fra i cinque tornati persone (Atto XIX). È il momento più duro della strada: non forzarlo, lascialo ai giocatori.\n⟦Lucia, tornata persona, era nei campi con Sabatino e conosce Menica: se Menica la vede nella colonna, lo sa da lei prima che da voi.⟧",
    "nota": {
     "cd": 0
@@ -288,6 +316,12 @@
      "immagine": "PDI — Colleatterrato — Le scarpe sulla soglia.jpg",
      "png": "png-menica-de-li-fiore"
     }
+   ],
+   "incontri": [
+    {
+     "png": "png-menica-de-li-fiore",
+     "leggi": "Una giovane donna apre la porta di un palmo, con un bambino in braccio. Guarda prima le vostre armi, poi la strada alle vostre spalle."
+    }
    ]
   },
   {
@@ -300,8 +334,8 @@
     "x": 660,
     "y": 450
    },
-   "text": "In mezzo al borgo, una piazzetta di terra battuta con un gelso in un angolo. Una fontana di pietra con una vasca lunga per le bestie e un pilastro in mezzo. L’acqua esce da una bocca di leone, fredda e abbondante: la sentite prima di vederla.\n\nLe vostre bestie la sentono e tirano verso la vasca.\n\nSul pilastro, inchiodato con quattro chiodi, un foglio col sigillo di cera. È scritto grande, da leggersi da lontano.\n\nLe porte intorno sono chiuse. Sul bordo della vasca è seduta una vecchia vestita di nero, con un bastone e un mazzo di chiavi alla cintura. Riempie una brocca e non vi guarda. La brocca è piena da un pezzo: lei la tiene sotto l’acqua lo stesso.",
-   "breve": "Il Bando inchiodato al pilastro e Liberata de la Fonte, che dà l’acqua alle bestie e non ha paura di nessuno. Rosa Chiòdi era la sua figlioccia: se riconosce Mèmmo nella colonna, il borgo cambia faccia.",
+   "text": "La piazzetta del borgo è uno slargo di terra battuta con una fontana in mezzo: una vasca di pietra e un pilastro con un leone che getta acqua dalla bocca. Le bestie della colonna sentono l’acqua e tirano da quella parte.\n\nSul pilastro, inchiodato con quattro chiodi, un foglio col sigillo di cera. Sul bordo della vasca è seduta una vecchia vestita di nero, con un bastone e un mazzo di chiavi alla cintura.",
+   "breve": "Il Bando della città contro la Crociata, inchiodato al pilastro, e Liberata, l’unica nel borgo che non ha paura: dà l’acqua alle bestie. Gancio: Rosa Chiòdi, morta al guado, era la sua figlioccia; Mèmmo, il fratello di Berardo, cammina con la colonna e lei lo crede morto.",
    "gm": "Il Bando (o proclama) di Teramum: lo stesso che i PG hanno già in mano. Il canone lo vuole letto in ogni borgo da un banditore: qui è inchiodato alla fontana. Strapparlo davanti al borgo è un gesto (e il sergente lo scrive). Leggere in piazza la dichiarazione di Gisulfo sopra il Bando è la contromossa del canone: Persuasione con vantaggio.\nLiberata: madrina di Rosa Chiòdi (la moglie di Berardo Chiòdi, nuora di Zi’ Anselmo). Protegge Menica. Ha la chiave dell’ara.\n⟦Crede morti tutti i Chiòdi. Se riconosce Mèmmo in fondo alla colonna, lascia la brocca, gli va incontro col bastone e toglie il suo sasso dalla ciotola dell’ara: da quel momento il borgo smette di avere paura.⟧",
    "nota": {
     "cd": 0
@@ -364,6 +398,12 @@
      "pe": 200,
      "png": "png-liberata-de-la-fonte"
     }
+   ],
+   "incontri": [
+    {
+     "png": "png-liberata-de-la-fonte",
+     "leggi": "La vecchia riempie una brocca alla fontana senza fretta. Quando vi avvicinate alza gli occhi, chiarissimi, e vi guarda dritto in faccia, uno per uno."
+    }
    ]
   },
   {
@@ -376,8 +416,8 @@
     "x": 250,
     "y": 340
    },
-   "text": "In fondo al borgo la cresta finisce. Un terrazzo di terra battuta, un muretto a secco, una panca di pietra, un cipresso.\n\nLa strada si affaccia sulla valle. E la vedete.\n\nPrima le mura, di pietra chiara e mattone, a fasce. Poi le torri. Poi i tetti, fitti, fin dove due fiumi si stringono sotto la città. Una porta grande dalla vostra parte, con un prato davanti e una strada che ci arriva dritta dal ponte.\n\nSopra tutti i tetti, un campanile coi merli in cima, che prende ancora la luce. Dietro, altissimo, il Gigante, così vicino che sembra appoggiato alla città.\n\nSulle colline intorno a voi resta un po’ di sole. La città è già nell’ombra della montagna.",
-   "breve": "La prima vista di Teramum. Chi è di città riconosce i luoghi (Percezione o Storia per leggerla). Da qui si scende alla sbarra.",
+   "text": "In fondo al borgo la cresta finisce in un terrazzo con un muretto e un cipresso. Da qui la valle si apre tutta sotto di voi.\n\nLa strada scende a tornanti verso il fiume. Poi i tetti, fitti, fin dove due fiumi si stringono sotto la città. Sopra i tetti, torri e campanili; dietro, grigia e enorme, la montagna. La città è già nell’ombra della montagna.",
+   "breve": "La prima vista di Teramum. Chi è di città (Alessandros, Vicarus, Maximus) riconosce i luoghi principali; con Percezione o Storia si leggono porte e quartieri. Da qui si scende alla sbarra della Guardia.",
    "gm": "Luce: il Gigante blocca il sole del pomeriggio; a Teramum non si vedono i tramonti, solo le albe. Da qui le colline sono al sole e la città è già in ombra.\nCosa si vede (canone, voce Teramum): la città sta su una lingua di terra fra il Tordinum e la Vezzola, e da qui se ne vede la punta orientale, la città vecchia con la Torre Bruciata. Sopra tutto il campanile della Basilica Aurea (cinquanta braccia, i merli in cima: niente cupola). Verso la montagna la Terranova col Corso, fino a Piazza Garibaldi, con sopra, a Colleparco bassa, la Rocca di Casa Grazianus e Porta Due di Coppe; accanto i Tigli, il viale del passeggio. Davanti, a levante, Porta Reale, detta la Porta della Madre, con fuori la Lunaria delle Grazie e il Campo Fiera: la Crociata entrerà da lì. Le sette porte: Reale (est), Melatina (nord, sul Tordinum), Romana (sud, sopra la Vezzola), del Corso (ovest, in fondo al Corso), Carrese (sud-est), delle Recluse (sotto la Casa dei Folli), Due di Coppe.\nLegami (uno per PG, se i giocatori chiedono cosa riconoscono): Maximus è nato qui: riconosce la Rocca di Casa Grazianus a Colleparco bassa, oltre Piazza Garibaldi, la casa di suo padre, lo Stratega Lucius Grazianus; Alessandros e Vicarus hanno studiato qui (lo Studio di Teramum, sul colle di Colleparco a sud, e il palazzo dei Cerullius in città); Mattheus: se il giocatore dice da quale borgo viene, lo vede da qui; Martinella Lezzia, la fidanzata di Maximus, è di ⟦Castronia, un borgo a una lega da Teramum⟧; Adamus vede il tratturo lungo il Tordinum, verde, con le greggi; Luigis e Zenith leggono le porte.\nNon rivelare niente di ciò che sta sotto la città (Basilica Aurea, Sigillo, Città Sepolta).",
    "nota": {
     "cd": 0
@@ -494,8 +534,8 @@
     "x": 200,
     "y": 620
    },
-   "text": "A metà discesa, dove la strada esce dagli ulivi e si vede il ponte, una sbarra di legno di traverso su due cavalletti. Un telo tirato fra due ulivi contro l’umido, un tavolo da campo con un registro aperto, un calamaio, una brocca. Un cavallo sellato legato a un ulivo.\n\nQuattro uomini in tabarro grigio, con una torre e un lupo ricamati sul petto. Tre stanno in piedi con la picca. Il quarto, seduto al tavolo, alza gli occhi dal registro.\n\nVi conta. Lo vedete muovere le labbra: i carri, i cavalli, le facce. Si ferma sull’uomo col cappuccio, in testa alla colonna.\n\n«Fermi la colonna. Quanti siete. Da dove venite. Chi comanda.»",
-   "breve": "Il sergente Benedetto Arcioni e tre guardie contano la colonna e la scrivono nel registro, che parte a cavallo per la città. Non fermano: contano. Conta cosa finisce scritto, e se Silvanus si toglie il cappuccio.",
+   "text": "A metà discesa una sbarra di legno chiude la strada. Accanto, un telo teso fra due ulivi ripara dall’umido un tavolo da campo con un registro aperto. Due cavalli sono legati a un albero.\n\nQuattro uomini in tabarro grigio, con una torre e un lupo ricamati sul petto. Tre stanno in piedi con le picche; il quarto è seduto al tavolo, con la penna in mano.",
+   "breve": "Il picchetto della Guardia Ducale: non ferma la colonna, la conta e la scrive nel registro, che poi parte a cavallo per la città. Contano cosa finisce scritto e se Silvanus si scopre il volto. Gancio per Maximus: la Guardia è di suo padre, e i soldati lo riconoscono.",
    "gm": "Il Bando è arrivato prima di loro: il picchetto ha l’ordine di contare, non di fermare. Il registro arriva in città prima della colonna ed è ciò che la Guardia alla porta avrà in mano (vedi Arrivo a Teramum).\nIl tabarro grigio con la torre e il lupo viene dal motto di Casa Grazianus, «La Torre e il Lupo».\nIl sergente è onesto e stanco. Ha un secondo ordine, a voce: se passa un Grazianus, mandare subito il cavallo. L’ha dato Lucius Grazianus, lo Stratega, capo della Guardia e padre di Maximus (Atti): vuole sapere prima di tutti quando arriva suo figlio.\nIl lasciapassare di Ansaldo ce l’ha Maximus. Ansaldo è morto all’osteria e il convoglio non è partito: oggi alla sbarra non è passato nessun carro di Ansaldo.",
    "nota": {
     "cd": 0
@@ -627,6 +667,20 @@
    ],
    "chi": [
     "png-guardie-del-picchetto"
+   ],
+   "incontri": [
+    {
+     "png": "png-benedetto-arcioni",
+     "leggi": "Il sergente seduto al tavolo ha i capelli grigi corti e le dita sporche d’inchiostro. Alza la testa dal registro, vi guarda e intinge la penna."
+    },
+    {
+     "png": "png-guardie-del-picchetto",
+     "leggi": "Le tre guardie tengono le picche dritte, tutte alla stessa altezza. Vi guardano senza muoversi e aspettano un cenno del sergente."
+    },
+    {
+     "png": "png-cavaliere-sulla-collina",
+     "leggi": "Lontano, su un’altura oltre la strada, un cavaliere senza stemma sta fermo accanto a una quercia e guarda la sbarra. Se qualcuno va verso di lui, gira il cavallo e sparisce oltre la cresta."
+    }
    ]
   },
   {
@@ -639,8 +693,8 @@
     "x": 160,
     "y": 930
    },
-   "text": "Dalla strada che sale dalla città arriva di corsa un mulo, con la bava alla bocca. Sopra, un ragazzo in camicia nonostante il freddo, schizzato di fango fino ai capelli.\n\nSi ferma davanti alla colonna e scende prima che il mulo sia fermo. Quasi cade. Ha un sacchetto di cuoio al collo e lo tiene stretto con una mano.\n\nVhaerun gli si para davanti, ma il ragazzo non lo guarda. Guarda i cavalieri, uno per uno. Poi dice un nome.\n\n«Maximus Grazianus.»",
-   "breve": "Vitale lu Messo porta a Maximus un biglietto: «Non entrare stasera. — G.» Lo manda suo padre, Lucius Grazianus. Da qui si decide: scendere subito alla porta o passare la notte qui.",
+   "text": "Dalla strada che sale dalla città arriva al trotto un mulo, sporco di fango fino alla pancia. Sopra c’è un ragazzo infreddolito, col mantello bagnato e un sacchetto di cuoio appeso al collo.\n\nSi ferma davanti alla colonna e scende. Guarda i cavalieri, uno per uno. Poi dice un nome.",
+   "breve": "Il messo porta a Maximus un biglietto: «Non entrare stasera. — G.» Lo manda suo padre, Lucius Grazianus. Da qui i giocatori decidono se scendere subito alla porta o passare la notte qui.",
    "gm": "Il biglietto: carta buona, piegata in quattro, cera semplice senza impronta. Una riga, scritta di fretta con una mano abituata agli ordini: «Non entrare stasera. — G.»\nChi è G.: Grazianus. Il padre di Maximus è lo Stratega Lucius Grazianus, capo della Guardia Ducale (Atti). È venuto lui al ponte, prima dell’alba, col grigio della Guardia sotto il mantello e la torre coperta (calvo, la barba grigia corta: vedi la sua scheda). È il «segnale» che il falco prometteva («Aspetta mio segnale. — Grazianus»), arrivato tardi.\nCosa cambia: se la colonna entra stasera, entra nella notte in cui qualcuno sa che è meglio di no (la Guardia raddoppiata dopo il terremoto; il secondo ordine del sergente di porta). Se aspetta, si accampa fuori (vedi Arrivo a Teramum: il tratturo).\nIl messo è arrivato mentre il ragazzo del sergente scendeva col registro: chi guarda bene (Percezione CD 13) vede i due incrociarsi senza salutarsi.",
    "nota": {
     "cd": 0
@@ -703,6 +757,12 @@
      ],
      "dopo": "La scelta passa ai giocatori: entrare stasera o accamparsi fuori. È la porta verso Arrivo a Teramum.",
      "rilancio": "La città è lì sotto, nell’ombra. Che cosa fate?"
+    }
+   ],
+   "incontri": [
+    {
+     "png": "png-vitale-lu-messo",
+     "leggi": "Il ragazzo ha diciassette anni e la voce che ancora si spacca. Tiene stretto il sacchetto con una mano e cerca con gli occhi chi comanda."
     }
    ]
   }
