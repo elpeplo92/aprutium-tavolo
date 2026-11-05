@@ -101,6 +101,9 @@
       "colle_case"
      ]
     }
+   ],
+   "chi": [
+    "png-peppino-delle-capre"
    ]
   },
   {
@@ -621,6 +624,9 @@
      "rilancio": "Che cosa fate?",
      "daqui": []
     }
+   ],
+   "chi": [
+    "png-guardie-del-picchetto"
    ]
   },
   {
@@ -1236,7 +1242,7 @@
    "best": "popolano",
    "x": 1165,
    "y": 190,
-   "gruppo": "colonna",
+   "gruppo": "borgo",
    "tac": "Otto anni, scalzo. Il sergente della sbarra dà un soldo a chi suona la campana quando arrivano uomini armati.",
    "png": "png-peppino-delle-capre"
   },
@@ -1249,7 +1255,9 @@
    "y": 1025,
    "gruppo": "colonna",
    "png": "png-pasqualino",
-   "tac": "Cammina in coda con le vacche. Ha chiesto lui di venire."
+   "tac": "Cammina in coda con le vacche. Ha chiesto lui di venire.",
+   "img": "TOKEN — Pasqualino.png",
+   "ritratto": "Ritratto pedina — Pasqualino.jpg"
   },
   {
    "id": "g_vac",
@@ -1261,24 +1269,5 @@
    "gruppo": "colonna",
    "tac": "Le vacche della carovana vesperiana, prese all’osteria. La più vecchia ha parlato con Adamus. Portano il carico che i carri bruciati non portano più."
   }
- ],
- "serata": {
-  "titolo": "La serata",
-  "stato": [
-   "1° novembre 1437, Tutti i Lucenti. La colonna è a Colleatterrato. Domani è il Giorno dei Morti.",
-   "35 anime, 5 carri, 29 bestie. Viveri finiti, cassa 620, coesione 3.",
-   "Con voi: Arben e Ilir prigionieri, Pasqualino, le sei vacche."
-  ],
-  "passi": [
-   "Colleatterrato: l’ara, Liberata e Menica, la fontana e il Bando, il belvedere.",
-   "La sbarra: il sergente Arcioni conta la colonna.",
-   "Vitale porta a Maximus il biglietto di Lucius.",
-   "Notte qui o discesa subito: decidono loro.",
-   "La Porta della Madre: ponte, dazio, sergente Iaco, scrivano dei Chiodi, cappuccio di Silvanus.",
-   "Il Centro nel Giorno dei Morti: il Tempio di Mortus aperto per Mattheus.",
-   "Il palazzo Cerullius: portone chiuso, lo zio Vincenzus, Ottorino.",
-   "Dove dormire: i Tigli invitano, Lu Cane Bianche è per i poveri.",
-   "Fine: la prima notte a Teramum."
-  ]
- }
+ ]
 }
