@@ -2805,7 +2805,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v342</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v343</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -13829,4 +13829,85 @@ body.sc-citta #world .poi.unrev{opacity:1!important}
   connect();
 })();
 /* ===== FINE SCENE, SCHEDA SOLA E CO-MASTER (v340) ===== */
+/* ===== LA SCHEDA DEL PNG IN UNA FINESTRA (v343) =====
+   Giuseppe (5-11): «ogni scheda del Compendio deve essere una sorta di pop-up che compare indipendente: se chiudo il Compendio e vado
+   sul tavolo la scheda può restare aperta; se clicco un'altra scheda cambia. Dietro niente schermata nera. Devo poter mostrare il ritratto
+   ai giocatori. La scheda di Peppino è illeggibile per gestire il dialogo.»
+   Finestra mobile (si trascina dalla testata), non modale, sopra la mappa. Per i PNG un'impaginazione da usare al tavolo: come si presenta
+   (da leggere, in corsivo), voce, cosa vuole / teme / come cede, cosa sa e non sa, segreto, «Se gli chiedono di…» con le risposte,
+   reazioni, battute pronte, come chiude. Le altre voci: testo per i giocatori e note del master. «Mostra il ritratto ai giocatori».
+   Fonte: 7_Aprutium/Revisioni/La guida del master (novembre 2026)/v343/scheda.js */
+(function(){
+  const esc=s=>poiText(s==null?'':s);
+  const md=s=>esc(s).replace(/\*([^*\n]+)\*/g,'<em>$1</em>').replace(/\n/g,'<br>');
+  const pl=v=>typeof c2Plain==='function'?c2Plain(v):String(v||'');
+  function campi(gm){ const o={}, altro=[]; let k=null;
+    for(const r of String(gm||'').split(/\n/)){ const m=r.match(/^\s*([A-ZÀ-Ý][A-Za-zÀ-ÿ’' ]{1,24}?)(?:\s*\([^)]*\))?\s*:\s*(.*)$/);
+      if(m){ k=m[1].trim(); o[k]=(o[k]?o[k]+' ':'')+m[2]; } else if(r.trim()){ if(k&&!/^\s*$/.test(r)) o[k]+='\n'+r; else altro.push(r); } }
+    return {o,altro}; }
+  function sezione(t,h,cls){ return h?`<section class="ps-s ${cls||''}"><h4>${t}</h4><div>${h}</div></section>`:''; }
+  function htmlPng(e){
+    const d=(typeof DIALOGHI_DATA!=='undefined'&&DIALOGHI_DATA[e.id])||e.dialogo||{};
+    const {o}=campi(pl(e.gm)); const g=k=>o[k]||'';
+    let h='';
+    if(d.apertura) h+=sezione('Quando vi avvicinate',`<p class="ps-leggi">${md(d.apertura)}</p>`);
+    else if(e.pub) h+=sezione('Come appare',`<p class="ps-leggi">${md(pl(e.pub))}</p>`);
+    h+=sezione('Voce e modi',md(d.voce||g('Voce')));
+    const vtc=[['Vuole',g('Vuole')||g('Cosa vuole')],['Teme',g('Teme')||g('Cosa teme')],['Come cede',g('Cede')||g('Come lo si conquista')]].filter(x=>x[1]);
+    if(vtc.length) h+=`<section class="ps-s ps-g3">${vtc.map(([t,v])=>`<div><h4>${t}</h4><div>${md(v)}</div></div>`).join('')}</section>`;
+    const sa=[['Sa',g('Sa')],['Non sa',g('Non sa')]].filter(x=>x[1]);
+    if(sa.length) h+=`<section class="ps-s ps-g2">${sa.map(([t,v])=>`<div><h4>${t}</h4><div>${md(v)}</div></div>`).join('')}</section>`;
+    if(g('Segreto')||g('Segreto piccolo')) h+=sezione('Segreto (non lo dice)',md(g('Segreto')||g('Segreto piccolo')),'ps-seg');
+    if((d.argomenti||[]).length) h+=sezione('Se gli chiedono di…',d.argomenti.map(a=>`<div class="ps-arg"><b>${esc(a.tema)}</b>${a.domanda?`<span class="ps-dom">${md(a.domanda)}</span>`:''}<p>${md(a.risposta)}</p>${a.insistono?`<p class="ps-ins"><i>Se insistono:</i> ${md(a.insistono)}</p>`:''}${a.prova?`<p class="ps-prova">Prova: ${esc(typeof a.prova==='string'?a.prova:[(a.prova.abilita||[]).join(' o '),a.prova.cd?'CD '+a.prova.cd:''].join(' '))}</p>`:''}${a.mai?`<p class="ps-mai"><i>Non dice mai:</i> ${md(a.mai)}</p>`:''}</div>`).join(''));
+    if(d.reazioni&&Object.keys(d.reazioni).length) h+=sezione('Se lo…',`<dl class="ps-rea">${Object.entries(d.reazioni).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${md(v)}</dd>`).join('')}</dl>`);
+    if((d.battute||[]).length) h+=sezione('Battute pronte',`<ul class="ps-bat">${d.battute.map(b=>`<li>${md(b)}</li>`).join('')}</ul>`);
+    if(d.uscita&&d.uscita.frase) h+=sezione('Come chiude',`<p class="ps-leggi">${md(d.uscita.frase)}</p>`);
+    const piu=[['Chi è',g('Chi è')],['Aspetto',g('Aspetto')],['Età',g('Età')],['Statistiche',g('Statistiche')]].filter(x=>x[1]);
+    if(piu.length) h+=`<details class="ps-s ps-piu"><summary>Chi è, aspetto, statistiche</summary>${piu.map(([t,v])=>`<p><b>${t}:</b> ${md(v)}</p>`).join('')}</details>`;
+    if(!h) h=sezione('Note del master',md(pl(e.gm)));
+    return h; }
+  function htmlVoce(e){ let h=''; if(e.pub) h+=sezione('Per i giocatori',`<p class="ps-leggi">${md(pl(e.pub))}</p>`); if(IS_GM&&e.gm) h+=sezione('Solo master',md(pl(e.gm))); return h||'<p>Voce vuota.</p>'; }
+  let win=null, cur=null;
+  function finestra(){ if(win&&win.isConnected) return win;
+    win=document.createElement('div'); win.id='schedaPop'; win.className='hidden';
+    win.innerHTML='<div class="ps-h" id="psH"><div class="ps-ri" id="psRi"></div><div class="ps-ti"><b id="psT"></b><span id="psS"></span></div><button class="ps-x" id="psX" title="Chiudi">×</button></div><div class="ps-az" id="psAz"></div><div class="ps-c" id="psC"></div>';
+    document.body.appendChild(win);
+    ['pointerdown','wheel','keydown'].forEach(ev=>win.addEventListener(ev,e=>e.stopPropagation(),ev==='wheel'?{passive:true}:false));
+    win.querySelector('#psX').onclick=()=>{ win.classList.add('hidden'); cur=null; };
+    /* trascina dalla testata */
+    const h=win.querySelector('#psH'); let dx=0, dy=0, on=false;
+    h.addEventListener('pointerdown',e=>{ if(e.target.closest('button')) return; on=true; const r=win.getBoundingClientRect(); dx=e.clientX-r.left; dy=e.clientY-r.top; h.setPointerCapture(e.pointerId); });
+    h.addEventListener('pointermove',e=>{ if(!on) return; win.style.left=Math.max(0,Math.min(innerWidth-120,e.clientX-dx))+'px'; win.style.top=Math.max(0,Math.min(innerHeight-60,e.clientY-dy))+'px'; win.style.right='auto'; });
+    h.addEventListener('pointerup',()=>{ on=false; });
+    return win; }
+  window.apriScheda=function(id){
+    const e=c2All().find(x=>x.id===id); if(!e){ toast('Scheda non trovata'); return; }
+    const w=finestra(); cur=id; const img=c2Img(e);
+    w.querySelector('#psRi').style.backgroundImage=img?`url('${img}')`:'none';
+    w.querySelector('#psT').textContent=e.title||''; w.querySelector('#psS').textContent=e.sub||'';
+    w.querySelector('#psAz').innerHTML=(IS_GM&&img?'<button class="mini primary" id="psMostra">Mostra il ritratto ai giocatori</button>':'')+(IS_GM?'<button class="mini" id="psComp">Apri nel Compendio</button>':'');
+    w.querySelector('#psC').innerHTML=e.cat==='png'?htmlPng(e):htmlVoce(e); w.querySelector('#psC').scrollTop=0;
+    const m=w.querySelector('#psMostra'); if(m) m.onclick=()=>{ showToPlayers({img,title:e.title,to:'*'}); toast('Ritratto mostrato ai giocatori'); };
+    const c=w.querySelector('#psComp'); if(c) c.onclick=()=>{ c2Open=id; openCompendio(); };
+    w.classList.remove('hidden'); };
+  const css=document.createElement('style'); css.id='schedaPopCss'; css.textContent=`
+#schedaPop{position:fixed;z-index:70;top:70px;right:min(32vw,620px);width:min(560px,40vw);max-height:calc(100vh - 100px);display:flex;flex-direction:column;background:#E9DDBF;color:#2A2118;border:1px solid #B08A3E;border-radius:8px;box-shadow:0 14px 44px rgba(0,0,0,.65);font-family:'Bookinsanity',Georgia,serif}
+#schedaPop.hidden{display:none}
+#schedaPop .ps-h{display:flex;gap:10px;align-items:center;padding:8px 10px;background:#12161D;color:#F6E3A8;border-radius:8px 8px 0 0;cursor:move;user-select:none}
+#schedaPop .ps-ri{flex:none;width:64px;height:64px;border-radius:50%;background:#333 center 20%/cover;border:2px solid #D9B15C}
+#schedaPop .ps-ti{flex:1;min-width:0} #schedaPop .ps-ti b{display:block;font:400 24px/1.05 'Mr Eaves Small Caps',Georgia,serif;color:#D9B15C} #schedaPop .ps-ti span{display:block;font-size:13px;line-height:1.3;opacity:.85}
+#schedaPop .ps-x{flex:none;width:30px;height:30px;border-radius:6px;border:1px solid rgba(217,177,92,.5);background:transparent;color:#F6E3A8;font-size:20px;cursor:pointer}
+#schedaPop .ps-az{display:flex;gap:6px;flex-wrap:wrap;padding:6px 10px;background:#1B1F27}
+#schedaPop .ps-c{overflow:auto;padding:10px 14px 14px;font-size:16px;line-height:1.42}
+#schedaPop .ps-s{margin:0 0 12px} #schedaPop h4{margin:0 0 3px;font:400 17px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;color:#7A3B12;border-bottom:1px solid rgba(122,59,18,.25)}
+#schedaPop .ps-leggi, #schedaPop em{font-style:italic} #schedaPop .ps-leggi{margin:0;padding:6px 10px;background:rgba(255,255,255,.35);border-left:3px solid #B08A3E}
+#schedaPop .ps-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px} #schedaPop .ps-g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#schedaPop .ps-seg>div{background:rgba(122,40,30,.10);padding:4px 8px;border-left:3px solid #8C2F1E}
+#schedaPop .ps-arg{margin:0 0 10px;padding:0 0 8px;border-bottom:1px dotted rgba(122,59,18,.3)} #schedaPop .ps-arg b{font:400 17px 'Mr Eaves Small Caps',Georgia,serif;color:#2A2118;margin-right:6px} #schedaPop .ps-dom{font-size:14px;opacity:.7} #schedaPop .ps-arg p{margin:3px 0}
+#schedaPop .ps-ins,#schedaPop .ps-mai,#schedaPop .ps-prova{font-size:15px} #schedaPop .ps-mai{color:#8C2F1E} #schedaPop .ps-prova{color:#22507A}
+#schedaPop .ps-rea{display:grid;grid-template-columns:max-content 1fr;gap:3px 10px;margin:0} #schedaPop .ps-rea dt{font:400 16px 'Mr Eaves Small Caps',Georgia,serif;color:#7A3B12}
+#schedaPop .ps-bat{margin:0;padding-left:18px} #schedaPop .ps-piu summary{cursor:pointer;font:400 16px 'Mr Eaves Small Caps',Georgia,serif;color:#7A3B12}
+`; document.head.appendChild(css);
+})();
+/* ===== FINE LA SCHEDA DEL PNG IN UNA FINESTRA (v343) ===== */
 </script>
