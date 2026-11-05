@@ -1928,3 +1928,13 @@ Giuseppe: un manuale dell'avventura come Waterdeep: Dragon Heist, da Colleatterr
 - **Blocchi nuovi**: «LA SERATA NEL REGISTRO» (campo `serata` della scena: riquadro in cima al Registro, solo master, spunte in `localStorage`), «BARRE DEL MASTER» (`#zoomctl` griglia a due colonne da 40 px; `#selBar` si chiude con × o Esc), «PEDINE FUORI DALLA GUIDA» (riquadro `#secPedine` a sinistra sotto Bestiario). Fonti `serata.js`, `barre.js`, `pedine.js` in `Revisioni/Sessione del 02-11-2026/`.
 - Lista unica dei lavori: `Revisioni/Sessione del 02-11-2026/LISTA DEI LAVORI.md`. Prossimo: Guida della scena secondo `Revisioni/La guida del master (novembre 2026)/Disegno di Giuseppe.md`.
 - Prova: `prova-tavolo.js` verde (70 e 40 comandi).
+
+## v338 (05/11/2026) — la Guida della scena da leggere
+
+- Giuseppe (5-11, prima della sessione): «La sezione per il master non mi serve. L'introduzione sì, e il copione da leggere dei punti d'interesse. Se c'è un personaggio, un collegamento alla sua scheda.» E la serata nel Registro «non serve a nulla».
+- Script rigiocabile: `7_Aprutium/Revisioni/La guida del master (novembre 2026)/v338/applica.py` (con `intro.js` e `guida.js`).
+- **Guida del master**: via «Per il master» (`gmNoteHtml` non si chiama più; la nota `intro.note` resta nei dati). L'introduzione è il primo punto (✦), sempre aperta, con immagine, testo, «Mostra ai giocatori» e «Con la colonna» (i PNG del gruppo `colonna`). Poi i punti in ordine di gioco, tutti aperti, niente fisarmoniche: immagine, testo da leggere (`text`), «Chi c'è», tre tasti (Svela / Sulla mappa / Scheda del punto). Moduli, prove e note restano nella scheda del punto. Le classi `gpoi` e `gbody` restano (il bastione ci aggancia il suo tasto).
+- **Chi c'è** = i `png` dei moduli del punto più il campo nuovo `chi` del punto (array di id del Compendio). Il tasto apre la voce del Compendio (`c2Open=id; openCompendio()`), dove ci sono voce, cosa vuole e il dialogo. Campi `chi` messi in `colleatterato` (Peppino alla salita, guardie alla sbarra) e `teramum_porta` (votato e donna con le galline al ponte, uomo senza elmo alla porta, corriere al tavolo).
+- **Via la serata**: tolto il blocco «LA SERATA NEL REGISTRO (v337)» e il campo `serata` di `colleatterato.json`.
+- Pedine: Pasqualino (`g_pas`) col suo token; Peppino (`c_bam`) passa al gruppo `borgo`. Senza immagine restano i carri, le vacche, Peppino, il votato sull'asino, Lu Russe, Za' Flaminia, i frati e Ninuccio della Casa dei folli: ritratti in lavorazione con Midjourney.
+- Prova: `prova-tavolo.js` verde (71 e 40 comandi).
