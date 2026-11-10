@@ -1970,3 +1970,7 @@ Fonti rigiocabili in `7_Aprutium/Revisioni/La guida del master (novembre 2026)/`
 ## v350 (10-11-2026, durante la sessione)
 
 Scena nuova `casalena` («La stalla di Casalena», ordine 6.1): battlemap GPT Image 2.6 (1920×1290, griglia), cinque punti (cancello, cortile e forgia, stalla, fienile, casa e cantina) coi moduli presi dal punto `colle_casalena` di Colleatterrato, tutti `nota.auto:false` (niente «Fermi tutti»). Pedine in tre gruppi: `casa` (Zi' Nicandro, Tonino, stallieri Ciccone e Marzio, due mastini, Rubino), `fienile` (Guelfo), `notte` (Lanfranco e due Osservatori). PNG nuovi `png-zi-nicandro` e `png-tonino-di-casalena` col dialogo. Ritratti Midjourney (scelte mie: Nicandro 1, Tonino 1, mastini 3, Rubino 1). Fonte rigiocabile: `Revisioni/Scene al Manuale (10-11-2026)/casalena/casalena.py`.
+
+## v351 (11-11-2026)
+
+Scena `casalena` con la nebbia (`regole.nebbia: true`): il master la attiva e rivela col pennello.
