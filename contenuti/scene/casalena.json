@@ -1,0 +1,347 @@
+{
+ "id": "casalena",
+ "nome": "La stalla di Casalena",
+ "menu": "La stalla di Casalena",
+ "citta": "La strada per Teramum",
+ "ordine": 6.1,
+ "mappa": {
+  "img": "BATTLEMAP — Casalena.jpg",
+  "larghezza": 1920,
+  "altezza": 1290,
+  "griglia": true
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "tutti",
+  "strumentiDungeon": true,
+  "segnaposto": false
+ },
+ "intro": {
+  "leggi": "Oltre un fosso, mezz'ora a nord del borgo, una masseria di pietra e mattone con un cortile chiuso da un muro e una stalla lunga e bassa. Sopra il cancello, un ferro di cavallo inchiodato per fortuna.\n\nDal cortile viene il colpo regolare di un martello. Due cani grossi alla catena si alzano tutti e due insieme.",
+  "note": "La stazione dei cavalli di Zi' Nicandro, dove la rete della Signora cambia i cavalli dei corrieri. Qui aspetta Guelfo, con la lettera della rosa addosso e il cavallo zoppo. Il cavallo si ferra al vespro: prima scappa a piedi, dopo a cavallo. Alla seconda ora di notte arriva Lanfranco.",
+  "img": "BATTLEMAP — Casalena.jpg"
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "cas_cancello",
+   "kind": "porta",
+   "title": "Il cancello",
+   "legacyPosition": {
+    "x": 1011,
+    "y": 1032
+   },
+   "text": "Un muro a secco tutto intorno, alto quanto un uomo. Un cancello di legno a due battenti, con un ferro di cavallo inchiodato sopra per fortuna. Di là, il colpo regolare di un martello e due cani che si alzano tutti e due insieme.",
+   "breve": "Di notte il cancello è sbarrato: si apre a chi dice «Lana per i tintori». Alla seconda ora di notte arriva Lanfranco con due Osservatori (uno resta al cancello, uno sul sentiero).",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "moduli": [
+    {
+     "id": "lanfranco",
+     "tipo": "dialogo",
+     "titolo": "L'uomo col bel mantello",
+     "parte": "evento",
+     "innesco": "Seconda ora di notte, se i personaggi sono alla stalla o ci tornano.",
+     "leggi": "Tre colpi al cancello, leggeri. Una voce cortese: «Lana per i tintori.»\n\nQuando il cancello si apre entra un uomo col mantello buono e la lanterna abbassata. Un odore dolce di fiori arriva prima di lui. Saluta i cani per nome.",
+     "note": "Lanfranco (spia: Inganno +7, Intuizione +5, Furtività +6; trentacinque anni, mani lisce, profuma di lillà e appena di cenere, spilla d'argento a ragno al bordo del mantello). Dice di comprare lana. Due Osservatori restano fuori, uno al cancello e uno sul sentiero (spie in grigio, pugnale avvelenato +1d6 solo per scappare; se presi tacciono un giorno, poi dicono «Lei lo sa già»; sotto il grigio un sigillo d'osso nero col fiore).\nVa dritto da Guelfo, prende la lettera, legge il secondo foglio alla lanterna, riparte a piedi verso il ponte della Melatina.\nAGGUATO: non combatte, grida «Aiuto! Mi derubano!»; a Casalena nessuno lo aiuta. Preso, dice cose vere e inutili; con Intimidire o Persuasione CD 18: «Riferisco a una casa. Una casa non ha nome.» Il nome della Signora non lo dice mai, nemmeno con la magia: tace. Consegnato alla Guardia, un notaio dei Chiodi lo fa uscire prima di sera. La spilla presa apre la Porta Carrese una volta, stanotte o domani notte.\nIL SIGILLO D'OSSO DI ANSALDO: se Maximus lo mostra al buio e dice qualcosa di giusto («Lana per i tintori», «Vengo da parte del messere»), Inganno CD 13. Se riesce, Lanfranco lo crede un corriere: «Perdonate. Credevo che le carte del messere fossero perse. Allora ditemi voi: il capitano. Gli occhi. Li avete visti?» Gli si può far dire la parola della Carrese («Per la madre del sergente»), dove lasciargli messaggi (al banco del lillà, ai Tigli, a nome «Lana») e che «la signora vuole il capitano a Teramum, intero, e voi tutti stanchi». Una domanda che un corriere dovrebbe già sapere: Inganno CD 15. Un errore e Lanfranco sorride, dice «perdonate» e se ne va.\nSE NESSUNO INTERVIENE: prima dell'alba al ponte della Melatina consegna tutto a un messo per i Tigli. All'alba la Signora sa. Poi si mette in fila sul ponte davanti alla Porta della Madre.",
+     "rilancio": "Che cosa fate?",
+     "pedine": [
+      "notte"
+     ]
+    }
+   ],
+   "gm": "Chi c'è: Zi' Nicandro Saccoccia (bruto, martello 1d8+2; sessant'anni, un occhio solo), il garzone Tonino (quattordici anni), due stallieri della rete, Ciccone e Marzio (banditi, fuggono quando uno cade o vedono più di tre armati), due mastini alla catena (Percezione passiva 13), Guelfo (esploratore, 16 PF, spada corta +3; non attacca mai per primo, colpisce solo chi tocca il cavallo) e Rubino, il suo baio.\nDi notte il cancello è sbarrato e si apre solo a chi dice «Lana per i tintori» (lo sanno Guelfo, Tonino, Zi' Nicandro per 10 mo).\nL'allarme: i cani abbaiano a chi entra senza Zi' Nicandro. Al primo abbaio Guelfo si affaccia dal fienile; al secondo round gli stallieri escono con le mazze; Zi' Nicandro esce col martello ma non attacca. Guelfo scappa: a piedi dalla finestrella del fienile giù per il fosso verso la Gammarana, o a cavallo dalla porta delle bestie se è già ferrato.\nNessuno qui vuole combattere per la Signora: Zi' Nicandro vuole solo che non gli tocchino i cavalli."
+  },
+  {
+   "schemaVersion": 3,
+   "id": "cas_cortile",
+   "kind": "persona",
+   "title": "Il cortile e la forgia",
+   "legacyPosition": {
+    "x": 1440,
+    "y": 710
+   },
+   "text": "Un cortile di terra battuta, un pozzo, un abbeveratoio di pietra. Sotto una tettoia nera di fumo, una forgia accesa e decine di ferri di cavallo appesi a un’asta.",
+   "breve": "Zi’ Nicandro alla forgia. I mastini alla catena (Percezione passiva 13): abbaiano a chi entra senza di lui.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "moduli": [
+    {
+     "id": "nicandro",
+     "tipo": "dialogo",
+     "titolo": "Zi' Nicandro alla forgia",
+     "parte": "indizio",
+     "innesco": "Qualcuno entra nel cortile o chiede di Guelfo.",
+     "leggi": "Sotto una tettoia nera di fumo, una forgia accesa e un'incudine. Ferri di cavallo appesi a un'asta, a decine. Un vecchio con un occhio solo tiene un ferro rosso nella tenaglia e vi guarda col suo occhio buono.\n\n«La stalla è chiusa per i forestieri.» Il martello cade sul ferro. «Anche per i pellegrini.»",
+     "note": "Parla a sbuffi, chiude ogni frase con un colpo di martello. Nega, poi tratta. Cede ai soldi («Dieci fiorini e vi dico pure di che colore ha le mutande»), a una minaccia ai cavalli («Toccate i cavalli e vi ferro la faccia»), al nome della Guardia («Qua ferro i cavalli e basta»).\nSA: da un anno tiene tre cavalli pronti per «gente che paga in oro e non dice il nome»; i corrieri arrivano di notte e dicono «Lana per i tintori»; chi paga ha un mantello buono, profuma di fiori, porta una spilla d'argento a ragno e si fa chiamare Lanfranco; il ragazzo arrivato stamattina aspetta quell'uomo per dargli una lettera, «ha lavato le mani nell'abbeveratoio come se ci avesse ammazzato un maiale»; i fiorini sono leggeri, limati; alla fornace vecchia della Gammarana dormono «quelli del Ponte», che l'uomo dei fiori paga.\nSul ceppo c'è il ferro nuovo per Rubino, quasi finito; in una scatola di latta sei chiodi a testa di petalo: «Chiodi da signori. Il fabbro che li fa ha la mano fina. E l'anima no.»",
+     "rilancio": "Il martello aspetta. Che cosa fate?",
+     "pedine": [
+      "casa"
+     ]
+    }
+   ],
+   "gm": ""
+  },
+  {
+   "schemaVersion": 3,
+   "id": "cas_stalla",
+   "kind": "stanza",
+   "title": "La stalla",
+   "legacyPosition": {
+    "x": 480,
+    "y": 645
+   },
+   "text": "Una stalla lunga e bassa, fresca, buia. Sette poste, sette cavalli troppo belli per una masseria di collina.",
+   "breve": "Rubino nell’ultima posta, zoppo fino al vespro. Tonino col forcone. Il tesoro nella sacca della sella e sotto il pagliericcio.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "moduli": [
+    {
+     "id": "rubino",
+     "tipo": "dettaglio",
+     "titolo": "La stalla e Rubino",
+     "parte": "indizio",
+     "innesco": "Qualcuno entra nella stalla.",
+     "leggi": "Una stalla lunga e bassa, fresca, buia. Sette cavalli nelle poste, troppo belli per una masseria di collina. Nell'ultima posta, da solo, un baio con la testa bassa che tiene sollevato lo zoccolo anteriore sinistro.\n\nSopra le poste, una scala a pioli sale nel buio, verso il fienile.",
+     "note": "Rubino ha i ferri coi chiodi a rosa; fino al vespro gli manca l'anteriore sinistro. Con Parlare con gli animali: «Il mio ragazzo piange la notte. Si lava le mani. Due notti fa è salito dove dormiva l'uomo nero. È sceso con l'odore del ferro rosso. Poi abbiamo corso. Ho perso la scarpa sui sassi. Fa male.» Chi aspettano: «L'uomo dei fiori. Viene col buio. Dà le carote. Non mi piace.» Se Adamus gli cura lo zoccolo, o Luigis lo ferra (un'ora con gli attrezzi da fabbro), Rubino da allora segue chi l'ha curato, e Guelfo lo vede.\nI mastini, con Parlare con gli animali: «Il ragazzo nuovo è sopra. Sa di paura e di mele. L'uomo dei fiori viene quando è buio.»\nTESORO: nella sacca della sella di un cavallo della rete, 30 fiorini d'oro limati sul bordo (Indagare CD 12: ognuno ha perso un'unghia d'oro, tutti nello stesso punto). Sotto un pagliericcio degli stallieri, 2 fiorini limati e un foglio con un ragno, una porta con due torri (la Carrese) e «seconda di notte».",
+     "rilancio": "Che cosa fate?"
+    },
+    {
+     "id": "tonino",
+     "tipo": "dialogo",
+     "titolo": "Tonino, il garzone",
+     "parte": "indizio",
+     "innesco": "Qualcuno parla col ragazzo che pulisce la stalla, o gli dà un pezzo di pane.",
+     "leggi": "Un ragazzino con la forca del letame in mano vi guarda da dietro una posta. Guarda il pane prima di guardare voi.",
+     "note": "«Zi' Nicandro nun vole che parlo. Ma ho fame.» Sa la parola del cancello, sa che in cantina c'è una nicchia dietro una lastra, sa che il ragazzo arrivato stamattina «ha pianto nel fienile, piano, per non farsi sentire dai cani». «Quelli della notte picchiano i cavalli col manico della frusta. Il ragazzo nuovo no: il ragazzo nuovo gli parla.»",
+     "rilancio": "Che cosa fate?"
+    }
+   ],
+   "gm": ""
+  },
+  {
+   "schemaVersion": 3,
+   "id": "cas_fienile",
+   "kind": "stanza",
+   "title": "Il fienile",
+   "legacyPosition": {
+    "x": 400,
+    "y": 903
+   },
+   "text": "In fondo alla stalla, una scala a pioli sale al fienile: fieno fino alle travi e una finestrella sul fosso.",
+   "breve": "Guelfo con la lettera addosso. Se vede armati salta dalla finestrella sul letamaio (tre metri) e scappa giù per il fosso.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "moduli": [
+    {
+     "id": "guelfo",
+     "tipo": "dialogo",
+     "titolo": "Guelfo nel fienile",
+     "parte": "indizio",
+     "png": "png-cavaliere-sulla-collina",
+     "innesco": "I personaggi salgono nel fienile, o prendono Guelfo.",
+     "leggi": "Fieno fino alle travi, polvere d'oro nella luce di una finestrella. Su una balla, un sacchetto di mele, tre morsicate e lasciate. Accanto, una sella appoggiata e una coperta stesa che nessuno ha usato.",
+     "note": "Guelfo tiene la lettera della rosa addosso, nel tabarro, contro il petto. Non la lascia mai. Se vede armati, salta dalla finestrella (tre metri, su un mucchio di letame) e scappa. Il suo dialogo è nella sua scheda.\nLA LETTERA (due fogli, cera rossa con la rosa, «a chi sapete, a Teramum»):\n• il primo, di Dama Violante: il conto della colonna (trentanove anime, cinque carri, ventitré bestie, dodici vesperiani, un Brak, «un dottore che non dorme»), «Il capitano porta il cappuccio anche di notte», «Le casse sono passate dalle mie cantine come d'accordo, e il messere porta il resto ai Tigli», «Ricordatevi di Nutaròschë, come promesso. Il titolo lo aspetto per la festa del Lucente Gennaro», firma «V. R.» con la rosa a penna. È una prova scritta contro Casa Rosaspina.\n• il secondo, di Guelfo, scritto stamattina con la mano che trema: convoglio bruciato, «i servitori di ferro sono caduti», vesperiani morti quasi tutti e due vivi, «il messere non ha parlato», le carte le ha «il cavaliere biondo, quello che chiamano Grazianus», «il prete della Crociata ha gridato in mezzo al ferro, e il ferro lo ha guardato». È il foglio più pericoloso per i personaggi.\nNella stanza del corriere, sopra gli stallieri, sotto il tavolo: un foglio accartocciato, «Il messere non ha parlato perché io…» e una riga d'inchiostro sopra.\nCOSA FARNE: prendere la lettera e lasciarlo andare (dirà di averla persa nel fiume); tenerlo prigioniero (testimone vivo contro Rosaspina; non scappa se il cavallo resta con lui); farlo lavorare per loro (Persuasione CD 16 e la promessa del cavallo: porta alla sua signora un racconto falso, non una lettera falsa); rimetterlo al suo posto per prendere Lanfranco (solo se è crollato o lo tengono per il cavallo); consegnarlo alla Guardia (la lettera diventa un atto pubblico e la Signora lo sa prima di sera); ucciderlo (non combatte; Rubino non si lascia più montare).",
+     "rilancio": "Che cosa fate?",
+     "pedine": [
+      "fienile"
+     ]
+    },
+    {
+     "id": "inseguimento",
+     "tipo": "dettaglio",
+     "titolo": "L'inseguimento",
+     "parte": "evento",
+     "innesco": "Guelfo scappa.",
+     "leggi": "Una figura scura salta dalla finestrella del fienile, rotola nel letame, si rialza e corre giù per il fosso, fra gli ulivi.",
+     "note": "Senza mappa, a turni. Partenza: 18 m a piedi (prima del vespro), 30 m a cavallo su Rubino (velocità 18 m, dopo il vespro). Scatti liberi: 3 + mod. Cos, poi Costituzione CD 10 o un livello di Indebolimento. Guelfo ha vantaggio alle complicazioni; a fine round, se nessuno lo vede, Furtività +6 contro la Percezione passiva più alta: se riesce li ha seminati. Zenith in volo lo vede sempre; Adamus in forma di lupo lo raggiunge in un round o due e lui si ferma terrorizzato.\nCOMPLICAZIONI (1d20 a fine turno di ognuno): 1 muro a secco che crolla (Acrobazia CD 12 o prono e 1d4); 2 salto di un terrazzo (Atletica CD 10 o −3 m); 3 ramo d'ulivo (Des CD 10 o 1d4 e −3 m); 4 capre di Peppino (Addestrare animali CD 12 o terreno difficile); 5 pozzo nell'erba (Percezione CD 12, poi Des CD 12 o trattenuto); 6 fango rosso (terreno difficile); 7 crepa del terremoto (Atletica CD 10 o −6 m); 8 cane di masseria (Acrobazia CD 12 o 1d4 perforanti); 9 tegole crude a terra (il fornaciaio vede la faccia); 10 sbuffo della fornace (Cos CD 10 o accecato un turno); 11-20 niente.\nTERZO ROUND: al fosso della Gammarana la fila delle donne coi cesti d'argilla taglia la strada: Acrobazia CD 12 o a terra con una donna e il suo cesto; aggirarla costa 6 m.\nDI NOTTE: se Guelfo cade con un Osservatore entro 9 m, gli lancia la lettera e l'inseguimento continua con l'Osservatore.\nLA FINE: Guelfo si ferma, si mette fra loro e il cavallo con le mani aperte: «Il cavallo no.» Se li semina, si nasconde nel camino della fornace vecchia, covo dei bravi (di giorno 2 banditi che dormono e lo indicano col pollice; Percezione CD 13 per trovarlo).",
+     "rilancio": "Che cosa fate?"
+    }
+   ],
+   "gm": ""
+  },
+  {
+   "schemaVersion": 3,
+   "id": "cas_cantina",
+   "kind": "stanza",
+   "title": "La casa e la cantina",
+   "legacyPosition": {
+    "x": 1248,
+    "y": 363
+   },
+   "text": "Una casa di pietra di due stanze: il focolare, una tavola, i letti. Nel pavimento, una botola.",
+   "breve": "Nella cantina la nicchia dietro la lastra che scorre a destra: registro di Zi’ Nicandro, sigillo d’osso, 40 fiorini limati.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "moduli": [
+    {
+     "id": "cantina",
+     "tipo": "bottino",
+     "titolo": "La cantina delle carte",
+     "parte": "nascosto",
+     "innesco": "Qualcuno cerca nella cantina sotto la casa (Percezione CD 15, o lo dice Tonino per un pezzo di pane).",
+     "leggi": "Una cantina di botti vuote. In un muro, una lastra di pietra che non è come le altre. Spinta a destra, scorre.",
+     "note": "Nella nicchia: una cassetta di latta con 40 fiorini limati, un sigillo d'osso nero col fiore inciso (uguale a quello di Ansaldo) e il registro di Zi' Nicandro, «cavalli dati» e «cavalli resi», con una lettera per ogni corriere: L (Lanfranco), G (Guelfo), A (Ansaldo), T e O (non si sa). Ultima riga, di dieci giorni fa: «A: tre cavalli per la Melatina, di notte». È la prova che la stalla è una stazione della rete. Dopo la seconda ora di notte ci sono anche 10 fiorini nuovi: la paga di Zi' Nicandro.",
+     "rilancio": "Che cosa fate?"
+    }
+   ],
+   "gm": ""
+  }
+ ],
+ "pedine": [
+  {
+   "id": "n_nic",
+   "nome": "Zi’ Nicandro Saccoccia",
+   "short": "Nic",
+   "best": "popolano",
+   "kind": "alleato",
+   "gruppo": "casa",
+   "x": 1408,
+   "y": 758,
+   "png": "png-zi-nicandro",
+   "img": "TOKEN — Zi’ Nicandro Saccoccia.png",
+   "ritratto": "Ritratto pedina — Zi’ Nicandro Saccoccia.jpg",
+   "tac": "Martello 1d8+2, ma non attacca: esce col martello e guarda. Vuole solo che non gli tocchino i cavalli."
+  },
+  {
+   "id": "n_ton",
+   "nome": "Tonino",
+   "short": "To",
+   "best": "popolano",
+   "kind": "alleato",
+   "gruppo": "casa",
+   "x": 568,
+   "y": 532,
+   "png": "png-tonino-di-casalena",
+   "img": "TOKEN — Tonino.png",
+   "ritratto": "Ritratto pedina — Tonino.jpg",
+   "tac": "Non combatte. Se lo minacciano corre nel fienile ad avvertire Guelfo."
+  },
+  {
+   "id": "n_st1",
+   "nome": "Ciccone, stalliere",
+   "short": "Ci",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "casa",
+   "x": 648,
+   "y": 242,
+   "tac": "Esce con la mazza al secondo round d’allarme. Scappa quando uno cade o vede più di tre armati."
+  },
+  {
+   "id": "n_st2",
+   "nome": "Marzio, stalliere",
+   "short": "Ma",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "casa",
+   "x": 704,
+   "y": 266,
+   "tac": "Come Ciccone."
+  },
+  {
+   "id": "n_cane1",
+   "nome": "Mastino di Casalena",
+   "short": "M1",
+   "best": "cane",
+   "kind": "nemico",
+   "gruppo": "casa",
+   "x": 960,
+   "y": 968,
+   "img": "TOKEN — I mastini di Casalena.png",
+   "ritratto": "Ritratto pedina — I mastini di Casalena.jpg",
+   "tac": "Alla catena. Percezione passiva 13. Abbaia a chi entra senza Zi’ Nicandro."
+  },
+  {
+   "id": "n_cane2",
+   "nome": "Mastino di Casalena",
+   "short": "M2",
+   "best": "cane",
+   "kind": "nemico",
+   "gruppo": "casa",
+   "x": 1072,
+   "y": 968,
+   "img": "TOKEN — I mastini di Casalena.png",
+   "ritratto": "Ritratto pedina — I mastini di Casalena.jpg",
+   "tac": "Alla catena. Percezione passiva 13."
+  },
+  {
+   "id": "n_rub",
+   "nome": "Rubino",
+   "short": "Ru",
+   "best": "cavallo",
+   "kind": "alleato",
+   "gruppo": "casa",
+   "x": 408,
+   "y": 790,
+   "img": "TOKEN — Rubino.png",
+   "ritratto": "Ritratto pedina — Rubino.jpg",
+   "tac": "Zoppo all’anteriore sinistro fino al vespro. Segue chi lo cura."
+  },
+  {
+   "id": "n_gue",
+   "nome": "Guelfo",
+   "short": "Gu",
+   "best": "esploratore",
+   "kind": "nemico",
+   "gruppo": "fienile",
+   "x": 368,
+   "y": 895,
+   "png": "png-cavaliere-sulla-collina",
+   "img": "TOKEN — Il cavaliere sulla collina.png",
+   "ritratto": "Ritratto pedina — Il cavaliere sulla collina.jpg",
+   "tac": "Non attacca mai per primo; colpisce solo chi tocca il cavallo. Se vede armati salta dalla finestrella e scappa."
+  },
+  {
+   "id": "n_lan",
+   "nome": "Lanfranco",
+   "short": "La",
+   "best": "osservatore",
+   "kind": "nemico",
+   "gruppo": "notte",
+   "x": 1008,
+   "y": 1226,
+   "png": "png-uomo-col-mantello",
+   "img": "TOKEN — Lanfranco.png",
+   "ritratto": "Ritratto pedina — Lanfranco.jpg",
+   "tac": "Spia: Inganno +7, Intuizione +5, Furtività +6, Percezione passiva 16. Non combatte: grida «Aiuto! Mi derubano!» e scappa."
+  },
+  {
+   "id": "n_os1",
+   "nome": "Osservatore",
+   "short": "O1",
+   "best": "osservatore",
+   "kind": "nemico",
+   "gruppo": "notte",
+   "x": 928,
+   "y": 1113,
+   "img": "TOKEN — Osservatore di Casalena.png",
+   "ritratto": "Ritratto pedina — Osservatore di Casalena.jpg",
+   "tac": "Resta al cancello. Pugnale avvelenato (+1d6) solo per scappare."
+  },
+  {
+   "id": "n_os2",
+   "nome": "Osservatore",
+   "short": "O2",
+   "best": "osservatore",
+   "kind": "nemico",
+   "gruppo": "notte",
+   "x": 960,
+   "y": 1266,
+   "img": "TOKEN — Osservatore di Casalena.png",
+   "ritratto": "Ritratto pedina — Osservatore di Casalena.jpg",
+   "tac": "Resta sul sentiero. Se presi tacciono un giorno, poi dicono «Lei lo sa già»."
+  }
+ ]
+}

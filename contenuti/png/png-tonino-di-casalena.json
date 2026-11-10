@@ -1,0 +1,49 @@
+{
+ "id": "png-tonino-di-casalena",
+ "cat": "png",
+ "city": "strada",
+ "group": "Colleatterrato",
+ "title": "Tonino",
+ "sub": "il garzone affamato della stalla di Casalena",
+ "img": "Ritratto — Tonino.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "png-zi-nicandro"
+ ],
+ "pub": "Un ragazzino magro con la paglia nei capelli e la forca del letame in mano. Guarda il pane prima di guardare le persone.",
+ "gm": "Età: quattordici (ne dimostra dodici). Popolano. Sa la parola del cancello, la nicchia della cantina dietro una lastra, che il ragazzo nuovo «ha pianto nel fienile, piano». Parla per un pezzo di pane.",
+ "dialogo": {
+  "apertura": "*Da dietro una posta, un ragazzino con la forca del letame vi guarda. Guarda il pane, se ne avete.* «Zi’ Nicandro nun vole che parlo.» *Pausa.* «Ma ho fame.»",
+  "voce": "Dialetto, a bassa voce, guardando verso la forgia. · Tic: si pulisce le mani sulla tunica, mangia tutto subito.",
+  "argomenti": [
+   {
+    "tema": "Il ragazzo nuovo",
+    "domanda": "«Chi è il ragazzo nel fienile?»",
+    "risposta": "«È arrivato stamattina. Ha pianto, nel fienile, piano, per non farsi sentire dai cani.» *Morde il pane.* «Gli parla al cavallo. Quelli della notte i cavalli li picchiano col manico della frusta. Lui no.»",
+    "insistono": "«Aspetta l’uomo dei fiori. Viene col buio. Bussa tre volte e dice “Lana per i tintori”.»",
+    "mai": "Non sa leggere: della lettera sa solo che c’è."
+   },
+   {
+    "tema": "La cantina",
+    "domanda": "«C’è qualcosa nascosto qui?»",
+    "risposta": "*Guarda la casa.* «In cantina. Una pietra che scorre. Zi’ Nicandro ci tiene le carte e i soldi.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 10,
+     "si": "Dice quale lastra e come si spinge (a destra).",
+     "no": "«Nun so niente, io pulisco.»"
+    },
+    "mai": "Non è mai sceso a guardare."
+   }
+  ],
+  "reazioni": "Se lo minacciano scappa nel fienile e avverte Guelfo.",
+  "battute": [
+   "«Il pane è vostro? Tutto?»"
+  ],
+  "uscita": "*Torna alla forca, ma vi guarda ancora.*",
+  "ottenuto": "La parola del cancello, la nicchia della cantina."
+ }
+}

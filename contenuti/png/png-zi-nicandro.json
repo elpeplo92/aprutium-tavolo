@@ -1,0 +1,62 @@
+{
+ "id": "png-zi-nicandro",
+ "cat": "png",
+ "city": "strada",
+ "group": "Colleatterrato",
+ "title": "Zi’ Nicandro Saccoccia",
+ "sub": "il vecchio fabbro con un occhio solo che tiene la stalla di Casalena",
+ "img": "Ritratto — Zi’ Nicandro Saccoccia.jpg",
+ "state": "segreto",
+ "atti": [],
+ "links": [
+  "png-tonino-di-casalena",
+  "png-cavaliere-sulla-collina",
+  "png-uomo-col-mantello"
+ ],
+ "pub": "Un vecchio fabbro con un occhio solo e la benda di cuoio, che ferra cavalli e ne tiene troppi, e troppo belli, per una masseria di collina. Parla a sbuffi e chiude ogni frase con un colpo di martello.",
+ "gm": "Età: sessantacinque. Statistiche: bruto (martello 1d8+2), ma non attacca: vuole solo che non gli tocchino i cavalli.\nSa: da un anno tiene tre cavalli pronti per «gente che paga in oro e non dice il nome»; la parola del cancello «Lana per i tintori»; Lanfranco (mantello buono, profuma di fiori, spilla d’argento a ragno); Guelfo arrivato stamattina; i fiorini limati; alla fornace vecchia della Gammarana dormono «quelli del Ponte».\nCede ai soldi (10 mo), a una minaccia ai cavalli, al nome della Guardia.",
+ "dialogo": {
+  "apertura": "*Il martello cade sul ferro rosso. L’occhio buono vi guarda, l’altro è una benda di cuoio.* «La stalla è chiusa per i forestieri.» *Colpo.* «Anche per i pellegrini.»",
+  "voce": "Dialetto, frasi corte a sbuffi; ogni frase finisce con un colpo di martello. · Tic: soffia sul ferro, guarda i cavalli prima delle persone.",
+  "argomenti": [
+   {
+    "tema": "Il ragazzo nel fienile",
+    "domanda": "«Chi c’è nel fienile?»",
+    "risposta": "«Nessuno.» *Colpo.* «Un ragazzo che paga. Il cavallo zoppo è suo. Al vespro lo ferro, e se ne va.»",
+    "insistono": "«È arrivato stamattina, a piedi, tirando la bestia. Ha lavato le mani nell’abbeveratoio come se ci avesse ammazzato un maiale.» *Colpo.* «Aspetta uno. Per dargli una lettera.»",
+    "prova": {
+     "abilita": [
+      "Persuasione",
+      "Intimidire"
+     ],
+     "cd": 13,
+     "si": "Dice di Lanfranco, della parola del cancello e della seconda ora di notte.",
+     "no": "«Qua ferro i cavalli e basta.»"
+    },
+    "mai": "Non sa cosa c’è nella lettera."
+   },
+   {
+    "tema": "I cavalli e chi paga",
+    "domanda": "«Di chi sono questi cavalli?»",
+    "risposta": "«Miei.» *Colpo.* «Li tengo. Per chi paga.»",
+    "insistono": "«Gente che paga in oro e non dice il nome. Un anno che va avanti.» *Mostra un fiorino.* «Oro leggero. Limato. Ma oro.»",
+    "prova": {
+     "abilita": [
+      "Persuasione"
+     ],
+     "cd": 15,
+     "si": "«Dieci fiorini e vi dico pure di che colore ha le mutande.» Dice di Lanfranco e della fornace vecchia della Gammarana, dove dormono «quelli del Ponte».",
+     "no": "Batte il martello e non risponde più."
+    },
+    "mai": "Non ha mai sentito il nome della Signora."
+   }
+  ],
+  "reazioni": "Minacciano i cavalli: «Toccate i cavalli e vi ferro la faccia.» Ma non attacca. Nominano la Guardia: si chiude.",
+  "battute": [
+   "«Chiodi da signori. Il fabbro che li fa ha la mano fina. E l’anima no.»",
+   "«Io ferro. Chi monta non è affare mio.»"
+  ],
+  "uscita": "*Torna al ferro. Il martello riprende, regolare.*",
+  "ottenuto": "La parola del cancello, il nome di Lanfranco, la seconda ora di notte."
+ }
+}
