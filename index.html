@@ -2805,7 +2805,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v352</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v353</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -11177,368 +11177,9 @@ window.RICETTE={
   window.__v257={suona,animaEvento,sorveglia,segna,attivi:()=>EFF.length,azzera:()=>{ EFF=[]; },visti:FX_VISTI,t:()=>FX_T};
 })();
 /* ===== FINE ANIMAZIONI DEGLI INCANTESIMI (v257) ===== */
-/* ===== IL COLLOQUIO (v291) =====
-   Giuseppe (25-10-2026): via «Il PNG parla» (voce sintetica, i giocatori che parlano col token: «non ha senso, i PNG li recito io»).
-   Al suo posto il colloquio, come nei giochi di ruolo (Pathfinder, Neverwinter Nights):
-   - Il giocatore clicca la pedina di un altro (non la sua) e gli si apre un menù con quello che può fare: con un PNG o un nemico
-     Parla, Persuadi, Intimidisci, Inganna, Leggi le intenzioni, Osserva; con un alleato o un altro PG Parla, Aiuta, Passa un oggetto,
-     Cura o stabilizza, Osserva. «Parla» e le azioni sociali aprono il colloquio; le altre vanno nel Registro.
-   - Il colloquio è un pannello a sinistra della mappa, accanto agli attrezzi del master: ritratto del PNG, chi parla con chi, le battute.
-     Lo vedono tutti i giocatori della scena; chiunque può scrivere (o dettare col microfono) cosa dice.
-   - Il master ha nello stesso pannello il COPIONE del PNG (il dialogo a sette blocchi): clicca una frase fra «» e la mostra ai giocatori.
-     Per le domande fuori copione: il suggeritore (banco di regia, `7_Aprutium/Regia/regia.mjs`, Claude Haiku) propone tre battute;
-     il master le legge, le corregge e le mostra. Può anche scrivere lui la risposta. Il master apre il pannello cliccando la pedina del PNG.
-   - Ogni battuta mostrata va nel Registro; alla chiusura il riassunto (lo scrive il banco di regia).
-   Dati su Firebase in `partita/regia/<ambiente>/colloqui/<cid>` (collegamento anonimo `regia`, come la v269):
-   {png, nome, tid, sc, pg, pgs:{pg:1}, aperto, chiuso, righe:{rid:{chi:'pg'|'png', pg, testo, azione, tipo:'azione', t, reg, chiesta}},
-    richiesta:{testo, chi, nota, t}, proposte:{req, stato, lista:[{tono,battuta,azione}], avviso}, riassunto, registrato}.
-   Fonte: 7_Aprutium/Revisioni/Il colloquio (v291)/ (colloquio.js + applica.py). */
-(function(){
-  const AMB=(new URLSearchParams(location.search).get('regia'))||(TEST_MODE?'prova':'partita');
-  const BASE='partita/regia/'+AMB;
-  const PGN={alessandros:'Alessandros',vicarus:'Vicarus',adamus:'Adamus',maximus:'Maximus',mattheus:'Mattheus',luigis:'Luigis',gruppo:'Il gruppo'};
-  let rdb=null, COLS={}, STATO={}, ONLINE=false, APERTO=null, SOLO=null, CHIUSO_QUI=new Set(), VISTI=new Set(), lastKey='', ascolto=null, pronto=false;
-  /* v307: «Esci» vale anche dopo un ricarico (per questo schermo) */
-  { const K='aprutium.colloquiChiusi'; try{ for(const x of JSON.parse(localStorage.getItem(K)||'[]')) CHIUSO_QUI.add(x); }catch(e){}
-    const salva=()=>{ try{ localStorage.setItem(K,JSON.stringify([...CHIUSO_QUI].slice(-50))); }catch(e){} }, _a=CHIUSO_QUI.add.bind(CHIUSO_QUI), _d=CHIUSO_QUI.delete.bind(CHIUSO_QUI);
-    CHIUSO_QUI.add=x=>{ const r=_a(x); salva(); return r; }; CHIUSO_QUI.delete=x=>{ const r=_d(x); salva(); return r; }; }
-  const esc=s=>poiText(s==null?'':s);
-  const now=()=>Date.now();
-  const breve=n=>String(n||'').split(',')[0].replace(/\s*\(.*?\)\s*/g,' ').trim();
-  const imgDi=t=>t?((typeof railImg==='function'&&railImg(t))||t.ritratto||t.img||''):'';
-  const pgTok=pg=>S.tokens[pg]||null;
-
-  const css=document.createElement('style'); css.textContent=`
-#colloquio{position:absolute;z-index:8;top:12px;bottom:64px;width:clamp(340px,32vw,470px);display:flex;flex-direction:column;background:#0B0E15;border:1px solid rgba(217,177,92,.55);border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.65);overflow:hidden;color:#EADFC8}
-#colloquio.hidden{display:none}
-#colloquio .colh{display:flex;align-items:center;gap:12px;padding:12px 14px;background:linear-gradient(180deg,#1A1610,#0F0D0A);border-bottom:1px solid rgba(217,177,92,.35)}
-#colloquio .colr{width:76px;height:76px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 25%;border:2px solid #C9A24A;box-shadow:0 0 0 3px rgba(0,0,0,.6)}
-#colloquio .colt{flex:1;min-width:0}
-#colloquio .colt .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A88A4E}
-#colloquio .colt b{display:block;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:25px;line-height:1.05;letter-spacing:.03em;color:#E6C67A}
-#colloquio .colt .chi{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:5px;font-size:13px;color:#B8A98C}
-#colloquio .colt .chi img{width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid rgba(217,177,92,.6)}
-#colloquio .colx{flex:none;align-self:flex-start;width:30px;height:30px;padding:0;border-radius:50%;font-size:18px;line-height:1;background:transparent;border:1px solid rgba(217,177,92,.4);color:#C9A24A}
-#colloquio .colb{flex:1;overflow-y:auto;padding:10px 12px 12px;display:flex;flex-direction:column;gap:10px}
-#colloquio .colb>*{flex:none}
-#colloquio .colconv{display:flex;flex-direction:column;gap:7px;min-height:40px}
-#colloquio .cb{max-width:88%;padding:7px 11px;border-radius:12px;font-size:15px;line-height:1.42}
-#colloquio .cb small{display:block;font-size:11.5px;letter-spacing:.04em;color:#A88A4E;margin-bottom:2px}
-#colloquio .cb.pg{align-self:flex-end;background:rgba(201,162,74,.16);border:1px solid rgba(201,162,74,.3);border-bottom-right-radius:3px}
-#colloquio .cb.png{align-self:flex-start;background:linear-gradient(rgb(227,204,156),rgb(214,186,132));color:#2E2116;font-family:"Bookinsanity",Georgia,serif;font-size:16px;border-bottom-left-radius:3px}
-#colloquio .cb.png small{color:#7A5420}
-#colloquio .cb.png i{display:block;font-size:13.5px;color:#5C4426;margin-top:3px}
-#colloquio .cb.az{align-self:center;max-width:95%;background:none;border:1px dashed rgba(201,162,74,.35);font-style:italic;font-size:14px;color:#CDBB97;text-align:center}
-#colloquio .cvuoto{font-size:14px;color:#9C8E74;font-style:italic;text-align:center;padding:6px}
-#colloquio .colsez{border-top:1px solid rgba(217,177,92,.22);padding-top:9px}
-#colloquio .colsez>h6{margin:0 0 6px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:#C9A24A}
-#colloquio .colsez>h6 .st{float:right;font-family:inherit;font-size:12px;letter-spacing:0;text-transform:none;color:#9C8E74}
-#colloquio .crow{display:flex;gap:6px;align-items:center;margin-top:6px}
-#colloquio .crow input,#colloquio .crow select{flex:1;min-width:0;font:inherit;font-size:14px;background:rgba(0,0,0,.35);color:#EADFC8;border:1px solid rgba(217,177,92,.4);border-radius:6px;padding:7px 9px}
-#colloquio .crow button{flex:none;font-size:13.5px;padding:7px 11px}
-#colloquio .cchips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
-#colloquio .cchips button{font-size:12.5px;padding:4px 9px;border-radius:14px}
-#colloquio button.mic.on{background:#7a2a1a;border-color:#c25a3a;color:#fff}
-#colloquio .cprop{border:1px solid rgba(217,177,92,.3);border-radius:8px;padding:7px 9px;margin-top:6px;background:rgba(255,255,255,.03)}
-#colloquio .cprop small{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#A88A4E}
-#colloquio .cprop textarea{display:block;width:100%;box-sizing:border-box;min-height:48px;margin:4px 0;font-family:"Bookinsanity",Georgia,serif;font-size:15px;line-height:1.4;background:rgba(0,0,0,.3);color:#F1E6CF;border:1px solid rgba(217,177,92,.25);border-radius:5px;padding:6px 8px;resize:vertical}
-#colloquio .cprop .caz{font-size:13px;color:#B8A98C;font-style:italic}
-#colloquio .cprop .crow{justify-content:flex-end}
-#colloquio .cavv{font-size:13px;color:#E8C27A;border-left:2px solid #C9A24A;padding:2px 0 2px 8px;margin-top:6px}
-#colloquio .cattesa{font-size:13.5px;color:#9C8E74;font-style:italic;margin-top:4px}
-#colloquio .cnota{font-size:13px;color:#9C8E74;margin:0 0 8px}
-#colloquio .cvoce{font-size:13px;line-height:1.45;color:#A99C82;margin:0}
-#colloquio .cvoce b{color:#C9A24A;font-weight:600}
-#colloquio .ccarta{background:#F1E4C4;color:#24190E;border-radius:8px;padding:10px 12px}
-#colloquio .ccarta .cdid{display:block;font-family:"Bookinsanity",Georgia,serif;font-style:italic;font-size:14px;line-height:1.4;color:#6A5435;margin:2px 0 6px}
-#colloquio .ccarta .cnar{display:block;font-size:13px;line-height:1.4;color:#6A5435;margin:6px 0 2px}
-#colloquio .ccarta .csay{display:block;width:100%;text-align:left;margin:4px 0;padding:7px 10px 7px 12px;border:0;border-left:3px solid #B98A3C;border-radius:0 6px 6px 0;background:rgba(185,138,60,.12);color:#24190E;font-family:"Bookinsanity",Georgia,serif;font-size:16.5px;font-weight:400;line-height:1.42;cursor:pointer;box-shadow:none}
-#colloquio .ccarta .csay:hover{background:rgba(185,138,60,.26)}
-#colloquio .ccarta .csay.on{border-left-color:#4E7A34;background:rgba(78,122,52,.14)}
-#colloquio .ccarta .csay.on::after{content:"nel Registro ✓ · clic per togliere";display:block;font-family:"Scaly Sans","Source Sans 3",sans-serif;font-size:11.5px;letter-spacing:.03em;color:#4E7A34;margin-top:3px}
-#colloquio .ccarta h5{margin:10px 0 2px;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#7A4E1C}
-#colloquio .ccarta .cmai{margin-top:8px;font-size:12.5px;line-height:1.4;color:#7A6345;border-top:1px dashed rgba(122,78,28,.35);padding-top:6px}
-#colloquio .ccarta .cmai b{color:#7A4E1C}
-/* v295: la prova del modulo di scena dentro la carta del copione (prima: fondo quasi nero e testo scuro, illeggibile) */
-#colloquio .ccarta .v3prova{background:#FBF4E2!important;border:1px solid rgba(122,78,28,.4)!important;border-radius:6px!important;padding:8px 10px!important;margin:10px 0 0!important;box-shadow:none!important;color:#24190E!important}
-#colloquio .ccarta .v3prova .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
-#colloquio .ccarta .v3prova b{font-size:15px;color:#24190E!important}
-#colloquio .ccarta .v3prova .note,#colloquio .ccarta .v3prova .v3sum{font-size:12.5px;color:#6A5435!important;font-style:normal}
-#colloquio .ccarta .v3esito{background:transparent!important;border:0!important;border-left:3px solid #7FA65E!important;border-radius:0!important;padding:4px 0 4px 9px!important;margin:8px 0 0!important}
-#colloquio .ccarta .v3esito.fail{border-left-color:#B5533C!important}
-#colloquio .ccarta .v3esito.on{background:rgba(127,166,94,.16)!important}
-#colloquio .ccarta .v3esito.fail.on{background:rgba(181,83,60,.12)!important}
-#colloquio .ccarta .v3esito .lbl{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:14px;letter-spacing:.05em;color:#3F6B2A!important}
-#colloquio .ccarta .v3esito.fail .lbl{color:#8A2E1E!important}
-#colloquio .ccarta .v3esito p{margin:3px 0;font-size:14.5px;line-height:1.4;color:#24190E!important}
-#colloquio .ccarta .v3esito .chip{background:#24190E!important;color:#F1E4C4!important;border-radius:10px;padding:1px 7px;font-size:12px;margin-left:6px}
-#colloquio .ccarta .v3prova button:not(.primary){background:transparent!important;color:#5C3E16!important;border:1px solid rgba(122,78,28,.45)!important;box-shadow:none!important}
-#colloquio .cdom{border-top:1px solid rgba(217,177,92,.18)}
-#colloquio .cdom>summary{list-style:none;cursor:pointer;padding:9px 4px 9px 22px;position:relative;font-size:15px;line-height:1.35;color:#EADFC8}
-#colloquio .cdom>summary::-webkit-details-marker{display:none}
-#colloquio .cdom>summary::before{content:"▸";position:absolute;left:5px;top:9px;color:#C9A24A}
-#colloquio .cdom[open]>summary::before{content:"▾"}
-#colloquio .cdom>summary small{display:block;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#A88A4E;margin-bottom:1px}
-#colloquio .cdom>summary:hover{color:#F6E3A8}
-#colloquio .cdom>summary .gia{color:#7FA65E;font-size:12px;margin-left:6px}
-#colloquio .cdom>.ccarta{margin:0 0 10px}
-#colloquio .cb.png .cbx{float:right;margin:-2px -4px 0 6px;width:20px;height:20px;padding:0;border-radius:50%;font-size:13px;line-height:1;background:transparent;border:1px solid rgba(92,68,38,.4);color:#5C4426;cursor:pointer}
-#colloquio .colf{display:flex;gap:6px;justify-content:space-between;padding:8px 12px;border-top:1px solid rgba(217,177,92,.25);background:#0F0D0A}
-html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro resta fermo in fondo alla colonna: senza fondo (v288) si leggeva sopra «Selezione» */
-#tokMenu{position:fixed;z-index:60;min-width:210px;background:#0F0D0A;border:1px solid rgba(217,177,92,.6);border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.7);padding:6px;color:#EADFC8}
-#tokMenu .tmh{display:flex;align-items:center;gap:8px;padding:4px 6px 7px;border-bottom:1px solid rgba(217,177,92,.25);margin-bottom:4px}
-#tokMenu .tmh img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid #C9A24A}
-#tokMenu .tmh b{font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:18px;color:#E6C67A}
-#tokMenu button{display:block;width:100%;text-align:left;border:0;background:transparent;color:#EADFC8;font-size:14.5px;padding:7px 9px;border-radius:5px;cursor:pointer}
-#tokMenu button:hover{background:rgba(201,162,74,.18);color:#F6E3A8}
-#tokMenu button small{color:#9C8E74;margin-left:4px}
-#tokMenu button.tmatk{color:#F1D9A0}
-#tokMenu button.tmatk+button:not(.tmatk){border-top:1px solid rgba(217,177,92,.25);border-radius:0 0 5px 5px;margin-top:3px}`;
-  document.head.appendChild(css);
-
-  /* ---------- collegamento ---------- */
-  async function connect(){
-    if(typeof firebase==='undefined'||!window.FIREBASE_CONFIG) return;
-    try{
-      let app; try{ app=firebase.app('regia'); }catch(e){ app=firebase.initializeApp(window.FIREBASE_CONFIG,'regia'); }
-      const auth=app.auth(); if(!auth.currentUser) await auth.signInAnonymously();
-      rdb=app.database();
-      rdb.ref(BASE+'/stato').on('value',s=>{ STATO=s.val()||{}; ONLINE=!!(STATO.online&&now()-STATO.online<70000); paint(); });
-      rdb.ref(BASE+'/colloqui').on('value',s=>{ COLS=s.val()||{}; arrivi(); paint(); });
-      setInterval(()=>{ const o=ONLINE; ONLINE=!!(STATO.online&&now()-STATO.online<70000); if(o!==ONLINE) paint(); },20000);
-    }catch(e){ console.warn('colloquio: collegamento non riuscito',e); }
-  }
-  const scena=()=>(CUR&&CUR.id)||S.scene||'';
-  const righe=c=>Object.entries((c&&c.righe)||{}).map(([id,r])=>({id,...r})).sort((a,b)=>a.t-b.t);
-  const aperti=()=>Object.entries(COLS).filter(([id,c])=>c&&!c.chiuso&&(!c.sc||c.sc===scena())).sort((a,b)=>(a[1].aperto||0)-(b[1].aperto||0));
-  const diTok=tid=>aperti().find(([id,c])=>c.tid===tid);
-  const nomeTok=tid=>{ const t=S.tokens[tid]; return t?String(t.name||''):''; };
-
-  function apri(tid,pg){
-    if(!rdb) { toast('Il colloquio non è collegato: ricarica la pagina'); return null; }
-    const g=diTok(tid); if(g){ if(pg&&!(g[1].pgs||{})[pg]) rdb.ref(BASE+'/colloqui/'+g[0]+'/pgs/'+pg).set(1); return g[0]; }
-    const t=S.tokens[tid]; if(!t) return null;
-    const png=typeof tokPng==='function'?tokPng(tid):null;
-    const cid='c'+now().toString(36)+Math.random().toString(36).slice(2,5);
-    rdb.ref(BASE+'/colloqui/'+cid).set({png:png||'',nome:breve(t.name),tid,sc:scena(),pg:pg||'gruppo',pgs:{[pg||'gruppo']:1},aperto:now()});
-    return cid;
-  }
-  function scrivi(cid,riga){ if(!rdb||!cid) return; const c=COLS[cid]; if(riga.pg&&c&&!(c.pgs||{})[riga.pg]) rdb.ref(BASE+'/colloqui/'+cid+'/pgs/'+riga.pg).set(1); rdb.ref(BASE+'/colloqui/'+cid+'/righe/r'+now().toString(36)+Math.random().toString(36).slice(2,4)).set({...riga,t:now()}); }
-  function chiedi(cid,testo,chi,nota){ if(!rdb||!cid) return; rdb.ref(BASE+'/colloqui/'+cid+'/richiesta').set({testo:String(testo||'').trim(),chi:chi||'',nota:String(nota||'').trim(),t:now()}); }
-  /* v293: la battuta del PNG va nel Registro (lì la leggono i giocatori, e il master la toglie quando vuole); in `righe` resta per il suggeritore */
-  const dette=cid=>(S.log||[]).filter(e=>e&&e.col===cid&&e.rid);
-  function mostra(cid,testo,azione){ testo=String(testo||'').replace(/^«|»$/g,'').trim(); if(!testo||!cid||!IS_GM) return; const c=COLS[cid]||{}; const rid='r'+now().toString(36)+Math.random().toString(36).slice(2,4); azione=String(azione||'').trim();
-    log({kind:'sys',txt:`${c.nome||'Il PNG'}: «${testo}»${azione?' ('+azione+')':''}`,col:cid,rid,say:testo}); save();
-    if(rdb) rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+rid).set({chi:'png',testo,azione,t:now(),reg:1}); lastKey=''; paint(); }
-  function togli(cid,rid){ if(!IS_GM) return; S.log=(S.log||[]).filter(e=>!(e&&e.rid===rid)); save(); if(rdb) rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+rid).remove(); lastKey=''; paint(); }
-  function chiudi(cid){ if(rdb&&cid) rdb.ref(BASE+'/colloqui/'+cid).update({chiuso:now()}); if(APERTO===cid) APERTO=null; SOLO=null; lastKey=''; paint(); }
-
-  /* ---------- cosa succede quando arriva qualcosa ---------- */
-  function arrivi(){
-    for(const [cid,c] of aperti()){
-      if(!VISTI.has(cid)){ VISTI.add(cid);
-        if(pronto&&now()-(c.aperto||0)<60000){ const chi=Object.keys(c.pgs||{}).map(k=>PGN[k]||k).join(', ');
-          if(IS_GM||((c.pgs||{})[me]&&!CHIUSO_QUI.has(cid))){ if(!APERTO||!COLS[APERTO]||COLS[APERTO].chiuso) APERTO=cid; }
-          toast(`${chi} parla con ${c.nome}`); } } }
-    pronto=true;
-    /* v307: il master chiude da sé i colloqui fermi da più di tre ore (uno lasciato aperto si ripresentava ai giocatori) */
-    if(IS_GM&&rdb) for(const [cid,c] of Object.entries(COLS)){ if(!c||c.chiuso) continue; const ult=Math.max(c.aperto||0,...righe(c).map(r=>r.t||0)); if(now()-ult>3*3600e3) rdb.ref(BASE+'/colloqui/'+cid).update({chiuso:now()}); }
-    if(!IS_GM||!(FB_LOADED||TEST_MODE)) return;
-    /* il master: le battute nel Registro, le domande al suggeritore, i riassunti */
-    let n=0;
-    for(const [cid,c] of Object.entries(COLS)){ if(!c) continue;
-      for(const r of righe(c)){
-        if(!r.reg&&r.testo){ log({kind:'sys',txt:r.chi==='png'?`${c.nome}: «${r.testo}»${r.azione?' ('+r.azione+')':''}`:r.tipo==='azione'?`${PGN[r.pg]||r.pg} · ${r.testo} (${c.nome})`:`${PGN[r.pg]||r.pg} a ${c.nome}: «${r.testo}»`}); rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+r.id+'/reg').set(1); n++; }
-        if(r.chi==='pg'&&!r.chiesta&&!c.chiuso){ rdb.ref(BASE+'/colloqui/'+cid+'/righe/'+r.id+'/chiesta').set(1); if(ONLINE&&now()-r.t<120000) chiedi(cid,r.testo,r.pg,''); } }
-      if(c.chiuso&&c.riassunto!=null&&!c.registrato){ if(c.riassunto){ log({kind:'sys',txt:`Colloquio con ${c.nome} · ${c.riassunto}`}); n++; } rdb.ref(BASE+'/colloqui/'+cid+'/registrato').set(true); } }
-    if(n) save();
-  }
-
-  /* ---------- microfono: detta nel campo, non manda da solo ---------- */
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  function detta(inp,btn){
-    if(!SR){ toast('Il microfono non c’è in questo browser: scrivi'); return; }
-    if(ascolto){ try{ ascolto.stop(); }catch(e){} return; }
-    const r=new SR(); r.lang='it-IT'; r.interimResults=true; r.continuous=false; ascolto=r; btn.classList.add('on'); const base=inp.value?inp.value+' ':'';
-    r.onresult=e=>{ let s=''; for(const x of e.results) s+=x[0].transcript; inp.value=base+s; };
-    r.onerror=e=>{ if(e.error!=='no-speech'&&e.error!=='aborted') toast('Microfono: '+e.error); };
-    r.onend=()=>{ ascolto=null; btn.classList.remove('on'); inp.focus(); };
-    try{ r.start(); }catch(e){ ascolto=null; btn.classList.remove('on'); }
-  }
-
-  /* ---------- il pannello ---------- */
-  function box(){ let b=document.getElementById('colloquio'); if(b) return b; const st=document.getElementById('stage'); if(!st) return null; b=document.createElement('div'); b.id='colloquio'; b.className='hidden'; b.addEventListener('pointerdown',e=>e.stopPropagation()); b.addEventListener('wheel',e=>e.stopPropagation(),{passive:true}); st.appendChild(b); return b; }
-  function posiziona(b){ const z=document.getElementById('zoomctl'), st=document.getElementById('stage'); let left=12; if(z&&st&&z.offsetWidth){ const zr=z.getBoundingClientRect(), sr=st.getBoundingClientRect(); left=Math.round(zr.right-sr.left+10); } b.style.left=left+'px'; }
-  function convHtml(c,cid){
-    /* le battute dei giocatori da `righe`; quelle del PNG dal Registro (se il master le toglie lì, spariscono anche qui) */
-    const L=righe(c).filter(r=>r.chi!=='png').concat(dette(cid).map(e=>({chi:'png',testo:e.say,t:e.t,rid:e.rid}))).sort((a,b)=>a.t-b.t);
-    if(!L.length) return `<div class="cvuoto">${IS_GM?'Nessuno ha ancora parlato.':'Scrivi qui sotto cosa dici.'}</div>`;
-    return L.map(r=>{
-      if(r.chi==='png') return `<div class="cb png">${IS_GM?`<button class="cbx" data-ctogli="${esc(r.rid)}" title="Togli dal Registro">×</button>`:''}<small>${esc(c.nome)}</small>${esc(r.testo)}</div>`;
-      if(r.tipo==='azione') return `<div class="cb az">${esc(PGN[r.pg]||r.pg)} ${esc(r.testo)}</div>`;
-      return `<div class="cb pg"><small>${esc(PGN[r.pg]||r.pg)}</small>${esc(r.testo)}</div>`; }).join('');
-  }
-  function chiHtml(c){ return Object.keys(c.pgs||{}).map(k=>{ const t=pgTok(k); const im=imgDi(t); return `${im?`<img src="${esc(im)}" alt="">`:''}${esc(PGN[k]||k)}`; }).join(' · '); }
-  /* v293, Giuseppe: il copione è solo quello che dice il PNG. In testa come si presenta, poi le domande (clic = si apre la risposta).
-     Le frasi fra «» sono tasti: clic = nel Registro, di nuovo = tolta. Le didascalie fra *…* in piccolo. */
-  function battutaHtml(s){
-    s=String(s||''); let h='', last=0, frasi=0;
-    for(const m of s.matchAll(/\*([^*\n]+)\*|«([^»]*)»/g)){
-      const pre=s.slice(last,m.index).replace(/^[\s.,;:—–-]+|[\s,;:—–-]+$/g,''); if(pre) h+=`<span class="cnar">${esc(pre)}</span>`;
-      if(m[1]) h+=`<span class="cdid">${esc(m[1])}</span>`; else { h+=`<button type="button" class="csay" data-say="${esc(m[2])}">«${esc(m[2])}»</button>`; frasi++; }
-      last=m.index+m[0].length; }
-    const post=s.slice(last).replace(/^[\s.,;:—–-]+|[\s,;:—–-]+$/g,''); if(post) h+=`<span class="cnar">${esc(post)}</span>`;
-    if(!frasi){ /* senza «»: tutto ciò che non è didascalia è la frase */
-      const solo=s.replace(/\*[^*\n]+\*/g,' ').replace(/\s+/g,' ').trim(); const did=[...s.matchAll(/\*([^*\n]+)\*/g)].map(x=>`<span class="cdid">${esc(x[1])}</span>`).join('');
-      return did+(solo?`<button type="button" class="csay" data-say="${esc(solo)}">${esc(solo)}</button>`:''); }
-    return h;
-  }
-  const DLG_SE=[['minaccia','Se lo minacciano'],['soldi','Se gli offrono soldi'],['lusinga','Se lo lusingano'],['bugia','Se lo beccano a mentire']];
-  function copioneHtml(png,cid){
-    const d=png&&typeof DIALOGHI_DATA!=='undefined'?DIALOGHI_DATA[png]:null;
-    if(!d) return `<p class="cnota">Questo personaggio non ha ancora un copione: usa il suggeritore qui sopra.</p>`;
-    let p=null,m=null; for(const q of POIS){ if(!poiInScene(q)) continue; const mm=(q.moduli||[]).find(x=>x.png===png); if(mm){ p=q; m=mm; break; } }
-    const sc=scena(); const gia=new Set(dette(cid).map(e=>e.say));
-    const usata=s=>[...String(s||'').matchAll(/«([^»]*)»/g)].some(x=>gia.has(x[1]));
-    const voce=(tit,dom,corpo,detta)=>`<details class="cdom" data-k="${esc(tit+'|'+(dom||''))}"><summary><small>${esc(tit)}</small>${dom?esc(String(dom).replace(/^«|»$/g,'')):''}${detta?'<span class="gia">✓ detta</span>':''}</summary><div class="ccarta">${corpo}</div></details>`;
-    let h=`<p class="cnota">Clicca una frase per scriverla nel Registro, dove la leggono i giocatori. Riclicca per toglierla.</p>`;
-    if(d.apertura) h+=`<div class="ccarta" style="margin-bottom:10px"><h5 style="margin-top:0">Come si presenta</h5>${battutaHtml(d.apertura)}</div>`;
-    (d.argomenti||[]).forEach((a,i)=>{ if(a.scena&&sc&&a.scena!==sc) return;
-      const pv=m?(m.prove||[]).find(x=>x.dlg===i):null;
-      let corpo=battutaHtml(a.risposta);
-      if(a.insistono) corpo+=`<h5>Se insistono</h5>${battutaHtml(a.insistono)}`;
-      if(pv) corpo+=v3RenderProva(p,m,pv); else if(a.prova) corpo+=`<div class="cmai"><b>Prova:</b> ${esc((a.prova.abilita||[]).join(' o '))} CD ${esc(a.prova.cd)} — sì: ${esc(a.prova.si)} · no: ${esc(a.prova.no)}</div>`;
-      if(a.mai) corpo+=`<div class="cmai"><b>Non lo dice mai:</b> ${esc(a.mai)}</div>`;
-      h+=voce(a.tema||('Domanda '+(i+1)),a.domanda||a.tema,corpo,usata(a.risposta)||usata(a.insistono)); });
-    const R=d.reazioni||{}; for(const [k,t] of DLG_SE) if(R[k]) h+=voce(t,'',battutaHtml(R[k]),usata(R[k]));
-    if((d.battute||[]).length) h+=voce('Battute pronte','Frasi da usare quando servono',d.battute.map(battutaHtml).join(''),d.battute.some(usata));
-    const U=d.uscita||{}; if(U.frase) h+=voce('Il congedo','Come chiude il colloquio',battutaHtml(U.frase)+(U.aggancio?`<div class="cmai"><b>Aggancio:</b> ${esc(U.aggancio)}</div>`:''),usata(U.frase));
-    return h;
-  }
-  function voceHtml(png){ const d=png&&typeof DIALOGHI_DATA!=='undefined'?DIALOGHI_DATA[png]:null; return d&&d.voce?`<div class="colsez"><p class="cvoce"><b>Come parla.</b> ${esc(d.voce)}</p></div>`:''; }
-  const SOCIALI=[['persuadi','Persuadi','prova a convincerlo (Persuasione)'],['intimidisci','Intimidisci','prova a intimidirlo (Intimidire)'],['inganna','Inganna','prova a ingannarlo (Inganno)'],['intuizione','Leggi le intenzioni','lo studia per capire se mente (Intuizione)']];
-  function paint(){
-    const b=box(); if(!b) return;
-    let cid=APERTO&&COLS[APERTO]&&!COLS[APERTO].chiuso&&(!COLS[APERTO].sc||COLS[APERTO].sc===scena())?APERTO:null;
-    /* v307: al giocatore si riapre da solo solo un colloquio dove c'è il suo personaggio (prima: l'ultimo aperto, anche quello del gruppo lasciato aperto dal master) */
-    if(!cid&&!IS_GM){ const a=aperti().filter(([id,c])=>!CHIUSO_QUI.has(id)&&(c.pgs||{})[me]); if(a.length) cid=a[a.length-1][0]; }
-    if(!cid&&SOLO){ const g=diTok(SOLO); if(g) cid=g[0]; }
-    const c=cid?COLS[cid]:null;
-    const solo=!c&&IS_GM&&SOLO&&S.tokens[SOLO]?SOLO:null;
-    if(!c&&!solo){ b.classList.add('hidden'); lastKey=''; return; }
-    const key=JSON.stringify([cid,c,solo,ONLINE,IS_GM,aperti().map(x=>x[0]),imgDi(S.tokens[c?c.tid:solo]),cid?dette(cid).map(e=>e.rid):0]);
-    if(key===lastKey&&!b.classList.contains('hidden')) return; lastKey=key;
-    /* i campi scritti a metà non si perdono quando il pannello si ridisegna */
-    const keep={}; b.querySelectorAll('input[id],textarea[id]').forEach(x=>keep[x.id]=x.value);
-    const chiTid=String(c?c.tid:solo); const stesso=b.dataset.tid===chiTid; const apD=new Set([...b.querySelectorAll('details.cdom[open]')].map(x=>x.dataset.k)); const sc0=(b.querySelector('.colb')||{}).scrollTop||0; b.dataset.tid=chiTid;
-    const foc=document.activeElement&&b.contains(document.activeElement)?document.activeElement.id:null;
-    const tid=c?c.tid:solo, t=S.tokens[tid]; const nome=c?c.nome:breve(t&&t.name); const im=imgDi(t);
-    let h=`<div class="colh">${im?`<img class="colr" src="${esc(im)}" alt="">`:''}<div class="colt"><div class="eyebrow">Colloquio</div><b>${esc(nome)}</b><div class="chi">${c?'con '+chiHtml(c):'nessuno gli sta parlando'}</div></div><button class="colx" id="colX" title="Nascondi il pannello">×</button></div><div class="colb">`;
-    if(IS_GM&&aperti().length>1) h+=`<div class="cchips">${aperti().map(([id,x])=>`<button data-capri="${id}" class="${id===cid?'primary':''}">${esc(x.nome)}</button>`).join('')}</div>`;
-    if(c) h+=`<div class="colconv" id="colConv">${convHtml(c,cid)}</div>`;
-    if(IS_GM){
-      if(!c) h+=`<div class="colsez"><h6>Apri il colloquio</h6><div class="crow"><select id="colPg"><option value="gruppo">Tutto il gruppo</option>${Object.entries(PGN).filter(([k])=>k!=='gruppo').map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="primary" id="colApri">Apri</button></div></div>`;
-      const P=c&&c.proposte, req=c&&c.richiesta;
-      h+=`<div class="colsez"><h6>Risposta fuori copione <span class="st">${ONLINE?'suggeritore acceso':'suggeritore spento: Regia/avvia.bat'}</span></h6>`;
-      if(P&&req&&P.req===req.t){
-        if(P.stato==='in corso') h+=`<div class="cattesa">Il suggeritore pensa a «${esc(req.testo)}»…</div>`;
-        else if(P.stato==='errore') h+=`<div class="cavv">Il suggeritore non ha risposto${P.errore?': '+esc(P.errore):''}. Scrivi tu la risposta.</div>`;
-        else { h+=`<div class="cattesa">Per: «${esc(req.testo)}»</div>`+(P.lista||[]).map((p,i)=>`<div class="cprop"><small>${esc(p.tono||'proposta '+(i+1))}</small><textarea id="colP${i}">${esc(p.battuta)}</textarea>${p.azione?`<div class="caz">${esc(p.azione)}</div>`:''}<div class="crow"><button class="primary" data-cmostra="${i}">Nel Registro</button></div></div>`).join('')+(P.avviso?`<div class="cavv">${esc(P.avviso)}</div>`:''); }
-      } else if(req&&req.t&&ONLINE) h+=`<div class="cattesa">In attesa del suggeritore…</div>`;
-      h+=`<div class="crow"><input id="colQ" placeholder="Domanda dei giocatori (scrivi o incolla)"><button id="colChiedi" title="Chiedi tre risposte al suggeritore">Proposte</button></div>`;
-      h+=`<div class="crow"><input id="colNota" placeholder="Indicazione (facoltativa): «è spaventato», «vuole soldi»"></div>`;
-      h+=`<div class="crow"><input id="colIo" placeholder="Oppure scrivi tu la risposta del PNG"><button id="colIoGo">Nel Registro</button></div></div>`;
-      const png=c?c.png:(typeof tokPng==='function'?tokPng(tid):null);
-      h+=voceHtml(png)+`<div class="colsez" id="colCop"><h6>Copione</h6>${copioneHtml(png,cid)}</div>`;
-    }
-    h+=`</div>`;
-    if(IS_GM) h+=c?`<div class="colf"><span></span><button class="danger" id="colFine">Chiudi il colloquio</button></div>`:'';
-    else h+=`<div class="colf" style="flex-direction:column;align-items:stretch"><div class="crow" style="margin:0"><input id="colTxt" placeholder="Cosa dici a ${esc(nome)}?"><button id="colMic" class="mic" title="Detta col microfono">🎤</button><button class="primary" id="colDi">Di’</button></div><div class="cchips">${SOCIALI.map(([k,l])=>`<button data-csoc="${k}">${l}</button>`).join('')}<button id="colEsci" style="margin-left:auto">Esci</button></div></div>`;
-    b.innerHTML=h; b.classList.remove('hidden'); posiziona(b);
-    for(const [id,v] of Object.entries(keep)){ const x=b.querySelector('#'+id); if(x&&!/^colP\d$/.test(id)) x.value=v; }
-    if(foc){ const x=b.querySelector('#'+foc); if(x) try{ x.focus({preventScroll:true}); }catch(e){} }
-    const q=s=>b.querySelector(s);
-    q('#colX').onclick=()=>{ if(IS_GM){ APERTO=null; SOLO=null; } else if(cid) CHIUSO_QUI.add(cid); b.classList.add('hidden'); lastKey=''; };
-    b.querySelectorAll('[data-capri]').forEach(x=>x.onclick=()=>{ APERTO=x.dataset.capri; lastKey=''; paint(); });
-    const conv=q('#colConv');
-    if(IS_GM){
-      const assicura=()=>cid||(APERTO=apri(tid,(q('#colPg')||{}).value||'gruppo'));
-      if(q('#colApri')) q('#colApri').onclick=()=>{ APERTO=apri(tid,q('#colPg').value); lastKey=''; };
-      const chiediGo=()=>{ const v=q('#colQ').value.trim(); if(!v){ toast('Scrivi la domanda dei giocatori'); return; } if(!ONLINE) toast('Il suggeritore è spento: sul PC del master doppio clic su Regia/avvia.bat'); const id=assicura(); setTimeout(()=>{ chiedi(id,v,'',q('#colNota')?q('#colNota').value:''); },60); q('#colQ').value=''; };
-      q('#colChiedi').onclick=chiediGo; q('#colQ').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); chiediGo(); } });
-      const ioGo=()=>{ const v=q('#colIo').value; if(!v.trim()) return; const id=assicura(); setTimeout(()=>mostra(id,v,''),60); q('#colIo').value=''; };
-      q('#colIoGo').onclick=ioGo; q('#colIo').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); ioGo(); } });
-      b.querySelectorAll('[data-cmostra]').forEach(x=>x.onclick=()=>{ const i=+x.dataset.cmostra; const p=((c&&c.proposte&&c.proposte.lista)||[])[i]||{}; mostra(cid,q('#colP'+i).value,p.azione); });
-      const cop=q('#colCop'); if(cop){ if(typeof v3Bind==='function') try{ v3Bind(cop); }catch(e){}
-        const D=dette(cid);
-        cop.querySelectorAll('.csay').forEach(el=>{ const testo=el.dataset.say; const e0=D.find(e=>e.say===testo); if(e0) el.classList.add('on');
-          el.onclick=e=>{ e.preventDefault(); e.stopPropagation(); if(e0) togli(cid,e0.rid); else { const id=assicura(); setTimeout(()=>mostra(id,testo,''),60); } }; }); }
-      b.querySelectorAll('[data-ctogli]').forEach(x=>x.onclick=()=>togli(cid,x.dataset.ctogli));
-      if(q('#colFine')) q('#colFine').onclick=()=>chiudi(cid);
-    } else {
-      const go=()=>{ const v=q('#colTxt').value.trim(); if(!v) return; scrivi(cid,{chi:'pg',pg:me,testo:v}); q('#colTxt').value=''; };
-      q('#colDi').onclick=go; q('#colTxt').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); go(); } });
-      q('#colMic').onclick=()=>detta(q('#colTxt'),q('#colMic'));
-      b.querySelectorAll('[data-csoc]').forEach(x=>x.onclick=()=>{ const s=SOCIALI.find(y=>y[0]===x.dataset.csoc); scrivi(cid,{chi:'pg',pg:me,tipo:'azione',testo:s[2]}); });
-      q('#colEsci').onclick=()=>{ CHIUSO_QUI.add(cid); b.classList.add('hidden'); lastKey=''; };
-    }
-    /* stesso personaggio: le domande aperte restano aperte e il pannello resta dov'era */
-    if(stesso){ b.querySelectorAll('details.cdom').forEach(x=>{ if(apD.has(x.dataset.k)) x.open=true; }); const cb=q('.colb'); if(cb) cb.scrollTop=sc0; }
-  }
-
-  /* ---------- il menù delle azioni dei giocatori sulle pedine degli altri ---------- */
-  function menuChiudi(){ const m=document.getElementById('tokMenu'); if(m) m.remove(); }
-  function menu(tid){
-    menuChiudi(); const t=S.tokens[tid]; if(!t||IS_GM||!me) return;
-    const el=document.querySelector(`#tokens .tok[data-id="${CSS.escape(tid)}"]`)||document.querySelector(`.tok[data-id="${CSS.escape(tid)}"]`); if(!el) return;
-    const r=el.getBoundingClientRect(); const amico=t.kind==='pg'||t.kind==='alleato'||!!t.owner;
-    const io=PGN[me]||me, lui=breve(t.name);
-    const voci=[['parla','Parla con '+lui]];
-    if(amico) voci.push(['aiuta','Aiuta','dà vantaggio alla sua prossima prova'],['passa','Passa un oggetto'],['cura',t.hp<=0?'Stabilizza':'Cura','Medicina'],['osserva','Osserva','Percezione']);
-    else voci.push(...SOCIALI.map(([k,l])=>[k,l]),['osserva','Osserva','Percezione']);
-    /* v319, i giocatori: dalla pedina nemica si sceglie l'attacco e la finestra del tiro si apre con quel bersaglio già scelto */
-    const mioT=S.tokens[me]; const attacchi=!amico&&mioT&&t.hp>0?(mioT.actions||[]).map((a,i)=>({a,i})).filter(({a})=>a&&(a.atk!=null||/^Multiattacco/.test(a.n))).slice(0,8):[];
-    const m=document.createElement('div'); m.id='tokMenu';
-    m.innerHTML=`<div class="tmh">${imgDi(t)?`<img src="${esc(imgDi(t))}" alt="">`:''}<b>${esc(lui)}</b></div>`
-      +attacchi.map(({a,i})=>`<button data-tatk="${i}" class="tmatk">⚔ ${esc(a.n)}<small>${a.atk!=null?'+'+a.atk:''}${a.dmg?' · '+esc(a.dmg):''}</small></button>`).join('')
-      +voci.map(([k,l,s])=>`<button data-tm="${k}">${esc(l)}${s?`<small>${esc(s)}</small>`:''}</button>`).join('');
-    document.body.appendChild(m);
-    const W=m.offsetWidth, H=m.offsetHeight; m.style.left=Math.min(innerWidth-W-8,r.right+8)+'px'; m.style.top=Math.max(8,Math.min(innerHeight-H-8,r.top))+'px';
-    m.addEventListener('pointerdown',e=>e.stopPropagation());
-    m.querySelectorAll('[data-tatk]').forEach(b=>b.onclick=()=>{ const a=(mioT.actions||[])[+b.dataset.tatk]; menuChiudi(); if(!a) return; doAction(me,a);
-      setTimeout(()=>{ const inp=document.querySelector(`#modal input[value="${CSS.escape(tid)}"]`); if(inp){ if(inp.type==='checkbox') document.querySelectorAll('#modal input[type=checkbox][name="tgt"]').forEach(x=>{ if(x!==inp) x.checked=false; }); inp.checked=true; inp.dispatchEvent(new Event('change',{bubbles:true})); inp.closest('label')?.scrollIntoView({block:'center'}); } },180); });
-    m.querySelectorAll('[data-tm]').forEach(b=>b.onclick=()=>{ const k=b.dataset.tm; menuChiudi();
-      if(k==='parla'||SOCIALI.some(s=>s[0]===k)){ const cid=apri(tid,me); if(!cid) return; CHIUSO_QUI.delete(cid); APERTO=cid; lastKey='';
-        if(k!=='parla'){ const s=SOCIALI.find(y=>y[0]===k); setTimeout(()=>scrivi(cid,{chi:'pg',pg:me,tipo:'azione',testo:s[2]}),80); }
-        setTimeout(()=>{ paint(); const x=document.getElementById('colTxt'); if(x) x.focus(); },120); return; }
-      const txt={aiuta:`${io} aiuta ${lui}: vantaggio alla sua prossima prova`,passa:`${io} vuole passare un oggetto a ${lui}`,cura:`${io} vuole ${t.hp<=0?'stabilizzare':'curare'} ${lui} (Medicina)`,osserva:`${io} osserva ${lui} con attenzione (Percezione)`}[k];
-      log({kind:'sys',txt}); save(); toast('Detto al master: '+txt); });
-    setTimeout(()=>window.addEventListener('pointerdown',menuChiudi,{once:true}),0);
-  }
-  window.addEventListener('keydown',e=>{ if(e.key==='Escape') menuChiudi(); });
-
-  /* il clic su una pedina (senza trascinarla): il giocatore apre il menù sulle pedine degli altri, il master il colloquio del PNG */
-  const _sel=select; select=function(id){
-    const t=S.tokens[id], x0=t&&t.x, y0=t&&t.y;
-    _sel.apply(this,arguments);
-    if(!t) return;
-    const mio=!IS_GM&&((t.kind==='pg'&&id===me)||t.owner===me);
-    if(mio) return;
-    window.addEventListener('pointerup',()=>setTimeout(()=>{
-      const t2=S.tokens[id]; if(!t2||t2.x!==x0||t2.y!==y0||(typeof pending!=='undefined'&&pending)) return;
-      if(IS_GM){ const g=diTok(id); if(g){ APERTO=g[0]; SOLO=null; lastKey=''; paint(); } else if(typeof tokPng==='function'&&tokPng(id)){ SOLO=id; APERTO=null; lastKey=''; paint(); } }
-      else if(t2.kind!=='pg'||id!==me) menu(id);
-    },30),{once:true});
-  };
-
-  /* v300: i carri non parlano (il nome «Carro I · lo guida Tiberius Aurentius» faceva trovare il dialogo di Tiberius) */
-  const _tp=tokPng; tokPng=function(id){ for(const sd of SCENE_DATA){ const pre='p_'+sd.id+'_'; if(id&&id.startsWith(pre)){ const x=(sd.pedine||[]).find(q=>q.id===id.slice(pre.length)); if(x&&x.carro) return null; } } return _tp.apply(this,arguments); };
-  const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ paint(); }catch(e){ console.warn('colloquio',e); } return o; };
-  window.addEventListener('resize',()=>{ const b=document.getElementById('colloquio'); if(b&&!b.classList.contains('hidden')) posiziona(b); });
-  connect();
-  window.__colloquio={apri,scrivi,chiedi,mostra,chiudi,menu,parla:tid=>{ const cid=apri(tid,me); if(cid){ CHIUSO_QUI.delete(cid); APERTO=cid; lastKey=''; setTimeout(paint,120); } },stato:()=>({ONLINE,COLS,AMB,APERTO,SOLO})};
-})();
-/* ===== FINE IL COLLOQUIO (v291) ===== */
+/* ===== v353: il colloquio (v291), il suggeritore e la finestra del dialogo sulla pedina sono stati tolti (Giuseppe, 17-11-2026: «inutili, i PNG li recito io»).
+   Resta solo la regola della v300: i carri non parlano (il nome «Carro I · lo guida Tiberius Aurentius» faceva trovare il dialogo di Tiberius). */
+{ const _tp=tokPng; tokPng=function(id){ for(const sd of SCENE_DATA){ const pre='p_'+sd.id+'_'; if(id&&id.startsWith(pre)){ const x=(sd.pedine||[]).find(q=>q.id===id.slice(pre.length)); if(x&&x.carro) return null; } } return _tp.apply(this,arguments); }; }
 
 /* ===== RICARICO SULLA SCENA GIUSTA E «PARLA CON…» (v276) =====
    Mattheus (21-10): «ogni volta che si ricarica ricompare il dungeon sotto Bëllindë». Era la scena di partenza, mostrata finché la partita
@@ -11551,12 +11192,7 @@ html body #side>#secLog#secLog{background:#090B10!important}  /* il Registro res
   if(!TEST_MODE){ const st=document.getElementById('stage'); if(st){ const v=document.createElement('div'); v.id='veloApertura'; v.innerHTML='<div><span class="rombo">◆</span> Il tavolo si sta aprendo…</div>'; st.appendChild(v);
     const css=document.createElement('style'); css.textContent='#veloApertura{position:absolute;inset:0;z-index:40;background:rgba(7,10,17,.92);display:flex;align-items:center;justify-content:center;font-family:"Mr Eaves Small Caps",Georgia,serif;font-size:26px;letter-spacing:.06em;color:var(--gold,#D9B15C);transition:opacity .5s}#veloApertura .rombo{opacity:.7;margin-right:8px}'; document.head.appendChild(css);
     const t0=Date.now(); const via=()=>{ v.style.opacity='0'; setTimeout(()=>v.remove(),500); }; const iv=setInterval(()=>{ if(FB_LOADED||Date.now()-t0>8000){ clearInterval(iv); via(); } },150); } }
-  /* «Parla con…» nel riquadro del giocatore */
-  const bs=document.getElementById('btnSpells'); if(bs&&!IS_GM){ const b=document.createElement('button'); b.id='btnParla'; b.textContent='Parla con…'; bs.insertAdjacentElement('afterend',b);
-    b.onclick=()=>{ const L=Object.entries(S.tokens).filter(([id,t])=>t&&!t.hidden&&t.kind!=='pg'&&!t.owner&&(typeof tokInScene!=='function'||tokInScene(id))&&visible(id));
-      if(!L.length){ toast('Qui non c’è nessuno con cui parlare'); return; }
-      openModal(`<div class="eyebrow">${poiText((S.tokens[me]||{}).name||'')}</div><h2 class="big">Parla con…</h2><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px">${L.map(([id,t])=>{ const img=(typeof railImg==='function'&&railImg(t))||t.img||''; return `<button data-parla="${poiText(id)}" style="display:flex;align-items:center;gap:8px">${img?`<img src="${poiText(img)}" alt="" style="width:34px;height:34px;border-radius:50%;object-fit:cover">`:''}${poiText(String(t.name).split(',')[0])}</button>`; }).join('')}</div><p class="note" style="margin-top:10px">Si apre il colloquio a sinistra della mappa: lì scrivi cosa dici.</p>`,'poibox');
-      document.querySelectorAll('#modal [data-parla]').forEach(x=>x.onclick=()=>{ closeModal(); window.__colloquio.parla(x.dataset.parla); }); }; }
+  /* v353: via il tasto «Parla con…» (apriva il colloquio) */
 })();
 /* ===== FINE v276 ===== */
 
@@ -13739,67 +13375,9 @@ document.addEventListener('click',e=>{ const b=e.target.closest('[data-gpng]'); 
   window.apriScheda=function(id){ c2Open=id; openCompendio(); const bx=document.querySelector('#modal .box'); if(bx) bx.classList.add('c4sola'); };
   document.addEventListener('click',e=>{ const b=e.target.closest('#c2back'); if(!b) return; const bx=b.closest('.box.c4sola'); if(!bx) return; e.preventDefault(); e.stopPropagation(); closeModal(); },true);
 
-  /* --- 4. Il co-master --- */
-  const AMB=(new URLSearchParams(location.search).get('regia'))||(TEST_MODE?'prova':'partita');
-  const BASE='partita/regia/'+AMB;
-  let rdb=null, MSG={}, ST={}, aperto=false, ascolto=null, firma='';
-  const now=()=>Date.now(), esc=s=>poiText(s==null?'':s);
-  const online=()=>!!(ST.online&&now()-ST.online<70000);
-  function testo(s){ /* *corsivo* = da leggere ai giocatori; **grassetto**; righe */
-    return esc(s).replace(/\*\*([^*\n]+)\*\*/g,'<b>$1</b>').replace(/\*([^*\n][^*]*?)\*/g,'<em>$1</em>').replace(/\n/g,'<br>'); }
-  async function connect(){
-    if(!IS_GM||typeof firebase==='undefined'||!window.FIREBASE_CONFIG) return;
-    try{ let app; try{ app=firebase.app('regia'); }catch(e){ app=firebase.initializeApp(window.FIREBASE_CONFIG,'regia'); }
-      const auth=app.auth(); if(!auth.currentUser) await auth.signInAnonymously(); rdb=app.database();
-      rdb.ref(BASE+'/stato').on('value',s=>{ ST=s.val()||{}; dipingi(); });
-      rdb.ref(BASE+'/comaster').limitToLast(40).on('value',s=>{ MSG=s.val()||{}; dipingi(); });
-      setInterval(dipingi,20000);
-    }catch(e){ console.warn('co-master: collegamento',e); }
-  }
-  function pannello(){ let p=document.getElementById('comaster'); if(p) return p;
-    p=document.createElement('div'); p.id='comaster'; p.className='hidden';
-    p.innerHTML=`<div class="cm-h"><b>Co-master</b><span id="cmStato"></span><button class="mini" id="cmPulisci" title="Ricomincia la conversazione">Nuova</button><button class="mini" id="cmChiudi" title="Chiudi">×</button></div>
-      <div class="cm-l" id="cmL"></div>
-      <div class="cm-f"><textarea id="cmIn" rows="3" placeholder="Cosa fanno i giocatori? Cosa ti serve? (Invio manda, Maiuscole+Invio va a capo)"></textarea>
-      <div class="cm-b"><button class="mini" id="cmMic" title="Detta col microfono">🎤</button><button class="mini primary" id="cmVai">Chiedi</button></div></div>`;
-    document.body.appendChild(p);
-    p.addEventListener('pointerdown',e=>e.stopPropagation()); p.addEventListener('wheel',e=>e.stopPropagation(),{passive:true}); p.addEventListener('keydown',e=>e.stopPropagation());
-    const inp=p.querySelector('#cmIn');
-    p.querySelector('#cmChiudi').onclick=()=>apri(false);
-    p.querySelector('#cmVai').onclick=manda;
-    inp.addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); manda(); } });
-    p.querySelector('#cmMic').onclick=()=>detta(inp,p.querySelector('#cmMic'));
-    p.querySelector('#cmPulisci').onclick=()=>{ if(!rdb) return; if(confirm('Ricominciare la conversazione col co-master? Le risposte di prima spariscono.')) rdb.ref(BASE+'/comaster').set(null); };
-    return p; }
-  function apri(v){ aperto=v; const p=pannello(); p.classList.toggle('hidden',!v); const b=document.getElementById('navCm'); if(b) b.classList.toggle('on',v); if(v){ firma=''; dipingi(); setTimeout(()=>p.querySelector('#cmIn').focus(),50); } }
-  function manda(){ const inp=document.getElementById('cmIn'); const t=(inp.value||'').trim(); if(!t) return;
-    if(!rdb){ toast('Co-master: Firebase non collegato'); return; }
-    const sc=(typeof GM_VIEW!=='undefined'&&GM_VIEW)||S.scene;
-    rdb.ref(BASE+'/comaster').push({t:now(),testo:t,sc,stato:'attesa'}); inp.value='';
-    if(!online()) toast('Il banco di regia è spento: la domanda aspetta che si accenda (Regia/avvia.bat)'); }
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  function detta(inp,btn){ if(!SR){ toast('Il microfono non c’è in questo browser: scrivi'); return; }
-    if(ascolto){ try{ ascolto.stop(); }catch(e){} return; }
-    const r=new SR(); r.lang='it-IT'; r.interimResults=true; r.continuous=true; ascolto=r; btn.classList.add('on'); const base=inp.value?inp.value+' ':'';
-    r.onresult=e=>{ let s=''; for(const x of e.results) s+=x[0].transcript; inp.value=base+s; };
-    r.onerror=e=>{ if(e.error!=='no-speech'&&e.error!=='aborted') toast('Microfono: '+e.error); };
-    r.onend=()=>{ ascolto=null; btn.classList.remove('on'); inp.focus(); };
-    try{ r.start(); }catch(e){ ascolto=null; btn.classList.remove('on'); } }
-  function dipingi(){ const st=document.getElementById('cmStato'); if(st){ st.textContent=online()?'acceso':'spento'; st.className=online()?'on':'off'; }
-    if(!aperto) return; const L=document.getElementById('cmL'); if(!L) return;
-    const arr=Object.entries(MSG).filter(([,m])=>m).sort((a,b)=>a[1].t-b[1].t);
-    const f=JSON.stringify(arr.map(([k,m])=>[k,m.stato,(m.risposta||'').length]))+online(); if(f===firma) return; firma=f;
-    L.innerHTML=arr.length?arr.map(([k,m])=>`<div class="cm-q">${esc(m.testo)}</div><div class="cm-r">${m.risposta?testo(m.risposta):m.stato==='errore'?`<i class="cm-e">Errore: ${esc(m.errore||'')}</i>`:`<i class="cm-w">${online()?'sto pensando…':'aspetto il banco di regia (spento)'}</i>`}</div>`).join('')
-      :`<div class="cm-v">Scrivi o detta cosa fanno i giocatori: il co-master risponde con il testo da leggere (<em>in corsivo</em>), le prove da chiedere e le battute dei PNG, sulla scena che stai guardando.${online()?'':'<br><br><b>Il banco di regia è spento</b>: si accende con Regia/avvia.bat.'}</div>`;
-    L.scrollTop=L.scrollHeight; }
-  if(nav&&IS_GM&&!document.getElementById('navCm')){
-    const b=document.createElement('button'); b.className='navb'; b.id='navCm'; b.title='Il co-master: scrivi o detta, ti risponde';
-    b.innerHTML='<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>Co-master';
-    b.onclick=()=>apri(!aperto);
-    b.classList.remove('navb'); b.classList.add('cm-tasto'); document.body.appendChild(b); /* v341: fuori dalla barra in alto (Giuseppe: lì solo Scene, Tavolo, Scheda, Compendio) */
-  }
+  /* --- 4. v353: il co-master è stato tolto (Giuseppe, 17-11-2026). Restano qui sotto il tasto «Torna dai giocatori», il movimento libero in esplorazione e lo stile della Guida. --- */
   const css=document.createElement('style'); css.id='v340css'; css.textContent=`
-#navTorna.cm-torna{position:fixed;z-index:59;left:calc(var(--cmL,250px) + 150px);bottom:14px;display:flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:20px;border:1px solid #F6E3A8;background:#7A2A1E;color:#F6E3A8;font:400 18px 'Mr Eaves Small Caps',Georgia,serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+#navTorna.cm-torna{position:fixed;z-index:59;left:var(--cmL,250px);bottom:14px;display:flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:20px;border:1px solid #F6E3A8;background:#7A2A1E;color:#F6E3A8;font:400 18px 'Mr Eaves Small Caps',Georgia,serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
 #navTorna.cm-torna svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
 #navTorna.nascosto{display:none!important}
 body.sc-citta #world .poi{transform:translate(-50%,-50%) scale(2.1)!important;z-index:5}
@@ -13810,33 +13388,15 @@ body.sc-citta #world .poi.unrev{opacity:1!important}
 #sceneGuide .gp2breve{font-family:'Bookinsanity',Georgia,serif;font-style:normal;font-size:15px;line-height:1.35;margin:4px 0 6px;padding:6px 8px;border-left:3px solid rgba(140,100,40,.55);background:rgba(140,100,40,.08)}
 #modal .box.c4sola{background:transparent!important;box-shadow:none!important;border:0!important}
 #modal .box.c4sola .c3nav, #modal .box.c4sola .c3main, #modal .box.c4sola .c3veil, #modal .box.c4sola>.close{display:none!important}
-#navCm.cm-tasto{position:fixed;z-index:59;left:var(--cmL,250px);bottom:14px;display:flex;align-items:center;gap:6px;padding:7px 14px 7px 10px;border-radius:20px;border:1px solid rgba(217,177,92,.7);background:#12161D;color:#F6E3A8;font:400 18px 'Mr Eaves Small Caps',Georgia,serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
-#navCm.cm-tasto svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
-#navCm.cm-tasto.on{background:#D9B15C;color:#12161D}
-#comaster{position:fixed;z-index:60;left:50%;transform:translateX(-50%);bottom:14px;width:min(640px,46vw);height:min(62vh,640px);display:flex;flex-direction:column;background:#12161D;border:1px solid rgba(217,177,92,.55);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.6);color:#EDE3C8}
-#comaster.hidden{display:none}
-#comaster .cm-h{display:flex;align-items:center;gap:8px;padding:8px 10px;border-bottom:1px solid rgba(217,177,92,.3)}
-#comaster .cm-h b{font-family:'Mr Eaves Small Caps',Georgia,serif;font-size:22px;color:#D9B15C;font-weight:400}
-#comaster .cm-h span{font-size:13px;margin-right:auto} #comaster .cm-h span.on{color:#8FCB9B} #comaster .cm-h span.off{color:#D98C7A}
-#comaster .cm-l{flex:1;overflow:auto;padding:10px 12px;font-family:'Bookinsanity',Georgia,serif;font-size:16px;line-height:1.45}
-#comaster .cm-q{margin:10px 0 4px 18%;padding:6px 10px;border-radius:8px;background:#232833;color:#F6E3A8}
-#comaster .cm-r{margin:0 0 10px;padding:8px 10px;border-radius:8px;background:#E9DDBF;color:#2A2118}
-#comaster .cm-r em{font-style:italic;color:#3B2410}
-#comaster .cm-w,#comaster .cm-v{opacity:.75} #comaster .cm-e{color:#9B2E20}
-#comaster .cm-f{display:flex;gap:6px;padding:8px;border-top:1px solid rgba(217,177,92,.3)}
-#comaster textarea{flex:1;resize:none;font:16px/1.35 'Bookinsanity',Georgia,serif;background:#0C0F14;color:#EDE3C8;border:1px solid rgba(217,177,92,.35);border-radius:6px;padding:6px 8px}
-#comaster .cm-b{display:flex;flex-direction:column;gap:6px}
-#comaster #cmMic.on{background:#7A2A1E;color:#fff}
 `; document.head.appendChild(css);
   /* v341: posizione del tasto: in basso, subito a destra della colonna dei personaggi */
-  function posCm(){ const b=document.getElementById('navCm'), st=document.getElementById('stage'); if(!b||!st) return; const r=st.getBoundingClientRect(); document.body.style.setProperty('--cmL',Math.round(r.left+12)+'px'); }
+  function posCm(){ const st=document.getElementById('stage'); if(!st) return; const r=st.getBoundingClientRect(); document.body.style.setProperty('--cmL',Math.round(r.left+12)+'px'); }
   window.addEventListener('resize',posCm); setTimeout(posCm,500);
   /* v341: in esplorazione le pedine si muovono libere, senza conferma e senza righe nel Registro; in scontro come prima */
   { const _pm=proposeMove; proposeMove=function(id,from,to,el){ if(S.mode==='scontro') return _pm.apply(this,arguments);
       const t=S.tokens[id]; if(!t) return; t.x=to.x; t.y=to.y; if(t.kind==='pg'&&S.fog&&S.fog.on) fogOp('r',to.x,to.y,sightPx(t),true); pending=null; confirmEl.style.display='none'; save(); render(); }; }
   const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ posCm(); torna(); document.body.classList.toggle('sc-citta',!!(CUR&&CUR.id==='teramum')); }catch(e){} return o; };
   try{ torna(); }catch(e){}
-  connect();
 })();
 /* ===== FINE SCENE, SCHEDA SOLA E CO-MASTER (v340) ===== */
 /* ===== LA SCHEDA DEL PNG IN UNA FINESTRA (v343) =====
