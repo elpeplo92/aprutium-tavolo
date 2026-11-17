@@ -2805,7 +2805,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v353</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v354</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -3097,7 +3097,7 @@ roleSel.onchange=async()=>{ const want=roleSel.value; if(want==='master'&&fbAuth
    di loro va in errore — il che spegneva la nebbia, i tasti muri/porte e
    "Rivela intorno al gruppo". Qui la forma viene ricostruita a ogni lettura. */
 const SHAPE_ARR=['order','log','removed','archive','met','visited','comp','comp2'];
-const SHAPE_OBJ=['pgSc','poiRevT','fogS','wallsS','doorsS','doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','negozi','bastione'];
+const SHAPE_OBJ=['pgSc','poiRevT','fogS','wallsS','doorsS','doors','tokens','notes','poiPos','compOv','inv','walls','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','negozi','bastione','arrivo'];
 function normalize(s){
   if(!s||typeof s!=='object') s={};
   for(const k of SHAPE_ARR) if(!Array.isArray(s[k])) s[k]=[];
@@ -3167,7 +3167,7 @@ const LIVE=['hd','sc','light','xs','ich','res','fx','adv','fxT','x','y','hp','hp
 function merge(remote){
   const s=structuredClone(DEFAULT_STATE);
   if(!remote) return normalize(s);
-  for(const k of ['mode','round','turn','order','request','log','scene','pgSc','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','negozi','bastione','fogS','wallsS','doorsS','fogMig','poiRevT']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
+  for(const k of ['mode','round','turn','order','request','log','scene','pgSc','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','negozi','bastione','fogS','wallsS','doorsS','fogMig','poiRevT','arrivo']) if(remote[k]!==undefined) s[k]=structuredClone(remote[k]);
   const rt=remote.tokens||{};
   for(const [id,t] of Object.entries(rt)){
     if(s.tokens[id]){ for(const k of LIVE) if(t[k]!==undefined) s.tokens[id][k]=t[k]; }
@@ -3178,7 +3178,7 @@ function merge(remote){
 }
 function toRemote(s){
   const out={};
-  for(const k of ['mode','round','turn','order','request','log','scene','pgSc','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','negozi','bastione','fogS','wallsS','doorsS','fogMig','poiRevT']) if(s[k]!==undefined) out[k]=s[k];
+  for(const k of ['mode','round','turn','order','request','log','scene','pgSc','removed','fog','publicRolls','walls','doors','aoe','ping','show','notes','party','archive','met','visited','comp','poiPos','compOv','comp2','inv','poiRev','poiRoll','poiSeen','poiSpot','poiMiss','diari','pe','premi','monete','crociata','equip','invOut','hotbar','pos','marcia','scenaStato','fronti','invNote','appunti','negozi','bastione','fogS','wallsS','doorsS','fogMig','poiRevT','arrivo']) if(s[k]!==undefined) out[k]=s[k];
   out.tokens={};
   for(const [id,t] of Object.entries(s.tokens)){ const o={}; for(const k of LIVE) if(t[k]!==undefined) o[k]=t[k]; if(t.custom){ Object.assign(o,{custom:true,name:t.name,short:t.short,kind:t.kind,color:t.color,img:t.img||'',mods:t.mods,actions:t.actions||[],ac:t.ac,note:t.note||'',size:t.size||1,noInit:!!t.noInit,tac:t.tac||'',lines:t.lines||[]}); } out.tokens[id]=o; }
   return out;
@@ -3300,7 +3300,6 @@ function drawFog(){
   fogCtx.clearRect(0,0,MAP_W,MAP_H);
   const smoke=document.getElementById('fogsmoke'); if(smoke) smoke.style.display='none';
   if(!f.on||(typeof CUR!=='undefined'&&CUR&&!CUR.fog)){ return; }
-  if(typeof gmPeeking==='function'&&gmPeeking()) return;   /* v262: in anteprima la nebbia è quella di un'altra scena */
   if(IS_GM&&typeof editTool!=='undefined'&&editTool==='wall') return;
   /* 1. maschera delle zone svelate (nero = si vede) */
   if(fogMask.width!==MAP_W||fogMask.height!==MAP_H){ fogMask.width=fogMemo.width=MAP_W; fogMask.height=fogMemo.height=MAP_H; } /* v352: la maschera segue la mappa */
@@ -6048,7 +6047,6 @@ document.getElementById('wallTool').onclick=()=>setEditTool('wall');
 document.getElementById('doorTool').onclick=()=>setEditTool('door');
 function editAt(x,y,first){
   const k=cellKey(x,y);
-  if(gmPeeking()){ toast('Stai guardando un’altra scena: muri e porte si dipingono dove sta il gruppo'); return; }   /* v262 */
   if(editTool==='wall'){ S.walls=S.walls||{}; if(first) paintVal=walkable(x,y)?0:1; if(paintVal===1&&maskAt(x,y)==='1') delete S.walls[k]; else if(paintVal===0&&maskAt(x,y)!=='1') delete S.walls[k]; else S.walls[k]=paintVal; }
   else if(editTool==='door'&&first){ S.doors=S.doors||{}; const cur=S.doors[k]; if(!cur) S.doors[k]='c'; else if(cur==='c'||cur==='o') S.doors[k]='s'; else delete S.doors[k]; toast(S.doors[k]==='c'?'Porta chiusa':S.doors[k]==='s'?'Passaggio segreto (invisibile ai giocatori)':'Porta tolta'); }
   drawWalls(); drawFog();
@@ -6281,7 +6279,7 @@ function sceneStart(key){
   const d=SCENE_DATA.find(s=>s.id===key); if(!d) return [];
   if(key===SCENE_DEFAULT.id) return sceneParty().map(id=>{ const o=DEFAULT_STATE.tokens[id]; return o?{x:o.x,y:o.y}:null; }).filter(Boolean);
   const W=(d.mappa&&d.mappa.larghezza)||1448, H=(d.mappa&&d.mappa.altezza)||1086, g=Math.max(30,+(d.regole&&d.regole.pedina)||0); /* v300: pedine grandi = posti più larghi */
-  const primo=(d.punti||[]).map(p=>poiPosition(p)).find(Boolean)||{x:W/2,y:H/2};
+  const arr=(S&&S.arrivo||{})[key]; const primo=(arr&&arr.x!=null)?{x:+arr.x,y:+arr.y}:((d.punti||[]).map(p=>poiPosition(p)).find(Boolean)||{x:W/2,y:H/2}); /* v354: punto d'arrivo scelto dal master */
   const sn=v=>Math.floor(v/g)*g+g/2, out=[], muri=!!(d.regole&&d.regole.muri);
   const libero=(x,y)=>x>g&&y>g&&x<W-g&&y<H-g&&!out.some(o=>o.x===x&&o.y===y)&&(!muri||((d.mappa.muri||[])[Math.floor(y/g)]||'')[Math.floor(x/g)]==='1');
   /* a spirale intorno all'ingresso, partendo da una casella sotto */
@@ -13399,6 +13397,49 @@ body.sc-citta #world .poi.unrev{opacity:1!important}
   try{ torna(); }catch(e){}
 })();
 /* ===== FINE SCENE, SCHEDA SOLA E CO-MASTER (v340) ===== */
+
+/* ===== MURI, PORTE E NEBBIA DELLA SCENA GUARDATA; PUNTO D'ARRIVO (v354) =====
+   Giuseppe (17-11): «muri e porte rimangono sempre sulla mappa e non si aggiornano quando cambiamo la mappa». Quando il master
+   guardava un'altra scena (anteprima, GM_VIEW) la pagina disegnava e usava S.walls/S.doors/S.fog della scena del gruppo, e il
+   pennello dei muri era bloccato. Ora, come già per il giocatore altrove (v306, conLaSua), render, drawWalls, drawFog, walkable,
+   fogVisible, fogOp, editAt, doorClickAt e i quattro tasti della nebbia lavorano su S.fogS/wallsS/doorsS[GM_VIEW] e ci scrivono.
+   «E poi mi devi permettere di selezionare dove far comparire i personaggi»: tasto «Arrivo» (#arrivoTool) fra i tasti a sinistra:
+   un clic sulla mappa fissa S.arrivo[scena]={x,y}; se è la scena del gruppo i PG vengono messi subito lì (a spirale, come
+   sceneStart), altrimenti arriveranno lì quando il gruppo entrerà (S.pos[scena] si cancella). «Porta i personaggi all'ingresso»
+   usa lo stesso punto. */
+(function(){
+  if(!IS_GM) return;
+  const peek=()=>typeof gmPeeking==='function'&&gmPeeking();
+  const conQuella=(fn,scrivi)=>{ const k=GM_VIEW, F=S.fog, W=S.walls, D=S.doors; S.fogS=S.fogS||{}; S.wallsS=S.wallsS||{}; S.doorsS=S.doorsS||{}; const f=S.fogS[k];
+    S.fog=f?{on:!!f.on,ops:Array.isArray(f.ops)?f.ops.slice():[]}:{on:false,ops:[]}; S.walls=Object.assign({},S.wallsS[k]||{}); S.doors=Object.assign({},S.doorsS[k]||{});
+    try{ return fn(); } finally { if(scrivi){ S.fogS[k]={on:!!(S.fog&&S.fog.on),ops:((S.fog&&S.fog.ops)||[]).slice()}; S.wallsS[k]=Object.assign({},S.walls||{}); S.doorsS[k]=Object.assign({},S.doors||{}); } S.fog=F; S.walls=W; S.doors=D; } };
+  const avvolgi=(nome,scrivi)=>{ const v=window[nome]; if(typeof v!=='function') return; window[nome]=function(){ const a=arguments, t=this; if(peek()) return conQuella(()=>v.apply(t,a),scrivi); return v.apply(t,a); }; };
+  for(const n of ['render','drawWalls','drawFog','walkable','fogVisible']) avvolgi(n,false);
+  for(const n of ['fogOp','editAt','doorClickAt']) avvolgi(n,true);
+  for(const id of ['fogOn','fogAll','fogReset','fogParty']){ const b=document.getElementById(id); if(!b||!b.onclick) continue; const o=b.onclick; b.onclick=function(e){ if(peek()) return conQuella(()=>o.call(b,e),true); return o.call(b,e); }; }
+
+  /* il tasto «Arrivo» */
+  let arrivoTool=false;
+  const ic=s=>`url("data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>${s}</svg>`)}")`;
+  const ICO=ic(`<path fill='#fff' d='M256 24c-84 0-152 68-152 152 0 110 152 312 152 312s152-202 152-312c0-84-68-152-152-152zm0 92a60 60 0 110 120 60 60 0 010-120zM120 420h272v48H120z'/>`);
+  const css=document.createElement('style'); css.textContent=`#zoomctl #arrivoTool{--ic:${ICO}} #stage.arrivotool{cursor:crosshair}`; document.head.appendChild(css);
+  function tasto(){ if(document.getElementById('arrivoTool')) return; const neb=document.getElementById('vmNebbia'), rif=document.getElementById('fogParty'); if(!neb||!rif) return;
+    const b=document.createElement('button'); b.id='arrivoTool'; b.className='gm'; b.dataset.nome='Arrivo dei personaggi'; b.title='Arrivo dei personaggi: clicca sulla mappa dove devono comparire';
+    rif.insertAdjacentElement('afterend',b); b.onclick=()=>{ arrivoTool=!arrivoTool; b.classList.toggle('on',arrivoTool); b.classList.toggle('primary',arrivoTool); stage.classList.toggle('arrivotool',arrivoTool); if(arrivoTool){ if(fogTool) setFogTool(fogTool); if(editTool) setEditTool(editTool); toast('Clicca sulla mappa il punto d’arrivo dei personaggi'); } }; }
+  function spegni(){ if(!arrivoTool) return; arrivoTool=false; const b=document.getElementById('arrivoTool'); if(b){ b.classList.remove('on','primary'); } stage.classList.remove('arrivotool'); }
+  function fissa(p){ const k=(peek()?GM_VIEW:S.scene); const sc=SCENES[k]; if(!sc){ return; }
+    S.arrivo=S.arrivo||{}; S.arrivo[k]={x:Math.round(p.x),y:Math.round(p.y)}; if(S.pos) delete S.pos[k];
+    if(!peek()&&CUR&&CUR.tokens===true){ const start=sceneStart(k), ids=Object.keys(S.tokens).filter(id=>(S.tokens[id].kind==='pg'||S.tokens[id].owner)&&tokInScene(id));
+      ids.forEach((id,i)=>{ const t=S.tokens[id], q=start[i%Math.max(1,start.length)]; if(t&&q){ t.x=q.x; t.y=q.y; t.movedM=0; t.dash=false; if(S.fog&&S.fog.on&&CUR.fog) fogOp('r',q.x,q.y,sightPx(t),true); } });
+      log({kind:'sys',txt:'Il master raduna i personaggi in '+(CUR.menu||CUR.name)}); toast('Personaggi radunati qui: d’ora in poi arrivano in questo punto'); }
+    else toast('Segnato: quando il gruppo entrerà in «'+(sc.menu||sc.name||k)+'» comparirà qui');
+    save(true); render(); }
+  stage.addEventListener('pointerdown',e=>{ if(!arrivoTool) return; if(e.target.closest('button,#confirm,#zoomctl,#dock,#hud,#zoomlbl')) return; e.stopImmediatePropagation(); fissa(toMap(e)); spegni(); },true);
+  const _dk=document.getElementById('dkMove'); if(_dk){ const o=_dk.onclick; _dk.onclick=function(e){ spegni(); return o?o.call(_dk,e):undefined; }; }
+  tasto(); setTimeout(tasto,800); const _r=render; render=function(){ const o=_r.apply(this,arguments); try{ tasto(); }catch(e){} return o; };
+})();
+/* ===== FINE v354 ===== */
+
 /* ===== LA SCHEDA DEL PNG IN UNA FINESTRA (v343) =====
    Giuseppe (5-11): «ogni scheda del Compendio deve essere una sorta di pop-up che compare indipendente: se chiudo il Compendio e vado
    sul tavolo la scheda può restare aperta; se clicco un'altra scheda cambia. Dietro niente schermata nera. Devo poter mostrare il ritratto
