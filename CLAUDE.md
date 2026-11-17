@@ -1974,3 +1974,18 @@ Scena nuova `casalena` («La stalla di Casalena», ordine 6.1): battlemap GPT Im
 ## v351 (11-11-2026)
 
 Scena `casalena` con la nebbia (`regole.nebbia: true`): il master la attiva e rivela col pennello.
+
+## Cloudflare (17/11/2026) — copia di prova, non ancora il sito vero
+
+- Giuseppe vuole poter rendere privato il repository e uscire dal limite dei ~480 MB di GitHub Pages. Copia del sito su Cloudflare (gratuito): **https://aprutium-tavolo.aprutium.workers.dev** (Worker `aprutium-tavolo` con asset statici; sottodominio account `aprutium.workers.dev`). `wrangler pages` non funziona più per i progetti nuovi: si usa `wrangler deploy --assets`.
+- **Pubblicare sulla copia**: dopo `py build.py` e la prova, da `Sito/`: `powershell -ExecutionPolicy Bypass -File strumenti\pubblica-cloudflare.ps1`. Lo script copia in una cartella temporanea solo `index.html`, `img/`, `font/`, `dice/` (esclude `_privato`, `src`, `contenuti`, `comp`, `strumenti`), controlla i limiti (25 MB per file, 20.000 file) e carica. Serve il login di wrangler già fatto (`npx wrangler login`).
+- Provato: caricamento (36 s, 2.240 file, 290 MB), pagina e immagini, accesso anonimo di Firebase dal dominio nuovo, scrittura e lettura su `partita/` da quel dominio (con nodo di prova poi rimosso). Dopo il primo deploy il certificato ha impiegato circa 8 minuti.
+- **GitHub Pages resta il sito vero** finché Giuseppe non decide il passaggio. Al passaggio: avvisare i giocatori del link nuovo, aggiornare questa guida e `7_Aprutium/CLAUDE.md` («Come si pubblica»), poi eventualmente repository privato (Pages da repository privato non funziona sul piano gratuito).
+- Il sito pubblicato (su qualunque ospite) resta leggibile da chiunque abbia il link: i testi `gm` nel sorgente della pagina non sono segreti. Per i segreti veri usare il nodo Firebase `master/`.
+
+## v352 (17-11-2026, prima della sessione) — nebbia: maschera che segue la mappa e vista viva dei PG
+
+- Giuseppe: su Casalena «Rivela tutto» apriva un rettangolo più piccolo della mappa e «Rivela intorno al gruppo» non seguiva la luce. Causa: `fogMask` era un canvas fisso 1448×1086 (Sotto Bëllindë) e non veniva mai ridimensionato: su ogni mappa più grande la parte fuori da quel rettangolo restava coperta. Ora `sceneApply` lo porta a `sc.w×sc.h` insieme a `fog` e `walls`, e `drawFog` lo controlla a ogni disegno.
+- **Vista viva** (`fogPgVivi`, in `drawFog` e `fogVisible`): quello che i PG della scena vedono adesso (`sightPx` = 9 m o la luce accesa, fermato dai muri con `losPoly`) è sempre scoperto e si sposta con le pedine, senza premere nulla. Le pedine dei PNG si vedono solo dentro la vista viva o nelle zone aperte col pennello.
+- Due maschere: `fogMask` (pennello, «Rivela tutto»: scoperto del tutto) e `fogMemo` (i passi dei PG e «Rivela intorno al gruppo», cioè le `ops` con `los`): la memoria resta in **penombra** (coltre ridotta del 62% per i giocatori, del 50% per il master). «Copri» toglie da entrambe. Niente campi nuovi nello stato.
+- Provato in locale su Casalena (PG in basso a destra: luce viva; spostati: la luce segue e dove stavano torna buio; Rivela tutto: angolo 1900×1270 scoperto; Copri + Rivela intorno al gruppo + mossa: memoria a metà alpha); `prova-tavolo.js` verde (74 e 40).

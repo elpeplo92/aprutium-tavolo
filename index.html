@@ -2805,7 +2805,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v351</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v352</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -3289,6 +3289,8 @@ const fogC=document.getElementById('fog'), fogCtx=fogC.getContext('2d');
 let fogTool=null; // 'r' | 'h'
 const FOG_R=()=>S.grid.size*4; // raggio pennello: 4 caselle = 6 m
 const fogMask=document.createElement('canvas'); fogMask.width=1448; fogMask.height=1086; const fogMaskCtx=fogMask.getContext('2d');
+const fogMemo=document.createElement('canvas'); fogMemo.width=1448; fogMemo.height=1086; const fogMemoCtx=fogMemo.getContext('2d'); /* v352: memoria delle zone esplorate (penombra) */
+function fogPgVivi(){ const out=[]; if(typeof S==='undefined'||!S||!S.tokens) return out; for(const [id,t] of Object.entries(S.tokens)){ if(!t||t.kind!=='pg'||!tokInScene(id)) continue; out.push(t); } return out; } /* v352: PG nella scena, la cui vista è viva */
 const fogNoise=(()=>{ const c=document.createElement('canvas'); c.width=c.height=512; const x=c.getContext('2d'); x.fillStyle='#000'; x.fillRect(0,0,512,512);
   for(let i=0;i<220;i++){ const r=50+Math.random()*130, px=Math.random()*512, py=Math.random()*512; const a=.025+Math.random()*.05;
     for(const [ox,oy] of [[0,0],[512,0],[-512,0],[0,512],[0,-512],[512,512],[-512,-512],[512,-512],[-512,512]]){ const g=x.createRadialGradient(px+ox,py+oy,0,px+ox,py+oy,r); g.addColorStop(0,`rgba(95,108,130,${a})`); g.addColorStop(1,'rgba(95,108,130,0)'); x.fillStyle=g; x.beginPath(); x.arc(px+ox,py+oy,r,0,Math.PI*2); x.fill(); } }
@@ -3301,24 +3303,32 @@ function drawFog(){
   if(typeof gmPeeking==='function'&&gmPeeking()) return;   /* v262: in anteprima la nebbia è quella di un'altra scena */
   if(IS_GM&&typeof editTool!=='undefined'&&editTool==='wall') return;
   /* 1. maschera delle zone svelate (nero = si vede) */
-  const m=fogMaskCtx; m.clearRect(0,0,MAP_W,MAP_H);
+  if(fogMask.width!==MAP_W||fogMask.height!==MAP_H){ fogMask.width=fogMemo.width=MAP_W; fogMask.height=fogMemo.height=MAP_H; } /* v352: la maschera segue la mappa */
+  const m=fogMaskCtx, mm=fogMemoCtx; m.clearRect(0,0,MAP_W,MAP_H); mm.clearRect(0,0,MAP_W,MAP_H);
+  /* v352: le rivelazioni del pennello e «Rivela tutto» vanno nella maschera piena; i passi dei PG (los) nella memoria, in penombra; «copri» toglie da entrambe */
   for(const o of f.ops){
-    m.globalCompositeOperation=o.t==='r'?'source-over':'destination-out'; m.fillStyle='rgba(0,0,0,1)';
-    if(o.t==='r'&&o.los){ const pts=losPoly(o.x,o.y,o.r); m.beginPath(); pts.forEach((p,i)=>i?m.lineTo(p[0],p[1]):m.moveTo(p[0],p[1])); m.closePath(); m.fill(); continue; }
-    if(o.t==='r'){ const g=m.createRadialGradient(o.x,o.y,o.r*.7,o.x,o.y,o.r); g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(1,'rgba(0,0,0,0)'); m.fillStyle=g; }
-    m.beginPath(); m.arc(o.x,o.y,o.r,0,Math.PI*2); m.fill();
+    const tg=(o.t==='r')?[o.los?mm:m]:[m,mm];
+    for(const c of tg){
+      c.globalCompositeOperation=o.t==='r'?'source-over':'destination-out'; c.fillStyle='rgba(0,0,0,1)';
+      if(o.t==='r'&&o.los){ const pts=losPoly(o.x,o.y,o.r); c.beginPath(); pts.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1])); c.closePath(); c.fill(); continue; }
+      if(o.t==='r'){ const g=c.createRadialGradient(o.x,o.y,o.r*.7,o.x,o.y,o.r); g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(1,'rgba(0,0,0,0)'); c.fillStyle=g; }
+      c.beginPath(); c.arc(o.x,o.y,o.r,0,Math.PI*2); c.fill();
+    }
   }
-  m.globalCompositeOperation='source-over';
+  /* v352: vista viva — quello che i PG vedono adesso (raggio di vista o della luce, fermato dai muri) è sempre scoperto e si sposta con loro */
+  m.globalCompositeOperation='source-over'; m.fillStyle='rgba(0,0,0,1)';
+  for(const t of fogPgVivi()){ const pts=losPoly(t.x,t.y,sightPx(t)); m.beginPath(); pts.forEach((p,i)=>i?m.lineTo(p[0],p[1]):m.moveTo(p[0],p[1])); m.closePath(); m.fill(); }
+  m.globalCompositeOperation='source-over'; mm.globalCompositeOperation='source-over';
   /* 2. coltre: buio blu notte + fumo, poi si ritaglia la maschera con i bordi sfumati */
   fogCtx.globalCompositeOperation='source-over';
   fogCtx.fillStyle=IS_GM?'rgba(6,9,15,.62)':'rgb(6,9,15)'; fogCtx.fillRect(0,0,MAP_W,MAP_H);
   fogCtx.globalAlpha=IS_GM?.45:.8; const pat=fogCtx.createPattern(fogNoise,'repeat'); fogCtx.fillStyle=pat; fogCtx.fillRect(0,0,MAP_W,MAP_H); fogCtx.globalAlpha=1;
-  fogCtx.globalCompositeOperation='destination-out'; fogCtx.filter='blur(9px)'; fogCtx.drawImage(fogMask,0,0); fogCtx.filter='none';
+  fogCtx.globalCompositeOperation='destination-out'; fogCtx.filter='blur(9px)'; fogCtx.globalAlpha=IS_GM?.5:.62; fogCtx.drawImage(fogMemo,0,0); fogCtx.globalAlpha=1; fogCtx.drawImage(fogMask,0,0); fogCtx.filter='none';
   fogCtx.globalCompositeOperation='source-over';
   /* 3. strato di fumo che si muove, ritagliato dalla stessa nebbia */
   if(smoke){ try{ const url=fogC.toDataURL('image/png'); smoke.style.webkitMaskImage=`url(${url})`; smoke.style.maskImage=`url(${url})`; smoke.style.display=''; }catch(e){} }
 }
-function fogVisible(x,y){ const f=S.fog; if(!f||!f.on) return true; if(typeof CUR!=='undefined'&&CUR&&!CUR.fog) return true; let v=false; for(const o of f.ops){ if(Math.hypot(o.x-x,o.y-y)<o.r*.9){ if(o.los&&!lineClear(o.x,o.y,x,y)) continue; v=(o.t==='r'); } } return v; }
+function fogVisible(x,y){ const f=S.fog; if(!f||!f.on) return true; if(typeof CUR!=='undefined'&&CUR&&!CUR.fog) return true; let v=false; for(const o of f.ops){ if(o.t==='r'&&o.los) continue; if(Math.hypot(o.x-x,o.y-y)<o.r*.9){ v=(o.t==='r'); } } if(v) return true; for(const t of fogPgVivi()){ if(Math.hypot(t.x-x,t.y-y)<sightPx(t)&&lineClear(t.x,t.y,x,y)) return true; } return false; } /* v352: vista viva dei PG; la memoria (penombra) non mostra le pedine */
 function fogOp(t,x,y,r,los){ S.fog=S.fog||{on:true,ops:[]}; const last=S.fog.ops[S.fog.ops.length-1]; if(last&&last.t===t&&!los&&Math.hypot(last.x-x,last.y-y)<r*.35) return; const op={t,x:Math.round(x),y:Math.round(y),r:Math.round(r||FOG_R())}; if(los) op.los=1; S.fog.ops.push(op); if(S.fog.ops.length>600) S.fog.ops.splice(0,S.fog.ops.length-600); drawFog(); }
 function setFogTool(t){ fogTool=(fogTool===t)?null:t; measuring=false; measurePts=[]; stage.classList.toggle('measuring',false); document.getElementById('btnMeasure').classList.remove('primary'); stage.classList.toggle('fogtool',!!fogTool); document.getElementById('fogReveal').classList.toggle('primary',fogTool==='r'); document.getElementById('fogHide').classList.toggle('primary',fogTool==='h'); }
 { const _nt=document.getElementById('notesToggle'); if(_nt) _nt.onclick=()=>{ const n=document.getElementById('gmNotes'); n.classList.toggle('open'); document.getElementById('notesToggle').textContent=n.classList.contains('open')?'Riduci':'Espandi'; }; }
@@ -6234,7 +6244,7 @@ function applyScene(){
   document.getElementById('luogoView').style.display=isMap?'none':'';
   document.getElementById('zoomctl').style.display=isMap?'':'none';
   document.getElementById('hud').style.display=isMap?'':'none';
-  if(isMap&&changed){ MAP_W=sc.w; MAP_H=sc.h; const img=document.getElementById('mapimg'); img.src=sc.src; img.style.width=sc.w+'px'; img.style.height=sc.h+'px'; for(const id of ['fog','walls']){ const c=document.getElementById(id); c.width=sc.w; c.height=sc.h; } lastPing=0; setTimeout(fit,30); }
+  if(isMap&&changed){ MAP_W=sc.w; MAP_H=sc.h; const img=document.getElementById('mapimg'); img.src=sc.src; img.style.width=sc.w+'px'; img.style.height=sc.h+'px'; for(const id of ['fog','walls']){ const c=document.getElementById(id); c.width=sc.w; c.height=sc.h; } fogMask.width=fogMemo.width=sc.w; fogMask.height=fogMemo.height=sc.h; lastPing=0; setTimeout(fit,30); }
   document.querySelectorAll('.dungeon-only').forEach(e=>e.classList.toggle('hidden',!sc.dungeon||(e.classList.contains('gm')&&!IS_GM)||(e.classList.contains('pl')&&IS_GM)));
   if(!isMap) renderLuogo(sc.luogo);
   renderSceneSel();
