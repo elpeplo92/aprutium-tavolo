@@ -2050,3 +2050,7 @@ Scena `casalena` con la nebbia (`regole.nebbia: true`): il master la attiva e ri
 
 - Giuseppe, al tavolo: «non c'è la mappa per lo scontro con gli 8 tizi e Torè». La mappa c'era (scena `colleatterato`, punto «Il campo di San Benedetto», modulo «I bravi della fornace»), ma senza pedine. Ora il modulo ha `pedine:["bravi"]` → tasto «Metti: bravi» che mette dal lato nord del campo `b_tore` (Torè lu Sfrisciate) e `b_ban1…8` (banditi): 6-8 verso il fieno del Carro III, gli altri con Torè verso la cassa del Carro I e i cavalli.
 - Scheda nuova `contenuti/_bestiario/tore_sfrisciate.json` = Bandit Captain SRD 5.2.1 (CA 15, 65 PF, scimitarra ×2 + pugnale, Parata, GS 2); i banditi usano `brigante` (Bandit, CA 12, 11 PF).
+
+## v362 (24/11/2026, in sessione) — scena a parte per lo scontro al campo
+
+- Giuseppe non trovava la mappa dentro «Da Colleatterrato»: nuova scena `contenuti/scene/campo_bravi.json` «Lo scontro al campo — i bravi della fornace» (La strada per Teramum, ordine 6.3), stessa battlemap di Colleatterrato, pedine della colonna e dei bravi copiate da lì; un punto «I bravi della fornace» con i moduli «La Crociata al campo» (Metti: colonna) e «I bravi della fornace» (Metti: bravi). La v361 resta valida.
