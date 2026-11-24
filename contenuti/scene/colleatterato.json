@@ -1215,8 +1215,11 @@
      "parte": "evento",
      "innesco": "Dopo mezzanotte, col campo in disordine per la scossa.",
      "leggi": "Dal fosso, nel buio, un fruscio fra l'erba secca. Poi una fiamma sale dal fieno del terzo carro.",
-     "note": "8 banditi e Tore lu Sfrisciate (capitano dei banditi, cicatrice da orecchio a bocca, dente d'oro), tagliagole del Ponte degli Impiccati che dormono nella fornace vecchia della Gammarana. Li paga l'uomo col bel mantello in fiorini limati: «la cassa dei pellegrini, senza morti», e non toccare «quello con gli occhi strani».\nArrivano dal lato nord in due gruppi: 3 danno fuoco al fieno del Carro III, gli altri con Tore vanno alla cassa (620 mo, Carro I) e ai cavalli. Percezione passiva di chi fa la guardia contro Furtività +2: se li vedono, un round prima che il fuoco prenda.\nNon cercano i personaggi: colpiscono chi sta davanti alla cassa. Fuggono con 4 a terra o Tore caduto; Tore fugge a metà PF gridando «A la fornace!». Se Vicarus usa la magia draconica: «Lu Drache! Ce sta lu Drache co' li pellegrini!» e scappano tutti.\nSe il campo era pronto (cane bianco, stallieri di Casalena, Brizio), Tore guarda, conta le spade e se ne va: «Nun è serata.»\nSe rubano la cassa: coesione −1; la ritrovano nella fornace vecchia prima dell'alba, coi bravi che litigano. Più di tre bravi morti: domani la Gammarana dice che la Crociata ha ammazzato «li ragazze de la fornace».\nTesoro di Tore: 12 fiorini limati, un anello d'argento con lo stemma dei Thaulero, un coltello col manico d'osso. Ogni bandito 1d6 grossi d'argento. STANOTTE (24-11): i personaggi lo sanno da Lanfranco («una dozzina, ne ho pagati per otto; i soldi li hanno già presi»). Se cassa e bestie sono al muro del chiostro e i miliziani svegli, Tore conta le spade e se ne va («Nun è serata»), ma riferisce com'è fatto il campo. Rubino nitrisce per primo: Guelfo lo tiene. L'anello di Tore con le tre api è dei Thaulero.",
-     "rilancio": "Che cosa fate?"
+     "note": "8 banditi e Tore lu Sfrisciate (capitano dei banditi, cicatrice da orecchio a bocca, dente d'oro), tagliagole del Ponte degli Impiccati che dormono nella fornace vecchia della Gammarana. Li paga l'uomo col bel mantello in fiorini limati: «la cassa dei pellegrini, senza morti», e non toccare «quello con gli occhi strani».\nArrivano dal lato nord in due gruppi: 3 danno fuoco al fieno del Carro III, gli altri con Tore vanno alla cassa (620 mo, Carro I) e ai cavalli. Percezione passiva di chi fa la guardia contro Furtività +2: se li vedono, un round prima che il fuoco prenda.\nNon cercano i personaggi: colpiscono chi sta davanti alla cassa. Fuggono con 4 a terra o Tore caduto; Tore fugge a metà PF gridando «A la fornace!». Se Vicarus usa la magia draconica: «Lu Drache! Ce sta lu Drache co' li pellegrini!» e scappano tutti.\nSe il campo era pronto (cane bianco, stallieri di Casalena, Brizio), Tore guarda, conta le spade e se ne va: «Nun è serata.»\nSe rubano la cassa: coesione −1; la ritrovano nella fornace vecchia prima dell'alba, coi bravi che litigano. Più di tre bravi morti: domani la Gammarana dice che la Crociata ha ammazzato «li ragazze de la fornace».\nTesoro di Tore: 12 fiorini limati, un anello d'argento con lo stemma dei Thaulero, un coltello col manico d'osso. Ogni bandito 1d6 grossi d'argento. STANOTTE (24-11): i personaggi lo sanno da Lanfranco («una dozzina, ne ho pagati per otto; i soldi li hanno già presi»). Se cassa e bestie sono al muro del chiostro e i miliziani svegli, Tore conta le spade e se ne va («Nun è serata»), ma riferisce com'è fatto il campo. Rubino nitrisce per primo: Guelfo lo tiene. L'anello di Tore con le tre api è dei Thaulero. PEDINE: tasto «Metti: bravi» qui sotto mette Torè e gli 8 banditi dal lato nord del campo (Torè CA 15, 65 PF, due scimitarre + pugnale, Parata; banditi CA 12, 11 PF). Furtività +2 contro la Percezione passiva delle guardie.",
+     "rilancio": "Che cosa fate?",
+     "pedine": [
+      "bravi"
+     ]
     },
     {
      "id": "alba",
@@ -1846,6 +1849,105 @@
    "img": "TOKEN — Osservatore di Casalena.png",
    "ritratto": "Ritratto pedina — Osservatore di Casalena.jpg",
    "tac": "Preso a Casalena il 17-11 (Blocca persone), legato. Muto per un giorno; domani sera dice solo «Lei lo sa già». Sotto il grigio un sigillo d'osso nero col fiore. Arben lo riconosce: «Grigio. Quelli pagano la lista.»"
+  },
+  {
+   "id": "b_tore",
+   "nome": "Torè lu Sfrisciate",
+   "short": "To",
+   "best": "tore_sfrisciate",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1230,
+   "y": 360,
+   "tac": "Col gruppo grosso, verso la cassa (Carro I) e i cavalli."
+  },
+  {
+   "id": "b_ban1",
+   "nome": "Bandito della fornace 1",
+   "short": "B1",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1180,
+   "y": 335,
+   "tac": "Con Torè verso la cassa del Carro I e i cavalli."
+  },
+  {
+   "id": "b_ban2",
+   "nome": "Bandito della fornace 2",
+   "short": "B2",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1270,
+   "y": 340,
+   "tac": "Con Torè verso la cassa del Carro I e i cavalli."
+  },
+  {
+   "id": "b_ban3",
+   "nome": "Bandito della fornace 3",
+   "short": "B3",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1215,
+   "y": 395,
+   "tac": "Con Torè verso la cassa del Carro I e i cavalli."
+  },
+  {
+   "id": "b_ban4",
+   "nome": "Bandito della fornace 4",
+   "short": "B4",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1285,
+   "y": 400,
+   "tac": "Con Torè verso la cassa del Carro I e i cavalli."
+  },
+  {
+   "id": "b_ban5",
+   "nome": "Bandito della fornace 5",
+   "short": "B5",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1320,
+   "y": 370,
+   "tac": "Con Torè verso la cassa del Carro I e i cavalli."
+  },
+  {
+   "id": "b_ban6",
+   "nome": "Bandito della fornace 6",
+   "short": "B6",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1395,
+   "y": 420,
+   "tac": "Tre (6-8) vanno a dare fuoco al fieno del Carro III; gli altri con Torè alla cassa."
+  },
+  {
+   "id": "b_ban7",
+   "nome": "Bandito della fornace 7",
+   "short": "B7",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1430,
+   "y": 470,
+   "tac": "Tre (6-8) vanno a dare fuoco al fieno del Carro III; gli altri con Torè alla cassa."
+  },
+  {
+   "id": "b_ban8",
+   "nome": "Bandito della fornace 8",
+   "short": "B8",
+   "best": "brigante",
+   "kind": "nemico",
+   "gruppo": "bravi",
+   "x": 1440,
+   "y": 520,
+   "tac": "Tre (6-8) vanno a dare fuoco al fieno del Carro III; gli altri con Torè alla cassa."
   }
  ]
 }

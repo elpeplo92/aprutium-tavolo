@@ -1,0 +1,30 @@
+{
+ "id": "tore_sfrisciate",
+ "name": "Torè lu Sfrisciate, capitano dei bravi",
+ "short": "To",
+ "color": "#6B2E2E",
+ "hp": 65,
+ "ac": 15,
+ "init": 3,
+ "size": 1,
+ "actions": [
+  {
+   "n": "Multiattacco: scimitarra ×2 + pugnale",
+   "atk": 5,
+   "dmg": "1d6+3"
+  },
+  {
+   "n": "Pugnale (lanciato 6/18 m)",
+   "atk": 5,
+   "dmg": "1d4+3"
+  }
+ ],
+ "note": "Capitano dei banditi (Bandit Captain, MM 2024, SRD 5.2.1) · GS 2 · 450 PE · Vel 9 m · For 15 Des 16 Cos 14 · TS For +4 Des +5 Sag +2 · Reazione Parata: +2 alla CA contro un attacco in mischia che vede. Cicatrice da orecchio a bocca, dente d'oro, anello d'argento con le tre api dei Thaulero.",
+ "src": "La fornace vecchia della Gammarana",
+ "tac": "Va dritto alla cassa del Carro I, mai ai personaggi. A metà PF fugge gridando «A la fornace!». Se vede magia draconica: «Lu Drache!» e scappano tutti.",
+ "lines": [
+  "«La cassa, e nisciunë se fa male.»",
+  "«Nun è serata.»",
+  "«A la fornace!»"
+ ]
+}
