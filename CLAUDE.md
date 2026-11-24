@@ -2032,3 +2032,9 @@ Scena `casalena` con la nebbia (`regole.nebbia: true`): il master la attiva e ri
 
 - Otto immagini nuove con GPT Image 2.6 su Higgsfield (stile = la veduta «Mondo — Teramum.jpg», città = foto vera di Teramo dall'alto; quality high, 2k, 16:9): «PDI — San Benedetto — Il campo di notte» (fondo della scena, 1920×1086, visto dalla salita verso la città, fornaci a sinistra nel fosso), La lettera della rosa, I tre legati, I tornati del guado, La scossa di mezzanotte, I bravi della fornace, La candela alla Rocca, L'alba e la discesa. Originali in `03_Compendio/02 Luoghi/La strada per Teramum/San Benedetto/`; script `Revisioni/Sessione del 24-11-2026/immagini_campo.py` (+ `immagini_campo-urls.json`, foglio `Immagini del campo - foglio.jpg`). Scelte mie per la fretta: Giuseppe può farne rifare.
 - I segnaposto della scena sono riscalati alla misura nuova. Prova verde (74 e 39).
+
+## v359 (24-11-2026, sera) — le cinque immagini mancanti del campo; via l'evento dei bravi dalla scena immagine
+
+- Giuseppe: le immagini GPT Image della v358 sono piaciute ai giocatori (quelle rifatte su Midjourney, foglio `Revisioni/Sessione del 24-11-2026/Immagini del campo - Midjourney - foglio.jpg`, non si usano); mancavano le scene dei punti Parlare con Silvanus, Mattheus e i suoi allievi, Guelfo e Rubino, Fare la guardia, Scendere alle fornaci: fatte con lo stesso metodo (`immagini_campo2.py`, `immagini_campo2-urls.json`, foglio `Immagini del campo 2 - foglio.jpg`).
+- **Regola di Giuseppe**: se nella scena è previsto uno scontro, serve la mappa VTT con le pedine; se non è previsto, basta l'immagine. Quindi il punto «EVENTO · I bravi della fornace» è tolto dalla scena immagine: lo scontro si gioca in «Da Colleatterrato» (punto del campo, modulo «I bravi della fornace»); il rimando sta nelle note di «Fare la guardia o dormire» e nell'introduzione.
+- Prova verde (74 e 39).
