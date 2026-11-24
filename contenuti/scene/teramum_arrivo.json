@@ -1,0 +1,158 @@
+{
+ "id": "teramum_arrivo",
+ "nome": "L'arrivo a Teramum",
+ "menu": "L'arrivo a Teramum — la città dall'alto",
+ "citta": "Teramum",
+ "ordine": 6.9,
+ "mappa": {
+  "img": "PDI — Arrivo a Teramum — La città dall'alto.jpg",
+  "larghezza": 1920,
+  "altezza": 1086,
+  "griglia": false
+ },
+ "regole": {
+  "nebbia": false,
+  "muri": false,
+  "token": "nessuno",
+  "strumentiDungeon": false,
+  "segnaposto": false,
+  "handout": true
+ },
+ "intro": {
+  "leggi": "Il sole esce dal mare alle vostre spalle e la luce corre giù per la valle prima di voi. La colonna si è levata al buio: i fuochi spenti con la terra, le bestie attaccate, Mastro Giustino che bestemmia piano sulla stanga del Carro IV. Avete passato la sbarra della Guardia a metà discesa, con il sergente che contava a voce alta e il ragazzo del registro partito al galoppo prima di voi. Poi la strada è scesa fra gli ulivi, a tornanti stretti, con i carri che girano a fatica e i buoi che puntano le zampe. L'aria è fredda e pulita e il fiato fuma. La brina sulle foglie si scioglie mentre passate.\n\nAll'ultimo tornante la nebbia del fondovalle si apre, e la vedete tutta.\n\nTeramum sta su una lingua di terra alta fra due fiumi: a sinistra il Tordinum, largo e marrone, che viene giù dalla montagna; a destra la Vezzola, più stretta, che gli corre incontro. Dove i due fiumi si incontrano, la città finisce in punta, come la prua di una nave. Le mura la stringono tutta: in basso pietra grigia, enorme, squadrata, senza malta, roba dei tempi dell'Impero; sopra, pietra chiara e mattone rosso, con una torre ogni cinquanta passi e le torce ancora accese sui merli. Dentro le mura, tetti rossi fitti fitti, torri sottili, campanili. In mezzo, sopra tutto, il campanile della Basilica Aurea, quadrato, altissimo, con la cuspide che prende il primo sole. In fondo, all'altro capo della città, dove la lingua di terra si allarga, la Rocca dei Grazianus: tozza, quadrata, con le torri basse e i falchi che le girano intorno. Dietro, grigia e nuda, la montagna riempie mezzo cielo, con la neve sulle cime.\n\nSotto di voi, in fondo alla discesa, la strada tocca il Tordinum e lo scavalca con un ponte di pietra a tre arcate. Dall'altra parte del ponte, incastrata nelle mura, la porta grande: un arco più alto delle torri che lo stringono, con i battenti neri chiusi. La chiamano Porta della Madre, per il piccolo convento delle votate che sta lì fuori, a sinistra dell'arco, con il suo chiostro e il suo cancello. Davanti al ponte c'è già una fila: carretti di fieno, muli, una donna con le galline, un frate su un asino, pastori con le forme di pecorino. Si muove un passo ogni tanto.\n\nA sinistra del ponte, dove il fosso della Gammarana sbocca nel fiume, ci sono le fornaci dei vasai che avete visto accese stanotte: adesso fumano bianco, e fra le bocche si muovono gli uomini con le carriole di argilla. Più in là lungo il fiume, sotto le mura, il quartiere delle forge e delle conce, con il fumo nero dei camini. A destra del ponte, invece, lungo il Tordinum, si stende una striscia d'erba larga come una piazza e lunga fin dove arriva l'occhio: il tratturo, la strada delle pecore, bianco di greggi, con i cippi di pietra ai bordi e due cani grandi come vitelli che vi guardano da laggiù.\n\nDalla città arrivano le campane: non suonano a festa, suonano le ore. E dalle mura, se guardate bene, gli elmi delle guardie si muovono, si fermano, ripartono: sopra la porta grande ce ne sono il doppio di quante ne servirebbero.\n\nMaximus, tu qui ci sei nato: riconosci la Rocca, la casa di tuo padre, all'altro capo della città, e sai che la finestra di tua madre guarda da questa parte. Alessandros e Vicarus, voi qui avete studiato: Alessandros riconosce il campanile a otto facce della Basilica, dove da ragazzo contava i gradini; Vicarus il tetto storto della scuola dei Delfico, sulla destra sotto il campanile, dove una volta ha dato fuoco a una tenda. Per Mattheus, Adamus e Luigis è la prima volta: la città più grande che abbiate mai visto.\n\nSiete fermi all'ultimo tornante, tutti e sei davanti alla colonna, con Silvanus a cavallo accanto a voi che si tira il cappuccio sugli occhi. Sotto, a dieci minuti di strada, il cippo con le frecce, il ponte, la fila, la porta.",
+  "note": "SCENA IMMAGINE, SENZA PEDINE (24-11-2026): si gioca sull'illustrazione per far vedere la città e decidere la strada; poi si passa alla mappa VTT «Arrivo a Teramum» (Scene → Porta qui il gruppo) per il ponte, il dazio, la porta e l'attesa. Mattina del 25 novembre 1437. Il registro di Arcioni è già partito al galoppo: alla porta sanno che arrivano. Punti = cosa possono fare adesso: guardare la città (chi riconosce cosa), leggere il cippo e parlare con Zi' Berardino (le sei porte: la scelta), guardare la fila (la donna con le galline: «aspettano voi»), andare al tratturo (il Mastro-Pastore, il posto per la colonna). Niente scontro qui: se la colonna sceglie un'altra porta, la scena della porta vale lo stesso (Ser Eutichio e il capitano li raggiungono dove sono).",
+  "ingressi": [
+   {
+    "da": "Dalla discesa di Colleatterrato, all'alba",
+    "primo": "ta_vista",
+    "poi": "ta_cippo",
+    "note": "Poi la mappa «Arrivo a Teramum»."
+   }
+  ]
+ },
+ "punti": [
+  {
+   "schemaVersion": 3,
+   "id": "ta_vista",
+   "kind": "scena",
+   "title": "Guardare la città dall'alto",
+   "legacyPosition": {
+    "x": 960,
+    "y": 330
+   },
+   "image": "PDI — Arrivo a Teramum — La città dall'alto.jpg",
+   "text": "Da qui si vede quasi tutta. Le mura la stringono come una cintura chiara; le torri sono tante, sottili, quadrate. A metà della città una grande piazza chiara e il campanile più alto di tutto. In fondo, dove le mura si allargano, la rocca tozza sopra una piazza larga. Più ci si avvicina, più le mura cambiano: in basso la pietra grigia enorme senza malta, sopra la pietra chiara appoggiata sulla vecchia come un vestito buono su un corpo più antico.",
+   "breve": "Chi riconosce cosa: Maximus la Rocca, Alessandros il campanile della Basilica, Vicarus la scuola dei Delfico. Storia CD 12 per leggere la città: le due pietre delle mura, i quartieri. Percezione CD 15: le guardie raddoppiate sulla porta grande.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "moduli": [
+    {
+     "id": "leggere",
+     "tipo": "dettaglio",
+     "titolo": "Leggere la città",
+     "parte": "indizio",
+     "innesco": "Qualcuno guarda a lungo, o chiede com'è fatta la città.",
+     "leggi": "La città ha tre parti, e si vedono da qui. In mezzo, intorno al campanile, le case alte e le piazze: il Centro, dove stanno il Palazzo del Consiglio e le Casate. Verso di voi, sotto le mura lungo il fiume, il fumo nero delle forge e delle conce: la Gammarana, il quartiere di chi lavora il ferro e la pelle. In fondo, dove la terra si allarga, la Rocca e le case dei soldati.",
+     "note": "Storia CD 12 (Maximus, Alessandros e Vicarus senza tiro): le mura grigie in basso sono dell'Impero, quelle chiare dei Duchi; la città non si vede mai al tramonto, il Gigante se lo mangia dal primo pomeriggio. Percezione CD 15: sopra la porta grande ci sono dodici elmi dove ne basterebbero sei, e sei balestre appoggiate ai merli. Chi lo nota capisce che la porta è chiusa per loro."
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "ta_cippo",
+   "kind": "dettaglio",
+   "title": "Il cippo delle sette porte e Zi' Berardino",
+   "legacyPosition": {
+    "x": 420,
+    "y": 760
+   },
+   "image": "PDI — Arrivo a Teramum — Il cippo delle sette porte.jpg",
+   "text": "Dove la strada tocca il fiume, prima del ponte, c'è un cippo di pietra alto fino al petto, con sette frecce scolpite e sette nomi ripassati col carbone. Ci sta seduto un vecchio con tre denti e un cappello di paglia pieno di fave: le sgrana, butta i baccelli nel fiume, e intanto guarda i vostri carri uno per uno.\n\n«Sette porte, sette modi d'entrare», dice senza che nessuno gli abbia chiesto niente. «E sei modi di restare fuori.»",
+   "breve": "Zi' Berardino lu Sgranafave commenta ogni porta senza che nessuno glielo chieda e non chiede soldi. Sette frecce, sei porte: la Due di Coppe e il Lucente Giorgio sono la stessa. La scelta della porta è qui.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "chi": [
+    "png-zi-berardino"
+   ],
+   "moduli": [
+    {
+     "id": "porte",
+     "tipo": "dialogo",
+     "titolo": "Le porte, una per una",
+     "parte": "indizio",
+     "innesco": "Qualcuno legge il cippo o chiede quale porta conviene.",
+     "leggi": "«Quella davanti, oltre il ponte, è la Porta Reale, che tutti chiamano della Madre: si apre per la Madre e per i Duchi, e fa aspettare. Giù a destra, lungo le mura, la Carrese: la porta delle pecore e dei carri, se entrate di là in città ridono. Più giù ancora, sopra l'altro fiume, la Romana: la più grossa e la più guardata, quattro scrivani e quattro timbri. Su per il fiume, mezz'ora, la Melatina: ponte lungo, guardie serie, e in fondo al ponte un sensale della Lega. Dietro la città, mezza giornata di giro, la Due di Coppe sotto la Rocca: casa della Guardia, e sulla strada di montagna gli uomini del Marchese. E lassù, per il sentiero dei cipressi, le Recluse: di là passano i morti.» Ride, e si vedono i tre denti. «Sette frecce, sei porte. A Teramum pure le pietre contano male.»",
+     "note": "Zi' Berardino (popolano, settantotto anni) non chiede soldi; se gli danno un pezzo di pane, un sorso o un quattrino aggiunge: «Stanotte, contate i fuochi sulle mura. Se sono il doppio, non è per i terremoti.» LE PORTE PER IL MASTER: Madre = la scena della mappa (attesa lunga, tessera per sei); Carrese = di giorno in pochi e travestiti si passa (Inganno o Furtività di gruppo CD 13), la colonna no, di notte il capoposto è Ser Doroteo Squilla, uomo del Palazzo, la rete passa con «Per la madre del sergente» e la spilla a ragno; Romana = stessa pratica ma in pubblico, gli agenti della Signora lo sanno entro sera; Melatina = la porta per trattare con calma, il Decano Melatino sa prima di sera chi è passato; Due di Coppe = si arriva col buio, è casa della Guardia, lo Stratega lo sa prima che scendano dai carri, ufficiale freddo (Persuasione con svantaggio), pattuglia del Marchese d'Avalos sulla strada; Recluse = solo a piedi, fingere un funerale (Inganno CD 15) fa entrare pochi senza armi da guerra, se scoperti è sacrilegio. Qualunque porta scelgano, la pratica si apre lo stesso: Ser Eutichio arriva dov'è la colonna e il capitano li raggiunge al tratturo. «Comunque andate, la carta ve la chiedono lo stesso. Qua dentro, senza carta, non entra manco la pioggia.»"
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "ta_fila",
+   "kind": "persona",
+   "title": "La fila davanti al ponte",
+   "legacyPosition": {
+    "x": 1180,
+    "y": 700
+   },
+   "image": "PDI — Arrivo a Teramum — La fila davanti al ponte.jpg",
+   "text": "La colonna arriva in fondo alla discesa e si mette in coda. Il votato sull'asino si gira, guarda lo stendardo arrotolato sul vostro primo carro, e si fa il segno del sole. Una donna con due galline legate per le zampe vi squadra da capo a piedi.\n\n«Hanno chiuso la porta grande da stamattina», dice a nessuno in particolare. «Aspettano qualcuno.» Vi guarda ancora. «Aspettano voi, mi sa.»",
+   "breve": "In coda si parla: la porta grande chiusa dall'alba, la Guardia col turno doppio, una signora forestiera ai Tigli che paga in oro, il Consiglio che litiga. La donna con le galline e il votato sanno tutte le voci.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "chi": [
+    "png-votato-sull-asino",
+    "png-donna-con-le-galline"
+   ],
+   "moduli": [
+    {
+     "id": "voci",
+     "tipo": "dialogo",
+     "titolo": "Le voci della fila",
+     "parte": "indizio",
+     "innesco": "Qualcuno chiede alla fila cosa succede.",
+     "leggi": "«Il Consiglio non si riunisce da un mese. E quando si riunisce, litiga e se ne va.» «La Guardia raddoppia i turni da una settimana. Dicono per i terremoti. Nessuno ci crede.» «Una signora forestiera ha preso casa ai Tigli. Paga tutto in oro, e le Casate le mandano i figli a cena.» «Sotto la Basilica si sente suonare di notte.» «Hanno murato il tempio di Mortus. Ma i morti, a Teramum, trovano sempre chi li accompagna.»",
+     "note": "Vere: il Consiglio paralizzato, i turni raddoppiati (il colpo di Lucius che si prepara), la signora forestiera ai Tigli (Iuvenza sotto altro nome), il tempio murato (Frate Davide). Da non confermare: la Basilica, l'Arlecchino delle cripte. Da qui si passa alla mappa: Scene → «Arrivo a Teramum» → Porta qui il gruppo, con i PG al cippo."
+    }
+   ]
+  },
+  {
+   "schemaVersion": 3,
+   "id": "ta_tratturo",
+   "kind": "scena",
+   "title": "Il tratturo e i cani bianchi",
+   "legacyPosition": {
+    "x": 1650,
+    "y": 820
+   },
+   "image": "PDI — Arrivo a Teramum — Il tratturo.jpg",
+   "text": "A destra della strada, lungo il fiume, la striscia d'erba larga come una piazza sparisce verso sud fra le colline. Ai bordi, ogni tanto, un cippo di pietra bianca. Ci pascolano centinaia di pecore. In fondo un recinto, una capanna e un fuoco acceso. I due cani bianchi, grandi come vitelli, hanno alzato la testa prima del vecchio.",
+   "breve": "Il tratturo è terra dell'Ordine dei Tratturi: col permesso del Mastro-Pastore Venanzio la colonna può dormirci e la Guardia non la può spostare. Lui vuole rispetto, non sigilli. I cani si siedono davanti a chi accettano.",
+   "nota": {
+    "cd": 0,
+    "auto": false
+   },
+   "chi": [
+    "png-venanzio-collepietra"
+   ],
+   "moduli": [
+    {
+     "id": "cani",
+     "tipo": "dettaglio",
+     "titolo": "I Mastini bianchi",
+     "parte": "evento",
+     "innesco": "Qualcuno entra nel prato.",
+     "leggi": "Si fermano a tre passi. Non ringhiano. Vi annusano uno per uno, con calma, come se leggessero. Si fermano più a lungo davanti a qualcuno. Poi si siedono. Gli occhi, all'ombra, hanno un riflesso d'argento.\n\nIl vecchio, dal fuoco, non si è mosso. «Se si siedono», dice forte, «potete venire avanti. Se si alzano, andate via.»",
+     "note": "Ciaùla e Tempèsta si fermano più a lungo davanti ad Adamus (la terra) e a Mattheus (il Filatterio: uno guaisce piano, poi si siede); davanti a Vicarus uno scopre i denti e il vecchio lo richiama. Toccarli senza permesso = si alzano, trattativa con svantaggio. Il permesso e la lettera di Ersilia per Maximus stanno nella mappa «Arrivo a Teramum», punto «Il tratturo e il Mastro-Pastore»."
+    }
+   ]
+  }
+ ],
+ "pedine": []
+}
