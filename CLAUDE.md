@@ -2054,3 +2054,7 @@ Scena `casalena` con la nebbia (`regole.nebbia: true`): il master la attiva e ri
 ## v362 (24/11/2026, in sessione) — scena a parte per lo scontro al campo
 
 - Giuseppe non trovava la mappa dentro «Da Colleatterrato»: nuova scena `contenuti/scene/campo_bravi.json` «Lo scontro al campo — i bravi della fornace» (La strada per Teramum, ordine 6.3), stessa battlemap di Colleatterrato, pedine della colonna e dei bravi copiate da lì; un punto «I bravi della fornace» con i moduli «La Crociata al campo» (Metti: colonna) e «I bravi della fornace» (Metti: bravi). La v361 resta valida.
+
+## v363 (24/11/2026, in sessione) — battlemap del campo di notte
+
+- La scena `campo_bravi` usava la mappa di Colleatterrato («che cazzata è»): ora ha la sua battlemap notturna (GPT Image 2.6, 1448×1086, `BATTLEMAP — Il campo di San Benedetto di notte.jpg`; originale e varianti 1 e 3 in `03_Compendio/02 Luoghi/La strada per Teramum/San Benedetto/`). Campo in basso a destra, fosso in alto, chiostro a sinistra. Pedine della colonna (carri, cavalli, prigionieri, Guelfo e Rubino) e dei bravi riposizionate sulla mappa nuova.
