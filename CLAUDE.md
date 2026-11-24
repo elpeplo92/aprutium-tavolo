@@ -2058,3 +2058,7 @@ Scena `casalena` con la nebbia (`regole.nebbia: true`): il master la attiva e ri
 ## v363 (24/11/2026, in sessione) — battlemap del campo di notte
 
 - La scena `campo_bravi` usava la mappa di Colleatterrato («che cazzata è»): ora ha la sua battlemap notturna (GPT Image 2.6, 1448×1086, `BATTLEMAP — Il campo di San Benedetto di notte.jpg`; originale e varianti 1 e 3 in `03_Compendio/02 Luoghi/La strada per Teramum/San Benedetto/`). Campo in basso a destra, fosso in alto, chiostro a sinistra. Pedine della colonna (carri, cavalli, prigionieri, Guelfo e Rubino) e dei bravi riposizionate sulla mappa nuova.
+
+## v364 (24/11/2026, in sessione) — nebbia leggera
+
+- Regola nuova di scena `regole.nebbiaLeggera:true` → `CUR.fogLight`: in `drawFog` la coltre è al 72% per i giocatori (40% per il master) invece che piena: di notte all aperto si intravede la mappa. La scena `campo_bravi` l usa, con `muri:false` e `strumentiDungeon:false` (niente strumenti dei muri).
