@@ -2805,7 +2805,7 @@ header #roleSel{max-width:200px;text-overflow:ellipsis}
 <div id="modal"><div class="box"></div></div>
 <div id="app">
   <header>
-    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v365</span></div>
+    <div class="brand"><h1><img src="img/logo-aprutium.png" alt="Aprutium" class="logo"></h1><span class="eyebrow">Atto Terzo</span><span class="eyebrow" id="ver" title="Versione della pagina" style="opacity:.6">v366</span></div>
     <nav id="nav"><button class="navb on" id="navTavolo"><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Tavolo</button><button class="navb" id="navDiario" title="Scheda del personaggio"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Scheda</button><button class="navb" id="btnComp"><svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>Compendio</button></nav>
     <div class="right">
     <span class="pill" id="modePill" title="Fase del gioco: la cambi con Inizia scontro / Termina">Fase · Esplorazione</span>
@@ -6063,7 +6063,7 @@ document.getElementById('btnAddBest').onclick=()=>{
   // cerca una casella libera vicino al centro dell'area visibile
   const r=stage.getBoundingClientRect(); const c=toMap({clientX:r.left+r.width/2,clientY:r.top+r.height/2}); let p=snap(c);
   if(!walkable(p.x,p.y)){ outer: for(let d=1;d<12;d++) for(let dx=-d;dx<=d;dx++) for(let dy=-d;dy<=d;dy++){ const q={x:p.x+dx*30,y:p.y+dy*30}; if(walkable(q.x,q.y)){ p=q; break outer; } } }
-  S.tokens[id]={custom:true,name:b.name,short:b.short,kind:'nemico',color:b.color,img:b.img||'',x:p.x,y:p.y,hp:b.hp,hpMax:b.hp,ac:b.ac,init:null,hidden:true,sc:(CUR&&CUR.id&&CUR.id!=='luogo')?CUR.id:SCENE_DEFAULT.id,size:b.size||1,noInit:!!b.noInit||!!x.noInit,mods:{Iniziativa:b.init},actions:b.actions,note:b.note,tac:b.tac||'',lines:b.lines||[]};
+  S.tokens[id]={custom:true,name:b.name,short:b.short,kind:'nemico',color:b.color,img:b.img||'',x:p.x,y:p.y,hp:b.hp,hpMax:b.hp,ac:b.ac,init:null,hidden:true,sc:(CUR&&CUR.id&&CUR.id!=='luogo')?CUR.id:SCENE_DEFAULT.id,size:b.size||1,noInit:!!b.noInit,mods:{Iniziativa:b.init},actions:b.actions,note:b.note,tac:b.tac||'',lines:b.lines||[]};
   selected=id; log({kind:'sys',gm:true,txt:`${b.name} messo sulla mappa (nascosto)`}); save();
 };
 
