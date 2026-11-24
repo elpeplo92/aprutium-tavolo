@@ -2066,3 +2066,7 @@ Scena `casalena` con la nebbia (`regole.nebbia: true`): il master la attiva e ri
 ## v365 (24/11/2026, in sessione) — pedine fuori dall iniziativa
 
 - `pedineMetti`: una pedina della scena può avere `noInit:true` (prima lo decideva solo la scheda del Bestiario). In `campo_bravi` lo hanno tutti i non combattenti della colonna (carri, popolani, tornati, Albino, Frate Martino, Cecco, Guelfo, Rubino, Pasqualino, vacche, prigionieri); tirano solo Silvanus, Tiberius, Brizio, Pippo, i quattro miliziani, Vhaerun e Gerardo Tosti. Vale per le pedine messe DOPO la v365: quelle già sulla mappa vanno tolte e rimesse.
+
+## v366 (24/11/2026, in sessione) — correzione
+
+- La v365 aveva messo `||!!x.noInit` anche nel «Metti sulla mappa» del Bestiario, dove `x` non esiste (ROTTO nella prova, pubblicata per errore perché la catena non si fermava sull esito: controllare sempre «Nessun problema» prima del push). Corretto: la regola vale solo in `pedineMetti`.
